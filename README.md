@@ -28,7 +28,7 @@ If you wish to contribute directly, please contact me on BoardGameGeek or discor
 ### The Future
 
 All new version of the rule book and their change logs will be published here and in the BGG thread.
-I will probably submit an indefinite number of changes before changing the version number again (which is 0.2 as of writing).
+I will probably submit an indefinite number of changes before changing the version number again.
 The aim is to have a vastly superior "1.0" version ready before most people receive their pledges.
 
 The current aim is to produce a document that's meant more for digital reading, as most references to other rules and sections within the document are accomplished by using hyperlinks in the text.
