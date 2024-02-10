@@ -4,25 +4,36 @@ Please see the original thread on [Board Game Geek](https://boardgamegeek.com/th
 
 ### What is this?
 
-This project aims to rewrite the original rulebook, in which the amount of vague language and lack of clearly stated rules was just too vast to ignore.
-It is typical for any game to receive fan-made rules summaries or simplified rule sheets.
-This repository hosts a document that explains the rules clearly and concisely and eventually has an answer for basically any basic rules query you might have.
+This project aims to rewrite the original rule book, in which the amount of vague language was just too vast to ignore.
+
+This repository hosts a document that aims to explain the rules clearly and concisely, and should eventually have an answer for basically any basic rules query you might have.
+
 
 ### Why?
 
-This is a complex game and that many of the fine points of the rules were still under construction during the Kickstarter campaign.
-It is impossible to cover all rule conflicts and player expectations for such a large game.
-None of the work here is aimed at causing any discomfort to any Archon staff, or any of the people who wrote, proofread and edited the official rule book.
-It is a fan work out of the love of learning games and wanting to understand their complexities.
+The content in the official English rule book is, simply put, insufficient as a teaching tool for the game or as a general rules reference.
+If you read the thread linked above you should understand how frustrating this has been for me.
+
 
 ### How?
 
-The initial strategy was just this: take the whole text body and turn it into proper rule book language.
-Rule books should just command players to do stuff.
-You MUST move this piece here, but you MAY move it there IF this condition happens.
+I am completely rewriting the rule book in LaTeX.
+It's possible that a finalized version will be later put together using other tools such as Adobe Visual Studio.
+
+This is a communal effort.
+This repository serves both as a means for me to preserve my work, but also for others to contribute to it as writers, proofreaders, or layout designers.
+If you wish to contribute directly, please contact me on BoardGameGeek or discord, my username is Heegu on both platforms.
+
 
 ### The Future
 
-The new rule book and the change log will be published here.
-Please open issues with factual errors and any bad language.
-You can also open pull requests with suggestions.
+All new version of the rule book and their change logs will be published here and in the BGG thread.
+I will probably submit an indefinite number of changes before changing the version number again (which is 0.2 as of writing).
+The aim is to have a vastly superior "1.0" version ready before most people receive their pledges.
+
+The current aim is to produce a document that's meant more for digital reading, as most references to other rules and sections within the document are accomplished by using hyperlinks in the text.
+I know most people would also love a version that's designed more for printing, I'll see if I later have the energy to create that as well.
+A printable document would probably be more of a shorter reference, this document will always have 30+ pages.
+
+Please discuss any and all factual errors, bad language or other errors you've found by either contacting me directly or in the thread.
+You can do this by reaching out to me directly or by opening pull requests with suggestions.
