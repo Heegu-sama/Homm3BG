@@ -1,17 +1,17 @@
-# name: Build Document
-#
-# on:
-#   pull_request:
-#     branches: [main]
-#
-# jobs:
-#   build_latex:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Set up repository
-#         uses: actions/checkout@v4
-#
-#       - name: Compile LaTeX document
-#         uses: xu-cheng/latex-action@v3
-#         with:
-#           root_file: main.tex
+name: Build Document
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
