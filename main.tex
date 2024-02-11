@@ -434,8 +434,8 @@ Most units have a \textbf{special ability}:\\[6pt]
 \subsection*{\hypertarget{Unittype}{Unit types}}
 There are thee types of units:
 \begin{itemize}
-    \item \textbf{Ground} \includegraphics[scale=0.25]{images/unit_ground.PNG} units move up to 3 spaces and attack adjacent enemies.
-    \item \textbf{Flying} \includegraphics[scale=0.25]{images/unit_flying.PNG} units move up to 3 spaces, ignoring obstacles, and attack adjacent enemies.
+    \item \textbf{Ground} \includesvg[height=10px]{svgs/unit_ground.svg} units move up to 3 spaces and attack adjacent enemies.
+    \item \textbf{Flying} \includesvg[height=10px]{svgs/unit_flying.svg} units move up to 3 spaces, ignoring obstacles, and attack adjacent enemies.
     \item \textbf{Ranged} \includesvg[height=10px]{svgs/unit_ranged.svg} units may attack any unit anywhere OR move up to 1 space.
 \end{itemize}
 If a \textbf{ranged} unit is next to an enemy unit, its attack target must be that adjacent enemy. When attacking an adjacent enemy in this way \textbf{or} an enemy in the backline while the ranged unit is also in its own backline, the ranged unit suffers a combat penalty. Throw two combat dice and \textbf{apply the smaller result}. Walls and gates may also \hyperlink{Walls}{reduce} a ranged unit's attack.
@@ -499,21 +499,21 @@ add the result to the unit’s attack value.\\[6pt]
 \textbf{\hypertarget{Retaliate}{Retaliation attack}} – If a unit survives an attack by an adjacent unit, it performs an attack on that unit. Each unit can perform only 1 retaliation attack per combat round. Retaliation attacks function
 identically to normal attacks, but they cannot cause another retaliation attack. Mark units which
 have performed a retaliation attack this round with a black cube.\\[6pt]
-\textbf{Paralysis} \includegraphics[scale=0.75]{images/paralysis.PNG} – Effects which paralyze a unit place the paralysis token on them. A paralyzed unit
+\textbf{Paralysis} \includesvg[height=10px]{svgs/paralysis.svg} – Effects which paralyze a unit place the paralysis token on them. A paralyzed unit
 skips its next activation and removes the token instead. If it is attacked or takes any damage before
 that time, remove the paralysis token from that unit.\\[6pt]
-\textbf{\hypertarget{Defend}{Defend}} \includegraphics[scale=0.75]{images/defense_action.PNG} – When a unit with a defense token is attacked, make another roll with the attack die
+\textbf{\hypertarget{Defend}{Defend}} \includesvg[height=10px]{svgs/defense.svg} – When a unit with a defense token is attacked, make another roll with the attack die
 after the initial attack roll. If you roll a “+1”, the defending unit gains an extra 1 defense for this
 attack. If a unit has a defense token at the start of its activation, discard it. That unit cannot take another defense action during that activation.
 
 \subsection*{\hypertarget{CombatCards}{Using cards during combat}}
-You may only use \textbf{one spell per combat round}. Other card types can be used as many times as you want to. Ongoing \includesvg[height=10px]{svgs/ongoing.svg}and \includegraphics[scale=0.3]{images/unit_activation.PNG} activate effects can be used only when activating a unit and before it attacks. Ongoing effects last until end of combat or if the effect on the card is used up. Instant \includesvg[height=10px]{svgs/instant.svg}cards may be played at any time except between rolling the combat die and resolving damage unless otherwise stated. Instant cards which increase a unit's statistics \textbf{last only for the duration of the current unit's activation}.
+You may only use \textbf{one spell per combat round}. Other card types can be used as many times as you want to. Ongoing \includesvg[height=10px]{svgs/ongoing.svg} and \includesvg[height=10px]{svgs/activation.svg} activate effects can be used only when activating a unit and before it attacks. Ongoing effects last until end of combat or if the effect on the card is used up. Instant \includesvg[height=10px]{svgs/instant.svg} cards may be played at any time except between rolling the combat die and resolving damage unless otherwise stated. Instant cards which increase a unit's statistics \textbf{last only for the duration of the current unit's activation}.
 \subsection*{\hypertarget{Timelimit}{Combat time limits}}
 Combat against neutral units has a time limit of one round. If the player cannot win the combat
 before the end of the current combat round, they must either \hyperlink{Endcombat}{retreat} or spend 1 MP from the hero who started the combat in order to play another combat round. Combat against azure units, other players or AI heroes has no time limit.
 \clearpage
 \subsection*{\hypertarget{Walls}{Defending a town with a citadel}}
-When a town with a citadel is attacked, the defender adds the wall and gate obstacles in any order to the middle row of the combat board after placing their units. The gate card is not an obstacle to the defending player. The wall and gate cards can be destroyed by any adjacent \includegraphics[scale=0.25]{images/ground_icon.PNG} or \includegraphics[scale=0.25]{images/flying_icon.PNG} unit's attack. Such attacks are always successful, do not roll the combat die when performing them.\\[6pt]
+When a town with a citadel is attacked, the defender adds the wall and gate obstacles in any order to the middle row of the combat board after placing their units. The gate card is not an obstacle to the defending player. The wall and gate cards can be destroyed by any adjacent \includesvg[height=10px]{svgs/unit_ground.svg} or \includesvg[height=10px]{svgs/unit_flying.svg} unit's attack. Such attacks are always successful, do not roll the combat die when performing them.\\[6pt]
 Defending units standing on their own side and in the same column as a wall or a gate are partially protected from ranged attacks. If they are targeted by a ranged attack performed from the opponent's side of the combat board, \textbf{reduce the attack's damage by 1}.
 \\[6pt]
 The defender also gains the arrow tower unit card which is placed next to the combat board. It can only be targeted by ranged attacks. This unit is also destroyed if all wall and gate cards are destroyed. The arrow tower cannot start a defensive combat by itself without other units and you do not need to destroy it in order to win when attacking.
@@ -559,7 +559,7 @@ If your hero’s level is higher than a field’s difficulty when combat against
 These rules apply when playing a \textbf{solo} game. The AI combat rules for targeting and attacking are also used when playing a \textbf{cooperative} scenario.\\[6pt]
 Solo campaigns are played against AI Heroes who use two automated decks to play the game: the AI deck, and the spell deck. The AI deck consists of cards that are similar in function to abilities and artifacts, but change depending on the game's \hyperlink{Difficulty}{difficulty}. The spell deck should be used
 when instructed by the cards in the AI deck. During combat against neutral enemies or AI heroes, their units follow an automatic set of instructions. \textbf{Initiative rules} work identically. When an \textbf{AI hero} activates a unit, drawn an AI card as its activation.\\[6pt]
-All AI controlled \includegraphics[scale=0.25]{images/ground_icon.PNG} and \includegraphics[scale=0.25]{images/flying_icon.PNG} units prioritize attacking units of the same tier. If this is impossible, they attack the closest unit, prioritizing the lowest tier one. \includegraphics[scale=0.25]{images/ranged_icon.PNG} units prioritize other \includegraphics[scale=0.25]{images/ranged_icon.PNG} units of the same tier, then lower tier, and finally higher tier. If there are no \includegraphics[scale=0.25]{images/ranged_icon.PNG} for them to target they prioritize \includegraphics[scale=0.25]{images/ground_icon.PNG} and \includegraphics[scale=0.25]{images/flying_icon.PNG} units in the same tier order. If there's more than one valid target, they attack the closest one.\\[6pt]
+All AI controlled \includesvg[height=10px]{svgs/unit_ground.svg} and \includesvg[height=10px]{svgs/unit_flying.svg} units prioritize attacking units of the same tier. If this is impossible, they attack the closest unit, prioritizing the lowest tier one. \includesvg[height=10px]{svgs/unit_ranged.svg} units prioritize other \includesvg[height=10px]{svgs/unit_ranged.svg} units of the same tier, then lower tier, and finally higher tier. If there are no \includesvg[height=10px]{svgs/unit_ranged.svg} for them to target they prioritize \includesvg[height=10px]{svgs/unit_ground.svg} and \includesvg[height=10px]{svgs/unit_flying.svg} units in the same tier order. If there's more than one valid target, they attack the closest one.\\[6pt]
 If there's ever a tie between equally valid targets for any units, the players choose which unit is attacked.
 
 \clearpage
