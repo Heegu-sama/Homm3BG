@@ -5,12 +5,22 @@ on:
     branches:
       - main
 
+env:
+  BOARG_GAME_GEEK_FILES: https://boardgamegeek.com/filepage/272787
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Set up repository
         uses: actions/checkout@v4
+
+      - name: Replace version with a warning
+        run: |
+          VERSION=$(grep -P "^Version \d{1,}.\d{1,}$" main.tex)
+          RELEASE_PAGE="${{ github.server_url }}/${{ github.repository }}/releases"
+          WARNING="This is an unreleased version built on GitHub from commit ${GITHUB_SHA::7}. To download the latest official release, please go to \\\href{${RELEASE_PAGE}}{GitHub release page} or \\\href{${{ env.BOARG_GAME_GEEK_FILES }}}{BoardGameGeek files section}."
+          sed -i "s@$VERSION@$WARNING@g" main.tex
 
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3

@@ -1,6 +1,6 @@
 # Heroes of Might & Magic III: The Board Game - Rule Book Rewrite Project
 
-Please see the original thread on [Board Game Geek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1).
+Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1).
 
 To download the most recent PDF file (not necessarily a released one) built from the main branch, [click here](https://github.com/Heegu-sama/Homm3BG/raw/build/main.pdf/PDF/main.pdf).
 
