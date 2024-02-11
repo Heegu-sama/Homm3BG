@@ -2,6 +2,9 @@
 
 Please see the original thread on [Board Game Geek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1).
 
+To download the most recent PDF file (not necessarily a released one) built from the main branch, [click here](https://github.com/Heegu-sama/Homm3BG/raw/build/main.pdf/PDF/main.pdf).
+
+
 ### What is this?
 
 This project aims to rewrite the original rule book, in which the amount of vague language was just too vast to ignore.

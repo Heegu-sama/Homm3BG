@@ -1,0 +1,50 @@
+name: Publish Document
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+
+      - name: Upload pdf as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PDF
+          path: main.pdf
+
+  publish:
+    needs: [build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          path: main.pdf
+
+      - name: Move PDF
+        run: mkdir -p github_deploy && mv main.pdf github_deploy/
+
+      - name: Deploy on orphaned branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./github_deploy
+          publish_branch: build
+          force_orphan: true
