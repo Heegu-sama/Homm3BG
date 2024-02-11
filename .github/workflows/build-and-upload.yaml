@@ -5,6 +5,9 @@ on:
     branches:
       - setup-ci
 
+env:
+  ARTIFACT_NAME: "BUILT_PDF"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,7 +23,7 @@ jobs:
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
-          name: github-pages
+          name: ${{ env.ARTIFACT_NAME }}
           path: main.pdf
 
   deploy:
@@ -36,3 +39,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: ${{ env.ARTIFACT_NAME }}
