@@ -19,12 +19,9 @@ jobs:
         run: |
           VERSION=$(grep ^Version main.tex)
           RELEASE_PAGE="${{ github.server_url }}/${{ github.repository }}/releases"
-          echo ${VERSION}
-          echo ${RELEASE_PAGE}
-          echo Ref: ${GITHUB_SHA::7}
-          echo BGG: ${{ env.BOARG_GAME_GEEK_FILES }}
-          WARNING="This is an unreleased version built on GitHub from commit ${GITHUB_SHA::7}. To download the latest official release, please go to \href{${RELEASE_PAGE}}{GitHub release page} or \href{${{ env.BOARG_GAME_GEEK_FILES }}}{BoardGameGeek files section}."
-          echo $WARNING
+          WARNING="This is an unreleased version built on GitHub from commit ${GITHUB_SHA::7}. To download the latest official release, please go to \\\href{${RELEASE_PAGE}}{GitHub release page} or \\\href{${{ env.BOARG_GAME_GEEK_FILES }}}{BoardGameGeek files section}."
+          sed -i "s@$VERSION@$WARNING@g" main.tex
+          grep "To download" main.tex
 
   #     - name: Compile LaTeX document
   #       uses: xu-cheng/latex-action@v3
