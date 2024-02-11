@@ -3,7 +3,10 @@ name: Publish Document
 on:
   push:
     branches:
-      - main
+      - warn-in-build
+
+env:
+  BOARG_GAME_GEEK_FILES: https://boardgamegeek.com/filepage/272787
 
 jobs:
   build:
@@ -12,39 +15,50 @@ jobs:
       - name: Set up repository
         uses: actions/checkout@v4
 
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: main.tex
+      - name: Replace version with a warning
+        run: |
+          VERSION=$(grep ^Version main.tex)
+          RELEASE_PAGE="${{ github.server_url }}/${{ github.repository }}/releases"
+          echo ${VERSION}
+          echo ${RELEASE_PAGE}
+          echo Ref: ${GITHUB_SHA::7}
+          echo BGG: ${{ env.BOARG_GAME_GEEK_FILES }}
+          WARNING="This is an unreleased version built on GitHub from commit ${GITHUB_SHA::7}. To download the latest official release, please go to \href{${RELEASE_PAGE}}{GitHub release page} or \href{${{ env.BOARG_GAME_GEEK_FILES }}}{BoardGameGeek files section}."
+          echo $WARNING
 
-      - name: Upload pdf as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: PDF
-          path: main.pdf
-
-  publish:
-    needs: [build]
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - uses: actions/download-artifact@v4
-        with:
-          path: main.pdf
-
-      - name: Move PDF
-        run: mkdir -p github_deploy && mv main.pdf github_deploy/
-
-      - name: Deploy on orphaned branch
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./github_deploy
-          publish_branch: build
-          force_orphan: true
+  #     - name: Compile LaTeX document
+  #       uses: xu-cheng/latex-action@v3
+  #       with:
+  #         root_file: main.tex
+  #
+  #     - name: Upload pdf as artifact
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: PDF
+  #         path: main.pdf
+  #
+  # publish:
+  #   needs: [build]
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: write
+  #     pages: write
+  #     id-token: write
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
+  #
+  #     - uses: actions/download-artifact@v4
+  #       with:
+  #         path: main.pdf
+  #
+  #     - name: Move PDF
+  #       run: mkdir -p github_deploy && mv main.pdf github_deploy/
+  #
+  #     - name: Deploy on orphaned branch
+  #       uses: peaceiris/actions-gh-pages@v3
+  #       with:
+  #         github_token: ${{ secrets.GITHUB_TOKEN }}
+  #         publish_dir: ./github_deploy
+  #         publish_branch: build
+  #         force_orphan: true
