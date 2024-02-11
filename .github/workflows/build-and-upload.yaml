@@ -5,9 +5,6 @@ on:
     branches:
       - setup-ci
 
-env:
-  ARTIFACT_NAME: "BUILT_PDF"
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,23 +17,33 @@ jobs:
         with:
           root_file: main.tex
 
-      - name: Upload PDF file
-        shell: bash
-        run: |
-          mkdir public
-          mv main.pdf public/
-          git config user.email "bot@example.com"
-          git config user.name "Build Bot"
-          git checkout -b github_pages
-          git add public
-          git commit -m "Publish PDF file"
-          git push --force
+      - name: Upload pdf as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PDF
+          path: main.pdf
 
-      - name: Deploy
+  publish:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          path: main.pdf
+
+      - name: Move PDF
+        run: mkdir -p github_deploy && mv main.pdf github_deploy/
+
+      - name: Deploy on orphaned branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./github_deploy
+          publish_branch: build
+          force_orphan: true
 
   # deploy:
   #   needs: build
