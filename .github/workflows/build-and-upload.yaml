@@ -25,6 +25,8 @@ jobs:
         run: |
           mkdir public
           mv main.pdf public/
+          git config user.email "bot@example.com"
+          git config user.name "Build Bot"
           git checkout -b github_pages
           git add public
           git commit -m "Publish PDF file"
