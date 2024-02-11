@@ -239,7 +239,7 @@ If your secondary hero is attacked by an enemy hero, you can choose to have your
 \item Knowledge – Number of knowledge cards in your starting deck.
 \item Starting Ability – Reminder for the unique ability card the hero starts with.
 \item Hero Specialty – Reminder for the specialty cards the hero adds to their deck at the start of the game and after specific level ups. Each hero has three specialty cards.
-\item Level - Whenever a main hero gains 1 or more experience \includegraphics[scale=0.75]{images/exp.PNG} move the cube that number of steps on this track. When the cube reaches the next slot on the upper row, the hero gains a level.
+\item Level tracker - Whenever a main hero gains 1 or more experience \includegraphics[scale=0.75]{images/exp.PNG} move the cube that number of steps on this track. When the cube reaches the next slot on the upper row, the hero gains a level.
 \end{enumerate}
 \clearpage
 
@@ -268,19 +268,21 @@ List of all effects:
 All players have a unique deck which represents their main hero's abilities and equipment. Decks may contain statistic cards, ability cards, spell cards, artifact cards and the chosen hero’s specialty cards. Whenever a player gains a new card, they always place it directly into their hand unless otherwise stated. Each player’s deck starts with 9 cards, built during the game’s set up.
 \subsection*{General card rules}
 \begin{enumerate}
+	\item Cards can be played \textbf{only on your turn}, or in a combat involving your \textbf{main hero}.
+	\item After a card is used, discard it. Each player has their own separate discard pile for their own deck.
+	\item If your hero's deck is empty when you need to draw a card, shuffle your discard pile into a new deck.
     \item Whenever you are instructed to \textbf{search} (X) the ability, artifact, or spell deck, you may either look at the top (X) cards from the specified deck, take one of them to your hand, and discard the others, or-instead of looking at the top (X) cards add the top card from that deck’s discard pile to your hand.
     \item The ability, artifact, and spell decks each have their own discard piles, created during the setup, which help players identify these decks. If a deck ever runs out of cards, reshuffle it and discard its top card to form a new discard pile. Also, whenever an ability, artifact or spell deck discard is empty, refill it with that deck’s top card.
     \item Whenever you are instructed to remove a card, remove it completely from the game and return it to the box.
     \item Player cards have the following types of effects:
     \begin{itemize}
-        \item \textbf{Instant} \includegraphics[scale=0.75]{images/instant.PNG} effects are resolved immediately and can be played out of turn.
+        \item \textbf{Instant} \includegraphics[scale=0.75]{images/instant.PNG} effects are resolved immediately and can be played out of turn during combat.
         \item \textbf{Activation} \includegraphics[scale=0.75]{images/activation.PNG} effects must be played when activating a unit in combat.
-        \item \textbf{Map} \includegraphics[scale=0.75]{images/map.PNG} effects must be played on your turn and cannot be used during combat.  
-        \item \textbf{Ongoing} \includegraphics[scale=0.75]{images/ongoing.PNG} effects must be played on your turn and last until they are used up or until the player who played them starts their next turn (whichever happens first).
-        \item \textbf{Permanent} \includegraphics[scale=0.5]{images/permanent.PNG} effects must be played on your turn and stay in your play area until discarded or replaced. Players may have only one permanent card at a time; playing another discards the first.
+        \item \textbf{Map} \includegraphics[scale=0.75]{images/map.PNG} effects cannot be used during combat.  
+        \item \textbf{Ongoing} \includegraphics[scale=0.75]{images/ongoing.PNG} effects last until they are used up or until the player who played them starts their next turn (whichever happens first).
+        \item \textbf{Permanent} \includegraphics[scale=0.5]{images/permanent.PNG} cards stay in your play area until discarded or replaced. Players may have only one permanent card at a time; playing another discards the first.
     \end{itemize}
-    \item After a card is used, discard it. Each player has their own separate discard pile for their own deck.
-    \item If your hero's deck is empty when you need to draw a card, shuffle your discard pile into a new deck.
+
 \end{enumerate}
 
 \clearpage
