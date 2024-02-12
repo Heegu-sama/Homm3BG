@@ -3,8 +3,8 @@ name: Build Document
 on:
   pull_request:
     branches: [main]
-    # paths-ignore:
-    #   - '.github/**'
+    paths-ignore:
+      - '.github/**'
 
 jobs:
   build_latex:
