@@ -3,6 +3,8 @@ name: Build Document
 on:
   pull_request:
     branches: [main]
+    paths-ignore:
+      - '.github/**'
 
 jobs:
   build_latex:
@@ -15,3 +17,9 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
+
+      - name: Upload pdf as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: RULE_BOOK_PDF
+          path: main.pdf
