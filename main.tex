@@ -27,7 +27,9 @@
     pdftitle={Heroes of Might & Magic III Rule Book},
     pdfpagemode=FullScreen,
     }
-
+% Set the default spacing between paragraphs. Remove indentation.
+\usepackage[skip=6pt, indent=0pt]{parskip}
+\setstretch{1}
 
 % Background
 \AddToHook{shipout/background}{%
@@ -35,14 +37,7 @@
     \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{images/bottom.png}}%
 }
 
-% Set the default spacing between paragraphs. Remove indentation.
-\usepackage[skip=6pt, indent=0pt]{parskip}
-\setstretch{1}
-
-
 \begin{document}
-
-
 
 \title{\includegraphics[width=4cm]{images/title.png} The Rewritening}
 
@@ -124,7 +119,7 @@ This section will guide you through the process of setting up a scenario from th
 \clearpage
 
 \begin{center}
-\includegraphics[scale=0.9]{images/setup.PNG}
+\includegraphics[scale=0.85]{images/setup.PNG}
 \end{center}
 
 \clearpage
