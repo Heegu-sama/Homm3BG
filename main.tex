@@ -12,6 +12,10 @@
 % Useful packages
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{efbox}
+\efboxsetup{linecolor=yellow, backgroundcolor=darkgray, linewidth=1pt}
+\usepackage{caption}
+\captionsetup[figure]{labelformat=empty}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{enumitem}
 \usepackage{setspace}
@@ -711,8 +715,10 @@ Additionally, \textbf{instead of increasing resource production}, you may choose
 
 \subsection*{Re-visitable fields}
 \begin{figure}[h]
-\centering
-\includegraphics[width=0.5\linewidth]{\images/stables.png}
+	\centering
+	\textbf{Stables}\par\medskip
+	\efbox{\includegraphics[width=0.5\linewidth]{\images/stables.jpg}}
+	\caption{Category: \textbf{Revisitable}\\Gain 1 additional MP.}
 \end{figure}
 \begin{center}
 \textit{This movement point lasts for only one turn. The same is true for all other effects which grant MP. Essentially, it's "free" to move onto this field.}
@@ -720,12 +726,16 @@ Additionally, \textbf{instead of increasing resource production}, you may choose
 
 \clearpage
 
-\includegraphics[scale=0.8]{\images/trading_post.png}
+\begin{figure}
+	\centering
+	\textbf{Trading Post}\par\medskip
+	\efbox{\includegraphics[width=0.5\linewidth]{\images/trading_post.jpg}}
+	\caption{Category: \textbf{Revisitable}\\Exchange resources or Remove a card. See \protect\hyperlink{Trading}{trading}.}
+\end{figure}
 \includegraphics[scale=0.8]{\images/black_market.png}\\
 \includegraphics[scale=0.8]{\images/sanctuary.png}
 \includegraphics[scale=0.8]{\images/tavern.png}\\
 \includegraphics[scale=0.8]{\images/library.png}\par
-\textit{All of these effects should be clear by their official descriptions. The trading post's effect is explained in the \hyperlink{Trading}{trading} section.}
 \clearpage
 \subsection*{Other fields}
 The effects of these fields are only indicated by a question mark on their tiles.\par
