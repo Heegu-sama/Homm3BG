@@ -12,10 +12,13 @@
 % Useful packages
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage{efbox}
-\efboxsetup{linecolor=yellow, backgroundcolor=darkgray, linewidth=1pt}
+
 \usepackage{caption}
 \captionsetup[figure]{labelformat=empty}
+
+\usepackage{tikz}
+\usetikzlibrary{shadows,calc}
+
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{enumitem}
 \usepackage{setspace}
@@ -40,6 +43,49 @@
 \def\assets{assets}
 \def\images{\assets/images}
 \def\svgs{\assets/svgs}
+
+% Drop shadow for images
+\def\shadowshift{3pt,-3pt}
+\def\shadowradius{6pt}
+
+\colorlet{innercolor}{black!60}
+\colorlet{outercolor}{gray!05}
+
+\newcommand\drawshadow[1]{
+	\begin{pgfonlayer}{shadow}
+		\shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.south west)+(\shadowshift)+(\shadowradius/2,\shadowradius/2)$) circle (\shadowradius);
+		\shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) circle (\shadowradius);
+		\shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) circle (\shadowradius);
+		\shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.north east)+(\shadowshift)+(-\shadowradius/2,-\shadowradius/2)$) circle (\shadowradius);
+		\shade[top color=innercolor,bottom color=outercolor] ($(#1.south west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) rectangle ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$);
+		\shade[left color=innercolor,right color=outercolor] ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$);
+		\shade[bottom color=innercolor,top color=outercolor] ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$);
+		\shade[outercolor,right color=innercolor,left color=outercolor] ($(#1.south west)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$);
+		\filldraw ($(#1.south west)+(\shadowshift)+(\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)-(\shadowradius/2,\shadowradius/2)$);
+	\end{pgfonlayer}
+}
+
+% create a shadow layer, so that we don't need to worry about overdrawing other things
+\pgfdeclarelayer{shadow} 
+\pgfsetlayers{shadow,main}
+
+\newsavebox\mybox
+\newlength\mylen
+
+\newcommand\shadowimage[2][]{%
+	\setbox0=\hbox{\includegraphics[#1]{#2}}
+	\setlength\mylen{\wd0}
+	\ifnum\mylen<\ht0
+	\setlength\mylen{\ht0}
+	\fi
+	\divide \mylen by 120
+	\def\shadowshift{\mylen,-\mylen}
+	\def\shadowradius{\the\dimexpr\mylen+\mylen+\mylen\relax}
+	\begin{tikzpicture}
+		\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[#1]{#2}};
+		\drawshadow{image}
+\end{tikzpicture}}
+% End of drop shadow definition
 
 % Background
 \AddToHook{shipout/background}{%
@@ -717,7 +763,7 @@ Additionally, \textbf{instead of increasing resource production}, you may choose
 \begin{figure}[h]
 	\centering
 	\textbf{Stables}\par\medskip
-	\efbox{\includegraphics[width=0.5\linewidth]{\images/stables.jpg}}
+	\shadowimage[width=0.5\linewidth]{\images/stables.jpg}
 	\caption{Category: \textbf{Revisitable}\\Gain 1 additional MP.}
 \end{figure}
 \begin{center}
@@ -729,18 +775,39 @@ Additionally, \textbf{instead of increasing resource production}, you may choose
 \begin{figure}
 	\centering
 	\textbf{Trading Post}\par\medskip
-	\efbox{\includegraphics[width=0.5\linewidth]{\images/trading_post.jpg}}
+	\shadowimage[width=0.5\linewidth]{\images/trading_post.jpg}
 	\caption{Category: \textbf{Revisitable}\\Exchange resources or Remove a card. See \protect\hyperlink{Trading}{trading}.}
 \end{figure}
+
 \includegraphics[scale=0.8]{\images/black_market.png}\\
-\includegraphics[scale=0.8]{\images/sanctuary.png}
+
+\begin{figure}
+	\centering
+	\textbf{Sanctuary}\par\medskip
+	\shadowimage[width=0.5\linewidth]{\images/sanctuary.jpg}
+	\caption{Category: \textbf{Revisitable}\\Heroes on this field cannot be attacked by other Heroes. If a field is occupied by a Hero, other Heroes can move through but cannot stop here.}
+\end{figure}
+
 \includegraphics[scale=0.8]{\images/tavern.png}\\
 \includegraphics[scale=0.8]{\images/library.png}\par
 \clearpage
 \subsection*{Other fields}
 The effects of these fields are only indicated by a question mark on their tiles.\par
-\includegraphics[scale=0.8]{\images/tree.png}
-\includegraphics[scale=0.8]{\images/observatory.png}\\
+
+\begin{figure}
+	\centering
+	\textbf{Tree Of Knowledge}\par\medskip
+	\shadowimage[width=0.5\linewidth]{\images/tree.jpg}
+	\caption{Category: \textbf{Visitable}\\You may pay 3 \includesvg[height=10px]{\svgs/valuablegreater.svg} or 10 \includesvg[height=10px]{\svgs/gold.svg} to gain 2 \includesvg[height=10px]{\svgs/exp.svg}.}
+\end{figure}
+\par
+\begin{figure}
+	\centering
+	\textbf{Redwood Observatory}\par\medskip
+	\shadowimage[width=0.5\linewidth]{\images/observatory.jpg}
+	\caption{Category: \textbf{Visitable}\\Discover a tile adjacent to this one.}
+\end{figure}
+
 \includegraphics[scale=0.8]{\images/hut.png}
 \includegraphics[scale=0.8]{\images/utopia.png}\\
 \includegraphics[scale=0.8]{\images/spring.png}
