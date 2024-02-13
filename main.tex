@@ -15,6 +15,7 @@
 
 \usepackage{caption}
 \captionsetup[figure]{labelformat=empty}
+\usepackage{subfigure}
 
 \usepackage{tikz}
 \usetikzlibrary{shadows,calc}
@@ -30,7 +31,7 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=cyan,
     pdftitle={Heroes of Might \& Magic III Rule Book},
     pdfpagemode=FullScreen,
@@ -66,7 +67,7 @@
 }
 
 % create a shadow layer, so that we don't need to worry about overdrawing other things
-\pgfdeclarelayer{shadow} 
+\pgfdeclarelayer{shadow}
 \pgfsetlayers{shadow,main}
 
 \newsavebox\mybox
@@ -116,7 +117,7 @@ Version 0.2
 Each game of Heroes III is played using a scenario from the mission book. There are four types of scenarios:
 \subsection*{Clash}
 
-A fully competitive mode for 2-3 players. 
+A fully competitive mode for 2-3 players.
 
 \subsection*{Campaign}
 A single player mode of interconnected scenarios against an enemy AI. For rules unique to solo mode, see \hyperlink{AIrules}{here}. Further rules changes are detailed in the campaign mission books.
@@ -125,7 +126,7 @@ A single player mode of interconnected scenarios against an enemy AI. For rules 
 A 2 vs. 2 team-based mode. You will need an expansion pack to be able to play a 4-player game.
 
 \subsection*{Co-op}
-A cooperative mode for 2-3 players where everyone shares the same goal. 
+A cooperative mode for 2-3 players where everyone shares the same goal.
 \clearpage
 
 
@@ -267,7 +268,11 @@ If a player loses morale, they must discard a positive morale token \includesvg[
 \clearpage
 
 \section[Heroes]{Heroes\hypertarget{Heroes}{}}
+<<<<<<< HEAD
 Players always control a main hero and may additionally also recruit a secondary hero. A “player’s hero” may refer to either of them. Heroes are used to perform movement actions on the game board and to start combats against enemies in order to reach a scenario victory condition.
+=======
+Players always control a main hero and may additionally also recruit a secondary hero. A “player’s hero” may refer to either of them. Heroes are used to perform movement actions on the game board and to start combats against enemies in order to reach a scenario victory condition. Whenever a hero gains a card for any reason, put it directly into your hand unless otherwise stated.
+>>>>>>> 24117e0 (Add broken formatting of two images)
 \subsection*{Main hero}
 
 The main hero is represented by its chosen model and hero card. Each faction’s main hero has 3 movement points. Only the main hero can use its own deck of cards.\par
@@ -284,7 +289,7 @@ If your secondary hero is attacked by an enemy hero, you can choose to have your
 \clearpage
 
 \begin{wrapfigure}{r}{0.5\textwidth}
-\includegraphics[width=0.9\linewidth]{\images/herocard.png} 
+\includegraphics[width=0.9\linewidth]{\images/herocard.png}
 \end{wrapfigure}
 \subsection*{\hypertarget{Herocard}{Hero card anatomy}}
 \begin{enumerate}
@@ -337,8 +342,13 @@ All players have a unique deck which represents their main hero's abilities and 
     \item Player cards have the following types of effects:
     \begin{itemize}
         \item \textbf{Instant} \includesvg[height=10px]{\svgs/instant.svg} effects are resolved immediately and can be played out of turn during combat.
+<<<<<<< HEAD
         \item \textbf{Activation} \includesvg[height=10px]{\svgs/activation.svg} effects must be played when activating your own unit in combat.
         \item \textbf{Map} \includesvg[height=10px]{\svgs/map.svg} effects cannot be used during combat.  
+=======
+        \item \textbf{Activation} \includesvg[height=10px]{\svgs/activation.svg} effects must be played when activating a unit in combat.
+        \item \textbf{Map} \includesvg[height=10px]{\svgs/map.svg} effects cannot be used during combat.
+>>>>>>> 24117e0 (Add broken formatting of two images)
         \item \textbf{Ongoing} \includesvg[height=10px]{\svgs/ongoing.svg} effects last until they are used up or until the player who played them starts their next turn (whichever happens first).
         \item \textbf{Permanent} \includesvg[height=10px]{\svgs/permanent.svg} cards stay in your play area until discarded or replaced. \textbf{Players may have only one permanent card at a time}; playing another discards the first.
     \end{itemize}
@@ -348,7 +358,7 @@ All players have a unique deck which represents their main hero's abilities and 
 \clearpage
 \subsection*{\hypertarget{Ability}{Ability and statistic cards}}
 \begin{wrapfigure}{R}{0.5\textwidth}
- 
+
     \includegraphics[width=0.48\textwidth]{\images/ability.png}
 
 \end{wrapfigure}
@@ -412,7 +422,7 @@ When you \hyperlink{Categories}{flag} a town, take \hyperlink{End}{a faction cub
 \clearpage
 
 \begin{wrapfigure}{r}{0.5\textwidth}
-\includegraphics[width=0.9\linewidth]{\images/maptiles.png} 
+\includegraphics[width=0.9\linewidth]{\images/maptiles.png}
 \end{wrapfigure}
 \section{Map locations}
 Each scenario is built using four types of map tiles. Players always have a faction-specific starting (I) map tile and may additionally have a number of face-down far (II-III) map tiles which can be used to add new areas to the scenario by spending MP. Near (IV-V) and center (VI-VII) tiles are usually placed face down randomly during a scenario’s set up and must be turned face up by spending MP.\par
@@ -424,8 +434,13 @@ During a scenario’s set up, you will be instructed to use a certain amount of 
     \end{center}
 \end{wrapfigure}
 \subsection*{Map tile anatomy}
+<<<<<<< HEAD
 Each map tile is divided into 7 separate \textbf{fields} that your heroes can \textbf{visit}. When a hero moves to a field, they must immediately visit it, or 
 first start a \hyperlink{Combat}{combat} against the enemies guarding it before visiting. Empty fields do nothing when visited. Solid yellow lines on a field's edge cannot be passed through. \hyperlink{Difficulty}{Roman numerals} indicate that a field is guarded by neutral enemies that must be fought.\par
+=======
+Each map tile is divided into 7 separate \textbf{fields} that your heroes can \textbf{visit}. When a hero moves to a field, they must immediately visit it, or
+first start a \hyperlink{Combat}{combat} against neutral enemies or another player depending on the tile they have just entered. If the hero wins the combat, they must then visit that field afterwards. Visiting fields provides heroes with benefits such as gaining resources or cards. Empty fields do nothing when visited. Solid yellow lines on a field's edge cannot be passed through. \hyperlink{Difficulty}{Roman numerals} indicate that a field is guarded by neutral enemies that must be fought.\par
+>>>>>>> 24117e0 (Add broken formatting of two images)
 
 \clearpage
 \subsection*{\hypertarget{Categories}{Location categories}}
@@ -762,6 +777,7 @@ Additionally, \textbf{instead of increasing resource production}, you may choose
 \subsection*{Re-visitable fields}
 \begin{figure}[h]
 	\centering
+	\captionsetup{width=.5\linewidth}
 	\textbf{Stables}\par\medskip
 	\shadowimage[width=0.5\linewidth]{\images/stables.jpg}
 	\caption{Category: \textbf{Revisitable}\\Gain 1 additional MP.}
@@ -773,27 +789,31 @@ Additionally, \textbf{instead of increasing resource production}, you may choose
 \clearpage
 
 \begin{figure}
-	\centering
-	\textbf{Trading Post}\par\medskip
-	\shadowimage[width=0.5\linewidth]{\images/trading_post.jpg}
-	\caption{Category: \textbf{Revisitable}\\
-		Exchange resources or Remove a card.
-		See \protect\hyperlink{Trading}{trading}.}
+	\begin{subfigure}
+		\centering
+		\captionsetup{width=.48\textwidth}
+		\textbf{Trading Post}\par
+		\shadowimage[width=0.48\textwidth]{\images/trading_post.jpg}
+		\caption{Category: \textbf{Revisitable}\\
+			Exchange resources or Remove a card.
+			See \protect\hyperlink{Trading}{trading}.}
+	\end{subfigure}
+	\begin{subfigure}
+		\centering
+		\captionsetup{width=.48\textwidth}
+		\textbf{Black Market}\par
+		\shadowimage[width=0.48\textwidth]{\images/black_market.jpg}
+		\caption{Category: \textbf{Revisitable}\\Look at the top 4 cards from the Artifact discard pile. You can buy one of them for:\\
+			5 \includesvg[height=10px]{\svgs/gold.svg} if it is a \textbf{Minor} Artifact \\
+			7 \includesvg[height=10px]{\svgs/gold.svg}  if it is a \textbf{Major} Artifact \\
+			10 \includesvg[height=10px]{\svgs/gold.svg}  if it is a \textbf{Relic} Artifact
+			}
+	\end{subfigure}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\textbf{Black Market}\par
-	\shadowimage[width=0.5\linewidth]{\images/black_market.jpg}
-	\caption{Category: \textbf{Revisitable}\\Look at the top 4 cards from the Artifact discard pile. You can buy one of them for:\\
-		5 \includesvg[height=10px]{\svgs/gold.svg} if it is a \textbf{Minor} Artifact \\
-		7 \includesvg[height=10px]{\svgs/gold.svg}  if it is a \textbf{Major} Artifact \\
-		10 \includesvg[height=10px]{\svgs/gold.svg}  if it is a \textbf{Relic} Artifact 
-		}
-\end{figure}
-
-\begin{figure}
-	\centering
+	\captionsetup{width=.5\linewidth}
 	\textbf{Sanctuary}\par\medskip
 	\shadowimage[width=0.5\linewidth]{\images/sanctuary.jpg}
 	\caption{Category: \textbf{Revisitable}\\
@@ -803,6 +823,7 @@ Additionally, \textbf{instead of increasing resource production}, you may choose
 
 \begin{figure}
 	\centering
+	\captionsetup{width=.5\linewidth}
 	\textbf{War Machine Factory}\par\medskip
 	\shadowimage[width=0.5\linewidth]{\images/war_machine_factory.jpg}
 	\caption{Category: \textbf{Revisitable}\\This location allows a Hero to buy a War Machine.}
@@ -810,18 +831,20 @@ Additionally, \textbf{instead of increasing resource production}, you may choose
 
 \begin{figure}
 	\centering
+	\captionsetup{width=.5\linewidth}
 	\textbf{Tavern}\par
 	\shadowimage[width=0.5\linewidth]{\images/tavern.jpg}
 	\caption{Category: \textbf{Revisitable}\\You can \includesvg[height=10px]{\svgs/pay_v2.svg}
-	7 \includesvg[height=10px]{\svgs/gold.svg} 
+	7 \includesvg[height=10px]{\svgs/gold.svg}
 	on this field to gain a Secondary Hero and choose one enemy player to discard 1 random card from their hand.}
 \end{figure}
 
 \begin{figure}
 	\centering
+	\captionsetup{width=.5\linewidth}
 	\textbf{Library}\par
 	\shadowimage[width=0.5\linewidth]{\images/library.jpg}
-	\caption{Category: \textbf{Revisitable}\\You can 
+	\caption{Category: \textbf{Revisitable}\\You can
 		\includesvg[height=10px]{\svgs/pay_v2.svg}
 		3 \includesvg[height=10px]{\svgs/gold.svg}
 		to Remove 1 Statistic card from 	your hand or discard pile and replace it with any other Statistic card.
@@ -834,17 +857,19 @@ The effects of these fields are only indicated by a question mark on their tiles
 
 \begin{figure}
 	\centering
+	\captionsetup{width=.5\linewidth}
 	\textbf{Tree Of Knowledge}\par
 	\shadowimage[width=0.5\linewidth]{\images/tree.jpg}
-	\caption{Category: \textbf{Visitable}\\You may 
+	\caption{Category: \textbf{Visitable}\\You may
 		\includesvg[height=10px]{\svgs/pay_v2.svg}
-		 3 \includesvg[height=10px]{\svgs/valuablegreater.svg} or 
-		 10 \includesvg[height=10px]{\svgs/gold.svg} to gain 
+		 3 \includesvg[height=10px]{\svgs/valuablegreater.svg} or
+		 10 \includesvg[height=10px]{\svgs/gold.svg} to gain
 		 2 \includesvg[height=10px]{\svgs/exp.svg}.}
 \end{figure}
 
 \begin{figure}
 	\centering
+	\captionsetup{width=.5\linewidth}
 	\textbf{Redwood Observatory}\par\medskip
 	\shadowimage[width=0.5\linewidth]{\images/observatory.jpg}
 	\caption{Category: \textbf{Visitable}\\Discover a tile adjacent to this one.}
@@ -852,6 +877,7 @@ The effects of these fields are only indicated by a question mark on their tiles
 
 \begin{figure}
 	\centering
+	\captionsetup{width=.5\linewidth}
 	\textbf{Witch Hut}\par\medskip
 	\shadowimage[width=0.5\linewidth]{\images/witch_hut.jpg}
 	\caption{Category: \textbf{Visitable}\\You may either Remove an Ability card from your hand or look at the top card of the Ability deck and put that card into your hand or into the Ability deck discard pile.}
@@ -859,6 +885,7 @@ The effects of these fields are only indicated by a question mark on their tiles
 
 \begin{figure}
 	\centering
+	\captionsetup{width=.5\linewidth}
 	\textbf{Dragon Utopia}\par\medskip
 	\shadowimage[width=0.5\linewidth]{\images/dragon_utopia.jpg}
 	\caption{Category: \textbf{Flaggable}\\Effects depend on scenario.}
@@ -866,6 +893,7 @@ The effects of these fields are only indicated by a question mark on their tiles
 
 \begin{figure}
 	\centering
+	\captionsetup{width=.5\linewidth}
 	\textbf{Magic Spring}\par\medskip
 	\shadowimage[width=0.5\linewidth]{\images/magic_spring.jpg}
 	\caption{Category: \textbf{Visitable}\\You may look at the top 3 cards of your discard pile and take 1 of them back to your hand. Return the remaining cards on top of your discard pile in any order.}
@@ -875,6 +903,7 @@ The effects of these fields are only indicated by a question mark on their tiles
 
 \begin{figure}
 	\centering
+	\captionsetup{width=.5\linewidth}
 	\textbf{Obelisk}\par\medskip
 	\shadowimage[width=0.5\linewidth]{\images/obelisk.jpg}
 	\caption{Category: \textbf{Flaggable}\\An Obelisk's effects can vary depending on the scenario. When you visit it, the enemy faction cubes are not removed, meaning that there may be multiple cubes on the field. Once visited by a faction, the Obelisk counts as an empty field for that faction, just like a visitable field would.}
@@ -882,6 +911,7 @@ The effects of these fields are only indicated by a question mark on their tiles
 
 \begin{figure}
 	\centering
+	\captionsetup{width=.5\linewidth}
 	\textbf{University}\par\medskip
 	\shadowimage[width=0.5\linewidth]{\images/university.jpg}
 	\caption{Category: \textbf{Visitable}\\ \includesvg[height=10px]{\svgs/pay_v2.svg} 6 \includesvg[height=10px]{\svgs/gold.svg} to \textbf{Search (4)} the Ability discard pile.}
@@ -889,6 +919,7 @@ The effects of these fields are only indicated by a question mark on their tiles
 
 \begin{figure}
 	\centering
+	\captionsetup{width=.5\linewidth}
 	\textbf{Market Of Time}\par\medskip
 	\shadowimage[width=0.5\linewidth]{\images/market_of_time.jpg}
 	\caption{Category: \textbf{Visitable}\\ Remove one card from your hand. Then \textbf{Search (2)} Ability, Spell, or Artifact deck.}
@@ -896,6 +927,7 @@ The effects of these fields are only indicated by a question mark on their tiles
 
 \begin{figure}
 	\centering
+	\captionsetup{width=.5\linewidth}
 	\textbf{Prison}\par\medskip
 	\shadowimage[width=0.5\linewidth]{\images/prison.jpg}
 	\caption{Category: \textbf{Visitable}\\You gain a Secondary Hero. Place their model on this field. If you already have a Secondary Hero, gain 3 \includesvg[height=10px]{\svgs/gold.svg}.}
@@ -903,13 +935,29 @@ The effects of these fields are only indicated by a question mark on their tiles
 
 \begin{figure}
 	\centering
+	\captionsetup{width=.5\linewidth}
 	\textbf{Hill Fort}\par\medskip
 	\shadowimage[width=0.5\linewidth]{\images/hill_fort.jpg}
 	\caption{Category: \textbf{Visitable}\\You can immediately Reinforce one of your \includesvg[height=10px]{\svgs/bronze.svg} or \includesvg[height=10px]{\svgs/silver.svg} units. The Reinforcement cost is reduced by 3 \includesvg[height=10px]{\svgs/gold.svg} to a minimum of 0.}
 \end{figure}
 
 \includegraphics[scale=0.8]{\images/axis.png}\\
-\includegraphics[scale=0.8]{\images/scholar.png}\\
+
+\begin{figure}
+	\captionsetup{singlelinecheck=off, width=.5\linewidth}
+	\centering
+	\textbf{Scholar}\par\medskip
+	\shadowimage[width=0.5\linewidth]{\images/scholar.jpg}
+	\caption[scholar they]{Category: \textbf{Visitable}\\
+		Roll 1 Attack die. Depending on the result, do the following:
+		\begin{itemize}
+		\item[ \textbf{+1}] - Draw 1 chosen Statistic card or Remove one of the Statistic cards from hand.
+	  \item[\textbf{ 0}] - Draw 2 Ability cards, take one of them and discard the other.
+		 \item[\textbf{ -1}] - Draw 2 Spell cards, take one of them and discard the other.
+		 \end{itemize}
+		 }
+\end{figure}
+
 \textit{The scholar's "drawing" of statistic cards refers to the piles of unused basic statistics cards. Removing a statistic card should work with empowered statistics too. His other abilities are basically searching without the option of taking a discarded card.}
 \clearpage
 \end{document}
