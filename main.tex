@@ -1,3 +1,4 @@
+% !TeX spellcheck = en_US
 \documentclass[12pt]{article}
 
 % Language setting
@@ -19,12 +20,13 @@
 \usepackage{hyperref}
 \usepackage{tikz}
 \usepackage{outlines}
+\usepackage[usetransparent=false]{svg}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
     filecolor=magenta,      
     urlcolor=cyan,
-    pdftitle={Heroes of Might & Magic III Rule Book},
+    pdftitle={Heroes of Might \& Magic III Rule Book},
     pdfpagemode=FullScreen,
     }
 % Set the default spacing between paragraphs. Remove indentation.
@@ -193,13 +195,14 @@ After performing a town action, flip the respective token on its inactive side o
 \end{itemize}
 
 \subsection*{Morale actions}
-Players can gain or lose morale through various game effects. When a player gains morale, place a positive morale token \includegraphics[scale=0.75]{images/positive.PNG} near your play area. A player may only have one such token. If they would gain a second token, they may immediately spend the first one before gaining the second. A positive morale token may be spent to perform any of the following actions at any time:
+Players can gain or lose morale through various game effects. When a player gains morale, place a positive morale token \includesvg[height=10px]{svgs/positive.svg} near your play area. A player may only have one such token. If they would gain a second token, they may immediately spend the first one before gaining the second. A positive morale token may be spent to perform any of the following actions at any time:
 \begin{itemize}
 \item Draw a card from your hero's deck.
 \item Discard any number of cards, then draw that many cards.
 \item Reroll any die you have thrown.
 \end{itemize}
-If a player loses morale, they must discard a positive morale token \includegraphics[scale=0.75]{images/positive.PNG} without effect if they have one, otherwise they gain a negative morale token \includegraphics[scale=0.75]{images/negative.PNG}. Gaining morale while you have a negative morale token discards the negative morale token without effect. If a player would gain a second negative morale token, they must instead discard their entire hand of cards the next time they end their turn.\par
+
+If a player loses morale, they must discard a positive morale token \includesvg[height=10px]{svgs/positive.svg} without effect if they have one, otherwise they gain a negative morale token \includesvg[height=10px]{svgs/negative.svg}. Gaining morale while you have a negative morale token discards the negative morale token without effect. If a player would gain a second negative morale token, they must instead discard their entire hand of cards the next time they end their turn.\par
 \textbf{NOTE:} The Necropolis faction ignores any morale effects. They cannot ever gain or lose morale for any reason.\\[12pt]
 Once all players have spent all their movement points on their turns and do not wish to use any further town or morale actions or instant effects, the current round is over.\par
 
@@ -208,8 +211,10 @@ Once all players have spent all their movement points on their turns and do not 
 \section[Heroes]{Heroes\hypertarget{Heroes}{}}
 Players always control a main hero and may additionally also recruit a secondary hero. A “player’s hero” may refer to either of them. Heroes are used to perform movement actions on the game board and to start combats against enemies in order to reach a scenario victory condition. Whenever a hero gains a card for any reason, put it directly into your hand unless otherwise stated. 
 \subsection*{Main hero}
+
 The main hero is represented by its chosen model and hero card. Each faction’s main hero has 3 movement points. Only the main hero can use its own deck of cards.\par
-Each main hero starts the game at level 1 and can advance up to level 7 by gaining experience. Experience is gained from winning combat, visiting certain locations and the treasure die. Gaining 1 experience is represented by the symbol \includegraphics[scale=0.75]{images/exp.PNG}. \hyperlink{Level}{Leveling up} provides the hero various benefits. \hyperlink{Units}{Units} owned by the player may always participate in combat started in the same field as their main hero.
+Each main hero starts the game at level 1 and can advance up to level 7 by gaining experience. Experience is gained from winning combat, visiting certain locations and the treasure die. Gaining 1 experience is represented by the symbol \includesvg[height=10px]{svgs/exp.svg}. \hyperlink{Level}{Leveling up} provides the hero various benefits. \hyperlink{Units}{Units} owned by the player may always participate in combat started in the same field as their main hero.
+
 \subsection*{\hypertarget{Secondary}{Secondary heroes}}
 If you control a town or a settlement, a secondary hero can be hired by flipping your population token and paying 10 gold. \textbf{Note}: Units cannot be \hyperlink{Units}{recruited or reinforced} during that use of the population token.\par
 Your secondary hero uses the remaining hero model of your faction. You may wish to mark this model with a token such as a faction cube to differentiate it from the main hero. After hiring a secondary hero, place the model in a town or settlement you control. You can only have one secondary hero at a time.\par
@@ -227,7 +232,7 @@ If your secondary hero is attacked by an enemy hero, you can choose to have your
 \begin{enumerate}
 \item Name – The hero’s name. Used for identification. Has no gameplay effect.
 \item Class – The hero’s class. Has no gameplay effect.
-\item Type – The hero’s type (might \includegraphics[scale=0.3]{images/might.PNG} or magic \includegraphics[scale=0.3]{images/magic.PNG}). Determines the amount of magic arrow spells in your starting deck (1 or 2 respectively).
+\item Type – The hero’s type (might \includesvg[height=10px]{svgs/might.svg} or magic \includesvg[height=10px]{svgs/magic.svg}). Determines the amount of magic arrow spells in your starting deck (1 or 2 respectively).
 \item Faction color – Reminder for the color of the faction’s cubes and miniatures.
 \item Attack – Number of attack cards in your starting deck.
 \item Defense – Number of defense cards in your starting deck.
@@ -235,7 +240,7 @@ If your secondary hero is attacked by an enemy hero, you can choose to have your
 \item Knowledge – Number of knowledge cards in your starting deck.
 \item Starting Ability – Reminder for the unique ability card the hero starts with.
 \item Hero Specialty – Reminder for the specialty cards the hero adds to their deck at the start of the game and after specific level ups. Each hero has three specialty cards.
-\item Level tracker - Whenever a main hero gains 1 or more experience \includegraphics[scale=0.75]{images/exp.PNG} move the cube that number of steps on this track. When the cube reaches the next slot on the upper row, the hero gains a level.
+\item Level tracker - Whenever a main hero gains 1 or more experience \includesvg[height=10px]{svgs/exp.svg} move the cube that number of steps on this track. When the cube reaches the next slot on the upper row, the hero gains a level.
 \end{enumerate}
 \clearpage
 
@@ -244,8 +249,8 @@ The most common sources of gaining experience are the treasure die and \hyperlin
 The level tracker on your hero card shows the following information:
 \begin{itemize}
 \item Your main hero’s current level and amount of experience gained, shown by the cube's position.
-\item Your current hand limit \includegraphics[scale=0.5]{images/hand.PNG}.
-\item The number of \hyperlink{Ability}{expert effects} \includegraphics[scale=0.5]{images/expert.PNG} you may use during a round. Track the number of uses each player has in any suitable manner, such as by moving black cubes on and off your hero card.
+\item Your current hand limit \includesvg[height=10px]{svgs/hand.svg}.
+\item The number of \hyperlink{Ability}{expert effects} \includesvg[height=10px]{svgs/expert.svg} you may use during a round. Track the number of uses each player has in any suitable manner, such as by moving black cubes on and off your hero card.
 \item At which levels your main hero must search for a new \hyperlink{Ability}{ability card} or gain a \hyperlink{Specialty}{specialty card}. Level numbers written in gold on the level tracker (1, 4 and 6) give you a specialty card, while silver levels (2, 3, 5, 7) give you an ability card.
 \end{itemize}
 List of all effects:
@@ -272,10 +277,10 @@ All players have a unique deck which represents their main hero's abilities and 
     \item Whenever you are instructed to remove a card, remove it completely from the game and return it to the box.
     \item Player cards have the following types of effects:
     \begin{itemize}
-        \item \textbf{Instant} \includegraphics[scale=0.75]{images/instant.PNG} effects are resolved immediately and can be played out of turn during combat.
-        \item \textbf{Activation} \includegraphics[scale=0.75]{images/activation.PNG} effects must be played when activating a unit in combat.
-        \item \textbf{Map} \includegraphics[scale=0.75]{images/map.PNG} effects cannot be used during combat.  
-        \item \textbf{Ongoing} \includegraphics[scale=0.75]{images/ongoing.PNG} effects last until they are used up or until the player who played them starts their next turn (whichever happens first).
+        \item \textbf{Instant} \includesvg[height=10px]{svgs/instant.svg} effects are resolved immediately and can be played out of turn during combat.
+        \item \textbf{Activation} \includesvg[height=10px]{svgs/activation.svg} effects must be played when activating a unit in combat.
+        \item \textbf{Map} \includesvg[height=10px]{svgs/map.svg} effects cannot be used during combat.  
+        \item \textbf{Ongoing} \includesvg[height=10px]{svgs/ongoing.svg} effects last until they are used up or until the player who played them starts their next turn (whichever happens first).
         \item \textbf{Permanent} \includegraphics[scale=0.5]{images/permanent.PNG} cards stay in your play area until discarded or replaced. Players may have only one permanent card at a time; playing another discards the first.
     \end{itemize}
 
@@ -288,8 +293,10 @@ All players have a unique deck which represents their main hero's abilities and 
     \includegraphics[width=0.48\textwidth]{images/ability.PNG}
 
 \end{wrapfigure}
-Every ability and statistic card has a basic effect and a stronger expert effect, which is shown below the basic effect. Whenever a player plays an ability or statistic card, they must choose which effect they are using. The number of expert \includegraphics[scale=0.5]{images/expert.PNG} effects a player can use each round is limited by their main hero’s \hyperlink{Level}{level}.\par
-\textbf{Important}: Certain cards are limited to the Necropolis faction \includegraphics[scale=1]{images/necro.PNG}. When a non-Necropolis player draws one, they may either discard it and draw a new card as a replacement or gain it as normal. Non-Necropolis players cannot use faction specific cards from their hand in any way besides discarding them.
+
+Every ability and statistic card has a basic effect and a stronger expert effect, which is shown below the basic effect. Whenever a player plays an ability or statistic card, they must choose which effect they are using. The number of expert \includesvg[height=10px]{svgs/expert.svg} effects a player can use each round is limited by their main hero’s \hyperlink{Level}{level}.\par
+\textbf{Important}: Certain cards are limited to the Necropolis faction \includesvg[height=10px]{svgs/necro.svg}. When a non-Necropolis player draws one, they may either discard it and draw a new card as a replacement or gain it as normal. Non-Necropolis players cannot use faction specific cards from their hand in any way besides discarding them.
+
 \subsection*{Artifact cards}
 Artifact cards are divided into 3 levels: minor, major, and relic. These levels relate to the overall power of the card and may be referenced when resolving certain effects or during scenario set up. Artifacts are gained through map exploration.\par
 If you gain an artifact as part of applying the difficulty bonus during a scenario’s set up, keep it in your hand instead of shuffling it into your deck.
@@ -304,8 +311,9 @@ Artifacts can be \hyperlink{Trading}{traded} in alliance and cooperative scenari
     \includegraphics[width=0.48\textwidth]{images/spell_example.PNG}
     \end{center}
 \end{wrapfigure}
+
 Spell cards have three possible primary effects. Using the topmost basic version of the spell has no additional costs. Accessing the second and third effects requires the spell to be \textbf{empowered} before it is played. The amount a spell needs to be empowered for each effect is indicated within a circle in the middle of its card text.\par
-You may empower a spell by playing any card for its empower \includegraphics[scale=0.75]{images/empower.PNG} effect. The bottom, alternative effect of all spell cards is to empower another spell.\par
+You may empower a spell by playing any card for its empower \includesvg[height=10px]{svgs/empower.svg} effect. The bottom, alternative effect of all spell cards is to empower another spell.\par
 \textbf{Important}: During combat, \textbf{only one spell} card may be played by each player \textbf{per combat round}.\par
 Spells can be gained by building the mage guild. When you do, search (2) the spell deck, twice. If you start a scenario with the mage guild, perform the searching in turn order and shuffle the cards into your deck at the end of the set up. More spells can be bought by flipping your spell book token and paying the indicated cost on the guild to search (2) the spell deck. This cannot be done during the same round as when the guild is constructed. Spells can be \hyperlink{Trading}{traded} in alliance and cooperative scenarios.
 
@@ -324,7 +332,8 @@ Hero specialty cards are gained from level ups. Each hero has an unique set of t
 \clearpage
 \section{Resources}
 There are three types of resources in the game: gold, building materials, and valuables.
-Resources are spent during the game to expand your town, to recruit units, and to purchase spells. You can gain resources from settlements and mines that you have \hyperlink{Categories}{flagged}, but also by using artifacts and rolling resource dice \includegraphics[scale=0.75]{images/resource_die.PNG}. Whenever a player's resource production is increased or decreased, move that resource's cube on its production track the appropriate number of spaces.\par
+
+Resources are spent during the game to expand your town, to recruit units, and to purchase spells. You can gain resources from settlements and mines that you have \hyperlink{Categories}{flagged}, but also by using artifacts and rolling resource dice \includesvg[height=10px]{svgs/resource_die.svg}. Whenever a player's resource production is increased or decreased, move that resource's cube on its production track the appropriate number of spaces.\par
 \includegraphics[scale=1]{images/resources.PNG}\\
 Players start each scenario with the number of resources indicated in that scenario’s set up.
 Resources are also gained at the start of each resource round. When they are gained or spent, exchange the appropriate number and type of resource tokens between your faction's and the game's supply. Resources can also be \hyperlink{Trading}{traded}. There's no limit to the amount of resources you can have.
@@ -383,10 +392,12 @@ Placing a new tile costs 1MP. The new tile must be adjacent to the hero who spen
 \clearpage
 \section[Units]{Units\hypertarget{Units}{}}
 
+
 In addition to their hero and its deck, players have a deck of unit cards which represent the armies moving with their heroes. Every faction has access to 7 different units, each with unique stats and abilities. Units are necessary for winning combats and fulfilling scenario goals. Each scenario's set up instructions indicate which unit cards should be included in your initial unit deck. Your current unit deck should be kept near the town and hero boards, clearly separated from the rest of your faction’s units.\par
 Each faction unit is double-sided, with a weaker “Few” side, and a stronger “Pack” side. “Few” units may be upgraded to “Packs” by \textbf{reinforcing} them, while taking damage in combat can subsequently reduce a unit back to its “Few” side. Units should always be kept on their correct side when moved around or inspected.\par
-A player’s unit deck may have any number of units, but only up to 5 units can be selected to fight during \hyperlink{Combatsetup}{combat set up}. If a unit is defeated in combat, remove it from your unit deck. After combat, return any surviving units to your unit deck. Defeated faction units can be recruited again after being defeated. Units may be recruited and reinforced by flipping the population token and paying the unit's recruitment \includegraphics[scale=0.25]{images/pay.PNG} or reinforcement \includegraphics[scale=0.25]{images/reinforce.PNG} cost. When you do so, you can instantly recruit and reinforce \textbf{any number} of times, provided you have enough resources and the prerequisite buildings to do so.\par
+A player’s unit deck may have any number of units, but only up to 5 units can be selected to fight during \hyperlink{Combatsetup}{combat set up}. If a unit is defeated in combat, remove it from your unit deck. After combat, return any surviving units to your unit deck. Defeated faction units can be recruited again after being defeated. Units may be recruited and reinforced by flipping the population token and paying the unit's recruitment \includesvg[height=10px]{svgs/pay.svg} or reinforcement \includesvg[height=10px]{svgs/reinforce.svg} cost. When you do so, you can instantly recruit and reinforce \textbf{any number} of times, provided you have enough resources and the prerequisite buildings to do so.\par
 \textbf{Recruiting} a unit requires that your town has a dwelling of that unit’s level or higher. \textbf{Reinforcing} requires that your town has a citadel in addition to a dwelling of that unit’s level or higher. If you ever lose all units in your unit deck, \textbf{immediately} replace your unit deck with the starting units of the scenario.\par
+
 \textbf{Important}: Any effects which allow you to reinforce outside of using the population token \textbf{do not} require owning a citadel or the appropriate level of dwelling.
 \begin{figure}[h]
 \centering
@@ -403,22 +414,23 @@ A player’s unit deck may have any number of units, but only up to 5 units can 
     \end{center}
 \end{wrapfigure}
 \subsection*{Unit card anatomy}
-\includegraphics[scale=1]{images/attack.PNG}\textbf{Attack} – The amount of damage this unit deals when it attacks. Attacks are always reduced by the defending unit’s defense. Attacks may be modified by various effects such as the attack die and statistic cards.\par
-\includegraphics[scale=1]{images/defense.PNG}\textbf{Defense} - The amount by which the unit reduces the attack damage it receives. Does not apply to damage received from spells or other non-attack effects. Defense may be modified by various effects such as statistic cards.\par
-\includegraphics[scale=1]{images/HP.PNG}\textbf{\hypertarget{HP}{HP}} - The maximum amount of damage a unit can sustain before it is defeated. ”Few” units are removed from combat and its owner’s unit deck when defeated. ”Pack” units are turned back to ”Few” units, with any excess damage placed on its ”Few” side. After combat, all damage is removed from all units. Units retain their ”Few” or ”Pack” status after combat. Defeated neutral units are placed into their respective discard pile.\par
-\includegraphics[scale=1]{images/initiative.PNG}{\hypertarget{Initiative}{\textbf{Initiative}}} - Determines when the unit activates during combat. Units with a higher initiative activate first. In case of a tie, the \hyperlink{Combatterminology}{attacking} side’s unit should always activate first. If there are multiple ties on one side, the player who controls those units selects which unit to activate next. If there are multiple ties on both sides (for instance two attackers and two defenders with the same initiative), alternate between the attackers and defenders starting with the attacker.\par
+
+\includesvg[height=30px]{svgs/attack.svg}\textbf{Attack} – The amount of damage this unit deals when it attacks. Attacks are always reduced by the defending unit’s defense. Attacks may be modified by various effects such as the attack die and statistic cards.\par
+\includesvg[height=30px]{svgs/defense.svg}\textbf{Defense} - The amount by which the unit reduces the attack damage it receives. Does not apply to damage received from spells or other non-attack effects. Defense may be modified by various effects such as statistic cards.\par
+\includesvg[height=30px]{svgs/HP.svg}\textbf{\hypertarget{HP}{HP}} - The maximum amount of damage a unit can sustain before it is defeated. ”Few” units are removed from combat and its owner’s unit deck when defeated. ”Pack” units are turned back to ”Few” units, with any excess damage placed on its ”Few” side. After combat, all damage is removed from all units. Units retain their ”Few” or ”Pack” status after combat. Defeated neutral units are placed into their respective discard pile.\par
+\includesvg[height=30px]{svgs/initiative.svg}{\hypertarget{Initiative}{\textbf{Initiative}}} - Determines when the unit activates during combat. Units with a higher initiative activate first. In case of a tie, the \hyperlink{Combatterminology}{attacking} side’s unit should always activate first. If there are multiple ties on one side, the player who controls those units selects which unit to activate next. If there are multiple ties on both sides (for instance two attackers and two defenders with the same initiative), alternate between the attackers and defenders starting with the attacker.\par
 Most units have a \textbf{special ability}:\par
   \begin{minipage}{.6\textwidth}
     \begin{itemize}[wide]
-      \item\textbf{Activation} \includegraphics[scale=0.25]{images/unit_activation.PNG} resolves when the unit is activated.
-      \item\textbf{Attack} \includegraphics[scale=0.25]{images/unit_attack.PNG} resolves when the unit attacks during its activation. In case of multiple attacks, resolve the effect for the first attack only.
-      \item\textbf{Other} \includegraphics[scale=0.25]{images/unit_other.PNG} may be resolved instead of the unit's normal activation. Replaces all movement and/or attacking.
+      \item\textbf{Activation} \includesvg[height=10px]{svgs/activation.svg} resolves when the unit is activated.
+      \item\textbf{Attack} \includesvg[height=10px]{svgs/unit_attack.svg} resolves when the unit attacks during its activation. In case of multiple attacks, resolve the effect for the first attack only.
+      \item\textbf{Other} \includesvg[height=10px]{svgs/unit_other.svg} may be resolved instead of the unit's normal activation. Replaces all movement and/or attacking.
     \end{itemize}
   \end{minipage}
   \begin{minipage}{0.5\textwidth}
     \begin{itemize}[wide]
-      \item\textbf{Passive} \includegraphics[scale=0.25]{images/unit_passive.PNG} resolves whenever its condition is met.
-      \item\textbf{Retaliate} \includegraphics[scale=0.25]{images/unit_retaliate.PNG} resolves when the unit retaliates.
+      \item\textbf{Passive} \includesvg[height=10px]{svgs/unit_passive.svg} resolves whenever its condition is met.
+      \item\textbf{Retaliate} \includesvg[height=10px]{svgs/unit_retaliate.svg} resolves when the unit retaliates.
       \item In any cases without one of the above icons, the unit’s ability is used according to its text. Units may also have \hyperlink{Playerdecks}{these} symbols.
     \end{itemize}
   \end{minipage}
@@ -427,9 +439,9 @@ Most units have a \textbf{special ability}:\par
 \subsection*{\hypertarget{Unittype}{Unit types}}
 There are thee types of units:
 \begin{itemize}
-    \item \textbf{Ground} \includegraphics[scale=0.25]{images/unit_ground.PNG} units move up to 3 spaces and attack adjacent enemies.
-    \item \textbf{Flying} \includegraphics[scale=0.25]{images/unit_flying.PNG} units move up to 3 spaces, ignoring obstacles, and attack adjacent enemies.
-    \item \textbf{Ranged} \includegraphics[scale=0.25]{images/unit_ranged.PNG} units may attack any unit anywhere OR move up to 1 space.
+    \item \textbf{Ground} \includesvg[height=10px]{svgs/unit_ground.svg} units move up to 3 spaces and attack adjacent enemies.
+    \item \textbf{Flying} \includesvg[height=10px]{svgs/unit_flying.svg} units move up to 3 spaces, ignoring obstacles, and attack adjacent enemies.
+    \item \textbf{Ranged} \includesvg[height=10px]{svgs/unit_ranged.svg} units may attack any unit anywhere OR move up to 1 space.
 \end{itemize}
 If a \textbf{ranged} unit is next to an enemy unit, its attack target must be that adjacent enemy. When attacking an adjacent enemy in this way \textbf{or} an enemy in the backline while the ranged unit is also in its own backline, the ranged unit suffers a combat penalty. Throw two combat dice and \textbf{apply the smaller result}. Walls and gates may also \hyperlink{Walls}{reduce} a ranged unit's attack.
 \subsection*{Neutral units}
@@ -491,22 +503,24 @@ Obstacles block the movement of all non-flying units.\par
 add the result to the unit’s attack value.\par
 \textbf{\hypertarget{Retaliate}{Retaliation attack}} – If a unit survives an attack by an adjacent unit, it performs an attack on that unit. Each unit can perform only 1 retaliation attack per combat round. Retaliation attacks function
 identically to normal attacks, but they cannot cause another retaliation attack. Mark units which
+
 have performed a retaliation attack this round with a black cube.\par
-\textbf{Paralysis} \includegraphics[scale=0.75]{images/paralysis.PNG} – Effects which paralyze a unit place the paralysis token on them. A paralyzed unit
+\textbf{Paralysis} \includesvg[height=10px]{svgs/paralysis.svg} – Effects which paralyze a unit place the paralysis token on them. A paralyzed unit
 skips its next activation and removes the token instead. If it is attacked or takes any damage before
 that time, remove the paralysis token from that unit.\par
-\textbf{\hypertarget{Defend}{Defend}} \includegraphics[scale=0.75]{images/defense_action.PNG} – When a unit with a defense token is attacked, make another roll with the attack die
+\textbf{\hypertarget{Defend}{Defend}} \includesvg[height=10px]{svgs/defense.svg} – When a unit with a defense token is attacked, make another roll with the attack die
 after the initial attack roll. If you roll a “+1”, the defending unit gains an extra 1 defense for this
 attack. If a unit has a defense token at the start of its activation, discard it. That unit cannot take another defense action during that activation.
 
 \subsection*{\hypertarget{CombatCards}{Using cards during combat}}
-You may only use \textbf{one spell per combat round}. Other card types can be used as many times as you want to. Ongoing \includegraphics[scale=0.75]{images/ongoing.PNG} and \includegraphics[scale=0.3]{images/unit_activation.PNG} activate effects can be used only when activating a unit and before it attacks. Ongoing effects last until end of combat or if the effect on the card is used up. Instant \includegraphics[scale=0.75]{images/instant.PNG} cards may be played at any time except between rolling the combat die and resolving damage unless otherwise stated. Instant cards which increase a unit's statistics \textbf{last only for the duration of the current unit's activation}.
+You may only use \textbf{one spell per combat round}. Other card types can be used as many times as you want to. Ongoing \includesvg[height=10px]{svgs/ongoing.svg} and \includesvg[height=10px]{svgs/activation.svg} activate effects can be used only when activating a unit and before it attacks. Ongoing effects last until end of combat or if the effect on the card is used up. Instant \includesvg[height=10px]{svgs/instant.svg} cards may be played at any time except between rolling the combat die and resolving damage unless otherwise stated. Instant cards which increase a unit's statistics \textbf{last only for the duration of the current unit's activation}.
 \subsection*{\hypertarget{Timelimit}{Combat time limits}}
 Combat against neutral units has a time limit of one round. If the player cannot win the combat
 before the end of the current combat round, they must either \hyperlink{Endcombat}{retreat} or spend 1 MP from the hero who started the combat in order to play another combat round. Combat against azure units, other players or AI heroes has no time limit.
 \clearpage
 \subsection*{\hypertarget{Walls}{Defending a town with a citadel}}
-When a town with a citadel is attacked, the defender adds the wall and gate obstacles in any order to the middle row of the combat board after placing their units. The gate card is not an obstacle to the defending player. The wall and gate cards can be destroyed by any adjacent \includegraphics[scale=0.25]{images/ground_icon.PNG} or \includegraphics[scale=0.25]{images/flying_icon.PNG} unit's attack. Such attacks are always successful, do not roll the combat die when performing them.\par
+
+When a town with a citadel is attacked, the defender adds the wall and gate obstacles in any order to the middle row of the combat board after placing their units. The gate card is not an obstacle to the defending player. The wall and gate cards can be destroyed by any adjacent \includesvg[height=10px]{svgs/unit_ground.svg} or \includesvg[height=10px]{svgs/unit_flying.svg} unit's attack. Such attacks are always successful, do not roll the combat die when performing them.\par
 Defending units standing on their own side and in the same column as a wall or a gate are partially protected from ranged attacks. If they are targeted by a ranged attack performed from the opponent's side of the combat board, \textbf{reduce the attack's damage by 1}.
 \par
 The defender also gains the arrow tower unit card which is placed next to the combat board. It can only be targeted by ranged attacks. This unit is also destroyed if all wall and gate cards are destroyed. The arrow tower cannot start a defensive combat by itself without other units and you do not need to destroy it in order to win when attacking.
@@ -543,7 +557,8 @@ Combat against \textbf{other players} can end in the following ways:
  When a secondary hero is attacked, they may also choose to be \textbf{instantly defeated} instead of fighting a combat in order to preserve their units. When this happens, the attacker still receives a faction cube from the defeated hero.\par Defeating a main hero \hyperlink{End}{may eliminate} that player.
 
 \subsection*{\hypertarget{Combatexperience}{Combat experience}}
-Winning combat with your main hero usually grants them experience. If the difficulty of the neutral field or the level of a defeated enemy main hero was equal to your level, gain 1 \includegraphics[scale=0.75]{images/exp.PNG}. If they were higher than your level, gain 2 \includegraphics[scale=0.75]{images/exp.PNG}. Defeating a neutral combat which involved an azure unit grants you level 7 immediately. If you gain multiple levels in this way, resolve their effects in order.\par
+
+Winning combat with your main hero usually grants them experience. If the difficulty of the neutral field or the level of a defeated enemy main hero was equal to your level, gain 1 \includesvg[height=10px]{svgs/exp.svg}. If they were higher than your level, gain 2 \includesvg[height=10px]{svgs/exp.svg}. Defeating a neutral combat which involved an azure unit grants you level 7 immediately. If you gain multiple levels in this way, resolve their effects in order.\par
 Secondary heroes cannot gain experience from winning a combat. You also do not gain experience from defeating a secondary hero.
 \subsection*{\hypertarget{Quick}{Quick combat}}
 If your hero’s level is higher than a field’s difficulty when combat against neutral units would begin, \textbf{no combat} takes place. The player is considered to have beaten the neutral units by default and gains no rewards for the combat.
@@ -551,8 +566,9 @@ If your hero’s level is higher than a field’s difficulty when combat against
 \subsection*{\hypertarget{AIrules}{Player vs AI}}
 These rules apply when playing a \textbf{solo} game. The AI combat rules for targeting and attacking are also used when playing a \textbf{cooperative} scenario.\par
 Solo campaigns are played against AI Heroes who use two automated decks to play the game: the AI deck, and the spell deck. The AI deck consists of cards that are similar in function to abilities and artifacts, but change depending on the game's \hyperlink{Difficulty}{difficulty}. The spell deck should be used
+
 when instructed by the cards in the AI deck. During combat against neutral enemies or AI heroes, their units follow an automatic set of instructions. \textbf{Initiative rules} work identically. When an \textbf{AI hero} activates a unit, drawn an AI card as its activation.\par
-All AI controlled \includegraphics[scale=0.25]{images/ground_icon.PNG} and \includegraphics[scale=0.25]{images/flying_icon.PNG} units prioritize attacking units of the same tier. If this is impossible, they attack the closest unit, prioritizing the lowest tier one. \includegraphics[scale=0.25]{images/ranged_icon.PNG} units prioritize other \includegraphics[scale=0.25]{images/ranged_icon.PNG} units of the same tier, then lower tier, and finally higher tier. If there are no \includegraphics[scale=0.25]{images/ranged_icon.PNG} for them to target they prioritize \includegraphics[scale=0.25]{images/ground_icon.PNG} and \includegraphics[scale=0.25]{images/flying_icon.PNG} units in the same tier order. If there's more than one valid target, they attack the closest one.\par
+All AI controlled \includesvg[height=10px]{svgs/unit_ground.svg} and \includesvg[height=10px]{svgs/unit_flying.svg} units prioritize attacking units of the same tier. If this is impossible, they attack the closest unit, prioritizing the lowest tier one. \includesvg[height=10px]{svgs/unit_ranged.svg} units prioritize other \includesvg[height=10px]{svgs/unit_ranged.svg} units of the same tier, then lower tier, and finally higher tier. If there are no \includesvg[height=10px]{svgs/unit_ranged.svg} for them to target they prioritize \includesvg[height=10px]{svgs/unit_ground.svg} and \includesvg[height=10px]{svgs/unit_flying.svg} units in the same tier order. If there's more than one valid target, they attack the closest one.\par
 If there's ever a tie between equally valid targets for any units, the players choose which unit is attacked.
 
 \clearpage
@@ -634,12 +650,12 @@ Added by the Rampart expansion. War machines are permanent cards that can be bou
 \subsection*{Events}
 Added by the Fortress expansion. Event cards may be used in games with more than one player. Shuffle the event deck during set up. At the start of each resource round (except the first round), draw and read the next event card after receiving resources. The first event is drawn by the starting player. Change this player in a clockwise order every time a new event is drawn. Resolve any effects in clockwise order starting with the player who drew the card. Any cards which were revealed as a part of resolving an event should be shuffled back into their respective decks afterwards.
 \subsection*{Empowered statistic cards}
-Added by the Inferno expansion. These cards are more powerful versions of the normal statistics cards. They have only one effect which is identical to the normal statistic's expert effect, but does not require using your \includegraphics[scale=0.5]{images/expert.PNG}.
+Added by the Inferno expansion. These cards are more powerful versions of the normal statistics cards. They have only one effect which is identical to the normal statistic's expert effect, but does not require using your \includesvg[height=10px]{svgs/expert.svg}.
 
 \subsection*{Summoning}
 Some cards from the Inferno expansion may summon units during combat. Place the summoned unit adjacent to the summoning unit. Summoned units activate in the round they were summoned if their initiative is lower or equal to the initiative of the currently activated unit. Otherwise, treat them as if they already activated this combat round. After combat, unless stated otherwise, the summoned units are added to your unit deck.
 \subsection*{Random town}
-Added by the Inferno expansion. When this field is revealed, all players roll 2 \includegraphics[scale=0.75]{images/resource_die.PNG}. The highest roller chooses an unused faction. The random town is defended by units from that faction. They have a pack of bronze, two packs of silver, and two "fews" of gold units. Flagging it increases gold production by 10, which is also gained immediately if you are the first to flag it.
+Added by the Inferno expansion. When this field is revealed, all players roll 2 \includesvg[height=10px]{svgs/resource_die.svg}. The highest roller chooses an unused faction. The random town is defended by units from that faction. They have a pack of bronze, two packs of silver, and two "fews" of gold units. Flagging it increases gold production by 10, which is also gained immediately if you are the first to flag it.
 \clearpage
 \begin{wrapfigure}{R}{0.5\textwidth}
     \begin{center}
