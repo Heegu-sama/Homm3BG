@@ -170,6 +170,8 @@ For every 1 MP spent, you can perform one of the following actions:
     \item \hyperlink{Categories}{Re-visit} a field where your hero is in.
     \item \hyperlink{Timelimit}{Continue combat} against neutral units for 1 additional round.
     \item \hyperlink{Placing}{Discover a face down map tile} if the hero is on a field next to that map tile.
+    % TODO When do we prepare these map tiles (link to Map locations)?
+    % TODO Can what are the conditions of this placement (hero at border, face up/down)
     \item Place a new map tile from your pool of far (II-III) map tiles.
 \end{itemize}
 Mark the amount of MP you have used by flipping your movement tokens over to their brown, inactive side. If a player has both a main and a secondary hero, track their MP separately. Heroes can spend MP in any order.\par
@@ -189,7 +191,9 @@ Allied heroes can move through each other but cannot stop their movement in the 
 
 \subsection*{Town actions}
 You can perform each of the town actions listed below \textbf{once per round}. These actions can be performed at any point during any player’s turn, except during combat or when a player is resolving an action that would be interrupted by your town action. For example, you cannot draw spell cards simultaneously with the spell book token.\par
-When a player announces that they are about to start combat, you may react to it with a town action before performing any of the steps of \hyperlink{Combatsetup}{setting up combat.}\par
+When a player announces that they are about to start combat, you may react to it with a town action before performing any of the steps of
+% TODO "a town action" -> ? single town action / multiple ?
+ \hyperlink{Combatsetup}{setting up combat.}\par
 If multiple players wish to use a town action at the same time and the order of resolving them has an effect on the game, you may roll an attack or resource die and let the highest roller perform the action first.\par
 After performing a town action, flip the respective token on its inactive side on your town board. You cannot use that action again until the start of the next round, when the tokens are refreshed.
 \begin{itemize}
@@ -399,7 +403,9 @@ Placing a new tile costs 1MP. The new tile must be adjacent to the hero who spen
 In addition to their hero and its deck, players have a deck of unit cards which represent the armies moving with their heroes. Every faction has access to 7 different units, each with unique stats and abilities. Units are necessary for winning combats and fulfilling scenario goals. Each scenario's set up instructions indicate which unit cards should be included in your initial unit deck. Your current unit deck should be kept near the town and hero boards, clearly separated from the rest of your faction’s units.\par
 Each faction unit is double-sided, with a weaker “Few” side, and a stronger “Pack” side. “Few” units may be upgraded to “Packs” by \textbf{reinforcing} them, while taking damage in combat can subsequently reduce a unit back to its “Few” side. Units should always be kept on their correct side when moved around or inspected.\par
 A player’s unit deck may have any number of units, but only up to 5 units can be selected to fight during \hyperlink{Combatsetup}{combat set up}. If a unit is defeated in combat, discard it from your unit deck. After combat, return any surviving units to your unit deck. Defeated faction units can be recruited again after being defeated. Units may be recruited and reinforced by flipping the population token and paying the unit's recruitment \includesvg[height=10px]{\svgs/pay.svg} or reinforcement \includesvg[height=10px]{\svgs/reinforce.svg} cost. When you do so, you can instantly recruit and reinforce \textbf{any number} of times, provided you have enough resources and the prerequisite buildings to do so.\par
-\textbf{Recruiting} a unit requires that your town has a dwelling of that unit’s level or higher. \textbf{Reinforcing} requires that your town has a citadel in addition to a dwelling of that unit’s level or higher. If you ever lose all units in your unit deck, \textbf{immediately} replace your unit deck with the starting units of the scenario.\par
+\textbf{Recruiting} a unit requires that your town has a dwelling of that unit’s level or higher. \textbf{Reinforcing} requires that your town has a citadel in addition to a dwelling of that unit’s level or higher.
+% TODO or higher? Can I skip bronze dwelling and somehow get a bronze unit and reinforce with only a silver dwelling. Or can be buildings destroyed?
+ If you ever lose all units in your unit deck, \textbf{immediately} replace your unit deck with the starting units of the scenario.\par
 
 \textbf{Important}: Any effects which allow you to reinforce outside of using the population token \textbf{do not} require owning a citadel or the appropriate level of dwelling.
 \begin{figure}[h]
@@ -437,7 +443,7 @@ Most units have a \textbf{special ability}:\par
 
 \clearpage
 \subsection*{\hypertarget{Unittype}{Unit types}}
-There are thee types of units:
+There are three types of units:
 \begin{itemize}
     \item \textbf{Ground} \includesvg[height=10px]{\svgs/unit_ground.svg} units move up to 3 spaces and attack adjacent enemies.
     \item \textbf{Flying} \includesvg[height=10px]{\svgs/unit_flying.svg} units move up to 3 spaces, ignoring obstacles, and attack adjacent enemies.
@@ -472,6 +478,7 @@ Players are able to start multiple combats during their turn.
 \end{wrapfigure}
 \subsection*{\hypertarget{Combatsetup}{Combat setup}}
 
+% TODO info about battlefield expansion
 Combat takes place on the 4 x 5 combat board, which consists of two backlines and two frontlines on opposite ends and a middle row. Follow these steps when fighting against \textbf{neutral units}:
 
 \begin{itemize}
@@ -503,9 +510,9 @@ Obstacles block the movement of all non-flying units.\par
 \textbf{Attack die} – A red die whose results range from -1 to +1. Roll the die whenever a unit attacks and
 add the result to the unit’s attack value.\par
 \textbf{\hypertarget{Retaliate}{Retaliation attack}} – If a unit survives an attack by an adjacent unit, it performs an attack on that unit. Each unit can perform only 1 retaliation attack per combat round. Retaliation attacks function
-identically to normal attacks, but they cannot cause another retaliation attack. Mark units which
+identically to normal attacks, but they cannot cause another retaliation attack. Mark units which have performed a retaliation attack this round with a black cube.\par
 
-have performed a retaliation attack this round with a black cube.\par
+
 \textbf{Paralysis} \includesvg[height=10px]{\svgs/paralysis.svg} – Effects which paralyze a unit place the paralysis token on them. A paralyzed unit
 skips its next activation and removes the token instead. If it is attacked or takes any damage before
 that time, remove the paralysis token from that unit.\par
@@ -542,7 +549,7 @@ Structure of a combat round:
     \item When a unit activates, place a faction cube on it to indicate it has been activated this combat round.
     \item Activated units may move and attack according to their \hyperlink{Unittype}{type}.
     \item Instead of attacking, a unit may \hyperlink{Defend}{defend}. Neutral units controlled by the game or another player can only defend if instructed to by a card effect.
-    \item Before a unit attacks, both players may \hyperlink{CombatCards}{play cards}.
+    \item Before a unit attacks, both players may \hyperlink{CombatCards}{play cards}. %TODO priority? Who can play the first card?
     \item After a unit's attack has been declared and all cards have been played that the players wish to play, roll the combat die. Modify the attacking unit's attack by the die's result, reduce it by the defending unit's defense, and then deal the rest as \hyperlink{HP}{damage} to the defending unit.
     \item If the defending unit was adjacent to the attacker, it \hyperlink{Retaliate}{retaliates} if it hasn't done so this round.
     \item Keep activating units until they've all been activated once. After the last unit's activation, the combat round ends.
@@ -559,7 +566,9 @@ Combat against \textbf{other players} can end in the following ways:
 
 \subsection*{\hypertarget{Combatexperience}{Combat experience}}
 
-Winning combat with your main hero usually grants them experience. If the difficulty of the neutral field or the level of a defeated enemy main hero was equal to your level, gain 1 \includesvg[height=10px]{\svgs/exp.svg}. If they were higher than your level, gain 2 \includesvg[height=10px]{\svgs/exp.svg}. Defeating a neutral combat which involved an azure unit grants you level 7 immediately. If you gain multiple levels in this way, resolve their effects in order.\par
+Winning combat with your main hero usually grants them experience. If the difficulty of the neutral field or the level of a defeated enemy main hero was equal to your level, gain 1 \includesvg[height=10px]{\svgs/exp.svg}. If they were higher than your level, gain 2 \includesvg[height=10px]{\svgs/exp.svg}. Defeating a neutral combat which involved an azure unit grants you level 7 immediately.
+% TODO add azure star
+ If you gain multiple levels in this way, resolve their effects in order.\par
 Secondary heroes cannot gain experience from winning a combat. You also do not gain experience from defeating a secondary hero.
 \subsection*{\hypertarget{Quick}{Quick combat}}
 If your hero’s level is higher than a field’s difficulty when combat against neutral units would begin, \textbf{no combat} takes place. The player is considered to have beaten the neutral units by default and gains no rewards for the combat.
@@ -567,7 +576,6 @@ If your hero’s level is higher than a field’s difficulty when combat against
 \subsection*{\hypertarget{AIrules}{Player vs AI}}
 These rules apply when playing a \textbf{solo} game. The AI combat rules for targeting and attacking are also used when playing a \textbf{cooperative} scenario.\par
 Solo campaigns are played against AI Heroes who use two automated decks to play the game: the AI deck, and the spell deck. The AI deck consists of cards that are similar in function to abilities and artifacts, but change depending on the game's \hyperlink{Difficulty}{difficulty}. The spell deck should be used
-
 when instructed by the cards in the AI deck. During combat against neutral enemies or AI heroes, their units follow an automatic set of instructions. \textbf{Initiative rules} work identically. When an \textbf{AI hero} activates a unit, drawn an AI card as its activation.\par
 All AI controlled \includesvg[height=10px]{\svgs/unit_ground.svg} and \includesvg[height=10px]{\svgs/unit_flying.svg} units prioritize attacking units of the same tier. If this is impossible, they attack the closest unit, prioritizing the lowest tier one. \includesvg[height=10px]{\svgs/unit_ranged.svg} units prioritize other \includesvg[height=10px]{\svgs/unit_ranged.svg} units of the same tier, then lower tier, and finally higher tier. If there are no \includesvg[height=10px]{\svgs/unit_ranged.svg} for them to target they prioritize \includesvg[height=10px]{\svgs/unit_ground.svg} and \includesvg[height=10px]{\svgs/unit_flying.svg} units in the same tier order. If there's more than one valid target, they attack the closest one.\par
 If there's ever a tie between equally valid targets for any units, the players choose which unit is attacked.
