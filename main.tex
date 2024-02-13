@@ -29,7 +29,9 @@
     pdftitle={Heroes of Might \& Magic III Rule Book},
     pdfpagemode=FullScreen,
     }
-
+% Set the default spacing between paragraphs. Remove indentation.
+\usepackage[skip=6pt, indent=0pt]{parskip}
+\setstretch{1}
 
 % Background
 \AddToHook{shipout/background}{%
@@ -37,14 +39,7 @@
     \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{images/bottom.png}}%
 }
 
-% Remove indent.
-\parindent 0px
-\setstretch{1}
-
-
 \begin{document}
-
-
 
 \title{\includegraphics[width=4cm]{images/title.png} The Rewritening}
 
@@ -132,7 +127,7 @@ This section will guide you through the process of setting up a scenario from th
 \clearpage
 
 \section{Round structure}
-The game is structured into rounds, during which each player will take their own turn in a clockwise order starting with the starting player. During their turns, players will move their \hyperlink{Heroes}{heroes} on the game map, construct new buildings in their \hyperlink{Town}{town} and recruit \hyperlink{Units}{units} in an attempt to fulfill the scenario’s victory condition.\\[6pt]
+The game is structured into rounds, during which each player will take their own turn in a clockwise order starting with the starting player. During their turns, players will move their \hyperlink{Heroes}{heroes} on the game map, construct new buildings in their \hyperlink{Town}{town} and recruit \hyperlink{Units}{units} in an attempt to fulfill the scenario’s victory condition.\par
 Perform the following steps at the start of every round except the first one:
 \begin{itemize}
 \item Flip any previously used build, population and/or spell book tokens back to their active side.
@@ -161,10 +156,10 @@ At the start of a player’s turn, that player refreshes their hero's hand of ca
     \item Discard any number of cards from your hand. If your current hand exceeds your hand limit, you must discard down to at least your hand limit.
     \item Draw back to your hand limit.
 \end{itemize}
-Your current hand limit depends on your hero’s \hyperlink{Level}{level}. The beginning of your turn is the only time your hand size is checked.\\[6pt]
+Your current hand limit depends on your hero’s \hyperlink{Level}{level}. The beginning of your turn is the only time your hand size is checked.\par
 There are three types of actions players may take during their turn:
 \subsection*{Movement actions}
-Movement actions are performed by using movement points. A player can use movement actions only during their own turn.\\[6pt]
+Movement actions are performed by using movement points. A player can use movement actions only during their own turn.\par
 For every 1 MP spent, you can perform one of the following actions:
 \begin{itemize}
     \item Move a hero 1 field in any direction.
@@ -173,8 +168,8 @@ For every 1 MP spent, you can perform one of the following actions:
     \item \hyperlink{Placing}{Discover a face down map tile} if the hero is on a field next to that map tile.
     \item Place a new map tile from your pool of far (II-III) map tiles.
 \end{itemize}
-Mark the amount of MP you have used by flipping your movement tokens over to their brown, inactive side. If a player has both a main and a secondary hero, track their MP separately. Heroes can spend MP in any order.\\[6pt]
-Allied heroes can move through each other but cannot stop their movement in the same field. When you move through a field with an allied hero, do not visit the field that the allied hero is standing on. In the unlikely situation that two allied heroes are forced onto the same field, you must use your next MP to move one of them away from that field.\\[6pt]
+Mark the amount of MP you have used by flipping your movement tokens over to their brown, inactive side. If a player has both a main and a secondary hero, track their MP separately. Heroes can spend MP in any order.\par
+Allied heroes can move through each other but cannot stop their movement in the same field. When you move through a field with an allied hero, do not visit the field that the allied hero is standing on. In the unlikely situation that two allied heroes are forced onto the same field, you must use your next MP to move one of them away from that field.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.25\linewidth]{images/mp.png}
@@ -189,9 +184,9 @@ Allied heroes can move through each other but cannot stop their movement in the 
 \clearpage
 
 \subsection*{Town actions}
-You can perform each of the town actions listed below \textbf{once per round}. These actions can be performed at any point during any player’s turn, except during combat or when a player is resolving an action that would be interrupted by your town action. For example, you cannot draw spell cards simultaneously with the spell book token.\\[6pt]
-When a player announces that they are about to start combat, you may react to it with a town action before performing any of the steps of \hyperlink{Combatsetup}{setting up combat.}\\[6pt]
-If multiple players wish to use a town action at the same time and the order of resolving them has an effect on the game, you may roll an attack or resource die and let the highest roller perform the action first.\\[6pt]
+You can perform each of the town actions listed below \textbf{once per round}. These actions can be performed at any point during any player’s turn, except during combat or when a player is resolving an action that would be interrupted by your town action. For example, you cannot draw spell cards simultaneously with the spell book token.\par
+When a player announces that they are about to start combat, you may react to it with a town action before performing any of the steps of \hyperlink{Combatsetup}{setting up combat.}\par
+If multiple players wish to use a town action at the same time and the order of resolving them has an effect on the game, you may roll an attack or resource die and let the highest roller perform the action first.\par
 After performing a town action, flip the respective token on its inactive side on your town board. You cannot use that action again until the start of the next round, when the tokens are refreshed.
 \begin{itemize}
 \item Build token, used to expand your \hyperlink{Town}{town}.\includegraphics[scale=0.5]{images/build.png}
@@ -206,24 +201,27 @@ Players can gain or lose morale through various game effects. When a player gain
 \item Discard any number of cards, then draw that many cards.
 \item Reroll any die you have thrown.
 \end{itemize}
-If a player loses morale, they must discard a positive morale token \includesvg[height=10px]{svgs/positive.svg} without effect if they have one, otherwise they gain a negative morale token \includesvg[height=10px]{svgs/negative.svg}. Gaining morale while you have a negative morale token discards the negative morale token without effect. If a player would gain a second negative morale token, they must instead discard their entire hand of cards the next time they end their turn.\\[6pt]
+
+If a player loses morale, they must discard a positive morale token \includesvg[height=10px]{svgs/positive.svg} without effect if they have one, otherwise they gain a negative morale token \includesvg[height=10px]{svgs/negative.svg}. Gaining morale while you have a negative morale token discards the negative morale token without effect. If a player would gain a second negative morale token, they must instead discard their entire hand of cards the next time they end their turn.\par
 \textbf{NOTE:} The Necropolis faction ignores any morale effects. They cannot ever gain or lose morale for any reason.\\[12pt]
-Once all players have spent all their movement points on their turns and do not wish to use any further town or morale actions or instant effects, the current round is over.\\[6pt]
+Once all players have spent all their movement points on their turns and do not wish to use any further town or morale actions or instant effects, the current round is over.\par
 
 \clearpage
 
 \section[Heroes]{Heroes\hypertarget{Heroes}{}}
 Players always control a main hero and may additionally also recruit a secondary hero. A “player’s hero” may refer to either of them. Heroes are used to perform movement actions on the game board and to start combats against enemies in order to reach a scenario victory condition. Whenever a hero gains a card for any reason, put it directly into your hand unless otherwise stated. 
 \subsection*{Main hero}
-The main hero is represented by its chosen model and hero card. Each faction’s main hero has 3 movement points. Only the main hero can use its own deck of cards.\\[6pt]
+
+The main hero is represented by its chosen model and hero card. Each faction’s main hero has 3 movement points. Only the main hero can use its own deck of cards.\par
 Each main hero starts the game at level 1 and can advance up to level 7 by gaining experience. Experience is gained from winning combat, visiting certain locations and the treasure die. Gaining 1 experience is represented by the symbol \includesvg[height=10px]{svgs/exp.svg}. \hyperlink{Level}{Leveling up} provides the hero various benefits. \hyperlink{Units}{Units} owned by the player may always participate in combat started in the same field as their main hero.
+
 \subsection*{\hypertarget{Secondary}{Secondary heroes}}
-If you control a town or a settlement, a secondary hero can be hired by flipping your population token and paying 10 gold. \textbf{Note}: Units cannot be \hyperlink{Units}{recruited or reinforced} during that use of the population token.\\[6pt]
-Your secondary hero uses the remaining hero model of your faction. You may wish to mark this model with a token such as a faction cube to differentiate it from the main hero. After hiring a secondary hero, place the model in a town or settlement you control. You can only have one secondary hero at a time.\\[6pt]
+If you control a town or a settlement, a secondary hero can be hired by flipping your population token and paying 10 gold. \textbf{Note}: Units cannot be \hyperlink{Units}{recruited or reinforced} during that use of the population token.\par
+Your secondary hero uses the remaining hero model of your faction. You may wish to mark this model with a token such as a faction cube to differentiate it from the main hero. After hiring a secondary hero, place the model in a town or settlement you control. You can only have one secondary hero at a time.\par
 Secondary heroes have 2 movement points. They do not have their own hero card, cannot gain experience, and cannot use your main hero's deck for any reason. If a secondary hero gains any cards, place them into your hand as normal.
-Secondary heroes are considered to have the same level as the main hero for the purposes of resolving \hyperlink{Quick}{quick combat} against neutral enemies.\\[6pt]
-Units owned by the player may always participate in combat started in the same field as their secondary hero.\\[6pt]
-If your secondary hero is attacked by an enemy hero, you can choose to have your hero be \hyperlink{Endcombat}{instantly defeated instead of fighting a combat}. When a secondary hero is defeated, remove them from the game. They can be recruited again with another use of the population token.\\[6pt]
+Secondary heroes are considered to have the same level as the main hero for the purposes of resolving \hyperlink{Quick}{quick combat} against neutral enemies.\par
+Units owned by the player may always participate in combat started in the same field as their secondary hero.\par
+If your secondary hero is attacked by an enemy hero, you can choose to have your hero be \hyperlink{Endcombat}{instantly defeated instead of fighting a combat}. When a secondary hero is defeated, remove them from the game. They can be recruited again with another use of the population token.\par
 
 \clearpage
 
@@ -247,7 +245,7 @@ If your secondary hero is attacked by an enemy hero, you can choose to have your
 \clearpage
 
 \subsection*{\hypertarget{Level}{Level effects}}
-The most common sources of gaining experience are the treasure die and \hyperlink{Combatexperience}{combat}. Each new level up requires 2 experience. When a main hero reaches a new level, resolve the effects of the level up immediately. If a main hero gains multiple levels at the same time, resolve the effects in ascending level order. Gaining experience at level 7 has no effect.\\[6pt]
+The most common sources of gaining experience are the treasure die and \hyperlink{Combatexperience}{combat}. Each new level up requires 2 experience. When a main hero reaches a new level, resolve the effects of the level up immediately. If a main hero gains multiple levels at the same time, resolve the effects in ascending level order. Gaining experience at level 7 has no effect.\par
 The level tracker on your hero card shows the following information:
 \begin{itemize}
 \item Your main hero’s current level and amount of experience gained, shown by the cube's position.
@@ -295,12 +293,14 @@ All players have a unique deck which represents their main hero's abilities and 
     \includegraphics[width=0.48\textwidth]{images/ability.PNG}
 
 \end{wrapfigure}
-Every ability and statistic card has a basic effect and a stronger expert effect, which is shown below the basic effect. Whenever a player plays an ability or statistic card, they must choose which effect they are using. The number of expert \includesvg[height=10px]{svgs/expert.svg} effects a player can use each round is limited by their main hero’s \hyperlink{Level}{level}.\\[6pt]
+
+Every ability and statistic card has a basic effect and a stronger expert effect, which is shown below the basic effect. Whenever a player plays an ability or statistic card, they must choose which effect they are using. The number of expert \includesvg[height=10px]{svgs/expert.svg} effects a player can use each round is limited by their main hero’s \hyperlink{Level}{level}.\par
 \textbf{Important}: Certain cards are limited to the Necropolis faction \includesvg[height=10px]{svgs/necro.svg}. When a non-Necropolis player draws one, they may either discard it and draw a new card as a replacement or gain it as normal. Non-Necropolis players cannot use faction specific cards from their hand in any way besides discarding them.
+
 \subsection*{Artifact cards}
-Artifact cards are divided into 3 levels: minor, major, and relic. These levels relate to the overall power of the card and may be referenced when resolving certain effects or during scenario set up. Artifacts are gained through map exploration.\\[6pt]
+Artifact cards are divided into 3 levels: minor, major, and relic. These levels relate to the overall power of the card and may be referenced when resolving certain effects or during scenario set up. Artifacts are gained through map exploration.\par
 If you gain an artifact as part of applying the difficulty bonus during a scenario’s set up, keep it in your hand instead of shuffling it into your deck.
-Artifacts can be \hyperlink{Trading}{traded} in alliance and cooperative scenarios.\\[6pt]
+Artifacts can be \hyperlink{Trading}{traded} in alliance and cooperative scenarios.\par
 \includegraphics[scale=1]{images/artifact.PNG}
 
 \clearpage
@@ -311,14 +311,15 @@ Artifacts can be \hyperlink{Trading}{traded} in alliance and cooperative scenari
     \includegraphics[width=0.48\textwidth]{images/spell_example.PNG}
     \end{center}
 \end{wrapfigure}
-Spell cards have three possible primary effects. Using the topmost basic version of the spell has no additional costs. Accessing the second and third effects requires the spell to be \textbf{empowered} before it is played. The amount a spell needs to be empowered for each effect is indicated within a circle in the middle of its card text.\\[6pt]
-You may empower a spell by playing any card for its empower \includesvg[height=10px]{svgs/empower.svg} effect. The bottom, alternative effect of all spell cards is to empower another spell.\\[6pt]
-\textbf{Important}: During combat, \textbf{only one spell} card may be played by each player \textbf{per combat round}.\\[6pt]
+
+Spell cards have three possible primary effects. Using the topmost basic version of the spell has no additional costs. Accessing the second and third effects requires the spell to be \textbf{empowered} before it is played. The amount a spell needs to be empowered for each effect is indicated within a circle in the middle of its card text.\par
+You may empower a spell by playing any card for its empower \includesvg[height=10px]{svgs/empower.svg} effect. The bottom, alternative effect of all spell cards is to empower another spell.\par
+\textbf{Important}: During combat, \textbf{only one spell} card may be played by each player \textbf{per combat round}.\par
 Spells can be gained by building the mage guild. When you do, search (2) the spell deck, twice. If you start a scenario with the mage guild, perform the searching in turn order and shuffle the cards into your deck at the end of the set up. More spells can be bought by flipping your spell book token and paying the indicated cost on the guild to search (2) the spell deck. This cannot be done during the same round as when the guild is constructed. Spells can be \hyperlink{Trading}{traded} in alliance and cooperative scenarios.
 
 \subsection*{\hypertarget{Specialty}{Hero specialty cards}}
 Hero specialty cards are gained from level ups. Each hero has an unique set of them. While many specialty cards have effects which resemble spell cards, specialty cards are their \textbf{own unique category of card}, which are not affected by effects that do not specifically specify them.
-\\[6pt]
+\par
 
 \begin{figure}[h]
 \centering
@@ -331,13 +332,14 @@ Hero specialty cards are gained from level ups. Each hero has an unique set of t
 \clearpage
 \section{Resources}
 There are three types of resources in the game: gold, building materials, and valuables.
-Resources are spent during the game to expand your town, to recruit units, and to purchase spells. You can gain resources from settlements and mines that you have \hyperlink{Categories}{flagged}, but also by using artifacts and rolling resource dice \includesvg[height=10px]{svgs/resource_die.svg}. Whenever a player's resource production is increased or decreased, move that resource's cube on its production track the appropriate number of spaces.\\[6pt]
+
+Resources are spent during the game to expand your town, to recruit units, and to purchase spells. You can gain resources from settlements and mines that you have \hyperlink{Categories}{flagged}, but also by using artifacts and rolling resource dice \includesvg[height=10px]{svgs/resource_die.svg}. Whenever a player's resource production is increased or decreased, move that resource's cube on its production track the appropriate number of spaces.\par
 \includegraphics[scale=1]{images/resources.PNG}\\
 Players start each scenario with the number of resources indicated in that scenario’s set up.
 Resources are also gained at the start of each resource round. When they are gained or spent, exchange the appropriate number and type of resource tokens between your faction's and the game's supply. Resources can also be \hyperlink{Trading}{traded}. There's no limit to the amount of resources you can have.
 \section[Town]{Town\hypertarget{Town}{}}
-Each faction has their own town, which is located in the center of their starting tile. The town is your most important location, as many scenarios \hyperlink{End}{may end} if it's flagged by an enemy hero.\\[6pt]
-The contents of your town and overall faction status are represented by the town board. The board shows your currently built buildings, resource costs for future buildings, your resource incomes and status of town tokens.\\[6pt]
+Each faction has their own town, which is located in the center of their starting tile. The town is your most important location, as many scenarios \hyperlink{End}{may end} if it's flagged by an enemy hero.\par
+The contents of your town and overall faction status are represented by the town board. The board shows your currently built buildings, resource costs for future buildings, your resource incomes and status of town tokens.\par
 All factions are able to build the following buildings in their town:
 \begin{itemize}
     \item \textbf{City hall} – Provides resource income or a faction-specific ability.
@@ -346,8 +348,8 @@ All factions are able to build the following buildings in their town:
     \item \textbf{Mage guild} - gives you \hyperlink{spells}{spells}.
     \item \textbf{Faction building} - a faction-specific building with a unique effect.
 \end{itemize}
-\textbf{A single building} may be constructed each round by using the build token. When you construct a building, pay its cost in resources, flip the build token to its inactive side, and place the new building’s cardboard piece into its proper slot on the town board. If the building has any immediate effects upon building it, resolve them now.\\[6pt]
-If a town or settlement is attacked by an enemy hero and your hero is not also on that field, you may immediately \textbf{pay 8 gold} to fight a defending combat using only your units. You cannot use your deck during that combat as your main Hero is not present. Paying this gold represents the cost of transporting the army there.\\[6pt]
+\textbf{A single building} may be constructed each round by using the build token. When you construct a building, pay its cost in resources, flip the build token to its inactive side, and place the new building’s cardboard piece into its proper slot on the town board. If the building has any immediate effects upon building it, resolve them now.\par
+If a town or settlement is attacked by an enemy hero and your hero is not also on that field, you may immediately \textbf{pay 8 gold} to fight a defending combat using only your units. You cannot use your deck during that combat as your main Hero is not present. Paying this gold represents the cost of transporting the army there.\par
 When you flag a town, take \hyperlink{End}{a faction cube} from its previous owner.
 
 \clearpage
@@ -356,9 +358,9 @@ When you flag a town, take \hyperlink{End}{a faction cube} from its previous own
 \includegraphics[width=0.9\linewidth]{images/maptiles.PNG} 
 \end{wrapfigure}
 \section{Map locations}
-Each scenario is built using four types of map tiles. Players always have a faction-specific starting (I) map tile and may additionally have a number of face-down far (II-III) map tiles which can be used to add new areas to the scenario by spending MP. Near (IV-V) and center (VI-VII) tiles are usually placed face-down during a scenario’s set up and must be turned face up by spending MP.\\[6pt]
-The roman numeral of each tile describes the overall difficulty of neutral armies on that tile, as well as the number of rewards players might expect to find on that tile. Starting (I) tiles are the easiest while center (VI-VII) tiles are the most difficult.\\[6pt]
-During a scenario’s set up, you will be instructed to use a certain amount of specific map tiles. Follow the scenario’s set up instructions and gather the necessary tiles. All face-down tiles should be selected randomly from the pool of possible tiles and shuffled to keep their front side hidden.\\[6pt]
+Each scenario is built using four types of map tiles. Players always have a faction-specific starting (I) map tile and may additionally have a number of face-down far (II-III) map tiles which can be used to add new areas to the scenario by spending MP. Near (IV-V) and center (VI-VII) tiles are usually placed face-down during a scenario’s set up and must be turned face up by spending MP.\par
+The roman numeral of each tile describes the overall difficulty of neutral armies on that tile, as well as the number of rewards players might expect to find on that tile. Starting (I) tiles are the easiest while center (VI-VII) tiles are the most difficult.\par
+During a scenario’s set up, you will be instructed to use a certain amount of specific map tiles. Follow the scenario’s set up instructions and gather the necessary tiles. All face-down tiles should be selected randomly from the pool of possible tiles and shuffled to keep their front side hidden.\par
 \begin{wrapfigure}{R}{0.5\textwidth}
     \begin{center}
     \includegraphics[width=0.48\textwidth]{images/fields.PNG}
@@ -366,7 +368,7 @@ During a scenario’s set up, you will be instructed to use a certain amount of 
 \end{wrapfigure}
 \subsection*{Map tile anatomy}
 Each map tile is divided into 7 separate \textbf{fields} that your heroes can \textbf{visit}. When a hero moves to a field, they must immediately visit it, or 
-first start a \hyperlink{Combat}{combat} against neutral enemies or another player depending on the tile they have just entered. If the hero wins the combat, they must then visit that field afterwards. Visiting fields provides heroes with benefits such as gaining resources or cards. Empty fields do nothing when visited. Solid yellow lines on a field's edge cannot be passed through. \hyperlink{Difficulty}{Roman numerals} indicate that a field is guarded by neutral enemies that must be fought.\\[6pt]
+first start a \hyperlink{Combat}{combat} against neutral enemies or another player depending on the tile they have just entered. If the hero wins the combat, they must then visit that field afterwards. Visiting fields provides heroes with benefits such as gaining resources or cards. Empty fields do nothing when visited. Solid yellow lines on a field's edge cannot be passed through. \hyperlink{Difficulty}{Roman numerals} indicate that a field is guarded by neutral enemies that must be fought.\par
 
 \clearpage
 \subsection*{\hypertarget{Categories}{Location categories}}
@@ -379,9 +381,9 @@ There are three categories of visitable fields:
 
 See \hyperlink{All}{this section} for a list of all possible fields and what they do.
 \subsection*{\hypertarget{Placing}{Placing and discovering new tiles}}
-When you hero is adjacent to an undiscovered face down tile, that hero may spend 1 MP during your turn to turn that tile over. You may then rotate the tile as you see fit and place it face-up. That tile can now be moved onto normally.\\[6pt]
-In some scenarios you will receive your own individual stack of far (II-III) map tiles. These can be placed on the map to expand the play area. Players may only use the tiles they were given during set up. Tiles should be kept hidden from everyone until they are about to be placed.\\[6pt]
-Placing a new tile costs 1MP. The new tile must be adjacent to the hero who spends the MP, and to at least two other existing tiles. New tiles must also be positioned so that there is a valid path that eventually joins them with all other tiles. You may always rotate map tiles when placing them.\\[6pt]
+When you hero is adjacent to an undiscovered face down tile, that hero may spend 1 MP during your turn to turn that tile over. You may then rotate the tile as you see fit and place it face-up. That tile can now be moved onto normally.\par
+In some scenarios you will receive your own individual stack of far (II-III) map tiles. These can be placed on the map to expand the play area. Players may only use the tiles they were given during set up. Tiles should be kept hidden from everyone until they are about to be placed.\par
+Placing a new tile costs 1MP. The new tile must be adjacent to the hero who spends the MP, and to at least two other existing tiles. New tiles must also be positioned so that there is a valid path that eventually joins them with all other tiles. You may always rotate map tiles when placing them.\par
 \begin{center}
     \includegraphics[scale=1]{images/placement.PNG}
 \end{center}
@@ -390,10 +392,12 @@ Placing a new tile costs 1MP. The new tile must be adjacent to the hero who spen
 \clearpage
 \section[Units]{Units\hypertarget{Units}{}}
 
-In addition to their hero and its deck, players have a deck of unit cards which represent the armies moving with their heroes. Every faction has access to 7 different units, each with unique stats and abilities. Units are necessary for winning combats and fulfilling scenario goals. Each scenario's set up instructions indicate which unit cards should be included in your initial unit deck. Your current unit deck should be kept near the town and hero boards, clearly separated from the rest of your faction’s units.\\[6pt]
-Each faction unit is double-sided, with a weaker “Few” side, and a stronger “Pack” side. “Few” units may be upgraded to “Packs” by \textbf{reinforcing} them, while taking damage in combat can subsequently reduce a unit back to its “Few” side. Units should always be kept on their correct side when moved around or inspected.\\[6pt]
-A player’s unit deck may have any number of units, but only up to 5 units can be selected to fight during \hyperlink{Combatsetup}{combat set up}. If a unit is defeated in combat, remove it from your unit deck. After combat, return any surviving units to your unit deck. Defeated faction units can be recruited again after being defeated. Units may be recruited and reinforced by flipping the population token and paying the unit's recruitment \includesvg[height=10px]{svgs/pay.svg} or reinforcement \includesvg[height=10px]{svgs/reinforce.svg} cost. When you do so, you can instantly recruit and reinforce \textbf{any number} of times, provided you have enough resources and the prerequisite buildings to do so.\\[6pt]
-\textbf{Recruiting} a unit requires that your town has a dwelling of that unit’s level or higher. \textbf{Reinforcing} requires that your town has a citadel in addition to a dwelling of that unit’s level or higher. If you ever lose all units in your unit deck, \textbf{immediately} replace your unit deck with the starting units of the scenario.\\[6pt]
+
+In addition to their hero and its deck, players have a deck of unit cards which represent the armies moving with their heroes. Every faction has access to 7 different units, each with unique stats and abilities. Units are necessary for winning combats and fulfilling scenario goals. Each scenario's set up instructions indicate which unit cards should be included in your initial unit deck. Your current unit deck should be kept near the town and hero boards, clearly separated from the rest of your faction’s units.\par
+Each faction unit is double-sided, with a weaker “Few” side, and a stronger “Pack” side. “Few” units may be upgraded to “Packs” by \textbf{reinforcing} them, while taking damage in combat can subsequently reduce a unit back to its “Few” side. Units should always be kept on their correct side when moved around or inspected.\par
+A player’s unit deck may have any number of units, but only up to 5 units can be selected to fight during \hyperlink{Combatsetup}{combat set up}. If a unit is defeated in combat, remove it from your unit deck. After combat, return any surviving units to your unit deck. Defeated faction units can be recruited again after being defeated. Units may be recruited and reinforced by flipping the population token and paying the unit's recruitment \includesvg[height=10px]{svgs/pay.svg} or reinforcement \includesvg[height=10px]{svgs/reinforce.svg} cost. When you do so, you can instantly recruit and reinforce \textbf{any number} of times, provided you have enough resources and the prerequisite buildings to do so.\par
+\textbf{Recruiting} a unit requires that your town has a dwelling of that unit’s level or higher. \textbf{Reinforcing} requires that your town has a citadel in addition to a dwelling of that unit’s level or higher. If you ever lose all units in your unit deck, \textbf{immediately} replace your unit deck with the starting units of the scenario.\par
+
 \textbf{Important}: Any effects which allow you to reinforce outside of using the population token \textbf{do not} require owning a citadel or the appropriate level of dwelling.
 \begin{figure}[h]
 \centering
@@ -410,10 +414,11 @@ A player’s unit deck may have any number of units, but only up to 5 units can 
     \end{center}
 \end{wrapfigure}
 \subsection*{Unit card anatomy}
-\includesvg[height=30px]{svgs/attack.svg}\textbf{Attack} – The amount of damage this unit deals when it attacks. Attacks are always reduced by the defending unit’s defense. Attacks may be modified by various effects such as the attack die and statistic cards.\\[6pt]
-\includesvg[height=30px]{svgs/defense.svg}\textbf{Defense} - The amount by which the unit reduces the attack damage it receives. Does not apply to damage received from spells or other non-attack effects. Defense may be modified by various effects such as statistic cards.\\[6pt]
-\includesvg[height=30px]{svgs/HP.svg}\textbf{\hypertarget{HP}{HP}} - The maximum amount of damage a unit can sustain before it is defeated. ”Few” units are removed from combat and its owner’s unit deck when defeated. ”Pack” units are turned back to ”Few” units, with any excess damage placed on its ”Few” side. After combat, all damage is removed from all units. Units retain their ”Few” or ”Pack” status after combat. Defeated neutral units are placed into their respective discard pile.\\[6pt]
-\includesvg[height=30px]{svgs/initiative.svg}{\hypertarget{Initiative}{\textbf{Initiative}}} - Determines when the unit activates during combat. Units with a higher initiative activate first. In case of a tie, the \hyperlink{Combatterminology}{attacking} side’s unit should always activate first. If there are multiple ties on one side, the player who controls those units selects which unit to activate next. If there are multiple ties on both sides (for instance two attackers and two defenders with the same initiative), alternate between the attackers and defenders starting with the attacker.\\[6pt]
+
+\includesvg[height=30px]{svgs/attack.svg}\textbf{Attack} – The amount of damage this unit deals when it attacks. Attacks are always reduced by the defending unit’s defense. Attacks may be modified by various effects such as the attack die and statistic cards.\par
+\includesvg[height=30px]{svgs/defense.svg}\textbf{Defense} - The amount by which the unit reduces the attack damage it receives. Does not apply to damage received from spells or other non-attack effects. Defense may be modified by various effects such as statistic cards.\par
+\includesvg[height=30px]{svgs/HP.svg}\textbf{\hypertarget{HP}{HP}} - The maximum amount of damage a unit can sustain before it is defeated. ”Few” units are removed from combat and its owner’s unit deck when defeated. ”Pack” units are turned back to ”Few” units, with any excess damage placed on its ”Few” side. After combat, all damage is removed from all units. Units retain their ”Few” or ”Pack” status after combat. Defeated neutral units are placed into their respective discard pile.\par
+\includesvg[height=30px]{svgs/initiative.svg}{\hypertarget{Initiative}{\textbf{Initiative}}} - Determines when the unit activates during combat. Units with a higher initiative activate first. In case of a tie, the \hyperlink{Combatterminology}{attacking} side’s unit should always activate first. If there are multiple ties on one side, the player who controls those units selects which unit to activate next. If there are multiple ties on both sides (for instance two attackers and two defenders with the same initiative), alternate between the attackers and defenders starting with the attacker.\par
 Most units have a \textbf{special ability}:\\[6pt]
   \begin{minipage}{.6\textwidth}
     \begin{itemize}[wide]
@@ -440,8 +445,8 @@ There are thee types of units:
 \end{itemize}
 If a \textbf{ranged} unit is next to an enemy unit, its attack target must be that adjacent enemy. When attacking an adjacent enemy in this way \textbf{or} an enemy in the backline while the ranged unit is also in its own backline, the ranged unit suffers a combat penalty. Throw two combat dice and \textbf{apply the smaller result}. Walls and gates may also \hyperlink{Walls}{reduce} a ranged unit's attack.
 \subsection*{Neutral units}
-Neutral units guard the various locations on the game map. Starting and winning combat against them is necessary to visit most locations. Neutral units are spread into four different tiers, each with their own deck. In addition to bronze, silver and gold, there are also azure \includegraphics[scale=0.25]{images/azure.PNG} neutral units which are the strongest in the game.\\[6pt]
-Each of these decks should be kept separate from each other and shuffled during set up. If a neutral unit deck ever runs out of cards, reshuffle the discard into a new deck. When a combat against neutral units starts, \hyperlink{Difficulty}{the appropriate number} of units from each tier should be drawn to take part in that combat.\\[6pt]
+Neutral units guard the various locations on the game map. Starting and winning combat against them is necessary to visit most locations. Neutral units are spread into four different tiers, each with their own deck. In addition to bronze, silver and gold, there are also azure \includegraphics[scale=0.25]{images/azure.PNG} neutral units which are the strongest in the game.\par
+Each of these decks should be kept separate from each other and shuffled during set up. If a neutral unit deck ever runs out of cards, reshuffle the discard into a new deck. When a combat against neutral units starts, \hyperlink{Difficulty}{the appropriate number} of units from each tier should be drawn to take part in that combat.\par
 It is possible for players to gain neutral units to their unit deck through various effects, such as scenario-specific rules or the diplomacy ability card. Neutral units cannot be reinforced, as they are single sided. Whenever a neutral unit is defeated from your unit deck, place it into the neutral discard pile as normal.
 \begin{figure}[h]
 \centering
@@ -486,22 +491,23 @@ Unit setup when fighting \textbf{other players}:
 \clearpage
 \subsection*{\hypertarget{Combatterminology}{Combat terminology}}
 The following terms are used in this rule book and by the unit and other cards to describe effects
-and elements during combat:\\[6pt]
-\textbf{Attacking playe}r – The player who started the combat by moving their hero.\\[6pt]
-\textbf{Defending player} – The player whom combat was started against.\\[6pt]
-\textbf{Activation} – A unit activates when it is next in the initiative order.\\[6pt]
-\textbf{Adjacent unit} – A unit is directly adjacent to another if it is one space away in a cardinal direction (nondiagonal).\\[6pt]
-\textbf{Combat round} – A full cycle of all units of each player being activated.\\[6pt]
+and elements during combat:\par
+\textbf{Attacking playe}r – The player who started the combat by moving their hero.\par
+\textbf{Defending player} – The player whom combat was started against.\par
+\textbf{Activation} – A unit activates when it is next in the initiative order.\par
+\textbf{Adjacent unit} – A unit is directly adjacent to another if it is one space away in a cardinal direction (nondiagonal).\par
+\textbf{Combat round} – A full cycle of all units of each player being activated.\par
 \textbf{Combat obstacles} – Every card placed on the combat board counts as a combat obstacle.
-Obstacles block the movement of all non-flying units.\\[6pt]
+Obstacles block the movement of all non-flying units.\par
 \textbf{Attack die} – A red die whose results range from -1 to +1. Roll the die whenever a unit attacks and
-add the result to the unit’s attack value.\\[6pt]
+add the result to the unit’s attack value.\par
 \textbf{\hypertarget{Retaliate}{Retaliation attack}} – If a unit survives an attack by an adjacent unit, it performs an attack on that unit. Each unit can perform only 1 retaliation attack per combat round. Retaliation attacks function
 identically to normal attacks, but they cannot cause another retaliation attack. Mark units which
-have performed a retaliation attack this round with a black cube.\\[6pt]
+
+have performed a retaliation attack this round with a black cube.\par
 \textbf{Paralysis} \includesvg[height=10px]{svgs/paralysis.svg} – Effects which paralyze a unit place the paralysis token on them. A paralyzed unit
 skips its next activation and removes the token instead. If it is attacked or takes any damage before
-that time, remove the paralysis token from that unit.\\[6pt]
+that time, remove the paralysis token from that unit.\par
 \textbf{\hypertarget{Defend}{Defend}} \includesvg[height=10px]{svgs/defense.svg} – When a unit with a defense token is attacked, make another roll with the attack die
 after the initial attack roll. If you roll a “+1”, the defending unit gains an extra 1 defense for this
 attack. If a unit has a defense token at the start of its activation, discard it. That unit cannot take another defense action during that activation.
@@ -513,9 +519,10 @@ Combat against neutral units has a time limit of one round. If the player cannot
 before the end of the current combat round, they must either \hyperlink{Endcombat}{retreat} or spend 1 MP from the hero who started the combat in order to play another combat round. Combat against azure units, other players or AI heroes has no time limit.
 \clearpage
 \subsection*{\hypertarget{Walls}{Defending a town with a citadel}}
-When a town with a citadel is attacked, the defender adds the wall and gate obstacles in any order to the middle row of the combat board after placing their units. The gate card is not an obstacle to the defending player. The wall and gate cards can be destroyed by any adjacent \includesvg[height=10px]{svgs/unit_ground.svg} or \includesvg[height=10px]{svgs/unit_flying.svg} unit's attack. Such attacks are always successful, do not roll the combat die when performing them.\\[6pt]
+
+When a town with a citadel is attacked, the defender adds the wall and gate obstacles in any order to the middle row of the combat board after placing their units. The gate card is not an obstacle to the defending player. The wall and gate cards can be destroyed by any adjacent \includesvg[height=10px]{svgs/unit_ground.svg} or \includesvg[height=10px]{svgs/unit_flying.svg} unit's attack. Such attacks are always successful, do not roll the combat die when performing them.\par
 Defending units standing on their own side and in the same column as a wall or a gate are partially protected from ranged attacks. If they are targeted by a ranged attack performed from the opponent's side of the combat board, \textbf{reduce the attack's damage by 1}.
-\\[6pt]
+\par
 The defender also gains the arrow tower unit card which is placed next to the combat board. It can only be targeted by ranged attacks. This unit is also destroyed if all wall and gate cards are destroyed. The arrow tower cannot start a defensive combat by itself without other units and you do not need to destroy it in order to win when attacking.
 \begin{figure}[h]
 \centering
@@ -527,7 +534,7 @@ The defender also gains the arrow tower unit card which is placed next to the co
 
 \clearpage
 \subsection*{Combat round structure}
-Combat is divided into rounds, during which all of the units participating in that combat activate once in initiative order. After each unit has activated once, a new combat round begins. Combat lasts until all units on one side are eliminated, a player has to \textbf{retreat} when fighting neutral units, or a player \textbf{surrenders} to another player. In \textbf{clash} and \textbf{alliance} scenarios, neutral units are always controlled by the next enemy player sitting to your right. When controlling neutral units in this way they must always attack if possible. In campaign and cooperative scenarios, neutral enemies follow their own \hyperlink{AIrules}{rules}.\\[6pt]
+Combat is divided into rounds, during which all of the units participating in that combat activate once in initiative order. After each unit has activated once, a new combat round begins. Combat lasts until all units on one side are eliminated, a player has to \textbf{retreat} when fighting neutral units, or a player \textbf{surrenders} to another player. In \textbf{clash} and \textbf{alliance} scenarios, neutral units are always controlled by the next enemy player sitting to your right. When controlling neutral units in this way they must always attack if possible. In campaign and cooperative scenarios, neutral enemies follow their own \hyperlink{AIrules}{rules}.\par
 Structure of a combat round:
 \begin{itemize}
     \item Players activate their units in the decreasing order of unit \hyperlink{Initiative}{intiative}, starting with the next unit that has not yet been activated this combat round.
@@ -540,26 +547,28 @@ Structure of a combat round:
     \item Keep activating units until they've all been activated once. After the last unit's activation, the combat round ends.
 \end{itemize}
 \subsection*{\hypertarget{Endcombat}{End of combat}}
-When combat ends, all damage is removed from all surviving units. Move any player owned units back to their unit deck and discard any leftover neutral units. After winning combat, \hyperlink{Categories}{visit} the field where the combat took place.\\[6pt]
-In combat against \textbf{neutral units}, if the player defeats all opposing units they win the combat. If the player \hyperlink{Timelimit}{runs out of time} or all of their units are defeated, they have to \textbf{retreat}. When you retreat, move any surviving units back to your unit deck and move the hero that started the combat back to the field they last visited. There are no other negative consequences.\\[6pt]
+When combat ends, all damage is removed from all surviving units. Move any player owned units back to their unit deck and discard any leftover neutral units. After winning combat, \hyperlink{Categories}{visit} the field where the combat took place.\par
+In combat against \textbf{neutral units}, if the player defeats all opposing units they win the combat. If the player \hyperlink{Timelimit}{runs out of time} or all of their units are defeated, they have to \textbf{retreat}. When you retreat, move any surviving units back to your unit deck and move the hero that started the combat back to the field they last visited. There are no other negative consequences.\\par
 Combat against \textbf{other players} can end in the following ways:
 \begin{itemize}
     \item All units on one side are defeated. If a \textbf{main hero} is defeated in this way, the defeated player \textbf{loses morale} and has to \textbf{pay the winner} 5 gold. If a \textbf{secondary hero} is defeated instead, do not lose morale or pay any gold. In both cases, the defeated player also gives the winner one of their \hyperlink{End}{faction cubes}. Defeated main heroes are moved to a friendly town or settlement while secondary heroes are removed from the game.
     \item One player chooses to \textbf{surrender}. You may surrender by paying the other player 10 gold when activating a unit. Move your main hero or remove your secondary hero from the game as if you were defeated by losing your units. You cannot surrender when defending a town. There are no other direct consequences to surrendering; the winner does not gain a faction cube nor any experience.
 \end{itemize}
- When a secondary hero is attacked, they may also choose to be \textbf{instantly defeated} instead of fighting a combat in order to preserve their units. When this happens, the attacker still receives a faction cube from the defeated hero.\\[6pt] Defeating a main hero \hyperlink{End}{may eliminate} that player.
+ When a secondary hero is attacked, they may also choose to be \textbf{instantly defeated} instead of fighting a combat in order to preserve their units. When this happens, the attacker still receives a faction cube from the defeated hero.\par Defeating a main hero \hyperlink{End}{may eliminate} that player.
 
 \subsection*{\hypertarget{Combatexperience}{Combat experience}}
-Winning combat with your main hero usually grants them experience. If the difficulty of the neutral field or the level of a defeated enemy main hero was equal to your level, gain 1 \includesvg[height=10px]{svgs/exp.svg}. If they were higher than your level, gain 2 \includesvg[height=10px]{svgs/exp.svg}. Defeating a neutral combat which involved an azure unit grants you level 7 immediately. If you gain multiple levels in this way, resolve their effects in order.\\[6pt]
+
+Winning combat with your main hero usually grants them experience. If the difficulty of the neutral field or the level of a defeated enemy main hero was equal to your level, gain 1 \includesvg[height=10px]{svgs/exp.svg}. If they were higher than your level, gain 2 \includesvg[height=10px]{svgs/exp.svg}. Defeating a neutral combat which involved an azure unit grants you level 7 immediately. If you gain multiple levels in this way, resolve their effects in order.\par
 Secondary heroes cannot gain experience from winning a combat. You also do not gain experience from defeating a secondary hero.
 \subsection*{\hypertarget{Quick}{Quick combat}}
 If your hero’s level is higher than a field’s difficulty when combat against neutral units would begin, \textbf{no combat} takes place. The player is considered to have beaten the neutral units by default and gains no rewards for the combat.
 
 \subsection*{\hypertarget{AIrules}{Player vs AI}}
-These rules apply when playing a \textbf{solo} game. The AI combat rules for targeting and attacking are also used when playing a \textbf{cooperative} scenario.\\[6pt]
+These rules apply when playing a \textbf{solo} game. The AI combat rules for targeting and attacking are also used when playing a \textbf{cooperative} scenario.\par
 Solo campaigns are played against AI Heroes who use two automated decks to play the game: the AI deck, and the spell deck. The AI deck consists of cards that are similar in function to abilities and artifacts, but change depending on the game's \hyperlink{Difficulty}{difficulty}. The spell deck should be used
+
 when instructed by the cards in the AI deck. During combat against neutral enemies or AI heroes, their units follow an automatic set of instructions. \textbf{Initiative rules} work identically. When an \textbf{AI hero} activates a unit, drawn an AI card as its activation.\\[6pt]
-All AI controlled \includesvg[height=10px]{svgs/unit_ground.svg} and \includesvg[height=10px]{svgs/unit_flying.svg} units prioritize attacking units of the same tier. If this is impossible, they attack the closest unit, prioritizing the lowest tier one. \includesvg[height=10px]{svgs/unit_ranged.svg} units prioritize other \includesvg[height=10px]{svgs/unit_ranged.svg} units of the same tier, then lower tier, and finally higher tier. If there are no \includesvg[height=10px]{svgs/unit_ranged.svg} for them to target they prioritize \includesvg[height=10px]{svgs/unit_ground.svg} and \includesvg[height=10px]{svgs/unit_flying.svg} units in the same tier order. If there's more than one valid target, they attack the closest one.\\[6pt]
+All AI controlled \includesvg[height=10px]{svgs/unit_ground.svg} and \includesvg[height=10px]{svgs/unit_flying.svg} units prioritize attacking units of the same tier. If this is impossible, they attack the closest unit, prioritizing the lowest tier one. \includesvg[height=10px]{svgs/unit_ranged.svg} units prioritize other \includesvg[height=10px]{svgs/unit_ranged.svg} units of the same tier, then lower tier, and finally higher tier. If there are no \includesvg[height=10px]{svgs/unit_ranged.svg} for them to target they prioritize \includesvg[height=10px]{svgs/unit_ground.svg} and \includesvg[height=10px]{svgs/unit_flying.svg} units in the same tier order. If there's more than one valid target, they attack the closest one.\par
 If there's ever a tie between equally valid targets for any units, the players choose which unit is attacked.
 
 \clearpage
@@ -574,7 +583,7 @@ If there's ever a tie between equally valid targets for any units, the players c
     \includegraphics[width=0.48\textwidth]{images/ai_card.PNG}
     \end{center}
 \end{wrapfigure}
-AI heroes always automatically win combat against any neutral units when they flag fields. They do not otherwise have to fight any other neutral units and will treat their fields as empty. The same is true for all other visitable locations. AI heroes must discover face down map tiles as normal by spending 1 MP in order to move onto them. The player chooses that tile’s orientation. AI heroes cannot surrender and you cannot surrender to them. They will always fight until they run out of units and there’s no time limit in combats against them. Winning combat against an AI hero does not grant any rewards unless stated by the scenario. AI heroes do not have a town board, resources, or a hero card. Their armies are static and defined by the scenario’s set up or other rules.\\[6pt]
+AI heroes always automatically win combat against any neutral units when they flag fields. They do not otherwise have to fight any other neutral units and will treat their fields as empty. The same is true for all other visitable locations. AI heroes must discover face down map tiles as normal by spending 1 MP in order to move onto them. The player chooses that tile’s orientation. AI heroes cannot surrender and you cannot surrender to them. They will always fight until they run out of units and there’s no time limit in combats against them. Winning combat against an AI hero does not grant any rewards unless stated by the scenario. AI heroes do not have a town board, resources, or a hero card. Their armies are static and defined by the scenario’s set up or other rules.\par
 
 Any differences to the above rules will be described in any given scenario’s own rules
 
@@ -584,13 +593,13 @@ All scenarios have their victory conditions listed in the scenario book. In addi
     \item Play 3 full rounds without controlling a town or a settlement. Count the number of rounds left using any suitable component.
     \item Lose combat with your main hero when you have no towns or settlements left, including when defending your last town or settlement.
 \end{itemize}
-If you eliminate all enemy factions you immediately win the scenario. Eliminated players are immediately removed from the game. Remove their faction cubes and heroes from the game map. Treat the cards in their deck as being removed from the game for the rest of the scenario. If you are eliminated, you may still participate in the game by controlling neutral units.\\[6pt]
+If you eliminate all enemy factions you immediately win the scenario. Eliminated players are immediately removed from the game. Remove their faction cubes and heroes from the game map. Treat the cards in their deck as being removed from the game for the rest of the scenario. If you are eliminated, you may still participate in the game by controlling neutral units.\par
 In \textbf{clash} scenarios, collecting \textbf{a faction cube} from every enemy player when there are 3 more players immediately wins you the game. Other scenario specific rules may also modify the behaviour of collecting faction cubes.
 \clearpage
 
 \section{Other rules}
 \subsection*{\hypertarget{Trading}{Trading}}
-The trading post field and other effects allow the players to trade resources with the game in accordance to the table below. You may also \textbf{remove cards} from your hand at the trading post to gain 1 gold. \textbf{Note}: Specialty, statistic, starting ability and magic arrows cannot be removed in this way.\\[6pt]
+The trading post field and other effects allow the players to trade resources with the game in accordance to the table below. You may also \textbf{remove cards} from your hand at the trading post to gain 1 gold. \textbf{Note}: Specialty, statistic, starting ability and magic arrows cannot be removed in this way.\par
 In \textbf{alliance} and \textbf{co-operative} scenarios, players are allowed to trade resources and cards following these rules:
 \begin{itemize}
     \item In alliance scenarios, allies may trade resources freely at any time on their turns except during combat.
@@ -627,7 +636,7 @@ Most expansions have cards which refer to schools of magic. All spell cards belo
 \subsection*{Permanent cards}
 Added by the stretch goals and Rampart expansions, explained \hyperlink{Playerdecks}{here}.
 \subsection*{War machines}
-Added by the Rampart expansion. War machines are permanent cards that can be bought at either a trading post or a war machine factory. If you buy one at the trading post, you cannot use any of the other normal functions of that field during that visit. War machines are also more expensive at the trading post. \textit{I don't currently know if these have a player card back and are added to your hand like normal?}\\[6pt]
+Added by the Rampart expansion. War machines are permanent cards that can be bought at either a trading post or a war machine factory. If you buy one at the trading post, you cannot use any of the other normal functions of that field during that visit. War machines are also more expensive at the trading post. \textit{I don't currently know if these have a player card back and are added to your hand like normal?}\par
 \includegraphics[width=0.48\textwidth]{images/factory.PNG}
 
 \clearpage
@@ -655,8 +664,8 @@ Added by the Inferno expansion. When this field is revealed, all players roll 2 
 \end{wrapfigure}
 \section[All map locations]{All map locations\hypertarget{All}{}}
 
-This section describes the function of every single field in the game. The vast majority of fields have useful iconography that clearly communicates the field's effect. On the right is a screenshot of the back of the rule book that explains these. If a field has any combination of these icons and is not described in detail later, then that field is either \textbf{visitable} or \textbf{flaggable} and its only effect is indicated by these icons.\\[6pt]
-Re-visitable fields do not have an icon that indicates them to be such. For this reason all re-visitable fields are pictured and described individually. The \includegraphics[scale=0.75]{images/revisitable.PNG} symbol is on almost all flaggable fields, with the major exception of settlements. Rules for flagging mines, settlements and towns are on the next page followed by descriptions of re-visitable and unique fields marked with a question mark.\\[6pt]
+This section describes the function of every single field in the game. The vast majority of fields have useful iconography that clearly communicates the field's effect. On the right is a screenshot of the back of the rule book that explains these. If a field has any combination of these icons and is not described in detail later, then that field is either \textbf{visitable} or \textbf{flaggable} and its only effect is indicated by these icons.\par
+Re-visitable fields do not have an icon that indicates them to be such. For this reason all re-visitable fields are pictured and described individually. The \includegraphics[scale=0.75]{images/revisitable.PNG} symbol is on almost all flaggable fields, with the major exception of settlements. Rules for flagging mines, settlements and towns are on the next page followed by descriptions of re-visitable and unique fields marked with a question mark.\par
 Random towns and war machine factories were pictured in the previous section so they aren't explained below again.
 
 
@@ -681,7 +690,7 @@ Random towns and war machine factories were pictured in the previous section so 
 \end{center}
 
 \clearpage
-\textbf{Settlements} function similarly to both towns and mines. They act as a spawn point for secondary heroes, and as a place for main heroes to move to when defeated. You may also \hyperlink{Town}{pay gold} to defend settlements with units. When you flag a settlement, you choose whether to increase your \textbf{gold}, \textbf{building materials} or \textbf{valuables} income by one space. As with mines, if you are the first player to flag a settlement, you immediately gain resources equal to that increase in production. Mark the settlement with an appropriate resource token to show which resource it produces. When you flag an enemy settlement you may switch which resource it produces.\\[6pt]
+\textbf{Settlements} function similarly to both towns and mines. They act as a spawn point for secondary heroes, and as a place for main heroes to move to when defeated. You may also \hyperlink{Town}{pay gold} to defend settlements with units. When you flag a settlement, you choose whether to increase your \textbf{gold}, \textbf{building materials} or \textbf{valuables} income by one space. As with mines, if you are the first player to flag a settlement, you immediately gain resources equal to that increase in production. Mark the settlement with an appropriate resource token to show which resource it produces. When you flag an enemy settlement you may switch which resource it produces.\par
 Additionally, \textbf{instead of increasing resource production}, you may choose to \textbf{reinforce} one of your bronze or silver units immediately for half the normal cost, rounded up. If you were the first player to flag the settlement, also reinforce an additional bronze or silver unit for free. Do not place any resource tokens on the settlement if you choose to reinforce.
 \begin{figure}[h]
 \centering
@@ -706,11 +715,11 @@ Additionally, \textbf{instead of increasing resource production}, you may choose
 \includegraphics[scale=0.8]{images/black_market.PNG}\\
 \includegraphics[scale=0.8]{images/sanctuary.PNG}
 \includegraphics[scale=0.8]{images/tavern.PNG}\\
-\includegraphics[scale=0.8]{images/library.PNG}\\[6pt]
+\includegraphics[scale=0.8]{images/library.PNG}\par
 \textit{All of these effects should be clear by their official descriptions. The trading post's effect is explained in the \hyperlink{Trading}{trading} section.}
 \clearpage
 \subsection*{Other fields}
-The effects of these fields are only indicated by a question mark on their tiles.\\[6pt]
+The effects of these fields are only indicated by a question mark on their tiles.\par
 \includegraphics[scale=0.8]{images/tree.PNG}
 \includegraphics[scale=0.8]{images/observatory.PNG}\\
 \includegraphics[scale=0.8]{images/hut.PNG}
