@@ -222,7 +222,7 @@ Each main hero starts the game at level 1 and can advance up to level 7 by gaini
 \subsection*{\hypertarget{Secondary}{Secondary heroes}}
 If you control a town or a settlement, a secondary hero can be hired by flipping your population token and paying 10 gold. \textbf{Note}: Units cannot be \hyperlink{Units}{recruited or reinforced} during that use of the population token.\par
 Your secondary hero uses the remaining hero model of your faction. You may wish to mark this model with a token such as a faction cube to differentiate it from the main hero. After hiring a secondary hero, place the model in a town or settlement you control. You can only have one secondary hero at a time.\par
-Secondary heroes have 2 movement points. They do not have their own hero card, cannot gain experience, and cannot use your main hero's deck for any reason. If a secondary hero gains any cards, place them into your hand as normal.
+Secondary heroes have 2 movement points. When you gain a secondary hero, take an additional set of 2 movement tokens to represent their MP. They do not have their own hero card, cannot gain experience, and cannot use your main hero's deck for any reason. If a secondary hero gains any cards, place them into your hand as normal.
 Secondary heroes are considered to have the same level as the main hero for the purposes of resolving \hyperlink{Quick}{quick combat} against neutral enemies.\par
 Units owned by the player may always participate in combat started in the same field as their secondary hero.\par
 If your secondary hero is attacked by an enemy hero, you can choose to have your hero be \hyperlink{Endcombat}{instantly defeated instead of fighting a combat}. When a secondary hero is defeated, remove them from the game. They can be recruited again with another use of the population token.\par
@@ -303,7 +303,6 @@ Every ability and statistic card has a basic effect and a stronger expert effect
 
 \subsection*{Artifact cards}
 Artifact cards are divided into 3 levels: minor, major, and relic. These levels relate to the overall power of the card and may be referenced when resolving certain effects or during scenario set up. Artifacts are gained through map exploration.\par
-If you gain an artifact as part of applying the difficulty bonus during a scenario’s set up, keep it in your hand instead of shuffling it into your deck.
 Artifacts can be \hyperlink{Trading}{traded} in alliance and cooperative scenarios.\par
 \includegraphics[scale=1]{\images/artifact.png}
 
@@ -399,7 +398,7 @@ Placing a new tile costs 1MP. The new tile must be adjacent to the hero who spen
 
 In addition to their hero and its deck, players have a deck of unit cards which represent the armies moving with their heroes. Every faction has access to 7 different units, each with unique stats and abilities. Units are necessary for winning combats and fulfilling scenario goals. Each scenario's set up instructions indicate which unit cards should be included in your initial unit deck. Your current unit deck should be kept near the town and hero boards, clearly separated from the rest of your faction’s units.\par
 Each faction unit is double-sided, with a weaker “Few” side, and a stronger “Pack” side. “Few” units may be upgraded to “Packs” by \textbf{reinforcing} them, while taking damage in combat can subsequently reduce a unit back to its “Few” side. Units should always be kept on their correct side when moved around or inspected.\par
-A player’s unit deck may have any number of units, but only up to 5 units can be selected to fight during \hyperlink{Combatsetup}{combat set up}. If a unit is defeated in combat, remove it from your unit deck. After combat, return any surviving units to your unit deck. Defeated faction units can be recruited again after being defeated. Units may be recruited and reinforced by flipping the population token and paying the unit's recruitment \includesvg[height=10px]{\svgs/pay.svg} or reinforcement \includesvg[height=10px]{\svgs/reinforce.svg} cost. When you do so, you can instantly recruit and reinforce \textbf{any number} of times, provided you have enough resources and the prerequisite buildings to do so.\par
+A player’s unit deck may have any number of units, but only up to 5 units can be selected to fight during \hyperlink{Combatsetup}{combat set up}. If a unit is defeated in combat, discard it from your unit deck. After combat, return any surviving units to your unit deck. Defeated faction units can be recruited again after being defeated. Units may be recruited and reinforced by flipping the population token and paying the unit's recruitment \includesvg[height=10px]{\svgs/pay.svg} or reinforcement \includesvg[height=10px]{\svgs/reinforce.svg} cost. When you do so, you can instantly recruit and reinforce \textbf{any number} of times, provided you have enough resources and the prerequisite buildings to do so.\par
 \textbf{Recruiting} a unit requires that your town has a dwelling of that unit’s level or higher. \textbf{Reinforcing} requires that your town has a citadel in addition to a dwelling of that unit’s level or higher. If you ever lose all units in your unit deck, \textbf{immediately} replace your unit deck with the starting units of the scenario.\par
 
 \textbf{Important}: Any effects which allow you to reinforce outside of using the population token \textbf{do not} require owning a citadel or the appropriate level of dwelling.
@@ -421,7 +420,7 @@ A player’s unit deck may have any number of units, but only up to 5 units can 
 
 \includesvg[height=30px]{\svgs/attack.svg}\textbf{Attack} – The amount of damage this unit deals when it attacks. Attacks are always reduced by the defending unit’s defense. Attacks may be modified by various effects such as the attack die and statistic cards.\par
 \includesvg[height=30px]{\svgs/defense.svg}\textbf{Defense} - The amount by which the unit reduces the attack damage it receives. Does not apply to damage received from spells or other non-attack effects. Defense may be modified by various effects such as statistic cards.\par
-\includesvg[height=30px]{\svgs/HP.svg}\textbf{\hypertarget{HP}{HP}} - The maximum amount of damage a unit can sustain before it is defeated. ”Few” units are removed from combat and its owner’s unit deck when defeated. ”Pack” units are turned back to ”Few” units, with any excess damage placed on its ”Few” side. After combat, all damage is removed from all units. Units retain their ”Few” or ”Pack” status after combat. Defeated neutral units are placed into their respective discard pile.\par
+\includesvg[height=30px]{\svgs/HP.svg}\textbf{\hypertarget{HP}{HP}} - The maximum amount of damage a unit can sustain before it is defeated. ”Few” units are discarded from combat and its owner’s unit deck when defeated. ”Pack” units are turned back to ”Few” units, with any excess damage placed on its ”Few” side. After combat, all damage is healed from all units. Units retain their ”Few” or ”Pack” status after combat. Defeated neutral units are placed into their respective discard pile.\par
 \includesvg[height=30px]{\svgs/initiative.svg}{\hypertarget{Initiative}{\textbf{Initiative}}} - Determines when the unit activates during combat. Units with a higher initiative activate first. In case of a tie, the \hyperlink{Combatterminology}{attacking} side’s unit should always activate first. If there are multiple ties on one side, the player who controls those units selects which unit to activate next. If there are multiple ties on both sides (for instance two attackers and two defenders with the same initiative), alternate between the attackers and defenders starting with the attacker.\par
 Most units have a \textbf{special ability}:\par
   \begin{minipage}{.6\textwidth}
@@ -445,7 +444,7 @@ There are thee types of units:
 \begin{itemize}
     \item \textbf{Ground} \includesvg[height=10px]{\svgs/unit_ground.svg} units move up to 3 spaces and attack adjacent enemies.
     \item \textbf{Flying} \includesvg[height=10px]{\svgs/unit_flying.svg} units move up to 3 spaces, ignoring obstacles, and attack adjacent enemies.
-    \item \textbf{Ranged} \includesvg[height=10px]{\svgs/unit_ranged.svg} units may attack any unit anywhere OR move up to 1 space.
+    \item \textbf{Ranged} \includesvg[height=10px]{\svgs/unit_ranged.svg} units may attack any unit anywhere and then move 1 space OR move up to 1 space without attacking.
 \end{itemize}
 If a \textbf{ranged} unit is next to an enemy unit, its attack target must be that adjacent enemy. When attacking an adjacent enemy in this way \textbf{or} an enemy in the backline while the ranged unit is also in its own backline, the ranged unit suffers a combat penalty. Throw two combat dice and \textbf{apply the smaller result}. Walls and gates may also \hyperlink{Walls}{reduce} a ranged unit's attack.
 \subsection*{Neutral units}
@@ -551,11 +550,11 @@ Structure of a combat round:
     \item Keep activating units until they've all been activated once. After the last unit's activation, the combat round ends.
 \end{itemize}
 \subsection*{\hypertarget{Endcombat}{End of combat}}
-When combat ends, all damage is removed from all surviving units. Move any player owned units back to their unit deck and discard any leftover neutral units. After winning combat, \hyperlink{Categories}{visit} the field where the combat took place.\par
+When combat ends, all damage is healed from all surviving units. Move any player owned units back to their unit deck and discard any leftover neutral units. After winning combat, \hyperlink{Categories}{visit} the field where the combat took place.\par
 In combat against \textbf{neutral units}, if the player defeats all opposing units they win the combat. If the player \hyperlink{Timelimit}{runs out of time} or all of their units are defeated, they have to \textbf{retreat}. When you retreat, move any surviving units back to your unit deck and move the hero that started the combat back to the field they last visited. There are no other negative consequences.\\par
 Combat against \textbf{other players} can end in the following ways:
 \begin{itemize}
-    \item All units on one side are defeated. If a \textbf{main hero} is defeated in this way, the defeated player \textbf{loses morale} and has to \textbf{pay the winner} 5 gold. If a \textbf{secondary hero} is defeated instead, do not lose morale or pay any gold. In both cases, the defeated player also gives the winner one of their \hyperlink{End}{faction cubes}. Defeated main heroes are moved to a friendly town or settlement while secondary heroes are removed from the game.
+    \item All units on one side are defeated. If a \textbf{main hero} is defeated in this way, the defeated player \textbf{loses morale} and has to \textbf{pay the winner} 5 gold. If a \textbf{secondary hero} is defeated instead, do not lose morale or pay any gold. In both cases, the defeated player also gives the winner one of their \hyperlink{End}{faction cubes}. Defeated main heroes are moved to a friendly town or settlement, while secondary heroes are removed from the game until recruited again.
     \item One player chooses to \textbf{surrender}. You may surrender by paying the other player 10 gold when activating a unit. Move your main hero or remove your secondary hero from the game as if you were defeated by losing your units. You cannot surrender when defending a town. There are no other direct consequences to surrendering; the winner does not gain a faction cube nor any experience.
 \end{itemize}
  When a secondary hero is attacked, they may also choose to be \textbf{instantly defeated} instead of fighting a combat in order to preserve their units. When this happens, the attacker still receives a faction cube from the defeated hero.\par Defeating a main hero \hyperlink{End}{may eliminate} that player.
@@ -597,7 +596,7 @@ All scenarios have their victory conditions listed in the scenario book. In addi
     \item Play 3 full rounds without controlling a town or a settlement. Count the number of rounds left using any suitable component.
     \item Lose combat with your main hero when you have no towns or settlements left, including when defending your last town or settlement.
 \end{itemize}
-If you eliminate all enemy factions you immediately win the scenario. Eliminated players are immediately removed from the game. Remove their faction cubes and heroes from the game map. Treat the cards in their deck as being removed from the game for the rest of the scenario. If you are eliminated, you may still participate in the game by controlling neutral units.\par
+If you eliminate all enemy factions you immediately win the scenario. Eliminated players are immediately out of the game. Discard their faction cubes and heroes from the game map. Treat the cards in their deck as being removed from the game for the rest of the scenario. If you are eliminated, you may still participate in the game by controlling neutral units.\par
 In \textbf{clash} scenarios, collecting \textbf{a faction cube} from every enemy player when there are 3 more players immediately wins you the game. Other scenario specific rules may also modify the behaviour of collecting faction cubes.
 \clearpage
 
@@ -623,7 +622,7 @@ encountered during neutral combat and which additional bonuses players receive d
     \item \textbf{Hard} – Roll 1 resource die and receive the resources on it – OR – reveal cards from the top of the artifact deck until you find 1 minor artifact and add it to your hand.
     \item \textbf{Impossible} – No starting bonus.
 \end{itemize}
-All artifacts received from a starting bonus should be placed into your hand and not shuffled into your starting deck. Shuffle the artifact deck and its discard pile together afterwards, and then discard one artifact from the top to form the artifact discard pile again.
+All \textbf{artifacts} received from a starting bonus should be placed into your \textbf{hand} and not shuffled into your starting deck. Shuffle the artifact deck and its discard pile together afterwards, and then discard one artifact from the top to form the artifact discard pile again.
 \begin{center}
 \includegraphics[scale=1]{\images/field_difficulty.png}
 \end{center}
@@ -695,7 +694,7 @@ Random towns and war machine factories were pictured in the previous section so 
 
 \clearpage
 \textbf{Settlements} function similarly to both towns and mines. They act as a spawn point for secondary heroes, and as a place for main heroes to move to when defeated. You may also \hyperlink{Town}{pay gold} to defend settlements with units. When you flag a settlement, you choose whether to increase your \textbf{gold}, \textbf{building materials} or \textbf{valuables} income by one space. As with mines, if you are the first player to flag a settlement, you immediately gain resources equal to that increase in production. Mark the settlement with an appropriate resource token to show which resource it produces. When you flag an enemy settlement you may switch which resource it produces.\par
-Additionally, \textbf{instead of increasing resource production}, you may choose to \textbf{reinforce} one of your bronze or silver units immediately for half the normal cost, rounded up. If you were the first player to flag the settlement, also reinforce an additional bronze or silver unit for free. Do not place any resource tokens on the settlement if you choose to reinforce.
+Additionally, \textbf{instead of increasing resource production}, you may choose to \textbf{reinforce} one of your bronze or silver units immediately for half the normal cost, rounded up. If you were the first player to flag the settlement, reinforce that unit for free instead. Do not place any resource tokens on the settlement if you choose to reinforce.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\linewidth]{\images/settlements.png}
