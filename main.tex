@@ -18,7 +18,7 @@
 \usepackage{subfigure}
 
 \usepackage{tikz}
-\usetikzlibrary{shadows,calc}
+\usetikzlibrary{shadows, shadows.blur, calc}
 
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{enumitem}
@@ -87,6 +87,13 @@
     \drawshadow{image}
 \end{tikzpicture}}
 % End of drop shadow definition
+
+% Command for overlay circled text
+\definecolor{goblin}{HTML}{3b7c33}
+\newcommand\encircle[1]{%
+	\tikz[baseline=(X.base)]
+	\node (X) [draw=white, shape=circle, inner sep=0, fill=goblin, text=white, blur shadow={shadow blur steps=10}] {\strut \textbf{#1}};%
+}
 
 % Background
 \AddToHook{shipout/background}{%
@@ -175,9 +182,17 @@ This section will guide you through the process of setting up a scenario from th
 
 \clearpage
 
-\begin{center}
-\includegraphics[scale=0.9]{\images/setup.png}
-\end{center}
+\begin{figure}
+  \centering
+  \begin{scriptsize}
+  \begin{tikzpicture}
+    \draw (0, 0) node[inner sep=0] {\makebox[\textwidth][c]{\includegraphics[width=1.25\linewidth]{\images/setup.png}}};
+     \draw (0, 0) node {\encircle{0 }};
+    \draw (1.6, 1.7) node {\encircle{4h}};
+  \end{tikzpicture}
+  \end{scriptsize}
+
+\end{figure}
 
 \clearpage
 
