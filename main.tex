@@ -53,17 +53,17 @@
 \colorlet{outercolor}{gray!05}
 
 \newcommand\drawshadow[1]{
-	\begin{pgfonlayer}{shadow}
-		\shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.south west)+(\shadowshift)+(\shadowradius/2,\shadowradius/2)$) circle (\shadowradius);
-		\shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) circle (\shadowradius);
-		\shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) circle (\shadowradius);
-		\shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.north east)+(\shadowshift)+(-\shadowradius/2,-\shadowradius/2)$) circle (\shadowradius);
-		\shade[top color=innercolor,bottom color=outercolor] ($(#1.south west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) rectangle ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$);
-		\shade[left color=innercolor,right color=outercolor] ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$);
-		\shade[bottom color=innercolor,top color=outercolor] ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$);
-		\shade[outercolor,right color=innercolor,left color=outercolor] ($(#1.south west)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$);
-		\filldraw ($(#1.south west)+(\shadowshift)+(\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)-(\shadowradius/2,\shadowradius/2)$);
-	\end{pgfonlayer}
+  \begin{pgfonlayer}{shadow}
+    \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.south west)+(\shadowshift)+(\shadowradius/2,\shadowradius/2)$) circle (\shadowradius);
+    \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) circle (\shadowradius);
+    \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) circle (\shadowradius);
+    \shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.north east)+(\shadowshift)+(-\shadowradius/2,-\shadowradius/2)$) circle (\shadowradius);
+    \shade[top color=innercolor,bottom color=outercolor] ($(#1.south west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) rectangle ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$);
+    \shade[left color=innercolor,right color=outercolor] ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$);
+    \shade[bottom color=innercolor,top color=outercolor] ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$);
+    \shade[outercolor,right color=innercolor,left color=outercolor] ($(#1.south west)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$);
+    \filldraw ($(#1.south west)+(\shadowshift)+(\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)-(\shadowradius/2,\shadowradius/2)$);
+  \end{pgfonlayer}
 }
 
 % create a shadow layer, so that we don't need to worry about overdrawing other things
@@ -74,17 +74,17 @@
 \newlength\mylen
 
 \newcommand\shadowimage[2][]{%
-	\setbox0=\hbox{\includegraphics[#1]{#2}}
-	\setlength\mylen{\wd0}
-	\ifnum\mylen<\ht0
-	\setlength\mylen{\ht0}
-	\fi
-	\divide \mylen by 120
-	\def\shadowshift{\mylen,-\mylen}
-	\def\shadowradius{\the\dimexpr\mylen+\mylen+\mylen\relax}
-	\begin{tikzpicture}
-		\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[#1]{#2}};
-		\drawshadow{image}
+  \setbox0=\hbox{\includegraphics[#1]{#2}}
+  \setlength\mylen{\wd0}
+  \ifnum\mylen<\ht0
+  \setlength\mylen{\ht0}
+  \fi
+  \divide \mylen by 120
+  \def\shadowshift{\mylen,-\mylen}
+  \def\shadowradius{\the\dimexpr\mylen+\mylen+\mylen\relax}
+  \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[#1]{#2}};
+    \drawshadow{image}
 \end{tikzpicture}}
 % End of drop shadow definition
 
@@ -332,10 +332,16 @@ List of all effects:
 All players have a unique deck which represents their main hero's abilities and equipment. Decks may contain statistic cards, ability cards, spell cards, artifact cards and the chosen hero’s specialty cards. Each player’s deck starts with 9 cards, built during the game’s set up. Game components may refer to this deck as your \textbf{Deck of Might and Magic}, in this rule book this is shorthanded to \textit{your deck}.
 \subsection*{General card rules}
 \begin{enumerate}
+<<<<<<< HEAD
 	\item Cards can be played \textbf{only on your turn}, or in a combat involving your \textbf{main hero}.
 	\item After a card is used, discard it. Each player has their own separate discard pile for their own deck.
 	\item If your deck is empty when you need to draw a card, shuffle your discard pile into a new deck to draw from.
 	\item Whenever a hero gains a card for any reason, put it directly into your hand unless otherwise stated. 
+=======
+  \item Cards can be played \textbf{only on your turn}, or in a combat involving your \textbf{main hero}.
+  \item After a card is used, discard it. Each player has their own separate discard pile for their own deck.
+  \item If your hero's deck is empty when you need to draw a card, shuffle your discard pile into a new deck.
+>>>>>>> dbd46eb (Replace tabs with spaces)
     \item Whenever you are instructed to \textbf{search} (X) the ability, artifact, or spell deck, you may either look at the top (X) cards from the specified deck, take one of them to your hand, and discard the others, or-instead of looking at the top (X) cards add the top card from that deck’s discard pile to your hand.
     \item The ability, artifact, and spell decks each have their own discard piles, created during the setup, which help players identify these decks. If a deck ever runs out of cards, reshuffle it and discard its top card to form a new discard pile. Also, whenever an ability, artifact or spell deck discard is empty, refill it with that deck’s top card.
     \item Whenever you are instructed to remove a card, remove it completely from the game and return it to the box.
@@ -776,75 +782,75 @@ Additionally, \textbf{instead of increasing resource production}, you may choose
 
 \subsection*{Revisitable fields}
 \begin{figure}[h]
-	\centering
-	\captionsetup{width=.5\linewidth}
-	\textbf{Stables}\par\medskip
-	\shadowimage[width=0.5\linewidth]{\images/stables.jpg}
-	\caption{Category: \textbf{Revisitable}\\Gain 1 additional MP.}
-	\bigbreak
-	\textit{This movement point lasts for only one turn. The same is true for all other effects which grant MP. Essentially, it's "free" to move onto this field.}
+  \centering
+  \captionsetup{width=.5\linewidth}
+  \textbf{Stables}\par\medskip
+  \shadowimage[width=0.5\linewidth]{\images/stables.jpg}
+  \caption{Category: \textbf{Revisitable}\\Gain 1 additional MP.}
+  \bigbreak
+  \textit{This movement point lasts for only one turn. The same is true for all other effects which grant MP. Essentially, it's "free" to move onto this field.}
 \end{figure}
 
 \begin{figure}
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\textbf{Trading Post}\\
-		\shadowimage[width=\textwidth]{\images/trading_post.jpg}
-		\caption{Category: \textbf{Revisitable}\\
-			Exchange resources or Remove a card.
-			See \protect\hyperlink{Trading}{trading}.}
-	\end{minipage}\hfill
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\captionsetup{singlelinecheck=off}
-		\textbf{Black Market}\\
-		\shadowimage[width=\textwidth]{\images/black_market.jpg}
-		\caption[black market]{Category: \textbf{Revisitable}\\Look at the top 4 cards from the Artifact discard pile. You can buy one of them for:
-			\begin{itemize}
-				\item [5] \includesvg[height=10px]{\svgs/gold.svg} if it is a \textbf{Minor} Artifact
-				\item [7] \includesvg[height=10px]{\svgs/gold.svg} if it is a \textbf{Major} Artifact
-				\item [10] \includesvg[height=10px]{\svgs/gold.svg} if it is a \textbf{Relic} Artifact
-			\end{itemize}
-			}
-	\end{minipage}
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{Trading Post}\\
+    \shadowimage[width=\textwidth]{\images/trading_post.jpg}
+    \caption{Category: \textbf{Revisitable}\\
+      Exchange resources or Remove a card.
+      See \protect\hyperlink{Trading}{trading}.}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \captionsetup{singlelinecheck=off}
+    \textbf{Black Market}\\
+    \shadowimage[width=\textwidth]{\images/black_market.jpg}
+    \caption[black market]{Category: \textbf{Revisitable}\\Look at the top 4 cards from the Artifact discard pile. You can buy one of them for:
+      \begin{itemize}
+        \item [5] \includesvg[height=10px]{\svgs/gold.svg} if it is a \textbf{Minor} Artifact
+        \item [7] \includesvg[height=10px]{\svgs/gold.svg} if it is a \textbf{Major} Artifact
+        \item [10] \includesvg[height=10px]{\svgs/gold.svg} if it is a \textbf{Relic} Artifact
+      \end{itemize}
+      }
+  \end{minipage}
 \end{figure}
 
 \begin{figure}
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\textbf{Sanctuary}\\
-		\shadowimage[width=\textwidth]{\images/sanctuary.jpg}
-		\caption{Category: \textbf{Revisitable}\\
-			Heroes on this field cannot be attacked by other Heroes.
-			If a field is occupied by a Hero, other Heroes can move through but cannot stop here.}
-	\end{minipage}\hfill
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\textbf{War Machine Factory}\\
-		\shadowimage[width=\textwidth]{\images/war_machine_factory.jpg}
-		\caption{Category: \textbf{Revisitable}\\This location allows a Hero to buy a War Machine.}
-	\end{minipage}
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{Sanctuary}\\
+    \shadowimage[width=\textwidth]{\images/sanctuary.jpg}
+    \caption{Category: \textbf{Revisitable}\\
+      Heroes on this field cannot be attacked by other Heroes.
+      If a field is occupied by a Hero, other Heroes can move through but cannot stop here.}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{War Machine Factory}\\
+    \shadowimage[width=\textwidth]{\images/war_machine_factory.jpg}
+    \caption{Category: \textbf{Revisitable}\\This location allows a Hero to buy a War Machine.}
+  \end{minipage}
 \end{figure}
 
 \begin{figure}
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\textbf{Tavern}\par
-		\shadowimage[width=\textwidth]{\images/tavern.jpg}
-		\caption{Category: \textbf{Revisitable}\\You can \includesvg[height=10px]{\svgs/pay_v2.svg}
-		7 \includesvg[height=10px]{\svgs/gold.svg}
-		on this field to gain a Secondary Hero and choose one enemy player to discard 1 random card from their hand.}
-	\end{minipage}\hfill
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\textbf{Library}\par
-		\shadowimage[width=\textwidth]{\images/library.jpg}
-		\caption{Category: \textbf{Revisitable}\\You can
-			\includesvg[height=10px]{\svgs/pay_v2.svg}
-			3 \includesvg[height=10px]{\svgs/gold.svg}
-			to Remove 1 Statistic card from 	your hand or discard pile and replace it with any other Statistic card.
-			You can do it twice per visit.}
-	\end{minipage}
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{Tavern}\par
+    \shadowimage[width=\textwidth]{\images/tavern.jpg}
+    \caption{Category: \textbf{Revisitable}\\You can \includesvg[height=10px]{\svgs/pay_v2.svg}
+    7 \includesvg[height=10px]{\svgs/gold.svg}
+    on this field to gain a Secondary Hero and choose one enemy player to discard 1 random card from their hand.}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{Library}\par
+    \shadowimage[width=\textwidth]{\images/library.jpg}
+    \caption{Category: \textbf{Revisitable}\\You can
+      \includesvg[height=10px]{\svgs/pay_v2.svg}
+      3 \includesvg[height=10px]{\svgs/gold.svg}
+      to Remove 1 Statistic card from   your hand or discard pile and replace it with any other Statistic card.
+      You can do it twice per visit.}
+  \end{minipage}
 \end{figure}
 
 \clearpage
@@ -853,121 +859,121 @@ Additionally, \textbf{instead of increasing resource production}, you may choose
 The effects of these fields are only indicated by a question mark on their tiles.\par
 \bigbreak
 \begin{figure}[h]
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\textbf{Tree Of Knowledge}\\
-		\shadowimage[width=\linewidth]{\images/tree.jpg}
-		\caption{Category: \textbf{Visitable}\\You may
-			\includesvg[height=10px]{\svgs/pay_v2.svg}
-			 3 \includesvg[height=10px]{\svgs/valuablegreater.svg} or
-			 10 \includesvg[height=10px]{\svgs/gold.svg} to gain
-			 2 \includesvg[height=10px]{\svgs/exp.svg}.}
-	\end{minipage}\hfill
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\textbf{Redwood Observatory}\\
-		\shadowimage[width=\linewidth]{\images/observatory.jpg}
-		\caption{Category: \textbf{Visitable}\\Discover a tile adjacent to this one.}
-	\end{minipage}
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{Tree Of Knowledge}\\
+    \shadowimage[width=\linewidth]{\images/tree.jpg}
+    \caption{Category: \textbf{Visitable}\\You may
+      \includesvg[height=10px]{\svgs/pay_v2.svg}
+       3 \includesvg[height=10px]{\svgs/valuablegreater.svg} or
+       10 \includesvg[height=10px]{\svgs/gold.svg} to gain
+       2 \includesvg[height=10px]{\svgs/exp.svg}.}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{Redwood Observatory}\\
+    \shadowimage[width=\linewidth]{\images/observatory.jpg}
+    \caption{Category: \textbf{Visitable}\\Discover a tile adjacent to this one.}
+  \end{minipage}
 \end{figure}
 
 \begin{figure}[h]
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\textbf{Grail}\\
-		% TODO: replace with a better image
-		\shadowimage[width=\linewidth]{\images/grail.jpg}
-		\caption{Category: \textbf{Visitable}\\
-			Gain a Grail token.}
-	\end{minipage}\hfill
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\textbf{Dragon Utopia}\\
-		\shadowimage[width=\linewidth]{\images/dragon_utopia.jpg}
-		\caption{Category: \textbf{Flaggable}\\Effects depend on scenario.}
-	\end{minipage}
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{Grail}\\
+    % TODO: replace with a better image
+    \shadowimage[width=\linewidth]{\images/grail.jpg}
+    \caption{Category: \textbf{Visitable}\\
+      Gain a Grail token.}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{Dragon Utopia}\\
+    \shadowimage[width=\linewidth]{\images/dragon_utopia.jpg}
+    \caption{Category: \textbf{Flaggable}\\Effects depend on scenario.}
+  \end{minipage}
 \end{figure}
 
 \begin{figure}[h]
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\textbf{Market Of Time}\\
-		\shadowimage[width=\linewidth]{\images/market_of_time.jpg}
-		\caption{Category: \textbf{Visitable}\\ Remove one card from your hand. Then \textbf{Search (2)} Ability, Spell, or Artifact deck.}
-	\end{minipage}\hfill
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\textbf{University}\\
-		\shadowimage[width=\linewidth]{\images/university.jpg}
-		\caption{Category: \textbf{Visitable}\\ \includesvg[height=10px]{\svgs/pay_v2.svg} 6 \includesvg[height=10px]{\svgs/gold.svg} to \textbf{Search (4)} the Ability discard pile.}
-	\end{minipage}
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{Market Of Time}\\
+    \shadowimage[width=\linewidth]{\images/market_of_time.jpg}
+    \caption{Category: \textbf{Visitable}\\ Remove one card from your hand. Then \textbf{Search (2)} Ability, Spell, or Artifact deck.}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{University}\\
+    \shadowimage[width=\linewidth]{\images/university.jpg}
+    \caption{Category: \textbf{Visitable}\\ \includesvg[height=10px]{\svgs/pay_v2.svg} 6 \includesvg[height=10px]{\svgs/gold.svg} to \textbf{Search (4)} the Ability discard pile.}
+  \end{minipage}
 \end{figure}
 
 \begin{figure}[h]
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\textbf{Magic Spring}\\
-		\shadowimage[width=\linewidth]{\images/magic_spring.jpg}
-		\caption{Category: \textbf{Visitable}\\You may look at the top 3 cards of your discard pile and take 1 of them back to your hand. Return the remaining cards on top of your discard pile in any order.}
-	\end{minipage}\hfill
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\textbf{Witch Hut}\\
-		\shadowimage[width=\linewidth]{\images/witch_hut.jpg}
-		\caption{Category: \textbf{Visitable}\\You may either Remove an Ability card from your hand or look at the top card of the Ability deck and put that card into your hand or into the Ability deck discard pile.}
-	\end{minipage}
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{Magic Spring}\\
+    \shadowimage[width=\linewidth]{\images/magic_spring.jpg}
+    \caption{Category: \textbf{Visitable}\\You may look at the top 3 cards of your discard pile and take 1 of them back to your hand. Return the remaining cards on top of your discard pile in any order.}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{Witch Hut}\\
+    \shadowimage[width=\linewidth]{\images/witch_hut.jpg}
+    \caption{Category: \textbf{Visitable}\\You may either Remove an Ability card from your hand or look at the top card of the Ability deck and put that card into your hand or into the Ability deck discard pile.}
+  \end{minipage}
 \end{figure}
 
 \begin{figure}[h]
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\textbf{Obelisk}\\
-		\shadowimage[width=\linewidth]{\images/obelisk.jpg}
-		\caption{Category: \textbf{Flaggable}\\An Obelisk's effects can vary depending on the scenario. When you visit it, the enemy faction cubes are not removed, meaning that there may be multiple cubes on the field. Once visited by a faction, the Obelisk counts as an empty field for that faction, just like a visitable field would.}
-	\end{minipage}\hfill
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\textbf{Star Axis}\\
-		% TODO: find a better image
-		\shadowimage[width=\linewidth]{\images/star_axis.jpg}
-		\caption{Category: \textbf{Flaggable}\\
-			You can Remove one of your Statistic cards from your hand and replace it with an Empowered one of the same type.
-			When you visit a Star Axis, the enemy faction cubes are not removed, meaning that there may be multiple cubes on the field.
-			Once visited by a faction, the Star Axis counts as an empty field for that faction, ust like a visitable field would.
-		}
-	\end{minipage}
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{Obelisk}\\
+    \shadowimage[width=\linewidth]{\images/obelisk.jpg}
+    \caption{Category: \textbf{Flaggable}\\An Obelisk's effects can vary depending on the scenario. When you visit it, the enemy faction cubes are not removed, meaning that there may be multiple cubes on the field. Once visited by a faction, the Obelisk counts as an empty field for that faction, just like a visitable field would.}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{Star Axis}\\
+    % TODO: find a better image
+    \shadowimage[width=\linewidth]{\images/star_axis.jpg}
+    \caption{Category: \textbf{Flaggable}\\
+      You can Remove one of your Statistic cards from your hand and replace it with an Empowered one of the same type.
+      When you visit a Star Axis, the enemy faction cubes are not removed, meaning that there may be multiple cubes on the field.
+      Once visited by a faction, the Star Axis counts as an empty field for that faction, ust like a visitable field would.
+    }
+  \end{minipage}
 \end{figure}
 
 \begin{figure}
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\textbf{Hill Fort}\\
-		\shadowimage[width=\linewidth]{\images/hill_fort.jpg}
-		\caption{Category: \textbf{Visitable}\\You can immediately Reinforce one of your \includesvg[height=10px]{\svgs/bronze.svg} or \includesvg[height=10px]{\svgs/silver.svg} units. The Reinforcement cost is reduced by 3 \includesvg[height=10px]{\svgs/gold.svg} to a minimum of 0.}
-	\end{minipage}\hfill
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\textbf{Prison}\\
-		\shadowimage[width=\linewidth]{\images/prison.jpg}
-		\caption{Category: \textbf{Visitable}\\You gain a Secondary Hero. Place their model on this field. If you already have a Secondary Hero, gain 3 \includesvg[height=10px]{\svgs/gold.svg}.}
-	\end{minipage}
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{Hill Fort}\\
+    \shadowimage[width=\linewidth]{\images/hill_fort.jpg}
+    \caption{Category: \textbf{Visitable}\\You can immediately Reinforce one of your \includesvg[height=10px]{\svgs/bronze.svg} or \includesvg[height=10px]{\svgs/silver.svg} units. The Reinforcement cost is reduced by 3 \includesvg[height=10px]{\svgs/gold.svg} to a minimum of 0.}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \textbf{Prison}\\
+    \shadowimage[width=\linewidth]{\images/prison.jpg}
+    \caption{Category: \textbf{Visitable}\\You gain a Secondary Hero. Place their model on this field. If you already have a Secondary Hero, gain 3 \includesvg[height=10px]{\svgs/gold.svg}.}
+  \end{minipage}
 \end{figure}
 
 \begin{figure}
-	\captionsetup{singlelinecheck=off, width=.5\linewidth}
-	\centering
-	\textbf{Scholar}\par\medskip
-	\shadowimage[width=0.5\linewidth]{\images/scholar.jpg}
-	\caption[scholar they]{Category: \textbf{Visitable}\\
-		Roll 1 Attack die. Depending on the result, do the following:
-		\begin{itemize}
-		\item[ \textbf{+1}] - Draw 1 chosen Statistic card or Remove one of the Statistic cards from hand.
-	  \item[\textbf{ 0}] - Draw 2 Ability cards, take one of them and discard the other.
-		 \item[\textbf{ -1}] - Draw 2 Spell cards, take one of them and discard the other.
-		 \end{itemize}
-		 }
-		 \bigbreak
-		 \textit{The scholar's "drawing" of statistic cards refers to the piles of unused basic statistics cards. Removing a statistic card should work with empowered statistics too. His other abilities are basically searching without the option of taking a discarded card.}
+  \captionsetup{singlelinecheck=off, width=.5\linewidth}
+  \centering
+  \textbf{Scholar}\par\medskip
+  \shadowimage[width=0.5\linewidth]{\images/scholar.jpg}
+  \caption[scholar they]{Category: \textbf{Visitable}\\
+    Roll 1 Attack die. Depending on the result, do the following:
+    \begin{itemize}
+    \item[ \textbf{+1}] - Draw 1 chosen Statistic card or Remove one of the Statistic cards from hand.
+    \item[\textbf{ 0}] - Draw 2 Ability cards, take one of them and discard the other.
+     \item[\textbf{ -1}] - Draw 2 Spell cards, take one of them and discard the other.
+     \end{itemize}
+     }
+     \bigbreak
+     \textit{The scholar's "drawing" of statistic cards refers to the piles of unused basic statistics cards. Removing a statistic card should work with empowered statistics too. His other abilities are basically searching without the option of taking a discarded card.}
 \end{figure}
 
 \end{document}
