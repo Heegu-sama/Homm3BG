@@ -90,18 +90,18 @@
 
 %Create section heading with graphics. Argument one is heading name, argument two is picture to use on the left. Also adds the section to table of contents.
 \newcommand{\addsection}[2]{
-		\begin{center}
-			\includegraphics[]{\images/sectionheading.png}
-			\vspace*{-20ex}
-			\color{yellow} \Huge \section{\uppercase{#1}}
-		\end{center}
-		\vspace{-2ex}
-		\begin{tikzpicture}
-			\hspace{13ex}
-			\includegraphics[]{#2}
-		\end{tikzpicture}
-		\vspace*{2ex}
-		\par
+  \begin{center}
+    \includegraphics[]{\images/sectionheading.png}
+    \vspace*{-20ex}
+    \color{yellow} \Huge \section{\uppercase{#1}}
+  \end{center}
+  \vspace{-2ex}
+  \begin{tikzpicture}
+    \hspace{13ex}
+    \includegraphics[]{#2}
+  \end{tikzpicture}
+  \vspace*{2ex}
+  \par
 }
 %End of create section heading.
 
