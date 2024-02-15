@@ -94,7 +94,8 @@
   \begin{center}
     \includegraphics[]{\images/sectionheading.png}
     \vspace*{-20ex}
-    \color{yellow} \Huge \section[#1]{\uppercase{#1}}
+    \color{yellow} \Huge \section*{\uppercase{#1}}
+    \addcontentsline{toc}{section}{\protect\numberline{}#1}
   \end{center}
   \vspace{-2ex}
   \begin{tikzpicture}
