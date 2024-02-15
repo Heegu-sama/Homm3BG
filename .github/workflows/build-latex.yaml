@@ -3,8 +3,8 @@ name: Build Document
 on:
   pull_request:
     branches: [main]
-    paths-ignore:
-      - '.github/**'
+    # paths-ignore:
+    #   - '.github/**'
 
 jobs:
   build_latex:
@@ -16,9 +16,10 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          extra_system_packages: "inkscape"
-          root_file: main.tex
+          compiler: pdflatex
+          extra_system_packages: inkscape
           latexmk_shell_escape: true
+          root_file: main.tex
       - name: Upload pdf as artifact
         uses: actions/upload-artifact@v4
         with:

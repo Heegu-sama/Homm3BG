@@ -25,6 +25,7 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
+          compiler: pdflatex
           extra_system_packages: "inkscape"
           latexmk_shell_escape: true
           root_file: main.tex
