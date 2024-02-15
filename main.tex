@@ -92,7 +92,7 @@
 \definecolor{goblin}{HTML}{3b7c33}
 \newcommand\encircle[1]{%
 	\tikz[baseline=(X.base)]
-	\node (X) [draw=white, shape=circle, inner sep=0, fill=goblin, text=white, blur shadow={shadow blur steps=10}] {\strut \textbf{#1}};%
+	\node (X) [draw=white, shape=circle, inner sep=0, fill=goblin, text=white, blur shadow={shadow blur steps=5}] {\strut \textbf{#1}};%
 }
 
 % Background
@@ -189,20 +189,34 @@ This section will guide you through the process of setting up a scenario from th
     \draw (0, 0) node[inner sep=0] {\makebox[\textwidth][c]{\includegraphics[width=1.25\linewidth]{\images/setup.png}}};
     \draw (0, 0) node {\encircle{0}};
     \draw (6.2, 2.9) node {\encircle{\phantom{.}3\phantom{.}}};
+    \draw (-1.8, -5.5) node {\encircle{\phantom{.}3\phantom{.}}};
+    \draw (0, -4.7) node {\encircle{4a}};
+    \draw (4.3, 2.4) node {\encircle{4a}};
     \draw (-3.1, -1.7) node {\encircle{4b}};
+    \draw (3.9, 1.4) node {\encircle{4b}};
     \draw (5.5, -9.6) node {\encircle{4c}};
+    \draw (0.5, 5.2) node {\encircle{4c}};
     \draw (7.3, -5.5) node {\encircle{4d}};
+    \draw (-1.3, 2.9) node {\encircle{4d}};
     \draw (-7.1, 7.5) node {\encircle{4e}};
     \draw (7.5, 7) node {\encircle{4e}};
     \draw (1.3, -7.9) node {\encircle{4f}};
+    \draw (3.7, 4.4) node {\encircle{4f}};
     \draw (-0.5, -7.9) node {\encircle{4g}};
+    \draw (5, 4.4) node {\encircle{4g}};
     \draw (1.6, 1.7) node {\encircle{4h}};
     \draw (1.9, -4.3) node {\encircle{4h}};
     \draw (5.5, -7.9) node {\encircle{4i}};
+    \draw (0.5, 4.4) node {\encircle{4i}};
     \draw (6.3, -7.9) node {\encircle{4j}};
+    \draw (-0.1, 4.4) node {\encircle{4j}};
     \draw (7.3, -7.9) node {\encircle{4k}};
+    \draw (-1.2, 4.5) node {\encircle{4k}};
     \draw (1.4, -1.3) node {\encircle{\phantom{.}6\phantom{.}}};
     \draw (3.1, -8.1) node {\encircle{\phantom{.}7\phantom{.}}};
+    \draw (2.2, 4.4) node {\encircle{\phantom{.}7\phantom{.}}};
+    \draw (6.5, -6.9) node {\encircle{\phantom{.}8\phantom{.}}};
+    \draw (-0.5, 3.8) node {\encircle{\phantom{.}8\phantom{.}}};
     \draw (-3.1, -4.5) node {\encircle{\phantom{.}9\phantom{.}}};
     \draw (6.3, -3.6) node {\encircle{\phantom{.}9\phantom{.}}};
     \draw (6.1, 1.6) node {\encircle{\phantom{.}9\phantom{.}}};
@@ -216,7 +230,6 @@ This section will guide you through the process of setting up a scenario from th
     \draw (-7.1, -1.5) node {\encircle{20}};
   \end{tikzpicture}
   \end{scriptsize}
-
 \end{figure}
 
 \clearpage
