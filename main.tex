@@ -18,7 +18,7 @@
 \usepackage{subfigure}
 
 \usepackage{tikz}
-\usetikzlibrary{shadows,calc}
+\usetikzlibrary{shadows, shadows.blur, calc}
 
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{enumitem}
@@ -88,7 +88,7 @@
 \end{tikzpicture}}
 % End of drop shadow definition
 
-%Create section heading with graphics. Argument one is heading name, argument two is picture to use on the left. Also adds the section to table of contents.
+%Create section heading with graphics. Argument one is heading name, argument two is picture to use on the left.
 \newcommand{\addsection}[2]{
   \begin{center}
     \includegraphics[]{\images/sectionheading.png}
@@ -105,6 +105,13 @@
   \bigbreak
 }
 %End of create section heading.
+
+% Command for overlay circled text
+\definecolor{goblin}{HTML}{3b7c33}
+\newcommand\encircle[1]{%
+	\tikz[baseline=(X.base)]
+	\node (X) [draw=white, shape=circle, inner sep=0, fill=goblin, text=white, blur shadow={shadow blur steps=5}] {\strut \textbf{#1}};%
+}
 
 % Background
 \AddToHook{shipout/background}{%
@@ -193,9 +200,54 @@ This section will guide you through the process of setting up a scenario from th
 
 \clearpage
 
-\begin{center}
-\includegraphics[scale=0.9]{\images/setup.png}
-\end{center}
+\begin{figure}
+  \centering
+  \begin{scriptsize}
+  \begin{tikzpicture}
+    \draw (0, 0) node[inner sep=0] {\makebox[\textwidth][c]{\includegraphics[width=1.25\linewidth]{\images/setup.png}}};
+    \draw (6.2, 2.9) node {\encircle{\phantom{.}3\phantom{.}}};
+    \draw (-1.8, -5.5) node {\encircle{\phantom{.}3\phantom{.}}};
+    \draw (0, -4.7) node {\encircle{4a}};
+    \draw (4.3, 2.4) node {\encircle{4a}};
+    \draw (-3.1, -1.7) node {\encircle{4b}};
+    \draw (3.9, 1.4) node {\encircle{4b}};
+    \draw (5.5, -9.6) node {\encircle{4c}};
+    \draw (0.5, 5.2) node {\encircle{4c}};
+    \draw (7.3, -5.5) node {\encircle{4d}};
+    \draw (-1.3, 2.9) node {\encircle{4d}};
+    \draw (-7.1, 7.5) node {\encircle{4e}};
+    \draw (7.5, 7) node {\encircle{4e}};
+    \draw (1.3, -7.9) node {\encircle{4f}};
+    \draw (3.7, 4.4) node {\encircle{4f}};
+    \draw (-0.5, -7.9) node {\encircle{4g}};
+    \draw (5, 4.4) node {\encircle{4g}};
+    \draw (1.6, 1.7) node {\encircle{4h}};
+    \draw (1.9, -4.3) node {\encircle{4h}};
+    \draw (5.5, -7.9) node {\encircle{4i}};
+    \draw (0.5, 4.4) node {\encircle{4i}};
+    \draw (6.3, -7.9) node {\encircle{4j}};
+    \draw (-0.1, 4.4) node {\encircle{4j}};
+    \draw (7.3, -7.9) node {\encircle{4k}};
+    \draw (-1.2, 4.5) node {\encircle{4k}};
+    \draw (1.4, -1.3) node {\encircle{\phantom{.}6\phantom{.}}};
+    \draw (3.1, -8.1) node {\encircle{\phantom{.}7\phantom{.}}};
+    \draw (2.2, 4.4) node {\encircle{\phantom{.}7\phantom{.}}};
+    \draw (6.5, -6.9) node {\encircle{\phantom{.}8\phantom{.}}};
+    \draw (-0.5, 3.8) node {\encircle{\phantom{.}8\phantom{.}}};
+    \draw (-3.1, -4.5) node {\encircle{\phantom{.}9\phantom{.}}};
+    \draw (6.3, -3.6) node {\encircle{\phantom{.}9\phantom{.}}};
+    \draw (6.1, 1.6) node {\encircle{\phantom{.}9\phantom{.}}};
+    \draw (-6.6, -4.5) node {\encircle{10}};
+    \draw (-4, 4.5) node {\encircle{11}};
+    \draw (-4, -7.5) node {\encircle{11}};
+    \draw (-7.1, 1.5) node {\encircle{15}};
+    \draw (-5.6, 5.5) node {\encircle{17}};
+    \draw (5.1, 5.8) node {\encircle{18}};
+    \draw (-4.8, -2) node {\encircle{19}};
+    \draw (-7.1, -1.5) node {\encircle{20}};
+  \end{tikzpicture}
+  \end{scriptsize}
+\end{figure}
 
 \clearpage
 
@@ -520,7 +572,7 @@ There are three types of units:
 If a \includesvg[height=10px]{\svgs/unit_ranged.svg} unit is next to an enemy unit, its attack target must be that adjacent enemy. When attacking an adjacent enemy in this way the ranged unit suffers a combat penalty: throw two combat dice and \textbf{apply the smaller result}.\par
 This penalty is also applied if the \includesvg[height=10px]{\svgs/unit_ranged.svg} unit attacks from its own backline into the enemy's backline. Walls and gates may also \hyperlink{Walls}{reduce} a ranged unit's attack.
 \subsection*{Neutral units}
-Neutral units guard the various locations on the game map. Starting and winning combat against them is necessary to visit most locations. Neutral units are spread into four different tiers, each with their own deck. In addition to bronze, silver and gold, there are also azure \includesvg[height=10px]{\svgs/azure.svg} neutral units which are the strongest in the game.\par
+Neutral units guard the various locations on the game map. Starting and winning combat against them is necessary to visit most locations. Neutral units are spread into four different tiers, each with their own deck. In addition to (\includesvg[height=10px]{\svgs/bronze.svg}, \includesvg[height=10px]{\svgs/silver.svg} and \includesvg[height=10px]{\svgs/golden.svg}, there are also azure \includesvg[height=10px]{\svgs/azure.svg} neutral units which are the strongest in the game.\par
 Each of these decks should be kept separate from each other and shuffled during set up. If a neutral unit deck ever runs out of cards, reshuffle the discard into a new deck. When a combat against neutral units starts, \hyperlink{Difficulty}{the appropriate number} of units from each tier should be drawn to take part in that combat.\par
 It is possible for players to gain neutral units to their unit deck through various effects, such as scenario-specific rules or the diplomacy ability card. Neutral units cannot be reinforced, as they are single sided. Whenever a neutral unit is defeated from your unit deck, place it into the neutral discard pile as normal.
 \begin{figure}[h]
@@ -604,34 +656,32 @@ The defender also gains the arrow tower unit card which is placed next to the co
 
 \clearpage
 \subsection*{Combat round structure}
-Combat is divided into rounds, during which all of the units participating in that combat activate once in initiative order. After each unit has activated once, a new combat round begins. Combat lasts until all units on one side are eliminated, a player has to \textbf{retreat} when fighting neutral units, or a player \textbf{surrenders} to another player. In \textbf{clash} and \textbf{alliance} scenarios, neutral units are always controlled by the next enemy player sitting to your right. When controlling neutral units in this way they must always attack if possible. In campaign and cooperative scenarios, neutral enemies follow their own \hyperlink{AIrules}{rules}.\par
+Combat is divided into rounds, during which all of the units participating in that combat activate once in initiative order. After each unit has activated once, a new combat round begins. Combat lasts until all units on one side are eliminated, a player has to \textbf{retreat} when fighting neutral units, or a player \textbf{surrenders} to another player. In \textbf{clash} and \textbf{alliance} scenarios, neutral units are always controlled by the next enemy player sitting to your right. When controlling neutral units in this way they must always attack if possible, or if they can't, move as close to an enemy unit as possible.\par
 Structure of a combat round:
 \begin{itemize}
     \item Players activate their units in the decreasing order of unit \hyperlink{Initiative}{intiative}, starting with the next unit that has not yet been activated this combat round.
     \item When a unit activates, place a faction cube on it to indicate it has been activated this combat round.
     \item Activated units may move and attack according to their \hyperlink{Unittype}{type}.
-    \item Instead of attacking, a unit may \hyperlink{Defend}{defend}. Neutral units controlled by the game or another player can only defend if instructed to by a card effect.
+    \item Instead of attacking, a unit may \hyperlink{Defend}{defend}. In neutral combat, enemy units cannot defend.
     \item Before a unit attacks, both players may \hyperlink{CombatCards}{play cards}. %TODO priority? Who can play the first card?
     \item After a unit's attack has been declared and all cards have been played that the players wish to play, roll the combat die. Modify the attacking unit's attack by the die's result, reduce it by the defending unit's defense, and then deal the rest as \hyperlink{HP}{damage} to the defending unit.
     \item If the defending unit was adjacent to the attacker, it \hyperlink{Retaliate}{retaliates} if it hasn't done so this round.
     \item Keep activating units until they've all been activated once. After the last unit's activation, the combat round ends.
 \end{itemize}
 \subsection*{\hypertarget{Endcombat}{End of combat}}
-When combat ends, all damage is healed from all surviving units. Move any player owned units back to their unit deck and discard any leftover neutral units. After winning combat, \hyperlink{Categories}{visit} the field where the combat took place.\par
+When combat ends, all damage is healed from all surviving units. Move any player owned units back to their unit deck and discard any leftover enemy neutral units.\par
 In combat against \textbf{neutral units}, if the player defeats all opposing units they win the combat. If the player \hyperlink{Timelimit}{runs out of time} or all of their units are defeated, they have to \textbf{retreat}. When you retreat, move any surviving units back to your unit deck and move the hero that started the combat back to the field they last visited. There are no other negative consequences.\\par
 Combat against \textbf{other players} can end in the following ways:
 \begin{itemize}
     \item All units on one side are defeated. If a \textbf{main hero} is defeated in this way, the defeated player \textbf{loses morale} and has to \textbf{pay the winner} 5 gold. If a \textbf{secondary hero} is defeated instead, do not lose morale or pay any gold. In both cases, the defeated player also gives the winner one of their \hyperlink{End}{faction cubes}. Defeated main heroes are moved to a friendly town or settlement, while secondary heroes are removed from the game until recruited again.
-    \item One player chooses to \textbf{surrender}. You may surrender by paying the other player 10 gold when activating a unit. Move your main hero or remove your secondary hero from the game as if you were defeated by losing your units. You cannot surrender when defending a town. There are no other direct consequences to surrendering; the winner does not gain a faction cube nor any experience.
+    \item One player chooses to \textbf{surrender}. You may surrender by paying the other player 10 gold when activating a unit. Move your main hero or remove your secondary hero from the game as if you were defeated by losing your units. There are no other direct consequences to surrendering; the winner does not gain a faction cube. \textbf{Note}: You cannot surrender when defending a town.
 \end{itemize}
  When a secondary hero is attacked, they may also choose to be \textbf{instantly defeated} instead of fighting a combat in order to preserve their units. When this happens, the attacker still receives a faction cube from the defeated hero.\par Defeating a main hero \hyperlink{End}{may eliminate} that player.
 
 \subsection*{\hypertarget{Combatexperience}{Combat experience}}
 
-Winning combat with your main hero usually grants them experience. If the difficulty of the neutral field or the level of a defeated enemy main hero was equal to your level, gain 1 \includesvg[height=10px]{\svgs/exp.svg}. If they were higher than your level, gain 2 \includesvg[height=10px]{\svgs/exp.svg}. Defeating a neutral combat which involved an azure unit grants you level 7 immediately.
-% TODO add azure star
- If you gain multiple levels in this way, resolve their effects in order.\par
-Secondary heroes cannot gain experience from winning a combat. You also do not gain experience from defeating a secondary hero.
+Winning combat with your main hero usually grants them experience. If either the difficulty of the neutral field or the level of a defeated enemy main hero was equal to your level, gain 1 \includesvg[height=10px]{\svgs/exp.svg}. If they were higher than your level, gain 2 \includesvg[height=10px]{\svgs/exp.svg}. Defeating a neutral combat which involved an azure \includesvg[height=10px]{\svgs/azure.svg} unit grants you level 7 immediately. If you gain multiple levels in this way, resolve their effects in order.\par
+Secondary heroes cannot gain experience from winning a combat. You also do not gain experience from defeating a secondary hero, or if an enemy hero surrenders to you.
 \subsection*{\hypertarget{Quick}{Quick combat}}
 If your hero’s level is higher than a field’s difficulty when combat against neutral units would begin, \textbf{no combat} takes place. The player is considered to have beaten the neutral units by default and gains no rewards for the combat.
 
@@ -666,8 +716,8 @@ Any differences to the above rules will be described in any given scenario’s o
     \item Play 3 full rounds without controlling a town or a settlement. Count the number of rounds left using any suitable component.
     \item Lose combat with your main hero when you have no towns or settlements left, including when defending your last town or settlement.
 \end{itemize}
-If you eliminate all enemy factions you immediately win the scenario. Eliminated players are immediately out of the game. Discard their faction cubes and heroes from the game map. Treat the cards in their deck as being removed from the game for the rest of the scenario. If you are eliminated, you may still participate in the game by controlling neutral units.\par
-In \textbf{clash} scenarios, collecting \textbf{a faction cube} from every enemy player when there are 3 more players immediately wins you the game. Other scenario specific rules may also modify the behaviour of collecting faction cubes.
+Eliminated players are immediately out of the game. Discard their faction cubes and heroes from the game map. Treat the cards in their deck as being removed from the game for the rest of the scenario. If you are eliminated, you may still participate in the game by controlling neutral units. \textbf{Important}: If you eliminate all enemy factions you immediately win the scenario.\par
+In \textbf{clash} scenarios, collecting \textbf{a faction cube} from every enemy player when there are 3 more players immediately wins you the game. Other scenario specific rules may also modify the outcome of collecting faction cubes.
 \clearpage
 
 \addsection{Other Rules}{\images/luck.png}
@@ -684,15 +734,15 @@ In \textbf{alliance} and \textbf{co-operative} scenarios, players are allowed to
 \end{center}
 \clearpage
 \subsection*{\hypertarget{Difficulty}{Difficulty}}
-During set up, players must choose the game’s difficulty. This affects the number of enemies
-encountered during neutral combat and which additional bonuses players receive during set up. The field difficulty table below shows which neutral enemies appear on each difficulty. There are four different difficulties, each with a different bonus:
+During set up, players must choose the game’s difficulty. There are four different difficulties, each with a different starting bonus that players receive during set up:
 \begin{itemize}
-    \item \textbf{Easy} – Roll 2 resource dice and receive resources from both – OR – Search (2) the artifact deck, twice.
-    \item \textbf{Normal} – Roll 2 resource dice and receive the resources from one of them – OR – Search (2) the artifact deck.
-    \item \textbf{Hard} – Roll 1 resource die and receive the resources on it – OR – reveal cards from the top of the artifact deck until you find 1 minor artifact and add it to your hand.
+    \item \textbf{Easy} – Roll 2 \includesvg[height=10px]{\svgs/resource_die.svg} and receive resources from both – OR – Search (2) the artifact deck, twice.
+    \item \textbf{Normal} – Roll 2 \includesvg[height=10px]{\svgs/resource_die.svg} and receive the resources from one of them – OR – Search (2) the artifact deck.
+    \item \textbf{Hard} – Roll 1 \includesvg[height=10px]{\svgs/resource_die.svg} and receive the resources on it – OR – reveal cards from the top of the artifact deck until you find 1 minor artifact and add it to your hand.
     \item \textbf{Impossible} – No starting bonus.
 \end{itemize}
-All \textbf{artifacts} received from a starting bonus should be placed into your \textbf{hand} and not shuffled into your starting deck. Shuffle the artifact deck and its discard pile together afterwards, and then discard one artifact from the top to form the artifact discard pile again.
+All \textbf{artifacts} received from a starting bonus should be placed into your \textbf{hand} and not shuffled into your starting deck. Shuffle the artifact deck and its discard pile together afterwards, and then discard one artifact from the top to form the artifact discard pile again.\par
+The chosen difficulty also determines the number and type of neutral enemies that are encountered during neutral combat:
 \begin{center}
 \includegraphics[scale=1]{\images/field_difficulty.png}
 \end{center}
@@ -710,7 +760,6 @@ Most expansions have cards which refer to schools of magic. All spell cards belo
 Added by the stretch goals and Rampart expansions, explained \hyperlink{Playerdecks}{here}.
 \subsection*{War machines}
 Added by the Rampart expansion. War machines are permanent cards that can be bought at either a trading post or a war machine factory. If you buy one at the trading post, you cannot use any of the other normal functions of that field during that visit. War machines are also more expensive at the trading post. \textit{I don't currently know if these have a player card back and are added to your hand like normal?}\par
-\includegraphics[width=0.48\textwidth]{\images/factory.png}
 
 \clearpage
 \begin{wrapfigure}{r}{0.5\textwidth}
@@ -738,7 +787,7 @@ Added by the Inferno expansion. When this field is revealed, all players roll 2 
 \addsection{All Map Locations}{\images/ballistics.png}
 \hypertarget{All}{This} section describes the function of every single field in the game. The vast majority of fields have useful iconography that clearly communicates the field's effect. On the right is a screenshot of the back of the rule book that explains these. If a field has any combination of these icons and is not described in detail later, then that field is either \textbf{visitable} or \textbf{flaggable} and its only effect is indicated by these icons.\par
 Revisitable fields do not have an icon that indicates them to be such. For this reason all revisitable fields are pictured and described individually. The \includegraphics[scale=0.75]{\images/revisitable.png} symbol is on almost all flaggable fields, with the major exception of settlements. Rules for flagging mines, settlements and towns are on the next page followed by descriptions of revisitable and unique fields marked with a question mark.\par
-Random towns and war machine factories were pictured in the previous section so they aren't explained below again.
+Random towns are explained above.
 
 
 
