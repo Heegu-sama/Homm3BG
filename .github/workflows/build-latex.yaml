@@ -17,8 +17,8 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           compiler: pdflatex
+          args: "-synctex=1 -interaction=nonstopmode  --shell-escape"
           extra_system_packages: inkscape
-          latexmk_shell_escape: true
           root_file: main.tex
       - name: Upload pdf as artifact
         uses: actions/upload-artifact@v4
