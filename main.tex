@@ -22,6 +22,7 @@
 
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{enumitem}
+\usepackage{multicol}
 \usepackage{setspace}
 \usepackage{wrapfig}
 \usepackage{hyperref}
@@ -353,23 +354,69 @@ If your secondary hero is attacked by an enemy hero, you can choose to have your
 
 \clearpage
 
-\begin{wrapfigure}{r}{0.5\textwidth}
-\includegraphics[width=0.9\linewidth]{\images/herocard.png}
-\end{wrapfigure}
-\subsection*{\hypertarget{Herocard}{Hero card anatomy}}
-\begin{enumerate}
-\item Name – The hero’s name. Used for identification. Has no gameplay effect.
-\item Class – The hero’s class. Has no gameplay effect.
-\item Type – The hero’s type (might \includesvg[height=10px]{\svgs/might.svg} or magic \includesvg[height=10px]{\svgs/magic.svg}). Determines the amount of magic arrow spells in your starting deck (1 or 2 respectively).
-\item Faction color – Reminder for the color of the faction’s cubes and miniatures.
-\item Attack – Number of attack cards in your starting deck.
-\item Defense – Number of defense cards in your starting deck.
-\item Power – Number of power cards in your starting deck.
-\item Knowledge – Number of knowledge cards in your starting deck.
-\item Starting Ability – Reminder for the unique ability card the hero starts with.
-\item Hero Specialty – Reminder for the specialty cards the hero adds to their deck at the start of the game and after specific level ups. Each hero has three specialty cards.
-\item Level tracker - Whenever a main hero gains 1 or more experience \includesvg[height=10px]{\svgs/exp.svg} move the cube that number of steps on this track. When the cube reaches the next slot on the upper row, the hero gains a level.
-\end{enumerate}
+\subsection*{\hypertarget{Herocard}{Hero Card Anatomy}}
+\bigbreak
+\begin{figure}[h]
+    \begin{minipage}[t]{0.5\textwidth}
+        \vspace{0pt}
+        \begin{enumerate}[itemsep=5pt]
+            \item Name – The hero’s name. Used for identification. Has no gameplay effect.
+            \item Class – The hero’s class. Has no gameplay effect.
+            \item Type – The hero’s type (might \includesvg[height=10px]{\svgs/might.svg} or magic \includesvg[height=10px]{\svgs/magic.svg}). Determines the amount of magic arrow spells in your starting deck (1 or 2 respectively).
+            \item Faction color – Reminder for the color of the faction’s cubes and miniatures.
+            \item Attack – Number of attack cards in your starting deck.
+            \item Defense – Number of defense cards in your starting deck.
+            \item Power – Number of power cards in your starting deck.
+            \item Knowledge – Number of knowledge cards in your starting deck.
+            \item Starting Ability – Reminder for the unique ability card the hero starts with.
+            \item Hero Specialty – Reminder for the specialty cards the hero adds to their deck at the start of the game and after specific level ups. Each hero has three specialty cards.
+            \item Level tracker – Whenever a main hero gains 1 or more experience \includesvg[height=10px]{\svgs/exp.svg} move the cube that number of steps on this track. When the cube reaches the next slot on the upper row, the hero gains a level.
+        \end{enumerate}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \vspace{0pt}
+        \begin{scriptsize}
+            \begin{tikzpicture}
+                \draw (0, 0) node[inner sep=0] {\makebox[\textwidth][c]{\includegraphics[width=\linewidth]{\images/herocard.png}}};
+                \draw (0, 0) node {\encircle{\phantom{.}0\phantom{.}}};
+                \draw (2.3, 2.5) node {\encircle{\phantom{.}1\phantom{.}}};
+                \draw (0.8, 1.9) node {\encircle{\phantom{.}2\phantom{.}}};
+                \draw (3.5, 2.5) node {\encircle{\phantom{.}3\phantom{.}}};
+                \draw (-0.1, 2.5) node {\encircle{\phantom{.}4\phantom{.}}};
+                \draw (0, 1.25) node {\encircle{\phantom{.}5\phantom{.}}};
+                \draw (1.1, 1.25) node {\encircle{\phantom{.}6\phantom{.}}};
+                \draw (2, 1.25) node {\encircle{\phantom{.}7\phantom{.}}};
+                \draw (3.25, 1.25) node {\encircle{\phantom{.}8\phantom{.}}};
+                \draw (1, -0.2) node {\encircle{\phantom{.}9\phantom{.}}};
+                \draw (3, -0.2) node {\encircle{10}};
+                \draw (-1.7, -1.4) node {\encircle{11}};
+            \end{tikzpicture}
+        \end{scriptsize}
+        \break
+        \footnotesize{\textbf{\textit{\textcolor{purple}{Hero Card}}}}
+        \scriptsize
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item[\textbf{1.}] \textbf{Name}
+                \item[\textbf{2.}] \textbf{Class}
+                \item[\textbf{3.}] \textbf{Type}
+                \item[\textbf{4.}] \textbf{Faction color}
+                \item[\textbf{5.}] \textbf{Attack}
+                \item[\textbf{6.}] \textbf{Defense}
+                \item[\textbf{7.}] \textbf{Power}
+                \item[\textbf{8.}] \textbf{Knowledge}
+                \item[\textbf{9.}] \textbf{Starting Ability}
+                \item[\textbf{10.}] \textbf{Specialty}
+                \item[\textbf{11.}] \textbf{Level tracker}
+                \item[\textbf{\phantom{.}}] \phantom{.}
+            \end{itemize}
+        \end{multicols}
+    \end{minipage}
+\end{figure}
+%\includegraphics[width=\linewidth]{\images/herocard.png}
+
+
 \clearpage
 
 \subsection*{\hypertarget{Level}{Level effects}}
