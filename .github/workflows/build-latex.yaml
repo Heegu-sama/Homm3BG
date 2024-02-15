@@ -6,6 +6,9 @@ on:
     # paths-ignore:
     #   - '.github/**'
 
+env:
+  ROOT_FILE: main.tex
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -16,10 +19,11 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
+          pre_compile: "pdflatex --shell-escape ${{ env.ROOT_FILE }}"
           compiler: pdflatex
           args: "--shell-escape"
           extra_system_packages: inkscape
-          root_file: main.tex
+          root_file: ${{ env.ROOT_FILE }}
       - name: Upload pdf as artifact
         uses: actions/upload-artifact@v4
         with:
