@@ -25,7 +25,30 @@
     \endminipage
     \hfill\allowbreak%
     \bigbreak
-    \includegraphics[width=0.48\textwidth]{\images/Warmachines.png}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{scriptsize}
+      \begin{tikzpicture}
+        \draw (0, 0) node[inner sep=0] {\makebox[\textwidth][c]{\shadowimage[width=0.8\textwidth]{\images/war_machine.jpg}}};
+        \draw (1, 3.8) node {\encircle{\phantom{.}1\phantom{.}}};
+        \draw (0, -3.5) node {\encircle{\phantom{.}2\phantom{.}}};
+        \draw (-1.2, -1.8) node {\encircle{\phantom{.}3\phantom{.}}};
+        \draw (1.1, -1.8) node {\encircle{\phantom{.}4\phantom{.}}};
+      \end{tikzpicture}
+    \end{scriptsize}
+    \break
+    \footnotesize{\textbf{\textit{\textcolor{purple}{War Machine Card}}}}
+    \scriptsize
+    \begin{multicols}{2}
+      \begin{itemize}
+        \item[\textbf{1.}] \textbf{Name}
+        \item[\textbf{2.}] \textbf{Effect}
+        \item[\textbf{\phantom{.}}] \phantom{.}
+        \item[\textbf{3.}] \textbf{War Machine Factory cost}
+        \item[\textbf{4.}] \textbf{Trading Post cost}
+      \end{itemize}
+    \end{multicols}
+  \end{minipage}
   \end{center}
 \end{wrapfigure}
 \subsection*{Schools of magic}
