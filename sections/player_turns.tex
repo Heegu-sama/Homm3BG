@@ -1,0 +1,55 @@
+\addsection{Player Turns}{\images/dimension_door.png}
+At the start of a player’s turn, that player refreshes their hand of cards from their deck following two steps in order:
+\begin{itemize}
+    \item Discard any number of cards from your hand. If your current hand exceeds your hand limit, you must discard down to at least your hand limit.
+    \item Draw back to your hand limit.
+\end{itemize}
+Your current hand limit depends on your hero’s \hyperlink{Level}{level}. The beginning of your turn is the only time your hand size is checked.\par
+There are three types of actions players may take during their turn: movement actions, town actions and morale actions. Once all players have spent all their movement points on their turns and do not wish to use any further town or morale actions, the current round is over.
+\subsection*{Movement actions}
+Movement actions are performed by using movement points. A player can use movement actions only during their own turn.\par
+For every 1 MP spent, you can perform one of the following actions:
+\begin{itemize}
+    \item Move a hero 1 field in any direction.
+    \item \hyperlink{Categories}{Re-visit} a field where your hero is in.
+    \item \hyperlink{Timelimit}{Continue combat} against neutral units for 1 additional round.
+    \item \hyperlink{Placing}{Discover a face down map tile} if the hero is on a field next to that map tile.
+    % TODO When do we prepare these map tiles (link to Map locations)?
+    % TODO Can what are the conditions of this placement (hero at border, face up/down)
+    \item Place a new map tile from your pool of far (II-III) map tiles.
+\end{itemize}
+Mark the amount of MP you have used by flipping your movement tokens over to their brown, inactive side. If a player has both a main and a secondary hero, track their MP separately. Heroes can spend MP in any order.\par
+Allied heroes can move through each other but cannot stop their movement in the same field. When you move through a field with an allied hero, do not visit the field that the allied hero is standing on. In the unlikely situation that two allied heroes are forced onto the same field, you must use your next MP to move one of them away from that field.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.25\linewidth]{\images/mp.png}
+\end{figure}\\
+\begin{center}
+\textit{An active and an inactive movement token.}
+\end{center}
+
+\clearpage
+
+\subsection*{Town actions}
+You can perform each of the town actions listed below \textbf{once per round}. These actions can be performed at any point during any player’s turn, except during combat or when a player is resolving an action that would be interrupted by your town action. For example, you cannot draw spell cards simultaneously with the spell book token.\par
+When a player announces that they are about to start combat, you may react to it with a town action before performing any of the steps of
+% TODO "a town action" -> ? single town action / multiple ?
+ \hyperlink{Combatsetup}{setting up combat.}\par
+If multiple players wish to use a town action at the same time and the order of resolving them has an effect on the game, you may roll an attack or resource die and let the highest roller perform the action first.\par
+After performing a town action, flip the respective token on its inactive side on your town board. You cannot use that action again until the start of the next round, when the tokens are refreshed.
+\begin{itemize}
+\item Build token, used to expand your \hyperlink{Town}{town}.\includegraphics[scale=0.1]{\images/build.png}
+\item Population token, used to recruit and reinforce \hyperlink{Units}{units} or to recruit \hyperlink{Secondary}{a secondary hero}.\includegraphics[scale=0.1]{\images/population.png}
+\item Spell book token, used to purchase \hyperlink{spells}{spells}.\includegraphics[scale=0.1]{\images/spells.png}
+\end{itemize}
+
+\subsection*{Morale actions}
+Players can gain or lose morale through various game effects. When a player gains morale, place a positive morale token \includesvg[height=10px]{\svgs/positive.svg} near your play area. A player may only have one such token. If they would gain a second token, they may immediately spend the first one before gaining the second. A positive morale token may be spent to perform any of the following actions at any time:
+\begin{itemize}
+\item Draw a card from your deck.
+\item Discard any number of cards, then draw that many cards.
+\item Reroll any die you have thrown.
+\end{itemize}
+
+If a player loses morale, they must discard a positive morale token \includesvg[height=10px]{\svgs/positive.svg} without effect if they have one, otherwise they gain a negative morale token \includesvg[height=10px]{\svgs/negative.svg}. Gaining morale while you have a negative morale token discards the negative morale token without effect. If a player would gain a second negative morale token, they must instead discard their entire hand of cards the next time they end their turn.\par
+\textbf{NOTE:} The Necropolis faction ignores any morale effects. They cannot ever gain or lose morale for any reason.\\[12pt]
