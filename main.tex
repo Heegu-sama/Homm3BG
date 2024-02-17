@@ -28,6 +28,8 @@
 \usepackage{hyperref}
 \usepackage{tikz}
 \usepackage{outlines}
+\usepackage[strict]{changepage}
+\usepackage{fullwidth}
 \usepackage[usetransparent=false]{svg}
 \hypersetup{
     colorlinks=true,
@@ -91,20 +93,23 @@
 
 %Create section heading with graphics. Argument one is heading name, argument two is picture to use on the left.
 \newcommand{\addsection}[2]{
-  \begin{center}
-    \includegraphics[]{\images/sectionheading.png}
-    \vspace*{-20ex}
-    \color{yellow} \Huge \section*{\uppercase{#1}}
-    \addcontentsline{toc}{section}{\protect\numberline{}#1}
-  \end{center}
-  \vspace{-2ex}
-  \begin{tikzpicture}
-    \hspace{13ex}
-    \includegraphics[width=0.125\textwidth]{#2}
-  \end{tikzpicture}
-  \vspace*{2ex}
-  \par
-  \bigbreak
+  \makebox[0pt][l]{
+  \raisebox{-\totalheight}[0pt][5pt]{
+    \begin{tikzpicture}
+      \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth]{\images/sectionheading.jpg}};
+      \draw (-6, 0) node {\includegraphics[width=0.125\textwidth]{#2}};
+    \end{tikzpicture}
+    }
+  }
+  % \begin{adjustwidth*}{}{0.125\textwidth}
+  \begin{fullwidth}[leftmargin=0.15\textwidth]
+    \begin{center}
+      \color{yellow} \Huge \section*{\uppercase{#1}}
+      \addcontentsline{toc}{section}{\protect\numberline{}#1}
+    \end{center}
+  % \end{adjustwidth*}
+  \end{fullwidth}
+  \vspace{2.5em}
 }
 %End of create section heading.
 
