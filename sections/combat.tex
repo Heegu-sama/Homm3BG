@@ -1,6 +1,7 @@
 \addsection{Combat}{\images/attack.png}
-\hypertarget{Combat}{Combat} starts whenever heroes encounter enemy heroes or units, and takes place on the separate combat board.
-Combat with \textbf{neutral units} starts when a hero moves to an unvisited field with a roman numeral, which signifies the \hyperlink{Difficulty}{type and number} of Neutral units guarding that field.
+\hypertarget{Combat}{Combat} is resolved on the separate Combat Board.
+Combat with \textbf{Neutral Units} starts when a Hero moves to an unvisited Field with a roman numeral, which signifies the \hyperlink{Difficulty}{type and number} of Neutral Units guarding that field.
+
 Combat with \textbf{another player} can start in two ways:
 \begin{itemize}
   \item You move into any Field containing one of their Heroes.
@@ -11,93 +12,90 @@ Players are able to start multiple combats during their turn.
 \subsection*{\hypertarget{Combatsetup}{Combat setup}}
 
 % TODO info about battlefield expansion
-Combat takes place on the 4 x 5 combat board, which consists of two backlines and two frontlines on opposite ends and a middle row.
-Follow these steps when fighting against \textbf{neutral units}:
+Combat takes place on the 4 x 5 Combat board, which consists of two Backlines and two Frontlines on opposite ends, and a middle row.
+Follow these steps when Combat begins against \textbf{Neutral Units}:
 
 \begin{itemize}
-  \item Choose one of the combat board’s sides as your own.
-Place up to 5 of your unit cards freely onto the back- and frontline of that side.
-  \item Check the difficulty table and draw the corresponding number of neutral unit cards from their decks.
-  \item The neutral units are placed differently depending on the game mode:
-  \item In \textbf{clash} or \textbf{alliance} scenarios, the enemy player sitting to your right controls the Neutral Units and decides their placement.
-Ranged units must be placed in the backline if possible.
-  \item In \textbf{campaign} or \textbf{co-op} scenarios, units are placed from left to right from the player's perspective.
-First, place any ranged units in the backline.
-Then, place any flying or ground units in the frontline.
-If there's not enough room to place a unit in its correct line, place them in the other one.
-Units must be placed in decreasing initiative order.
+  \item Choose one of the Combat Board’s sides as your own.
+Place up to 5 of your Unit cards freely onto the Back- and Frontline of that side.
+  \item Check the \textbf{Difficulty Table} and draw the corresponding number of Neutral Unit cards from their decks.
+  \item The Neutral Units are placed differently depending on the Game Mode:
+  \item In \textbf{Clash} or \textbf{Alliance} Scenarios, the enemy player sitting to your right controls the Neutral Units and decides their placement.
+\includesvg[height=10px]{\svgs/unit_ranged.svg} Units must be placed in the backline if possible.
+  \item In \textbf{Campaign} or \textbf{Co-op} scenarios, Neutral Units are placed from left to right from the player's perspective.
+First, place any \includesvg[height=10px]{\svgs/unit_ranged.svg} units in the Backline.
+Then, place any \includesvg[height=10px]{\svgs/unit_ground.svg} or \includesvg[height=10px]{\svgs/unit_flying.svg} Units in the Frontline.
+If there's not enough room to place a Unit in its correct line, place them in the other one.
+Units must be placed in decreasing Initiative order.
 If there's a tie, place higher tier units first.
 If there's still a tie, the players decide the placement order.
 \end{itemize}
 Unit setup when fighting \textbf{other players}:
 \begin{itemize}[wide]
-  \item The attacking player places up to 5 units on their chosen side of the combat board, followed by the defender.
-  \item If the combat takes place in a town with a citadel, the defender adds the \hyperlink{Walls}{wall, gate and arrow tower} cards after placing their units.
+  \item The attacking player places up to 5 Units on their chosen side of the Combat Board, followed by the defender.
+  \item If the combat takes place in a Town with a Citadel, the defender adds the \hyperlink{Walls}{Wall, Gate and Arrow Tower} cards after placing their Units.
 \end{itemize}
 
 \clearpage
-\subsection*{\hypertarget{Combatterminology}{Combat terminology}}
-The following terms are used in this rule book and by the unit and other cards to describe effects
-and elements during combat:\par
-\textbf{Attacking playe}r – The player who started the combat by moving their hero.\par
-\textbf{Defending player} – The player whom combat was started against.\par
-\textbf{Activation} – A unit activates when it is next in the initiative order.\par
-\textbf{Adjacent unit} – A unit is directly adjacent to another if it is one space away in a cardinal direction (nondiagonal).\par
-\textbf{Combat round} – A full cycle of all units of each player being activated.\par
-\textbf{Combat obstacles} – Every card placed on the combat board counts as a combat obstacle.
-Obstacles block the movement of all non-flying units.\par
-\textbf{Attack die} – A red die whose results range from -1 to +1.
+\subsection*{\hypertarget{Combatterminology}{Combat Terminology}}
+The following terms are used in this rule book and by the Unit and other cards to describe effects and elements during combat:\par
+\textbf{Attacking playe}r – The player who started the Combat by moving their Hero.\par
+\textbf{Defending player} – The player whom Combat was started against.\par
+\textbf{Activation} – A Unit activates when it is next in the Initiative order.\par
+\textbf{Adjacent Unit} – A Unit is directly adjacent to another if it is one space away in a cardinal direction (nondiagonal).\par
+\textbf{Combat Round} – A full cycle of all Units of each player being Activated.\par
+\textbf{Combat Obstacles} – Every card placed on the Combat Board counts as a Combat Obstacle.
+Obstacles block the movement of all non-flying Units.\par
+\textbf{Attack Die} – A red die whose results range from -1 to +1.
 Roll the die whenever a unit attacks and
 add the result to the unit’s attack value.\par
-\textbf{\hypertarget{Retaliate}{Retaliation attack}} – If a unit survives an attack by an adjacent unit, it performs an attack on that unit.
-Each unit can perform only 1 retaliation attack per combat round.
-Retaliation attacks function identically to normal attacks, but they cannot cause another retaliation attack.
-Mark units which have performed a retaliation attack this round with a black cube.\par
-
+\textbf{\hypertarget{Retaliate}{Retaliation Attack}} – If a unit survives an attack by an adjacent Unit, it performs an attack back on that Unit.
+Each Unit can perform only 1 Retaliation Attack per Combat Round.
+Retaliation Attacks function identically to normal attacks, but they cannot cause another Retaliation Attack.
+Mark Units which have performed a Retaliation Attack this round with a black cube.\par
 \textbf{Paralysis} \includesvg[height=10px]{\svgs/paralysis.svg} – Effects which paralyze a unit place the paralysis token on them.
-A paralyzed unit
-skips its next activation and removes the token instead.
-If it is attacked or takes any damage before that time, remove the paralysis token from that unit.\par
-\textbf{\hypertarget{Defend}{Defend}} \includesvg[height=10px]{\svgs/defense.svg} – When a unit with a defense token is attacked, make another roll with the attack die
+A paralyzed Unit \textbf{skips its next Activation} and removes the token instead.
+If it is \textbf{attacked or takes any damage} before that time, \textbf{remove the paralysis token} from that unit.\par
+\textbf{\hypertarget{Defend}{Defend}} \includesvg[height=10px]{\svgs/defense.svg} – When a Unit with a Defense Token is attacked, make another roll with the attack die
 after the initial attack roll.
-If you roll a “+1”, the defending unit gains an extra 1 defense for this attack.
-If a unit has a defense token at the start of its activation, discard it.
-That unit cannot take another defense action during that activation.
+If you roll a “+1”, the defending Unit gains an extra 1 defense for this attack.
+If a Unit has a defense token at the start of its activation, discard it.
+The Unit cannot take another defense action during that activation.
 
-\subsection*{\hypertarget{CombatCards}{Using cards during combat}}
-You may only use \textbf{one spell per combat round}.
+\subsection*{\hypertarget{CombatCards}{Using Cards During Combat}}
+You may only use \textbf{one Spell per Combat Round}.
 Other card types can be used as many times as you want to.
-Ongoing \includesvg[height=10px]{\svgs/ongoing.svg} and \includesvg[height=10px]{\svgs/activation.svg} activate effects can be used only when activating one of your units and before it attacks.
-Ongoing effects last until end of combat or if the effect on the card is used up.
-Instant \includesvg[height=10px]{\svgs/instant.svg} cards may be played at any time except between rolling the combat die and resolving damage unless otherwise stated.
-Instant cards which increase a unit's statistics \textbf{last only for the duration of the currently activated unit's next attack}.
-\subsection*{\hypertarget{Timelimit}{Combat time limits}}
-Combat against neutral units has a time limit of \textbf{one Combat round}.
-If the player cannot win the combat before the end of the current Combat round, they must either \hyperlink{Endcombat}{retreat} or spend 1 MP from the hero that started the combat in order to play another combat round.\par
-\textbf{Note}: Combat against azure \includesvg[height=10px]{\svgs/azure.svg} units, other players or \hyperlink{AIrules}{AI heroes} have no time limit.
+Ongoing \includesvg[height=10px]{\svgs/ongoing.svg} and \includesvg[height=10px]{\svgs/activation.svg} Activate effects can be used only when Activating one of your Units and before it attacks.
+Ongoing effects last until end of Combat or if the effect on the card is used up.
+Instant \includesvg[height=10px]{\svgs/instant.svg} Cards may be played at any time except between rolling the Combat Die and resolving damage unless otherwise stated.
+Instant Cards which increase a unit's statistics \textbf{last only for the duration of the currently activated Unit's next attack}.
+\subsection*{\hypertarget{Timelimit}{Combat Time Limits}}
+Combat against Neutral Units has a time limit of \textbf{one Combat Round}.
+If the player cannot win the Combat before the end of the current Combat Round, they must either \hyperlink{Endcombat}{Retreat} or spend 1 MP from the Hero that started the combat in order to play another Combat Round.\par
+\textbf{Note}: Combat against Azure \includesvg[height=10px]{\svgs/azure.svg} Units, other players or \hyperlink{AIrules}{AI Heroes} have no time limit.
 \clearpage
-\subsection*{\hypertarget{Walls}{Defending a town with a citadel}}
+\subsection*{\hypertarget{Walls}{Defending a Town With a Citadel}}
 
-When a town with a citadel is attacked, the defender adds the wall and gate obstacles in any order to the middle row of the combat board after placing their units.
-The gate card is not an obstacle to the defending player.
-The wall and gate cards can be destroyed by any adjacent \includesvg[height=10px]{\svgs/unit_ground.svg} or \includesvg[height=10px]{\svgs/unit_flying.svg} unit's attack.
-Such attacks are always successful, do not roll the combat die when performing them.\par
+When a Town with a Citadel is attacked, the defender adds the Wall and Gate Obstacles in any order to the Middle Row of the Combat Board after placing their Units.
+The Gate Card is \textbf{not an Obstacle to the defending player}.
+The Wall and Gate cards can be destroyed by any adjacent \includesvg[height=10px]{\svgs/unit_ground.svg} or \includesvg[height=10px]{\svgs/unit_flying.svg} Unit's attack.
+Such attacks are always successful, do not roll the Combat Die when performing them.\par
 
-Defending units standing on their own side and in the same column as a wall or a gate are partially protected from ranged attacks.
-If they are targeted by a ranged attack performed from the opponent's side of the combat board, \textbf{reduce the attack's damage by 1}.
+Defending Units standing on their own side and \textbf{in the same column} as a Wall or a Gate are partially protected from \includesvg[height=10px]{\svgs/unit_ranged.svg} attacks.
+If they are targeted by a \includesvg[height=10px]{\svgs/unit_ranged.svg} attack performed from the opponent's side of the Combat Board, \textbf{reduce the attack's damage by 1}.
 \begin{figure}[h]
   \mbox{}%
   \hfill%
   \begin{minipage}[t]{0.4\textwidth}
     \centering
     \shadowimage[width=\linewidth]{\images/ranged_example_1.jpg}
-  \caption[halberdiers protected]{\textit{Halberdiers are behind a non-destroyed gate, they \textbf{are protected} when attacked from spaces 1-8.}}
+  \caption[halberdiers protected]{\textit{Halberdiers are behind a non-destroyed Gate, they \textbf{are protected} when attacked from spaces 1-8.}}
   \end{minipage}
   \hfill%
   \begin{minipage}[t]{0.4\textwidth}
     \centering
     \shadowimage[width=\linewidth]{\images/ranged_example_2.jpg}
-  \caption[halberdiers unprotected]{\textit{Because halberdiers are not behind a non-destroyed wall, \textbf{protection doesn't work}, regardless of where the ranged attack comes from.}}
+  \caption[halberdiers unprotected]{\textit{Because Halberdiers are not behind a non-destroyed Wall, \textbf{protection doesn't work}, regardless of where the \includesvg[height=10px]{\svgs/unit_ranged.svg} attack comes from.}}
   \end{minipage}
   \hfill%
   \mbox{}%
@@ -108,95 +106,96 @@ If they are targeted by a ranged attack performed from the opponent's side of th
   \includegraphics[width=\linewidth]{\images/arrow_tower.png}
   \vskip -\baselineskip
 \end{wrapfigure}
-The defender also gains the arrow tower unit card which is placed next to the combat board.
+The defender also gains the Arrow Tower Unit Card which is placed next to the Combat Board.
 % TODO: find out if arrow tower can be targeted by spells
 It can only be damaged by \includesvg[height=10px]{\svgs/unit_ranged.svg} attacks and card effects.
-This unit is also destroyed if all wall and gate cards are destroyed.
-The arrow tower cannot start a defensive combat by itself without other units and you do not need to destroy it in order to win when attacking.
+This Unit is also destroyed if all Wall and Gate cards are destroyed.
+The arrow tower cannot start a defensive Combat by itself without other Units and you do not need to destroy it in order to win when attacking.
 
 \clearpage
 
-\subsection*{Combat round structure}
-Combat is divided into rounds, during which all of the units participating in that combat activate once in initiative order.
-After each unit has activated once, a new combat round begins.
-Combat lasts until all units on one side are eliminated, a player has to \textbf{retreat} when fighting neutral units, or a player \textbf{surrenders} to another player.
-In \textbf{clash} and \textbf{alliance} scenarios, neutral units are always controlled by the next enemy player sitting to your right.
-When controlling neutral units in this way they must always attack if possible, or if they can't, move as close to an enemy unit as possible.\par
+\subsection*{Combat Round Structure}
+Combat is divided into Rounds, during which all of the Units participating in that Combat \textbf{Activate once} in Initiative order.
+After each Unit has activated, a new Combat Round begins.
+Combat lasts until all Units on one side are eliminated, a player has to \textbf{retreat} when fighting Neutral Units, or a player \textbf{Surrenders} to another player.
+
 Structure of a combat round:
 \begin{itemize}
-  \item Players activate their units in the decreasing order of unit \hyperlink{Initiative}{intiative}, starting with the next unit that has not yet been activated this combat round.
-  \item When a unit activates, place a faction cube on it to indicate it has been activated this combat round.
-  \item Activated units may move and attack according to their \hyperlink{Unittype}{type}.
-  \item Instead of attacking, a unit may \hyperlink{Defend}{defend}.
-  In Neutral Combat, the Neutral Enemy units cannot defend.
-  \item Before a unit attacks, both players may \hyperlink{CombatCards}{play cards}. Cards are resolved in the order in which players decide to play them.
-  \item After a unit's attack has been declared and all cards have been played that the players wish to play, roll the combat die.
-    Modify the attacking unit's attack by the die's result, reduce it by the defending unit's defense, and then deal the rest as \hyperlink{HP}{damage} to the defending unit.
-  \item If the defending unit was adjacent to the attacker, it \hyperlink{Retaliate}{retaliates} if it hasn't done so this round.
-  \item Keep activating units until they've all been activated once.
-After the last unit's activation, the combat round ends.
+  \item Players Activate their Units in decreasing order of Unit \hyperlink{Initiative}{Intiative}.
+  \item When a unit Activates, place a Faction Cube on it to indicate it has been Activated this Combat Round.
+  \item Activated Units may move and attack according to their \hyperlink{Unittype}{type}.
+  \item Instead of attacking, a Unit may \hyperlink{Defend}{defend}.
+  In Neutral Combat, the Neutral Enemy units cannot defend, even when controlled by another player.
+  \item Before a Unit attacks, both players may \hyperlink{CombatCards}{play cards}. Cards are resolved in the order in which players decide to play them.
+  \item After a Unit's attack has been declared and all cards have been played that the players wish to play, roll the Combat Die.
+    Modify the attacking Unit's attack by the die's result, then reduce it by the defending Unit's defense, and finally deal the rest as \hyperlink{HP}{damage} to the defending Unit.
+  \item If the defending Unit was adjacent to the attacker, it \hyperlink{Retaliate}{retaliates} if it hasn't done so this round.
+  \item Keep activating Units until they've all been activated once.
+After the last Unit's activation, the combat round ends.
 \end{itemize}
-\subsection*{\hypertarget{Endcombat}{End of combat}}
-When combat ends, all damage is healed from all surviving units.
-Move any player owned units back to their unit deck and discard any leftover enemy neutral units.\par
-In combat against \textbf{neutral units}, if the player defeats all opposing units they win the combat.
-If the player \hyperlink{Timelimit}{runs out of time} or all of their units are defeated, they have to \textbf{retreat}.
-When you retreat, move any surviving units back to your unit deck and move the hero that started the combat back to the field they last visited.
-There are no other negative consequences.
-Combat against \textbf{other players} can end in the following ways:
+\subsection*{\hypertarget{Endcombat}{End Of Combat}}
+Combat can end in the following ways:
 \begin{itemize}
-  \item All units on one side are defeated.
-    If a \textbf{main hero} is defeated in this way, the defeated player \textbf{loses morale} and has to \textbf{pay the winner} 5 gold.
-    If a \textbf{secondary hero} is defeated instead, do not lose morale or pay any gold.
-    In both cases, the defeated player also gives the winner one of their \hyperlink{End}{faction cubes}.
-    Defeated main heroes are moved to a friendly town or settlement, while secondary heroes are removed from the game until recruited again.
-  \item One player chooses to \textbf{surrender}.
-You may surrender by paying the other player 10 gold when activating a unit.
-Move your main hero or remove your secondary hero from the game as if you were defeated by losing your units.
-There are no other direct consequences to surrendering; the winner does not gain a faction cube.
-\textbf{Note}: You cannot surrender when defending a town.
+    \item All Units on one side are defeated.
+    \item A player runs out of time against Neutral Units and has to \textbf{Retreat}.
+    \item A player \textbf{Surrenders} when fighting another player.
 \end{itemize}
-When a secondary hero is attacked, they may also choose to be \textbf{instantly defeated} instead of fighting a combat in order to preserve their units.
-When this happens, the attacker still receives a faction cube from the defeated hero.\par Defeating a main hero \hyperlink{End}{may eliminate} that player.
+In combat against \textbf{Neutral Units}, if the player defeats all opposing Units they win the combat.
+If the player \hyperlink{Timelimit}{runs out of time} or all of their Units are defeated, they instead have to \textbf{Retreat}; move any surviving Units back to your Unit Deck and move the Hero that started the Combat back to the Field they last Visited.
+There are no other negative consequences.\par
+If you defeat all Units \textbf{during combat against another player's Main Hero}, the defeated player \textbf{loses Morale} and has to \textbf{pay the winner} 5 \includesvg[height=10px]{\svgs/gold.svg}.
+Do not lose Morale or pay \includesvg[height=10px]{\svgs/gold.svg} if a \textbf{Secondary Hero} is defeated.
+\textbf{In both cases}, the defeated player also \textbf{gives the winner} one of their \hyperlink{End}{faction cubes}.
+Defeated Main Heroes \textbf{have to move} to a friendly Town or Settlement, while Secondary Heroes are removed from the game until Recruited again.\par
+You may \textbf{Surrender} to other players by paying the other player 10 \includesvg[height=10px]{\svgs/gold.svg} when activating a Unit.
+Move your Main Hero or remove your Secondary Hero from the game as if you were defeated by losing your Units.
+There are no other direct consequences to Surrendering; the winner does not gain a Faction Cube.
+\textbf{Note}: You cannot surrender when defending a Town.\par
+When a Secondary Hero is attacked, they may also choose to be \textbf{instantly defeated} instead of fighting a Combat in order to preserve their Units.
+When this happens, the attacker still receives a Faction Cube from the defeated Hero.
+Defeating a Main Hero \hyperlink{End}{may eliminate} that player.\par
+When Combat ends, all damage is healed from all surviving Units.
+Move any player owned Units back to their Unit Deck and discard any leftover enemy Neutral Units.
+After winning Combat, Heroes \textbf{must} Visit the Field where the Combat took place.
 
-\subsection*{\hypertarget{Combatexperience}{Combat experience}}
+\subsection*{\hypertarget{Combatexperience}{Combat Experience}}
 
-Winning combat with your main hero usually grants them experience.
-If either the difficulty of the neutral field or the level of a defeated enemy main hero was equal to your level, gain 1 \includesvg[height=10px]{\svgs/exp.svg}.
-If they were higher than your level, gain 2 \includesvg[height=10px]{\svgs/exp.svg}.
-Defeating a neutral combat which involved an azure \includesvg[height=10px]{\svgs/azure.svg} unit grants your Hero level 7 immediately.
-If you gain multiple levels in this way, resolve their effects in order.\par
-Secondary heroes cannot gain experience from winning a combat.
-You also do not gain experience from defeating a secondary hero, or if an enemy hero surrenders to you.
-\subsection*{\hypertarget{Quick}{Quick combat}}
-If your hero’s level is higher than a field’s difficulty when combat against neutral units would begin, \textbf{no combat} takes place.
-The player is considered to have beaten the neutral units by default and gains no rewards from the combat.
+Winning Combat with your Main Hero usually grants them Experience.
+If either the Difficulty of the Neutral Field or the Level of a defeated enemy Main Hero was equal to your Level, gain 1 \includesvg[height=10px]{\svgs/exp.svg}.
+If they were higher than your Level, gain 2 \includesvg[height=10px]{\svgs/exp.svg}.
+Winning a Neutral Combat which involved an Azure \includesvg[height=10px]{\svgs/azure.svg} Unit grants your Hero Level 7 immediately.
+If you gain multiple Levels in this way, resolve their effects in order.\par
+Secondary Heroes cannot ever gain Experience.
+You also \textbf{do not gain} Experience from defeating a Secondary Hero, or if an enemy Hero Surrenders to you.
+\subsection*{\hypertarget{Quick}{Quick Combat}}
+If your Hero’s Level is higher than a Field’s Difficulty when Combat against Neutral Units would begin, \textbf{no Combat} takes place.
+The player is considered to have beaten the Neutral Units by default and gains no rewards from the Combat.
 
 \subsection*{\hypertarget{AIrules}{Player vs AI}}
-These rules apply when playing a \textbf{solo} game.
-The AI combat rules for targeting and attacking are also used when playing a \textbf{cooperative} scenario.\par
-Solo campaigns are played against AI Heroes who use two automated decks to play the game: the AI deck, and the spell deck.
-The AI deck consists of cards that are similar in function to abilities and artifacts, but change depending on the game's \hyperlink{Difficulty}{difficulty}.
-The spell deck should be used when instructed by the cards in the AI deck.
-During combat against neutral enemies or AI heroes, their units follow an automatic set of instructions.
+These rules apply when playing a \textbf{Solo} game.
+The AI Combat rules for targeting and attacking are also used when playing a \textbf{Cooperative} Scenario.\par
+Solo Campaigns are played against AI Heroes who use two automated decks to play the game: the AI Deck, and the Spell Deck.
+The AI Deck consists of cards that are similar in function to Abilities and Artifacts, but change depending on the game's \hyperlink{Difficulty}{Difficulty}.
+The Spell Deck should be used when instructed by the cards in the AI Deck.
+During combat against Neutral enemies or AI Heroes, their Units follow an automatic set of instructions.
 \textbf{Initiative rules} work identically.
-When an \textbf{AI hero} activates a unit, drawn an AI card as its activation.\par
-All AI controlled \includesvg[height=10px]{\svgs/unit_ground.svg} and \includesvg[height=10px]{\svgs/unit_flying.svg} units prioritize attacking units of the same tier.
-If this is impossible, they attack the closest unit, prioritizing the lowest tier one.
-\includesvg[height=10px]{\svgs/unit_ranged.svg} units prioritize attacking other \includesvg[height=10px]{\svgs/unit_ranged.svg} units of the same tier, then lower tier, and finally higher tier.
-If there are no \includesvg[height=10px]{\svgs/unit_ranged.svg} for them to target they prioritize \includesvg[height=10px]{\svgs/unit_ground.svg} and \includesvg[height=10px]{\svgs/unit_flying.svg} units in the same tier order.
+When an \textbf{AI hero} Activates a Unit, draw an AI card and follow its instructions as the Unit's Activation.\par
+All AI controlled \includesvg[height=10px]{\svgs/unit_ground.svg} and \includesvg[height=10px]{\svgs/unit_flying.svg} Units prioritize attacking Units of the same tier.
+If this is impossible, they attack the closest Unit, prioritizing the lowest tier one.
+\includesvg[height=10px]{\svgs/unit_ranged.svg} Units prioritize attacking other \includesvg[height=10px]{\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier.
+If there are no \includesvg[height=10px]{\svgs/unit_ranged.svg} Units for them to target they prioritize \includesvg[height=10px]{\svgs/unit_ground.svg} and \includesvg[height=10px]{\svgs/unit_flying.svg} Units in the same tier order.
 If there's more than one valid target, they attack the closest one.\par
-If there's ever a tie between equally valid targets for any units, the players choose which unit is attacked.
+If there's ever a tie between equally valid targets for any units, the players choose which Unit is attacked.
 
 \clearpage
-\textbf{AI heroes} always start in their town's space unless otherwise stated.
+\textbf{AI Ueroes} always start in their Town's Field unless otherwise stated.
 They have 3MP and always use them to perform the following actions in decreasing priority:
 \begin{itemize}
-  \item Check if a player hero is on the same tile as the AI.
-    If they are, spend all MP to move towards them in an attempt to begin combat.
-  \item Check if there are any mines or settlements to flag on the map tile the AI hero is on.
-    If there are any, move toward the closest one and flag it.
-  \item Otherwise, move toward the player's town in an attempt to flag it.
+  \item Check if a player Hero is on the same Tile as the AI.
+    If they are, spend all MP to move towards them in an attempt to begin Combat.
+  \item Check if there are any Mines or Settlements to Flag on the Map Tile the AI Hero is on.
+    If there are any, move toward the closest one and Flag it.
+  \item Otherwise, move toward the player's Town in an attempt to Flag it.
 Repeat this sequence until all MP is used.
 \end{itemize}
 \begin{wrapfigure}{R}{0.5\textwidth}
@@ -204,13 +203,13 @@ Repeat this sequence until all MP is used.
   \includegraphics[width=0.48\textwidth]{\images/ai_card.png}
   \end{center}
 \end{wrapfigure}
-AI heroes always automatically win combat against any neutral units, while simultaneously flagging or visiting all fields they happen to move through.
-They gain no benefits from flagging or visiting fields.
-AI heroes must discover face down map tiles as normal by spending 1 MP in order to move onto them.
+AI Heroes always \textbf{automatically win Combat} against any Neutral Units, while simultaneously \textbf{Flagging or Visiting all fields} they happen to move through.
+They gain no benefits from Flagging or Visiting Fields.
+AI Heroes must discover face down Map Tiles as normal by spending 1 MP before moving onto them.
 The player chooses that tile’s orientation.\par
-AI heroes cannot surrender and you cannot surrender to them.
-They will always fight until they run out of units.
-Winning combat against an AI hero does not grant any rewards unless stated by the scenario.
-AI heroes do not have a town board, resources, or a hero card.
-Their armies are static and defined by the scenario’s set up or other rules.\par
-Any differences to the above will be described in any given scenario’s own rules.
+AI Heroes cannot Surrender and you cannot Surrender to them;
+they will always fight until they run out of Units.
+Winning Combat against an AI Hero does not grant any rewards unless stated by the Scenario.
+AI Heroes do not have a Town Board, Resources, or a Hero Card.
+Their Units are static and defined by the Scenario’s set up or other rules.\par
+Any differences to the above will be described in any given Scenario’s own rules.
