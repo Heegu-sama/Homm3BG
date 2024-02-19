@@ -11,26 +11,22 @@
 
 % Useful packages
 \usepackage{amsmath}
-\usepackage{graphicx}
-
 \usepackage{caption}
-\captionsetup[figure]{labelformat=empty}
-\usepackage{subfigure}
-
-\usepackage{tikz}
-\usetikzlibrary{shadows, shadows.blur, calc}
-
-\usepackage[colorlinks=true, allcolors=blue]{hyperref}
-\usepackage{enumitem}
-\usepackage{multicol}
-\usepackage{setspace}
-\usepackage{wrapfig}
-\usepackage{hyperref}
-\usepackage{tikz}
-\usepackage{outlines}
 \usepackage[strict]{changepage}
+\usepackage{enumitem}
+\usepackage{float}
 \usepackage{fullwidth}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{outlines}
+\usepackage{setspace}
+\usepackage{subfigure}
 \usepackage[usetransparent=false]{svg}
+\usepackage{tikz}
+\usepackage{titlesec}
+\usepackage{wrapfig}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -42,6 +38,8 @@
 % Set the default spacing between paragraphs. Remove indentation.
 \usepackage[skip=6pt, indent=0pt]{parskip}
 \setstretch{1}
+\captionsetup[figure]{labelformat=empty}
+\usetikzlibrary{shadows, shadows.blur, calc}
 
 % Variables
 \def\assets{assets}
@@ -91,25 +89,34 @@
 \end{tikzpicture}}
 % End of drop shadow definition
 
+\titleformat{\section}
+{\huge}
+{\filright
+\footnotesize
+\enspace SECTION \thesection\enspace}
+{8pt}
+{\Huge\bfseries\filcenter\uppercase}
 %Create section heading with graphics. Argument one is heading name, argument two is picture to use on the left.
 \newcommand{\addsection}[2]{
   \makebox[0pt][l]{
-  \raisebox{-\totalheight}[0pt][5pt]{
+  \raisebox{-\totalheight}[0pt][7pt]{
     \begin{tikzpicture}
-      \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth]{\images/sectionheading.jpg}};
-      \draw (-6, 0) node {\includegraphics[width=0.125\textwidth]{#2}};
+      \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\images/sectionheading.jpg}};
+      \draw (-6.2, 0) node {\includegraphics[width=0.125\textwidth]{#2}};
     \end{tikzpicture}
     }
   }
   % \begin{adjustwidth*}{}{0.125\textwidth}
-  \begin{fullwidth}[leftmargin=0.15\textwidth]
+  \begin{fullwidth}[leftmargin=0.16\textwidth]
     \begin{center}
-      \color{yellow} \Huge \section*{\uppercase{#1}}
+      \fontfamily{ptm}\selectfont{
+        \color{white} \section*{#1}
+      }
       \addcontentsline{toc}{section}{\protect\numberline{}#1}
     \end{center}
   % \end{adjustwidth*}
   \end{fullwidth}
-  \vspace{2.5em}
+  \vspace{3em}
 }
 %End of create section heading.
 
