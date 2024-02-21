@@ -1,4 +1,7 @@
 \addsection{Units}{\images/leadership.png}
+
+\begin{multicols*}{2}
+
 \hypertarget{Units}{In} addition to their Hero and its associated deck, players also have \textbf{a deck of Unit Cards} which represent the armies moving with their Heroes.
 Every Faction has access to \textbf{7 different Units}, each with unique stats and abilities.
 Units are necessary for winning Combat and fulfilling Scenario goals.
@@ -11,23 +14,32 @@ A player's Unit Deck may have any number of Units, but \textbf{only up to 5 Unit
 If a unit is defeated in Combat, \textbf{discard it} from your Unit Deck.\par
 Units may be Recruited and Reinforced by flipping the Population Token and paying the Unit's Recruitment \includesvg[height=10px]{\svgs/pay.svg} or Reinforcement \includesvg[height=10px]{\svgs/reinforce.svg} cost.
 When you do so, you can instantly Recruit and Reinforce \textbf{any number} of times, provided you have enough Resources and the prerequisite Buildings to do so.\par
-\begin{wrapfigure}{r}{0.5\textwidth}
-  \centering
-  \shadowimage[width=0.6\linewidth]{\images/necromancy_card.jpg}
-  \caption[hero specialty]{\scriptsize\textit{
-    Cards such as Necromancy allow you to Reinforce outside of using the Population Token.
-    This does not require owning any of the prerequisite buildings for Reinforcing nor flipping your Population Token.}
-  }
-\end{wrapfigure}
+
 \textbf{Recruiting} a unit requires that your town has a Dwelling of that Unit's level (\includesvg[height=10px]{\svgs/bronze.svg}\includesvg[height=10px]{\svgs/silver.svg} \includesvg[height=10px]{\svgs/golden.svg}).
 \textbf{Reinforcing} requires that your town has a Citadel in addition to a Dwelling of that Unit's level.
 If all Units in your Unit Deck are defeated, \textbf{immediately} replace your Unit Deck with the starting Units of the Scenario. Defeated Faction Units can always be re-Recruited with another use of the Population Token.\par
 
 \textbf{Important}: Any effects which allow you to Reinforce outside of using the Population Token \textbf{do not} require a Citadel or any Dwellings.
 
+\bigskip
+
+\begin{center}
+  \shadowimage[width=0.6\linewidth]{\images/necromancy_card.jpg}\\
+  \footnotesize\textit{
+    Cards such as Necromancy allow you to Reinforce outside of using the Population Token.
+    This does not require owning any of the prerequisite buildings for Reinforcing nor flipping your Population Token.
+  }
+\end{center}
+
+\vfill
+
 \clearpage
 
+\end{multicols*}
+\begin{multicols}{2}
 \subsection*{Unit Card Anatomy}
+
+\vspace{0pt}
 
 \includesvg[height=30px]{\svgs/attack.svg}\textbf{Attack} – The amount of damage this Unit deals when it attacks.
 Attacks are always reduced by the defending unit's Defense.
@@ -45,13 +57,14 @@ Units with a higher initiative activate first.
 In case of a tie, the \hyperlink{Combatterminology}{attacking} side's Unit should always activate first.
 If there are multiple ties on one side, the player who controls those Units selects which Unit to activate next.
 If there are multiple ties on both sides (for instance two attackers and two defenders with the same initiative), alternate between the attackers and defenders starting with the attacker.\par
-\begin{wrapfigure}{R}{0.5\textwidth}
-  \begin{center}
-  \includegraphics[width=0.48\textwidth]{\images/units.png}
-  \end{center}
-\end{wrapfigure}
-Most Units have a \textbf{special ability}:\par
+\bigskip
 
+\begin{center}
+  \includegraphics[width=0.48\textwidth]{\images/units.png}
+\end{center}
+\bigskip
+
+Most Units have a \textbf{special ability}:\par
 \begin{itemize}[wide]
   \item\textbf{Activation} \includesvg[height=10px]{\svgs/activation.svg} resolves when the Unit is Activated.
   \item\textbf{Attack} \includesvg[height=10px]{\svgs/unit_attack.svg} resolves when the Unit attacks during its Activation.
@@ -64,7 +77,9 @@ Most Units have a \textbf{special ability}:\par
     Units may also use \hyperlink{Playerdecks}{these} symbols.
 \end{itemize}
 
-\clearpage
+\end{multicols}
+\begin{multicols}{2}
+
 \subsection*{\hypertarget{Unittype}{Unit Types}}
 There are three types of Units:
 \begin{itemize}
@@ -90,7 +105,10 @@ It is possible for players to gain Neutral Units to their unit deck through vari
 Whenever a Neutral Unit is defeated from anywhere, place it into the appropriate Neutral Discard Pile.\par
 In \textbf{Clash} and \textbf{Alliance} scenarios, Neutral Units are always controlled by the next enemy player sitting to your right.
 When controlling neutral units in this way \textbf{they must always attack if possible}, or if they can't, move as close to an enemy unit as possible.\par
-\begin{figure}[h]
+
+\end{multicols}
+
+\begin{figure*}[!hb]
   \centering
   \includegraphics[width=\linewidth]{\images/unit_list.png}
-\end{figure}
+\end{figure*}
