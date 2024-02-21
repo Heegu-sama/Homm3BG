@@ -2,12 +2,19 @@
 \documentclass[12pt]{article}
 
 % Language setting
-% Replace `english' with e.g. `spanish' to change the document language
 \usepackage[english]{babel}
 
 % Set page size and margins
-% Replace `letterpaper' with `a4paper' for UK/EU standard size
-\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+\usepackage[
+  a4paper,
+  top=2cm,
+  bottom=3cm,
+  left=2cm,
+  right=2cm,
+  marginparwidth=1.75cm,
+  footskip=2.05cm
+  % footskip=1cm
+]{geometry}
 
 % Useful packages
 \usepackage{amsmath}
@@ -106,7 +113,7 @@
 {\Huge\bfseries\filcenter\uppercase}
 %Create section heading with graphics. Argument one is heading name, argument two is picture to use on the left.
 \newcommand{\addsection}[2]{
-  \noindent
+  \vspace*{-5em}
   \makebox[0pt][l]{
   \raisebox{-\totalheight}[0pt][7pt]{
     \begin{tikzpicture}
@@ -125,7 +132,7 @@
     \end{center}
   % \end{adjustwidth*}
   \end{fullwidth}
-  \vspace{3em}
+  \vspace{1.75em}
 }
 %End of create section heading.
 
