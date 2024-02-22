@@ -1,4 +1,7 @@
 \addsection{Combat}{\images/attack.png}
+
+\begin{multicols*}{2}
+
 \hypertarget{Combat}{Combat} is resolved on the separate Combat Board.
 Combat with \textbf{Neutral Units} starts when a Hero moves to an unvisited Field with a roman numeral, which signifies the \hyperlink{Difficulty}{type and number} of Neutral Units guarding that field.
 
@@ -36,7 +39,14 @@ Unit setup when fighting \textbf{other players}:
   \item If the combat takes place in a Town with a Citadel, the defender adds the \hyperlink{Walls}{Wall, Gate and Arrow Tower} cards after placing their Units.
 \end{itemize}
 
-\clearpage
+
+\vspace*{\fill}
+
+\hspace{2em}
+\includegraphics[scale=0.4]{\art/cavalryman.png}
+
+\vspace*{\fill}
+
 \subsection*{\hypertarget{Combatterminology}{Combat Terminology}}
 The following terms are used in this rule book and by the Unit and other cards to describe effects and elements during combat:\par
 \textbf{Attacking playe}r – The player who started the Combat by moving their Hero.\par
@@ -73,7 +83,15 @@ Instant Cards which increase a unit's statistics \textbf{last only for the durat
 Combat against Neutral Units has a time limit of \textbf{one Combat Round}.
 If the player cannot win the Combat before the end of the current Combat Round, they must either \hyperlink{Endcombat}{Retreat} or spend 1 MP from the Hero that started the combat in order to play another Combat Round.\par
 \textbf{Note}: Combat against Azure \includesvg[height=10px]{\svgs/azure.svg} Units, other players or \hyperlink{AIrules}{AI Heroes} have no time limit.
-\clearpage
+
+\vspace*{\fill}
+\hspace{6.6em}
+\includegraphics[scale=0.25]{\art/gorgone.png}
+
+\end{multicols*}
+
+\begin{multicols}{2}
+
 \subsection*{\hypertarget{Walls}{Defending a Town With a Citadel}}
 
 When a Town with a Citadel is attacked, the defender adds the Wall and Gate Obstacles in any order to the Middle Row of the Combat Board after placing their Units.
@@ -83,7 +101,17 @@ Such attacks are always successful, do not roll the Combat Die when performing t
 
 Defending Units standing on their own side and \textbf{in the same column} as a Wall or a Gate are partially protected from \includesvg[height=10px]{\svgs/unit_ranged.svg} attacks.
 If they are targeted by a \includesvg[height=10px]{\svgs/unit_ranged.svg} attack performed from the opponent's side of the Combat Board, \textbf{reduce the attack's damage by 1}.
-\begin{figure}[h]
+
+\begin{center}
+  \includegraphics[scale=0.3]{\images/arrow_tower.png}
+\end{center}
+The defender also gains the Arrow Tower Unit Card which is placed next to the Combat Board.
+
+\end{multicols}
+
+\vspace*{\fill}
+
+\begin{figure*}[!hb]
   \mbox{}%
   \hfill%
   \begin{minipage}[t]{0.4\textwidth}
@@ -99,20 +127,9 @@ If they are targeted by a \includesvg[height=10px]{\svgs/unit_ranged.svg} attack
   \end{minipage}
   \hfill%
   \mbox{}%
-\end{figure}
+\end{figure*}
 
-\begin{wrapfigure}{l}{0.2\textwidth}
-  \vspace{-30pt}%
-  \includegraphics[width=\linewidth]{\images/arrow_tower.png}
-  \vskip -\baselineskip
-\end{wrapfigure}
-The defender also gains the Arrow Tower Unit Card which is placed next to the Combat Board.
-% TODO: find out if arrow tower can be targeted by spells
-It can only be damaged by \includesvg[height=10px]{\svgs/unit_ranged.svg} attacks and card effects.
-This Unit is also destroyed if all Wall and Gate cards are destroyed.
-The arrow tower cannot start a defensive Combat by itself without other Units and you do not need to destroy it in order to win when attacking.
-
-\clearpage
+\begin{multicols}{2}
 
 \subsection*{Combat Round Structure}
 Combat is divided into Rounds, during which all of the Units participating in that Combat \textbf{Activate once} in Initiative order.
@@ -188,7 +205,6 @@ If there are no \includesvg[height=10px]{\svgs/unit_ranged.svg} Units for them t
 If there's more than one valid target, they attack the closest one.\par
 If there's ever a tie between equally valid targets for any units, the players choose which Unit is attacked.
 
-\clearpage
 \textbf{AI Ueroes} always start in their Town's Field unless otherwise stated.
 They have 3MP and always use them to perform the following actions in decreasing priority:
 \begin{itemize}
@@ -199,13 +215,14 @@ They have 3MP and always use them to perform the following actions in decreasing
   \item Otherwise, move toward the player's Town in an attempt to Flag it.
 Repeat this sequence until all MP is used.
 \end{itemize}
-\begin{wrapfigure}{R}{0.5\textwidth}
-  \begin{center}
+
+\begin{center}
   \includegraphics[width=0.48\textwidth]{\images/ai_card.png}
-  \end{center}
-\end{wrapfigure}
+\end{center}
+
 AI Heroes always \textbf{automatically win Combat} against any Neutral Units, while simultaneously \textbf{Flagging or Visiting all fields} they happen to move through.
 They gain no benefits from Flagging or Visiting Fields.
+
 AI Heroes must discover face down Map Tiles as normal by spending 1 MP before moving onto them.
 The player chooses that tile's orientation.\par
 AI Heroes cannot Surrender and you cannot Surrender to them;
@@ -214,3 +231,12 @@ Winning Combat against an AI Hero does not grant any rewards unless stated by th
 AI Heroes do not have a Town Board, Resources, or a Hero Card.
 Their Units are static and defined by the Scenario's set up or other rules.\par
 Any differences to the above will be described in any given Scenario's own rules.
+
+
+\end{multicols}
+
+\vspace*{\fill}
+\begin{figure*}[!hb]
+  \centering
+  \includegraphics[width=\textwidth]{\art/sharpshooter.jpg}
+\end{figure*}

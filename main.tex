@@ -45,6 +45,7 @@
 % Set the default spacing between paragraphs. Remove indentation.
 \usepackage[skip=6pt, indent=0pt]{parskip}
 \setstretch{1}
+
 \captionsetup[figure]{labelformat=empty}
 \usetikzlibrary{shadows, shadows.blur, calc}
 
@@ -121,7 +122,6 @@
     \end{tikzpicture}
     }
   }
-  % \begin{adjustwidth*}{}{0.125\textwidth}
   \begin{fullwidth}[leftmargin=0.16\textwidth]
     \begin{center}
       \fontfamily{ptm}\selectfont{
@@ -129,7 +129,6 @@
       }
       \addcontentsline{toc}{section}{\protect\numberline{}#1}
     \end{center}
-  % \end{adjustwidth*}
   \end{fullwidth}
   \vspace{1.75em}
 }
