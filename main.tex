@@ -31,6 +31,7 @@
 \usepackage{stfloats}
 \usepackage{subfigure}
 \usepackage[usetransparent=false]{svg}
+\usepackage[subfigure]{tocloft}
 \usepackage{tikz}
 \usepackage{titlesec}
 \usepackage{wrapfig}
@@ -45,6 +46,11 @@
 % Set the default spacing between paragraphs. Remove indentation.
 \usepackage[skip=6pt, indent=0pt]{parskip}
 \setstretch{1}
+
+% Add dots to the table of contents
+\renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
+\renewcommand\cftsecdotsep{\cftdot}
+\renewcommand\cftsubsecdotsep{\cftdot}
 
 \captionsetup[figure]{labelformat=empty}
 \usetikzlibrary{shadows, shadows.blur, calc}
@@ -149,7 +155,7 @@
 
 \begin{document}
 
-\title{\includegraphics[width=4cm]{\images/title.png} The Rewritening}
+\title{\includegraphics[width=6cm]{\images/title.png}\\The Rewritening}
 
 \author{Hermanni "Heegu" Karppela}
 \maketitle
@@ -158,7 +164,19 @@
 Version 0.3
 \end{center}
 
+\bigbreak
+Acknowledgements:\\
+\ldots
+
+\clearpage
+
+\begin{multicols*}{2}
 \tableofcontents
+\vspace*{\fill}
+\columnbreak
+\vspace*{\fill}
+\includegraphics[width=\linewidth]{\art/black_dragon.jpg}
+\end{multicols*}
 
 \clearpage
 
