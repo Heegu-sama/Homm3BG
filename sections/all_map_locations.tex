@@ -1,9 +1,7 @@
 \addsection{All Map Locations}{\images/earth_magic.png}
-\begin{wrapfigure}{R}{0.5\textwidth}
-    \begin{center}
-    \includegraphics[width=0.46\textwidth]{\images/symbols.png}
-    \end{center}
-\end{wrapfigure}
+
+\begin{multicols*}{2}
+
 \hypertarget{All}{This} section describes the function of every single field in the game.
 The vast majority of fields have useful iconography that clearly communicates the field's effect.
 On the right is a screenshot of the back of the rule book that explains these.
@@ -13,6 +11,16 @@ For this reason all revisitable fields are pictured and described individually.
 The \includegraphics[scale=0.75]{\images/revisitable.png} symbol is on almost all flaggable fields, with the major exception of settlements.
 Rules for flagging mines, settlements and towns are on the next page followed by descriptions of revisitable and unique fields marked with a question mark.\par
 Random towns and War Machine Factories are explained above.
+
+\vfill
+\begin{center}
+  \hspace{-14em}
+  \includegraphics[scale=0.11]{\art/ballista.png}
+\end{center}
+
+\begin{center}
+  \includegraphics[width=\linewidth]{\images/symbols.png}
+\end{center}
 
 \clearpage
 \subsection*{Towns, mines and settlements}
@@ -51,28 +59,29 @@ When you flag an enemy settlement you may switch which resource it produces.\par
 Additionally, \textbf{instead of increasing resource production}, you may choose to \textbf{reinforce} one of your bronze or silver units immediately for half the normal cost, rounded up.
 If you were the first player to flag the settlement, reinforce that unit for free instead.
 Do not place any resource tokens on the settlement if you choose to reinforce.
-\begin{figure}[h]
-\centering
-\shadowimage[width=.3\textwidth]{\images/castle_settlement.jpg}\hfill%
-\shadowimage[width=.3\textwidth]{\images/dungeon_settlement.jpg}\hfill%
-\shadowimage[width=.3\textwidth]{\images/necropolis_settlement.jpg}\\
-\vspace{4pt}
-\shadowimage[width=.3\textwidth]{\images/rampart_settlement.jpg}\hfill%
-\shadowimage[width=.3\textwidth]{\images/fortress_settlement.jpg}\hfill%
-\shadowimage[width=.3\textwidth]{\images/inferno_settlement.jpg}\\
-\vspace{4pt}
-\shadowimage[width=.3\textwidth]{\images/tower_settlement.jpg}\\%
-\vspace{4pt}
-\textit{All possible settlements.
+
+\bigbreak
+
+\begin{minipage}[h]{\linewidth}
+  \centering
+  \shadowimage[width=0.7\linewidth]{\images/castle_settlement.jpg}\hfill%
+  \shadowimage[width=0.7\linewidth]{\images/dungeon_settlement.jpg}\hfill%
+  \shadowimage[width=0.7\linewidth]{\images/necropolis_settlement.jpg}\\
+  \shadowimage[width=0.7\linewidth]{\images/rampart_settlement.jpg}\hfill%
+  \shadowimage[width=0.7\linewidth]{\images/fortress_settlement.jpg}\hfill%
+  \shadowimage[width=0.7\linewidth]{\images/inferno_settlement.jpg}\\
+  \shadowimage[width=0.7\linewidth]{\images/tower_settlement.jpg}\\%
+  \textit{All possible settlements.
   Each is styled after a different faction.
   They all work identically.}
-\end{figure}
+\end{minipage}
+\end{multicols*}
 \bigbreak
 
 \subsection*{Revisitable fields}
 
 \begin{figure}[H]
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \textbf{Library}\medskip
@@ -83,7 +92,7 @@ Do not place any resource tokens on the settlement if you choose to reinforce.
       to Remove 1 Statistic card from   your hand or discard pile and replace it with any other Statistic card.
       You may do this twice per visit.}
   \end{minipage}\hfill
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \captionsetup{singlelinecheck=off}
@@ -92,6 +101,7 @@ Do not place any resource tokens on the settlement if you choose to reinforce.
     \caption[black market]{\small Category: \textbf{Revisitable}\\Look at the top 4 cards from the Artifact discard pile.
       You may buy one of them for:
       \begin{itemize}
+      \setlength\itemsep{-4pt}
         \item [5] \includesvg[height=8px]{\svgs/gold.svg} if it is a \textbf{Minor} Artifact
         \item [7] \includesvg[height=8px]{\svgs/gold.svg} if it is a \textbf{Major} Artifact
         \item [10] \includesvg[height=8px]{\svgs/gold.svg} if it is a \textbf{Relic} Artifact
@@ -101,7 +111,7 @@ Do not place any resource tokens on the settlement if you choose to reinforce.
 \end{figure}
 
 \begin{figure}[H]
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \textbf{Sanctuary}\medskip
@@ -110,7 +120,7 @@ Do not place any resource tokens on the settlement if you choose to reinforce.
       Heroes on this field cannot be attacked by other Heroes.
       Friendly Heroes can move through enemy Heroes on this field but cannot stop here.}
   \end{minipage}\hfill
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \textbf{Tavern}\medskip
@@ -125,16 +135,16 @@ Do not place any resource tokens on the settlement if you choose to reinforce.
 \end{figure}
 
 \begin{figure}[H]
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \hypertarget{Trading Post}{\textbf{Trading Post}}\medskip
     \shadowimage[width=\textwidth]{\images/trading_post.jpg}
     \caption{\small Category: \textbf{Revisitable}\\
       Exchange resources or Remove a card.
-      See \protect\hyperlink{Trading}{trading}.}
+      See \protect\hyperlink{Trading}{Trading}.}
   \end{minipage}\hfill
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \textbf{Stables}\medskip
@@ -151,7 +161,7 @@ Do not place any resource tokens on the settlement if you choose to reinforce.
 The effects of these fields are only indicated by a question mark on their tiles.\par
 \bigbreak
 \begin{figure}[H]
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \textbf{Tree Of Knowledge}\medskip
@@ -162,7 +172,7 @@ The effects of these fields are only indicated by a question mark on their tiles
        10 \includesvg[height=8px]{\svgs/gold.svg} to gain
        2 \includesvg[height=8px]{\svgs/exp.svg}.}
   \end{minipage}\hfill
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \textbf{Redwood Observatory}\medskip
@@ -172,15 +182,15 @@ The effects of these fields are only indicated by a question mark on their tiles
 \end{figure}
 
 \begin{figure}[H]
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \textbf{Grail}\medskip
     \shadowimage[width=\linewidth]{\images/grail.jpg}
-    \caption{\small Category: \textbf{Visitable}\\
-      Gain a Grail token.}
+    % \caption{\small Category: \textbf{Visitable}\\Gain a Grail token.}
+    \caption{\small Category: \textbf{Visitable}\\Gain a Grail token.\phantom{\ldots\ldots\ldots}}
   \end{minipage}\hfill
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \textbf{Dragon Utopia}\medskip
@@ -190,7 +200,7 @@ The effects of these fields are only indicated by a question mark on their tiles
 \end{figure}
 
 \begin{figure}[H]
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \textbf{Market Of Time}\medskip
@@ -198,7 +208,7 @@ The effects of these fields are only indicated by a question mark on their tiles
     \caption{\small Category: \textbf{Visitable}\\ Remove one card from your hand.
 Then \textbf{Search (2)} Ability, Spell, or Artifact deck.}
   \end{minipage}\hfill
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \textbf{University}\medskip
@@ -209,7 +219,7 @@ Then \textbf{Search (2)} Ability, Spell, or Artifact deck.}
 \end{figure}
 
 \begin{figure}[H]
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \textbf{Magic Spring}\medskip
@@ -218,7 +228,7 @@ Then \textbf{Search (2)} Ability, Spell, or Artifact deck.}
       You may look at the top 3 cards of your discard pile and take 1 of them back to your hand.
       Return the remaining cards on top of your discard pile in any order.}
   \end{minipage}\hfill
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \textbf{Witch Hut}\medskip
@@ -229,7 +239,7 @@ Then \textbf{Search (2)} Ability, Spell, or Artifact deck.}
 \end{figure}
 
 \begin{figure}[H]
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \textbf{Obelisk}\medskip
@@ -238,7 +248,7 @@ Then \textbf{Search (2)} Ability, Spell, or Artifact deck.}
       The Obelisk's effects vary depending on the scenario.
       When you Flag this Field, do not remove any enemy faction cubes; multiple players may have a faction cube on this field.}
   \end{minipage}\hfill
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \textbf{Star Axis}\medskip
@@ -250,7 +260,7 @@ Then \textbf{Search (2)} Ability, Spell, or Artifact deck.}
 \end{figure}
 
 \begin{figure}[H]
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \textbf{Hill Fort}\medskip
@@ -259,7 +269,7 @@ Then \textbf{Search (2)} Ability, Spell, or Artifact deck.}
       You may immediately Reinforce one of your \includesvg[height=8px]{\svgs/bronze.svg} or \includesvg[height=8px]{\svgs/silver.svg} units.
       The Reinforcement cost is reduced by 3 \includesvg[height=8px]{\svgs/gold.svg} to a minimum of 0.}
   \end{minipage}\hfill
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \textbf{Prison}\medskip
@@ -272,7 +282,7 @@ Then \textbf{Search (2)} Ability, Spell, or Artifact deck.}
 \end{figure}
 
 \begin{figure}[H]
-  \begin{minipage}[t]{0.48\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \captionsetup{singlelinecheck=off}
     \centering
@@ -289,5 +299,17 @@ Then \textbf{Search (2)} Ability, Spell, or Artifact deck.}
         \end{itemize}
        }
   \end{minipage}
+  \begin{minipage}[t]{0.6\textwidth}
+    \vspace{10pt}
+    \hspace{2em}
+    \includegraphics[width=\linewidth]{\art/implosion.png}
+  \end{minipage}
+
 \end{figure}
+\vfill
+
+\begin{figure*}[!hb]
+  \centering
+  \includegraphics[width=\linewidth]{\art/gold_dragon.jpg}
+\end{figure*}
 \vfill

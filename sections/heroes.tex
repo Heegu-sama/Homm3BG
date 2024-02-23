@@ -1,4 +1,7 @@
 \addsection{Heroes}{\images/sorcery.png}
+
+\begin{multicols*}{2}
+
 \hypertarget{Heroes}{Players} always control a Main Hero and may additionally also recruit a Secondary Hero.
 A “player's Hero” may refer to either of them.
 Heroes are used to perform Movement Actions on the game board and to start Combats against enemies in order to reach a Scenario victory condition.
@@ -25,6 +28,8 @@ Secondary Heroes are considered to have the same Level as the Main Hero for the 
 If your Secondary Hero is attacked by an enemy Hero, you can choose to have your Hero be \hyperlink{Endcombat}{instantly defeated instead of fighting a Combat}.
 When a Secondary Hero is defeated, remove them from the game.
 They can be recruited again with another use of the Population Token.\par
+
+\end{multicols*}
 
 \clearpage
 
@@ -57,6 +62,7 @@ They can be recruited again with another use of the Population Token.\par
     \centering
     \vspace{0pt}
     \begin{scriptsize}
+      \hspace*{2em}
       \begin{tikzpicture}
         \draw (0, 0) node[inner sep=0] {\makebox[\textwidth][c]{\includegraphics[width=\linewidth]{\images/herocard.png}}};
         \draw (2.2, 2.5) node {\encircle{\phantom{.}1\phantom{.}}};
@@ -96,6 +102,8 @@ They can be recruited again with another use of the Population Token.\par
 
 \clearpage
 
+\begin{multicols}{2}
+
 \subsection*{\hypertarget{Level}{Level Effects}}
 Main Heroes always start each Scenario at Level 1 and may Level up by gaining Experience \includesvg[height=10px]{\svgs/exp.svg}.
 The most common sources of gaining Experience are the \hyperlink{Resources}{Treasure Die} and \hyperlink{Combatexperience}{Combat}.
@@ -127,3 +135,12 @@ You may play 3 cards for their Expert Effect per round.
 \item \textbf{Level 7} – Your Hand Limit is 7.
 Search (2) the Ability Deck.
 \end{itemize}
+
+\end{multicols}
+
+\vspace*{\fill}
+
+\begin{figure*}[!hb]
+  \centering
+  \includegraphics[width=0.9\linewidth]{\art/dread_knight.jpg}
+\end{figure*}
