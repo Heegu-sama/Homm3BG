@@ -37,7 +37,7 @@
 \usepackage{wrapfig}
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
+    linkcolor=goldenbrown,
     filecolor=magenta,
     urlcolor=cyan,
     pdftitle={Heroes of Might \& Magic III Rule Book},
@@ -66,6 +66,7 @@
 % Colors
 \definecolor{darkcandyapplered}{rgb}{0.64, 0.0, 0.0}
 \definecolor{antiquewhite}{rgb}{0.98, 0.92, 0.84}
+\definecolor{goldenbrown}{rgb}{0.6, 0.4, 0.08}
 
 % Drop shadow for images
 \def\shadowshift{3pt,-3pt}
@@ -133,8 +134,8 @@
     \begin{center}
       \fontfamily{ptm}\selectfont{
         \color{antiquewhite} \section*{#1}
+        \cleardoublepage\phantomsection\addcontentsline{toc}{section}{\protect\numberline{}#1}
       }
-      \addcontentsline{toc}{section}{\protect\numberline{}#1}
     \end{center}
   \end{fullwidth}
   \vspace{1.75em}
@@ -164,6 +165,12 @@
 \begin{center}
 Version 0.3
 \end{center}
+
+\bigbreak
+
+This is a community-driven project, which lives in \href{https://github.com/Heegu-sama/Homm3BG}{this GitHub repository}.
+Everyone is welcome to contribute, make changes, and fix errors.
+If you simply want to leave feedback, please do so in \href{https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project}{this BoardGameGeek thread}.
 
 \bigbreak
 \ldots
