@@ -16,6 +16,7 @@
 ]{geometry}
 
 % Useful packages
+\usepackage[export]{adjustbox}
 \usepackage{amsmath}
 \usepackage{caption}
 \usepackage[strict]{changepage}
@@ -58,10 +59,18 @@
 \setlength{\columnsep}{1cm}
 
 % Variables
-\def\assets{assets}
-\def\images{\assets/images}
-\def\art{\assets/art}
-\def\svgs{\assets/svgs}
+\def\_assets{assets}
+
+\def\art{\_assets/art}
+\def\cards{\_assets/cards}
+\def\examples{\_assets/examples}
+\def\images{\_assets/images}
+\def\layout{\_assets/layout}
+\def\map_locations{\_assets/map-locations}
+\def\skills{\_assets/skills}
+\def\spells{\_assets/spells}
+\def\svgs{\_assets/glyphs}
+\def\tables{\_assets/tables}
 
 % Colors
 \definecolor{darkcandyapplered}{rgb}{0.64, 0.0, 0.0}
@@ -125,7 +134,7 @@
   \makebox[0pt][l]{
   \raisebox{-\totalheight}[0pt][7pt]{
     \begin{tikzpicture}
-      \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\images/sectionheading.jpg}};
+      \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\layout/section_heading.jpg}};
       \draw (-6.2, 0) node {\includegraphics[width=0.125\textwidth]{#2}};
     \end{tikzpicture}
     }
@@ -151,8 +160,8 @@
 
 % Background
 \AddToHook{shipout/background}{%
-    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\images/tausta.png}}%
-    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\images/bottom.png}}%
+    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}%
+    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}%
 }
 
 \begin{document}
