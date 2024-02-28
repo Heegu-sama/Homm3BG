@@ -1,9 +1,18 @@
 name: Publish Document
 
+# on:
+#   push:
+#     branches:
+#       - main
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - '.github/**'
+      - 'assets/gimp-files/**'
+      - .gitignore
+      - .pre-commit-config.yaml
+      - README.md
 
 env:
   BOARG_GAME_GEEK_FILES: https://boardgamegeek.com/filepage/272787
@@ -35,6 +44,27 @@ jobs:
           name: PDF
           path: main.pdf
 
+      - name: Add pages to hyperlinks
+        run: |
+          find sections -type f | xargs -n 1 sed -i "s@\\\hypertarget@\\\pagetarget@g"
+          find sections -type f | xargs -n 1 sed -i "s@\\\hyperlink@\\\pagelink@g"
+
+      - name: Compile printable document
+        uses: xu-cheng/latex-action@v3
+        with:
+          extra_system_packages: "inkscape"
+          latexmk_shell_escape: true
+          root_file: main.tex
+
+      - name: Rename pritable file
+        run: mv main.pdf printable.pdf
+
+      - name: Upload printable pdf as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PRINTABLE
+          path: printable.pdf
+
   publish:
     needs: [build]
     runs-on: ubuntu-latest
@@ -48,15 +78,18 @@ jobs:
 
       - uses: actions/download-artifact@v4
         with:
-          path: main.pdf
+          pattern: *.pdf
 
-      - name: Move PDF
-        run: mkdir -p github_deploy && mv main.pdf github_deploy/
+      - name: Move PDFs
+        run: |
+          mkdir -p github_deploy
+          mv main.pdf github_deploy/
+          mv printable.pdf github_deploy/
 
       - name: Deploy on orphaned branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./github_deploy
-          publish_branch: build
+          publish_branch: test
           force_orphan: true
