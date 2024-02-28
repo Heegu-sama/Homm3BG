@@ -3,7 +3,7 @@ name: Publish Document
 on:
   push:
     branches:
-      - printable
+      - main
 
 env:
   BOARG_GAME_GEEK_FILES: https://boardgamegeek.com/filepage/272787
@@ -86,5 +86,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./github_deploy
-          publish_branch: test
+          publish_branch: build
           force_orphan: true
