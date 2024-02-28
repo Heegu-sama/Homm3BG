@@ -2,7 +2,7 @@
 
 Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1) 🤓
 
-To download the most recent PDF file (not necessarily a released one) built from the main branch, [**click here** 📄](https://github.com/Heegu-sama/Homm3BG/raw/build/main.pdf/PDF/main.pdf).
+[**Click here** 📄](https://github.com/Heegu-sama/Homm3BG/raw/build/main.pdf/PDF/main.pdf) to download the most recent PDF file (not necessarily a released one) built from the main branch.
 
 > ❗ 🖨️ 🖨️ 🖨️❗
 >
