@@ -29,7 +29,7 @@ jobs:
           latexmk_shell_escape: true
           root_file: main.tex
 
-      - name: Upload pdf as artifact
+      - name: Upload PDF as artifact
         uses: actions/upload-artifact@v4
         with:
           name: PDF
@@ -50,7 +50,7 @@ jobs:
       - name: Rename pritable file
         run: mv main.pdf printable.pdf
 
-      - name: Upload printable pdf as artifact
+      - name: Upload printable PDF as artifact
         uses: actions/upload-artifact@v4
         with:
           name: PRINTABLE
@@ -69,11 +69,11 @@ jobs:
 
       - uses: actions/download-artifact@v4
         with:
-          pattern: main.pdf
+          path: main.pdf
 
       - uses: actions/download-artifact@v4
         with:
-          pattern: printable.pdf
+          path: printable.pdf
 
       - name: Move PDFs
         run: |
