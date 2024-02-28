@@ -69,7 +69,11 @@ jobs:
 
       - uses: actions/download-artifact@v4
         with:
-          pattern: "*.pdf"
+          pattern: main.pdf
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: printable.pdf
 
       - name: Move PDFs
         run: |
