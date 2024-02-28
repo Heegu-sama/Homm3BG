@@ -1,30 +1,30 @@
-name: Build Document
-
-on:
-  pull_request:
-    branches: [main]
-    paths-ignore:
-      - '.github/**'
-      - 'assets/gimp-files/**'
-      - .gitignore
-      - .pre-commit-config.yaml
-      - README.md
-
-jobs:
-  build_latex:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set up repository
-        uses: actions/checkout@v4
-
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v3
-        with:
-          extra_system_packages: "inkscape"
-          root_file: main.tex
-          latexmk_shell_escape: true
-      - name: Upload pdf as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: RULE_BOOK_PDF
-          path: main.pdf
+# name: Build Document
+#
+# on:
+#   pull_request:
+#     branches: [main]
+#     paths-ignore:
+#       - '.github/**'
+#       - 'assets/gimp-files/**'
+#       - .gitignore
+#       - .pre-commit-config.yaml
+#       - README.md
+#
+# jobs:
+#   build_latex:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Set up repository
+#         uses: actions/checkout@v4
+#
+#       - name: Compile LaTeX document
+#         uses: xu-cheng/latex-action@v3
+#         with:
+#           extra_system_packages: "inkscape"
+#           root_file: main.tex
+#           latexmk_shell_escape: true
+#       - name: Upload pdf as artifact
+#         uses: actions/upload-artifact@v4
+#         with:
+#           name: RULE_BOOK_PDF
+#           path: main.pdf

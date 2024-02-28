@@ -1,18 +1,9 @@
 name: Publish Document
 
-# on:
-#   push:
-#     branches:
-#       - main
 on:
-  pull_request:
-    branches: [main]
-    paths-ignore:
-      - '.github/**'
-      - 'assets/gimp-files/**'
-      - .gitignore
-      - .pre-commit-config.yaml
-      - README.md
+  push:
+    branches:
+      - printable
 
 env:
   BOARG_GAME_GEEK_FILES: https://boardgamegeek.com/filepage/272787
@@ -78,7 +69,7 @@ jobs:
 
       - uses: actions/download-artifact@v4
         with:
-          pattern: *.pdf
+          pattern: "*.pdf"
 
       - name: Move PDFs
         run: |
