@@ -1,4 +1,4 @@
-# Heroes of Might & Magic III: The Board Game - Rule Book Rewrite Project 🐴 🛡️ ⚔️️
+# Heroes of Might & Magic III: The Board Game 🐴 🛡️ ⚔️️<br>Rule Book Rewrite Project ✏️ 📋
 
 Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1) 🤓
 
@@ -6,17 +6,17 @@ Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thre
 
 > ❗ 🖨️ 🖨️ 🖨️❗
 >
-> [**Click here** 🖨️](https://github.com/Heegu-sama/Homm3BG/raw/build/printable.pdf/PRINTABLE/printable.pdf) to download a printable version with page numbers.
+> [**Click here** 🖨️](https://github.com/Heegu-sama/Homm3BG/raw/build/printable.pdf/PRINTABLE/printable.pdf) to download a printable version with additional page numbers.
 >
 > ⚠️ Although, unlike the original, this document is intended to be read on electronic devices, there is an automatically built printable version.
-> The difference is that all hyperlinks are additionally appended with page numbers in the brackets, like this: "See Trading (p. 37)"
+> The difference is that all hyperlinks are additionally appended with page numbers in the brackets, like this: "See [Trading]() (p. [37]())".
 > This adds a significant amount of text, therefore maintaining original layout is not guaranteed.
 
 ### 💡 What is this?
 
 This project aims to rewrite the original rule book, in which the amount of vague language was just too vast to ignore.
 
-This repository hosts a document that aims to explain the rules clearly and concisely, and should eventually have an answer for basically any basic rules query you might have.
+This repository hosts a document that aims to explain the rules clearly and concisely, and should eventually have an answer for any basic rules query you might have.
 
 ### 🤔 Why?
 
@@ -54,7 +54,7 @@ To work on the document on your machine, you need the following:
 - [**TeXstudio**](https://www.texstudio.org/) (optional) to edit LaTeX files and rebuild the PDF file quickly
 - [**GIMP**](https://www.gimp.org/) (optional) to edit some images in `assets` directory - see below for details
 
-To build the document either run this in the command line:
+To build the document, either run this in the command line:
 
 ```bash
 pdflatex --shell-escape main.tex
