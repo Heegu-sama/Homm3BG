@@ -151,6 +151,9 @@
 }
 %End of create section heading.
 
+\newcommand{\pagetarget}[2]{\label{#1}\hypertarget{#1}{#2}}
+\newcommand{\pagelink}[2]{\hyperlink{#1}{#2} (p. \pageref{#1})}
+
 % Command for overlay circled text
 \definecolor{goblin}{HTML}{3b7c33}
 \newcommand\encircle[1]{%
