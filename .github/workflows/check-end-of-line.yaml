@@ -1,0 +1,18 @@
+name: Check end of line
+
+on:
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - 'assets/**'
+
+jobs:
+  linelint:
+    runs-on: ubuntu-latest
+    name: Check end of line
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Linelint
+        uses: fernandrone/linelint@master
