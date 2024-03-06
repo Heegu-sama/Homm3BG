@@ -1,7 +1,7 @@
 % !TeX spellcheck = en_US
 \addsection{Combat}{\skills/attack.png}
 
-\begin{multicols*}{2}
+\begin{multicols}{2}
 
 \hypertarget{Combat}{Combat} is resolved on the separate Combat Board.
 Combat with \textbf{Neutral Units} starts when a Hero moves to an unvisited Field with a roman numeral, which signifies the \hyperlink{Difficulty}{type and number} of Neutral Units guarding that Field.
@@ -80,23 +80,24 @@ Instant Cards which increase a unit's statistics \textbf{last only for the durat
 \subsection*{\hypertarget{Timelimit}{Combat Time Limits}}
 Combat against Neutral Units has a time limit of \textbf{one Combat Round}.
 If the player cannot win the Combat before the end of the current Combat Round, they must either \hyperlink{Endcombat}{Retreat} or spend 1 MP from the Hero that started the combat in order to play another Combat Round.\par
-\textbf{Note}: Combat against Azure \includesvg[height=10px]{\svgs/azure.svg} Units, other players or \hyperlink{AIrules}{AI Heroes} have no time limit.
+\note{small}{Combat against Azure \includesvg[height=10px]{\svgs/azure.svg} Units, other players or \hyperlink{AIrules}{AI Heroes} have no time limit.}
 
-\vspace*{\fill}
-\hspace{2em}
-\includegraphics[width=0.9\linewidth]{\art/cavalryman.png}
-
-\end{multicols*}
-
-\begin{multicols}{2}
+% \vspace*{\fill}
+% \hspace{6em}
+% \includegraphics[width=0.55\linewidth]{\art/cavalryman.png}
+%
+% \end{multicols*}
+%
+% \begin{multicols}{2}
 
 \subsection*{\hypertarget{Walls}{Defending a Town With a Citadel}}
 
 When a Town with a Citadel is attacked, the defender adds the Wall and Gate Obstacles in any order to the Middle Row of the Combat Board after placing their Units.
 The Gate Card is \textbf{not an Obstacle to the defending player}.
-The Wall and Gate cards can be destroyed by any adjacent \includesvg[height=10px]{\svgs/unit_ground.svg} or \includesvg[height=10px]{\svgs/unit_flying.svg} Unit's attack.
-\textbf{Note:} Such attacks are always successful and they do not follow the normal framework for attacking other Units.
-Do not roll the Combat Die, activate any \includesvg[height=10px]{\svgs/unit_attack.svg} Abilities or play any Statistics altering \includesvg[height=10px]{\svgs/instant.svg} Cards during them.\par
+The Wall and Gate cards can be destroyed by any adjacent \includesvg[height=10px]{\svgs/unit_ground.svg} or \includesvg[height=10px]{\svgs/unit_flying.svg} Unit's attack.\par
+\note{medium}{Attacks against Walls are always successful and they do not follow the normal framework for attacking other Units.
+  Do not roll the Combat Die, activate any \includesvg[height=10px]{\svgs/unit_attack.svg} Abilities or play any Statistics altering \includesvg[height=10px]{\svgs/instant.svg} Cards during them.
+}\par
 
 Defending Units standing on their own side and \textbf{in the same column} as a Wall or a Gate are partially protected from \includesvg[height=10px]{\svgs/unit_ranged.svg} attacks.
 If they are targeted by a \includesvg[height=10px]{\svgs/unit_ranged.svg} attack performed from the opponent's side of the Combat Board, \textbf{reduce the attack's damage by 1}.
@@ -109,19 +110,18 @@ The defender also gains the Arrow Tower Unit Card which is placed next to the Co
 \end{multicols}
 
 \vspace*{\fill}
-
 \begin{figure*}[!hb]
   \mbox{}%
   \hfill%
   \begin{minipage}[t]{0.4\textwidth}
     \centering
-    \shadowimage[width=\linewidth]{\examples/ranged_protected.jpg}
+    \shadowimage[width=0.9\linewidth]{\examples/ranged_protected.jpg}
   \caption[halberdiers protected]{\textit{Halberdiers are behind a non-destroyed Gate, they \textbf{are protected} when attacked from spaces 1-8.}}
   \end{minipage}
   \hfill%
   \begin{minipage}[t]{0.4\textwidth}
     \centering
-    \shadowimage[width=\linewidth]{\examples/ranged_unprotected.jpg}
+    \shadowimage[width=0.9\linewidth]{\examples/ranged_unprotected.jpg}
   \caption[halberdiers unprotected]{\textit{Because Halberdiers are not behind a non-destroyed Wall, \textbf{protection doesn't work}, regardless of where the \includesvg[height=10px]{\svgs/unit_ranged.svg} attack comes from.}}
   \end{minipage}
   \hfill%
@@ -166,8 +166,8 @@ Do not lose Morale or pay \includesvg[height=10px]{\svgs/gold.svg} if a \textbf{
 Defeated Main Heroes \textbf{have to move} to a friendly Town or Settlement, while Secondary Heroes are removed from the game until Recruited again.\par
 You may \textbf{Surrender} to other players by paying the other player 10 \includesvg[height=10px]{\svgs/gold.svg} when activating a Unit.
 Move your Main Hero or remove your Secondary Hero from the game as if you were defeated by losing your Units.
-There are no other direct consequences to Surrendering; the winner does not gain a Faction Cube.
-\textbf{Note}: You cannot surrender when defending a Town.\par
+There are no other direct consequences to Surrendering; the winner does not gain a Faction Cube.\par
+\note{small}{Note: you cannot surrender when defending a Town.}\par
 When a Secondary Hero is attacked, they may also choose to be \textbf{instantly defeated} instead of fighting a Combat in order to preserve their Units.
 When this happens, the attacker still receives a Faction Cube from the defeated Hero.
 Defeating a Main Hero \hyperlink{End}{may eliminate} that player.\par

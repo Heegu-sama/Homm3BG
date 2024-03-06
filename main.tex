@@ -156,14 +156,14 @@
 %End of create section heading.
 
 % Create note box
-\newcommand{\note}[1]{
+\newcommand{\note}[2]{
   \begin{tikzpicture}
-    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\layout/note-small.png}}};
+    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\layout/note-#1.png}}};
     \node at (current bounding box.center) {
-      \begin{varwidth}{0.9\linewidth}
+      \begin{varwidth}{0.85\linewidth}
       \fontfamily{ptm}\selectfont{
         \color{arylideyellow}
-        #1
+        #2
       }
       \end{varwidth}
     };
