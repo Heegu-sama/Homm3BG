@@ -81,6 +81,7 @@
 \definecolor{antiquewhite}{rgb}{0.98, 0.92, 0.84}
 \definecolor{goldenbrown}{rgb}{0.6, 0.4, 0.08}
 \definecolor{arylideyellow}{rgb}{0.91, 0.84, 0.42}
+\definecolor{amber}{rgb}{1.0, 0.49, 0.0}
 
 % Drop shadow for images
 \def\shadowshift{3pt,-3pt}
@@ -164,7 +165,9 @@
       \begin{varwidth}{0.85\linewidth}
       \fontfamily{ptm}\selectfont{
         \color{arylideyellow}
+        \hypersetup{linkcolor=amber}
         #2
+        \hypersetup{linkcolor=goldenbrown}
       }
       \end{varwidth}
     };
