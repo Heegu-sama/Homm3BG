@@ -23,7 +23,7 @@
 \usepackage{enumitem}
 \usepackage{float}
 \usepackage{fullwidth}
-\usepackage{graphicx}
+\usepackage{graphicx, trimclip}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{hyperref}
 \usepackage{multicol}
@@ -157,6 +157,13 @@
 }
 %End of create section heading.
 
+\newcommand\picdims[4][]{%
+	\setbox0=\hbox{\includegraphics[#1]{#4}}%
+	\clipbox{.5\dimexpr\wd0-#2\relax{} %
+		.5\dimexpr\ht0-#3\relax{} %
+		.5\dimexpr\wd0-#2\relax{} %
+		.5\dimexpr\ht0-#3\relax}{\includegraphics[#1]{#4}}}
+
 \tikzset{
 	thick/.style=      {line width=1.3pt},
 	very thick/.style= {line width=1.7pt},
@@ -166,7 +173,7 @@
 % Create note box
 \newcommand{\note}[2]{
   \begin{tikzpicture}
-    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth, height=#1\baselineskip]{\layout/note-big.jpg}}};
+    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/note-big.jpg}}};
     \draw [black, ultra thick] ([xshift=+2pt, yshift=-2pt] current bounding box.north west) rectangle ([xshift=-2pt, yshift=2pt] current bounding box.south east);
     \draw [yellow, very thick] (current bounding box.north west) rectangle (current bounding box.south east);
     \draw [yellow, thick] ([xshift=+4.5pt, yshift=-4.5pt] current bounding box.north west) rectangle ([xshift=-4.5pt, yshift=4.5pt] current bounding box.south east);
