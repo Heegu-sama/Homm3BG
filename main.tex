@@ -157,23 +157,31 @@
 }
 %End of create section heading.
 
+\tikzset{
+	thick/.style=      {line width=1.3pt},
+	very thick/.style= {line width=1.7pt},
+	ultra thick/.style={line width=2.2pt}
+}
+
 % Create note box
-\newcommand{\note}[3][small]{
+\newcommand{\note}[2]{
   \begin{tikzpicture}
-    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth, height=#2\baselineskip]{\layout/note-#1.jpg}}};
+    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth, height=#1\baselineskip]{\layout/note-big.jpg}}};
+    \draw [black, ultra thick] ([xshift=+2pt, yshift=-2pt] current bounding box.north west) rectangle ([xshift=-2pt, yshift=2pt] current bounding box.south east);
+    \draw [yellow, very thick] (current bounding box.north west) rectangle (current bounding box.south east);
+    \draw [yellow, thick] ([xshift=+4.5pt, yshift=-4.5pt] current bounding box.north west) rectangle ([xshift=-4.5pt, yshift=4.5pt] current bounding box.south east);
     \node at (current bounding box.center) {
       \begin{varwidth}{0.85\linewidth}
       \fontfamily{ptm}\selectfont{
         \color{arylideyellow}
         \hypersetup{linkcolor=amber}
-        #3
+        #2
         \hypersetup{linkcolor=goldenbrown}
       }
       \end{varwidth}
     };
   \end{tikzpicture}
 }
-
 \newcommand{\pagetarget}[2]{\label{#1}\hypertarget{#1}{#2}}
 \newcommand{\pagelink}[2]{\hyperlink{#1}{#2} (p. \pageref{#1})}
 
@@ -191,6 +199,7 @@
 }
 
 \begin{document}
+	
 
 \title{\includegraphics[width=6cm]{\images/title.png}\\The Rewritening}
 
