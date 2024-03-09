@@ -23,7 +23,7 @@
 \usepackage{enumitem}
 \usepackage{float}
 \usepackage{fullwidth}
-\usepackage{graphicx}
+\usepackage{graphicx, trimclip}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{hyperref}
 \usepackage{multicol}
@@ -73,6 +73,7 @@
 \def\skills{\_assets/skills}
 \def\spells{\_assets/spells}
 \def\svgs{\_assets/glyphs}
+\def\notes_svgs{\svgs/for-notes}
 \def\tables{\_assets/tables}
 
 % Colors
@@ -156,10 +157,28 @@
 }
 %End of create section heading.
 
+\newcommand\picdims[4][]{%
+  \setbox0=\hbox{\includegraphics[#1]{#4}}%
+  \clipbox{.5\dimexpr\wd0-#2\relax{} %
+    .5\dimexpr\ht0-#3\relax{} %
+    .5\dimexpr\wd0-#2\relax{} %
+    .5\dimexpr\ht0-#3\relax}{\includegraphics[#1]{#4}}}
+
+\tikzset{
+  thick/.style=      {line width=1.3pt},
+  very thick/.style= {line width=1.7pt},
+  ultra thick/.style={line width=2.2pt}
+}
+
+\definecolor{borderoutyellow}{HTML}{E0B75F}
+\definecolor{borderinyellow}{HTML}{F6EA48}
 % Create note box
-\newcommand{\note}[2][small]{
+\newcommand{\note}[2]{
   \begin{tikzpicture}
-    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\layout/note-#1.jpg}}};
+    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/note-big.jpg}}};
+    \draw [black, ultra thick] ([xshift=+2pt, yshift=-2pt] current bounding box.north west) rectangle ([xshift=-2pt, yshift=2pt] current bounding box.south east);
+    \draw [borderoutyellow, very thick] (current bounding box.north west) rectangle (current bounding box.south east);
+    \draw [borderinyellow, thick] ([xshift=+4.5pt, yshift=-4.5pt] current bounding box.north west) rectangle ([xshift=-4.5pt, yshift=4.5pt] current bounding box.south east);
     \node at (current bounding box.center) {
       \begin{varwidth}{0.85\linewidth}
       \fontfamily{ptm}\selectfont{
@@ -172,7 +191,6 @@
     };
   \end{tikzpicture}
 }
-
 \newcommand{\pagetarget}[2]{\label{#1}\hypertarget{#1}{#2}}
 \newcommand{\pagelink}[2]{\hyperlink{#1}{#2} (p. \pageref{#1})}
 
@@ -190,6 +208,7 @@
 }
 
 \begin{document}
+  
 
 \title{\includegraphics[width=6cm]{\images/title.png}\\The Rewritening}
 
