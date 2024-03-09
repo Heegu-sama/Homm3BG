@@ -158,16 +158,16 @@
 %End of create section heading.
 
 \newcommand\picdims[4][]{%
-	\setbox0=\hbox{\includegraphics[#1]{#4}}%
-	\clipbox{.5\dimexpr\wd0-#2\relax{} %
-		.5\dimexpr\ht0-#3\relax{} %
-		.5\dimexpr\wd0-#2\relax{} %
-		.5\dimexpr\ht0-#3\relax}{\includegraphics[#1]{#4}}}
+  \setbox0=\hbox{\includegraphics[#1]{#4}}%
+  \clipbox{.5\dimexpr\wd0-#2\relax{} %
+    .5\dimexpr\ht0-#3\relax{} %
+    .5\dimexpr\wd0-#2\relax{} %
+    .5\dimexpr\ht0-#3\relax}{\includegraphics[#1]{#4}}}
 
 \tikzset{
-	thick/.style=      {line width=1.3pt},
-	very thick/.style= {line width=1.7pt},
-	ultra thick/.style={line width=2.2pt}
+  thick/.style=      {line width=1.3pt},
+  very thick/.style= {line width=1.7pt},
+  ultra thick/.style={line width=2.2pt}
 }
 
 \definecolor{borderoutyellow}{HTML}{E0B75F}
@@ -208,7 +208,7 @@
 }
 
 \begin{document}
-	
+  
 
 \title{\includegraphics[width=6cm]{\images/title.png}\\The Rewritening}
 
