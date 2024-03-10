@@ -208,7 +208,23 @@
 }
 
 \begin{document}
-  
+
+\begin{titlepage}
+  \begin{tikzpicture}[remember picture, overlay, inner sep=10pt]
+    \node(cover)[anchor=center] at (current page.center) {\includegraphics[height=\paperheight, keepaspectratio]{\layout/cover.jpg}};
+    \node(title)[minimum width = \paperwidth, anchor=center, yshift=-10em] at (current page.north) {\includegraphics[width=0.6\paperwidth]{\layout/cover_title.png}};
+    \node(subtitle)[
+      % minimum width = \paperwidth,
+      anchor=center,
+      yshift=10em,
+      fill=black,
+      fill opacity=0.4,
+      text opacity=1
+    ] at (current page.south) {
+      \fontfamily{ptm}\selectfont{\color{white}\fontsize{35}{35}\textbf{RULE BOOK REWRITING}}
+    };
+  \end{tikzpicture}
+\end{titlepage}
 
 \title{\includegraphics[width=6cm]{\images/title.png}\\The Rewritening}
 
