@@ -40,13 +40,13 @@
 \usepackage[most]{tcolorbox}
 \newtcolorbox{scaledfigure}[1][]{height fill, space to=\myspace,#1}
 \hypersetup{
-    colorlinks=true,
-    linkcolor=goldenbrown,
-    filecolor=magenta,
-    urlcolor=cyan,
-    pdftitle={Heroes of Might \& Magic III Rule Book},
-    pdfpagemode=FullScreen,
-    }
+  colorlinks=true,
+  linkcolor=goldenbrown,
+  filecolor=magenta,
+  urlcolor=cyan,
+  pdftitle={Heroes of Might \& Magic III Rule Book},
+  pdfpagemode=FullScreen,
+}
 % Set the default spacing between paragraphs. Remove indentation.
 \usepackage[skip=6pt, indent=0pt]{parskip}
 \setstretch{1}
@@ -123,7 +123,7 @@
   \begin{tikzpicture}
     \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[#1]{#2}};
     \drawshadow{image}
-\end{tikzpicture}}
+  \end{tikzpicture}}
 % End of drop shadow definition
 
 \titleformat{\section}
@@ -203,18 +203,21 @@
 
 % Background
 \AddToHook{shipout/background}{%
-    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}%
-    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}%
+  \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}%
+  \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}%
 }
 
 \begin{document}
 
 \begin{titlepage}
   \begin{tikzpicture}[remember picture, overlay, inner sep=10pt]
-    \node(cover)[anchor=center] at (current page.center) {\includegraphics[height=\paperheight, keepaspectratio]{\layout/cover.jpg}};
-    \node(title)[minimum width = \paperwidth, anchor=center, yshift=-10em] at (current page.north) {\includegraphics[width=0.6\paperwidth]{\layout/cover_title.png}};
+    \node(cover)[anchor=center] at (current page.center) {
+      \includegraphics[height=\paperheight, keepaspectratio]{\layout/cover.jpg}
+    };
+    \node(title)[minimum width = \paperwidth, anchor=center, yshift=-10em] at (current page.north) {
+      \includegraphics[width=0.6\paperwidth]{\layout/cover_title.png}
+    };
     \node(subtitle)[
-      % minimum width = \paperwidth,
       anchor=center,
       yshift=10em,
       fill=black,
