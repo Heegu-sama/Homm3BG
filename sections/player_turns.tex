@@ -1,7 +1,7 @@
 % !TeX spellcheck = en_US
 \addsection{Player Turns}{\spells/dimension_door.png}
 
-\begin{multicols*}{2}
+\begin{multicols}{2}
 
 At the start of a player's Turn, that player refreshes their hand of Cards from their Deck of Might \& Magic following two steps in order:
 \begin{itemize}
@@ -37,8 +37,7 @@ Mark the amount of MP you have used by flipping your Movement Tokens over to the
 If a player has both a Main and a \hyperlink{Secondary}{Secondary Hero}, track their MP separately.
 Heroes can spend MP in any order.\par
 Allied Heroes can move through each other but cannot stop their movement in the same Field.
-When you move through a Field with an allied Hero, do not \hyperlink{Categories}{Visit} the Field that the allied Hero is standing on.
-In the unlikely situation that two allied Heroes are forced onto the same Field, you must use your next MP to move one of them away from that Field.\par
+When you move through a Field with an allied Hero, do not \hyperlink{Categories}{Visit} the Field that the allied Hero is standing on.\par
 \note{10}{
   Whenever you are instructed to gain (additional) MP, sometimes shorthanded with the symbol \includesvg[height=10px]{\svgs/movement-note.svg}, that MP persists for \textbf{only the Turn it was gained on}.
   In the unlikely situation that two allied Heroes are forced onto the same Field, you must use your next MP to move one of them away from that Field.
@@ -60,27 +59,33 @@ You cannot use that action again until the start of the next Round, when the Tok
 
 \subsection*{Morale Actions}
 Players can gain or lose Morale through various game effects.
-When you gain Morale, place a Positive Morale Token \includesvg[height=10px]{\svgs/positive.svg} near your play area.
-A player may only have one such token.
-If they would gain a second token, they may immediately spend the first one before gaining the second.
+When you gain Morale, take a Positive Morale Token \includesvg[height=10px]{\svgs/positive.svg}.
+You may only have one such Token.
+If you would gain a second Token, you may immediately spend the first one before gaining the second.
 A Positive Morale Token may be spent to perform any of the following Actions at any time:
 \begin{itemize}
   \item Draw a Card from your Deck.
   \item Discard any number of Cards, then draw that many Cards.
   \item Reroll any die you have thrown.
 \end{itemize}
-
-If a player loses Morale, they must discard a Positive Morale Token \includesvg[height=10px]{\svgs/positive.svg} without effect if they have one, otherwise they gain a Negative Morale Token \includesvg[height=10px]{\svgs/negative.svg}.
-Inversely, gaining Morale while you have a Negative Morale Token also discards it without effect.
-If a player would gain a second Negative Morale Token, they must instead discard their entire hand of Cards the next time they end their Turn.\par
+If you lose Morale, discard a Positive Morale Token \includesvg[height=10px]{\svgs/positive.svg} if you have one, otherwise gain a Negative Morale Token \includesvg[height=10px]{\svgs/negative.svg}.
+Inversely, gaining Positive Morale while you have a Negative Morale Token discards the Token.
+If you would gain a second Negative Morale Token, you must instead \textbf{discard your hand of Cards} the next time you end your Turn.\par
 
 \note{5}{The Necropolis \includesvg[height=10px]{\svgs/necro-note.svg} Faction ignores any Morale effects.
   They cannot ever gain or lose Morale for any reason.
 }
 
-\vspace*{\fill}
-\begin{center}
-  \includegraphics[width=1.3\linewidth]{\art/cavalryman.png}
-\end{center}
+\subsection*{Example Turn}
 
-\end{multicols*}
+\textit{Alice, who is playing the Hero Catherine the Knight, begins her Turn.
+She has 3 cards in her hand from the previous round, and decides to discard 2 of them before drawing cards from her Deck up to her Hand Limit \includesvg[height=10px]{\svgs/hand.svg}.
+The current limit is 5, since her Main Hero is Level 3, so she draws 4 cards after discarding (see \hyperlink{Level}{Level Effects}).}\par
+\textit{She then spends her Build Token to construct the \includesvg[height=10px]{\svgs/golden.svg} Dwelling, and then her Population Token to \hyperlink{Units}{Recruit} the \includesvg[height=10px]{\svgs/golden.svg} Unit Champions.
+She is allowed to do this, as she had previously built the prerequisite lower Level Dwellings (\includesvg[height=10px]{\svgs/bronze.svg} and \includesvg[height=10px]{\svgs/silver.svg}) and has enough \hyperlink{Resources}{Resources} to both Build the Dwelling and to Recruit the Champions.}\par
+\textit{Now prepared for a coming battle, she spends a Movement Point to move her Main Hero to an adjacent Field currently occupied by Sandro the Necromancer, an enemy Main Hero controlled by Bob.
+As Melissa announces her intent to start Combat, both players still now have an opportunity to perform Town Actions.}\par
+
+\includegraphics[width=\linewidth]{\examples/catherine_attacks_sandro.png}
+
+\end{multicols}
