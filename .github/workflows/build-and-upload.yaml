@@ -1,8 +1,6 @@
 name: Publish Document
 
 on:
-  pull_request:
-    branches: [main]
   push:
     branches:
       - main
@@ -92,5 +90,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./github_deploy
-          publish_branch: test
+          publish_branch: build
           force_orphan: true
