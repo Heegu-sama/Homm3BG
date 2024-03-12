@@ -26,6 +26,9 @@
 \usepackage{graphicx, trimclip}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{hyperref}
+% \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[nonewpage]{imakeidx}
 \usepackage{multicol}
 \usepackage{outlines}
 \usepackage{setspace}
@@ -191,6 +194,8 @@
     };
   \end{tikzpicture}
 }
+
+% Commands to be used for automation generating printable version
 \newcommand{\pagetarget}[2]{\label{#1}\hypertarget{#1}{#2}}
 \newcommand{\pagelink}[2]{\hyperlink{#1}{#2} (p. \pageref{#1})}
 
@@ -206,6 +211,9 @@
   \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}%
   \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}%
 }
+
+\makeindex[columns=2, title=, options={-s index_style.ist}]
+% \indexsetup{othercode={\fancyhead{}}}
 
 \begin{document}
 
