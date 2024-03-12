@@ -50,7 +50,7 @@ jobs:
         with:
           extra_system_packages: "inkscape"
           latexmk_shell_escape: true
-          pre_compile: "pdflatex --shell-escape main.tex && makeindex main -s index_style.ist"
+          pre_compile: "cat index_style.ist; cat main.ind; makeindex main -s index_style.ist; cat main.ind"
           root_file: main.tex
 
       - name: Rename pritable file
