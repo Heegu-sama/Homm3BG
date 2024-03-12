@@ -13,7 +13,7 @@ Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thre
 > This adds a significant amount of text, therefore maintaining original layout is not guaranteed.
 > Also, index is generated at the end 🤞
 
-### 💡 What is this?
+### 💡 What Is This?
 
 This project aims to rewrite the original rule book, in which the amount of vague language was just too vast to ignore.
 
