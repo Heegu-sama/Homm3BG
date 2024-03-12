@@ -1,6 +1,8 @@
 name: Publish Document
 
 on:
+  pull_request:
+    branches: [main]
   push:
     branches:
       - main
@@ -27,6 +29,7 @@ jobs:
         with:
           extra_system_packages: "inkscape"
           latexmk_shell_escape: true
+          post_compile: "makeindex main -s index_style.ist"
           root_file: main.tex
 
       - name: Upload PDF as artifact
@@ -47,9 +50,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
-          pre_compile: "makeindex main -s index_style.ist"
-          compiler: pdflatex
-          args: "--shell-escape"
+          latexmk_shell_escape: true
           root_file: main.tex
 
       - name: Rename pritable file
