@@ -2,7 +2,7 @@ name: Build Document
 
 on:
   pull_request:
-    branches: [main]
+    branches: [none]
     paths-ignore:
       - '.github/**'
       - 'assets/gimp-files/**'
@@ -23,6 +23,7 @@ jobs:
           extra_system_packages: "inkscape"
           root_file: main.tex
           latexmk_shell_escape: true
+
       - name: Upload pdf as artifact
         uses: actions/upload-artifact@v4
         with:
