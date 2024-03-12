@@ -29,7 +29,6 @@ jobs:
         with:
           extra_system_packages: "inkscape"
           latexmk_shell_escape: true
-          post_compile: "makeindex main -s index_style.ist"
           root_file: main.tex
 
       - name: Upload PDF as artifact
@@ -51,6 +50,7 @@ jobs:
         with:
           extra_system_packages: "inkscape"
           latexmk_shell_escape: true
+          post_compile: "makeindex main -s index_style.ist && pdflatex --shell-escape main.tex"
           root_file: main.tex
 
       - name: Rename pritable file
