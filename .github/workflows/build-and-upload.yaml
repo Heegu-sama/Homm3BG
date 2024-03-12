@@ -49,8 +49,9 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
-          latexmk_shell_escape: true
-          pre_compile: "cat index_style.ist; cat main.ind; makeindex main -s index_style.ist; cat main.ind"
+          pre_compile: "makeindex main -s index_style.ist"
+          compiler: pdflatex
+          args: "--shell-escape"
           root_file: main.tex
 
       - name: Rename pritable file
