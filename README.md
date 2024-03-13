@@ -1,4 +1,4 @@
-# Heroes of Might & Magic III: The Board Game 🐴 🛡️ ⚔️️<br>Rule Book Rewrite Project ✏️ 📋
+# Heroes of Might & Magic III: The Board Game 🐴 🛡️ ⚔️️<br>Rule Book Rewrite Project 📜🪶
 
 Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1) 🤓
 
@@ -6,13 +6,14 @@ Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thre
 
 > ❗ 🖨️ 🖨️ 🖨️❗
 >
-> [**Click here** 🖨️](https://github.com/Heegu-sama/Homm3BG/raw/build/printable.pdf/PRINTABLE/printable.pdf) to download a printable version with additional page numbers.
+> [**Click here** 🖨️](https://github.com/Heegu-sama/Homm3BG/raw/build/printable.pdf/PRINTABLE/printable.pdf) to download a printable version with additional page numbers and an index page.
 >
 > ⚠️ Although, unlike the original, this document is intended to be read on electronic devices, there is an automatically built printable version.
 > The difference is that all hyperlinks are additionally appended with page numbers in the brackets, like this: "See [Trading]() (p. [37]())".
 > This adds a significant amount of text, therefore maintaining original layout is not guaranteed.
+> Also, index is generated at the end 🤞
 
-### 💡 What is this?
+### 💡 What Is This?
 
 This project aims to rewrite the original rule book, in which the amount of vague language was just too vast to ignore.
 

@@ -40,11 +40,15 @@ jobs:
           find sections -type f | xargs -n 1 sed -i "s@\\\hypertarget@\\\pagetarget@g"
           find sections -type f | xargs -n 1 sed -i "s@\\\hyperlink@\\\pagelink@g"
 
+      - name: Include index page
+        run: sed -i "s@\\\end{document}@\\\include{sections/index.tex}\\\end{document}@g" main.tex
+
       - name: Compile printable document
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
           latexmk_shell_escape: true
+          post_compile: "makeindex main -s index_style.ist && pdflatex --shell-escape main.tex"
           root_file: main.tex
 
       - name: Rename pritable file
