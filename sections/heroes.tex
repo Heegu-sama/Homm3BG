@@ -8,15 +8,15 @@ A “player's Hero” may refer to either of them.
 Heroes are used to perform Movement Actions on the game board and to start Combats against enemies in order to reach a Scenario victory condition.
 
 \subsection*{Main Hero}
-The Main Hero is represented by its chosen model and Hero Card.
+The Main Hero\index{Main Hero} is represented by its chosen model and Hero Card.
 Each Faction's Main Hero has 3 Movement Points.
 Only the Main Hero can use your Deck.\par
 Each Main Hero starts the game at Level 1 and can advance up to Level 7 by gaining Experience.
 Experience is gained from \hyperlink{Combatexperience}{winning Combat}, Visiting certain \hyperlink{All}{Locations} and the \hyperlink{Resources}{Treasure Die} \includesvg[height=10px]{\svgs/treasure.svg}.
-Gaining 1 Experience is represented by the symbol \includesvg[height=10px]{\svgs/exp.svg}.
+Gaining 1 Experience\index{Experience} is represented by the symbol \includesvg[height=10px]{\svgs/exp.svg}.
 
 \subsection*{\hypertarget{Secondary}{Secondary Heroes}}
-If you control a Town or a Settlement, a Secondary Hero can be Hired by flipping your \textbf{Population Token} and paying 10 Gold \includesvg[height=10px]{\svgs/gold.svg}.\par
+If you control a Town or a Settlement, a Secondary Hero\index{Secondary Hero} can be Hired by flipping your \textbf{Population Token} and paying 10 Gold \includesvg[height=10px]{\svgs/gold.svg}.\par
 \note{5}{Units \textbf{cannot} be \hyperlink{Units}{Recruited or Reinforced} while using the Population Token to recruit a Secondary Hero.}\par
 Your Secondary Hero uses the remaining Hero model of your Faction.
 You may wish to mark this model with a token such as a Faction Cube to differentiate it from the Main Hero.
@@ -39,7 +39,7 @@ They can be Recruited again with another use of the Population Token.\par
 
 \clearpage
 
-\subsection*{\hypertarget{Herocard}{Hero Card Anatomy}}
+\subsection*{\hypertarget{Herocard}{Hero Card Anatomy}}\index{Hero Card}
 \bigbreak
 \begin{figure}[h]
   \begin{minipage}[t]{0.5\textwidth}
@@ -57,7 +57,7 @@ They can be Recruited again with another use of the Population Token.\par
       \item \textbf{Defense} – Number of Defense cards in your Starting Deck.
       \item \textbf{Power} – Number of Power cards in your Starting Deck.
       \item \textbf{Knowledge} – Number of Knowledge cards in your Starting Deck.
-      \item \textbf{Starting Ability} – Reminder for the unique Ability card the Hero starts with.
+      \item \textbf{Starting Ability} – Reminder for the unique Ability Card\index{Ability Card} the Hero starts with.
       \item \textbf{Hero Specialty} – Reminder for the Specialty cards the Hero adds to their deck at the start of the game and after specific Level ups.
         Each hero has three Specialty Cards.
       \item \textbf{Level Tracker} – Whenever a Main Hero gains 1 or more Experience \includesvg[height=10px]{\svgs/exp.svg}, move the cube that number of steps on this track.
@@ -115,7 +115,7 @@ They can be Recruited again with another use of the Population Token.\par
 \begin{multicols}{2}
 
 \subsection*{\hypertarget{Level}{Level Effects}}
-Main Heroes always start each Scenario at Level 1 and may Level up by gaining Experience \includesvg[height=10px]{\svgs/exp.svg}.
+Main Heroes always start each Scenario at Level 1\index{Level} and may Level up by gaining Experience \includesvg[height=10px]{\svgs/exp.svg}.
 The most common sources of gaining Experience are the \hyperlink{Resources}{Treasure Die} and \hyperlink{Combatexperience}{Combat}.
 Each new Level up requires \textbf{2 Experience}.
 When a Main Hero reaches a new Level, resolve the effects of the Level up immediately.
@@ -148,8 +148,8 @@ You may play 3 cards for their Expert Effect per Round.
 Search (2) the Ability Deck.
 \end{itemize}
 
-\vspace*{\fill}
-\begin{center}
-    \includegraphics[width=1.3\linewidth]{\art/cavalryman.png}
-\end{center}
 \end{multicols}
+
+\begin{tikzpicture}[overlay]
+  \node at (9, -3) {\includegraphics[width=0.6\linewidth]{\art/cavalryman.png}};
+\end{tikzpicture}
