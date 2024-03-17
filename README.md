@@ -6,10 +6,10 @@ Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thre
 
 > ❗ 🖨️ 🖨️ 🖨️❗
 >
-> [**Click here** 🖨️](https://github.com/Heegu-sama/Homm3BG/raw/build/printable.pdf/PRINTABLE/printable.pdf) to download a printable version with additional page numbers and an index page.
+> [**Click here** 🖨️](https://github.com/Heegu-sama/Homm3BG/raw/build/printable.pdf/PRINTABLE/printable.pdf) to download a **printable** version with additional page numbers and an index page.
 >
 > ⚠️ Although, unlike the original, this document is intended to be read on electronic devices, there is an automatically built printable version.
-> The difference is that all hyperlinks are additionally appended with page numbers in the brackets, like this: "See [Trading]() (p. [37]())".
+> The difference is that all hyperlinks are additionally appended with page numbers in the brackets, like this: "See [Trading]() (p. [36]())".
 > This adds a significant amount of text, therefore maintaining original layout is not guaranteed.
 > Also, index is generated at the end 🤞
 
@@ -58,10 +58,18 @@ To work on the document on your machine, you need the following:
 To build the document, either run this in the command line:
 
 ```bash
-pdflatex --shell-escape main.tex
+latexmk -pdf -silent "main"
 ```
 
 or press the `Build & View` (F5) button in TeXstudio.
+
+To build the printable version, use the script:
+
+> ⚠️ Be careful, as it edits all the files!
+
+```bash
+./make_printable.sh
+```
 
 ## ✨ Assets
 
