@@ -41,7 +41,7 @@ jobs:
           find sections -type f | xargs -n 1 sed -i "s@\\\hyperlink@\\\pagelink@g"
 
       - name: Include index page
-        run: sed -i "s@\\\end{document}@\\\include{sections/index.tex}\\\end{document}@g" main.tex
+        run: sed -i "s@\\\include{sections/back_cover.tex}@\\\include{sections/index.tex}\\\include{sections/back_cover.tex}@g" main.tex
 
       - name: Compile printable document
         uses: xu-cheng/latex-action@v3
