@@ -7,7 +7,7 @@
 Every Faction has access to \textbf{7 different Units}, each with unique stats and abilities.
 Units are necessary for winning Combat and fulfilling Scenario goals.
 Each Scenario's setup instructions indicate which Unit Cards should be included in your initial Unit Deck.
-Your current Unit Deck should be kept near the Town Board, clearly separated from the rest of your Faction's Units.\par
+This Deck should be kept near the Town Board, clearly separated from the rest of your Faction's Units.\par
 Each Faction Unit is double-sided, with a weaker “Few” side, and a stronger “Pack” side.
 “Few” units may be upgraded to “Packs” by \textbf{Reinforcing} them, while taking damage in Combat can subsequently reduce a Unit back to its “Few” side.
 Units should be always kept on their correct side when moved around or inspected.\par
@@ -17,18 +17,12 @@ Units may be Recruited and Reinforced by flipping the Population Token and payin
 When you do so, you can instantly Recruit and Reinforce \textbf{any number} of times, provided you have enough Resources and the prerequisite Buildings to do so.\par
 
 \textbf{Recruiting} a Unit requires that your Town has a Dwelling of that Unit's Level (\includesvg[height=10px]{\svgs/bronze.svg}\includesvg[height=10px]{\svgs/silver.svg} \includesvg[height=10px]{\svgs/golden.svg}).
-\textbf{Reinforcing} requires that your Town has a Citadel in addition to a Dwelling of that Unit's Level.
-If all Units in your Unit Deck are defeated, \textbf{immediately} replace your Unit Deck with the starting Units of the Scenario. Defeated Faction Units can always be re-Recruited with another use of the Population Token.\par
+\textbf{Reinforcing} requires that your Town has a Citadel in addition to a Dwelling of that Unit's Level.\par
 
 \note{6}{Any effects which allow you to Reinforce outside of using the Population Token \textbf{do not} require a Citadel or any Dwellings.}\par
-\bigskip
+\note{8}{If all Units in your Unit Deck are defeated, \textbf{immediately} replace your Unit Deck with the starting Units of the Scenario. Defeated Faction Units can always be re-Recruited with another use of the Population Token.}
 
 \begin{center}
-  \includegraphics[width=0.6\linewidth]{\cards/necromancy_card.png}\par
-  \footnotesize\textit{
-    Cards such as Necromancy allow you to Reinforce outside of using the Population Token.
-    This does not require owning any of the prerequisite buildings for Reinforcing nor flipping your Population Token.
-  }
   \vfill
   \includegraphics[width=0.6\linewidth]{\art/fire_shield.png}
 \end{center}
@@ -41,12 +35,9 @@ If all Units in your Unit Deck are defeated, \textbf{immediately} replace your U
 
 \vspace{0pt}
 
-\includesvg[height=30px]{\svgs/attack.svg}\textbf{Attack} – The amount of damage this Unit deals when it attacks.
-Attacks are always reduced by the defending Unit's Defense.
-Attacks may be modified by various effects such as the attack Die and Statistic Cards.\par
-\includesvg[height=30px]{\svgs/defense.svg}\textbf{Defense} - The amount by which the Unit reduces the Attack damage it receives.
-Does not apply to damage received from Spells or other non-attack effects.
-Defense may be modified by various effects such as Statistic Cards.\par
+\includesvg[height=30px]{\svgs/attack.svg}\textbf{Attack} – The amount of damage this Unit deals when it attacks.\par
+\includesvg[height=30px]{\svgs/defense.svg}\textbf{Defense} - The amount by which this Unit reduces the Attack damage it receives.
+Does not apply to damage received from Spells or other non-attack effects.\par
 \includesvg[height=30px]{\svgs/health_points.svg}\textbf{\hypertarget{HP}{HP}} - The maximum amount of damage a Unit can sustain before it is defeated.
 ”Few” Units are discarded from Combat and its owner's Unit Deck when defeated.
 ”Pack” Units are turned back to ”Few” units, with any excess damage placed on its ”Few” side.
@@ -54,9 +45,6 @@ After Combat, all damage is healed from all Units.
 Units retain their ”Few” or ”Pack” status between Combats.\par
 \includesvg[height=30px]{\svgs/initiative.svg}{\hypertarget{Initiative}{\textbf{Initiative}}} - Determines when the Unit Activates during Combat.
 Units with a higher Initiative Activate first.
-In case of a tie, the \hyperlink{Combatterminology}{attacking} side's Unit should always Activate first.
-If there are multiple ties on one side, the player who controls those Units selects which Unit to Activate next.
-If there are multiple ties on both sides (for instance two attackers and two defenders with the same Initiative), alternate between the attackers and defenders starting with the attacker.\par
 \bigskip
 
 \begin{scaledfigure}[blanker]
@@ -65,11 +53,8 @@ If there are multiple ties on both sides (for instance two attackers and two def
 \end{scaledfigure}
 
 \begin{center}
-  \includegraphics[width=\linewidth]{\cards/units.png}
+    \includegraphics[width=\linewidth]{\cards/units.png}
 \end{center}
-\bigskip
-
-\vspace*{\fill}
 
 Most Units have a \textbf{special ability}\index{Special Ability}:\par
 \begin{itemize}[wide]
@@ -91,9 +76,9 @@ Most Units have a \textbf{special ability}\index{Special Ability}:\par
 \subsection*{\hypertarget{Unittype}{Unit Types}}
 There are three types of Units\index{Unit Types}:
 \begin{itemize}
-  \item \textbf{Ground} \includesvg[height=10px]{\svgs/unit_ground.svg} Units may move up to 3 spaces and then attack adjacent enemies.
-  \item \textbf{Flying} \includesvg[height=10px]{\svgs/unit_flying.svg} Units may move up to 3 spaces, ignoring Combat Obstacles, and then attack adjacent enemies.
-  \item \textbf{Ranged} \includesvg[height=10px]{\svgs/unit_ranged.svg} Units may attack any Unit anywhere and then move 1 space OR move up to 1 space without attacking.
+  \item \textbf{Ground} \includesvg[height=10px]{\svgs/unit_ground.svg} Units may move up to 3 spaces and then attack an adjacent enemy.
+  \item \textbf{Flying} \includesvg[height=10px]{\svgs/unit_flying.svg} Units may move up to 3 spaces, \textbf{ignoring Combat Obstacles}, and then attack an adjacent enemy.
+  \item \textbf{Ranged} \includesvg[height=10px]{\svgs/unit_ranged.svg} Units may attack \textbf{any Unit anywhere} and then move up to 1 space OR move up to 1 space without attacking.
 \end{itemize}
 If a \includesvg[height=10px]{\svgs/unit_ranged.svg} Unit is next to an enemy Unit, its attack target \textbf{must be} that adjacent enemy.
 When attacking an adjacent enemy in this way, the \includesvg[height=10px]{\svgs/unit_ranged.svg} Unit suffers a Combat penalty\index{Combat Penalty}: throw two Combat Dice (instead of one) and \textbf{apply the smaller result}.\par
@@ -111,8 +96,6 @@ When a Combat against Neutral Units starts, draw \hyperlink{Difficulty}{the appr
 It is possible for players to gain Neutral Units to their Unit Deck through various effects, such as Scenario-Specific Rules or the Diplomacy Ability Card.
 \textbf{Neutral Units cannot be Reinforced}, as they are single sided.
 Whenever a Neutral Unit is defeated from anywhere, place it into the appropriate Neutral Discard Pile.\par
-In \textbf{Clash} and \textbf{Alliance} Scenarios, Neutral Units are always controlled by the next enemy player sitting to your right.
-When controlling Neutral Units in this way \textbf{they must always attack if possible}, or if they can't, move as close to an enemy Unit as possible.\par
 
 \end{multicols}
 
@@ -123,11 +106,11 @@ When controlling Neutral Units in this way \textbf{they must always attack if po
 
 \clearpage
 
-\subsection*{Example}
+\subsection*{Gameplay Example}
 
 \begin{multicols}{2}
 
-\textit{Alamar casts a Magic Arrow against Sandro's pack of Skeletons, Empowering \includesvg[height=10px]{\svgs/empower.svg} the Spell by two with the Expert  Effect \includesvg[height=10px]{\svgs/expert.svg} of a Power Card.}
+\textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons, Empowering \includesvg[height=10px]{\svgs/empower.svg} the Spell by 2 with the Expert  Effect \includesvg[height=10px]{\svgs/expert.svg} of a Power Card.}
 
 \includegraphics[width=\linewidth]{\examples/alamar_empowering_magic_arrow.png}
 \par
