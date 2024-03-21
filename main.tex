@@ -190,14 +190,8 @@
     \node(title)[minimum width = \paperwidth, anchor=center, yshift=-10em] at (current page.north) {
       \includegraphics[width=0.6\paperwidth]{\layout/cover_title.png}
     };
-    \node(subtitle)[
-      anchor=center,
-      yshift=10em,
-      fill=black,
-      fill opacity=0.4,
-      text opacity=1
-    ] at (current page.south) {
-      \fontfamily{ptm}\selectfont{\color{white}\fontsize{35}{35}\textbf{RULE BOOK REWRITE}}
+    \node(subtitle)[anchor=center, yshift=10em] at (current page.south) {
+      \includegraphics[width=0.6\paperwidth]{\layout/cover_subtitle.png}
     };
   \end{tikzpicture}
 \end{titlepage}
