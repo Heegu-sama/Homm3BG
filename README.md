@@ -2,18 +2,15 @@
 
 Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1) 🤓
 
-[**Click here** 📄](https://github.com/Heegu-sama/Homm3BG/raw/build/main.pdf/PDF/main.pdf) to download the most recent PDF file (not necessarily a released one) built from the main branch.
+This repository hosts **three** documents. Click to download the most recent builds:
 
-> ❗ 🖨️ 🖨️ 🖨️❗
->
-> [**Click here** 🖨️](https://github.com/Heegu-sama/Homm3BG/raw/build/printable.pdf/PRINTABLE/printable.pdf) to download a **printable** version with additional page numbers and an index page.
->
-> ⚠️ Although, unlike the original, this document is intended to be read on electronic devices, there is an automatically built printable version.
-> The difference is that all hyperlinks are additionally appended with page numbers in the brackets, like this: "See [Trading]() (p. [36]())".
-> This adds a significant amount of text, therefore maintaining original layout is not guaranteed.
-> Also, index is generated at the end 🤞
+- [📜 **Rewritten Rule Book**](https://github.com/Heegu-sama/Homm3BG/raw/build/main.pdf/PDF/main.pdf)
+- [🖨️ **Rewritten Rule Book - printable version️️**](https://github.com/Heegu-sama/Homm3BG/raw/build/printable.pdf/PRINTABLE/printable.pdf)
+- [📋 **Comprehensive Components List**](https://github.com/Heegu-sama/Homm3BG/raw/build/components_list.pdf/COMPONENTS_LIST/components_list.pdf)
 
-There is also a [**comprehensive list of components** 📋](https://github.com/Heegu-sama/Homm3BG/raw/build/components_list.pdf/COMPONENTS_LIST/components_list.pdf), which lists all the cards 🃏, minis 🚹, tokens, etc. for every box.
+⚠️ The printable build appends page numbers to clickable hyperlinks, and includes an index page at the end 🤞
+
+Componets List lists all the cards 🃏, minis 🚹, tokens, etc. for every box.
 See the [BoardGameGeek thread](https://boardgamegeek.com/thread/3265461/article/43995671#43995671) for details.
 
 ### 💡 What Is This?
