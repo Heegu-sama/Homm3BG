@@ -13,6 +13,9 @@ Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thre
 > This adds a significant amount of text, therefore maintaining original layout is not guaranteed.
 > Also, index is generated at the end 🤞
 
+There is also a [**comprehensive list of components** 📋](https://github.com/Heegu-sama/Homm3BG/raw/build/components_list.pdf/COMPONENTS_LIST/components_list.pdf), which lists all the cards 🃏, minis 🚹, tokens, etc. for every box.
+See the [BoardGameGeek thread](https://boardgamegeek.com/thread/3265461/article/43995671#43995671) for details.
+
 ### 💡 What Is This?
 
 This project aims to rewrite the original rule book, in which the amount of vague language was just too vast to ignore.
@@ -62,6 +65,7 @@ latexmk -pdf -silent "main"
 ```
 
 or press the `Build & View` (F5) button in TeXstudio.
+To build components list instead of the rule book, just replace `"main"` with `"components_list"`, or press `Build & View` with that file open in TexStudio.
 
 To build the printable version, use the script:
 

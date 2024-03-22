@@ -1,0 +1,215 @@
+% !TeX spellcheck = en_US
+\documentclass[12pt]{article}
+
+% Language setting
+\usepackage[english]{babel}
+
+% Set page size and margins
+\usepackage[
+  a4paper,
+  top=2cm,
+  bottom=3cm,
+  left=2cm,
+  right=2cm,
+  marginparwidth=1.75cm,
+  footskip=2.05cm
+]{geometry}
+
+% Useful packages
+\usepackage[export]{adjustbox}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage[strict]{changepage}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{fullwidth}
+\usepackage{graphicx, trimclip}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{hyperref}
+\usepackage[nonewpage]{imakeidx}
+\usepackage{multicol}
+\usepackage{outlines}
+\usepackage{setspace}
+\usepackage{stfloats}
+\usepackage{subfigure}
+\usepackage[usetransparent=false]{svg}
+\usepackage[subfigure]{tocloft}
+\usepackage{tikz}
+\usepackage{titlesec}
+\usepackage{varwidth}
+\usepackage{wrapfig}
+\usepackage[most]{tcolorbox}
+\newtcolorbox{scaledfigure}[1][]{height fill, space to=\myspace,#1}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=goldenbrown,
+  filecolor=magenta,
+  urlcolor=cyan,
+  pdftitle={Heroes of Might \& Magic III Components List},
+  pdfpagemode=UseNone,
+}
+% Set the default spacing between paragraphs. Remove indentation.
+\usepackage[skip=6pt, indent=0pt]{parskip}
+\setstretch{1}
+
+% Add dots to the table of contents
+\renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
+\renewcommand\cftsecdotsep{\cftdot}
+\renewcommand\cftsubsecdotsep{\cftdot}
+
+\captionsetup[figure]{labelformat=empty}
+\usetikzlibrary{shadows, shadows.blur, calc}
+
+\setlength{\columnsep}{1cm}
+
+% Variables
+\def\_assets{assets}
+
+\def\art{\_assets/art}
+\def\cards{\_assets/cards}
+\def\examples{\_assets/examples}
+\def\images{\_assets/images}
+\def\layout{\_assets/layout}
+\def\map_locations{\_assets/map-locations}
+\def\skills{\_assets/skills}
+\def\spells{\_assets/spells}
+\def\svgs{\_assets/glyphs}
+\def\notes_svgs{\svgs/for-notes}
+\def\tables{\_assets/tables}
+\def\qr{\_assets/qr-codes}
+\def\covers{\_assets/box-covers}
+
+% Colors
+\definecolor{darkcandyapplered}{rgb}{0.64, 0.0, 0.0}
+\definecolor{antiquewhite}{rgb}{0.98, 0.92, 0.84}
+\definecolor{goldenbrown}{rgb}{0.6, 0.4, 0.08}
+\definecolor{arylideyellow}{rgb}{0.91, 0.84, 0.42}
+\definecolor{amber}{rgb}{1.0, 0.49, 0.0}
+
+% Command to frame images
+\newcommand\framedimage[2][]{%
+  \begin{tikzpicture}
+    \draw (0, 0) node[inner sep=0] {\makebox[#1][c]{\includegraphics[width=#1]{#2}}};
+    \draw [borderoutyellow, thick] (current bounding box.north west) rectangle (current bounding box.south east);
+  \end{tikzpicture}}
+% End of drop frame definition
+
+\titleformat{\section}
+{\huge}
+{\filright
+\footnotesize
+\enspace SECTION \thesection\enspace}
+{8pt}
+{\Huge\bfseries\filcenter\uppercase}
+%Create section heading with graphics. Argument one is heading name, argument two is picture to use on the left.
+\newcommand{\addsection}[2]{
+  \vspace*{-5em}
+  \hspace*{-1em}
+  \makebox[0pt][l]{
+  \raisebox{-\totalheight}[0pt][7pt]{
+    \begin{tikzpicture}
+      \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\layout/section_heading.jpg}};
+      \draw (-6.2, 0) node {\framedimage[0.14\textwidth]{#2}};
+    \end{tikzpicture}
+    }
+  }
+  \begin{fullwidth}[leftmargin=0.16\textwidth]
+    \begin{center}
+      \fontfamily{ptm}\selectfont{
+        \color{antiquewhite} \section*{#1}
+        \cleardoublepage\phantomsection\addcontentsline{toc}{section}{\protect\numberline{}#1}
+      }
+    \end{center}
+  \end{fullwidth}
+  \vspace{1.75em}
+}
+%End of create section heading.
+
+\newcommand\picdims[4][]{%
+  \setbox0=\hbox{\includegraphics[#1]{#4}}%
+  \clipbox{.5\dimexpr\wd0-#2\relax{} %
+    .5\dimexpr\ht0-#3\relax{} %
+    .5\dimexpr\wd0-#2\relax{} %
+    .5\dimexpr\ht0-#3\relax}{\includegraphics[#1]{#4}}}
+
+\tikzset{
+  thick/.style=      {line width=1.3pt},
+  very thick/.style= {line width=1.7pt},
+  ultra thick/.style={line width=2.2pt}
+}
+
+\definecolor{borderoutyellow}{HTML}{E0B75F}
+\definecolor{borderinyellow}{HTML}{F6EA48}
+% Create note box
+\newcommand{\note}[2]{
+  \begin{tikzpicture}
+    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/note-big.jpg}}};
+    \draw [black, ultra thick] ([xshift=+2pt, yshift=-2pt] current bounding box.north west) rectangle ([xshift=-2pt, yshift=2pt] current bounding box.south east);
+    \draw [borderoutyellow, very thick] (current bounding box.north west) rectangle (current bounding box.south east);
+    \draw [borderinyellow, thick] ([xshift=+4.5pt, yshift=-4.5pt] current bounding box.north west) rectangle ([xshift=-4.5pt, yshift=4.5pt] current bounding box.south east);
+    \node at (current bounding box.center) {
+      \begin{varwidth}{0.85\linewidth}
+      \fontfamily{ptm}\selectfont{
+        \color{arylideyellow}
+        \hypersetup{linkcolor=amber}
+        #2
+        \hypersetup{linkcolor=goldenbrown}
+      }
+      \end{varwidth}
+    };
+  \end{tikzpicture}
+}
+
+% Command for overlay circled text
+\definecolor{goblin}{HTML}{3b7c33}
+\newcommand\encircle[1]{%
+  \tikz[baseline=(X.base)]
+  \node (X) [draw=white, shape=circle, inner sep=0, fill=goblin, text=white, blur shadow={shadow blur steps=5}] {\strut \textbf{#1}};%
+}
+
+% Background
+\AddToHook{shipout/background}{%
+  \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}%
+  \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}%
+}
+
+\makeindex[columns=3, title=, options={-s index_style.ist}]
+
+\title{\includegraphics[width=6cm]{\images/title.png}\\Components List}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+  Version 0.4
+
+  \bigbreak
+  This document aims to comprehensively list the contents of all the board game boxes.
+  It was compiled using a list in \href{https://boardgamegeek.com/thread/3265461/article/43995671#43995671}{this BoardGameGeek thread}.
+  \par
+  It is a community-driven project, which has a \href{https://github.com/Heegu-sama/Homm3BG}{GitHub repository}.
+  Everyone is welcome to contribute, make changes, and fix errors.
+\end{center}
+
+\bigbreak
+
+\tableofcontents
+
+\include{components_lists/core_game.tex}
+
+\include{components_lists/rampart.tex}
+
+\include{components_lists/fortress.tex}
+
+\include{components_lists/inferno.tex}
+
+\include{components_lists/tower.tex}
+
+\include{components_lists/strech_goals_faction.tex}
+
+\include{components_lists/strech_goals_neutral.tex}
+
+\include{components_lists/battlefield.tex}
+
+\end{document}
