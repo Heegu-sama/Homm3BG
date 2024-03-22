@@ -1,4 +1,4 @@
-name: Build Document
+name: Build Components List
 
 on:
   pull_request:
@@ -6,12 +6,14 @@ on:
     paths-ignore:
       - '.github/**'
       - 'assets/gimp-files/**'
+      - 'sections/**'
       - .gitignore
       - .pre-commit-config.yaml
       - README.md
+      - main.tex
 
 jobs:
-  build_latex:
+  build_components_list:
     runs-on: ubuntu-latest
     steps:
       - name: Set up repository
@@ -21,11 +23,11 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
-          root_file: main.tex
+          root_file: components_list.tex
           latexmk_shell_escape: true
 
       - name: Upload pdf as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: RULE_BOOK_PDF
-          path: main.pdf
+          name: COMPONENTS_LIST_PDF
+          path: components_list.pdf

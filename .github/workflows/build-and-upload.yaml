@@ -22,7 +22,7 @@ jobs:
           WARNING="This is an unreleased version built on GitHub from commit ${GITHUB_SHA::7}. To download the latest official release, please go to \\\href{${RELEASE_PAGE}}{GitHub release page} or \\\href{${{ env.BOARG_GAME_GEEK_FILES }}}{BoardGameGeek files section}."
           sed -i "s@$VERSION@$WARNING@g" main.tex
 
-      - name: Compile LaTeX document
+      - name: Compile rule book
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
@@ -46,7 +46,7 @@ jobs:
       - name: Add QR codes
         run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes.tex' -e 'd}' main.tex
 
-      - name: Compile printable document
+      - name: Compile printable rule book
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
@@ -62,6 +62,19 @@ jobs:
         with:
           name: PRINTABLE
           path: printable.pdf
+
+      - name: Compile components list
+        uses: xu-cheng/latex-action@v3
+        with:
+          extra_system_packages: "inkscape"
+          latexmk_shell_escape: true
+          root_file: components_list.tex
+
+      - name: Upload printable PDF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: COMPONENTS_LIST
+          path: components_list.pdf
 
   publish:
     needs: [build]
@@ -82,11 +95,14 @@ jobs:
         with:
           path: printable.pdf
 
+      - uses: actions/download-artifact@v4
+        with:
+          path: components_list.pdf
+
       - name: Move PDFs
         run: |
           mkdir -p github_deploy
-          mv main.pdf github_deploy/
-          mv printable.pdf github_deploy/
+          mv main.pdf printable.pdf components_list.pdf github_deploy/
 
       - name: Deploy on orphaned branch
         uses: peaceiris/actions-gh-pages@v3
