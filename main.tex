@@ -213,6 +213,13 @@
 
 % QR codes placeholder
 
+\begin{tikzpicture}[remember picture, overlay]
+  \node(cover)[anchor=center, yshift=12em] at (current page.south) {
+    \includegraphics[width=1.01\paperwidth, keepaspectratio]{\art/castle_bottom.png}
+    \thispagestyle{empty}
+  };
+\end{tikzpicture}
+
 \clearpage
 
 \begin{multicols*}{2}
