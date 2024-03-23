@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
+
 import fileinput
 import pathlib
 import re
-
 
 HYPERLINKS_TO_REPLACE = [
     "AIrules",
@@ -19,6 +19,8 @@ HYPERLINKS_TO_REPLACE = [
     "Trading",
     "Walls",
 ]
+SECTIONS_DIRECTORY = "sections"
+
 
 def _list_tex_files(directory):
     return pathlib.Path(f"./{directory}").glob("*.tex")
@@ -46,4 +48,4 @@ def update_files(directory):
 
 
 if __name__ == "__main__":
-    update_files("sections")
+    update_files(SECTIONS_DIRECTORY)
