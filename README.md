@@ -62,7 +62,7 @@ latexmk -pdf -silent "main"
 ```
 
 or press the `Build & View` (F5) button in TeXstudio.
-To build components list instead of the rule book, just replace `"main"` with `"components_list"`, or press `Build & View` with that file open in TexStudio.
+To build components list instead of the rule book, just replace `"main"` with `"components_list"`, or press `Build & View` with that file open in TeXstudio.
 
 To build the printable version, make sure you've built a regular one first at least once.
 Then, use the script:

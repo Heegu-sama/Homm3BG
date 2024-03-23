@@ -29,15 +29,17 @@ def _list_tex_files(directory):
 def _replace_line(line):
     for pattern in HYPERLINKS_TO_REPLACE:
         match = re.search(f"hyperlink{{{pattern}", line)
-        if match:
-            line = line.replace(f"hyperlink{{{pattern}", f"pagelink{{{pattern}")
+        line = (
+            line.replace(f"hyperlink{{{pattern}", f"pagelink{{{pattern}")
+            if match
+            else line
+        )
     return line
 
 
 def _parse_file(file):
     for line in file:
-        if "hyperlink" in line:
-            line = _replace_line(line)
+        line = _replace_line(line) if "hyperlink" in line else line
         print(line, end="")
 
 
