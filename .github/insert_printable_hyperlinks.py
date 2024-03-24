@@ -19,32 +19,24 @@ HYPERLINKS_TO_REPLACE = [
     "Trading",
     "Walls",
 ]
-SECTIONS_DIRECTORY = "sections"
+SECTIONS_DIRECTORY = pathlib.Path(__file__).parent.parent / "sections"
 
 
-def _list_tex_files(directory):
-    return pathlib.Path(f"./{directory}").glob("*.tex")
-
-
-def _replace_line(line):
+def _replace_line(line: str) -> str:
     for pattern in HYPERLINKS_TO_REPLACE:
-        match = re.search(f"hyperlink{{{pattern}", line)
-        line = (
-            line.replace(f"hyperlink{{{pattern}", f"pagelink{{{pattern}")
-            if match
-            else line
-        )
+        if re.search(f"hyperlink{{{pattern}", line):
+            line = line.replace(f"hyperlink{{{pattern}", f"pagelink{{{pattern}")
     return line
 
 
-def _parse_file(file):
+def _parse_file(file: fileinput.FileInput[str]) -> None:
     for line in file:
         line = _replace_line(line) if "hyperlink" in line else line
         print(line, end="")
 
 
-def update_files(directory):
-    for filename in _list_tex_files(directory):
+def update_files(directory: pathlib.Path) -> None:
+    for filename in directory.glob("*.tex"):
         with fileinput.FileInput(filename, inplace=True) as file:
             _parse_file(file)
 
