@@ -50,14 +50,14 @@ Unit setup when fighting \textbf{other players}:
 }
 
 \subsection*{\hypertarget{Combatterminology}{Combat Terminology}}
-The following terms are used in this rule book and by the Unit and other cards to describe effects and elements during Combat:\par
-\textbf{Attacking Playe}r – The player who started the Combat by moving their Hero.\par
+The following terms are used to describe effects and elements during Combat:\par
+\textbf{Attacking Player} – The player who started the Combat.\par
 \textbf{Defending Player} – The player whom Combat was started against.\par
 \textbf{Activation} – A Unit Activates when it is next in the Initiative order.\par
 \textbf{Adjacent Unit} – A Unit is directly adjacent to another if it is one space away in a cardinal direction (nondiagonal).\par
 \textbf{Combat Round} – A full cycle of all Units of each player being Activated.\par
-\textbf{Combat Obstacles}\index{Combat Obstacles}\index{Obstacles, Combat} – Every card placed on the Combat Board counts as a Combat Obstacle.
-Obstacles block the movement of all non-flying Units.\par
+\textbf{Combat Obstacles}\index{Combat Obstacles}\index{Obstacles, Combat} – Every card on the Combat Board is a Combat Obstacle.
+They block the movement of all non-flying Units.\par
 \textbf{Attack Die}\index{Attack Die} – A red Die whose results range from -1 to +1.
 Roll the Die \textbf{whenever a Unit attacks} and
 add the result to the Unit's Attack value.\par
@@ -65,9 +65,9 @@ add the result to the Unit's Attack value.\par
 Each Unit can perform \textbf{only 1} Retaliation Attack\index{Retaliation Attack} per Combat Round.
 Retaliation Attacks function identically to normal attacks, but they cannot cause another Retaliation Attack.
 Mark Units which have performed a Retaliation Attack this Round with a black cube.\par
-\textbf{Paralysis}\index{Paralysis} \includesvg[height=10px]{\svgs/paralysis.svg} – Effects which paralyze a Unit place the Paralysis Token on them.
-A paralyzed Unit \textbf{skips its next Activation} and removes the token instead.
-If it is \textbf{attacked or takes any damage} before that time, \textbf{remove the Paralysis Token} from that Unit.\par
+\textbf{Paralysis}\index{Paralysis} \includesvg[height=10px]{\svgs/paralysis.svg} – Some effects can place a Paralysis Token on a Unit.
+That Unit \textbf{skips its next Activation} and removes the Token instead.
+If it is \textbf{attacked or takes any damage} before that time, \textbf{remove the Token}.\par
 \textbf{\hypertarget{Defend}{Defend}} \includesvg[height=10px]{\svgs/defense.svg} – Units may choose to gain a Defense Token instead of attacking.
 When a Unit with a Defense Token is attacked, make another roll with the attack Die after the initial attack roll.
 If you roll a "+1", the defending Unit gains an extra 1 Defense for this attack.
@@ -78,12 +78,12 @@ The Unit cannot take another Defense Action during that activation.
 You may only use \textbf{one Spell per Combat Round}.
 Other card types can be used as many times as you want to.
 Ongoing \includesvg[height=10px]{\svgs/ongoing.svg} and \includesvg[height=10px]{\svgs/activation.svg} Activate effects can be used only \textbf{when Activating one of your Units and before it attacks}.
-Ongoing effects\index{Ongoing Effects} last until end of Combat or if the effect on the card is used up.
+Ongoing effects\index{Ongoing Effects} last until end of Combat or if the effect on the card is used up.\par
 Instant \includesvg[height=10px]{\svgs/instant.svg} Cards may be played \textbf{at any time} except between rolling the Combat Die and resolving damage unless otherwise stated.
-Instant Cards\index{Instant Card} which increase a Unit's Statistics \textbf{last only for the duration of the currently Activated Unit's next attack}.
+Instant Cards which increase a Unit's \includesvg[height=10px]{\svgs/attack.svg} or \includesvg[height=10px]{\svgs/defense.svg}, such as the Attack and Defense Statistic cards, \textbf{must} be played after an attack has been announced and persist only for the duration of that attack.
 \subsection*{\hypertarget{Timelimit}{Combat Time Limits}}\index{Time Limit}
 Combats against Neutral Units have a time limit of \textbf{one Combat Round}.
-If you cannot win the Combat before the end of the current Combat Round, you must either \hyperlink{Endcombat}{Retreat}\index{Retreat} or spend 1 MP from the Hero that started the Combat in order to play another Combat Round.\par
+If you cannot win the Combat before the end of the current Combat Round, you must either \hyperlink{Endcombat}{Retreat}\index{Retreat} or spend 1 MP from the Hero that started the Combat in order to play another Round.\par
 
 \bigskip
 
@@ -183,36 +183,42 @@ After winning Combat, Heroes \textbf{must} Visit the Field where the Combat took
 \subsection*{\hypertarget{Combatexperience}{Combat Experience}}
 
 Winning Combat with your Main Hero usually grants them Experience\index{Experience}.
-If either the Difficulty of the Neutral Field or the Level of a defeated enemy Main Hero was equal to your Level, gain 1 \includesvg[height=10px]{\svgs/exp.svg}.
-If they were higher than your Level, gain 2 \includesvg[height=10px]{\svgs/exp.svg}.
-Winning a Neutral Combat against a Neutral Azure \includesvg[height=10px]{\svgs/azure.svg} Unit grants your Hero Level 7 immediately.
-If you ever gain multiple Levels at the same time, resolve their effects in order.\par
+If either the Difficulty of the Neutral Field or the Level of a defeated enemy Main Hero was \textbf{equal} to your Level, gain 1 \includesvg[height=10px]{\svgs/exp.svg}.
+If they were \textbf{higher} than your Level, gain 2 \includesvg[height=10px]{\svgs/exp.svg}.
+Winning a Neutral Combat against a Neutral Azure \includesvg[height=10px]{\svgs/azure.svg} Unit grants your Hero Level 7 \textbf{immediately}.
+If you ever gain multiple Levels at the same time, resolve their effects in order.
+Level ups must be resolved before Visiting the Field where the Combat happened.\par
 Secondary Heroes cannot ever gain Experience.
-You also \textbf{do not gain} Experience from defeating a Secondary Hero, or if an enemy Hero Surrenders to you.
+You also do not gain Experience from \textbf{defeating} a Secondary Hero, or if an enemy Hero \textbf{Surrenders} to you.
+
 \subsection*{\hypertarget{Quick}{Quick Combat}}\index{Quick Combat}
 If your Hero's Level is higher than a Field's Difficulty when Combat against Neutral Units would begin, \textbf{no Combat} takes place.
 The player is considered to have beaten the Neutral Units by default and gains no rewards from the Combat.
 
 \subsection*{\hypertarget{AIrules}{Player vs AI}}
 These rules apply when playing a \textbf{Solo} game.\index{Solo Mode}
-The AI Combat rules for targeting and attacking are also used when playing a \textbf{Cooperative} Scenario.\par
-Solo Campaigns are played against AI Heroes who use two automated Decks to play the game: the AI Deck, and the Spell Deck.
+The AI Combat rules for unit behaviour are also used when playing a \textbf{Cooperative} Scenario.\par
+Solo Campaigns are played against AI Heroes who use two automated Decks to play the game: the \textbf{AI Deck}, and the \textbf{Spell Deck}.
+Each Campaign Scenario contains instructions for constructing these Decks.\par
 The AI Deck consists of cards that are similar in function to Abilities and Artifacts, but change depending on the game's \hyperlink{Difficulty}{Difficulty}.
+When an \textbf{AI hero} Activates a Unit, draw an AI Card\index{AI Card} and follow its instructions before the Unit moves and/or attacks.
 The Spell Deck should be used when instructed by the cards in the AI Deck.
-During Combat against Neutral enemies or AI Heroes, their Units follow an automatic set of instructions.
+If an AI Hero is instructed to draw a card, they will draw and resolve another card from the AI Deck.\par
+During Combat against Neutral enemies or AI Heroes, their Units follow an automatic set of instructions:
+\par
 \textbf{Initiative rules} work identically.
-When an \textbf{AI hero} Activates a Unit, draw an AI Card\index{AI Card} and follow its instructions as the Unit's Activation.\par
-All AI controlled \includesvg[height=10px]{\svgs/unit_ground.svg} and \includesvg[height=10px]{\svgs/unit_flying.svg} Units prioritize attacking Units of the same tier.
+\includesvg[height=10px]{\svgs/unit_ground.svg} and \includesvg[height=10px]{\svgs/unit_flying.svg} Units prioritize attacking Units of the same tier.
 If this is impossible, they attack the closest Unit, prioritizing the lowest tier one.
 \includesvg[height=10px]{\svgs/unit_ranged.svg} Units prioritize attacking other \includesvg[height=10px]{\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier.
 If there are no \includesvg[height=10px]{\svgs/unit_ranged.svg} Units for them to target they prioritize \includesvg[height=10px]{\svgs/unit_ground.svg} and \includesvg[height=10px]{\svgs/unit_flying.svg} Units in the same tier order.
 If there's more than one valid target, they attack the closest one.\par
-If there's ever a tie between equally valid targets for any Units, the players choose which Unit is attacked.
+If there's ever a tie between equally valid targets for any Units, the player chooses which Unit is attacked.
+Enemy units cannot \hyperlink{Defend}{Defend} unless instructed to.
 
 \textbf{AI Heroes} always start in their Town's Field unless otherwise stated.
 They have 3 MP and always use them to perform the following Actions in decreasing priority:
 \begin{itemize}
-  \item Check if a player Hero is on the same Tile as the AI.
+  \item Check if a player's Hero is on the same Tile as the AI.
     If they are, spend all MP to move towards them in an attempt to begin Combat.
   \item Check if there are any Mines or Settlements to Flag on the Map Tile the AI Hero is on.
     If there are any, move toward the closest one and Flag it.
