@@ -8,7 +8,7 @@ This repository hosts **three** documents. Click to download the most recent bui
 - [🖨️ **Rewritten Rule Book - printable version️️**](https://github.com/Heegu-sama/Homm3BG/raw/build/printable.pdf/PRINTABLE/printable.pdf)
 - [📋 **Comprehensive Components List**](https://github.com/Heegu-sama/Homm3BG/raw/build/components_list.pdf/COMPONENTS_LIST/components_list.pdf)
 
-⚠️ The printable build appends page numbers to clickable hyperlinks, and includes an index page at the end 🤞
+⚠️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
 
 Componets List lists all the cards 🃏, minis 🚹, tokens, etc. for every box.
 See the [BoardGameGeek thread](https://boardgamegeek.com/thread/3265461/article/43995671#43995671) for details.
@@ -62,11 +62,13 @@ latexmk -pdf -silent "main"
 ```
 
 or press the `Build & View` (F5) button in TeXstudio.
-To build components list instead of the rule book, just replace `"main"` with `"components_list"`, or press `Build & View` with that file open in TexStudio.
+To build components list instead of the rule book, just replace `"main"` with `"components_list"`, or press `Build & View` with that file open in TeXstudio.
 
-To build the printable version, use the script:
+To build the printable version, make sure you've built a regular one first at least once.
+Then, use the script:
 
 > ⚠️ Be careful, as it edits all the files!
+> Also, you'll need [Python](https://www.python.org/) for this 🐍
 
 ```bash
 ./make_printable.sh
