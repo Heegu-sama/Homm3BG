@@ -16,8 +16,10 @@ HYPERLINKS_TO_REPLACE = [
     "Movement",
     "Playerdecks",
     "Quick",
+    "Random Town",
     "Trading",
     "Walls",
+    "War Machine Factory",
 ]
 SECTIONS_DIRECTORY = pathlib.Path(__file__).parent.parent / "sections"
 
