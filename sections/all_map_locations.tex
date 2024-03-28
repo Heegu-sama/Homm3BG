@@ -185,6 +185,7 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
     % \includegraphics[width=0.8\linewidth]{\art/implosion.png}
   \end{minipage}
 \end{figure}
+
 \subsection*{Other Fields}
 
 \begin{figure}[H]
@@ -234,17 +235,21 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \textbf{Dragon Utopia}\par
-    \framedimage[\linewidth]{\map_locations/dragon_utopia.jpg}
-    \caption{\small Category: \textbf{Flaggable}\\Effects depend on the Scenario.}
+    \phantom{j}\textbf{Hill Fort}\par
+    \framedimage[\linewidth]{\map_locations/hill_fort.jpg}
+    \caption{\small Category: \textbf{Visitable}\\
+      You may immediately Reinforce one of your \includesvg[height=8px]{\svgs/bronze.svg} or \includesvg[height=8px]{\svgs/silver.svg} Units.
+      The Reinforcement cost is reduced by 3 \includesvg[height=8px]{\svgs/gold.svg} to a minimum of 0.}
   \end{minipage}\hfill
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \textbf{University}\par
-    \framedimage[\linewidth]{\map_locations/university.jpg}
+    \phantom{j}\textbf{Prison}\par
+    \framedimage[\linewidth]{\map_locations/prison.jpg}
     \caption{\small Category: \textbf{Visitable}\\
-      \includesvg[height=8px]{\svgs/pay_v2.svg} 6 \includesvg[height=8px]{\svgs/gold.svg} to \textbf{Search (4)} the Ability Discard Pile.}
+      Gain a Secondary Hero.
+      Place their model on this Field.
+      If you already have a Secondary Hero, gain 3 \includesvg[height=8px]{\svgs/gold.svg} instead.}
   \end{minipage}
 \end{figure}
 
@@ -278,41 +283,7 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
       The Obelisk's effects depend on the Scenario.
       When you Flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}
   \end{minipage}\hfill
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \phantom{j}\textbf{Star Axis}\par
-    \framedimage[\linewidth]{\map_locations/star_axis.jpg}
-    \caption{\small Category: \textbf{Flaggable}\\
-      You may Remove one of your Statistic cards from your hand and replace it with an \textbf{Empowered} one of the same type.
-      When you Flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[H]
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \phantom{j}\textbf{Hill Fort}\par
-    \framedimage[\linewidth]{\map_locations/hill_fort.jpg}
-    \caption{\small Category: \textbf{Visitable}\\
-      You may immediately Reinforce one of your \includesvg[height=8px]{\svgs/bronze.svg} or \includesvg[height=8px]{\svgs/silver.svg} Units.
-      The Reinforcement cost is reduced by 3 \includesvg[height=8px]{\svgs/gold.svg} to a minimum of 0.}
-  \end{minipage}\hfill
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \phantom{j}\textbf{Prison}\par
-    \framedimage[\linewidth]{\map_locations/prison.jpg}
-    \caption{\small Category: \textbf{Visitable}\\
-      Gain a Secondary Hero.
-      Place their model on this Field.
-      If you already have a Secondary Hero, gain 3 \includesvg[height=8px]{\svgs/gold.svg} instead.}
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[H]
-  \begin{minipage}[t]{0.47\textwidth}
+    \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \captionsetup{singlelinecheck=off}
     \centering
@@ -328,21 +299,52 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
         \item[\textbf{-1}] - Draw 2 Cards from the Spell Deck, gain one of them and discard the other.
         \end{itemize}
        }
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \textbf{Dragon Utopia}\par
+    \framedimage[\linewidth]{\map_locations/dragon_utopia.jpg}
+    \caption{\small Category: \textbf{Flaggable}\\Effects depend on the Scenario.}
   \end{minipage}\hfill
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
-    \captionsetup{singlelinecheck=off}
     \centering
-    \phantom{j}\textbf{\hypertarget{Random Town}{Random Town}}\par
-    \framedimage[\linewidth]{\map_locations/random_town.jpg}
-    \caption[scholar they]{\small Category: \textbf{Flaggable}\\
-      When this Field is revealed, all players roll 2 \includesvg[height=10px]{\svgs/resource_die.svg}.
-      The highest roller chooses an unused Faction.
-      The random Town is defended by Units from that Faction.
-      They have a "Pack" of \includesvg[height=10px]{\svgs/bronze.svg}, two "Packs" of \includesvg[height=10px]{\svgs/silver.svg}, and two "Fews" of \includesvg[height=10px]{\svgs/golden.svg} Units.
-      The \includesvg[height=10px]{\svgs/bronze.svg} Unit is chosen by the player who controls the Units during that Combat.
-      Flagging it increases \includesvg[height=10px]{\svgs/gold.svg} production by 10, which is also gained immediately if you are the first to Flag it.
-    }
+    \textbf{University}\par
+    \framedimage[\linewidth]{\map_locations/university.jpg}
+    \caption{\small Category: \textbf{Visitable}\\
+      \includesvg[height=8px]{\svgs/pay_v2.svg} 6 \includesvg[height=8px]{\svgs/gold.svg} to \textbf{Search (4)} the Ability Discard Pile.}
   \end{minipage}
-
 \end{figure}
+
+\begin{multicols*}{2}
+
+{\centering\phantom{Star Axis}\par}
+\includegraphics[width=\linewidth]{\art/unicorn.jpg}
+
+\columnbreak
+
+{\centering\textbf{Star Axis}\par}
+\framedimage[\linewidth]{\map_locations/star_axis.jpg}
+{\small Category: \textbf{Flaggable}\\
+  You may Remove one of your Statistic cards from your hand and replace it with an \textbf{Empowered} one of the same type.
+  When you Flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.
+}
+
+\bigskip
+
+{\centering\textbf{\hypertarget{Random Town}{Random Town}}\par}
+\framedimage[\linewidth]{\map_locations/random_town.jpg}
+{\small Category: \textbf{Flaggable}\\
+  When revealed, all players roll 2 \includesvg[height=10px]{\svgs/resource_die.svg}.
+  The highest roller chooses an unused Faction.
+  The random Town is defended by Units from that Faction.
+  They have a "Pack" of \includesvg[height=10px]{\svgs/bronze.svg}, two "Packs" of \includesvg[height=10px]{\svgs/silver.svg}, and two "Fews" of \includesvg[height=10px]{\svgs/golden.svg} Units.
+  The \includesvg[height=10px]{\svgs/bronze.svg} Unit is chosen by the player who controls the Units during that Combat.
+  Flagging it increases \includesvg[height=10px]{\svgs/gold.svg} production by 10, which is also gained immediately if you are the first to Flag it.
+}
+
+\end{multicols*}
