@@ -4,14 +4,13 @@
 \begin{multicols}{2}
 
 \subsection*{AI Hero Turn}
-
-AI Heroes start in their Town's Field.
+\hypertarget{AIrules}{AI Heroes}start in their Town's Field.
 They have 3 MP and always use them to perform the following Actions in decreasing priority:
 \begin{itemize}
   \item If a player's Hero is on the same Tile as the AI, spend all MP to move towards them in an attempt to begin Combat.
   \item If there are any Mines or Settlements the AI could Flag on the same Tile, move towards the closest one.
   \item Otherwise, move toward the player's Town.
-Repeat this sequence until all MP is used.
+Repeat this sequence until all MP are used up.
 \end{itemize}
 
 AI Heroes always \textbf{automatically win Combat} against any Neutral Units, while simultaneously \textbf{Flagging or Visiting all Fields} they happen to move through.
@@ -46,7 +45,7 @@ If an AI Hero is instructed to draw a card, they will draw and resolve \textbf{a
 
 {\centering\includegraphics[width=0.45\linewidth]{\art/slayer.png}\par}
 
-\subsection*{\hypertarget{AI Combat}{Combat against AI}}
+\subsection*{Combat against AI}
 
 These rules apply during Combat in \textbf{Solo}\index{Solo Mode} and \textbf{Cooperative} Scenarios.
 When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\par
