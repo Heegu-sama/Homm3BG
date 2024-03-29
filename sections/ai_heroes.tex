@@ -4,13 +4,14 @@
 \begin{multicols}{2}
 
 \subsection*{AI Hero Turn}
-\hypertarget{AIrules}{AI Heroes}start in their Town's Field.
-They have 3 MP and always use them to perform the following Actions in decreasing priority:
+\hypertarget{AIrules}{AI Heroes} are used in the Campaigns.
+They start in their Town's Field, and have 3 MP, always spending them to perform the following Actions in decreasing priority:
 \begin{itemize}
   \item If a player's Hero is on the same Tile as the AI, spend all MP to move towards them in an attempt to begin Combat.
   \item If there are any Mines or Settlements the AI could Flag on the same Tile, move towards the closest one.
   \item Otherwise, move toward the player's Town.
 Repeat this sequence until all MP are used up.
+AI Heroes take their turn after the player.
 \end{itemize}
 
 AI Heroes always \textbf{automatically win Combat} against any Neutral Units, while simultaneously \textbf{Flagging or Visiting all Fields} they happen to move through.
@@ -24,6 +25,8 @@ Winning Combat against an AI Hero does not grant any rewards unless stated by th
 AI Heroes do not have a Town Board, Resources, or a Hero Card.
 Their Units are static and defined by the Scenario's setup or other rules.\par
 Any differences to the above will be described in any given Scenario's own rules.
+
+\vfill
 
 \subsection*{\hypertarget{AIrules}{AI Decks}}
 
@@ -42,8 +45,6 @@ If an AI Hero is instructed to draw a card, they will draw and resolve \textbf{a
 \includegraphics[width=\linewidth]{\cards/ai.png}
 
 \vfill
-
-{\centering\includegraphics[width=0.45\linewidth]{\art/slayer.png}\par}
 
 \subsection*{Combat against AI}
 
