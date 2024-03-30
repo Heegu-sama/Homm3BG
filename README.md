@@ -54,6 +54,7 @@ To work on the document on your machine, you need the following:
 - [**Inkscape**](https://inkscape.org/) (required) to render glyphs in the document (while installing on Windows, make sure to tick `Add Inkscape to the System Path` option)
 - [**TeXstudio**](https://www.texstudio.org/) (optional) to edit LaTeX files and rebuild the PDF file quickly
 - [**GIMP**](https://www.gimp.org/) (optional) to edit some images in `assets` directory - see below for details
+- [**aspell**](http://aspell.net/) (optional) for spellchecking - see below for details
 
 To build the document, either run this in the command line:
 
@@ -73,6 +74,27 @@ Then, use the script:
 ```bash
 ./make_printable.sh
 ```
+
+### 🔎 Spellchecking
+
+TeXstudio has built-in spellchecking, but the first steps have been made towards automated spellchecking with aspell.
+For local development, after installing the tool, you can run it from the command line for example with
+
+```bash
+aspell -d en_US -p=./.aspell.homm3.pws --mode=tex --dont-backup check main.tex
+```
+
+or when wanting to check all `.tex` files then with
+
+```bash
+find . -type f -name "*.tex" -exec aspell -d en_US -p=./.aspell.homm3.pws --mode=tex --dont-backup check {} \;
+```
+
+Please note that currently the tool will flag many parameters in LaTeX commands.
+We are currently looking into it, how best to remediate this.
+
+The personal dictionary `.aspell.homm3.pwd` currently contains only game-related words.
+It does not contain names (e.g., "BoardGameGeek") or parameter values (e.g., "px", "svg") in order to minimize the chances of false-negatives in the main body of text.
 
 ## ✨ Assets
 
