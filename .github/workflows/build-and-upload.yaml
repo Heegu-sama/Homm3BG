@@ -16,7 +16,7 @@ jobs:
       - name: Set up repository
         uses: actions/checkout@v4
 
-      - name: Replace version with a warning
+      - name: Replace rule book version with a warning
         run: |
           VERSION=$(grep -P "^[\ ]*Version \d{1,}.\d{1,}$" main.tex)
           RELEASE_PAGE="${{ github.server_url }}/${{ github.repository }}/releases"
@@ -68,7 +68,7 @@ jobs:
           name: PRINTABLE
           path: printable.pdf
 
-      - name: Replace version with a warning
+      - name: Replace components list version with a warning
         run: |
           VERSION=$(grep -P "^[\ ]*Version \d{1,}.\d{1,}$" components_list.tex)
           RELEASE_PAGE="${{ github.server_url }}/${{ github.repository }}/releases"
