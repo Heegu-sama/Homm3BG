@@ -24,6 +24,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
+          pre_compile: "pdflatex --shell-escape --non-stop-mode main.tex || true"
           root_file: main.tex
           latexmk_shell_escape: true
 
