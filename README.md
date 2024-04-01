@@ -59,7 +59,7 @@ To work on the document on your machine, you need the following:
 To build the document, either run this in the command line:
 
 ```bash
-latexmk -pdf -silent "main"
+latexmk -pdf -silent -shell-escape "main"
 ```
 
 or press the `Build & View` (F5) button in TeXstudio.
