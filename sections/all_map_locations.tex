@@ -3,35 +3,124 @@
 
 \begin{multicols*}{2}
 
-\hypertarget{All}{This} section describes the function of Fields not explained above.
-The following \textbf{Visitable} fields are not pictured out of redundancy, as their effects are described clearly by the symbols on the right:
-\begin{itemize}
-  \item Artifact Symbol
-  \item Fountain of Youth
-  \item Learning Stone
-  \item Mystical Garden
-  \item Pandora's Box
-  \item Resource Symbol
-  \item Shrine of Magic Gesture/Incantation
-  \item Temple
-  \item Treasure Symbol
-  \item Warrior's Tomb
-  \item Water Wheel
-  \item Windmill
+\subsection*{Symbols on the Map}
+
+\begingroup
+  \renewcommand{\arraystretch}{1.5}
+  \newcolumntype{Y}{>{\centering\arraybackslash}X}
+  \begin{tabularx}{\linewidth}{Y m{0.7\linewidth}}
+    \small
+    \mbox{\textbf{I-VII}} & Field Difficulty corresponding to the level of Neutral Units. \\
+    \includesvg[height=15px]{\svgs/treasure.svg} & Roll a Treasure die and gain the indicated bouns. \\
+    \includesvg[height=15px]{\svgs/resource_die.svg} & Roll a Resource die and gain the indicated resources. \\
+    \includesvg[height=15px]{\svgs/experience.svg} & Gain one experience point. \\
+    \includesvg[height=15px]{\svgs/spellpower.svg} & Search (2) the Spell deck. \\
+    \includesvg[height=15px]{\svgs/artifact.svg} & Search (2) the Artifact deck. \\
+    \includesvg[height=15px]{\svgs/morale_positive.svg} & Gain Positive Morale. \\
+    \includesvg[height=15px]{\svgs/morale_negative.svg} & Gain Negative Morale. \\
+    \includesvg[height=15px]{\svgs/movement.svg} & Gain 1 Movement Point. \\
+    {\huge\textbf{?}} & Special effect, see \hyperlink{Revisitable Fields}{Revisitable} or \hyperlink{Other Fields}{Other} fields.\\
+  \end{tabularx}
+\endgroup
+
+\bigskip
+
+\begin{itemize}[itemsep=1em]
+  \item [{\LARGE\textbf{+}}]
+    \includesvg[height=0.8\baselineskip]{\svgs/gold.svg}/\includesvg[height=0.8\baselineskip]{\svgs/building_materials.svg}/\includesvg[height=0.8\baselineskip]{\svgs/valuablegreater.svg} —
+    Immediately gain the given resource.
+  \item [{\includesvg[height=15px]{\svgs/ongoing.svg}}]
+    \includesvg[height=0.8\baselineskip]{\svgs/gold.svg}/\includesvg[height=0.8\baselineskip]{\svgs/building_materials.svg}/\includesvg[height=0.8\baselineskip]{\svgs/valuablegreater.svg} —
+    Increase the production of the given resource.
+    If it is \textbf{Flagged} for the first time, you also gain it immediately.
+  \item [{\includesvg[height=0.8\baselineskip]{\svgs/pay_v2.svg}}]
+    \includesvg[height=0.8\baselineskip]{\svgs/gold.svg}/\includesvg[height=0.8\baselineskip]{\svgs/building_materials.svg}/\includesvg[height=0.8\baselineskip]{\svgs/valuablegreater.svg} \includesvg[height=0.8\baselineskip]{\svgs/arrow_right.svg} —
+    The Player needs to pay the given resource to gain something.
+  \item [{\LARGE\textbf{2}}] {\LARGE\textbf{x}} —
+    Perofm {\LARGE\textbf{x}} action twice.
+  \item [{\LARGE\textbf{2}}] \includesvg[height=0.8\baselineskip]{\svgs/treasure.svg} \includesvg[height=0.8\baselineskip]{\svgs/arrow_right.svg}{\LARGE\textbf{1}} —
+    Roll 2 Treasure dice and choose one to be resolved.
 \end{itemize}
 
+\phantom{\includesvg[height=1px]{\svgs/experience.svg}\includesvg[height=1px]{\svgs/spellpower.svg}}
 \vspace*{\fill}
-  \vspace{4.4em}
+\columnbreak
+
+Effects of the following \textbf{Visitable} fields are explained by the symbols on the left:
+
+\medskip
+
+{\centering
+  \phantom{j}\textbf{Artifact}\\
+  \framedimage[\linewidth]{\map_locations/artifact_symbol.jpg}
+
+  \bigskip
+
+  \phantom{j}\textbf{Resource}\\
+  \framedimage[\linewidth]{\map_locations/resource_symbol.jpg}\\
+
+  \bigskip
+
+  \phantom{j}\textbf{Treasure}\\
+  \framedimage[\linewidth]{\map_locations/treasure_symbol.jpg}\\
+
+  \bigskip
+
+  \phantom{j}\textbf{Fountain of Youth}\\
+  \framedimage[\linewidth]{\map_locations/fountain_of_youth.jpg}\\
+
+  \filbreak
+
+  \phantom{j}\textbf{Windmill}\\
+  \framedimage[\linewidth]{\map_locations/windmill.jpg}\\
+
+  \bigskip
+
+  \phantom{j}\textbf{Warrior's Tomb}\\
+  \framedimage[\linewidth]{\map_locations/warriors_tomb.jpg}\\
+
+  \bigskip
+
+  \textbf{Mystical Garden}\\
+  \framedimage[\linewidth]{\map_locations/mystical_garden.jpg}\\
+
+  \bigskip
+
+  \phantom{j}\textbf{Learning Stone}\\
+  \framedimage[\linewidth]{\map_locations/learning_stone.jpg}\\
+
+  \bigskip
+
+  \phantom{j}\textbf{Shrine of Magic Gesture/Incantation}\\
+  \framedimage[\linewidth]{\map_locations/shrine_of_magic_whatever.jpg}\\
+
+  \vspace*{\fill}
+  \filbreak
+
+  \phantom{j}\textbf{Water Wheel}\\
+  \framedimage[\linewidth]{\map_locations/water_wheel.jpg}\\
+
+  \bigskip
+
+  \phantom{j}\textbf{Temple}\\
+  \framedimage[\linewidth]{\map_locations/temple.jpg}\\
+
+  \bigskip
+
+  \phantom{j}\textbf{Pandora's Box}\\
+  \framedimage[\linewidth]{\map_locations/pandoras_box.jpg}\\
+}
+
+\vspace*{\fill}
+
+\vspace{7.4em}
+
 \note{10}{
   The effects of Fields that allow you to \textbf{Search} for Spells or Artifacts, or where you must spend resources to use the Field's effect, are \textbf{always optional}.
   You must always place a Black Cube on such Visitable Fields even if you choose not to use that Field's effect.
 }
-\vspace*{\fill}
-\columnbreak
 
-\begin{center}
-  \framedimage[\linewidth]{\tables/symbols.png}
-\end{center}
+\vspace*{\fill}
 
 \pagebreak
 
@@ -91,7 +180,7 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
 \end{multicols*}
 \bigbreak
 
-\subsection*{Revisitable Fields}
+\subsection*{\hypertarget{Revisitable Fields}{Revisitable Fields}}
 
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
@@ -184,7 +273,7 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
   \node at (16, 4.5) {\includegraphics[width=0.5\linewidth]{\art/pegasi.png}};
 \end{tikzpicture}
 
-\subsection*{Other Fields}
+\subsection*{\hypertarget{Other Fields}{Other Fields}}
 
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
@@ -196,7 +285,7 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
       \includesvg[height=8px]{\svgs/pay_v2.svg}
        3 \includesvg[height=8px]{\svgs/valuablegreater.svg} or
        10 \includesvg[height=8px]{\svgs/gold.svg} to gain
-       2 \includesvg[height=8px]{\svgs/exp.svg}.}
+       2 \includesvg[height=8px]{\svgs/experience.svg}.}
   \end{minipage}\hfill
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
