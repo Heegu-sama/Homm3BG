@@ -11,7 +11,7 @@ This repository hosts **three** documents. Click to download the most recent bui
 ⚠️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
 
 Componets List lists all the cards 🃏, minis 🚹, tokens, etc. for every box.
-See the [BoardGameGeek thread](https://boardgamegeek.com/thread/3265461/article/43995671#43995671) for details.
+See another [BoardGameGeek thread](https://boardgamegeek.com/thread/3265461/article/43995671#43995671) for details.
 
 ### 💡 What Is This?
 
