@@ -1,34 +1,53 @@
 % !TeX spellcheck = en_US
-\addsection{Heroes}{\skills/sorcery.png}
+\en{
+  \addsection{Heroes}{\skills/sorcery.png}
+}
+\pl{
+  \addsection{Bohaterowie}{\skills/sorcery.png}
+}
 
 \begin{multicols*}{2}
 
-\hypertarget{Heroes}{Players} always control a Main Hero and may additionally also recruit a Secondary Hero.
-A "player's Hero" may refer to either of them.
-Heroes are used to perform Movement Actions on the game board and to start Combats against enemies in order to reach a Scenario victory condition.
+\en{
+  \hypertarget{Heroes}{Players} always control a Main Hero and may additionally also recruit a Secondary Hero.
+  A "player's Hero" may refer to either of them.
+  Heroes are used to perform Movement Actions on the game board and to start Combats against enemies in order to reach a Scenario victory condition.
+}
+\pl{}
 
-\subsection*{Main Hero}
-The Main Hero\index{Main Hero} is represented by its chosen model, Hero Card, and Your Deck.
-Each Faction's Main Hero has 3 Movement Points.
-Only the Main Hero can use Your Deck.\par
-Each Main Hero starts the game at Level 1 and can advance up to Level 7 by gaining Experience.
-Experience is gained from \hyperlink{Combatexperience}{winning Combat}, Visiting certain \hyperlink{All}{Locations} and the \hyperlink{Resources}{Treasure Die} \includesvg[height=10px]{\svgs/treasure.svg}.
-Gaining 1 Experience\index{Experience} is represented by the symbol \includesvg[height=10px]{\svgs/experience.svg}.
+\en{
+  \subsection*{Main Hero}
+  The Main Hero\index{Main Hero} is represented by its chosen model, Hero Card, and Your Deck.
+  Each Faction's Main Hero has 3 Movement Points.
+  Only the Main Hero can use Your Deck.\par
+  Each Main Hero starts the game at Level 1 and can advance up to Level 7 by gaining Experience.
+  Experience is gained from \hyperlink{Combatexperience}{winning Combat}, Visiting certain \hyperlink{All}{Locations} and the \hyperlink{Resources}{Treasure Die} \includesvg[height=10px]{\svgs/treasure.svg}.
+  Gaining 1 Experience\index{Experience} is represented by the symbol \includesvg[height=10px]{\svgs/experience.svg}.
+}
+\pl{
+  \subsection*{Bohater Główny}
+  Bohater Główny\index{Bohater Główny}...
+}
 
-\subsection*{\hypertarget{Secondary}{Secondary Heroes}}
-If you control a Town or a Settlement, a Secondary Hero\index{Secondary Hero} can be Hired by flipping your \textbf{Population Token} and paying 10 Gold \includesvg[height=10px]{\svgs/gold.svg}.\par
-\note{5}{Units \textbf{cannot} be \hyperlink{Units}{Recruited or Reinforced} while using the Population Token to recruit a Secondary Hero.}\par
-Your Secondary Hero uses the remaining Hero model of your Faction.
-You may wish to mark this model with a token such as a Faction Cube to differentiate it from the Main Hero.
-After Hiring a Secondary Hero, place the model in a Town or Settlement you control.
-\textbf{You can only have one Secondary Hero at a time}.\par
-Secondary Heroes have \textbf{2 Movement Points}; when you gain a Secondary Hero, take an additional set of 2 Movement Tokens to represent their MP.
-They do not have their own Hero Card, \textbf{cannot gain Experience}, and \textbf{cannot use Cards from Your Deck} for any reason.
-If a Secondary Hero gains any Cards, place them into your hand as normal (see \hyperlink{Playerdecks}{Deck-building}).
-Secondary Heroes are considered to have the same Level as the Main Hero for the purposes of resolving \hyperlink{Quick}{Quick Combat}.\par
-If your Secondary Hero is attacked by an enemy Hero, you can choose to have that Hero be \hyperlink{Endcombat}{instantly defeated instead of fighting a Combat}.
-When a Secondary Hero is defeated, remove them from the game.
-They can be Recruited again with another use of the Population Token.\par
+\en{
+  \subsection*{\hypertarget{Secondary}{Secondary Heroes}}
+  If you control a Town or a Settlement, a Secondary Hero\index{Secondary Hero} can be Hired by flipping your \textbf{Population Token} and paying 10 Gold \includesvg[height=10px]{\svgs/gold.svg}.\par
+  \note{5}{Units \textbf{cannot} be \hyperlink{Units}{Recruited or Reinforced} while using the Population Token to recruit a Secondary Hero.}\par
+  Your Secondary Hero uses the remaining Hero model of your Faction.
+  You may wish to mark this model with a token such as a Faction Cube to differentiate it from the Main Hero.
+  After Hiring a Secondary Hero, place the model in a Town or Settlement you control.
+  \textbf{You can only have one Secondary Hero at a time}.\par
+  Secondary Heroes have \textbf{2 Movement Points}; when you gain a Secondary Hero, take an additional set of 2 Movement Tokens to represent their MP.
+  They do not have their own Hero Card, \textbf{cannot gain Experience}, and \textbf{cannot use Cards from Your Deck} for any reason.
+  If a Secondary Hero gains any Cards, place them into your hand as normal (see \hyperlink{Playerdecks}{Deck-building}).
+  Secondary Heroes are considered to have the same Level as the Main Hero for the purposes of resolving \hyperlink{Quick}{Quick Combat}.\par
+  If your Secondary Hero is attacked by an enemy Hero, you can choose to have that Hero be \hyperlink{Endcombat}{instantly defeated instead of fighting a Combat}.
+  When a Secondary Hero is defeated, remove them from the game.
+  They can be Recruited again with another use of the Population Token.\par
+}
+\pl{
+  \subsection*{\hypertarget{Pomocniczy}{Bohater Pomocniczy}}
+}
 
 \vfill
 
@@ -39,29 +58,55 @@ They can be Recruited again with another use of the Population Token.\par
 
 \clearpage
 
-\subsection*{\hypertarget{Herocard}{Hero Card Anatomy}}\index{Hero Card}
+\en{
+  \subsection*{\hypertarget{Herocard}{Hero Card Anatomy}}\index{Hero Card}
+}
+\pl{
+  \subsection*{\hypertarget{Planszetki}{Planszetki Bohaterów}}\index{Planszetki Bohaterów}
+}
 \bigbreak
 \begin{figure}[h]
   \begin{minipage}[t]{0.5\textwidth}
     \vspace{0pt}
     \begin{enumerate}[itemsep=5pt]
-      \item \textbf{Name} – The Hero's name.
-        Used for identification.
-        Has no gameplay effect.
-      \item \textbf{Class} – The Hero's class.
-        Has no gameplay effect.
-      \item \textbf{Type} – The Hero's type (Might \includesvg[height=10px]{\svgs/might.svg} or Magic \includesvg[height=10px]{\svgs/magic.svg}).
-        Determines the amount of Magic Arrow Spells in your Starting Deck (1 or 2 respectively).
-      \item \textbf{Faction Color} – Reminder for the color of the Faction's cubes and miniatures.
-      \item \textbf{Attack} – Number of Attack Cards in your Starting Deck.
-      \item \textbf{Defense} – Number of Defense Cards in your Starting Deck.
-      \item \textbf{Power} – Number of Power Cards in your Starting Deck.
-      \item \textbf{Knowledge} – Number of Knowledge Cards in your Starting Deck.
-      \item \textbf{Starting Ability} – Reminder for the unique Ability Card\index{Ability Card} the Hero starts with.
-      \item \textbf{Hero Specialty} – Reminder for the Specialty Cards the Hero adds to their deck at the start of the game and after specific Level ups.
-        Each hero has three Specialty Cards.
-      \item \textbf{Level Tracker} – Whenever a Main Hero gains 1 or more Experience \includesvg[height=10px]{\svgs/experience.svg}, move the cube that number of steps on this track.
-        When the cube reaches the next slot on the upper row, the hero gains a Level.
+      \en{
+        \item \textbf{Name} – The Hero's name.
+          Used for identification.
+          Has no gameplay effect.
+      }
+      \pl{\item}
+      \en{
+        \item \textbf{Class} – The Hero's class.
+          Has no gameplay effect.
+      }
+      \pl{\item}
+      \en{
+        \item \textbf{Type} – The Hero's type (Might \includesvg[height=10px]{\svgs/might.svg} or Magic \includesvg[height=10px]{\svgs/magic.svg}).
+          Determines the amount of Magic Arrow Spells in your Starting Deck (1 or 2 respectively).
+      }
+      \pl{\item}
+      \en{\item \textbf{Faction Color} – Reminder for the color of the Faction's cubes and miniatures.}
+      \pl{\item}
+      \en{\item \textbf{Attack} – Number of Attack Cards in your Starting Deck.}
+      \pl{\item}
+      \en{\item \textbf{Defense} – Number of Defense Cards in your Starting Deck.}
+      \pl{\item}
+      \en{\item \textbf{Power} – Number of Power Cards in your Starting Deck.}
+      \pl{\item}
+      \en{\item \textbf{Knowledge} – Number of Knowledge Cards in your Starting Deck.}
+      \pl{\item}
+      \en{\item \textbf{Starting Ability} – Reminder for the unique Ability Card\index{Ability Card} the Hero starts with.}
+      \pl{\item}
+      \en{
+        \item \textbf{Hero Specialty} – Reminder for the Specialty Cards the Hero adds to their deck at the start of the game and after specific Level ups.
+          Each hero has three Specialty Cards.
+      }
+      \pl{\item}
+      \en{
+        \item \textbf{Level Tracker} – Whenever a Main Hero gains 1 or more Experience \includesvg[height=10px]{\svgs/experience.svg}, move the cube that number of steps on this track.
+          When the cube reaches the next slot on the upper row, the hero gains a Level.
+      }
+      \pl{\item}
     \end{enumerate}
   \end{minipage}\hfill
   \begin{minipage}[t]{0.48\textwidth}
@@ -85,22 +130,35 @@ They can be Recruited again with another use of the Population Token.\par
       \end{tikzpicture}
     \end{scriptsize}
     \break
-    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Hero Card}}}}
+    \en{\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Hero Card}}}}}
+    \pl{\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{planszetka Bohatera}}}}}
     \scriptsize
     \begin{multicols}{2}
       \begin{itemize}
-        \item[\textbf{1.}] \textbf{Name}
-        \item[\textbf{2.}] \textbf{Class}
-        \item[\textbf{3.}] \textbf{Type}
-        \item[\textbf{4.}] \textbf{Faction Color}
-        \item[\textbf{5.}] \textbf{Attack}
-        \item[\textbf{6.}] \textbf{Defense}
-        \item[\textbf{7.}] \textbf{Power}
-        \item[\textbf{8.}] \textbf{Knowledge}
-        \item[\textbf{9.}] \textbf{Starting Ability}
-        \item[\textbf{10.}] \textbf{Specialty}
-        \item[\textbf{11.}] \textbf{Level Tracker}
-        \item[\textbf{\phantom{.}}] \phantom{.}
+        \en{\item[\textbf{1.}] \textbf{Name}}
+        \pl{\item}
+        \en{\item[\textbf{2.}] \textbf{Class}}
+        \pl{\item}
+        \en{\item[\textbf{3.}] \textbf{Type}}
+        \pl{\item}
+        \en{\item[\textbf{4.}] \textbf{Faction Color}}
+        \pl{\item}
+        \en{\item[\textbf{5.}] \textbf{Attack}}
+        \pl{\item}
+        \en{\item[\textbf{6.}] \textbf{Defense}}
+        \pl{\item}
+        \en{\item[\textbf{7.}] \textbf{Power}}
+        \pl{\item}
+        \en{\item[\textbf{8.}] \textbf{Knowledge}}
+        \pl{\item}
+        \en{\item[\textbf{9.}] \textbf{Starting Ability}}
+        \pl{\item}
+        \en{\item[\textbf{10.}] \textbf{Specialty}}
+        \pl{\item}
+        \en{\item[\textbf{11.}] \textbf{Level Tracker}}
+        \pl{\item}
+        \en{\item[\textbf{\phantom{.}}] \phantom{.}}
+        \pl{\item}
       \end{itemize}
     \end{multicols}
   \end{minipage}
@@ -114,38 +172,69 @@ They can be Recruited again with another use of the Population Token.\par
 
 \begin{multicols}{2}
 
-\subsection*{\hypertarget{Level}{Level Effects}}
-Main Heroes always start each Scenario at Level 1\index{Level} and may Level up by gaining Experience \includesvg[height=10px]{\svgs/experience.svg}.
-The most common sources of gaining Experience are the \hyperlink{Resources}{Treasure Die} \includesvg[height=10px]{\svgs/treasure.svg} and \hyperlink{Combatexperience}{Combat}.
-Each new Level up requires \textbf{2 Experience}.
-When a Main Hero reaches a new Level, resolve the effects of the Level up immediately.
-Gaining Experience at Level 7 has no effect.\par
-The Level Tracker on your Hero Card shows the following information:
+\en{
+  \subsection*{\hypertarget{Level}{Level Effects}}
+  Main Heroes always start each Scenario at Level 1\index{Level} and may Level up by gaining Experience \includesvg[height=10px]{\svgs/experience.svg}.
+  The most common sources of gaining Experience are the \hyperlink{Resources}{Treasure Die} \includesvg[height=10px]{\svgs/treasure.svg} and \hyperlink{Combatexperience}{Combat}.
+  Each new Level up requires \textbf{2 Experience}.
+  When a Main Hero reaches a new Level, resolve the effects of the Level up immediately.
+  Gaining Experience at Level 7 has no effect.\par
+  The Level Tracker on your Hero Card shows the following information:
+}
+\pl{}
 \begin{itemize}
-\item Your Main Hero's current Level and amount of Experience gained, shown by the cube's position.
-\item Your current Hand Limit \includesvg[height=10px]{\svgs/hand.svg}.
-\item The number of \hyperlink{Ability}{Expert Effects} \includesvg[height=10px]{\svgs/expert.svg} you may use during a Round.
-\item At which Levels your Main Hero must \hyperlink{Playerdecks}{Search} for a new \hyperlink{Ability}{Ability Card} or gain a \hyperlink{Specialty}{Specialty Card}.
-Level numbers written in gold on the Level Tracker (\includesvg[height=10px]{\svgs/level1.svg}, \includesvg[height=10px]{\svgs/level4.svg} and \includesvg[height=10px]{\svgs/level6.svg}) give you a Specialty Card, while silver Levels (2, 3, 5, 7) give you an Ability Card.
+  \en{\item Your Main Hero's current Level and amount of Experience gained, shown by the cube's position.}
+  \pl{\item}
+  \en{\item Your current Hand Limit \includesvg[height=10px]{\svgs/hand.svg}.}
+  \pl{\item}
+  \en{\item The number of \hyperlink{Ability}{Expert Effects} \includesvg[height=10px]{\svgs/expert.svg} you may use during a Round.}
+  \pl{\item}
+  \en{
+    \item At which Levels your Main Hero must \hyperlink{Playerdecks}{Search} for a new \hyperlink{Ability}{Ability Card} or gain a \hyperlink{Specialty}{Specialty Card}.
+      Level numbers written in gold on the Level Tracker (\includesvg[height=10px]{\svgs/level1.svg}, \includesvg[height=10px]{\svgs/level4.svg} and \includesvg[height=10px]{\svgs/level6.svg}) give you a Specialty Card, while silver Levels (2, 3, 5, 7) give you an Ability Card.
+  }
+  \pl{\item}
 \end{itemize}
 \vfill\null
 \columnbreak
-List of all effects:
+\en{List of all effects:}
+\pl{}
 \begin{itemize}
-\item \textbf{Level 1} – Your Hand Limit\index{Hand Limit} is 4.
-Add your first Specialty Card to Your Deck.
-\item \textbf{Level 2} – Search (2) the Ability Deck.
-You may play 1 Card for its Expert Effect per Round.
-\item \textbf{Level 3} – Your Hand Limit is 5.
-Search (2) the Ability Deck.
-\item \textbf{Level 4} – Gain your second Specialty Card.
-You may play 2 Cards for their Expert Effect per Round.
-\item \textbf{Level 5} – Your Hand Limit is 6.
-Search (2) the Ability Deck.
-\item \textbf{Level 6} – Gain your third Specialty Card.
-You may play 3 cards for their Expert Effect per Round.
-\item \textbf{Level 7} – Your Hand Limit is 7.
-Search (2) the Ability Deck.
+  \en{
+    \item \textbf{Level 1} – Your Hand Limit\index{Hand Limit} is 4.
+      Add your first Specialty Card to Your Deck.
+  }
+  \pl{\item}
+  \en{
+    \item \textbf{Level 2} – Search (2) the Ability Deck.
+      You may play 1 Card for its Expert Effect per Round.
+  }
+  \pl{\item}
+  \en{
+    \item \textbf{Level 3} – Your Hand Limit is 5.
+      Search (2) the Ability Deck.
+  }
+  \pl{\item}
+  \en{
+    \item \textbf{Level 4} – Gain your second Specialty Card.
+      You may play 2 Cards for their Expert Effect per Round.
+  }
+  \pl{\item}
+  \en{
+    \item \textbf{Level 5} – Your Hand Limit is 6.
+      Search (2) the Ability Deck.
+  }
+  \pl{\item}
+  \en{
+    \item \textbf{Level 6} – Gain your third Specialty Card.
+      You may play 3 cards for their Expert Effect per Round.
+  }
+  \pl{\item}
+  \en{
+    \item \textbf{Level 7} – Your Hand Limit is 7.
+      Search (2) the Ability Deck.
+  }
+  \pl{\item}
 \end{itemize}
 
 \end{multicols}
