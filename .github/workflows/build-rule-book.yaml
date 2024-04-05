@@ -16,6 +16,11 @@ on:
 jobs:
   build_rule_book:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        language:
+          - en
+          - pl
     steps:
       - name: Set up repository
         uses: actions/checkout@v4
@@ -24,11 +29,11 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
-          root_file: main.tex
+          root_file: main_${{ matrix.language }}.tex
           latexmk_shell_escape: true
 
       - name: Upload pdf as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: RULE_BOOK_PDF
-          path: main.pdf
+          name: rule_book_${{ matrix.language }}
+          path: main_${{ matrix.language }}.pdf
