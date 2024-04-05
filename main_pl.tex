@@ -1,8 +1,9 @@
 % !TeX spellcheck = en_US
 \documentclass[12pt]{article}
 
-% Language setting
-\usepackage[english]{babel}
+% Languages
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
 
 % Set page size and margins
 \usepackage[
@@ -22,6 +23,7 @@
 \usepackage{caption}
 \usepackage[strict]{changepage}
 \usepackage{enumitem}
+\usepackage{etoolbox}
 \usepackage{float}
 \usepackage{fullwidth}
 \usepackage{graphicx, trimclip}
@@ -63,6 +65,14 @@
 \usetikzlibrary{shadows, shadows.blur, calc}
 
 \setlength{\columnsep}{1cm}
+
+% Language settings
+\newif\ifen
+\newif\ifpl
+
+\newcommand{\en}[1]{\ifen#1\fi}
+\newcommand{\pl}[1]{\ifpl#1\fi}
+\pltrue
 
 % Variables
 \def\_assets{assets}
@@ -204,13 +214,11 @@
 \maketitle
 
 \begin{center}
-  Version 1.0
+  Wersja 1.0
 
   \bigbreak
 
-  This is a community-driven project, which has a \href{https://github.com/Heegu-sama/Homm3BG}{GitHub repository}.
-  Everyone is welcome to contribute, make changes, and fix errors.
-  If you simply want to leave feedback, please do so in the original \href{https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project}{BoardGameGeek thread}.
+  Niniejszy projekt jest tworzony przez społeczność w \href{https://github.com/Heegu-sama/Homm3BG}{repozytorium na GitHube}.
 \end{center}
 
 % QR codes placeholder
