@@ -1,0 +1,269 @@
+% Set page size and margins
+\usepackage[
+  a4paper,
+  top=2cm,
+  bottom=3cm,
+  left=2cm,
+  right=2cm,
+  marginparwidth=1.75cm,
+  footskip=2.05cm
+]{geometry}
+
+% Useful packages
+\usepackage[export]{adjustbox}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{caption}
+\usepackage[strict]{changepage}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{fullwidth}
+\usepackage{graphicx, trimclip}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{hyperref}
+\usepackage[nonewpage]{imakeidx}
+\usepackage{multicol}
+\usepackage{outlines}
+\usepackage{setspace}
+\usepackage{stfloats}
+\usepackage{subfigure}
+\usepackage[usetransparent=false]{svg}
+\usepackage{tabularx}
+\usepackage[subfigure]{tocloft}
+\usepackage{tikz}
+\usepackage{titlesec}
+\usepackage{varwidth}
+\usepackage{wrapfig}
+\usepackage[most]{tcolorbox}
+\newtcolorbox{scaledfigure}[1][]{height fill, space to=\myspace,#1}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=goldenbrown,
+  filecolor=magenta,
+  urlcolor=cyan,
+  pdftitle={Heroes of Might \& Magic III Rule Book},
+  pdfpagemode=UseNone,
+}
+% Set the default spacing between paragraphs. Remove indentation.
+\usepackage[skip=6pt, indent=0pt]{parskip}
+\setstretch{1}
+
+% Add dots to the table of contents
+\renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
+\renewcommand\cftsecdotsep{\cftdot}
+\renewcommand\cftsubsecdotsep{\cftdot}
+
+\captionsetup[figure]{labelformat=empty}
+\usetikzlibrary{shadows, shadows.blur, calc}
+
+\setlength{\columnsep}{1cm}
+
+% Variables
+\def\_assets{assets}
+
+\def\art{\_assets/art}
+\def\cards{\_assets/cards}
+\def\examples{\_assets/examples}
+\def\images{\_assets/images}
+\def\layout{\_assets/layout}
+\def\map_locations{\_assets/map-locations}
+\def\skills{\_assets/skills}
+\def\spells{\_assets/spells}
+\def\svgs{\_assets/glyphs}
+\def\notes_svgs{\svgs/for-notes}
+\def\tables{\_assets/tables}
+\def\qr{\_assets/qr-codes}
+
+% Colors
+\definecolor{darkcandyapplered}{rgb}{0.64, 0.0, 0.0}
+\definecolor{antiquewhite}{rgb}{0.98, 0.92, 0.84}
+\definecolor{goldenbrown}{rgb}{0.6, 0.4, 0.08}
+\definecolor{arylideyellow}{rgb}{0.91, 0.84, 0.42}
+\definecolor{amber}{rgb}{1.0, 0.49, 0.0}
+
+% Command to frame images
+\newcommand\framedimage[2][]{%
+  \begin{tikzpicture}
+    \draw (0, 0) node[inner sep=0] {\makebox[#1][c]{\includegraphics[width=#1]{#2}}};
+    \draw [black, thick] ([xshift=+1pt, yshift=-1pt] current bounding box.north west) rectangle ([xshift=-1pt, yshift=1pt] current bounding box.south east);
+    \draw [borderoutyellow, thick] (current bounding box.north west) rectangle (current bounding box.south east);
+    \draw [borderinyellow, thick] ([xshift=+3pt, yshift=-3pt] current bounding box.north west) rectangle ([xshift=-3pt, yshift=3pt] current bounding box.south east);
+  \end{tikzpicture}}
+% End of drop frame definition
+
+\titleformat{\section}
+{\huge}
+{\filright
+\footnotesize
+\enspace SECTION \thesection\enspace}
+{8pt}
+{\Huge\bfseries\filcenter\uppercase}
+%Create section heading with graphics. Argument one is heading name, argument two is picture to use on the left.
+\newcommand{\addsection}[2]{
+  \vspace*{-5em}
+  \hspace*{-1em}
+  \makebox[0pt][l]{
+  \raisebox{-\totalheight}[0pt][7pt]{
+    \begin{tikzpicture}
+      \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\layout/section_heading.jpg}};
+      \draw (-6.2, 0) node {\includegraphics[width=0.125\textwidth]{#2}};
+    \end{tikzpicture}
+    }
+  }
+  \begin{fullwidth}[leftmargin=0.16\textwidth]
+    \begin{center}
+      \fontfamily{ptm}\selectfont{
+        \color{antiquewhite} \section*{#1}
+        \cleardoublepage\phantomsection\addcontentsline{toc}{section}{\protect\numberline{}#1}
+      }
+    \end{center}
+  \end{fullwidth}
+  \vspace{1.75em}
+}
+%End of create section heading.
+
+\newcommand\picdims[4][]{%
+  \setbox0=\hbox{\includegraphics[#1]{#4}}%
+  \clipbox{.5\dimexpr\wd0-#2\relax{} %
+    .5\dimexpr\ht0-#3\relax{} %
+    .5\dimexpr\wd0-#2\relax{} %
+    .5\dimexpr\ht0-#3\relax}{\includegraphics[#1]{#4}}}
+
+\tikzset{
+  thick/.style=      {line width=1.3pt},
+  very thick/.style= {line width=1.7pt},
+  ultra thick/.style={line width=2.2pt}
+}
+
+\definecolor{borderoutyellow}{HTML}{E0B75F}
+\definecolor{borderinyellow}{HTML}{F6EA48}
+% Create note box
+\newcommand{\note}[2]{
+  \begin{tikzpicture}
+    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/note-big.jpg}}};
+    \draw [black, ultra thick] ([xshift=+2pt, yshift=-2pt] current bounding box.north west) rectangle ([xshift=-2pt, yshift=2pt] current bounding box.south east);
+    \draw [borderoutyellow, very thick] (current bounding box.north west) rectangle (current bounding box.south east);
+    \draw [borderinyellow, thick] ([xshift=+4.5pt, yshift=-4.5pt] current bounding box.north west) rectangle ([xshift=-4.5pt, yshift=4.5pt] current bounding box.south east);
+    \node at (current bounding box.center) {
+      \begin{varwidth}{0.85\linewidth}
+      \fontfamily{ptm}\selectfont{
+        \color{arylideyellow}
+        \hypersetup{linkcolor=amber}
+        #2
+        \hypersetup{linkcolor=goldenbrown}
+      }
+      \end{varwidth}
+    };
+  \end{tikzpicture}
+}
+
+% Commands to be used for automation generating printable version
+\newcommand{\pagetarget}[2]{\label{#1}\hypertarget{#1}{#2}}
+\newcommand{\pagelink}[2]{\hyperlink{#1}{#2} (p. \pageref{#1})}
+
+% Command for overlay circled text
+\definecolor{goblin}{HTML}{3b7c33}
+\newcommand\encircle[1]{%
+  \tikz[baseline=(X.base)]
+  \node (X) [draw=white, shape=circle, inner sep=0, fill=goblin, text=white, blur shadow={shadow blur steps=5}] {\strut \textbf{#1}};%
+}
+
+% Background
+\AddToHook{shipout/background}{%
+  \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}%
+  \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}%
+}
+
+\makeindex[columns=3, title=, options={-s index_style.ist}]
+
+\begin{document}
+
+\begin{titlepage}
+  \begin{tikzpicture}[remember picture, overlay, inner sep=10pt]
+    \node(cover)[anchor=center] at (current page.center) {
+      \includegraphics[height=\paperheight, keepaspectratio]{\layout/cover.jpg}
+    };
+    \node(title)[minimum width = \paperwidth, anchor=center, yshift=-10em] at (current page.north) {
+      \includegraphics[width=0.6\paperwidth]{\layout/cover_title.png}
+    };
+    \node(subtitle)[anchor=center, yshift=10em] at (current page.south) {
+      \includegraphics[width=0.6\paperwidth]{\layout/cover_subtitle.png}
+    };
+  \end{tikzpicture}
+\end{titlepage}
+
+\title{\includegraphics[width=6cm]{\images/title.png}\\The Rewrite}
+
+\author{Hermanni "Heegu" Karppela}
+\maketitle
+
+\begin{center}
+  Version 1.0
+
+  \bigbreak
+
+  This is a community-driven project, which has a \href{https://github.com/Heegu-sama/Homm3BG}{GitHub repository}.
+  Everyone is welcome to contribute, make changes, and fix errors.
+  If you simply want to leave feedback, please do so in the original \href{https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project}{BoardGameGeek thread}.
+\end{center}
+
+% QR codes placeholder
+
+\begin{tikzpicture}[remember picture, overlay]
+  \node(cover)[anchor=center, yshift=12em] at (current page.south) {
+    \includegraphics[width=1.01\paperwidth, keepaspectratio]{\art/castle_bottom.png}
+    \thispagestyle{empty}
+  };
+\end{tikzpicture}
+
+\clearpage
+
+\begin{multicols*}{2}
+\tableofcontents
+\vspace*{\fill}
+\columnbreak
+\vspace*{\fill}
+\includegraphics[width=\linewidth]{\art/black_dragon.jpg}
+\end{multicols*}
+
+\clearpage
+
+\include{sections/introduction.tex}
+
+\include{sections/game_modes.tex}
+
+\include{sections/setup.tex}
+
+\include{sections/round_structure.tex}
+
+\include{sections/player_turns.tex}
+
+\include{sections/heroes.tex}
+
+\include{sections/deckbuilding.tex}
+
+\include{sections/resources.tex}
+
+\include{sections/town.tex}
+
+\include{sections/map_elements.tex}
+
+\include{sections/units.tex}
+
+\include{sections/combat.tex}
+
+\include{sections/ai_heroes.tex}
+
+\include{sections/scenario_end.tex}
+
+\include{sections/other_rules.tex}
+
+\include{sections/expansion_content.tex}
+
+\include{sections/all_map_locations.tex}
+
+\include{sections/credits.tex}
+
+\include{sections/back_cover.tex}
+
+\end{document}
