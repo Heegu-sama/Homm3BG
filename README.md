@@ -4,8 +4,8 @@ Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thre
 
 This repository hosts **three** documents. Click to download the most recent builds:
 
-- [📜 **Rewritten Rule Book**](https://github.com/Heegu-sama/Homm3BG/raw/build/main.pdf/PDF/main.pdf)
-- [🖨️ **Rewritten Rule Book - printable version️️**](https://github.com/Heegu-sama/Homm3BG/raw/build/printable.pdf/PRINTABLE/printable.pdf)
+- [📜 **Rewritten Rule Book**](https://github.com/Heegu-sama/Homm3BG/raw/build/main_en.pdf/PDF/main_en.pdf)
+- [🖨️ **Rewritten Rule Book - printable version️️**](https://github.com/Heegu-sama/Homm3BG/raw/build/printable.p_en.pdf/PRINTABLE/printable_en.pdf)
 - [📋 **Comprehensive Components List**](https://github.com/Heegu-sama/Homm3BG/raw/build/components_list.pdf/COMPONENTS_LIST/components_list.pdf)
 
 ⚠️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
@@ -59,11 +59,11 @@ To work on the document on your machine, you need the following:
 To build the document, either run this in the command line:
 
 ```bash
-latexmk -pdf -silent -shell-escape "main"
+latexmk -pdf -silent -shell-escape "main_en"
 ```
 
 or press the `Build & View` (F5) button in TeXstudio.
-To build components list instead of the rule book, just replace `"main"` with `"components_list"`, or press `Build & View` with that file open in TeXstudio.
+To build components list instead of the rule book, just replace `"main_en"` with `"components_list"`, or press `Build & View` with that file open in TeXstudio.
 
 To build the printable version, make sure you've built a regular one first at least once.
 Then, use the script:

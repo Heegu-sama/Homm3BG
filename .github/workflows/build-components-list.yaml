@@ -10,7 +10,9 @@ on:
       - .gitignore
       - .pre-commit-config.yaml
       - README.md
-      - main.tex
+      - main_en.tex
+      - main_pl.tex
+      - metadata.tex
       - make_printable.sh
 
 jobs:
@@ -26,9 +28,3 @@ jobs:
           extra_system_packages: "inkscape"
           root_file: components_list.tex
           latexmk_shell_escape: true
-
-      - name: Upload pdf as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: COMPONENTS_LIST_PDF
-          path: components_list.pdf

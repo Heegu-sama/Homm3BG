@@ -32,9 +32,3 @@ jobs:
           extra_system_packages: "inkscape"
           root_file: main_${{ matrix.language }}.tex
           latexmk_shell_escape: true
-
-      - name: Upload pdf as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: rule_book_${{ matrix.language }}
-          path: main_${{ matrix.language }}.pdf
