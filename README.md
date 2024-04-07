@@ -59,7 +59,7 @@ To work on the document on your machine, you need the following:
 To build the document, either run this in the command line:
 
 ```bash
-latexmk -pdf -silent -shell-escape "main"
+latexmk -pdf -silent -shell-escape "main_pl"
 ```
 
 or press the `Build & View` (F5) button in TeXstudio.
@@ -105,16 +105,21 @@ Their respective XCF files reside in [`assets/gimp-files`](https://github.com/He
 
 ## Translations
 
-Make sure you have "po4a" installed
-
-MacOS - https://formulae.brew.sh/formula/po4a
+Make sure you have [`po4a`](https://po4a.org/index.php.en) installed ([MacOS instructions](https://formulae.brew.sh/formula/po4a)).
 
 To translate particular section:
-- go to po4a/<section_name> and open <lang>.po file
-- write your new text in desired "msgstr"
-- re-generate your localized section:
+ - Go to `translations/<section_name>` and open `<lang>.po` file, e.g., `translations/introduction.tex/pl.po`
+ - Write your new text in desired line starting with `msgstr`. Example:
+     ```tex
+     msgid "\\addsection{Introduction}{\\spells/magic_arrow.png}"
+     msgstr "\\addsection{Wprowadzenie}{\\spells/magic_arrow.png}"
+     ```
+ - Regenerate your localized section:
+     ```bash
+     po4a --no-update po4a.cfg
+     ```
+ - Rebuild your PDF file (or press Build in TeXStudio).
     ```bash
-    po4a --no-update po4a.cfg
+    latexmk -pdf -silent -shell-escape "main_<lang>"
     ```
-- re-build your pdf
--
+ - Don't forget to commit!
