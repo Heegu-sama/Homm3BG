@@ -110,11 +110,11 @@ Make sure you have "po4a" installed
 MacOS - https://formulae.brew.sh/formula/po4a
 
 To translate particular section:
-- go to po4a/<section_name> and open <lang>.po file 
+- go to po4a/<section_name> and open <lang>.po file
 - write your new text in desired "msgstr"
-- re-generate your localized section: 
+- re-generate your localized section:
     ```bash
     po4a --no-update po4a.cfg
     ```
 - re-build your pdf
-- 
+-
