@@ -46,18 +46,18 @@ jobs:
           python .github/insert_printable_hyperlinks.py
 
       - name: Include index page
-        run: sed -i "s@\\\include{\\\sections/back_cover.tex}@\\\include{\\\sections/index.tex}\\\include{\\\sections/back_cover.tex}@g" main.tex
+        run: sed -i "s@\\\include{\\\sections/back_cover.tex}@\\\include{\\\sections/index.tex}\\\include{\\\sections/back_cover.tex}@g" metadata.tex
 
       - name: Add QR codes
-        run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes.tex' -e 'd}' metadata.tex
+        run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes.tex' -e 'd}' main_en.tex
 
       - name: Compile printable rule book
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
           latexmk_shell_escape: true
-          post_compile: "makeindex main -s index_style.ist && pdflatex --shell-escape main.tex"
-          root_file: main.tex
+          post_compile: "makeindex main -s index_style.ist && pdflatex --shell-escape main_en.tex"
+          root_file: main_en.tex
 
       - name: Rename pritable file
         run: mv main_en.pdf printable.pdf
@@ -73,7 +73,7 @@ jobs:
           VERSION=$(grep -P "^[\ ]*Version \d{1,}.\d{1,}$" components_list.tex)
           RELEASE_PAGE="${{ github.server_url }}/${{ github.repository }}/releases"
           WARNING="This is an unreleased version built on GitHub from commit ${GITHUB_SHA::7}. To download the latest official release, please go to \\\href{${RELEASE_PAGE}}{GitHub release page} or \\\href{${{ env.BOARD_GAME_GEEK_COMPONENTS_LIST }}}{BoardGameGeek files section}."
-          sed -i "s@$VERSION@$WARNING@g" main.tex
+          sed -i "s@$VERSION@$WARNING@g" components_list.tex
 
       - name: Compile components list
         uses: xu-cheng/latex-action@v3
