@@ -49,7 +49,7 @@ jobs:
         run: sed -i "s@\\\include{\\\sections/back_cover.tex}@\\\include{\\\sections/index.tex}\\\include{\\\sections/back_cover.tex}@g" metadata.tex
 
       - name: Add QR codes
-        run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes.tex' -e 'd}' main_en.tex
+        run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes-en.tex' -e 'd}' metadata.tex
 
       - name: Compile printable rule book
         uses: xu-cheng/latex-action@v3
