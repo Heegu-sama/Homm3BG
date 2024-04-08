@@ -21,7 +21,7 @@ jobs:
           VERSION=$(grep -P "^[\ ]*Version \d{1,}.\d{1,}$" main.tex)
           RELEASE_PAGE="${{ github.server_url }}/${{ github.repository }}/releases"
           WARNING="This is an unreleased version built on GitHub from commit ${GITHUB_SHA::7}. To download the latest official release, please go to \\\href{${RELEASE_PAGE}}{GitHub release page} or \\\href{${{ env.BOARD_GAME_GEEK_RULE_BOOK }}}{BoardGameGeek files section}."
-          sed -i "s@$VERSION@$WARNING@g" main.tex
+          sed -i "s@$VERSION@$WARNING@g" main_en.tex
 
       - name: Compile rule book
         uses: xu-cheng/latex-action@v3
@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: PDF
-          path: main.pdf
+          path: main_en.pdf
 
       - uses: actions/setup-python@v5
         with:
@@ -46,10 +46,10 @@ jobs:
           python .github/insert_printable_hyperlinks.py
 
       - name: Include index page
-        run: sed -i "s@\\\include{sections/back_cover.tex}@\\\include{sections/index.tex}\\\include{sections/back_cover.tex}@g" main.tex
+        run: sed -i "s@\\\include{\\\sections/back_cover.tex}@\\\include{\\\sections/index.tex}\\\include{\\\sections/back_cover.tex}@g" main.tex
 
       - name: Add QR codes
-        run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes.tex' -e 'd}' main.tex
+        run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes.tex' -e 'd}' metadata.tex
 
       - name: Compile printable rule book
         uses: xu-cheng/latex-action@v3
@@ -60,7 +60,7 @@ jobs:
           root_file: main.tex
 
       - name: Rename pritable file
-        run: mv main.pdf printable.pdf
+        run: mv main_en.pdf printable.pdf
 
       - name: Upload printable PDF as artifact
         uses: actions/upload-artifact@v4
@@ -101,7 +101,7 @@ jobs:
 
       - uses: actions/download-artifact@v4
         with:
-          path: main.pdf
+          path: main_en.pdf
 
       - uses: actions/download-artifact@v4
         with:
@@ -114,7 +114,7 @@ jobs:
       - name: Move PDFs
         run: |
           mkdir -p github_deploy
-          mv main.pdf printable.pdf components_list.pdf github_deploy/
+          mv main_en.pdf printable.pdf components_list.pdf github_deploy/
 
       - name: Deploy on orphaned branch
         uses: peaceiris/actions-gh-pages@v3
