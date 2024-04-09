@@ -4,7 +4,7 @@ Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thre
 
 This repository hosts **three** documents. Click to download the most recent builds:
 
-- [📜 **Rewritten Rule Book**](https://github.com/Heegu-sama/Homm3BG/raw/build/main.pdf/PDF/main.pdf)
+- [📜 **Rewritten Rule Book**](https://github.com/Heegu-sama/Homm3BG/raw/build/main_en.pdf/PDF/main_en.pdf)
 - [🖨️ **Rewritten Rule Book - printable version️️**](https://github.com/Heegu-sama/Homm3BG/raw/build/printable.pdf/PRINTABLE/printable.pdf)
 - [📋 **Comprehensive Components List**](https://github.com/Heegu-sama/Homm3BG/raw/build/components_list.pdf/COMPONENTS_LIST/components_list.pdf)
 
@@ -53,17 +53,18 @@ To work on the document on your machine, you need the following:
 - [**MiKTeX**](https://miktex.org/) (required) to build the PDF file from LaTeX files
 - [**Inkscape**](https://inkscape.org/) (required) to render glyphs in the document (while installing on Windows, make sure to tick `Add Inkscape to the System Path` option)
 - [**TeXstudio**](https://www.texstudio.org/) (optional) to edit LaTeX files and rebuild the PDF file quickly
+- [**po4a**](https://po4a.org/index.php.en) (optional) to work on translating the document to other languages
 - [**GIMP**](https://www.gimp.org/) (optional) to edit some images in `assets` directory - see below for details
 - [**aspell**](http://aspell.net/) (optional) for spellchecking - see below for details
 
-To build the document, either run this in the command line:
+To build the document in English, either run this in the command line:
 
 ```bash
-latexmk -pdf -silent -shell-escape "main"
+latexmk -pdf -silent -shell-escape "main_en"
 ```
 
-or press the `Build & View` (F5) button in TeXstudio.
-To build components list instead of the rule book, just replace `"main"` with `"components_list"`, or press `Build & View` with that file open in TeXstudio.
+or press the `Build & View` ▶️ (F5) button in TeXstudio.
+To build components list instead of the rule book, just replace `"main_en"` with `"components_list"`, or press `Build & View` with that file open in TeXstudio.
 
 To build the printable version, make sure you've built a regular one first at least once.
 Then, use the script:
@@ -74,6 +75,29 @@ Then, use the script:
 ```bash
 ./make_printable.sh
 ```
+
+### Translations 🌍
+
+Make sure you have [`po4a`](https://po4a.org/index.php.en) installed ([MacOS instructions](https://formulae.brew.sh/formula/po4a)).
+
+To translate a particular section:
+- Go to `translations/<section_name>` and open `<lang>.po` file, e.g., `translations/introduction.tex/pl.po`
+- Choose a fragment to translate. Those start with `msgid`. Write your new text in the desired line below starting with `msgstr`. Example:
+    ```tex
+    msgid "\\addsection{Introduction}{\\spells/magic_arrow.png}"
+    msgstr "\\addsection{Wprowadzenie}{\\spells/magic_arrow.png}"
+    ```
+  This text (`msgstr`) will replace the original (`msgid`) in your translation.
+- Regenerate your localized section:
+    ```bash
+    po4a --no-update po4a.cfg
+    ```
+  Disregard the errors about `mismatched` multicols, as this is an upstream parser issue.
+- Rebuild your PDF file (or press Build ▶️ in TeXStudio).
+   ```bash
+   latexmk -pdf -silent -shell-escape "main_<lang>"
+   ```
+- Commit and repeat!
 
 ### 🔎 Spellchecking
 
