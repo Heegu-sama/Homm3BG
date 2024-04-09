@@ -76,13 +76,13 @@ Then, use the script:
 ./make_printable.sh
 ```
 
-### Translations 🌍
+### 🌍 Translations
 
 Make sure you have [`po4a`](https://po4a.org/index.php.en) installed ([MacOS instructions](https://formulae.brew.sh/formula/po4a)).
 
 To translate a particular section:
 - Go to `translations/<section_name>` and open `<lang>.po` file, e.g., `translations/introduction.tex/pl.po`
-- Choose a fragment to translate. Those start with `msgid`. Write your new text in the desired line below starting with `msgstr`. Example:
+- Choose a fragment to translate. Those start with `msgid`. Write your new text in the line below starting with `msgstr`. Example:
     ```tex
     msgid "\\addsection{Introduction}{\\spells/magic_arrow.png}"
     msgstr "\\addsection{Wprowadzenie}{\\spells/magic_arrow.png}"
@@ -92,7 +92,7 @@ To translate a particular section:
     ```bash
     po4a --no-update po4a.cfg
     ```
-  Disregard the errors about `mismatched` multicols, as this is an upstream parser issue.
+  Disregard the errors about mismatched `multicols`, as this is an upstream parser issue.
 - Rebuild your PDF file (or press Build ▶️ in TeXStudio).
    ```bash
    latexmk -pdf -silent -shell-escape "main_<lang>"
