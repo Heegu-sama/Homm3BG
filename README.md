@@ -76,7 +76,7 @@ Then, use the script:
 ./make_printable.sh
 ```
 
-### Translations 🌍
+### 🌍 Translations
 
 Make sure you have [`po4a`](https://po4a.org/index.php.en) installed ([MacOS instructions](https://formulae.brew.sh/formula/po4a)).
 
