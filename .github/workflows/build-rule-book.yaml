@@ -34,15 +34,15 @@ jobs:
       - name: Generate translations for ${{ matrix.language }}
         if: ${{ matrix.language != 'en' }}
         run: |
-          sudo apt-get install -y --no-install-recommends po4a libc-bin
+          sudo apt-get install -y po4a libc-bin
           # wget --quiet ${{ env.PO4A_URL }}/${{ env.PO4A_DIR }}.tar.gz
           # tar -xf ${{ env.PO4A_DIR }}.tar.gz
           # export PERL5LIB="${{ env.PO4A_DIR }}/lib:${PERL5LIB}"
           # ls -R translations
           # pwd
-          echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
-          echo "pl_PL.UTF-8 UTF-8" >> /etc/locale.gen
-          sudo locale-gen
+          # echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+          # echo "pl_PL.UTF-8 UTF-8" >> /etc/locale.gen
+          # sudo locale-gen
           po4a --no-update po4a.cfg
 
       - name: Compile LaTeX document
