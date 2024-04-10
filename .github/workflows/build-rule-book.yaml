@@ -25,7 +25,7 @@ jobs:
       fail-fast: false
       matrix:
         language:
-          - en
+          # - en
           - pl
     steps:
       - name: Set up repository
@@ -42,7 +42,8 @@ jobs:
           wget --quiet ${{ env.PO4A_URL }}/${{ env.PO4A_DIR }}.tar.gz
           tar -xf ${{ env.PO4A_DIR }}.tar.gz
           echo ${PATH}
-          export PATH="${{ env.PO4A_DIR }}:$PATH"
+          export PATH="${{ env.PO4A_DIR }}/lib:$PATH"
+          perl -e 'print "@INC";'
           ./${{ env.PO4A_DIR }}/po4a --no-update po4a.cfg
 
       - name: Compile LaTeX document
