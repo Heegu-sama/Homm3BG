@@ -41,10 +41,11 @@ jobs:
         run: |
           wget --quiet ${{ env.PO4A_URL }}/${{ env.PO4A_DIR }}.tar.gz
           tar -xf ${{ env.PO4A_DIR }}.tar.gz
-          # echo ${PATH}
+          echo ${PERL5LIB}
+          export PERL5LIB="${{ env.PO4A_DIR }}/lib:${PERL5LIB}"
           # export PATH="${{ env.PO4A_DIR }}/lib:$PATH"
           perl -e 'print "@INC";'
-          cp -r ${{ env.PO4A_DIR }}/lib/Locale /usr/local/lib/site_perl/
+          # cp -r ${{ env.PO4A_DIR }}/lib/Locale /usr/local/lib/site_perl/
           ./${{ env.PO4A_DIR }}/po4a --no-update po4a.cfg
 
       - name: Compile LaTeX document
