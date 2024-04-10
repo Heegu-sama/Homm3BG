@@ -40,6 +40,9 @@ jobs:
           # export PERL5LIB="${{ env.PO4A_DIR }}/lib:${PERL5LIB}"
           # ls -R translations
           # pwd
+          echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+          echo "pl_PL.UTF-8 UTF-8" >> /etc/locale.gen
+          sudo locale-gen
           po4a --no-update po4a.cfg
 
       - name: Compile LaTeX document
