@@ -31,6 +31,11 @@ jobs:
       - name: Set up repository
         uses: actions/checkout@v4
 
+      - uses: shogo82148/actions-setup-perl@v1
+        if: ${{ matrix.language != 'en' }}
+        with:
+          perl-version: "5.34"
+
       - name: Generate translations for ${{ matrix.language }}
         if: ${{ matrix.language != 'en' }}
         run: |
