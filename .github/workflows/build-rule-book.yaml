@@ -31,21 +31,14 @@ jobs:
       - name: Set up repository
         uses: actions/checkout@v4
 
-      # - uses: shogo82148/actions-setup-perl@v1
-      #   if: ${{ matrix.language != 'en' }}
-      #   with:
-      #     perl-version: "5.34"
-
       - name: Generate translations for ${{ matrix.language }}
         if: ${{ matrix.language != 'en' }}
         run: |
           wget --quiet ${{ env.PO4A_URL }}/${{ env.PO4A_DIR }}.tar.gz
           tar -xf ${{ env.PO4A_DIR }}.tar.gz
-          echo ${PERL5LIB}
           export PERL5LIB="${{ env.PO4A_DIR }}/lib:${PERL5LIB}"
-          # export PATH="${{ env.PO4A_DIR }}/lib:$PATH"
-          perl -e 'print "@INC";'
-          # cp -r ${{ env.PO4A_DIR }}/lib/Locale /usr/local/lib/site_perl/
+          ls -R translations
+          pwd
           ./${{ env.PO4A_DIR }}/po4a --no-update po4a.cfg
 
       - name: Compile LaTeX document
