@@ -1,5 +1,9 @@
 name: Build Rule Book
 
+env:
+  PO4A_URL: https://github.com/mquinson/po4a/releases/download/v0.71
+  PO4A_DIR: po4a-0.71
+
 on:
   pull_request:
     branches: [main]
@@ -26,6 +30,13 @@ jobs:
     steps:
       - name: Set up repository
         uses: actions/checkout@v4
+
+      - name: Generate translations for ${{ matrix.language }}
+        if: ${{ matrix.language != 'en' }}
+        run: |
+          wget ${{ env.PO4A_URL }}/${{ env.PO4A_DIR }}.tar.gz
+          tar -xf ${{ env.PO4A_DIR }}.tar.gz
+          ./${{ env.PO4A_DIR }}/po4a --no-update po4a.cfg
 
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
