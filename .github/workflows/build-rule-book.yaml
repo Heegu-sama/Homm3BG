@@ -35,16 +35,22 @@ jobs:
         if: ${{ matrix.language != 'en' }}
         run: |
           wget --quiet ${{ env.PO4A_GH_URL }}/v${{ env.PO4A_VERSION }}/po4a-${{ env.PO4A_VERSION}}.tar.gz
-          export PO4A_DIR=po4a-${{ env.PO4A_VERSION }}
+          export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
+
+          # tar -xf ${PO4A_DIR}.tar.gz
+          # export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
+          # ls -R translations
+          # echo "en_US.UTF-8 UTF-8" | sudo tee /etc/locale.gen
+          # echo "pl_PL.UTF-8 UTF-8" | sudo tee /etc/locale.gen
+          # sudo locale-gen
+          # echo ${LANG}
+          # ls -R ${PO4A_DIR}
+          # sudo ./${PO4A_DIR}/po4a --no-update po4a.cfg
+
           tar -xf ${PO4A_DIR}.tar.gz
-          export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
+          export PERL5LIB="${{ env.PO4A_DIR }}/lib:${PERL5LIB}"
           ls -R translations
-          echo "en_US.UTF-8 UTF-8" | sudo tee /etc/locale.gen
-          echo "pl_PL.UTF-8 UTF-8" | sudo tee /etc/locale.gen
-          sudo locale-gen
-          echo ${LANG}
-          ls -R ${PO4A_DIR}
-          sudo ./${PO4A_DIR}/po4a --no-update po4a.cfg
+          ./${PO4A_DIR}/po4a --no-update po4a.cfg
 
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
