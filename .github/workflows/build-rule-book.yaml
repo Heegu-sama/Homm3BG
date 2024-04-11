@@ -32,20 +32,17 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Generate translations for ${{ matrix.language }}
-        uses: qwrtln/po4a-action@test
         if: ${{ matrix.language != 'en' }}
-        # run: |
-        #   sudo apt-get install -y po4a libc-bin
-        #   # wget --quiet ${{ env.PO4A_URL }}/${{ env.PO4A_DIR }}.tar.gz
-        #   # tar -xf ${{ env.PO4A_DIR }}.tar.gz
-        #   # export PERL5LIB="${{ env.PO4A_DIR }}/lib:${PERL5LIB}"
-        #   # ls -R translations
-        #   # pwd
-        #   echo "en_US.UTF-8 UTF-8" | sudo tee /etc/locale.gen
-        #   echo "pl_PL.UTF-8 UTF-8" | sudo tee /etc/locale.gen
-        #   sudo locale-gen
-        #   echo ${LANG}
-        #   po4a --no-update po4a.cfg
+        run: |
+          wget --quiet ${{ env.PO4A_URL }}/${{ env.PO4A_DIR }}.tar.gz
+          tar -xf ${{ env.PO4A_DIR }}.tar.gz
+          export PERL5LIB="${{ env.PO4A_DIR }}/lib:${PERL5LIB}"
+          ls -R translations
+          # echo "en_US.UTF-8 UTF-8" | sudo tee /etc/locale.gen
+          # echo "pl_PL.UTF-8 UTF-8" | sudo tee /etc/locale.gen
+          # sudo locale-gen
+          # echo ${LANG}
+          ./${{ env.PO4ADIR }}/po4a --no-update po4a.cfg
 
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
