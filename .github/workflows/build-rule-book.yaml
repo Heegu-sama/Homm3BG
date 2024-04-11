@@ -48,8 +48,8 @@ jobs:
           # sudo ./${PO4A_DIR}/po4a --no-update po4a.cfg
 
           tar -xf ${PO4A_DIR}.tar.gz
-          export PERL5LIB="${{ env.PO4A_DIR }}/lib:${PERL5LIB}"
-          ls -R translations
+          export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
+          ls -R ${PO4A_DIR}
           ./${PO4A_DIR}/po4a --no-update po4a.cfg
 
       - name: Compile LaTeX document
