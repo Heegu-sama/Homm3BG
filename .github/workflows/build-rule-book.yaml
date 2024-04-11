@@ -38,15 +38,6 @@ jobs:
           export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
           tar -xf ${PO4A_DIR}.tar.gz
           export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
-          # echo "User:"
-          # perl -e "print \"@INC\""
-          # echo ""
-          # echo "Root:"
-          # sudo perl -e "print \"@INC\""
-          # echo ""
-          # echo "Root w/ var:"
-          # PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}" sudo perl -e "print \"@INC\""
-          # echo ""
           sudo --preserve-env=PERL5LIB ./${PO4A_DIR}/po4a --no-update po4a.cfg
 
       - name: Compile LaTeX document
