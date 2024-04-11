@@ -35,7 +35,7 @@ jobs:
         if: ${{ matrix.language != 'en' }}
         run: |
           sudo apt-get install -y po4a  # required as standalone po4a is missing some deps
-          wget --quiet ${{ env.PO4A_GH_URL }}/v${{ env.PO4A_VERSION }}/po4a-${{ env.PO4A_VERSION}}.tar.gz  # sadly the version from apt isn't worknig
+          wget --quiet ${{ env.PO4A_GH_URL }}/v${{ env.PO4A_VERSION }}/po4a-${{ env.PO4A_VERSION}}.tar.gz  # sadly the version from apt isn't working
           export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
           tar -xf ${PO4A_DIR}.tar.gz
           export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
