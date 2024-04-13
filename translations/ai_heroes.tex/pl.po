@@ -27,7 +27,7 @@ msgstr ""
 #. type: subsection{#2}
 #: sections/ai_heroes.tex:16
 msgid "AI Hero Turn"
-msgstr ""
+msgstr "Tura Bohatera SI"
 
 #. type: multicols
 #: sections/ai_heroes.tex:16
@@ -35,28 +35,32 @@ msgid ""
 "\\hypertarget{AIrules}{AI Heroes} are used in the Campaigns.  They start in "
 "their Town, and have 3 MP, always spending them to perform the following "
 "Actions in descending priority:"
-msgstr ""
+msgstr "\\hypertarget{AIrules}{AI Heroes} występują w kampaniach. Każdy Bohater SI zaczyna grę w swoim mieście, posiada 3 punkty ruchu (PR), które zawsze wykorzystuje  na wykonanie następujących działań według malejącego priorytetu:"
 
 #. type: itemize
 #: sections/ai_heroes.tex:16
 msgid ""
 "If a player's Hero is on the same Tile as the AI, spend all MP to move "
 "towards them in an attempt to start Combat."
-msgstr ""
+msgstr "Jeśli Twój Bohater znajduje się na tym samym kafelku co Bohater SI, wykorzystaj wszystkie posiadane"
+"punkty ruchu aby przemieścić się jego kierunku i spróbować rozpocząć Walkę."
 
 #. type: itemize
 #: sections/ai_heroes.tex:16
 msgid ""
 "If there are any Mines or Settlements the AI could Flag on the same Tile, "
 "move towards the closest one."
-msgstr ""
+msgstr "Jeśli na tym samym kafelku znajdują się kopalnie lub osady, które Bohater SI"
+"może zająć przemieść się w kierunku najbliższej z nich."
 
 #. type: itemize
 #: sections/ai_heroes.tex:16
 msgid ""
 "Otherwise, move toward the player's Town.  Repeat this sequence until all "
 "MPs are used up.  AI Heroes take their turn after the player."
-msgstr ""
+msgstr "W innym przypadku (Inaczej) poruszaj się swoim Bohaterem w kierunku miasta Bohatera SI."
+"Powtarzaj tą sekwencję ruchów aż wykorzystasz wszystkie posiadane punkty ruchu (MP). Bohaterowie SI"
+"wykonują swoję turę dopiero po skończeniu tury Gracza."
 
 #. type: multicols
 #: sections/ai_heroes.tex:19
@@ -64,7 +68,9 @@ msgid ""
 "AI Heroes always \\textbf{automatically win Combat} against any Neutral "
 "Units, while simultaneously \\textbf{Flagging or Visiting all Fields} they "
 "happen to move through.  They gain no benefits from any Fields."
-msgstr ""
+msgstr "Bohaterowie SI \\textbf{automatycznie wygrywają Walkę} przeciwko wszystkim Jednostkom Neutralnym,"
+"jednocześnie \\textbf{Zdobywając lub odwiedzając wszystkie pola}, przez które przechodzą. Nie uzyskują żadnych"
+"korzyści z jakiegokolwiek pola."
 
 #. type: multicols
 #: sections/ai_heroes.tex:28
@@ -77,12 +83,19 @@ msgid ""
 "have a Town Board, Resources, or a Hero Card.  Their Units are static and "
 "defined by the Scenario's setup or other rules.\\par Any differences to the "
 "above will be described in any given Scenario's own rules."
-msgstr ""
+msgstr "Bohaterowie SI muszą odkrywać zakryte Kafelki mapy w sposób standardowy, wykorzystując"
+"1 Punkt Ruchu (PR) zanim przemieszczą się na dany Kafelek mapy. Gracz wybiera ułożenie tego Kafelka. \\par "
+"Bohaterowie SI nie mogą poddawać walki, Ty, prowadząc swojego Bohatera, też nie możesz poddać się"
+"Bohaterowi SI; SI będą walczyć aż do wyczerpania wszystkich posiadanych Jednostek."
+"Wygranie walki z Bohaterem SI nie daje żadnych nagród, chyba że jest to specjalnie wskazane w Scenariuszu"
+"Bohaterowie SI nie mają Planszy Miasta, Zasobów ani Karty Bohatera. Ich Jednostki są stałe i określone przez"
+"zasady Scenariusza lub inne zasady."
+"\\par Wszelkie różnice od powyższych zapisów będą opisane w zasadach danego Scenariusza."
 
 #. type: subsection{#2}
 #: sections/ai_heroes.tex:32
 msgid "AI Decks"
-msgstr ""
+msgstr "Talie SI"
 
 #. type: multicols
 #: sections/ai_heroes.tex:44
@@ -106,12 +119,26 @@ msgid ""
 "Magic Card \\includesvg[height=10px]{\\svgs/magic.svg} is drawn.  If an AI "
 "Hero is instructed to draw a card, they will draw and resolve "
 "\\textbf{another card} from the AI Deck."
-msgstr ""
+msgstr "Bohaterowie SI używają dwóch Talii Automatycznych podczas Walki:"
+"\\textbf{Talii SI} oraz \\textbf{Talii Zaklęć}. Talia SI jest budowana z wykorzystaniem"
+"trzech rodzajów kart SI: Siły \\includesvg[height=10px]{\\svgs/might.svg},"
+"Magii \\includesvg[height=10px]{svgs/magic.svg} oraz Umiejętności \\includesvg[height=10px]{svgs/skill.svg}."
+"Każdy Scenariusz Kampanii podaje liczbę każdego rodzaju (typu) Karty SI wchodzącej w skład Talii SI."
+"Karty Siły \\includesvg[height=10px]{svgs/might.svg} oraz Umiejętności \\includesvg[height=10px]{svgs/skill.svg}"
+"mają dwie wersje. Wybierz te karty \\textbf{losowo} w trakcie budowania Talii."
+"Jeśli w Talii są karty Umiejętności, wyszukaj i wybierz je odkładając na bok."
+"Zbuduj \\textbf{Talię Zaklęć SI} oddzielając wskazane Zaklęcia od Zwykłej (regularnej) Talii Zaklęć."
+"Potasuj Talie SI i Talię Zaklęć podczas przygotowania po ich utworzeniu."
+"\\par Gdy Bohater SI \\textbf{Aktywuje} Jednostkę, wylosuj Kartę SI\\index{Karta SI} i postępuj"
+"zgodnie z zapisanymi na niej instrukcjami zanim Jednostka wykona ruch i/lub zaatakuje. Efekt każdej Karty SI"
+"zależy od \\hyperlink{Difficulty}{Difficulty} gry. Talię Zaklęć SI używa się zawsze,"
+"gdy zostanie wylosowana Karta Magii \\includesvg[height=10px]{\\svgs/magic.svg}."
+"Jeśli Bohater SI otrzyma polecenie wylosowania karty, wylosuje i rozwiąże \\textbf{kolejną kartę} z Talii SI."
 
 #. type: subsection{#2}
 #: sections/ai_heroes.tex:50
 msgid "Combat against AI"
-msgstr ""
+msgstr "Walka przeciwko SI"
 
 #. type: multicols
 #: sections/ai_heroes.tex:53
@@ -119,7 +146,9 @@ msgid ""
 "These rules apply during Combat in \\textbf{Solo}\\index{Solo Mode} and "
 "\\textbf{Cooperative} Scenarios.  When Neutral enemies or AI Heroes activate "
 "a unit, they follow a set of automatic instructions:"
-msgstr ""
+msgstr "Te zasady obowiązują podczas Walki w trybach \\textbf{Solo}\\index{Tryb Solo}"
+"oraz \\textbf{Kooperacyjnych}. Gdy neutralni wrogowie lub Bohaterowie SI aktywują"
+"jednostkę, realizują (wykonują) zestaw instrukcji (poleceń) automatycznych."
 
 #. type: multicols
 #: sections/ai_heroes.tex:61
@@ -138,4 +167,17 @@ msgid ""
 "one.\\par If there's ever a tie between equally valid targets for any Units, "
 "the player chooses which Unit is attacked.  Enemy units cannot "
 "\\hyperlink{Defend}{Defend} unless instructed to."
-msgstr ""
+msgstr "Jednostki Lądowe \\includesvg[height=10px]{\\svgs/unit_ground.svg} oraz "
+"Latające \\includesvg[height=10px]{\\svgs/unit_flying.svg} Wrogów "
+"priorytetowo atakują Jednostki tej samej klasy. Jeśli jest to niemożliwe, "
+"atakują najbliższą Jednostkę, priorytetowo najniższej klasy.\\par Jednostki "
+"Atakujące na Odległość \\includesvg[height=10px]{\\svgs/unit_ranged.svg} priorytetowo "
+"atakują inne Jednostki Atakujące na Odległość \\includesvg[height=10px]{\\svgs/unit_ranged.svg} "
+"tej samej klasy, następnie niższej klasy, a w końcu wyższej klasy. Jeśli nie "
+"ma Jednostek Atakujących na Odległość, które mogłyby zaatakować, priorytetowo atakują "
+"Jednostki Lądowe \\includesvg[height=10px]{\\svgs/unit_ground.svg} oraz "
+"Latające \\includesvg[height=10px]{\\svgs/unit_flying.svg} w tej samej "
+"kolejności klas. Jeśli jest więcej niż jeden ważny cel, atakują najbliższy."
+"\\par Jeśli kiedykolwiek wystąpi remis między równie ważnymi celami dla "
+"jakichkolwiek Jednostek, gracz wybiera, która Jednostka jest atakowana. "
+"Jednostki wrogów nie mogą \\hyperlink{Defend}{Defend}, chyba że zostaną do tego wyznaczone."
