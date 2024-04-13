@@ -27,7 +27,7 @@ msgstr ""
 #. type: subsection{#2}
 #: sections/ai_heroes.tex:16
 msgid "AI Hero Turn"
-msgstr "Tura Bohatera SI"
+msgstr "Tura Bohatera AI"
 
 #. type: multicols
 #: sections/ai_heroes.tex:16
@@ -35,14 +35,14 @@ msgid ""
 "\\hypertarget{AIrules}{AI Heroes} are used in the Campaigns.  They start in "
 "their Town, and have 3 MP, always spending them to perform the following "
 "Actions in descending priority:"
-msgstr "\\hypertarget{AIrules}{AI Heroes} występują w kampaniach. Każdy Bohater SI zaczyna grę w swoim mieście, posiada 3 punkty ruchu (PR), które zawsze wykorzystuje  na wykonanie następujących działań według malejącego priorytetu:"
+msgstr "\\hypertarget{AIrules}{AI Heroes} występują w kampaniach. Każdy Bohater w Trybie Solo zaczyna grę w swoim mieście, posiada 3 punkty ruchu (PR), które zawsze wykorzystuje  na wykonanie następujących działań według malejącego priorytetu:"
 
 #. type: itemize
 #: sections/ai_heroes.tex:16
 msgid ""
 "If a player's Hero is on the same Tile as the AI, spend all MP to move "
 "towards them in an attempt to start Combat."
-msgstr "Jeśli Twój Bohater znajduje się na tym samym kafelku co Bohater SI, wykorzystaj wszystkie posiadane"
+msgstr "Jeśli Twój Bohater znajduje się na tym samym kafelku co Bohater AI, wykorzystaj wszystkie posiadane"
 "punkty ruchu aby przemieścić się jego kierunku i spróbować rozpocząć Walkę."
 
 #. type: itemize
@@ -50,7 +50,7 @@ msgstr "Jeśli Twój Bohater znajduje się na tym samym kafelku co Bohater SI, w
 msgid ""
 "If there are any Mines or Settlements the AI could Flag on the same Tile, "
 "move towards the closest one."
-msgstr "Jeśli na tym samym kafelku znajdują się kopalnie lub osady, które Bohater SI"
+msgstr "Jeśli na tym samym Kafelku Mapy znajdują się kopalnie lub osady, które Bohater AI"
 "może zająć przemieść się w kierunku najbliższej z nich."
 
 #. type: itemize
@@ -58,8 +58,8 @@ msgstr "Jeśli na tym samym kafelku znajdują się kopalnie lub osady, które Bo
 msgid ""
 "Otherwise, move toward the player's Town.  Repeat this sequence until all "
 "MPs are used up.  AI Heroes take their turn after the player."
-msgstr "W innym przypadku (Inaczej) poruszaj się swoim Bohaterem w kierunku miasta Bohatera SI."
-"Powtarzaj tą sekwencję ruchów aż wykorzystasz wszystkie posiadane punkty ruchu (MP). Bohaterowie SI"
+msgstr "W innym przypadku (Inaczej) poruszaj się swoim Bohaterem w kierunku miasta Bohatera AI."
+"Powtarzaj tą sekwencję ruchów aż wykorzystasz wszystkie posiadane punkty ruchu (MP). Bohaterowie AI"
 "wykonują swoję turę dopiero po skończeniu tury Gracza."
 
 #. type: multicols
@@ -68,7 +68,7 @@ msgid ""
 "AI Heroes always \\textbf{automatically win Combat} against any Neutral "
 "Units, while simultaneously \\textbf{Flagging or Visiting all Fields} they "
 "happen to move through.  They gain no benefits from any Fields."
-msgstr "Bohaterowie SI \\textbf{automatycznie wygrywają Walkę} przeciwko wszystkim Jednostkom Neutralnym,"
+msgstr "Bohaterowie AI \\textbf{automatycznie wygrywają Walkę} przeciwko wszystkim Jednostkom Neutralnym,"
 "jednocześnie \\textbf{Zdobywając lub odwiedzając wszystkie pola}, przez które przechodzą. Nie uzyskują żadnych"
 "korzyści z jakiegokolwiek pola."
 
@@ -83,19 +83,19 @@ msgid ""
 "have a Town Board, Resources, or a Hero Card.  Their Units are static and "
 "defined by the Scenario's setup or other rules.\\par Any differences to the "
 "above will be described in any given Scenario's own rules."
-msgstr "Bohaterowie SI muszą odkrywać zakryte Kafelki mapy w sposób standardowy, wykorzystując"
-"1 Punkt Ruchu (PR) zanim przemieszczą się na dany Kafelek mapy. Gracz wybiera ułożenie tego Kafelka. \\par "
-"Bohaterowie SI nie mogą poddawać walki, Ty, prowadząc swojego Bohatera, też nie możesz poddać się"
-"Bohaterowi SI; SI będą walczyć aż do wyczerpania wszystkich posiadanych Jednostek."
-"Wygranie walki z Bohaterem SI nie daje żadnych nagród, chyba że jest to specjalnie wskazane w Scenariuszu"
-"Bohaterowie SI nie mają Planszy Miasta, Zasobów ani Karty Bohatera. Ich Jednostki są stałe i określone przez"
+msgstr "Bohaterowie AI muszą odkrywać zakryte Kafelki Mapy w sposób standardowy, wykorzystując"
+"1 Punkt Ruchu (PR) zanim przemieszczą się na dany Kafelek Mapy. Gracz wybiera ułożenie tego Kafelka. \\par "
+"Bohaterowie AI nie mogą poddawać walki, Ty, prowadząc swojego Bohatera, też nie możesz poddać się"
+"Bohaterowi AI; AI będą walczyć aż do wyczerpania wszystkich posiadanych Jednostek."
+"Wygranie walki z Bohaterem AI nie daje żadnych nagród, chyba że jest to specjalnie wskazane w Scenariuszu"
+"Bohaterowie AI nie mają Planszy Miasta, Zasobów ani Karty Bohatera. Ich Jednostki są stałe i określone przez"
 "zasady Scenariusza lub inne zasady."
 "\\par Wszelkie różnice od powyższych zapisów będą opisane w zasadach danego Scenariusza."
 
 #. type: subsection{#2}
 #: sections/ai_heroes.tex:32
 msgid "AI Decks"
-msgstr "Talie SI"
+msgstr "Talie AI"
 
 #. type: multicols
 #: sections/ai_heroes.tex:44
@@ -119,26 +119,26 @@ msgid ""
 "Magic Card \\includesvg[height=10px]{\\svgs/magic.svg} is drawn.  If an AI "
 "Hero is instructed to draw a card, they will draw and resolve "
 "\\textbf{another card} from the AI Deck."
-msgstr "Bohaterowie SI używają dwóch Talii Automatycznych podczas Walki:"
-"\\textbf{Talii SI} oraz \\textbf{Talii Zaklęć}. Talia SI jest budowana z wykorzystaniem"
-"trzech rodzajów kart SI: Siły \\includesvg[height=10px]{\\svgs/might.svg},"
+msgstr "Bohaterowie AI używają dwóch Talii Automatycznych podczas Walki:"
+"\\textbf{Talii AI} oraz \\textbf{Talii Zaklęć}. Talia AI jest budowana z wykorzystaniem"
+"trzech rodzajów kart AI: Siły \\includesvg[height=10px]{\\svgs/might.svg},"
 "Magii \\includesvg[height=10px]{svgs/magic.svg} oraz Umiejętności \\includesvg[height=10px]{svgs/skill.svg}."
-"Każdy Scenariusz Kampanii podaje liczbę każdego rodzaju (typu) Karty SI wchodzącej w skład Talii SI."
+"Każdy Scenariusz Kampanii podaje liczbę każdego rodzaju (typu) Karty AI wchodzącej w skład Talii AI."
 "Karty Siły \\includesvg[height=10px]{svgs/might.svg} oraz Umiejętności \\includesvg[height=10px]{svgs/skill.svg}"
 "mają dwie wersje. Wybierz te karty \\textbf{losowo} w trakcie budowania Talii."
 "Jeśli w Talii są karty Umiejętności, wyszukaj i wybierz je odkładając na bok."
-"Zbuduj \\textbf{Talię Zaklęć SI} oddzielając wskazane Zaklęcia od Zwykłej (regularnej) Talii Zaklęć."
-"Potasuj Talie SI i Talię Zaklęć podczas przygotowania po ich utworzeniu."
-"\\par Gdy Bohater SI \\textbf{Aktywuje} Jednostkę, wylosuj Kartę SI\\index{Karta SI} i postępuj"
-"zgodnie z zapisanymi na niej instrukcjami zanim Jednostka wykona ruch i/lub zaatakuje. Efekt każdej Karty SI"
-"zależy od \\hyperlink{Difficulty}{Difficulty} gry. Talię Zaklęć SI używa się zawsze,"
+"Zbuduj \\textbf{Talię Zaklęć AI} oddzielając wskazane Zaklęcia od Zwykłej (regularnej) Talii Zaklęć."
+"Potasuj Talie AI i Talię Zaklęć podczas przygotowania po ich utworzeniu."
+"\\par Gdy Bohater AI \\textbf{Aktywuje} Jednostkę, wylosuj Kartę AI\\index{Karta AI} i postępuj"
+"zgodnie z zapisanymi na niej instrukcjami zanim Jednostka wykona ruch i/lub zaatakuje. Efekt każdej Karty AI"
+"zależy od \\hyperlink{Difficulty}{Difficulty} gry. Talię Zaklęć AI używa się zawsze,"
 "gdy zostanie wylosowana Karta Magii \\includesvg[height=10px]{\\svgs/magic.svg}."
-"Jeśli Bohater SI otrzyma polecenie wylosowania karty, wylosuje i rozwiąże \\textbf{kolejną kartę} z Talii SI."
+"Jeśli Bohater AI otrzyma polecenie wylosowania karty, wylosuje i rozwiąże \\textbf{kolejną kartę} z Talii AI."
 
 #. type: subsection{#2}
 #: sections/ai_heroes.tex:50
 msgid "Combat against AI"
-msgstr "Walka przeciwko SI"
+msgstr "Walka przeciwko AI"
 
 #. type: multicols
 #: sections/ai_heroes.tex:53
@@ -147,7 +147,7 @@ msgid ""
 "\\textbf{Cooperative} Scenarios.  When Neutral enemies or AI Heroes activate "
 "a unit, they follow a set of automatic instructions:"
 msgstr "Te zasady obowiązują podczas Walki w trybach \\textbf{Solo}\\index{Tryb Solo}"
-"oraz \\textbf{Kooperacyjnych}. Gdy neutralni wrogowie lub Bohaterowie SI aktywują"
+"oraz \\textbf{Kooperacyjnych}. Gdy neutralni wrogowie lub Bohaterowie AI aktywują"
 "jednostkę, realizują (wykonują) zestaw instrukcji (poleceń) automatycznych."
 
 #. type: multicols
