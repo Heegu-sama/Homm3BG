@@ -502,7 +502,7 @@ msgstr ""
 "Po zadeklarowaniu ataku Jednostki i zagraniu kart należy rzucić"
 "Kością Walki.  Zmodyfikuj atak Jednostki atakującej o wynik rzutu, "
 "następnie odejmij wartość Obrony Jednostki broniącej się. Końcowy wynik to ilość "
-"\\hyperlink{HP}{obrażeń} które otrzymuje broniąca się jednostka."
+"\\hyperlink{PŻ}{obrażeń} które otrzymuje broniąca się jednostka."
 
 #. type: itemize
 #: sections/combat.tex:158
@@ -581,25 +581,25 @@ msgstr ""
 "Gracz \\textbf{daje zwycięzcy} jedną ze swoich \\hyperlink{End}{Kostek "
 "Frakcji}.  Pokonanego Głównego bohatera \\textbf{należy przenieść} sojuszniczego Miasta lub "
 "Osady, a Bohaterowie Pomocniczy są usunięci z gry do momentu ponownej "
-"Rekrutacji.  Pokonanie Bohatera Głównego może doprowadzić \\hyperlink{Koniec}{Eliminacji Gracza}."
+"Rekrutacji.  Pokonanie Bohatera Głównego może doprowadzić do \\hyperlink{Koniec}{Eliminacji Gracza}."
 "\\par Możesz \\textbf{Poddać się}\\index{Poddawanie się} drugiemu Graczowi "
 "płacąc mu 10 \\includesvg[height=10px]{\\svgs/gold.svg} w momencie aktywacji "
 "Jednostki.  Przenieś swojego Głównego Bohatera lub usuń Pomocniczego Bohatera z gry tak jakbyś "
 "został pokonany przez stratę Jednostek.  Nie ma innych "
 "konsekwencji Poddawania się; zwycięzca nie dosaje Kostki Frakcji.\\par "
 "\\note{4}{Nie możesz się poddać broniąc Miasta.}\\par Gdy atakowany jest "
-"Bohater Pomocniczy, mogą oni być \\textbf{natychmiastowo pokonani} "
+"Bohater Pomocniczy, może on być \\textbf{natychmiastowo pokonany} "
 "zamiast brać udział w Walce, celem uchronienia przed stratą Jednostek.  Gdy to się "
 "stanie, Gracz atakujący zdobywa Kostkę Frakcji od pokonanego Bohatera."
-"\\par When Combat ends, all damage is healed from all surviving Units.  Move "
-"any player owned Units back to their Unit Deck and discard any leftover "
-"enemy Neutral Units.  After winning Combat, Heroes \\textbf{must} Visit the "
-"Field where the Combat took place."
+"\\par Po walce wszystkie Jednostki zostają wyleczone z Ran.  Odłóż "
+"wszystkie Jednostki Gracza z powrotem do Talii Jednostek i odrzuć pozostałe "
+"wrogie Jednostki Neutralne.  Po wygraniu Walki, Bohaterowie \\textbf{muszą} Odwiedzić "
+"Pole na którym Walka miała miejsce."
 
 #. type: subsection{#2}
 #: sections/combat.tex:184
 msgid "\\hypertarget{Combatexperience}{Combat Experience}"
-msgstr ""
+msgstr "\\hypertarget{Doświadczenie zdobyte w Walce}{Doświadczenie zdobyte w Walce}"
 
 #. type: multicols
 #: sections/combat.tex:193
@@ -617,16 +617,28 @@ msgid ""
 "Experience.  You also do not gain Experience from \\textbf{defeating} a "
 "Secondary Hero, or if an enemy Hero \\textbf{Surrenders} to you."
 msgstr ""
+"Po wygraniu Walki Głównym Bohaterem zdobywa on"
+"Doświadczenie\\index{Doświadczenie}.  Jeśli poziom Trudności "
+"Pola albo Poziom wrogiego Bohatera jest \\textbf{równy} Twojemu "
+"Poziomowi, otrzymujesz 1 \\includesvg[height=10px]{\\svgs/experience.svg}.  Jeśli "
+"jest \\textbf{wyższy} niż twój Poziom, zdobywasz 2 \\includesvg[height=10px]"
+"{\\svgs/experience.svg}.  Pokonanie Jednostek Neutralnych poziomu Azurowego "
+"\\includesvg[height=10px]{\\svgs/azure.svg} \\textbf{natychmiast}"
+"zapewnia 7 Poziom Doświadczenia.  Jeśli kiedykolwiek zdobędziesz kilka Poziomów na raz, "
+"rozwiąż ich efekty w kolejności.  Zdobycie nowego Poziomu należy rozpatrzyć przed Odwiedzeniem "
+"Pola na którym miała miejsce Walka.\\par Bohater Pomocniczy nie może otrzymać "
+"Doświadczenia.  Również nie otrzymujesz Doświadczenia za \\textbf{pokonanie} "
+"Bohatera Pomocniczego lub w przypadku gdy wrogi Bohater \\textbf{Podda się}."
 
 #. type: subsection{#2}
 #: sections/combat.tex:197
 msgid "\\hypertarget{Quick}{Quick Combat}"
-msgstr ""
+msgstr "\\hypertarget{Szybka}{Szybka walka}"
 
 #. type: index{#1}
 #: sections/combat.tex:197
 msgid "Quick Combat"
-msgstr ""
+msgstr "Szybka Walka"
 
 #. type: multicols
 #: sections/combat.tex:197
@@ -636,11 +648,15 @@ msgid ""
 "considered to have beaten the Neutral Units by default and gains no rewards "
 "from the Combat."
 msgstr ""
+"Jeśli Poziom twojego Bohatera jest wyższy niż poziom Trudności Pola "
+"odnosisz zwycięstwo \\textbf{bez Walki}.  Gracz "
+"nie zdobywa żadnych nagród "
+"z KartyWalki."
 
 #. type: subsection{#2}
 #: sections/combat.tex:200
 msgid "Campaign and Cooperative Combat"
-msgstr ""
+msgstr "Kampania i Walka Kooperacyjna"
 
 #. type: multicols
 #: sections/combat.tex:200
@@ -648,6 +664,8 @@ msgid ""
 "During these game modes, all enemy Units activate according to the rules in "
 "\\hyperlink{AIrules}{the next section}."
 msgstr ""
+"W tych trybach gry, wszystkie wrogie Jednostki aktywują się zgodnie z zasadami "
+"\\hyperlink{ZasadyAI}{opisanymi w następnej sekcji}."
 
 #. type: scaledfigure
 #: sections/combat.tex:208
@@ -661,7 +679,7 @@ msgstr ""
 #. type: subsection{#2}
 #: sections/combat.tex:212
 msgid "Combat Example"
-msgstr ""
+msgstr "Przykładowa Walka"
 
 #. type: multicols*
 #: sections/combat.tex:219
@@ -675,6 +693,13 @@ msgid ""
 "They would both be permitted to play any number of additional cards in any order, but they decide to stop after playing these cards.}\\par\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\textit{Zombie Bob'a atakują Gryfy Alicji.\n"
+"Po deklaracji ataku obaj gracze mogą zmodyfikować Atak i Obronę swoich Jednostek zagrywając dowolną liczbę \\includesvg[height=10px]{\\svgs/instant.svg} kart zwiększających ich \\includesvg[height=10px]{\\svgs/attack.svg} lub \\includesvg[height=10px]{\\svgs/defense.svg}.}\\par\n"
+"\\textit{Bob decyduje sę zagrać Kartę Ataku +1, zwiększając Atak Zombie z 2 na 3.\n"
+"Alicja odpowiada zagrywając kartę Obrony +1, zwększając obronę Gryfów z 0 do 1.\n"
+"Oboje mogą zagrać dowolną ilość dodatkowych kart w dowolnej kolejności, lecz decydują się na tym poprzestać.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:221
@@ -697,6 +722,14 @@ msgid ""
 "The previously played Attack and Defense cards no longer have any effect.}\n"
 "\n"
 msgstr ""
+"\\textit{Po zagraniu wszystkich kart dla danej sekwencji ataku wykonywany jest rzut Kością Ataku celem policzenia jego całkowitej siły .\n"
+"Bob wyrzuca +1.\n"
+"Zwiększa to Atak Zombie z 3 na 4, co zmniejszone zostaje o Obronę Gryfów o 1. Gryfy otrzymują 3 \\includesvg[height=10px]{\\svgs/damage.svg}. Ponieważ ich PŻ \\includesvg[height=10px]{\\svgs/health_points.svg} wynosi 4, ich karta nie zostaje obrócona na stronę \"Kilka\" .}\\par\n"
+"\\textit{Na Gryfach nie ma położonej Czarnej Kostki, więc wykonują one Kontratak.\n"
+"Normalnie Kostka powinna się na nich znajdować, jednakże ich Specjalna \\includesvg[height=10px]{\\svgs/unit_retaliate.svg} zdolność umożliwia wykonanie Kontrataku nieograniczoną ilość razy, więc Kostki nie ustawia się.}\\par\n"
+"\\textit{Obaj Gracze ponownie mogą zmodyfikować Statystyki swoich Jednostek podczas Kontrataku.\n"
+"Poprzednio zagrane karty Ataku i Obrony nie mają już żadnego efektu.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:231 sections/deckbuilding.tex:129
