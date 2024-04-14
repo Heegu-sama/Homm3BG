@@ -22,7 +22,7 @@ msgstr ""
 #. type: Plain text
 #: sections/combat.tex:3
 msgid "\\addsection{Combat}{\\skills/attack.png}"
-msgstr ""
+msgstr "\\addsection{Walka}{\\skills/attack.png}""
 
 #. type: multicols
 #: sections/combat.tex:5 sections/combat.tex:138
@@ -37,31 +37,40 @@ msgid ""
 "signifying the \\hyperlink{Difficulty}{type and number} of Neutral Units "
 "guarding that Field."
 msgstr ""
+"\\hypertarget{Walka}{Walka}\\index{Walka} z \\textbf{Jednostkami Neutralnymi} "
+"rozpoczyna się, gdy Bohater wejdzie na nieodwiedzone Pole oznaczone cyfrą rzymską,"
+"określającą \\hyperlink{Poziom trudności}{typ oraz ilość} napotkanych Jednostek "
+"broniących tego Pola."
 
 #. type: multicols
 #: sections/combat.tex:14
 msgid "Combat with \\textbf{another player} can start in two ways:"
 msgstr ""
+"Walkę z \\textbf{drugim graczem} można rozpocząć na dwa sposoby:"
 
 #. type: itemize
 #: sections/combat.tex:14
 msgid "You move into any Field containing one of their Heroes."
 msgstr ""
+"Wchodząc na Pole okupowane przez wrogiego Bohatera"
 
 #. type: itemize
 #: sections/combat.tex:14
 msgid "You move into a Town or Settlement owned by them."
 msgstr ""
+"Zajmując wcześniej zdobyte przez przeciwnika Miasto lub Lokację."
 
 #. type: multicols
 #: sections/combat.tex:14
 msgid "Players are able to start multiple Combats during their Turn."
 msgstr ""
+"Gracz może rozpocząć wiele Walk podczas tej samej Tury."
 
 #. type: subsection{#2}
 #: sections/combat.tex:16
 msgid "\\hypertarget{Combatsetup}{Combat Setup}"
 msgstr ""
+ "\\hypertarget{Przygotowania do Walki}{Przygotowania do Walki}"
 
 #.  TODO info about battlefield expansion
 #. type: multicols
@@ -71,6 +80,9 @@ msgid ""
 "Backlines and two Frontlines on opposite ends, and a middle row.  Follow "
 "these steps when Combat begins against \\textbf{Neutral Units}:"
 msgstr ""
+"Walka odbywa się na planszy Walki 4 x 5, którą podzielić można na dwie"
+"sekcje - Przednią i Tylną, po obu stronach planszy, oraz środkowy rząd. Przed"
+"początkiem Bitwy przeciwko \\textbf{Neutralnym Jednostkom} wykonaj nastepujące kroki:"
 
 #. type: itemize
 #: sections/combat.tex:51
@@ -78,6 +90,8 @@ msgid ""
 "Choose one of the Combat Board's sides as your own.  Place up to 5 of your "
 "Unit cards freely onto the Back and Frontlines of that side."
 msgstr ""
+"Wybierz jedną ze stron planszy Bitwy jako swoją. Rozmieść do pięciu"
+"jednostek w dowolny sposób na Przednim oraz Tylnim rzędzie wybranej strony planszy."
 
 #. type: itemize
 #: sections/combat.tex:51
@@ -85,11 +99,14 @@ msgid ""
 "Check the \\hyperlink{Difficulty}{\\textbf{Difficulty Table}} and draw the "
 "corresponding number of Neutral Unit cards from their Decks."
 msgstr ""
+"Sprawdź \\hyperlink{Poziom trudności}{\\textbf{Tabelę Trudności Pola}} i dobierz "
+"odpowiednią ilość kart Jednostek Neutralnych z ich Talii."
 
 #. type: itemize
 #: sections/combat.tex:51
 msgid "The Neutral Units are placed differently depending on the Game Mode:"
 msgstr ""
+"Neutralne Jednostki ustawia się w sposób zależny o wybranego Trybu Gry"
 
 #. type: itemize
 #: sections/combat.tex:51
@@ -99,6 +116,10 @@ msgid ""
 "\\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units must be placed in "
 "the Backline if possible."
 msgstr ""
+"W Scenariuszach w\\textbf{Trybie Starcia} lub \\textbf{Trybie Sojuszu}, wrogi Gracz siedzący "
+"po twojej prawej stronie kontroluje Neutralne Jednostki i decyduje o ich ustawieniu.  "
+"\\includesvg[height=10px]{\\svgs/unit_ranged.svg} Jednostki muszą być ustawione "
+"w Tylnym rzędzie, jeśli to możliwe."
 
 #. type: itemize
 #: sections/combat.tex:51
@@ -114,11 +135,22 @@ msgid ""
 "place higher tier Units first.  If there's still a tie, the players decide "
 "the order."
 msgstr ""
+"w Scenariuszach w \\textbf{Trybie Kampanii} lub \\textbf{Trybie Kooperacyjnym} Jednostki Neutralne "
+"ustawiane są od lewej do prawej z perspektywy gracza, zaczynając od "
+"\\includesvg[height=10px]{\\svgs/unit_ranged.svg} jednostek w "
+"Tylnym rzędzie\\index{Ustawienie jednostek}.  Następnie rozstaw\\includesvg[height=10px]"
+"{\\svgs/unit_ground.svg} lub \\includesvg[height=10px]{\\svgs/unit_flying."
+"svg} Jednostki w Przednim rzędzie. Jeśli nie ma wystarczająco miejsca na rozstawienie Jednostki "
+"w odpowiednim dla niej Rzędzie, ustaw ją w kolejnym. Jednostki muszą być rozstawione w kolejności "
+"\\textbf{malejącej} Inicjatywy\\index{Inicjatywa}. W przypadku równych wartości, "
+"zacznij od Jednostek wyższego poziomu. Jeśli wciąż jest remis, decyzja o rozstawieniu należy do gracza "
+"the order."
 
 #. type: multicols
 #: sections/combat.tex:51
 msgid "Unit setup when fighting \\textbf{other players}:"
 msgstr ""
+"Rozstawianie jednostek w przypadku walki z \\textbf{innym Graczem} przebiega nastepująco:"
 
 #. type: itemize
 #: sections/combat.tex:51
@@ -131,6 +163,8 @@ msgid ""
 "The attacking player places up to 5 Units on their chosen side of the Combat "
 "Board, followed by the defender."
 msgstr ""
+"Gracz atakujący ustawia do pięciu Jednostek na wybrannej przez siebie stronie planszy "
+"Bitwy, zaraz po nim robi to Gracz broniący się."
 
 #. type: itemize
 #: sections/combat.tex:51
@@ -139,6 +173,9 @@ msgid ""
 "\\hyperlink{Walls}{Wall, Gate and Arrow Tower} cards after placing their "
 "Units."
 msgstr ""
+"Jeśli walka odbywa się w mieście w którym wybudowana jest Cytadela, Gracz broniący się dodaje "
+"\\hyperlink{Mury}{Mury, Gate and Arrow Tower} cards after placing their "
+"Units."
 
 #. type: multicols
 #: sections/combat.tex:51
