@@ -1,0 +1,194 @@
+# Polish translations for Homm package
+# Polskie tłumaczenia dla pakietu Homm
+# Copyright (C) 2024 Free Software Foundation, Inc.
+# This file is distributed under the same license as the Homm package.
+# Automatically generated, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Homm 3BG\n"
+"POT-Creation-Date: 2024-04-06 18:37+0300\n"
+"PO-Revision-Date: 2024-04-06 18:37+0300\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#.  !TeX spellcheck = en_US
+#. type: Plain text
+#: sections/ai_heroes.tex:3
+msgid "\\addsection{AI Heroes}{\\spells/fortune.png}"
+msgstr "\\addsection{Bohaterowie AI}{\\spells/fortune.png}"
+
+#. type: subsection{#2}
+#: sections/ai_heroes.tex:16
+msgid "AI Hero Turn"
+msgstr "Tura Bohatera AI"
+
+#. type: multicols
+#: sections/ai_heroes.tex:16
+msgid ""
+"\\hypertarget{AIrules}{AI Heroes} are used in the Campaigns.  They start in "
+"their Town, and have 3 MP, always spending them to perform the following "
+"Actions in descending priority:"
+msgstr ""
+"\\hypertarget{Zasady AI}{Bohaterowie AI} wykorzystywani są w Kampaniach. Każdy Bohater"
+"w Trybie Solo zaczyna grę w swoim Mieście, posiada 3 Punkty Ruchu (PR), które zawsze wykorzystuje"
+"do wykonania następujących działań według malejącego priorytetu:"
+
+#. type: itemize
+#: sections/ai_heroes.tex:16
+msgid ""
+"If a player's Hero is on the same Tile as the AI, spend all MP to move "
+"towards them in an attempt to start Combat."
+msgstr ""
+"Jeśli Bohater Gracza znajduje się na tym samym Kafelku co Bohater AI, wykorzystaj wszystkie posiadane"
+"Punkty Ruchu, aby przemieścić się w jego kierunku w celu rozpoczęcia Walki."
+
+#. type: itemize
+#: sections/ai_heroes.tex:16
+msgid ""
+"If there are any Mines or Settlements the AI could Flag on the same Tile, "
+"move towards the closest one."
+msgstr ""
+"Jeśli na tym samym Kafelku Mapy znajdują się Kopalnie lub Osady, które Bohater AI"
+"może zająć, przemieść się w kierunku najbliższej z nich."
+
+#. type: itemize
+#: sections/ai_heroes.tex:16
+msgid ""
+"Otherwise, move toward the player's Town.  Repeat this sequence until all "
+"MPs are used up.  AI Heroes take their turn after the player."
+msgstr ""
+"W pozostałych przypadkach poruszaj się w kierunku Miasta gracza."
+"Powtarzaj tę sekwencję, aż wykorzystasz wszystkie posiadane Punkty Ruchu (PR). Bohaterowie AI"
+"wykonują swoją turę po graczu."
+
+#. type: multicols
+#: sections/ai_heroes.tex:19
+msgid ""
+"AI Heroes always \\textbf{automatically win Combat} against any Neutral "
+"Units, while simultaneously \\textbf{Flagging or Visiting all Fields} they "
+"happen to move through.  They gain no benefits from any Fields."
+msgstr ""
+"Bohaterowie AI \\textbf{automatycznie wygrywają Walkę} przeciwko wszystkim Jednostkom Neutralnym,"
+"jednocześnie \\textbf{Zdobywając (przejmując) lub odwiedzając wszystkie pola}, przez które przechodzą."
+"Nie uzyskują żadnych korzyści z jakiegokolwiek pola."
+
+#. type: multicols
+#: sections/ai_heroes.tex:28
+msgid ""
+"AI Heroes must discover face down Map Tiles as normal by spending 1 MP "
+"before moving onto them.  The player chooses that Tile's orientation.\\par "
+"AI Heroes cannot Surrender and you cannot Surrender to them; they will "
+"always fight until they run out of Units.  Winning Combat against an AI Hero "
+"does not grant any rewards unless stated by the Scenario.  AI Heroes do not "
+"have a Town Board, Resources, or a Hero Card.  Their Units are static and "
+"defined by the Scenario's setup or other rules.\\par Any differences to the "
+"above will be described in any given Scenario's own rules."
+msgstr ""
+"Bohaterowie AI, podobnie jak gracze, muszą odkrywać nieodkryte Kafelki Mapy w sposób standardowy, wykorzystując"
+"1 Punkt Ruchu (PR), zanim się na niego przemieszczą. Gracz wybiera ułożenie tego Kafelka. \\par "
+"Bohaterowie AI nie mogą się poddać. Gracze również nie mogą się poddać Bohaterowi AI."
+"AI będzie walczyć aż do utraty wszystkich Jednostek."
+"Wygranie Walki z Bohaterem AI nie daje żadnych nagród, chyba że w Scenariuszu napisano inaczej."
+"Bohaterowie AI nie mają Planszy Miasta, Zasobów ani Karty Bohatera. Ich Jednostki są stałe i określone przez"
+"zasady Scenariusza lub inne zasady."
+"\\par Wszelkie odstąpienia od powyższych reguł będą opisane w zasadach danego Scenariusza."
+
+#. type: subsection{#2}
+#: sections/ai_heroes.tex:32
+msgid "AI Decks"
+msgstr "Talie AI"
+
+#. type: multicols
+#: sections/ai_heroes.tex:44
+msgid ""
+"AI Heroes use two automated Decks during Combat: the \\textbf{AI Deck}, and "
+"the \\textbf{Spell Deck}.  The AI Deck is built using three types of AI "
+"cards: Might \\includesvg[height=10px]{\\svgs/might.svg}, Magic "
+"\\includesvg[height=10px]{\\svgs/magic.svg} and Skill "
+"\\includesvg[height=10px]{\\svgs/skill.svg}.  Each Campaign scenario lists "
+"the number of each type of Card included in the AI Deck.  Might "
+"\\includesvg[height=10px]{\\svgs/might.svg} and Skill "
+"\\includesvg[height=10px]{\\svgs/skill.svg} Cards have two variations. "
+"Choose these cards \\textbf{randomly} when building the Deck.  If Skill "
+"Cards are included, search for and set aside the Ability Card related to "
+"it.  Build the AI's \\textbf{Spell Deck} by separating the indicated Spells "
+"from the regular Spell Deck.  Shuffle the AI and Spell Decks during setup "
+"after building them.\\par When an AI Hero \\textbf{Activates} a Unit, draw "
+"an AI Card\\index{AI Card} and follow its instructions before the Unit moves "
+"and/or attacks.  The effect of each AI card depends of the game's "
+"\\hyperlink{Difficulty}{Difficulty}.  The AI Spell Deck is used whenever a "
+"Magic Card \\includesvg[height=10px]{\\svgs/magic.svg} is drawn.  If an AI "
+"Hero is instructed to draw a card, they will draw and resolve "
+"\\textbf{another card} from the AI Deck."
+msgstr ""
+"Bohaterowie AI używają dwóch zautomatyzowanych Talii podczas Walki:"
+"\\textbf{Talii AI} oraz \\textbf{Talii Magii}. Talia AI jest budowana z wykorzystaniem"
+"trzech rodzajów kart AI: Mocy \\includesvg[height=10px]{\\svgs/might.svg},"
+"Magii \\includesvg[height=10px]{svgs/magic.svg} oraz Umiejętności \\includesvg[height=10px]{svgs/skill.svg}."
+"Każdy Scenariusz Kampanii podaje liczbę każdego rodzaju (typu) Karty AI wchodzącej w skład Talii AI."
+"Karty Mocy \\includesvg[height=10px]{svgs/might.svg} oraz Umiejętności \\includesvg[height=10px]{svgs/skill.svg}"
+"mają dwie wersje. Wybierz te karty \\textbf{losowo} w trakcie budowania Talii."
+"Jeśli w Talii są karty Umiejętności, wyszukaj i wybierz je odkładając na bok."
+"Zbuduj \\textbf{Talię Magii AI}, oddzielając wskazane Zaklęcia od zwykłej Talii Magii."
+"Po ich utworzeniu potasuj Talię AI i Talię Zaklęć podczas przygotowania gry."
+"\\par Gdy Bohater AI \\textbf{Aktywuje} Jednostkę, wylosuj Kartę AI\\index{Karta AI} i postępuj"
+"zgodnie z zapisanymi na niej instrukcjami zanim Jednostka wykona ruch i/lub zaatakuje. Efekt każdej Karty AI"
+"zależy od \\hyperlink{Poziom Trudności}{Poziomu Trudności} gry. Talii Magii AI używa się zawsze,"
+"gdy zostanie wylosowana Karta Magii \\includesvg[height=10px]{\\svgs/magic.svg}."
+"Jeśli Bohater AI otrzyma polecenie wylosowania karty, wylosuje i rozpatrzy \\textbf{kolejną kartę} z Talii AI."
+
+#. type: subsection{#2}
+#: sections/ai_heroes.tex:50
+msgid "Combat against AI"
+msgstr "Walka z AI"
+
+#. type: multicols
+#: sections/ai_heroes.tex:53
+msgid ""
+"These rules apply during Combat in \\textbf{Solo}\\index{Solo Mode} and "
+"\\textbf{Cooperative} Scenarios.  When Neutral enemies or AI Heroes activate "
+"a unit, they follow a set of automatic instructions:"
+msgstr ""
+"Niniejsze zasady obowiązują podczas Walki w trybach \\textbf{Solo}\\index{Tryb Solo}"
+"oraz \\textbf{Kooperacyjnym}. Gdy neutralni wrogowie lub Bohaterowie AI aktywują"
+"Jednostkę, wykonują szereg automatycznych poleceń."
+
+#. type: multicols
+#: sections/ai_heroes.tex:61
+msgid ""
+"Enemy Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying "
+"\\includesvg[height=10px]{\\svgs/unit_flying.svg} Units prioritize attacking "
+"Units of the same tier.  If this is impossible, they attack the closest "
+"Unit, prioritizing the lowest tier one.\\par Ranged \\includesvg[height=10px]"
+"{\\svgs/unit_ranged.svg} Units prioritize attacking other Ranged "
+"\\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units of the same tier, "
+"then lower tier, and finally higher tier.  If there are no Ranged "
+"\\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, "
+"they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and "
+"Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same "
+"tier order.  If there's more than one valid target, they attack the closest "
+"one.\\par If there's ever a tie between equally valid targets for any Units, "
+"the player chooses which Unit is attacked.  Enemy units cannot "
+"\\hyperlink{Defend}{Defend} unless instructed to."
+msgstr ""
+"Wrogie Jednostki Naziemne \\includesvg[height=10px]{\\svgs/unit_ground.svg} oraz "
+"Latające \\includesvg[height=10px]{\\svgs/unit_flying.svg} "
+"atakują w pierwszej kolejności Jednostki tego samego poziomu. Jeśli jest to niemożliwe, "
+"atakują najbliższą Jednostkę, priorytetowo najniższego poziomu.\\par Jednostki "
+"Strzelające \\includesvg[height=10px]{\\svgs/unit_ranged.svg} "
+"atakują w pierwszej kolejności inne Jednostki Strzelające \\includesvg[height=10px]{\\svgs/unit_ranged.svg} "
+"tego samego poziomu, następnie niższego poziomu, a w końcu wyższego. Jeśli nie "
+"ma Jednostek Strzelających, które mogłyby być celem Ataku, w pierwszej kolejności atakują "
+"Jednostki Lądowe \\includesvg[height=10px]{\\svgs/unit_ground.svg} oraz "
+"Latające \\includesvg[height=10px]{\\svgs/unit_flying.svg} w tej samej "
+"kolejności poziomów. Jeśli jest więcej niż jeden możliwy cel, atakują najbliższy."
+"\\par Jeśli wystąpi remis pomiędzy celami ataku dla"
+"jakichkolwiek Jednostek, gracz wybiera, która Jednostka jest atakowana. "
+"Jednostki wrogów nie mogą \\hyperlink{Obrona}{się bronić}, chyba że otrzymają takie polecenie."
