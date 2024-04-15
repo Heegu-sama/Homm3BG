@@ -22,7 +22,7 @@ msgstr ""
 #. type: Plain text
 #: sections/ai_heroes.tex:3
 msgid "\\addsection{AI Heroes}{\\spells/fortune.png}"
-msgstr ""
+msgstr "\\addsection{Bohaterowie AI}{\\spells/fortune.png}"
 
 #. type: multicols
 #: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
@@ -41,7 +41,8 @@ msgid ""
 "{2}\n"
 "\n"
 msgstr ""
-
+"{2}\n"
+"\n"
 #. type: multicols
 #: sections/ai_heroes.tex:16
 #, no-wrap
@@ -58,6 +59,18 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{Tura Bohatera AI}\n"
+"\\hypertarget{Zasady AI}{Bohaterowie AI} wykorzystywani są w Kampaniach.\n"
+"Każdy Bohater AI w Trybie Solo zaczyna grę w swoim Mieście, posiada 3 Punkty RUchu (PR), które zawsze"
+"wykorzystuje do następujących działań według malejącego priorytetu:"
+"begin{itemize}\n"
+"  \\item Jeśli Bohater Gracza znajduje się na tym samym Kafelku co Bohater AI, wykorzystaj wszystkie posiadane PR, aby przemieścić się w jego kierunku w celu rozpoczęcia Walki.\n"
+"  \\item Jeśli na tym samym Kafelku Mapy znajdują się Kopalnie lub Osady, które Bohater AI może zając, przemieść się w kierunku najbliższej z nich.\n"
+"  \\item W pozostałych przypadkach poruszaj się w kierunku Miasta gracza.\n"
+"Powtarzaj tę sekwencję, aż wykorzystasz wszystkie posiadane PR.\n"
+"Bohaterowie AI wykonują swoją turę po graczu.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:19
@@ -67,6 +80,9 @@ msgid ""
 "They gain no benefits from any Fields.\n"
 "\n"
 msgstr ""
+"Bohater AI \\textbf{automatycznie wygrywa Walkę} przeciwko wszystkim Jednostkom Neutralnym, jednocześnie \\textbf{Zdobywając lub odwiedzając wszystkie pola}, prze które przechodzą.\n"
+"Nie uzyskują żadnych korzyści z jakiegokolwiek pola.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:28
@@ -82,6 +98,15 @@ msgid ""
 "Any differences to the above will be described in any given Scenario's own rules.\n"
 "\n"
 msgstr ""
+"Bohaterowie AI, podobnie jak gracze, muszą odkrywać nieodkryte Kafelki Mapy w sposób standardowy, wykorzystując 1 PR zanim się na niego przemieszczą.\n"
+"Gracz wybiera ułożenie tego Kafelka.\\par\n"
+"Bohaterowie AI nie mogą się poddać. Gracze również nie mogą się poddać Bohaterowi AI.\n"
+"Bohater AI walczy aż do utraty wszystkich Jednostek\n"
+"Wygranie Walki z Bohaterem AI nie daje żadnych nagród, chyba że w Scenariuszu określono inaczej.\n"
+"Bohaterowie AI nie mają Planszy Miasta, Zasobów ani Karty Bohatera.\n"
+"Ich Jednostki są stałe i określone w Scenariuszu lub w innych zasadach.\\par\n"
+"Wszelkie różnice od powyższych reguł zostaną opisane w zasadach danego Scenariusza.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_heroes.tex:30 sections/ai_heroes.tex:48
@@ -93,6 +118,8 @@ msgid ""
 "\\vfill\n"
 "\n"
 msgstr ""
+"\\vfill\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:32
@@ -101,6 +128,8 @@ msgid ""
 "\\subsection*{AI Decks}\n"
 "\n"
 msgstr ""
+"\\subsection*{Talie AI}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:44
@@ -119,6 +148,19 @@ msgid ""
 "If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
 "\n"
 msgstr ""
+"Bohaterowie AI używają dwóch zautomatyzowanych Talii podczas Walki:"
+"\\textbf{Talii AI} oraz \\textbf{Talii Magii}.\n"
+"Talia AI jest budowana z wykorzystaniem trzech rodzajów kart AI: Mocy \\includesvg[height=10px]{\\svgs/might.svg}, Magii \\includesvg[height=10px]{svgs/magic.svg} oraz Umiejętności \\includesvg[height=10px]{svgs/skill.svg}.\n"
+"Każdy Scenariusz Kampanii podaje liczbę każdego rodzaju (typu) Karty AI wchodzącej w skład Talii AI.\n"
+"Karty Mocy \\includesvg[height=10px]{svgs/might.svg} oraz Umiejętności \\includesvg[height=10px]{svgs/skill.svg} mają dwie wersje. Wybierz te karty \\textbf{losowo} w trakcie budowania Talii.\n"
+"Jeśli w Talii są karty Umiejętności, wyszukaj i wybierz je odkładając na bok."
+"Zbuduj \\textbf{Talię Magii AI}, oddzielając wskazane Zaklęcia od zwykłej Talii Magii.\n"
+"Po ich utworzeniu potasuj Talię AI i Talię Zaklęć podczas przygotowania gry.\\par\n"
+"Gdy Bohater AI \\textbf{Aktywuje} Jednostkę, wylosuj Kartę AI\\index{Karta AI} i postępuj zgodnie z zapisanymi na niej instrukcjami zanim Jednostka wykona ruch i/lub zaatakuje.\n"
+"Efekt każdej Karty AI zależy od \\hyperlink{Poziom Trudności}{Poziomu Trudności} gry.\n"
+"Talii Magii AI używa się zawsze, gdy zostanie wylosowana Karta Magii \\includesvg[height=10px]{\\svgs/magic.svg}.\n"
+"Jeśli Bohater AI otrzyma polecenie wylosowania karty, wylosuje i rozpatrzy \\textbf{kolejną kartę} z Talii AI.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:46
@@ -127,6 +169,8 @@ msgid ""
 "\\includegraphics[width=\\linewidth]{\\cards/ai.png}\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{\\cards/ai.png}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:50
@@ -135,6 +179,8 @@ msgid ""
 "\\subsection*{Combat against AI}\n"
 "\n"
 msgstr ""
+"\\subsection*{Walka z AI}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:53
@@ -144,6 +190,9 @@ msgid ""
 "When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\\par\n"
 "\n"
 msgstr ""
+"Niniejsze zasady obowiązują podczas Walki w trybach \\textbf{Solo}\\index{Tryb Solo} oraz \\textbf{Kooperacyjnym}.\n"
+"Gdy neutralni wrogowie lub Bohaterowie AI aktywują Jednostkę, wykonują szereg automatycznych poleceń:\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:61
@@ -158,6 +207,14 @@ msgid ""
 "Enemy units cannot \\hyperlink{Defend}{Defend} unless instructed to.\n"
 "\n"
 msgstr ""
+"Wrogie Jednostki Naziemne \\includesvg[height=10px]{\\svgs/unit_ground.svg} oraz Latające \\includesvg[height=10px]{\\svgs/unit_flying.svg} atakują w pierwszej kolejności Jednostki tego samego poziomu.\n"
+"Jeśli jest to niemożliwe, atakują najbliższą Jednostkę, priorytetowo najniższego poziomu.\\par\n"
+"Jednostki Strzelające \\includesvg[height=10px]{\\svgs/unit_ranged.svg} atakują w pierwszej kolejności inne Jednostki Strzelające \\includesvg[height=10px]{\\svgs/unit_ranged.svg} tego samego poziomu, następnie niższego poziomu, a w końcu wyższego.\n"
+"Jeśli nie ma Jednostek Strzelających, które mogłyby być celem Ataku, w pierwszej kolejności atakują Jednostki Lądowe \\includesvg[height=10px]{\\svgs/unit_ground.svg} oraz Latające \\includesvg[height=10px]{\\svgs/unit_flying.svg} w tej samej kolejności poziomów.\n"
+"Jeśli jest więcej niż jeden możliwy cel, atakują najbliższy. \\par\n"
+"Jeśli wystąpi remis pomiędzy celami ataku dla jakichkolwiek Jednostek, gracz wybiera, która Jednostka jest atakowana.\n"
+"Jednostki wrogów nie mogą \\hyperlink{Obrona}{się bronić}, chyba że otrzymają takie polecenie.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:65
@@ -166,7 +223,8 @@ msgid ""
 "\\includegraphics[width=\\linewidth]{\\art/coin.png}\n"
 "\n"
 msgstr ""
-
+"\\includegraphics[width=\\linewidth]{\\art/coin.png}\n"
+"\n"
 #. type: multicols
 #: sections/ai_heroes.tex:69
 #, no-wrap
@@ -176,3 +234,7 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"    \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/titan.jpg}\n"
+"\\end{center}\n"
+"\n"
