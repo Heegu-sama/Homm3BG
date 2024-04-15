@@ -178,19 +178,7 @@
 
 \begin{document}
 
-\begin{titlepage}
-  \begin{tikzpicture}[remember picture, overlay, inner sep=10pt]
-    \node(cover)[anchor=center] at (current page.center) {
-      \includegraphics[height=\paperheight, keepaspectratio]{\layout/cover.jpg}
-    };
-    \node(title)[minimum width = \paperwidth, anchor=center, yshift=-10em] at (current page.north) {
-      \includegraphics[width=0.6\paperwidth]{\layout/cover_title.png}
-    };
-    \node(subtitle)[anchor=center, yshift=10em] at (current page.south) {
-      \includegraphics[width=0.6\paperwidth]{\layout/cover_subtitle.png}
-    };
-  \end{tikzpicture}
-\end{titlepage}
+\include{\sections/title_page.tex}
 
 \author{Hermanni "Heegu" Karppela}
 \maketitle
