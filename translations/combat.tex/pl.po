@@ -61,7 +61,7 @@ msgstr ""
 #. type: Plain text
 #: sections/combat.tex:3
 msgid "\\addsection{Combat}{\\skills/attack.png}"
-msgstr ""
+msgstr "\\addsection{Walka}{\\skills/attack.png}"
 
 #. type: multicols
 #: sections/combat.tex:7
@@ -70,6 +70,8 @@ msgid ""
 "\\hypertarget{Combat}{Combat}\\index{Combat} with \\textbf{Neutral Units} starts when a Hero moves to an unvisited Field with a roman numeral, signifying the \\hyperlink{Difficulty}{type and number} of Neutral Units guarding that Field.\n"
 "\n"
 msgstr ""
+"\\hypertarget{Walka}{Walka}\\index{Walka} z \\textbf{Jednostkami Neutralnymi} rozpoczyna się, gdy Bohater wejdzie na nieodwiedzone Pole oznaczone cyfrą rzymską, określającą \\hyperlink{Poziom trudności}{typ oraz ilość} napotkanych Jednostek broniących tego Pola.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:14
@@ -83,6 +85,12 @@ msgid ""
 "Players are able to start multiple Combats during their Turn.\n"
 "\n"
 msgstr ""
+"Walkę z \\textbf{drugim Graczem} można rozpocząć na dwa sposoby:\n"
+"\\begin{itemize}\n"
+"  \\item Wchodząc na Pole okupowane przez wrogiego Bohatera\n"
+"  \\item Zajmując wcześniej zdobyte przez przeciwnika Miasto lub Lokację.\n"
+"\\end{itemize}\n"
+"Gracz może rozpocząć wiele Walk podczas tej samej Tury.\n"
 
 #. type: multicols
 #: sections/combat.tex:16
@@ -91,6 +99,8 @@ msgid ""
 "\\subsection*{\\hypertarget{Combatsetup}{Combat Setup}}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Przygotowania do Walki}{Przygotowania do Walki}}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:20
@@ -101,6 +111,10 @@ msgid ""
 "Follow these steps when Combat begins against \\textbf{Neutral Units}:\n"
 "\n"
 msgstr ""
+"Walka odbywa się na Planszy Walki 4 x 5, składającej się z dwóch\n"
+"sekcji przedzielonych środkowym rzędem. Każda z sekcji składa się z rzędu tylnego oraz rzędu przedniego. Przed\n"
+"początkiem Bitwy przeciwko \\textbf{Neutralnym Jednostkom} wykonaj nastepujące kroki:\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:51
@@ -138,6 +152,36 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\begin{itemize}\n"
+"  \\item Wybierz jedną ze stron planszy Bitwy.\n"
+"    Rozmieść do pięciu jednostek w dowolny sposób na Przednim oraz Tylnym rzędzie wybranej strony Planszy Walki.\n"
+"  \\item Sprawdź \\hyperlink{Poziom trudności}{\\textbf{Tabelę Trudności Pola}} i dobierz odpowiednią ilość Kart Jednostek Neutralnych z ich Talii.\n"
+"  \\item Neutralne Jednostki ustawia się w sposób zależny o wybranego Trybu Gry:\n"
+"  \\item W Scenariuszach w\\textbf{Trybie Starcia} lub \\textbf{Trybie Sojuszu}, wrogi Gracz siedzący po twojej prawej stronie kontroluje Jednostki Neutralne i decyduje o ich ustawieniu.\n"
+"    \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Jednostki muszą być ustawione w Tylnym rzędzie, jeśli to możliwe.\n"
+"  \\item W Scenariuszach w \\textbf{Trybie Kampanii} lub \\textbf{Trybie Kooperacyjnym} Jednostki Neutralne ustawiane są od lewej do prawej z perspektywy gracza , zaczynając od \\includesvg[height=10px]{\\svgs/unit_ranged.svg} jednostek w Tylnym rzędzie\\index{Ustawienie Jednostek}.\n"
+"Następnie rozstaw\\includesvg[height=10px]{\\svgs/unit_ground.svg} lub \\includesvg[height=10px]{\\svgs/unit_flying.svg} Jednostki w Przednim rzędzie.\n"
+"Jeśli nie ma wystarczająco miejsca na rozstawienie Jednostki w odpowiednim dla niej rzędzie, ustaw ją w kolejnym.\n"
+"Jednostki muszą być rozstawione w kolejności \\textbf{malejącej} Inicjatywy\\index{Inicjatywa}.\n"
+"W przypadku równych wartości, zacznij od Jednostek wyższego poziomu.\n"
+"Jeśli wciąż jest remis, decyzja o rozstawieniu należy do gracza.\n"
+"\\end{itemize}\n"
+"Rozstawianie Jednostek w przypadku Walki z \\textbf{innym Graczem} przebiega następująco:\n"
+"\\begin{itemize}[wide]\n"
+"  \\item Gracz atakujący ustawia do pięciu Jednostek na wybranej przez siebie stronie Planszy Bitwy, zaraz po nim robi to gracz broniący się.\n"
+"  \\item If the Combat takes place in a Town with a Citadel, the defender adds the \\hyperlink{Walls}{Wall, Gate and Arrow Tower} cards after placing their Units.\n"
+"\\end{itemize}\n"
+"\\vfill\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=0.55\\linewidth]{\\art/aging.png}\n"
+"\\end{center}\n"
+"\\vfill\n"
+"\\note{11}{\n"
+"    Jeśli twoje Miasto lub Osada są atakowane przez wrogiego Bohatera, a twój Bohater nie znajduje się na tym polu, możesz \\textbf{zapłacić 8} \\includesvg[height=10px]{\\svgs/gold.svg} aby bronić danej Lokacji \\textbf{wykorzystując posiadane Jednostki}.\n"
+"    Twój Bohater nie bierze udziału w tej Walce, przez co nie możesz korzystać ze swojej Talii.\n"
+"    Opłata w Złocie jest kosztem przetransportowania jednostek w dane miejsce.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:77
@@ -338,6 +382,8 @@ msgid ""
 "\\subsection*{\\hypertarget{Combatexperience}{Combat Experience}}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Doświadczenie zdobyte w Walce}{Doświadczenie zdobyte w Walce}}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:193
@@ -353,6 +399,15 @@ msgid ""
 "You also do not gain Experience from \\textbf{defeating} a Secondary Hero, or if an enemy Hero \\textbf{Surrenders} to you.\n"
 "\n"
 msgstr ""
+"Po wygranej Walce Bohater Główny zdobywa Doświadczenie\\index{Doświadczenie}.\n"
+"Jeśli poziom Trudności Pola albo Poziom Wrogiego Bohatera jest \\textbf{równy} Twojemu Poziomowi, otrzymujesz 1 \\includesvg[height=10px]{\\svgs/experience.svg}.\n"
+"Jeśli jest \\textbf{wyższy} niż twój Poziom, zdobywasz 2 \\includesvg[height=10px]{\\svgs/experience.svg}.\n"
+"Pokonanie Błękitnych Jednostek Neutralnych \\includesvg[height=10px]{\\svgs/azure.svg} \\textbf{natychmiast} awansuje Twojego Bohatera na 7 Poziom Doświadczenia.\n"
+"Jeśli kiedykolwiek zdobędziesz kilka Poziomów na raz, rozwiąż ich efekty w kolejności.\n"
+"Zdobycie nowego Poziomu należy rozpatrzyć przed Odwiedzeniem Pola, na którym miała miejsce Walka.\\par\n"
+"Bohater Pomocniczy nie może otrzymać Doświadczenia.\n"
+"Również nie otrzymujesz Doświadczenia za \\textbf{pokonanie} Bohatera Pomocniczego lub w przypadku gdy wrogi Bohater \\textbf{Podda się}.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:197
@@ -363,6 +418,10 @@ msgid ""
 "The player is considered to have beaten the Neutral Units by default and gains no rewards from the Combat.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Szybka Walka}{Szybka Walka}}\\index{Szybka Walka}\n"
+"Jeśli Poziom twojego Bohatera jest wyższy niż poziom Trudności Pola, odnosisz zwycięstwo \\textbf{bez Walki}.\n"
+"Gracz nie zdobywa żadnych nagród z Walki.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:200
@@ -372,6 +431,9 @@ msgid ""
 "During these game modes, all enemy Units activate according to the rules in \\hyperlink{AIrules}{the next section}.\n"
 "\n"
 msgstr ""
+"\\subsection*{Kampania i Walka Kooperacyjna}\n"
+"W tych Trybach Gry, wszystkie Wrogie Jednostki aktywują się zgodnie z zasadami \\hyperlink{Zasady AI}{opisanymi w następnej sekcji}.\n"
+"\n"
 
 #. type: scaledfigure
 #: sections/combat.tex:208
@@ -385,7 +447,8 @@ msgstr ""
 #. type: subsection{#2}
 #: sections/combat.tex:212
 msgid "Combat Example"
-msgstr ""
+msgstr "Przykładowa Walka"
+
 
 #. type: multicols*
 #: sections/combat.tex:219
@@ -399,6 +462,13 @@ msgid ""
 "They would both be permitted to play any number of additional cards in any order, but they decide to stop after playing these cards.}\\par\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\textit{Zombie Boba atakują Gryfy Alicji.\n"
+"Po deklaracji ataku obaj gracze mogą zmodyfikować Atak i Obronę swoich Jednostek zagrywając dowolną liczbę \\includesvg[height=10px]{\\svgs/instant.svg} Kart zwiększających ich \\includesvg[height=10px]{\\svgs/attack.svg} lub \\includesvg[height=10px]{\\svgs/defense.svg}.}\\par\n"
+"\\textit{Bob decyduje sę zagrać Kartę Ataku +1, zwiększając Atak Zombie z 2 na 3.\n"
+"Alicja odpowiada zagrywając kartę Obrony +1, zwiększając obronę Gryfów z 0 do 1.\n"
+"Oboje mogą zagrać dowolną ilość dodatkowych Kart w dowolnej kolejności, lecz decydują się na tym poprzestać.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:221
@@ -421,6 +491,14 @@ msgid ""
 "The previously played Attack and Defense cards no longer have any effect.}\n"
 "\n"
 msgstr ""
+"\\textit{Po zagraniu wszystkich kart dla danej sekwencji ataku wykonywany jest rzut Kością Ataku celem policzenia jego całkowitej siły .\n"
+"Bob wyrzuca +1.\n"
+"Zwiększa to Atak Zombie z 3 na 4, który zostaje pomniejszony o wartość Obrony Gryfów (1). Gryfy otrzymują 3 \\includesvg[height=10px]{\\svgs/damage.svg}. Ponieważ ich PŻ \\includesvg[height=10px]{\\svgs/health_points.svg} wynosi 4, ich karta nie zostaje obrócona na stronę \"Kilka\" .}\\par\n"
+"\\textit{Na Gryfach nie ma położonej Czarnej Kostki, więc wykonują one Kontratak.\n"
+"Z reguły powinno się na nich kłaść Kostkę, jednakże ich Specjalna \\includesvg[height=10px]{\\svgs/unit_retaliate.svg} Zdolność umożliwia wykonanie Kontrataku nieograniczoną ilość razy, więc Kostki się nie ustawia.}\\par\n"
+"\\textit{Obaj Gracze ponownie mogą zmodyfikować Statystyki swoich Jednostek podczas Kontrataku.\n"
+"Poprzednio zagrane karty Ataku i Obrony nie wliczają się już do tego ataku.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:233
