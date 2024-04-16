@@ -9,10 +9,10 @@ Click in the table to download the most recent builds in the chosen language:
 
 |                |📜 **Rewritten Rule Book** |🖨️ **Rule Book - printable version** |📋 **Comprehensive Components List**|
 |:---------------|:-------------------------:|:-----------------------------------:|:----------------------------------:|
-| 🇬🇧 English    |[🇬🇧📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/main_en/main_en.pdf)|[🇬🇧🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/printable_en/printable_en.pdf)| [🇬🇧📋](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf) |
-| 🇵🇱 Polish     |[🇵🇱📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/main_pl/main_pl.pdf) | n/a | n/a |
-| 🇪🇸 Spanish    | n/a | n/a | n/a |
-| 🇫🇷 French     | n/a | n/a | n/a |
+| 🇬🇧 English    |[🇬🇧📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf)|[🇬🇧🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf)| [🇬🇧📋](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf) |
+| 🇵🇱 Poski     |[🇵🇱📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf) | n/a | n/a |
+| 🇪🇸 Español    | n/a | n/a | n/a |
+| 🇫🇷 Français   | n/a | n/a | n/a |
 
 
 ⚠️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞

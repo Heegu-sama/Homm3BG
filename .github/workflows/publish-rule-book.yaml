@@ -57,19 +57,19 @@ jobs:
 
       - name: Move file
         run: |
-          mkdir main_${{ matrix.language }}
-          mv main_${{ matrix.language }}.pdf main_${{ matrix.language }}
+          mkdir ${{ matrix.language }}
+          mv main_${{ matrix.language }}.pdf ${{ matrix.language }}
 
-      - name: Publish main_${{ matrix.language }}.pdf in artifacts repository
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          deploy_key: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}
-          external_repository: qwrtln/Homm3BG-build-artifacts
-          publish_branch: main_${{ matrix.language }}
-          publish_dir: ./main_${{ matrix.language }}
-          force_orphan: true
+      # - name: Publish main_${{ matrix.language }}.pdf in artifacts repository
+      #   uses: peaceiris/actions-gh-pages@v4
+      #   with:
+      #     deploy_key: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}
+      #     external_repository: qwrtln/Homm3BG-build-artifacts
+      #     publish_branch: main_${{ matrix.language }}
+      #     publish_dir: ./main_${{ matrix.language }}
+      #     force_orphan: true
 
-      # Steps below publish printable version, which for now is available in English only
+      # Printable build for now is available in English only
 
       - uses: actions/setup-python@v5
         if: ${{ matrix.language == 'en' }}
@@ -102,15 +102,13 @@ jobs:
       - name: Move file
         if: ${{ matrix.language == 'en' }}
         run: |
-          mkdir printable_${{ matrix.language }}
-          mv main_${{ matrix.language }}.pdf printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf
+          mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
 
-      - name: Publish in artifacts repository
-        if: ${{ matrix.language == 'en' }}
+      - name: Publish ${{ matrix.language }} in artifacts repository
         uses: peaceiris/actions-gh-pages@v4
         with:
           deploy_key: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}
           external_repository: qwrtln/Homm3BG-build-artifacts
-          publish_branch: printable_${{ matrix.language }}
-          publish_dir: ./printable_${{ matrix.language }}
+          publish_branch: ${{ matrix.language }}
+          publish_dir: ./${{ matrix.language }}
           force_orphan: true
