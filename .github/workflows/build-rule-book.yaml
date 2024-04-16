@@ -8,7 +8,7 @@ on:
   pull_request:
     branches: [main]
     paths-ignore:
-      - ".github/**"
+      # - ".github/**"
       - "assets/gimp-files/**"
       - "components_lists/**"
       - .aspell.homm3.pws
@@ -43,14 +43,33 @@ jobs:
           ./${PO4A_DIR}/po4a -v --no-update po4a.cfg
 
       - name: Compile LaTeX document
+        if: ${{ matrix.language != 'en' }}
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
           root_file: main_${{ matrix.language }}.tex
           latexmk_shell_escape: true
 
-      - uses: actions/upload-artifact@v4
+      # - uses: actions/upload-artifact@v4
+      #   if: ${{ matrix.language != 'en' }}
+      #   with:
+      #     name: main_${{ matrix.language }}
+      #     path: main_${{ matrix.language }}.pdf
+      - name: Move document to a directory
         if: ${{ matrix.language != 'en' }}
+        run: |
+          mkdir ${{ matrix.language }}
+          mv main_${{ matrix.language }}.pdf ${{ matrix.language }}
+
+      - name: Pushes document to build repository
+        if: ${{ matrix.language != 'en' }}
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}
         with:
-          name: main_${{ matrix.language }}
-          path: main_${{ matrix.language }}.pdf
+          source-directory: '${{ matrix.language }}'
+          destination-github-username: 'qwrtln'
+          destination-repository-name: 'Homm3BG-build-artifacts'
+          # user-email: carles3@pina.cat
+          target-branch: main_${{ matrix.language }}
+          create-target-branch-if-needed: true
