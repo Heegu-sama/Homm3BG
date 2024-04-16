@@ -3,20 +3,11 @@ name: Build Components List
 on:
   pull_request:
     branches: [main]
-    paths-ignore:
-      - ".github/**"
-      - "assets/gimp-files/**"
-      - "sections/**"
-      - "translations/**"
-      - .aspell.homm3.pws
-      - .gitignore
-      - .pre-commit-config.yaml
-      - README.md
-      - main_en.tex
-      - main_pl.tex
-      - make_printable.sh
-      - metadata.tex
-      - po4a.cfg
+    paths:
+      - 'assets/**'
+      - '!assets/gimp-files/**'
+      - 'components_list.tex'
+      - 'components_lists/**'
 
 jobs:
   build_components_list:
@@ -31,9 +22,3 @@ jobs:
           extra_system_packages: "inkscape"
           root_file: components_list.tex
           latexmk_shell_escape: true
-
-      - name: Upload pdf as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: COMPONENTS_LIST_PDF
-          path: components_list.pdf

@@ -1,0 +1,103 @@
+name: Publish Rule Book
+
+on:
+  # push:
+  #   branches:
+  #     - main
+  pull_request:
+    branches: [main]
+
+env:
+  BOARD_GAME_GEEK_RULE_BOOK: https://boardgamegeek.com/filepage/272787
+  BOARD_GAME_GEEK_COMPONENTS_LIST: https://boardgamegeek.com/filepage/276593
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [en, pl]
+        include:
+          - language: en
+            version: Version
+            warning: ""
+          - language: pl
+            version: Wersja
+            warning: "To jest nieopublikowana wersja zbudowana na GitHubie z commita ${GITHUB_SHA::7}"
+
+    steps:
+      - name: Set up repository
+        uses: actions/checkout@v4
+
+      - name: Replace rule book version with a warning
+        run: |
+          VERSION=$(grep -P "^[\ ]*${{ matrix.version }} \d{1,}.\d{1,}$" main_${{ matrix.language }}.tex)
+          RELEASE_PAGE="${{ github.server_url }}/${{ github.repository }}/releases"
+          WARNING="This is an unreleased version built on GitHub from commit ${GITHUB_SHA::7}. To download the latest official release, please go to \\\href{${RELEASE_PAGE}}{GitHub release page} or \\\href{${{ env.BOARD_GAME_GEEK_RULE_BOOK }}}{BoardGameGeek files section}."
+          sed -i "s@$VERSION@$WARNING@g" main_${{ matrix.language }}.tex
+
+      - name: Compile rule book
+        uses: xu-cheng/latex-action@v3
+        with:
+          extra_system_packages: "inkscape"
+          latexmk_shell_escape: true
+          root_file: main_${{ matrix.language }}.tex
+
+      - name: Move file
+        run: |
+          mkdir main_${{ matrix.language }}
+          mv main_${{ matrix.language }}.pdf main_${{ matrix.language }}
+
+      - name: Publish main_en.pdf in artifacts repository
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          deploy_key: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}
+          external_repository: qwrtln/Homm3BG-build-artifacts
+          publish_branch: main_${{ matrix.language }}
+          publish_dir: ./main_${{ matrix.language }}
+          force_orphan: true
+
+      - uses: actions/setup-python@v5
+        if: ${{ matrix.language == 'en' }}
+        with:
+          python-version: "3.11"
+
+      - name: Add pages to select hyperlinks
+        if: ${{ matrix.language == 'en' }}
+        run: |
+          find sections -type f | xargs -n 1 sed -i "s@\\\hypertarget@\\\pagetarget@g"
+          python .github/insert_printable_hyperlinks.py
+
+      - name: Include index page
+        if: ${{ matrix.language == 'en' }}
+        run: sed -i "s@\\\include{\\\sections/back_cover.tex}@\\\include{\\\sections/index.tex}\\\include{\\\sections/back_cover.tex}@g" metadata.tex
+
+      - name: Add QR codes
+        if: ${{ matrix.language == 'en' }}
+        run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes-en.tex' -e 'd}' metadata.tex
+
+      - name: Compile printable rule book
+        if: ${{ matrix.language == 'en' }}
+        uses: xu-cheng/latex-action@v3
+        with:
+          extra_system_packages: "inkscape"
+          latexmk_shell_escape: true
+          post_compile: "makeindex main_en -s index_style.ist && pdflatex --shell-escape main_en.tex"
+          root_file: main_en.tex
+
+      - name: Move file
+        if: ${{ matrix.language == 'en' }}
+        run: |
+          mkdir printable_${{ matrix.language }}
+          mv main_${{ matrix.language }}.pdf printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf
+
+      - name: Publish in artifacts repository
+        if: ${{ matrix.language == 'en' }}
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          deploy_key: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}
+          external_repository: qwrtln/Homm3BG-build-artifacts
+          publish_branch: printable_${{ matrix.language }}
+          publish_dir: ./printable_${{ matrix.language }}
+          force_orphan: true

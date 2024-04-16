@@ -7,16 +7,13 @@ env:
 on:
   pull_request:
     branches: [main]
-    paths-ignore:
-      # - ".github/**"
-      - "assets/gimp-files/**"
-      - "components_lists/**"
-      - .aspell.homm3.pws
-      - .gitignore
-      - .pre-commit-config.yaml
-      - README.md
-      - components_list.tex
-      - make_printable.sh
+    paths:
+      - 'assets/**'
+      - '!assets/gimp-files/**'
+      - '**.tex'
+      - '**.po'
+      - '!components_list.tex'
+      - '!components_list/**'
 
 jobs:
   build_rule_book:
@@ -50,35 +47,8 @@ jobs:
           root_file: main_${{ matrix.language }}.tex
           latexmk_shell_escape: true
 
-      # - uses: actions/upload-artifact@v4
-      #   if: ${{ matrix.language != 'en' }}
-      #   with:
-      #     name: main_${{ matrix.language }}
-      #     path: main_${{ matrix.language }}.pdf
-      - name: Move document to a directory
+      - uses: actions/upload-artifact@v4
         if: ${{ matrix.language != 'en' }}
-        run: |
-          mkdir ${{ matrix.language }}
-          mv main_${{ matrix.language }}.pdf ${{ matrix.language }}
-
-      # - name: Pushes document to build repository
-      #   if: ${{ matrix.language != 'en' }}
-      #   uses: cpina/github-action-push-to-another-repository@main
-      #   env:
-      #     SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}
-      #   with:
-      #     source-directory: '${{ matrix.language }}'
-      #     destination-github-username: 'qwrtln'
-      #     destination-repository-name: 'Homm3BG-build-artifacts'
-      #     # user-email: carles3@pina.cat
-      #     target-branch: main_${{ matrix.language }}
-      #     create-target-branch-if-needed: true
-
-      - name: Publish in artifacts repository
-        uses: peaceiris/actions-gh-pages@v4
         with:
-          deploy_key: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}
-          external_repository: qwrtln/Homm3BG-build-artifacts
-          publish_branch: main_${{ matrix.language }}
-          publish_dir: ./${{ matrix.language }}
-          force_orphan: true
+          name: main_${{ matrix.language }}
+          path: main_${{ matrix.language }}.pdf
