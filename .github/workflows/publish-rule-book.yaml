@@ -9,7 +9,8 @@ on:
 
 env:
   BOARD_GAME_GEEK_RULE_BOOK: https://boardgamegeek.com/filepage/272787
-  BOARD_GAME_GEEK_COMPONENTS_LIST: https://boardgamegeek.com/filepage/276593
+  PO4A_VERSION: "0.71"
+  PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
 
 jobs:
   build:
@@ -21,10 +22,10 @@ jobs:
         include:
           - language: en
             version: Version
-            warning: ""
+            # warning: ""
           - language: pl
             version: Wersja
-            warning: "To jest nieopublikowana wersja zbudowana na GitHubie z commita ${GITHUB_SHA::7}"
+            # warning: "To jest nieopublikowana wersja zbudowana na GitHubie z commita ${GITHUB_SHA::7}"
 
     steps:
       - name: Set up repository
@@ -36,6 +37,16 @@ jobs:
           RELEASE_PAGE="${{ github.server_url }}/${{ github.repository }}/releases"
           WARNING="This is an unreleased version built on GitHub from commit ${GITHUB_SHA::7}. To download the latest official release, please go to \\\href{${RELEASE_PAGE}}{GitHub release page} or \\\href{${{ env.BOARD_GAME_GEEK_RULE_BOOK }}}{BoardGameGeek files section}."
           sed -i "s@$VERSION@$WARNING@g" main_${{ matrix.language }}.tex
+
+      - name: Generate translations for ${{ matrix.language }}
+        if: ${{ matrix.language != 'en' }}
+        run: |
+          sudo apt-get install -y po4a  # required as standalone po4a is missing some deps
+          wget --quiet ${{ env.PO4A_GH_URL }}/v${{ env.PO4A_VERSION }}/po4a-${{ env.PO4A_VERSION}}.tar.gz  # sadly the version from apt isn't working
+          export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
+          tar -xf ${PO4A_DIR}.tar.gz
+          export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
+          ./${PO4A_DIR}/po4a -v --no-update po4a.cfg
 
       - name: Compile rule book
         uses: xu-cheng/latex-action@v3
@@ -49,7 +60,7 @@ jobs:
           mkdir main_${{ matrix.language }}
           mv main_${{ matrix.language }}.pdf main_${{ matrix.language }}
 
-      - name: Publish main_en.pdf in artifacts repository
+      - name: Publish main_${{ matrix.language }}.pdf in artifacts repository
         uses: peaceiris/actions-gh-pages@v4
         with:
           deploy_key: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}
@@ -57,6 +68,8 @@ jobs:
           publish_branch: main_${{ matrix.language }}
           publish_dir: ./main_${{ matrix.language }}
           force_orphan: true
+
+      # Steps below publish printable version, which for now is available in English only
 
       - uses: actions/setup-python@v5
         if: ${{ matrix.language == 'en' }}
