@@ -4,10 +4,13 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches: [main]
     paths:
-      - "components_lists/**"
-      - "assets/**"
-      - "components_list.tex"
+      - 'assets/**'
+      - '!assets/gimp-files/**'
+      - 'components_list.tex'
+      - 'components_lists/**'
 
 env:
   BOARD_GAME_GEEK_COMPONENTS_LIST: https://boardgamegeek.com/filepage/276593
@@ -35,11 +38,13 @@ jobs:
           root_file: components_list.tex
 
       - name: Move file
+        if: github.event_name != 'pull_request'
         run: |
           mkdir components_list_en
           mv components_list.pdf components_list_en/components_list_en.pdf
 
       - name: Publish in artifacts repository
+        if: github.event_name != 'pull_request'
         uses: peaceiris/actions-gh-pages@v4
         with:
           deploy_key: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}

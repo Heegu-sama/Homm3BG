@@ -1,11 +1,18 @@
 name: Publish Rule Book
 
 on:
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - main
   pull_request:
     branches: [main]
+    paths:
+      - 'assets/**'
+      - '!assets/gimp-files/**'
+      - '**.tex'
+      - 'translations/**'
+      - '!components_list.tex'
+      - '!components_list/**'
 
 env:
   BOARD_GAME_GEEK_RULE_BOOK: https://boardgamegeek.com/filepage/272787
@@ -18,7 +25,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [en, pl]
         include:
           - language: en
             version: Version
@@ -55,43 +61,41 @@ jobs:
           latexmk_shell_escape: true
           root_file: main_${{ matrix.language }}.tex
 
+      # Upload non-English PDF in PRs to facilitate the work of translators not having po4a
+      - uses: actions/upload-artifact@v4
+        if: ${{ matrix.language != 'en' && github.event_name == 'pull_request' }}
+        with:
+          name: main_${{ matrix.language }}
+          path: main_${{ matrix.language }}.pdf
+
       - name: Move file
+        if: github.event_name != 'pull_request'
         run: |
           mkdir ${{ matrix.language }}
           mv main_${{ matrix.language }}.pdf ${{ matrix.language }}
 
-      # - name: Publish main_${{ matrix.language }}.pdf in artifacts repository
-      #   uses: peaceiris/actions-gh-pages@v4
-      #   with:
-      #     deploy_key: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}
-      #     external_repository: qwrtln/Homm3BG-build-artifacts
-      #     publish_branch: main_${{ matrix.language }}
-      #     publish_dir: ./main_${{ matrix.language }}
-      #     force_orphan: true
-
       # Printable build for now is available in English only
-
       - uses: actions/setup-python@v5
-        if: ${{ matrix.language == 'en' }}
+        if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
         with:
           python-version: "3.11"
 
       - name: Add pages to select hyperlinks
-        if: ${{ matrix.language == 'en' }}
+        if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
         run: |
           find sections -type f | xargs -n 1 sed -i "s@\\\hypertarget@\\\pagetarget@g"
           python .github/insert_printable_hyperlinks.py
 
       - name: Include index page
-        if: ${{ matrix.language == 'en' }}
+        if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
         run: sed -i "s@\\\include{\\\sections/back_cover.tex}@\\\include{\\\sections/index.tex}\\\include{\\\sections/back_cover.tex}@g" metadata.tex
 
       - name: Add QR codes
-        if: ${{ matrix.language == 'en' }}
+        if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
         run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes-en.tex' -e 'd}' metadata.tex
 
       - name: Compile printable rule book
-        if: ${{ matrix.language == 'en' }}
+        if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
@@ -100,11 +104,12 @@ jobs:
           root_file: main_en.tex
 
       - name: Move file
-        if: ${{ matrix.language == 'en' }}
+        if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
         run: |
           mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
 
       - name: Publish ${{ matrix.language }} in artifacts repository
+        if: github.event_name != 'pull_request'
         uses: peaceiris/actions-gh-pages@v4
         with:
           deploy_key: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}
