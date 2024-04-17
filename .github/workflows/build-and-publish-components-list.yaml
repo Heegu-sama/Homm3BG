@@ -38,13 +38,13 @@ jobs:
           root_file: components_list.tex
 
       - name: Move file
-        if: github.event_name != 'pull_request'
+        # if: github.event_name != 'pull_request'
         run: |
           mkdir components_list_en
           mv components_list.pdf components_list_en/components_list_en.pdf
 
       - name: Publish in artifacts repository
-        if: github.event_name != 'pull_request'
+        # if: github.event_name != 'pull_request'
         uses: peaceiris/actions-gh-pages@v4
         with:
           deploy_key: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}

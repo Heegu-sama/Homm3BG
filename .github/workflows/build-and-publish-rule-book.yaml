@@ -15,9 +15,9 @@ on:
     #   - '!components_list/**'
 
 env:
-  BOARD_GAME_GEEK_RULE_BOOK: https://boardgamegeek.com/filepage/272787
   PO4A_VERSION: "0.71"
   PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
+  REPO_URL: https://github.com/Heegu-sama/Homm3BG
 
 jobs:
   build:
@@ -28,10 +28,10 @@ jobs:
         include:
           - language: en
             version: Version
-            # warning: ""
+            warning: "This is an unreleased version built on GitHub from commit"
           - language: pl
             version: Wersja
-            # warning: "To jest nieopublikowana wersja zbudowana na GitHubie z commita ${GITHUB_SHA::7}"
+            warning: "To jest nieopublikowana wersja zbudowana na GitHubie z commita"
 
     steps:
       - name: Set up repository
@@ -40,8 +40,7 @@ jobs:
       - name: Replace rule book version with a warning
         run: |
           VERSION=$(grep -P "^[\ ]*${{ matrix.version }} \d{1,}.\d{1,}$" main_${{ matrix.language }}.tex)
-          RELEASE_PAGE="${{ github.server_url }}/${{ github.repository }}/releases"
-          WARNING="This is an unreleased version built on GitHub from commit ${GITHUB_SHA::7}. To download the latest official release, please go to \\\href{${RELEASE_PAGE}}{GitHub release page} or \\\href{${{ env.BOARD_GAME_GEEK_RULE_BOOK }}}{BoardGameGeek files section}."
+          WARNING="${{ matrix.warning }} \\\href{${{ env.REPO_URL }}}{${GITHUB_SHA::7}}."
           sed -i "s@$VERSION@$WARNING@g" main_${{ matrix.language }}.tex
 
       - name: Generate translations for ${{ matrix.language }}
