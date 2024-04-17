@@ -82,7 +82,7 @@ jobs:
       - name: Add pages to select hyperlinks
         if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
         run: |
-          find sections -type f | xargs -n 1 sed -i "s@\\\hypertarget@\\\pagetarget@g"
+          find sections -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
           python .github/insert_printable_hyperlinks.py
 
       - name: Include index page
