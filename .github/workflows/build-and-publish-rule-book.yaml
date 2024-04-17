@@ -87,7 +87,7 @@ jobs:
 
       - name: Include index page
         if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
-        run: sed -i "s@\\\include{\\\sections/back_cover.tex}@\\\include{\\\sections/index.tex}\\\include{\\\sections/back_cover.tex}@g" metadata.tex
+        run: sed -i 's@\\include{\\sections/back_cover.tex}@\\include{\\sections/index.tex}\\include{\\sections/back_cover.tex}@g' metadata.tex
 
       - name: Add QR codes
         if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
