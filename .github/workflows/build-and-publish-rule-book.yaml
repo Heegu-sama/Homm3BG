@@ -1,4 +1,4 @@
-name: Publish Rule Book
+name: Build and Publish Rule Book
 
 on:
   push:
@@ -6,13 +6,13 @@ on:
       - main
   pull_request:
     branches: [main]
-    paths:
-      - 'assets/**'
-      - '!assets/gimp-files/**'
-      - '**.tex'
-      - 'translations/**'
-      - '!components_list.tex'
-      - '!components_list/**'
+    # paths:
+    #   - 'assets/**'
+    #   - '!assets/gimp-files/**'
+    #   - '**.tex'
+    #   - 'translations/**'
+    #   - '!components_list.tex'
+    #   - '!components_list/**'
 
 env:
   BOARD_GAME_GEEK_RULE_BOOK: https://boardgamegeek.com/filepage/272787

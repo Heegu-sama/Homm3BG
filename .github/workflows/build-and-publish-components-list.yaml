@@ -1,4 +1,4 @@
-name: Publish Components List
+name: Build and Publish Components List
 
 on:
   push:
@@ -6,11 +6,11 @@ on:
       - main
   pull_request:
     branches: [main]
-    paths:
-      - 'assets/**'
-      - '!assets/gimp-files/**'
-      - 'components_list.tex'
-      - 'components_lists/**'
+    # paths:
+    #   - 'assets/**'
+    #   - '!assets/gimp-files/**'
+    #   - 'components_list.tex'
+    #   - 'components_lists/**'
 
 env:
   BOARD_GAME_GEEK_COMPONENTS_LIST: https://boardgamegeek.com/filepage/276593
