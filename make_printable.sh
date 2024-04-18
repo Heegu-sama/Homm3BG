@@ -1,16 +1,11 @@
 #!/usr/bin/env bash
 
 LANGUAGE=$1
-en=1
-pl=2
-es=3
-declare -p PATHS
 if [[ ${LANGUAGE} == en ]]; then
   SECTIONS=sections
 else
   SECTIONS="sections/translated/${LANGUAGE}"
 fi
-SECTIONS=${PATHS[$LANGUAGE]}
 
 makeindex main_en -s index_style.ist
 find sections -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +

@@ -42,7 +42,6 @@ def _parse_file(file: fileinput.FileInput[str]) -> None:
 
 def update_files(directory: pathlib.Path) -> None:
     for filename in directory.glob("*.tex"):
-        print(f"Replacing {filename}")
         with fileinput.FileInput(filename, inplace=True) as file:
             _parse_file(file)
 
