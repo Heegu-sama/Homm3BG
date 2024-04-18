@@ -3,6 +3,7 @@
 import fileinput
 import pathlib
 import re
+import sys
 
 HYPERLINKS_TO_REPLACE = [
     "AIrules",
@@ -21,7 +22,10 @@ HYPERLINKS_TO_REPLACE = [
     "Walls",
     "War Machine Factory",
 ]
-SECTIONS_DIRECTORY = pathlib.Path(__file__).parent.parent / "sections"
+
+SECTIONS_PATH = sys.argv[1]
+SECTIONS_DIRECTORY = pathlib.Path(__file__).parent.parent / SECTIONS_PATH
+# SECTIONS_DIRECTORY = pathlib.Path(__file__).parent.parent / "sections"
 
 
 def _replace_line(line: str) -> str:
@@ -39,6 +43,7 @@ def _parse_file(file: fileinput.FileInput[str]) -> None:
 
 def update_files(directory: pathlib.Path) -> None:
     for filename in directory.glob("*.tex"):
+        print(f"Replacing {filename}")
         with fileinput.FileInput(filename, inplace=True) as file:
             _parse_file(file)
 
