@@ -3,8 +3,9 @@
 LANGUAGE=$1
 en=1
 pl=2
+es=3
 declare -p PATHS
-declare -a PATHS=( [1]="sections" [2]="sections/translated/pl" )
+declare -a PATHS=( [1]="sections" [2]="sections/translated/pl" [3]="sections/translated/es" )
 SECTIONS=${PATHS[$LANGUAGE]}
 
 makeindex main_en -s index_style.ist
