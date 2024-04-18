@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
 
 LANGUAGE=$1
-PATHS=( ["en"]="sections" ["pl"]="sections/translated/pl" )
+en=1
+pl=2
+declare -p PATHS
+declare -a PATHS=( [1]="sections" [2]="sections/translated/pl" )
+SECTIONS=${PATHS[$LANGUAGE]}
 
 makeindex main_en -s index_style.ist
 find sections -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
-python .github/insert_printable_hyperlinks.py "${PATHS[$LANGUAGE]}"
+python .github/insert_printable_hyperlinks.py "${SECTIONS}"
 sed -i 's@\\include{\\sections/back_cover.tex}@\\include{\\sections/index.tex}\\include{\\sections/back_cover.tex}@g' metadata.tex
 sed -i -e "/% QR codes placeholder/{r .github/qr-codes-$LANGUAGE.tex" -e 'd}' metadata.tex
 latexmk -pdf -silent -shell-escape "main_${LANGUAGE}"
