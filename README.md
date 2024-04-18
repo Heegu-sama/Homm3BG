@@ -2,11 +2,18 @@
 
 Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1) 🤓
 
-This repository hosts **three** documents. Click to download the most recent builds:
+This repository hosts **three** documents.
+Efforts are ongoing to translate them to languages other than English.
+Please reach out if you'd like to help with translating.
+Click in the table to download the most recent builds in the chosen language:
 
-- [📜 **Rewritten Rule Book**](https://github.com/Heegu-sama/Homm3BG/raw/build/main_en.pdf/PDF/main_en.pdf)
-- [🖨️ **Rewritten Rule Book - printable version️️**](https://github.com/Heegu-sama/Homm3BG/raw/build/printable.pdf/PRINTABLE/printable.pdf)
-- [📋 **Comprehensive Components List**](https://github.com/Heegu-sama/Homm3BG/raw/build/components_list.pdf/COMPONENTS_LIST/components_list.pdf)
+|                |📜 **Rewritten Rule Book** |🖨️ **Rule Book - printable version** |📋 **Comprehensive Components List**|
+|:---------------|:-------------------------:|:-----------------------------------:|:----------------------------------:|
+| 🇬🇧 English    |[🇬🇧📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf)|[🇬🇧🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf)|[🇬🇧📋](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf)|
+| 🇵🇱 Poski      |[🇵🇱📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_pl/components_list_pl.pdf)|
+| 🇪🇸 Español    |[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_es/components_list_es.pdf)|
+| 🇫🇷 Français   |[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_fr/components_list_fr.pdf)|
+
 
 ⚠️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
 

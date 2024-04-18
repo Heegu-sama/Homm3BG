@@ -1,0 +1,118 @@
+name: Build and Publish Rule Book
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches: [main]
+    paths:
+      - 'assets/**'
+      - '!assets/gimp-files/**'
+      - '**.tex'
+      - 'translations/**'
+      - '!components_list.tex'
+      - '!components_list/**'
+
+env:
+  PO4A_VERSION: "0.71"
+  PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
+  REPO_URL: https://github.com/Heegu-sama/Homm3BG
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - language: en
+            version: Version
+            warning: "This is an unreleased version built on GitHub from commit"
+          - language: pl
+            version: Wersja
+            warning: "To jest nieopublikowana wersja zbudowana na GitHubie z commita"
+
+    steps:
+      - name: Set up repository
+        uses: actions/checkout@v4
+
+      - name: Replace rule book version with a warning
+        run: |
+          VERSION=$(grep -P "^[\ ]*${{ matrix.version }} \d{1,}.\d{1,}$" main_${{ matrix.language }}.tex)
+          WARNING="${{ matrix.warning }} \\\href{${{ env.REPO_URL }}}{${GITHUB_SHA::7}}."
+          sed -i "s@$VERSION@$WARNING@g" main_${{ matrix.language }}.tex
+
+      - name: Generate translations for ${{ matrix.language }}
+        if: ${{ matrix.language != 'en' }}
+        run: |
+          sudo apt-get install -y po4a  # required as standalone po4a is missing some deps
+          wget --quiet ${{ env.PO4A_GH_URL }}/v${{ env.PO4A_VERSION }}/po4a-${{ env.PO4A_VERSION}}.tar.gz  # sadly the version from apt isn't working
+          export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
+          tar -xf ${PO4A_DIR}.tar.gz
+          export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
+          ./${PO4A_DIR}/po4a -v --no-update po4a.cfg
+
+      - name: Compile rule book
+        uses: xu-cheng/latex-action@v3
+        with:
+          extra_system_packages: "inkscape"
+          latexmk_shell_escape: true
+          root_file: main_${{ matrix.language }}.tex
+
+      # Upload non-English PDF in PRs to facilitate the work of translators not having po4a
+      - uses: actions/upload-artifact@v4
+        if: ${{ matrix.language != 'en' && github.event_name == 'pull_request' }}
+        with:
+          name: main_${{ matrix.language }}
+          path: main_${{ matrix.language }}.pdf
+
+      - name: Move file
+        if: github.event_name != 'pull_request'
+        run: |
+          mkdir ${{ matrix.language }}
+          mv main_${{ matrix.language }}.pdf ${{ matrix.language }}
+
+      # Printable build for now is available in English only
+      - uses: actions/setup-python@v5
+        if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
+        with:
+          python-version: "3.11"
+
+      - name: Add pages to select hyperlinks
+        if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
+        run: |
+          find sections -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
+          python .github/insert_printable_hyperlinks.py
+
+      - name: Include index page
+        if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
+        run: sed -i 's@\\include{\\sections/back_cover.tex}@\\include{\\sections/index.tex}\\include{\\sections/back_cover.tex}@g' metadata.tex
+
+      - name: Add QR codes
+        if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
+        run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes-en.tex' -e 'd}' metadata.tex
+
+      - name: Compile printable rule book
+        if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
+        uses: xu-cheng/latex-action@v3
+        with:
+          extra_system_packages: "inkscape"
+          latexmk_shell_escape: true
+          post_compile: "makeindex main_en -s index_style.ist && pdflatex --shell-escape main_en.tex"
+          root_file: main_en.tex
+
+      - name: Move file
+        if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
+        run: |
+          mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
+
+      - name: Publish ${{ matrix.language }} in artifacts repository
+        if: github.event_name != 'pull_request'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          deploy_key: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}
+          external_repository: qwrtln/Homm3BG-build-artifacts
+          publish_branch: ${{ matrix.language }}
+          publish_dir: ./${{ matrix.language }}
+          force_orphan: true
