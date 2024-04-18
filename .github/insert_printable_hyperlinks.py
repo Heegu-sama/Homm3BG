@@ -25,7 +25,6 @@ HYPERLINKS_TO_REPLACE = [
 
 SECTIONS_PATH = sys.argv[1]
 SECTIONS_DIRECTORY = pathlib.Path(__file__).parent.parent / SECTIONS_PATH
-# SECTIONS_DIRECTORY = pathlib.Path(__file__).parent.parent / "sections"
 
 
 def _replace_line(line: str) -> str:
