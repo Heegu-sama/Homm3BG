@@ -29,9 +29,15 @@ jobs:
           - language: en
             version: Version
             warning: "This is an unreleased version built on GitHub from commit"
+            sections: "sections"
           - language: pl
             version: Wersja
             warning: "To jest nieopublikowana wersja zbudowana na GitHubie z commita"
+            sections: "sections/translated/pl"
+          - language: es
+            version: Versión
+            warning: "Se trata de una versión inédita creada en GitHub a partir del commit"
+            sections: "sections/translated/es"
 
     steps:
       - name: Set up repository
@@ -73,37 +79,37 @@ jobs:
           mkdir ${{ matrix.language }}
           mv main_${{ matrix.language }}.pdf ${{ matrix.language }}
 
-      # Printable build for now is available in English only
+      # Printable build goes below
       - uses: actions/setup-python@v5
-        if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
+        if: github.event_name != 'pull_request'
         with:
           python-version: "3.11"
 
       - name: Add pages to select hyperlinks
-        if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
+        if: github.event_name != 'pull_request'
         run: |
-          find sections -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
-          python .github/insert_printable_hyperlinks.py
+          find ${{ matrix.sections }} -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
+          python .github/insert_printable_hyperlinks.py ${{ matrix.sections }}
 
       - name: Include index page
-        if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
+        if: github.event_name != 'pull_request'
         run: sed -i 's@\\include{\\sections/back_cover.tex}@\\include{\\sections/index.tex}\\include{\\sections/back_cover.tex}@g' metadata.tex
 
       - name: Add QR codes
-        if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
-        run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes-en.tex' -e 'd}' metadata.tex
+        if: github.event_name != 'pull_request'
+        run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes-${{ matrix.language }}.tex' -e 'd}' metadata.tex
 
       - name: Compile printable rule book
-        if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
+        if: github.event_name != 'pull_request'
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
           latexmk_shell_escape: true
-          post_compile: "makeindex main_en -s index_style.ist && pdflatex --shell-escape main_en.tex"
-          root_file: main_en.tex
+          post_compile: "makeindex main_${{ matrix.language }} -s index_style.ist && pdflatex --shell-escape main_${{ matrix.language }}.tex"
+          root_file: main_${{ matrix.language }}.tex
 
       - name: Move file
-        if: ${{ matrix.language == 'en' && github.event_name != 'pull_request' }}
+        if: github.event_name != 'pull_request'
         run: |
           mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
 

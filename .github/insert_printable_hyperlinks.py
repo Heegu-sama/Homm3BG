@@ -3,6 +3,7 @@
 import fileinput
 import pathlib
 import re
+import sys
 
 HYPERLINKS_TO_REPLACE = [
     "AIrules",
@@ -21,7 +22,9 @@ HYPERLINKS_TO_REPLACE = [
     "Walls",
     "War Machine Factory",
 ]
-SECTIONS_DIRECTORY = pathlib.Path(__file__).parent.parent / "sections"
+
+SECTIONS_PATH = sys.argv[1]
+SECTIONS_DIRECTORY = pathlib.Path(__file__).parent.parent / SECTIONS_PATH
 
 
 def _replace_line(line: str) -> str:
