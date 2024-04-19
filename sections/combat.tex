@@ -3,7 +3,7 @@
 
 \begin{multicols}{2}
 
-\pagetarget{Combat}{Combat}\index{Combat} with \textbf{Neutral Units} starts when a Hero moves to an unvisited Field with a roman numeral, signifying the \hyperlink{Difficulty}{type and number} of Neutral Units guarding that Field.
+\hypertarget{Combat}{Combat}\index{Combat} with \textbf{Neutral Units} starts when a Hero moves to an unvisited Field with a roman numeral, signifying the \hyperlink{Difficulty}{type and number} of Neutral Units guarding that Field.
 
 Combat with \textbf{another player} can start in two ways:
 \begin{itemize}
@@ -12,7 +12,7 @@ Combat with \textbf{another player} can start in two ways:
 \end{itemize}
 Players are able to start multiple Combats during their Turn.
 
-\subsection*{\pagetarget{Combatsetup}{Combat Setup}}
+\subsection*{\hypertarget{Combatsetup}{Combat Setup}}
 
 % TODO info about battlefield expansion
 Combat is resolved on the 4 x 5 Combat board, which consists of two Backlines and two Frontlines on opposite ends, and a middle row.
@@ -49,7 +49,7 @@ Unit setup when fighting \textbf{other players}:
     Paying this Gold represents the cost of transporting the army there.
 }
 
-\subsection*{\pagetarget{Combatterminology}{Combat Terminology}}
+\subsection*{\hypertarget{Combatterminology}{Combat Terminology}}
 The following terms are used to describe effects and elements during Combat:\par
 \textbf{Attacking Player} – The player who started the Combat.\par
 \textbf{Defending Player} – The player whom Combat was started against.\par
@@ -57,11 +57,13 @@ The following terms are used to describe effects and elements during Combat:\par
 \textbf{Adjacent Unit} – A Unit is directly adjacent to another if it is one space away in a cardinal direction (nondiagonal).\par
 \textbf{Combat Round} – A full cycle of all Units of each player being Activated.\par
 \textbf{Combat Obstacles}\index{Combat Obstacles}\index{Obstacles, Combat} – Every card on the Combat Board is a Combat Obstacle.
-They block the movement of all non-flying Units.\par
-\textbf{Attack Die}\index{Attack Die} – A red Die whose results range from -1 to +1.
+They block the movement of all non-flying Units.\smallskip\par
+\begin{tikzpicture}[overlay]
+  \node at (7, 0) {\includegraphics[width=0.2\linewidth]{\images/attack_die.png}};
+\end{tikzpicture}\parbox{0.7\hsize}{\textbf{Attack Die}\index{Attack Die}\index{Dice} – A red Die whose results range from -1 to +1.
 Roll the Die \textbf{whenever a Unit attacks} and
-add the result to the Unit's Attack value.\par
-\textbf{\pagetarget{Retaliate}{Retaliation Attack}} – If a Unit survives an attack by an adjacent Unit, it performs an attack back at that Unit.
+add the result to the Unit's Attack value.}\par\smallskip
+\textbf{\hypertarget{Retaliate}{Retaliation Attack}} – If a Unit survives an attack by an adjacent Unit, it performs an attack back at that Unit.
 Each Unit can perform \textbf{only 1} Retaliation Attack\index{Retaliation Attack} per Combat Round.
 Retaliation Attacks function identically to normal attacks, but they cannot cause another Retaliation Attack.
 Mark Units which have performed a Retaliation Attack this Round with a black cube.\par
@@ -69,19 +71,19 @@ Mark Units which have performed a Retaliation Attack this Round with a black cub
 That Unit \textbf{must skip its next Activation}. Remove the Token instead of activating it.
 If the Unit \textbf{attacked or takes any damage} before that time, \textbf{remove the Token}.
 The Token does not prevent Units from performing Retaliation Attacks.\par
-\textbf{\pagetarget{Defend}{Defend}} \includesvg[height=10px]{\svgs/defense.svg} – Units may choose to gain a Defense Token instead of attacking.
+\textbf{\hypertarget{Defend}{Defend}} \includesvg[height=10px]{\svgs/defense.svg} – Units may choose to gain a Defense Token instead of attacking.
 When a Unit with a Defense Token is attacked, make another roll with the attack Die after the initial attack roll.
 If you roll a "+1", the defending Unit gains an extra 1 Defense for this attack.
 If a Unit has a Defense Token at the start of its activation, discard it.
 The Unit cannot take another Defense Action during that activation.
 
-\subsection*{\pagetarget{CombatCards}{Using Cards During Combat}}
+\subsection*{\hypertarget{CombatCards}{Using Cards During Combat}}
 You may only use \textbf{one Spell per Combat Round}.
 Ongoing \includesvg[height=10px]{\svgs/ongoing.svg} and \includesvg[height=10px]{\svgs/activation.svg} Activate effects can be used only \textbf{when Activating one of your Units and before it attacks}.
 Ongoing effects\index{Ongoing Effects} last until end of Combat or if the effect on the card is used up.\par
 Instant \includesvg[height=10px]{\svgs/instant.svg} Cards may be played \textbf{at any time} except between rolling the Combat Die and resolving damage unless otherwise stated.
 Instant Cards which increase a Unit's \includesvg[height=10px]{\svgs/attack.svg} or \includesvg[height=10px]{\svgs/defense.svg}, such as the Attack and Defense Statistic cards, \textbf{must} be played after an attack has been announced and persist only for the duration of that attack.
-\subsection*{\pagetarget{Timelimit}{Combat Time Limits}}\index{Time Limit}
+\subsection*{\hypertarget{Timelimit}{Combat Time Limits}}\index{Time Limit}
 Combats against Neutral Units have a time limit of \textbf{one Combat Round}.
 If you cannot win the Combat before the end of the current Combat Round, you must either \hyperlink{Endcombat}{Retreat}\index{Retreat} or spend 1 MP from the Hero that started the Combat in order to play another Round.\par
 
@@ -97,7 +99,7 @@ If you cannot win the Combat before the end of the current Combat Round, you mus
 
 \filbreak
 
-\subsection*{\pagetarget{Walls}{Defending a Town With\\a Citadel\raggedright}}\index{Defending Town}
+\subsection*{\hypertarget{Walls}{Defending a Town With\\a Citadel\raggedright}}\index{Defending Town}
 
 When a Town with a Citadel is attacked, the defender adds the 3 Wall and 1 Gate Obstacles in any order to the Middle Row of the Combat Board after placing their Units.
 The Gate Card is \textbf{not an Obstacle to the defending player}.
@@ -156,7 +158,7 @@ Structure of a Combat Round:
 After the last Unit's activation, the Combat Round ends.
 \end{itemize}
 
-\subsection*{\pagetarget{Endcombat}{End of Combat}}
+\subsection*{\hypertarget{Endcombat}{End of Combat}}
 Combat ends immediately if all units on one side are defeated.
 The side with any surviving units is the winner.
 In Combat against \textbf{Neutral Units}, if you \hyperlink{Timelimit}{run out of time} or your Units are defeated, you must \textbf{Retreat}; move any surviving Units back to your Unit Deck and move the Hero that started the Combat back to the Field they \textbf{last Visited}.
@@ -180,7 +182,7 @@ When Combat ends, all damage is healed from all surviving Units.
 Move any player owned Units back to their Unit Deck and discard any leftover enemy Neutral Units.
 After winning Combat, Heroes \textbf{must} Visit the Field where the Combat took place.
 
-\subsection*{\pagetarget{Combatexperience}{Combat Experience}}
+\subsection*{\hypertarget{Combatexperience}{Combat Experience}}
 
 Winning Combat with your Main Hero usually grants them Experience\index{Experience}.
 If either the Difficulty of the Neutral Field or the Level of a defeated enemy Main Hero was \textbf{equal} to your Level, gain 1 \includesvg[height=10px]{\svgs/experience.svg}.
@@ -191,7 +193,7 @@ Level ups must be resolved before Visiting the Field where the Combat happened.\
 Secondary Heroes cannot ever gain Experience.
 You also do not gain Experience from \textbf{defeating} a Secondary Hero, or if an enemy Hero \textbf{Surrenders} to you.
 
-\subsection*{\pagetarget{Quick}{Quick Combat}}\index{Quick Combat}
+\subsection*{\hypertarget{Quick}{Quick Combat}}\index{Quick Combat}
 If your Hero's Level is higher than a Field's Difficulty when Combat against Neutral Units would begin, \textbf{no Combat} takes place.
 The player is considered to have beaten the Neutral Units by default and gains no rewards from the Combat.
 

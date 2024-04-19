@@ -10,9 +10,14 @@
   \newcolumntype{Y}{>{\centering\arraybackslash}X}
   \begin{tabularx}{\linewidth}{Y m{0.8\linewidth}}
     \small
-    \mbox{\textbf{I-VII}} & Field Difficulty corresponding to the level of Neutral Units. \\
-    \includesvg[height=15px]{\svgs/treasure.svg} & Roll a Treasure Die and gain the indicated bonus (\includesvg[height=10px]{\svgs/resource_die.svg}, \includesvg[height=10px]{\svgs/2_treasure_die.svg}, \includesvg[height=10px]{\svgs/experience.svg}, or \includesvg[height=10px]{\svgs/artifact.svg}).\index{Treasure Die} \\
-    \includesvg[height=15px]{\svgs/resource_die.svg} & Roll a Resource Die and gain the indicated Resources. \\
+    \mbox{\textbf{I-VII}} & Field Difficulty corresponding to the level of Neutral Units.\smallskip \\
+    \includesvg[height=15px]{\svgs/treasure.svg} & \parbox{0.7\hsize}{
+        Roll a Treasure Die\index{Treasure Die}\index{Dice} and gain the indicated bonus (\includesvg[height=10px]{\svgs/resource_die.svg}, \includesvg[height=10px]{\svgs/2_treasure_die.svg}, \includesvg[height=10px]{\svgs/experience.svg}, or \includesvg[height=10px]{\svgs/artifact.svg}).
+    }
+    \begin{tikzpicture}[overlay]
+      \node at (1, 0.25) {\includegraphics[width=0.2\linewidth]{\images/treasure_die.png}};
+    \end{tikzpicture} \\
+    \includesvg[height=15px]{\svgs/resource_die.svg} & Roll a \hyperlink{Resources}{Resource Die} and gain the indicated Resources. \\
     \includesvg[height=15px]{\svgs/2_treasure_die.svg} & Roll 2 Resource Dice and choose the bonus from one of them. \\
     \includesvg[height=15px]{\svgs/experience.svg} & Gain one Experience Point. \\
     \includesvg[height=15px]{\svgs/artifact.svg} & Search (2) the Artifact Deck. \\
