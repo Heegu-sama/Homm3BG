@@ -112,6 +112,7 @@
   }
   \begin{fullwidth}[leftmargin=0.16\textwidth]
     \begin{center}
+      \vspace*{\lang_header_adjustment}
       \fontfamily{ptm}\selectfont{
         \color{antiquewhite} \section*{#1}
         \cleardoublepage\phantomsection\addcontentsline{toc}{section}{\protect\numberline{}#1}
@@ -159,7 +160,7 @@
 
 % Commands to be used for automation generating printable version
 \newcommand{\pagetarget}[2]{\label{#1}\hypertarget{#1}{#2}}
-\newcommand{\pagelink}[2]{\hyperlink{#1}{#2} (p. \pageref{#1})}
+\newcommand{\pagelink}[2]{\hyperlink{#1}{#2} (\pageshorthand \pageref{#1})}
 
 % Command for overlay circled text
 \definecolor{goblin}{HTML}{3b7c33}
@@ -180,7 +181,7 @@
 
 \include{\sections/title_page.tex}
 
-\author{Hermanni "Heegu" Karppela}
+\author{Hermanni "Heegu"{} Karppela}
 \maketitle
 
 \begin{center}
