@@ -57,10 +57,12 @@ The following terms are used to describe effects and elements during Combat:\par
 \textbf{Adjacent Unit} – A Unit is directly adjacent to another if it is one space away in a cardinal direction (nondiagonal).\par
 \textbf{Combat Round} – A full cycle of all Units of each player being Activated.\par
 \textbf{Combat Obstacles}\index{Combat Obstacles}\index{Obstacles, Combat} – Every card on the Combat Board is a Combat Obstacle.
-They block the movement of all non-flying Units.\par
-\textbf{Attack Die}\index{Attack Die} – A red Die whose results range from -1 to +1.
+They block the movement of all non-flying Units.\smallskip\par
+\begin{tikzpicture}[overlay]
+  \node at (7, 0) {\includegraphics[width=0.2\linewidth]{\images/attack_die.png}};
+\end{tikzpicture}\parbox{0.7\hsize}{\textbf{Attack Die}\index{Attack Die}\index{Dice} – A red Die whose results range from -1 to +1.
 Roll the Die \textbf{whenever a Unit attacks} and
-add the result to the Unit's Attack value.\par
+add the result to the Unit's Attack value.}\par\smallskip
 \textbf{\hypertarget{Retaliate}{Retaliation Attack}} – If a Unit survives an attack by an adjacent Unit, it performs an attack back at that Unit.
 Each Unit can perform \textbf{only 1} Retaliation Attack\index{Retaliation Attack} per Combat Round.
 Retaliation Attacks function identically to normal attacks, but they cannot cause another Retaliation Attack.

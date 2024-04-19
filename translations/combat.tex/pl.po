@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-15 17:20+0200\n"
+"POT-Creation-Date: 2024-04-19 07:27+0100\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -20,8 +20,8 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
-#: sections/all_map_locations.tex:411 sections/combat.tex:5
-#: sections/combat.tex:138 sections/credits.tex:7 sections/deckbuilding.tex:5
+#: sections/all_map_locations.tex:417 sections/combat.tex:5
+#: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/expansion_content.tex:5 sections/expansion_content.tex:49
 #: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
 #: sections/map_elements.tex:34 sections/map_elements.tex:74
@@ -37,8 +37,8 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_heroes.tex:30 sections/ai_heroes.tex:48
-#: sections/ai_heroes.tex:63 sections/combat.tex:93 sections/combat.tex:231
+#: sections/ai_heroes.tex:30 sections/ai_heroes.tex:49
+#: sections/ai_heroes.tex:64 sections/combat.tex:95 sections/combat.tex:233
 #: sections/deckbuilding.tex:129 sections/deckbuilding.tex:135
 #: sections/expansion_content.tex:65 sections/heroes.tex:34
 #, no-wrap
@@ -48,9 +48,8 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/all_map_locations.tex:27 sections/all_map_locations.tex:425
-#: sections/combat.tex:89 sections/player_turns.tex:37 sections/units.tex:105
-#: sections/units.tex:138
+#: sections/all_map_locations.tex:431 sections/combat.tex:91
+#: sections/player_turns.tex:37 sections/units.tex:105 sections/units.tex:138
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -140,7 +139,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:77
+#: sections/combat.tex:79
 #, no-wrap
 msgid ""
 "\\subsection*{\\hypertarget{Combatterminology}{Combat Terminology}}\n"
@@ -151,10 +150,12 @@ msgid ""
 "\\textbf{Adjacent Unit} – A Unit is directly adjacent to another if it is one space away in a cardinal direction (nondiagonal).\\par\n"
 "\\textbf{Combat Round} – A full cycle of all Units of each player being Activated.\\par\n"
 "\\textbf{Combat Obstacles}\\index{Combat Obstacles}\\index{Obstacles, Combat} – Every card on the Combat Board is a Combat Obstacle.\n"
-"They block the movement of all non-flying Units.\\par\n"
-"\\textbf{Attack Die}\\index{Attack Die} – A red Die whose results range from -1 to +1.\n"
+"They block the movement of all non-flying Units.\\smallskip\\par\n"
+"\\begin{tikzpicture}[overlay]\n"
+"  \\node at (7, 0) {\\includegraphics[width=0.2\\linewidth]{\\images/attack_die.png}};\n"
+"\\end{tikzpicture}\\parbox{0.7\\hsize}{\\textbf{Attack Die}\\index{Attack Die}\\index{Dice} – A red Die whose results range from -1 to +1.\n"
 "Roll the Die \\textbf{whenever a Unit attacks} and\n"
-"add the result to the Unit's Attack value.\\par\n"
+"add the result to the Unit's Attack value.}\\par\\smallskip\n"
 "\\textbf{\\hypertarget{Retaliate}{Retaliation Attack}} – If a Unit survives an attack by an adjacent Unit, it performs an attack back at that Unit.\n"
 "Each Unit can perform \\textbf{only 1} Retaliation Attack\\index{Retaliation Attack} per Combat Round.\n"
 "Retaliation Attacks function identically to normal attacks, but they cannot cause another Retaliation Attack.\n"
@@ -172,7 +173,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:87
+#: sections/combat.tex:89
 #, no-wrap
 msgid ""
 "\\subsection*{\\hypertarget{CombatCards}{Using Cards During Combat}}\n"
@@ -188,7 +189,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:91
+#: sections/combat.tex:93
 #, no-wrap
 msgid ""
 "\\note{5}{Combats against Azure \\includesvg[height=10px]{\\svgs/azure-note.svg} Units, other players, or \\hyperlink{AIrules}{AI Heroes} have no time limit.}\n"
@@ -196,7 +197,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:97
+#: sections/combat.tex:99
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -206,7 +207,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:99 sections/deckbuilding.tex:74
+#: sections/combat.tex:101 sections/deckbuilding.tex:74
 #, no-wrap
 msgid ""
 "\\filbreak\n"
@@ -214,7 +215,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:101
+#: sections/combat.tex:103
 #, no-wrap
 msgid ""
 "\\subsection*{\\hypertarget{Walls}{Defending a Town With\\\\a Citadel\\raggedright}}\\index{Defending Town}\n"
@@ -222,7 +223,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:108
+#: sections/combat.tex:110
 #, no-wrap
 msgid ""
 "When a Town with a Citadel is attacked, the defender adds the 3 Wall and 1 Gate Obstacles in any order to the Middle Row of the Combat Board after placing their Units.\n"
@@ -235,7 +236,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:113
+#: sections/combat.tex:115
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -246,7 +247,7 @@ msgid ""
 msgstr ""
 
 #. type: figure*
-#: sections/combat.tex:136
+#: sections/combat.tex:138
 #, no-wrap
 msgid ""
 "[h]\n"
@@ -270,7 +271,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:143
+#: sections/combat.tex:145
 #, no-wrap
 msgid ""
 "\\subsection*{Combat Round Structure}\n"
@@ -281,7 +282,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:158
+#: sections/combat.tex:160
 #, no-wrap
 msgid ""
 "Structure of a Combat Round:\n"
@@ -302,7 +303,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:182
+#: sections/combat.tex:184
 #, no-wrap
 msgid ""
 "\\subsection*{\\hypertarget{Endcombat}{End of Combat}}\n"
@@ -332,7 +333,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:184
+#: sections/combat.tex:186
 #, no-wrap
 msgid ""
 "\\subsection*{\\hypertarget{Combatexperience}{Combat Experience}}\n"
@@ -340,7 +341,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:193
+#: sections/combat.tex:195
 #, no-wrap
 msgid ""
 "Winning Combat with your Main Hero usually grants them Experience\\index{Experience}.\n"
@@ -355,7 +356,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:197
+#: sections/combat.tex:199
 #, no-wrap
 msgid ""
 "\\subsection*{\\hypertarget{Quick}{Quick Combat}}\\index{Quick Combat}\n"
@@ -365,7 +366,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:200
+#: sections/combat.tex:202
 #, no-wrap
 msgid ""
 "\\subsection*{Campaign and Cooperative Combat}\n"
@@ -374,7 +375,7 @@ msgid ""
 msgstr ""
 
 #. type: scaledfigure
-#: sections/combat.tex:208
+#: sections/combat.tex:210
 #, no-wrap
 msgid ""
 "[blanker]\n"
@@ -383,12 +384,12 @@ msgid ""
 msgstr ""
 
 #. type: subsection{#2}
-#: sections/combat.tex:212
+#: sections/combat.tex:214
 msgid "Combat Example"
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:219
+#: sections/combat.tex:221
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -401,7 +402,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:221
+#: sections/combat.tex:223
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/zombies_attack_griffins.png}\n"
@@ -409,7 +410,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:229
+#: sections/combat.tex:231
 #, no-wrap
 msgid ""
 "\\textit{After all cards for the attack have been played, the Attack Die is thrown to further modify the amount of damage the attacking Unit deals.\n"
@@ -423,7 +424,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:233
+#: sections/combat.tex:235
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\art/prayer.png}\n"
