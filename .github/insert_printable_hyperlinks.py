@@ -30,7 +30,7 @@ SECTIONS_DIRECTORY = pathlib.Path(__file__).parent.parent / SECTIONS_PATH
 def _replace_line(line: str) -> str:
     for pattern in HYPERLINKS_TO_REPLACE:
         if re.search(f"hyperlink{{{pattern}", line):
-            line = line.replace(f"hyperlink{{{pattern}", f"pagelink{{{pattern}")
+            line = line.replace(f"hyperlink{{{pattern}}}", f"pagelink{{{pattern}}}")
     return line
 
 
