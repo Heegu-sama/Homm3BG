@@ -10,9 +10,9 @@ fi
 makeindex main_en -s index_style.ist
 find sections -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
 python .github/insert_printable_hyperlinks.py "${SECTIONS}"
-if [ $(grep -c "sections/notes.tex" metadata.tex) -eq 0 ]
+if [ $(grep -c "sections/notes.tex" metadata.tex) -eq 1 ]
 then
-  sed -i 's@\\include{\\sections/all_map_locations.tex}@\\include{\\sections/all_map_locations.tex}\\include{\\sections/notes.tex}@g' metadata.tex
+  sed -i 's@\\include{\\sections/notes.tex}@@g' metadata.tex
 fi
 if [ $(grep -c "sections/index.tex" metadata.tex) -eq 0 ]
 then

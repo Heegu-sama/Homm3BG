@@ -93,7 +93,7 @@ jobs:
 
       - name: Include notes page
         if: github.event_name != 'pull_request'
-        run: sed -i 's@\\include{\\sections/all_map_locations.tex}@\\include{\\sections/all_map_locations.tex}\\include{\\sections/notes.tex}@g' metadata.tex
+        run: sed -i 's@\\include{\\sections/notes.tex}@@g' metadata.tex
 
       - name: Include index page
         if: github.event_name != 'pull_request'
