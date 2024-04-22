@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 case "$(uname -s)" in
-    Darwin*)    command=open;;
-    Linux*)     command=xdg-open;;
+    Darwin*)    open=open;;
+    Linux*)     open=xdg-open;;
 esac
 
 LANGUAGE=$1
@@ -11,4 +11,4 @@ LANGUAGE=$1
 rm -f main_${LANGUAGE}.aux && \
   po4a --no-update po4a.cfg && \
   latexmk -pdf -shell-escape main_${LANGUAGE}.tex && \
-  ${command} main_${LANGUAGE}.pdf &
+  ${open} main_${LANGUAGE}.pdf &
