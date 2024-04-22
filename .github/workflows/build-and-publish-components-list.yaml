@@ -1,0 +1,54 @@
+name: Build and Publish Components List
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches: [main]
+    paths:
+      - 'assets/**'
+      - '!assets/gimp-files/**'
+      - 'components_list.tex'
+      - 'components_lists/**'
+
+env:
+  BOARD_GAME_GEEK_COMPONENTS_LIST: https://boardgamegeek.com/filepage/276593
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up repository
+        uses: actions/checkout@v4
+
+      - name: Replace components list version with a warning
+        run: |
+          VERSION=$(grep -P "^[\ ]*Version \d{1,}.\d{1,}$" components_list.tex)
+          RELEASE_PAGE="${{ github.server_url }}/${{ github.repository }}/releases"
+          WARNING="This is an unreleased version built on GitHub from commit ${GITHUB_SHA::7}. To download the latest official release, please go to \\\href{${RELEASE_PAGE}}{GitHub release page} or \\\href{${{ env.BOARD_GAME_GEEK_COMPONENTS_LIST }}}{BoardGameGeek files section}."
+          sed -i "s@$VERSION@$WARNING@g" components_list.tex
+
+      - name: Compile components list
+        uses: xu-cheng/latex-action@v3
+        with:
+          extra_system_packages: "inkscape"
+          latexmk_shell_escape: true
+          root_file: components_list.tex
+
+      - name: Move file
+        # if: github.event_name != 'pull_request'
+        run: |
+          mkdir components_list_en
+          mv components_list.pdf components_list_en/components_list_en.pdf
+
+      - name: Publish in artifacts repository
+        # if: github.event_name != 'pull_request'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          deploy_key: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}
+          external_repository: qwrtln/Homm3BG-build-artifacts
+          publish_branch: components_list_en
+          publish_dir: ./components_list_en
+          force_orphan: true
