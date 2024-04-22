@@ -67,11 +67,11 @@ jobs:
           root_file: main_${{ matrix.language }}.tex
 
       # Upload non-English PDF in PRs to facilitate the work of translators not having po4a
-      - uses: actions/upload-artifact@v4
+      # - uses: actions/upload-artifact@v4
         # if: ${{ matrix.language != 'en' && github.event_name == 'pull_request' }}
-        with:
-          name: main_${{ matrix.language }}
-          path: main_${{ matrix.language }}.pdf
+        # with:
+        #   name: main_${{ matrix.language }}
+        #   path: main_${{ matrix.language }}.pdf
 
       - name: Move file
         if: github.event_name != 'pull_request'
@@ -108,7 +108,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
-          pre_compile: echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && upmendex -s index_style main_${{ matrix.language }}
+          pre_compile: echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && upmendex -s index_style main_${{ matrix.language }} && sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}@g' main_${{ matrix.language }}.ind
           latexmk_shell_escape: true
           root_file: main_${{ matrix.language }}.tex
 
