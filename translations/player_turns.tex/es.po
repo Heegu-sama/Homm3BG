@@ -56,7 +56,7 @@ msgstr ""
 #. type: Plain text
 #: sections/player_turns.tex:3
 msgid "\\addsection{Player Turns}{\\spells/dimension_door.png}"
-msgstr ""
+msgstr "\\addsection{Turnos del jugador}{\\spells/dimension_door.png}\n\\vspace*{\\lang_header_adjustment}"
 
 #. type: multicols
 #: sections/player_turns.tex:17
@@ -75,6 +75,18 @@ msgid ""
 "Once all players have spent all their Movement Points and do not wish to use any further Town or Morale Actions, the current Round is over.\n"
 "\n"
 msgstr ""
+"Al comienzo de tu Turno actualiza tu mano de Cartas siguiendo estos pasos:\n"
+"\\begin{itemize}\n"
+"  \\item Descarta cualquier número de Cartas de tu mano.\n"
+"Si tu mano supera tu Límite de Mano \\includesvg[height=10px]{\\svgs/hand.svg}, debes descartar cartas para que coincidan con el Límite.\n"
+"  \\item A continuación puedes robar Cartas hasta el Límite de tu Mano.\n"
+"  \\item Resuelve cualquier habilidad 'al inicio de tu turno' después de robar.\n"
+"\\end{itemize}\n"
+"Tu actual Límite de Mano\\index{Hand Limit} depende del \\hyperlink{Level}{Nivel} de tu Héroe.\n"
+"El comienzo de tu Turno es la única vez que se comprueba el Límite de tu Mano.\\par\n"
+"Los jugadores pueden realizar tres tipos de Acciones: \\textbf{Movimiento}, \\textbf{Ciudad} y \\textbf{Moral}.\n"
+"Cuando todos los jugadores hayan gastado sus Puntos de Movimiento y no quieran utilizar más Acciones la Ronda actual habrá terminado.\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:29
@@ -93,6 +105,18 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{Acciones de Movimiento}\n"
+"\\hypertarget{Movement}{Acciones de Movimiento}\\index{Movement Actions} se realizan gastando Puntos de Movimiento (PM).\n"
+"Un jugador puede usar PM \\textbf{sólo durante su turno}.\\par\n"
+"Por cada 1 MP gastado puedes realizar una de las siguientes acciones:\n"
+"\\begin{itemize}\n"
+"  \\item Mover un Héroe 1 casilla.\n"
+"  \\item \\hyperlink{Categories}{Revisitar} la Zona actual del Héroe.\n"
+"  \\item \\hyperlink{Timelimit}{Continuar el combate} de unidades Neutrales por 1 PM adicional.\n"
+"  \\item \\hyperlink{Placing}{Descubrir una ficha de mapa} si tu Héroe se encuentra adyacente a ella.\n"
+"  \\item Colocar una nueva Loseta de Mapa (II–III) de tu reserva de fichas de mapa.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:35
@@ -105,6 +129,12 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\includesvg[width=0.6\\linewidth]{\\images/movement_tokens.svg}\\\\\n"
+"  \\medskip\n"
+"  \\footnotesize\\textit{Una ficha de movimiento activa y otra inactiva.}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:43
@@ -117,6 +147,12 @@ msgid ""
 "When you move through a Field with an allied Hero, do not \\hyperlink{Categories}{Visit} the Field that the allied Hero is standing on.\\par\n"
 "\n"
 msgstr ""
+"Marca la cantidad de MP que has usado volteando tus Fichas de Movimiento a su lado marrón inactivo.\n"
+"Si un jugador tiene un \\hyperlink{Secondary}{Héroe Secundario}, utiliza sus movimientos por separado.\n"
+"Los héroes pueden gastar PM en cualquier orden.\\par\n"
+"Los Héroes Aliados pueden moverse unos a través de otros pero no pueden detener su movimiento en la misma casilla.\n"
+"Cuando te mueves a través de una Casilla con un Héroe aliado, no \\hyperlink{Categories}{Resuelvas} la Casilla donde se encuentra el Héroe aliado.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:48
@@ -128,6 +164,11 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{8}{\n"
+"  Siempre que se indique que ganas PM, a veces representado por el símbolo \\includesvg[height=10px]{\\svgs/movement-note.svg}, sólo será válido \\textbf{durante ese turno}.\n"
+"  En la situación de que dos Héroes aliados sean forzados a la misma Casilla debes usar tu siguiente PM para mover a uno de ellos fuera de esa Casilla.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:53
@@ -158,6 +199,19 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{Acciones de Ciudad\\index{Town Actions}}\n"
+"Cada una de las siguientes Acciones de la Ciudad se utilizan \\textbf{una vez por Ronda}.\n"
+"Estas Acciones pueden realizarse en cualquier momento durante el Turno de cualquier jugador, excepto durante el Combate o cuando tu Acción de Ciudad interrumpiese otra Acción.\n"
+"Por ejemplo, no puedes robar cartas de Hechizo simultáneamente con la Ficha del Libro de Hechizos.\\par\n"
+"Cuando un jugador anuncia que está a punto de comenzar el Combate, puedes reaccionar con las Acciones de Ciudad antes de realizar cualquier paso de la \\hyperlink{Combatsetup}{preparación de Combate.}\\par\n"
+"Después de realizar una Acción de la Ciudad, voltea la Ficha respectiva sobre su lado inactivo en tu Tablero de Ciudad.\n"
+"No puedes volver a usar esta Acción hasta el comienzo de la siguiente Ronda, cuando se renuevan las Fichas.\n"
+"\\begin{itemize}\n"
+"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/build.png}}] Ficha de Construcción, utilizada para ampliar tu \\hyperlink{Town}{Ciudad}.\n"
+"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/population.png}}] Ficha de Reclutamiento, usado para Reclutar o Reforzar \\hyperlink{Units}{Unidades} o para Reclutar un \\hyperlink{Secondary}{Héroe Secundario}.\n"
+"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/spells.png}}]Ficha de Hechizos, usado para la compra de \\hyperlink{spells}{Hechizos}. Requiere el edificio de Cofradía de Magos.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:83
@@ -179,6 +233,21 @@ msgid ""
 "If you would gain a second Negative Morale Token, you must instead \\textbf{discard your hand of Cards} the next time you end your Turn.\\par\n"
 "\n"
 msgstr ""
+"\\subsection*{Acciones de Moral}\\index{Morale Actions}\n"
+"Los jugadores pueden ganar o perder Moral a través de varios efectos del juego.\n"
+"Cuando ganes Moral, coge una Ficha de Moral Positiva\\index{Positive Morale} \\includesvg[height=10px]{\\svgs/morale_positive.svg}.\n"
+"Sólo puedes tener una ficha de este tipo.\n"
+"Si estás a punto de ganar una segunda Ficha puedes gastar inmediatamente la primera antes de ganar la segunda.\n"
+"Se puede user una Ficha de Moral Positiva para cualquiera de las siguientes Acciones en cualquier momento:\n"
+"\\begin{itemize}\n"
+"  \\item Roba una Carta de tu Mazo.\n"
+"  \\item Descartar cualquier número de Cartas, luego robar ese número de Cartas.\n"
+"  \\item Relanzar cualquier dado que hayas lanzado.\n"
+"\\end{itemize}\n"
+"Si pierdes Moral descarta una Ficha de Moral Positiva \\includesvg[height=10px]{\\svgs/morale_positive.svg} si tienes una, de lo contrario ganas un Token de Moral Negativa\\index{Negative Morale} \\includesvg[height=10px]{\\svgs/morale_negative.svg}.\n"
+"De igual modo, ganar Moral Positiva mientras tienes una Ficha de Moral Negativa la descarta.\n"
+"Si ganas una segunda Ficha de Moral Negativa en su lugar debes \\textbf{descartar tus Cartas} la próxima vez que termines el turno.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:87
@@ -189,6 +258,10 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{4}{La Facción Necrópolis \\includesvg[height=10px]{\\svgs/necro-note.svg} ignora los efectos de Moral.\n"
+"  No pueden ganar ni perder moral por ningún motivo.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:91
@@ -207,6 +280,8 @@ msgid ""
 "\\subsection*{Example Turn}\n"
 "\n"
 msgstr ""
+"\\subsection*{Turno de Ejemplo}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:101
@@ -221,6 +296,14 @@ msgid ""
 "As Alice announces her intent to start Combat, both players still have an opportunity to perform Town Actions.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Alice, que interpreta a la Heroína Catalina la Caballero, comienza su Turno.\n"
+"Tiene 3 cartas en la mano de la ronda anterior y decide descartar 2 de ellas antes de robar cartas de su Mazo hasta llegar al Límite de su Mano. \\includesvg[height=10px]{\\svgs/hand.svg}.\n"
+"El límite actual es 5, ya que su Héroe Principal es de Nivel 3, por lo que roba 4 cartas (ver \\hyperlink{Level}{Efectos de Nivel}).}\\par\n"
+"\\textit{Luego gasta su Ficha de Construcción para hacer la Vivienda \\includesvg[height=10px]{\\svgs/golden.svg} y después su Ficha de Reclutamiento para \\hyperlink{Units}{Reclutar} Campeones \\includesvg[height=10px]{\\svgs/golden.svg}.\n"
+"Puede hacerlo ya que antes había construido las Viviendas de Nivel inferior (\\includesvg[height=10px]{\\svgs/bronze.svg} y \\includesvg[height=10px]{\\svgs/silver.svg}) y tiene \\hyperlink{Resources}{Recursos} suficientes para las Acciones.}\\par\n"
+"\\textit{Ya preparada para la próxima batalla, gasta un PM para mover su Héroe a un Terreno adyacente ocupado por Sandro el Nigromante, un Héroe enemigo controlado por Bob.\n"
+"Cuando Alice anuncia el Combate ambos jugadores aún tienen la oportunidad de realizar las Acciones de la Ciudad.}\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:103
