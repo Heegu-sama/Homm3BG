@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 rm -f * 2> /dev/null
 git restore \
   README.md \

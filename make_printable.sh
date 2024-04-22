@@ -8,6 +8,10 @@ else
 fi
 
 po4a --no-update po4a.cfg
+if [ $(grep -c "icu_locale" index_style.ist) -eq 0 ]
+then
+  echo "icu_locale \"${LANGUAGE}\"" >> index_style.ist
+fi
 upmendex -s index_style main_${LANGUAGE}
 # upmendex sorts non-English characters properly but fails to generate proper ind file
 sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}@g' main_${LANGUAGE}.ind
@@ -24,3 +28,4 @@ then
 fi
 sed -i -e "/% QR codes placeholder/{r .github/qr-codes-$LANGUAGE.tex" -e 'd}' metadata.tex
 latexmk -pdf -shell-escape "main_${LANGUAGE}"
+git restore index_style.ist
