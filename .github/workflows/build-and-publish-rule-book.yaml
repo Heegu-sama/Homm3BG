@@ -38,6 +38,10 @@ jobs:
             version: Versión
             warning: "Se trata de una versión inédita creada en GitHub a partir del commit"
             sections: "sections/translated/es"
+          - language: fr
+            version: Version
+            warning: "Ceci est une version non-éditée créée sur GitHub à partir de commit"
+            sections: "sections/translated/fr"
 
     steps:
       - name: Set up repository
@@ -91,6 +95,10 @@ jobs:
           find ${{ matrix.sections }} -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
           python .github/insert_printable_hyperlinks.py ${{ matrix.sections }}
 
+      - name: Exclude notes page
+        if: github.event_name != 'pull_request'
+        run: sed -i 's@\\include{\\sections/notes.tex}@@g' metadata.tex
+
       - name: Include index page
         if: github.event_name != 'pull_request'
         run: sed -i 's@\\include{\\sections/back_cover.tex}@\\include{\\sections/index.tex}\\include{\\sections/back_cover.tex}@g' metadata.tex
@@ -104,8 +112,8 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
+          pre_compile: echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && upmendex -s index_style main_${{ matrix.language }} && sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}@g' main_${{ matrix.language }}.ind
           latexmk_shell_escape: true
-          post_compile: "makeindex main_${{ matrix.language }} -s index_style.ist && pdflatex --shell-escape main_${{ matrix.language }}.tex"
           root_file: main_${{ matrix.language }}.tex
 
       - name: Move file
