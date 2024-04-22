@@ -21,7 +21,7 @@
 \usepackage{graphicx, trimclip}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{hyperref}
-\usepackage[nonewpage]{imakeidx}
+\usepackage[noautomatic, nonewpage]{imakeidx}
 \usepackage{multicol}
 \usepackage{outlines}
 \usepackage{setspace}
@@ -175,7 +175,7 @@
   \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}%
 }
 
-\makeindex[columns=3, title=, options={-s index_style.ist}]
+\makeindex[columns=3, title=,]
 
 \begin{document}
 
