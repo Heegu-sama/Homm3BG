@@ -95,6 +95,10 @@ jobs:
           find ${{ matrix.sections }} -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
           python .github/insert_printable_hyperlinks.py ${{ matrix.sections }}
 
+      - name: Include notes page
+        if: github.event_name != 'pull_request'
+        run: sed -i 's@\\include{\\sections/notes.tex}@@g' metadata.tex
+
       - name: Include index page
         if: github.event_name != 'pull_request'
         run: sed -i 's@\\include{\\sections/back_cover.tex}@\\include{\\sections/index.tex}\\include{\\sections/back_cover.tex}@g' metadata.tex
