@@ -18,6 +18,7 @@ env:
   PO4A_VERSION: "0.71"
   PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
   REPO_URL: https://github.com/Heegu-sama/Homm3BG
+  EVEN_NUMBER_OF_PAGES: false
 
 jobs:
   build:
@@ -95,9 +96,9 @@ jobs:
           find ${{ matrix.sections }} -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
           python .github/insert_printable_hyperlinks.py ${{ matrix.sections }}
 
-      - name: Exclude notes page
-        if: github.event_name != 'pull_request'
-        run: sed -i 's@\\include{\\sections/notes.tex}@@g' metadata.tex
+      - name: Include notes page
+        if: ${{ github.event_name != 'pull_request' && env.EVEN_NUMBER_OF_PAGES == 'true' }}
+        run: sed -i 's@% Notes placeholder@\\include{\\sections/notes.tex}@g' metadata.tex
 
       - name: Include index page
         if: github.event_name != 'pull_request'
