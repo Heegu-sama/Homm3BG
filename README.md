@@ -64,14 +64,30 @@ To work on the document on your machine, you need the following:
 - [**GIMP**](https://www.gimp.org/) (optional) to edit some images in `assets` directory - see below for details
 - [**aspell**](http://aspell.net/) (optional) for spellchecking - see below for details
 
+
 To build the document in English, either run this in the command line:
 
 ```bash
 latexmk -pdf -silent -shell-escape "main_en"
 ```
 
-or press the `Build & View` ▶️ (F5) button in TeXstudio.
-To build components list instead of the rule book, just replace `"main_en"` with `"components_list"`, or press `Build & View` with that file open in TeXstudio.
+or press the `Build & View` ▶️ (F5) button in TeXstudio on the `main_en.tex` file.
+
+To build the document in any other language (currently `pl`, `es` and `fr` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
+
+```bash
+./build.sh <LANGUAGE>
+```
+
+or press the `Build & View` ▶️ (F5) button in TeXstudio while having any `main_<LANGUAGE>.tex` file open, after running `po4a` (see `Translations` below for details).
+
+To build components list instead of the rule book, use this:
+
+```bash
+latexmk -pdf -shell-escape components_list
+```
+
+or press `Build & View` on file `components_list.tex` open in TeXstudio.
 
 To build the printable version in a given language, make sure you've built a regular one first at least once.
 Then, use the script:
@@ -80,7 +96,7 @@ Then, use the script:
 > Also, you'll need [Python](https://www.python.org/) for this 🐍
 
 ```bash
-./make_printable.sh en
+./make_printable.sh <LANGUAGE>
 ```
 
 ### 🌍 Translations
