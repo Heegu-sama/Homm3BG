@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-06 18:37+0300\n"
+"POT-Creation-Date: 2024-04-19 21:21+0200\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,8 +19,9 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:5 sections/all_map_locations.tex:411
-#: sections/credits.tex:7 sections/deckbuilding.tex:5
+#: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
+#: sections/all_map_locations.tex:417 sections/combat.tex:5
+#: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/expansion_content.tex:5 sections/expansion_content.tex:49
 #: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
 #: sections/map_elements.tex:34 sections/map_elements.tex:74
@@ -36,7 +37,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/all_map_locations.tex:27 sections/all_map_locations.tex:425
+#: sections/all_map_locations.tex:431 sections/combat.tex:91
 #: sections/player_turns.tex:37 sections/units.tex:105 sections/units.tex:138
 #, no-wrap
 msgid ""
@@ -57,7 +58,7 @@ msgstr ""
 #. type: Plain text
 #: sections/player_turns.tex:3
 msgid "\\addsection{Player Turns}{\\spells/dimension_door.png}"
-msgstr ""
+msgstr "\\addsection{Tury graczy}{\\spells/dimension_door.png}"
 
 #. type: multicols
 #: sections/player_turns.tex:17
@@ -76,6 +77,18 @@ msgid ""
 "Once all players have spent all their Movement Points and do not wish to use any further Town or Morale Actions, the current Round is over.\n"
 "\n"
 msgstr ""
+"Na początku swojej Tury wykonaj następujące kroki:\n"
+"\\begin{itemize}\n"
+" \\item Odrzuć dowolną liczbę Kart z ręki.\n"
+"Jeśli liczba Kart w twojej ręce przekracza twój Limit \\includesvg[height=10px]{\\svgs/hand.svg}, musisz odrzucić nadmiarowe Karty do Limitu.\n"
+" \\item Następnie możesz dobrać Karty aż do osiągnięcia swojego Limitu Ręki.\n"
+" \\item Po dobraniu Kart rozpatrz wszelkie efekty mające miejsce wraz z początkiem twojej Tury.\n"
+"\\end{itemize}\n"
+"Twój Limit Ręki\\index{Limit Ręki} zależy od \\hyperlink{Level}{Poziomu} twojego Bohatera Głównego.\n"
+"Początek twojej Tury to jedyny moment, w którym sprawdzany jest twój Limit Ręki.\\par\n"
+"Gracze mogą wykonywać trzy rodzaje Akcji: \\textbf{Ruch}, \\textbf{Miasto} i \\textbf{Morale}.\n"
+"Bieżąca Runda kończy się, gdy wszyscy gracze wykorzystają wszystkie Punkty Ruchu i nie chcą wykorzystać pozostałych Akcji Miasta lub Morale.\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:29
@@ -94,6 +107,18 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{Akcje Ruchu}\n"
+"\\hypertarget{Movement}{Akcje Ruchu}\\index{Akcje Ruchu} wykonuje się wykorzystując Punkty Ruchu (PR).\n"
+"Gracz może wykonać Akcje Ruchu \\textbf{tylko podczas swojej Tury}.\\par\n"
+"Każdy wykorzystany PR umożliwia wykonanie jednej z poniższych Akcji:\n"
+"\\begin{itemize}\n"
+"  \\item Przesunięcie Bohatera o jedno Pole w dowolnym kierunku.\n"
+"  \\item \\hyperlink{Categories}{Ponowne odwiedzenie} Pola na którym Bohater aktualnie się znajduje.\n"
+"  \\item \\hyperlink{Timelimit}{Kontynuowanie walki} przeciwko Jednostkom Neutralnym przez dodatkową Rundę Walki.\n"
+"  \\item \\hyperlink{Placing}{Odwrócenie zakrytego Kafelka Mapy} jeśli Bohater znajduje się na Polu sąsiadującym z tym Kafelkiem.\n"
+"  \\item Położenie nowego Kafelka Mapy z twojej puli Kafelków Dalekich (II–III).\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:35
@@ -106,6 +131,12 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\includesvg[width=0.6\\linewidth]{\\images/movement_tokens.svg}\\\\\n"
+"  \\medskip\n"
+"  \\footnotesize\\textit{Aktywny oraz użyty Żeton Ruchu.}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:43
@@ -118,6 +149,12 @@ msgid ""
 "When you move through a Field with an allied Hero, do not \\hyperlink{Categories}{Visit} the Field that the allied Hero is standing on.\\par\n"
 "\n"
 msgstr ""
+"Zaznacz ilość wykorzystanych PR, odwracając swoje Żetony Ruchu na nieaktywną, brązową stronę.\n"
+"Jeśli gracz posiada zarówno Głównego jak i \\hyperlink{Secondary}{Pomocniczego Bohatera}, śledź ich PR oddzielnie.\n"
+"Bohaterowie mogą wykorzystywać PR w dowolnej kolejności.\\par\n"
+"Sojuszniczy Bohaterowie mogą przechodzić przez siebie nawzajem ale nie mogą zatrzymać się na tym samym Polu.\n"
+"Nie możesz \\hyperlink{Categories}{Odwiedzić} Pola na którym znajduje się sojuszniczy Bohater.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:48
@@ -129,6 +166,11 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{10}{\n"
+"  Gdy jesteś poinstruowany, aby zyskać (dodatkowy) PR, czasem przedstawiony ikoną \\includesvg[height=10px]{\\svgs/movement-note.svg}, ten PR utrzymuje się \\textbf{tylko przez Turę, w której został uzyskany}.\n"
+"  W sytuacji, gdy dwóch sojuszniczych Bohaterów jest zmuszonych do zatrzymania się na tym samym Polu, musisz wykorzystać swój następny PR celem opuszczenia tego Pola.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:53
@@ -159,6 +201,19 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{Akcje Miasta\\index{Akcje Miasta}}\n"
+"\\textbf{Raz na rundę} możesz wykonać każdą z poniższych Akcji Miasta.\n"
+"Akcje te można wykonywać w dowolnym momencie podczas Tury dowolnego Gracza, z wyjątkiem Walki lub gdy twoja Akcja przerwie inną Akcję.\n"
+"Na przykład nie możesz jednocześnie dobierać Kart Zaklęć i korzystać z Żetonu Księgi Zaklęć.\\par\n"
+"Gdy Gracz ogłasza, że zamierza rozpocząć Walkę, możesz na to zareagować wykonując dowolną liczbę Akcji Miasta przed przejściem do \\hyperlink{Combatsetup}{kroków przygotowania Walki.}\\par\n"
+"Po wykonaniu Akcji Miasta odwróć odpowiadający jej Żeton na jego nieaktywną stronę na swojej Planszy Miasta.\n"
+"Nie możesz ponownie użyć tej Akcji do początku następnej Rundy, gdy Żetony zostaną odwrócone.\n"
+"\\begin{itemize}\n"
+"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/build.png}}] Żeton Budowy, używany do rozbudowy twojego \\hyperlink{Town}{Miasta}.\n"
+"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/population.png}}] Żeton Populacji, używany do Rekrutacji i Wzmocnienia \\hyperlink{Units}{Jednostek} albo do Zrekrutowania \\hyperlink{Secondary}{Bohatera Pomocniczego}.\n"
+"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/spells.png}}]Żeton Księgi Zaklęć, używany do kupowania \\hyperlink{spells}{Zaklęć}. Do skorzystania z niego wymagana jest Gildia Magów.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:83
@@ -180,6 +235,21 @@ msgid ""
 "If you would gain a second Negative Morale Token, you must instead \\textbf{discard your hand of Cards} the next time you end your Turn.\\par\n"
 "\n"
 msgstr ""
+"\\subsection*{Akcje Morale}\\index{Akcje Morale}\n"
+"Gracze mogą zyskać lub stracić Morale z powodu różnych efektów gry.\n"
+"Gdy zdobędziesz Morale, pobierz Żeton Wysokiego Morale\\index{Wysokie Morale} \\includesvg[height=10px]{\\svgs/morale_positive.svg}.\n"
+"Możesz posiadać tylko jeden taki Żeton.\n"
+"W momencie uzyskania drugiego Żetonu, możesz natychmiast wykorzystać pierwszy przed zdobyciem drugiego.\n"
+"Żeton Wysokiego Morale można wydać, aby wykonać dowolną z poniższych akcji w dowolnym momencie:\n"
+"\\begin{itemize}\n"
+"  \\item Pobierz Kartę ze swojej Talii.\n"
+"  \\item Odrzuć dowolną ilość Kart, a następnie dobierz tyle samo kart z Talii.\n"
+"  \\item Przerzuć jedną Kość.\n"
+"\\end{itemize}\n"
+"Gdy twoje Morale obniży się, odrzuć Żeton Wysokiego Morale \\includesvg[height=10px]{\\svgs/morale_positive.svg} jeśli go posiadasz, w innym przypadku pobierz Żeton Niskiego Morale\\index{Niskie Morale} \\includesvg[height=10px]{\\svgs/morale_negative.svg}.\n"
+"Jeżeli natomiast twoje Morale podniesie się gdy masz Żeton Niskiego Morale, odrzuć ten Żeton.\n"
+"Gdy efekt gry każe ci dobrać drugi Żeton Niskiego Morale, zamiast tego pod koniec Tury \\textbf{odrzuć wszystkie Karty z ręki}.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:87
@@ -190,6 +260,10 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{6}{Nekropolia \\includesvg[height=10px]{\\svgs/necro-note.svg} ignoruje wszystkie efekty związane z Morale.\n"
+"  Frakcja ta nie może pozyskać bądź stracić Morale z jakiegokolwiek powodu.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:91
@@ -208,6 +282,8 @@ msgid ""
 "\\subsection*{Example Turn}\n"
 "\n"
 msgstr ""
+"\\subsection*{Przykładowa Tura}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:101
@@ -218,10 +294,18 @@ msgid ""
 "The current limit is 5, since her Main Hero is Level 3, so she draws 4 cards after discarding (see \\hyperlink{Level}{Level Effects}).}\\par\n"
 "\\textit{She then spends her Build Token to construct the \\includesvg[height=10px]{\\svgs/golden.svg} Dwelling, and then her Population Token to \\hyperlink{Units}{Recruit} the \\includesvg[height=10px]{\\svgs/golden.svg} Unit Champions.\n"
 "She can do this, as she had previously built the prerequisite lower Level Dwellings (\\includesvg[height=10px]{\\svgs/bronze.svg} and \\includesvg[height=10px]{\\svgs/silver.svg}) and has enough \\hyperlink{Resources}{Resources} to both Build the Dwelling and to Recruit the Champions.}\\par\n"
-"\\textit{Now prepared for a upcoming battle, she spends a Movement Point to move her Main Hero to an adjacent Field currently occupied by Sandro the Necromancer, an enemy Main Hero controlled by Bob.\n"
+"\\textit{Now prepared for an upcoming battle, she spends a Movement Point to move her Main Hero to an adjacent Field currently occupied by Sandro the Necromancer, an enemy Main Hero controlled by Bob.\n"
 "As Alice announces her intent to start Combat, both players still have an opportunity to perform Town Actions.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Alicja, która gra Katarzyną, rozpoczyna swoją Turę.\n"
+"Na ręce ma 3 Karty z poprzedniej Rundy i postanawia odrzucić 2 z nich przed dobraniem Kart z jej Talii, do Limitu Kart na ręce \\includesvg[height=10px]{\\svgs/hand.svg}.\n"
+"Obecny Limit wynosi 5, gdyż jej bohater ma 3. poziom, więc po odrzuceniu Kart dobiera 4 (spr. \\hyperlink{Level}{Efekty Poziomów}).}\\par\n"
+"\\textit{Następnie wykorzystuje swój Żeton Budowy do wzniesienia \\includesvg[height=10px]{\\svgs/golden.svg} Siedlisk oraz Żetonu Populacji do \\hyperlink{Units}{Zrekrutowania} \\includesvg[height=10px]{\\svgs/golden.svg} jednostek Czempionów.\n"
+"Może to zrobić ponieważ wcześniej wybudowała wymagane (\\includesvg[height=10px]{\\svgs/bronze.svg} oraz \\includesvg[height=10px]{\\svgs/silver.svg}) Siedliska i ma wystarczająco \\hyperlink{Resources}{Zasobów} do ich zbudowania jak i do Zrekrutowania Czempionów.}\\par\n"
+"\\textit{Tak przygotowana do bitwy, Alicja wykorzystuje Punkt Ruchu aby przemieścić swojego Bohatera Głównego do Pola przylegającego z Polem  zajmowanym przez Nekromantę Sandro - wrogiego Bohatera Głównego kontrolowanego przez Boba.\n"
+"Przed rozpoczęciem Walki obaj gracze mają możliwość wykonania Akcji Miasta.}\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:103
