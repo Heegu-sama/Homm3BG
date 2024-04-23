@@ -57,7 +57,7 @@ msgstr ""
 #. type: Plain text
 #: sections/heroes.tex:3
 msgid "\\addsection{Heroes}{\\skills/sorcery.png}"
-msgstr ""
+msgstr "\\addsection{Héros}{\\skills/sorcery.png}"
 
 #. type: multicols*
 #: sections/heroes.tex:9
@@ -68,6 +68,10 @@ msgid ""
 "Heroes are used to perform Movement Actions on the game board and to start Combats against enemies in order to reach a Scenario victory condition.\n"
 "\n"
 msgstr ""
+"Les \\hypertarget{Heroes}{Joueurs} contrôlent toujours un Héros Principal et peuvent aussi recruter un Héros Secondaire.\n"
+"Le “Héros d’un Joueur” fait référence à l’un ou l’autre.\n"
+"Les Héros sont utilisés pour effectuer des Actions de Mouvement sur la Map et engager des Combats contre les ennemis dans le but d’atteindre une condition de victoire du Scénario.\n"
+"\n"
 
 #. type: multicols*
 #: sections/heroes.tex:17
@@ -82,6 +86,14 @@ msgid ""
 "Gaining 1 Experience\\index{Experience} is represented by the symbol \\includesvg[height=10px]{\\svgs/experience.svg}.\n"
 "\n"
 msgstr ""
+"\\subsection*{Héros Principal}\n"
+"Le Héros Principal\\index{Main Hero} est représenté par sa figurine, son Plateau de Héros et Votre Deck.\n"
+"chaque Héros Principal de Faction possède 3 Points de Mouvement.\n"
+"Seul le Héros Principal peut utiliser votre Deck.\\par\n"
+"Chaque Héros Principal commence la partie au Niveau 1 et peut monter jusqu’au Niveau 7 en gagnant de l’Expérience.\n"
+"L’Expérience est obtenue en \\hyperlink{Combatexperience}{gagnant un Combat}, Visitant certains \\hyperlink{All}{Lieux} et les \\hyperlink{Resources}{Coffres aux Trésors} \\includesvg[height=10px]{\\svgs/treasure.svg}.\n"
+"Gagner 1 Experience\\index{Experience} est représenté par le symbole \\includesvg[height=10px]{\\svgs/experience.svg}.\n"
+"\n"
 
 #. type: multicols*
 #: sections/heroes.tex:32
@@ -103,6 +115,21 @@ msgid ""
 "They can be Recruited again with another use of the Population Token.\\par\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Secondary}{Héros Secondaire}}\n"
+"Si vous contrôlez une Ville ou un Campement, un Héros Secondaire\\index{Secondary Hero} peut être Recruter en utilisant \\textbf{Jeton Population} et 10 Or \\includesvg[height=10px]{\\svgs/gold.svg}.\\par\n"
+"\note{5}{Le Jeton Population \\textbf{ne peut pas} servir à \\hyperlink{Units}{Recruter ou Renforcer} des Unités et à Recruter le Héros Secondaire en même temps.}\\par\n"
+"Votre Héros Secondaire utilise la figurine de Héros restante de votre Faction.\n"
+"vous voudrez différencier cette figurine en utilisant un Cube de Faction de celle de votre Héros Principal.\n"
+"Placez la figurine dans votre Ville ou un Campement que vous contrôlez.\n"
+"\\textbf{Vous ne pouvez posséder qu’un seul Héros Secondaire}.\\par\n"
+"Le Héros Secondaire a \\textbf{2 Points de Mouvement}; quand vous engagez un Héros Secondaire, prenez 2 Jetons de Mouvement supplémentaires pour représenter ces PM.\n"
+"Ils n’ont pas de Plateau de Héros, \\textbf{ne gagnent pas d’Expérience et n’utilisent pas de Cartes de Votre Deck} pour aucune raison.\n"
+"Si un Héros Secondaire gagne des Cartes, placez-les dans votre Main (voir \\hyperlink{Playerdecks}{Deck-building}).\n"
+"Le Héros Secondaire a le même niveau que le Héros Principal dans le but de résoudre les \\hyperlink{Quick}{Combat Rapide}.\\par\n"
+"Si votre Héros Secondaire est attaqué par un Héros ennemi, vous pouvez \\hyperlink{Endcombat}{choisir la défaite au lieu de Combattre}.\n"
+"Quand un Héros Secondaire est battu, retirez-le du jeu.\n"
+"Ils peuvent à nouveau être Recrutés avec un autre Jeton de Population.\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/heroes.tex:37
@@ -116,12 +143,12 @@ msgstr ""
 #. type: subsection{#2}
 #: sections/heroes.tex:70
 msgid "\\hypertarget{Herocard}{Hero Card Anatomy}"
-msgstr ""
+msgstr "\\hypertarget{Herocard}{Plateau de Héros}"
 
 #. type: index{#1}
 #: sections/heroes.tex:70
 msgid "Hero Card"
-msgstr ""
+msgstr "Plateau de Héros"
 
 #. type: figure
 #: sections/heroes.tex:70 sections/setup.tex:69 sections/units.tex:113
@@ -139,11 +166,12 @@ msgid ""
 "\\textbf{Name} – The Hero's name.  Used for identification.  Has no gameplay "
 "effect."
 msgstr ""
+"\\textbf{Nom} – Nom du Héros. Sert à l'identifier. Pas d'effet en jeu."
 
 #. type: enumerate
 #: sections/heroes.tex:70
 msgid "\\textbf{Class} – The Hero's class.  Has no gameplay effect."
-msgstr ""
+msgstr "\\textbf{Classe} – Classe du Héros. Pas d'effet en jeu."
 
 #. type: enumerate
 #: sections/heroes.tex:70
@@ -153,6 +181,8 @@ msgid ""
 "Determines the amount of Magic Arrow Spells in your Starting Deck (1 or 2 "
 "respectively)."
 msgstr ""
+"\\textbf{Type} – Type du Héros (Guerrier \\includesvg[height=10px]{\\svgs/might.svg} ou Mage \\includesvg[height=10px]{\\svgs/magic.svg}).\n"
+"Détermines le nombre de Carte Flèche Magique dans votre Deck de départ (1 ou 2 respectivement).\n"
 
 #. type: enumerate
 #: sections/heroes.tex:70
@@ -160,26 +190,26 @@ msgid ""
 "\\textbf{Faction Color} – Reminder for the color of the Faction's cubes and "
 "miniatures."
 msgstr ""
+"\\textbf{Couleur de Faction} – Couleur des Cubes de Faction et des Figurines."
 
 #. type: enumerate
 #: sections/heroes.tex:70
 msgid "\\textbf{Attack} – Number of Attack Cards in your Starting Deck."
-msgstr ""
+msgstr "\\textbf{Attaque} – Nombre de Carte Attaque dans Votre Deck de départ."
 
 #. type: enumerate
 #: sections/heroes.tex:70
 msgid "\\textbf{Defense} – Number of Defense Cards in your Starting Deck."
-msgstr ""
-
+msgstr "\\textbf{Défense} – Nombre de Carte Défense dans Votre Deck de départ."
 #. type: enumerate
 #: sections/heroes.tex:70
 msgid "\\textbf{Power} – Number of Power Cards in your Starting Deck."
-msgstr ""
+msgstr "\\textbf{Puissance} – Nombre de Carte Puissance dans Votre Deck de départ."
 
 #. type: enumerate
 #: sections/heroes.tex:70
 msgid "\\textbf{Knowledge} – Number of Knowledge Cards in your Starting Deck."
-msgstr ""
+msgstr "\\textbf{Savoir} – Nombre de Carte Savoir dans Votre Deck de départ."
 
 #. type: enumerate
 #: sections/heroes.tex:70
@@ -187,6 +217,7 @@ msgid ""
 "\\textbf{Starting Ability} – Reminder for the unique Ability "
 "Card\\index{Ability Card} the Hero starts with."
 msgstr ""
+"\\textbf{Compétence} – Carte de Compétence\\index{Ability Card} dans Votre Deck de départ."
 
 #. type: enumerate
 #: sections/heroes.tex:70
@@ -195,6 +226,9 @@ msgid ""
 "their deck at the start of the game and after specific Level ups.  Each hero "
 "has three Specialty Cards."
 msgstr ""
+"\\textbf{Spécialisation} – Carte de Spécialisation à ajouter dans votre "
+"Deck de départ et en gagnant des Niveaux. Chaque Héros "
+"a trois Cartes de Spécialisation."
 
 #. type: enumerate
 #: sections/heroes.tex:70
@@ -204,6 +238,9 @@ msgid ""
 "of steps on this track.  When the cube reaches the next slot on the upper "
 "row, the hero gains a Level."
 msgstr ""
+"\\textbf{Piste de Niveau} – Quand le Héros Principal gagne 1 ou plusieurs Expérience "
+"\\includesvg[height=10px]{\\svgs/experience.svg}, déplacez le Cube du même nombre "
+"sur la Piste. Quand le Cube atteint la ligne du haut de la Piste, le Héros gagnent un Niveau."
 
 #. type: scriptsize
 #: sections/heroes.tex:72
@@ -261,6 +298,22 @@ msgid ""
 "      \\end{itemize}\n"
 "    "
 msgstr ""
+"{2}\n"
+"      \\begin{itemize}\n"
+"        \\item[\\textbf{1.}] \\textbf{Nom}\n"
+"        \\item[\\textbf{2.}] \\textbf{Classe}\n"
+"        \\item[\\textbf{3.}] \\textbf{Type}\n"
+"        \\item[\\textbf{4.}] \\textbf{Couleur de Faction}\n"
+"        \\item[\\textbf{5.}] \\textbf{Attaque}\n"
+"        \\item[\\textbf{6.}] \\textbf{Défense}\n"
+"        \\item[\\textbf{7.}] \\textbf{Puissance}\n"
+"        \\item[\\textbf{8.}] \\textbf{Savoir}\n"
+"        \\item[\\textbf{9.}] \\textbf{Compétence}\n"
+"        \\item[\\textbf{10.}] \\textbf{Spécialisation}\n"
+"        \\item[\\textbf{11.}] \\textbf{Piste de Niveau}\n"
+"        \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
+"      \\end{itemize}\n"
+"    "
 
 #. type: tikzpicture
 #: sections/heroes.tex:112
@@ -309,6 +362,39 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Level}{Effets de Niveau}}\n"
+"Le Héros Principal commence chaque Scénario au Niveau 1\\index{Level} et peut monter en Niveau en gagnant de l’Expérience \\includesvg[height=10px]{\\svgs/experience.svg}.\n"
+"Les sources d’Expérience communes sont les \\hyperlink{Resources}{Coffres aux Trésors} \\includesvg[height=10px]{\\svgs/treasure.svg} et le \\hyperlink{Combatexperience}{Combat}.\n"
+"Chaque Niveau nécessite \\textbf{2 Expérience}.\n"
+"Quand un Héros Principal atteint un nouveau Niveau, résolvez les effets du Gain de Niveau immédiatement. Gagner de l’Expérience au Niveau 7 n’a pas d’effet.\\par\n"
+"La Piste de Niveau de votre Plateau de Héros montre les informations suivante:\n"
+"\\begin{itemize}\n"
+"\\item Le Niveau de votre Héros Principal et son Expérience acquise symbolisé par un Cube de Faction.\n"
+"\\item Votre Limite de Main \\includesvg[height=10px]{\\svgs/hand.svg}.\n"
+"\\item Le nombre d'\\hyperlink{Ability}{Effet Expert} \\includesvg[height=10px]{\\svgs/expert.svg} que vous pouvez utiliser à chaque Tour.\n"
+"\\item A quel Niveau votre Héros Principal doit \\hyperlink{Playerdecks}{Fouiller} pour une nouvelle \\hyperlink{Ability}{Carte de Compétence} ou gagner une \\hyperlink{Specialty}{Carte de Spécialisation}.\n"
+"Les Niveaux marqués en Or sur la Piste (\\includesvg[height=10px]{\\svgs/level1.svg}, \\includesvg[height=10px]{\\svgs/level4.svg} and \\includesvg[height=10px]{\\svgs/level6.svg}) donne une carte de Spécialisation, alors que les Niveaux Argent (2, 3, 5, 7) donnent une Carte de Compétence.\n"
+"\\end{itemize}\n"
+"\\vfill\null\n"
+"\\columnbreak\n"
+"Liste de tous les effets:\n"
+"\\begin{itemize}\n"
+"\\item \\textbf{Level 1} – Limite de Main\\index{Hand Limit} 4.\n"
+"Ajoutez à votre Deck, la première Carte de Spécialisation.\n"
+"\\item \\textbf{Level 2} – Fouillez (2) dans le Deck de Compétence.\n"
+"Vous pouvez jouer 1 Effet Expert.\n"
+"\\item \\textbf{Level 3} – Limite de Main 5.\n"
+"Fouillez (2) dans le Deck de Compétence.\n"
+"\\item \\textbf{Level 4} – Ajoutez votre deuxième Carte de Spécialisation.\n"
+"Vous pouvez jouer 2 Effets Expert.\n"
+"\\item \\textbf{Level 5} – Limite de Main 6.\n"
+"Fouillez (2) dans le Deck de Compétence.\n"
+"\\item \\textbf{Level 6} – Ajoutez votre troisième Carte de Spécialisation.\n"
+"Vous pouvez jouer 3 Effets Expert.\n"
+"\\item \\textbf{Level 7} – Limite de Main 7.\n"
+"Fouillez (2) dans le Deck de Compétence.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: tikzpicture
 #: sections/heroes.tex:155
