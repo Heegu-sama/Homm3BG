@@ -9,6 +9,7 @@ git restore \
   index_style.ist \
   main_es.tex \
   main_en.tex \
+  main_fr.tex \
   main_pl.tex \
   make_printable.sh \
   metadata.tex \

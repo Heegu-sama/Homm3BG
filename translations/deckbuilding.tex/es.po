@@ -91,6 +91,8 @@ msgstr ""
 #: sections/deckbuilding.tex:3
 msgid "\\addsection{Deck-building}{\\skills/wisdom.png}"
 msgstr ""
+"\\addsection{Construcción del Mazo}{\\skills/wisdom.png}\n"
+"\\vspace*{\\lang_header_adjustment}"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:10
@@ -102,6 +104,11 @@ msgid ""
 "Each player's Deck starts with 9 cards, built during the game's setup.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Playerdecks}{Mazo del Jugador}}\n"
+"Todos los jugadores tienen un mazo que representa las habilidades y el equipo del Héroe.\n"
+"Los mazos pueden contener cartas de Características, Habilidades, Hechizos, Artefactos y la Especialidad del Héroe.\n"
+"El mazo de cada jugador comienza con 9 cartas, creado durante la preparación del juego.\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:34
@@ -132,6 +139,29 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\subsection*{Normas generales de las cartas}\n"
+"\\begin{enumerate}\n"
+"  \\item Las cartas \\textbf{sólo pueden ser jugadas en tu Turno} o en un \\hyperlink{Combat}{Combate} que involucre a tu \\textbf{Héroe Principal}.\n"
+"  \\item Después de usar una carta, descártala en tu propia Pila de Descartes\\index{Pila de Descartes}.\n"
+"  \\item Si Tu Mazo está vacío cuando necesites robar una Carta, \\textbf{baraja tu Pila de Descartes} y úsala como nuevo Mazo.\n"
+"  \\item Cuando tu Héroe gane una Carta, colócala \\textbf{diréctamente en tu Mano} a menos que se indique lo contrario.\n"
+"  \\item Cuando se indique \\textbf{Buscar} (X)\\index{Buscar (X)} en los Mazos de Habilidades, Artefactos o Hechizos, puedes mirar las (X) Cartas superiores del Mazo, quedarte una y descartar las otras, \\textbf{O} puedes ganar la carta visible de su Pila de Descartes.\n"
+"  \\item Los Mazos de Habilidades, Artefactos y Hechizos tienen sus propias Pilas de Descartes, creadas durante la preparación, que ayudan a identificar los Mazos.\n"
+"    Si un Mazo se queda sin Cartas, baraja la Pila de Descartes como nuevo Mazo, descarta su Carta superior y forma una nueva Pila.\n"
+"    Siempre que una Pila de Descartes quede vacía \\textbf{vuelve a crearla} con su Carta Superior.\n"
+"  \\item Las cartas tienen los siguientes tipos de efectos:\n"
+"  \\begin{itemize}\n"
+"    \\item \\textbf{Instantáneo} \\includesvg[height=10px]{\\svgs/instant.svg} Los efectos se resuelven en el momento.\n"
+"    \\item \\textbf{Activación} \\includesvg[height=10px]{\\svgs/activation.svg} Los efectos deben jugarse al Activar tu propia Unidad en Combate.\n"
+"    \\item \\textbf{Mapa} \\includesvg[height=10px]{\\svgs/map.svg} Los efectos no pueden utilizarse durante el combate.\n"
+"    \\item \\textbf{En Curso} \\includesvg[height=10px]{\\svgs/ongoing.svg} Los efectos duran hasta que se agotan o hasta que el jugador que los jugó comienza su siguiente Turno (lo que ocurra primero).\n"
+"    \\item \\textbf{Permanente} \\includesvg[height=10px]{\\svgs/permanent.svg} Las Cartas\\index{Cartas Permanentes} permanecen en juego hasta que se descartan o se sustituyen.\n"
+"      \\textbf{Sólo puede haber una Carta permanente activa a la vez}; al jugar otra se descarta la primera.\n"
+"  \\end{itemize}\n"
+"\\end{enumerate}\n"
+"\\note{5}{Las Cartas \\includesvg[height=10px]{\\svgs/instant-note.svg} Instantáneas que modifican las Estadísicas de las \\hyperlink{Units}{Unidades} o las dañan \\includesvg[height=10px]{\\svgs/damage-note.svg} sólo se utilizan en combate.\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:37
@@ -158,6 +188,8 @@ msgid ""
 "\\subsection*{\\hypertarget{Ability}{Ability} and \\hypertarget{Statistic}{Statistic} Cards}\n"
 "\n"
 msgstr ""
+"\\subsection*{Cartas de \\hypertarget{Ability}{Habilidad} y \\hypertarget{Statistic}{Característica}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:47
@@ -170,6 +202,12 @@ msgid ""
 "\\bigskip\n"
 "\n"
 msgstr ""
+"Todas las cartas de Habilidad y Característica\\index{Cartas de Característica} tienen un \\textbf{Efecto Básico}\\index{Efecto Básico} y un \\textbf{Efecto Experto} más fuerte\\index{Efecto Experto} \\includesvg[height=10px]{\\svgs/expert.svg}, que se muestra debajo del Efecto Básico.\n"
+"Siempre que juegues una carta de Habilidad o de Característica debes elegir qué efecto utilizas.\n"
+"El número de Efectos \\includesvg[height=10px]{\\svgs/expert.svg} que puedes utilizar cada Ronda está limitado por el \\hyperlink{Level}{Nivel} de tu Héroe Principal.\n"
+"Anota el número de usos que tienes de manera adecuada, como moviendo Cubos Negros dentro y fuera de tu Carta de Héroe.\\par\n"
+"\\bigskip\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:55
@@ -184,6 +222,14 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{\\cards/ability.png}\n"
+"\\bigbreak\n"
+"\\note{11}{\n"
+"  Ciertas cartas están limitadas a la facción Necrópolis \\includesvg[height=10px]{\\svgs/necro-note.svg}.\n"
+"  Cuando un jugador que no es de la Necrópolis roba una Carta de Necrópolis\\index{Carta de Necrópolis} del Mazo de Habilidades, puede decartarla y robar una Carta como reemplazo o ganarla.\n"
+"  Jugadores No-Necrópolis \\textbf{no puedes utilizar} las Cartas de esta Facción específicas desde su mano, salvo por efectos de descartar cartas.\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:61
@@ -192,6 +238,8 @@ msgid ""
 "\\subsection*{Artifact Cards}\n"
 "\n"
 msgstr ""
+"\\subsection*{Cartas Artefacto}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:69
@@ -206,6 +254,14 @@ msgid ""
 "\\includegraphics[width=\\linewidth]{\\cards/artifact.png}\n"
 "\n"
 msgstr ""
+"Las Cartas Artefacto\\index{Carta Artefacto} tienen un efecto superior e inferior. Cuando juegues uno tienes que \\textbf{elegir el efecto} que vas a usar.\n"
+"Se dividen en 3 Niveles: Menor, Mayor y Reliquia.\n"
+"Estos Niveles se refieren a la Potencia total de la Carta y pueden ser consultados al resolver ciertos efectos o durante la preparación del Escenario.\n"
+"De lo contrario, todas las Cartas de Artefacto se barajan normalmente juntas para formar el Mazo de Artefacto independientemente de su Nivel.\n"
+"Se obtienen mediante la exploración del mapa.\\par\n"
+"Los Artefactos pueden \\hyperlink{Trading}{negociarse} en Escenarios de Alianzas o Cooperativos.\\par\n"
+"\\includegraphics[width=\\linewidth]{\\cards/artifact.png}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:72
@@ -223,6 +279,8 @@ msgid ""
 "\\subsection*{\\hypertarget{spells}{Spell Cards}}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{spells}{Cartas de Hechizos}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:82
@@ -235,6 +293,12 @@ msgid ""
 "All Spell Cards also have an alternative bottom (5) \\includesvg[height=10px]{\\svgs/empower.svg} effect.\\par\n"
 "\n"
 msgstr ""
+"Las Cartas de Hechizos\\index{Carta de Hechizo} tiene 3 posibles efectos.\n"
+"El uso de la versión básica del Hechizo no tiene costes adicionales.\n"
+"Para acceder a los demás efectos puedes \\textbf{Potenciar} un Hechizo\\index{Potenciar Hechizos} pagando el coste indicado (3) para obtener un resultado más potente (4).\n"
+"Puedes pagar este coste jugando otras cartas por su efecto de Poder \\includesvg[height=10px]{\\svgs/empower.svg} antes de lanzar el Hechizo.\n"
+"Todas las Cartas de Hechizo también tienen un efecto alternativo (5) \\includesvg[height=10px]{\\svgs/empower.svg}.\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:98
@@ -256,6 +320,21 @@ msgid ""
 "    \\end{itemize}\n"
 "  "
 msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=0.6\\linewidth]{\\cards/spell_example.png}\\\\\n"
+"  \\medskip\n"
+"  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Carta de Hechizo}}}}\n"
+"  \\scriptsize\n"
+"  \\begin{multicols}{2}\n"
+"    \\begin{itemize}[itemsep=5pt]\n"
+"      \\item[\\textbf{1.}] \\textbf{Nombre}\n"
+"      \\item[\\textbf{2.}] \\textbf{Escuelas}\n"
+"      \\item[\\textbf{3.}] \\textbf{Costes}\n"
+"      \\item[\\textbf{4.}] \\textbf{Efecto}\n"
+"      \\item[\\textbf{5.}] \\textbf{Efecto Alternativo}\n"
+"      \\item[]\n"
+"    \\end{itemize}\n"
+"  "
 
 #. type: multicols*
 #: sections/deckbuilding.tex:100
@@ -275,6 +354,11 @@ msgid ""
 "Spells can be \\hyperlink{Trading}{traded} in Alliance and Cooperative Scenarios.\n"
 "\n"
 msgstr ""
+"Los hechizos se pueden conseguir en la Cofradía de Magos\\index{Cofradía de Magos}.\n"
+"Construirlo también te permite usar la Ficha del Libro de Hechizos\\index{Ficha del Libro de Hechizos} para comprar Hechizos adicionales.\n"
+"La Ficha no puede ser usada en la \\textbf{misma Ronda} cuando la Cofradía es construida.\\par\n"
+"Los Hechizos se pueden \\hyperlink{Trading}{negociar} en Escenarios de Alianzas o Cooperativos.\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:107
@@ -283,6 +367,8 @@ msgid ""
 "\\subsection*{\\hypertarget{Specialty}{Hero Specialty Cards}}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Specialty}{Cartas de Especialidad}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:111
@@ -293,6 +379,10 @@ msgid ""
 "While many of these Cards have effects which resemble Spell Cards, Specialty Cards are their \\textbf{own unique category of cards}.\n"
 "\n"
 msgstr ""
+"Cartas de Especialidad del Héroe\\index{Cartas de Especialidad} se ganan \\hyperlink{Level}{subiendo de Nivel}.\n"
+"Cada Héroe Principal tiene un conjunto único de Cartas de Especialidad.\n"
+"Aunque muchas de estas Cartas tienen efectos parecidos a las Cartas de Hechizo, las Cartas Especiales son \\textbf{una categoría única de cartas}.\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:117
@@ -305,6 +395,12 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=0.6\\linewidth]{\\cards/specialty.png}\\\\\n"
+"  \\medskip\n"
+"  \\footnotesize\\textit{Una Carta de Especialidad de Nivel 4 de Catherine la Caballero.}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:127
@@ -319,6 +415,14 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{11}{\n"
+"  Durante el combate, \\textbf{sólo una Carta de Hechizo} puede ser jugada por cada jugador \\textbf{por Ronda de Combate}.\n"
+"\n"
+"  \\medskip\n"
+"\n"
+"  Cuando usas un efecto que te permite lanzar un Hechizo desde otro lugar que no sea tu mano (como directamente desde el Mazo de Hechizos), coloca ese Hechizo en tu Pila de Descartes después de lanzarlo..\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:133
@@ -337,6 +441,8 @@ msgid ""
 "\\subsection*{Searching Example}\n"
 "\n"
 msgstr ""
+"\\subsection*{Ejemplo de Búsqueda}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:147
@@ -353,6 +459,16 @@ msgid ""
 "\\textit{He decides to keep the Fireball, placing it into his hand and discarding the Magic Arrow into the Spell Discard Pile.}\n"
 "\n"
 msgstr ""
+"\\textit{Bob, jugando como Deemer el Brujo, ha construido una Cofradía de Magos durante la Ronda de Juego anterior, permitiéndole ahora usar su Ficha del Libro de Hechizos para comprar Hechizos adicionales.}\\par\n"
+"\\includegraphics[width=\\linewidth]{\\examples/deemer_receiving_spellbook.png}\\par\n"
+"\\textit{Usa la ficha y paga el coste de 5 \\includesvg[height=10px]{\\svgs/gold.svg} indicado en su Tablero de Ciudad, permitiéndole \\textbf{Buscar (2)} en el Mazo de Hechizos.}\\par\n"
+"\\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par\n"
+"\\filbreak\n"
+"\\textit{Ahora tiene la opción de ganar la Carta superior de la Pila de Descarte del Mazo de Hechizos, o robar las dos Cartas superiores del Mazo de Hechizos y ganar una de ellas.\n"
+"No está interesado en ganar una Maldición de Hechizo, que está en la parte superior de la Pila de Descarte, y en su lugar decide robar dos Cartas - una Flecha Mágica y una Bola de Fuego.}\n"
+"\\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow.png}\\par\n"
+"\\textit{Decide quedarse con la Bola de Fuego, colocándola en su mano y descartando la Flecha Mágica en la Pila de Descartes de Hechizos.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:151
