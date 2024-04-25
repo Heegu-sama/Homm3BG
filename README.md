@@ -15,10 +15,10 @@ Click in the table to download the most recent builds in the chosen language:
 | 🇫🇷 Français   |~10%|[🇫🇷📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf)|[🇫🇷🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_fr/components_list_fr.pdf)|
 
 
-⚠️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
+🖨️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
 
-Componets List lists all the cards 🃏, minis 🚹, tokens, etc. for every box.
-See another [BoardGameGeek thread](https://boardgamegeek.com/thread/3265461/article/43995671#43995671) for details.
+Componets List lists all the cards 🃏, minis 🚹, tokens, etc. for every box. ⚠️ ️️**Archon released their own version of it, and you should use it instead. Find it on 👉 [their website](https://archon-studio.com/downloads/heroes-iii) 👈 called "Content Guide"**.
+The document here will remain for legacy purposes.
 
 ### 💡 What Is This?
 
