@@ -40,6 +40,7 @@ msgstr ""
 #: sections/map_elements.tex:3
 msgid "\\addsection{Map Elements}{\\skills/logistics.png}"
 msgstr ""
+"\\addsection{Elements de Plateau}{\\skills/logistics.png}"
 
 #. type: multicols*
 #: sections/map_elements.tex:11
@@ -54,6 +55,14 @@ msgid ""
 "Starting (I) Tiles are the easiest while Center (VI–VII) Tiles are the most difficult.\\par\n"
 "\n"
 msgstr ""
+"{2}\n"
+"Chaque Scénario est construit en utilisant quatre types de Tuiles de Plateau.\n"
+"Les Joueurs commencent sur la Tuile de Départ (I) propre à leur Faction.\n"
+"Les autres tuiles peuvent être placées et révélées comme décrit sur la page suivante.\n"
+"Pendant la mise en place, toutes les tuiles face cachée sont choisies alétoirement depuis une pile de Tuiles possible comme décrit par le Scénario, mélangées et gardées face cachée.\\par\n"
+"Le \\textbf{chiffre romain} de chaque tuile indique la \\textbf{difficulté générale des Unités Neutres} de cette tuile, tout comme le nombre de récompenses que les joueurs peuvent espérer trouver sur cette Tuile.\n"
+"Les Tuiles de Départ (I) sont les plus simples alors que celle du Centre (VI–VII) sont les plus difficiles.\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:17
@@ -102,6 +111,36 @@ msgid ""
 "    \\item[\\textbf{6.}] Field Difficulty\n"
 "  "
 msgstr ""
+"\\subsection*{Tuile de Plateau\\index{Tuile de Plateau}}\n"
+"Chaque Tuile de Plateau est divisé en 7 \\textbf{Cases} séparées que vos Héros peuvent \\textbf{Visiter}.\n"
+"Quand votre Héros se déplace sur une Case, il doit immédiatement la Visiter, ou\n"
+"avant commencer un \\hyperlink{Combat}{Combat} contre les ennemis la gardant avant de la Visiter.\n"
+"Les Cases Vides\\index{Case Vide} n'a pas d'effet lors d'une Visite.\n"
+"Les Lignes Jaunes Pleines sur les bords d'une Case ne peuvent pas être traversés.\n"
+"Les \\hyperlink{Difficulty}{chiffres romains} marqués sur une Case indique que cette Case est gardée par des Ennemis Neutres qui doivent être combattus pour la Visiter.\\par\n"
+"\\columnbreak\n"
+"\\includegraphics[width=\\linewidth]{\\images/maptiles.png}\n"
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\item[\\textbf{1.}] Tuile de Départ : I\n"
+"  \\item[\\textbf{2.}] Tuiles Lontaines : II-II\n"
+"  \\item[\\textbf{3.}] Tuiles Proches : IV-V\n"
+"  \\item[\\textbf{4.}] Tuiles Centrales : VI-VII\n"
+"\\end{itemize}\n"
+"\\vfill\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=0.8\\linewidth]{\\images/fields.png}\n"
+"\\end{center}\n"
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\begin{multicols}{2}\n"
+"    \\item[\\textbf{1.}] Case Vide\n"
+"    \\item[\\textbf{2.}] Site\n"
+"    \\item[\\textbf{3.}] Symbole d'Artefact\n"
+"    \\item[\\textbf{4.}] Case Bloquée\n"
+"    \\item[\\textbf{5.}] Bord d'une Case\n"
+"    \\item[\\textbf{6.}] Difficulté de la Case\n"
+"  "
 
 #. type: multicols*
 #: sections/map_elements.tex:50
@@ -129,6 +168,21 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Categories}{Catégories de Sites}}\n"
+"Visiter des Cases donnes des bonus aux Héros, comme gagner des Ressources ou des Cartes (voir \\hyperlink{All Map Locations}{Liste des Sites}).\n"
+"Il existe trois catégories de Cases :\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{Visitable} – Une fois cette case Visitée, placez une Cube Noir dessus.\n"
+"    Considérez-la comme une Case Vide tant que le Cube est présent dessus.\n"
+"  \\item \\textbf{Revendicable} – Ces Cases peuvent être capturés par les joueurs et donnent des bonus passifs.\n"
+"    Quand vous en Visitez une, placez un de vos Cubes de Faction dessus.\n"
+"    Les Héros Ennemis qui Visitent une Case Revendiquée remplaceront votre Cube avec le leur pour \\textbf{voler} les effets de la Case.\n"
+"    Les Héros Alliés considèrent une Case Revendiquée \\textbf{comme si elle était vide}.\n"
+"  \\item \\textbf{Ouvert} – Vous pouvez Visiter cette Case plusieurs fois.\n"
+"    Ne placez aucun Cube quand vous la Visitez.\n"
+"    Vous pouvez dépenser 1 PM pour Visiter à nouveau cette Case.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:76
@@ -142,6 +196,13 @@ msgid ""
 "You may always rotate Map Tiles when placing or revealing them.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Placing}{Placer et Révéler une Nouvelle Tuile}}\\index{Révéler une Tuile}\n"
+"Les Héros peuvent dépenser 1 PM soit pour révéler une Tuile adjacente face cachée, ou placer une Tuile Lontaine (II–III) de leur propre pile de Tuile.\n"
+"Toutes les Tuiles face cachée doivent rester \\textbf{cachée de tous les joueurs} jusqu'à être placée ou révélée.\n"
+"Une nouvelle tuile doit être placée adjacente au Héros qui dépense le PM, et être connectée à au moins de Tuiles déjà existantes.\n"
+"Une nouvelle tuile doit aussi être placée de façon à avoir un chemin valide qui la connecte éventuellement à toutes les autres Tuiles.\n"
+"Vous pouvez toujours orienter les Tuiles quand vous les placez ou les révélez.\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:81
@@ -153,6 +214,11 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\medskip\n"
+"\\note{6}{\n"
+"  Quand vous Visiter une Case Visitable, \\textbf{vous devez} placer un Cube Noir même si vous ne pouvez ou ne voulez pas utiliser l'effet de la Case.\n"
+"}\n"
+"\n"
 
 #. type: figure*
 #: sections/map_elements.tex:93
@@ -167,11 +233,20 @@ msgid ""
 "    \\node at (3.9, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{be adjacent to two other tiles}}}}};\n"
 "  \\end{tikzpicture}"
 msgstr ""
+"[!hb]\n"
+"  \\centering\n"
+"  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
+"  \\begin{tikzpicture}[overlay]\n"
+"    \\node at (5, 10) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Vous ne pouvez pas placer de Tuile ici}}}}};\n"
+"    \\node at (5, 1.4) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{Vous pouvez placer une tuile ici, car elle sera}}}}};\n"
+"    \\node at (3.9, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{adjacente à deux autre tuiles}}}}};\n"
+"  \\end{tikzpicture}"
 
 #. type: subsection{#2}
 #: sections/map_elements.tex:97
 msgid "Example Turn"
 msgstr ""
+"Exemple de Tour"
 
 #. type: multicols*
 #: sections/map_elements.tex:102
@@ -181,6 +256,9 @@ msgid ""
 "    She spends 1 MP to move onto the Mine, which begins \\hyperlink{Combat}{Combat} against Neutral Units, since the Field has a \\hyperlink{Difficulty}{Difficulty Rating} and has not been previously Flagged by any player.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Alice veut capturer une \\hyperlink{Mines}{Mine} adjacente en la Revendiquant avec son Héros Principal, Sandro the Necromancer.\n"
+"    Elle dépense 1 PM pour se déplacer sur la Mine, ce qui débute le \\hyperlink{Combat}{Combat} contre les Unités Neutres, car cette Case a un \\hyperlink{Difficulty}{Rang de Difficulté} et n'a pas été revendiquée au préalable par aucun joueur.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:104
@@ -199,6 +277,10 @@ msgid ""
 "During the Combat, she casts the Lightning Bolt, and Empowers \\includesvg[height=0.8\\baselineskip]{\\svgs/empower.svg} it with Haste's alternative (bottom) effect, which makes the Lightning Bolt deal 3 damage \\includesvg[height=0.8\\baselineskip]{\\svgs/damage.svg}, killing the Troglodytes and winning the Combat.}\n"
 "\n"
 msgstr ""
+"\\textit{La Mine est gardée par des Troglodytes, qui ont 3 PV \\includesvg[height=0.8\\baselineskip]{\\svgs/health_points.svg}.\n"
+"Dans la main d'Alice il y une Carte de Puissance, de Foudre, de Rapidité et de Portail de Ville.\n"
+"Durant le Combat, elle lance Foudre, et l'Augmente \\includesvg[height=0.8\\baselineskip]{\\svgs/empower.svg} avec l'effet alternatif de Rapidité (bas), ce qui permet à Foudre de faire 3 dégats \\includesvg[height=0.8\\baselineskip]{\\svgs/damage.svg}, tuant les Troglodytes et ainsi gagner le Combat.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:110
@@ -215,6 +297,8 @@ msgid ""
 "\\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell Card per Combat Round.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Le Combat ne durant qu'un Tour, Alice n'aurait pas pu jouer Foudre et Rapidité, car les joueurs sont limités à une Carte de Sort par Tour de Combat.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:119
@@ -227,6 +311,12 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\textit{Alice Revendique alors la Mine en plaçant une de ses Cubes de Faction dessus.\n"
+"    Revendiquer cette Mine ci augmente ses revenus de Matériaux \\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg} par 2, et elle gagne aussi immédiatement la valeur de revenu de la Mine de 2 \\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg} en étant la première joueuse à la Revendiquer.}\\par\n"
+"\\textit{Après celà, Alice veut retourner défendre une Enclave précédemment revendiquée en jouant le Portail de Ville restant dans sa main.\n"
+"    Son Héros est Niveau 2, elle peut donc l'augmenter avec l'Effect Expert \\includesvg[height=0.8\\baselineskip]{\\svgs/expert.svg} de sa Carte Puissance, ce qui lui donne un Point de Mouvement additionnel après l'avoir jouée.\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:121
