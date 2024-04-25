@@ -144,6 +144,19 @@ msgid ""
 "If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
 "\n"
 msgstr ""
+"Les Héros IA utilisent deux Decks automatique durant le Combat: le \\textbf{Deck IA}, et le \\textbf{Deck de Sort}.\n"
+"Le Deck IA est construit avec trois types de cartes IA : Guerrier \\includesvg[height=10px]{\\svgs/might.svg}, Magie \\includesvg[height=10px]{\\svgs/magic.svg} et Capacité \\includesvg[height=10px]{\\svgs/skill.svg}.\n"
+"Chaque Scénario de Campagne liste le nombre de chaque type de carte incluses dans le Deck IA.\n"
+"Les cartes Guerrier \\includesvg[height=10px]{\\svgs/might.svg} et Capacité \\includesvg[height=10px]{\\svgs/skill.svg} ont deux variations. Choisissez ces cartes \\textbf{aléatoirement} lors de la construction du Deck.\n"
+"Si une carte Capacité est incluse, cherchez la carte de Compétence correspondante et mettez-la de côté.\n"
+"Créez le \\textbf{Deck de Sort} IA en séparant les Sorts indiqués du Deck de Sort classique.\n"
+"Mélangez les Deck IA et Sort IA après leur création durant la mise en place.\\par\n"
+"Quand le Héros IA \\textbf{Actives} une Unité, piochez une Carte IA\\index{Carte IA} et suivez les instructions avant de déplacer l'Unité et/ou  d'attaquer.\n"
+"Les effets de chaque carte IA dépendent de la \\hyperlink{Difficulty}{Difficulté} de la partie.\n"
+"Les Cartes Guerrier \\includesvg[height=10px]{\\svgs/might.svg} sont associées à l'unité avant que la première attaque/défense ne se produise.\n"
+"Le Deck de Sort IA est utilisé à chaque pioche d'une Carte Magie \\includesvg[height=10px]{\\svgs/magic.svg}.\n"
+"Si le Héros IA doit piocher une carte, il devra piocher et résoudre une \\textbf{autre carte} du Deck IA.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:47
@@ -160,6 +173,8 @@ msgid ""
 "\\subsection*{Combat against AI}\n"
 "\n"
 msgstr ""
+"\\subsection*{Combat contre l'IA}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:54
@@ -169,6 +184,9 @@ msgid ""
 "When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\\par\n"
 "\n"
 msgstr ""
+"Ces règles s'appliquent durant un Combat en Scénario \\textbf{Solo}\\index{Mode Solo} et \\textbf{Coopératif}.\n"
+"Quand un ennemi Neutre ou un Héros IA active une unité, ils suivent une série d'instructions automatique :\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:62
@@ -183,6 +201,14 @@ msgid ""
 "Enemy units cannot \\hyperlink{Defend}{Defend} unless instructed to.\n"
 "\n"
 msgstr ""
+"Les Unités ennemies au Sol \\includesvg[height=10px]{\\svgs/unit_ground.svg} et Volantes \\includesvg[height=10px]{\\svgs/unit_flying.svg} attaque en priorité une Unité de même rang.\n"
+"Si c'est impossible, ils attaquent l'Unité la plus proche, en priorité le rang le plus faible.\\par\n"
+"Les Unités à Distance \\includesvg[height=10px]{\\svgs/unit_ranged.svg} attaquent en priorité les autres Unités à Distance \\includesvg[height=10px]{\\svgs/unit_ranged.svg} de même rang, puis de rang plus faible, et ensuite de rang plus fort.\n"
+"Si il n'y a pas d'Unité à Distance \\includesvg[height=10px]{\\svgs/unit_ranged.svg} à cibler, la priorité est Unité au Sol \\includesvg[height=10px]{\\svgs/unit_ground.svg} et Volante \\includesvg[height=10px]{\\svgs/unit_flying.svg} dans le même ordre de rang.\n"
+"Si il y a plus d'une cible valide, Ils attanquent la plus proche.\\par\n"
+"Si il devait y a voir égalité dans le choix de cible valide pour n'importe quel type d'Unité, c'est le joueur qui choisit l'Unité attaquée.\n"
+"Les unités ennemies ne peuvent pas se \\hyperlink{Defend}{Défendre} à moins d'en recevoir l'instruction.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:66
