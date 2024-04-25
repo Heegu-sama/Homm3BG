@@ -99,6 +99,11 @@
 {8pt}
 {\Huge\bfseries\filcenter\uppercase}
 %Create section heading with graphics. Argument one is heading name, argument two is picture to use on the left.
+\providecommand{\sectionheadertext}[1]{
+  \fontfamily{ptm}\selectfont{
+    \color{antiquewhite} \section*{#1}
+  }
+}
 \newcommand{\addsection}[2]{
   \vspace*{-5em}
   \hspace*{-1em}
@@ -113,10 +118,8 @@
   \begin{fullwidth}[leftmargin=0.16\textwidth]
     \begin{center}
       \vspace*{\lang_header_adjustment}
-      \fontfamily{ptm}\selectfont{
-        \color{antiquewhite} \section*{#1}
-        \cleardoublepage\phantomsection\addcontentsline{toc}{section}{\protect\numberline{}#1}
-      }
+      \sectionheadertext{#1}
+      \cleardoublepage\phantomsection\addcontentsline{toc}{section}{\protect\numberline{}#1}
     \end{center}
   \end{fullwidth}
   \vspace{1.75em}
