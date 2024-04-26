@@ -92,7 +92,7 @@ msgstr ""
 #. type: Plain text
 #: sections/deckbuilding.tex:3
 msgid "\\addsection{Deck-building}{\\skills/wisdom.png}"
-msgstr ""
+msgstr "\\addsection{Budowanie Talii}{\\skills/wisdom.png}"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:10
@@ -104,6 +104,11 @@ msgid ""
 "Each player's Deck starts with 9 cards, built during the game's setup.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Playerdecks}{Talie Graczy}}\n"
+"Każdy gracz ma unikatową Talię, która reprezentuje Umiejętności i Ekwipunek jego Bohatera Głównego.\n"
+"Talie mogą zawierać Karty Statystyk, Umiejętności, Zaklęć, Artefaktów oraz Zdolności Bohatera Głównego.\n"
+"Talia Początkowa, zbudowana podczas przygotowania do gry, zawiera 9 Kart.\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:34
@@ -134,6 +139,30 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\subsection*{Ogólne Zasady Kart}\n"
+"\\begin{enumerate}\n"
+"  \\item Karty mogą być zagrywane \\textbf{wyłącznie podczas twojej Tury} lub w \\hyperlink{Combat}{Walce}, w której bierze udział twój \\textbf{Bohater Główny}.\n"
+"  \\item Po zagraniu Karty, odrzuć ją.\n"
+"    Każdy gracz ma swój własny Stos Kart Odrzuconych\\index{Stos Kart Odrzuconych}.\n"
+"  \\item Jeśli twoja Talia jest pusta, a musisz dobrać Kartę, \\textbf{potasuj swój Stos Kart Odrzuconych} aby stworzyć z niego nową Talię, z której będziesz dobierać Karty.\n"
+"  \\item Kiedykolwiek twój Bohater zdobywa Kartę, weź ją \\textbf{bezpośrednio do ręki}, jeśli nie napisano inaczej.\n"
+"  \\item Kiedykolwiek powinieneś \\textbf{Przeszukać} (X)\\index{Przeszukaj (X)} Talię Umiejętności, Artefaktów lub Zaklęć, możesz spojrzeć na wierzchnie (X) Kart z danej Talii, wziąć jedną z nich na rękę i odrzucić pozostałe, \\textbf{ALBO} zamiast podglądać wierzchnie (X) Kart, dobrać wierzchnią Kartę ze Stosu Kart Odrzuconych tejże Talii.\n"
+"  \\item Talie Umiejętności, Artefaktów i Zaklęć mają swoje własne Stosy Kart Odrzuconych stworzone podczas przygotowania do gry, które pomogą ci rozpoznać te Talie.\n"
+"    Jeśli w Talii skończą się Karty, potasuj ją i odrzuć wierzchnią Kartę aby stworzyć nowy Stos Kart Odrzuconych.\n"
+"    Kiedykolwiek Stos Kart Odrzucony jest pusty, \\textbf{odnów go} wierzchnią Kartą tej Talii.\n"
+"  \\item Karty mają następujące typy efektów:\n"
+"  \\begin{itemize}\n"
+"    \\item \\textbf{Natychmiastowy} \\includesvg[height=10px]{\\svgs/instant.svg} Efekty są wykonywane natychmiatowo.\n"
+"    \\item \\textbf{Aktywacja} \\includesvg[height=10px]{\\svgs/activation.svg} Efekty muszą być zagrane podczas Aktywacji twojej Jednostki w Walce.\n"
+"    \\item \\textbf{Mapa} \\includesvg[height=10px]{\\svgs/map.svg} Efekty nie mogą być zagrane podczas Walki.\n"
+"    \\item \\textbf{Krótkotrwały} \\includesvg[height=10px]{\\svgs/ongoing.svg} Efekty trwają dopóki zostaną wykorzystane lub dopóki gracz, który je zagrał rozpocznie swoją kolejną Turę (którekolwiek nastąpi pierwsze).\n"
+"    \\item \\textbf{Długotrwały} \\includesvg[height=10px]{\\svgs/permanent.svg} \\index{Karty z efektem Długotrwałym} pozostają w grze dopóki nie zostaną odrzucone albo zamienione.\n"
+"      \\textbf{W danym momencie możesz mieć tylko jedną Kartę z efektem Długotrwałym}; zagranie innej powoduje odrzucenie pierwszej.\n"
+"  \\end{itemize}\n"
+"\\end{enumerate}\n"
+"\\note{5}{Karty z efektem Natychmiastowym \\includesvg[height=10px]{\\svgs/instant-note.svg}, które modyfikują statystyki \\hyperlink{Jednostki}{Jednostki} lub zadają obrażenia \\includesvg[height=10px]{\\svgs/damage-note.svg} nie mogą być użyte poza Walką.\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:37
