@@ -1,4 +1,5 @@
-# French translations for Homm package
+# Russian translations for Homm package
+# Английские переводы для пакета Homm
 # Copyright (C) 2024 Free Software Foundation, Inc.
 # This file is distributed under the same license as the Homm package.
 # Automatically generated, 2024.
@@ -7,14 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
 "POT-Creation-Date: 2024-04-19 21:21+0200\n"
-"PO-Revision-Date: 2024-04-06 18:37+0300\n"
+"PO-Revision-Date: 2024-04-19 21:21+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
-"Language: fr\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
@@ -33,8 +35,6 @@ msgid ""
 "{2}\n"
 "\n"
 msgstr ""
-"{2}\n"
-"\n"
 
 #. type: multicols
 #: sections/all_map_locations.tex:431 sections/combat.tex:91
@@ -58,7 +58,7 @@ msgstr ""
 #. type: Plain text
 #: sections/player_turns.tex:3
 msgid "\\addsection{Player Turns}{\\spells/dimension_door.png}"
-msgstr "\\addsection{Tour Du Joueur}{\\spells/dimension_door.png}"
+msgstr ""
 
 #. type: multicols
 #: sections/player_turns.tex:17
@@ -77,18 +77,6 @@ msgid ""
 "Once all players have spent all their Movement Points and do not wish to use any further Town or Morale Actions, the current Round is over.\n"
 "\n"
 msgstr ""
-"Au début de votre Tour, complétez votre main de Cartes en suivant ces étapes :\n"
-"\\begin{itemize}\n"
-"  \\item Défaussez n’importe quel nombre de Cartes depuis votre main.\n"
-"Si votre main actuelle dépasse votre Limite de Cartes \\includesvg[height=10px]{\\svgs/hand.svg}, vous devez défausser des Cartes pour atteindre cette Limite.\n"
-"  \\item Vous pouvez alors piocher des Cartes jusqu’à atteindre votre Limite de Cartes.\n"
-"  \\item Résolvez tous les effets « Au début de votre tour » après avoir pioché.\n"
-"\\end{itemize}\n"
-"Votre Limite de Cartes \\index{Limite de Cartes}  dépend du \\hyperlink{Level}{Niveau} de votre Héros Principal.\n"
-"La Limite de Cartes est vérifiée uniquement au début de votre Tour.\\par\n"
-"Les joueurs peuvent faire trois types d’Actions différentes : \\textbf{Mouvement}, \\textbf{Ville}, et \\textbf{Moral}.\n"
-"Une fois que chaque Joueur a utilisé tous ses Points de Mouvement et qu’il ne souhaite plus utiliser d’action de Ville ou de Moral, la Manche prend fin.\n"
-"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:29
@@ -107,18 +95,6 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
-"\\subsection*{Actions de Mouvement}\n"
-"Les \\hypertarget{Movement}{Actions de Mouvement}\\index{Actions de Mouvement} sont effectuées en dépensant un Point de Mouvement.\n"
-"Un joueur ne peut faire d’Action de Mouvement \\textbf{que pendant son Tour}.\\par\n"
-"Pour chaque 1 PM, vous pouvez faire l’une des Actions suivantes :\n"
-"\\begin{itemize}\n"
-"  \\item Déplacer un Héros d’une Case dans n’importe quelle direction.\n"
-"  \\item \\hyperlink{Categories}{Explorer} à nouveau une Case où se trouve votre Héros.\n"
-"  \\item \\hyperlink{Timelimit}{Prolonger un Combat} contre des Unités Neutres pour 1 Tour de Combat supplémentaire.\n"
-"  \\item \\hyperlink{Placing}{Révéler une Tuile face cachée} si votre Héros est adjacent à cette Tuile.\n"
-"  \\item Placer une nouvelle Tuile depuis votre Pile de Tuiles Lontaines (II-III).\n"
-"\\end{itemize}\n"
-"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:35
@@ -131,12 +107,6 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includesvg[width=0.6\\linewidth]{\\images/movement_tokens.svg}\\\\\n"
-"  \\medskip\n"
-"  \\footnotesize\\textit{Un Jeton Mouvement actif et inactif.}\n"
-"\\end{center}\n"
-"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:43
@@ -149,12 +119,6 @@ msgid ""
 "When you move through a Field with an allied Hero, do not \\hyperlink{Categories}{Visit} the Field that the allied Hero is standing on.\\par\n"
 "\n"
 msgstr ""
-"Décomptez le nombre de PM que vous avez utilisé en retournant les Jetons de Mouvement sur les faces marrons, côté inactif.\n"
-"Si un joueur a un Héros Principal et un \\hyperlink{Secondary}{Héros secondaire}, décomptez leurs PM séparément.\n"
-"Les Héros peuvent utiliser leurs PM dans n’importe quel ordre.\\par\n"
-"Des Héros Alliés peuvent se traverser mais pas arrêter leurs mouvement sur la même Case\n"
-"Quand vous traversez une Case avec un Héros allié, n'\\hyperlink{Categories}{Explorez} pas la Case du Héros allié.\\par\n"
-"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:48
@@ -166,11 +130,6 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
-"\\note{10}{\n"
-"  Lorsque vous gagnez un PM (supplémentaire), parfois représenté par le symbole \\includesvg[height=10px]{\\svgs/movement-note.svg}, ce PM ne reste \\textbf{que le Tour où vous l’obtenez}.\n"
-"  Dans le cas peu probable, où deux Héros alliés sont forcés de rester sur la même Case, vous devez utiliser votre prochain PM pour déplacer l’un des deux sur une Case adjacente libre.\n"
-"}\n"
-"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:53
@@ -201,19 +160,6 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
-"\\subsection*{Actions de Ville\\index{Actions de Ville}}\n"
-"Vous pouvez effectuer chaque Action de Ville \\textbf{une fois par Tour}.\n"
-"Ces Actions peuvent être effectuées n’importe quand durant le Tour de n’importe quel joueur sauf durant les Combats ou quand votre Action de Ville interrompt une autre Action.\n"
-"Par exemple, vous ne pouvez pas piocher une Carte de Sort simultanément avec un jeton Grimoire.\\par\n"
-"Quand un joueur annonce un Combat, vous pouvez réagir avec n’importe quel nombre d’Action de Ville avant d’effectuer n’importe quelle étape de la \\hyperlink{Combatsetup}{mise en place du Combat.}\\par\n"
-"Après avoir effectué une Action de Ville, retournez le Jeton correspondant sur sa face inactive sur votre Plateau de Ville.\n"
-"Vous ne pouvez plus utiliser cette Action jusqu’au début de la prochaine Manche, quand les Jetons sont retournés sur leurs faces actives.\n"
-"\\begin{itemize}\n"
-"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/build.png}}] Jeton Construction, utilisé pour étendre votre \\hyperlink{Town}{Ville}.\n"
-"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/population.png}}] Jeton Population, utilisé pour Recruter et Améliorer des \\hyperlink{Units}{Unités} ou Recruter un \\hyperlink{Secondary}{Héros Secondaire}.\n"
-"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/spells.png}}]Jeton Grimoire, utilisé pour acheter des \\hyperlink{spells}{Sorts}. Requiert la construction du Bâtiment Guilde des Mages pour utiliser ce Jeton.\n"
-"\\end{itemize}\n"
-"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:83
@@ -235,21 +181,6 @@ msgid ""
 "If you would gain a second Negative Morale Token, you must instead \\textbf{discard your hand of Cards} the next time you end your Turn.\\par\n"
 "\n"
 msgstr ""
-"\\subsection*{Action de Moral}\\index{Actions de Moral}\n"
-"Les joueurs peuvent gagner ou perdre du Moral grâce à différents effets du jeu.\n"
-"Quand vous gagnez du Moral, prenez le Jeton de Moral Positif\\index{Moral Positif} \\includesvg[height=10px]{\\svgs/morale_positive.svg}.\n"
-"Vous ne pouvez en avoir qu’un seul.\n"
-"Si vous deviez en gagner un second, vous pouvez immédiatement dépenser le premier avant de gagner le second.\n"
-"Le Jeton de Moral Positif peut être dépensé pour effectuer une des actions suivantes à n’importe quel moment :\n"
-"\\begin{itemize}\n"
-"  \\item Piocher une Carte de Votre Deck.\n"
-"  \\item Défaussez n’importe quel nombre de Cartes, puis en piocher le même nombre.\n"
-"  \\item Relancer n’importe quel Dé.\n"
-"\\end{itemize}\n"
-"Si vous perdez du Moral, défausser le Jeton de Moral Positif \\includesvg[height=10px]{\\svgs/morale_positive.svg} si vous en avez un, sinon prenez une Jeton de Moral Négatif\\index{Moral Négatif} \\includesvg[height=10px]{\\svgs/morale_negative.svg}.\n"
-"À l’inverse si vous gagnez du Moral en ayant un Jeton de Moral Négatif, défaussez le Jeton Négatif.\n"
-"Si vous deviez prendre un second Jeton de Moral Négatif, vous devez à la place \\textbf{défausser votre Main} à la fin de votre prochain Tour.\\par\n"
-"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:87
@@ -260,10 +191,6 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
-"\\note{5}{La Faction de la Nécropole \\includesvg[height=10px]{\\svgs/necro-note.svg} ignore tous les effets de Moral.\n"
-"  Ils ne peuvent ni gagner ni perdre du Moral pour aucune raison.\n"
-"}\n"
-"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:91
@@ -282,8 +209,6 @@ msgid ""
 "\\subsection*{Example Turn}\n"
 "\n"
 msgstr ""
-"\\subsection*{Exemple de Tour}\n"
-"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:101
@@ -298,13 +223,6 @@ msgid ""
 "As Alice announces her intent to start Combat, both players still have an opportunity to perform Town Actions.}\\par\n"
 "\n"
 msgstr ""
-"\\textit{Alice, qui joue le Héros Catherine le Chevalier, commence son Tour. Elle a 3 Cartes dans sa Main de la Manche précédente et décide de défausser 2 Cartes avant de piocher depuis son Deck jusqu’à sa Limite de Cartes \\includesvg[height=10px]{\\svgs/hand.svg}.\n"
-"Sa Limite actuelle est 5, car son Héros est Niveau 3, donc elle pioche 4 Cartes après avoir défaussé (voir \\hyperlink{Level}{Effets de Niveau}).}\\par\n"
-"\\textit{Elle dépense son Jeton de Construction pour construire la Demeure \\includesvg[height=10px]{\\svgs/golden.svg}, et son Jeton Population pour \\hyperlink{Units}{Recruter} l'Unité \\includesvg[height=10px]{\\svgs/golden.svg} Champions.\n"
-"Elle peut le faire, car elle a préalablement construit les Demeures de niveaux inférieurs (\\includesvg[height=10px]{\\svgs/bronze.svg} et \\includesvg[height=10px]{\\svgs/silver.svg}) et possède suffisamment de \\hyperlink{Resources}{Ressources} pour à la fois Construire la Demeure et Recruter les Champions.}\\par\n"
-"\\textit{Maintenant prête pour la bataille à venir, elle dépense un Point de Mouvement pour déplacer son Héros Principal sur une Case adjacente actuellement occupée par Sandro le Nécromancien, un Héros Principal ennemi contrôlé par Bob.\n"
-"Quand Alice annonce son intention d’initier le Combat, chaque joueur a encore l’opportunité d’effectuer des Actions de Ville.}\\par\n"
-"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:103
