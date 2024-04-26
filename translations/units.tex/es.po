@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-21 20:31+0100\n"
+"POT-Creation-Date: 2024-04-23 15:23+0200\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -70,7 +70,7 @@ msgstr ""
 #: sections/all_map_locations.tex:422 sections/credits.tex:33
 #: sections/deckbuilding.tex:59 sections/difficulty.tex:16
 #: sections/expansion_content.tex:18 sections/expansion_content.tex:63
-#: sections/game_modes.tex:27 sections/scenario_end.tex:20
+#: sections/game_modes.tex:27 sections/scenario_end.tex:23
 #: sections/units.tex:79
 #, no-wrap
 msgid ""
@@ -96,16 +96,12 @@ msgid ""
 "\n"
 msgstr ""
 
-#. type: figure
-#: sections/heroes.tex:70 sections/setup.tex:69 sections/units.tex:113
-msgid "[h]"
-msgstr ""
-
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/units.tex:3
 msgid "\\addsection{Units}{\\skills/leadership.png}"
-msgstr ""
+msgstr "\\addsection{Unidades}{\\skills/leadership.png}\n"
+"\\vspace*{\\lang_header_adjustment}"
 
 #. type: multicols*
 #: sections/units.tex:20
@@ -127,6 +123,21 @@ msgid ""
 "\\textbf{Reinforcing} requires that your Town has a Citadel in addition to a Dwelling of that Unit's Level.\\par\n"
 "\n"
 msgstr ""
+"\\hypertarget{Units}{Además}\\index{Unidades} del Héroe y su mazo asociado, los jugadores también tienen \\textbf{un Mazo de Cartas con Unidades} que representa los ejércitos moviéndose con los Héroes.\n"
+"Cada Facción tiene \\textbf{7 Unidades diferentes}, únicas en estadísticas y habilidades.\n"
+"Las unidades son necesarias para ganar el combate y cumplir los objetivos del escenario.\n"
+"La preparación de cada Escenario indica qué Cartas de Unidad deben incluirse en el Mazo de Unidades inicial.\n"
+"Este Mazo debe estar separado del resto de Unidades de tu Facción.\\par\n"
+"Cada carta de unidad tiene dos caras, una débil con el lado \"Pocas\" y una más fuerte con el lado \"Manada\".\n"
+"\"Pocas\" unidades pueden mejorarse a \"Manada\" \\textbf{Reforzándolas}, mientras que si reciben daño puede devolver a la Unidad a su lado \"Pocas\".\n"
+"Las unidades deben mantenerse siempre en su lado correcto cuando se muevan o inspeccionen.\\par\n"
+"El Mazo de Unidades de un jugador puede tener cualquier número de Unidades, pero \\textbf{sólo 5} pueden ser elegidas para la \\hyperlink{Combatsetup}{Preparación del Combate}.\n"
+"Si una Unidad es derrotada en Combate, \\textbf{descártala} de tu Mazo de Unidades.\\par\n"
+"Las unidades se pueden Reclutar\\index{Reclutar} y Reforzar\\index{Reforzar} utilizando la Ficha de Población\\index{Ficha de Población} y pagando el coste de Reclutamiento \\includesvg[height=10px]{\\svgs/pay.svg} o de Refuerzo \\includesvg[height=10px]{\\svgs/reinforce.svg}.\n"
+"Cuando lo hagas podrás Reclutar o Reforzar \\textbf{cualquier número} de veces, siempre que dispongas de suficientes Recursos y los Edificios necesarios para ello.\\par\n"
+"\\textbf{Reclutar} una Unidad requiere que tengas la Vivienda del Nivel de la Unidad (\\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/silver.svg} \\includesvg[height=10px]{\\svgs/golden.svg}).\n"
+"\\textbf{Reforzar} una Unidad requiere que tengas la Vivienda del Nivel y la Ciudadela.\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:28
@@ -141,6 +152,14 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{13}{\n"
+"  Cualquier efecto que ordene Reforzar \\textbf{no} es necesario gastar tu Ficha de Población ni poseer una Ciudadela ni ninguna Vivienda.\\par\n"
+"\n"
+"  \\medskip\n"
+"\n"
+"  Si todas las Unidades de tu Mazo de Unidades son derrotadas, \\textbf{inmediatamente} reemplaza tu Mazo de Unidades con las Unidades Iniciales\\index{Unidades Iniciales} del Escenario. Las Unidades de Facción derrotadas siempre pueden ser Reclutadas de nuevo con otro uso de la Ficha de Población.\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:33
@@ -161,6 +180,9 @@ msgid ""
 "\\subsection*{Unit Card Anatomy}\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\subsection*{Anatomía de las Cartas}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:41
@@ -186,6 +208,17 @@ msgid ""
 "Units with a higher Initiative Activate first.\n"
 "\n"
 msgstr ""
+"\\includegraphics[height=30px]{\\images/attack.png} \\textbf{Ataque} - La cantidad de daño que inflige esta Unidad cuando ataca.\\par\n"
+"\\includegraphics[height=30px]{\\images/defense.png} \\textbf{Defensa} - La cantidad en la que esta Unidad reduce el daño de Ataque recibido.\n"
+"No se aplica al daño recibido de Hechizos u otros efectos que no sean de ataque.\\par\n"
+"\\includegraphics[height=30px]{\\images/hp.png} \\textbf{\\hypertarget{HP}{HP}} - Cantidad máxima de daño que puede sufrir una unidad antes de ser derrotada.\n"
+"\"Pocas\" unidades son descartadas del Combate y del Mazo de Unidades de su propietario cuando son derrotadas.\n"
+"Las \"Manadas\" vuelven a ser \"Pocas\" Unidades cuando hay exceso de daño, continuando con el daño en el lado de \"Pocas\".\n"
+"Las Unidades conservas su estado de \"Pocas\" o \"Manada\" entre combates.\n"
+"Todo el daño se cura de todas las Unidades al final del Combate.\\par\n"
+"\\includegraphics[height=30px]{\\images/initiative.png}{\\hypertarget{Initiative}{\\textbf{Iniciativa}}} - Determina cuándo se Activa la Unidad durante el Combate.\n"
+"Las unidades con mayor iniciativa se activan primero.\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:56
@@ -225,6 +258,19 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"Muchas Unidades tienen una \\textbf{Habilidad Especial}\\index{Habilidad Especial}:\\par\n"
+"\\begin{itemize}[wide]\n"
+"  \\item\\textbf{Activación} \\includesvg[height=10px]{\\svgs/activation.svg} se resuelve cuando la Unidad se Activa.\n"
+"  \\item\\textbf{Ataque} \\includesvg[height=10px]{\\svgs/unit_attack.svg} se resuelve cuando la unidad ataca en su activación.\n"
+"    En caso de ataques múltiples, resuelve el efecto \\textbf{sólo en el primer ataque}.\n"
+"  \\item\\textbf{Otro} \\includesvg[height=10px]{\\svgs/unit_other.svg} se puede resolver en vez del ataque normal de la Unidad.\n"
+"    Reemplaza el movimiento y/o el ataque.\n"
+"  \\item\\textbf{Pasiva} \\includesvg[height=10px]{\\svgs/unit_passive.svg} se resuelve cuando se cumple la condición.\n"
+"  \\item\\textbf{Contraatacar} \\includesvg[height=10px]{\\svgs/unit_retaliate.svg} se resuelve cuando la Unidad contraataca.\n"
+"  \\item En cualquier otro caso sin uno de los iconos anteriores, la habilidad de la Unidad se utiliza según su texto.\n"
+"    Las unidades también pueden tener \\hyperlink{Playerdecks}{estos} símbolos.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:91
@@ -243,6 +289,18 @@ msgid ""
 "Walls and Gates may also \\hyperlink{Walls}{reduce} the damage from  \\includesvg[height=10px]{\\svgs/unit_ranged.svg} attacks.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Unittype}{Tipos de Unidades}}\n"
+"There are three types of Units:\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{Terrestres}\\index{Unidades Terrestres} \\includesvg[height=10px]{\\svgs/unit_ground.svg} Pueden moverse hasta 3 espacios y luego atacar a un enemigo adyacente.\n"
+"  \\item \\textbf{Voladoras}\\index{Unidades Voladoras} \\includesvg[height=10px]{\\svgs/unit_flying.svg} Pueden moverse hasta 3 espacios, \\textbf{ignorando Obstáculos} y después atacar a un enemigo adyacente.\n"
+"  \\item \\textbf{A distancia}\\index{Unidades a Distancia} \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Pueden atacar \\textbf{a cualquier unidad} y moverse 1 espacio O no atacar y moverse 1 espacio.\n"
+"\\end{itemize}\n"
+"Si una unidad \\includesvg[height=10px]{\\svgs/unit_ranged.svg} está junto a una unidad enemiga, \\textbf{atacará a ese enemigo}.\n"
+"Al atacar a un enemigo adyacente la unidad \\includesvg[height=10px]{\\svgs/unit_ranged.svg} sufrirá una penalización de Combate\\index{Penalización de Combate}: lanza dos dados de ataque y \\textbf{aplica el resultado más bajo}.\\par\n"
+"Esta penalización también se aplica si la unidad \\includesvg[height=10px]{\\svgs/unit_ranged.svg} ataca desde su Retaguardia a la Retaguardia enemiga.\n"
+"Murallas y puertas enemigas \\hyperlink{Walls}{reducen} el ataque  \\includesvg[height=10px]{\\svgs/unit_ranged.svg}.\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:103
@@ -261,6 +319,18 @@ msgid ""
 "Whenever a Neutral Unit is defeated from anywhere, place it into the appropriate Neutral Discard Pile.\\par\n"
 "\n"
 msgstr ""
+"\\subsection*{Unidades Neutrales}\n"
+"Las Unidades Neutrales\\index{Unidades Neutrales} guardan las distintas ubicaciones del Mapa del Juego.\n"
+"Combatir contra ellas es necesario para visitar la mayoría de las ubicaciones.\n"
+"Las Unidades Neutrales están repartidas en cuatro niveles, cada una con su propio Mazo.\n"
+"Además de \\includesvg[height=10px]{\\svgs/bronze.svg}, \\includesvg[height=10px]{\\svgs/silver.svg} y \\includesvg[height=10px]{\\svgs/golden.svg}, también hay Azur \\includesvg[height=10px]{\\svgs/azure.svg} que son las Unidades Neutrales más fuertes del juego.\\par\n"
+"Estos Mazos se mantendrán separados y se barajarán durante la preparación.\n"
+"Si un Mazo se queda sin cartas, baraja el descarte para crear un nuevo Mazo.\n"
+"Cuando comienza un Combate contra Unidades Neutrales, roba \\hyperlink{Difficulty}{según la dificultad} el número de Unidades de cada nivel que participarán en ese Combate.\\par\n"
+"Es posible que los jugadores ganen Unidades Neutrales para su Mazo de Unidades a través de varios efectos, como Reglas Específicas del Escenario o la Carta de Habilidad Diplomacia.\n"
+"\\textbf{Las Unidades Neutrales no pueden ser Reforzadas}.\n"
+"Siempre que una Unidad Neutral sea derrotada, colócala en la Pila de Descartes del Mazo Neutral correspondiente.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:106
@@ -269,6 +339,15 @@ msgid ""
 "\\vfill\n"
 "\\hfill\\includegraphics[width=0.7\\linewidth]{\\art/cerberi.png}\n"
 "\n"
+msgstr ""
+
+#. type: figure
+#: sections/units.tex:113
+#, no-wrap
+msgid ""
+"[h]\n"
+"  \\centering\n"
+"  \\includegraphics[width=\\linewidth]{\\tables/unit_list.png}"
 msgstr ""
 
 #. type: multicols
@@ -286,6 +365,8 @@ msgid ""
 "\\subsection*{Gameplay Example}\n"
 "\n"
 msgstr ""
+"\\subsection*{Ejemplo de Partida}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:124
@@ -294,6 +375,8 @@ msgid ""
 "\\textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons, Empowering \\includesvg[height=10px]{\\svgs/empower.svg} the Spell by 2 with the Expert  Effect \\includesvg[height=10px]{\\svgs/expert.svg} of a Power Card.}\n"
 "\n"
 msgstr ""
+"\\textit{Bob, jugando como Alamar el Brujo, lanza una Flecha Mágica contra la manada de Esqueletos de Alice, Potenciando \\includesvg[height=10px]{\\svgs/empower.svg} el Hechizo por 2 con el Efecto Experto \\includesvg[height=10px]{\\svgs/expert.svg} de una Carta de Poder.}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:128
@@ -313,6 +396,11 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\textit{Los esqueletos reciben 3 de daño \\includesvg[height=10px]{\\svgs/damage.svg} del Hechizo.\n"
+"  Su defensa \\includesvg[height=10px]{\\svgs/defense.svg} de 1 no reduce el daño, porque sólo se aplica contra ataques.\n"
+"  Los esqueletos tienen un HP \\includesvg[height=10px]{\\svgs/health_points.svg} de 2, por lo que se guira la carta al lado de ''Pocas'' y 1 de daño sobrante \\includesvg[height=10px]{\\svgs/damage.svg} se coloca sobre ellos.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:139
