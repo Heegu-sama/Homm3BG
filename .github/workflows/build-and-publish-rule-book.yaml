@@ -11,8 +11,6 @@ on:
       - '!assets/gimp-files/**'
       - '**.tex'
       - 'translations/**'
-      - '!components_list.tex'
-      - '!components_list/**'
 
 env:
   PO4A_VERSION: "0.71"
@@ -113,8 +111,8 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
-          pre_compile: echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && upmendex -s index_style main_${{ matrix.language }} && sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}@g' main_${{ matrix.language }}.ind
           latexmk_shell_escape: true
+          post_compile: echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && upmendex -s index_style main_${{ matrix.language }} && sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}@g' main_${{ matrix.language }}.ind && pdflatex --shell-escape main_${{ matrix.language }}.tex
           root_file: main_${{ matrix.language }}.tex
 
       - name: Move file
