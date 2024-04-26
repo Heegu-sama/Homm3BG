@@ -19,22 +19,6 @@ In \textbf{Alliance} and \textbf{Cooperative} Scenarios, players are allowed to 
 
 \end{multicols}
 
-\definecolor{darkcellborder}{HTML}{634831}
-\newcommand{\darkcell}[1]{
-	\begin{tikzpicture}
-		\filldraw[thick, fill=black, fill opacity=0.5, draw=darkcellborder] (0, 0) rectangle (\linewidth, 1);
-		\node at (current bounding box.center) {#1};
-	\end{tikzpicture}
-}
-
-\definecolor{lightcellborder}{HTML}{77543e}
-\newcommand{\lightcell}[1]{
-	\begin{tikzpicture}
-		\filldraw[thick, fill=black, fill opacity=0.2, draw=lightcellborder] (0, 0) rectangle (\linewidth, 1);
-		\node at (current bounding box.center) {\color{white}#1};
-	\end{tikzpicture}
-}
-
 \vfill
 
 \note[0.95]{14}{
@@ -46,9 +30,9 @@ In \textbf{Alliance} and \textbf{Cooperative} Scenarios, players are allowed to 
 
 	\begin{tabularx}{\linewidth}{XXXX}
 		\darkcell{\color{white}Sells/gets} & \darkcell{...to purchase \includesvg[height=10px]{\svgs/gold.svg}} & \darkcell{...to purchase \includesvg[height=10px]{\svgs/valuablegreater.svg}} & \darkcell{...to purchase \includesvg[height=10px]{\svgs/building_materials.svg}} \\
-		\darkcell{I am selling \includesvg[height=10px]{\svgs/gold.svg}...} & \lightcell{--} & \lightcell{6 \includesvg[height=10px]{\svgs/gold.svg} → 1 \includesvg[height=10px]{\svgs/valuablegreater.svg}} & \lightcell{2 \includesvg[height=10px]{\svgs/gold.svg} → 1 \includesvg[height=10px]{\svgs/building_materials.svg}} \\
-		\darkcell{I am selling \includesvg[height=10px]{\svgs/valuablegreater.svg}...} & \lightcell{1 \includesvg[height=10px]{\svgs/valuablegreater.svg} → 3 \includesvg[height=10px]{\svgs/gold.svg}} & \lightcell{--} & \lightcell{1 \includesvg[height=10px]{\svgs/valuablegreater.svg} → 2 \includesvg[height=10px]{\svgs/building_materials.svg}} \\
-		\darkcell{I am selling \includesvg[height=10px]{\svgs/building_materials.svg}...} & \lightcell{1 \includesvg[height=10px]{\svgs/building_materials.svg} → 1 \includesvg[height=10px]{\svgs/gold.svg}} & \lightcell{3 \includesvg[height=10px]{\svgs/building_materials.svg} → 1 \includesvg[height=10px]{\svgs/valuablegreater.svg}} & \lightcell{--} \\
+		\darkcell{I am selling \includesvg[height=10px]{\svgs/gold.svg}...} & \lightcell{--} & \lightcell{6 \includesvg[height=10px]{\svgs/gold.svg} \includesvg[height=0.5\baselineskip]{\svgs/arrow_right_gray.svg} 1 \includesvg[height=10px]{\svgs/valuablegreater.svg}} & \lightcell{2 \includesvg[height=10px]{\svgs/gold.svg} \includesvg[height=0.5\baselineskip]{\svgs/arrow_right_gray.svg} 1 \includesvg[height=10px]{\svgs/building_materials.svg}} \\
+		\darkcell{I am selling \includesvg[height=10px]{\svgs/valuablegreater.svg}...} & \lightcell{1 \includesvg[height=10px]{\svgs/valuablegreater.svg} \includesvg[height=0.5\baselineskip]{\svgs/arrow_right_gray.svg} 3 \includesvg[height=10px]{\svgs/gold.svg}} & \lightcell{--} & \lightcell{1 \includesvg[height=10px]{\svgs/valuablegreater.svg} \includesvg[height=0.5\baselineskip]{\svgs/arrow_right_gray.svg} 2 \includesvg[height=10px]{\svgs/building_materials.svg}} \\
+		\darkcell{I am selling \includesvg[height=10px]{\svgs/building_materials.svg}...} & \lightcell{1 \includesvg[height=10px]{\svgs/building_materials.svg} \includesvg[height=0.5\baselineskip]{\svgs/arrow_right_gray.svg} 1 \includesvg[height=10px]{\svgs/gold.svg}} & \lightcell{3 \includesvg[height=10px]{\svgs/building_materials.svg} \includesvg[height=0.5\baselineskip]{\svgs/arrow_right_gray.svg} 1 \includesvg[height=10px]{\svgs/valuablegreater.svg}} & \lightcell{--} \\
 	\end{tabularx}
 	\egroup
 }

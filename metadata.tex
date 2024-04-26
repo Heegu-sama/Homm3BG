@@ -142,7 +142,7 @@
 
 \definecolor{borderoutyellow}{HTML}{E0B75F}
 \definecolor{borderinyellow}{HTML}{F6EA48}
-% Create note box
+% Create note box; the first optional parameter is how much width to give for the content
 \newcommand{\note}[3][0.85]{
   \begin{tikzpicture}
     \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#2\baselineskip}{\layout/note-big.jpg}}};
@@ -160,6 +160,22 @@
       \end{varwidth}
     };
   \end{tikzpicture}
+}
+
+\definecolor{darkcellborder}{HTML}{634831}
+\newcommand{\darkcell}[1]{
+	\begin{tikzpicture}
+		\filldraw[line width=1.0pt, fill=black, fill opacity=0.5, draw=darkcellborder] (0, 0) rectangle (\linewidth, 1);
+		\node at (current bounding box.center) {#1};
+	\end{tikzpicture}
+}
+
+\definecolor{lightcellborder}{HTML}{77543e}
+\newcommand{\lightcell}[1]{
+	\begin{tikzpicture}
+		\filldraw[line width=1.0pt, fill=black, fill opacity=0.2, draw=lightcellborder] (0, 0) rectangle (\linewidth, 1);
+		\node at (current bounding box.center) {\color{white}#1};
+	\end{tikzpicture}
 }
 
 % Commands to be used for automation generating printable version
