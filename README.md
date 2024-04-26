@@ -10,16 +10,16 @@ Click in the table to download the most recent builds in the chosen language:
 |               |Progress|📜 **Rewritten Rule Book** |🖨️ **Rule Book - printable version** |📋 **Comprehensive Components List**|
 |:--------------|:------:|:-------------------------:|:-----------------------------------:|:----------------------------------:|
 | 🇬🇧 English    |100%|[🇬🇧📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf)|[🇬🇧🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf)|[🇬🇧📋](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf)|
-| 🇵🇱 Poski      |~50%|[🇵🇱📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf)|[🇵🇱🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_pl/components_list_pl.pdf)|
+| 🇵🇱 Polski      |~50%|[🇵🇱📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf)|[🇵🇱🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_pl/components_list_pl.pdf)|
 | 🇪🇸 Español    |~25%|[🇪🇸📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf)|[🇪🇸🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_es/components_list_es.pdf)|
 | 🇫🇷 Français   |~10%|[🇫🇷📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf)|[🇫🇷🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_fr/components_list_fr.pdf)|
 | 🇷🇺 Русский   |~5%|[🇷🇺📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf)|[🇷🇺🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_ru/components_list_ru.pdf)|
 
 
-⚠️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
+🖨️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
 
-Componets List lists all the cards 🃏, minis 🚹, tokens, etc. for every box.
-See another [BoardGameGeek thread](https://boardgamegeek.com/thread/3265461/article/43995671#43995671) for details.
+Componets List lists all the cards 🃏, minis 🚹, tokens, etc. for every box. ⚠️ ️️**Archon released their own version of it, and you should use it instead. Find it on 👉 [their website](https://archon-studio.com/downloads/heroes-iii) 👈 called "Content Guide"**.
+The document here will remain for legacy purposes.
 
 ### 💡 What Is This?
 
