@@ -144,6 +144,29 @@ We are currently looking into it, how best to remediate this.
 The personal dictionary `.aspell.homm3.pwd` currently contains only game-related words.
 It does not contain names (e.g., "BoardGameGeek") or parameter values (e.g., "px", "svg") in order to minimize the chances of false-negatives in the main body of text.
 
+### Screenshots
+
+As Pull Request often requires screenshots you can use next script to make a png images of exact page(s):
+```bash
+./pdf_screenshot.sh <LANGUAGE> <FIRST> <LAST>
+```
+
+where 
+- **LANGUAGE**: language code of your translation
+- **FIRST**: page number to start from
+- **LAST**: last page number
+
+Example:
+```bash
+./pdf_screenshot.sh en 5 7
+```
+
+* if you need only one page, just use the same number twice:
+Example:
+```bash
+./pdf_screenshot.sh en 5 5
+```
+
 ## ✨ Assets
 
 All assets come from publicly available sources.
