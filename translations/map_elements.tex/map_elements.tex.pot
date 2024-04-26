@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-04-06 18:37+0300\n"
+"POT-Creation-Date: 2024-04-25 12:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,16 +17,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:5 sections/all_map_locations.tex:411
-#: sections/credits.tex:7 sections/deckbuilding.tex:5
-#: sections/expansion_content.tex:5 sections/expansion_content.tex:49
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
-#: sections/map_elements.tex:34 sections/map_elements.tex:74
-#: sections/other_rules.tex:4 sections/other_rules.tex:33
-#: sections/player_turns.tex:5 sections/resources.tex:5
-#: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:5 sections/town.tex:5 sections/units.tex:5
-#: sections/units.tex:119
+#: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
+#: sections/all_map_locations.tex:417 sections/combat.tex:5
+#: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
+#: sections/difficulty.tex:5 sections/expansion_content.tex:5
+#: sections/expansion_content.tex:49 sections/game_modes.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
+#: sections/map_elements.tex:99 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:118
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -66,7 +66,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:30
+#: sections/map_elements.tex:47
 #, no-wrap
 msgid ""
 "\\subsection*{Map Tile Anatomy\\index{Map Tile}}\n"
@@ -78,12 +78,37 @@ msgid ""
 "\\hyperlink{Difficulty}{Roman numerals} written on a Field indicate that the Field is guarded by Neutral enemies that must be fought to Visit it.\\par\n"
 "\\columnbreak\n"
 "\\includegraphics[width=\\linewidth]{\\images/maptiles.png}\n"
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\item[\\textbf{1.}] Starting Map Tiles: I\n"
+"  \\item[\\textbf{2.}] Far Map Tiles: II-II\n"
+"  \\item[\\textbf{3.}] Near Map Tiles: IV-V\n"
+"  \\item[\\textbf{4.}] Center Map Tiles: VI-VII\n"
+"\\end{itemize}\n"
 "\\vfill\n"
-"\\includegraphics[width=\\linewidth]{\\images/fields.png}"
+"\\begin{center}\n"
+"  \\includegraphics[width=0.8\\linewidth]{\\images/fields.png}\n"
+"\\end{center}\n"
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\begin{multicols}{2}\n"
+"    \\item[\\textbf{1.}] Empty Field\n"
+"    \\item[\\textbf{2.}] Location\n"
+"    \\item[\\textbf{3.}] Artifact Symbol\n"
+"    \\item[\\textbf{4.}] Blocked Field\n"
+"    \\item[\\textbf{5.}] Border line\n"
+"    \\item[\\textbf{6.}] Field Difficulty\n"
+"  "
+msgstr ""
+
+#. type: multicols*
+#: sections/map_elements.tex:50
+#, no-wrap
+msgid "\\end{itemize}"
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:49
+#: sections/map_elements.tex:69
 #, no-wrap
 msgid ""
 "\\subsection*{\\hypertarget{Categories}{Location Categories}}\n"
@@ -104,7 +129,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:56
+#: sections/map_elements.tex:76
 #, no-wrap
 msgid ""
 "\\subsection*{\\hypertarget{Placing}{Placing and Discovering New Tiles}}\\index{Discovering Tiles}\n"
@@ -117,7 +142,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:61
+#: sections/map_elements.tex:81
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -128,21 +153,26 @@ msgid ""
 msgstr ""
 
 #. type: figure*
-#: sections/map_elements.tex:68
+#: sections/map_elements.tex:93
 #, no-wrap
 msgid ""
 "[!hb]\n"
 "  \\centering\n"
-"  \\includegraphics[width=\\textwidth]{\\images/placement.png}"
+"  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
+"  \\begin{tikzpicture}[overlay]\n"
+"    \\node at (5, 10) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{You cannot add this tile here}}}}};\n"
+"    \\node at (5, 1.4) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{You can add this tile here, because it will}}}}};\n"
+"    \\node at (3.9, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{be adjacent to two other tiles}}}}};\n"
+"  \\end{tikzpicture}"
 msgstr ""
 
 #. type: subsection{#2}
-#: sections/map_elements.tex:72
+#: sections/map_elements.tex:97
 msgid "Example Turn"
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:77
+#: sections/map_elements.tex:102
 #, no-wrap
 msgid ""
 "\\textit{Alice wants to capture an adjacent \\hyperlink{Mines}{Mine} by Flagging it with her Main Hero, Sandro the Necromancer.\n"
@@ -151,7 +181,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:79
+#: sections/map_elements.tex:104
 #, no-wrap
 msgid ""
 "\\includegraphics[width=1.1\\linewidth]{\\examples/sandro_takes_mine.png}\n"
@@ -159,7 +189,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:83
+#: sections/map_elements.tex:108
 #, no-wrap
 msgid ""
 "\\textit{The Mine turns out to be guarded by Troglodytes, which have 3 HP \\includesvg[height=0.8\\baselineskip]{\\svgs/health_points.svg}.\n"
@@ -169,7 +199,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:85
+#: sections/map_elements.tex:110
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_lightning_bolt.png}\n"
@@ -177,7 +207,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:87
+#: sections/map_elements.tex:112
 #, no-wrap
 msgid ""
 "\\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell Card per Combat Round.}\\par\n"
@@ -185,7 +215,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:94
+#: sections/map_elements.tex:119
 #, no-wrap
 msgid ""
 "\\textit{Alice now Flags the Mine by placing one of her Faction Cubes on it.\n"
@@ -197,7 +227,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:96
+#: sections/map_elements.tex:121
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_town_portal.png}\n"
@@ -205,7 +235,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:100
+#: sections/map_elements.tex:125
 #, no-wrap
 msgid ""
 "\\vfill\n"
