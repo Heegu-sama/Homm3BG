@@ -416,6 +416,14 @@ msgid ""
 "\\columnbreak\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=0.55\\linewidth]{\\images/mine_example.png}\\\\\n"
+"  \\textit{Une Mine produisant \\includesvg[height=10px]{\\svgs/valuablegreater.svg}, gardées par des Unités Neutres de Niveau 3.\n"
+"    Le premier joueur à revendiquer ce Site gagnera immédiatement un \\includesvg[height=10px]{\\svgs/valuablegreater.svg} en plus d'augmenter son revenu \\includesvg[height=10px]{\\svgs/valuablegreater.svg}.\n"
+"  }\n"
+"\\end{center}\n"
+"\\columnbreak\n"
+"\n"
 
 #. type: multicols*
 #: sections/all_map_locations.tex:169
@@ -431,6 +439,15 @@ msgid ""
 "Do not place any Resource Tokens on the Settlement if you choose to Reinforce.\n"
 "\n"
 msgstr ""
+"Les \\textbf{Enclaves}\\index{Enclave} servent de point d'apparition pour les Héros Secondaires, et comme lieu de repli pour les Héros Principaux battus.\n"
+"Quand vous revendiquez une Enclave, choisissez soit d'augmenter votre revenu \\includesvg[height=10px]{\\svgs/gold.svg}, \\includesvg[height=10px]{\\svgs/building_materials.svg} ou \\includesvg[height=10px]{\\svgs/valuablegreater.svg} d'une case.\n"
+"Comme pour une Mine, la première Revendication d'une Enclave, permet \\textbf{immédiatement} de gagner les Ressources égales à l'augmentation de revenu.\n"
+"Marquez l'Enclave avec le Jeton de la Ressource choisi pour indiquer sa production.\n"
+"Quand vous Revendiquez une Enclave ennemie, Vous pouvez changer cette Ressource.\\par\n"
+"En plus, \\textbf{à la place de l'augmentation de Revenu}, vous pouvez choisir de \\textbf{Renforcer} une de vos Unités \\includesvg[height=10px]{\\svgs/bronze.svg} ou \\includesvg[height=10px]{\\svgs/silver.svg} immédiatement pour la moitié de son coût, arrondi au supérieur.\n"
+"Si vous êtes le premier à la Revendiquer, Renforcez cette Unité \\textbf{gratuitement} ) la place.\n"
+"Ne placez pas de Jeton Ressource si vous choisissez de Renforcer.\n"
+"\n"
 
 #. type: multicols
 #: sections/all_map_locations.tex:171 sections/deckbuilding.tex:119
@@ -460,6 +477,20 @@ msgid ""
 "  They all work identically.}\n"
 "\\end{minipage}"
 msgstr ""
+"\\begin{minipage}[h]{\\linewidth}\n"
+"  \\centering\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/castle_settlement.png}\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/dungeon_settlement.png}\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/necropolis_settlement.png}\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/rampart_settlement.png}\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/fortress_settlement.png}\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/inferno_settlement.png}\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/tower_settlement.png}\n"
+"  \\par\n"
+"  \\textit{toutes les Enclaves possible.\n"
+"  Chacune dans le style d'une Faction différente.\n"
+"  Elle fonctionne de la même façon.}\n"
+"\\end{minipage}"
 
 #. type: Plain text
 #: sections/all_map_locations.tex:188 sections/credits.tex:5
@@ -470,7 +501,7 @@ msgstr ""
 #. type: subsection{#2}
 #: sections/all_map_locations.tex:190
 msgid "\\hypertarget{Revisitable Fields}{Revisitable Fields}"
-msgstr ""
+msgstr "\\hypertarget{Revisitable Fields}{Sites Ouverts}"
 
 #. type: minipage
 #: sections/all_map_locations.tex:220
@@ -478,6 +509,8 @@ msgid ""
 "\\textbf{Library}\\par \\framedimage[\\textwidth]{\\map_locations/library."
 "jpg}"
 msgstr ""
+"\\textbf{Bibliothèque d'Illumination}\\par \\framedimage[\\textwidth]{\\map_locations/library."
+"jpg}"
 
 #. type: caption{#2}
 #: sections/all_map_locations.tex:220
@@ -487,6 +520,10 @@ msgid ""
 "Statistic Card from your hand or Discard Pile and replace it with any other "
 "Statistic Card.  You may do this twice per Visit."
 msgstr ""
+"\\small Category: \\textbf{Ouvert}\\\\Vous pouvez \\includesvg[height=8px]"
+"{\\svgs/pay_v2.svg} 3 \\includesvg[height=8px]{\\svgs/gold.svg} pour Retirer 1 "
+"Carte Caractéristique de votre main ou défausse et la remplacer par une autre "
+"carte Caractéristique. Faisable deux vous par Exploration."
 
 #. type: minipage
 #: sections/all_map_locations.tex:220
@@ -494,6 +531,8 @@ msgid ""
 "\\captionsetup{singlelinecheck=off} \\phantom{j}\\textbf{Black Market}\\par "
 "\\framedimage[\\textwidth]{\\map_locations/black_market.jpg}"
 msgstr ""
+"\\captionsetup{singlelinecheck=off} \\phantom{j}\\textbf{Marché Noir}\\par "
+"\\framedimage[\\textwidth]{\\map_locations/black_market.jpg}"
 
 #. type: caption{#2}
 #: sections/all_map_locations.tex:220
@@ -501,6 +540,8 @@ msgid ""
 "\\small Category: \\textbf{Revisitable}\\\\Look at the top 4 cards from the "
 "Artifact Discard Pile.  You may buy one of them for:"
 msgstr ""
+"\\small Category: \\textbf{Revisitable}\\\\Regardez les 4 premières cartes de "
+" la Défausse Artefact. Vous pouvez en acheter un pour :"
 
 #. type: itemize
 #: sections/all_map_locations.tex:220
@@ -513,6 +554,8 @@ msgid ""
 "[5] \\includesvg[height=8px]{\\svgs/gold.svg} if it is a \\textbf{Minor} "
 "Artifact"
 msgstr ""
+"[5] \\includesvg[height=8px]{\\svgs/gold.svg} pour un Artefact "
+"\\textbf{Mineur}"
 
 #. type: itemize
 #: sections/all_map_locations.tex:220
@@ -520,6 +563,8 @@ msgid ""
 "[7] \\includesvg[height=8px]{\\svgs/gold.svg} if it is a \\textbf{Major} "
 "Artifact"
 msgstr ""
+"[7] \\includesvg[height=8px]{\\svgs/gold.svg} pour un Artefact "
+"\\textbf{Majeur}"
 
 #. type: itemize
 #: sections/all_map_locations.tex:220
@@ -527,6 +572,8 @@ msgid ""
 "[10] \\includesvg[height=8px]{\\svgs/gold.svg} if it is a \\textbf{Relic} "
 "Artifact"
 msgstr ""
+"[10] \\includesvg[height=8px]{\\svgs/gold.svg} pour un Artefact "
+"\\textbf{Relique}"
 
 #. type: minipage
 #: sections/all_map_locations.tex:244
@@ -534,6 +581,8 @@ msgid ""
 "\\textbf{Sanctuary}\\par \\framedimage[\\textwidth]{\\map_locations/"
 "sanctuary.jpg}"
 msgstr ""
+"\\textbf{Sanctuaire}\\par \\framedimage[\\textwidth]{\\map_locations/"
+"sanctuary.jpg}"
 
 #. type: caption{#2}
 #: sections/all_map_locations.tex:244
@@ -542,6 +591,9 @@ msgid ""
 "attacked by other Heroes.  Friendly Heroes can move through enemy Heroes on "
 "this Field but cannot stop here."
 msgstr ""
+"\\small Category: \\textbf{Ouvert}\\\\ Les Héros sur ce Site ne peuvent pas être "
+"attaqué par d'autre Héros.  Les Alliés peuvent traverser des Héros ennemis sur"
+"ce lieu mais pas s'y arrêter."
 
 #. type: minipage
 #: sections/all_map_locations.tex:244
@@ -549,6 +601,8 @@ msgid ""
 "\\phantom{j}\\textbf{Tavern}\\par \\framedimage[\\textwidth]{\\map_locations/"
 "tavern.jpg}"
 msgstr ""
+"\\phantom{j}\\textbf{Taverne}\\par \\framedimage[\\textwidth]{\\map_locations/"
+"tavern.jpg}"
 
 #. type: caption{#2}
 #: sections/all_map_locations.tex:244
@@ -558,6 +612,10 @@ msgid ""
 "Secondary Hero.  Place their model on this Field.  Then, choose one enemy "
 "player to discard 1 random card from their hand."
 msgstr ""
+"\\small Category: \\textbf{Ouvert}\\\\ Vous pouvez \\includesvg[height=8px]"
+"{\\svgs/pay_v2.svg} 7 \\includesvg[height=8px]{\\svgs/gold.svg} pour acheter un "
+"Héros Secondaire.  Placez sa figurine sur ce Site.  Puis, choisissez un joueur "
+"ennemi qui défausse une carte aléatoire de sa main."
 
 #. type: minipage
 #: sections/all_map_locations.tex:263
@@ -565,6 +623,8 @@ msgid ""
 "\\hypertarget{Trading Post}{\\textbf{Trading Post}}\\par "
 "\\framedimage[\\textwidth]{\\map_locations/trading_post.jpg}"
 msgstr ""
+"\\hypertarget{Trading Post}{\\textbf{Comptoir}}\\par "
+"\\framedimage[\\textwidth]{\\map_locations/trading_post.jpg}"
 
 #. type: caption{#2}
 #: sections/all_map_locations.tex:263
@@ -573,6 +633,9 @@ msgid ""
 "\\protect\\hyperlink{Trading}{Trade} resources and Remove cards OR buy a "
 "\\protect\\hyperlink{War Machines}{War Machine}."
 msgstr ""
+"\\small Category: \\textbf{Ouvert}\\\\ \\textbf{Au choix}: "
+"\\protect\\hyperlink{Trading}{Echanger} des ressources et Retirer une carte Ou acheter une "
+"\\protect\\hyperlink{War Machines}{Machine de Guerre}."
 
 #. type: minipage
 #: sections/all_map_locations.tex:263
@@ -581,6 +644,9 @@ msgid ""
 "Factory}}\\par \\framedimage[\\textwidth]{\\map_locations/"
 "war_machine_factory.jpg}"
 msgstr ""
+"\\phantom{j}\\hypertarget{War Machine Factory}{\\textbf{Manufacture "
+"d'Arme}}\\par \\framedimage[\\textwidth]{\\map_locations/"
+"war_machine_factory.jpg}"
 
 #. type: caption{#2}
 #: sections/all_map_locations.tex:263
@@ -588,6 +654,8 @@ msgid ""
 "\\small Category: \\textbf{Revisitable}\\\\Buy a \\protect\\hyperlink{War "
 "Machines}{War Machine}.\\phantom{.......}"
 msgstr ""
+"\\small Category: \\textbf{Ouvert}\\\\Acheter une \\protect\\hyperlink{War "
+"Machines}{Machine de Guerre}.\\phantom{.......}"
 
 #. type: minipage
 #: sections/all_map_locations.tex:277
@@ -595,6 +663,8 @@ msgid ""
 "\\phantom{j}\\textbf{Stables}\\par \\framedimage[\\textwidth]"
 "{\\map_locations/stables.jpg}"
 msgstr ""
+"\\phantom{j}\\textbf{Ecuries}\\par \\framedimage[\\textwidth]"
+"{\\map_locations/stables.jpg}"
 
 #. type: caption{#2}
 #: sections/all_map_locations.tex:277
@@ -603,6 +673,9 @@ msgid ""
 "\\includesvg[height=8px]{\\svgs/movement.svg}.  It lasts for only one Turn.  "
 "See \\protect\\hyperlink{Movement}{Movement Actions}."
 msgstr ""
+"\\small Category: \\textbf{Ouvert}\\\\ Gagnez 1 Pm "
+"\\includesvg[height=8px]{\\svgs/movement.svg}.  Il ne dure que ce Tour.  "
+"Voir \\protect\\hyperlink{Movement}{Actions de Mouvements}."
 
 #. type: tikzpicture
 #: sections/all_map_locations.tex:281
@@ -615,7 +688,7 @@ msgstr ""
 #. type: subsection{#2}
 #: sections/all_map_locations.tex:283
 msgid "\\hypertarget{Other Fields}{Other Fields}"
-msgstr ""
+msgstr "\\hypertarget{Other Fields}{Auters Sites}"
 
 #. type: minipage
 #: sections/all_map_locations.tex:304
@@ -623,6 +696,8 @@ msgid ""
 "\\textbf{Tree of Knowledge}\\par \\framedimage[\\linewidth]{\\map_locations/"
 "tree_of_knowledge.jpg}"
 msgstr ""
+"\\textbf{Arbre de Connaissance}\\par \\framedimage[\\linewidth]{\\map_locations/"
+"tree_of_knowledge.jpg}"
 
 #. type: caption{#2}
 #: sections/all_map_locations.tex:304
@@ -632,6 +707,10 @@ msgid ""
 "or 10 \\includesvg[height=8px]{\\svgs/gold.svg} to gain 2 "
 "\\includesvg[height=8px]{\\svgs/experience.svg}."
 msgstr ""
+"\\small Category: \\textbf{Explorable}\\\\Vous pouvez \\includesvg[height=8px]"
+"{\\svgs/pay_v2.svg} 3 \\includesvg[height=8px]{\\svgs/valuablegreater.svg} "
+"ou 10 \\includesvg[height=8px]{\\svgs/gold.svg} pour 2 "
+"\\includesvg[height=8px]{\\svgs/experience.svg}."
 
 #. type: minipage
 #: sections/all_map_locations.tex:304
@@ -639,6 +718,8 @@ msgid ""
 "\\textbf{Redwood Observatory}\\par \\framedimage[\\linewidth]"
 "{\\map_locations/redwood_observatory.jpg}"
 msgstr ""
+"\\textbf{Arbre Observatoire}\\par \\framedimage[\\linewidth]"
+"{\\map_locations/redwood_observatory.jpg}"
 
 #. type: caption{#2}
 #: sections/all_map_locations.tex:304
@@ -646,6 +727,8 @@ msgid ""
 "\\small Category: \\textbf{Visitable}\\\\Discover a face down Tile adjacent "
 "to this one."
 msgstr ""
+"\\small Category: \\textbf{Explorable}\\\\Révélez une Tuile face cachée adjacente "
+"à celle-ci."
 
 #. type: minipage
 #: sections/all_map_locations.tex:326
@@ -653,6 +736,8 @@ msgid ""
 "\\phantom{j}\\textbf{Grail}\\par \\framedimage[\\linewidth]{\\map_locations/"
 "grail.jpg}"
 msgstr ""
+"\\phantom{j}\\textbf{Graal}\\par \\framedimage[\\linewidth]{\\map_locations/"
+"grail.jpg}"
 
 #. type: caption{#2}
 #: sections/all_map_locations.tex:326
@@ -662,6 +747,10 @@ msgid ""
 "is removed or if there are multiple Grail Fields.  The Token's effects are "
 "described in the Scenario's description.  \\phantom{\\ldots\\ldots\\ldots}"
 msgstr ""
+"\\small Category: \\textbf{Explorable}\\\\Gagnez le Jeton Graal.  Il ne peut y avoir "
+"qu'un Jeton Graal dans la partie, n'en gagnez pas d'autre si le Cube Noir de ce site "
+"est retiré ou si il y a plusieurs Sites Graal.  Ces Effets sont "
+"décrit dans la description du Scénario.  \\phantom{\\ldots\\ldots\\ldots}"
 
 #. type: minipage
 #: sections/all_map_locations.tex:326
@@ -669,6 +758,8 @@ msgid ""
 "\\phantom{j}\\textbf{Market of Time}\\par \\framedimage[\\linewidth]"
 "{\\map_locations/market_of_time.jpg}"
 msgstr ""
+"\\phantom{j}\\textbf{Marché du Temps}\\par \\framedimage[\\linewidth]"
+"{\\map_locations/market_of_time.jpg}"
 
 #. type: caption{#2}
 #: sections/all_map_locations.tex:326
@@ -676,6 +767,8 @@ msgid ""
 "\\small Category: \\textbf{Visitable}\\\\ Remove one card from your hand.  "
 "Then \\textbf{Search (2)} the Ability, Spell, or Artifact Deck."
 msgstr ""
+"\\small Category: \\textbf{Explorable}\\\\ Retirer une carte de votre main.  "
+"Puis \\textbf{Fouillez (2)} dans les Decks Compétence, Sort ou Artefact."
 
 #. type: minipage
 #: sections/all_map_locations.tex:348
@@ -683,6 +776,8 @@ msgid ""
 "\\phantom{j}\\textbf{Hill Fort}\\par \\framedimage[\\linewidth]"
 "{\\map_locations/hill_fort.jpg}"
 msgstr ""
+"\\phantom{j}\\textbf{Fortin}\\par \\framedimage[\\linewidth]"
+"{\\map_locations/hill_fort.jpg}"
 
 #. type: caption{#2}
 #: sections/all_map_locations.tex:348
@@ -692,6 +787,10 @@ msgid ""
 "\\includesvg[height=8px]{\\svgs/silver.svg} Units.  The Reinforcement cost "
 "is reduced by 3 \\includesvg[height=8px]{\\svgs/gold.svg} to a minimum of 0."
 msgstr ""
+"\\small Category: \\textbf{Explorable}\\\\ Vous pouvez immédiatement Renforcer une "
+"de vos Unités \\includesvg[height=8px]{\\svgs/bronze.svg} ou "
+"\\includesvg[height=8px]{\\svgs/silver.svg}.  Le coût de Renforcement "
+"est réduit de 3 \\includesvg[height=8px]{\\svgs/gold.svg} minimum 0."
 
 #. type: minipage
 #: sections/all_map_locations.tex:348
@@ -699,6 +798,8 @@ msgid ""
 "\\phantom{j}\\textbf{Prison}\\par \\framedimage[\\linewidth]{\\map_locations/"
 "prison.jpg}"
 msgstr ""
+"\\phantom{j}\\textbf{Prison}\\par \\framedimage[\\linewidth]{\\map_locations/"
+"prison.jpg}"
 
 #. type: caption{#2}
 #: sections/all_map_locations.tex:348
@@ -707,6 +808,9 @@ msgid ""
 "their model on this Field.  If you already have a Secondary Hero, gain 3 "
 "\\includesvg[height=8px]{\\svgs/gold.svg} instead."
 msgstr ""
+"\\small Category: \\textbf{Explorable}\\\\ Gagnez un Héros Secondaire.  Placez "
+"sa figurine sur ce Site.  Si vous en avez déjà un, gagnez 3 "
+"\\includesvg[height=8px]{\\svgs/gold.svg} à la place."
 
 #. type: minipage
 #: sections/all_map_locations.tex:368
