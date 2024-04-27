@@ -143,7 +143,8 @@
 
 \definecolor{borderoutyellow}{HTML}{E0B75F}
 \definecolor{borderinyellow}{HTML}{F6EA48}
-% Create note box; the first optional parameter is how much width to give for the content
+% Create note box
+\providecommand{\notefont}[0]{\fontfamily{ptm}\selectfont}
 \newcommand{\note}[2]{
   \begin{tikzpicture}
     \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/note-big.jpg}}};
@@ -152,7 +153,7 @@
     \draw [borderinyellow, thick] ([xshift=+4.5pt, yshift=-4.5pt] current bounding box.north west) rectangle ([xshift=-4.5pt, yshift=4.5pt] current bounding box.south east);
     \node at (current bounding box.center) {
       \begin{varwidth}{0.85\linewidth}
-      \fontfamily{ptm}\selectfont{
+      \notefont{
         \color{arylideyellow}
         \hypersetup{linkcolor=amber}
         #2
@@ -171,7 +172,7 @@
     \draw [borderinyellow, thick] ([xshift=+3pt, yshift=-3pt] current bounding box.north west) rectangle ([xshift=-3pt, yshift=3pt] current bounding box.south east);
     \node at (current bounding box.center) {
       \begin{varwidth}{0.95\linewidth}
-      \fontfamily{ptm}\selectfont{
+      \notefont{
         \bgroup
         \color{arylideyellow}
         \hypersetup{linkcolor=amber}
