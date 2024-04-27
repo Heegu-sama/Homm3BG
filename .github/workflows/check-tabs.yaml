@@ -16,8 +16,15 @@ jobs:
 
       - name: Find tabs
         run: |
-          if find . -type f -iname "*.tex" | xargs grep -nP '\t'
-          then
+          ERRORS=0
+          for f in $(git grep -Il '')
+          do
+            if [[ $(grep -nP '\t' $f) ]]; then
+              ERRORS=1
+            fi
+          done
+
+          if [ $ERRORS -eq 1 ]; then
               echo "Tabs found, see the output above. Please replace them with spaces."
-              exit 1
+            exit 1
           fi
