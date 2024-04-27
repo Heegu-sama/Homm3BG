@@ -46,7 +46,7 @@ msgstr ""
 #. type: Plain text
 #: sections/deckbuilding.tex:3
 msgid "\\addsection{Deck-building}{\\skills/wisdom.png}"
-msgstr ""
+msgstr "\\addsection{Сбор колоды}{\\skills/wisdom.png}"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:10
@@ -58,6 +58,11 @@ msgid ""
 "Each player's Deck starts with 9 cards, built during the game's setup.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Playerdecks}{Колода игрока}}\n"
+"Все игроки имеют уникальную колоду, содержащую навыки и вооружение основного героя.\n"
+"Колода может содержать карты статистики, навыков, заклинаний, артефактов и Специальности героя.\n"
+"Каждый игрок начинает с колодой из 9 карт, собранной в момент подготовки.\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:34
@@ -88,6 +93,30 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\subsection*{Общие правила карт}\n"
+"\\begin{enumerate}\n"
+"  \\item Карты могут быть сыграны \\textbf{только в ваш ход} или в \\hyperlink{Combat}{сражении} с участием \\textbf{основного героя}.\n"
+"  \\item Сбросьте карту после использования.\n"
+"    Каждый игрок имеет свой собственный сброс\\index{Discard Pile}.\n"
+"  \\item Если ваша колода закончилась в момент набора карт, \\textbf{перемешайте сброс} и получите новую колоду.\n"
+"  \\item При получении карты всегда помещайте ее \\textbf{в руку}, если не указано иное.\n"
+"  \\item Каждый раз при \\textbf{поиске} (X)\\index{Search (X)} в колодах навыков, артефактов или заклинаний, поместите в руку одну из (X) верхних карт колоды, сбросив остальные, \\textbf{ИЛИ} поместите в руку верхнюю карту из сброса колоды вместо поиска.\n"
+"  \\item Колоды навыков, артефактов и заклинаний имею собственный сброс.\n"
+"    Когда в колоде заканчиваются карты, создайте новую, перемешав сброс и положив верхнюю карту в новый сброс.\n"
+"    Если сброс одной из колод опустел, поместите в него верхнюю карту этой колоды.\n"
+"  \\item Карты имеют следующие типы эффектов:\n"
+"  \\begin{itemize}\n"
+"    \\item \\textbf{мгновенные} \\includesvg[height=10px]{\\svgs/instant.svg} эффекты применяются незамедлительно.\n"
+"    \\item эффекты \\textbf{активации} \\includesvg[height=10px]{\\svgs/activation.svg} должны применятся во время активации вашего отряда в сражении.\n"
+"    \\item эффекты \\textbf{карты} \\includesvg[height=10px]{\\svgs/map.svg} не могут использоваться во время сражения.\n"
+"    \\item \\textbf{текущие} \\includesvg[height=10px]{\\svgs/ongoing.svg} эффекты длятся до момента их использования или пока применивший их игрок не начнет следующий ход.\n"
+"    \\item \\textbf{постоянные} \\includesvg[height=10px]{\\svgs/permanent.svg} карты\\index{Permanent Cards} работают до момента их сброса или замены.\n"
+"      \\textbf{Вы можете иметь только одну активную перманентную карту}; для применения другой карты необходимо сбросить первую.\n"
+"  \\end{itemize}\n"
+"\\end{enumerate}\n"
+"\\note{5}{Мгновенные \\includesvg[height=10px]{\\svgs/instant-note.svg} карты, изменяющие статистику \\hyperlink{Units}{отряда} или наносящие урон \\includesvg[height=10px]{\\svgs/damage-note.svg} не могут использоваться вне сражения.\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:37
@@ -114,6 +143,8 @@ msgid ""
 "\\subsection*{\\hypertarget{Ability}{Ability} and \\hypertarget{Statistic}{Statistic} Cards}\n"
 "\n"
 msgstr ""
+"\\subsection*{Карты \\hypertarget{Ability}{навыков} и \\hypertarget{Statistic}{статистик}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:47
@@ -126,6 +157,12 @@ msgid ""
 "\\bigskip\n"
 "\n"
 msgstr ""
+"Все карты навыков и статистик\\index{Statistic Cards} имеют \\textbf{базовый}\\index{Basic Effect} и усиленный \\textbf{экспертный} \\includesvg[height=10px]{\\svgs/expert.svg} \\textbf{эффекты}\\index{Expert Effect}, изображённые под базовым эффектом.\n"
+"При использовании карты навыка или статистик, вы должны выбрать применяемый эффект.\n"
+"Количество доступных использований \\includesvg[height=10px]{\\svgs/expert.svg} эффектов за раунд ограничено \\hyperlink{Level}{уровнем} вашего героя.\n"
+"Отслеживайте количество использований любым подходящим способом, например помещая чёрные кубики на карту героя.\\par\n"
+"\\bigskip\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:74
