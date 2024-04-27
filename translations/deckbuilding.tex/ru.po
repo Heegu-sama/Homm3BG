@@ -99,7 +99,7 @@ msgstr ""
 "  \\item Сбросьте карту после использования.\n"
 "    Каждый игрок имеет свой собственный сброс\\index{Discard Pile}.\n"
 "  \\item Если ваша колода закончилась в момент набора карт, \\textbf{перемешайте сброс} и получите новую колоду.\n"
-"  \\item При получении карты всегда помещайте ее \\textbf{в руку}, если не указано иное.\n"
+"  \\item При получении карты всегда помещайте её \\textbf{в руку}, если не указано иное.\n"
 "  \\item Каждый раз при \\textbf{поиске} (X)\\index{Search (X)} в колодах навыков, артефактов или заклинаний, поместите в руку одну из (X) верхних карт колоды, сбросив остальные, \\textbf{ИЛИ} поместите в руку верхнюю карту из сброса колоды вместо поиска.\n"
 "  \\item Колоды навыков, артефактов и заклинаний имею собственный сброс.\n"
 "    Когда в колоде заканчиваются карты, создайте новую, перемешав сброс и положив верхнюю карту в новый сброс.\n"
@@ -188,6 +188,25 @@ msgid ""
 "    \\item[\\textbf{4.}] Faction-specific Card*\n"
 "  \\end{itemize}"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{\\cards/ability.png}\n"
+"\\vspace{-2em}\n"
+"\\begin{multicols*}{2}\n"
+"  \\footnotesize\n"
+"  \\begin{center}\n"
+"    \\phantom{\\ldots}\\textbf{\\textit{\\textcolor{darkcandyapplered}{Карта навыка}}}\n"
+"  \\end{center}\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{1.}] Имя\n"
+"    \\item[\\textbf{2.}] Базовый эффект\n"
+"  \\end{itemize}\n"
+"  \\columnbreak\n"
+"  \\begin{center}\n"
+"    \\textbf{\\textit{\\textcolor{darkcandyapplered}{Карта статистики}}}\\phantom{\\ldots}\n"
+"  \\end{center}\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{3.}] Экспертный эффект\n"
+"    \\item[\\textbf{4.}] Особая карта Фракции*\n"
+"  \\end{itemize}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:74
@@ -199,6 +218,12 @@ msgid ""
 "gain it.  Non-Necropolis players \\textbf{cannot use} Faction Specific Cards "
 "from their hand in any way besides for effects that discard them.  }"
 msgstr ""
+"\\bigbreak \\note{11}{ Некоторые карты применимы только к Фракции Некрополиса "
+"\\includesvg[height=10px]{\\svgs/necro-note.svg}. Когда игроку другой Фракции "
+"попадается карта Некрополиса\\index{Necropolis Card} из колоды навыков, "
+"он может сбросить её, заменив новой картой, или взять в руку. "
+"Однако \\textbf{единственный способ использования} особых карт Фракций игроками "
+"других Фракций - поместить эти карты в свой сброс. }"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:78 sections/resources.tex:31
@@ -208,7 +233,7 @@ msgstr ""
 #. type: subsection{#2}
 #: sections/deckbuilding.tex:80
 msgid "Artifact Cards"
-msgstr ""
+msgstr "Карты артефактов"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:110
@@ -222,6 +247,14 @@ msgid ""
 "Level.  They are gained through map exploration.\\par Artifacts can be "
 "\\hyperlink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgstr ""
+"Карты артефактов\\index{Artifact Card} имеют верхний и нижний эффекты. Когда вы "
+"применяете такую карту, вы должны \\textbf{выбрать} используемый эффект.  Карты "
+"разделены на 3 уровня: слабый, сильный и реликтовый. Эти уровни определяют общую "
+"мощь карты и могут быть использованы в разрешении определенных эффектов или "
+"подготовке сценария. В то же время, все карты артефактов перемешиваются  "
+"между собой для формирования колоды артефактов без учета их уровня. "
+"Карты можно получить в ходе исследования карты.\\par Артефакты можно "
+"\\hyperlink{Trading}{купить} в режимах Альянса или Кооператива."
 
 #. type: multicols*
 #: sections/deckbuilding.tex:110
@@ -241,6 +274,19 @@ msgid ""
 "    \\phantom{\\ldots}\\textbf{\\textit{\\textcolor{darkcandyapplered}{Relic Artifact}}}\n"
 "  \\end{center}"
 msgstr ""
+"{2}\n"
+"  \\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}\n"
+"  \\footnotesize\n"
+"    \\null\\hfill\\textbf{\\textit{\\textcolor{darkcandyapplered}{Сильный артефакт}}}\n"
+"  \\columnbreak\n"
+"  \\begin{center}\n"
+"    \\phantom{\\ldots}\\\\\n"
+"    \\phantom{\\ldots}\\includegraphics[width=0.6\\linewidth]{\\cards/minor_artifact.png}\\\\\n"
+"    \\phantom{\\ldots}\\textbf{\\textit{\\textcolor{darkcandyapplered}{Слабый артефакт}}}\\\\\n"
+"    \\vspace{3em}\n"
+"    \\phantom{\\ldots}\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}\\\\\n"
+"    \\phantom{\\ldots}\\textbf{\\textit{\\textcolor{darkcandyapplered}{Реликтовый артефакт}}}\n"
+"  \\end{center}"
 
 #. type: multicols
 #: sections/deckbuilding.tex:110
@@ -255,6 +301,14 @@ msgid ""
 "    \\item[\\textbf{3.}] Fluff\n"
 "  \\end{itemize}"
 msgstr ""
+"{2}\n"
+"  \\footnotesize\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{1.}] Имя\n"
+"    \\item[\\textbf{2.}] Эффект\n"
+"    \\columnbreak\n"
+"    \\item[\\textbf{3.}] Описание\n"
+"  \\end{itemize}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:115
@@ -264,7 +318,7 @@ msgstr ""
 #. type: subsection{#2}
 #: sections/deckbuilding.tex:117
 msgid "\\hypertarget{spells}{Spell Cards}"
-msgstr ""
+msgstr "\\hypertarget{spells}{Карты заклинаний}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:123
@@ -278,6 +332,14 @@ msgid ""
 "Spell.  All Spell Cards also have an alternative bottom (5) "
 "\\includesvg[height=10px]{\\svgs/empower.svg} effect."
 msgstr ""
+"Карты заклинаний\\index{Spell Card} имеют три возможных первичных эффекта. Использование "
+"базовой версии заклинания не требует дополнительных расходов. Для доступа "
+"к другим эффектам, вы можете \\textbf{усилить} заклинание\\index{Empowering "
+"Spells}, оплатив обозначенную стоимость (3) для получения более могущественного результата "
+"(4). Вы можете оплатить эту цену, отдав другие карты заклинаний для усиления "
+"\\includesvg[height=10px]{\\svgs/empower.svg} эффекта перед применением "
+"заклинания. Также все карты имеют альтернативный (5) "
+"\\includesvg[height=10px]{\\svgs/empower.svg} эффект."
 
 #. type: center
 #: sections/deckbuilding.tex:141
@@ -285,6 +347,8 @@ msgid ""
 "\\medskip \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}"
 "{Spell Card}}}} \\scriptsize"
 msgstr ""
+"\\medskip \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}"
+"{Карта заклинаний}}}} \\scriptsize"
 
 #. type: multicols
 #: sections/deckbuilding.tex:141
@@ -301,6 +365,16 @@ msgid ""
 "    \\end{itemize}\n"
 "  "
 msgstr ""
+"{2}\n"
+"    \\begin{itemize}[itemsep=5pt]\n"
+"      \\item[\\textbf{1.}] \\textbf{Имя заклинания}\n"
+"      \\item[\\textbf{2.}] \\textbf{Школа магии}\n"
+"      \\item[\\textbf{3.}] \\textbf{Стоимость усиления}\n"
+"      \\item[\\textbf{4.}] \\textbf{Эффект заклинания}\n"
+"      \\item[\\textbf{5.}] \\textbf{Альтернативный эффект}\n"
+"      \\item[]\n"
+"    \\end{itemize}\n"
+"  "
 
 #. type: Plain text
 #: sections/deckbuilding.tex:146
@@ -311,11 +385,16 @@ msgid ""
 "\\textbf{same Round} when the Guild is constructed.\\par Spells can be "
 "\\hyperlink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgstr ""
+"Заклинания можно получить, построив Гильдию магов\\index{Mage Guild}.  "
+"Её постройка также дает возможность использовать жетон книги магии\\index{Spell Book "
+"Token} для покупки дополнительных заклинаний. Жетон не может быть использован в ходе "
+"\\textbf{того же раунда}, в котором была построена Гильдия.\\par Заклинания можно "
+"\\hyperlink{Trading}{покупать} в режимах Альянса и Кооператива."
 
 #. type: subsection{#2}
 #: sections/deckbuilding.tex:148
 msgid "\\hypertarget{Specialty}{Hero Specialty Cards}"
-msgstr ""
+msgstr "\\hypertarget{Specialty}{Карты специальности героя}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:152
@@ -326,6 +405,11 @@ msgid ""
 "Spell Cards, Specialty Cards are their \\textbf{own unique category of "
 "cards}."
 msgstr ""
+"Карты специальности героя\\index{Specialty Card} зарабатываются при "
+"\\hyperlink{Level}{повышении уровня}. Каждый основной герой имеет уникальный набор "
+"карт специальности. Хотя многие из этих карт имеют эффекты, схожие с картами "
+"заклинаний, карты специальности представляют собой \\textbf{уникальную категорию "
+"карт}."
 
 #. type: center
 #: sections/deckbuilding.tex:158
@@ -333,6 +417,8 @@ msgid ""
 "\\medskip \\footnotesize\\textit{A Level 4 Specialty Card, belonging to "
 "Catherine the Knight.}"
 msgstr ""
+"\\medskip \\footnotesize\\textit{Карта специальности 4 уровня, принадлежащая "
+"рыцарю Катерине.}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:168
@@ -343,11 +429,16 @@ msgid ""
 "directly from the Spell Deck), place that Spell into your Discard Pile after "
 "casting it.  }"
 msgstr ""
+"\\note{11}{В ходе сражения каждый игрок может использовать \\textbf{только одну "
+"карту заклинаний} \\textbf{за боевой раунд}. \\medskip Если вы используете эффект, "
+"дающий вам возможность использовать заклинание не из вашей руки (например "
+"непосредственно из колоды заклинаний), поместите эту карту в ваш сброс после "
+"применения.}"
 
 #. type: subsection{#2}
 #: sections/deckbuilding.tex:178
 msgid "Searching Example"
-msgstr ""
+msgstr "Пример поиска"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:188
@@ -368,3 +459,18 @@ msgid ""
 "png}\\par \\textit{He decides to keep the Fireball, placing it into his hand "
 "and discarding the Magic Arrow into the Spell Discard Pile.}"
 msgstr ""
+"\\textit{Боб, играющий за чернокнижника Димера, построил Гильдию магов в ходе "
+"предыдущего раунда, что позволило ему использовать жетон Книги магии для "
+"покупки дополнительных заклинаний.}\\par \\includegraphics[width=\\linewidth]"
+"{\\examples/deemer_receiving_spellbook.png}\\par \\textit{В текущем ходу он использует "
+"жетон и платит 5 \\includesvg[height=10px]{\\svgs/gold.svg} "
+"отмеченных на его карте города, что позволяет ему \\textbf{искать (2)} в колоде "
+"заклинаний.}\\par \\includegraphics[width=\\linewidth]{\\examples/"
+"deemer_spell_cost.png}\\par \\filbreak \\textit{Он знает, что может на выбор "
+"забрать верхнюю карту заклинаний из сброса, или взять две верхние карты "
+"из колоды заклинаний и забрать одну из них. Он не "
+"заинтересован в заклинании Проклятья, находящееся сверху сброса, "
+"поэтому вместо этого он решает взять две карты - Волшебную стрелу и Огненный шар.} "
+"\\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow."
+"png}\\par \\textit{Он решает забрать Огненный шар, поместив его в свою руку и сбросив "
+"карту Волшебной стрелы в сброс колоды заклинаний.}"
