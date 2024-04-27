@@ -149,10 +149,21 @@ It does not contain names (e.g., "BoardGameGeek") or parameter values (e.g., "px
 As Pull Request often requires screenshots you can the script to make PNG images of specified page(s):
 ```bash
 ./pdf_screenshot.sh <LANGUAGE> <FIRST_PAGE> <LAST_PAGE>
+```
 
 Example:
 ```bash
 ./pdf_screenshot.sh en 5 7
+```
+
+To process single page, use:
+```bash
+./pdf_screenshot.sh <LANGUAGE> <PAGE>
+```
+
+Example:
+```bash
+./pdf_screenshot.sh en 5 
 ```
 
 ## ✨ Assets
