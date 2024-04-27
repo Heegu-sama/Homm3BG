@@ -11,6 +11,7 @@ git restore \
   main_en.tex \
   main_fr.tex \
   main_pl.tex \
+  main_ru.tex \
   make_printable.sh \
   metadata.tex \
   po4a.cfg
