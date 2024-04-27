@@ -74,7 +74,7 @@ jobs:
       - name: Compile rule book
         uses: xu-cheng/latex-action@v3
         with:
-          extra_system_packages: "inkscape font-liberation font-hack"
+          extra_system_packages: "inkscape font-liberation"
           latexmk_use_lualatex: ${{ matrix.luaengine }}
           latexmk_shell_escape: true
           root_file: main_${{ matrix.language }}.tex
@@ -120,7 +120,7 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: xu-cheng/latex-action@v3
         with:
-          extra_system_packages: "inkscape font-liberation font-hack"
+          extra_system_packages: "inkscape font-liberation"
           latexmk_use_lualatex: ${{ matrix.luaengine }}
           latexmk_shell_escape: true
           post_compile: echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && upmendex -s index_style main_${{ matrix.language }} && sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}@g' main_${{ matrix.language }}.ind && ${{ matrix.luaengine && 'lualatex' || 'pdflatex' }} --shell-escape main_${{ matrix.language }}.tex
