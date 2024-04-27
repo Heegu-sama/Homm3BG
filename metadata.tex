@@ -172,10 +172,12 @@
     \node at (current bounding box.center) {
       \begin{varwidth}{0.95\linewidth}
       \fontfamily{ptm}\selectfont{
+        \bgroup
         \color{arylideyellow}
         \hypersetup{linkcolor=amber}
+        \setlength{\tabcolsep}{0.3em}
         #2
-        \hypersetup{linkcolor=goldenbrown}
+        \egroup
       }
       \end{varwidth}
     };
