@@ -188,7 +188,7 @@
 \newcommand{\darkcell}[2][1]{
   \begin{tikzpicture}
     \filldraw[line width=1.0pt, fill=black, fill opacity=0.5, draw=darkcellborder] (0, 0) rectangle (\linewidth, #1);
-    \node[text width=\linewidth, align=center] at (current bounding box.center) {#2};
+	\node[text width=\linewidth, align=center] at (current bounding box.center) {\textbf{#2}};
   \end{tikzpicture}
 }
 
