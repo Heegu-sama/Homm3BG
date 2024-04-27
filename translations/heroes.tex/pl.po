@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-19 13:55+0200\n"
+"POT-Creation-Date: 2024-04-26 16:44+0100\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -20,16 +20,15 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
-#: sections/all_map_locations.tex:412 sections/combat.tex:5
-#: sections/combat.tex:138 sections/credits.tex:7 sections/deckbuilding.tex:5
-#: sections/expansion_content.tex:5 sections/expansion_content.tex:49
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
-#: sections/map_elements.tex:34 sections/map_elements.tex:74
-#: sections/other_rules.tex:4 sections/other_rules.tex:33
-#: sections/player_turns.tex:5 sections/resources.tex:5
-#: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:5 sections/town.tex:5 sections/units.tex:5
-#: sections/units.tex:119
+#: sections/all_map_locations.tex:417 sections/combat.tex:5
+#: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
+#: sections/difficulty.tex:5 sections/expansion_content.tex:5
+#: sections/expansion_content.tex:49 sections/game_modes.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
+#: sections/map_elements.tex:99 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:145
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -37,19 +36,19 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_heroes.tex:30 sections/ai_heroes.tex:49
-#: sections/ai_heroes.tex:64 sections/combat.tex:93 sections/combat.tex:231
-#: sections/deckbuilding.tex:129 sections/deckbuilding.tex:135
-#: sections/expansion_content.tex:65 sections/heroes.tex:34
+#: sections/ai_heroes.tex:30 sections/ai_heroes.tex:64 sections/combat.tex:95
+#: sections/combat.tex:233 sections/expansion_content.tex:65
+#: sections/heroes.tex:34
 #, no-wrap
 msgid ""
 "\\vfill\n"
 "\n"
-msgstr ""
+msgstr "\\empty\n"
 
 #. type: Plain text
-#: sections/all_map_locations.tex:183 sections/credits.tex:5
-#: sections/heroes.tex:70 sections/introduction.tex:5
+#: sections/all_map_locations.tex:188 sections/credits.tex:5
+#: sections/deckbuilding.tex:160 sections/heroes.tex:70
+#: sections/introduction.tex:5
 msgid "\\bigbreak"
 msgstr ""
 
@@ -95,7 +94,7 @@ msgid ""
 "After Hiring a Secondary Hero, place the model in a Town or Settlement you control.\n"
 "\\textbf{You can only have one Secondary Hero at a time}.\\par\n"
 "Secondary Heroes have \\textbf{2 Movement Points}; when you gain a Secondary Hero, take an additional set of 2 Movement Tokens to represent their MP.\n"
-"They do not have their own Hero Card, \\textbf{cannot gain Experience}, and \\textbf{cannot use Cards from Your Deck} for any reason.\n"
+"They do not have their own Hero Card, \\textbf{cannot gain Experience}, and \\textbf{cannot play Cards from Your Deck during Combat}.\n"
 "If a Secondary Hero gains any Cards, place them into your hand as normal (see \\hyperlink{Playerdecks}{Deck-building}).\n"
 "Secondary Heroes are considered to have the same Level as the Main Hero for the purposes of resolving \\hyperlink{Quick}{Quick Combat}.\\par\n"
 "If your Secondary Hero is attacked by an enemy Hero, you can choose to have that Hero be \\hyperlink{Endcombat}{instantly defeated instead of fighting a Combat}.\n"
@@ -124,88 +123,39 @@ msgid "Hero Card"
 msgstr ""
 
 #. type: figure
-#: sections/heroes.tex:70 sections/setup.tex:69 sections/units.tex:114
-msgid "[h]"
-msgstr ""
-
-#. type: enumerate
 #: sections/heroes.tex:70
-msgid "[itemsep=5pt]"
-msgstr ""
-
-#. type: enumerate
-#: sections/heroes.tex:70
+#, no-wrap
 msgid ""
-"\\textbf{Name} – The Hero's name.  Used for identification.  Has no gameplay "
-"effect."
+"[h]\n"
+"  \\begin{minipage}[t]{0.5\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\begin{enumerate}[itemsep=5pt]\n"
+"      \\item \\textbf{Name} – The Hero's name.\n"
+"        Used for identification.\n"
+"        Has no gameplay effect.\n"
+"      \\item \\textbf{Class} – The Hero's class.\n"
+"        Has no gameplay effect.\n"
+"      \\item \\textbf{Type} – The Hero's type (Might \\includesvg[height=10px]{\\svgs/might.svg} or Magic \\includesvg[height=10px]{\\svgs/magic.svg}).\n"
+"        Determines the amount of Magic Arrow Spells in your Starting Deck (1 or 2 respectively).\n"
+"      \\item \\textbf{Faction Color} – Reminder for the color of the Faction's cubes and miniatures.\n"
+"      \\item \\textbf{Attack} – Number of Attack Cards in your Starting Deck.\n"
+"      \\item \\textbf{Defense} – Number of Defense Cards in your Starting Deck.\n"
+"      \\item \\textbf{Power} – Number of Power Cards in your Starting Deck.\n"
+"      \\item \\textbf{Knowledge} – Number of Knowledge Cards in your Starting Deck.\n"
+"      \\item \\textbf{Starting Ability} – Reminder for the unique Ability Card\\index{Ability Card} the Hero starts with.\n"
+"      \\item \\textbf{Hero Specialty} – Reminder for the Specialty Cards the Hero adds to their deck at the start of the game and after specific Level ups.\n"
+"        Each hero has three Specialty Cards.\n"
+"      \\item \\textbf{Level Tracker} – Whenever a Main Hero gains 1 or more Experience \\includesvg[height=10px]{\\svgs/experience.svg}, move the cube that number of steps on this track.\n"
+"        When the cube reaches the next slot on the upper row, the hero gains a Level.\n"
+"    \\end{enumerate}\n"
+"  \\end{minipage}\\hfill\n"
+"  \\begin{minipage}[t]{0.48\\textwidth}\n"
+"    \\centering\n"
+"    \\vspace{0pt}\n"
+"    \\begin{scriptsize}\n"
 msgstr ""
 
-#. type: enumerate
-#: sections/heroes.tex:70
-msgid "\\textbf{Class} – The Hero's class.  Has no gameplay effect."
-msgstr ""
-
-#. type: enumerate
-#: sections/heroes.tex:70
-msgid ""
-"\\textbf{Type} – The Hero's type (Might \\includesvg[height=10px]{\\svgs/"
-"might.svg} or Magic \\includesvg[height=10px]{\\svgs/magic.svg}).  "
-"Determines the amount of Magic Arrow Spells in your Starting Deck (1 or 2 "
-"respectively)."
-msgstr ""
-
-#. type: enumerate
-#: sections/heroes.tex:70
-msgid ""
-"\\textbf{Faction Color} – Reminder for the color of the Faction's cubes and "
-"miniatures."
-msgstr ""
-
-#. type: enumerate
-#: sections/heroes.tex:70
-msgid "\\textbf{Attack} – Number of Attack Cards in your Starting Deck."
-msgstr ""
-
-#. type: enumerate
-#: sections/heroes.tex:70
-msgid "\\textbf{Defense} – Number of Defense Cards in your Starting Deck."
-msgstr ""
-
-#. type: enumerate
-#: sections/heroes.tex:70
-msgid "\\textbf{Power} – Number of Power Cards in your Starting Deck."
-msgstr ""
-
-#. type: enumerate
-#: sections/heroes.tex:70
-msgid "\\textbf{Knowledge} – Number of Knowledge Cards in your Starting Deck."
-msgstr ""
-
-#. type: enumerate
-#: sections/heroes.tex:70
-msgid ""
-"\\textbf{Starting Ability} – Reminder for the unique Ability Card"
-"\\index{Ability Card} the Hero starts with."
-msgstr ""
-
-#. type: enumerate
-#: sections/heroes.tex:70
-msgid ""
-"\\textbf{Hero Specialty} – Reminder for the Specialty Cards the Hero adds to "
-"their deck at the start of the game and after specific Level ups.  Each hero "
-"has three Specialty Cards."
-msgstr ""
-
-#. type: enumerate
-#: sections/heroes.tex:70
-msgid ""
-"\\textbf{Level Tracker} – Whenever a Main Hero gains 1 or more Experience "
-"\\includesvg[height=10px]{\\svgs/experience.svg}, move the cube that number "
-"of steps on this track.  When the cube reaches the next slot on the upper "
-"row, the hero gains a Level."
-msgstr ""
-
-#. type: scriptsize
+#. type: figure
 #: sections/heroes.tex:72
 #, no-wrap
 msgid ""
@@ -213,8 +163,8 @@ msgid ""
 "      \\begin{tikzpicture}\n"
 msgstr ""
 
-#. type: scriptsize
-#: sections/heroes.tex:86
+#. type: figure
+#: sections/heroes.tex:107
 #, no-wrap
 msgid ""
 "        \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=\\linewidth]{\\cards/hero.png}}};\n"
@@ -230,21 +180,11 @@ msgid ""
 "        \\draw (3, -0.2) node {\\encircle{10}};\n"
 "        \\draw (-1.7, -1.4) node {\\encircle{11}};\n"
 "      \\end{tikzpicture}\n"
-"    "
-msgstr ""
-
-#. type: minipage
-#: sections/heroes.tex:108
-msgid ""
-"\\break \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Hero "
-"Card}}}} \\scriptsize"
-msgstr ""
-
-#. type: multicols
-#: sections/heroes.tex:108
-#, no-wrap
-msgid ""
-"{2}\n"
+"    \\end{scriptsize}\n"
+"    \\break\n"
+"    \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Hero Card}}}}\n"
+"    \\scriptsize\n"
+"    \\begin{multicols}{2}\n"
 "      \\begin{itemize}\n"
 "        \\item[\\textbf{1.}] \\textbf{Name}\n"
 "        \\item[\\textbf{2.}] \\textbf{Class}\n"
@@ -259,7 +199,8 @@ msgid ""
 "        \\item[\\textbf{11.}] \\textbf{Level Tracker}\n"
 "        \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
 "      \\end{itemize}\n"
-"    "
+"    \\end{multicols}\n"
+"  \\end{minipage}"
 msgstr ""
 
 #. type: tikzpicture

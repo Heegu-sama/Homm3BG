@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-06 18:37+0300\n"
+"POT-Creation-Date: 2024-04-22 16:56+0100\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,16 +19,17 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:5 sections/all_map_locations.tex:411
-#: sections/credits.tex:7 sections/deckbuilding.tex:5
-#: sections/expansion_content.tex:5 sections/expansion_content.tex:49
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
-#: sections/map_elements.tex:34 sections/map_elements.tex:74
-#: sections/other_rules.tex:4 sections/other_rules.tex:33
+#: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
+#: sections/all_map_locations.tex:417 sections/combat.tex:5
+#: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
+#: sections/difficulty.tex:5 sections/expansion_content.tex:5
+#: sections/expansion_content.tex:49 sections/game_modes.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:34
+#: sections/map_elements.tex:74 sections/other_rules.tex:4
 #: sections/player_turns.tex:5 sections/resources.tex:5
 #: sections/round_structure.tex:5 sections/scenario_end.tex:5
 #: sections/setup.tex:5 sections/town.tex:5 sections/units.tex:5
-#: sections/units.tex:119
+#: sections/units.tex:118
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -36,10 +37,11 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/all_map_locations.tex:416 sections/credits.tex:18
-#: sections/deckbuilding.tex:59 sections/expansion_content.tex:18
-#: sections/expansion_content.tex:63 sections/game_modes.tex:27
-#: sections/scenario_end.tex:20 sections/units.tex:79
+#: sections/all_map_locations.tex:422 sections/credits.tex:33
+#: sections/deckbuilding.tex:59 sections/difficulty.tex:16
+#: sections/expansion_content.tex:18 sections/expansion_content.tex:63
+#: sections/game_modes.tex:27 sections/scenario_end.tex:23
+#: sections/units.tex:79
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -50,7 +52,7 @@ msgstr ""
 #. type: Plain text
 #: sections/scenario_end.tex:3
 msgid "\\addsection{Scenario End}{\\skills/archery.png}"
-msgstr ""
+msgstr "\\addsection{Koniec Scenariusza}{\\skills/archery.png}"
 
 #. type: multicols*
 #: sections/scenario_end.tex:18
@@ -70,22 +72,62 @@ msgid ""
 "\\note{4}{If you Eliminate all enemy Factions, you immediately win the Scenario.}\\par\n"
 "\n"
 msgstr ""
+"Warunki zwycięstwa \\index{Warunki Zwycięstwa}\\hypertarget{End}{każdego} Scenariusza są opisane w Księdze Misji.\n"
+"Ponadto, z każdego Scenariusza można zawsze zostać \\textbf{Wyeliminowanym} w następujące sposoby:\n"
+"\\begin{itemize}\n"
+"  \\item Wykonaj 3 pełne Rundy bez kontrolowania Miasta lub Osady.\n"
+"    Zlicz liczbę pozostałych Rund, używając jakiegokolwiek komponentu.\n"
+"  \\item Przegraj Walkę \\textbf{Bohaterem Głównym}, gdy nie kontrolujesz żadnego Miasta lub Osady, lub jesteś w trakcie bronienia swojego ostatniego Miasta bądź Osady.\n"
+"\\end{itemize}\n"
+"Wyeliminowani gracze są natychmiast Usuwani z gry.\n"
+"Odrzuć ich Kostki Frakcyjne i Figurki Bohaterów z Mapy Gry.\n"
+"Potraktuj Karty z ich Talii jako Usunięte z gry do końca Scenariusza.\n"
+"Jeśli zostaniesz Wyeliminowany, możesz nadal brać udział w grze przez kontrolowanie Jednostek Neutralnych.\\par\n"
+"\\note{4}{Wyeliminowanie wszystkich wrogich Frakcji skutkuje natychmiastową wygraną Scenariusza.}\\par\n"
+"\n"
 
 #. type: multicols*
-#: sections/scenario_end.tex:23
+#: sections/scenario_end.tex:21
 #, no-wrap
 msgid ""
 "In \\textbf{Clash} Scenarios with three or more players, collecting \\textbf{a Faction Cube} from every enemy player immediately wins you the game.\n"
 "Other Scenario specific rules may also modify the outcome of collecting Faction Cubes.\n"
 "\n"
 msgstr ""
+"W \\textbf{Trybie Starcia} z co najmniej trzema graczami, zdobycie \\textbf{Kostki Frakcyjnej} od każdego z nich skutkuje natychmiastową wygraną.\n"
+"Pozostałe zasady właściwe dla danego Scenariusza mogą mieć wpływ na zdobywanie Kostek Frakcyjnych.\n"
+"\n"
 
 #. type: multicols*
-#: sections/scenario_end.tex:27
+#: sections/scenario_end.tex:32
+#, no-wrap
+msgid ""
+"After finishing a \\textbf{Solo Campaign} scenario, reset your Hero's Experience Level to 1, and prepare the starting deck for the next scenario of the campaign.\n"
+"It will consist of:\n"
+"\\begin{itemize}\n"
+"  \\item all the \\hyperlink{Statistic}{Statistic} cards from your deck,\n"
+"  \\item the level 1 \\hyperlink{Specialty}{Specialty} card,\n"
+"  \\item 5 other non-Specialty cards of your choice from your deck.\n"
+"\\end{itemize}\n"
+"Skip steps 11-13 of Setup for the next scenario of the campaign.\n"
+"\n"
+msgstr ""
+"Po ukończeniu Scenariusza w \\textbf{Trybie Solo}, twój Bohater wraca na ,,1'' Poziom. Przygotuj Talię Początkową na następny Scenariusz Kampanii.\n"
+"Z Kart swojej Talii utwórz nową Talię, zawierającą:\n"
+"\\begin{itemize}\n"
+"  \\item wszystke Karty \\hyperlink{Statistic}{Statystyk},\n"
+"  \\item Kartę \\hyperlink{Specialty}{Specjalności} Poziomu 1,\n"
+"  \\item 5 dowolnych Kart (poza Specjalnościami).\n"
+"\\end{itemize}\n"
+"Pomiń kroki 11-13 Przygotowania dla następnego Scenariusza z Kampanii.\n"
+"\n"
+
+#. type: multicols*
+#: sections/scenario_end.tex:36
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
-"\\hspace{-6em}\n"
-"\\includegraphics[width=2\\linewidth]{\\art/medusa.png}\n"
+"\\hspace{-3em}\n"
+"\\includegraphics[width=1.7\\linewidth]{\\art/medusa.png}\n"
 "\n"
 msgstr ""

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-06 18:37+0300\n"
+"POT-Creation-Date: 2024-04-25 12:20+0200\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,16 +17,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:5 sections/all_map_locations.tex:411
-#: sections/credits.tex:7 sections/deckbuilding.tex:5
-#: sections/expansion_content.tex:5 sections/expansion_content.tex:49
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
-#: sections/map_elements.tex:34 sections/map_elements.tex:74
-#: sections/other_rules.tex:4 sections/other_rules.tex:33
-#: sections/player_turns.tex:5 sections/resources.tex:5
-#: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:5 sections/town.tex:5 sections/units.tex:5
-#: sections/units.tex:119
+#: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
+#: sections/all_map_locations.tex:417 sections/combat.tex:5
+#: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
+#: sections/difficulty.tex:5 sections/expansion_content.tex:5
+#: sections/expansion_content.tex:49 sections/game_modes.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
+#: sections/map_elements.tex:99 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:118
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -38,6 +38,8 @@ msgstr ""
 #: sections/map_elements.tex:3
 msgid "\\addsection{Map Elements}{\\skills/logistics.png}"
 msgstr ""
+"\\addsection{Elementos del Mapa}{\\skills/logistics.png}\n"
+"\\vspace*{\\lang_header_adjustment}"
 
 #. type: multicols*
 #: sections/map_elements.tex:11
@@ -52,6 +54,14 @@ msgid ""
 "Starting (I) Tiles are the easiest while Center (VI–VII) Tiles are the most difficult.\\par\n"
 "\n"
 msgstr ""
+"{2}\n"
+"Cada Escenario está formado por Fichas de Mapa.\n"
+"Los jugadores empiezan en la Ficha de Inicio (I) de su facción.\n"
+"Otras fichas se pueden descubrir y colocar como se describe en la siguiente página.\n"
+"Durante la preparación, se seleccionan aleatoriamente Fichas boca abajo de la pila de Fichas del Mazo descritas en el Escenario.\\par\n"
+"El \\textbf{número romano} de cada ficha describe la \\textbf{dificultad de los Enemigos} de esa ficha y las recompensas que los jugadores pueden encontrar en esa ficha.\n"
+"Las fichas iniciales (I) son las más fáciles y las centrales (VI-VII) son las más difíciles.\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:17
@@ -66,7 +76,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:30
+#: sections/map_elements.tex:47
 #, no-wrap
 msgid ""
 "\\subsection*{Map Tile Anatomy\\index{Map Tile}}\n"
@@ -78,12 +88,67 @@ msgid ""
 "\\hyperlink{Difficulty}{Roman numerals} written on a Field indicate that the Field is guarded by Neutral enemies that must be fought to Visit it.\\par\n"
 "\\columnbreak\n"
 "\\includegraphics[width=\\linewidth]{\\images/maptiles.png}\n"
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\item[\\textbf{1.}] Starting Map Tiles: I\n"
+"  \\item[\\textbf{2.}] Far Map Tiles: II-II\n"
+"  \\item[\\textbf{3.}] Near Map Tiles: IV-V\n"
+"  \\item[\\textbf{4.}] Center Map Tiles: VI-VII\n"
+"\\end{itemize}\n"
 "\\vfill\n"
-"\\includegraphics[width=\\linewidth]{\\images/fields.png}"
+"\\begin{center}\n"
+"  \\includegraphics[width=0.8\\linewidth]{\\images/fields.png}\n"
+"\\end{center}\n"
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\begin{multicols}{2}\n"
+"    \\item[\\textbf{1.}] Empty Field\n"
+"    \\item[\\textbf{2.}] Location\n"
+"    \\item[\\textbf{3.}] Artifact Symbol\n"
+"    \\item[\\textbf{4.}] Blocked Field\n"
+"    \\item[\\textbf{5.}] Border line\n"
+"    \\item[\\textbf{6.}] Field Difficulty\n"
+"  "
+msgstr ""
+"\\subsection*{Descripción de Fichas de Mapa\\index{Fichas de Mapa}}\n"
+"Cada ficha de mapa se compone de 7 \\textbf{Casillas visitables}.\n"
+"Cuando un Héroe se mueve a una casilla inmediatamente se visita o\n"
+"se provoca un \\hyperlink{Combat}{Combate} contra las Unidades que la guardan.\n"
+"Las casillas vacías\\index{Casillas Vacías} no provocan nada.\n"
+"Las líneas amarillas continuas en el borde de las casillas no se pueden atravesar.\n"
+"\\hyperlink{Difficulty}{Los números romanos} indican que están custodiadas por Enemigos Neutrales contra los que hay que luchar para porder Visitarla.\\par\n"
+"\\columnbreak\n"
+"\\includegraphics[width=\\linewidth]{\\images/maptiles.png}\n"
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\item[\\textbf{1.}] Fichas de Mapa Iniciales: I\n"
+"  \\item[\\textbf{2.}] Fichas de Mapa Cercanas: II-II\n"
+"  \\item[\\textbf{3.}] Fichas de Mapa Lejanas: IV-V\n"
+"  \\item[\\textbf{4.}] Fichas de Mapa Centrales: VI-VII\n"
+"\\end{itemize}\n"
+"\\vfill\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=0.8\\linewidth]{\\images/fields.png}\n"
+"\\end{center}\n"
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\begin{multicols}{2}\n"
+"    \\item[\\textbf{1.}] Casilla Vacía\n"
+"    \\item[\\textbf{2.}] Localización\n"
+"    \\item[\\textbf{3.}] Símbolo de Artefacto\n"
+"    \\item[\\textbf{4.}] Casilla Bloqueada\n"
+"    \\item[\\textbf{5.}] Línea de Borde\n"
+"    \\item[\\textbf{6.}] Dificultad\n"
+"  "
+
+#. type: multicols*
+#: sections/map_elements.tex:50
+#, no-wrap
+msgid "\\end{itemize}"
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:49
+#: sections/map_elements.tex:69
 #, no-wrap
 msgid ""
 "\\subsection*{\\hypertarget{Categories}{Location Categories}}\n"
@@ -102,9 +167,24 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Categories}{Tipos de Localizaciones}}\n"
+"Visitar Casillas proporciona beneficios a los Héroes, como Recursos o Cartas (ver \\hyperlink{All Map Locations}{Tipos de Casillas}).\n"
+"Se dividen en tres tipos:\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{Visitable} – Una vez visitada se coloca un cubo negro en ella.\n"
+"    Tratarlo como una casilla vacía si tiene un Cubo Negro.\n"
+"  \\item \\textbf{Señalado} – Estas casillas pueden ser capturadas para aportar beneficios pasivos.\n"
+"    Cuando la visites coloca un cubo de tu facción en ella.\n"
+"    Un Héroe que visita una casilla marcada por otro Héroe reemplazará el cubo por uno propio para \\textbf{robarle} los efectos de la casilla.\n"
+"    Héroes Aliados tratan este caso \\textbf{como si la casilla estuviese vacía}.\n"
+"  \\item \\textbf{Revisitable} – Puedes visitar esta casilla varias veces.\n"
+"    No se colocan cubos durante la visita..\n"
+"    Tienes que pagar 1 PM por visitar otra vez la casilla.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
-#: sections/map_elements.tex:56
+#: sections/map_elements.tex:76
 #, no-wrap
 msgid ""
 "\\subsection*{\\hypertarget{Placing}{Placing and Discovering New Tiles}}\\index{Discovering Tiles}\n"
@@ -115,9 +195,16 @@ msgid ""
 "You may always rotate Map Tiles when placing or revealing them.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Placing}{Colocando y descubriendo nuevas losetas}}\\index{Descubriendo Mapa}\n"
+"Los Héroes pueden gastar 1 PM para revelar una loseta boca abajo adyacente o colocar una loseta (II–III) de su propia reserva de losetas.\n"
+"Las losetas boca abajo \\textbf{se mantienen ocultas para todos los jugadores} hasta que alguien las revele.\n"
+"Las losetas nuevas deben ser colocadas adyacentes al Héroe que gaste su PM y conectarla con dos losetas ya existentes.\n"
+"También deben colocarse en una posición válida de manera que sea accesible desde el resto de losetas colindantes.\n"
+"Puedes rotas las nuevas losetas, tanto si las añades como si las revelas.\n"
+"\n"
 
 #. type: multicols
-#: sections/map_elements.tex:61
+#: sections/map_elements.tex:81
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -126,32 +213,53 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\medskip\n"
+"\\note{6}{\n"
+"  Al Visitar una casilla Visitable, \\textbf{debes} coloca un cubo negro en ese Campo incluso si no puedes o decides no usar los efectos de esa casilla.\n"
+"}\n"
+"\n"
 
 #. type: figure*
-#: sections/map_elements.tex:68
+#: sections/map_elements.tex:93
 #, no-wrap
 msgid ""
 "[!hb]\n"
 "  \\centering\n"
-"  \\includegraphics[width=\\textwidth]{\\images/placement.png}"
+"  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
+"  \\begin{tikzpicture}[overlay]\n"
+"    \\node at (5, 10) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{You cannot add this tile here}}}}};\n"
+"    \\node at (5, 1.4) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{You can add this tile here, because it will}}}}};\n"
+"    \\node at (3.9, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{be adjacent to two other tiles}}}}};\n"
+"  \\end{tikzpicture}"
 msgstr ""
+"[!hb]\n"
+"  \\centering\n"
+"  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
+"  \\begin{tikzpicture}[overlay]\n"
+"    \\node at (5, 10) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{No puedes añadir esta loseta aquí}}}}};\n"
+"    \\node at (5, 1.4) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{Puedes añadir la loseta aquí, porque }}}}};\n"
+"    \\node at (3.9, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{está adyacente a otras dos losetas}}}}};\n"
+"  \\end{tikzpicture}"
 
 #. type: subsection{#2}
-#: sections/map_elements.tex:72
+#: sections/map_elements.tex:97
 msgid "Example Turn"
-msgstr ""
+msgstr "Turno de Ejemplo"
 
 #. type: multicols*
-#: sections/map_elements.tex:77
+#: sections/map_elements.tex:102
 #, no-wrap
 msgid ""
 "\\textit{Alice wants to capture an adjacent \\hyperlink{Mines}{Mine} by Flagging it with her Main Hero, Sandro the Necromancer.\n"
 "    She spends 1 MP to move onto the Mine, which begins \\hyperlink{Combat}{Combat} against Neutral Units, since the Field has a \\hyperlink{Difficulty}{Difficulty Rating} and has not been previously Flagged by any player.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Alice quiere capturar una \\hyperlink{Mines}{Mina} adyacente con su Héroe Principal, Sandro el Nigromante.\n"
+"    Gasta 1 PM para colocarse en la Mina, lo cual inicia \\hyperlink{Combat}{un Combate} contra Unidades Neutrales, ya que la casilla tiene \\hyperlink{Difficulty}{una Dificultad} y no ha sido marcado antes por otros jugadores.}\\par\n"
+"\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:79
+#: sections/map_elements.tex:104
 #, no-wrap
 msgid ""
 "\\includegraphics[width=1.1\\linewidth]{\\examples/sandro_takes_mine.png}\n"
@@ -159,7 +267,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:83
+#: sections/map_elements.tex:108
 #, no-wrap
 msgid ""
 "\\textit{The Mine turns out to be guarded by Troglodytes, which have 3 HP \\includesvg[height=0.8\\baselineskip]{\\svgs/health_points.svg}.\n"
@@ -167,9 +275,13 @@ msgid ""
 "During the Combat, she casts the Lightning Bolt, and Empowers \\includesvg[height=0.8\\baselineskip]{\\svgs/empower.svg} it with Haste's alternative (bottom) effect, which makes the Lightning Bolt deal 3 damage \\includesvg[height=0.8\\baselineskip]{\\svgs/damage.svg}, killing the Troglodytes and winning the Combat.}\n"
 "\n"
 msgstr ""
+"\\textit{La Mina resulta estar custodiada por Trogloditas, que tienen 3 HP \\includesvg[height=0.8\\baselineskip]{\\svgs/health_points.svg}.\n"
+"La mano actual de Alice consiste en una Carta de Poder, un Rayo, Prisa y un Portal de Ciudad.\n"
+"Durante el Combate, lanza el Rayo y lo Potencia \\includesvg[height=0.8\\baselineskip]{\\svgs/empower.svg} con el efecto alternativo (inferior) de Prisa, que hace que el rayo inflija 3 puntos de daño \\includesvg[height=0.8\\baselineskip]{\\svgs/damage.svg}, matando los Trogloditas y ganando el combate.}\n"
+"\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:85
+#: sections/map_elements.tex:110
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_lightning_bolt.png}\n"
@@ -177,15 +289,17 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:87
+#: sections/map_elements.tex:112
 #, no-wrap
 msgid ""
 "\\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell Card per Combat Round.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{El combate duró sólo una ronda, por lo que Alice no habría podido lanzar tanto Relámpago como Prisa, ya que los jugadores sólo pueden jugar una carta de hechizo por ronda de combate.}\\par\n"
+"\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:94
+#: sections/map_elements.tex:119
 #, no-wrap
 msgid ""
 "\\textit{Alice now Flags the Mine by placing one of her Faction Cubes on it.\n"
@@ -195,9 +309,15 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\textit{Alice ahora marca la mina colocando un cubo de su facción sobre ella.\n"
+"    Marcar esta Mina en particular aumenta la producción de los Materiales de Construcción \\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg} por 2, y también gana inmediatamente el valor de producción de la Mina de 2 \\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg} por ser la primera jugadora en colocar un cubo.}\\par\n"
+"\\textit{Después, Alice quiere volver a defender un asentamiento previamente marcado lanzando el Portal de la Ciudad que aún le queda en la mano.\n"
+"    Su Héroe es de Nivel 2, así que puede potenciarlo con el Efecto Experto de la Carta de Poder \\includesvg[height=0.8\\baselineskip]{\\svgs/expert.svg}, que le otorga un punto de movimiento adicional después de lanzarla.\n"
+"}\n"
+"\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:96
+#: sections/map_elements.tex:121
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_town_portal.png}\n"
@@ -205,7 +325,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:100
+#: sections/map_elements.tex:125
 #, no-wrap
 msgid ""
 "\\vfill\n"

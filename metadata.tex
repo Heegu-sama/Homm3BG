@@ -21,7 +21,7 @@
 \usepackage{graphicx, trimclip}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{hyperref}
-\usepackage[nonewpage]{imakeidx}
+\usepackage[noautomatic, nonewpage]{imakeidx}
 \usepackage{multicol}
 \usepackage{outlines}
 \usepackage{setspace}
@@ -75,11 +75,12 @@
 \def\qr{\_assets/qr-codes}
 
 % Colors
-\definecolor{darkcandyapplered}{rgb}{0.64, 0.0, 0.0}
-\definecolor{antiquewhite}{rgb}{0.98, 0.92, 0.84}
-\definecolor{goldenbrown}{rgb}{0.6, 0.4, 0.08}
-\definecolor{arylideyellow}{rgb}{0.91, 0.84, 0.42}
 \definecolor{amber}{rgb}{1.0, 0.49, 0.0}
+\definecolor{antiquewhite}{rgb}{0.98, 0.92, 0.84}
+\definecolor{arylideyellow}{rgb}{0.91, 0.84, 0.42}
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\definecolor{darkcandyapplered}{rgb}{0.64, 0.0, 0.0}
+\definecolor{goldenbrown}{rgb}{0.6, 0.4, 0.08}
 
 % Command to frame images
 \newcommand\framedimage[2][]{%
@@ -99,6 +100,11 @@
 {8pt}
 {\Huge\bfseries\filcenter\uppercase}
 %Create section heading with graphics. Argument one is heading name, argument two is picture to use on the left.
+\providecommand{\sectionheadertext}[1]{
+  \fontfamily{ptm}\selectfont{
+    \color{antiquewhite} \section*{#1}
+  }
+}
 \newcommand{\addsection}[2]{
   \vspace*{-5em}
   \hspace*{-1em}
@@ -113,10 +119,8 @@
   \begin{fullwidth}[leftmargin=0.16\textwidth]
     \begin{center}
       \vspace*{\lang_header_adjustment}
-      \fontfamily{ptm}\selectfont{
-        \color{antiquewhite} \section*{#1}
-        \cleardoublepage\phantomsection\addcontentsline{toc}{section}{\protect\numberline{}#1}
-      }
+      \sectionheadertext{#1}
+      \cleardoublepage\phantomsection\addcontentsline{toc}{section}{\protect\numberline{}#1}
     \end{center}
   \end{fullwidth}
   \vspace{1.75em}
@@ -139,6 +143,7 @@
 \definecolor{borderoutyellow}{HTML}{E0B75F}
 \definecolor{borderinyellow}{HTML}{F6EA48}
 % Create note box
+\providecommand{\notefont}[0]{\fontfamily{ptm}\selectfont}
 \newcommand{\note}[2]{
   \begin{tikzpicture}
     \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/note-big.jpg}}};
@@ -147,7 +152,7 @@
     \draw [borderinyellow, thick] ([xshift=+4.5pt, yshift=-4.5pt] current bounding box.north west) rectangle ([xshift=-4.5pt, yshift=4.5pt] current bounding box.south east);
     \node at (current bounding box.center) {
       \begin{varwidth}{0.85\linewidth}
-      \fontfamily{ptm}\selectfont{
+      \notefont{
         \color{arylideyellow}
         \hypersetup{linkcolor=amber}
         #2
@@ -175,7 +180,7 @@
   \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}%
 }
 
-\makeindex[columns=3, title=, options={-s index_style.ist}]
+\makeindex[columns=3, title=,]
 
 \begin{document}
 
@@ -239,13 +244,17 @@
 
 \include{\sections/ai_heroes.tex}
 
-\include{\sections/scenario_end.tex}
+\include{\sections/difficulty.tex}
 
-\include{\sections/other_rules.tex}
+\include{\sections/trading.tex}
+
+\include{\sections/scenario_end.tex}
 
 \include{\sections/expansion_content.tex}
 
 \include{\sections/all_map_locations.tex}
+
+% Notes placeholder
 
 \include{\sections/credits.tex}
 
