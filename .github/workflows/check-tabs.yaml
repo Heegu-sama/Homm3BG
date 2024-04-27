@@ -19,7 +19,8 @@ jobs:
           ERRORS=0
           for f in $(git grep -Il '')
           do
-            if [[ $(grep -nP '\t' $f) ]]; then
+            if [[ $(grep -P '\t' $f) ]]; then
+              grep -nHP '\t' $f
               ERRORS=1
             fi
           done

@@ -7,13 +7,13 @@ Efforts are ongoing to translate them to languages other than English.
 Please reach out if you'd like to help with translating.
 Click in the table to download the most recent builds in the chosen language:
 
-|               |Progress|📜 **Rewritten Rule Book** |🖨️ **Rule Book - printable version** |📋 **Comprehensive Components List**|
+|							 |Progress|📜 **Rewritten Rule Book** |🖨️ **Rule Book - printable version** |📋 **Comprehensive Components List**|
 |:--------------|:------:|:-------------------------:|:-----------------------------------:|:----------------------------------:|
-| 🇬🇧 English    |100%|[🇬🇧📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf)|[🇬🇧🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf)|[🇬🇧📋](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf)|
-| 🇵🇱 Polski      |~50%|[🇵🇱📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf)|[🇵🇱🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_pl/components_list_pl.pdf)|
-| 🇪🇸 Español    |~25%|[🇪🇸📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf)|[🇪🇸🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_es/components_list_es.pdf)|
-| 🇫🇷 Français   |~10%|[🇫🇷📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf)|[🇫🇷🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_fr/components_list_fr.pdf)|
-| 🇷🇺 Русский   |~5%|[🇷🇺📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf)|[🇷🇺🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_ru/components_list_ru.pdf)|
+| 🇬🇧 English		|100%|[🇬🇧📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf)|[🇬🇧🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf)|[🇬🇧📋](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf)|
+| 🇵🇱 Polski			|~50%|[🇵🇱📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf)|[🇵🇱🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_pl/components_list_pl.pdf)|
+| 🇪🇸 Español		|~25%|[🇪🇸📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf)|[🇪🇸🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_es/components_list_es.pdf)|
+| 🇫🇷 Français	 |~10%|[🇫🇷📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf)|[🇫🇷🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_fr/components_list_fr.pdf)|
+| 🇷🇺 Русский	 |~5%|[🇷🇺📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf)|[🇷🇺🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_ru/components_list_ru.pdf)|
 
 
 🖨️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
@@ -107,20 +107,20 @@ Make sure you have [`po4a`](https://po4a.org/index.php.en) installed ([MacOS ins
 To translate a particular section:
 - Go to `translations/<section_name>` and open `<lang>.po` file, e.g., `translations/introduction.tex/pl.po`
 - Choose a fragment to translate. Those start with `msgid`. Write your new text in the line below starting with `msgstr`. Example:
-    ```tex
-    msgid "\\addsection{Introduction}{\\spells/magic_arrow.png}"
-    msgstr "\\addsection{Wprowadzenie}{\\spells/magic_arrow.png}"
-    ```
-  This text (`msgstr`) will replace the original (`msgid`) in your translation.
+		```tex
+		msgid "\\addsection{Introduction}{\\spells/magic_arrow.png}"
+		msgstr "\\addsection{Wprowadzenie}{\\spells/magic_arrow.png}"
+		```
+	This text (`msgstr`) will replace the original (`msgid`) in your translation.
 - Regenerate your localized section:
-    ```bash
-    po4a --no-update po4a.cfg
-    ```
-  Disregard the errors about mismatched `multicols`, as this is an upstream parser issue.
+		```bash
+		po4a --no-update po4a.cfg
+		```
+	Disregard the errors about mismatched `multicols`, as this is an upstream parser issue.
 - Rebuild your PDF file (or press Build ▶️ in TeXStudio).
-   ```bash
-   latexmk -pdf -silent -shell-escape "main_<lang>"
-   ```
+	 ```bash
+	 latexmk -pdf -silent -shell-escape "main_<lang>"
+	 ```
 - Commit and repeat!
 
 ### 🔎 Spellchecking
