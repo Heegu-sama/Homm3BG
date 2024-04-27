@@ -13,6 +13,7 @@ Click in the table to download the most recent builds in the chosen language:
 | 🇵🇱 Polski      |~50%|[🇵🇱📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf)|[🇵🇱🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_pl/components_list_pl.pdf)|
 | 🇪🇸 Español    |~25%|[🇪🇸📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf)|[🇪🇸🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_es/components_list_es.pdf)|
 | 🇫🇷 Français   |~10%|[🇫🇷📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf)|[🇫🇷🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_fr/components_list_fr.pdf)|
+| 🇷🇺 Русский   |~5%|[🇷🇺📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf)|[🇷🇺🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_ru/components_list_ru.pdf)|
 
 
 🖨️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
@@ -73,7 +74,7 @@ latexmk -pdf -silent -shell-escape "main_en"
 
 or press the `Build & View` ▶️ (F5) button in TeXstudio on the `main_en.tex` file.
 
-To build the document in any other language (currently `pl`, `es` and `fr` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
+To build the document in any other language (currently `pl`, `es`, `fr` and `ru` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
 
 ```bash
 ./build.sh <LANGUAGE>
@@ -142,6 +143,23 @@ We are currently looking into it, how best to remediate this.
 
 The personal dictionary `.aspell.homm3.pwd` currently contains only game-related words.
 It does not contain names (e.g., "BoardGameGeek") or parameter values (e.g., "px", "svg") in order to minimize the chances of false-negatives in the main body of text.
+
+### 📸 Screenshots
+
+As Pull Request often requires screenshots you can the script to make PNG images of specified page(s):
+```bash
+./pdf2image.sh <LANGUAGE> <FIRST_PAGE> <LAST_PAGE>
+```
+
+Example:
+```bash
+./pdf2image.sh en 5 7
+```
+
+To process a single page, use:
+```bash
+./pdf2image.sh en 5 
+```
 
 ## ✨ Assets
 
