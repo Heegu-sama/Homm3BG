@@ -149,7 +149,7 @@ msgstr ""
 "  \\item Kiedykolwiek powinieneś \\textbf{Przeszukać} (X)\\index{Przeszukaj (X)} Talię Umiejętności, Artefaktów lub Zaklęć, możesz spojrzeć na wierzchnie (X) Kart z danej Talii, wziąć jedną z nich na rękę i odrzucić pozostałe, \\textbf{ALBO} zamiast podglądać wierzchnie (X) Kart, dobrać wierzchnią Kartę ze Stosu Kart Odrzuconych tejże Talii.\n"
 "  \\item Talie Umiejętności, Artefaktów i Zaklęć mają swoje własne Stosy Kart Odrzuconych stworzone podczas przygotowania do gry, które pomogą ci rozpoznać te Talie.\n"
 "    Jeśli w Talii skończą się Karty, potasuj ją i odrzuć wierzchnią Kartę aby stworzyć nowy Stos Kart Odrzuconych.\n"
-"    Kiedykolwiek Stos Kart Odrzucony jest pusty, \\textbf{odnów go} wierzchnią Kartą tej Talii.\n"
+"    Gdy Stos Kart Odrzuconych jest pusty, \\textbf{odnów go} wierzchnią Kartą tej Talii.\n"
 "  \\item Karty mają następujące typy efektów:\n"
 "  \\begin{itemize}\n"
 "    \\item \\textbf{Natychmiastowy} \\includesvg[height=10px]{\\svgs/instant.svg} Efekty są wykonywane natychmiatowo.\n"
@@ -160,7 +160,7 @@ msgstr ""
 "      \\textbf{W danym momencie możesz mieć tylko jedną Kartę z efektem Długotrwałym}; zagranie innej powoduje odrzucenie pierwszej.\n"
 "  \\end{itemize}\n"
 "\\end{enumerate}\n"
-"\\note{5}{Karty z efektem Natychmiastowym \\includesvg[height=10px]{\\svgs/instant-note.svg}, które modyfikują statystyki \\hyperlink{Jednostki}{Jednostki} lub zadają obrażenia \\includesvg[height=10px]{\\svgs/damage-note.svg} nie mogą być użyte poza Walką.\n"
+"\\note{6}{Karty z efektem Natychmiastowym \\includesvg[height=10px]{\\svgs/instant-note.svg}, które modyfikują statystyki \\hyperlink{Jednostki}{Jednostki} lub zadają obrażenia \\includesvg[height=10px]{\\svgs/damage-note.svg} nie mogą być użyte poza Walką.\n"
 "}\n"
 "\n"
 
@@ -189,6 +189,8 @@ msgid ""
 "\\subsection*{\\hypertarget{Ability}{Ability} and \\hypertarget{Statistic}{Statistic} Cards}\n"
 "\n"
 msgstr ""
+"\\subsection*{Karty \\hypertarget{Ability}{Umiejętności} i \\hypertarget{Statistic}{Statystyk}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:47
@@ -201,6 +203,12 @@ msgid ""
 "\\bigskip\n"
 "\n"
 msgstr ""
+"Każda Karta Umiejętności i Statystyki \\index{Karty Statystyk} posiada \\textbf{Efekt Podstawowy}\\index{Efekt Podstawowy} oraz silniejszy \\textbf{Efekt Mistrzowski} \\includesvg[height=10px]{\\svgs/expert.svg} \\index{Efekt Mistrzowski}, który znajduje się pod Efektem Podstawowym.\n"
+"Gdy zagrywasz Kartę Umiejętności lub Statystyki, musisz wybrać którego efektu używasz.\n"
+"Liczba Efektów \\includesvg[height=10px]{\\svgs/expert.svg}, którą możesz zagrać w każdej z Rund zależy od \\hyperlink{Level}{Poziomu} twojego Bohatera Głównego.\n"
+"Śledź pozostałą liczbę Efektów Mistrzowskich w dogodny dla ciebie sposób, przykładowo przez umieszczanie i zdejmowanie Czarnych Kostek z Planszetki Bohatera.\\par\n"
+"\\bigskip\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:55
@@ -215,6 +223,14 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{\\cards/ability.png}\n"
+"\\bigbreak\n"
+"\\note{11}{\n"
+"  Niektóre Karty są przeznaczone wyłącznie dla Frakcji Nekropolii \\includesvg[height=10px]{\\svgs/necro-note.svg}.\n"
+"  Gdy gracz nie grający Nekropolią dobiera Kartę Necropolii \\index{Karta Nekropolii} z Talii Umiejętności, może ją odrzucić i dobrać nową Kartę jako zamiennik, lub ją dobrać.\n"
+"  Gracze nie grający Nekropolią \\textbf{nie mogą używać} Kart Frakcyjnych ze swojej ręki w żaden sposób poza efektami, które je odrzucają.\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:61
@@ -223,6 +239,8 @@ msgid ""
 "\\subsection*{Artifact Cards}\n"
 "\n"
 msgstr ""
+"\\subsection*{Karty Artefaktów}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:69
@@ -237,6 +255,14 @@ msgid ""
 "\\includegraphics[width=\\linewidth]{\\cards/artifact.png}\n"
 "\n"
 msgstr ""
+"Karty Artefaktów\\index{Karta Artefaktu} posiadają górny oraz dolny efekt. Gdy je zagrywasz, musisz \\textbf{wybrać  efekt} którego używasz.\n"
+"Są podzielone na 3 Poziomy: Słabe, Mocne oraz Relikty.\n"
+"Te poziomy odnoszą się do ogólnej Mocy Karty, a dodatkowo mogą być przydatne podczas rozgrywania niektórych efekty oraz przygotowania Scenariusza.\n"
+"W innym wypadku wszystkie Karty Artefaktów są tasowane razem, aby stworzyć Talię Artefaktów bez względu na ich Poziom.\n"
+"Można je zdobywać podczas odkrywania mapy.\\par\n"
+"Artefakty mogą być \\hyperlink{Trading}{przehandlowane} w Trybie Sojuszu oraz Kooperacji.\\par\n"
+"\\includegraphics[width=\\linewidth]{\\cards/artifact.png}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:72
@@ -254,6 +280,8 @@ msgid ""
 "\\subsection*{\\hypertarget{spells}{Spell Cards}}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{spells}{Karty Zaklęć}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:82
@@ -266,6 +294,12 @@ msgid ""
 "All Spell Cards also have an alternative bottom (5) \\includesvg[height=10px]{\\svgs/empower.svg} effect.\\par\n"
 "\n"
 msgstr ""
+"Karty Zaklęć\\index{Karta Zaklęcia} mają trzy możliwe efekty podstawowe.\n"
+"Użycie górnej, podstawowej wersji Zaklęcia nie ma dodatkowych kosztów.\n"
+"Aby użyć pozostałych efektów, możesz \\textbf{Wzmocnić} Zaklęcie\\index{Wzmacnianie Zaklęć} przez opłacenie wskazanego kosztu (3) aby uzyskać potężniejszy wynik (4).\n"
+"Możesz opłacić ten koszt zagrywając inne Karty aby uzyskać Efekt Wzmocniony \\includesvg[height=10px]{\\svgs/empower.svg} zanim rzucisz te Zaklęcie.\n"
+"Każda Karta Zaklęcia posiada również alternatywny, dolny (5) \\includesvg[height=10px]{\\svgs/empower.svg} efekt.\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:98
@@ -287,6 +321,21 @@ msgid ""
 "    \\end{itemize}\n"
 "  "
 msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=0.6\\linewidth]{\\cards/spell_example.png}\\\\\n"
+"  \\medskip\n"
+"  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Spell Card}}}}\n"
+"  \\scriptsize\n"
+"  \\begin{multicols}{2}\n"
+"    \\begin{itemize}[itemsep=5pt]\n"
+"      \\item[\\textbf{1.}] \\textbf{Nazwa Zaklęcia}\n"
+"      \\item[\\textbf{2.}] \\textbf{Szkoła Magii}\n"
+"      \\item[\\textbf{3.}] \\textbf{Koszt Wzmocnienia}\n"
+"      \\item[\\textbf{4.}] \\textbf{Efekt Zaklęcia}\n"
+"      \\item[\\textbf{5.}] \\textbf{Alternatywny efekt}\n"
+"      \\item[]\n"
+"    \\end{itemize}\n"
+"  "
 
 #. type: multicols*
 #: sections/deckbuilding.tex:100
@@ -306,6 +355,11 @@ msgid ""
 "Spells can be \\hyperlink{Trading}{traded} in Alliance and Cooperative Scenarios.\n"
 "\n"
 msgstr ""
+"Możesz zdobyć Zaklęcia Budując Gildię Magów\\index{Gildia Magów}.\n"
+"Zbudowanie jej pozwala ci używać Żetonu Księgi Zaklęć\\index{Żeton Księgi Zaklęć} aby kupować dodatkowe Zaklęcia.\n"
+"Żeton nie może być użyty podczas \\textbf{tej samej Rundy}, w której została zbudowana Gildia Magów.\\par\n"
+"Zaklęcia nie mogą być przedmiotem \\hyperlink{Trading}{handlu} w Trybie Sojuszu ani Kooperacji.\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:107
@@ -314,6 +368,8 @@ msgid ""
 "\\subsection*{\\hypertarget{Specialty}{Hero Specialty Cards}}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Specialty}{Karty Specjalności Bohatera}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:111
@@ -324,6 +380,10 @@ msgid ""
 "While many of these Cards have effects which resemble Spell Cards, Specialty Cards are their \\textbf{own unique category of cards}.\n"
 "\n"
 msgstr ""
+"Karty Specjalności Bohatera\\index{Karta Specjalności} są pozyskiwane podczas \\hyperlink{Level}{zyskiwania Poziomów}.\n"
+"Każdy Bohater Główny posiada unikatowy zestaw Kart Specjalności.\n"
+"Mimo, że wiele z tych Kart posiada efekty, które odwzorowują Karty Zaklęć, Karty Specjalności są ich \\textbf{własną unikatową kategorią Kart}.\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:117
@@ -336,6 +396,12 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=0.6\\linewidth]{\\cards/specialty.png}\\\\\n"
+"  \\medskip\n"
+"  \\footnotesize\\textit{Karta Specjalności 4 Poziomu, należąca do Królowej Katarzyny.}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:127
@@ -350,6 +416,14 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{11}{\n"
+"  Podczas Walki, \\textbf{tylko jedna Karta Zaklęcia} może zostać zagrana przez każdego gracza \\textbf{na jedną Rundę Walki}.\n"
+"\n"
+"  \\medskip\n"
+"\n"
+"  Gdy używasz efektu, który pozwala ci na zagranie Zaklęcia z miejsca innego niż twoja ręka (jak na przykład bezpośrednio z Talii Zaklęć), połóż to Zaklęcie na swój Stos Kart Odrzuconych po rzuceniu go.\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:133
@@ -368,6 +442,8 @@ msgid ""
 "\\subsection*{Searching Example}\n"
 "\n"
 msgstr ""
+"\\subsection*{Przykład Przeszukiwania}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:147
@@ -384,6 +460,16 @@ msgid ""
 "\\textit{He decides to keep the Fireball, placing it into his hand and discarding the Magic Arrow into the Spell Discard Pile.}\n"
 "\n"
 msgstr ""
+"\\textit{Bob grający jako Czarnoksiężnik Deemer wybudował Gildię Magów podczas swojej poprzedniej Rundy, co pozwoliło mu teraz na użycie Żetonu Księgi Zaklęć aby kupić dodatkowe Zaklęcia.}\\par\n"
+"\\includegraphics[width=\\linewidth]{\\examples/deemer_receiving_spellbook.png}\\par\n"
+"\\textit{Wykorzystuje Żeton i płaci koszt 5 \\includesvg[height=10px]{\\svgs/gold.svg} wskazany na swojej Planszy Miasta, co pozwala mu \\textbf{Przeszukać (2)} Talię Zaklęć.}\\par\n"
+"\\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par\n"
+"\\filbreak\n"
+"\\textit{Ma teraz wybór - albo dobiera wierzchnią Kartę ze Stosu Kart Odrzuconych Zaklęć, albo dobiera dwie wierzchnie Karty z Talii Zaklęć i wybiera jedną z nich.\n"
+"Nie jest zainteresowany dobieraniem Zaklęcia ,,Klątwa'', które znajduje się na górze Stosu Kart Odrzuconych i zamiast tego postanawia dobrać dwie Karty – Magiczną Strzałę i Kulę Ognia.}\n"
+"\\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow.png}\\par\n"
+"\\textit{Postanawia zatrzymać Kulę Ognia i bierze ją na swoją Rękę, odrzucając tym samym Magiczną Strzałe na Stos Kart Odrzuconych.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:151
