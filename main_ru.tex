@@ -2,8 +2,12 @@
 \documentclass[12pt]{article}
 
 % Language setting
-\usepackage[T2A]{fontenc}
+\usepackage[TU]{fontenc}
 \usepackage[russian]{babel}
+\usepackage{fontspec}
+
+\setmainfont{Liberation Serif}
+\newfontfamily\titlefont{Hack}
 
 \def\sections{sections/translated/ru}
 \def\lang_header_adjustment{0px}
@@ -22,7 +26,9 @@
 \title{\includegraphics[width=6cm]{\images/title.png}\\Правила в редакции сообщества}
 
 \newcommand{\sectionheadertext}[1]{
+  \titlefont
   \color{antiquewhite} \section*{\MakeUppercase{\textbf{#1}}}
 }
+\newcommand{\notefont}[0]{}
 
 \input{metadata.tex}
