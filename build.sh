@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 case "$(uname -s)" in
-	Darwin*)    open=open;;
-	Linux*)     open=xdg-open;;
+    Darwin*)    open=open;;
+    Linux*)     open=xdg-open;;
 esac
 
 LANGUAGE=$1
