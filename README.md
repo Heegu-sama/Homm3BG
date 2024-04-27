@@ -69,7 +69,7 @@ To work on the document on your machine, you need the following:
 To build the document in English, either run this in the command line:
 
 ```bash
-latexmk -pdf -silent -shell-escape "main_en"
+latexmk -pdf -silent -"main_en"
 ```
 
 or press the `Build & View` ▶️ (F5) button in TeXstudio on the `main_en.tex` file.
@@ -85,7 +85,7 @@ or press the `Build & View` ▶️ (F5) button in TeXstudio while having any `ma
 To build components list instead of the rule book, use this:
 
 ```bash
-latexmk -pdf -shell-escape components_list
+latexmk -pdf components_list
 ```
 
 or press `Build & View` on file `components_list.tex` open in TeXstudio.
@@ -119,7 +119,7 @@ To translate a particular section:
   Disregard the errors about mismatched `multicols`, as this is an upstream parser issue.
 - Rebuild your PDF file (or press Build ▶️ in TeXStudio).
    ```bash
-   latexmk -pdf -silent -shell-escape "main_<lang>"
+   latexmk -pdf -silent "main_<lang>"
    ```
 - Commit and repeat!
 
