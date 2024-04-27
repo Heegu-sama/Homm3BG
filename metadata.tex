@@ -166,9 +166,9 @@
 \newcommand{\hommtable}[2]{
   \begin{tikzpicture}
     \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/table-background.jpg}}};
-    \draw [black, ultra thick] ([xshift=+2pt, yshift=-2pt] current bounding box.north west) rectangle ([xshift=-2pt, yshift=2pt] current bounding box.south east);
-    \draw [borderoutyellow, very thick] (current bounding box.north west) rectangle (current bounding box.south east);
-    \draw [borderinyellow, thick] ([xshift=+4.5pt, yshift=-4.5pt] current bounding box.north west) rectangle ([xshift=-4.5pt, yshift=4.5pt] current bounding box.south east);
+    \draw [black, thick] ([xshift=+1pt, yshift=-1pt] current bounding box.north west) rectangle ([xshift=-1pt, yshift=1pt] current bounding box.south east);
+    \draw [borderoutyellow, thick] (current bounding box.north west) rectangle (current bounding box.south east);
+    \draw [borderinyellow, thick] ([xshift=+3pt, yshift=-3pt] current bounding box.north west) rectangle ([xshift=-3pt, yshift=3pt] current bounding box.south east);
     \node at (current bounding box.center) {
       \begin{varwidth}{0.95\linewidth}
       \fontfamily{ptm}\selectfont{
