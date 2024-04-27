@@ -37,7 +37,7 @@ Each player's Deck starts with 9 cards, built during the game's setup.
 
 \clearpage
 
-\subsection*{\hypertarget{Ability}{Ability and Statistic Cards}}
+\subsection*{\hypertarget{Ability}{Ability} and \hypertarget{Statistic}{Statistic} Cards}
 
 All Ability and Statistic cards\index{Statistic Cards} have a \textbf{Basic Effect}\index{Basic Effect} and a stronger \textbf{Expert} \includesvg[height=10px]{\svgs/expert.svg} \textbf{Effect}\index{Expert Effect}, which is shown below the Basic Effect.
 Whenever you play an Ability or Statistic card, you must choose which effect you are using.
@@ -46,6 +46,25 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
 \bigskip
 
 \includegraphics[width=\linewidth]{\cards/ability.png}
+\vspace{-2em}
+\begin{multicols*}{2}
+  \footnotesize
+  \begin{center}
+    \phantom{\ldots}\textbf{\textit{\textcolor{darkcandyapplered}{Ability Card}}}
+  \end{center}
+  \begin{itemize}
+    \item[\textbf{1.}] Name
+    \item[\textbf{2.}] Basic Effect
+  \end{itemize}
+  \columnbreak
+  \begin{center}
+    \textbf{\textit{\textcolor{darkcandyapplered}{Statistic Card}}}\phantom{\ldots}
+  \end{center}
+  \begin{itemize}
+    \item[\textbf{3.}] Expert Effect
+    \item[\textbf{4.}] Faction-specific Card*
+  \end{itemize}
+\end{multicols*}
 \bigbreak
 \note{11}{
   Certain cards are limited to the Necropolis Faction \includesvg[height=10px]{\svgs/necro-note.svg}.
@@ -65,7 +84,29 @@ These Levels relate to the overall Power of the Card and may be referenced when 
 Otherwise, all Artifact Cards are normally shuffled together to form the Artifact Deck regardless of their Level.
 They are gained through map exploration.\par
 Artifacts can be \hyperlink{Trading}{traded} in Alliance and Cooperative Scenarios.\par
-\includegraphics[width=\linewidth]{\cards/artifact.png}
+\begin{multicols*}{2}
+  \includegraphics[width=1.2\linewidth]{\cards/artifact.png}
+  \footnotesize
+    \null\hfill\textbf{\textit{\textcolor{darkcandyapplered}{Major Artifact}}}
+  \columnbreak
+  \begin{center}
+    \phantom{\ldots}\\
+    \phantom{\ldots}\includegraphics[width=0.6\linewidth]{\cards/minor_artifact.png}\\
+    \phantom{\ldots}\textbf{\textit{\textcolor{darkcandyapplered}{Minor Artifact}}}\\
+    \vspace{3em}
+    \phantom{\ldots}\includegraphics[width=0.6\linewidth]{\cards/relic_artifact.png}\\
+    \phantom{\ldots}\textbf{\textit{\textcolor{darkcandyapplered}{Relic Artifact}}}
+  \end{center}
+\end{multicols*}
+\begin{multicols}{2}
+  \footnotesize
+  \begin{itemize}
+    \item[\textbf{1.}] Name
+    \item[\textbf{2.}] Effect
+    \columnbreak
+    \item[\textbf{3.}] Fluff
+  \end{itemize}
+\end{multicols}
 
 \vspace*{\fill}
 \includegraphics[width=\linewidth]{\art/morale_low.png}

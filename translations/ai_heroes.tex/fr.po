@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-15 21:03+0100\n"
+"POT-Creation-Date: 2024-04-21 09:09+0100\n"
 "PO-Revision-Date: 2024-04-19 14:21+0200\n"
 "Last-Translator: basile <sugranesb@gmail.com>\n"
 "Language-Team: French <sugranesb@gmail.com>\n"
@@ -26,8 +26,8 @@ msgstr "\\addsection{Héros IA}{\\spells/fortune.png}"
 
 #. type: multicols
 #: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
-#: sections/all_map_locations.tex:411 sections/combat.tex:5
-#: sections/combat.tex:138 sections/credits.tex:7 sections/deckbuilding.tex:5
+#: sections/all_map_locations.tex:417 sections/combat.tex:5
+#: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/expansion_content.tex:5 sections/expansion_content.tex:49
 #: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
 #: sections/map_elements.tex:34 sections/map_elements.tex:74
@@ -83,6 +83,7 @@ msgstr ""
 "Un Héros IA \\textbf{gagne automatiquement un Combat} contre les Unités Neutres, tout en \\textbf{Revendiquant ou en Explorant toute Case} qu'il traverse.\n"
 "Il ne bénéficie d'aucun bonus, peu importe la Case.\n"
 "\n"
+
 #. type: multicols
 #: sections/ai_heroes.tex:28
 #, no-wrap
@@ -108,10 +109,10 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_heroes.tex:30 sections/ai_heroes.tex:49
-#: sections/ai_heroes.tex:64 sections/combat.tex:93 sections/combat.tex:231
-#: sections/deckbuilding.tex:129 sections/deckbuilding.tex:135
-#: sections/expansion_content.tex:65 sections/heroes.tex:34
+#: sections/ai_heroes.tex:30 sections/ai_heroes.tex:64 sections/combat.tex:95
+#: sections/combat.tex:233 sections/deckbuilding.tex:129
+#: sections/deckbuilding.tex:135 sections/expansion_content.tex:65
+#: sections/heroes.tex:34
 #, no-wrap
 msgid ""
 "\\vfill\n"
@@ -125,9 +126,19 @@ msgid ""
 "\\subsection*{AI Decks}\n"
 "\n"
 msgstr ""
+"\\subsection*{Decks IA}\n"
+"\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:45
+#: sections/ai_heroes.tex:34
+#, no-wrap
+msgid ""
+"\\includegraphics[width=\\linewidth]{\\cards/ai.png}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_heroes.tex:42
 #, no-wrap
 msgid ""
 "AI Heroes use two automated Decks during Combat: the \\textbf{AI Deck}, and the \\textbf{Spell Deck}.\n"
@@ -136,12 +147,7 @@ msgid ""
 "Might \\includesvg[height=10px]{\\svgs/might.svg} and Skill \\includesvg[height=10px]{\\svgs/skill.svg} Cards have two variations. Choose these cards \\textbf{randomly} when building the Deck.\n"
 "If Skill Cards are included, search for and set aside the Ability Card related to it.\n"
 "Build the AI's \\textbf{Spell Deck} by separating the indicated Spells from the regular Spell Deck.\n"
-"Shuffle the AI and Spell Decks during setup after building them.\\par\n"
-"When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI Card} and follow its instructions before the Unit moves and/or attacks.\n"
-"The effect of each AI card depends of the game's \\hyperlink{Difficulty}{Difficulty}.\n"
-"The Might Card \\includesvg[height=10px]{\\svgs/might.svg} is attached to the unit until the first respective attack/defence happens.\n"
-"The AI Spell Deck is used whenever a Magic Card \\includesvg[height=10px]{\\svgs/magic.svg} is drawn.\n"
-"If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
+"Shuffle the AI and Spell Decks during setup after building them.\n"
 "\n"
 msgstr ""
 "Les Héros IA utilisent deux Decks automatiques durant le Combat : le \\textbf{Deck IA} et le \\textbf{Deck de Sort}.\n"
@@ -151,20 +157,25 @@ msgstr ""
 "Si une Carte Capacité est incluse, cherchez la Carte de Compétence correspondante et mettez-la de côté.\n"
 "Créez le \\textbf{Deck de Sort} IA en séparant les Sorts indiqués du Deck de Sort classique.\n"
 "Mélangez les Deck IA et Sort IA après leur création durant la mise en place.\\par\n"
-"Quand le Héros IA \\textbf{Active} une Unité, piochez une Carte IA\\index{Carte IA} et suivez les instructions avant de déplacer l'Unité et/ou d'Attaquer.\n"
-"Les effets de chaque carte IA dépendent de la \\hyperlink{Difficulty}{Difficulté} de la partie.\n"
-"Les Cartes Guerrier \\includesvg[height=10px]{\\svgs/might.svg} sont associées à l'Unité avant que la première Attaque/Aéfense ne se produise.\n"
-"Le Deck de Sort IA est utilisé à chaque pioche d'une Carte Magie \\includesvg[height=10px]{\\svgs/magic.svg}.\n"
-"Si le Héros IA doit piocher une Carte, il devra piocher et résoudre une \\textbf{autre Carte} du Deck IA.\n"
-"\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:47
+#: sections/ai_heroes.tex:49
 #, no-wrap
 msgid ""
-"\\includegraphics[width=\\linewidth]{\\cards/ai.png}\n"
+"When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI Card} and follow its instructions before the Unit moves and/or attacks.\n"
+"If AI Deck is depleted during Combat, stop drawing from it.\n"
+"The effect of each AI card depends of the game's \\hyperlink{Difficulty}{Difficulty}.\n"
+"The Might Card \\includesvg[height=10px]{\\svgs/might.svg} is attached to the unit until the first respective attack/defence happens.\n"
+"The AI Spell Deck is used whenever a Magic Card \\includesvg[height=10px]{\\svgs/magic.svg} is drawn.\n"
+"If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
 "\n"
 msgstr ""
+"Quand le Héros IA \\textbf{Active} une Unité, piochez une Carte IA\\index{Carte IA} et suivez le>
+"Les effets de chaque carte IA dépendent de la \\hyperlink{Difficulty}{Difficulté} de la partie.\>
+"Les Cartes Guerrier \\includesvg[height=10px]{\\svgs/might.svg} sont associées à l'Unité avant q>
+"Le Deck de Sort IA est utilisé à chaque pioche d'une Carte Magie \\includesvg[height=10px]{\\svg>
+"Si le Héros IA doit piocher une Carte, il devra piocher et résoudre une \\textbf{autre Carte} du>
+"\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:51
