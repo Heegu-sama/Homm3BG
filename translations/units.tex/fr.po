@@ -1,13 +1,13 @@
 # French translations for Homm package
 # Copyright (C) 2024 Free Software Foundation, Inc.
 # This file is distributed under the same license as the Homm package.
-# Automatically generated, 2024.
+# Automatically generated <>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
 "POT-Creation-Date: 2024-04-26 15:38+0200\n"
-"PO-Revision-Date: 2024-04-06 18:37+0300\n"
+"PO-Revision-Date: 2024-04-27 17:21+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: fr\n"
@@ -15,6 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 3.36.0\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
@@ -98,7 +99,7 @@ msgstr ""
 #. type: Plain text
 #: sections/units.tex:3
 msgid "\\addsection{Units}{\\skills/leadership.png}"
-msgstr ""
+msgstr "\\addsection{Unités}{\\skills/leadership.png}"
 
 #. type: multicols*
 #: sections/units.tex:20
@@ -120,6 +121,21 @@ msgid ""
 "\\textbf{Reinforcing} requires that your Town has a Citadel in addition to a Dwelling of that Unit's Level.\\par\n"
 "\n"
 msgstr ""
+"\\hypertarget{Units}{En plus}\\index{Unités} des Héros et de leur Deck, les joueurs ont aussi \\textbf{un Deck de Cartes d’Unités} qui représente l’armée se déplaçant avec leurs Héros.\n"
+"Chaque Faction a accès à \\textbf{7 Unités différentes} avec chacune ses caractéristiques et ses compétences.\n"
+"Les Unités sont nécessaires pour gagner les Combats et compléter les objectifs de Scénario.\n"
+"Chaque mise en place indique quelles Cartes ajouter à votre Deck d’Unité de départ.\n"
+"Ce Deck doit être séparé du reste des Unités de votre Faction.\\par\n"
+"Chaque Carte d’Unité a deux côtés, une face « Quelques » faible et une face « Groupe » plus forte.\n"
+"Une Unité « Quelques » peut être renforcée en « Groupe » en l'\\textbf{Améliorant}, tandis que prendre des dégâts retourne à nouveau sa carte du côté « Quelques ».\n"
+"Les Unités doivent rester du bon côté quand elles sont déplacées ou inspectées.\\par\n"
+"Le Deck d’Unité d’un joueur peut avoir n’importe quel nombre de Carte, mais \\textbf{seulement 5 Unités} peuvent être utilisées pendant la \\hyperlink{Combatsetup}{mise en place du Combat}.\n"
+"Si une Unité est battue, \\textbf{défaussez-la} de votre Deck d’Unité.\\par\n"
+"Les Unités peuvent être Recrutées\\index{Recrutement} et Améliorées\\index{Amélioration} en utilisant le Jeton Population\\index{Jeton Population} et en payant leur coût de Recrutement \\includesvg[height=10px]{\\svgs/pay.svg} ou d'Amélioration \\includesvg[height=10px]{\\svgs/reinforce.svg}.\n"
+"Si vous le faites, vous pouvez instantanément Recruter ou Améliorer \\textbf{n’importe quel nombre de fois} tant que vous avez les Ressources et les Bâtiments.\\par\n"
+"\\textbf{Recruter} une Unité requiert dans votre Ville la Demeure de Rang correspondant (\\includesvg[height=10px]{\\svgs/bronze.svg} \\includesvg[height=10px]{\\svgs/silver.svg} \\includesvg[height=10px]{\\svgs/golden.svg}).\n"
+"\\textbf{Renforcer} requiert une Citadelle en plus de la Demeure.\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:28
@@ -134,6 +150,14 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{13}{\n"
+"  Tous les effets qui Améliorent \\textbf{ne requièrent pas} de dépenser le Jeton Population, de posséder une Demeure ou la Citadelle.\\par\n"
+"\n"
+"  \\medskip\n"
+"\n"
+"  Si toutes vos Unités sont battues, remplacez \\textbf{immédiatement} votre Deck d’Unité avec les Unités de départ. Les Unités de Faction battues peuvent toujours être Recrutées à nouveau avec un Jeton Population.\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:33
@@ -154,6 +178,9 @@ msgid ""
 "\\subsection*{Unit Card Anatomy}\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\subsection*{Anatomie d'une Carte d'Unité}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:41
@@ -179,6 +206,17 @@ msgid ""
 "Units with a higher Initiative Activate first.\n"
 "\n"
 msgstr ""
+"\\includegraphics[height=30px]{\\images/attack.png} \\textbf{Attaque} – La quantité de dégâts infligés par l'Unité en attaque.\\par\n"
+"\\includegraphics[height=30px]{\\images/defense.png} \\textbf{Défense} - La quantité de dégâts ignorés par l'Unité lorsqu'elle est Attaquée.\n"
+"Ne s'applique pas aux dégâts des Sorts ou aux effets autres que l'Attaque.\\par\n"
+"\\includegraphics[height=30px]{\\images/hp.png} \\textbf{\\hypertarget{HP}{PV}} - Le nombre maximum de dégâts que peut recevoir une Unité avant d'être battue.\n"
+"Les Unités « Quelques » sont défaussées du Combat et du Deck d'Unités du Joueur quand elles sont battues.\n"
+"Les Unités « Groupe » sont retournées côté « Quelques », les dégâts excédentaires sont placés sur le côté « Quelques ».\n"
+"Les Unités gardent leurs statuts « Quelques » ou « Groupe » entre les Combats.\n"
+"Tous les dégâts sont soignés à la fin des Combats.\\par\n"
+"\\includegraphics[height=30px]{\\images/initiative.png}{\\hypertarget{Initiative}{\\textbf{Initiative}}} - Détermine quand l'Unité s'active durant le Combat.\n"
+"L'Unité avec la plus haute Initiative s'active en premier.\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:56
@@ -224,6 +262,35 @@ msgid ""
 "    % \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
 "  \\end{itemize}"
 msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=\\linewidth]{\\cards/units.png}\n"
+"\\end{center}\n"
+"\\vspace{-1em}\n"
+"\\begin{multicols*}{2}\n"
+"  \\footnotesize\n"
+"  \\begin{center}\n"
+"    \\textbf{\\textit{\\textcolor{darkcandyapplered}{Carte Unité (Quelques)}}}\n"
+"  \\end{center}\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{1.}] {Nom}\n"
+"    \\item[\\textbf{2.}] {Rang}\n"
+"    \\item[\\textbf{3.}] {Type}\n"
+"    \\item[\\textbf{4.}] {Attaque}\n"
+"    \\item[\\textbf{5.}] {Défense}\n"
+"    \\item[\\textbf{6.}] {PV}\n"
+"  \\end{itemize}\n"
+"  \\columnbreak\n"
+"  \\begin{center}\n"
+"    \\textbf{\\textit{\\textcolor{darkcandyapplered}{Carte Unité (Groupe)}}}\n"
+"  \\end{center}\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{7.}] {Initiative}\n"
+"    \\item[\\textbf{8.}] {Coût de Recrutement}\n"
+"    \\item[\\textbf{9.}] {Coût d'Amélioration}\n"
+"    \\item[\\textbf{10.}]{Symbole Groupe}\n"
+"    \\item[\\textbf{11.}]{Capacité spéciale}\n"
+"    % \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
+"  \\end{itemize}"
 
 #. type: multicols
 #: sections/units.tex:102
@@ -243,6 +310,19 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"La plupart des Unités ont une \\textbf{Compétence Spéciale}\\index{Compétence Spéciale} :\\par\n"
+"\\begin{itemize}[wide]\n"
+"  \\item\\textbf{Activation} \\includesvg[height=10px]{\\svgs/activation.svg} se résout à l'Activation de l'Unité.\n"
+"  \\item\\textbf{Action d'Attaque} \\includesvg[height=10px]{\\svgs/unit_attack.svg} se résout quand l'Unité Activée Attaque.\n"
+"    Dans le cas d'Attaques multiples, résoudre cet effet pour \\textbf{la première Attaque seulement}.\n"
+"  \\item\\textbf{Autre Action} \\includesvg[height=10px]{\\svgs/unit_other.svg} peut se résoudre à la place de l'Activation normale de l'Unité.\n"
+"    Remplace le Mouvement et/ou l'Attaque.\n"
+"  \\item\\textbf{Passif} \\includesvg[height=10px]{\\svgs/unit_passive.svg} se résout à chaque fois que les conditions sont remplies.\n"
+"  \\item\\textbf{Riposte} \\includesvg[height=10px]{\\svgs/unit_retaliate.svg} se résout à chaque fois que l'Unité Riposte.\n"
+"  \\item Dans les autres cas, sans ces icônes, la compétence de l'Unité se déclenche selon son texte.\n"
+"    Les Unité peuvent aussi utiliser \\hyperlink{Playerdecks}{ces symboles}.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:118
@@ -261,6 +341,18 @@ msgid ""
 "Walls and Gates may also \\hyperlink{Walls}{reduce} the damage from  \\includesvg[height=10px]{\\svgs/unit_ranged.svg} attacks.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Unittype}{Types d'Unités}}\n"
+"Une Unité appartient à l'une de ces 3 catégories :\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{Au Sol}\\index{Unités au Sol} \\includesvg[height=10px]{\\svgs/unit_ground.svg} peut se déplacer de 3 cases puis attaquer un ennemi adjacent ;\n"
+"  \\item \\textbf{Volante}\\index{Unités Volantes} \\includesvg[height=10px]{\\svgs/unit_flying.svg} peut se déplacer de 3 cases, \\textbf{en ignorant les Obstacles}, puis attaquer un ennemi adjacent ;\n"
+"  \\item \\textbf{À Distance}\\index{Unités à Distance} \\includesvg[height=10px]{\\svgs/unit_ranged.svg} peut attaquer \\textbf{n'importe quelle Unité, n'importe où} puis bouger d'une case OU bouger d'une case sans attaquer.\n"
+"\\end{itemize}\n"
+"Si une Unité \\includesvg[height=10px]{\\svgs/unit_ranged.svg} est adjacente à une Unité ennemie, sa cible \\textbf{doit être} cet ennemi.\n"
+"Dans ce cas, l'Unité \\includesvg[height=10px]{\\svgs/unit_ranged.svg} souffre d'une pénalité de Combat\\index{Pénalité de Combat} : lancez deux Dés d'Attaque (au lieu d'un) et \\textbf{utilisez le plus petit résultat}.\\par\n"
+"Cette pénalité s'applique aussi si l'Unité \\includesvg[height=10px]{\\svgs/unit_ranged.svg} attaque depuis sa Ligne Arrière une Unité sur sa propre Ligne Arrière.\n"
+"Les Murs et Portes peuvent aussi \\hyperlink{Walls}{réduire} les dégâts d'Attaque \\includesvg[height=10px]{\\svgs/unit_ranged.svg}.\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:130
@@ -279,6 +371,18 @@ msgid ""
 "Whenever a Neutral Unit is defeated from anywhere, place it into the appropriate Neutral Discard Pile.\\par\n"
 "\n"
 msgstr ""
+"\\subsection*{Unités Neutres}\n"
+"Les Unités Neutres\\index{Unités Neutres} gardent différents lieux sur le Plateau.\n"
+"Gagner des Combat contre eux est nécessaire pour Explorer la plupart des Sites.\n"
+"Les Unités Neutres sont séparées en quatre Rangs, chacun avec leurs Deck propre.\n"
+"En plus des \\includesvg[height=10px]{\\svgs/bronze.svg}, \\includesvg[height=10px]{\\svgs/silver.svg} et \\includesvg[height=10px]{\\svgs/golden.svg}, il y a aussi les Unités Neutres Azur \\includesvg[height=10px]{\\svgs/azure.svg} qui sont les plus fortes du jeu.\\par\n"
+"Chaque Deck doit toujours être laissé séparé des autres et mélangé pendant la mise en place.\n"
+"Si un Deck d'Unité Neutre n'a plus de Carte, mélanger sa défausse pour former un nouveau Deck.\n"
+"Quand un combat contre des Unités Neutres commence, piochez \\hyperlink{Difficulty}{le bon nombre} d'Unités de chaque rang pour participer au Combat.\\par\n"
+"Il est possible pour les joueurs de gagner des Unités Neutres de diverses façons dans leurs Deck d'Unité, comme des règles de Scénario ou la Carte de Compétence Diplomatie.\n"
+"Les \\textbf{Unités Neutres ne peuvent pas être Améliorées}, comme elles n'ont qu'une face.\n"
+"Quand une Unité Neutre est battue n'importe où, placez-la dans la Défausse Neutre.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:133
@@ -313,6 +417,8 @@ msgid ""
 "\\subsection*{Gameplay Example}\n"
 "\n"
 msgstr ""
+"\\subsection*{Example de Gameplay}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:151
@@ -321,6 +427,8 @@ msgid ""
 "\\textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons, Empowering \\includesvg[height=10px]{\\svgs/empower.svg} the Spell by 2 with the Expert  Effect \\includesvg[height=10px]{\\svgs/expert.svg} of a Power Card.}\n"
 "\n"
 msgstr ""
+"\\textit{Bob, jouant Alamar le Mage de Guerre, lance une Flèche Magique contre le « Groupe » de Squelettes d'Alice, Augmentant \\includesvg[height=10px]{\\svgs/empower.svg} le Sort de 2 avec l'Effet Expert \\includesvg[height=10px]{\\svgs/expert.svg} d'une Carte Puissance.}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:155
@@ -340,6 +448,11 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\textit{Les Squelettes prennent 3 dégâts \\includesvg[height=10px]{\\svgs/damage.svg} du Sort.\n"
+"  Leur Défense \\includesvg[height=10px]{\\svgs/defense.svg} de 1 ne réduit pas les dégâts, car cela ne s'applique qu'aux Attaques non magique.\n"
+"  Les Squelettes ont des PV \\includesvg[height=10px]{\\svgs/health_points.svg} de seulement 2, donc Bob retourne la carte face « Quelques » et 1 marqueur de dégâts \\includesvg[height=10px]{\\svgs/damage.svg} restant est placé dessus.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:166
