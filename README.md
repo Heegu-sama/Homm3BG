@@ -158,7 +158,7 @@ Example:
 
 To process a single page, use:
 ```bash
-./pdf2image.sh en 5 
+./pdf2image.sh en 5
 ```
 
 ## ✨ Assets
