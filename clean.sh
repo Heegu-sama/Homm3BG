@@ -6,6 +6,7 @@ git restore \
   build.sh \
   clean.sh \
   components_list.tex \
+  find_fuzzy.sh \
   index_style.ist \
   main_es.tex \
   main_en.tex \
@@ -14,4 +15,5 @@ git restore \
   main_ru.tex \
   make_printable.sh \
   metadata.tex \
+  pdf2image.sh \
   po4a.cfg
