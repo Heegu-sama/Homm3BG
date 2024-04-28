@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#
+
 LANGUAGE=$1
 
 for f in $(find translations -name ${LANGUAGE}.po)
