@@ -1,14 +1,13 @@
 # French translations for Homm package
 # Copyright (C) 2024 Free Software Foundation, Inc.
 # This file is distributed under the same license as the Homm package.
-# Automatically generated, 2024.
+# Automatically generated <>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-25 23:19+0100\n"
 "POT-Creation-Date: 2024-04-26 15:42+0200\n"
-"PO-Revision-Date: 2024-04-11 09:25+0200\n"
+"PO-Revision-Date: 2024-04-25 22:49+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: fr\n"
@@ -16,6 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 3.36.0\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
@@ -62,7 +62,7 @@ msgstr ""
 #. type: Plain text
 #: sections/combat.tex:3
 msgid "\\addsection{Combat}{\\skills/attack.png}"
-msgstr ""
+msgstr "\\addsection{Combat}{\\skills/attack.png}"
 
 #. type: multicols
 #: sections/combat.tex:7
@@ -71,6 +71,8 @@ msgid ""
 "\\hypertarget{Combat}{Combat}\\index{Combat} with \\textbf{Neutral Units} starts when a Hero moves to an unvisited Field with a roman numeral, signifying the \\hyperlink{Difficulty Table}{type and number} of Neutral Units guarding that Field.\n"
 "\n"
 msgstr ""
+"Le \\hypertarget{Combat}{Combat}\\index{Combat} avec des \\textbf{Unités Neutres} commence quand un Héros se déplace sur une Case non visitée avec un chiffre romain, correspondant aux \\hyperlink{Difficulty Table}{type et nombre} d'Unités Neutres gardant cette Case.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:14
@@ -84,6 +86,13 @@ msgid ""
 "Players are able to start multiple Combats during their Turn.\n"
 "\n"
 msgstr ""
+"Le Combat avec \\textbf{un autre Joueur} peut commencer de deux façons.\n"
+"\\begin{itemize}\n"
+"  \\item Se deplacer sur une Case contenant un de ses Héros.\n"
+"  \\item Se déplacer sur une Ville ou une Enclave lui appartenant.\n"
+"\\end{itemize}\n"
+"Les Joueurs peuvent engager plusieurs Combats pendant leur Tour.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:16
@@ -92,6 +101,8 @@ msgid ""
 "\\subsection*{\\hypertarget{Combatsetup}{Combat Setup}}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Combatsetup}{Préparation du Combat}}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:20
@@ -102,6 +113,10 @@ msgid ""
 "Follow these steps when Combat begins against \\textbf{Neutral Units}:\n"
 "\n"
 msgstr ""
+"% TODO info about battlefield expansion\n"
+"Les Combats se font sur un plateau de 4 x 5, composé de deux Lignes Arrières et deux Lignes de Front, séparées par une Ligne Centrale.\n"
+"Suivez ces étapes avant de débuter un Combat contre des \\textbf{Unités Neutres} :\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:51
@@ -139,6 +154,37 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\begin{itemize}\n"
+"  \\item Choisissez votre côté du plateau de Combat.\n"
+"    Placez jusqu'à 5 Cartes de votre Deck d'Unité sur votre Ligne Arrière et Ligne de Front.\n"
+"  \\item Vérifiez la \\hyperlink{Difficulty Table}{\\textbf{Table de Difficulté}} et piochez le nombre d'Unités Neutres nécessaire depuis leurs Decks.\n"
+"  \\item Les Unités Neutres se placent en fonction du \\textbf{Mode de Jeu} :\n"
+"  \\item En \\textbf{Affrontement} ou \\textbf{Alliance}, le joueur à votre droite place et contrôle les Unités Neutres.\n"
+"    Les Unités \\includesvg[height=10px]{\\svgs/unit_ranged.svg} doivent être placées sur la Ligne Arrière le plus possible.\n"
+"  \\item En \\textbf{Campagne} ou \\textbf{Coopératif}, les Unités Neutres sont placées de gauche à droite depuis le point de vue du joueur.\n"
+"D'abord, placez toutes les Unités \\includesvg[height=10px]{\\svgs/unit_ranged.svg} sur la Ligne Arrière\\index{Placement des Unités}.\n"
+"Puis, placez les Unités \\includesvg[height=10px]{\\svgs/unit_ground.svg} ou \\includesvg[height=10px]{\\svgs/unit_flying.svg} sur la Ligne de Front.\n"
+"Si une Unité ne peut pas être placée sur sa Ligne, placez là sur l'autre.\n"
+"Les Unités sont placées dans l'ordre \\textbf{décroissant} d'Initiative\\index{Initiative}.\n"
+"En cas d'égalité, l'Unité de plus haut rang l'emporte.\n"
+"Si l'égalité persiste, c'est aux Joueurs de choisir.\n"
+"\\end{itemize}\n"
+"Mise en place des Unités contre \\textbf{d'autres Joueurs}.\n"
+"\\begin{itemize}[wide]\n"
+"  \\item L'attaquant place jusqu'à 5 Unités sur son côté du plateau de Combat, puis le défenseur fait de même.\n"
+"  \\item Si le Combat se passe dans une Ville avec une Citadelle, le défenseur place les cartes de \\hyperlink{Walls}{Murs, Porte and Tourelle} après ses Unités.\n"
+"\\end{itemize}\n"
+"\\vfill\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=0.55\\linewidth]{\\art/aging.png}\n"
+"\\end{center}\n"
+"\\vfill\n"
+"\\note{11}{\n"
+"    Si une Ville ou une Enclave est attaquée par un Héros ennemi et que votre Héros n'est pas sur la Case, vous pouvez immédiatement \\textbf{payer 8} \\includesvg[height=10px]{\\svgs/gold.svg} pour vous défendre \\textbf{en n'utilisant que vos Unités}.\n"
+"    Vous ne pouvez pas utiliser votre Deck pendant le combat car votre Héros Principal n'est pas présent.\n"
+"    Ce coût de 8 \\includesvg[height=10px]{\\svgs/gold.svg} représente le coût de déplacement de votre armée.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:79
@@ -173,6 +219,33 @@ msgid ""
 "The Unit cannot take another Defense Action during that activation.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Combatterminology}{Glossaire de Combat}}\n"
+"Les termes suivants décrivent des effets et élément du Combat.\\par\n"
+"\\textbf{Attaquant} – Joueur qui initie le Combat.\\par\n"
+"\\textbf{Défenseur} – Joueur attaqué.\\par\n"
+"\\textbf{Activation} – Une Unité s'Active quand elle est la suivante dans l'ordre d'Initiative.\\par\n"
+"\\textbf{Unité Adjacente} – Une Unité est adjacente à une autre quand elle est à une case de distance orthogonalement (pas en diagonale).\\par\n"
+"\\textbf{Tour de Combat} – Cycle complet d'Activation de toutes les Unités de chaque Joueur.\\par\n"
+"\\textbf{Obstacles}\\index{Obstacles de Combat}\\index{Obstacles, Combat} – Chaque Carte sur le Plateau de Combat est un Obstacle de Combat.\n"
+"Ils bloquent le déplacement de toutes les Unités non-volantes.\\smallskip\\par\n"
+"\\begin{tikzpicture}[overlay]\n"
+"  \\node at (7, 0) {\\includegraphics[width=0.2\\linewidth]{\\images/attack_die.png}};\n"
+"\\end{tikzpicture}\\parbox{0.7\\hsize}{\\textbf{Dé d'Attaque}\\index{Dé d'Attaque}\\index{Dé} – Dé rouge dont le résultat varie entre -1 et +1.\n"
+"Lancez ce dé \\textbf{quand une Unité attaque} et ajoutez ce résultat à l'Attaque de l'Unité.}\\par\\smallskip\n"
+"\\textbf{\\hypertarget{Retaliate}{Riposte}} – Si une Unité survit à une Attaque d'une Unité adjacente, elle riposte en faisant une Attaque contre l'Unité attaquante.\n"
+"Chaque créature ne peut faire \\textbf{qu'une seule} Riposte\\index{Riposte} par Tour de Combat.\n"
+"Les Ripostes fonctionnent comme une Attaque normale, mais n'entrainent pas d'autre Riposte.\n"
+"Marquez les Unités qui ont déjà Riposté ce Tour de Combat avec un Cube Noir.\\par\n"
+"\\textbf{Paralysie}\\index{Paralysie} \\includesvg[height=10px]{\\svgs/paralysis.svg} – Certains effets placent un Jeton Paralysie sur les Unités.\n"
+"Cette Unité \\textbf{perd sa prochaine Activation}. Retirez le Jeton à la place de l'Activer.\n"
+"Si l'Unité est \\textbf{attaquée ou subit des dégâts} avant, \\textbf{retirer le Jeton}.\n"
+"Le Jeton Paralysie n'empêche pas la Riposte.\\par\n"
+"\\textbf{\\hypertarget{Defend}{Défendre}} \\includesvg[height=10px]{\\svgs/defense.svg} – Une Unité peut choisir de prendre un Jeton Défense au lieu d'Attaquer.\n"
+"Quand une Unité avec le Jeton Défense est attaquée, lancez à nouveau le dé d'attaque après le jet d'attaque initial.\n"
+"Si vous lancez « +1 », l'Unité en défense gagne +1 à sa Défense pour cette attaque.\n"
+"Si une unité s'active avec un Jeton Défense, défaussez-le.\n"
+"L'Unité ne peut pas prendre un autre Jeton Défense pendant cette Activation.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:89
@@ -189,6 +262,16 @@ msgid ""
 "If you cannot win the Combat before the end of the current Combat Round, you must either \\hyperlink{Endcombat}{Retreat}\\index{Retreat} or spend 1 MP from the Hero that started the Combat in order to play another Round.\\par\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{CombatCards}{Les Cartes lors des Combats}}\n"
+"Vous ne pouvez utiliser qu'\\textbf{un Sort par Tour de Combat}.\n"
+"Les effets Persistant \\includesvg[height=10px]{\\svgs/ongoing.svg} et d'Activation \\includesvg[height=10px]{\\svgs/activation.svg} peuvent seulement être utilisés \\textbf{quand une Unité s'Active ou avant son Attaque}.\n"
+"Les effets Persistant\\index{Effets Continus} durent jusqu'à la fin de l'effet ou du Combat.\\par\n"
+"Les effets Instantanés \\includesvg[height=10px]{\\svgs/instant.svg} peuvent être joués \\textbf{n'importe quand} sauf entre les lancés de Dé de Combat et la résolution des dégâts ou sauf indication contraire.\n"
+"Les Cartes Instantanées augmentant \\includesvg[height=10px]{\\svgs/attack.svg} ou \\includesvg[height=10px]{\\svgs/defense.svg}, comme les Cartes d'Attaque ou de Défense, \\textbf{doivent} être jouées après l'annonce de l'Attaque et persitent le temps de cette attaque.\n"
+"\\subsection*{\\hypertarget{Timelimit}{Limite de Tour des Combats}}\\index{Limite de Tour des Combats}\n"
+"Les Combats contre des Unités Neutres ont une limite d'\\textbf{un Tour de Combat}.\n"
+"Si le Combat ne peut pas être gagné avant la fin du Tour de Combat, vous pouvez soit \\hyperlink{Endcombat}{Fuir}\\index{Fuite} soit dépenser 1 PM du Héros qui a initié le Combat pour un autre Tour.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:93
@@ -197,6 +280,8 @@ msgid ""
 "\\note{5}{Combats against Azure \\includesvg[height=10px]{\\svgs/azure-note.svg} Units, other players, or \\hyperlink{AIrules}{AI Heroes} have no time limit.}\n"
 "\n"
 msgstr ""
+"\\note{5}{Les Combats contre les Unités Azur \\includesvg[height=10px]{\\svgs/azure-note.svg}, d'autres joueurs ou les  \\hyperlink{AIrules}{Héros IA} n'ont pas de limite de Tour.}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:99
@@ -223,6 +308,8 @@ msgid ""
 "\\subsection*{\\hypertarget{Walls}{Defending a Town With\\\\a Citadel\\raggedright}}\\index{Defending Town}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Walls}{Défendre une Ville avec\\\\une Citadelle\\raggedright}}\\index{Ville en Défense}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:110
@@ -236,6 +323,13 @@ msgid ""
 "If they are targeted by a \\includesvg[height=10px]{\\svgs/unit_ranged.svg} attack performed from the opponent's side of the Combat Board, \\textbf{reduce the attack's damage by 1}.\n"
 "\n"
 msgstr ""
+"Quand une Ville avec une Citadelle est attaquée, le défenseur ajoute les 3 Murs et 1 Porte en Obstacle dans l'ordre qu'il souhaite sur la Ligne Centrale après avoir placé ses Unités.\n"
+"La Porte \\textbf{n'est pas une Obstacle pour le défenseur}.\n"
+"Les Murs et Porte\\index{Murs et Porte} peuvent être détruits par n'importe quelle attaque d'une Unité \\includesvg[height=10px]{\\svgs/unit_ground.svg} ou \\includesvg[height=10px]{\\svgs/unit_flying.svg} adjacente.\n"
+"\\par\n"
+"Les Unités en Défense de leur côté et \\textbf{dans la même colonne} qu'un Mur ou une Porte gagnent une protection contre les attaques \\includesvg[height=10px]{\\svgs/unit_ranged.svg}.\n"
+"Si elles sont ciblées par une attaque \\includesvg[height=10px]{\\svgs/unit_ranged.svg} du côté de l'attaquant du Plateau de Combat, \\textbf{réduisez les dégâts de l'Attaque de 1}.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:115
@@ -247,6 +341,11 @@ msgid ""
 "The defender also gains the Arrow Tower\\index{Arrow Tower} Unit Card which is placed next to the Combat Board.\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=0.6\\linewidth]{\\cards/arrow_tower.png}\n"
+"\\end{center}\n"
+"Le défenseur gagne aussi la Carte de Tourelle\\index{Tourelle} placée à côté du Plateau de Combat.\n"
+"\n"
 
 #. type: figure*
 #: sections/combat.tex:138
@@ -271,6 +370,24 @@ msgid ""
 "  \\hfill%\n"
 "  \\mbox{}%"
 msgstr ""
+"[h]\n"
+"  \\mbox{}%\n"
+"  \\hfill%\n"
+"  \\begin{minipage}[t]{0.415\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=\\linewidth,height=11cm]{\\examples/ranged_protected.png}\n"
+"  \\caption[halberdiers protected]{\\textit{Quand les Hallebarbiers sont derrière une Porte non détruite, ils \\textbf{sont protégés} des attaques depuis derrière la ligne des Murs.\n"
+"    Les dégâts de l'attaque \\includesvg[height=10px]{\\svgs/unit_ranged.svg} des Yeux Maléfiques sont \\textbf{réduit de 1}.}}\n"
+"  \\end{minipage}\n"
+"  \\hfill%\n"
+"  \\begin{minipage}[t]{0.415\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=\\linewidth,height=11cm]{\\examples/ranged_unprotected.png}\n"
+"    \\caption[halberdiers unprotected]{\\textit{Comme les Hallebardiers sont derrière un Mur détruit, la \\textbf{protection ne s'applique pas}.\n"
+"      Les Yeux Démoniaques attaquent \\textbf{sans pénalité}.}}\n"
+"  \\end{minipage}\n"
+"  \\hfill%\n"
+"  \\mbox{}%"
 
 #. type: multicols
 #: sections/combat.tex:145
@@ -282,6 +399,11 @@ msgid ""
 "Combat lasts until all Units on one side are eliminated, a player has to \\textbf{Retreat} when fighting Neutral Units, or a player \\textbf{Surrenders} to another player.\n"
 "\n"
 msgstr ""
+"\\subsection*{Structure d'un Tour de Combat}\n"
+"Un Combat est divisé en Tours, durant lesquels toutes les Unités participant au Combat \\textbf{s'Activent une fois} dans l'ordre d'Initiative.\n"
+"Après toutes les Activations, un nouveau Tour de Combat commence.\n"
+"Un Combat dure jusqu'à ce que toutes les Unités d'un côté soit éliminées, un Joueur doive \\textbf{Fuir} contre des Unités Neutres, ou un Joueur \\textbf{se Rende} face à un autre Joueur.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:160
@@ -303,6 +425,21 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"Structure d'un Tour de Combat.\n"
+"\\begin{itemize}\n"
+"  \\item Les Joueurs Activent leurs Unités dans l'ordre décroissant d'\\hyperlink{Initiative}{Initiative}. \\textbf{S'il y a égalité}, alterner entre attaquant et défenseur en commençant par l'attaquant.\n"
+"  \\item Quand une Unité s'Active, placez une Cube de Faction dessus indiquant qu'elle s'est Activée ce Tour.\n"
+"  \\item Une Unité Activée se déplace et attaque selon son \\hyperlink{Unittype}{Type}. Les Unités Neutres contrôlées par un Joueur doivent Attaquer si possible.\n"
+"  \\item Au lieu d'Attaquer, une Unité peut se \\hyperlink{Defend}{Défendre}.\n"
+"  Dans un Combat, les Unités Neutres ne peuvent pas se Défendre, même si elles sont contrôlées par un autre Joueur.\n"
+"  \\item Avant l'Attaque d'une Unité, chaque joueur peut \\hyperlink{CombatCards}{jouer des Cartes}. Les Cartes se résolvent dans l'ordre où elles sont jouées.\n"
+"  \\item Après cette étape, lancez le Dé de Combat.\n"
+"    Modifiez l'Attaque de l'Unité avec le résultat du Dé, moins la Défense de l'Unité en défense et enfin infliger le reste en \\hyperlink{HP}{dommage} à l'Unité en défense.\n"
+"  \\item Si l'Unité en défense est adjacente à l'attaquant, elle \\hyperlink{Retaliate}{Riposte} si ce n'est pas déjà fait ce Tour.\n"
+"  \\item Continuez à Activer les Unités jusqu'à les avoir toutes Activé une fois.\n"
+"Après l'Activation de la dernière Unité, le Tour de Combat prend fin.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:184
@@ -333,6 +470,30 @@ msgid ""
 "After winning Combat, Heroes \\textbf{must} Visit the Field where the Combat took place.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Endcombat}{Fin du Combat}}\n"
+"Le Combat prend fin immédiatement quand toutes les Unités d'un camp sont battues.\n"
+"Le camp survivant est le vainqueur.\n"
+"Contre des \\textbf{Unités Neutres}, si vous \\hyperlink{Timelimit}{ne finissez pas à temps} ou que vos Unités sont battues, vous devez \\textbf{Fuir} ; remettez vos Unités survivantes dans votre Deck d'Unité et déplacez le Héros du Combat dans la Case \\textbf{Explorée en dernier}.\n"
+"Il n'y a pas de conséquence négative à la Fuite.\\par\n"
+"\\note{9}{\n"
+"  \\textbf{Exception importante} : si \\textbf{toutes} les Unités de votre \\textbf{Deck d'Unité} sont battues durant un Combat Neutre, votre Héros Principal doit se déplacer dans une Ville ou une Enclave alliée.\n"
+"  Le Héros Secondaire est défaussé du jeu et doit à nouveau être Recruté.\\par\n"
+"}\\par\n"
+"Si vous battez toutes les Unités du \\textbf{Héros Principal d'un autre joueur}, ce joueur \\textbf{perd du Moral} et doit \\textbf{vous payer} 5 \\includesvg[height=10px]{\\svgs/gold.svg}.\n"
+"Ne perdez pas de Moral et ne payez pas d'Or \\includesvg[height=10px]{\\svgs/gold.svg} si un \\textbf{Héros Secondaire} est battu.\n"
+"\\textbf{Dans les deux cas}, le perdant \\textbf{donne aussi au gagnant} un \\hyperlink{End}{Cube de Faction}.\n"
+"Le Héros Principal battu \\textbf{doit se déplacer} sur une Ville ou une Enclave alliée, le Héros Secondaire est lui retiré du jeu avant d'être à nouveau Recruté.\n"
+"Battre un Héros Principal peut entrainer l'\\hyperlink{End}{Élimination du Joueur}.\\par\n"
+"Vous pouvez \\textbf{vous Rendre}\\index{Retraite} à un autre joueur en lui payant 10 \\includesvg[height=10px]{\\svgs/gold.svg} à l'Activation d'une Unité.\n"
+"Déplacez votre Héros Principal ou retirez votre Héros Secondaire du jeu comme si vous aviez perdu toutes vos Unités.\n"
+"Il n'y a pas d'autre conséquence à la Fuite; Le vainqueur ne gagne pas de Cube de Faction.\\par\n"
+"\\note{4}{Vous ne pouvez pas vous rendre en défendant une Ville.}\\par\n"
+"Quand un Héros Secondaire est attaqué, il peut choisir de \\textbf{perdre automatiquement} au lieu de Combattre pour préserver ses Unités.\n"
+"Dans ce cas, le vainqueur reçoit quand même un Cube de Faction du Héros battu.\\par\n"
+"À la fin du Combat, tous les dégâts sont soignés pour les Unités survivantes.\n"
+"Remettez les Cartes d'Unités dans leur Deck et défaussez les Unités Neutres restantes.\n"
+"Après avoir gagné un Combat, les Héros \\textbf{doivent} Explorer la Case où a eu lieu le Combat.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:186
@@ -341,6 +502,8 @@ msgid ""
 "\\subsection*{\\hypertarget{Combatexperience}{Combat Experience}}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Combatexperience}{Expérience de Combat}}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:195
@@ -356,6 +519,15 @@ msgid ""
 "You also do not gain Experience from \\textbf{defeating} a Secondary Hero, or if an enemy Hero \\textbf{Surrenders} to you.\n"
 "\n"
 msgstr ""
+"Gagner un Combat avec le Héros Principal lui donne normalement de l'Expérience\\index{Expérience}.\n"
+"Si la Difficulté de la Case Neutre ou le Niveau du Héros Principal battu est \\textbf{égal} à votre Niveau, gagnez 1 \\includesvg[height=10px]{\\svgs/experience.svg}.\n"
+"S'ils étaient de plus \\textbf{haut} Niveau que vous, gagnez 2 \\includesvg[height=10px]{\\svgs/experience.svg}.\n"
+"Gagner un Combat Neutre contre une Unité Neutre Azur \\includesvg[height=10px]{\\svgs/azure.svg} permet à votre Héros de monter \\textbf{immédiatement} au Niveau 7.\n"
+"Si vous montez plusieurs Niveaux en même temps, résolvez leurs effets dans l'ordre.\n"
+"La montée en Niveau se résoud avant l'Exploration de la Case où le Combat a eu lieu.\\par\n"
+"Le Héros Secondaire ne gagne jamais d'Expérience.\n"
+"Vous ne gagnez pas non plus d'Expérience en \\textbf{battant} un Héros Secondaire ou si un Héros se \\textbf{Rend}.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:199
@@ -366,6 +538,10 @@ msgid ""
 "The player is considered to have beaten the Neutral Units by default and gains no rewards from the Combat.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Quick}{Combat Instantané}}\\index{Combat Instantané}\n"
+"Si le Niveau de votre Héros est supérieur à la Difficulté de la Case au début d'un Combat contre des Unités Neutres, il n'y a \\textbf{pas de Combat}.\n"
+"Le joueur est considéré victorieux par défaut et n'obtient aucun gain du Combat.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:202
@@ -375,6 +551,9 @@ msgid ""
 "During these game modes, all enemy Units activate according to the rules in \\hyperlink{AIrules}{the next section}.\n"
 "\n"
 msgstr ""
+"\\subsection*{Combat de Campagne et Coopératif}\n"
+"Dans ces modes, tous les ennemis s'activent selon les règles de \\hyperlink{AIrules}{la section suivante}.\n"
+"\n"
 
 #. type: scaledfigure
 #: sections/combat.tex:210
@@ -388,7 +567,7 @@ msgstr ""
 #. type: subsection{#2}
 #: sections/combat.tex:214
 msgid "Combat Example"
-msgstr ""
+msgstr "Exemple de Combat"
 
 #. type: multicols*
 #: sections/combat.tex:221
@@ -402,6 +581,13 @@ msgid ""
 "They would both be permitted to play any number of additional cards in any order, but they decide to stop after playing these cards.}\\par\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\textit{Les Zombies de Bob vont attaquer les Griffons d'Alice.\n"
+"Quand Bob announce l'Attaque, chaque joueur a la possibilité de modifier l'Attaque ou la Défense de leurs Unités en jouant n'importe quel nombre de Cartes \\includesvg[height=10px]{\\svgs/instant.svg} qui augmentent l'Attaque \\includesvg[height=10px]{\\svgs/attack.svg} de l'Unité attaquante ou la défense \\includesvg[height=10px]{\\svgs/defense.svg} de l'Unité en défense.}\\par\n"
+"\\textit{Bob décide de jouer une Carte d'Attaque +1, augmentant l'Attaque des Zombies de 2 à 3.\n"
+"En réponse, Alice joue une Carte de Défense +1, augmentant la Défense des Griffons de 0 à 1.\n"
+"Ils peuvent tous les deux continuer à jouer n'importe quel nombre de Cartes dans l'ordre de leur choix, mais décident d'arrêter.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:223
@@ -424,6 +610,14 @@ msgid ""
 "The previously played Attack and Defense cards no longer have any effect.}\n"
 "\n"
 msgstr ""
+"\\textit{Après avoir joué leurs Cartes, le Dé d'Attaque est lancé, modifiant le montant des dégâts infligés par les Unités attaquantes.\n"
+"Bob lance +1.\n"
+"Cela augmente l'attaque des Zombies de 3 à 4, réduit ensuite par la défense de 1 des Griffons. De ce fait, 3 dégâts \\includesvg[height=10px]{\\svgs/damage.svg} sont placés sur les Griffons. Leurs PV \\includesvg[height=10px]{\\svgs/health_points.svg} étant de 4, ils ne sont pas retournés du côté « Quelques ».}\\par\n"
+"\\textit{Les Griffons n'ayant pas de Cube Noir vont pouvoir Riposter.\n"
+"Un Cube devrait être placé sur les Griffons, cependant leur Compétence \\includesvg[height=10px]{\\svgs/unit_retaliate.svg} indique qu'ils Rispostent contre chaque Attaque. On ne place donc pas de Cube.}\\par\n"
+"\\textit{Chaque joueur peut à nouveau modifier les Caractéristiques de ses Unités pendant les Ripostes.\n"
+"Les Cartes utilisées précédement ne font cependant plus effet.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:235
