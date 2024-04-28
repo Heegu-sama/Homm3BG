@@ -122,6 +122,19 @@ To translate a particular section:
    ```
 - Commit and repeat!
 
+#### Finding fuzzy translations
+
+In case an already translated text is changed, `po4a` marks such a translation as _fuzzy_ in the `*.po` files.
+Those excerpts will be compiled just as they are in the original (English), until the translation is corrected, and the _fuzzy_ mark is removed.
+To facilitate finding them, use the script:
+
+```bash
+./find_fuzzy.sh <lang>
+```
+
+It will show all the fuzzy translations in the `*.po` files for the specified language.
+
+
 ### 🔎 Spellchecking
 
 TeXstudio has built-in spellchecking, but the first steps have been made towards automated spellchecking with aspell.
