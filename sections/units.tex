@@ -57,6 +57,33 @@ Units with a higher Initiative Activate first.
 \begin{center}
   \includegraphics[width=\linewidth]{\cards/units.png}
 \end{center}
+\vspace{-1em}
+\begin{multicols*}{2}
+  \footnotesize
+  \begin{center}
+    \textbf{\textit{\textcolor{darkcandyapplered}{Unit Card (Few)}}}
+  \end{center}
+  \begin{itemize}
+    \item[\textbf{1.}] {Name}
+    \item[\textbf{2.}] {Tier}
+    \item[\textbf{3.}] {Type}
+    \item[\textbf{4.}] {Attack}
+    \item[\textbf{5.}] {Defense}
+    \item[\textbf{6.}] {HP}
+  \end{itemize}
+  \columnbreak
+  \begin{center}
+    \textbf{\textit{\textcolor{darkcandyapplered}{Unit Card (Pack)}}}
+  \end{center}
+  \begin{itemize}
+    \item[\textbf{7.}] {Initiative}
+    \item[\textbf{8.}] {Recruitment cost}
+    \item[\textbf{9.}] {Reinforcement cost}
+    \item[\textbf{10.}]{Pack symbol}
+    \item[\textbf{11.}]{Special Ability}
+    % \item[\textbf{\phantom{.}}] \phantom{.}
+  \end{itemize}
+\end{multicols*}
 
 \bigbreak
 
@@ -106,10 +133,26 @@ Whenever a Neutral Unit is defeated from anywhere, place it into the appropriate
 
 \end{multicols}
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\linewidth]{\tables/unit_list.png}
-\end{figure}
+\hommtable{14}{
+  \begin{tabularx}{\linewidth}{XXXXX}
+    & \darkcell{Town Building} & \darkcell{Castle} & \darkcell{Dungeon} & \darkcell{Necropolis} \\
+    \darkcell[1.6]{\includesvg[height=12px]{\svgs/bronze-table.svg} \\ Bronze Units} &
+      \lightcell[1.6]{Tier 1 \\ Dwelling} &
+      \lightcell[1.6]{Halberdiers, Marksmen, Griffins} &
+      \lightcell[1.6]{Troglodytes, Harpies, Evil Eyes} &
+      \lightcell[1.6]{Skeletons, Zombies, Wraiths} \\
+    \darkcell[1.2]{\includesvg[height=12px]{\svgs/silver.svg} \\ Silver Units} &
+      \lightcell[1.2]{Tier 2 \\ Dwelling} &
+      \lightcell[1.2]{Crusaders, Zealots} &
+      \lightcell[1.2]{Medusas, Minotaurs} &
+      \lightcell[1.2]{Vampires,\\ Liches} \\
+    \darkcell[1.2]{\includesvg[height=12px]{\svgs/golden.svg} \\ Gold Units} &
+      \lightcell[1.2]{Tier 3 \\ Dwelling} &
+      \lightcell[1.2]{Champions, Archangels} &
+      \lightcell[1.2]{Manticores, Black Dragons} &
+      \lightcell[1.2]{Dread Knights, Ghost Dragons} \\
+  \end{tabularx}
+}
 
 \clearpage
 

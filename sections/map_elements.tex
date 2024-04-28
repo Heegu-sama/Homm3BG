@@ -24,8 +24,28 @@ Solid yellow lines on a Field's edge cannot be passed through.
 \hyperlink{Difficulty}{Roman numerals} written on a Field indicate that the Field is guarded by Neutral enemies that must be fought to Visit it.\par
 \columnbreak
 \includegraphics[width=\linewidth]{\images/maptiles.png}
+\begin{itemize}
+  \footnotesize
+  \item[\textbf{1.}] Starting Map Tiles: I
+  \item[\textbf{2.}] Far Map Tiles: II-II
+  \item[\textbf{3.}] Near Map Tiles: IV-V
+  \item[\textbf{4.}] Center Map Tiles: VI-VII
+\end{itemize}
 \vfill
-\includegraphics[width=\linewidth]{\images/fields.png}
+\begin{center}
+  \includegraphics[width=0.8\linewidth]{\images/fields.png}
+\end{center}
+\begin{itemize}
+  \footnotesize
+  \begin{multicols}{2}
+    \item[\textbf{1.}] Empty Field
+    \item[\textbf{2.}] Location
+    \item[\textbf{3.}] Artifact Symbol
+    \item[\textbf{4.}] Blocked Field
+    \item[\textbf{5.}] Border line
+    \item[\textbf{6.}] Field Difficulty
+  \end{multicols}
+\end{itemize}
 \end{multicols*}
 
 \clearpage
@@ -64,6 +84,11 @@ You may always rotate Map Tiles when placing or revealing them.
 \begin{figure*}[!hb]
   \centering
   \includegraphics[width=\textwidth]{\images/placement.png}
+  \begin{tikzpicture}[overlay]
+    \node at (5, 10) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{You cannot add this tile here}}}}};
+    \node at (5, 1.4) {\footnotesize{\textbf{\textit{\textcolor{cadmiumgreen}{You can add this tile here, because it will}}}}};
+    \node at (3.9, 1) {\footnotesize{\textbf{\textit{\textcolor{cadmiumgreen}{be adjacent to two other tiles}}}}};
+  \end{tikzpicture}
 \end{figure*}
 
 \clearpage

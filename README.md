@@ -7,18 +7,18 @@ Efforts are ongoing to translate them to languages other than English.
 Please reach out if you'd like to help with translating.
 Click in the table to download the most recent builds in the chosen language:
 
-|               |Progress|📜 **Rewritten Rule Book** |🖨️ **Rule Book - printable version** |📋 **Comprehensive Components List**|
-|:--------------|:------:|:-------------------------:|:-----------------------------------:|:----------------------------------:|
-| 🇬🇧 English    |100%|[🇬🇧📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf)|[🇬🇧🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf)|[🇬🇧📋](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf)|
-| 🇵🇱 Poski      |~50%|[🇵🇱📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf)|[🇵🇱🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_pl/components_list_pl.pdf)|
-| 🇪🇸 Español    |~25%|[🇪🇸📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf)|[🇪🇸🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_es/components_list_es.pdf)|
-| 🇫🇷 Français   |~10%|[🇫🇷📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf)|[🇫🇷🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf)|[n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_fr/components_list_fr.pdf)|
+|               | Progress |                                📜 **Rewritten Rule Book**                                 |                              🖨️ **Rule Book - printable version**                              |                                         📋 **Comprehensive Components List**                                         |
+|:--------------|:--------:|:-----------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------:|
+| 🇬🇧 English  |   100%   | [🇬🇧📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf) | [🇬🇧🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf) | [🇬🇧📋](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf) |
+| 🇵🇱 Polski   |   ~70%   | [🇵🇱📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf) | [🇵🇱🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf) |  [n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_pl/components_list_pl.pdf)   |
+| 🇪🇸 Español  |   ~80%   | [🇪🇸📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf) | [🇪🇸🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf) |  [n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_es/components_list_es.pdf)   |
+| 🇫🇷 Français |   ~40%   | [🇫🇷📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf) | [🇫🇷🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf) |  [n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_fr/components_list_fr.pdf)   |
+| 🇷🇺 Русский  |   ~10%   | [🇷🇺📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf) | [🇷🇺🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf) |  [n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_ru/components_list_ru.pdf)   |
 
+🖨️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
 
-⚠️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
-
-Componets List lists all the cards 🃏, minis 🚹, tokens, etc. for every box.
-See another [BoardGameGeek thread](https://boardgamegeek.com/thread/3265461/article/43995671#43995671) for details.
+Components List lists all the cards 🃏, minis 🚹, tokens, etc. for every box. ⚠️ ️️**Archon released their own version of it, and you should use it instead. Find it on 👉 [their website](https://archon-studio.com/downloads/heroes-iii) 👈 called "Content Guide"**.
+The document here will remain for legacy purposes.
 
 ### 💡 What Is This?
 
@@ -64,7 +64,6 @@ To work on the document on your machine, you need the following:
 - [**GIMP**](https://www.gimp.org/) (optional) to edit some images in `assets` directory - see below for details
 - [**aspell**](http://aspell.net/) (optional) for spellchecking - see below for details
 
-
 To build the document in English, either run this in the command line:
 
 ```bash
@@ -73,7 +72,7 @@ latexmk -pdf -silent -shell-escape "main_en"
 
 or press the `Build & View` ▶️ (F5) button in TeXstudio on the `main_en.tex` file.
 
-To build the document in any other language (currently `pl`, `es` and `fr` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
+To build the document in any other language (currently `pl`, `es`, `fr` and `ru` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
 
 ```bash
 ./build.sh <LANGUAGE>
@@ -104,6 +103,7 @@ Then, use the script:
 Make sure you have [`po4a`](https://po4a.org/index.php.en) installed ([MacOS instructions](https://formulae.brew.sh/formula/po4a)).
 
 To translate a particular section:
+
 - Go to `translations/<section_name>` and open `<lang>.po` file, e.g., `translations/introduction.tex/pl.po`
 - Choose a fragment to translate. Those start with `msgid`. Write your new text in the line below starting with `msgstr`. Example:
     ```tex
@@ -142,6 +142,26 @@ We are currently looking into it, how best to remediate this.
 
 The personal dictionary `.aspell.homm3.pwd` currently contains only game-related words.
 It does not contain names (e.g., "BoardGameGeek") or parameter values (e.g., "px", "svg") in order to minimize the chances of false-negatives in the main body of text.
+
+### 📸 Screenshots
+
+As Pull Request often requires screenshots you can the script to make PNG images of specified page(s):
+
+```bash
+./pdf2image.sh <LANGUAGE> <FIRST_PAGE> <LAST_PAGE>
+```
+
+Example:
+
+```bash
+./pdf2image.sh en 5 7
+```
+
+To process a single page, use:
+
+```bash
+./pdf2image.sh en 5
+```
 
 ## ✨ Assets
 
