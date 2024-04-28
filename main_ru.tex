@@ -5,8 +5,13 @@
 \usepackage[TU]{fontenc}
 \usepackage[russian]{babel}
 \usepackage{fontspec}
-
-\setmainfont{Liberation Serif}
+\setmainfont[
+  Path = ./assets/fonts/,
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic]{LiberationSerif}
 
 \def\sections{sections/translated/ru}
 \def\lang_header_adjustment{0px}
