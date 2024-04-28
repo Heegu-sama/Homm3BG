@@ -5,9 +5,13 @@
 \usepackage[TU]{fontenc}
 \usepackage[russian]{babel}
 \usepackage{fontspec}
-
-\setmainfont{Liberation Serif}
-\newfontfamily\titlefont{Hack}
+\setmainfont[
+  Path = ./assets/fonts/,
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic]{LiberationSerif}
 
 \def\sections{sections/translated/ru}
 \def\lang_header_adjustment{0px}
@@ -26,7 +30,6 @@
 \title{\includegraphics[width=6cm]{\images/title.png}\\Правила в редакции сообщества}
 
 \newcommand{\sectionheadertext}[1]{
-  \titlefont
   \color{antiquewhite} \section*{\MakeUppercase{\textbf{#1}}}
 }
 \newcommand{\notefont}[0]{}
