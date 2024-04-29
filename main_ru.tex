@@ -2,8 +2,16 @@
 \documentclass[12pt]{article}
 
 % Language setting
-\usepackage[T2A]{fontenc}
+\usepackage[TU]{fontenc}
 \usepackage[russian]{babel}
+\usepackage{fontspec}
+\setmainfont[
+  Path = ./assets/fonts/,
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic]{LiberationSerif}
 
 \def\sections{sections/translated/ru}
 \def\lang_header_adjustment{0px}
@@ -24,5 +32,6 @@
 \newcommand{\sectionheadertext}[1]{
   \color{antiquewhite} \section*{\MakeUppercase{\textbf{#1}}}
 }
+\newcommand{\notefont}[0]{}
 
 \input{metadata.tex}
