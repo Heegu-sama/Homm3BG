@@ -23,6 +23,7 @@
 \usepackage{hyperref}
 \usepackage[noautomatic, nonewpage]{imakeidx}
 \usepackage{multicol}
+\usepackage[super]{nth}
 \usepackage{outlines}
 \usepackage{setspace}
 \usepackage{stfloats}
@@ -102,7 +103,7 @@
 %Create section heading with graphics. Argument one is heading name, argument two is picture to use on the left.
 \providecommand{\sectionheadertext}[1]{
   \fontfamily{ptm}\selectfont{
-    \color{antiquewhite} \section*{#1}
+    \color{antiquewhite} \section*{\MakeUppercase{#1}}
   }
 }
 \newcommand{\addsection}[2]{
@@ -143,6 +144,7 @@
 \definecolor{borderoutyellow}{HTML}{E0B75F}
 \definecolor{borderinyellow}{HTML}{F6EA48}
 % Create note box
+\providecommand{\notefont}[0]{\fontfamily{ptm}\selectfont}
 \newcommand{\note}[2]{
   \begin{tikzpicture}
     \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/note-big.jpg}}};
@@ -151,7 +153,7 @@
     \draw [borderinyellow, thick] ([xshift=+4.5pt, yshift=-4.5pt] current bounding box.north west) rectangle ([xshift=-4.5pt, yshift=4.5pt] current bounding box.south east);
     \node at (current bounding box.center) {
       \begin{varwidth}{0.85\linewidth}
-      \fontfamily{ptm}\selectfont{
+      \notefont{
         \color{arylideyellow}
         \hypersetup{linkcolor=amber}
         #2
@@ -159,6 +161,43 @@
       }
       \end{varwidth}
     };
+  \end{tikzpicture}
+}
+
+\newcommand{\hommtable}[2]{
+  \begin{tikzpicture}
+    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/table-background.jpg}}};
+    \draw [black, thick] ([xshift=+1pt, yshift=-1pt] current bounding box.north west) rectangle ([xshift=-1pt, yshift=1pt] current bounding box.south east);
+    \draw [borderoutyellow, thick] (current bounding box.north west) rectangle (current bounding box.south east);
+    \draw [borderinyellow, thick] ([xshift=+3pt, yshift=-3pt] current bounding box.north west) rectangle ([xshift=-3pt, yshift=3pt] current bounding box.south east);
+    \node at (current bounding box.center) {
+      \begin{varwidth}{0.95\linewidth}
+      \notefont{
+        \bgroup
+        \color{arylideyellow}
+        \hypersetup{linkcolor=amber}
+        \setlength{\tabcolsep}{0.3em}
+        #2
+        \egroup
+      }
+      \end{varwidth}
+    };
+  \end{tikzpicture}
+}
+
+\definecolor{darkcellborder}{HTML}{634831}
+\newcommand{\darkcell}[2][0.9]{
+  \begin{tikzpicture}
+    \filldraw[line width=1.0pt, fill=black, fill opacity=0.5, draw=darkcellborder] (0, 0) rectangle (\linewidth, #1);
+    \node[text width=\linewidth, align=center] at (current bounding box.center) {\textbf{#2}};
+  \end{tikzpicture}
+}
+
+\definecolor{lightcellborder}{HTML}{77543e}
+\newcommand{\lightcell}[2][0.9]{
+  \begin{tikzpicture}
+    \filldraw[line width=1.0pt, fill=black, fill opacity=0.2, draw=lightcellborder] (0, 0) rectangle (\linewidth, #1);
+    \node[text width=\linewidth, align=center] at (current bounding box.center) {\color{white}#2};
   \end{tikzpicture}
 }
 
