@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-24 14:17+0100\n"
+"POT-Creation-Date: 2024-04-27 17:11+0100\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -22,11 +22,11 @@ msgstr ""
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:34
-#: sections/map_elements.tex:74 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
+#: sections/map_elements.tex:99 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
-#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:118
+#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -42,12 +42,29 @@ msgstr ""
 "\\vspace*{\\lang_header_adjustment}"
 
 #. type: multicols
-#: sections/trading.tex:16
-#, no-wrap
+#: sections/trading.tex:20
+#, fuzzy, no-wrap
+#| msgid ""
+#| "The \\hyperlink{Trading Post}{Trading Post Field} and other effects allow you to \\hypertarget{Trading}{trade}\\index{Trading} Resources with the game in accordance to the table below.\n"
+#| "You may also \\textbf{Remove cards} from your hand at the trading post to gain 1 \\includesvg[height=10px]{\\svgs/gold.svg} per card.\\par\n"
+#| "\\note{5}{Specialty, Statistic, Starting Ability and Magic Arrows \\textbf{cannot be removed} in the Trading Post.}\\par\n"
+#| "In \\textbf{Alliance} and \\textbf{Cooperative} Scenarios, players are allowed to trade Resources and cards following these rules:\n"
+#| "\\begin{itemize}\n"
+#| "  \\item In Alliance Scenarios, allies may trade Resources freely at any time on their Turns except during Combat.\n"
+#| "  \\item In Cooperative Scenarios, Resources may be given to other players when Visiting a Trading Post.\n"
+#| "  \\columnbreak\n"
+#| "  \\item In both Scenario types, allies may trade \\textbf{Spell} and \\textbf{Artifact} cards in any mix if they have heroes on adjacent Fields.\n"
+#| "    Only \\textbf{cards from their hands} may be traded and you must give and receive an equal amount of cards.\n"
+#| "\\end{itemize}\n"
+#| "\n"
 msgid ""
-"The \\hyperlink{Trading Post}{Trading Post Field} and other effects allow you to \\hypertarget{Trading}{trade}\\index{Trading} Resources with the game in accordance to the table below.\n"
-"You may also \\textbf{Remove cards} from your hand at the trading post to gain 1 \\includesvg[height=10px]{\\svgs/gold.svg} per card.\\par\n"
-"\\note{5}{Specialty, Statistic, Starting Ability and Magic Arrows \\textbf{cannot be removed} in the Trading Post.}\\par\n"
+"The \\hyperlink{Trading Post}{Trading Post Field} and other effects allow you to either:\n"
+"\\begin{itemize}\n"
+"  \\item \\hypertarget{Trading}{trade}\\index{Trading} multiple Resources with the game in accordance to the table below,\n"
+"  \\item \\textbf{remove a card} from your hand at the trading post to gain 1 \\includesvg[height=10px]{\\svgs/gold.svg},\n"
+"    \\note{5}{Specialty, Statistic, Starting Ability and Magic Arrows \\textbf{cannot be removed} in the Trading Post.}\\par\n"
+"  \\item or buy a \\hyperlink{War Machines}{War Machine}, if you have the Rampart expansion.\n"
+"\\end{itemize}\n"
 "In \\textbf{Alliance} and \\textbf{Cooperative} Scenarios, players are allowed to trade Resources and cards following these rules:\n"
 "\\begin{itemize}\n"
 "  \\item In Alliance Scenarios, allies may trade Resources freely at any time on their Turns except during Combat.\n"
@@ -72,7 +89,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/trading.tex:19
+#: sections/trading.tex:23
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -80,11 +97,35 @@ msgid ""
 "\n"
 msgstr ""
 
-#. type: figure*
-#: sections/trading.tex:27
-#, no-wrap
+#. type: Plain text
+#: sections/trading.tex:40
 msgid ""
-"[!hb]\n"
-"  \\centering\n"
-"  \\includegraphics[width=\\linewidth]{\\tables/trade_table.png}"
+"\\hommtable{14}{ \\centering \\textbf{Trade Table} \\bigskip "
+"\\begin{tabularx}{\\linewidth}{XXXX} \\darkcell{\\color{white}Sells/gets} & "
+"\\darkcell{...to purchase \\includesvg[height=10px]{\\svgs/gold.svg}} & "
+"\\darkcell{...to purchase \\includesvg[height=10px]{\\svgs/valuablegreater."
+"svg}} & \\darkcell{...to purchase \\includesvg[height=10px]{\\svgs/"
+"building_materials.svg}} \\\\ \\darkcell{I am selling "
+"\\includesvg[height=10px]{\\svgs/gold.svg}...} & \\lightcell{--} & "
+"\\lightcell{6 \\includesvg[height=10px]{\\svgs/gold.svg} "
+"\\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 "
+"\\includesvg[height=10px]{\\svgs/valuablegreater.svg}} & \\lightcell{2 "
+"\\includesvg[height=10px]{\\svgs/gold.svg} "
+"\\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 "
+"\\includesvg[height=10px]{\\svgs/building_materials.svg}} \\\\ \\darkcell{I "
+"am selling \\includesvg[height=10px]{\\svgs/valuablegreater.svg}...} & "
+"\\lightcell{1 \\includesvg[height=10px]{\\svgs/valuablegreater.svg} "
+"\\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 3 "
+"\\includesvg[height=10px]{\\svgs/gold.svg}} & \\lightcell{--} & "
+"\\lightcell{1 \\includesvg[height=10px]{\\svgs/valuablegreater.svg} "
+"\\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 2 "
+"\\includesvg[height=10px]{\\svgs/building_materials.svg}} \\\\ \\darkcell{I "
+"am selling \\includesvg[height=10px]{\\svgs/building_materials.svg}...} & "
+"\\lightcell{1 \\includesvg[height=10px]{\\svgs/building_materials.svg} "
+"\\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 "
+"\\includesvg[height=10px]{\\svgs/gold.svg}} & \\lightcell{3 "
+"\\includesvg[height=10px]{\\svgs/building_materials.svg} "
+"\\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 "
+"\\includesvg[height=10px]{\\svgs/valuablegreater.svg}} & \\lightcell{--} \\"
+"\\ \\end{tabularx} }"
 msgstr ""
