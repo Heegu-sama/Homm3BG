@@ -11,6 +11,11 @@ if [[ ${LANGUAGE} == en ]]; then
 else
   SECTIONS="sections/translated/${LANGUAGE}"
 fi
+if [[ ${LANGUAGE} == ru ]]; then
+    ENGINE=-pdflua
+else
+    ENGINE=-pdf
+fi
 
 po4a --no-update po4a.cfg
 if [ $(grep -c "icu_locale" index_style.ist) -eq 0 ]
@@ -28,6 +33,6 @@ then
   sed -i 's@\\include{\\sections/back_cover.tex}@\\include{\\sections/index.tex}\\include{\\sections/back_cover.tex}@g' metadata.tex
 fi
 sed -i -e "/% QR codes placeholder/{r .github/qr-codes-$LANGUAGE.tex" -e 'd}' metadata.tex
-latexmk -pdf -shell-escape "main_${LANGUAGE}"
+latexmk ${ENGINE} -shell-escape "main_${LANGUAGE}"
 git restore index_style.ist
 ${open} main_${LANGUAGE}.pdf &
