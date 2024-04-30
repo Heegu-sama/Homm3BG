@@ -58,7 +58,7 @@ msgstr ""
 #. type: Plain text
 #: sections/player_turns.tex:3
 msgid "\\addsection{Player Turns}{\\spells/dimension_door.png}"
-msgstr ""
+msgstr "\\addsection{Ходы Игрока}{\\spells/dimension_door.png}"
 
 #. type: multicols
 #: sections/player_turns.tex:17
@@ -77,6 +77,18 @@ msgid ""
 "Once all players have spent all their Movement Points and do not wish to use any further Town or Morale Actions, the current Round is over.\n"
 "\n"
 msgstr ""
+"В начале вашего хода обновите карты в руке следующим образом:\n"
+"\\begin{itemize}\n"
+"  \\item сбросьте любое количество карт с руки.\n"
+"Если количество карт в руке больше лимита \\includesvg[height=10px]{\\svgs/hand.svg}, сбросьте лишние карты.\n"
+"  \\item доберите недостающее до лимита руки количество карт.\n"
+"  \\item выполните все эффекты вида «в начале вашего хода...».\n"
+"\\end{itemize}\n"
+"Текущий лимит \\index{Hand Limit} зависит от \\hyperlink{Level}{уровня} вашего основного героя.\n"
+"Проверка лимита производится только в начале вашего хода.\\par\n"
+"Игрок может \\textbf{передвигаться}, выполнять действия \\textbf{города} и \\textbf{морали}.\n"
+"Если игроки потратили свои ОП и не планируют выполнять вышеописанные действия, раунд завершается.\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:29
@@ -95,6 +107,18 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{Передвижение}\n"
+"Для \\hypertarget{Movement}{передвижения}\\index{Movement Actions} используйте очки передвижения.\n"
+"Игрок может использовать ОП \\textbf{только в свой ход}.\\par\n"
+"За каждое ОП вы можете выполнить одно из следующих действий:\n"
+"\\begin{itemize}\n"
+"  \\item передвинуть героя на 1 поле в любом направлении.\n"
+"  \\item \\hyperlink{Categories}{повторно посетить} поле, в котором находится ваш герой.\n"
+"  \\item \\hyperlink{Timelimit}{продлить сражение} против нейтральных отрядов на 1 раунд.\n"
+"  \\item \\hyperlink{Placing}{исследовать новый элемент карты}, если ваш герой находится на пограничном с ним поле.\n"
+"  \\item разместить новый элемент из пула дальних (II–III) элементов карты.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:35
@@ -107,6 +131,12 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\includesvg[width=0.6\\linewidth]{\\images/movement_tokens.svg}\\\\\n"
+"  \\medskip\n"
+"  \\footnotesize\\textit{Активный и неактивный жетон передвижения.}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:43
@@ -119,6 +149,12 @@ msgid ""
 "When you move through a Field with an allied Hero, do not \\hyperlink{Categories}{Visit} the Field that the allied Hero is standing on.\\par\n"
 "\n"
 msgstr ""
+"Отметьте использованные ОП, перевернув жетоны передвижения коричневой стороной вверх.\n"
+"Если у игрока имеется \\hyperlink{Secondary}{вторичный герой}, отслеживайте его ОП отдельно.\n"
+"Герои могут использовать ОП в любой последовательности.\\par\n"
+"Союзники могут пересекать поле с другим героем в процессе движения, но не могут остановиться на нём.\n"
+"Когда вы пересекаете поле с союзником, то независимо от типа этого поля это не будет считаться \\hyperlink{Categories}{посещением}.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:48
@@ -130,6 +166,11 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{10}{\n"
+"  Когда вы получаете дополнительное ОП \\includesvg[height=10px]{\\svgs/movement-note.svg}, его можно использовать \\textbf{только в текущем раунде}.\n"
+"  Если два союзных героя оказались на одном и том же поле, используйте ОП для того, чтобы сдвинуть одного из них с этого поля.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:53
@@ -160,6 +201,19 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{Действия Города\\index{Town Actions}}\n"
+"Вы можете выполнять каждое из описанных ниже действий города \\textbf{1 раз в раунд}.\n"
+"Эти действия могут быть выполнены в любой момент хода любого игрока, кроме сражения или если такое действие препятствует другому действию.\n"
+"Например, вы не можете использовать жетон Книги заклинаний для поиска в колоде, пока другой игрок не закончил свой поиск в этой же колоде.\\par\n"
+"Когда игрок заявляет о намерении начать сражение, вы можете выполнить любое из действий города перед выполнением \\hyperlink{Combatsetup}{подготовки к бою.}\\par\n"
+"После выполнения действия города, переверните соответствующий жетон на карте города лицом вниз.\n"
+"Вы не можете выполнить это действие ещё раз до начала следующего раунда.\n"
+"\\begin{itemize}\n"
+"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/build.png}}] жетон строительства для расширения \\hyperlink{Town}{города}.\n"
+"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/population.png}}] жетон популяции для найма или усиления \\hyperlink{Units}{отрядов}, или найма \\hyperlink{Secondary}{вторичного героя}.\n"
+"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/spells.png}}] жетон книги магии для покупки \\hyperlink{spells}{заклинаний}. Для использования требуется возведенная Гильдия магов.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:83
@@ -181,6 +235,21 @@ msgid ""
 "If you would gain a second Negative Morale Token, you must instead \\textbf{discard your hand of Cards} the next time you end your Turn.\\par\n"
 "\n"
 msgstr ""
+"\\subsection*{Действия Морали}\\index{Morale Actions}\n"
+"Игроки могут получать или терять мораль в ходе игры.\n"
+"Когда вы получаете мораль, возьмите жетон положительной морали\\index{Positive Morale}\\includesvg[height=10px]{\\svgs/morale_positive.svg}.\n"
+"У вас может быть только один такой жетон.\n"
+"Если вы собираетесь получить второй такой жетон, вы можете применить первый перед получением второго.\n"
+"Жетон положительной морали может быть использован в любое время для выполнения любого из действий:\n"
+"\\begin{itemize}\n"
+"  \\item взять карту из вашей колоды.\n"
+"  \\item сбросить любое количество карт и взять такое же количество.\n"
+"  \\item перебросить любой кубик.\n"
+"\\end{itemize}\n"
+"Если вы теряете мораль, сбросьте жетон положительной морали\\includesvg[height=10px]{\\svgs/morale_positive.svg} если он у вас есть, или возьмите жетон отрицательной морали \\index{Negative Morale}\\includesvg[height=10px]{\\svgs/morale_negative.svg}.\n"
+"В свою очередь, получение положительной морали отменяет отрицательную мораль при её наличии.\n"
+"Если вы получаете второй жетон отрицательной морали, вы должны \\textbf{сбросить все карты с руки} в конце вашего следующего хода.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:87
@@ -191,6 +260,10 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{5}{Фракция Некрополиса \\includesvg[height=10px]{\\svgs/necro-note.svg} игнорирует все эффекты морали.\n"
+"  Некрополис ни при каких обстоятельствах не может получать или терять мораль.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:91
@@ -209,6 +282,8 @@ msgid ""
 "\\subsection*{Example Turn}\n"
 "\n"
 msgstr ""
+"\\subsection*{Пример Хода}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:101
@@ -223,6 +298,14 @@ msgid ""
 "As Alice announces her intent to start Combat, both players still have an opportunity to perform Town Actions.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Алиса, играющая за рыцаря Катерину, начинает свой ход.\n"
+"У неё есть 3 карты на руке с предыдущего раунда, и она решает сбросить 2 из них перед набором карт для своей колоды, согласно её лимиту руки \\includesvg[height=10px]{\\svgs/hand.svg}.\n"
+"Так как уровень её основного героя 3, то лимит равен 5, она набирает 4 карты после сброса (см. \\hyperlink{Level}{уровни эффектов}).}\\par\n"
+"\\textit{После она использует жетон строительства для постройки Жилища \\includesvg[height=10px]{\\svgs/golden.svg} и жетон популяции для \\hyperlink{Units}{найма} отряда Чемпионов \\includesvg[height=10px]{\\svgs/golden.svg}.\n"
+"Она может это сделать, так как имела ранее построенные Жилища предыдущих уровней (\\includesvg[height=10px]{\\svgs/bronze.svg} и \\includesvg[height=10px]{\\svgs/silver.svg}) и имела достаточно \\hyperlink{Resources}{ресурсов} для постройки Жилищ и найма Чемпионов.}\\par\n"
+"\\textit{Теперь, готовая к предстоящей битве, она использует ОП для передвижения её главного героя в соседнее поле, оккупированное некромантом Сандро, вражеским героем под контролем Боба.\n"
+"Так как Алиса объявляет намерение начать сражение, оба игрока всё ещё имеют возможность выполнить действия города.}\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:103
