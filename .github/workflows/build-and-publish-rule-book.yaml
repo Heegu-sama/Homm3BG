@@ -7,10 +7,11 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'assets/**'
-      - '!assets/gimp-files/**'
-      - '**.tex'
-      - 'translations/**'
+      - '.github/**'
+    #   - 'assets/**'
+    #   - '!assets/gimp-files/**'
+    #   - '**.tex'
+    #   - 'translations/**'
 
 env:
   PO4A_VERSION: "0.71"
@@ -162,22 +163,28 @@ jobs:
 
   check_pages:
     runs-on: ubuntu-latest
+    needs: build
     strategy:
       fail-fast: false
       matrix:
-        include:
-          language: ["pl", "es", "fr", "ru"]
+        language: ["pl", "es", "fr", "ru"]
 
     steps:
       - name: Install pdfinfo
         run: sudo apt-get install -y poppler-utils
 
-      - name: Download PDF
+
+      - name: Download digital PDF
         uses: actions/download-artifact@v4
         with:
-          path: my-artifact
-          pattern: my-artifact-*
+          path: main_${{ matrix.language }}.pdf
+
+      - name: Download printable PDF
+        uses: actions/download-artifact@v4
+        with:
+          path: ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
 
       - name: Check number of pages
         run: |
           NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          echo ${NUM_OF_PAGES}
