@@ -189,7 +189,7 @@ jobs:
       - name: Check number of pages
         run: |
           ls -laR
-          file main_${{ matrix.language }}/main_${{ matrix.language }}.pdf
+          file main_${{ matrix.language }}/main_${{ matrix.language }}/main_${{ matrix.language }}.pdf
           echo "Expected: ${{ needs.build.outputs.number_of_pages }}"
-          NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}/main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}/main_${{ matrix.language }}/main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
           echo "Actual: ${NUM_OF_PAGES}"
