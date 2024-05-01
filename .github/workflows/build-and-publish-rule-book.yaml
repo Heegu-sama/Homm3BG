@@ -97,8 +97,8 @@ jobs:
         id: check_pages
         if: ${{ matrix.language == 'en' }}
         run: |
-          NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
-          echo "NUM_OF_PAGES=${NUM_OF_PAGES} >> "$GITHUB_OUTPUT"
+          NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | grep Pages | grep -Po "\d+")
+          echo "NUM_OF_PAGES=${NUM_OF_PAGES}" >> "$GITHUB_OUTPUT"
 
       - name: Move file
         if: github.event_name != 'pull_request'
