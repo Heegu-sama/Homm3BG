@@ -1,11 +1,19 @@
 % !TeX spellcheck = en_US
 \documentclass[12pt]{article}
 
-% Languages
-\usepackage[T1]{fontenc}
+% Language setting
+\usepackage[TU]{fontenc}
 \usepackage[ukrainian]{babel}
+\usepackage{fontspec}
+\setmainfont[
+  Path = ./assets/fonts/,
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic]{LiberationSerif}
 
-\def\sections{sections/translated/ua}
+\def\sections{sections/translated/ru}
 \def\lang_header_adjustment{0px}
 
 \newcommand{\version}{
@@ -17,8 +25,13 @@
     Вітаються будь-які зміни та виправлення .
   Якщо ви просто хочете залишити відгук, будь ласка, робіть це в оригінальній  \href{https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project}{темі на BoardGameGeek}.
 }
-\newcommand{\pageshorthand}{s. }
+\newcommand{\pageshorthand}{с. }
 
-\title{\includegraphics[width=6cm]{\images/title.png}\\Przepisanie}
+\title{\includegraphics[width=6cm]{\images/title.png}\\Правила в редакции сообщества}
+
+\newcommand{\sectionheadertext}[1]{
+  \color{antiquewhite} \section*{\MakeUppercase{\textbf{#1}}}
+}
+\newcommand{\notefont}[0]{}
 
 \input{metadata.tex}
