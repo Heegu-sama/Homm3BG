@@ -21,6 +21,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      number_of_pages: ${{ steps.check_pages.outputs.num_of_pages }}
     strategy:
       fail-fast: false
       matrix:
@@ -86,6 +88,17 @@ jobs:
           name: main_${{ matrix.language }}
           path: main_${{ matrix.language }}.pdf
 
+      - name: Install pdfinfo
+        if: ${{ matrix.language == 'en' }}
+        run: sudo apt-get install -y poppler-utils
+
+      - name: Check number of pages
+        id: check_pages
+        if: ${{ matrix.language == 'en' }}
+        run: |
+          NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          echo "NUM_OF_PAGES=${NUM_OF_PAGES} >> "$GITHUB_OUTPUT"
+
       - name: Move file
         if: github.event_name != 'pull_request'
         run: |
@@ -131,12 +144,40 @@ jobs:
         run: |
           mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
 
-      - name: Publish ${{ matrix.language }} in artifacts repository
-        if: github.event_name != 'pull_request'
-        uses: peaceiris/actions-gh-pages@v4
+      - uses: actions/upload-artifact@v4
+        if: ${{ matrix.language != 'en' && github.event_name == 'pull_request' }}
         with:
-          deploy_key: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}
-          external_repository: qwrtln/Homm3BG-build-artifacts
-          publish_branch: ${{ matrix.language }}
-          publish_dir: ./${{ matrix.language }}
-          force_orphan: true
+          name: ${{ matrix.language }}/printable_${{ matrix.language }}
+          path: ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
+
+      # - name: Publish ${{ matrix.language }} in artifacts repository
+      #   if: github.event_name != 'pull_request'
+      #   uses: peaceiris/actions-gh-pages@v4
+      #   with:
+      #     deploy_key: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}
+      #     external_repository: qwrtln/Homm3BG-build-artifacts
+      #     publish_branch: ${{ matrix.language }}
+      #     publish_dir: ./${{ matrix.language }}
+      #     force_orphan: true
+
+  check_pages:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          language: ["pl", "es", "fr", "ru"]
+
+    steps:
+      - name: Install pdfinfo
+        run: sudo apt-get install -y poppler-utils
+
+      - name: Download PDF
+        uses: actions/download-artifact@v4
+        with:
+          path: my-artifact
+          pattern: my-artifact-*
+
+      - name: Check number of pages
+        run: |
+          NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
