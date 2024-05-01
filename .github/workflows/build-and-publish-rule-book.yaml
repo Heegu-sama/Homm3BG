@@ -18,6 +18,7 @@ env:
   PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
   REPO_URL: https://github.com/Heegu-sama/Homm3BG
   EVEN_NUMBER_OF_PAGES: false
+  ARTIFACT_RETENTION_DAYS: 3
 
 jobs:
   build:
@@ -88,6 +89,7 @@ jobs:
         with:
           name: main_${{ matrix.language }}
           path: main_${{ matrix.language }}.pdf
+          retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
 
       - name: Install pdfinfo
         if: ${{ matrix.language == 'en' }}
@@ -145,12 +147,12 @@ jobs:
         run: |
           mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
 
-      - uses: actions/upload-artifact@v4
-        if: ${{ matrix.language != 'en' && github.event_name == 'pull_request' }}
-        with:
-          name: ${{ matrix.language }}/printable_${{ matrix.language }}
-          path: ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
-
+      # - uses: actions/upload-artifact@v4
+      #   if: ${{ matrix.language != 'en' && github.event_name == 'pull_request' }}
+      #   with:
+      #     name: ${{ matrix.language }}/printable_${{ matrix.language }}
+      #     path: ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
+      #
       # - name: Publish ${{ matrix.language }} in artifacts repository
       #   if: github.event_name != 'pull_request'
       #   uses: peaceiris/actions-gh-pages@v4
@@ -177,17 +179,17 @@ jobs:
       - name: Download digital PDF
         uses: actions/download-artifact@v4
         with:
-          path: main_${{ matrix.language }}.pdf
+          path: main_${{ matrix.language }}
 
-      - name: Download printable PDF
-        uses: actions/download-artifact@v4
-        with:
-          path: ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
+      # - name: Download printable PDF
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     path: ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
 
       - name: Check number of pages
         run: |
           ls -laR
-          file main_${{ matrix.language }}.pdf
+          file main_${{ matrix.language }}/main_${{ matrix.language }}.pdf
           echo "Expected: ${{ needs.build.outputs.number_of_pages }}"
-          NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}/main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
           echo "Actual: ${NUM_OF_PAGES}"
