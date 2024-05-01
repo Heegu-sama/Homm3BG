@@ -38,21 +38,21 @@ jobs:
             warning: "To jest nieopublikowana wersja zbudowana na GitHubie z commita"
             sections: "sections/translated/pl"
             luaengine: false
-          - language: es
-            version: Versión
-            warning: "Se trata de una versión inédita creada en GitHub a partir del commit"
-            sections: "sections/translated/es"
-            luaengine: false
-          - language: fr
-            version: Version
-            warning: "Ceci est une version non-éditée créée sur GitHub à partir de commit"
-            sections: "sections/translated/fr"
-            luaengine: false
-          - language: ru
-            version: Версия
-            warning: "Данная версия является неопубликованной сборкой из коммита в GitHub"
-            sections: "sections/translated/ru"
-            luaengine: true
+          # - language: es
+          #   version: Versión
+          #   warning: "Se trata de una versión inédita creada en GitHub a partir del commit"
+          #   sections: "sections/translated/es"
+          #   luaengine: false
+          # - language: fr
+          #   version: Version
+          #   warning: "Ceci est une version non-éditée créée sur GitHub à partir de commit"
+          #   sections: "sections/translated/fr"
+          #   luaengine: false
+          # - language: ru
+          #   version: Версия
+          #   warning: "Данная версия является неопубликованной сборкой из коммита в GitHub"
+          #   sections: "sections/translated/ru"
+          #   luaengine: true
 
     steps:
       - name: Set up repository
@@ -167,7 +167,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ["pl", "es", "fr", "ru"]
+        language: ["pl"] #, "es", "fr", "ru"]
 
     steps:
       - name: Install pdfinfo
