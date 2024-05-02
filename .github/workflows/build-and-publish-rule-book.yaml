@@ -161,6 +161,8 @@ jobs:
           PAGES_PRINTABLE="${{ steps.check_printable_pages.outputs.num_of_printable_pages }}"
           echo "Number of pages in digital:   ${PAGES_DIGITAL}"
           echo "Number of pages in printable: ${PAGES_PRINTABLE}"
+          # If the number of pages in digital version is uneven, the printable one adds an index page.
+          # This is where the +1 for the additional page comes form.
           if [[ $((${PAGES_DIGITAL}+1)) != ${PAGES_PRINTABLE} ]]; then
             echo "Pages in digital and printable versions differ by too much. See above. Please investigate this."
             exit 1
