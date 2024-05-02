@@ -104,7 +104,6 @@ jobs:
           echo "NUM_OF_PAGES=${NUM_OF_PAGES}" >> "$GITHUB_OUTPUT"
 
       - name: Move file
-        if: github.event_name != 'pull_request'
         run: |
           mkdir ${{ matrix.language }}
           mv main_${{ matrix.language }}.pdf ${{ matrix.language }}
@@ -159,7 +158,6 @@ jobs:
 
       - name: Move file
         run: |
-          mkdir ${{ matrix.language }}
           mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
 
       - uses: actions/upload-artifact@v4
@@ -210,7 +208,6 @@ jobs:
 
       - name: Check number of pages in printable version
         run: |
-          ls -laR
           file main_${{ matrix.language }}/printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf
           ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}/printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
           echo "Expected number of pages: ${{ needs.build.outputs.number_of_printable_pages }}"
