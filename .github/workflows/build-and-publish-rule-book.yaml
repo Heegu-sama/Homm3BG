@@ -162,8 +162,8 @@ jobs:
           echo "Number of pages in digital:   ${PAGES_DIGITAL}"
           echo "Number of pages in printable: ${PAGES_PRINTABLE}"
           # The goal of this check is to make sure that printable version has an even number of pages at all times.
-          # If the number of pages in digital version is odd, the printable one adds an index page - this is where +1 comes from.
-          # If the number of pages in digital version is even, an additional notes page will be required - +1 will change to +2.
+          # If the number of pages in digital version is odd (the current state), the printable one adds an index page - this is where +1 comes from.
+          # If the number of pages in digital version becomes even, an additional notes page will be required - +1 will need to be changed to +2.
           if [[ $((${PAGES_DIGITAL}+1)) != ${PAGES_PRINTABLE} ]]; then
             echo "Pages in digital and printable versions differ by too much. See above. Please investigate this."
             exit 1
