@@ -100,7 +100,7 @@ jobs:
         id: check_pages
         if: ${{ matrix.language == 'en' }}
         run: |
-          NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | grep Pages | grep -Po "\d+")
+          NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
           echo "NUM_OF_PAGES=${NUM_OF_PAGES}" >> "$GITHUB_OUTPUT"
 
       - name: Move file
@@ -119,7 +119,7 @@ jobs:
           python .github/insert_printable_hyperlinks.py ${{ matrix.sections }}
 
       - name: Include notes page
-        if: ${{ env.EVEN_NUMBER_OF_PAGES == 'true' }}
+        if: env.EVEN_NUMBER_OF_PAGES
         run: sed -i 's@% Notes placeholder@\\include{\\sections/notes.tex}@g' metadata.tex
 
       - name: Include index page
@@ -137,11 +137,22 @@ jobs:
           post_compile: echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && upmendex -s index_style main_${{ matrix.language }} && sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}@g' main_${{ matrix.language }}.ind && ${{ matrix.luaengine && 'lualatex' || 'pdflatex' }} --shell-escape main_${{ matrix.language }}.tex
           root_file: main_${{ matrix.language }}.tex
 
+      - name: Move file
+        run: |
+          mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ matrix.language != 'en' && github.event_name == 'pull_request' }}
+        with:
+          name: printable_${{ matrix.language }}
+          path: ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
+          retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
+
       - name: Check number of printable pages
         id: check_printable_pages
         if: ${{ matrix.language == 'en' }}
         run: |
-          NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | grep Pages | grep -Po "\d+")
+          NUM_OF_PAGES=$(pdfinfo ${{ matrix.language }}/printable_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
           echo "NUM_OF_PRINTABLE_PAGES=${NUM_OF_PAGES}" >> "$GITHUB_OUTPUT"
 
       - name: Check if printable page number matches
@@ -155,17 +166,6 @@ jobs:
             echo "Pages in digital and printable versions differ by too much. See above. Please investigate this."
             exit 1
           fi
-
-      - name: Move file
-        run: |
-          mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
-
-      - uses: actions/upload-artifact@v4
-        if: ${{ matrix.language != 'en' && github.event_name == 'pull_request' }}
-        with:
-          name: printable_${{ matrix.language }}
-          path: ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
-          retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
       #
       # - name: Publish ${{ matrix.language }} in artifacts repository
       #   if: github.event_name != 'pull_request'
@@ -198,7 +198,7 @@ jobs:
       - name: Check number of pages in digital version
         run: |
           file main_${{ matrix.language }}/main_${{ matrix.language }}/main_${{ matrix.language }}.pdf
-          ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}/main_${{ matrix.language }}/main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}/main_${{ matrix.language }}/main_${{ matrix.language }}.pdf | awk '/^pages:/ {print $2}')
           echo "Expected number of pages: ${{ needs.build.outputs.number_of_pages }}"
           echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
           if [[ ${{ needs.build.outputs.number_of_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
