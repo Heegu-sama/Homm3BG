@@ -161,6 +161,9 @@ jobs:
           PAGES_PRINTABLE="${{ steps.check_printable_pages.outputs.num_of_printable_pages }}"
           echo "Number of pages in digital:   ${PAGES_DIGITAL}"
           echo "Number of pages in printable: ${PAGES_PRINTABLE}"
+          # The goal of this check is to make sure that printable version has an even number of pages at all times.
+          # If the number of pages in digital version is odd (the current state), the printable one adds an index page - this is where +1 comes from.
+          # If the number of pages in digital version becomes even, an additional notes page will be required - +1 will need to be changed to +2.
           if [[ $((${PAGES_DIGITAL}+1)) != ${PAGES_PRINTABLE} ]]; then
             echo "Pages in digital and printable versions differ by too much. See above. Please investigate this."
             exit 1
@@ -179,6 +182,7 @@ jobs:
   check_pages:
     runs-on: ubuntu-latest
     needs: build
+    if: github.event_name == 'pull_request'
     strategy:
       fail-fast: false
       matrix:
