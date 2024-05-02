@@ -40,21 +40,21 @@ jobs:
             warning: "To jest nieopublikowana wersja zbudowana na GitHubie z commita"
             sections: "sections/translated/pl"
             luaengine: false
-          # - language: es
-          #   version: Versión
-          #   warning: "Se trata de una versión inédita creada en GitHub a partir del commit"
-          #   sections: "sections/translated/es"
-          #   luaengine: false
-          # - language: fr
-          #   version: Version
-          #   warning: "Ceci est une version non-éditée créée sur GitHub à partir de commit"
-          #   sections: "sections/translated/fr"
-          #   luaengine: false
-          # - language: ru
-          #   version: Версия
-          #   warning: "Данная версия является неопубликованной сборкой из коммита в GitHub"
-          #   sections: "sections/translated/ru"
-          #   luaengine: true
+          - language: es
+            version: Versión
+            warning: "Se trata de una versión inédita creada en GitHub a partir del commit"
+            sections: "sections/translated/es"
+            luaengine: false
+          - language: fr
+            version: Version
+            warning: "Ceci est une version non-éditée créée sur GitHub à partir de commit"
+            sections: "sections/translated/fr"
+            luaengine: false
+          - language: ru
+            version: Версия
+            warning: "Данная версия является неопубликованной сборкой из коммита в GitHub"
+            sections: "sections/translated/ru"
+            luaengine: true
 
     steps:
       - name: Set up repository
@@ -111,31 +111,25 @@ jobs:
 
       # Printable build goes below
       - uses: actions/setup-python@v5
-        # if: github.event_name != 'pull_request'
         with:
           python-version: "3.11"
 
       - name: Add pages to select hyperlinks
-        # if: github.event_name != 'pull_request'
         run: |
           find ${{ matrix.sections }} -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
           python .github/insert_printable_hyperlinks.py ${{ matrix.sections }}
 
       - name: Include notes page
-        # if: ${{ github.event_name != 'pull_request' && env.EVEN_NUMBER_OF_PAGES == 'true' }}
         if: ${{ env.EVEN_NUMBER_OF_PAGES == 'true' }}
         run: sed -i 's@% Notes placeholder@\\include{\\sections/notes.tex}@g' metadata.tex
 
       - name: Include index page
-        # if: github.event_name != 'pull_request'
         run: sed -i 's@\\include{\\sections/back_cover.tex}@\\include{\\sections/index.tex}\\include{\\sections/back_cover.tex}@g' metadata.tex
 
       - name: Add QR codes
-        # if: github.event_name != 'pull_request'
         run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes-${{ matrix.language }}.tex' -e 'd}' metadata.tex
 
       - name: Compile printable rule book
-        # if: github.event_name != 'pull_request'
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
@@ -164,7 +158,6 @@ jobs:
           fi
 
       - name: Move file
-        # if: github.event_name != 'pull_request'
         run: |
           mkdir ${{ matrix.language }}
           mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
@@ -192,7 +185,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ["pl"] #, "es", "fr", "ru"]
+        language: ["pl", "es", "fr", "ru"]
 
     steps:
       - name: Install pdfinfo
