@@ -164,8 +164,9 @@ jobs:
           fi
 
       - name: Move file
-        if: github.event_name != 'pull_request'
+        # if: github.event_name != 'pull_request'
         run: |
+          mkdir ${{ matrix.language }}
           mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
 
       - uses: actions/upload-artifact@v4
