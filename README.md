@@ -73,7 +73,7 @@ latexmk -pdf -silent -shell-escape "main_en"
 
 or press the `Build & View` ▶️ (F5) button in TeXstudio on the `main_en.tex` file.
 
-To build the document in any other language (currently `pl`, `es`, `fr` and `ru` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
+To build the document in any other language (currently `pl`, `es`, `fr`, `ru` and `ua` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
 
 ```bash
 ./build.sh <LANGUAGE>
