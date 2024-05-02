@@ -25,6 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       number_of_pages: ${{ steps.check_pages.outputs.num_of_pages }}
+      number_of_printable_pages: ${{ steps.check_printable_pages.outputs.num_of_printable_pages }}
     strategy:
       fail-fast: false
       matrix:
@@ -39,21 +40,21 @@ jobs:
             warning: "To jest nieopublikowana wersja zbudowana na GitHubie z commita"
             sections: "sections/translated/pl"
             luaengine: false
-          - language: es
-            version: Versión
-            warning: "Se trata de una versión inédita creada en GitHub a partir del commit"
-            sections: "sections/translated/es"
-            luaengine: false
-          - language: fr
-            version: Version
-            warning: "Ceci est une version non-éditée créée sur GitHub à partir de commit"
-            sections: "sections/translated/fr"
-            luaengine: false
-          - language: ru
-            version: Версия
-            warning: "Данная версия является неопубликованной сборкой из коммита в GitHub"
-            sections: "sections/translated/ru"
-            luaengine: true
+          # - language: es
+          #   version: Versión
+          #   warning: "Se trata de una versión inédita creada en GitHub a partir del commit"
+          #   sections: "sections/translated/es"
+          #   luaengine: false
+          # - language: fr
+          #   version: Version
+          #   warning: "Ceci est une version non-éditée créée sur GitHub à partir de commit"
+          #   sections: "sections/translated/fr"
+          #   luaengine: false
+          # - language: ru
+          #   version: Версия
+          #   warning: "Данная версия является неопубликованной сборкой из коммита в GitHub"
+          #   sections: "sections/translated/ru"
+          #   luaengine: true
 
     steps:
       - name: Set up repository
@@ -142,16 +143,35 @@ jobs:
           post_compile: echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && upmendex -s index_style main_${{ matrix.language }} && sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}@g' main_${{ matrix.language }}.ind && ${{ matrix.luaengine && 'lualatex' || 'pdflatex' }} --shell-escape main_${{ matrix.language }}.tex
           root_file: main_${{ matrix.language }}.tex
 
+      - name: Check number of printable pages
+        id: check_printable_pages
+        if: ${{ matrix.language == 'en' }}
+        run: |
+          NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | grep Pages | grep -Po "\d+")
+          echo "NUM_OF_PRINTABLE_PAGES=${NUM_OF_PAGES}" >> "$GITHUB_OUTPUT"
+
+      - name: Check if printable page number matches
+        if: ${{ matrix.language == 'en' }}
+        run: |
+          PAGES_DIGITAL="${{ steps.check_pages.outputs.num_of_pages }}"
+          PAGES_PRINTABLE="${{ steps.check_printable_pages.outputs.num_of_printable_pages }}"
+          echo "Number of pages in digital:   ${PAGES_DIGITAL}"
+          echo "Number of pages in printable: ${PAGES_PRINTABLE}"
+          if [[ $((${PAGES_DIGITAL}+1)) != ${PAGES_PRINTABLE ]]; then
+            echo "Pages in digital and printable versions differ by too much. See above. Please investigate this."
+            exit 1
+          fi
+
       - name: Move file
         if: github.event_name != 'pull_request'
         run: |
           mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
 
-      # - uses: actions/upload-artifact@v4
-      #   if: ${{ matrix.language != 'en' && github.event_name == 'pull_request' }}
-      #   with:
-      #     name: ${{ matrix.language }}/printable_${{ matrix.language }}
-      #     path: ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
+      - uses: actions/upload-artifact@v4
+        if: ${{ matrix.language != 'en' && github.event_name == 'pull_request' }}
+        with:
+          name: ${{ matrix.language }}/printable_${{ matrix.language }}
+          path: ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
       #
       # - name: Publish ${{ matrix.language }} in artifacts repository
       #   if: github.event_name != 'pull_request'
@@ -169,7 +189,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ["pl", "es", "fr", "ru"]
+        language: ["pl"] #, "es", "fr", "ru"]
 
     steps:
       - name: Install pdfinfo
@@ -181,18 +201,30 @@ jobs:
         with:
           path: main_${{ matrix.language }}
 
-      # - name: Download printable PDF
-      #   uses: actions/download-artifact@v4
-      #   with:
-      #     path: ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
-
-      - name: Check number of pages
+      - name: Check number of pages in digital version
         run: |
           file main_${{ matrix.language }}/main_${{ matrix.language }}/main_${{ matrix.language }}.pdf
           ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}/main_${{ matrix.language }}/main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
           echo "Expected number of pages: ${{ needs.build.outputs.number_of_pages }}"
           echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
           if [[ ${{ needs.build.outputs.number_of_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
-            echo "The document in ${{ matrix.language }} language doesn't have correct number of pages. See the output above."
+            echo "The digital document in ${{ matrix.language }} language doesn't have correct number of pages. See the output above."
+            exit 1
+          fi
+
+      - name: Download printable PDF
+        uses: actions/download-artifact@v4
+        with:
+          path: ${{ matrix.language }}/printable_${{ matrix.language }}
+
+      - name: Check number of pages in printable version
+        run: |
+          ls -laR
+          file ${{ matrix.language }}/printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf
+          ACTUAL_NUM_OF_PAGES=$(pdfinfo ${{ matrix.language }}/printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          echo "Expected number of pages: ${{ needs.build.outputs.number_of_printable_pages }}"
+          echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
+          if [[ ${{ needs.build.outputs.number_of_printable_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
+            echo "The printable document in ${{ matrix.language }} language doesn't have correct number of pages. See the output above."
             exit 1
           fi
