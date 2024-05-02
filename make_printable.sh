@@ -11,11 +11,15 @@ if [[ ${LANGUAGE} == en ]]; then
 else
   SECTIONS="sections/translated/${LANGUAGE}"
 fi
-if [[ ${LANGUAGE} == ru || ${LANGUAGE} == ua ]]; then
+
+case "${LANGUAGE}" in
+  ru|ua)
     ENGINE=-pdflua
-else
+    ;;
+  *)
     ENGINE=-pdf
-fi
+    ;;
+esac
 
 po4a --no-update po4a.cfg
 if [ $(grep -c "icu_locale" index_style.ist) -eq 0 ]
