@@ -14,6 +14,7 @@ Click in the table to download the most recent builds in the chosen language:
 | 🇪🇸 Español  |   ~90%   | [🇪🇸📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf) | [🇪🇸🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf) |  [n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_es/components_list_es.pdf)   |
 | 🇫🇷 Français |   ~90%   | [🇫🇷📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf) | [🇫🇷🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf) |  [n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_fr/components_list_fr.pdf)   |
 | 🇷🇺 Русский  |   ~39%   | [🇷🇺📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf) | [🇷🇺🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf) |  [n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_ru/components_list_ru.pdf)   |
+| 🇺🇦 Українська  |   ~5%   | [🇺🇦📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf) | [🇺🇦🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf) |  [n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_ua/components_list_ua.pdf)   |
 
 🖨️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
 
@@ -72,7 +73,7 @@ latexmk -pdf -silent -shell-escape "main_en"
 
 or press the `Build & View` ▶️ (F5) button in TeXstudio on the `main_en.tex` file.
 
-To build the document in any other language (currently `pl`, `es`, `fr` and `ru` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
+To build the document in any other language (currently `pl`, `es`, `fr`, `ru` and `ua` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
 
 ```bash
 ./build.sh <LANGUAGE>
