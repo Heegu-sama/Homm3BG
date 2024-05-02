@@ -172,8 +172,9 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: ${{ matrix.language != 'en' && github.event_name == 'pull_request' }}
         with:
-          name: ${{ matrix.language }}/printable_${{ matrix.language }}
+          name: printable_${{ matrix.language }}
           path: ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
+          retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
       #
       # - name: Publish ${{ matrix.language }} in artifacts repository
       #   if: github.event_name != 'pull_request'
@@ -217,12 +218,12 @@ jobs:
       - name: Download printable PDF
         uses: actions/download-artifact@v4
         with:
-          path: ${{ matrix.language }}/printable_${{ matrix.language }}
+          path: printable_${{ matrix.language }}
 
       - name: Check number of pages in printable version
         run: |
           ls -laR
-          file ${{ matrix.language }}/printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf
+          file printable_${{ matrix.language }}/${{ matrix.language }}/printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf
           ACTUAL_NUM_OF_PAGES=$(pdfinfo ${{ matrix.language }}/printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
           echo "Expected number of pages: ${{ needs.build.outputs.number_of_printable_pages }}"
           echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
