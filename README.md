@@ -2,23 +2,22 @@
 
 Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1) 🤓
 
-This repository hosts **three** documents.
-Efforts are ongoing to translate them to languages other than English.
+Efforts are ongoing to translate the rule book to languages other than English.
 Please reach out if you'd like to help with translating.
 Click in the table to download the most recent builds in the chosen language:
 
-|               | Progress |                                📜 **Rewritten Rule Book**                                 |                              🖨️ **Rule Book - printable version**                              |                                         📋 **Comprehensive Components List**                                         |
-|:--------------|:--------:|:-----------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------:|
-| 🇬🇧 English  |   100%   | [🇬🇧📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf) | [🇬🇧🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf) | [🇬🇧📋](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf) |
-| 🇵🇱 Polski   |   ~70%   | [🇵🇱📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf) | [🇵🇱🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf) |  [n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_pl/components_list_pl.pdf)   |
-| 🇪🇸 Español  |   ~80%   | [🇪🇸📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf) | [🇪🇸🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf) |  [n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_es/components_list_es.pdf)   |
-| 🇫🇷 Français |   ~40%   | [🇫🇷📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf) | [🇫🇷🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf) |  [n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_fr/components_list_fr.pdf)   |
-| 🇷🇺 Русский  |   ~39%   | [🇷🇺📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf) | [🇷🇺🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf) |  [n/a](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_ru/components_list_ru.pdf)   |
+|                 | Progress |                                📜 **Rewritten Rule Book**                                 |                              🖨️ **Rewritten Rule Book - printable version**                              |
+|:----------------|:--------:|:-----------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------:|
+| 🇬🇧 English    |   100%   | [🇬🇧📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf) | [🇬🇧🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf) |
+| 🇵🇱 Polski     |   ~80%   | [🇵🇱📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf) | [🇵🇱🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf) |
+| 🇪🇸 Español    |   ~90%   | [🇪🇸📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf) | [🇪🇸🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf) |
+| 🇫🇷 Français   |   ~90%   | [🇫🇷📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf) | [🇫🇷🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf) |
+| 🇷🇺 Русский    |   ~39%   | [🇷🇺📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf) | [🇷🇺🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf) |
+| 🇺🇦 Українська |    ~5%   | [🇺🇦📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf) | [🇺🇦🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf)|
 
 🖨️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
 
-Components List lists all the cards 🃏, minis 🚹, tokens, etc. for every box. ⚠️ ️️**Archon released their own version of it, and you should use it instead. Find it on 👉 [their website](https://archon-studio.com/downloads/heroes-iii) 👈 called "Content Guide"**.
-The document here will remain for legacy purposes.
+This repository used to host [**Comprehensive Components List**](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf) listing all the cards, minis, tokens, etc. for every box, but after a while ⚠️ ️️**Archon released their own version of it, and you should use it instead. Find it on 👉 [their website](https://archon-studio.com/downloads/heroes-iii) 👈 called "Content Guide"**.
 
 ### 💡 What Is This?
 
@@ -72,7 +71,7 @@ latexmk -pdf -silent -shell-escape "main_en"
 
 or press the `Build & View` ▶️ (F5) button in TeXstudio on the `main_en.tex` file.
 
-To build the document in any other language (currently `pl`, `es`, `fr` and `ru` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
+To build the document in any other language (currently `pl`, `es`, `fr`, `ru` and `ua` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
 
 ```bash
 ./build.sh <LANGUAGE>
