@@ -86,7 +86,7 @@ jobs:
 
       # Upload non-English PDF in PRs to facilitate the work of translators not having po4a
       - uses: actions/upload-artifact@v4
-        if: ${{ matrix.language != 'en' && github.event_name == 'pull_request' }}
+        if: github.event_name == 'pull_request'
         with:
           name: main_${{ matrix.language }}
           path: main_${{ matrix.language }}.pdf
@@ -142,7 +142,7 @@ jobs:
           mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
 
       - uses: actions/upload-artifact@v4
-        if: ${{ matrix.language != 'en' && github.event_name == 'pull_request' }}
+        if: github.event_name == 'pull_request'
         with:
           name: printable_${{ matrix.language }}
           path: ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
