@@ -27,12 +27,13 @@
 \usepackage{outlines}
 \usepackage{setspace}
 \usepackage{stfloats}
-\usepackage{subfigure}
+\usepackage{subcaption}
 \usepackage[usetransparent=false]{svg}
 \usepackage{tabularx}
 \usepackage[subfigure]{tocloft}
 \usepackage{tikz}
 \usepackage{titlesec}
+\usepackage{verbatim}
 \usepackage{varwidth}
 \usepackage{wrapfig}
 \usepackage[most]{tcolorbox}
@@ -55,6 +56,7 @@
 \renewcommand\cftsubsecdotsep{\cftdot}
 
 \captionsetup[figure]{labelformat=empty}
+\captionsetup[subfigure]{labelformat=empty}
 \usetikzlibrary{shadows, shadows.blur, calc}
 
 \setlength{\columnsep}{1cm}
@@ -259,6 +261,8 @@
 \include{\sections/introduction.tex}
 
 \include{\sections/game_modes.tex}
+
+\include{\sections/components.tex}
 
 \include{\sections/setup.tex}
 
