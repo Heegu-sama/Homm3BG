@@ -7,11 +7,14 @@ esac
 
 LANGUAGE=$1
 
-if [[ ${LANGUAGE} == ru ]]; then
+case "${LANGUAGE}" in
+  ru|ua)
     ENGINE=-pdflua
-else
+    ;;
+  *)
     ENGINE=-pdf
-fi
+    ;;
+esac
 
 if [[ ${LANGUAGE} != en ]]; then
   po4a --no-update po4a.cfg
