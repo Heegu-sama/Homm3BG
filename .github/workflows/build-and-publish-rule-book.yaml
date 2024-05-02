@@ -199,7 +199,7 @@ jobs:
         run: sudo apt-get install -y poppler-utils
 
 
-      - name: Download digital PDF
+      - name: Download PDFs
         uses: actions/download-artifact@v4
         with:
           path: main_${{ matrix.language }}
@@ -215,16 +215,11 @@ jobs:
             exit 1
           fi
 
-      - name: Download printable PDF
-        uses: actions/download-artifact@v4
-        with:
-          path: printable_${{ matrix.language }}
-
       - name: Check number of pages in printable version
         run: |
           ls -laR
-          file printable_${{ matrix.language }}/${{ matrix.language }}/printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf
-          ACTUAL_NUM_OF_PAGES=$(pdfinfo ${{ matrix.language }}/printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          file main_${{ matrix.language }}/printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf
+          ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}/printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
           echo "Expected number of pages: ${{ needs.build.outputs.number_of_printable_pages }}"
           echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
           if [[ ${{ needs.build.outputs.number_of_printable_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
