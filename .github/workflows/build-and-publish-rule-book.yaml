@@ -119,7 +119,7 @@ jobs:
           python .github/insert_printable_hyperlinks.py ${{ matrix.sections }}
 
       - name: Include notes page
-        if: env.EVEN_NUMBER_OF_PAGES
+        if: ${{ env.EVEN_NUMBER_OF_PAGES == 'true' }}
         run: sed -i 's@% Notes placeholder@\\include{\\sections/notes.tex}@g' metadata.tex
 
       - name: Include index page
@@ -198,7 +198,7 @@ jobs:
       - name: Check number of pages in digital version
         run: |
           file main_${{ matrix.language }}/main_${{ matrix.language }}/main_${{ matrix.language }}.pdf
-          ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}/main_${{ matrix.language }}/main_${{ matrix.language }}.pdf | awk '/^pages:/ {print $2}')
+          ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}/main_${{ matrix.language }}/main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
           echo "Expected number of pages: ${{ needs.build.outputs.number_of_pages }}"
           echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
           if [[ ${{ needs.build.outputs.number_of_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
