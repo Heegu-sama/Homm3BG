@@ -5,7 +5,6 @@ git restore \
   README.md \
   build.sh \
   clean.sh \
-  components_list.tex \
   find_fuzzy.sh \
   index_style.ist \
   main_es.tex \
