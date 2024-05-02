@@ -7,7 +7,7 @@ esac
 
 LANGUAGE=$1
 
-if [[ ${LANGUAGE} == ru ]]; then
+if [[ ${LANGUAGE} == ru || ${LANGUAGE} == ua ]]; then
     ENGINE=-pdflua
 else
     ENGINE=-pdf

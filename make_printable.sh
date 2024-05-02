@@ -11,7 +11,7 @@ if [[ ${LANGUAGE} == en ]]; then
 else
   SECTIONS="sections/translated/${LANGUAGE}"
 fi
-if [[ ${LANGUAGE} == ru ]]; then
+if [[ ${LANGUAGE} == ru || ${LANGUAGE} == ua ]]; then
     ENGINE=-pdflua
 else
     ENGINE=-pdf
@@ -26,7 +26,7 @@ upmendex -s index_style main_${LANGUAGE}
 # upmendex sorts non-English characters properly but fails to generate proper ind file
 sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}@g' main_${LANGUAGE}.ind
 
-find sections -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
+find ${SECTIONS} -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
 python .github/insert_printable_hyperlinks.py "${SECTIONS}"
 if [ $(grep -c "sections/index.tex" metadata.tex) -eq 0 ]
 then
