@@ -24,7 +24,7 @@
     \includesvg[height=15px]{\svgs/spellpower.svg} & Search (2) the Spell Deck. \\
     \includesvg[height=15px]{\svgs/morale_positive.svg} & Gain Positive Morale. \\
     \includesvg[height=15px]{\svgs/morale_negative.svg} & Gain Negative Morale. \\
-    \includesvg[height=15px]{\svgs/movement.svg} & Gain 1 Movement Point. \\
+    \includesvg[height=15px]{\svgs/movement.svg} & Gain 1 Movement Point for this turn. \\
     {\huge\textbf{?}} & Special effect, see \hyperlink{Revisitable Fields}{Revisitable} or \hyperlink{Other Fields}{Other} fields.\\
   \end{tabularx}
 \endgroup
@@ -48,9 +48,12 @@
     Roll 2 Treasure or Resource Dice and choose one to be resolved.
 \end{itemize}
 
-\phantom{\includesvg[height=1px]{\svgs/experience.svg}\includesvg[height=1px]{\svgs/spellpower.svg}}
-\vspace*{\fill}
 \columnbreak
+
+\note{9}{
+  The effects of Fields that allow you to \textbf{Search} for Spells or Artifacts, or where you must spend resources to use the Field's effect, are \textbf{always optional}.
+  You must always place a Black Cube on such Visitable Fields even if you choose not to use that Field's effect.
+}
 
 The effects of the following \textbf{Visitable} \hypertarget{All Map Locations}{fields} are explained by the symbols on the left:
 
@@ -69,16 +72,18 @@ The effects of the following \textbf{Visitable} \hypertarget{All Map Locations}{
 
   \phantom{j}\textbf{Treasure}\\
   \framedimage[\linewidth]{\map_locations/treasure_symbol.jpg}\\
+}
+\end{multicols*}
 
-  \bigskip
+\pagebreak
+
+The effects of the following \textbf{Visitable} fields are explained by the symbols on the previous page:
+
+\begin{multicols*}{2}
+{\centering
 
   \phantom{j}\textbf{Fountain of Youth}\\
   \framedimage[\linewidth]{\map_locations/fountain_of_youth.jpg}\\
-
-  \filbreak
-
-  \phantom{j}\textbf{Windmill}\\
-  \framedimage[\linewidth]{\map_locations/windmill.jpg}\\
 
   \bigskip
 
@@ -115,15 +120,12 @@ The effects of the following \textbf{Visitable} \hypertarget{All Map Locations}{
 
   \phantom{j}\textbf{Pandora's Box}\\
   \framedimage[\linewidth]{\map_locations/pandoras_box.jpg}\\
-}
 
-\vspace*{\fill}
+  \bigskip
 
-\vspace{7.4em}
-
-\note{10}{
-  The effects of Fields that allow you to \textbf{Search} for Spells or Artifacts, or where you must spend resources to use the Field's effect, are \textbf{always optional}.
-  You must always place a Black Cube on such Visitable Fields even if you choose not to use that Field's effect.
+  \phantom{j}\textbf{Windmill}\\
+  \framedimage[\linewidth]{\map_locations/windmill.jpg}
+  {\small Due to a misprint, the Windmill on the tile \texttt{\#N3} has a \textbf{?}. It should be ``\textbf{+}1 \includesvg[height=0.8\baselineskip]{\svgs/valuablegreater.svg}''.}
 }
 
 \vspace*{\fill}
