@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-21 09:09+0100\n"
-"PO-Revision-Date: 2024-04-19 14:21+0200\n"
+"POT-Creation-Date: 2024-04-30 20:22+0200\n"
+"PO-Revision-Date: 2024-04-27 19:35+0200\n"
 "Last-Translator: basile <sugranesb@gmail.com>\n"
 "Language-Team: French <sugranesb@gmail.com>\n"
 "Language: fr\n"
@@ -22,20 +22,19 @@ msgstr ""
 #. type: Plain text
 #: sections/ai_heroes.tex:3
 msgid "\\addsection{AI Heroes}{\\spells/fortune.png}"
-msgstr "\\addsection{AI Heroes}{\\spells/fortune.png}"
+msgstr "\\addsection{Héros IA}{\\spells/fortune.png}"
 
 #. type: multicols
 #: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
 #: sections/all_map_locations.tex:417 sections/combat.tex:5
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
-#: sections/expansion_content.tex:5 sections/expansion_content.tex:49
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
-#: sections/map_elements.tex:34 sections/map_elements.tex:74
-#: sections/other_rules.tex:4 sections/other_rules.tex:33
-#: sections/player_turns.tex:5 sections/resources.tex:5
-#: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:5 sections/town.tex:5 sections/units.tex:5
-#: sections/units.tex:119
+#: sections/difficulty.tex:5 sections/expansion_content.tex:5
+#: sections/expansion_content.tex:49 sections/game_modes.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
+#: sections/map_elements.tex:99 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -60,6 +59,17 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{Tour du Héros IA}\n"
+"Les \\hypertarget{AIrules}{Héros IA} sont utilisés en Mode Campagne.\n"
+"Ils commencent dans leur ville, avec 3 PM, et les dépensent toujours dans les Actions suivantes dans cette ordre de priorité.\n"
+"\\begin{itemize}\n"
+"  \\item Si un joueur est sur la même Tuile, l'IA dépense tous ses PM dans sa direction pour tenter de Combattre.\n"
+"  \\item Si il y a des Mines ou des Enclaves que l'IA peut revendiquer sur sa Tuile, déplacez-la vers la plus proche.\n"
+"  \\item Sinon déplacez-la vers la Ville du joueur.\n"
+"Répétez cette séquence jusqu'à utilisation de tous les PM.\n"
+"Les Héros IA jouent leur Tour apres le joueur.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:19
@@ -69,6 +79,9 @@ msgid ""
 "They gain no benefits from any Fields.\n"
 "\n"
 msgstr ""
+"Un Héros IA \\textbf{gagne automatiquement un Combat} contre les Unités Neutres, tout en \\textbf{Revendiquant ou en Explorant toute Case} qu'il traverse.\n"
+"Il ne bénéficie d'aucun bonus, peu importe la Case.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:28
@@ -84,11 +97,19 @@ msgid ""
 "Any differences to the above will be described in any given Scenario's own rules.\n"
 "\n"
 msgstr ""
+"Le Héros IA doit révéler une Tuile face cachée en dépensant 1 PM avant de s'y déplacer.\n"
+"Le joueur choisit l'orientation de la Tuile.\\par\n"
+"L'IA ne peut pas se Rendre et vous ne pouvez pas vous Rendre face à l'IA;\n"
+"l'IA combat toujours jusqu'à ne plus avoir d'Unité.\n"
+"Gagner un Combat contre l'IA ne donne aucune récompense sauf indication du Scénario.\n"
+"L'IA n'a pas de Plateau de Ville, de Fiche de Héros ou de Ressources.\n"
+"Ses Unités sont définies par la mise en place du Scénario ou d'autres règles et ne changent pas.\\par\n"
+"Toute différence avec ces règles seront décrites dans les règles spécifiques du Scénario.\n"
+"\n"
 
 #. type: multicols*
-#: sections/ai_heroes.tex:30 sections/ai_heroes.tex:64 sections/combat.tex:95
-#: sections/combat.tex:233 sections/deckbuilding.tex:129
-#: sections/deckbuilding.tex:135 sections/expansion_content.tex:65
+#: sections/ai_heroes.tex:30 sections/ai_heroes.tex:81 sections/combat.tex:95
+#: sections/combat.tex:233 sections/expansion_content.tex:65
 #: sections/heroes.tex:34
 #, no-wrap
 msgid ""
@@ -103,17 +124,51 @@ msgid ""
 "\\subsection*{AI Decks}\n"
 "\n"
 msgstr ""
+"\\subsection*{Decks IA}\n"
+"\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:34
+#: sections/ai_heroes.tex:51
 #, no-wrap
 msgid ""
-"\\includegraphics[width=\\linewidth]{\\cards/ai.png}\n"
-"\n"
+"\\begin{multicols*}{2}\n"
+"  \\begin{center}\n"
+"    \\vspace*{-1.5em}\\includegraphics[width=1.3\\linewidth]{\\cards/ai.png}\n"
+"    \\phantom{\\ldots\\ldots}\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{AI Card}}}}\n"
+"  \\end{center}\n"
+"  \\vspace*{\\fill}\n"
+"  \\columnbreak\n"
+"  \\scriptsize\n"
+"  \\begin{itemize}[itemsep=0pt]\n"
+"    \\item[\\textbf{1.}] Name\n"
+"    \\item[\\textbf{2.}] Description\n"
+"    \\item[\\textbf{3.}] Easy Modifier\n"
+"    \\item[\\textbf{4.}] Normal Modifier\n"
+"    \\item[\\textbf{5.}] Expert Modifier\n"
+"    \\item[\\textbf{6.}] Impossible\\\\Modifier\n"
+"    \\item[\\textbf{7.}] Card Type\n"
+"  \\end{itemize}\\vspace*{\\fill}"
 msgstr ""
+"\\begin{multicols*}{2}\n"
+"  \\begin{center}\n"
+"    \\vspace*{-1.5em}\\includegraphics[width=1.3\\linewidth]{\\cards/ai.png}\n"
+"    \\phantom{\\ldots\\ldots}\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Carte IA}}}}\n"
+"  \\end{center}\n"
+"  \\vspace*{\\fill}\n"
+"  \\columnbreak\n"
+"  \\scriptsize\n"
+"  \\begin{itemize}[itemsep=0pt]\n"
+"    \\item[\\textbf{1.}] Nom\n"
+"    \\item[\\textbf{2.}] Effet\n"
+"    \\item[\\textbf{3.}] Modificateur\\\\Facile\n"
+"    \\item[\\textbf{4.}] Modificateur\\\\Normal\n"
+"    \\item[\\textbf{5.}] Modificateur\\\\Difficile\n"
+"    \\item[\\textbf{6.}] Modificateur\\\\Impossible\n"
+"    \\item[\\textbf{7.}] Type de Carte\n"
+"  \\end{itemize}\\vspace*{\\fill}"
 
 #. type: multicols
-#: sections/ai_heroes.tex:42
+#: sections/ai_heroes.tex:59
 #, no-wrap
 msgid ""
 "AI Heroes use two automated Decks during Combat: the \\textbf{AI Deck}, and the \\textbf{Spell Deck}.\n"
@@ -125,9 +180,17 @@ msgid ""
 "Shuffle the AI and Spell Decks during setup after building them.\n"
 "\n"
 msgstr ""
+"Les Héros IA utilisent deux Decks automatiques durant le Combat : le \\textbf{Deck IA} et le \\textbf{Deck de Sort}.\n"
+"Le Deck IA est construit avec trois types de cartes IA : Guerrier \\includesvg[height=10px]{\\svgs/might.svg}, Magie \\includesvg[height=10px]{\\svgs/magic.svg} et Capacité \\includesvg[height=10px]{\\svgs/skill.svg}.\n"
+"Chaque Scénario de Campagne liste le nombre de chaque type de cartes incluses dans le Deck IA.\n"
+"Les Cartes Guerrier \\includesvg[height=10px]{\\svgs/might.svg} et Capacité \\includesvg[height=10px]{\\svgs/skill.svg} ont deux variantes. Choisissez ces cartes \\textbf{aléatoirement} lors de la construction du Deck.\n"
+"Si une Carte Capacité est incluse, cherchez la Carte de Compétence correspondante et mettez-la de côté.\n"
+"Créez le \\textbf{Deck de Sort} IA en séparant les Sorts indiqués du Deck de Sort classique.\n"
+"Mélangez les Deck IA et Sort IA après leur création durant la mise en place.\n"
+"\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:49
+#: sections/ai_heroes.tex:66
 #, no-wrap
 msgid ""
 "When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI Card} and follow its instructions before the Unit moves and/or attacks.\n"
@@ -138,26 +201,38 @@ msgid ""
 "If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
 "\n"
 msgstr ""
+"Quand le Héros IA \\textbf{Active} une Unité, piochez une Carte IA\\index{Carte IA} et suivez les instructions avant de déplacer l'Unité et/ou d'Attaquer.\n"
+"Si le Deck IA se vide lors du Combat, ne piochez plus de celui-ci.\n"
+"Les effets de chaque carte IA dépendent de la \\hyperlink{Difficulty}{Difficulté} de la partie.\n"
+"Les Cartes Guerrier \\includesvg[height=10px]{\\svgs/might.svg} sont associées à l'Unité avant que la première Attaque/Défense ne se produise.\n"
+"Le Deck de Sort IA est utilisé à chaque pioche d'une Carte Magie \\includesvg[height=10px]{\\svgs/magic.svg}.\n"
+"Si le Héros IA doit piocher une Carte, il devra piocher et résoudre une \\textbf{autre Carte} du Deck IA.\n"
+"\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:51
+#: sections/ai_heroes.tex:68
 #, no-wrap
 msgid ""
 "\\subsection*{Combat against AI}\n"
 "\n"
 msgstr ""
+"\\subsection*{Combat contre l'IA}\n"
+"\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:54
+#: sections/ai_heroes.tex:71
 #, no-wrap
 msgid ""
 "These rules apply during Combat in \\textbf{Solo}\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
 "When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\\par\n"
 "\n"
 msgstr ""
+"Ces règles s'appliquent durant un Combat en Scénario \\textbf{Solo}\\index{Mode Solo} et \\textbf{Coopératif}.\n"
+"Quand un ennemi Neutre ou un Héros IA active une unité, il suit une série d'instructions automatiques.\\par\n"
+"\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:62
+#: sections/ai_heroes.tex:79
 #, no-wrap
 msgid ""
 "Enemy Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units prioritize attacking Units of the same tier.\n"
@@ -169,9 +244,17 @@ msgid ""
 "Enemy units cannot \\hyperlink{Defend}{Defend} unless instructed to.\n"
 "\n"
 msgstr ""
+"Les Unités ennemies au Sol \\includesvg[height=10px]{\\svgs/unit_ground.svg} et Volantes \\includesvg[height=10px]{\\svgs/unit_flying.svg} attaquent en priorité une Unité de même rang.\n"
+"Si c'est impossible, ils attaquent l'Unité la plus proche, en priorisant le Rang le plus faible.\\par\n"
+"Les Unités à Distance \\includesvg[height=10px]{\\svgs/unit_ranged.svg} attaquent en priorité les autres Unités à Distance \\includesvg[height=10px]{\\svgs/unit_ranged.svg} de même Rang, puis de Rang plus faible, et ensuite de Rang plus fort.\n"
+"S'il n'y a pas d'Unité à Distance \\includesvg[height=10px]{\\svgs/unit_ranged.svg} à cibler, la priorité est Unité au Sol \\includesvg[height=10px]{\\svgs/unit_ground.svg} et Volante \\includesvg[height=10px]{\\svgs/unit_flying.svg} dans le même ordre de Rang.\n"
+"S'il y a plus d'une cible valide, elles attaquent la plus proche.\\par\n"
+"S'il devait y a voir égalité dans le choix de cibles valides pour n'importe quel type d'Unité, c'est le joueur qui choisit l'Unité attaquée.\n"
+"Les unités ennemies ne peuvent pas se \\hyperlink{Defend}{Défendre} à moins d'en recevoir l'instruction.\n"
+"\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:66
+#: sections/ai_heroes.tex:83
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\art/coin.png}\n"
@@ -179,7 +262,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/ai_heroes.tex:70
+#: sections/ai_heroes.tex:87
 #, no-wrap
 msgid ""
 "\\begin{center}\n"

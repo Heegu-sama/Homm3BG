@@ -1,0 +1,37 @@
+% !TeX spellcheck = en_US
+\documentclass[12pt]{article}
+
+% Language setting
+\usepackage[TU]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{fontspec}
+\setmainfont[
+  Path = ./assets/fonts/,
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic]{LiberationSerif}
+
+\def\sections{sections/translated/ru}
+\def\lang_header_adjustment{0px}
+
+\newcommand{\version}{
+  Версия 1.1
+}
+
+\newcommand{\intro}{
+  Эта книга поддерживается сообществом в \href{https://github.com/Heegu-sama/Homm3BG}{репозитории на GitHub}.
+  Вы можете внести свой вклад в разработку, внести изменения или исправить ошибки.
+  Если вы хотите просто оставить отзыв, сделайте это в \href{https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project}{оригинальной ветке BoardGameGeek}.
+}
+\newcommand{\pageshorthand}{с. }
+
+\title{\includegraphics[width=6cm]{\images/title.png}\\Правила в редакции сообщества}
+
+\newcommand{\sectionheadertext}[1]{
+  \color{antiquewhite} \section*{\MakeUppercase{\textbf{#1}}}
+}
+\newcommand{\notefont}[0]{}
+
+\input{metadata.tex}

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-23 15:23+0200\n"
+"POT-Creation-Date: 2024-04-26 16:44+0100\n"
 "PO-Revision-Date: 2024-04-16 16:30+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -22,12 +22,11 @@ msgstr ""
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:34
-#: sections/map_elements.tex:74 sections/other_rules.tex:4
-#: sections/player_turns.tex:5 sections/resources.tex:5
-#: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:5 sections/town.tex:5 sections/units.tex:5
-#: sections/units.tex:118
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
+#: sections/map_elements.tex:99 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:145
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -36,8 +35,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_heroes.tex:30 sections/ai_heroes.tex:64 sections/combat.tex:95
-#: sections/combat.tex:233 sections/deckbuilding.tex:129
-#: sections/deckbuilding.tex:135 sections/expansion_content.tex:65
+#: sections/combat.tex:233 sections/expansion_content.tex:65
 #: sections/heroes.tex:34
 #, no-wrap
 msgid ""
@@ -47,7 +45,8 @@ msgstr ""
 
 #. type: Plain text
 #: sections/all_map_locations.tex:188 sections/credits.tex:5
-#: sections/heroes.tex:70 sections/introduction.tex:5
+#: sections/deckbuilding.tex:160 sections/heroes.tex:70
+#: sections/introduction.tex:5
 msgid "\\bigbreak"
 msgstr ""
 
@@ -64,7 +63,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "\\hypertarget{Heroes}{Players} always control a Main Hero and may additionally also recruit a Secondary Hero.\n"
-"A \"player's Hero\" may refer to either of them.\n"
+"A ``player's Hero'' may refer to either of them.\n"
 "Heroes are used to perform Movement Actions on the game board and to start Combats against enemies in order to reach a Scenario victory condition.\n"
 "\n"
 msgstr ""
@@ -107,7 +106,7 @@ msgid ""
 "After Hiring a Secondary Hero, place the model in a Town or Settlement you control.\n"
 "\\textbf{You can only have one Secondary Hero at a time}.\\par\n"
 "Secondary Heroes have \\textbf{2 Movement Points}; when you gain a Secondary Hero, take an additional set of 2 Movement Tokens to represent their MP.\n"
-"They do not have their own Hero Card, \\textbf{cannot gain Experience}, and \\textbf{cannot use Cards from Your Deck} for any reason.\n"
+"They do not have their own Hero Card, \\textbf{cannot gain Experience}, and \\textbf{cannot play Cards from Your Deck during Combat}.\n"
 "If a Secondary Hero gains any Cards, place them into your hand as normal (see \\hyperlink{Playerdecks}{Deck-building}).\n"
 "Secondary Heroes are considered to have the same Level as the Main Hero for the purposes of resolving \\hyperlink{Quick}{Quick Combat}.\\par\n"
 "If your Secondary Hero is attacked by an enemy Hero, you can choose to have that Hero be \\hyperlink{Endcombat}{instantly defeated instead of fighting a Combat}.\n"
@@ -123,7 +122,7 @@ msgstr ""
 "Después de contratar a un Héroe Secundario, coloca la figura en una Ciudad o Asentamiento que controles.\n"
 "\\textbf{Sólo puedes tener un Héroe Secundario a la vez}.\\par\n"
 "Los Héroes Secundarios tienen \\textbf{2 Puntos de Movimiento}; Cuando obtengas un Héroe Secundario coge 2 Fichas de Movimiento extra, representarán sus PM.\n"
-"No tienen Tarjeta de Héroe, \\textbf{no pueden ganar Experiencia} y \\textbf{no puede usar Cartas de tu Mazo} en ningún momento.\n"
+"No tienen Tarjeta de Héroe, \\textbf{no pueden ganar Experiencia} y \\textbf{no puede usar Cartas de tu Mazo} en ningún momento por ningún motivo.\n"
 "Si un Héroe Secundario gana alguna Carta colócala en tu mano de forma normal (ver \\hyperlink{Playerdecks}{construcción de Mazo}).\n"
 "Se considera que los Héroes Secundarios tienen el mismo Nivel que el Héroe Principal a efectos de resolver \\hyperlink{Quick}{Combates Rápidos}.\\par\n"
 "Si tu Héroe Secundario es atacado por un Héroe enemigo puedes elegir que ese Héroe sea \\hyperlink{Endcombat}{derrotado instantáneamente en lugar de luchar}.\n"
@@ -182,6 +181,33 @@ msgid ""
 "    \\vspace{0pt}\n"
 "    \\begin{scriptsize}\n"
 msgstr ""
+"[h]\n"
+"  \\begin{minipage}[t]{0.5\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\begin{enumerate}[itemsep=5pt]\n"
+"      \\item \\textbf{Nombre} – Nombre del Héroe.\n"
+"        Usado como identificador.\n"
+"        No afecta en el juego.\n"
+"      \\item \\textbf{Clase} – Clase del Héroe.\n"
+"        No afecta en el juego.\n"
+"      \\item \\textbf{Tipo} – Tipo de Héroe (Fuerza \\includesvg[height=10px]{\\svgs/might.svg} o Magia \\includesvg[height=10px]{\\svgs/magic.svg}).\n"
+"        Determina la cantidad de Hechizos de Flecha Mágica en tu Mazo Inicial (1 o 2 respectivamente).\n"
+"      \\item \\textbf{Color de Facción} – Color de los cubos y miniaturas de la Facción.\n"
+"      \\item \\textbf{Ataque} – Número de Cartas de Ataque en tu Mazo Inicial.\n"
+"      \\item \\textbf{Defensa} – Número de Cartas de Defensa en tu Mazo Inicial.\n"
+"      \\item \\textbf{Poder} – Número de Cartas de Poder en tu Mazo Inicial.\n"
+"      \\item \\textbf{Conocimiento} – Número de Cartas de Conocimiento en tu Mazo Inicial.\n"
+"      \\item \\textbf{Habilidad Inicial} – Recordatorio de la \\index{Carta de Habilidad} con la que comienza el Héroe.\n"
+"      \\item \\textbf{Especialidad del Héroe} – Las Cartas de Especialidad que el Héroe añade a su mazo al principio del juego y en las subidas de Nivel específicas.\n"
+"        Cada Héroe tiene tres Cartas de Especialidad.\n"
+"      \\item \\textbf{Seguimiento de Niveles} – Cada vez que un Héroe Principal gana 1 o más Experiencia \\includesvg[height=10px]{\\svgs/experience.svg}, mueve el cubo ese número de pasos.\n"
+"        Cuando el cubo alcanza la una ranura de la fila superior, el Héroe gana un Nivel.\n"
+"    \\end{enumerate}\n"
+"  \\end{minipage}\\hfill\n"
+"  \\begin{minipage}[t]{0.48\\textwidth}\n"
+"    \\centering\n"
+"    \\vspace{0pt}\n"
+"    \\begin{scriptsize}\n"
 
 #. type: figure
 #: sections/heroes.tex:72
@@ -230,6 +256,40 @@ msgid ""
 "    \\end{multicols}\n"
 "  \\end{minipage}"
 msgstr ""
+"        \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=\\linewidth]{\\cards/hero.png}}};\n"
+"        \\draw (2.2, 2.5) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
+"        \\draw (0.8, 1.9) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"        \\draw (3.5, 2.5) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
+"        \\draw (-0.1, 2.5) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
+"        \\draw (0, 1.25) node {\\encircle{\\phantom{.}5\\phantom{.}}};\n"
+"        \\draw (1.1, 1.25) node {\\encircle{\\phantom{.}6\\phantom{.}}};\n"
+"        \\draw (2, 1.25) node {\\encircle{\\phantom{.}7\\phantom{.}}};\n"
+"        \\draw (3.25, 1.25) node {\\encircle{\\phantom{.}8\\phantom{.}}};\n"
+"        \\draw (1, -0.2) node {\\encircle{\\phantom{.}9\\phantom{.}}};\n"
+"        \\draw (3, -0.2) node {\\encircle{10}};\n"
+"        \\draw (-1.7, -1.4) node {\\encircle{11}};\n"
+"      \\end{tikzpicture}\n"
+"    \\end{scriptsize}\n"
+"    \\break\n"
+"    \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Carta del Héroe}}}}\n"
+"    \\scriptsize\n"
+"    \\begin{multicols}{2}\n"
+"      \\begin{itemize}\n"
+"        \\item[\\textbf{1.}] \\textbf{Nombre}\n"
+"        \\item[\\textbf{2.}] \\textbf{Clase}\n"
+"        \\item[\\textbf{3.}] \\textbf{Tipo}\n"
+"        \\item[\\textbf{4.}] \\textbf{Color de Facción}\n"
+"        \\item[\\textbf{5.}] \\textbf{Ataque}\n"
+"        \\item[\\textbf{6.}] \\textbf{Defensa}\n"
+"        \\item[\\textbf{7.}] \\textbf{Poder}\n"
+"        \\item[\\textbf{8.}] \\textbf{Conocimiento}\n"
+"        \\item[\\textbf{9.}] \\textbf{Habilidad Inicial}\n"
+"        \\item[\\textbf{10.}] \\textbf{Especialidad}\n"
+"        \\item[\\textbf{11.}] \\textbf{Seguimiento de Niveles}\n"
+"        \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
+"      \\end{itemize}\n"
+"    \\end{multicols}\n"
+"  \\end{minipage}"
 
 #. type: tikzpicture
 #: sections/heroes.tex:112
