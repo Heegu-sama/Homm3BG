@@ -17,12 +17,14 @@ jobs:
     if: (github.event.issue.pull_request && startsWith(github.event.comment.body, 'po4a check'))
     runs-on: ubuntu-latest
     steps:
-      - uses: xt0rted/pull-request-comment-branch@v2
-        id: comment-branch
+      # - uses: xt0rted/pull-request-comment-branch@v2
+      #   id: comment-branch
 
-      - name: Add comment
-        run: gh pr comment ${{ steps.comment-branch.outputs.head_ref }} --body "Hi from po4a"
-
+      # - name: Add comment
+      #   run: gh pr comment ${{ steps.comment-branch.outputs.head_ref }} --body "Hi from po4a"
+      - uses: mshick/add-pr-comment@v2
+        with:
+          message: "Hello from po4a"
       # - name: Set up repository
       #   uses: actions/checkout@v4
       #
