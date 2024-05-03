@@ -1,0 +1,21 @@
+name: po4a - on comment
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+  issues: read
+  pull-requests: write
+  id-token: 'write'
+  statuses: write
+
+jobs:
+  get-comment:
+    name: Get po4a check comment
+    if: (github.event.issue.pull_request && startsWith(github.event.comment.body, 'po4a check'))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: xt0rted/pull-request-comment-branch@v2
+        id: comment-branch
