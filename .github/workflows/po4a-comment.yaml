@@ -1,5 +1,4 @@
-name: Check for unpdated translations
-
+name: Run po4a check on comment
 
 on:
   issue_comment:
@@ -15,7 +14,6 @@ permissions:
 env:
   PO4A_VERSION: "0.71"
   PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
-  GH_TOKEN: ${{ github.token }}
 
 jobs:
   # check_po4a:
@@ -57,3 +55,6 @@ jobs:
 
       - name: Add comment
         run: gh pr comment ${{ steps.comment-branch.outputs.head_ref }} --body "Hi from po4a"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
