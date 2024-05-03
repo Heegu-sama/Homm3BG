@@ -50,6 +50,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Set up repository
+        uses: actions/checkout@v4
+
       - uses: xt0rted/pull-request-comment-branch@v2
         id: comment-branch
 
