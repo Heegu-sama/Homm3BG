@@ -11,11 +11,6 @@ if [[ ${LANGUAGE} == en ]]; then
 else
   SECTIONS="sections/translated/${LANGUAGE}"
 fi
-if [[ ${LANGUAGE} == ru ]]; then
-    ENGINE=-pdflua
-else
-    ENGINE=-pdf
-fi
 
 case "${LANGUAGE}" in
   ru|ua)
