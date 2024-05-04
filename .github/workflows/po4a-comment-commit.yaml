@@ -60,6 +60,7 @@ jobs:
             git commit -m "[Automatic] Add po4a updates"
             git push
             echo 'Changes committed successfully 🎉' >> body.txt
+            echo 'Please update your local branch by running `git pull` 🌍➡️💻'
           else
             echo "Nothing to edit, `po4a` run was clean." >> body.txt
           fi
