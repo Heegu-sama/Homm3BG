@@ -58,9 +58,9 @@ jobs:
           if [ -s files.txt ]; then
             # There are edited files
             echo "po4a would edit the following files:" >> body.txt
-            echo "```" >> body.txt
+            echo '```' >> body.txt
             cat files.txt >> body.txt
-            echo "```" >> body.txt
+            echo '```' >> body.txt
           else
             echo "Nothing to edit, `po4a` run is clean." >> body.txt
           fi
