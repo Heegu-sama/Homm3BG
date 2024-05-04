@@ -55,7 +55,7 @@
 \renewcommand\cftsubsecdotsep{\cftdot}
 
 \captionsetup[figure]{labelformat=empty}
-\usetikzlibrary{shadows, shadows.blur, calc}
+\usetikzlibrary{shadows, shadows.blur, calc, backgrounds}
 
 \setlength{\columnsep}{1cm}
 
@@ -161,6 +161,9 @@
       }
       \end{varwidth}
     };
+    \begin{pgfonlayer}{background}
+      \draw [shade, blur shadow={shadow blur steps=5}] (current bounding box.north west) rectangle (current bounding box.south east);
+    \end{pgfonlayer}
   \end{tikzpicture}
 }
 
@@ -182,6 +185,9 @@
       }
       \end{varwidth}
     };
+    \begin{pgfonlayer}{background}
+      \draw [shade, blur shadow={shadow blur steps=5}] (current bounding box.north west) rectangle (current bounding box.south east);
+    \end{pgfonlayer}
   \end{tikzpicture}
 }
 
