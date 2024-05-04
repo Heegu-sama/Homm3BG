@@ -30,6 +30,14 @@ jobs:
         with:
           ref: ${{ steps.comment-branch.outputs.head_ref }}
 
+      - name: "Check if user has write access"
+        id: membership
+        uses: "lannonbr/repo-permission-check-action@2.0.0"
+        with:
+          permission: "write"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
       - name: Install po4a
         run: |
           sudo apt-get install -y po4a  # required as standalone po4a is missing some deps
@@ -65,5 +73,12 @@ jobs:
             echo 'Nothing to commit, `po4a` run was clean ✨' >> body.txt
           fi
           gh pr comment ${{ steps.comment-branch.outputs.head_ref }} --body-file body.txt
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Comment about non-membership status
+        if: ${{ always() && contains(steps.membership.result, 'failure') }}
+        run: |
+          gh pr comment ${{ steps.comment-branch.outputs.head_ref }} --body "⛔Sorry, only members with write access are allowed to run this action!"
         env:
           GH_TOKEN: ${{ github.token }}
