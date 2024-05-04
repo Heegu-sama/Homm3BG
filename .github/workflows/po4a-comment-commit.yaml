@@ -62,7 +62,7 @@ jobs:
             echo 'Changes committed successfully 🎉' >> body.txt
             echo 'Please update your local branch by running `git pull` 🌍➡️💻' >> body.txt
           else
-            echo "Nothing to edit, `po4a` run was clean." >> body.txt
+            echo 'Nothing to commit, `po4a` run was clean ✨' >> body.txt
           fi
           gh pr comment ${{ steps.comment-branch.outputs.head_ref }} --body-file body.txt
         env:
