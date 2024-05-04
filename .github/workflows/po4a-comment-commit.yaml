@@ -30,13 +30,11 @@ jobs:
         with:
           ref: ${{ steps.comment-branch.outputs.head_ref }}
 
-      - name: "Check if user has write access"
-        id: membership
-        uses: "lannonbr/repo-permission-check-action@2.0.0"
+      - name: Check if user has write access
+        id: write_access
+        uses: prince-chrismc/check-actor-permissions-action@v3
         with:
-          permission: "write"
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+          permission: write
 
       - name: Install po4a
         run: |
@@ -77,7 +75,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
 
       - name: Comment about non-membership status
-        if: ${{ always() && contains(steps.membership.result, 'failure') }}
+        if: ${{ always() && contains(steps.write_access.result, 'failure') }}
         run: |
           gh pr comment ${{ steps.comment-branch.outputs.head_ref }} --body "⛔Sorry, only members with write access are allowed to run this action!"
         env:
