@@ -1,0 +1,18 @@
+name: Check final newline
+
+on:
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - 'assets/**'
+
+jobs:
+  end_of_file:
+    runs-on: ubuntu-latest
+    name: Check final newline
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check final newline
+        uses: qwrtln/check-final-newline@v1.0.0

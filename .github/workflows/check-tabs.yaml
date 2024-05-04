@@ -1,0 +1,31 @@
+name: Check tabs
+
+on:
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - 'assets/**'
+
+jobs:
+  tablint:
+    runs-on: ubuntu-latest
+    name: Check tabs
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Find tabs
+        run: |
+          ERRORS=0
+          for f in $(git grep -Il '')
+          do
+            if grep -q -P '\t' $f; then
+              grep -nHP '\t' $f
+              ERRORS=1
+            fi
+          done
+
+          if [[ $ERRORS == 1 ]]; then
+              echo "Tabs found, see the output above. Please replace them with spaces."
+            exit 1
+          fi
