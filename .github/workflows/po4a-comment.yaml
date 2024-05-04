@@ -66,7 +66,7 @@ jobs:
             echo "</details>" >> body.txt
             echo 'To commit them, please comment `po4a commit` 😎' >> body.txt
           else
-            echo "Nothing to edit, `po4a` run was clean ✅" >> body.txt
+            echo "Nothing to edit, `po4a` run is clean." >> body.txt
           fi
           gh pr comment ${{ steps.comment-branch.outputs.head_ref }} --body-file body.txt
         env:
