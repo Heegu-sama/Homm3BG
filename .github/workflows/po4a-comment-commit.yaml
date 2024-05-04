@@ -77,6 +77,6 @@ jobs:
       - name: Comment about non-membership status
         if: ${{ failure() && steps.write_access.conclusion == 'failure' }}
         run: |
-          gh pr comment ${{ steps.comment-branch.outputs.head_ref }} --body "⛔Sorry, only members with write access are allowed to run this action!"
+          gh pr comment ${{ steps.comment-branch.outputs.head_ref }} --body "⛔ Sorry, only members with write access are allowed to run this action!"
         env:
           GH_TOKEN: ${{ github.token }}
