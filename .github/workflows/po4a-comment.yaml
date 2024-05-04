@@ -59,6 +59,7 @@ jobs:
             cat files.txt >> body.txt
             echo '```' >> body.txt
             echo "<details><summary>Click to see details</summary>" >> body.txt
+            echo >> body.txt
             echo '```diff' >> body.txt
             git diff >> body.txt
             echo '```' >> body.txt
