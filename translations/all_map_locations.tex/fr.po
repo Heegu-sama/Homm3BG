@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-27 16:41+0100\n"
+"POT-Creation-Date: 2024-05-03 08:54+0100\n"
 "PO-Revision-Date: 2024-04-11 09:25+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -18,15 +18,15 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
-#: sections/all_map_locations.tex:417 sections/combat.tex:5
+#: sections/all_map_locations.tex:419 sections/combat.tex:5
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
-#: sections/map_elements.tex:99 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
+#: sections/map_elements.tex:118 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
-#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:145
+#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -74,7 +74,7 @@ msgid ""
 "    \\includesvg[height=15px]{\\svgs/spellpower.svg} & Search (2) the Spell Deck. \\\\\n"
 "    \\includesvg[height=15px]{\\svgs/morale_positive.svg} & Gain Positive Morale. \\\\\n"
 "    \\includesvg[height=15px]{\\svgs/morale_negative.svg} & Gain Negative Morale. \\\\\n"
-"    \\includesvg[height=15px]{\\svgs/movement.svg} & Gain 1 Movement Point. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/movement.svg} & Gain 1 Movement Point for this turn. \\\\\n"
 "    {\\huge\\textbf{?}} & Special effect, see \\hyperlink{Revisitable Fields}{Revisitable} or \\hyperlink{Other Fields}{Other} fields.\\\\\n"
 "  \\end{tabularx}\n"
 "\\endgroup\n"
@@ -95,20 +95,20 @@ msgstr ""
 "    \\includesvg[height=15px]{\\svgs/resource_die.svg} & Lancez un \\hyperlink{Resources}{Dé de Ressource} et gagnez les Ressources indiquées. \\\\\n"
 "    \\includesvg[height=15px]{\\svgs/2_treasure_die.svg} & Lancez 2 Dés de Ressource et choisissez le bonus d'un de ces dés. \\\\\n"
 "    \\includesvg[height=15px]{\\svgs/experience.svg} & Gagnez un Point Experience. \\\\\n"
-"    \\includesvg[height=15px]{\\svgs/artifact.svg} & Fouillez (2) le Deck Artefact. \\\\\n"
-"    \\includesvg[height=15px]{\\svgs/spellpower.svg} & Fouillez (2) le Deck Sort. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/artifact.svg} & Fouillez (2) la Pile Artefact. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/spellpower.svg} & Fouillez (2) la Pile Sort. \\\\\n"
 "    \\includesvg[height=15px]{\\svgs/morale_positive.svg} & Gagnez un Moral Positif. \\\\\n"
 "    \\includesvg[height=15px]{\\svgs/morale_negative.svg} & Gagnez un Moral Négatif. \\\\\n"
-"    \\includesvg[height=15px]{\\svgs/movement.svg} & Gagnez  1 Point de Mouvement. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/movement.svg} & Gagnez 1 Point de Mouvement pendant ce tour. \\\\\n"
 "    {\\huge\\textbf{?}} & Effet Spécial, voir \\hyperlink{Revisitable Fields}{Sites Ouverts} ou \\hyperlink{Other Fields}{Autres} sites.\\\\\n"
 "  \\end{tabularx}\n"
 "\\endgroup\n"
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:33 sections/all_map_locations.tex:58
-#: sections/all_map_locations.tex:148 sections/expansion_content.tex:103
-#: sections/units.tex:153 sections/units.tex:157
+#: sections/all_map_locations.tex:33 sections/all_map_locations.tex:61
+#: sections/all_map_locations.tex:150 sections/expansion_content.tex:103
+#: sections/units.tex:169 sections/units.tex:173
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -155,21 +155,36 @@ msgstr ""
 "\\end{itemize}\n"
 "\n"
 
-#. type: multicols*
-#: sections/all_map_locations.tex:54
+#. type: multicols
+#: sections/all_map_locations.tex:52 sections/all_map_locations.tex:424
+#: sections/credits.tex:33 sections/difficulty.tex:16
+#: sections/expansion_content.tex:18 sections/expansion_content.tex:63
+#: sections/game_modes.tex:27 sections/scenario_end.tex:23
+#: sections/units.tex:106
 #, no-wrap
 msgid ""
-"\\phantom{\\includesvg[height=1px]{\\svgs/experience.svg}\\includesvg[height=1px]{\\svgs/spellpower.svg}}\n"
-"\\vspace*{\\fill}\n"
 "\\columnbreak\n"
 "\n"
 msgstr ""
-"\\vspace*{\\fill}\n"
-"\\columnbreak\n"
+
+#. type: multicols*
+#: sections/all_map_locations.tex:57
+#, no-wrap
+msgid ""
+"\\note{9}{\n"
+"  The effects of Fields that allow you to \\textbf{Search} for Spells or Artifacts, or where you must spend resources to use the Field's effect, are \\textbf{always optional}.\n"
+"  You must always place a Black Cube on such Visitable Fields even if you choose not to use that Field's effect.\n"
+"}\n"
+"\n"
+msgstr ""
+"\\note{9}{\n"
+"  Les effets des Sites qui permettent de \\textbf{Fouiller} pour des Sorts ou Artefacts, ou ceux dont l'effet nécessite une dépense de ressources pour être utilisé, sont \\textbf{toujours optionnels}.\n"
+"  Vous devez toujours placer un Cube Noir sur ces Sites Explorables même si vous n'utilisez pas l'effet du Site.\n"
+"}\n"
 "\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:56
+#: sections/all_map_locations.tex:59
 #, no-wrap
 msgid ""
 "The effects of the following \\textbf{Visitable} \\hypertarget{All Map Locations}{fields} are explained by the symbols on the left:\n"
@@ -179,7 +194,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:119
+#: sections/all_map_locations.tex:77
 #, no-wrap
 msgid ""
 "{\\centering\n"
@@ -195,16 +210,41 @@ msgid ""
 "\n"
 "  \\phantom{j}\\textbf{Treasure}\\\\\n"
 "  \\framedimage[\\linewidth]{\\map_locations/treasure_symbol.jpg}\\\\\n"
+"}"
+msgstr ""
+"{\\centering\n"
+"  \\phantom{j}\\textbf{Artefact}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/artifact_symbol.jpg}\n"
 "\n"
 "  \\bigskip\n"
 "\n"
+"  \\phantom{j}\\textbf{Ressource}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/resource_symbol.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Trésor}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/treasure_symbol.jpg}\\\\\n"
+"}"
+
+#. type: Plain text
+#: sections/all_map_locations.tex:81
+msgid ""
+"The effects of the following \\textbf{Visitable} fields are explained by the "
+"symbols on the previous page:"
+msgstr ""
+"Les effets des \\textbf{Explorables} suivants sont expliqués par les "
+"symboles à gauche."
+
+#. type: multicols*
+#: sections/all_map_locations.tex:130
+#, no-wrap
+msgid ""
+"{2}\n"
+"{\\centering\n"
+"\n"
 "  \\phantom{j}\\textbf{Fountain of Youth}\\\\\n"
 "  \\framedimage[\\linewidth]{\\map_locations/fountain_of_youth.jpg}\\\\\n"
-"\n"
-"  \\filbreak\n"
-"\n"
-"  \\phantom{j}\\textbf{Windmill}\\\\\n"
-"  \\framedimage[\\linewidth]{\\map_locations/windmill.jpg}\\\\\n"
 "\n"
 "  \\bigskip\n"
 "\n"
@@ -241,32 +281,20 @@ msgid ""
 "\n"
 "  \\phantom{j}\\textbf{Pandora's Box}\\\\\n"
 "  \\framedimage[\\linewidth]{\\map_locations/pandoras_box.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Windmill}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/windmill.jpg}\n"
+"  {\\small Due to a misprint, the Windmill on the tile \\texttt{\\#N3} has a \\textbf{?}. It should be ``\\textbf{+}1 \\includesvg[height=0.8\\baselineskip]{\\svgs/valuablegreater.svg}''.}\n"
 "}\n"
 "\n"
 msgstr ""
+"{2}\n"
 "{\\centering\n"
-"  \\phantom{j}\\textbf{Artefact}\\\\\n"
-"  \\framedimage[\\linewidth]{\\map_locations/artifact_symbol.jpg}\n"
-"\n"
-"  \\bigskip\n"
-"\n"
-"  \\phantom{j}\\textbf{Ressource}\\\\\n"
-"  \\framedimage[\\linewidth]{\\map_locations/resource_symbol.jpg}\\\\\n"
-"\n"
-"  \\bigskip\n"
-"\n"
-"  \\phantom{j}\\textbf{Trésor}\\\\\n"
-"  \\framedimage[\\linewidth]{\\map_locations/treasure_symbol.jpg}\\\\\n"
-"\n"
-"  \\bigskip\n"
 "\n"
 "  \\phantom{j}\\textbf{Fontaine de Jouvence}\\\\\n"
 "  \\framedimage[\\linewidth]{\\map_locations/fountain_of_youth.jpg}\\\\\n"
-"\n"
-"  \\filbreak\n"
-"\n"
-"  \\phantom{j}\\textbf{Moulin à Vent}\\\\\n"
-"  \\framedimage[\\linewidth]{\\map_locations/windmill.jpg}\\\\\n"
 "\n"
 "  \\bigskip\n"
 "\n"
@@ -303,15 +331,21 @@ msgstr ""
 "\n"
 "  \\phantom{j}\\textbf{Boîte de Pandore}\\\\\n"
 "  \\framedimage[\\linewidth]{\\map_locations/pandoras_box.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Moulin à Vent}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/windmill.jpg}\n"
+"  {\\small Dû à une erreur d'impression, le Moulin à Vent de la tuile \\texttt{\\#N3} a un \\textbf{?}. Cela devrait être \\og\\textbf{+}1 \\includesvg[height=0.8\\baselineskip]{\\svgs/valuablegreater.svg}\\fg.}\n"
 "}\n"
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:121 sections/all_map_locations.tex:130
-#: sections/credits.tex:35 sections/credits.tex:39
-#: sections/expansion_content.tex:57 sections/game_modes.tex:25
-#: sections/round_structure.tex:28 sections/setup.tex:64 sections/town.tex:28
-#: sections/town.tex:34 sections/units.tex:104
+#: sections/all_map_locations.tex:132 sections/credits.tex:35
+#: sections/credits.tex:39 sections/expansion_content.tex:57
+#: sections/game_modes.tex:25 sections/round_structure.tex:28
+#: sections/setup.tex:64 sections/town.tex:28 sections/town.tex:34
+#: sections/units.tex:104
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -319,31 +353,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:123
-#, no-wrap
-msgid ""
-"\\vspace{7.4em}\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/all_map_locations.tex:128
-#, no-wrap
-msgid ""
-"\\note{10}{\n"
-"  The effects of Fields that allow you to \\textbf{Search} for Spells or Artifacts, or where you must spend resources to use the Field's effect, are \\textbf{always optional}.\n"
-"  You must always place a Black Cube on such Visitable Fields even if you choose not to use that Field's effect.\n"
-"}\n"
-"\n"
-msgstr ""
-"\\note{10}{\n"
-"  Les effets des Sites qui permettent de \\textbf{Fouiller} pour des Sorts ou Artefacts, ou ceux dont l'effet nécessite une dépense de ressources pour être utilisé, sont \\textbf{toujours optionnels}.\n"
-"  Vous devez toujours placer un Cube Noir sur ces Sites Explorables même si vous n'utilisez pas l'effet du Site.\n"
-"}\n"
-"\n"
-
-#. type: multicols*
-#: sections/all_map_locations.tex:132
+#: sections/all_map_locations.tex:134
 #, no-wrap
 msgid ""
 "\\pagebreak\n"
@@ -351,7 +361,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:141
+#: sections/all_map_locations.tex:143
 #, no-wrap
 msgid ""
 "\\subsection*{Towns, Mines and Settlements}\n"
@@ -375,7 +385,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:146
+#: sections/all_map_locations.tex:148
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -391,7 +401,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:152
+#: sections/all_map_locations.tex:154
 #, no-wrap
 msgid ""
 "\\hypertarget{Mines}{\\textbf{Mines}}\\index{Mines} are Flaggable Fields which increase a specific resource's income when Flagged.\n"
@@ -405,7 +415,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:160
+#: sections/all_map_locations.tex:162
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -427,7 +437,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:169
+#: sections/all_map_locations.tex:171
 #, no-wrap
 msgid ""
 "\\textbf{Settlements}\\index{Settlement} act as a spawn point for Secondary Heroes, and as a place for Main Heroes to move to when defeated.\n"
@@ -445,13 +455,13 @@ msgstr ""
 "Comme pour une Mine, la première Revendication d'une Enclave, permet \\textbf{immédiatement} de gagner les Ressources égales à l'augmentation de revenu.\n"
 "Marquez l'Enclave avec le Jeton de la Ressource choisi pour indiquer sa production.\n"
 "Quand vous Revendiquez une Enclave ennemie, Vous pouvez changer cette Ressource.\\par\n"
-"En plus, \\textbf{à la place de l'augmentation de Revenu}, vous pouvez choisir d'\\textbf{Améliorer} une de vos Unités \\includesvg[height=10px]{\\svgs/bronze.svg} ou \\includesvg[height=10px]{\\svgs/silver.svg} immédiatement pour la moitié de son coût, arrondi au supérieur.\n"
+"Sinon, \\textbf{à la place de l'augmentation de Revenu}, vous pouvez choisir d'\\textbf{Améliorer} une de vos Unités \\includesvg[height=10px]{\\svgs/bronze.svg} ou \\includesvg[height=10px]{\\svgs/silver.svg} immédiatement pour la moitié de son coût, arrondi au supérieur.\n"
 "Si vous êtes le premier à la Revendiquer, Améliorez cette Unité \\textbf{gratuitement} à la place.\n"
 "Ne placez pas de Jeton Ressource si vous choisissez d'Améliorer.\n"
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:171 sections/units.tex:89
+#: sections/all_map_locations.tex:173 sections/units.tex:89
 #, no-wrap
 msgid ""
 "\\bigbreak\n"
@@ -459,7 +469,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:188
+#: sections/all_map_locations.tex:190
 #, no-wrap
 msgid ""
 "\\begin{minipage}[h]{\\linewidth}\n"
@@ -493,19 +503,19 @@ msgstr ""
 "\\end{minipage}"
 
 #. type: Plain text
-#: sections/all_map_locations.tex:188 sections/credits.tex:5
+#: sections/all_map_locations.tex:190 sections/credits.tex:5
 #: sections/deckbuilding.tex:160 sections/heroes.tex:70
 #: sections/introduction.tex:5
 msgid "\\bigbreak"
 msgstr ""
 
 #. type: subsection{#2}
-#: sections/all_map_locations.tex:190
+#: sections/all_map_locations.tex:192
 msgid "\\hypertarget{Revisitable Fields}{Revisitable Fields}"
 msgstr "\\hypertarget{Revisitable Fields}{Sites Ouverts}"
 
 #. type: figure
-#: sections/all_map_locations.tex:220
+#: sections/all_map_locations.tex:222
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -546,7 +556,7 @@ msgstr ""
 "    \\caption{\\small Catégorie : \\textbf{Ouvert}\\\\Vous pouvez\n"
 "      \\includesvg[height=8px]{\\svgs/pay_v2.svg}\n"
 "      3 \\includesvg[height=8px]{\\svgs/gold.svg}\n"
-"      pour Détruire 1 Carte Caractéristique de votre main ou défausser et la remplacer par une autre carte Caractéristique.\n"
+"       pour Détruire 1 Carte Caractéristique de votre main ou de votre Défausse et la remplacer par une autre carte Caractéristique.\n"
 "      Faisable deux fois par Exploration.}\n"
 "  \\end{minipage}\\hfill\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
@@ -555,7 +565,7 @@ msgstr ""
 "    \\captionsetup{singlelinecheck=off}\n"
 "    \\phantom{j}\\textbf{Marché Noir}\\par\n"
 "    \\framedimage[\\textwidth]{\\map_locations/black_market.jpg}\n"
-"    \\caption[black market]{\\small Catégorie : \\textbf{Ouvert}\\\\Regardez les 4 premières cartes de la Défausse Artefact.\n"
+"    \\caption[black market]{\\small Catégorie : \\textbf{Ouvert}\\\\Regardez les 4 premières cartes de la Défausse d'Artefact.\n"
 "      Vous pouvez en acheter un pour :\n"
 "      \\begin{itemize}\n"
 "      \\setlength\\itemsep{-4pt}\n"
@@ -567,7 +577,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:244
+#: sections/all_map_locations.tex:246
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -600,7 +610,7 @@ msgstr ""
 "    \\phantom{j}\\textbf{Sanctuaire}\\par\n"
 "    \\framedimage[\\textwidth]{\\map_locations/sanctuary.jpg}\n"
 "    \\caption{\\small Catégorie : \\textbf{Ouvert}\\\\\n"
-"      Les Héros sur ce Site ne peuvent pas être attaqué par d'autre Héros.\n"
+"      Les Héros sur ce Site ne peuvent pas être attaqués par d'autre Héros.\n"
 "      Les Héros peuvent traverser des Héros ennemis sur ce Site mais pas s'y arrêter.}\n"
 "  \\end{minipage}\\hfill\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
@@ -617,7 +627,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:263
+#: sections/all_map_locations.tex:265
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -657,7 +667,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:277
+#: sections/all_map_locations.tex:279
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -680,14 +690,13 @@ msgstr ""
 "    \\phantom{j}\\textbf{Écuries}\\par\n"
 "    \\framedimage[\\textwidth]{\\map_locations/stables.jpg}\n"
 "    \\caption{\\small Catégorie : \\textbf{Ouvert}\\\\\n"
-"      Gagnez 1 PM \\includesvg[height=8px]{\\svgs/movement.svg}.\n"
-"      Il ne dure que ce Tour.\n"
+"      Gagnez 1 PM \\includesvg[height=8px]{\\svgs/movement.svg} pour ce Tour.\n"
 "      Voir \\protect\\hyperlink{Movement}{Actions de Mouvement}.\n"
 "    }\n"
 "  \\end{minipage}\\hfill"
 
 #. type: tikzpicture
-#: sections/all_map_locations.tex:281
+#: sections/all_map_locations.tex:283
 #, no-wrap
 msgid ""
 "[overlay]\n"
@@ -695,12 +704,12 @@ msgid ""
 msgstr ""
 
 #. type: subsection{#2}
-#: sections/all_map_locations.tex:283
+#: sections/all_map_locations.tex:285
 msgid "\\hypertarget{Other Fields}{Other Fields}"
 msgstr "\\hypertarget{Other Fields}{Autres Sites}"
 
 #. type: figure
-#: sections/all_map_locations.tex:304
+#: sections/all_map_locations.tex:306
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -744,7 +753,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:326
+#: sections/all_map_locations.tex:328
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -784,13 +793,13 @@ msgstr ""
 "    \\centering\n"
 "    \\phantom{j}\\textbf{Marché du Temps}\\par\n"
 "    \\framedimage[\\linewidth]{\\map_locations/market_of_time.jpg}\n"
-"    \\caption{\\small Catégorie : \\textbf{Explorable}\\\\ Retirer une carte de votre main.\n"
-"      Puis \\textbf{Fouillez (2)} dans les Decks Compétence, Sort ou Artefact.\n"
+"    \\caption{\\small Catégorie : \\textbf{Explorable}\\\\ Détruisez une carte de votre main.\n"
+"      Puis \\textbf{Fouillez (2)} dans les Piles Compétence, Sort ou Artefact.\n"
 "    }\n"
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:348
+#: sections/all_map_locations.tex:350
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -836,7 +845,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:368
+#: sections/all_map_locations.tex:370
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -874,11 +883,11 @@ msgstr ""
 "    \\phantom{j}\\textbf{Cabane de Sorcière}\\par\n"
 "    \\framedimage[\\linewidth]{\\map_locations/witch_hut.jpg}\n"
 "    \\caption{\\small Catégorie : \\textbf{Explorable}\\\\\n"
-"      \\textbf{Choisissez} : Détruire une Carte Compétence de votre Main OU regarder la première carte du Deck de Compétence et l'ajouter à votre Main ou à la Défausse de Compétence.}\n"
+"      \\textbf{Choisissez} : Détruire une Carte Compétence de votre Main OU regarder la première carte de la Pile Compétence et l'ajouter à votre Main ou à la Défausse de Compétence.}\n"
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:397
+#: sections/all_map_locations.tex:399
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -930,15 +939,15 @@ msgstr ""
 "      Accomplissez les actions suivantes en fonction du résultat :\n"
 "      \\begin{itemize}\n"
 "        \\setlength\\itemsep{-0.2em}\n"
-"        \\item[ \\textbf{+1}] - prenez une Carte Caractéristique au choix ou défaussez en une de votre Main ;\n"
-"        \\item[\\textbf{0}] - piochez 2 Cartes de votre Deck de Compétence, gardez en une et défaussez l'autre ;\n"
-"        \\item[\\textbf{-1}] - piochez 2 Cartes de votre Deck de Sort, gardez en une et défaussez l'autre.\n"
+"        \\item[ \\textbf{+1}] - prenez une Carte Caractéristique au choix ou Détruisez en une de votre Main ;\n"
+"        \\item[\\textbf{0}] - piochez 2 Cartes Compétence, gardez-en une et défaussez l'autre ;\n"
+"        \\item[\\textbf{-1}] - piochez 2 Cartes Sort, gardez-en une et défaussez l'autre.\n"
 "        \\end{itemize}\n"
 "       }\n"
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:415
+#: sections/all_map_locations.tex:417
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -976,7 +985,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:420
+#: sections/all_map_locations.tex:422
 #, no-wrap
 msgid ""
 "{\\centering\\phantom{Star Axis}\\par}\n"
@@ -987,19 +996,8 @@ msgstr ""
 "\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
 "\n"
 
-#. type: multicols
-#: sections/all_map_locations.tex:422 sections/credits.tex:33
-#: sections/difficulty.tex:16 sections/expansion_content.tex:18
-#: sections/expansion_content.tex:63 sections/game_modes.tex:27
-#: sections/scenario_end.tex:23 sections/units.tex:106
-#, no-wrap
-msgid ""
-"\\columnbreak\n"
-"\n"
-msgstr ""
-
 #. type: multicols*
-#: sections/all_map_locations.tex:429
+#: sections/all_map_locations.tex:431
 #, no-wrap
 msgid ""
 "{\\centering\\textbf{Star Axis}\\par}\n"
@@ -1019,8 +1017,8 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:431 sections/combat.tex:91
-#: sections/player_turns.tex:37 sections/units.tex:164
+#: sections/all_map_locations.tex:433 sections/combat.tex:91
+#: sections/player_turns.tex:37 sections/units.tex:180
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -1028,7 +1026,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:442
+#: sections/all_map_locations.tex:444
 #, no-wrap
 msgid ""
 "{\\centering\\textbf{\\hypertarget{Random Town}{Random Town}}\\par}\n"
