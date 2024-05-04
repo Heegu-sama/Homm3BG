@@ -34,19 +34,25 @@ jobs:
           wget --quiet ${{ env.PO4A_GH_URL }}/v${{ env.PO4A_VERSION }}/po4a-${{ env.PO4A_VERSION}}.tar.gz  # sadly the version from apt isn't working
           export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
           tar -xf ${PO4A_DIR}.tar.gz
-          git branch
 
-      - name: Check if translations require updating
+      - name: Run po4a
         run: |
           export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
           export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
           ./${PO4A_DIR}/po4a -v po4a.cfg
+          git status
+
+      - name: Check if translations require updating
+        run: |
+          git status --porcelain translations
           if [[ `git status --porcelain translations` ]]; then
             git status --porcelain translations > files.txt
           fi
 
       - name: Add comment
         run: |
+          ls
+          du -cksh *
           if [ -s files.txt ]; then
             # There are edited files
             echo "po4a would edit the following files:" >> body.txt
