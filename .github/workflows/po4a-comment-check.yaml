@@ -52,19 +52,21 @@ jobs:
 
       - name: Add comment
         run: |
-          if [ -s files.txt ]; then
+          if [[ -s files.txt ]]; then
             # There are edited files
-            echo '⚠️ `po4a` would edit the following files:' >> body.txt
-            echo '```' >> body.txt
-            cat files.txt >> body.txt
-            echo '```' >> body.txt
-            echo "<details><summary>Click to see details 🧐</summary>" >> body.txt
-            echo >> body.txt
-            echo '```diff' >> body.txt
-            git diff >> body.txt
-            echo '```' >> body.txt
-            echo "</details>" >> body.txt
-            echo 'To commit them, please comment "po4a commit" 😎' >> body.txt
+            (
+              echo '⚠️ `po4a` would edit the following files:'
+              echo '```'
+              cat files.txt
+              echo '```'
+              echo "<details><summary>Click to see details 🧐</summary>"
+              echo
+              echo '```diff'
+              git diff
+              echo '```'
+              echo "</details>"
+              echo 'To commit them, please comment "po4a commit" 😎'
+            ) >> body.txt
           else
             echo 'Nothing to edit, `po4a` run was clean 🍰' >> body.txt
           fi
