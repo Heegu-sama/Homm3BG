@@ -22,11 +22,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set up repository
-        uses: actions/checkout@v4
-
       - uses: xt0rted/pull-request-comment-branch@v2
         id: comment-branch
+
+      - name: Set up repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.comment-branch.outputs.head_ref }}
 
       - name: Install po4a
         run: |
