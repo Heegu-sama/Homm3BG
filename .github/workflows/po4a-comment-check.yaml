@@ -1,0 +1,71 @@
+name: Run po4a check on comment
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+  issues: read
+  pull-requests: write
+  id-token: write
+  statuses: write
+
+env:
+  PO4A_VERSION: "0.71"
+  PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
+
+jobs:
+  check-comment:
+    name: Check po4a changes to commit
+    if: (github.event.issue.pull_request && startsWith(github.event.comment.body, 'po4a check'))
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: xt0rted/pull-request-comment-branch@v2
+        id: comment-branch
+
+      - name: Set up repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.comment-branch.outputs.head_ref }}
+
+      - name: Install po4a
+        run: |
+          sudo apt-get install -y po4a  # required as standalone po4a is missing some deps
+          wget --quiet ${{ env.PO4A_GH_URL }}/v${{ env.PO4A_VERSION }}/po4a-${{ env.PO4A_VERSION}}.tar.gz  # sadly the version from apt isn't working
+          export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
+          tar -xf ${PO4A_DIR}.tar.gz
+
+      - name: Run po4a
+        run: |
+          export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
+          export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
+          ./${PO4A_DIR}/po4a -v po4a.cfg
+
+      - name: Check git changes
+        run: git status --porcelain translations > files.txt
+
+      - name: Add comment
+        run: |
+          if [[ -s files.txt ]]; then
+            # There are edited files
+            (
+              echo '⚠️ `po4a` would edit the following files:'
+              echo '```'
+              cat files.txt
+              echo '```'
+              echo "<details><summary>Click to see details 🧐</summary>"
+              echo
+              echo '```diff'
+              git diff
+              echo '```'
+              echo "</details>"
+              echo 'To commit them, please comment "po4a commit" 😎'
+            ) >> body.txt
+          else
+            echo 'Nothing to edit, `po4a` run was clean 🍰' >> body.txt
+          fi
+          gh pr comment ${{ steps.comment-branch.outputs.head_ref }} --body-file body.txt
+        env:
+          GH_TOKEN: ${{ github.token }}
