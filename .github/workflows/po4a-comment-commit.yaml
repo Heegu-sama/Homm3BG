@@ -66,7 +66,7 @@ jobs:
             git commit -m "[Automatic] Add po4a updates"
             git push
             echo 'Changes committed successfully 🎉' >> body.txt
-            echo 'Please update your local branch by running `git pull` 🌍➡️💻' >> body.txt
+            echo 'Please update your local branch by running `git pull` 💻' >> body.txt
           else
             echo 'Nothing to commit, `po4a` run was clean ✨' >> body.txt
           fi
@@ -75,7 +75,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
 
       - name: Comment about non-membership status
-        if: ${{ failure() && contains(steps.write_access.result, 'failure') }}
+        if: ${{ failure() && steps.write_access.conclusion == 'failure' }}
         run: |
           gh pr comment ${{ steps.comment-branch.outputs.head_ref }} --body "⛔Sorry, only members with write access are allowed to run this action!"
         env:
