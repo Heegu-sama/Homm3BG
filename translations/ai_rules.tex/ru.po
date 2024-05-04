@@ -1,0 +1,202 @@
+# Russian translations for Homm package
+# Английские переводы для пакета Homm
+# Copyright (C) 2024 Free Software Foundation, Inc.
+# This file is distributed under the same license as the Homm package.
+# Automatically generated, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Homm 3BG\n"
+"POT-Creation-Date: 2024-05-04 16:19+0200\n"
+"PO-Revision-Date: 2024-04-21 09:09+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#.  !TeX spellcheck = en_US
+#. type: Plain text
+#: sections/ai_rules.tex:3
+#, fuzzy
+#| msgid "\\addsection{Round Structure}{\\spells/forgetfulness.png}"
+msgid "\\addsection{AI Rules}{\\spells/fortune.png}"
+msgstr "\\addsection{Состав Раунда}{\\spells/forgetfulness.png}"
+
+#. type: multicols
+#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
+#: sections/all_map_locations.tex:419 sections/combat.tex:5
+#: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
+#: sections/difficulty.tex:5 sections/expansion_content.tex:5
+#: sections/expansion_content.tex:49 sections/game_modes.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
+#: sections/map_elements.tex:118 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
+#, no-wrap
+msgid ""
+"{2}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:16
+#, no-wrap
+msgid ""
+"\\subsection*{AI Hero Turn}\n"
+"\\hypertarget{AIrules}{AI Heroes} are used in the Campaigns.\n"
+"They start in their Town, and have 3 MP, always spending them to perform the following Actions in descending priority:\n"
+"\\begin{itemize}\n"
+"  \\item If a player's Hero is on the same Tile as the AI, spend all MP to move towards them in an attempt to start Combat.\n"
+"  \\item If there are any Mines or Settlements the AI could Flag on the same Tile, move towards the closest one.\n"
+"  \\item Otherwise, move toward the player's Town.\n"
+"Repeat this sequence until all MPs are used up.\n"
+"AI Heroes take their turn after the player.\n"
+"\\end{itemize}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:19
+#, no-wrap
+msgid ""
+"AI Heroes always \\textbf{automatically win Combat} against any Neutral Units, while simultaneously \\textbf{Flagging or Visiting all Fields} they happen to move through.\n"
+"They gain no benefits from any Fields.\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:28
+#, no-wrap
+msgid ""
+"AI Heroes must discover face down Map Tiles as normal by spending 1 MP before moving onto them.\n"
+"The player chooses that Tile's orientation.\\par\n"
+"AI Heroes cannot Surrender and you cannot Surrender to them;\n"
+"they will always fight until they run out of Units.\n"
+"Winning Combat against an AI Hero does not grant any rewards unless stated by the Scenario.\n"
+"AI Heroes do not have a Town Board, Resources, or a Hero Card.\n"
+"Their Units are static and defined by the Scenario's setup or other rules.\\par\n"
+"Any differences to the above will be described in any given Scenario's own rules.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:30 sections/ai_rules.tex:81 sections/combat.tex:95
+#: sections/combat.tex:233 sections/expansion_content.tex:65
+#: sections/heroes.tex:34
+#, no-wrap
+msgid ""
+"\\vfill\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:32
+#, no-wrap
+msgid ""
+"\\subsection*{AI Decks}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:51
+#, no-wrap
+msgid ""
+"\\begin{multicols*}{2}\n"
+"  \\begin{center}\n"
+"    \\vspace*{-1.5em}\\includegraphics[width=1.3\\linewidth]{\\cards/ai.png}\n"
+"    \\phantom{\\ldots\\ldots}\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{AI Card}}}}\n"
+"  \\end{center}\n"
+"  \\vspace*{\\fill}\n"
+"  \\columnbreak\n"
+"  \\scriptsize\n"
+"  \\begin{itemize}[itemsep=0pt]\n"
+"    \\item[\\textbf{1.}] Name\n"
+"    \\item[\\textbf{2.}] Description\n"
+"    \\item[\\textbf{3.}] Easy Modifier\n"
+"    \\item[\\textbf{4.}] Normal Modifier\n"
+"    \\item[\\textbf{5.}] Expert Modifier\n"
+"    \\item[\\textbf{6.}] Impossible\\\\Modifier\n"
+"    \\item[\\textbf{7.}] Card Type\n"
+"  \\end{itemize}\\vspace*{\\fill}"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:59
+#, no-wrap
+msgid ""
+"AI Heroes use two automated Decks during Combat: the \\textbf{AI Deck}, and the \\textbf{Spell Deck}.\n"
+"The AI Deck is built using three types of AI cards: Might \\includesvg[height=10px]{\\svgs/might.svg}, Magic \\includesvg[height=10px]{\\svgs/magic.svg} and Skill \\includesvg[height=10px]{\\svgs/skill.svg}.\n"
+"Each Campaign scenario lists the number of each type of Card included in the AI Deck.\n"
+"Might \\includesvg[height=10px]{\\svgs/might.svg} and Skill \\includesvg[height=10px]{\\svgs/skill.svg} Cards have two variations. Choose these cards \\textbf{randomly} when building the Deck.\n"
+"If Skill Cards are included, search for and set aside the Ability Card related to it.\n"
+"Build the AI's \\textbf{Spell Deck} by separating the indicated Spells from the regular Spell Deck.\n"
+"Shuffle the AI and Spell Decks during setup after building them.\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:66
+#, no-wrap
+msgid ""
+"When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI Card} and follow its instructions before the Unit moves and/or attacks.\n"
+"If AI Deck is depleted during Combat, stop drawing from it.\n"
+"The effect of each AI card depends of the game's \\hyperlink{Difficulty}{Difficulty}.\n"
+"The Might Card \\includesvg[height=10px]{\\svgs/might.svg} is attached to the unit until the first respective attack/defence happens.\n"
+"The AI Spell Deck is used whenever a Magic Card \\includesvg[height=10px]{\\svgs/magic.svg} is drawn.\n"
+"If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:68
+#, no-wrap
+msgid ""
+"\\subsection*{Combat against AI}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:71
+#, no-wrap
+msgid ""
+"These rules apply during Combat in \\textbf{Solo}\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
+"When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\\par\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:79
+#, no-wrap
+msgid ""
+"Enemy Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units prioritize attacking Units of the same tier.\n"
+"If this is impossible, they attack the closest Unit, prioritizing the lowest tier one.\\par\n"
+"Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units prioritize attacking other Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier.\n"
+"If there are no Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same tier order.\n"
+"If there's more than one valid target, they attack the closest one.\\par\n"
+"If there's ever a tie between equally valid targets for any Units, the player chooses which Unit is attacked.\n"
+"Enemy units cannot \\hyperlink{Defend}{Defend} unless instructed to.\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:83
+#, no-wrap
+msgid ""
+"\\includegraphics[width=\\linewidth]{\\art/coin.png}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:87
+#, no-wrap
+msgid ""
+"\\begin{center}\n"
+"    \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/titan.jpg}\n"
+"\\end{center}\n"
+"\n"
+msgstr ""
