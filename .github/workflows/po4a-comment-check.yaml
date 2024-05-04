@@ -43,12 +43,8 @@ jobs:
           export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
           ./${PO4A_DIR}/po4a -v po4a.cfg
 
-      - name: Check if translations require updating
-        run: |
-          git status --porcelain translations
-          if [[ `git status --porcelain translations` ]]; then
-            git status --porcelain translations > files.txt
-          fi
+      - name: Check git changes
+        run: git status --porcelain translations > files.txt
 
       - name: Add comment
         run: |
