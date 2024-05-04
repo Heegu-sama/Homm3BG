@@ -54,6 +54,8 @@ jobs:
         run: |
           if [ -s files.txt ]; then
             # There are edited files
+            git config --global user.email "github-actions@github.com"
+            git config --global user.name "github-actions"
             git add translations
             git commit -m "[Automatic] Add po4a updates"
             git push
