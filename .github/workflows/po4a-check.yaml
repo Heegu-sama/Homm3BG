@@ -1,5 +1,4 @@
-name: Check for unpdated translations
-
+name: Check for unupdated translations
 
 on:
   pull_request:
@@ -9,15 +8,6 @@ on:
       - '!assets/gimp-files/**'
       - '**.tex'
       - 'translations/**'
-  issue_comment:
-    types: [created]
-
-permissions:
-  contents: read
-  issues: read
-  pull-requests: write
-  id-token: 'write'
-  statuses: write
 
 env:
   PO4A_VERSION: "0.71"
@@ -44,21 +34,8 @@ jobs:
           export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
           export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
           ./${PO4A_DIR}/po4a -v po4a.cfg
-          if [[ `git status --porcelain --untracked-files=no` ]]; then
+          if [[ `git status --porcelain translations` ]]; then
             echo "There are uncommited changes to translations:"
-            git status --porcelain | grep -v po4a
-            echo "Please run 'po4a po4a.cfg' and commit them."
+            git status --porcelain translations
             exit 1
           fi
-
-  get-comment:
-    name: Get po4a check comment
-    if: (github.event.issue.pull_request && startsWith(github.event.comment.body, 'po4a check'))
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: xt0rted/pull-request-comment-branch@v2
-        id: comment-branch
-
-      - name: Add comment
-        run: gh pr comment ${{ steps.comment-branch.outputs.head_ref }} --body "Hi from po4a"
