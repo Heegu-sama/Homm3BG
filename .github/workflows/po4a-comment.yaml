@@ -42,7 +42,6 @@ jobs:
           export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
           export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
           ./${PO4A_DIR}/po4a -v po4a.cfg
-          git status
 
       - name: Check if translations require updating
         run: |
@@ -53,14 +52,17 @@ jobs:
 
       - name: Add comment
         run: |
-          ls
-          du -cksh *
           if [ -s files.txt ]; then
             # There are edited files
             echo "po4a would edit the following files:" >> body.txt
             echo '```' >> body.txt
             cat files.txt >> body.txt
             echo '```' >> body.txt
+            echo "<details><summary>Click to see details</summary>" >> body.txt
+            echo '```diff' >> body.txt
+            git diff >> body.txt
+            echo '```' >> body.txt
+            echo "</details>" >> body.txt
           else
             echo "Nothing to edit, `po4a` run is clean." >> body.txt
           fi
