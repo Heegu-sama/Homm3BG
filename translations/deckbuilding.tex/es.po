@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-26 15:38+0200\n"
+"POT-Creation-Date: 2024-05-03 12:03+0200\n"
 "PO-Revision-Date: 2024-04-15 17:20+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -22,11 +22,11 @@ msgstr ""
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
-#: sections/map_elements.tex:99 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
+#: sections/map_elements.tex:118 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
-#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:145
+#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -35,7 +35,7 @@ msgstr ""
 
 #. type: Plain text
 #: sections/all_map_locations.tex:188 sections/credits.tex:5
-#: sections/deckbuilding.tex:160 sections/heroes.tex:70
+#: sections/deckbuilding.tex:162 sections/heroes.tex:70
 #: sections/introduction.tex:5
 msgid "\\bigbreak"
 msgstr ""
@@ -165,6 +165,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/deckbuilding.tex:74
+#, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\cards/ability.png}\n"
 "\\vspace{-2em}\n"
@@ -216,12 +217,13 @@ msgid ""
 "gain it.  Non-Necropolis players \\textbf{cannot use} Faction Specific Cards "
 "from their hand in any way besides for effects that discard them.  }"
 msgstr ""
-"\\bigbreak \\note{11}{ Ciertas cartas están limitadas a la facción Necrópolis "
-"\\includesvg[height=10px]{\\svgs/necro-note.svg}.  Cuando un jugador que no pertenece "
-"a la facción Necrópolis roba una carta limitada a Necrópolis\\index{Carta de Necrópolis} del Mazo de "
-"Habilidades, puede descartarla y robar una nueva Carta como reemplazo o quedársela. "
-"El jugador \\textbf{no podrá usar} esta carta específica de su mano "
-"salvo los efectos de descarte de cartas.  }"
+"\\bigbreak \\note{11}{ Ciertas cartas están limitadas a la facción "
+"Necrópolis \\includesvg[height=10px]{\\svgs/necro-note.svg}.  Cuando un "
+"jugador que no pertenece a la facción Necrópolis roba una carta limitada a "
+"Necrópolis\\index{Carta de Necrópolis} del Mazo de Habilidades, puede "
+"descartarla y robar una nueva Carta como reemplazo o quedársela. El jugador "
+"\\textbf{no podrá usar} esta carta específica de su mano salvo los efectos "
+"de descarte de cartas.  }"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:78 sections/resources.tex:31
@@ -245,14 +247,15 @@ msgid ""
 "Level.  They are gained through map exploration.\\par Artifacts can be "
 "\\hyperlink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgstr ""
-"Las Cartas Artefacto\\index{Carta Artefacto} tienen un efecto superior e inferior. "
-"Cuando juegues uno tienes que \\textbf{elegir el efecto} que vas a usar.  Se dividen en "
-"3 Niveles: Menor, Mayor y Reliquia.  Estos Niveles se refieren a "
-"la Potencia total de la Carta y pueden ser consultados al resolver ciertos "
-"efectos o durante la preparación del Escenario.  De lo contrario, todas las Cartas de Artefacto "
-"se barajan normalmente juntas para formar el Mazo de Artefacto independientemente "
-"de su Nivel.  Se pueden ganar explorando el mapa.\\par Los Artefactos pueden ser "
-"\\hyperlink{Trading}{negociados} en Escenarios de Alianza y Cooperativos."
+"Las Cartas Artefacto\\index{Carta Artefacto} tienen un efecto superior e "
+"inferior. Cuando juegues uno tienes que \\textbf{elegir el efecto} que vas a "
+"usar.  Se dividen en 3 Niveles: Menor, Mayor y Reliquia.  Estos Niveles se "
+"refieren a la Potencia total de la Carta y pueden ser consultados al "
+"resolver ciertos efectos o durante la preparación del Escenario.  De lo "
+"contrario, todas las Cartas de Artefacto se barajan normalmente juntas para "
+"formar el Mazo de Artefacto independientemente de su Nivel.  Se pueden ganar "
+"explorando el mapa.\\par Los Artefactos pueden ser \\hyperlink{Trading}"
+"{negociados} en Escenarios de Alianza y Cooperativos."
 
 #. type: multicols*
 #: sections/deckbuilding.tex:110
@@ -330,37 +333,38 @@ msgid ""
 "Spell.  All Spell Cards also have an alternative bottom (5) "
 "\\includesvg[height=10px]{\\svgs/empower.svg} effect."
 msgstr ""
-"Las Cartas de Hechizos\\index{Cartas de Hechizos} tiene 3 posibles efectos principales.  El "
-"uso superior, el Hechizo básico no tiene coste adicional.  Para acceder "
-"a los demás efectos, puedes \\textbf{Potenciar} un Hechizo\\index{Potenciando "
-"Hechizos} pagando el coste indicado (3) para un resultado más potente "
-"(4).  Puedes pagar este coste jugando otras cartas por su efecto de Poder "
-"\\includesvg[height=10px]{\\svgs/empower.svg} antes de lanzar el "
-"Hechizo.  Todas las Cartas de Hechizo tienen un efecto alternativo (5) "
-"\\includesvg[height=10px]{\\svgs/empower.svg}."
+"Las Cartas de Hechizos\\index{Cartas de Hechizos} tiene 3 posibles efectos "
+"principales.  El uso superior, el Hechizo básico no tiene coste adicional.  "
+"Para acceder a los demás efectos, puedes \\textbf{Potenciar} un "
+"Hechizo\\index{Potenciando Hechizos} pagando el coste indicado (3) para un "
+"resultado más potente (4).  Puedes pagar este coste jugando otras cartas por "
+"su efecto de Poder \\includesvg[height=10px]{\\svgs/empower.svg} antes de "
+"lanzar el Hechizo.  Todas las Cartas de Hechizo tienen un efecto alternativo "
+"(5) \\includesvg[height=10px]{\\svgs/empower.svg}."
 
-#. type: center
-#: sections/deckbuilding.tex:141
+#. type: Plain text
+#: sections/deckbuilding.tex:142
+#, fuzzy
+#| msgid ""
+#| "{2}\n"
+#| "    \\begin{itemize}[itemsep=5pt]\n"
+#| "      \\item[\\textbf{1.}] \\textbf{Spell Name}\n"
+#| "      \\item[\\textbf{2.}] \\textbf{School of Magic}\n"
+#| "      \\item[\\textbf{3.}] \\textbf{Cost to Empower}\n"
+#| "      \\item[\\textbf{4.}] \\textbf{Spell Effect}\n"
+#| "      \\item[\\textbf{5.}] \\textbf{Alternative Effect}\n"
+#| "      \\item[]\n"
+#| "    \\end{itemize}\n"
+#| "  "
 msgid ""
-"\\medskip \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}"
-"{Spell Card}}}} \\scriptsize"
-msgstr ""
-"\\medskip \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}"
-"{Carta de Hechizo}}}} \\scriptsize"
-
-#. type: multicols
-#: sections/deckbuilding.tex:141
-msgid ""
-"{2}\n"
-"    \\begin{itemize}[itemsep=5pt]\n"
-"      \\item[\\textbf{1.}] \\textbf{Spell Name}\n"
-"      \\item[\\textbf{2.}] \\textbf{School of Magic}\n"
-"      \\item[\\textbf{3.}] \\textbf{Cost to Empower}\n"
-"      \\item[\\textbf{4.}] \\textbf{Spell Effect}\n"
-"      \\item[\\textbf{5.}] \\textbf{Alternative Effect}\n"
-"      \\item[]\n"
-"    \\end{itemize}\n"
-"  "
+"{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/spell_example."
+"png}\\\\ \\medskip "
+"\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Spell "
+"Card}}}} \\scriptsize \\begin{multicols}{2} \\begin{itemize}[itemsep=5pt] "
+"\\item[\\textbf{1.}] \\textbf{Spell Name} \\item[\\textbf{2.}] "
+"\\textbf{School of Magic} \\item[\\textbf{3.}] \\textbf{Cost\\\\to Empower} "
+"\\item[\\textbf{4.}] \\textbf{Spell Effect} \\item[\\textbf{5.}] "
+"\\textbf{Alternative\\\\Effect} \\item[] \\end{itemize} \\end{multicols} }"
 msgstr ""
 "{2}\n"
 "    \\begin{itemize}[itemsep=5pt]\n"
@@ -374,7 +378,7 @@ msgstr ""
 "  "
 
 #. type: Plain text
-#: sections/deckbuilding.tex:146
+#: sections/deckbuilding.tex:147
 msgid ""
 "Spells can be gained by Building the Mage Guild\\index{Mage Guild}.  "
 "Building it also enables you to use the Spell Book Token\\index{Spell Book "
@@ -382,19 +386,20 @@ msgid ""
 "\\textbf{same Round} when the Guild is constructed.\\par Spells can be "
 "\\hyperlink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgstr ""
-"Los hechizos se pueden conseguir en la Cofradía de Magos\\index{Cofradía de Magos}  "
-"Construirlo también te permite usar la Ficha del Libro de "
-"Hechizos\\index{Ficha del Libro de Hechizos} para comprar Hechizos adicionales.  "
-"La Ficha no puede ser usada en la \\textbf{misma Ronda} cuando la Cofradía es construida.\\par "
-"Los Hechizos se pueden \\hyperlink{Trading}{negociar} en Escenarios de Alianza o Cooperativos."
+"Los hechizos se pueden conseguir en la Cofradía de Magos\\index{Cofradía de "
+"Magos}  Construirlo también te permite usar la Ficha del Libro de "
+"Hechizos\\index{Ficha del Libro de Hechizos} para comprar Hechizos "
+"adicionales.  La Ficha no puede ser usada en la \\textbf{misma Ronda} cuando "
+"la Cofradía es construida.\\par Los Hechizos se pueden \\hyperlink{Trading}"
+"{negociar} en Escenarios de Alianza o Cooperativos."
 
 #. type: subsection{#2}
-#: sections/deckbuilding.tex:148
+#: sections/deckbuilding.tex:149
 msgid "\\hypertarget{Specialty}{Hero Specialty Cards}"
 msgstr "\\hypertarget{Specialty}{Cartas de Especialidad}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:152
+#: sections/deckbuilding.tex:153
 msgid ""
 "Hero Specialty Cards\\index{Specialty Card} are gained from "
 "\\hyperlink{Level}{Level ups}.  Each Main Hero has an unique set of "
@@ -408,17 +413,22 @@ msgstr ""
 "Aunque muchas de estas Cartas tienen efectos parecidos a las Cartas de "
 "Hechizo, las Cartas Especiales son \\textbf{una categoría única de cartas}."
 
-#. type: center
-#: sections/deckbuilding.tex:158
+#. type: Plain text
+#: sections/deckbuilding.tex:160
+#, fuzzy
+#| msgid ""
+#| "\\medskip \\footnotesize\\textit{A Level 4 Specialty Card, belonging to "
+#| "Catherine the Knight.}"
 msgid ""
-"\\medskip \\footnotesize\\textit{A Level 4 Specialty Card, belonging to "
-"Catherine the Knight.}"
+"{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/specialty."
+"png}\\\\ \\medskip \\footnotesize\\textit{A Level 4 Specialty Card, "
+"belonging to Catherine the Knight.} }"
 msgstr ""
 "\\medskip \\footnotesize\\textit{Una Carta de Especialidad de Nivel 4 de "
 "Catherine la Caballero.}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:168
+#: sections/deckbuilding.tex:170
 msgid ""
 "\\note{11}{ During Combat, \\textbf{only one Spell Card} may be played by "
 "each player \\textbf{per Combat Round}.  \\medskip When you use an effect "
@@ -426,19 +436,19 @@ msgid ""
 "directly from the Spell Deck), place that Spell into your Discard Pile after "
 "casting it.  }"
 msgstr ""
-"\\note{11}{ Durante el combate, \\textbf{sólo una Carta de Hechizo} puede ser jugada "
-"por cada jugador \\textbf{por Ronda de Combate}.  \\medskip Cuando usas un efecto "
-"que te permite lanzar un Hechizo desde otro lugar que no sea tu mano (como directamente "
-"desde el Mazo de Hechizos), coloca ese Hechizo en tu Pila de Descartes después "
-"de lanzarlo.  }"
+"\\note{11}{ Durante el combate, \\textbf{sólo una Carta de Hechizo} puede "
+"ser jugada por cada jugador \\textbf{por Ronda de Combate}.  \\medskip "
+"Cuando usas un efecto que te permite lanzar un Hechizo desde otro lugar que "
+"no sea tu mano (como directamente desde el Mazo de Hechizos), coloca ese "
+"Hechizo en tu Pila de Descartes después de lanzarlo.  }"
 
 #. type: subsection{#2}
-#: sections/deckbuilding.tex:178
+#: sections/deckbuilding.tex:180
 msgid "Searching Example"
 msgstr "Ejemplo de Búsqueda"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:188
+#: sections/deckbuilding.tex:190
 msgid ""
 "\\textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during "
 "the previous Game Round, enabling him to now use his Spell Book Token to "
@@ -460,13 +470,16 @@ msgstr ""
 "Magos durante la Ronda de Juego anterior, permitiéndole ahora usar su Ficha "
 "del Libro de Hechizos para comprar Hechizos adicionales.}\\par\n"
 "\\includegraphics[width=\\linewidth]{\\examples/deemer_receiving_spellbook."
-"png}\\par \\textit{Usa la ficha y paga el coste de 5 \\includesvg[height=10px]{\\svgs/"
-"gold.svg} indicado en su Tablero de Ciudad, permitiéndole \\textbf{Buscar "
-"(2)} en el Mazo de Hechizos.}\\par \\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par "
-"\\filbreak \\textit{Ahora tiene la opción de ganar la Carta superior de la Pila de "
-"Descarte del Mazo de Hechizos, o robar las dos Cartas superiores del Mazo de "
-"Hechizos y ganar una de ellas. No está interesado en ganar una Maldición de Hechizo, que está en la parte "
-"superior de la Pila de Descarte, y en su lugar decide robar dos Cartas - una "
-"Flecha Mágica y una Bola de Fuego.} \\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow."
-"png}\\par \\textit{Decide quedarse con la Bola de Fuego, colocándola en su mano y "
-"descartando la Flecha Mágica en la Pila de Descartes de Hechizos.}"
+"png}\\par \\textit{Usa la ficha y paga el coste de 5 "
+"\\includesvg[height=10px]{\\svgs/gold.svg} indicado en su Tablero de Ciudad, "
+"permitiéndole \\textbf{Buscar (2)} en el Mazo de Hechizos.}\\par "
+"\\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par "
+"\\filbreak \\textit{Ahora tiene la opción de ganar la Carta superior de la "
+"Pila de Descarte del Mazo de Hechizos, o robar las dos Cartas superiores del "
+"Mazo de Hechizos y ganar una de ellas. No está interesado en ganar una "
+"Maldición de Hechizo, que está en la parte superior de la Pila de Descarte, "
+"y en su lugar decide robar dos Cartas - una Flecha Mágica y una Bola de "
+"Fuego.} \\includegraphics[width=\\linewidth]{\\examples/"
+"fireball_over_magic_arrow.png}\\par \\textit{Decide quedarse con la Bola de "
+"Fuego, colocándola en su mano y descartando la Flecha Mágica en la Pila de "
+"Descartes de Hechizos.}"
