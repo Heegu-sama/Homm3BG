@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-27 16:41+0100\n"
+"POT-Creation-Date: 2024-05-03 08:54+0100\n"
 "PO-Revision-Date: 2024-04-22 16:56+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -20,15 +20,15 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
-#: sections/all_map_locations.tex:417 sections/combat.tex:5
+#: sections/all_map_locations.tex:419 sections/combat.tex:5
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
-#: sections/map_elements.tex:99 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
+#: sections/map_elements.tex:118 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
-#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:145
+#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -72,7 +72,7 @@ msgid ""
 "    \\includesvg[height=15px]{\\svgs/spellpower.svg} & Search (2) the Spell Deck. \\\\\n"
 "    \\includesvg[height=15px]{\\svgs/morale_positive.svg} & Gain Positive Morale. \\\\\n"
 "    \\includesvg[height=15px]{\\svgs/morale_negative.svg} & Gain Negative Morale. \\\\\n"
-"    \\includesvg[height=15px]{\\svgs/movement.svg} & Gain 1 Movement Point. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/movement.svg} & Gain 1 Movement Point for this turn. \\\\\n"
 "    {\\huge\\textbf{?}} & Special effect, see \\hyperlink{Revisitable Fields}{Revisitable} or \\hyperlink{Other Fields}{Other} fields.\\\\\n"
 "  \\end{tabularx}\n"
 "\\endgroup\n"
@@ -80,9 +80,9 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/all_map_locations.tex:33 sections/all_map_locations.tex:58
-#: sections/all_map_locations.tex:148 sections/expansion_content.tex:103
-#: sections/units.tex:153 sections/units.tex:157
+#: sections/all_map_locations.tex:33 sections/all_map_locations.tex:61
+#: sections/all_map_locations.tex:150 sections/expansion_content.tex:103
+#: sections/units.tex:169 sections/units.tex:173
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -112,18 +112,31 @@ msgid ""
 "\n"
 msgstr ""
 
-#. type: multicols*
-#: sections/all_map_locations.tex:54
+#. type: multicols
+#: sections/all_map_locations.tex:52 sections/all_map_locations.tex:424
+#: sections/credits.tex:33 sections/difficulty.tex:16
+#: sections/expansion_content.tex:18 sections/expansion_content.tex:63
+#: sections/game_modes.tex:27 sections/scenario_end.tex:23
+#: sections/units.tex:106
 #, no-wrap
 msgid ""
-"\\phantom{\\includesvg[height=1px]{\\svgs/experience.svg}\\includesvg[height=1px]{\\svgs/spellpower.svg}}\n"
-"\\vspace*{\\fill}\n"
 "\\columnbreak\n"
 "\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:56
+#: sections/all_map_locations.tex:57
+#, no-wrap
+msgid ""
+"\\note{9}{\n"
+"  The effects of Fields that allow you to \\textbf{Search} for Spells or Artifacts, or where you must spend resources to use the Field's effect, are \\textbf{always optional}.\n"
+"  You must always place a Black Cube on such Visitable Fields even if you choose not to use that Field's effect.\n"
+"}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:59
 #, no-wrap
 msgid ""
 "The effects of the following \\textbf{Visitable} \\hypertarget{All Map Locations}{fields} are explained by the symbols on the left:\n"
@@ -131,7 +144,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:119
+#: sections/all_map_locations.tex:77
 #, no-wrap
 msgid ""
 "{\\centering\n"
@@ -147,16 +160,25 @@ msgid ""
 "\n"
 "  \\phantom{j}\\textbf{Treasure}\\\\\n"
 "  \\framedimage[\\linewidth]{\\map_locations/treasure_symbol.jpg}\\\\\n"
-"\n"
-"  \\bigskip\n"
+"}"
+msgstr ""
+
+#. type: Plain text
+#: sections/all_map_locations.tex:81
+msgid ""
+"The effects of the following \\textbf{Visitable} fields are explained by the "
+"symbols on the previous page:"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:130
+#, no-wrap
+msgid ""
+"{2}\n"
+"{\\centering\n"
 "\n"
 "  \\phantom{j}\\textbf{Fountain of Youth}\\\\\n"
 "  \\framedimage[\\linewidth]{\\map_locations/fountain_of_youth.jpg}\\\\\n"
-"\n"
-"  \\filbreak\n"
-"\n"
-"  \\phantom{j}\\textbf{Windmill}\\\\\n"
-"  \\framedimage[\\linewidth]{\\map_locations/windmill.jpg}\\\\\n"
 "\n"
 "  \\bigskip\n"
 "\n"
@@ -193,16 +215,22 @@ msgid ""
 "\n"
 "  \\phantom{j}\\textbf{Pandora's Box}\\\\\n"
 "  \\framedimage[\\linewidth]{\\map_locations/pandoras_box.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Windmill}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/windmill.jpg}\n"
+"  {\\small Due to a misprint, the Windmill on the tile \\texttt{\\#N3} has a \\textbf{?}. It should be ``\\textbf{+}1 \\includesvg[height=0.8\\baselineskip]{\\svgs/valuablegreater.svg}''.}\n"
 "}\n"
 "\n"
 msgstr ""
 
 #. type: multicols
-#: sections/all_map_locations.tex:121 sections/all_map_locations.tex:130
-#: sections/credits.tex:35 sections/credits.tex:39
-#: sections/expansion_content.tex:57 sections/game_modes.tex:25
-#: sections/round_structure.tex:28 sections/setup.tex:64 sections/town.tex:28
-#: sections/town.tex:34 sections/units.tex:104
+#: sections/all_map_locations.tex:132 sections/credits.tex:35
+#: sections/credits.tex:39 sections/expansion_content.tex:57
+#: sections/game_modes.tex:25 sections/round_structure.tex:28
+#: sections/setup.tex:64 sections/town.tex:28 sections/town.tex:34
+#: sections/units.tex:104
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -210,26 +238,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:123
-#, no-wrap
-msgid ""
-"\\vspace{7.4em}\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/all_map_locations.tex:128
-#, no-wrap
-msgid ""
-"\\note{10}{\n"
-"  The effects of Fields that allow you to \\textbf{Search} for Spells or Artifacts, or where you must spend resources to use the Field's effect, are \\textbf{always optional}.\n"
-"  You must always place a Black Cube on such Visitable Fields even if you choose not to use that Field's effect.\n"
-"}\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/all_map_locations.tex:132
+#: sections/all_map_locations.tex:134
 #, no-wrap
 msgid ""
 "\\pagebreak\n"
@@ -237,7 +246,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:141
+#: sections/all_map_locations.tex:143
 #, no-wrap
 msgid ""
 "\\subsection*{Towns, Mines and Settlements}\n"
@@ -252,7 +261,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:146
+#: sections/all_map_locations.tex:148
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -263,7 +272,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:152
+#: sections/all_map_locations.tex:154
 #, no-wrap
 msgid ""
 "\\hypertarget{Mines}{\\textbf{Mines}}\\index{Mines} are Flaggable Fields which increase a specific resource's income when Flagged.\n"
@@ -273,7 +282,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:160
+#: sections/all_map_locations.tex:162
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -287,7 +296,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:169
+#: sections/all_map_locations.tex:171
 #, no-wrap
 msgid ""
 "\\textbf{Settlements}\\index{Settlement} act as a spawn point for Secondary Heroes, and as a place for Main Heroes to move to when defeated.\n"
@@ -302,7 +311,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/all_map_locations.tex:171 sections/units.tex:89
+#: sections/all_map_locations.tex:173 sections/units.tex:89
 #, no-wrap
 msgid ""
 "\\bigbreak\n"
@@ -310,7 +319,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:188
+#: sections/all_map_locations.tex:190
 #, no-wrap
 msgid ""
 "\\begin{minipage}[h]{\\linewidth}\n"
@@ -330,19 +339,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/all_map_locations.tex:188 sections/credits.tex:5
+#: sections/all_map_locations.tex:190 sections/credits.tex:5
 #: sections/deckbuilding.tex:160 sections/heroes.tex:70
 #: sections/introduction.tex:5
 msgid "\\bigbreak"
 msgstr ""
 
 #. type: subsection{#2}
-#: sections/all_map_locations.tex:190
+#: sections/all_map_locations.tex:192
 msgid "\\hypertarget{Revisitable Fields}{Revisitable Fields}"
 msgstr ""
 
 #. type: figure
-#: sections/all_map_locations.tex:220
+#: sections/all_map_locations.tex:222
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -376,7 +385,7 @@ msgid ""
 msgstr ""
 
 #. type: figure
-#: sections/all_map_locations.tex:244
+#: sections/all_map_locations.tex:246
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -404,7 +413,7 @@ msgid ""
 msgstr ""
 
 #. type: figure
-#: sections/all_map_locations.tex:263
+#: sections/all_map_locations.tex:265
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -427,7 +436,7 @@ msgid ""
 msgstr ""
 
 #. type: figure
-#: sections/all_map_locations.tex:277
+#: sections/all_map_locations.tex:279
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -445,7 +454,7 @@ msgid ""
 msgstr ""
 
 #. type: tikzpicture
-#: sections/all_map_locations.tex:281
+#: sections/all_map_locations.tex:283
 #, no-wrap
 msgid ""
 "[overlay]\n"
@@ -453,12 +462,12 @@ msgid ""
 msgstr ""
 
 #. type: subsection{#2}
-#: sections/all_map_locations.tex:283
+#: sections/all_map_locations.tex:285
 msgid "\\hypertarget{Other Fields}{Other Fields}"
 msgstr ""
 
 #. type: figure
-#: sections/all_map_locations.tex:304
+#: sections/all_map_locations.tex:306
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -483,7 +492,7 @@ msgid ""
 msgstr ""
 
 #. type: figure
-#: sections/all_map_locations.tex:326
+#: sections/all_map_locations.tex:328
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -509,7 +518,7 @@ msgid ""
 msgstr ""
 
 #. type: figure
-#: sections/all_map_locations.tex:348
+#: sections/all_map_locations.tex:350
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -535,7 +544,7 @@ msgid ""
 msgstr ""
 
 #. type: figure
-#: sections/all_map_locations.tex:368
+#: sections/all_map_locations.tex:370
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -559,7 +568,7 @@ msgid ""
 msgstr ""
 
 #. type: figure
-#: sections/all_map_locations.tex:397
+#: sections/all_map_locations.tex:399
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -592,7 +601,7 @@ msgid ""
 msgstr ""
 
 #. type: figure
-#: sections/all_map_locations.tex:415
+#: sections/all_map_locations.tex:417
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -614,7 +623,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:420
+#: sections/all_map_locations.tex:422
 #, no-wrap
 msgid ""
 "{\\centering\\phantom{Star Axis}\\par}\n"
@@ -622,19 +631,8 @@ msgid ""
 "\n"
 msgstr ""
 
-#. type: multicols
-#: sections/all_map_locations.tex:422 sections/credits.tex:33
-#: sections/difficulty.tex:16 sections/expansion_content.tex:18
-#: sections/expansion_content.tex:63 sections/game_modes.tex:27
-#: sections/scenario_end.tex:23 sections/units.tex:106
-#, no-wrap
-msgid ""
-"\\columnbreak\n"
-"\n"
-msgstr ""
-
 #. type: multicols*
-#: sections/all_map_locations.tex:429
+#: sections/all_map_locations.tex:431
 #, no-wrap
 msgid ""
 "{\\centering\\textbf{Star Axis}\\par}\n"
@@ -647,8 +645,8 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/all_map_locations.tex:431 sections/combat.tex:91
-#: sections/player_turns.tex:37 sections/units.tex:164
+#: sections/all_map_locations.tex:433 sections/combat.tex:91
+#: sections/player_turns.tex:37 sections/units.tex:180
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -656,7 +654,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:442
+#: sections/all_map_locations.tex:444
 #, no-wrap
 msgid ""
 "{\\centering\\textbf{\\hypertarget{Random Town}{Random Town}}\\par}\n"
