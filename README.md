@@ -60,8 +60,10 @@ To work on the document on your machine, you need the following:
 - [**Inkscape**](https://inkscape.org/) (required) to render glyphs in the document (while installing on Windows, make sure to tick `Add Inkscape to the System Path` option)
 - [**TeXstudio**](https://www.texstudio.org/) (optional) to edit LaTeX files and rebuild the PDF file quickly
 - [**po4a**](https://po4a.org/index.php.en) (optional) to work on translating the document to other languages
-- [**GIMP**](https://www.gimp.org/) (optional) to edit some images in `assets` directory - see below for details
-- [**aspell**](http://aspell.net/) (optional) for spellchecking - see below for details
+- [**pdftoppm**](https://linux.die.net/man/1/pdftoppm) (optional) to make screenshots of rendered PDF pages
+- [**ImageMagick**](https://imagemagick.org/index.php) (optional) to combine screenshots into convenient diffs
+- [**GIMP**](https://www.gimp.org/) (optional) to edit some images in `assets` directory
+- [**aspell**](http://aspell.net/) (optional) for spellchecking
 
 To build the document in English, either run this in the command line:
 
