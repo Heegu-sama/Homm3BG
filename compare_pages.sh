@@ -19,6 +19,6 @@ for page in $(seq ${FIRST_PAGE} ${LAST_PAGE})
 do
   echo "Combining pages ${page}..."
   montage *${page}.png -tile 2x1 -geometry +0+0 ${page}.png
-  rm aa-${page}.png bb-${page}.png
+  rm aa-$(printf %02d $page).png bb-$(printf %02d $page).png
 done
 echo "Done."
