@@ -208,7 +208,7 @@
 
 % Commands to be used for automation generating printable version
 \newcommand{\pagetarget}[2]{\label{#1}\hypertarget{#1}{#2}}
-\newcommand{\pagelink}[2]{\hyperlink{#1}{#2} \textmd{(\pageshorthand \pageref{#1})}}
+\newcommand{\pagelink}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{ \textmd{(\pageshorthand\,\pageref{#1})}}{}}
 
 % Command for overlay circled text
 \definecolor{goblin}{HTML}{3b7c33}

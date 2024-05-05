@@ -8,7 +8,7 @@ This guide provides a visual overview of all components included in every expans
   \centering
   \begin{subfigure}[b]{0.4\linewidth}
     \includegraphics[width=\linewidth]{\images/combat_board_2.png}
-    \caption{\textbf{\hyperlink{Combat}{Combat} Board}}
+    \caption{\textbf{\pagelink{Combat}{Combat Board}}}
   \end{subfigure}
   ~
   \begin{subfigure}[b]{0.5\linewidth}
@@ -21,24 +21,24 @@ This guide provides a visual overview of all components included in every expans
   \centering
   \begin{subfigure}[b]{0.25\linewidth}
     \includegraphics[width=\linewidth]{\images/hero.png}
-    \caption{\textbf{\hyperlink{Heroes}{Hero} Card}}
+    \caption{\textbf{\pagelink{Heroes}{Hero Card}}}
   \end{subfigure}
   ~
   \begin{subfigure}[b]{0.25\linewidth}
     \includegraphics[width=\linewidth]{\images/town.png}
-    \caption{\textbf{\hyperlink{Town}{Town} Board}}
+    \caption{\textbf{\pagelink{Town}{Town Board}}}
   \end{subfigure}
   ~
   \begin{subfigure}[b]{0.25\linewidth}
     \centering
     \includegraphics[width=\linewidth]{\images/map-tile-back.png}
-    \caption{\textbf{\hyperlink{Map}{Map} Tile}}
+    \caption{\textbf{\pagelink{Map}{Map Tile}}}
   \end{subfigure}
   ~
   \begin{subfigure}[b]{0.15\linewidth}
     \centering
     \includegraphics[width=\linewidth]{\images/grail.png}
-    \caption{\textbf{Grail Token}}
+    \caption{\textbf{\pagelink{Grail}{Grail Token}}}
   \end{subfigure}
 \end{figure}
 \vspace*{-1.7em}
@@ -47,37 +47,37 @@ This guide provides a visual overview of all components included in every expans
   \begin{subfigure}[b]{0.16\linewidth}
     \centering
     \includegraphics[width=0.6\linewidth]{\images/initiative-bf.png}
-    \caption{\textbf{Initiative Token} (Battlefield Expansion)}
+    \caption{\textbf{Initiative Token} (Battlefield Expansion) \iftoggle{printable}{\phantom{Expansion}}{}}
   \end{subfigure}
   \begin{subfigure}[b]{0.18\linewidth}
     \centering
     \includegraphics[width=\linewidth]{\images/gold-tokens.png}
-    \caption{\textbf{\hyperlink{Resources}{Gold} Tokens} \phantom{Population} \phantom{Population} \phantom{Population}}
+    \caption{\textbf{\pagelink{Resources}{Gold Tokens}} \phantom{Popupulation} \phantom{Popupulation} \phantom{Popupulation}}
   \end{subfigure}
   \begin{subfigure}[b]{0.12\linewidth}
     \centering
     \includegraphics[width=0.6\linewidth]{\images/building-materials-token.png}
-    \caption{\textbf{\hyperlink{Resources}{Building Materials} Token} \phantom{Population}}
+    \caption{\textbf{\pagelink{Resources}{Building Materials Token}} \phantom{Population}}
   \end{subfigure}
   \begin{subfigure}[b]{0.12\linewidth}
     \centering
     \includegraphics[width=0.6\linewidth]{\images/valuables-token.png}
-    \caption{\textbf{\hyperlink{Resources}{Valuables} Token} \phantom{Population} \phantom{Population}}
+    \caption{\textbf{\pagelink{Resources}{Valuables Token}} \phantom{Population} \phantom{Population}}
   \end{subfigure}
   \begin{subfigure}[b]{0.12\linewidth}
     \centering
     \includegraphics[width=5em]{\images/build.png}
-    \caption{\textbf{\hyperlink{Town Actions}{Build} Token} \phantom{Population} \phantom{Population}}
+    \caption{\textbf{\pagelink{Town Actions}{Build Token}} \phantom{Population} \phantom{Population}}
   \end{subfigure}
   \begin{subfigure}[b]{0.13\linewidth}
     \centering
     \includegraphics[width=5em]{\images/population.png}
-    \caption{\textbf{\hyperlink{Town Actions}{Population} Token} \phantom{Population} \phantom{Population}}
+    \caption{\textbf{\pagelink{Town Actions}{Population Token}} \phantom{Population} \phantom{Population}}
   \end{subfigure}
   \begin{subfigure}[b]{0.12\linewidth}
     \centering
     \includegraphics[width=5em]{\images/spells.png}
-    \caption{\textbf{\hyperlink{Town Actions}{Spell Book} Token} \phantom{Population}}
+    \caption{\textbf{\pagelink{Town Actions}{Spell Book Token}} \phantom{Population}}
   \end{subfigure}
 \end{figure}
 \vspace*{-4em}
@@ -88,7 +88,7 @@ This guide provides a visual overview of all components included in every expans
       \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\images/morale-negative.png}};
       \node at (1, 0) {\includegraphics[width=0.6\linewidth]{\images/morale-positive.png}};
     \end{tikzpicture}
-    \caption{\textbf{\hyperlink{Morale}{Morale} Token}}
+    \caption{\textbf{\pagelink{Morale}{Morale Token}}}
   \end{subfigure}
   \begin{subfigure}[b]{0.1\linewidth}
     \centering
@@ -98,12 +98,12 @@ This guide provides a visual overview of all components included in every expans
   \begin{subfigure}[b]{0.17\linewidth}
     \centering
     \includegraphics[width=4.5em]{\images/paralysis-defense.png}
-    \caption{\textbf{\hyperlink{Paralysis}{Paralysis}/ \hyperlink{Defend}{Defense} Token}}
+    \caption{\textbf{\hyperlink{Paralysis}{Paralysis}/ \pagelink{Defend}{Defense} Token}}
   \end{subfigure}
   \begin{subfigure}[b]{0.15\linewidth}
     \centering
     \includegraphics[width=0.6\linewidth]{\images/movement-tokens.png}
-    \caption{\textbf{\hyperlink{Movement}{Movement} Tokens}}
+    \caption{\textbf{\pagelink{Movement}{Movement Tokens}}}
   \end{subfigure}
   \begin{subfigure}[b]{0.15\linewidth}
     \centering
@@ -153,24 +153,18 @@ This guide provides a visual overview of all components included in every expans
       \node at (0, 0) {\includegraphics[width=0.8\linewidth]{\cards/event-back.png}};
       \node at (1, 1) {\includegraphics[width=0.8\linewidth]{\cards/event.png}};
     \end{tikzpicture}
-    \caption{\textbf{\hyperlink{Events}{Event} Card}\\(Fortress Expansion)}
+    \caption{\textbf{\pagelink{Events}{Event Card}}\\(Fortress Expansion)}
   \end{subfigure}
-  ~
-  \begin{subfigure}[t]{0.23\linewidth}
+  \begin{subfigure}[t]{0.25\linewidth}
     \centering
-    \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.8\linewidth]{\cards/astrolog-back.png}};
-      \node at (1, 1) {\includegraphics[width=0.8\linewidth]{\cards/astrolog.png}};
-    \end{tikzpicture}
-    \caption{\textbf{\hyperlink{Rounds}{Astrologers} Proclaim Card}}
+    \includegraphics[width=0.8\linewidth]{\cards/astrolog.png}
+    \caption{\textbf{\pagelink{Rounds}{Astrologers Proclaim Card}}}
   \end{subfigure}
-  ~
   \begin{subfigure}[t]{0.23\linewidth}
     \centering
     \includegraphics[width=\linewidth]{\cards/aiback.png}
-    \caption{\textbf{\hyperlink{AIrules}{AI} Card}}
+    \caption{\textbf{\pagelink{AIrules}{AI Card}}}
   \end{subfigure}
-  ~
   \begin{subfigure}[t]{0.23\linewidth}
     \centering
     \includegraphics[width=\linewidth]{\cards/adventure.png}
@@ -186,7 +180,7 @@ This guide provides a visual overview of all components included in every expans
       \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
       \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/necromancy_card.png}};
     \end{tikzpicture}
-    \caption{\textbf{\hyperlink{Ability}{Ability} Card}}
+    \caption{\textbf{\pagelink{Ability}{Ability Card}}}
   \end{subfigure}
   \begin{subfigure}[t]{0.23\linewidth}
     \centering
@@ -194,7 +188,7 @@ This guide provides a visual overview of all components included in every expans
       \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
       \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/artifact-front.png}};
     \end{tikzpicture}
-    \caption{\textbf{\hyperlink{Artifact}{Artifact} Card}}
+    \caption{\textbf{\pagelink{Artifact}{Artifact Card}}}
   \end{subfigure}
   \begin{subfigure}[t]{0.23\linewidth}
     \centering
@@ -202,7 +196,7 @@ This guide provides a visual overview of all components included in every expans
       \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
       \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/spell.png}};
     \end{tikzpicture}
-    \caption{\textbf{\hyperlink{spells}{Spell} Card}}
+    \caption{\textbf{\pagelink{spells}{Spell Card}}}
   \end{subfigure}
 \end{figure}
 \vspace*{-2em}
@@ -214,7 +208,7 @@ This guide provides a visual overview of all components included in every expans
       \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
       \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/war_machine.png}};
     \end{tikzpicture}
-    \caption{\textbf{\hyperlink{War Machines}{War Machine} Card} (Rampart Expansion)}
+    \caption{\textbf{\pagelink{War Machines}{War Machine Card}} (Rampart Expansion)}
   \end{subfigure}
   \begin{subfigure}[t]{0.23\linewidth}
     \centering
@@ -222,7 +216,7 @@ This guide provides a visual overview of all components included in every expans
       \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
       \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/specialty.png}};
     \end{tikzpicture}
-    \caption{\textbf{\hyperlink{Specialty}{Hero Specialty} Card}}
+    \caption{\textbf{\pagelink{Specialty}{Hero Specialty Card}}}
   \end{subfigure}
   \begin{subfigure}[t]{0.23\linewidth}
     \centering
@@ -230,7 +224,7 @@ This guide provides a visual overview of all components included in every expans
       \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
       \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/statistic.png}};
     \end{tikzpicture}
-    \caption{\textbf{\hyperlink{Statistic}{Statistic} Card}}
+    \caption{\textbf{\pagelink{Statistic}{Statistic Card}}}
   \end{subfigure}
   \begin{subfigure}[t]{0.23\linewidth}
     \centering
@@ -238,10 +232,10 @@ This guide provides a visual overview of all components included in every expans
       \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
       \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/empowered_statistic.png}};
     \end{tikzpicture}
-    \caption{\textbf{\hyperlink{Empowered Statistic}{Empowered} Statistic Card} (Inferno Expansion)}
+    \caption{\textbf{\pagelink{Empowered Statistic}{Empowered Statistic Card}} (Inferno Expansion)}
   \end{subfigure}
 \end{figure}
-\vspace*{-3em}
+\vspace*{\iftoggle{printable}{-2em}{-3em}}
 \begin{figure}[H]
   \centering
   \begin{subfigure}[t]{0.23\linewidth}
@@ -250,7 +244,7 @@ This guide provides a visual overview of all components included in every expans
       \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/neutral-back.png}};
       \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/neutral-front.png}};
     \end{tikzpicture}
-    \caption{\textbf{\hyperlink{Neutral Units}{Neutral Unit} Card}}
+    \caption{\textbf{\pagelink{Neutral Units}{Neutral Unit Card}}}
   \end{subfigure}
   ~
   \begin{subfigure}[t]{0.23\linewidth}
@@ -259,7 +253,7 @@ This guide provides a visual overview of all components included in every expans
       \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/unit-pack.png}};
       \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/unit-few.png}};
     \end{tikzpicture}
-    \caption{\textbf{Faction \hyperlink{Units}{Unit} Card}}
+    \caption{\textbf{Faction \pagelink{Units}{Unit Card}}}
   \end{subfigure}
   ~
   \begin{subfigure}[t]{0.23\linewidth}
@@ -268,13 +262,13 @@ This guide provides a visual overview of all components included in every expans
       \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/arrow_tower_back.png}};
       \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/arrow_tower.png}};
     \end{tikzpicture}
-    \caption{\textbf{\hyperlink{Walls}{Arrow Tower} Card}}
+    \caption{\textbf{\pagelink{Walls}{Arrow Tower Card}}}
   \end{subfigure}
   ~
   \begin{subfigure}[t]{0.23\linewidth}
     \centering
     \includegraphics[width=\linewidth]{\cards/gate.png}
-    \caption{\textbf{\hyperlink{Walls}{Gate, Walls} Cards}}
+    \caption{\textbf{\pagelink{Walls}{Gate, Walls Cards}}}
   \end{subfigure}
 \end{figure}
 
@@ -299,15 +293,16 @@ This guide provides a visual overview of all components included in every expans
     \caption{\textbf{Resource Dice}}
   \end{subfigure}
 \end{figure}
-\vspace*{-1em}
+\vspace*{-2em}
 \begin{figure}[H]
   \centering
   \begin{subfigure}[b]{\iftoggle{printable}{0.8\linewidth}{\linewidth}}
     \centering
     \includegraphics[width=0.8\linewidth]{\images/round-tracker.png}
-    \caption{\textbf{\hyperlink{Rounds}{Round} Tracker}}
+    \caption{\textbf{\pagelink{Rounds}{Round Tracker}}}
   \end{subfigure}
 \end{figure}
+\vspace*{-1em}
 \switchcolumn
 \begin{figure}[H]
   \vspace*{1em}
