@@ -76,7 +76,7 @@ or press the `Build & View` ▶️ (F5) button in TeXstudio on the `main_en.tex`
 To build the document in any other language (currently `pl`, `es`, `fr`, `ru` and `ua` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
 
 ```bash
-./build.sh <LANGUAGE>
+tools/build.sh <LANGUAGE>
 ```
 
 or press the `Build & View` ▶️ (F5) button in TeXstudio while having any `main_<LANGUAGE>.tex` file open, after running `po4a` (see `Translations` below for details).
@@ -96,7 +96,7 @@ Then, use the script:
 > Also, you'll need [Python](https://www.python.org/) for this 🐍
 
 ```bash
-./make_printable.sh <LANGUAGE>
+tools/make_printable.sh <LANGUAGE>
 ```
 
 ### 🌍 Translations
@@ -130,7 +130,7 @@ Those excerpts will be compiled just as they are in the original (English), unti
 To facilitate finding them, use the script:
 
 ```bash
-./find_fuzzy.sh <lang>
+tools/find_fuzzy.sh <lang>
 ```
 
 It will show all the fuzzy translations in the `*.po` files for the specified language.
@@ -141,19 +141,19 @@ It is a good practice to share screenshots of your work in pull requests.
 You can the script to make PNG images of specified page(s):
 
 ```bash
-./pdf2image.sh <LANGUAGE> <FIRST_PAGE> <LAST_PAGE>
+tools/pdf2image.sh <LANGUAGE> <FIRST_PAGE> <LAST_PAGE>
 ```
 
 Example:
 
 ```bash
-./pdf2image.sh en 5 7
+tools/pdf2image.sh en 5 7
 ```
 
 To process a single page, use:
 
 ```bash
-./pdf2image.sh en 5
+tools/pdf2image.sh en 5
 ```
 
 ### 🎭 Comparing two pages side by side
@@ -161,7 +161,7 @@ To process a single page, use:
 If you'd like to show a single image of two instances of the same page side-by-side (before|after style), you can use the following script:
 
 ```bash
-./compare_pages.sh <FILE_COMPARED_AGAINST> <LANGUAGE> <FIRST_PAGE> <LAST_PAGE>
+tools/compare_pages.sh <FILE_COMPARED_AGAINST> <LANGUAGE> <FIRST_PAGE> <LAST_PAGE>
 ```
 
 Let's assume you have `main_en.pdf` in your home directory downloaded from GitHub, and in your current working directory you have a build you're working on.
@@ -169,7 +169,7 @@ You'd like to have images comparing pages 38 through 41.
 Here's how to use it:
 
 ```bash
-./compare_pages.sh ~/main_en.pdf en 38 41
+tools/compare_pages.sh ~/main_en.pdf en 38 41
 ```
 
 It will produce files: `38.png`, `39.png`, `40.png` and `41.png`.
