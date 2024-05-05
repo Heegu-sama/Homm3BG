@@ -235,7 +235,18 @@
   \intro{}
 \end{center}
 
-% QR codes placeholder
+\bigbreak
+
+\begin{multicols}{2}
+\centering
+\includegraphics[width=0.8\linewidth]{\qr/github.png}\\
+Skanuj, aby otworzyć repozytorium na \textbf{GitHubie}.
+
+\columnbreak
+
+\includegraphics[width=0.8\linewidth]{\qr/bgg.png}\\
+Skanuj, aby otworzyć wątek na \textbf{BoardGameGeeku}.
+\end{multicols}
 
 \begin{tikzpicture}[remember picture, overlay]
   \node(cover)[anchor=center, yshift=12em] at (current page.south) {
@@ -296,6 +307,6 @@
 
 \include{\sections/credits.tex}
 
-\include{\sections/back_cover.tex}
+\include{\sections/index.tex}\include{\sections/back_cover.tex}
 
 \end{document}
