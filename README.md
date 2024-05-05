@@ -1,4 +1,4 @@
-# Heroes of Might & Magic III: The Board Game 🐴 🛡️ ⚔️️<br>Rule Book Rewrite Project 📜🪶
+j# Heroes of Might & Magic III: The Board Game 🐴 🛡️ ⚔️️<br>Rule Book Rewrite Project 📜🪶
 
 Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1) 🤓
 
@@ -11,9 +11,9 @@ Click in the table to download the most recent builds in the chosen language:
 | 🇬🇧 English    |   100%   | [🇬🇧📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf) | [🇬🇧🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf) |
 | 🇵🇱 Polski     |   ~80%   | [🇵🇱📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf) | [🇵🇱🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf) |
 | 🇪🇸 Español    |   ~90%   | [🇪🇸📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf) | [🇪🇸🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf) |
-| 🇫🇷 Français   |   ~90%   | [🇫🇷📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf) | [🇫🇷🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf) |
+| 🇫🇷 Français   |   ~95%   | [🇫🇷📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf) | [🇫🇷🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf) |
 | 🇷🇺 Русский    |   ~39%   | [🇷🇺📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf) | [🇷🇺🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf) |
-| 🇺🇦 Українська |    ~5%   | [🇺🇦📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf) | [🇺🇦🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf)|
+| 🇺🇦 Українська |   ~10%   | [🇺🇦📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf) | [🇺🇦🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf)|
 
 🖨️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
 
