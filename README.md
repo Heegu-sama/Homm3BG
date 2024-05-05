@@ -62,7 +62,7 @@ To work on the document on your machine, you need the following:
 - [**po4a**](https://po4a.org/index.php.en) (optional) to work on translating the document to other languages
 - [**pdftoppm**](https://linux.die.net/man/1/pdftoppm) (optional) to make screenshots of rendered PDF pages
 - [**ImageMagick**](https://imagemagick.org/index.php) (optional) to combine screenshots into convenient diffs
-- [**GIMP**](https://www.gimp.org/) (optional) to edit some images in `assets` directory
+- [**GIMP**](https://www.gimp.org/) or [**Krita**](https://krita.org/) (optional) to edit some images in `assets` directory
 - [**aspell**](http://aspell.net/) (optional) for spellchecking
 
 To build the document in English, either run this in the command line:
