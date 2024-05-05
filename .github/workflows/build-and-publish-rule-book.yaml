@@ -133,7 +133,6 @@ jobs:
         run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes-${{ matrix.language }}.tex' -e 'd}' metadata.tex
 
       - name: Compile printable rule book
-        if: ${{ ! matrix.luaengine }}
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
