@@ -11,14 +11,14 @@ else
 fi
 
 echo "Making images of ${FILE_TO_COMPARE}..."
-pdftoppm ${FILE_TO_COMPARE} aa -f ${FIRST_PAGE} -l ${LAST_PAGE} -png
+pdftoppm ${FILE_TO_COMPARE} aa -f ${FIRST_PAGE} -l ${LAST_PAGE} -png &
 echo "Making images of main_${LANGUAGE}.pdf..."
 pdftoppm main_${LANGUAGE}.pdf bb -f ${FIRST_PAGE} -l ${LAST_PAGE} -png
 
 for page in $(seq ${FIRST_PAGE} ${LAST_PAGE})
 do
-  echo "Combining pages ${page}..."
-  montage *${page}.png -tile 2x1 -geometry +0+0 ${page}.png
+  echo "Combining pages $(printf %02d $page)..."
+  montage *$(printf %02d $page).png -tile 2x1 -geometry +0+0 $(printf %02d $page).png
   rm aa-$(printf %02d $page).png bb-$(printf %02d $page).png
 done
 echo "Done."
