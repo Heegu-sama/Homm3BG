@@ -192,7 +192,7 @@ find . -type f -name "*.tex" -exec aspell -d en_US -p=./.aspell.homm3.pws --mode
 ```
 
 Please note that currently the tool will flag many parameters in LaTeX commands.
-We are currently looking into it, how best to remediate this.
+We are currently looking into how best to remediate this.
 
 The personal dictionary `.aspell.homm3.pwd` currently contains only game-related words.
 It does not contain names (e.g., "BoardGameGeek") or parameter values (e.g., "px", "svg") in order to minimize the chances of false-negatives in the main body of text.
