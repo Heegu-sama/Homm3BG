@@ -133,28 +133,6 @@ To facilitate finding them, use the script:
 
 It will show all the fuzzy translations in the `*.po` files for the specified language.
 
-
-### 🔎 Spellchecking
-
-TeXstudio has built-in spellchecking, but the first steps have been made towards automated spellchecking with aspell.
-For local development, after installing the tool, you can run it from the command line for example with
-
-```bash
-aspell -d en_US -p=./.aspell.homm3.pws --mode=tex --dont-backup check main.tex
-```
-
-or when wanting to check all `.tex` files then with
-
-```bash
-find . -type f -name "*.tex" -exec aspell -d en_US -p=./.aspell.homm3.pws --mode=tex --dont-backup check {} \;
-```
-
-Please note that currently the tool will flag many parameters in LaTeX commands.
-We are currently looking into it, how best to remediate this.
-
-The personal dictionary `.aspell.homm3.pwd` currently contains only game-related words.
-It does not contain names (e.g., "BoardGameGeek") or parameter values (e.g., "px", "svg") in order to minimize the chances of false-negatives in the main body of text.
-
 ### 📸 Screenshots
 
 It is a good practice to share screenshots of your work in pull requests.
@@ -176,7 +154,7 @@ To process a single page, use:
 ./pdf2image.sh en 5
 ```
 
-### Comparing two pages side by side
+### 🎭 Comparing two pages side by side
 
 If you'd like to show a single image of two instances of the same page side-by-side (before|after style), you can use the following script:
 
@@ -185,16 +163,37 @@ If you'd like to show a single image of two instances of the same page side-by-s
 ```
 
 Let's assume you have `main_en.pdf` in your home directory downloaded from GitHub, and in your current working directory you have a build you're working on.
-You'd like to have images comparing pages 38 and 39.
+You'd like to have images comparing pages 38 through 41.
 Here's how to use it:
 
 ```bash
-./compare_pages.sh ~/main_en.pdf en 38 39
+./compare_pages.sh ~/main_en.pdf en 38 41
 ```
 
-It will produce two files: `38.png` and `39.png`.
+It will produce files: `38.png`, `39.png`, `40.png` and `41.png`.
 
 **This script requires `pdftoppm` and `imagemagick` utilities.**
+
+### 🔎 Spellchecking
+
+TeXstudio has built-in spellchecking, but the first steps have been made towards automated spellchecking with aspell.
+For local development, after installing the tool, you can run it from the command line for example with
+
+```bash
+aspell -d en_US -p=./.aspell.homm3.pws --mode=tex --dont-backup check main.tex
+```
+
+or when wanting to check all `.tex` files then with
+
+```bash
+find . -type f -name "*.tex" -exec aspell -d en_US -p=./.aspell.homm3.pws --mode=tex --dont-backup check {} \;
+```
+
+Please note that currently the tool will flag many parameters in LaTeX commands.
+We are currently looking into it, how best to remediate this.
+
+The personal dictionary `.aspell.homm3.pwd` currently contains only game-related words.
+It does not contain names (e.g., "BoardGameGeek") or parameter values (e.g., "px", "svg") in order to minimize the chances of false-negatives in the main body of text.
 
 ## ✨ Assets
 
