@@ -12,14 +12,14 @@ fi
 
 echo "Making images of ${FILE_TO_COMPARE} and main_${LANGUAGE}.pdf..."
 pdftoppm ${FILE_TO_COMPARE} aa -f ${FIRST_PAGE} -l ${LAST_PAGE} -png -progress &
-sleep 1
-pdftoppm main_${LANGUAGE}.pdf bb -f ${FIRST_PAGE} -l ${LAST_PAGE} -png
+pdftoppm main_${LANGUAGE}.pdf bb -f ${FIRST_PAGE} -l ${LAST_PAGE} -png -progress &
+wait
 
 for page in $(seq ${FIRST_PAGE} ${LAST_PAGE})
 do
   echo "Combining pages $(printf %02d $page)..."
   montage *$(printf %02d $page).png -tile 2x1 -geometry +0+0 $(printf %02d $page).png && \
   rm aa-$(printf %02d $page).png bb-$(printf %02d $page).png &
-  sleep .2
 done
+wait
 echo "Done."
