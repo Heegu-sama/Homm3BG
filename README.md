@@ -157,7 +157,8 @@ It does not contain names (e.g., "BoardGameGeek") or parameter values (e.g., "px
 
 ### 📸 Screenshots
 
-As Pull Request often requires screenshots you can the script to make PNG images of specified page(s):
+It is a good practice to share screenshots of your work in pull requests.
+You can the script to make PNG images of specified page(s):
 
 ```bash
 ./pdf2image.sh <LANGUAGE> <FIRST_PAGE> <LAST_PAGE>
@@ -174,6 +175,26 @@ To process a single page, use:
 ```bash
 ./pdf2image.sh en 5
 ```
+
+### Comparing two pages side by side
+
+If you'd like to show a single image of two instances of the same page side-by-side (before|after style), you can use the following script:
+
+```bash
+./compare_pages.sh <FILE_COMPARED_AGAINST> <LANGUAGE> <FIRST_PAGE> <LAST_PAGE>
+```
+
+Let's assume you have `main_en.pdf` in your home directory downloaded from GitHub, and in your current working directory you have a build you're working on.
+You'd like to have images comparing pages 38 and 39.
+Here's how to use it:
+
+```bash
+./compare_pages.sh ~/main_en.pdf en 38 39
+```
+
+It will produce two files: `38.png` and `39.png`.
+
+**This script requires `pdftoppm` and `imagemagick` utilities.**
 
 ## ✨ Assets
 
