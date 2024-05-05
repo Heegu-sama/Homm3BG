@@ -132,23 +132,14 @@ jobs:
       - name: Add QR codes
         run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes-${{ matrix.language }}.tex' -e 'd}' metadata.tex
 
-      - name: Compile printable rule book (lua)
-        if: ${{ matrix.luaengine }}
-        uses: xu-cheng/latex-action@v3
-        with:
-          extra_system_packages: "inkscape"
-          latexmk_use_lualatex: true
-          latexmk_shell_escape: true
-          post_compile: echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && upmendex -s index_style main_${{ matrix.language }} && sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}@g' main_${{ matrix.language }}.ind && lualatex --shell-escape -usepretex='\AtBeginDocument{\toggletrue{printable}}' main_${{ matrix.language }}.tex
-          root_file: main_${{ matrix.language }}.tex
-
-      - name: Compile printable rule book (non-lua)
+      - name: Compile printable rule book
         if: ${{ ! matrix.luaengine }}
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
+          latexmk_use_lualatex: ${{ matrix.luaengine }}
           latexmk_shell_escape: true
-          post_compile: echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && upmendex -s index_style main_${{ matrix.language }} && sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}@g' main_${{ matrix.language }}.ind && pdflatex --shell-escape '\AtBeginDocument{\toggletrue{printable}} \input{main_${{ matrix.language }}.tex}'
+          post_compile: echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && upmendex -s index_style main_${{ matrix.language }} && sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}@g' main_${{ matrix.language }}.ind && ${{ matrix.luaengine && 'lualatex' || 'pdflatex' }} --shell-escape '\AtBeginDocument{\toggletrue{printable}} \input{main_${{ matrix.language }}.tex}'
           root_file: main_${{ matrix.language }}.tex
 
       - name: Move file
