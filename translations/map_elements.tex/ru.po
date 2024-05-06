@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-25 12:20+0200\n"
+"POT-Creation-Date: 2024-04-29 22:27+0100\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -24,22 +24,29 @@ msgstr ""
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
-#: sections/map_elements.tex:99 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
+#: sections/map_elements.tex:118 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
-#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:118
+#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
 "{2}\n"
 "\n"
 msgstr ""
 
+#. type: figure
+#: sections/expansion_content.tex:140 sections/map_elements.tex:38
+#: sections/setup.tex:70
+#, no-wrap
+msgid "  \\begin{tikzpicture}\n"
+msgstr ""
+
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/map_elements.tex:3
 msgid "\\addsection{Map Elements}{\\skills/logistics.png}"
-msgstr ""
+msgstr "\\addsection{Элементы карты}{\\skills/logistics.png}"
 
 #. type: multicols*
 #: sections/map_elements.tex:11
@@ -54,6 +61,13 @@ msgid ""
 "Starting (I) Tiles are the easiest while Center (VI–VII) Tiles are the most difficult.\\par\n"
 "\n"
 msgstr ""
+"{2}\n"
+"Каждый сценарий использует четыре типа элементов карты.\n"
+"Игроки начинают с уникального для Фракции начального (I) элемента.\n"
+"В ходе подготовки к игре все элементы должны быть выбраны случайным образом из пула доступных элементов, исходя из описания сценария, перемешаны и оставлены лицом вниз.\\par\n"
+"\\textbf{Римские цифры} на каждом элементе описывают общую \\textbf{мощь нейтральных отрядов} и количество наград, которые игрок может получить на нём.\n"
+"Стартовые элементы (I) являются самыми простыми, в то время как элементы (VI–VII) самые сложные.\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:17
@@ -68,8 +82,8 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:47
-#, no-wrap
+#: sections/map_elements.tex:34
+#, fuzzy, no-wrap
 msgid ""
 "\\subsection*{Map Tile Anatomy\\index{Map Tile}}\n"
 "Each Map Tile is divided into 7 separate \\textbf{Fields} that your Heroes can \\textbf{Visit}.\n"
@@ -87,6 +101,143 @@ msgid ""
 "  \\item[\\textbf{3.}] Near Map Tiles: IV-V\n"
 "  \\item[\\textbf{4.}] Center Map Tiles: VI-VII\n"
 "\\end{itemize}\n"
+"\n"
+msgstr ""
+"\\subsection*{Анатомия элемента карты\\index{Map Tile}}\n"
+"Каждый элемент карты разделён на 7 \\textbf{полей}, которые герой может \\textbf{посетить}.\n"
+"Попадая на поле, герой должен незамедлительно посетить его или \n"
+"сперва \\hyperlink{Combat}{сразиться} с отрядами, охраняющими это поле.\n"
+"Пустые поля\\index{Empty Field} не имеют никакого эффекта при посещении.\n"
+"Сплошная жёлтая линия на границе поля не может быть пересечена.\n"
+"\\hyperlink{Difficulty}{Римские цифры} на полях означают, что это поле охраняется нейтральными отрядами, с которыми необходимо сразиться перед посещением.\\par\n"
+"\\columnbreak\n"
+"\\includegraphics[width=\\linewidth]{\\images/maptiles.png}\n"
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\item[\\textbf{1.}] Стартовые элементы: I\n"
+"  \\item[\\textbf{2.}] Дальние элементы: II-II\n"
+"  \\item[\\textbf{3.}] Ближние элементы: IV-V\n"
+"  \\item[\\textbf{4.}] Центральные элементы: VI-VII\n"
+"\\end{itemize}\n"
+"\n"
+
+#. type: multicols*
+#: sections/map_elements.tex:37
+#, no-wrap
+msgid ""
+"\\vfill\n"
+"\\begin{center}\n"
+"  \\begin{scriptsize}\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/map_elements.tex:55
+#, fuzzy, no-wrap
+#| msgid ""
+#| "        \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=\\linewidth]{\\cards/hero.png}}};\n"
+#| "        \\draw (2.2, 2.5) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
+#| "        \\draw (0.8, 1.9) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+#| "        \\draw (3.5, 2.5) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
+#| "        \\draw (-0.1, 2.5) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
+#| "        \\draw (0, 1.25) node {\\encircle{\\phantom{.}5\\phantom{.}}};\n"
+#| "        \\draw (1.1, 1.25) node {\\encircle{\\phantom{.}6\\phantom{.}}};\n"
+#| "        \\draw (2, 1.25) node {\\encircle{\\phantom{.}7\\phantom{.}}};\n"
+#| "        \\draw (3.25, 1.25) node {\\encircle{\\phantom{.}8\\phantom{.}}};\n"
+#| "        \\draw (1, -0.2) node {\\encircle{\\phantom{.}9\\phantom{.}}};\n"
+#| "        \\draw (3, -0.2) node {\\encircle{10}};\n"
+#| "        \\draw (-1.7, -1.4) node {\\encircle{11}};\n"
+#| "      \\end{tikzpicture}\n"
+#| "    \\end{scriptsize}\n"
+#| "    \\break\n"
+#| "    \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Hero Card}}}}\n"
+#| "    \\scriptsize\n"
+#| "    \\begin{multicols}{2}\n"
+#| "      \\begin{itemize}\n"
+#| "        \\item[\\textbf{1.}] \\textbf{Name}\n"
+#| "        \\item[\\textbf{2.}] \\textbf{Class}\n"
+#| "        \\item[\\textbf{3.}] \\textbf{Type}\n"
+#| "        \\item[\\textbf{4.}] \\textbf{Faction Color}\n"
+#| "        \\item[\\textbf{5.}] \\textbf{Attack}\n"
+#| "        \\item[\\textbf{6.}] \\textbf{Defense}\n"
+#| "        \\item[\\textbf{7.}] \\textbf{Power}\n"
+#| "        \\item[\\textbf{8.}] \\textbf{Knowledge}\n"
+#| "        \\item[\\textbf{9.}] \\textbf{Starting Ability}\n"
+#| "        \\item[\\textbf{10.}] \\textbf{Specialty}\n"
+#| "        \\item[\\textbf{11.}] \\textbf{Level Tracker}\n"
+#| "        \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
+#| "      \\end{itemize}\n"
+#| "    \\end{multicols}\n"
+#| "  \\end{minipage}"
+msgid ""
+"    \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=0.75\\linewidth]{\\images/fields.png}}};\n"
+"    \\draw (0, -0.3) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
+"    \\draw (-1.9, 0) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (2.3, 0) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (-1.4, 1.7) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (0.6, -1.9) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (0.5, 1.7) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (1.4, -2.2) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
+"    \\draw (1.4, 2.5) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
+"    \\draw (1.4, -1) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
+"    \\draw (-1, 0.5) node {\\encircle{\\phantom{.}5\\phantom{.}}};\n"
+"    \\draw (-1.1, -1.1) node {\\encircle{\\phantom{.}6\\phantom{.}}};\n"
+"    \\draw (-1.4, -1.7) node {\\encircle{\\phantom{.}7\\phantom{.}}};\n"
+"  \\end{tikzpicture}\n"
+"  \\end{scriptsize}\n"
+"\\end{center}\n"
+"\n"
+msgstr ""
+"        \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=\\linewidth]{\\cards/hero.png}}};\n"
+"        \\draw (2.2, 2.5) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
+"        \\draw (0.8, 1.9) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"        \\draw (3.5, 2.5) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
+"        \\draw (-0.1, 2.5) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
+"        \\draw (0, 1.25) node {\\encircle{\\phantom{.}5\\phantom{.}}};\n"
+"        \\draw (1.1, 1.25) node {\\encircle{\\phantom{.}6\\phantom{.}}};\n"
+"        \\draw (2, 1.25) node {\\encircle{\\phantom{.}7\\phantom{.}}};\n"
+"        \\draw (3.25, 1.25) node {\\encircle{\\phantom{.}8\\phantom{.}}};\n"
+"        \\draw (1, -0.2) node {\\encircle{\\phantom{.}9\\phantom{.}}};\n"
+"        \\draw (3, -0.2) node {\\encircle{10}};\n"
+"        \\draw (-1.7, -1.4) node {\\encircle{11}};\n"
+"      \\end{tikzpicture}\n"
+"    \\end{scriptsize}\n"
+"    \\break\n"
+"    \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Карта героя}}}}\n"
+"    \\scriptsize\n"
+"    \\begin{multicols}{2}\n"
+"      \\begin{itemize}\n"
+"        \\item[\\textbf{1.}] \\textbf{Имя}\n"
+"        \\item[\\textbf{2.}] \\textbf{Класс}\n"
+"        \\item[\\textbf{3.}] \\textbf{Тип}\n"
+"        \\item[\\textbf{4.}] \\textbf{Цвет Фракции}\n"
+"        \\item[\\textbf{5.}] \\textbf{Атака}\n"
+"        \\item[\\textbf{6.}] \\textbf{Защита}\n"
+"        \\item[\\textbf{7.}] \\textbf{Сила Заклинаний}\n"
+"        \\item[\\textbf{8.}] \\textbf{Знания}\n"
+"        \\item[\\textbf{9.}] \\textbf{Стартовый навык}\n"
+"        \\item[\\textbf{10.}] \\textbf{Специальность}\n"
+"        \\item[\\textbf{11.}] \\textbf{Трекер уровня}\n"
+"        \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
+"      \\end{itemize}\n"
+"    \\end{multicols}\n"
+"  \\end{minipage}"
+
+#. type: multicols*
+#: sections/map_elements.tex:66
+#, fuzzy, no-wrap
+msgid ""
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\begin{multicols}{2}\n"
+"    \\item[\\textbf{1.}] Empty Field\n"
+"    \\item[\\textbf{2.}] Location\n"
+"    \\item[\\textbf{3.}] Artifact Symbol\n"
+"    \\item[\\textbf{4.}] Field Difficulty\n"
+"    \\item[\\textbf{5.}] Border line\n"
+"    \\item[\\textbf{6.}] Blocked Field\n"
+"    \\item[\\textbf{7.}] Tile name like \\\\{} \\texttt{F2} or \\texttt{\\#N3}\n"
+"  "
+msgstr ""
 "\\vfill\n"
 "\\begin{center}\n"
 "  \\includegraphics[width=0.8\\linewidth]{\\images/fields.png}\n"
@@ -94,23 +245,22 @@ msgid ""
 "\\begin{itemize}\n"
 "  \\footnotesize\n"
 "  \\begin{multicols}{2}\n"
-"    \\item[\\textbf{1.}] Empty Field\n"
-"    \\item[\\textbf{2.}] Location\n"
-"    \\item[\\textbf{3.}] Artifact Symbol\n"
-"    \\item[\\textbf{4.}] Blocked Field\n"
-"    \\item[\\textbf{5.}] Border line\n"
-"    \\item[\\textbf{6.}] Field Difficulty\n"
+"    \\item[\\textbf{1.}] Пустое поле\n"
+"    \\item[\\textbf{2.}] Локация\n"
+"    \\item[\\textbf{3.}] Символ артефакта\n"
+"    \\item[\\textbf{4.}] Заблокированное поле\n"
+"    \\item[\\textbf{5.}] Граница поля\n"
+"    \\item[\\textbf{6.}] Сложность поля\n"
 "  "
-msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:50
+#: sections/map_elements.tex:69
 #, no-wrap
 msgid "\\end{itemize}"
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:69
+#: sections/map_elements.tex:88
 #, no-wrap
 msgid ""
 "\\subsection*{\\hypertarget{Categories}{Location Categories}}\n"
@@ -129,9 +279,24 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Categories}{Типы локаций}}\n"
+"Посещение полей позволяет игроку получать ресурсы или карты (см. \\hyperlink{All Map Locations}{список всех локаций}).\n"
+"Существует три типа полей:\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{Посещаемые} – посетив такое поле в первый раз, поместите на него чёрный кубик.\n"
+"    Если на поле уже есть чёрный кубик, оно считается пустым.\n"
+"  \\item \\textbf{Захватываемые} – используются для получения пассивных доходов.\n"
+"    Посетив такое поле, оставьте на нём кубик своей Фракции.\n"
+"    Когда вражеские герои посещают захваченные вами поля, они меняют кубик Фракций на свой, \\textbf{похищая} эффекты поля.\n"
+"    Союзники считают захваченные поля \\textbf{пустыми}.\n"
+"  \\item \\textbf{Перепосещаемые} – вы можете посещать такое поле неограниченное количество раз.\n"
+"    Не оставляйте на нём кубик после посещения.\n"
+"    Вы можете использовать 1 ОП для перепосещения этого поля.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
-#: sections/map_elements.tex:76
+#: sections/map_elements.tex:95
 #, no-wrap
 msgid ""
 "\\subsection*{\\hypertarget{Placing}{Placing and Discovering New Tiles}}\\index{Discovering Tiles}\n"
@@ -142,9 +307,16 @@ msgid ""
 "You may always rotate Map Tiles when placing or revealing them.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Placing}{Размещение и исследование новых элементов}}\\index{Discovering Tiles}\n"
+"Герои могут потратить 1 ОП для открытия пограничного элемента или для размещения дальнего (II–III) элемента из своего набора.\n"
+"Все лежащие лицом вниз элементы должны быть \\textbf{скрыты от всех игроков}, пока не появится необходимость их исследовать.\n"
+"Новые элементы должны быть расположены рядом с героем, потратившим ОП, и соединяться как минимум с двумя соседними.\n"
+"Также новые элементы должны позиционироваться так, чтобы сохранить возможность прохода из соседних элементов.\n"
+"Вы всегда можете вращать элементы при открытии.\n"
+"\n"
 
 #. type: multicols
-#: sections/map_elements.tex:81
+#: sections/map_elements.tex:100
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -153,9 +325,14 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\medskip\n"
+"\\note{6}{\n"
+"  Попадая на посещаемое поле, \\textbf{вы должны} оставить на нём чёрный кубик, даже если вы не собираетесь использовать эффекты этого поля.\n"
+"}\n"
+"\n"
 
 #. type: figure*
-#: sections/map_elements.tex:93
+#: sections/map_elements.tex:112
 #, no-wrap
 msgid ""
 "[!hb]\n"
@@ -167,23 +344,34 @@ msgid ""
 "    \\node at (3.9, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{be adjacent to two other tiles}}}}};\n"
 "  \\end{tikzpicture}"
 msgstr ""
+"[!hb]\n"
+"  \\centering\n"
+"  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
+"  \\begin{tikzpicture}[overlay]\n"
+"    \\node at (5, 10) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Вы не можете поместить элемент здесь}}}}};\n"
+"    \\node at (5, 1.4) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{Вы можете положить элемент сюда, так как он будет}}}}};\n"
+"    \\node at (3.9, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{граничить с двумя другими элементами}}}}};\n"
+"  \\end{tikzpicture}"
 
 #. type: subsection{#2}
-#: sections/map_elements.tex:97
+#: sections/map_elements.tex:116
 msgid "Example Turn"
-msgstr ""
+msgstr "Пример хода"
 
 #. type: multicols*
-#: sections/map_elements.tex:102
+#: sections/map_elements.tex:121
 #, no-wrap
 msgid ""
 "\\textit{Alice wants to capture an adjacent \\hyperlink{Mines}{Mine} by Flagging it with her Main Hero, Sandro the Necromancer.\n"
 "    She spends 1 MP to move onto the Mine, which begins \\hyperlink{Combat}{Combat} against Neutral Units, since the Field has a \\hyperlink{Difficulty}{Difficulty Rating} and has not been previously Flagged by any player.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Алиса хочет захватить соседнюю \\hyperlink{Mines}{шахту} её главным героем, некромантом Сандро.\n"
+"    Она использует 1 ОП для передвижения в шахту, начиная \\hyperlink{Combat}{сражение} против нейтральных отрядов, так как поле имеет \\hyperlink{Difficulty}{уровень сложности} и не было ранее захвачено другим игроком.}\\par\n"
+"\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:104
+#: sections/map_elements.tex:123
 #, no-wrap
 msgid ""
 "\\includegraphics[width=1.1\\linewidth]{\\examples/sandro_takes_mine.png}\n"
@@ -191,7 +379,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:108
+#: sections/map_elements.tex:127
 #, no-wrap
 msgid ""
 "\\textit{The Mine turns out to be guarded by Troglodytes, which have 3 HP \\includesvg[height=0.8\\baselineskip]{\\svgs/health_points.svg}.\n"
@@ -199,9 +387,13 @@ msgid ""
 "During the Combat, she casts the Lightning Bolt, and Empowers \\includesvg[height=0.8\\baselineskip]{\\svgs/empower.svg} it with Haste's alternative (bottom) effect, which makes the Lightning Bolt deal 3 damage \\includesvg[height=0.8\\baselineskip]{\\svgs/damage.svg}, killing the Troglodytes and winning the Combat.}\n"
 "\n"
 msgstr ""
+"\\textit{Шахта охраняется Троглодитами, имеющими 3 HP \\includesvg[height=0.8\\baselineskip]{\\svgs/health_points.svg}.\n"
+"Рука Алисы содержит карты Силы магии, Молнию, Ускорение и Городской портал.\n"
+"В ходе сражения она колдует Молнию и усиляет её \\includesvg[height=0.8\\baselineskip]{\\svgs/empower.svg} с помощью альтернативного (нижнего) эффекта карты Ускорения, что позволяет Молнии нанести 3 очка урона \\includesvg[height=0.8\\baselineskip]{\\svgs/damage.svg}, уничтожая Троглодитов и побеждая в сражении.}\n"
+"\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:110
+#: sections/map_elements.tex:129
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_lightning_bolt.png}\n"
@@ -209,15 +401,17 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:112
+#: sections/map_elements.tex:131
 #, no-wrap
 msgid ""
 "\\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell Card per Combat Round.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Битва завершилась за один раунд, поэтому Алиса не могла использовать основной эффект Ускорения, так как игроки могут колдовать только одно заклинание за раунд сражения.}\\par\n"
+"\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:119
+#: sections/map_elements.tex:138
 #, no-wrap
 msgid ""
 "\\textit{Alice now Flags the Mine by placing one of her Faction Cubes on it.\n"
@@ -227,9 +421,15 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\textit{Теперь Алиса захватывает шахту, помещая на неё кубик своей Фракции.\n"
+"    Захват этой конкретной шахты увеличивает её добычу строительных материалов \\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg} на 2; также Алиса незамедлительно получает 2 \\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg}, так как она была первым игроком, захватившим эту шахту.}\\par\n"
+"\\textit{Далее Алиса хочет вернуться на защиту ранее захваченного посёлка, колдуя Городской портал, все ещё находящийся в её руке.\n"
+"    Уровень её героя равен 2, поэтому она может усилить заклинание с помощью экспертного эффекта карты Силы магии \\includesvg[height=0.8\\baselineskip]{\\svgs/expert.svg}, что даёт ей дополнительное ОП после заклинания.\n"
+"}\n"
+"\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:121
+#: sections/map_elements.tex:140
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_town_portal.png}\n"
@@ -237,7 +437,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:125
+#: sections/map_elements.tex:144
 #, no-wrap
 msgid ""
 "\\vfill\n"

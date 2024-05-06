@@ -11,11 +11,15 @@ if [[ ${LANGUAGE} == en ]]; then
 else
   SECTIONS="sections/translated/${LANGUAGE}"
 fi
-if [[ ${LANGUAGE} == ru ]]; then
+
+case "${LANGUAGE}" in
+  ru|ua)
     ENGINE=-pdflua
-else
+    ;;
+  *)
     ENGINE=-pdf
-fi
+    ;;
+esac
 
 po4a --no-update po4a.cfg
 if [ $(grep -c "icu_locale" index_style.ist) -eq 0 ]
@@ -24,9 +28,9 @@ then
 fi
 upmendex -s index_style main_${LANGUAGE}
 # upmendex sorts non-English characters properly but fails to generate proper ind file
-sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}@g' main_${LANGUAGE}.ind
+sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}\\par}@g' main_${LANGUAGE}.ind
 
-find sections -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
+find ${SECTIONS} -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
 python .github/insert_printable_hyperlinks.py "${SECTIONS}"
 if [ $(grep -c "sections/index.tex" metadata.tex) -eq 0 ]
 then

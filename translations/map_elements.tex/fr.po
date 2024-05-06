@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-25 12:20+0200\n"
+"POT-Creation-Date: 2024-04-29 22:27+0100\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -22,11 +22,11 @@ msgstr ""
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
-#: sections/map_elements.tex:99 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
+#: sections/map_elements.tex:118 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
-#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:118
+#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -35,11 +35,18 @@ msgstr ""
 "{2}\n"
 "\n"
 
+#. type: figure
+#: sections/expansion_content.tex:140 sections/map_elements.tex:38
+#: sections/setup.tex:70
+#, no-wrap
+msgid "  \\begin{tikzpicture}\n"
+msgstr ""
+
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/map_elements.tex:3
 msgid "\\addsection{Map Elements}{\\skills/logistics.png}"
-msgstr "\\addsection{Élements du Plateau}{\\skills/logistics.png}"
+msgstr "\\addsection{Éléments du Plateau}{\\skills/logistics.png}"
 
 #. type: multicols*
 #: sections/map_elements.tex:11
@@ -59,7 +66,7 @@ msgstr ""
 "Les Joueurs commencent sur la Tuile de Départ (I) de leur Faction.\n"
 "Le placement et la révélation des autres tuiles est décrit page suivante.\n"
 "Pendant la mise en place, les tuiles cachées sont choisies aléatoirement depuis la pile décrite par le Scénario, mélangées et gardées face cachée.\\\\\n"
-"Le \\textbf{chiffre romain} de chaque tuile indique la \\textbf{difficulté des Unités Neutres} et le nombre de récompenses attendues par les joueurs sur cette Tuile.\n"
+"Le \\textbf{chiffre romain} de chaque tuile indique la \\textbf{difficulté des Unités Neutres} et le niveau de récompenses attendues par les joueurs sur cette Tuile.\n"
 "Les Tuiles de Départ (I) sont les plus simples et celles du Centre (VI–VII) sont les plus difficiles.\\par\n"
 "\n"
 
@@ -76,7 +83,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:47
+#: sections/map_elements.tex:34
 #, no-wrap
 msgid ""
 "\\subsection*{Map Tile Anatomy\\index{Map Tile}}\n"
@@ -95,26 +102,13 @@ msgid ""
 "  \\item[\\textbf{3.}] Near Map Tiles: IV-V\n"
 "  \\item[\\textbf{4.}] Center Map Tiles: VI-VII\n"
 "\\end{itemize}\n"
-"\\vfill\n"
-"\\begin{center}\n"
-"  \\includegraphics[width=0.8\\linewidth]{\\images/fields.png}\n"
-"\\end{center}\n"
-"\\begin{itemize}\n"
-"  \\footnotesize\n"
-"  \\begin{multicols}{2}\n"
-"    \\item[\\textbf{1.}] Empty Field\n"
-"    \\item[\\textbf{2.}] Location\n"
-"    \\item[\\textbf{3.}] Artifact Symbol\n"
-"    \\item[\\textbf{4.}] Blocked Field\n"
-"    \\item[\\textbf{5.}] Border line\n"
-"    \\item[\\textbf{6.}] Field Difficulty\n"
-"  "
+"\n"
 msgstr ""
 "\\subsection*{Anatomie d'une Tuile de Plateau\\index{Tuile de Plateau}}\n"
-"Chaque Tuile de Plateau est divisée en 7 \\textbf{Cases} séparées que vos Héros peuvent \\textbf{Explorer}.\n"
+"Chaque Tuile de Plateau est divisée en 7 \\textbf{Cases} distinctes, que vos Héros peuvent \\textbf{Explorer}.\n"
 "Quand votre Héros se déplace sur une Case, il doit l'Explorer, ou\n"
-"engager un \\hyperlink{Combat}{Combat} contre les ennemis la gardant puis l'Explorer.\n"
-"L'Exploration d'une Case Vide\\index{Case Vide} n'a pas d'effet.\n"
+"engager un \\hyperlink{Combat}{Combat} contre les ennemis la gardant, puis l'Explorer.\n"
+"Une Case Vide\\index{Case Vide} n'a pas d'effet.\n"
 "Les Lignes Jaunes Continues sur les bords d'une Case ne peuvent être traversées.\n"
 "Les \\hyperlink{Difficulty}{chiffres romains} indiquent une Case gardée par des Ennemis Neutres devant être combattus avant l'Exploration.\\par\n"
 "\\columnbreak\n"
@@ -126,29 +120,76 @@ msgstr ""
 "  \\item[\\textbf{3.}] Tuiles Proches : IV-V\n"
 "  \\item[\\textbf{4.}] Tuiles Centrales : VI-VII\n"
 "\\end{itemize}\n"
+"\n"
+
+#. type: multicols*
+#: sections/map_elements.tex:37
+#, no-wrap
+msgid ""
 "\\vfill\n"
 "\\begin{center}\n"
-"  \\includegraphics[width=0.8\\linewidth]{\\images/fields.png}\n"
+"  \\begin{scriptsize}\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/map_elements.tex:55
+#, no-wrap
+msgid ""
+"    \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=0.75\\linewidth]{\\images/fields.png}}};\n"
+"    \\draw (0, -0.3) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
+"    \\draw (-1.9, 0) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (2.3, 0) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (-1.4, 1.7) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (0.6, -1.9) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (0.5, 1.7) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (1.4, -2.2) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
+"    \\draw (1.4, 2.5) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
+"    \\draw (1.4, -1) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
+"    \\draw (-1, 0.5) node {\\encircle{\\phantom{.}5\\phantom{.}}};\n"
+"    \\draw (-1.1, -1.1) node {\\encircle{\\phantom{.}6\\phantom{.}}};\n"
+"    \\draw (-1.4, -1.7) node {\\encircle{\\phantom{.}7\\phantom{.}}};\n"
+"  \\end{tikzpicture}\n"
+"  \\end{scriptsize}\n"
 "\\end{center}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/map_elements.tex:66
+#, no-wrap
+msgid ""
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\begin{multicols}{2}\n"
+"    \\item[\\textbf{1.}] Empty Field\n"
+"    \\item[\\textbf{2.}] Location\n"
+"    \\item[\\textbf{3.}] Artifact Symbol\n"
+"    \\item[\\textbf{4.}] Field Difficulty\n"
+"    \\item[\\textbf{5.}] Border line\n"
+"    \\item[\\textbf{6.}] Blocked Field\n"
+"    \\item[\\textbf{7.}] Tile name like \\\\{} \\texttt{F2} or \\texttt{\\#N3}\n"
+"  "
+msgstr ""
 "\\begin{itemize}\n"
 "  \\footnotesize\n"
 "  \\begin{multicols}{2}\n"
 "    \\item[\\textbf{1.}] Case Vide\n"
 "    \\item[\\textbf{2.}] Site\n"
 "    \\item[\\textbf{3.}] Symbole d'Artefact\n"
-"    \\item[\\textbf{4.}] Case Bloquée\n"
+"    \\item[\\textbf{4.}] Difficulté de la Case\n"
 "    \\item[\\textbf{5.}] Bord de Cases\n"
-"    \\item[\\textbf{6.}] Difficulté de la Case\n"
+"    \\item[\\textbf{6.}] Case Bloquée\n"
+"    \\item[\\textbf{7.}] Nom de la Tuile : \\\\{} \\texttt{F2} ou \\texttt{\\#N3}\n"
 "  "
 
 #. type: multicols*
-#: sections/map_elements.tex:50
+#: sections/map_elements.tex:69
 #, no-wrap
 msgid "\\end{itemize}"
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:69
+#: sections/map_elements.tex:88
 #, no-wrap
 msgid ""
 "\\subsection*{\\hypertarget{Categories}{Location Categories}}\n"
@@ -169,13 +210,13 @@ msgid ""
 msgstr ""
 "\\subsection*{\\hypertarget{Categories}{Catégories de Sites}}\n"
 "Explorer des Cases donne des bonus aux Héros, tels que des Ressources ou des Cartes (voir \\hyperlink{All Map Locations}{Liste des Sites}).\n"
-"Il existe trois catégories de Cases :\n"
+"Il existe trois catégories de Cases.\n"
 "\\begin{itemize}\n"
 "  \\item \\textbf{Explorable} – Une fois cette Case Explorée, placez un Cube Noir dessus.\n"
 "    Considérez-la comme une Case Vide tant que le Cube est présent dessus.\n"
-"  \\item \\textbf{Revendicable} – Ces Cases sont capturées par les joueurs offrant ainsi des bonus passifs.\n"
+"  \\item \\textbf{Revendicable} – Ces Cases sont Revendiquées par les joueurs, offrant ainsi des bonus passifs.\n"
 "    Quand vous en Explorez une, placez-y votre Cube de Faction.\n"
-"    Les Héros Ennemis qui Explorent une Case Revendiquée remplacent votre Cube avec le leurs, \\textbf{volant} ainsi ses effets.\n"
+"    Les Héros Ennemis qui Explorent une Case Revendiquée remplacent votre Cube avec le leur, \\textbf{volant} ainsi ses effets.\n"
 "    Une Case Revendiquée \\textbf{est vide} pour les Héros Alliés.\n"
 "  \\item \\textbf{Ouvert} – Vous pouvez Explorer cette Case plusieurs fois.\n"
 "    Ne placez aucun Cube quand vous l'Explorez.\n"
@@ -184,7 +225,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:76
+#: sections/map_elements.tex:95
 #, no-wrap
 msgid ""
 "\\subsection*{\\hypertarget{Placing}{Placing and Discovering New Tiles}}\\index{Discovering Tiles}\n"
@@ -197,14 +238,14 @@ msgid ""
 msgstr ""
 "\\subsection*{\\hypertarget{Placing}{Placer et Révéler une Nouvelle Tuile}}\\index{Révéler une Tuile}\n"
 "Les Héros peuvent dépenser 1 PM soit pour révéler une Tuile adjacente face cachée ou placer une Tuile Lontaine (II–III) de leur propre pile de Tuile.\n"
-"Toutes les Tuiles face cachée doivent rester \\textbf{cachée de tous les joueurs} jusqu'à être placée ou révélée.\n"
+"Toutes les Tuiles faces cachées doivent rester \\textbf{cachées de tous les joueurs} jusqu'à être placées ou révélées.\n"
 "Une nouvelle tuile doit être adjacente au Héros qui dépense le PM, et connectée à au moins deux Tuiles déjà existantes.\n"
 "Une nouvelle tuile doit être connectée à toutes les autres Tuiles par un chemin valide.\n"
 "Vous pouvez toujours orienter les Tuiles quand vous les placez ou les révélez.\n"
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:81
+#: sections/map_elements.tex:100
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -220,7 +261,7 @@ msgstr ""
 "\n"
 
 #. type: figure*
-#: sections/map_elements.tex:93
+#: sections/map_elements.tex:112
 #, no-wrap
 msgid ""
 "[!hb]\n"
@@ -242,12 +283,12 @@ msgstr ""
 "  \\end{tikzpicture}"
 
 #. type: subsection{#2}
-#: sections/map_elements.tex:97
+#: sections/map_elements.tex:116
 msgid "Example Turn"
 msgstr "Exemple de Tour"
 
 #. type: multicols*
-#: sections/map_elements.tex:102
+#: sections/map_elements.tex:121
 #, no-wrap
 msgid ""
 "\\textit{Alice wants to capture an adjacent \\hyperlink{Mines}{Mine} by Flagging it with her Main Hero, Sandro the Necromancer.\n"
@@ -259,7 +300,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:104
+#: sections/map_elements.tex:123
 #, no-wrap
 msgid ""
 "\\includegraphics[width=1.1\\linewidth]{\\examples/sandro_takes_mine.png}\n"
@@ -267,7 +308,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:108
+#: sections/map_elements.tex:127
 #, no-wrap
 msgid ""
 "\\textit{The Mine turns out to be guarded by Troglodytes, which have 3 HP \\includesvg[height=0.8\\baselineskip]{\\svgs/health_points.svg}.\n"
@@ -281,15 +322,17 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:110
+#: sections/map_elements.tex:129
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_lightning_bolt.png}\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{translations/assets/fr/exemples/sandro_empowering_lightning_bolt_fr.png}\n"
+"\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:112
+#: sections/map_elements.tex:131
 #, no-wrap
 msgid ""
 "\\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell Card per Combat Round.}\\par\n"
@@ -300,7 +343,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:119
+#: sections/map_elements.tex:138
 #, no-wrap
 msgid ""
 "\\textit{Alice now Flags the Mine by placing one of her Faction Cubes on it.\n"
@@ -318,15 +361,17 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:121
+#: sections/map_elements.tex:140
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_town_portal.png}\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{translations/assets/fr/exemples/sandro_empowering_town_portal_fr.png}\n"
+"\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:125
+#: sections/map_elements.tex:144
 #, no-wrap
 msgid ""
 "\\vfill\n"

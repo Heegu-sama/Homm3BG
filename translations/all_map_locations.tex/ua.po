@@ -1,0 +1,668 @@
+# Language ua translations for Homm package
+# Copyright (C) 2024 Free Software Foundation, Inc.
+# This file is distributed under the same license as the Homm package.
+# Automatically generated, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Homm 3BG\n"
+"POT-Creation-Date: 2024-05-03 08:54+0100\n"
+"PO-Revision-Date: 2024-04-27 16:41+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ua\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: multicols
+#: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
+#: sections/all_map_locations.tex:419 sections/combat.tex:5
+#: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
+#: sections/difficulty.tex:5 sections/expansion_content.tex:5
+#: sections/expansion_content.tex:49 sections/game_modes.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
+#: sections/map_elements.tex:118 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
+#, no-wrap
+msgid ""
+"{2}\n"
+"\n"
+msgstr ""
+
+#.  !TeX spellcheck = en_US
+#. type: Plain text
+#: sections/all_map_locations.tex:3
+msgid "\\addsection{All Map Locations}{\\skills/earth_magic.png}"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:7
+#, no-wrap
+msgid ""
+"\\subsection*{Symbols on the Map}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:31
+#, no-wrap
+msgid ""
+"\\begingroup\n"
+"  \\renewcommand{\\arraystretch}{1.5}\n"
+"  \\newcolumntype{Y}{>{\\centering\\arraybackslash}X}\n"
+"  \\begin{tabularx}{\\linewidth}{Y m{0.8\\linewidth}}\n"
+"    \\small\n"
+"    \\mbox{\\textbf{I-VII}} & Field Difficulty corresponding to the level of Neutral Units.\\smallskip \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/treasure.svg} & \\parbox{0.7\\hsize}{\n"
+"        Roll a Treasure Die\\index{Treasure Die}\\index{Dice} and gain the indicated bonus (\\includesvg[height=10px]{\\svgs/resource_die.svg}, \\includesvg[height=10px]{\\svgs/2_treasure_die.svg}, \\includesvg[height=10px]{\\svgs/experience.svg}, or \\includesvg[height=10px]{\\svgs/artifact.svg}).\n"
+"    }\n"
+"    \\begin{tikzpicture}[overlay]\n"
+"      \\node at (1, 0.25) {\\includegraphics[width=0.2\\linewidth]{\\images/treasure_die.png}};\n"
+"    \\end{tikzpicture} \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/resource_die.svg} & Roll a \\hyperlink{Resources}{Resource Die} and gain the indicated Resources. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/2_treasure_die.svg} & Roll 2 Resource Dice and choose the bonus from one of them. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/experience.svg} & Gain one Experience Point. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/artifact.svg} & Search (2) the Artifact Deck. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/spellpower.svg} & Search (2) the Spell Deck. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/morale_positive.svg} & Gain Positive Morale. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/morale_negative.svg} & Gain Negative Morale. \\\\\n"
+"    \\includesvg[height=15px]{\\svgs/movement.svg} & Gain 1 Movement Point for this turn. \\\\\n"
+"    {\\huge\\textbf{?}} & Special effect, see \\hyperlink{Revisitable Fields}{Revisitable} or \\hyperlink{Other Fields}{Other} fields.\\\\\n"
+"  \\end{tabularx}\n"
+"\\endgroup\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/all_map_locations.tex:33 sections/all_map_locations.tex:61
+#: sections/all_map_locations.tex:150 sections/expansion_content.tex:103
+#: sections/units.tex:169 sections/units.tex:173
+#, no-wrap
+msgid ""
+"\\medskip\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:50
+#, no-wrap
+msgid ""
+"\\begin{itemize}[itemsep=0.4em]\n"
+"  \\item [{\\LARGE\\textbf{+}}]\n"
+"    \\includesvg[height=0.8\\baselineskip]{\\svgs/gold.svg}/\\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg}/\\includesvg[height=0.8\\baselineskip]{\\svgs/valuablegreater.svg} —\n"
+"    Immediately gain the indicated Resource.\n"
+"  \\item [{\\includesvg[height=15px]{\\svgs/ongoing.svg}}]\n"
+"    \\includesvg[height=0.8\\baselineskip]{\\svgs/gold.svg}/\\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg}/\\includesvg[height=0.8\\baselineskip]{\\svgs/valuablegreater.svg} —\n"
+"    Increase the production of the indicated Resource.\n"
+"    If it is \\textbf{Flagged} for the first time, you also gain it immediately.\n"
+"  \\item [{\\includesvg[height=0.8\\baselineskip]{\\svgs/pay_v2.svg}}]\n"
+"    \\includesvg[height=0.8\\baselineskip]{\\svgs/gold.svg}/\\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg}/\\includesvg[height=0.8\\baselineskip]{\\svgs/valuablegreater.svg} \\includesvg[height=0.8\\baselineskip]{\\svgs/arrow_right.svg} —\n"
+"    The Player needs to pay the indicated Resource to gain something.\n"
+"  \\item [{\\LARGE\\textbf{2}}] {\\LARGE\\textbf{x}} —\n"
+"    Perform the {\\LARGE\\textbf{x}} action twice.\n"
+"  \\item [{\\LARGE\\textbf{2}}] \\includesvg[height=0.8\\baselineskip]{\\svgs/treasure.svg}/{\\LARGE\\textbf{2}} \\includesvg[height=0.8\\baselineskip]{\\svgs/resource_die.svg} \\includesvg[height=0.8\\baselineskip]{\\svgs/arrow_right.svg}{\\LARGE\\textbf{1}} —\n"
+"    Roll 2 Treasure or Resource Dice and choose one to be resolved.\n"
+"\\end{itemize}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/all_map_locations.tex:52 sections/all_map_locations.tex:424
+#: sections/credits.tex:33 sections/difficulty.tex:16
+#: sections/expansion_content.tex:18 sections/expansion_content.tex:63
+#: sections/game_modes.tex:27 sections/scenario_end.tex:23
+#: sections/units.tex:106
+#, no-wrap
+msgid ""
+"\\columnbreak\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:57
+#, no-wrap
+msgid ""
+"\\note{9}{\n"
+"  The effects of Fields that allow you to \\textbf{Search} for Spells or Artifacts, or where you must spend resources to use the Field's effect, are \\textbf{always optional}.\n"
+"  You must always place a Black Cube on such Visitable Fields even if you choose not to use that Field's effect.\n"
+"}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:59
+#, no-wrap
+msgid ""
+"The effects of the following \\textbf{Visitable} \\hypertarget{All Map Locations}{fields} are explained by the symbols on the left:\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:77
+#, no-wrap
+msgid ""
+"{\\centering\n"
+"  \\phantom{j}\\textbf{Artifact}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/artifact_symbol.jpg}\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Resource}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/resource_symbol.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Treasure}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/treasure_symbol.jpg}\\\\\n"
+"}"
+msgstr ""
+
+#. type: Plain text
+#: sections/all_map_locations.tex:81
+msgid ""
+"The effects of the following \\textbf{Visitable} fields are explained by the "
+"symbols on the previous page:"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:130
+#, no-wrap
+msgid ""
+"{2}\n"
+"{\\centering\n"
+"\n"
+"  \\phantom{j}\\textbf{Fountain of Youth}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/fountain_of_youth.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Warrior's Tomb}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/warriors_tomb.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\textbf{Mystical Garden}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/mystical_garden.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Learning Stone}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/learning_stone.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Shrine of Magic Gesture/Incantation}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/shrine_of_magic_whatever.jpg}\\\\\n"
+"\n"
+"  \\vspace*{\\fill}\n"
+"  \\filbreak\n"
+"\n"
+"  \\phantom{j}\\textbf{Water Wheel}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/water_wheel.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Temple}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/temple.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Pandora's Box}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/pandoras_box.jpg}\\\\\n"
+"\n"
+"  \\bigskip\n"
+"\n"
+"  \\phantom{j}\\textbf{Windmill}\\\\\n"
+"  \\framedimage[\\linewidth]{\\map_locations/windmill.jpg}\n"
+"  {\\small Due to a misprint, the Windmill on the tile \\texttt{\\#N3} has a \\textbf{?}. It should be ``\\textbf{+}1 \\includesvg[height=0.8\\baselineskip]{\\svgs/valuablegreater.svg}''.}\n"
+"}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/all_map_locations.tex:132 sections/credits.tex:35
+#: sections/credits.tex:39 sections/expansion_content.tex:57
+#: sections/game_modes.tex:25 sections/round_structure.tex:28
+#: sections/setup.tex:64 sections/town.tex:28 sections/town.tex:34
+#: sections/units.tex:104
+#, no-wrap
+msgid ""
+"\\vspace*{\\fill}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:134
+#, no-wrap
+msgid ""
+"\\pagebreak\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:143
+#, no-wrap
+msgid ""
+"\\subsection*{Towns, Mines and Settlements}\n"
+"\\textbf{Towns} are always located in the center of a Starting (I) Tile.\n"
+"Flagging an enemy Town prevents their Secondary Heroes from spawning there and Main Heroes from moving there if defeated.\n"
+"Flagging a Town can cause \\hyperlink{End}{Player Elimination}, and Scenarios typically have special rewards for Flagging them.\n"
+"Flagging a Town also gives you a \\textbf{Faction Cube} from its original owner.\n"
+"Otherwise, Flagging a Town does not affect its original owner in any way.\n"
+"They do not lose access to their Town board or its functions.\n"
+"You also do not gain access to their Town board or Faction Units, unlike in the video game.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:148
+#, no-wrap
+msgid ""
+"\\begin{center}\n"
+"  \\framedimage[\\linewidth]{\\images/core_towns.jpg}\n"
+"  \\textit{Towns from the core game.}\n"
+"\\end{center}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:154
+#, no-wrap
+msgid ""
+"\\hypertarget{Mines}{\\textbf{Mines}}\\index{Mines} are Flaggable Fields which increase a specific resource's income when Flagged.\n"
+"If you are the first one to Flag a mine, it also immediately provides you with its income.\n"
+"All mines have the \\includesvg[height=10px]{\\svgs/ongoing.svg} symbol and a picture of the Resource they produce next to it.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:162
+#, no-wrap
+msgid ""
+"\\begin{center}\n"
+"  \\includegraphics[width=0.55\\linewidth]{\\images/mine_example.png}\\\\\n"
+"  \\textit{A mine that produces \\includesvg[height=10px]{\\svgs/valuablegreater.svg}, guarded by Level 3 Neutral Units.\n"
+"    The first player to Flag this Field would immediately gain one \\includesvg[height=10px]{\\svgs/valuablegreater.svg} in addition to increasing their \\includesvg[height=10px]{\\svgs/valuablegreater.svg} income.\n"
+"  }\n"
+"\\end{center}\n"
+"\\columnbreak\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:171
+#, no-wrap
+msgid ""
+"\\textbf{Settlements}\\index{Settlement} act as a spawn point for Secondary Heroes, and as a place for Main Heroes to move to when defeated.\n"
+"When you Flag a Settlement, choose whether to increase your \\includesvg[height=10px]{\\svgs/gold.svg}, \\includesvg[height=10px]{\\svgs/building_materials.svg} or \\includesvg[height=10px]{\\svgs/valuablegreater.svg} income by one space.\n"
+"As with Mines, if you are the first player to Flag a Settlement, you \\textbf{immediately} gain Resources equal to that increase in production.\n"
+"Mark the Settlement with an appropriate Resource Token to show which Resource it produces.\n"
+"When you Flag an enemy Settlement, you may change this Resource.\\par\n"
+"Additionally, \\textbf{instead of increasing Resource Production}, you may choose to \\textbf{Reinforce} one of your \\includesvg[height=10px]{\\svgs/bronze.svg} or \\includesvg[height=10px]{\\svgs/silver.svg} Units immediately for half the normal cost, rounded up.\n"
+"If you were the first player to Flag the Settlement, Reinforce that Unit \\textbf{for free} instead.\n"
+"Do not place any Resource Tokens on the Settlement if you choose to Reinforce.\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/all_map_locations.tex:173 sections/units.tex:89
+#, no-wrap
+msgid ""
+"\\bigbreak\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:190
+#, no-wrap
+msgid ""
+"\\begin{minipage}[h]{\\linewidth}\n"
+"  \\centering\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/castle_settlement.png}\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/dungeon_settlement.png}\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/necropolis_settlement.png}\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/rampart_settlement.png}\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/fortress_settlement.png}\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/inferno_settlement.png}\n"
+"  \\includegraphics[width=0.44\\linewidth]{\\map_locations/tower_settlement.png}\n"
+"  \\par\n"
+"  \\textit{All possible Settlements.\n"
+"  Each is styled after a different Faction.\n"
+"  They all work identically.}\n"
+"\\end{minipage}"
+msgstr ""
+
+#. type: Plain text
+#: sections/all_map_locations.tex:190 sections/credits.tex:5
+#: sections/deckbuilding.tex:160 sections/heroes.tex:70
+#: sections/introduction.tex:5
+msgid "\\bigbreak"
+msgstr ""
+
+#. type: subsection{#2}
+#: sections/all_map_locations.tex:192
+msgid "\\hypertarget{Revisitable Fields}{Revisitable Fields}"
+msgstr ""
+
+#. type: figure
+#: sections/all_map_locations.tex:222
+#, no-wrap
+msgid ""
+"[H]\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\textbf{Library}\\par\n"
+"    \\framedimage[\\textwidth]{\\map_locations/library.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Revisitable}\\\\You may\n"
+"      \\includesvg[height=8px]{\\svgs/pay_v2.svg}\n"
+"      3 \\includesvg[height=8px]{\\svgs/gold.svg}\n"
+"      to Remove 1 Statistic Card from your hand or Discard Pile and replace it with any other Statistic Card.\n"
+"      You may do this twice per Visit.}\n"
+"  \\end{minipage}\\hfill\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\captionsetup{singlelinecheck=off}\n"
+"    \\phantom{j}\\textbf{Black Market}\\par\n"
+"    \\framedimage[\\textwidth]{\\map_locations/black_market.jpg}\n"
+"    \\caption[black market]{\\small Category: \\textbf{Revisitable}\\\\Look at the top 4 cards from the Artifact Discard Pile.\n"
+"      You may buy one of them for:\n"
+"      \\begin{itemize}\n"
+"      \\setlength\\itemsep{-4pt}\n"
+"        \\item [5] \\includesvg[height=8px]{\\svgs/gold.svg} if it is a \\textbf{Minor} Artifact\n"
+"        \\item [7] \\includesvg[height=8px]{\\svgs/gold.svg} if it is a \\textbf{Major} Artifact\n"
+"        \\item [10] \\includesvg[height=8px]{\\svgs/gold.svg} if it is a \\textbf{Relic} Artifact\n"
+"      \\end{itemize}\n"
+"      }\n"
+"  \\end{minipage}"
+msgstr ""
+
+#. type: figure
+#: sections/all_map_locations.tex:246
+#, no-wrap
+msgid ""
+"[H]\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\textbf{Sanctuary}\\par\n"
+"    \\framedimage[\\textwidth]{\\map_locations/sanctuary.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Revisitable}\\\\\n"
+"      Heroes on this Field cannot be attacked by other Heroes.\n"
+"      Friendly Heroes can move through enemy Heroes on this Field but cannot stop here.}\n"
+"  \\end{minipage}\\hfill\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\phantom{j}\\textbf{Tavern}\\par\n"
+"    \\framedimage[\\textwidth]{\\map_locations/tavern.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Revisitable}\\\\\n"
+"      You can \\includesvg[height=8px]{\\svgs/pay_v2.svg}\n"
+"      7 \\includesvg[height=8px]{\\svgs/gold.svg}\n"
+"      to gain a Secondary Hero.\n"
+"      Place their model on this Field.\n"
+"      Then, choose one enemy player to discard 1 random card from their hand.}\n"
+"  \\end{minipage}"
+msgstr ""
+
+#. type: figure
+#: sections/all_map_locations.tex:265
+#, no-wrap
+msgid ""
+"[H]\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\hypertarget{Trading Post}{\\textbf{Trading Post}}\\par\n"
+"    \\framedimage[\\textwidth]{\\map_locations/trading_post.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Revisitable}\\\\\n"
+"      \\textbf{Choose one}: \\protect\\hyperlink{Trading}{Trade} resources OR Remove a card OR buy a \\protect\\hyperlink{War Machines}{War Machine}.\n"
+"    }\n"
+"  \\end{minipage}\\hfill\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\phantom{j}\\hypertarget{War Machine Factory}{\\textbf{War Machine Factory}}\\par\n"
+"    \\framedimage[\\textwidth]{\\map_locations/war_machine_factory.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Revisitable}\\\\Buy a \\protect\\hyperlink{War Machines}{War Machine}.\\phantom{.......}}\n"
+"  \\end{minipage}"
+msgstr ""
+
+#. type: figure
+#: sections/all_map_locations.tex:279
+#, no-wrap
+msgid ""
+"[H]\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\phantom{j}\\textbf{Stables}\\par\n"
+"    \\framedimage[\\textwidth]{\\map_locations/stables.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Revisitable}\\\\\n"
+"      Gain 1 MP \\includesvg[height=8px]{\\svgs/movement.svg}.\n"
+"      It lasts for only one Turn.\n"
+"      See \\protect\\hyperlink{Movement}{Movement Actions}.\n"
+"    }\n"
+"  \\end{minipage}\\hfill"
+msgstr ""
+
+#. type: tikzpicture
+#: sections/all_map_locations.tex:283
+#, no-wrap
+msgid ""
+"[overlay]\n"
+"  \\node at (16, 4.5) {\\includegraphics[width=0.5\\linewidth]{\\art/pegasi.png}};"
+msgstr ""
+
+#. type: subsection{#2}
+#: sections/all_map_locations.tex:285
+msgid "\\hypertarget{Other Fields}{Other Fields}"
+msgstr ""
+
+#. type: figure
+#: sections/all_map_locations.tex:306
+#, no-wrap
+msgid ""
+"[H]\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\textbf{Tree of Knowledge}\\par\n"
+"    \\framedimage[\\linewidth]{\\map_locations/tree_of_knowledge.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Visitable}\\\\You may\n"
+"      \\includesvg[height=8px]{\\svgs/pay_v2.svg}\n"
+"       3 \\includesvg[height=8px]{\\svgs/valuablegreater.svg} or\n"
+"       10 \\includesvg[height=8px]{\\svgs/gold.svg} to gain\n"
+"       2 \\includesvg[height=8px]{\\svgs/experience.svg}.}\n"
+"  \\end{minipage}\\hfill\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\textbf{Redwood Observatory}\\par\n"
+"    \\framedimage[\\linewidth]{\\map_locations/redwood_observatory.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Visitable}\\\\Discover a face down Tile adjacent to this one.}\n"
+"  \\end{minipage}"
+msgstr ""
+
+#. type: figure
+#: sections/all_map_locations.tex:328
+#, no-wrap
+msgid ""
+"[H]\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\phantom{j}\\textbf{Grail}\\par\n"
+"    \\framedimage[\\linewidth]{\\map_locations/grail.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Visitable}\\\\Gain a Grail Token.\n"
+"    Only one Grail Token can exist in the game, do not gain another if this Field's Black Cube is removed or if there are multiple Grail Fields.\n"
+"    The Token's effects are described in the Scenario's description.\n"
+"    \\phantom{\\ldots\\ldots\\ldots}}\n"
+"  \\end{minipage}\\hfill\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\phantom{j}\\textbf{Market of Time}\\par\n"
+"    \\framedimage[\\linewidth]{\\map_locations/market_of_time.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Visitable}\\\\ Remove one card from your hand.\n"
+"      Then \\textbf{Search (2)} the Ability, Spell, or Artifact Deck.\n"
+"    }\n"
+"  \\end{minipage}"
+msgstr ""
+
+#. type: figure
+#: sections/all_map_locations.tex:350
+#, no-wrap
+msgid ""
+"[H]\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\phantom{j}\\textbf{Hill Fort}\\par\n"
+"    \\framedimage[\\linewidth]{\\map_locations/hill_fort.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+"      You may immediately Reinforce one of your \\includesvg[height=8px]{\\svgs/bronze.svg} or \\includesvg[height=8px]{\\svgs/silver.svg} Units.\n"
+"      The Reinforcement cost is reduced by 3 \\includesvg[height=8px]{\\svgs/gold.svg} to a minimum of 0.}\n"
+"  \\end{minipage}\\hfill\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\phantom{j}\\textbf{Prison}\\par\n"
+"    \\framedimage[\\linewidth]{\\map_locations/prison.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+"      Gain a Secondary Hero.\n"
+"      Place their model on this Field.\n"
+"      If you already have a Secondary Hero, gain 3 \\includesvg[height=8px]{\\svgs/gold.svg} instead.}\n"
+"  \\end{minipage}"
+msgstr ""
+
+#. type: figure
+#: sections/all_map_locations.tex:370
+#, no-wrap
+msgid ""
+"[H]\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\textbf{Magic Spring}\\par\n"
+"    \\framedimage[\\linewidth]{\\map_locations/magic_spring.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+"      You may look at the top 3 Cards of your Discard Pile and return one of them to your Hand.\n"
+"      Return the remaining cards to the top of your Discard Pile in any order.}\n"
+"  \\end{minipage}\\hfill\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\phantom{j}\\textbf{Witch Hut}\\par\n"
+"    \\framedimage[\\linewidth]{\\map_locations/witch_hut.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+"      \\textbf{Choose one}: Remove an Ability card from your hand OR look at the top card of the Ability Deck and put that card into your hand or into the Ability Deck Discard Pile.}\n"
+"  \\end{minipage}"
+msgstr ""
+
+#. type: figure
+#: sections/all_map_locations.tex:399
+#, no-wrap
+msgid ""
+"[H]\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\phantom{j}\\textbf{Obelisk}\\par\n"
+"    \\framedimage[\\linewidth]{\\map_locations/obelisk.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Flaggable}\\\\\n"
+"      The Obelisk's effects depend on the Scenario.\n"
+"      When you Flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}\n"
+"  \\end{minipage}\\hfill\n"
+"    \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\captionsetup{singlelinecheck=off}\n"
+"    \\centering\n"
+"    \\phantom{j}\\textbf{Scholar}\\par\n"
+"    \\framedimage[\\linewidth]{\\map_locations/scholar.jpg}\n"
+"    \\caption[scholar they]{\\small Category: \\textbf{Visitable}\\\\\n"
+"      Roll 1 Attack Die.\n"
+"      Depending on the result, do the following:\n"
+"      \\begin{itemize}\n"
+"        \\setlength\\itemsep{-0.2em}\n"
+"        \\item[ \\textbf{+1}] - Gain a Statistic Card of your choice or Remove a Statistic Card from your hand.\n"
+"        \\item[\\textbf{0}] - Draw 2 Cards from the Ability Deck, gain one of them and discard the other.\n"
+"        \\item[\\textbf{-1}] - Draw 2 Cards from the Spell Deck, gain one of them and discard the other.\n"
+"        \\end{itemize}\n"
+"       }\n"
+"  \\end{minipage}"
+msgstr ""
+
+#. type: figure
+#: sections/all_map_locations.tex:417
+#, no-wrap
+msgid ""
+"[H]\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\textbf{Dragon Utopia}\\par\n"
+"    \\framedimage[\\linewidth]{\\map_locations/dragon_utopia.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Flaggable}\\\\Effects depend on the Scenario.}\n"
+"  \\end{minipage}\\hfill\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\textbf{University}\\par\n"
+"    \\framedimage[\\linewidth]{\\map_locations/university.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+"      \\includesvg[height=8px]{\\svgs/pay_v2.svg} 6 \\includesvg[height=8px]{\\svgs/gold.svg} to \\textbf{Search (4)} the Ability Discard Pile.}\n"
+"  \\end{minipage}"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:422
+#, no-wrap
+msgid ""
+"{\\centering\\phantom{Star Axis}\\par}\n"
+"\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:431
+#, no-wrap
+msgid ""
+"{\\centering\\textbf{Star Axis}\\par}\n"
+"\\framedimage[\\linewidth]{\\map_locations/star_axis.jpg}\n"
+"{\\small Category: \\textbf{Flaggable}\\\\\n"
+"  You may Remove one of your Statistic cards from your hand and replace it with an \\textbf{Empowered} one of the same type.\n"
+"  When you Flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.\n"
+"}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/all_map_locations.tex:433 sections/combat.tex:91
+#: sections/player_turns.tex:37 sections/units.tex:180
+#, no-wrap
+msgid ""
+"\\bigskip\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:444
+#, no-wrap
+msgid ""
+"{\\centering\\textbf{\\hypertarget{Random Town}{Random Town}}\\par}\n"
+"\\framedimage[\\linewidth]{\\map_locations/random_town.jpg}\n"
+"{\\small Category: \\textbf{Flaggable}\\\\\n"
+"  When revealed, all players roll 2 \\includesvg[height=10px]{\\svgs/resource_die.svg}.\n"
+"  The highest roller chooses an unused Faction.\n"
+"  The random Town is defended by Units from that Faction.\n"
+"  They have a ``Pack'' of \\includesvg[height=10px]{\\svgs/bronze.svg}, two ``Packs'' of \\includesvg[height=10px]{\\svgs/silver.svg}, and two ``Fews'' of \\includesvg[height=10px]{\\svgs/golden.svg} Units.\n"
+"  The \\includesvg[height=10px]{\\svgs/bronze.svg} Unit is chosen by the player who controls the Units during that Combat.\n"
+"  Flagging it increases \\includesvg[height=10px]{\\svgs/gold.svg} production by 10, which is also gained immediately if you are the first to Flag it.\n"
+"}\n"
+"\n"
+msgstr ""

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-26 15:38+0200\n"
+"POT-Creation-Date: 2024-05-03 12:03+0200\n"
 "PO-Revision-Date: 2024-04-23 19:52+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -23,11 +23,11 @@ msgstr ""
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
-#: sections/map_elements.tex:99 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
+#: sections/map_elements.tex:118 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
-#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:145
+#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -38,7 +38,7 @@ msgstr ""
 
 #. type: Plain text
 #: sections/all_map_locations.tex:188 sections/credits.tex:5
-#: sections/deckbuilding.tex:160 sections/heroes.tex:70
+#: sections/deckbuilding.tex:162 sections/heroes.tex:70
 #: sections/introduction.tex:5
 msgid "\\bigbreak"
 msgstr ""
@@ -98,14 +98,17 @@ msgstr ""
 "\\begin{enumerate}\n"
 "  \\item Les Cartes ne peuvent être jouées \\textbf{que pendant votre Tour}, ou en \\hyperlink{Combat}{Combat} avec votre \\textbf{Héros Principal}.\n"
 "  \\item Après avoir joué une Carte, défaussez-la.\n"
-"    Chaque joueur a sa propre Pile de Défausse\\index{Pile de Défausse}.\n"
-"  \\item Si Votre Deck est vide quand vous devez piocher, \\textbf{mélangez votre Pile de Défausse} pour faire un nouveau Deck dans lequel piocher.\n"
+"    Chaque joueur a sa propre Défausse\\index{Défausse}.\n"
+"  \\item Si Votre Deck est vide quand vous devez piocher, \\textbf{mélangez votre Défausse} pour faire un nouveau Deck dans lequel piocher.\n"
 "  \\item Quand vous gagnez une Carte, elle arrive \\textbf{directement dans votre main} sauf indication contraire.\n"
-"  \\item \\textbf{Fouiller} (X)\\index{Fouille (X)} dans le Deck de Compétence, Artéfact ou Sort, vous laisse soit regarder les (X) Cartes du dessus de ce Deck, en prendre une dans votre main et défausser les autres, \\textbf{OU} à la place prendre la première carte de la Pile de Défausse de ce Deck.\n"
-"  \\item Les Decks de Compétence, Artefact et Sort ont chacun leur Pile de Défausse propre créée lors de la mise en place du jeu.\n"
-"    Si un Deck n’a plus de Carte, mélangez la Pile de Défausse pour former un nouveau Deck et défaussez la première carte.\n"
-"    Si la Pile de Défausse est vide, \\textbf{défaussez la première carte} de la Pile correspondante.\n"
-"  \\item Les Cartes ont les effets suivants :\n"
+"  \\item \\textbf{Fouiller} (X)\\index{Fouille (X)} dans la Pile de Compétence, Artéfact ou Sort, vous laisse soit regarder les (X) Cartes du dessus de cette Pile, en prendre une dans votre main et défausser les autres, \\textbf{OU} à la place prendre la première carte de la Défausse de cette Pile.\n"
+"  \\item Les Piles de Compétence, Artefact et Sort ont chacune leur Défausse propre créée, lors de la mise en place du jeu.\n"
+"    Si une Pile n’a plus de Carte, mélangez la Défausse pour former une nouvelle Pile et défaussez la première carte.\n"
+"    Si la Défausse est vide, \\textbf{défaussez la première carte} de la Pile correspondante.\n"
+"  \\vfill\n"
+"  \\phantom{.}\n"
+"  \\columnbreak\n"
+"  \\item Les Cartes ont les effets suivants\n"
 "  \\begin{itemize}\n"
 "    \\item \\textbf{Instantané} \\includesvg[height=10px]{\\svgs/instant.svg} Effet à résoudre immédiatement.\n"
 "    \\item \\textbf{Activation} \\includesvg[height=10px]{\\svgs/activation.svg} Effet à jouer quand vous activez votre propre Unité en Combat.\n"
@@ -161,7 +164,7 @@ msgstr ""
 "Toutes les Cartes de Compétence et Caractéristique\\index{Cartes de Caractéristique} ont un \\textbf{Effet Basique}\\index{Effet Basique} et un \\textbf{Effet Expert}\\index{Effet Expert} \\includesvg[height=10px]{\\svgs/expert.svg} plus fort, noté en dessous de l’Effet Basique.\n"
 "Quand vous jouez ces cartes, vous devez choisir quel effet vous utilisez.\n"
 "Le nombre d’Effets Expert \\includesvg[height=10px]{\\svgs/expert.svg} que vous pouvez jouer à chaque Manche est limité par le \\hyperlink{Level}{Niveau} de votre Héros Principal.\n"
-"Décomptez vos utilisations comme vous le souhaitez en utilisant des Cubes Noirs sur votre Fiche de Héros.\\par\n"
+"Décomptez vos utilisations comme vous le souhaitez, par exemple en utilisant des Cubes Noirs sur votre Fiche de Héros.\\par\n"
 "\\bigskip\n"
 "\n"
 
@@ -189,7 +192,7 @@ msgid ""
 "    \\item[\\textbf{4.}] Faction-specific Card*\n"
 "  \\end{itemize}"
 msgstr ""
-"\\includegraphics[width=\\linewidth]{\\cards/ability.png}\n"
+"\\includegraphics[width=\\linewidth]{translations/assets/fr/cards/ability_fr.png}\n"
 "\\vspace{-2em}\n"
 "\\begin{multicols*}{2}\n"
 "  \\footnotesize\n"
@@ -206,7 +209,7 @@ msgstr ""
 "  \\end{center}\n"
 "  \\begin{itemize}\n"
 "    \\item[\\textbf{3.}] Effet Expert\n"
-"    \\item[\\textbf{4.}] Carte de Faction*\n"
+"    \\item[\\textbf{4.}] Carte de\\\\Faction*\n"
 "  \\end{itemize}"
 
 #. type: Plain text
@@ -221,10 +224,10 @@ msgid ""
 msgstr ""
 "\\bigbreak \\note{11}{ Certaines cartes sont limitées à la Faction Nécropole "
 "\\includesvg[height=10px]{\\svgs/necro-note.svg}. Quand une autre Faction "
-"pioche une Carte de Compétence Necropole\\index{Carte Necropole}, elle peut "
+"pioche une Carte de Compétence Nécropole\\index{Carte Nécropole}, elle peut "
 "soit la défausser et en piocher une autre soit la garder. Les autres "
 "Factions \\textbf{ne peuvent pas} utiliser les Cartes de Compétence "
-"Necropole depuis leur Main sauf pour des Effets qui les défaussent. }"
+"Nécropole depuis leur Main sauf pour des Effets qui les défaussent. }"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:78 sections/resources.tex:31
@@ -253,7 +256,7 @@ msgstr ""
 "Elles sont divisées en 3 Niveaux : Mineur, Majeur, Relique. Ces Niveaux sont "
 "liés à la Puissance de la Carte et peuvent servir quand on résout certains "
 "effets ou pendant la Mise en Place du Scénario. Sinon, tous les Artefacts "
-"sont mélangés ensemble pour former le Deck d’Artefact, qu’importe leurs "
+"sont mélangés ensemble pour former la Pile d’Artefact, qu’importe leurs "
 "Niveaux. Ils sont obtenus lors de l’exploration du Plateau.\\par Les "
 "Artefacts peuvent être \\hyperlink{Trading}{échangés} en Scénarios "
 "d'Alliance et de Coopération.\\par"
@@ -277,17 +280,17 @@ msgid ""
 "  \\end{center}"
 msgstr ""
 "{2}\n"
-"  \\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}\n"
+"  \\includegraphics[width=1.2\\linewidth]{translations/assets/fr/cards/artifact_fr.png}\n"
 "  \\footnotesize\n"
 "    \\null\\hfill\\textbf{\\textit{\\textcolor{darkcandyapplered}{Artefact Majeur}}}\n"
 "  \\columnbreak\n"
 "  \\begin{center}\n"
 "    \\phantom{\\ldots}\\\\\n"
-"    \\phantom{\\ldots}\\includegraphics[width=0.6\\linewidth]{\\cards/minor_artifact.png}\\\\\n"
+"    \\phantom{\\ldots}\\includegraphics[width=0.6\\linewidth]{translations/assets/fr/cards/minor_artifact_fr.png}\\\\\n"
 "    \\phantom{\\ldots}\\textbf{\\textit{\\textcolor{darkcandyapplered}{Artefact Mineur}}}\\\\\n"
 "    \\vspace{3em}\n"
-"    \\phantom{\\ldots}\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}\\\\\n"
-"    \\phantom{\\ldots}\\textbf{\\textit{\\textcolor{darkcandyapplered}{Relique}}}\n"
+"    \\phantom{\\ldots}\\includegraphics[width=0.6\\linewidth]{translations/assets/fr/cards/relic_artifact_fr.png}\\\\\n"
+"    \\phantom{\\ldots}\\textbf{\\textit{\\textcolor{darkcandyapplered}{Artefact Relique}}}\n"
 "  \\end{center}"
 
 #. type: multicols
@@ -336,50 +339,37 @@ msgid ""
 msgstr ""
 "Les Cartes de Sort\\index{Cartes de Sort} ont trois effets primaires "
 "possible. La Puissance de base n’a pas de coût additionnel. Pour les autres "
-"effets, vous pouvez \\textbf{Augmenter} un Sort\\index{Augmenter un Sort} en "
-"payant le coût indiqué (3) pour un effet plus fort (4). Vous pouvez payer ce "
-"coût en jouant des cartes pour leur effet de Puissance "
-"\\includesvg[height=10px]{\\svgs/empower.svg} avant de lancer le Sort. "
-"Toutes les Cartes de Sort ont aussi une alternative en bas (5) pour un effet "
-"\\includesvg[height=10px]{\\svgs/empower.svg}."
-
-#. type: center
-#: sections/deckbuilding.tex:141
-msgid ""
-"\\medskip \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}"
-"{Spell Card}}}} \\scriptsize"
-msgstr ""
-"\\medskip \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}"
-"{Carte de Sort}}}} \\scriptsize"
-
-#. type: multicols
-#: sections/deckbuilding.tex:141
-#, no-wrap
-msgid ""
-"{2}\n"
-"    \\begin{itemize}[itemsep=5pt]\n"
-"      \\item[\\textbf{1.}] \\textbf{Spell Name}\n"
-"      \\item[\\textbf{2.}] \\textbf{School of Magic}\n"
-"      \\item[\\textbf{3.}] \\textbf{Cost to Empower}\n"
-"      \\item[\\textbf{4.}] \\textbf{Spell Effect}\n"
-"      \\item[\\textbf{5.}] \\textbf{Alternative Effect}\n"
-"      \\item[]\n"
-"    \\end{itemize}\n"
-"  "
-msgstr ""
-"{2}\n"
-"    \\begin{itemize}[itemsep=5pt]\n"
-"      \\item[\\textbf{1.}] \\textbf{Nom du Sort}\n"
-"      \\item[\\textbf{2.}] \\textbf{École de Magie}\n"
-"      \\item[\\textbf{3.}] \\textbf{Coût de l'Augmentation}\n"
-"      \\item[\\textbf{4.}] \\textbf{Effet du Sort}\n"
-"      \\item[\\textbf{5.}] \\textbf{Effet Alternatif}\n"
-"      \\item[]\n"
-"     \\end{itemize}\n"
-"  "
+"effets, vous pouvez \\textbf{Augmenter la puissance} d'un "
+"Sort\\index{Augmenter un Sort} en payant le coût indiqué (3) pour un effet "
+"plus fort (4). Vous pouvez payer ce coût en jouant des cartes pour leur "
+"effet de Puissance \\includesvg[height=10px]{\\svgs/empower.svg} avant de "
+"lancer le Sort. Toutes les Cartes de Sort ont aussi une alternative en bas "
+"(5) pour un effet \\includesvg[height=10px]{\\svgs/empower.svg}."
 
 #. type: Plain text
-#: sections/deckbuilding.tex:146
+#: sections/deckbuilding.tex:142
+msgid ""
+"{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/spell_example."
+"png}\\\\ \\medskip "
+"\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Spell "
+"Card}}}} \\scriptsize \\begin{multicols}{2} \\begin{itemize}[itemsep=5pt] "
+"\\item[\\textbf{1.}] \\textbf{Spell Name} \\item[\\textbf{2.}] "
+"\\textbf{School of Magic} \\item[\\textbf{3.}] \\textbf{Cost\\\\to Empower} "
+"\\item[\\textbf{4.}] \\textbf{Spell Effect} \\item[\\textbf{5.}] "
+"\\textbf{Alternative\\\\Effect} \\item[] \\end{itemize} \\end{multicols} }"
+msgstr ""
+"{ \\centering \\includegraphics[width=0.6\\linewidth]{translations/assets/fr/"
+"cards/spell_example_fr.png}\\\\ \\medskip "
+"\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Carte de "
+"Sort}}}} \\scriptsize \\begin{multicols}{2} \\begin{itemize}[itemsep=5pt] "
+"\\item[\\textbf{1.}] \\textbf{Nom du Sort} \\item[\\textbf{2.}] "
+"\\textbf{École de Magie} \\item[\\textbf{3.}] \\textbf{Coût de\\"
+"\\l'Augmentation} \\item[\\textbf{4.}] \\textbf{Effet du Sort} "
+"\\item[\\textbf{5.}] \\textbf{Effet\\\\Alternatif} \\item[] \\end{itemize} "
+"\\end{multicols} }"
+
+#. type: Plain text
+#: sections/deckbuilding.tex:147
 msgid ""
 "Spells can be gained by Building the Mage Guild\\index{Mage Guild}.  "
 "Building it also enables you to use the Spell Book Token\\index{Spell Book "
@@ -387,20 +377,20 @@ msgid ""
 "\\textbf{same Round} when the Guild is constructed.\\par Spells can be "
 "\\hyperlink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgstr ""
-"Les Sorts sont obtenus en construisant la Guilde des Mages\\index{Guilde des "
-"Mages}. La Construire débloque aussi le Jeton Grimoire\\index{Jeton "
-"Grimoire} pour acheter des Sorts en plus. Le Jeton Grimoire est inutilisable "
-"durant la \\textbf{même Manche} que la construction de la Guilde.\\par Les "
-"Sorts peuvent être \\hyperlink{Trading}{échangés} en Alliance et en "
-"Coopération."
+"Les Sorts sont obtenus en construisant la Guilde des Mages\\index{Mage "
+"Guild} ou en Explorant certains \\hyperlink{All Map Locations}Sites. La "
+"Construire débloque aussi le Jeton Grimoire\\index{Jeton Grimoire} pour "
+"acheter des Sorts en plus. Le Jeton Grimoire est inutilisable durant la "
+"\\textbf{même Manche} que la construction de la Guilde.\\par Les Sorts "
+"peuvent être \\hyperlink{Trading}{échangés} en Alliance et en Coopération."
 
 #. type: subsection{#2}
-#: sections/deckbuilding.tex:148
+#: sections/deckbuilding.tex:149
 msgid "\\hypertarget{Specialty}{Hero Specialty Cards}"
 msgstr "\\hypertarget{Specialty}{Cartes de Spécialisation}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:152
+#: sections/deckbuilding.tex:153
 msgid ""
 "Hero Specialty Cards\\index{Specialty Card} are gained from "
 "\\hyperlink{Level}{Level ups}.  Each Main Hero has an unique set of "
@@ -413,17 +403,19 @@ msgstr ""
 "propres Cartes. Leurs effets ressemblent aux Cartes de Sort mais ont leur "
 "\\textbf{propre catégorie de cartes}."
 
-#. type: center
-#: sections/deckbuilding.tex:158
+#. type: Plain text
+#: sections/deckbuilding.tex:160
 msgid ""
-"\\medskip \\footnotesize\\textit{A Level 4 Specialty Card, belonging to "
-"Catherine the Knight.}"
+"{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/specialty."
+"png}\\\\ \\medskip \\footnotesize\\textit{A Level 4 Specialty Card, "
+"belonging to Catherine the Knight.} }"
 msgstr ""
-"\\medskip \\footnotesize\\textit{Carte de Spécialisation de Niveau 4, "
-"appartenant à Catherine le Chevalier.}"
+"{ \\centering \\includegraphics[width=0.6\\linewidth]{translations/assets/fr/"
+"cards/specialty_fr.png}\\\\ \\medskip \\footnotesize\\textit{Carte de "
+"Spécialisation de Niveau 4, appartenant à Catherine le Chevalier.} }"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:168
+#: sections/deckbuilding.tex:170
 msgid ""
 "\\note{11}{ During Combat, \\textbf{only one Spell Card} may be played by "
 "each player \\textbf{per Combat Round}.  \\medskip When you use an effect "
@@ -433,16 +425,16 @@ msgid ""
 msgstr ""
 "\\note{11}{ Pendant un Combat, chaque joueur ne peut jouer \\textbf{qu’une "
 "Carte de Sort par Tour de Combat}.  \\medskip Quand vous utilisez un effet "
-"pour lancer un Sort autrement que de votre main (comme depuis le Deck de "
-"Sort directement), placer le Sort ainsi lancé dans votre Pile de Défausse.  }"
+"pour lancer un Sort autrement que de votre main (comme depuis la Pile de "
+"Sort directement), placer le Sort ainsi lancé dans votre Défausse.  }"
 
 #. type: subsection{#2}
-#: sections/deckbuilding.tex:178
+#: sections/deckbuilding.tex:180
 msgid "Searching Example"
 msgstr "Exemple de Fouille"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:188
+#: sections/deckbuilding.tex:190
 msgid ""
 "\\textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during "
 "the previous Game Round, enabling him to now use his Spell Book Token to "
@@ -466,12 +458,13 @@ msgstr ""
 "{\\examples/deemer_receiving_spellbook.png}\\par \\textit{Il dépense son "
 "Jeton et paie le coût de 5 \\includesvg[height=10px]{\\svgs/gold.svg} "
 "indiqué sur le Plateau de Ville, lui permettant de \\textbf{Fouiller (2)} "
-"dans le Deck de Sort.}\\par \\includegraphics[width=\\linewidth]{\\examples/"
-"deemer_spell_cost.png}\\par \\filbreak \\textit{Il a alors le choix entre "
-"prendre la première Carte de la Défausse de Sort, ou piocher les deux "
-"premières Cartes du Deck de Sort pour n’en garder qu’une. Le Sort "
-"Malédiction, qui est au dessus de la Défausse ne l'intéresse pas, il pioche "
-"donc deux Cartes – Flèche Magique et Boule de Feu.} "
-"\\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow."
-"png}\\par \\textit{Il décide de garder Boule de Feu, la met dans sa Main et "
-"défausse Flèche Magique dans la Défausse de Sort.}"
+"dans la Pile de Sort.}\\par \\includegraphics[width=\\linewidth]"
+"{translations/assets/fr/exemples/deemer_spell_cost_fr.png}\\par \\filbreak "
+"\\textit{Il a alors le choix entre prendre la première Carte de la Défausse "
+"de Sort, ou piocher les deux premières Cartes de la Pile de Sort pour n’en "
+"garder qu’une. Le Sort Malédiction, qui est au dessus de la Défausse ne "
+"l'intéresse pas, il pioche donc deux Cartes – Flèche Magique et Boule de "
+"Feu.} \\includegraphics[width=\\linewidth]{translations/assets/fr/exemples/"
+"fireball_over_magic_arrow_fr.png}\\par \\textit{Il décide de garder Boule de "
+"Feu, la met dans sa Main et défausse Flèche Magique dans la Défausse de "
+"Sort.}"

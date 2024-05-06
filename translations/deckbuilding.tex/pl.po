@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-26 15:38+0200\n"
+"POT-Creation-Date: 2024-05-03 12:03+0200\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -24,11 +24,11 @@ msgstr ""
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
-#: sections/map_elements.tex:99 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
+#: sections/map_elements.tex:118 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
-#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:145
+#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -37,7 +37,7 @@ msgstr ""
 
 #. type: Plain text
 #: sections/all_map_locations.tex:188 sections/credits.tex:5
-#: sections/deckbuilding.tex:160 sections/heroes.tex:70
+#: sections/deckbuilding.tex:162 sections/heroes.tex:70
 #: sections/introduction.tex:5
 msgid "\\bigbreak"
 msgstr ""
@@ -46,7 +46,7 @@ msgstr ""
 #. type: Plain text
 #: sections/deckbuilding.tex:3
 msgid "\\addsection{Deck-building}{\\skills/wisdom.png}"
-msgstr ""
+msgstr "\\addsection{Budowanie Talii}{\\skills/wisdom.png}"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:10
@@ -58,6 +58,11 @@ msgid ""
 "Each player's Deck starts with 9 cards, built during the game's setup.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Playerdecks}{Talie Graczy}}\n"
+"Każdy gracz ma unikatową Talię reprezentującą Zdolności i Ekwipunek jego Bohatera Głównego.\n"
+"Talie mogą zawierać Karty Statystyk, Specjalności, Zaklęć, Artefaktów oraz Zdolności Bohatera Głównego.\n"
+"Talia Początkowa zawiera 9 Kart.\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:34
@@ -88,6 +93,29 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\subsection*{Ogólne Zasady Kart}\n"
+"\\begin{enumerate}\n"
+"  \\item Karty możesz zagrywać \\textbf{wyłącznie w własnej Turze} lub w \\hyperlink{Combat}{Walce}, w której walczy twój \\textbf{Bohater Główny}.\n"
+"  \\item Po zagraniu Karty odrzuć ją na swój własny Stos Kart Odrzuconych\\index{Stos Kart Odrzuconych}.\n"
+"  \\item Jeśli musisz dobrać Kartę, a twoja Talia jest pusta, \\textbf{potasuj swój Stos Kart Odrzuconych}, tworząc nową Talię, z której będziesz dobierać Karty.\n"
+"  \\item Gdy twój Bohater zdobywa Kartę, weź ją \\textbf{bezpośrednio do ręki}, o ile nie napisano inaczej.\n"
+"  \\item \\textbf{Przeszukując} (X)\\index{Przeszukaj (X)} Talię Zdolności, Artefaktów lub Zaklęć, możesz spojrzeć na wierzchnie (X) Kart danej Talii, wziąć jedną z nich na rękę i odrzucić pozostałe \\textbf{ALBO} zamiast podglądać (X) Kart, dobrać wierzchnią Kartę ze Stosu Kart Odrzuconych tej Talii.\n"
+"  \\item Talie Zdolności, Artefaktów i Zaklęć mają własne Stosy Kart Odrzuconych zbudowane podczas przygotowania  - pomagają one w rozpoznaniu tych Talii.\n"
+"    Jeśli w Talii skończą się Karty, potasuj ją i odrzuć wierzchnią Kartę, tworząc nowy Stos Kart Odrzuconych.\n"
+"    Gdy Stos Kart Odrzuconych jest pusty, \\textbf{odnów go}, odrzucając wierzchnią Kartę z tej Talii.\n"
+"  \\item Karty mają następujące typy efektów:\n"
+"  \\begin{itemize}\n"
+"    \\item \\textbf{Natychmiastowy} \\includesvg[height=10px]{\\svgs/instant.svg} rozpatrywany od razu.\n"
+"    \\item \\textbf{Aktywację} \\includesvg[height=10px]{\\svgs/activation.svg}, która musi być zagrane podczas Aktywacji twojej Jednostki w Walce.\n"
+"    \\item \\textbf{Mapę} \\includesvg[height=10px]{\\svgs/map.svg}, która nie może być zagrana w trakcie Walki.\n"
+"    \\item \\textbf{Krótkotrwały} \\includesvg[height=10px]{\\svgs/ongoing.svg} trwający dopóki nie zostanie wykorzystany lub dopóki gracz, który go zagrał, rozpocznie swoją kolejną Turę (którekolwiek nastąpi pierwsze).\n"
+"    \\item \\textbf{Długotrwały} \\includesvg[height=10px]{\\svgs/permanent.svg} \\index{Karta z efektem Długotrwałym} pozostający w grze, dopóki nie zostanie odrzucony albo zamieniony.\n"
+"      \\textbf{Możesz mieć tylko jedną Kartę z efektem Długotrwałym}; grając inną, odrzuć pierwszą.\n"
+"  \\end{itemize}\n"
+"\\end{enumerate}\n"
+"\\note{6}{Karty z efektem Natychmiastowym \\includesvg[height=10px]{\\svgs/instant-note.svg}, które modyfikują statystyki \\hyperlink{Jednostki}{Jednostki} lub zadają obrażenia \\includesvg[height=10px]{\\svgs/damage-table.svg}, nie mogą być użyte poza Walką.\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:37
@@ -114,6 +142,8 @@ msgid ""
 "\\subsection*{\\hypertarget{Ability}{Ability} and \\hypertarget{Statistic}{Statistic} Cards}\n"
 "\n"
 msgstr ""
+"\\subsection*{Karty \\hypertarget{Ability}{Zdolności} i \\hypertarget{Statistic}{Statystyk}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:47
@@ -126,6 +156,12 @@ msgid ""
 "\\bigskip\n"
 "\n"
 msgstr ""
+"Każda Karta Zdolności i Statystyk \\index{Karta Statystyk} ma \\textbf{Efekt Podstawowy}\\index{Efekt Podstawowy} oraz silniejszy \\textbf{Efekt \\includesvg[height=10px]{\\svgs/expert.svg} Mistrzowski},\\index{Efekt Mistrzowski} który znajduje się pod Efektem Podstawowym.\n"
+"Gdy zagrywasz Kartę Zdolności lub Statystyki, musisz wybrać, którego efektu używasz.\n"
+"Liczba Efektów \\includesvg[height=10px]{\\svgs/expert.svg}, którą możesz zagrać w każdej z Rund zależy od \\hyperlink{Level}{Poziomu} twojego Bohatera Głównego.\n"
+"Zlicz pozostałe Efekty Mistrzowskie w dogodny dla ciebie sposób, na przykład przez umieszczanie i zdejmowanie Czarnych Kostek z Planszetki Bohatera.\\par\n"
+"\\bigskip\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:74
@@ -151,6 +187,25 @@ msgid ""
 "    \\item[\\textbf{4.}] Faction-specific Card*\n"
 "  \\end{itemize}"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{translations/assets/pl/ability.png}\n"
+"\\vspace{-2em}\n"
+"\\begin{multicols*}{2}\n"
+"  \\footnotesize\n"
+"  \\begin{center}\n"
+"    \\phantom{\\ldots}\\textbf{\\textit{\\textcolor{darkcandyapplered}{Karta Zdolności}}}\n"
+"  \\end{center}\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{1.}] Nazwa\n"
+"    \\item[\\textbf{2.}] Efekt\\\\Podstawowy\n"
+"  \\end{itemize}\n"
+"  \\columnbreak\n"
+"  \\begin{center}\n"
+"    \\textbf{\\textit{\\textcolor{darkcandyapplered}{Karta Statystyk}}}\\phantom{\\ldots}\n"
+"  \\end{center}\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{3.}] Efekt\\\\Mistrzowski\n"
+"    \\item[\\textbf{4.}] Karta\\\\Frakcyjna*\n"
+"  \\end{itemize}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:74
@@ -162,6 +217,13 @@ msgid ""
 "gain it.  Non-Necropolis players \\textbf{cannot use} Faction Specific Cards "
 "from their hand in any way besides for effects that discard them.  }"
 msgstr ""
+"\\bigbreak \\note{11}{ Niektóre Karty są przeznaczone wyłącznie dla Frakcji "
+"Nekropolii \\includesvg[height=10px]{\\svgs/necro-note.svg}.  Gdy gracz "
+"niegrający Nekropolią dobiera Kartę Nekropolii \\index{Karta Nekropolii} z "
+"Talii Zdolności, może ją odrzucić i dobrać nową Kartę jako zamiennik, lub ją "
+"dobrać.  Gracze niegrający Nekropolią \\textbf{nie mogą używać} Kart "
+"Frakcyjnych ze swojej ręki w żaden sposób poza efektami, które je "
+"odrzucają.  }"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:78 sections/resources.tex:31
@@ -171,7 +233,7 @@ msgstr ""
 #. type: subsection{#2}
 #: sections/deckbuilding.tex:80
 msgid "Artifact Cards"
-msgstr ""
+msgstr "Karty Artefaktów"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:110
@@ -185,6 +247,15 @@ msgid ""
 "Level.  They are gained through map exploration.\\par Artifacts can be "
 "\\hyperlink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgstr ""
+"Karty Artefaktów\\index{Karta Artefaktu} mają górny oraz dolny efekt. Gdy je "
+"zagrywasz, musisz \\textbf{wybrać  efekt}, którego używasz. Dzielą się one "
+"na 3 Poziomy: Słabe, Mocne oraz Relikty. Te poziomy odnoszą się do ogólnej "
+"Siły Karty, a dodatkowo mogą być wskazane podczas rozgrywania niektórych "
+"efektów lub podczas przygotowania Scenariusza. Jeżeli w Scenariuszu nie "
+"podano inaczej, wszystkie Karty Artefaktów są tasowane razem, aby stworzyć "
+"Talię Artefaktów bez względu na ich Poziom. Można je zdobywać podczas "
+"odkrywania mapy. \\par Artefakty mogą być \\hyperlink{Trading}{wymieniane} w "
+"Trybie Sojuszu oraz Kooperacji."
 
 #. type: multicols*
 #: sections/deckbuilding.tex:110
@@ -204,6 +275,19 @@ msgid ""
 "    \\phantom{\\ldots}\\textbf{\\textit{\\textcolor{darkcandyapplered}{Relic Artifact}}}\n"
 "  \\end{center}"
 msgstr ""
+"{2}\n"
+"  \\includegraphics[width=1.2\\linewidth]{translations/assets/pl/artifact.png}\n"
+"  \\footnotesize\n"
+"    \\null\\hfill\\textbf{\\textit{\\textcolor{darkcandyapplered}{Mocny Artefakt}}}\n"
+"  \\columnbreak\n"
+"  \\begin{center}\n"
+"    \\phantom{\\ldots}\\\\\n"
+"    \\phantom{\\ldots}\\includegraphics[width=0.6\\linewidth]{\\cards/minor_artifact.png}\\\\\n"
+"    \\phantom{\\ldots}\\textbf{\\textit{\\textcolor{darkcandyapplered}{Słaby Artefakt}}}\\\\\n"
+"    \\vspace{3em}\n"
+"    \\phantom{\\ldots}\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}\\\\\n"
+"    \\phantom{\\ldots}\\textbf{\\textit{\\textcolor{darkcandyapplered}{Relikt}}}\n"
+"  \\end{center}"
 
 #. type: multicols
 #: sections/deckbuilding.tex:110
@@ -218,6 +302,14 @@ msgid ""
 "    \\item[\\textbf{3.}] Fluff\n"
 "  \\end{itemize}"
 msgstr ""
+"{2}\n"
+"  \\footnotesize\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{1.}] Nazwa\n"
+"    \\item[\\textbf{2.}] Efekt\n"
+"    \\columnbreak\n"
+"    \\item[\\textbf{3.}] Tekst fabularny\n"
+"  \\end{itemize}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:115
@@ -227,7 +319,7 @@ msgstr ""
 #. type: subsection{#2}
 #: sections/deckbuilding.tex:117
 msgid "\\hypertarget{spells}{Spell Cards}"
-msgstr ""
+msgstr "\\hypertarget{spells}{Karty Zaklęć}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:123
@@ -241,32 +333,38 @@ msgid ""
 "Spell.  All Spell Cards also have an alternative bottom (5) "
 "\\includesvg[height=10px]{\\svgs/empower.svg} effect."
 msgstr ""
-
-#. type: center
-#: sections/deckbuilding.tex:141
-msgid ""
-"\\medskip \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}"
-"{Spell Card}}}} \\scriptsize"
-msgstr ""
-
-#. type: multicols
-#: sections/deckbuilding.tex:141
-#, no-wrap
-msgid ""
-"{2}\n"
-"    \\begin{itemize}[itemsep=5pt]\n"
-"      \\item[\\textbf{1.}] \\textbf{Spell Name}\n"
-"      \\item[\\textbf{2.}] \\textbf{School of Magic}\n"
-"      \\item[\\textbf{3.}] \\textbf{Cost to Empower}\n"
-"      \\item[\\textbf{4.}] \\textbf{Spell Effect}\n"
-"      \\item[\\textbf{5.}] \\textbf{Alternative Effect}\n"
-"      \\item[]\n"
-"    \\end{itemize}\n"
-"  "
-msgstr ""
+"Karty Zaklęć\\index{Karta Zaklęcia} mają trzy możliwe efekty podstawowe. "
+"Użycie górnej, podstawowej wersji Zaklęcia nie ma dodatkowych kosztów. Aby "
+"użyć pozostałych efektów, możesz \\textbf{Wzmocnić} "
+"Zaklęcie\\index{Wzmacnianie Zaklęć}, płacąc określony koszt (3), aby uzyskać "
+"potężniejszy wynik (4). Możesz opłacić ten koszt zagrywając inne Karty z "
+"efektem Wzmocnienia \\includesvg[height=10px]{\\svgs/empower.svg}, zanim "
+"rzucisz to Zaklęcie. Każda Karta Zaklęcia ma również alternatywny, dolny (5) "
+"\\includesvg[height=10px]{\\svgs/empower.svg} efekt."
 
 #. type: Plain text
-#: sections/deckbuilding.tex:146
+#: sections/deckbuilding.tex:142
+msgid ""
+"{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/spell_example."
+"png}\\\\ \\medskip "
+"\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Spell "
+"Card}}}} \\scriptsize \\begin{multicols}{2} \\begin{itemize}[itemsep=5pt] "
+"\\item[\\textbf{1.}] \\textbf{Spell Name} \\item[\\textbf{2.}] "
+"\\textbf{School of Magic} \\item[\\textbf{3.}] \\textbf{Cost\\\\to Empower} "
+"\\item[\\textbf{4.}] \\textbf{Spell Effect} \\item[\\textbf{5.}] "
+"\\textbf{Alternative\\\\Effect} \\item[] \\end{itemize} \\end{multicols} }"
+msgstr ""
+"{ \\centering \\includegraphics[width=0.6\\linewidth]{translations/assets/pl/"
+"spell_example.png}\\\\ \\medskip "
+"\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Karta "
+"Zaklęć}}}} \\scriptsize \\begin{multicols}{2} \\begin{itemize}[itemsep=5pt] "
+"\\item[\\textbf{1.}] \\textbf{Nazwa Zaklęcia} \\item[\\textbf{2.}] "
+"\\textbf{Szkoła Magii} \\item[\\textbf{3.}] \\textbf{Koszt\\\\Wzmocnienia} "
+"\\item[\\textbf{4.}] \\textbf{Efekt Zaklęcia} \\item[\\textbf{5.}] "
+"\\textbf{Efekt\\\\Alternatywny} \\item[] \\end{itemize} \\end{multicols} }"
+
+#. type: Plain text
+#: sections/deckbuilding.tex:147
 msgid ""
 "Spells can be gained by Building the Mage Guild\\index{Mage Guild}.  "
 "Building it also enables you to use the Spell Book Token\\index{Spell Book "
@@ -274,14 +372,20 @@ msgid ""
 "\\textbf{same Round} when the Guild is constructed.\\par Spells can be "
 "\\hyperlink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgstr ""
+"Zaklęcia możesz zdobyć Budując Gildię Magów\\index{Gildia Magów}.  "
+"Zbudowanie jej pozwala ci używać Żetonu Księgi Zaklęć\\index{Żeton Księgi "
+"Zaklęć}, aby kupować dodatkowe Zaklęcia. Żeton nie może być użyty podczas "
+"\\textbf{tej samej Rundy}, w której została zbudowana Gildia Magów.\\par "
+"Zaklęcia mogą być \\hyperlink{Trading}{wymieniane} w Trybie Sojuszu oraz "
+"Kooperacji."
 
 #. type: subsection{#2}
-#: sections/deckbuilding.tex:148
+#: sections/deckbuilding.tex:149
 msgid "\\hypertarget{Specialty}{Hero Specialty Cards}"
-msgstr ""
+msgstr "\\hypertarget{Specialty}{Karty Specjalności Bohatera}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:152
+#: sections/deckbuilding.tex:153
 msgid ""
 "Hero Specialty Cards\\index{Specialty Card} are gained from "
 "\\hyperlink{Level}{Level ups}.  Each Main Hero has an unique set of "
@@ -289,16 +393,25 @@ msgid ""
 "Spell Cards, Specialty Cards are their \\textbf{own unique category of "
 "cards}."
 msgstr ""
-
-#. type: center
-#: sections/deckbuilding.tex:158
-msgid ""
-"\\medskip \\footnotesize\\textit{A Level 4 Specialty Card, belonging to "
-"Catherine the Knight.}"
-msgstr ""
+"Karty Specjalności Bohatera\\index{Karta Specjalności} są pozyskiwane "
+"podczas \\hyperlink{Level}{zdobywania Poziomów}. Każdy Bohater Główny "
+"posiada unikalny zestaw Kart Specjalności. Mimo że wiele z tych Kart posiada "
+"efekty, które odwzorowują Karty Zaklęć, Karty Specjalności są ich "
+"\\textbf{własną unikatową kategorią Kart}."
 
 #. type: Plain text
-#: sections/deckbuilding.tex:168
+#: sections/deckbuilding.tex:160
+msgid ""
+"{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/specialty."
+"png}\\\\ \\medskip \\footnotesize\\textit{A Level 4 Specialty Card, "
+"belonging to Catherine the Knight.} }"
+msgstr ""
+"{ \\centering \\includegraphics[width=0.6\\linewidth]{translations/assets/pl/"
+"specialty.png}\\\\ \\medskip \\footnotesize\\textit{Karta Specjalności 4 "
+"Poziomu, należąca do Katarzyny, będącej Rycerzem.} }"
+
+#. type: Plain text
+#: sections/deckbuilding.tex:170
 msgid ""
 "\\note{11}{ During Combat, \\textbf{only one Spell Card} may be played by "
 "each player \\textbf{per Combat Round}.  \\medskip When you use an effect "
@@ -306,14 +419,19 @@ msgid ""
 "directly from the Spell Deck), place that Spell into your Discard Pile after "
 "casting it.  }"
 msgstr ""
+"\\note{11}{ Podczas Walki każdy gracz może zagrać \\textbf{tylko jedną Kartę "
+"Zaklęcia na jedną Rundę Walki}.\\\\ \\medskip Gdy używasz efektu, który "
+"pozwala ci na zagranie Zaklęcia z miejsca innego niż twoja ręka (jak na "
+"przykład bezpośrednio z Talii Zaklęć), połóż to Zaklęcie na swój Stos Kart "
+"Odrzuconych po jego rzuceniu.  }"
 
 #. type: subsection{#2}
-#: sections/deckbuilding.tex:178
+#: sections/deckbuilding.tex:180
 msgid "Searching Example"
-msgstr ""
+msgstr "Przykład Przeszukiwania"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:188
+#: sections/deckbuilding.tex:190
 msgid ""
 "\\textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during "
 "the previous Game Round, enabling him to now use his Spell Book Token to "
@@ -331,3 +449,23 @@ msgid ""
 "png}\\par \\textit{He decides to keep the Fireball, placing it into his hand "
 "and discarding the Magic Arrow into the Spell Discard Pile.}"
 msgstr ""
+"\\textit{Bob, grający jako Czarnoksiężnik Deemer, w poprzedniej rundzie "
+"wybudował Gildię Magów,  co pozwala mu teraz na użycie Żetonu Księgi Zaklęć, "
+"aby kupić dodatkowe Zaklęcia.}\\par\n"
+"\\includegraphics[width=\\linewidth]{\\examples/deemer_receiving_spellbook."
+"png}\\par\n"
+"\\textit{Wykorzystuje Żeton i płaci koszt 5 \\includesvg[height=10px]{\\svgs/"
+"gold.svg} wskazany na swojej Planszy Miasta, co pozwala mu "
+"\\textbf{Przeszukać (2)} Talię Zaklęć.}\\par\n"
+"\\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par\n"
+"\\filbreak\n"
+"\\textit{Ma teraz wybór – dobrać wierzchnią Kartę ze Stosu Kart Odrzuconych "
+"Zaklęć, albo dobrać dwie wierzchnie Karty z Talii Zaklęć i wybrać jedną z "
+"nich.\n"
+"Nie jest zainteresowany dobieraniem Zaklęcia ,,Klątwa'', które znajduje się "
+"na górze Stosu Kart Odrzuconych. Zamiast tego postanawia dobrać dwie Karty – "
+"Magiczną Strzałę i Kulę Ognia.}\n"
+"\\includegraphics[width=\\linewidth]{translations/assets/pl/"
+"fireball_over_magic_arrow.png}\\par\n"
+"\\textit{Postanawia zatrzymać Kulę Ognia i bierze ją na swoją rękę, "
+"odrzucając tym samym Magiczną Strzałe na Stos Kart Odrzuconych.}"

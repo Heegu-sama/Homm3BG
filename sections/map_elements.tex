@@ -31,19 +31,38 @@ Solid yellow lines on a Field's edge cannot be passed through.
   \item[\textbf{3.}] Near Map Tiles: IV-V
   \item[\textbf{4.}] Center Map Tiles: VI-VII
 \end{itemize}
+
 \vfill
 \begin{center}
-  \includegraphics[width=0.8\linewidth]{\images/fields.png}
+  \begin{scriptsize}
+  \begin{tikzpicture}
+    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=0.75\linewidth]{\images/fields.png}}};
+    \draw (0, -0.3) node {\encircle{\phantom{.}1\phantom{.}}};
+    \draw (-1.9, 0) node {\encircle{\phantom{.}2\phantom{.}}};
+    \draw (2.3, 0) node {\encircle{\phantom{.}2\phantom{.}}};
+    \draw (-1.4, 1.7) node {\encircle{\phantom{.}2\phantom{.}}};
+    \draw (0.6, -1.9) node {\encircle{\phantom{.}2\phantom{.}}};
+    \draw (0.5, 1.7) node {\encircle{\phantom{.}2\phantom{.}}};
+    \draw (1.4, -2.2) node {\encircle{\phantom{.}3\phantom{.}}};
+    \draw (1.4, 2.5) node {\encircle{\phantom{.}4\phantom{.}}};
+    \draw (1.4, -1) node {\encircle{\phantom{.}4\phantom{.}}};
+    \draw (-1, 0.5) node {\encircle{\phantom{.}5\phantom{.}}};
+    \draw (-1.1, -1.1) node {\encircle{\phantom{.}6\phantom{.}}};
+    \draw (-1.4, -1.7) node {\encircle{\phantom{.}7\phantom{.}}};
+  \end{tikzpicture}
+  \end{scriptsize}
 \end{center}
+
 \begin{itemize}
   \footnotesize
   \begin{multicols}{2}
     \item[\textbf{1.}] Empty Field
     \item[\textbf{2.}] Location
     \item[\textbf{3.}] Artifact Symbol
-    \item[\textbf{4.}] Blocked Field
+    \item[\textbf{4.}] Field Difficulty
     \item[\textbf{5.}] Border line
-    \item[\textbf{6.}] Field Difficulty
+    \item[\textbf{6.}] Blocked Field
+    \item[\textbf{7.}] Tile name like \\{} \texttt{F2} or \texttt{\#N3}
   \end{multicols}
 \end{itemize}
 

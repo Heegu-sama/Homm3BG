@@ -44,7 +44,7 @@ msgstr ""
 #. type: Plain text
 #: sections/resources.tex:3
 msgid "\\addsection{Resources}{\\skills/estates.png}"
-msgstr ""
+msgstr "\\addsection{Zasoby}{\\skills/estates.png}"
 
 #. type: multicols
 #: sections/resources.tex:23
@@ -68,6 +68,23 @@ msgid ""
 "  \\includegraphics[width=0.8\\linewidth]{\\images/valuables.png}\n"
 "  \\footnotesize\\textcolor{darkcandyapplered}{\\textit{\\textbf{Valuables \\phantom{Materials}}}}"
 msgstr ""
+"\\hypertarget{Resources}{W grze} istnieją trzy rodzaje \\index{Zasoby} zasobów: Złoto \\includesvg[height=10px]{\\svgs/gold.svg}, Budulce \\includesvg[height=10px]{\\svgs/building_materials.svg} oraz Kosztowności \\includesvg[height=10px]{\\svgs/valuablegreater.svg}.\n"
+"Zasoby będziesz wydawał w trakcie gry na rozbudowę \\hyperlink{Town}{Miasta}, Rekrutację \\hyperlink{Units}{Jednostek} i zakup \\hyperlink{spells}{Zaklęć}.\n"
+"Zazwyczaj będziesz je pozyskiwał z \\hyperlink{Mines}{Kopalni oraz Osad}, które \\hyperlink{Categories}{Oflagowałeś}, a także zagrywając Karty i rzucając Kośćmi Zasobów \\includesvg[height=10px]{\\svgs/resource_die.svg}.\n"
+"Za każdym razem, gdy produkcja Zasobów gracza zostanie zwiększona lub zmniejszona, należy przesunąć Kostkę tego Zasobu na jego Torze Przychodu o odpowiednią liczbę pól.\\par\n"
+"\\begin{multicols}{3}\n"
+"  \\centering\n"
+"  \\vspace*{\\fill}\n"
+"  \\includegraphics[width=0.8\\linewidth]{\\images/gold.png}\n"
+"  \\footnotesize\\textcolor{darkcandyapplered}{\\textit{\\textbf{Złoto \\phantom{Materials}}}}\n"
+"  \\columnbreak\n"
+"  \\vspace*{\\fill}\n"
+"  \\includegraphics[width=0.8\\linewidth]{\\images/building_materials.png}\n"
+"  \\footnotesize\\textcolor{darkcandyapplered}{\\textit{\\textbf{Budulce \\phantom{Materials}}}}\n"
+"  \\columnbreak\n"
+"  \\vspace*{\\fill}\n"
+"  \\includegraphics[width=0.8\\linewidth]{\\images/valuables.png}\n"
+"  \\footnotesize\\textcolor{darkcandyapplered}{\\textit{\\textbf{Kosztowności}}}"
 
 #. type: Plain text
 #: sections/resources.tex:27
@@ -76,11 +93,14 @@ msgid ""
 "Scenario’s setup.  Resources can also be \\hyperlink{Trading}{traded}.  "
 "There's no limit to the amount of Resources you can have."
 msgstr ""
+"Gracze rozpoczynają każdy Scenariusz z ilością Zasobów określoną w "
+"Przygotowaniu Scenariusza.  Zasobami można również \\hyperlink{Trading}"
+"{handlować}. Nie ma ograniczeń w ilości posiadanych Zasobów."
 
 #. type: textcolor{#2}
 #: sections/resources.tex:37
 msgid "\\textbf{\\textit{Resource Production Tracker}}"
-msgstr ""
+msgstr "\\textbf{\\textit{Tor Przychodu}}"
 
 #. type: Plain text
 #: sections/resources.tex:49
@@ -88,6 +108,8 @@ msgid ""
 "Possible Resource Die\\index{Resource Die}\\index{Dice} "
 "\\includesvg[height=10px]{\\svgs/resource_die.svg} results:"
 msgstr ""
+"Rzucając \\index{Kość Zasobów}\\index{Kość} Kością Zasobów "
+"\\includesvg[height=10px]{\\svgs/resource_die.svg}, możesz zyskać:"
 
 #. type: itemize
 #: sections/resources.tex:49
@@ -100,6 +122,7 @@ msgid ""
 "[{\\includesvg[height=15px]{\\svgs/2_building_materials.svg}}] — 2 x "
 "Building Materials"
 msgstr ""
+"[{\\includesvg[height=15px]{\\svgs/2_building_materials.svg}}] — 2 x Budulce"
 
 #. type: itemize
 #: sections/resources.tex:49
@@ -107,40 +130,37 @@ msgid ""
 "[{\\includesvg[height=15px]{\\svgs/4_building_materials.svg}}] — 4 x "
 "Building Materials"
 msgstr ""
+"[{\\includesvg[height=15px]{\\svgs/4_building_materials.svg}}] — 4 x Budulce"
 
 #. type: itemize
 #: sections/resources.tex:49
 msgid "[{\\includesvg[height=15px]{\\svgs/1_valuables.svg}}] — 1 x Valuables"
 msgstr ""
+"[{\\includesvg[height=15px]{\\svgs/1_valuables.svg}}] — 1 x Kosztowności"
 
 #. type: itemize
 #: sections/resources.tex:49
 msgid "[{\\includesvg[height=15px]{\\svgs/2_valuables.svg}}] — 2 x Valuables"
 msgstr ""
+"[{\\includesvg[height=15px]{\\svgs/2_valuables.svg}}] — 2 x Kosztowności"
 
 #. type: itemize
 #: sections/resources.tex:49
 msgid "[{\\includesvg[height=15px]{\\svgs/3_gold.svg}}] — 3 x Gold"
-msgstr ""
+msgstr "[{\\includesvg[height=15px]{\\svgs/3_gold.svg}}] — 3 x Złoto"
 
 #. type: itemize
 #: sections/resources.tex:49
 msgid "[{\\includesvg[height=15px]{\\svgs/6_gold.svg}}] — 6 x Gold"
-msgstr ""
+msgstr "[{\\includesvg[height=15px]{\\svgs/6_gold.svg}}] — 6 x Złoto"
 
 #. type: tikzpicture
 #: sections/resources.tex:53
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\includegraphics[width=\\linewidth]{\\cards/ai.png}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "[overlay]\n"
 "  \\node at (6, 1.5) {\\includegraphics[width=0.3\\linewidth]{\\images/resource_die.png}};"
 msgstr ""
-"\\begin{multicols*}{2}\n"
-"\\begin{center}\\vspace*{-1.5em}\\includegraphics[width=1.3\\linewidth]{translations/assets/pl/ai.png}\n"
-"\\phantom{\\ldots\\ldots}\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Karta AI}}}}\\end{center}\\vspace*{\\fill}\\columnbreak\\scriptsize\\begin{itemize}[itemsep=0pt]  \\item[\\textbf{1.}] Nazwa  \\item[\\textbf{2.}] Instrukcja  \\item[\\textbf{3.}] Pozion Trudności: Łatwy  \\item[\\textbf{4.}] Pozion Trudności: Normalny  \\item[\\textbf{5.}] Pozion Trudności: Trudny  \\item[\\textbf{6.}] Pozion Trudności: Niemożliwy  \\item[\\textbf{7.}] Typ Karty\\end{itemize}\\vspace*{\\fill}\\end{multicols*}\n"
 
 #. type: scaledfigure
 #: sections/resources.tex:61

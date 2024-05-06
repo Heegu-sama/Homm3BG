@@ -17,10 +17,14 @@ env:
   PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
   REPO_URL: https://github.com/Heegu-sama/Homm3BG
   EVEN_NUMBER_OF_PAGES: false
+  ARTIFACT_RETENTION_DAYS: 1
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      number_of_pages: ${{ steps.check_pages.outputs.num_of_pages }}
+      number_of_printable_pages: ${{ steps.check_printable_pages.outputs.num_of_printable_pages }}
     strategy:
       fail-fast: false
       matrix:
@@ -42,13 +46,18 @@ jobs:
             luaengine: false
           - language: fr
             version: Version
-            warning: "Ceci est une version non-éditée créée sur GitHub à partir de commit"
+            warning: "Ceci est une version non-éditée créée sur GitHub à partir du commit"
             sections: "sections/translated/fr"
             luaengine: false
           - language: ru
             version: Версия
             warning: "Данная версия является неопубликованной сборкой из коммита в GitHub"
             sections: "sections/translated/ru"
+            luaengine: true
+          - language: ua
+            version: Версія
+            warning: "Це неопублікована версія, зібрана на GitHub з коміту"
+            sections: "sections/translated/ua"
             luaengine: true
 
     steps:
@@ -81,55 +90,89 @@ jobs:
 
       # Upload non-English PDF in PRs to facilitate the work of translators not having po4a
       - uses: actions/upload-artifact@v4
-        if: ${{ matrix.language != 'en' && github.event_name == 'pull_request' }}
+        if: github.event_name == 'pull_request'
         with:
           name: main_${{ matrix.language }}
           path: main_${{ matrix.language }}.pdf
+          retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
+
+      - name: Install pdfinfo
+        if: ${{ matrix.language == 'en' }}
+        run: sudo apt-get install -y poppler-utils
+
+      - name: Check number of pages
+        id: check_pages
+        if: ${{ matrix.language == 'en' }}
+        run: |
+          NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          echo "NUM_OF_PAGES=${NUM_OF_PAGES}" >> "$GITHUB_OUTPUT"
 
       - name: Move file
-        if: github.event_name != 'pull_request'
         run: |
           mkdir ${{ matrix.language }}
           mv main_${{ matrix.language }}.pdf ${{ matrix.language }}
 
       # Printable build goes below
       - uses: actions/setup-python@v5
-        if: github.event_name != 'pull_request'
         with:
           python-version: "3.11"
 
       - name: Add pages to select hyperlinks
-        if: github.event_name != 'pull_request'
         run: |
           find ${{ matrix.sections }} -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
           python .github/insert_printable_hyperlinks.py ${{ matrix.sections }}
 
       - name: Include notes page
-        if: ${{ github.event_name != 'pull_request' && env.EVEN_NUMBER_OF_PAGES == 'true' }}
+        if: ${{ env.EVEN_NUMBER_OF_PAGES == 'true' }}
         run: sed -i 's@% Notes placeholder@\\include{\\sections/notes.tex}@g' metadata.tex
 
       - name: Include index page
-        if: github.event_name != 'pull_request'
         run: sed -i 's@\\include{\\sections/back_cover.tex}@\\include{\\sections/index.tex}\\include{\\sections/back_cover.tex}@g' metadata.tex
 
       - name: Add QR codes
-        if: github.event_name != 'pull_request'
         run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes-${{ matrix.language }}.tex' -e 'd}' metadata.tex
 
       - name: Compile printable rule book
-        if: github.event_name != 'pull_request'
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
           latexmk_use_lualatex: ${{ matrix.luaengine }}
           latexmk_shell_escape: true
-          post_compile: echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && upmendex -s index_style main_${{ matrix.language }} && sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}@g' main_${{ matrix.language }}.ind && ${{ matrix.luaengine && 'lualatex' || 'pdflatex' }} --shell-escape main_${{ matrix.language }}.tex
+          post_compile: echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && upmendex -s index_style main_${{ matrix.language }} && sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}\\par}@g' main_${{ matrix.language }}.ind && ${{ matrix.luaengine && 'lualatex' || 'pdflatex' }} --shell-escape main_${{ matrix.language }}.tex
           root_file: main_${{ matrix.language }}.tex
 
       - name: Move file
-        if: github.event_name != 'pull_request'
         run: |
           mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
+
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'pull_request'
+        with:
+          name: printable_${{ matrix.language }}
+          path: ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
+          retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
+
+      - name: Check number of printable pages
+        id: check_printable_pages
+        if: ${{ matrix.language == 'en' }}
+        run: |
+          NUM_OF_PAGES=$(pdfinfo ${{ matrix.language }}/printable_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          echo "NUM_OF_PRINTABLE_PAGES=${NUM_OF_PAGES}" >> "$GITHUB_OUTPUT"
+
+      - name: Check if printable page number matches
+        if: ${{ matrix.language == 'en' }}
+        run: |
+          PAGES_DIGITAL="${{ steps.check_pages.outputs.num_of_pages }}"
+          PAGES_PRINTABLE="${{ steps.check_printable_pages.outputs.num_of_printable_pages }}"
+          echo "Number of pages in digital:   ${PAGES_DIGITAL}"
+          echo "Number of pages in printable: ${PAGES_PRINTABLE}"
+          # The goal of this check is to make sure that printable version has an even number of pages at all times.
+          # If the number of pages in digital version is odd (the current state), the printable one adds an index page - this is where +1 comes from.
+          # If the number of pages in digital version becomes even, an additional notes page will be required - +1 will need to be changed to +2.
+          if [[ $((${PAGES_DIGITAL}+1)) != ${PAGES_PRINTABLE} ]]; then
+            echo "Pages in digital and printable versions differ by too much. See above. Please investigate this."
+            exit 1
+          fi
 
       - name: Publish ${{ matrix.language }} in artifacts repository
         if: github.event_name != 'pull_request'
@@ -140,3 +183,44 @@ jobs:
           publish_branch: ${{ matrix.language }}
           publish_dir: ./${{ matrix.language }}
           force_orphan: true
+
+  check_pages:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event_name == 'pull_request'
+    strategy:
+      fail-fast: false
+      matrix:
+        language: ["pl", "es", "fr", "ru", "ua"]
+
+    steps:
+      - name: Install pdfinfo
+        run: sudo apt-get install -y poppler-utils
+
+
+      - name: Download PDFs
+        uses: actions/download-artifact@v4
+        with:
+          path: main_${{ matrix.language }}
+
+      - name: Check number of pages in digital version
+        run: |
+          file main_${{ matrix.language }}/main_${{ matrix.language }}/main_${{ matrix.language }}.pdf
+          ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}/main_${{ matrix.language }}/main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          echo "Expected number of pages: ${{ needs.build.outputs.number_of_pages }}"
+          echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
+          if [[ ${{ needs.build.outputs.number_of_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
+            echo "The digital document in ${{ matrix.language }} language doesn't have correct number of pages. See the output above."
+            exit 1
+          fi
+
+      - name: Check number of pages in printable version
+        run: |
+          file main_${{ matrix.language }}/printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf
+          ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}/printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          echo "Expected number of pages: ${{ needs.build.outputs.number_of_printable_pages }}"
+          echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
+          if [[ ${{ needs.build.outputs.number_of_printable_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
+            echo "The printable document in ${{ matrix.language }} language doesn't have correct number of pages. See the output above."
+            exit 1
+          fi

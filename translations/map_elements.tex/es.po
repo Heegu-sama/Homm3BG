@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-25 12:20+0200\n"
+"POT-Creation-Date: 2024-04-29 22:27+0100\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -22,15 +22,22 @@ msgstr ""
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
-#: sections/map_elements.tex:99 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
+#: sections/map_elements.tex:118 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
-#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:118
+#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
 "{2}\n"
 "\n"
+msgstr ""
+
+#. type: figure
+#: sections/expansion_content.tex:140 sections/map_elements.tex:38
+#: sections/setup.tex:70
+#, no-wrap
+msgid "  \\begin{tikzpicture}\n"
 msgstr ""
 
 #.  !TeX spellcheck = en_US
@@ -76,7 +83,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:47
+#: sections/map_elements.tex:34
 #, no-wrap
 msgid ""
 "\\subsection*{Map Tile Anatomy\\index{Map Tile}}\n"
@@ -95,60 +102,94 @@ msgid ""
 "  \\item[\\textbf{3.}] Near Map Tiles: IV-V\n"
 "  \\item[\\textbf{4.}] Center Map Tiles: VI-VII\n"
 "\\end{itemize}\n"
+"\n"
+msgstr ""
+"\\subsection*{Descripción Losetas del Mapa\\index{Losetas del Mapa}}\n"
+"Cada Loseta de mapa se compone de 7 \\textbf{Casillas} que los Héroes pueden \\textbf{Visitar}.\n"
+"Cuando un Héroe se mueve a una casilla inmediatamente se visita o\n"
+"se provoca un \\hyperlink{Combat}{Combate} contra las Unidades que la guardan antes de visitarla.\n"
+"Las Casillas vacías\\index{Casillas Vacías} no provocan nada.\n"
+"Las líneas amarillas en el borde de las Casillas no pueden atravesarse.\n"
+"\\hyperlink{Difficulty}{Los números romanos} indican que están custodiadas por Enemigos Neutrales contra los que hay que luchar para porder Visitarla.\\par\n"
+"\\columnbreak\n"
+"\\includegraphics[width=\\linewidth]{\\images/maptiles.png}\n"
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\item[\\textbf{1.}] Losetas Iniciales: I\n"
+"  \\item[\\textbf{2.}] Losetas Cercanas: II-II\n"
+"  \\item[\\textbf{3.}] Losetas Lejanas: IV-V\n"
+"  \\item[\\textbf{4.}] Losetas Centrales: VI-VII\n"
+"\\end{itemize}\n"
+"\n"
+
+#. type: multicols*
+#: sections/map_elements.tex:37
+#, no-wrap
+msgid ""
 "\\vfill\n"
 "\\begin{center}\n"
-"  \\includegraphics[width=0.8\\linewidth]{\\images/fields.png}\n"
+"  \\begin{scriptsize}\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/map_elements.tex:55
+#, no-wrap
+msgid ""
+"    \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=0.75\\linewidth]{\\images/fields.png}}};\n"
+"    \\draw (0, -0.3) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
+"    \\draw (-1.9, 0) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (2.3, 0) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (-1.4, 1.7) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (0.6, -1.9) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (0.5, 1.7) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (1.4, -2.2) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
+"    \\draw (1.4, 2.5) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
+"    \\draw (1.4, -1) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
+"    \\draw (-1, 0.5) node {\\encircle{\\phantom{.}5\\phantom{.}}};\n"
+"    \\draw (-1.1, -1.1) node {\\encircle{\\phantom{.}6\\phantom{.}}};\n"
+"    \\draw (-1.4, -1.7) node {\\encircle{\\phantom{.}7\\phantom{.}}};\n"
+"  \\end{tikzpicture}\n"
+"  \\end{scriptsize}\n"
 "\\end{center}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/map_elements.tex:66
+#, no-wrap
+msgid ""
 "\\begin{itemize}\n"
 "  \\footnotesize\n"
 "  \\begin{multicols}{2}\n"
 "    \\item[\\textbf{1.}] Empty Field\n"
 "    \\item[\\textbf{2.}] Location\n"
 "    \\item[\\textbf{3.}] Artifact Symbol\n"
-"    \\item[\\textbf{4.}] Blocked Field\n"
+"    \\item[\\textbf{4.}] Field Difficulty\n"
 "    \\item[\\textbf{5.}] Border line\n"
-"    \\item[\\textbf{6.}] Field Difficulty\n"
+"    \\item[\\textbf{6.}] Blocked Field\n"
+"    \\item[\\textbf{7.}] Tile name like \\\\{} \\texttt{F2} or \\texttt{\\#N3}\n"
 "  "
 msgstr ""
-"\\subsection*{Descripción de Fichas de Mapa\\index{Fichas de Mapa}}\n"
-"Cada ficha de mapa se compone de 7 \\textbf{Casillas visitables}.\n"
-"Cuando un Héroe se mueve a una casilla inmediatamente se visita o\n"
-"se provoca un \\hyperlink{Combat}{Combate} contra las Unidades que la guardan.\n"
-"Las casillas vacías\\index{Casillas Vacías} no provocan nada.\n"
-"Las líneas amarillas continuas en el borde de las casillas no se pueden atravesar.\n"
-"\\hyperlink{Difficulty}{Los números romanos} indican que están custodiadas por Enemigos Neutrales contra los que hay que luchar para porder Visitarla.\\par\n"
-"\\columnbreak\n"
-"\\includegraphics[width=\\linewidth]{\\images/maptiles.png}\n"
-"\\begin{itemize}\n"
-"  \\footnotesize\n"
-"  \\item[\\textbf{1.}] Fichas de Mapa Iniciales: I\n"
-"  \\item[\\textbf{2.}] Fichas de Mapa Cercanas: II-II\n"
-"  \\item[\\textbf{3.}] Fichas de Mapa Lejanas: IV-V\n"
-"  \\item[\\textbf{4.}] Fichas de Mapa Centrales: VI-VII\n"
-"\\end{itemize}\n"
-"\\vfill\n"
-"\\begin{center}\n"
-"  \\includegraphics[width=0.8\\linewidth]{\\images/fields.png}\n"
-"\\end{center}\n"
 "\\begin{itemize}\n"
 "  \\footnotesize\n"
 "  \\begin{multicols}{2}\n"
 "    \\item[\\textbf{1.}] Casilla Vacía\n"
 "    \\item[\\textbf{2.}] Localización\n"
-"    \\item[\\textbf{3.}] Símbolo de Artefacto\n"
-"    \\item[\\textbf{4.}] Casilla Bloqueada\n"
+"    \\item[\\textbf{3.}] Artefacto\n"
+"    \\item[\\textbf{4.}] Dificultad\n"
 "    \\item[\\textbf{5.}] Línea de Borde\n"
-"    \\item[\\textbf{6.}] Dificultad\n"
+"    \\item[\\textbf{6.}] Casilla Bloqueada\n"
+"    \\item[\\textbf{7.}] Identificador como \\\\{} \\texttt{F2} o \\texttt{\\#N3}\n"
 "  "
 
 #. type: multicols*
-#: sections/map_elements.tex:50
+#: sections/map_elements.tex:69
 #, no-wrap
 msgid "\\end{itemize}"
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:69
+#: sections/map_elements.tex:88
 #, no-wrap
 msgid ""
 "\\subsection*{\\hypertarget{Categories}{Location Categories}}\n"
@@ -184,7 +225,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:76
+#: sections/map_elements.tex:95
 #, no-wrap
 msgid ""
 "\\subsection*{\\hypertarget{Placing}{Placing and Discovering New Tiles}}\\index{Discovering Tiles}\n"
@@ -204,7 +245,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:81
+#: sections/map_elements.tex:100
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -220,7 +261,7 @@ msgstr ""
 "\n"
 
 #. type: figure*
-#: sections/map_elements.tex:93
+#: sections/map_elements.tex:112
 #, no-wrap
 msgid ""
 "[!hb]\n"
@@ -242,12 +283,12 @@ msgstr ""
 "  \\end{tikzpicture}"
 
 #. type: subsection{#2}
-#: sections/map_elements.tex:97
+#: sections/map_elements.tex:116
 msgid "Example Turn"
 msgstr "Turno de Ejemplo"
 
 #. type: multicols*
-#: sections/map_elements.tex:102
+#: sections/map_elements.tex:121
 #, no-wrap
 msgid ""
 "\\textit{Alice wants to capture an adjacent \\hyperlink{Mines}{Mine} by Flagging it with her Main Hero, Sandro the Necromancer.\n"
@@ -259,7 +300,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:104
+#: sections/map_elements.tex:123
 #, no-wrap
 msgid ""
 "\\includegraphics[width=1.1\\linewidth]{\\examples/sandro_takes_mine.png}\n"
@@ -267,7 +308,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:108
+#: sections/map_elements.tex:127
 #, no-wrap
 msgid ""
 "\\textit{The Mine turns out to be guarded by Troglodytes, which have 3 HP \\includesvg[height=0.8\\baselineskip]{\\svgs/health_points.svg}.\n"
@@ -281,7 +322,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:110
+#: sections/map_elements.tex:129
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_lightning_bolt.png}\n"
@@ -289,7 +330,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:112
+#: sections/map_elements.tex:131
 #, no-wrap
 msgid ""
 "\\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell Card per Combat Round.}\\par\n"
@@ -299,7 +340,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:119
+#: sections/map_elements.tex:138
 #, no-wrap
 msgid ""
 "\\textit{Alice now Flags the Mine by placing one of her Faction Cubes on it.\n"
@@ -317,7 +358,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:121
+#: sections/map_elements.tex:140
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_town_portal.png}\n"
@@ -325,7 +366,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:125
+#: sections/map_elements.tex:144
 #, no-wrap
 msgid ""
 "\\vfill\n"
