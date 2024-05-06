@@ -56,7 +56,7 @@ You can do this by reaching out to me directly or by opening pull requests with 
 
 To work on the document on your machine, you need the following:
 
-- [**MiKTeX**](https://miktex.org/) (required) to build the PDF file from LaTeX files
+- [**MiKTeX**](https://miktex.org/) for Windows, [**MacTeX**](https://www.tug.org/mactex/) for MacOS, [**TeX Live**](https://www.tug.org/texlive/) for Linux (required) to build the PDF file from LaTeX files
 - [**Inkscape**](https://inkscape.org/) (required) to render glyphs in the document (while installing on Windows, make sure to tick `Add Inkscape to the System Path` option)
 - [**TeXstudio**](https://www.texstudio.org/) (optional) to edit LaTeX files and rebuild the PDF file quickly
 - [**po4a**](https://po4a.org/index.php.en) (optional) to work on translating the document to other languages
@@ -71,23 +71,21 @@ To build the document in English, either run this in the command line:
 latexmk -pdf -silent -shell-escape "main_en"
 ```
 
+or use the script:
+
+```bash
+tools/build.sh en
+```
+
 or press the `Build & View` ▶️ (F5) button in TeXstudio on the `main_en.tex` file.
 
-To build the document in any other language (currently `pl`, `es`, `fr`, `ru` and `ua` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
+To build the document in any language (currently, `pl`, `es`, `fr`, `ru` and `ua` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
 
 ```bash
 tools/build.sh <LANGUAGE>
 ```
 
 or press the `Build & View` ▶️ (F5) button in TeXstudio while having any `main_<LANGUAGE>.tex` file open, after running `po4a` (see `Translations` below for details).
-
-To build components list instead of the rule book, use this:
-
-```bash
-latexmk -pdf -shell-escape components_list
-```
-
-or press `Build & View` on file `components_list.tex` open in TeXstudio.
 
 To build the printable version in a given language, make sure you've built a regular one first at least once.
 Then, use the script:
@@ -178,7 +176,7 @@ Here's how to use it:
 tools/compare_pages.sh ~/main_en.pdf en 38 41
 ```
 
-It will produce files: `38.png`, `39.png`, `40.png` and `41.png`.
+It will produce files: `en-38.png`, `en-39.png`, `en-40.png` and `en-41.png`.
 
 **This script requires `pdftoppm` and `imagemagick` utilities.**
 
