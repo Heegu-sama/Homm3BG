@@ -59,6 +59,11 @@ jobs:
             warning: "Це неопублікована версія, зібрана на GitHub з коміту"
             sections: "sections/translated/ua"
             luaengine: true
+          - language: de
+            version: Version
+            warning: "Dies ist eine unveröffentlichte Version auf GitHub"
+            sections: "sections/translated/de"
+            luaengine: true
 
     steps:
       - name: Set up repository
@@ -191,7 +196,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ["pl", "es", "fr", "ru", "ua"]
+        language: ["pl", "es", "fr", "ru", "ua", "de"]
 
     steps:
       - name: Install pdfinfo
