@@ -9,11 +9,11 @@ Click in the table to download the most recent builds in the chosen language:
 |                 | Progress |                                📜 **Rewritten Rule Book**                                 |                              🖨️ **Rewritten Rule Book - printable version**                              |
 |:----------------|:--------:|:-----------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------:|
 | 🇬🇧 English    |   100%   | [🇬🇧📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf) | [🇬🇧🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf) |
-| 🇵🇱 Polski     |   ~80%   | [🇵🇱📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf) | [🇵🇱🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf) |
+| 🇵🇱 Polski     |   ~95%   | [🇵🇱📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf) | [🇵🇱🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf) |
 | 🇪🇸 Español    |   ~90%   | [🇪🇸📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf) | [🇪🇸🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf) |
-| 🇫🇷 Français   |   ~90%   | [🇫🇷📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf) | [🇫🇷🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf) |
+| 🇫🇷 Français   |   ~95%   | [🇫🇷📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf) | [🇫🇷🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf) |
 | 🇷🇺 Русский    |   ~39%   | [🇷🇺📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf) | [🇷🇺🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf) |
-| 🇺🇦 Українська |    ~5%   | [🇺🇦📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf) | [🇺🇦🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf)|
+| 🇺🇦 Українська |   ~10%   | [🇺🇦📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf) | [🇺🇦🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf)|
 
 🖨️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
 
@@ -60,8 +60,10 @@ To work on the document on your machine, you need the following:
 - [**Inkscape**](https://inkscape.org/) (required) to render glyphs in the document (while installing on Windows, make sure to tick `Add Inkscape to the System Path` option)
 - [**TeXstudio**](https://www.texstudio.org/) (optional) to edit LaTeX files and rebuild the PDF file quickly
 - [**po4a**](https://po4a.org/index.php.en) (optional) to work on translating the document to other languages
-- [**GIMP**](https://www.gimp.org/) (optional) to edit some images in `assets` directory - see below for details
-- [**aspell**](http://aspell.net/) (optional) for spellchecking - see below for details
+- [**pdftoppm**](https://linux.die.net/man/1/pdftoppm) (optional) to make screenshots of rendered PDF pages
+- [**ImageMagick**](https://imagemagick.org/index.php) (optional) to combine screenshots into convenient diffs
+- [**GIMP**](https://www.gimp.org/) or [**Krita**](https://krita.org/) (optional) to edit some images in `assets` directory
+- [**aspell**](http://aspell.net/) (optional) for spellchecking
 
 To build the document in English, either run this in the command line:
 
@@ -74,7 +76,7 @@ or press the `Build & View` ▶️ (F5) button in TeXstudio on the `main_en.tex`
 To build the document in any other language (currently `pl`, `es`, `fr`, `ru` and `ua` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
 
 ```bash
-./build.sh <LANGUAGE>
+tools/build.sh <LANGUAGE>
 ```
 
 or press the `Build & View` ▶️ (F5) button in TeXstudio while having any `main_<LANGUAGE>.tex` file open, after running `po4a` (see `Translations` below for details).
@@ -94,7 +96,7 @@ Then, use the script:
 > Also, you'll need [Python](https://www.python.org/) for this 🐍
 
 ```bash
-./make_printable.sh <LANGUAGE>
+tools/make_printable.sh <LANGUAGE>
 ```
 
 ### 🌍 Translations
@@ -105,20 +107,26 @@ To translate a particular section:
 
 - Go to `translations/<section_name>` and open `<lang>.po` file, e.g., `translations/introduction.tex/pl.po`
 - Choose a fragment to translate. Those start with `msgid`. Write your new text in the line below starting with `msgstr`. Example:
+
     ```tex
     msgid "\\addsection{Introduction}{\\spells/magic_arrow.png}"
     msgstr "\\addsection{Wprowadzenie}{\\spells/magic_arrow.png}"
     ```
+
   This text (`msgstr`) will replace the original (`msgid`) in your translation.
 - Regenerate your localized section:
+
     ```bash
     po4a --no-update po4a.cfg
     ```
+
   Disregard the errors about mismatched `multicols`, as this is an upstream parser issue.
 - Rebuild your PDF file (or press Build ▶️ in TeXStudio).
+
    ```bash
    latexmk -pdf -silent -shell-escape "main_<lang>"
    ```
+
 - Commit and repeat!
 
 #### Finding fuzzy translations
@@ -128,11 +136,51 @@ Those excerpts will be compiled just as they are in the original (English), unti
 To facilitate finding them, use the script:
 
 ```bash
-./find_fuzzy.sh <lang>
+tools/find_fuzzy.sh <lang>
 ```
 
 It will show all the fuzzy translations in the `*.po` files for the specified language.
 
+### 📸 Screenshots
+
+It is a good practice to share screenshots of your work in pull requests.
+You can the script to make PNG images of specified page(s):
+
+```bash
+tools/pdf2image.sh <LANGUAGE> <FIRST_PAGE> <LAST_PAGE>
+```
+
+Example:
+
+```bash
+tools/pdf2image.sh en 5 7
+```
+
+To process a single page, use:
+
+```bash
+tools/pdf2image.sh en 5
+```
+
+### 🎭 Comparing two pages side by side
+
+If you'd like to show a single image of two instances of the same page side-by-side (before|after style), you can use the following script:
+
+```bash
+tools/compare_pages.sh <FILE_COMPARED_AGAINST> <LANGUAGE> <FIRST_PAGE> <LAST_PAGE>
+```
+
+Let's assume you have `main_en.pdf` in your home directory downloaded from GitHub, and in your current working directory you have a build you're working on.
+You'd like to have images comparing pages 38 through 41.
+Here's how to use it:
+
+```bash
+tools/compare_pages.sh ~/main_en.pdf en 38 41
+```
+
+It will produce files: `38.png`, `39.png`, `40.png` and `41.png`.
+
+**This script requires `pdftoppm` and `imagemagick` utilities.**
 
 ### 🔎 Spellchecking
 
@@ -150,30 +198,10 @@ find . -type f -name "*.tex" -exec aspell -d en_US -p=./.aspell.homm3.pws --mode
 ```
 
 Please note that currently the tool will flag many parameters in LaTeX commands.
-We are currently looking into it, how best to remediate this.
+We are currently looking into how best to remediate this.
 
 The personal dictionary `.aspell.homm3.pwd` currently contains only game-related words.
 It does not contain names (e.g., "BoardGameGeek") or parameter values (e.g., "px", "svg") in order to minimize the chances of false-negatives in the main body of text.
-
-### 📸 Screenshots
-
-As Pull Request often requires screenshots you can the script to make PNG images of specified page(s):
-
-```bash
-./pdf2image.sh <LANGUAGE> <FIRST_PAGE> <LAST_PAGE>
-```
-
-Example:
-
-```bash
-./pdf2image.sh en 5 7
-```
-
-To process a single page, use:
-
-```bash
-./pdf2image.sh en 5
-```
 
 ## ✨ Assets
 

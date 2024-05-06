@@ -138,7 +138,7 @@ jobs:
           extra_system_packages: "inkscape"
           latexmk_use_lualatex: ${{ matrix.luaengine }}
           latexmk_shell_escape: true
-          post_compile: echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && upmendex -s index_style main_${{ matrix.language }} && sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}@g' main_${{ matrix.language }}.ind && ${{ matrix.luaengine && 'lualatex' || 'pdflatex' }} --shell-escape main_${{ matrix.language }}.tex
+          post_compile: echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && upmendex -s index_style main_${{ matrix.language }} && sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}\\par}@g' main_${{ matrix.language }}.ind && ${{ matrix.luaengine && 'lualatex' || 'pdflatex' }} --shell-escape main_${{ matrix.language }}.tex
           root_file: main_${{ matrix.language }}.tex
 
       - name: Move file

@@ -1,5 +1,4 @@
-# Polish translations for Homm package
-# Polskie tłumaczenia dla pakietu Homm
+# Spanish translations for Homm package
 # Copyright (C) 2024 Free Software Foundation, Inc.
 # This file is distributed under the same license as the Homm package.
 # Automatically generated, 2024.
@@ -7,31 +6,32 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-30 20:22+0200\n"
-"PO-Revision-Date: 2024-04-06 18:37+0300\n"
+"POT-Creation-Date: 2024-05-04 16:19+0200\n"
+"PO-Revision-Date: 2024-04-15 17:20+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
-"Language: pl\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #.  !TeX spellcheck = en_US
 #. type: Plain text
-#: sections/ai_heroes.tex:3
-msgid "\\addsection{AI Heroes}{\\spells/fortune.png}"
-msgstr "\\addsection{Bohaterowie AI}{\\spells/fortune.png}"
+#: sections/ai_rules.tex:3
+msgid "\\addsection{AI Rules}{\\spells/fortune.png}"
+msgstr ""
+"\\addsection{Reglas IA}{\\spells/fortune.png}\n"
+"\\vspace*{\\lang_header_adjustment}"
 
 #. type: multicols
-#: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
-#: sections/all_map_locations.tex:417 sections/combat.tex:5
+#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
+#: sections/all_map_locations.tex:419 sections/combat.tex:5
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
-#: sections/map_elements.tex:99 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
+#: sections/map_elements.tex:118 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
 #: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
@@ -42,7 +42,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/ai_heroes.tex:16
+#: sections/ai_rules.tex:16
 #, no-wrap
 msgid ""
 "\\subsection*{AI Hero Turn}\n"
@@ -57,31 +57,32 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
-"\\subsection*{Tura Bohatera AI}\n"
-"\\hypertarget{AIrules}{Bohaterowie AI} występują w Kampaniach.\n"
-"W Trybie Solo zaczynają grę w swoim Mieście, posiadając 3 PR, przeznaczone do następujących działań według schematu:\n"
+"\\subsection*{Turno del Héroe IA}\n"
+"La \\hypertarget{AIrules}{IA} se utiliza en las campañas.\n"
+"Comienzan en su Ciudad y disponen de 3 PM, gastándolos siempre para realizar las siguientes Acciones en prioridad descendente:\n"
 "\\begin{itemize}\n"
-"  \\item Jeśli Bohater gracza znajduje się na tym samym Kafelku, co AI, wykorzystaj PR, aby przemieścić się w jego kierunku, w celu rozpoczęcia Walki.\n"
-"  \\item Jeśli na tym samym Kafelku Mapy znajdują się Kopalnie lub Osady, które można oflagować, przemieść się w kierunku najbliższej z nich i oflaguj ją.\n"
-"  \\item W pozostalych przypadkach idź w kierunku Miasta gracza.\n"
-"Powtarzaj tę sekwencję, aż wykorzystasz posiadane PR. Bohaterowie AI wykonują swoją turę po graczu.\n"
+"  \\item Si el Héroe de un jugador está en la misma Baldosa que la IA, gasta todos los PM para moverse hacia él intentando iniciar el Combate.\n"
+"  \\item Si hay alguna Mina o Asentamiento en la misma Loseta que la IA pueda reclamar, se moverá hacia la más cercana.\n"
+"  \\item De lo contrario, se mueve hacia la Ciudad del jugador.\n"
+"Repite la secuencia hasta agotar todos los MP.\n"
+"La IA juega después del jugador.\n"
 "\\end{itemize}\n"
 "\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:19
+#: sections/ai_rules.tex:19
 #, no-wrap
 msgid ""
 "AI Heroes always \\textbf{automatically win Combat} against any Neutral Units, while simultaneously \\textbf{Flagging or Visiting all Fields} they happen to move through.\n"
 "They gain no benefits from any Fields.\n"
 "\n"
 msgstr ""
-"Bohaterowie AI \\textbf{automatycznie wygrywają Walki} przeciwko wszystkim Jednostkom Neutralnym oraz \\textbf{zdobywają lub odwiedzają wszystkie Pola}, przez które przechodzą,\n"
-"nie uzyskując z nich korzyści.\n"
+"La IA siempre \\textbf{gana automáticamente el Combate} contra cualquier Unidad Neutral, a la vez que \\textbf{Marca o Visita todas las zonas} por las que pasa.\n"
+"No obtienen beneficios de ningún campo.\n"
 "\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:28
+#: sections/ai_rules.tex:28
 #, no-wrap
 msgid ""
 "AI Heroes must discover face down Map Tiles as normal by spending 1 MP before moving onto them.\n"
@@ -94,38 +95,38 @@ msgid ""
 "Any differences to the above will be described in any given Scenario's own rules.\n"
 "\n"
 msgstr ""
-"Bohaterowie AI muszą odkrywać Kafelki Mapy w sposób standardowy, wykorzystując 1 PR, nim się na niego przemieszczą.\n"
-"Gracz wybiera ułożenie Kafelka.\\par\n"
-"Bohaterowie AI nie mogą się poddać graczowi, ani gracz nie może się im poddać.\n"
-"Bohater AI walczy aż do utraty swoich Jednostek.\n"
-"Wygranie walki z Bohaterem AI nie daje korzyści, chyba że Scenariusz określa inaczej.\n"
-"Bohaterowie AI nie mają Planszy Miasta, Zasobów ani Planszetki Bohatera.\n"
-"Ich Jednostki są stałe i określone w Scenariuszu lub w innych zasadach.\\par\n"
-"Odstępstwa od powyższych reguł opisano w danym Scenariuszu.\n"
+"La IA deben descubrir las Baldosas de Mapa boca abajo de forma normal gastando 1 PM antes de moverse sobre ellas.\n"
+"El jugador elige la orientación de esa Loseta.\\par\n"
+"La IA no pueden Rendirse y tú no puedes Rendirte ante ellos;\n"
+"siempre lucharán hasta quedarse sin Unidades.\n"
+"Ganar un Combate contra la IA no otorga recompensa a menos que lo indique el Escenario.\n"
+"La IA no tiene Tablero de Ciudad, Recursos o Carta de Héroe.\n"
+"Sus Unidades son estáticas y están definidas por el Escenario u otras reglas.\\par\n"
+"Cualquier variante se describirá en las reglas propias de cada escenario.\n"
 "\n"
 
 #. type: multicols*
-#: sections/ai_heroes.tex:30 sections/ai_heroes.tex:81 sections/combat.tex:95
+#: sections/ai_rules.tex:30 sections/ai_rules.tex:81 sections/combat.tex:95
 #: sections/combat.tex:233 sections/expansion_content.tex:65
 #: sections/heroes.tex:34
 #, no-wrap
 msgid ""
 "\\vfill\n"
 "\n"
-msgstr "\\empty\n"
+msgstr ""
 
 #. type: multicols
-#: sections/ai_heroes.tex:32
+#: sections/ai_rules.tex:32
 #, no-wrap
 msgid ""
 "\\subsection*{AI Decks}\n"
 "\n"
 msgstr ""
-"\\subsection*{Talie AI}\n"
+"\\subsection*{Mazo IA}\n"
 "\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:51
+#: sections/ai_rules.tex:51
 #, no-wrap
 msgid ""
 "\\begin{multicols*}{2}\n"
@@ -148,24 +149,24 @@ msgid ""
 msgstr ""
 "\\begin{multicols*}{2}\n"
 "  \\begin{center}\n"
-"    \\vspace*{-1.5em}\\includegraphics[width=1.3\\linewidth]{translations/assets/pl/ai.png}\n"
-"    \\phantom{\\ldots\\ldots}\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Karta AI}}}}\n"
+"    \\vspace*{-1.5em}\\includegraphics[width=1.3\\linewidth]{\\cards/ai.png}\n"
+"    \\phantom{\\ldots\\ldots}\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Carta IA}}}}\n"
 "  \\end{center}\n"
 "  \\vspace*{\\fill}\n"
 "  \\columnbreak\n"
 "  \\scriptsize\n"
 "  \\begin{itemize}[itemsep=0pt]\n"
-"    \\item[\\textbf{1.}] Nazwa\n"
-"    \\item[\\textbf{2.}] Instrukcja\n"
-"    \\item[\\textbf{3.}] Poziom Trudności: Łatwy\n"
-"    \\item[\\textbf{4.}] Poziom Trudności: Normalny\n"
-"    \\item[\\textbf{5.}] Poziom Trudności: Trudny\n"
-"    \\item[\\textbf{6.}] Poziom Trudności: Niemożliwy\n"
-"    \\item[\\textbf{7.}] Typ Karty\n"
+"    \\item[\\textbf{1.}] Nombre\n"
+"    \\item[\\textbf{2.}] Descripción\n"
+"    \\item[\\textbf{3.}] Modificador Fácil\n"
+"    \\item[\\textbf{4.}] Modificador Normal\n"
+"    \\item[\\textbf{5.}] Modificador\\\\Experto\n"
+"    \\item[\\textbf{6.}] Modificador\\\\Imposible\n"
+"    \\item[\\textbf{7.}] Tipo de Carta\n"
 "  \\end{itemize}\\vspace*{\\fill}"
 
 #. type: multicols
-#: sections/ai_heroes.tex:59
+#: sections/ai_rules.tex:59
 #, no-wrap
 msgid ""
 "AI Heroes use two automated Decks during Combat: the \\textbf{AI Deck}, and the \\textbf{Spell Deck}.\n"
@@ -177,14 +178,17 @@ msgid ""
 "Shuffle the AI and Spell Decks during setup after building them.\n"
 "\n"
 msgstr ""
-"Bohaterowie AI używają dwóch Talii Kart podczas Walki: \\textbf{Talii AI} oraz \\textbf{Talii Magii}. Talia AI jest tworzona przy użyciu trzech rodzajów Kart AI: Mocy \\includesvg[height=10px]{\\svgs/might.svg}, Magii \\includesvg[height=10px]{\\svgs/magic.svg} i Umiejętności \\includesvg[height=10px]{\\svgs/skill.svg}.\n"
-"Każdy Scenariusz Kampanii podaje liczbę Kart każdego rodzaju Kart AI wchodzących w skład Talii AI.Karty Mocy \\includesvg[height=10px]{\\svgs/might.svg} i Umiejętności \\includesvg[height=10px]{\\svgs/skill.svg} mają dwa warianty. Wybierz te karty \\textbf{losowo} podczas budowania Talii. Jeśli w Talii są Karty Umiejętności, wyszukaj Karty Zdolności, do których się odnoszą, i odłóż je na bok.\n"
-"Stwórz \\textbf{Talię Magii} AI, oddzielając wskazane Zaklęcia od zwykłej Talii Magii.\n"
-"Potasuj Talię AI i Talię Zaklęć podczas przygotowania do gry.\n"
+"La IA usa dos Mazos automáticos durante el Combate: el \\textbf{Mazo IA} y el \\textbf{Mazo de Hechizos}.\n"
+"El mazo de la IA se construye con tres tipos de cartas: Fuerza \\includesvg[height=10px]{\\svgs/might.svg}, Magia \\includesvg[height=10px]{\\svgs/magic.svg} y Habilidad \\includesvg[height=10px]{\\svgs/skill.svg}.\n"
+"Cada escenario de Campaña indica el número de cada tipo de Carta incluida en el Mazo de la IA.\n"
+"Fuerza \\includesvg[height=10px]{\\svgs/might.svg} y Habilidad \\includesvg[height=10px]{\\svgs/skill.svg} tienen dos variaciones. Escoge tres cartas \\textbf{aleatorias} cuando construyas el Mazo.\n"
+"Si se incluyen Cartas de Habilidad, busca y aparta la Carta de Habilidad relacionada con ella.\n"
+"Crea el \\textbf{Mazo de Hechizos} de la IA separando los Hechizos indicados del Mazo de Hechizos normal.\n"
+"Baraja los dos mazos durante la configuración después de construirlos.\n"
 "\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:66
+#: sections/ai_rules.tex:66
 #, no-wrap
 msgid ""
 "When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI Card} and follow its instructions before the Unit moves and/or attacks.\n"
@@ -195,38 +199,38 @@ msgid ""
 "If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
 "\n"
 msgstr ""
-"Kiedy Bohater AI \\textbf{Aktywuje} Jednostkę, dobierz Kartę AI \\index{Karta AI} i rozpatrz ją zanim Jednostka wykona ruch lub zaatakuje.\n"
-"Jeżeli Talia AI wyczerpie się podczas Walki, nie dobieraj Kart.\n"
-"Efekt każdej Karty AI zależy od \\hyperlink{Difficulty}{Poziomu Trudności} gry.\n"
-"Karta Mocy \\includesvg[height=10px]{\\svgs/might.svg} zostaje przy Jednostce do momentu gdy nastąpi pierwszy atak/obrona.\n"
-"Talia Zaklęć AI jest używana za każdym razem, gdy dobierana jest Karta Magii \\includesvg[height=10px]{\\svgs/magic.svg} z Talii AI.\n"
-"Jeżeli Bohater AI otrzyma polecenie dobrania Karty, dobierze i rozpatrzy \\textbf{kolejną Kartę} z Talii AI.\n"
+"Cuando la IA \\textbf{Activa} una Unidad, roba una Carta de IA\\index{Cartas de IA} y sigue sus instrucciones antes de que la Unidad se mueva y/o ataque.\n"
+"Si el mazo de la IA se agota durante el combate, deja de utilizarlo.\n"
+"El efecto de cada carta de IA depende de la \\hyperlink{Difficulty}{Dificultad}.\n"
+"La carta de Fuerza \\includesvg[height=10px]{\\svgs/might.svg} se adjunta a la unidad hasta que se produce el primer ataque/defensa respectivo.\n"
+"El Mazo de Hechizos IA se utiliza siempre que una Carta Mágica \\includesvg[height=10px]{\\svgs/magic.svg} es robada.\n"
+"Si a la IA se le ordena robar una carta, robará y resolverá \\textbf{otra carta} del Mazo IA.\n"
 "\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:68
+#: sections/ai_rules.tex:68
 #, no-wrap
 msgid ""
 "\\subsection*{Combat against AI}\n"
 "\n"
 msgstr ""
-"\\subsection*{Walka z AI}\n"
+"\\subsection*{Combate contra IA}\n"
 "\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:71
+#: sections/ai_rules.tex:71
 #, no-wrap
 msgid ""
 "These rules apply during Combat in \\textbf{Solo}\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
 "When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\\par\n"
 "\n"
 msgstr ""
-"Niniejsze zasady obowiązują podczas Walki w trybach \\textbf{Solo}\\index{Tryb Solo} oraz \\textbf{Kooperacyjnym}.\n"
-"Gdy Neutralni wrogowie lub Bohaterowie AI aktywują Jednostkę, wykonują polecenia:\\par\n"
+"Estas reglas se aplican durante el Combate en Escenarios \\textbf{Solo}\\index{Solitario} y \\textbf{Cooperativo}.\n"
+"Cuando los enemigos neutrales o los héroes de la IA activan una unidad, siguen una serie de instrucciones automáticas:\\par\n"
 "\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:79
+#: sections/ai_rules.tex:79
 #, no-wrap
 msgid ""
 "Enemy Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units prioritize attacking Units of the same tier.\n"
@@ -238,17 +242,17 @@ msgid ""
 "Enemy units cannot \\hyperlink{Defend}{Defend} unless instructed to.\n"
 "\n"
 msgstr ""
-"Wrogie Jednostki Naziemne \\includesvg[height=10px]{\\svgs/unit_ground.svg} oraz Latające \\includesvg[height=10px]{\\svgs/unit_flying.svg} atakują w pierwszej kolejności Jednostki tego samego poziomu.\n"
-"Jeśli jest to niemożliwe, atakują najbliższą Jednostkę, począwszy od jednostek o najniższym poziomie.\\par\n"
-"Jednostki Strzelające \\includesvg[height=10px]{\\svgs/unit_ranged.svg} atakują najpierw inne Jednostki Strzelające \\includesvg[height=10px]{\\svgs/unit_ranged.svg} tego samego poziomu, następnie niższego poziomu, a na końcu wyższego.\n"
-"Jeśli nie ma Jednostek Strzelających, które mogłyby być celem Ataku, w pierwszej kolejności atakują Jednostki Lądowe \\includesvg[height=10px]{\\svgs/unit_ground.svg} oraz Latające \\includesvg[height=10px]{\\svgs/unit_flying.svg} w tej samej kolejności poziomów.\n"
-"Jeśli jest więcej niż jeden możliwy cel, atakują najbliższy. \\par\n"
-"Jeśli wystąpi remis pomiędzy celami ataku dla jakichkolwiek Jednostek, Gracz wybiera, która Jednostka jest atakowana.\n"
-"Wrogie Jednostki nie mogą \\hyperlink{Defend}{się bronić}, chyba że otrzymają takie polecenie.\n"
+"Enemigos \\includesvg[height=10px]{\\svgs/unit_ground.svg} y \\includesvg[height=10px]{\\svgs/unit_flying.svg} dan prioridad a las unidades atacantes del mismo nivel.\n"
+"Si no es posible, atacan a la Unidad más cercana, dando prioridad a la de nivel más bajo.\\par\n"
+"Unidades \\includesvg[height=10px]{\\svgs/unit_ranged.svg} priorizan el ataque a otras Unidades \\includesvg[height=10px]{\\svgs/unit_ranged.svg} del mismo nivel, después bajo nivel, y finalmente las de alto.\n"
+"Si no hay de Rango \\includesvg[height=10px]{\\svgs/unit_ranged.svg} a las que atacar, se prioriza \\includesvg[height=10px]{\\svgs/unit_ground.svg} and \\includesvg[height=10px]{\\svgs/unit_flying.svg} en el mismo orden de nivel.\n"
+"Si hay más de un objetivo válido, atacan al más cercano.\\par\n"
+"Si hay un empate entre objetivos válidos para cualquier Unidad, el jugador elige qué Unidad es atacada.\n"
+"Las unidades enemigas no se pueden \\hyperlink{Defend}{Defender} a menos que se indique.\n"
 "\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:83
+#: sections/ai_rules.tex:83
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\art/coin.png}\n"
@@ -256,7 +260,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/ai_heroes.tex:87
+#: sections/ai_rules.tex:87
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
