@@ -7,13 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
 "POT-Creation-Date: 2024-04-19 21:21+0200\n"
-"PO-Revision-Date: 2024-04-19 21:21+0200\n"
+"PO-Revision-Date: 2024-05-01 21:30+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: ua\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
@@ -55,7 +56,7 @@ msgstr ""
 #. type: Plain text
 #: sections/player_turns.tex:3
 msgid "\\addsection{Player Turns}{\\spells/dimension_door.png}"
-msgstr ""
+msgstr "\\addsection{Хід Гравця}{\\spells/dimension_door.png}"
 
 #. type: multicols
 #: sections/player_turns.tex:17
@@ -74,6 +75,18 @@ msgid ""
 "Once all players have spent all their Movement Points and do not wish to use any further Town or Morale Actions, the current Round is over.\n"
 "\n"
 msgstr ""
+"На початку свого Ходу оновіть Карти у своїй руці, виконавши такі дії:\n"
+"\\begin{itemize}\n"
+"  \\item киньте з руки будь-яку кількість карт.\n"
+"Якщо ваша поточна кількість карт перевищує ваш Ліміт Руки \\includesvg[height=10px]{\\svgs/hand.svg}, ви повинні скинути карти, щоб відповідати Ліміту.\n"
+"  \\item Після цього ви можете брати Карти до свого Ліміту Руки.\n"
+"  \\item Розіграйте всі ефекти \"на початку вашого ходу\" після добору карт\n"
+"\\end{itemize}\n"
+"Ваш поточний Ліміт Руки\\index{Hand Limit} залежить від \\hyperlink{Level}{Рівня} Головного Героя.\n"
+"Початок вашого ходу - це єдиний раз, коли перевіряється Ліміт Руки.\\par\n"
+"Існує три типи дій, які можуть виконувати гравці: \\textbf{Переміщення}, \\textbf{Місто}, та \\textbf{Мораль}.\n"
+" Як тільки всі гравці витратили всі свої Очки Переміщення і не бажають використовувати подальші Дії Міста або Моралі, поточний Раунд закінчується.\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:29
@@ -92,6 +105,18 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{Дії Переміщення}\n"
+"\\hypertarget{Movement}{Дії Переміщення}\\index{Movement Actions} виконуються шляхом витрачання Очок Переміщення.\n"
+"Гравець може використовувати Дії Переміщення \\textbf{тільки під час власного Ходу}.\\par\n"
+"За кожне витрачене 1 ОП ви можете виконати одну з наступних Дій:\n"
+"\\begin{itemize}\n"
+"  \\item Перемістіть Героя на 1 Область в будь-якому напряку.\n"
+"  \\item \\hyperlink{Categories}{Відвідайте знову} Область, де знаходиться ваш Герой.\n"
+"  \\item \\hyperlink{Timelimit}{Продовжити Бій} проти Нейтральних Підрозділів на 1 додатковий Раунд Бою.\n"
+"  \\item \\hyperlink{Placing}{Розкрийте Тайл Мапи,що лежить лицьовою стороною донизу} якщо ваш Герой знаходиться на Області поруч з цим Тайлом.\n"
+"  \\item Розмістіть новий Тайл Мапи з вашого пулу Далеких (II–III) Тайлів Мапи.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:35
@@ -104,6 +129,12 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\includesvg[width=0.6\\linewidth]{\\images/movement_tokens.svg}\\\\\n"
+"  \\medskip\n"
+"  \\footnotesize\\textit{Активний та Неактивний Жетон Руху}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:43
@@ -116,6 +147,12 @@ msgid ""
 "When you move through a Field with an allied Hero, do not \\hyperlink{Categories}{Visit} the Field that the allied Hero is standing on.\\par\n"
 "\n"
 msgstr ""
+"Відзначте кількість використаних ОП, перевернувши жетони руху коричневою, неактивною стороною.\n"
+"Якщо у гравця є як Головний, так і \\hyperlink{Secondary}{Другорядний Герой}, відстежуйте їхні ОП окремо.\n"
+"Герої можуть витрачати ОП в будь-якому порядку.\\par\n"
+"Союзні Герої можуть переміщуватися крізь один одного,але не можуть закінчувати своє переміщення в одній Області.\n"
+"Коли ви переміщуєтесь крізь Область з іншим Героєм, не \\hyperlink{Categories}{Відвідуйте} Область де стоїть інший Герой.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:48
@@ -127,6 +164,11 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{10}{\n"
+"  Щоразу, коли ви отримуєте вказівку отримати (додаткове) ОП, іноді позначене символом \\includesvg[height=10px]{\\svgs/movement-note.svg}, це ОП зберігається \\textbf{лише протягом того ходу, в якому воно було отримане}.\n"
+"  У малоймовірній ситуації, коли два союзних Героя опиняються в одній Області, ви повинні використати наступне ОП, щоб перемістити одного з них з цієї Області.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:53
@@ -157,6 +199,19 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{Дії Міста\\index{Town Actions}}\n"
+"Ви можете виконати кожну з перелічених нижче Дій Міста\\textbf{один раз за Раунд}.\n"
+"Ці Дії можуть бути виконані в будь-який момент під час Ходу будь-якого гравця, окрім Бою або коли ваша Дія Міста перериває іншу Дію.\n"
+"Наприклад, ви не можете брати карти заклинань одночасно з Жетоном Книги Заклинань.\\par\n"
+"Коли гравець оголошує, що збирається розпочати Битву, ви можете відреагувати на це будь-якою кількістю Дій Міста до того, як буде виконано будь-який з кроків  \\hyperlink{Combatsetup}{Підготовки до Битви}\\par\n"
+"Після виконання Дії Міста переверніть відповідний жетон неактивною стороною на Планшеті Міста.\n"
+"Ви не можете використати цю дію знову до початку наступного раунду, поки не оновите Жетони.\n"
+"\\begin{itemize}\n"
+"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/build.png}}] Жетон Будівництва, використовується для розширення \\hyperlink{Town}{Міста}.\n"
+"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/population.png}}] Жетон Населення, використовується для Найму та Підсилення \\hyperlink{Units}{Підрозділів} або для Найму \\hyperlink{Secondary}{Другорядного Героя}.\n"
+"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/spells.png}}]Жетон Книги Заклинань, використовується для отримання \\hyperlink{spells}{Заклинань}.Для використання необхідна побудована Гільдія Магів.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:83
@@ -178,6 +233,21 @@ msgid ""
 "If you would gain a second Negative Morale Token, you must instead \\textbf{discard your hand of Cards} the next time you end your Turn.\\par\n"
 "\n"
 msgstr ""
+"\\subsection*{Дії Моралі}\\index{Morale Actions}\n"
+"Гравці можуть отримувати або втрачати Мораль за допомогою різних ігрових ефектів.\n"
+"Коли ви отримуєте Мораль, візьміть жетон позитивної Моралі.\\index{Positive Morale} \\includesvg[height=10px]{\\svgs/morale_positive.svg}.\n"
+"У вас може бути лише один такий Жетон.\n"
+"Якщо ви маєте отримати другий Жетон, ви можете одразу витратити перший перед тим, як отримати другий.\n"
+"Жетон Позитивного Морального Духу може бути використаний для виконання будь-якої з наступних Дій у будь-який час:\n"
+"\\begin{itemize}\n"
+"  \\item Візьміть Карту з вашої Колоди.\n"
+"  \\item Скиньте будь-яку кількість карт з руки, потім візьміть таку ж кількість карт.\n"
+"  \\item Перекиньте будь-який Кубик, який ви кинули.\n"
+"\\end{itemize}\n"
+"Якщо ви втрачаєте Мораль, скиньте Жетон Позитивної Моралі \\includesvg[height=10px]{\\svgs/morale_positive.svg}, якщо він у вас є, інакше отримайте Жетон Негативної Моралі\\index{Negative Morale}  \\includesvg[height=10px]{\\svgs/morale_negative.svg}.\n"
+"І навпаки, якщо ви отримуєте жетон Позитивної Моралі, коли у вас є жетон Негативної Моралі, ви скидаєте цей Жетон.\n"
+"Якщо ви отримаєте другий Жетон Негативної Моралі, ви повинні \\textbf{кинути Карти зі своєї руки} наступного разу, коли закінчите свій хід.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:87
@@ -188,6 +258,10 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{5}{Фракція Некрополіс \\includesvg[height=10px]{\\svgs/necro-note.svg} ігнорує будь-які ефекти Моралі.\n"
+"  Вони не можуть отримувати або втрачати Мораль з будь-якої причини.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:91
@@ -206,6 +280,8 @@ msgid ""
 "\\subsection*{Example Turn}\n"
 "\n"
 msgstr ""
+"\\subsection*{Приклад Ходу}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:101
@@ -220,6 +296,14 @@ msgid ""
 "As Alice announces her intent to start Combat, both players still have an opportunity to perform Town Actions.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Аліса, яка грає за Героя Лицаря Катерину , починає свій Хід.\n"
+"У неї в руці є 3 карти з попереднього раунду, і вона вирішує скинути 2 з них, перш ніж брати карти з своєї Колоди до Ліміту на Руці \\includesvg[height=10px]{\\svgs/hand.svg}.\n"
+"Поточний ліміт - 5, оскільки її Головний Герой 3-го рівня, тож після скидання вона бере 4 карти після скидання (див. \\hyperlink{Level}{Ефекти Рівнів}).}\\par\n"
+"\\textit{Потім вона використовує свій Жетон Будівництва, щоб побудувати \\includesvg[height=10px]{\\svgs/golden.svg} Житло, а потім свій Жетон Населення для \\hyperlink{Units}{Найму} \\includesvg[height=10px]{\\svgs/golden.svg} Підрозділу Чемпіонів.\n"
+"Вона може це зробити, оскільки раніше побудувала необхідні Житла нижчого рівня (\\includesvg[height=10px]{\\svgs/bronze.svg} та \\includesvg[height=10px]{\\svgs/silver.svg}) та має достатньо \\hyperlink{Resources}{Ресурсів} щоб і побудувати Житло, і Найняти Чемпіонів.}\\par\n"
+"\\textit{Підготувавшись до майбутньої битви, вона витрачає Очко Переміщення, щоб перемістити свого Головного Героя на сусідню Область, яке наразі зайняте Некромантом Сандро, ворожим Головним Героєм, якого контролює Боб.\n"
+"Коли Аліса оголошує про свій намір розпочати Битву, обидва гравці все ще мають можливість виконати Дії Міста.}\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:103
