@@ -4,7 +4,7 @@ FILE_TO_COMPARE=$1
 LANGUAGE=$2
 FIRST_PAGE=$3
 
-if [ -z $4 ]; then
+if [[ -z $4 ]]; then
   LAST_PAGE=$3
 else
   LAST_PAGE=$4
