@@ -7,13 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
 "POT-Creation-Date: 2024-04-26 15:42+0200\n"
-"PO-Revision-Date: 2024-04-26 15:42+0200\n"
+"PO-Revision-Date: 2024-05-03 21:25+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: ua\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. type: multicols
 #: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
@@ -57,7 +58,7 @@ msgstr ""
 #. type: Plain text
 #: sections/combat.tex:3
 msgid "\\addsection{Combat}{\\skills/attack.png}"
-msgstr ""
+msgstr "\\addsection{Битва}{\\skills/attack.png}"
 
 #. type: multicols
 #: sections/combat.tex:7
@@ -66,6 +67,8 @@ msgid ""
 "\\hypertarget{Combat}{Combat}\\index{Combat} with \\textbf{Neutral Units} starts when a Hero moves to an unvisited Field with a roman numeral, signifying the \\hyperlink{Difficulty Table}{type and number} of Neutral Units guarding that Field.\n"
 "\n"
 msgstr ""
+"\\hypertarget{Combat}{Бій}\\index{Combat} з \\textbf{Нейтральними Підрозділами} починається, коли Герой переміщується на невідвідану Область з римською цифрою, що позначає \\hyperlink{Difficulty Table}{тип та кількість} Нейтральних Підрозділів, які охороняють це Поле.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:14
@@ -79,6 +82,13 @@ msgid ""
 "Players are able to start multiple Combats during their Turn.\n"
 "\n"
 msgstr ""
+"Битва з \\textbf{іншим гравцем} може розпочатися двома способами:\n"
+"\\begin{itemize}\n"
+"  \\item Ви переміщуєтесь на Поле, де стоїть ворожий Герой.\n"
+"  \\item Ви переміщуєтесь до Міста або Поселення, що належить противнику.\n"
+"\\end{itemize}\n"
+"Гравці можуть розпочати кілька Битв під час свого Ходу.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:16
@@ -87,6 +97,8 @@ msgid ""
 "\\subsection*{\\hypertarget{Combatsetup}{Combat Setup}}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Підготовка до Битви}{Combat Setup}}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:20
@@ -97,6 +109,10 @@ msgid ""
 "Follow these steps when Combat begins against \\textbf{Neutral Units}:\n"
 "\n"
 msgstr ""
+"% TODO info about battlefield expansion\n"
+"Бій відбувається на Бойовому Полі 4 x 5, яке складається з двох Тилових і двох Передових ліній на протилежних кінцях, а також Cереднього Ряду.\n"
+"Виконайте ці кроки, коли битва починається проти \\textbf{Нейтральних Підрозділів}:\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:51
@@ -134,6 +150,37 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\begin{itemize}\n"
+"  \\item Виберіть одну зі сторін Бойового Поля в якості своєї.\n"
+"    Помістіть до 5 карт своїх Підрозділів на тилову та передову лінії вашої сторони поля.\n"
+"  \\item Перевірте \\hyperlink{Difficulty Table}{\\textbf{Таблицю Складності}} і візьміть відповідну кількість карт Нейтральних Підрозділів з відповідних Колод.\n"
+"  \\item Нейтральні Підрозділи розміщуються в залежності від Режиму Гри:\n"
+"  \\item У Сценаріях \\textbf{Сутичка} або \\textbf{Альянс} ворожий гравець, який сидить праворуч від вас, контролює Нейтральні Підрозділи і приймає рішення про їх розміщення.\n"
+"    \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Підрозділи, за можливістю повинні бути розміщені в Тиловій Лінії.\n"
+"  \\item У сценаріях \\textbf{Кампанії} або \\textbf{Кооператив} Нейтральні Підрозділи розміщуються зліва направо, якщо дивитися з точки зору гравця.\n"
+"По-перше, розмістіть будь-які \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Підрозділи на Тиловій лінії\\index{Units Placement}.\n"
+"Потім розмістіть будь-які \\includesvg[height=10px]{\\svgs/unit_ground.svg} or \\includesvg[height=10px]{\\svgs/unit_flying.svg} Підрозділи на Передовій лінії.\n"
+"Якщо не вистачає місця для їх розміщення в необхідій лінії, розмістіть їх в іншій лінії.\n"
+"Підрозділи мусять розміщуватись в порядку \\textbf{спадання} Ініціативи\\index{Initiative} .\n"
+"У випадку рівного результату спочатку розміщуються Підрозділи вищого рівня.\n"
+"У випадку рівності рівний, гравці самі вирішують, якому порядку виставляти Підрозділи.\n"
+"\\end{itemize}\n"
+"Розміщення Підрозділів під час битви з \\textbf{іншими гравцями}:\n"
+"\\begin{itemize}[wide]\n"
+"  \\item Гравець, що атакує, розміщує до 5 Підрозділів на обраній ним стороні Бойового Поля, за ним слідує гравець, що обороняється.\n"
+"  \\item Якщо бій відбувається в Місті з Цитаделлю, захисник додає карти \\hyperlink{Walls}{Стіни, Воріт і Стрілецької вежі} після розстановки.\n"
+"\\end{itemize}\n"
+"\\vfill\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=0.55\\linewidth]{\\art/aging.png}\n"
+"\\end{center}\n"
+"\\vfill\n"
+"\\note{11}{\n"
+"    Якщо ваше місто або поселення атакує ворожий Герой, а вашого Героя немає в цій Області, ви можете негайно \\textbf{заплатити 8} \\includesvg[height=10px]{\\svgs/gold.svg} щоб оборонятися \\textbf{використовуючи тільки свої Підрозділи}.\n"
+"    Ви не можете використовувати свою Колоду під час цієї Битви, оскільки ваш Головний Герой не присутній.\n"
+"    Сплата цього золота - це вартість транспортування армії до поля бою.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:79
@@ -168,6 +215,34 @@ msgid ""
 "The Unit cannot take another Defense Action during that activation.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Combatterminology}{Бойова Термінологія}}\n"
+"Наступні терміни використовуються для описання ефектів та елементів під час Битви:\\par\n"
+"\\textbf{Нападник} – Гравець, який розпочав Битву.\\par\n"
+"\\textbf{Оборонець} – Гравець, проти якого було розпочато Битву.\\par\n"
+"\\textbf{Активація} – Підрозділ Активується, коли він є наступним у порядку Ініціативи.\\par\n"
+"\\textbf{Суміжний Підрозділ} – Підрозділи вважаються суміжними, коли вони прилягають один до одного по прямій лінії(не по діагоналі).\\par\n"
+"\\textbf{Бойовий Раунд} – повний цикл Активації всіх Підрозділів кожного гравця.\\par\n"
+"\\textbf{Бойові Перешкоди}\\index{Combat Obstacles}\\index{Obstacles, Combat} – кожна карта на Бойовому Полі є Бойовою Перешкодою.\n"
+"Вони блокують переміщення усіх нелітаючих Підрозділів.\\smallskip\\par\n"
+"\\begin{tikzpicture}[overlay]\n"
+"  \\node at (7, 0) {\\includegraphics[width=0.2\\linewidth]{\\images/attack_die.png}};\n"
+"\\end{tikzpicture}\\parbox{0.7\\hsize}{\\textbf{Кубик Атаки}\\index{Attack Die}\\index{Dice} – червоний Кубик, результати якого варіюються -1 +1.\n"
+"Кидайте кубик \\textbf{щоразу, коли Підрозділ атакує} і\n"
+"додайте результат до значення Атаки Підрозділу.}\\par\\smallskip\n"
+"\\textbf{\\hypertarget{Retaliate}{Атака Відплати}} – якщо Підрозділ пережив атаку з боку суміжного Підрозділа, він виконує атаку у відповідь проци цього Підрозділу.\n"
+"Кожен підрозділ може провести \\textbf{тільки 1} Атаку Відплати\\index{Retaliation Attack} за Раунд Битви.\n"
+"Атаки Відплати діють так само, як і звичайні атаки, але вони не спричиняють іншу Атаку Відплати.\n"
+"Позначайте Підрозділи, які здійснили Атаку Відплати в цьому Раунді, Чорним Кубиком.\\par\n"
+"\\textbf{Параліч}\\index{Paralysis} \\includesvg[height=10px]{\\svgs/paralysis.svg} – Деякі ефекти кладуть жетон Паралічу на Підрозділи.\n"
+"Цей Підрозділ \\textbf{повинен пропустити свою наступну Активацію}. Вилучіть жетон Паралічу замість активації цього Підрозділа.\n"
+"Якщо підрозділ \\textbf{було атаковано, або отримав пошкодження} до цього моменту, \\textbf{вилучіть Жетон}.\n"
+"Параліч не заважає проведенню Атаки Відплати.\\par\n"
+"\\textbf{\\hypertarget{Defend}{Захист}} \\includesvg[height=10px]{\\svgs/defense.svg} – Підрозділ може отримати Жетон Захисту і завершити Активацію замість того, щоб атакувати.\n"
+"Коли Підрозділ,який має Жетон Захисту, атаковано, зробіть ще один кидок Кубика Атаки після першого кидка атаки.\n"
+"Якщо результат ``+1'', обороняючийся Підрозділ отримує додатково 1 Захисту для цієї атаки.\n"
+"Якщо на початку активації Підрозділ має Жетон Захисту, скиньте його.\n"
+"Підрозділ не може виконати ще одну Дію Захисту під час цієї активації.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:89
@@ -184,6 +259,16 @@ msgid ""
 "If you cannot win the Combat before the end of the current Combat Round, you must either \\hyperlink{Endcombat}{Retreat}\\index{Retreat} or spend 1 MP from the Hero that started the Combat in order to play another Round.\\par\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{CombatCards}{Використання Карт під час Битви}}\n"
+"Ви можете використати лише \\textbf{одне Заклинання за Раунд Бою}.\n"
+"Ефекти \"Триваючий\" \\includesvg[height=10px]{\\svgs/ongoing.svg} і \"Активація\"\\includesvg[height=10px]{\\svgs/activation.svg} можуть бути використані тільки \\textbf{під час Активації Підрозділа але до його атаки}.\n"
+"Триваючі ефекти\\index{Ongoing Effects} діють до кінця Битви,або до завершення вказаного ефекту.\\par\n"
+"Миттєві \\includesvg[height=10px]{\\svgs/instant.svg} Карти можна розігрувати \\textbf{в будь-який час}, окрім проміжку між кидком Бойового Кубика та отриманням пошкоджень, якщо не вказано інакше.\n"
+"Миттєві карти, які збільшують \\includesvg[height=10px]{\\svgs/attack.svg} або \\includesvg[height=10px]{\\svgs/defense.svg}, Підрозділу, наприклад Карти Характеристик Атака та Захист, \\textbf{повинні} розігруватися після оголошення атаки і діють лише до кінця цієї атаки.\n"
+"\\subsection*{\\hypertarget{Timelimit}{Обмеження Часу Битви}}\\index{Time Limit}\n"
+"Битви проти Нейтральних Юнітів мають обмеження у часі - \\textbf{один Бойовий Раунд}.\n"
+"Якщо ви не можете виграти Битву до кінця поточного Раунду Битви, ви повинні або \\hyperlink{Endcombat}{Відступити}\\index{Retreat} або витратити 1 ОП Героя який розпочав Битву, щоб зіграти ще один Раунд.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:93
@@ -192,6 +277,8 @@ msgid ""
 "\\note{5}{Combats against Azure \\includesvg[height=10px]{\\svgs/azure-note.svg} Units, other players, or \\hyperlink{AIrules}{AI Heroes} have no time limit.}\n"
 "\n"
 msgstr ""
+"\\note{5}{Битви проти Лазурних \\includesvg[height=10px]{\\svgs/azure-note.svg} підрозділів, інших гравців, або \\hyperlink{AIrules}{Героїв ШІ} не мають часових обмежень.}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:99
@@ -218,6 +305,8 @@ msgid ""
 "\\subsection*{\\hypertarget{Walls}{Defending a Town With\\\\a Citadel\\raggedright}}\\index{Defending Town}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Walls}{Оборона Міста\\\\з Цитаделлю\\raggedright}}\\index{Defending Town}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:110
@@ -231,6 +320,13 @@ msgid ""
 "If they are targeted by a \\includesvg[height=10px]{\\svgs/unit_ranged.svg} attack performed from the opponent's side of the Combat Board, \\textbf{reduce the attack's damage by 1}.\n"
 "\n"
 msgstr ""
+"Коли Місто з Цитаделлю атаковане, Оборонець додає перешкоди в Середній Ряд Бойового Поля: 3 Стіни та 1 Ворота, після розміщення Підрозділів.\n"
+"Карта Ворті \\textbf{не є Перешкодою для Оборонця}.\n"
+"Карти Стін і Воріт\\index{Walls and Gate} можуть бути знищені атакою будь-якого суміжного \\includesvg[height=10px]{\\svgs/unit_ground.svg} або \\includesvg[height=10px]{\\svgs/unit_flying.svg} Підрозділу.\n"
+"\\par\n"
+"Підрозділи,що обороняються, якщо стоять на своїй стороні і \\textbf{в одній колоні} Зі Стіною або Воротами отримують захист від \\includesvg[height=10px]{\\svgs/unit_ranged.svg} атак.\n"
+"Якщо вони стали ціллю \\includesvg[height=10px]{\\svgs/unit_ranged.svg} атаки що здійснюється зі сторони Бойового Поля противника, \\textbf{зменшіть пошкодження від атаки на 1}.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:115
@@ -242,6 +338,11 @@ msgid ""
 "The defender also gains the Arrow Tower\\index{Arrow Tower} Unit Card which is placed next to the Combat Board.\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=0.6\\linewidth]{\\cards/arrow_tower.png}\n"
+"\\end{center}\n"
+"Оборонець також отримує картку Підрозділу \"Стрілецька Вежа\"\\index{Arrow Tower} яка кладеться поруч з Бойовим Полем.\n"
+"\n"
 
 #. type: figure*
 #: sections/combat.tex:138
@@ -266,6 +367,24 @@ msgid ""
 "  \\hfill%\n"
 "  \\mbox{}%"
 msgstr ""
+"[h]\n"
+"  \\mbox{}%\n"
+"  \\hfill%\n"
+"  \\begin{minipage}[t]{0.415\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=\\linewidth]{\\examples/ranged_protected.png}\n"
+"  \\caption[halberdiers protected]{\\textit{Коли алебардники знаходяться за незруйнованими Воротами, \\textbf{вони захощені} коли їх атакують з-за лінії Стіни.\n"
+"    Пошкодження від \\includesvg[height=10px]{\\svgs/unit_ranged.svg} атаки Лихоглядів  \\textbf{зменшується на 1}.}}\n"
+"  \\end{minipage}\n"
+"  \\hfill%\n"
+"  \\begin{minipage}[t]{0.415\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=\\linewidth]{\\examples/ranged_unprotected.png}\n"
+"    \\caption[halberdiers unprotected]{\\textit{Оскільки алебардники знаходяться за зруйнованою Стіною, \\textbf{захист не працює}.\n"
+"      Лихогляди атакують \\textbf{без штрафу}.}}\n"
+"  \\end{minipage}\n"
+"  \\hfill%\n"
+"  \\mbox{}%"
 
 #. type: multicols
 #: sections/combat.tex:145
@@ -277,6 +396,11 @@ msgid ""
 "Combat lasts until all Units on one side are eliminated, a player has to \\textbf{Retreat} when fighting Neutral Units, or a player \\textbf{Surrenders} to another player.\n"
 "\n"
 msgstr ""
+"\\subsection*{Структура Бойового Раунду}\n"
+"Битва ділиться на Раунди, під час яких усі Підрозділи, що беруть участь у цій Битві, \\textbf{Активуються по одному разу} в порядку Ініціативи.\n"
+"Після Активації усіх Підрозділів починається новий Раунд Бою.\n"
+"Бій триває допоки або: всі Підрозділи однієї зі сторін знищені, або гравець повинен \\textbf{Відступити} під час битви з Нейтральними Підрозділами, або гравець \\textbf{Здається} іншому гравцю.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:160
@@ -298,6 +422,21 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"Структура Раунду Битви:\n"
+"\\begin{itemize}\n"
+"  \\item Гравці активують свої Підрозділи у порядку спадання \\hyperlink{Initiative}{Ініціативи}. \\textbf{У випадку рівності}, почергово активуйте нападників і захисників, починаючи з нападника.\n"
+"  \\item Коли Підрозділ Активовано, помістіть на нього Кубик Фракції, щоб вказати, що він був активований у цьому Раунді Бою.\n"
+"  \\item Активовані Підрозділи можуть рухатися і атакувати відповідно до свого \\hyperlink{Unittype}{Типу}. Нейтральні Підрозділи під контролем гравця-суперника завжди повинні атакувати, якщо це можливо.\n"
+"  \\item Замість атаки, Підрозділ може \\hyperlink{Defend}{Захищатися}.\n"
+"  В Битвах з Нейтральними Підрозділами, Нейтральні Підрозділи не можуть Захищатися, навіть якщо вони під контролем іншого гравця.\n"
+"  \\item Перед тим як Підрозділ атакує, обидва гравці можуть \\hyperlink{CombatCards}{розігрувати Карти}. Ефект Карт розігрується в порядку розіграшу Карт гравцями.\n"
+"  \\item Після оголошення атаки Підрозділу і розіграшу Карт, киньте Бойовий Кубик.\n"
+"    Змініть результат атаки атакуючого Підрозділу на результат кидку кубика, і зменшіть його на показник Захисту атакованого Підрозділу і нанесіть необхідні \\hyperlink{HP}{Пошкодження} атакованому Підрозділу.\n"
+"  \\item Якщо атакований Підрозділ суміжний з атакуючим, він проводить \\hyperlink{Retaliate}{Атаку Відплати} якщо ще не робив цього в цьому Раунді.\n"
+"  \\item Продовжуйте Активацію Підрозділів доки всі вони не будуть Активовані по одному разу.\n"
+"Після Активації останнього Підрозділу, Бойовий Раунд завершено.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:184
@@ -328,6 +467,30 @@ msgid ""
 "After winning Combat, Heroes \\textbf{must} Visit the Field where the Combat took place.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Endcombat}{Закінчення Битви}}\n"
+"Бій закінчується негайно, якщо всі Підрозділи однієї сторони переможені.\n"
+"Перемагає сторона,в якої залишилися Підрозділи.\n"
+"В Битві проти \\textbf{Нейтральним Підрозділів}, якщо у вас \\hyperlink{Timelimit}{закінчився час} або ваші підрозділи переможено, ви повинні \\textbf{Відступити}; помістіть усі вцілілі Підрозділи в свою Колоду Підрозділів і перемістіть Героя, що розпочав Бій назад в Область яку він \\textbf{Відвідував востаннє}.\n"
+"Відступання не має інших негативних наслідків.\\par\n"
+"\\note{9}{\n"
+"  \\textbf{Важливий вийняток}: Якщо \\textbf{всі} ваші Підрозділи з \\textbf{Колоди Підрозділів} було переможено під час Бою з Нейтральними Підрозділами, ваш Головний Герой переміщується до Міста або Поселення.\n"
+"  Другорядні Герої вилучаються з гри, до моменту їхнього повторного найму.\\par\n"
+"}\\par\n"
+"Якщо під час Бою проти \\textbf{Головного героя іншого гравця}, ви перемогли всі підрозділи, переможений гравець \\textbf{втрачає Мораль} і повинен \\textbf{заплатити переможцю} 5 \\includesvg[height=10px]{\\svgs/gold.svg}.\n"
+"Не втрачайте Мораль і не платіть \\includesvg[height=10px]{\\svgs/gold.svg} якщо був переможений \\textbf{Другорядний Герой}.\n"
+"\\textbf{В обох випадках}, переможений гравець \\textbf{віддає переможцю} один зі своїх \\hyperlink{End}{Кубиків Фракції}.\n"
+"Переможені Головні Герої \\textbf{переміщуються} до Міста або Поселення, в той час як Другорядні Герої вилучаються з гри до моменту їхнього повторного найму.\n"
+"Поразка Головного Героя може призвести до \\hyperlink{End}{Вибуття Гравця}.\\par\n"
+"Ви можете \\textbf{Здатися}\\index{Surrender} іншому гравцеві заплативши йому 10 \\includesvg[height=10px]{\\svgs/gold.svg} під час Активації Підрозділу.\n"
+"Перемістіть свого Головного Героя або вилучіть свого Другорядного Героя з гри, наче ви зазнали поразки, втративши свої Підрозділи.\n"
+"Капітуляція не має інших прямих наслідків; переможець не отримує Кубик Фракції.\\par\n"
+"\\note{4}{Ви не можете Здатися, захищаючи Місто.}\\par\n"
+"Коли Другорядний Герой атакований, він також може вибрати \\textbf{миттєву поразуц} замість того, щоб вступити в Бій, для збереження своїх Підрозділів.\n"
+"Коли це відбувається, нападник все одно отримує Кубик Фракції від переможеного Героя.\\par\n"
+"Коли бій закінчується, всі отримані пошкодження знімаються з усіх виживших Підрозділів.\n"
+"Перемістіть усі Підрозділи, якими володіє гравець, назад в Колоду Підрозділів і скиньте всі ворожі Нейтральні Підрозділи, що залишилися.\n"
+"Після перемоги в Битві, Герої \\textbf{повинні} Відвідати Область де відбулася Битва.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:186
@@ -336,6 +499,8 @@ msgid ""
 "\\subsection*{\\hypertarget{Combatexperience}{Combat Experience}}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Combatexperience}{Бойовий Досвід}}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:195
@@ -351,6 +516,15 @@ msgid ""
 "You also do not gain Experience from \\textbf{defeating} a Secondary Hero, or if an enemy Hero \\textbf{Surrenders} to you.\n"
 "\n"
 msgstr ""
+"Перемога в Битві за участю Головного Героя приносить йому Досвід\\index{Experience}.\n"
+"Якщо Складність Області або Рівень переможеного Головного Героя \\textbf{дорівнював} вашому Рівню, ви отримуєте 1 \\includesvg[height=10px]{\\svgs/experience.svg}.\n"
+"Якщо їх рівень був \\textbf{вищий} за ваш, отримайте 2 \\includesvg[height=10px]{\\svgs/experience.svg}.\n"
+"Перемога в Бою проти нейтрального Лазурного \\includesvg[height=10px]{\\svgs/azure.svg} Підрозділу \\textbf{негайно} дає вашому Герою 7-й Рівень.\n"
+"Якщо ви отримуєте кілька Рівнів одночасно, розіграйте їхні ефекти по порядку.\n"
+"Підвищення Рівня повинно бути завершено до Відвідування Поля, на якому відбулася Битва.\\par\n"
+"Другорядні Герої не отримують Досвід.\n"
+"Ви також не отримуєте Досвід за \\textbf{перемогу} над Другорядним Героєм, або якщо вогожий Герой \\textbf{Здався} вам.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:199
@@ -361,6 +535,10 @@ msgid ""
 "The player is considered to have beaten the Neutral Units by default and gains no rewards from the Combat.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Quick}{Швидка Битва}}\\index{Quick Combat}\n"
+"У випадку якщо Рівень вашого Героя вищий за Рівень Області то битва з Нейтральними Підрозділами, \\textbf{не відбувається}.\n"
+"За замовчуванням вважається, що гравець переміг Нейтральні Підрозділи і не отримує жодних нагород за Бій.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:202
@@ -370,6 +548,9 @@ msgid ""
 "During these game modes, all enemy Units activate according to the rules in \\hyperlink{AIrules}{the next section}.\n"
 "\n"
 msgstr ""
+"\\subsection*{Кампанія та Кооперативний Режим}\n"
+"У цих режимах гри ворожі Підрозділи, активуються відповідно до правил, наведених \\hyperlink{AIrules}{в наступному розділі}.\n"
+"\n"
 
 #. type: scaledfigure
 #: sections/combat.tex:210
@@ -383,7 +564,7 @@ msgstr ""
 #. type: subsection{#2}
 #: sections/combat.tex:214
 msgid "Combat Example"
-msgstr ""
+msgstr "Приклад Бою"
 
 #. type: multicols*
 #: sections/combat.tex:221
@@ -397,6 +578,13 @@ msgid ""
 "They would both be permitted to play any number of additional cards in any order, but they decide to stop after playing these cards.}\\par\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\textit{Зомбі Боба збираються атакувати Грифонів Аліси.\n"
+"Коли Боб оголошує про атаку, обидва гравці можуть модифікувати Атаку або Захист своїх Підрозділів, зігравши будь-яку кількість \\includesvg[height=10px]{\\svgs/instant.svg} Карт які збільшують \\includesvg[height=10px]{\\svgs/attack.svg},Підрозділу що атакує або \\includesvg[height=10px]{\\svgs/defense.svg}.}Підрозділу,що обороняється\\par\n"
+"\\textit{Боб вирішує зіграти Карту Атаки +1, збільшуючи атаку Зомбі з 2 до 3.\n"
+"Аліса у відповідь грає Карту Захисту +1, збільшуючи захист Грифонів з 0 до 1.\n"
+"Їм обом дозволяється зіграти будь-яку кількість додаткових карт , але вони вирішують зупинитися після того, як зіграють ці карти.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:223
@@ -419,6 +607,14 @@ msgid ""
 "The previously played Attack and Defense cards no longer have any effect.}\n"
 "\n"
 msgstr ""
+"\\textit{Після того, як всі карти були розіграні, кидається Кубик Атаки, щоб ще більше змінити кількість пошкоджень, які наносить атакуючий Підрозділ.\n"
+"Боб викидає +1.\n"
+"Це збільшує атаку Зомбі з 3 до 4, яка потім зменшується на захист Грифонів, що дорівнює 1. Таким чином, Грифони отримують 3 пошкодження \\includesvg[height=10px]{\\svgs/damage.svg}. Оскільки вони мають 4 ОЗ \\includesvg[height=10px]{\\svgs/health_points.svg}, вони не перевертаються на бік \"Малочислених\".}\\par\n"
+"\\textit{У Грифонів немає чорного кубика, тому вони проводять Атаку Відплати.\n"
+"Зазвичай на них кладуть кубик, але їхня Зсоблива \\includesvg[height=10px]{\\svgs/unit_retaliate.svg} Здібность вказує, що вони можуть проводити Атаку Відплати будь-яку кількість разів, тому кубик не кладуть.}\\par\n"
+"\\textit{Обидва гравці можуть знову змінити Характеристики своїх Підрозділів під час Атаки Відплати.\n"
+"Зіграні раніше карти Атаки і Захисту більше не мають ніякого ефекту.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:235
