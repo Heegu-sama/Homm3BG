@@ -1,4 +1,4 @@
-j# Heroes of Might & Magic III: The Board Game 🐴 🛡️ ⚔️️<br>Rule Book Rewrite Project 📜🪶
+# Heroes of Might & Magic III: The Board Game 🐴 🛡️ ⚔️️<br>Rule Book Rewrite Project 📜🪶
 
 Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1) 🤓
 
@@ -107,20 +107,26 @@ To translate a particular section:
 
 - Go to `translations/<section_name>` and open `<lang>.po` file, e.g., `translations/introduction.tex/pl.po`
 - Choose a fragment to translate. Those start with `msgid`. Write your new text in the line below starting with `msgstr`. Example:
+
     ```tex
     msgid "\\addsection{Introduction}{\\spells/magic_arrow.png}"
     msgstr "\\addsection{Wprowadzenie}{\\spells/magic_arrow.png}"
     ```
+
   This text (`msgstr`) will replace the original (`msgid`) in your translation.
 - Regenerate your localized section:
+
     ```bash
     po4a --no-update po4a.cfg
     ```
+
   Disregard the errors about mismatched `multicols`, as this is an upstream parser issue.
 - Rebuild your PDF file (or press Build ▶️ in TeXStudio).
+
    ```bash
    latexmk -pdf -silent -shell-escape "main_<lang>"
    ```
+
 - Commit and repeat!
 
 #### Finding fuzzy translations
