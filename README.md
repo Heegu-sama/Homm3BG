@@ -14,7 +14,7 @@ Click in the table to download the most recent builds in the chosen language:
 | 🇫🇷 Français   |   ~95%   | [🇫🇷📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf) | [🇫🇷🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf) |
 | 🇷🇺 Русский    |   ~39%   | [🇷🇺📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf) | [🇷🇺🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf) |
 | 🇺🇦 Українська |   ~10%   | [🇺🇦📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf) | [🇺🇦🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf)|
-| 🇩🇪 Deutsch    |   ~1%   | [🇩🇪📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_de.pdf) | [🇩🇪🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_de.pdf)|
+| 🇩🇪 Deutsch    |   ~1%   | [🇩🇪📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/main_de.pdf) | [🇩🇪🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/printable_de.pdf)|
 
 🖨️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
 
