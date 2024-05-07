@@ -7,13 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
 "POT-Creation-Date: 2024-05-06 07:36+0000\n"
-"PO-Revision-Date: 2024-04-29 22:27+0100\n"
+"PO-Revision-Date: 2024-05-07 19:32+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: ua\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
@@ -43,7 +44,7 @@ msgstr ""
 #. type: Plain text
 #: sections/map_elements.tex:3
 msgid "\\addsection{Map Elements}{\\skills/logistics.png}"
-msgstr ""
+msgstr "\\addsection{Елементи Мапи}{\\skills/logistics.png}"
 
 #. type: multicols*
 #: sections/map_elements.tex:11
@@ -58,6 +59,14 @@ msgid ""
 "Starting (I) Tiles are the easiest while Center (VI–VII) Tiles are the most difficult.\\par\n"
 "\n"
 msgstr ""
+"{2}\n"
+"Кожен Сценарій будується з використанням чотирьох типів Тайлів Мапи.\n"
+"Гравці починають зі Стартового (I) Тайла своєї Фракції.\n"
+"Інші Тайли можуть бути розміщені і розкриті, як описано на наступній сторінці.\n"
+"Під час підготовки до гри, всі Тайли лежать лицьовою стороною донизу і випадковим чином обираються з пулу можливих Тайлів, як описано в Сценарії, перемішуються, залишаючись лицьовою стороною донизу.\\par\n"
+"\\textbf{Римська цифра} на кожному Тайлі описує загальну \\textbf{силу Нейтральних Підрозділів} на цьому Тайлі, а також кількість нагород.\n"
+"Початкові (I) Тайли є найлегшими,а Центральні(VI-VII)Тайли- найскладнішими.\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:17
@@ -93,6 +102,22 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{Тайли Мапи\\index{Map Tile}}\n"
+"Кожен Тайл Мапи розділений на 7 окремих \\textbf{Полів} які можуть \\textbf{Відвідувати} Герої.\n"
+"Коли ваш Герой переміщується на Поле, він повинен негайно Відвідати його, або\n"
+"спочатку розпочати a \\hyperlink{Combat}{Битву} проти ворогів, які охороняють його перш ніж Відвідати поле.\n"
+"Порожні Поля\\index{Empty Field} не мають ефекту під час Відвідування.\n"
+"Через суцільні жовті лінії на краю Поля не можна проходити.\n"
+"\\hyperlink{Difficulty}{Римські цифри}, що написані на Полі, означають, що це поле охороняють нейтральні вороги, з якими потрібно битися, щоб його Відвідати.\\par\n"
+"\\columnbreak\n"
+"\\includegraphics[width=\\linewidth]{\\images/maptiles.png}\n"
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\item[\\textbf{1.}] Стартові Тайли Мапи: I\n"
+"  \\item[\\textbf{2.}] Дальні Тайли Мапи: II-II\n"
+"  \\item[\\textbf{3.}] Ближні Тайли Мапи: IV-V\n"
+"  \\item[\\textbf{4.}] Центральні Тайли Мапи: VI-VII\n"
+"\\end{itemize}\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:37
@@ -142,6 +167,17 @@ msgid ""
 "    \\item[\\textbf{7.}] Tile name like \\\\{} \\texttt{F2} or \\texttt{\\#N3}\n"
 "  "
 msgstr ""
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\begin{multicols}{2}\n"
+"    \\item[\\textbf{1.}] Порожнє Поле\n"
+"    \\item[\\textbf{2.}] Локація\n"
+"    \\item[\\textbf{3.}] Символ Артефакту\n"
+"    \\item[\\textbf{4.}] Складність Поля\n"
+"    \\item[\\textbf{5.}] Межа Поля\n"
+"    \\item[\\textbf{6.}] Заблоковане Поле\n"
+"    \\item[\\textbf{7.}] Нумерація Тайлу, наприклад: \\\\{} \\texttt{F2} або \\texttt{\\#N3}\n"
+"  "
 
 #. type: multicols*
 #: sections/map_elements.tex:68
@@ -159,6 +195,9 @@ msgid ""
 "  Blocked Field cannot be entered, but can be exited.\n"
 "}"
 msgstr ""
+"\\note{3}{\n"
+"  У Заблоковані Поля не можна увійти, але з них можна вийти.\n"
+"}"
 
 #. type: multicols
 #: sections/map_elements.tex:92
@@ -180,6 +219,22 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Categories}{Типи Локацій}}\n"
+"Відвідування Полей приносить Героям вигоду, таку як отримання Ресурсів або Карт (див \\hyperlink{All Map Locations}{Список Всіх Локацій}).\n"
+"Існує три типи Полей:\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{Одноразові} – як тільки ви Відвідаєте це Поле, покладіть на нього Чорний Кубик .\n"
+"    Вважайте це Поле Порожнім, доки на ньому є Чорний Кубик.\n"
+"  \\item \\textbf{Захоплювані} – ці поля можуть бути захоплені гравцями для отримання пасивних доходів.\n"
+"    Коли ви Відвідуєте таке Поле, покладіть на нього свій Кубик Фракції.\n"
+"    Коли Ворожі Герої, відвідують Поле що було Захоплене вами, вони замінюють ваш Кубик на свій, \\textbf{забираючи} ефекти цього Поля.\n"
+"\n"
+"    Для союзників такі Поля вважаються\\textbf{порожніми}.\n"
+"  \\item \\textbf{Багаторазові} – Ви можете відвідувати це Поле багато разів.\n"
+"    Під час Відвідування не кладіть жодного Кубика.\n"
+"    Ви можете заплатити 1 ОП за повторне Відвідування цієї Області.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:99
@@ -193,6 +248,13 @@ msgid ""
 "You may always rotate Map Tiles when placing or revealing them.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\hypertarget{Placing}{Розміщення та Відкриття Нових Тайлів}}\\index{Discovering Tiles}\n"
+"Герої можуть витратити 1 ОП, щоб або відкрити суміжний Тайл, що лежить лицьовою стороною донизу, або покласти Далекий (II-III) Тайл Мапи з власного запасу Тайлів.\n"
+"Всі Тайли, що лежать лицьовою стороною донизу, повинні залишатися\\textbf{прихованими від усіх гравців} до того моменту, поки вони не будуть викладені або відкриті.\n"
+"Нові Тайли повинні бути розміщені поруч з Героєм, який витрачає ОД, і з'єднані принаймні з двома сусідніми Тайлами.\n"
+"Нові тайли також повинні бути розміщені таким чином, щоб існував правильний шлях, який зрештою з'єднує їх з усіма іншими Тайлами.\n"
+"Ви можете вільно обертати Тайли Мапи, коли розміщуєте або відкриваєте їх.\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:104
@@ -204,6 +266,11 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\medskip\n"
+"\\note{6}{\n"
+"  Коли ви Відвідуєте Одноразове Поле, \\textbf{ви повинні} розмістити чорний кубик на цьому Полі навіть якщо ви вирішили не використовувати ефекти цього Поля.\n"
+"}\n"
+"\n"
 
 #. type: figure*
 #: sections/map_elements.tex:116
@@ -218,11 +285,19 @@ msgid ""
 "    \\node at (3.9, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{be adjacent to two other tiles}}}}};\n"
 "  \\end{tikzpicture}"
 msgstr ""
+"[!hb]\n"
+"  \\centering\n"
+"  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
+"  \\begin{tikzpicture}[overlay]\n"
+"    \\node at (5, 10) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Ви не можете помістити цей Тайл сюди}}}}};\n"
+"    \\node at (5, 1.4) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{Ви можете помістити цей Тайл сюди, оскільки він буде}}}}};\n"
+"    \\node at (3.9, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{суміжним з двома іншими Тайлами}}}}};\n"
+"  \\end{tikzpicture}"
 
 #. type: subsection{#2}
 #: sections/map_elements.tex:120
 msgid "Example Turn"
-msgstr ""
+msgstr "Приклад Ходу"
 
 #. type: multicols*
 #: sections/map_elements.tex:125
@@ -232,6 +307,9 @@ msgid ""
 "    She spends 1 MP to move onto the Mine, which begins \\hyperlink{Combat}{Combat} against Neutral Units, since the Field has a \\hyperlink{Difficulty}{Difficulty Rating} and has not been previously Flagged by any player.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Аліса хоче захопити сусідню \\hyperlink{Mines}{Шахту} Захопивши її своїм Головним Героєм, Некромантом Сандро.\n"
+"    Вона витрачає 1 ОП, для переміщення на Шахту, де починається \\hyperlink{Combat}{Битва} проти Нейтральних Підрозділів, оскільки це Поле має \\hyperlink{Difficulty}{Рівень Складності} і не було раніше Захоплене жодним гравцем.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:127
@@ -250,6 +328,10 @@ msgid ""
 "During the Combat, she casts the Lightning Bolt, and Empowers \\includesvg[height=0.8\\baselineskip]{\\svgs/empower.svg} it with Haste's alternative (bottom) effect, which makes the Lightning Bolt deal 3 damage \\includesvg[height=0.8\\baselineskip]{\\svgs/damage.svg}, killing the Troglodytes and winning the Combat.}\n"
 "\n"
 msgstr ""
+"\\textit{Виявляється, що Шахту охороняють Троглодити, які мають 3 ОЗ \\includesvg[height=0.8\\baselineskip]{\\svgs/health_points.svg}.\n"
+"В руці Аліси знаходяться: Картка Сили, Блискавка, Прискорення та Міський Портал.\n"
+"Під час Битви вона розігрує Блискавку і Посилює \\includesvg[height=0.8\\baselineskip]{\\svgs/empower.svg} її альтернативним (нижнім) ефектом Прискорення, який дозволяє Блискавці завдати 3 рани \\includesvg[height=0.8\\baselineskip]{\\svgs/damage.svg}, вбити Троглодитів і перемогти в Битві.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:133
@@ -266,6 +348,8 @@ msgid ""
 "\\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell Card per Combat Round.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Бій тривав лише один Раунд, тому Аліса не змогла б використати і Блискавку, і Прискорення, оскільки гравці мають право розіграти лише одну Карту Заклинання за Раунд Бою.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:142
@@ -278,6 +362,12 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\textit{Тепер Аліса Захоплює Шахту поклавши на неї один із своїх Кубиків Фракції.\n"
+"    Захоплення цієї шахти збільшує її виробництво Будівельних Матеріалів \\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg} на 2, і вона також негайно отримує значення виробництва Шахти, яке дорівнює 2 \\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg} оскільки вона була першим гравцем, який Захопив її.}\\par\n"
+"\\textit{Після цього Аліса хоче повернутися на захист раніше Захопленого Поселення, розігравши Міський Портал, що залишився у неї в руці.\n"
+"    Її Герой має 2-й рівень, тому вона може Посилити його Експертним Ефектом \\includesvg[height=0.8\\baselineskip]{\\svgs/expert.svg}, карти Сили Магії, який дає їй додаткове ОП руху після розіграшу Карти.\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:144
