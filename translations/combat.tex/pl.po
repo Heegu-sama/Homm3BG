@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-05-04 22:21+0000\n"
+"POT-Creation-Date: 2024-05-08 16:16+0200\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -24,8 +24,8 @@ msgstr ""
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
-#: sections/map_elements.tex:118 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:77
+#: sections/map_elements.tex:122 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
 #: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
@@ -64,10 +64,10 @@ msgstr "\\addsection{Walka}{\\skills/attack.png}"
 #: sections/combat.tex:7
 #, no-wrap
 msgid ""
-"\\hypertarget{Combat}{Combat}\\index{Combat} with \\textbf{Neutral Units} starts when a Hero moves to an unvisited Field with a roman numeral, signifying the \\hyperlink{Difficulty Table}{type and number} of Neutral Units guarding that Field.\n"
+"\\hypertarget{Combat}{Combat}\\index{Combat} with \\textbf{Neutral Units} starts when a Hero moves to an \\textbf{unvisited} Field with a roman numeral, signifying the \\hyperlink{Difficulty Table}{type and number} of Neutral Units guarding that Field.\n"
 "\n"
 msgstr ""
-"\\hypertarget{Combat}{Walka}\\index{Walka} z \\textbf{Jednostkami Neutralnymi} rozpoczyna się, gdy Bohater wejdzie na nieodwiedzone Pole oznaczone cyfrą rzymską, określającą \\hyperlink{Difficulty}{typ i ilość} napotkanych Jednostek broniących tego Pola.\n"
+"\\hypertarget{Combat}{Walka}\\index{Walka} z \\textbf{Jednostkami Neutralnymi} rozpoczyna się, gdy Bohater wejdzie na \\textbf{nieodwiedzone} Pole oznaczone cyfrą rzymską, określającą \\hyperlink{Difficulty}{typ i liczbę} napotkanych Jednostek broniących tego Pola.\n"
 "\n"
 
 #. type: multicols
@@ -152,7 +152,7 @@ msgstr ""
 "\\begin{itemize}\n"
 "  \\item Wybierz jedną ze stron Planszy Bitwy.\n"
 "    Dowolnie rozmieść do 5 Jednostek na Przednim oraz Tylnym rzędzie wybranej strony Planszy Walki.\n"
-"  \\item Sprawdź \\hyperlink{Difficulty Table}{\\textbf{Tabelę Trudności Pola}} i dobierz odpowiednią ilość Kart Jednostek Neutralnych z ich Talii.\n"
+"  \\item Sprawdź \\hyperlink{Difficulty Table}{\\textbf{Tabelę Trudności Pola}} i dobierz odpowiednią liczbę Kart Jednostek Neutralnych z ich Talii.\n"
 "  \\item Jednostki Neutralne ustawia się według wybranego Trybu Gry:\n"
 "  \\item W \\textbf{Starciu} i \\textbf{Sojuszu}, gracz z twojej prawej strony rozmieszcza i kontroluje Jednostki Neutralne.\n"
 "    Jednostki \\includesvg[height=10px]{\\svgs/unit_ranged.svg} powinny być ustawione w Tylnym rzędzie, jeśli to możliwe.\n"
@@ -289,11 +289,11 @@ msgstr ""
 "\\subsection*{\\hypertarget{CombatCards}{Wykorzystywanie Kart w Walce}}\n"
 "W ciągu jednej Rundy Walki \\textbf{możesz użyć tylko 1 Karty Zaklęcia}.\n"
 "Efektów Krótkotrwałych \\includesvg[height=10px]{\\svgs/ongoing.svg} oraz Aktywacji \\includesvg[height=10px]{\\svgs/activation.svg} można użyć tylko \\textbf{podczas Aktywacji swojej Jednostki oraz przed jej atakiem}.\n"
-"Efekty Krótkotrwałe\\index{Ongoing Effects} trwają do końca Walki lub do momentu ich wykorzystania.\\par\n"
+"Efekty Krótkotrwałe\\index{Efekt Krótkotrwały} trwają do końca Walki lub do momentu ich wykorzystania.\\par\n"
 "Karty z Efektem Natychmiastowym \\includesvg[height=10px]{\\svgs/instant.svg} można zagrać \\textbf{w dowolnym momencie} poza rzutami Kością i rozpatrywaniem obrażeń, jeśli opis Karty nie stanowi inaczej.\n"
 "Karty Natychmiastowe, które podnoszą \\includesvg[height=10px]{\\svgs/attack.svg} lub \\includesvg[height=10px]{\\svgs/defense.svg} Jednostki, takie jak Karty Ataku i Obrony, trwają tylko na czas ataku i \\textbf{muszą} być zagrane po jego deklaracji.\n"
 "\\subsection*{\\hypertarget{Timelimit}{Limit Czasu Walki}}\\index{Limit Czasowy}\n"
-"Walka przeciwko Jednostkom Neutralnym ma Limit Czasowy - trwa \\textbf{jedną Rundę Walki}.\n"
+"Walka przeciwko Jednostkom Neutralnym ma Limit Czasowy - trwa \\textbf{tylko jedną Rundę Walki}.\n"
 "Jeśli nie wygrasz Walki przed końcem Rundy Walki, musisz \\hyperlink{Endcombat}{Wycofać się}\\index{Wycofywanie się} lub wydać 1 PR bohatera, który rozpoczął Walkę, aby móc ją przedłużyć o kolejną rundę.\\par\n"
 "\n"
 
@@ -366,7 +366,7 @@ msgstr ""
 "\\begin{center}\n"
 "  \\includegraphics[width=0.6\\linewidth]{translations/assets/pl/arrow_tower.png}\n"
 "\\end{center}\n"
-"Gracz broniący się otrzymuje również Kartę Jednostki Wieży Łuczniczej\\index{Wieża Łucznicza} którą należy położyć obok Planszy Walki.\n"
+"Gracz broniący się otrzymuje również Kartę Jednostki Wieży Łuczniczej\\index{Wieża Łucznicza}, którą należy położyć obok Planszy Walki.\n"
 "\n"
 
 #. type: figure*
@@ -608,7 +608,7 @@ msgstr ""
 "Po deklaracji ataku obaj gracze mogą zmodyfikować Atak i Obronę swoich Jednostek zagrywając dowolną liczbę \\includesvg[height=10px]{\\svgs/instant.svg} Kart zwiększających ich \\includesvg[height=10px]{\\svgs/attack.svg} lub \\includesvg[height=10px]{\\svgs/defense.svg}.}\\par\n"
 "\\textit{Bob decyduje sę zagrać Kartę Ataku +1, zwiększając Atak Zombie z 2 na 3.\n"
 "Alicja odpowiada zagrywając Kartę Obrony +1, zwiększając obronę Gryfów z 0 do 1.\n"
-"Oboje mogą zagrać dowolną ilość dodatkowych Kart w dowolnej kolejności, lecz decydują się na tym poprzestać.}\\par\n"
+"Oboje mogą zagrać dowolną liczbę dodatkowych Kart w dowolnej kolejności, lecz decydują się na tym poprzestać.}\\par\n"
 "\n"
 
 #. type: multicols*
@@ -638,7 +638,7 @@ msgstr ""
 "Bob wyrzuca +1.\n"
 "Zwiększa to Atak Zombie z 3 na 4, który zostaje pomniejszony o wartość Obrony Gryfów (1). Gryfy otrzymują 3 \\includesvg[height=10px]{\\svgs/damage.svg}. Ponieważ ich PZ \\includesvg[height=10px]{\\svgs/health_points.svg} wynosi 4, ich Karta nie zostaje obrócona na stronę \"Kilka\" .}\\par\n"
 "\\textit{Na Gryfach nie ma położonej Czarnej Kostki, więc wykonują one Kontratak.\n"
-"Z reguły powinno się na nich kłaść Kostkę, jednakże ich Specjalna \\includesvg[height=10px]{\\svgs/unit_retaliate.svg} Zdolność umożliwia wykonanie Kontrataku nieograniczoną ilość razy, więc Kostki się nie ustawia.}\\par\n"
+"Z reguły powinno się na nich kłaść Kostkę, jednakże ich Specjalna \\includesvg[height=10px]{\\svgs/unit_retaliate.svg} Zdolność umożliwia wykonanie Kontrataku nieograniczoną ilość razy, więc Kostki się nie umieszcza.}\\par\n"
 "\\textit{Obaj Gracze ponownie mogą zmodyfikować Statystyki swoich Jednostek podczas Kontrataku.\n"
 "Poprzednio zagrane Karty Ataku i Obrony nie wliczają się już do tego ataku.}\n"
 "\n"
