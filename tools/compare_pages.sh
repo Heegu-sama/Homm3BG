@@ -11,6 +11,7 @@ else
 fi
 
 RANDOM_DIR=$(mktemp -d)
+trap 'rm -rf -- "$RANDOM_DIR"' EXIT
 
 echo "Making images of ${FILE_TO_COMPARE} and main_${LANGUAGE}.pdf..."
 pdftoppm ${FILE_TO_COMPARE} ${RANDOM_DIR}/aa -f ${FIRST_PAGE} -l ${LAST_PAGE} -png -progress &
@@ -25,5 +26,4 @@ do
 done
 wait
 mv ${RANDOM_DIR}/* .
-rm -rf ${RANDOM_DIR}/
 echo "Done."
