@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-26 15:42+0200\n"
+"POT-Creation-Date: 2024-05-08 16:16+0200\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,17 +19,16 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
-#: sections/all_map_locations.tex:417 sections/combat.tex:5
+#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
+#: sections/all_map_locations.tex:419 sections/combat.tex:5
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
-#: sections/map_elements.tex:99 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:77
+#: sections/map_elements.tex:122 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
-#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:118
-#: sections/units.tex:145
+#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -37,9 +36,8 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_heroes.tex:30 sections/ai_heroes.tex:64 sections/combat.tex:95
-#: sections/combat.tex:233 sections/deckbuilding.tex:129
-#: sections/deckbuilding.tex:135 sections/expansion_content.tex:65
+#: sections/ai_rules.tex:30 sections/ai_rules.tex:81 sections/combat.tex:95
+#: sections/combat.tex:233 sections/expansion_content.tex:65
 #: sections/heroes.tex:34
 #, no-wrap
 msgid ""
@@ -48,8 +46,8 @@ msgid ""
 msgstr "\\empty\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:431 sections/combat.tex:91
-#: sections/player_turns.tex:37 sections/units.tex:164
+#: sections/all_map_locations.tex:433 sections/combat.tex:91
+#: sections/player_turns.tex:37 sections/units.tex:180
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -66,10 +64,10 @@ msgstr "\\addsection{Walka}{\\skills/attack.png}"
 #: sections/combat.tex:7
 #, no-wrap
 msgid ""
-"\\hypertarget{Combat}{Combat}\\index{Combat} with \\textbf{Neutral Units} starts when a Hero moves to an unvisited Field with a roman numeral, signifying the \\hyperlink{Difficulty Table}{type and number} of Neutral Units guarding that Field.\n"
+"\\hypertarget{Combat}{Combat}\\index{Combat} with \\textbf{Neutral Units} starts when a Hero moves to an \\textbf{unvisited} Field with a roman numeral, signifying the \\hyperlink{Difficulty Table}{type and number} of Neutral Units guarding that Field.\n"
 "\n"
 msgstr ""
-"\\hypertarget{Combat}{Walka}\\index{Walka} z \\textbf{Jednostkami Neutralnymi} rozpoczyna się, gdy Bohater wejdzie na nieodwiedzone Pole oznaczone cyfrą rzymską, określającą \\hyperlink{Difficulty}{typ i liczbę} napotkanych Jednostek broniących tego Pola.\n"
+"\\hypertarget{Combat}{Walka}\\index{Walka} z \\textbf{Jednostkami Neutralnymi} rozpoczyna się, gdy Bohater wejdzie na \\textbf{nieodwiedzone} Pole oznaczone cyfrą rzymską, określającą \\hyperlink{Difficulty}{typ i liczbę} napotkanych Jednostek broniących tego Pola.\n"
 "\n"
 
 #. type: multicols
@@ -184,7 +182,36 @@ msgstr ""
 
 #. type: multicols
 #: sections/combat.tex:79
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{\\hypertarget{Combatterminology}{Combat Terminology}}\n"
+#| "The following terms are used to describe effects and elements during Combat:\\par\n"
+#| "\\textbf{Attacking Player} – The player who started the Combat.\\par\n"
+#| "\\textbf{Defending Player} – The player whom Combat was started against.\\par\n"
+#| "\\textbf{Activation} – A Unit Activates when it is next in the Initiative order.\\par\n"
+#| "\\textbf{Adjacent Unit} – A Unit is directly adjacent to another if it is one space away in a cardinal direction (nondiagonal).\\par\n"
+#| "\\textbf{Combat Round} – A full cycle of all Units of each player being Activated.\\par\n"
+#| "\\textbf{Combat Obstacles}\\index{Combat Obstacles}\\index{Obstacles, Combat} – Every card on the Combat Board is a Combat Obstacle.\n"
+#| "They block the movement of all non-flying Units.\\smallskip\\par\n"
+#| "\\begin{tikzpicture}[overlay]\n"
+#| "  \\node at (7, 0) {\\includegraphics[width=0.2\\linewidth]{\\images/attack_die.png}};\n"
+#| "\\end{tikzpicture}\\parbox{0.7\\hsize}{\\textbf{Attack Die}\\index{Attack Die}\\index{Dice} – A red Die whose results range from -1 to +1.\n"
+#| "Roll the Die \\textbf{whenever a Unit attacks} and\n"
+#| "add the result to the Unit's Attack value.}\\par\\smallskip\n"
+#| "\\textbf{\\hypertarget{Retaliate}{Retaliation Attack}} – If a Unit survives an attack by an adjacent Unit, it performs an attack back at that Unit.\n"
+#| "Each Unit can perform \\textbf{only 1} Retaliation Attack\\index{Retaliation Attack} per Combat Round.\n"
+#| "Retaliation Attacks function identically to normal attacks, but they cannot cause another Retaliation Attack.\n"
+#| "Mark Units which have performed a Retaliation Attack this Round with a black cube.\\par\n"
+#| "\\textbf{Paralysis}\\index{Paralysis} \\includesvg[height=10px]{\\svgs/paralysis.svg} – Some effects place a Paralysis Token on Units.\n"
+#| "That Unit \\textbf{must skip its next Activation}. Remove the Token instead of activating it.\n"
+#| "If the Unit \\textbf{attacked or takes any damage} before that time, \\textbf{remove the Token}.\n"
+#| "The Token does not prevent Units from performing Retaliation Attacks.\\par\n"
+#| "\\textbf{\\hypertarget{Defend}{Defend}} \\includesvg[height=10px]{\\svgs/defense.svg} – Units may choose to gain a Defense Token and end the Activation instead of attacking.\n"
+#| "When a Unit with a Defense Token is attacked, make another roll with the attack Die after the initial attack roll.\n"
+#| "If you roll a ``+1'', the defending Unit gains an extra 1 Defense for this attack.\n"
+#| "If a Unit has a Defense Token at the start of its activation, discard it.\n"
+#| "The Unit cannot take another Defense Action during that activation.\n"
+#| "\n"
 msgid ""
 "\\subsection*{\\hypertarget{Combatterminology}{Combat Terminology}}\n"
 "The following terms are used to describe effects and elements during Combat:\\par\n"
@@ -204,7 +231,7 @@ msgid ""
 "Each Unit can perform \\textbf{only 1} Retaliation Attack\\index{Retaliation Attack} per Combat Round.\n"
 "Retaliation Attacks function identically to normal attacks, but they cannot cause another Retaliation Attack.\n"
 "Mark Units which have performed a Retaliation Attack this Round with a black cube.\\par\n"
-"\\textbf{Paralysis}\\index{Paralysis} \\includesvg[height=10px]{\\svgs/paralysis.svg} – Some effects place a Paralysis Token on Units.\n"
+"\\textbf{\\hypertarget{Paralysis}{Paralysis}}\\index{Paralysis} \\includesvg[height=10px]{\\svgs/paralysis.svg} – Some effects place a Paralysis Token on Units.\n"
 "That Unit \\textbf{must skip its next Activation}. Remove the Token instead of activating it.\n"
 "If the Unit \\textbf{attacked or takes any damage} before that time, \\textbf{remove the Token}.\n"
 "The Token does not prevent Units from performing Retaliation Attacks.\\par\n"
@@ -233,7 +260,7 @@ msgstr ""
 "Każda Jednostka może wykonać \\textbf{tylko 1} Kontratak\\index{Kontratak} na Rundę Walki.\n"
 "Kontrataki rozpatrywane są jak normalne ataki, ale same nie prowokują Kontrataku.\n"
 "Jednostki, które w tej Rundzie wykonały już Kontratak, oznacz czarną kostką.\\par\n"
-"\\textbf{Paraliż}\\index{Paraliż} \\includesvg[height=10px]{\\svgs/paralysis.svg} – Niektóre efekty umieszczają Żeton Paraliżu na Jednostkach.\n"
+"\\textbf{\\hypertarget{Paralysis}{Paraliż}}\\index{Paraliż} \\includesvg[height=10px]{\\svgs/paralysis.svg} – Niektóre efekty umieszczają Żeton Paraliżu na Jednostkach.\n"
 "Sparaliżowana Jednostka \\textbf{pomija swoją nastepną Aktywację} i zamiast ją aktywować, usuń z niej Żeton Paraliżu.\n"
 "Jeśli Jednostka \\textbf{zostanie zaatakowana bądź otrzyma obrażenia} przed najbliższą aktywacją, \\textbf{rownież usuń Żeton}.\n"
 "Żeton nie odbiera możliwości kontrataku.\\par\n"
@@ -266,7 +293,7 @@ msgstr ""
 "Karty z Efektem Natychmiastowym \\includesvg[height=10px]{\\svgs/instant.svg} można zagrać \\textbf{w dowolnym momencie} poza rzutami Kością i rozpatrywaniem obrażeń, jeśli opis Karty nie stanowi inaczej.\n"
 "Karty Natychmiastowe, które podnoszą \\includesvg[height=10px]{\\svgs/attack.svg} lub \\includesvg[height=10px]{\\svgs/defense.svg} Jednostki, takie jak Karty Ataku i Obrony, trwają tylko na czas ataku i \\textbf{muszą} być zagrane po jego deklaracji.\n"
 "\\subsection*{\\hypertarget{Timelimit}{Limit Czasu Walki}}\\index{Limit Czasowy}\n"
-"Walka przeciwko Jednostkom Neutralnym ma Limit Czasowy - trwa \\textbf{jedną Rundę Walki}.\n"
+"Walka przeciwko Jednostkom Neutralnym ma Limit Czasowy - trwa \\textbf{tylko jedną Rundę Walki}.\n"
 "Jeśli nie wygrasz Walki przed końcem Rundy Walki, musisz \\hyperlink{Endcombat}{Wycofać się}\\index{Wycofywanie się} lub wydać 1 PR bohatera, który rozpoczął Walkę, aby móc ją przedłużyć o kolejną rundę.\\par\n"
 "\n"
 
@@ -388,13 +415,13 @@ msgstr ""
 #: sections/combat.tex:145
 #, no-wrap
 msgid ""
-"\\subsection*{Combat Round Structure}\n"
+"\\subsection*{\\hypertarget{combatround}{Combat Round Structure}}\n"
 "Combat is divided into Rounds, during which all of the Units participating in that Combat \\textbf{Activate once} in Initiative order.\n"
 "After each Unit has Activated, a new Combat Round begins.\n"
 "Combat lasts until all Units on one side are eliminated, a player has to \\textbf{Retreat} when fighting Neutral Units, or a player \\textbf{Surrenders} to another player.\n"
 "\n"
 msgstr ""
-"\\subsection*{Struktura Rundy Walki}\n"
+"\\subsection*{\\hypertarget{combatround}{Struktura Rundy Walki}}\n"
 "Walka składa się z Rund, w których Jednostki \\textbf{Aktywowane są raz} zgodnie z Inicjatywą.\n"
 "Po Aktywacji wszystkich Jednostek zaczyna się nowa Runda.\n"
 "Walka trwa się, dopóki wszystkie Jednostki jednej ze stron zostaną pokonane, gracz musi \\textbf{Wycofać się} z walcząc z Jednostkami Neutralnymi lub \\textbf{Poddaje się} przeciwnikowi.\n"
