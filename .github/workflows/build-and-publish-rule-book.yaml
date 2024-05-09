@@ -59,6 +59,11 @@ jobs:
             warning: "Це неопублікована версія, зібрана на GitHub з коміту"
             sections: "sections/translated/ua"
             luaengine: true
+          - language: de
+            version: Version
+            warning: "Dies ist eine unveröffentlichte Version auf GitHub"
+            sections: "sections/translated/de"
+            luaengine: true
 
     steps:
       - name: Set up repository
@@ -138,7 +143,7 @@ jobs:
           extra_system_packages: "inkscape"
           latexmk_use_lualatex: ${{ matrix.luaengine }}
           latexmk_shell_escape: true
-          post_compile: echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && upmendex -s index_style main_${{ matrix.language }} && sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}@g' main_${{ matrix.language }}.ind && ${{ matrix.luaengine && 'lualatex' || 'pdflatex' }} --shell-escape main_${{ matrix.language }}.tex
+          post_compile: echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && upmendex -s index_style main_${{ matrix.language }} && sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}\\par}@g' main_${{ matrix.language }}.ind && ${{ matrix.luaengine && 'lualatex' || 'pdflatex' }} --shell-escape main_${{ matrix.language }}.tex
           root_file: main_${{ matrix.language }}.tex
 
       - name: Move file
@@ -191,7 +196,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ["pl", "es", "fr", "ru", "ua"]
+        language: ["pl", "es", "fr", "ru", "ua", "de"]
 
     steps:
       - name: Install pdfinfo
