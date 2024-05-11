@@ -294,7 +294,7 @@
 
 \include{\sections/combat.tex}
 
-% Empty page placeholder
+\iftoggle{printable}{\include{\sections/empty_page.tex}}{}
 
 \include{\sections/ai_rules.tex}
 
@@ -308,9 +308,11 @@
 
 \include{\sections/all_map_locations.tex}
 
-% Notes placeholder
+\iftoggle{printable}{\include{\sections/notes.tex}}{}
 
 \include{\sections/credits.tex}
+
+\iftoggle{printable}{\include{\sections/index.tex}}{}
 
 \include{\sections/back_cover.tex}
 
