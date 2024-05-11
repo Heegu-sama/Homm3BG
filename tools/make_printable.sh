@@ -32,6 +32,10 @@ sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}\\par}@g' main_${LA
 
 find ${SECTIONS} -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
 python .github/insert_printable_hyperlinks.py "${SECTIONS}"
+
+sed -i 's@% Empty page placeholder@\\include{\\sections/empty_page.tex}@' metadata.tex
+sed -i 's@% Notes placeholder@\\include{\\sections/notes.tex}@' metadata.tex
+
 if [ $(grep -c "sections/index.tex" metadata.tex) -eq 0 ]
 then
   sed -i 's@\\include{\\sections/back_cover.tex}@\\include{\\sections/index.tex}\\include{\\sections/back_cover.tex}@g' metadata.tex
