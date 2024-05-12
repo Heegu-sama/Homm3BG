@@ -1,9 +1,4 @@
 \begin{tikzpicture}[overlay]
   \node at (8.5, -11.6) {\includegraphics[width=\paperwidth]{\art/ballista.png}};
-  \iftoggle{printable}{
-    % \draw (0, 0) \node[text align=center, minimum size=\textwidth] {\heegusquote};
-    \draw (0, 0)
-    node[text, align=center,minimum size=5cm]
-    {\heegusquote};
-  }{}
+  \node[text width=0.9\textwidth] at (8, -13.5) {\heegusquote};
 \end{tikzpicture}
