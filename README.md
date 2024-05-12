@@ -188,20 +188,20 @@ Another version, which works faster, but uses a different workflow:
 First, switch to the `main` branch, build the `main_en.pdf` and run:
 
 ```bash
-tools/compare_pages_2.sh en 38-41 before
+tools/compare_pages_2.sh en 38-41,44 a
 ```
 
-If you have only 1 page to show, just type the single number, without `-`. Or use a comma-separated list of numbers.
+If you have only 1 page to show, just type the single number, without `-`. Or use a comma-separated list of numbers/ranges.
 
 The script will save the image of the specified pages to /tmp/. Now switch to the branch you're working on, do some changes, don't forget to rebuild the .pdf, and run:
 
 ```bash
-tools/compare_pages_2.sh en 38-41 after
+tools/compare_pages_2.sh en 38-41,44 b
 ```
 
-The script will use the previously written "before" files as the left side, and produce the single image with all the pages combined side by side, named /tmp/en-both-38-41.png
+The script will use the previously written "a" files as the left side, and produce the single image with all the pages combined side by side, named /tmp/homm3bgre/en-both-38-41,44.png
 
-You can keep running the "after" command as often as you want, it will keep reusing the same "before" state.
+You can keep running the "b" command as often as you want, it will keep reusing the same "a" state.
 
 **This script requires `qpdf` and `imagemagick` utilities.**
 
