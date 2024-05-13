@@ -17,6 +17,7 @@ env:
   PO4A_VERSION: "0.71"
   PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
   REPO_URL: https://github.com/Heegu-sama/Homm3BG
+  GHOSTSCRIPT_URL: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10030/gs_10.03.0_amd64_snap.tgz
   ARTIFACT_RETENTION_DAYS: 1
 
 jobs:
@@ -87,7 +88,9 @@ jobs:
 
       - name: Install ghostscript
         run: | #sudo apt-get install -y ghostscript
-          sudo snap install ghostscript
+          wget --quiet ${{ env.GHOSTSCRIPT_URL }}
+          tar -xvf gs_10.03.0_amd64_snap.tgz
+          sudo snap install ./gs_10.03.0_amd64_snap/gs_10.03.0_amd64.snap --devmode
 
       - name: Compile rule book
         uses: xu-cheng/latex-action@v3
