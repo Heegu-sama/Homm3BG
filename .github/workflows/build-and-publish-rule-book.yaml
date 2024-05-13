@@ -99,7 +99,7 @@ jobs:
       - name: Optimize PDF
         run: |
           du -sh main_${{ matrix.language }}.pdf
-          tools/optimize.sh main_${{ matrix.language }}.pdf
+          tools/optimize.sh ${{ matrix.language }}
           mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
           du -sh main_${{ matrix.language }}.pdf
 
@@ -151,6 +151,13 @@ jobs:
             sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}\\par}@g' main_${{ matrix.language }}.ind && \
             for _ in {1..2}; do ${{ matrix.luaengine && 'lualatex' || 'pdflatex' }} --shell-escape '\AtBeginDocument{\toggletrue{printable}} \input{main_${{ matrix.language }}.tex}'; done
           root_file: main_${{ matrix.language }}.tex
+
+      - name: Optimize PDF
+        run: |
+          du -sh main_${{ matrix.language }}.pdf
+          tools/optimize.sh ${{ matrix.language }}
+          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
+          du -sh main_${{ matrix.language }}.pdf
 
       - name: Move file
         run: |
