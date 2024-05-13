@@ -16,7 +16,6 @@ env:
   PO4A_VERSION: "0.71"
   PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
   REPO_URL: https://github.com/Heegu-sama/Homm3BG
-  EVEN_NUMBER_OF_PAGES: false
   ARTIFACT_RETENTION_DAYS: 1
 
 jobs:
@@ -127,13 +126,6 @@ jobs:
           find ${{ matrix.sections }} -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
           python .github/insert_printable_hyperlinks.py ${{ matrix.sections }}
 
-      - name: Include notes page
-        if: ${{ env.EVEN_NUMBER_OF_PAGES == 'true' }}
-        run: sed -i 's@% Notes placeholder@\\include{\\sections/notes.tex}@g' metadata.tex
-
-      - name: Include index page
-        run: sed -i 's@\\include{\\sections/back_cover.tex}@\\include{\\sections/index.tex}\\include{\\sections/back_cover.tex}@g' metadata.tex
-
       - name: Add QR codes
         run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes-${{ matrix.language }}.tex' -e 'd}' metadata.tex
 
@@ -171,10 +163,9 @@ jobs:
           PAGES_PRINTABLE="${{ steps.check_printable_pages.outputs.num_of_printable_pages }}"
           echo "Number of pages in digital:   ${PAGES_DIGITAL}"
           echo "Number of pages in printable: ${PAGES_PRINTABLE}"
-          # The goal of this check is to make sure that printable version has an even number of pages at all times.
-          # If the number of pages in digital version is odd (the current state), the printable one adds an index page - this is where +1 comes from.
-          # If the number of pages in digital version becomes even, an additional notes page will be required - +1 will need to be changed to +2.
-          if [[ $((${PAGES_DIGITAL}+1)) != ${PAGES_PRINTABLE} ]]; then
+          # The goal of this check is to make sure that printable version has 56 pages - divisible by 4 to be print friendly.
+          # Currenty, digital version has 53 pages, so the printable should have 3 more, hence +3 in the check.
+          if [[ $((${PAGES_DIGITAL}+3)) != ${PAGES_PRINTABLE} ]]; then
             echo "Pages in digital and printable versions differ by too much. See above. Please investigate this."
             exit 1
           fi
