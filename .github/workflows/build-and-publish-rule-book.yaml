@@ -17,7 +17,6 @@ env:
   PO4A_VERSION: "0.71"
   PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
   REPO_URL: https://github.com/Heegu-sama/Homm3BG
-  GHOSCRIPT_URL: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10030/ghostscript-10.03.0.tar.gz
   ARTIFACT_RETENTION_DAYS: 1
 
 jobs:
@@ -86,6 +85,10 @@ jobs:
           export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
           ./${PO4A_DIR}/po4a -v --no-update po4a.cfg
 
+      - name: Install ghostscript
+        run: | #sudo apt-get install -y ghostscript
+          sudo snap install ghostscript
+
       - name: Compile rule book
         uses: xu-cheng/latex-action@v3
         with:
@@ -93,14 +96,6 @@ jobs:
           latexmk_use_lualatex: ${{ matrix.luaengine }}
           latexmk_shell_escape: true
           root_file: main_${{ matrix.language }}.tex
-
-      - name: Install ghostscript
-        run: | #sudo apt-get install -y ghostscript
-          wget ${{ env.GHOSCRIPT_URL }}
-          tar xvf ghostscript-10.03.0.tar.gz
-          cd ghostscript-10.03.0/
-          sudo ./configure
-          sudo make install
 
       - name: Optimize PDF
         run: |
