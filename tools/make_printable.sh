@@ -21,23 +21,37 @@ case "${LANGUAGE}" in
     ;;
 esac
 
+case "${LANGUAGE}" in
+  de)
+    export HOMM3_LANG=german
+    ;;
+  es)
+    export HOMM3_LANG=spanish
+    ;;
+  fr)
+    export HOMM3_LANG=french
+    ;;
+  pl)
+    export HOMM3_LANG=polish
+    ;;
+  ru)
+    export HOMM3_LANG=russian
+    ;;
+  ua)
+    export HOMM3_LANG=ukrainian
+    ;;
+  *)
+    export HOMM3_LANG=english
+    ;;
+esac
+
 po4a --no-update po4a.cfg
-if [ $(grep -c "icu_locale" index_style.ist) -eq 0 ]
-then
-  echo "icu_locale \"${LANGUAGE}\"" >> index_style.ist
-fi
-#upmendex -s index_style main_${LANGUAGE}
-# upmendex sorts non-English characters properly but fails to generate proper ind file
-#sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}\\par}@g' main_${LANGUAGE}.ind
 
 find ${SECTIONS} -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
 python .github/insert_printable_hyperlinks.py "${SECTIONS}"
 
 sed -i -e "/% QR codes placeholder/{r .github/qr-codes-$LANGUAGE.tex" -e 'd}' metadata.tex
-#for _ in {1..2}
-#do
-#  ${ENGINE} --shell-escape "\AtBeginDocument{\toggletrue{printable}} \input{main_${LANGUAGE}.tex}"
-latexmk ${ENGINE} -silent -usepretex='\AtBeginDocument{\toggletrue{printable}}' -shell-escape main_${LANGUAGE}.tex
-#done
-git restore index_style.ist
+
+latexmk ${ENGINE} -usepretex='\AtBeginDocument{\toggletrue{printable}}' -shell-escape main_${LANGUAGE}.tex
+
 ${open} main_${LANGUAGE}.pdf &
