@@ -14,10 +14,10 @@ fi
 
 case "${LANGUAGE}" in
   ru|ua)
-    ENGINE=lualatex
+    ENGINE=-pdflua
     ;;
   *)
-    ENGINE=pdflatex
+    ENGINE=-pdf
     ;;
 esac
 
@@ -26,17 +26,18 @@ if [ $(grep -c "icu_locale" index_style.ist) -eq 0 ]
 then
   echo "icu_locale \"${LANGUAGE}\"" >> index_style.ist
 fi
-upmendex -s index_style main_${LANGUAGE}
+#upmendex -s index_style main_${LANGUAGE}
 # upmendex sorts non-English characters properly but fails to generate proper ind file
-sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}\\par}@g' main_${LANGUAGE}.ind
+#sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}\\par}@g' main_${LANGUAGE}.ind
 
 find ${SECTIONS} -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
 python .github/insert_printable_hyperlinks.py "${SECTIONS}"
 
 sed -i -e "/% QR codes placeholder/{r .github/qr-codes-$LANGUAGE.tex" -e 'd}' metadata.tex
-for _ in {1..2}
-do
-  ${ENGINE} --shell-escape "\AtBeginDocument{\toggletrue{printable}} \input{main_${LANGUAGE}.tex}"
-done
+#for _ in {1..2}
+#do
+#  ${ENGINE} --shell-escape "\AtBeginDocument{\toggletrue{printable}} \input{main_${LANGUAGE}.tex}"
+latexmk ${ENGINE} -pretex='\AtBeginDocument{\toggletrue{printable}}' -shell-escape main_${LANGUAGE}.tex
+#done
 git restore index_style.ist
 ${open} main_${LANGUAGE}.pdf &
