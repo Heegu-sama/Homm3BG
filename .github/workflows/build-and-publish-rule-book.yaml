@@ -140,7 +140,7 @@ jobs:
             echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && \
             upmendex -s index_style main_${{ matrix.language }} && \
             sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}\\par}@g' main_${{ matrix.language }}.ind && \
-            latexmk -usepretex='\AtBeginDocument{\toggletrue{printable}}' ${{ matrix.luaengine && '-pdflua' || '-pdf' }} -shell-escape "main_${{ marix.language }}"
+            latexmk -usepretex='\AtBeginDocument{\toggletrue{printable}}' ${{ matrix.luaengine && '-pdflua' || '-pdf' }} -shell-escape "main_${{ matrix.language }}"
           root_file: main_${{ matrix.language }}.tex
 
       - name: Move file
