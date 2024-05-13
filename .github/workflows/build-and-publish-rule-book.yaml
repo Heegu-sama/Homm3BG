@@ -17,12 +17,12 @@ env:
   PO4A_VERSION: "0.71"
   PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
   REPO_URL: https://github.com/Heegu-sama/Homm3BG
+  GHOSCRIPT_URL: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10030/ghostscript-10.03.0.tar.gz
   ARTIFACT_RETENTION_DAYS: 1
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: ubuntu:24.04
     outputs:
       number_of_pages: ${{ steps.check_pages.outputs.num_of_pages }}
       number_of_printable_pages: ${{ steps.check_printable_pages.outputs.num_of_printable_pages }}
@@ -35,46 +35,46 @@ jobs:
             warning: "This is an unreleased version built on GitHub from commit"
             sections: "sections"
             luaengine: false
-          - language: pl
-            version: Wersja
-            warning: "To jest nieopublikowana wersja zbudowana na GitHubie z commita"
-            sections: "sections/translated/pl"
-            luaengine: false
-          - language: es
-            version: Versión
-            warning: "Se trata de una versión inédita creada en GitHub a partir del commit"
-            sections: "sections/translated/es"
-            luaengine: false
-          - language: fr
-            version: Version
-            warning: "Ceci est une version non-éditée créée sur GitHub à partir du commit"
-            sections: "sections/translated/fr"
-            luaengine: false
-          - language: ru
-            version: Версия
-            warning: "Данная версия является неопубликованной сборкой из коммита в GitHub"
-            sections: "sections/translated/ru"
-            luaengine: true
-          - language: ua
-            version: Версія
-            warning: "Це неопублікована версія, зібрана на GitHub з коміту"
-            sections: "sections/translated/ua"
-            luaengine: true
-          - language: de
-            version: Version
-            warning: "Dies ist eine unveröffentlichte Version auf GitHub"
-            sections: "sections/translated/de"
-            luaengine: true
+          # - language: pl
+          #   version: Wersja
+          #   warning: "To jest nieopublikowana wersja zbudowana na GitHubie z commita"
+          #   sections: "sections/translated/pl"
+          #   luaengine: false
+          # - language: es
+          #   version: Versión
+          #   warning: "Se trata de una versión inédita creada en GitHub a partir del commit"
+          #   sections: "sections/translated/es"
+          #   luaengine: false
+          # - language: fr
+          #   version: Version
+          #   warning: "Ceci est une version non-éditée créée sur GitHub à partir du commit"
+          #   sections: "sections/translated/fr"
+          #   luaengine: false
+          # - language: ru
+          #   version: Версия
+          #   warning: "Данная версия является неопубликованной сборкой из коммита в GitHub"
+          #   sections: "sections/translated/ru"
+          #   luaengine: true
+          # - language: ua
+          #   version: Версія
+          #   warning: "Це неопублікована версія, зібрана на GitHub з коміту"
+          #   sections: "sections/translated/ua"
+          #   luaengine: true
+          # - language: de
+          #   version: Version
+          #   warning: "Dies ist eine unveröffentlichte Version auf GitHub"
+          #   sections: "sections/translated/de"
+          #   luaengine: true
 
     steps:
       - name: Set up repository
         uses: actions/checkout@v4
 
-      # - name: Replace rule book version with a warning
-      #   run: |
-      #     VERSION=$(grep -P "^[\ ]*${{ matrix.version }} \d{1,}.\d{1,}$" main_${{ matrix.language }}.tex)
-      #     WARNING="${{ matrix.warning }} \\\href{${{ env.REPO_URL }}}{${GITHUB_SHA::7}}."
-      #     sed -i "s@$VERSION@$WARNING@g" main_${{ matrix.language }}.tex
+      - name: Replace rule book version with a warning
+        run: |
+          VERSION=$(grep -P "^[\ ]*${{ matrix.version }} \d{1,}.\d{1,}$" main_${{ matrix.language }}.tex)
+          WARNING="${{ matrix.warning }} \\\href{${{ env.REPO_URL }}}{${GITHUB_SHA::7}}."
+          sed -i "s@$VERSION@$WARNING@g" main_${{ matrix.language }}.tex
 
       - name: Generate translations for ${{ matrix.language }}
         if: ${{ matrix.language != 'en' }}
@@ -95,7 +95,12 @@ jobs:
           root_file: main_${{ matrix.language }}.tex
 
       - name: Install ghostscript
-        run: sudo apt-get install -y ghostscript
+        run: | #sudo apt-get install -y ghostscript
+          wget ${{ env.GHOSCRIPT_URL }}
+          tar xvf ghostscript-10.03.0.tar.gz
+          cd ghostscript-10.03.0/
+          sudo ./configure
+          sudo make install
 
       - name: Optimize PDF
         run: |
@@ -204,7 +209,6 @@ jobs:
 
   check_pages:
     runs-on: ubuntu-latest
-    container: ubuntu:24.04
     needs: build
     if: github.event_name == 'pull_request'
     strategy:
