@@ -6,6 +6,7 @@ case "$(uname -s)" in
 esac
 
 LANGUAGE=$1
+export HOMM3_LANG=${LANGUAGE}
 
 case "${LANGUAGE}" in
   ru|ua)
