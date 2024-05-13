@@ -37,7 +37,7 @@ sed -i -e "/% QR codes placeholder/{r .github/qr-codes-$LANGUAGE.tex" -e 'd}' me
 #for _ in {1..2}
 #do
 #  ${ENGINE} --shell-escape "\AtBeginDocument{\toggletrue{printable}} \input{main_${LANGUAGE}.tex}"
-latexmk ${ENGINE} -pretex='\AtBeginDocument{\toggletrue{printable}}' -shell-escape main_${LANGUAGE}.tex
+latexmk ${ENGINE} -silent -usepretex='\AtBeginDocument{\toggletrue{printable}}' -shell-escape main_${LANGUAGE}.tex
 #done
 git restore index_style.ist
 ${open} main_${LANGUAGE}.pdf &
