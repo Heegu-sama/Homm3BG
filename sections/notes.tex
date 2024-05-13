@@ -1,6 +1,7 @@
 % !TeX spellcheck = en_US
 \addsection{Notes}{\spells/cure.png}
 
-\begin{tikzpicture}[overlay]
-  \node at (8.5, -11.6) {\includegraphics[width=\paperwidth]{\art/ballista.png}};
-\end{tikzpicture}
+\AddToHookNext{shipout/background}{%
+  \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/castle_background.jpg}}%
+  \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}%
+}
