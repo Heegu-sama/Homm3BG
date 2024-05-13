@@ -22,6 +22,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: ubuntu:24.04
     outputs:
       number_of_pages: ${{ steps.check_pages.outputs.num_of_pages }}
       number_of_printable_pages: ${{ steps.check_printable_pages.outputs.num_of_printable_pages }}
@@ -203,6 +204,7 @@ jobs:
 
   check_pages:
     runs-on: ubuntu-latest
+    container: ubuntu:24.04
     needs: build
     if: github.event_name == 'pull_request'
     strategy:
