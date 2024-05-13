@@ -98,7 +98,7 @@ jobs:
 
       - name: Compress PDF
         run: |
-          ps2pdf main_${{ matrix.language }}.pdf main_${{ matrix.language }}_compressed.pdf
+          gs -o main_${{ matrix.language }}_compressed.pdf -sDEVICE=pdfwrite -dDetectDuplicateImages=true main_${{ matrix.language }}.pdf
           mv main_${{ matrix.language }}_compressed.pdf main_${{ matrix.language }}.pdf
 
       - uses: actions/upload-artifact@v4
