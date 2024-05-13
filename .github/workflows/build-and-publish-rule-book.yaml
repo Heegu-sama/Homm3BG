@@ -96,10 +96,12 @@ jobs:
       - name: Install ghostscript
         run: sudo apt-get install -y ghostscript
 
-      - name: Compress PDF
+      - name: Optimize PDF
         run: |
-          gs -o main_${{ matrix.language }}_compressed.pdf -sDEVICE=pdfwrite -dDetectDuplicateImages=true main_${{ matrix.language }}.pdf
-          mv main_${{ matrix.language }}_compressed.pdf main_${{ matrix.language }}.pdf
+          du -sh main_${{ matrix.language }}.pdf
+          tools/optimize.sh main_${{ matrix.language }}.pdf
+          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
+          du -sh main_${{ matrix.language }}.pdf
 
       - uses: actions/upload-artifact@v4
         if: github.event_name == 'pull_request'
