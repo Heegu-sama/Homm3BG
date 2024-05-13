@@ -21,30 +21,6 @@ case "${LANGUAGE}" in
     ;;
 esac
 
-case "${LANGUAGE}" in
-  de)
-    export HOMM3_LANG=german
-    ;;
-  es)
-    export HOMM3_LANG=spanish
-    ;;
-  fr)
-    export HOMM3_LANG=french
-    ;;
-  pl)
-    export HOMM3_LANG=polish
-    ;;
-  ru)
-    export HOMM3_LANG=russian
-    ;;
-  ua)
-    export HOMM3_LANG=ukrainian
-    ;;
-  *)
-    export HOMM3_LANG=english
-    ;;
-esac
-
 po4a --no-update po4a.cfg
 
 find ${SECTIONS} -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
@@ -52,6 +28,8 @@ python .github/insert_printable_hyperlinks.py "${SECTIONS}"
 
 sed -i -e "/% QR codes placeholder/{r .github/qr-codes-$LANGUAGE.tex" -e 'd}' metadata.tex
 
-latexmk ${ENGINE} -usepretex='\AtBeginDocument{\toggletrue{printable}}' -shell-escape main_${LANGUAGE}.tex
+export HOMM3_LANG=${LANGUAGE}
+export HOMM3_PRINTABLE=1
+latexmk ${ENGINE} -shell-escape main_${LANGUAGE}.tex
 
 ${open} main_${LANGUAGE}.pdf &
