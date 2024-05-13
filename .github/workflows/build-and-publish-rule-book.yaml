@@ -70,11 +70,11 @@ jobs:
       - name: Set up repository
         uses: actions/checkout@v4
 
-      - name: Replace rule book version with a warning
-        run: |
-          VERSION=$(grep -P "^[\ ]*${{ matrix.version }} \d{1,}.\d{1,}$" main_${{ matrix.language }}.tex)
-          WARNING="${{ matrix.warning }} \\\href{${{ env.REPO_URL }}}{${GITHUB_SHA::7}}."
-          sed -i "s@$VERSION@$WARNING@g" main_${{ matrix.language }}.tex
+      # - name: Replace rule book version with a warning
+      #   run: |
+      #     VERSION=$(grep -P "^[\ ]*${{ matrix.version }} \d{1,}.\d{1,}$" main_${{ matrix.language }}.tex)
+      #     WARNING="${{ matrix.warning }} \\\href{${{ env.REPO_URL }}}{${GITHUB_SHA::7}}."
+      #     sed -i "s@$VERSION@$WARNING@g" main_${{ matrix.language }}.tex
 
       - name: Generate translations for ${{ matrix.language }}
         if: ${{ matrix.language != 'en' }}
