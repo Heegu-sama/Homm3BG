@@ -146,12 +146,6 @@ jobs:
           latexmk_shell_escape: true
           root_file: main_${{ matrix.language }}.tex
 
-      - name: Debug
-        run: |
-          cat main_${{ matrix.language }}.idx
-          echo =============================
-          cat main_${{ matrix.language }}.ind
-
       - name: Optimize PDF
         run: |
           du -sh main_${{ matrix.language }}.pdf
