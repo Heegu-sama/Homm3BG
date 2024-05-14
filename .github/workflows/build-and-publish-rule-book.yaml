@@ -139,6 +139,8 @@ jobs:
         run: |
           find ${{ matrix.sections }} -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
           python .github/insert_printable_hyperlinks.py ${{ matrix.sections }}
+          rm *.aux
+          ls -l
 
       - name: Add QR codes
         run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes-${{ matrix.language }}.tex' -e 'd}' metadata.tex
