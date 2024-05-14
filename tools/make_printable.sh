@@ -14,10 +14,10 @@ fi
 
 case "${LANGUAGE}" in
   ru|ua)
-    ENGINE=-pdflua
+    ENGINE=lualatex
     ;;
   *)
-    ENGINE=-pdf
+    ENGINE=pdflatex
     ;;
 esac
 
@@ -34,6 +34,9 @@ find ${SECTIONS} -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
 python .github/insert_printable_hyperlinks.py "${SECTIONS}"
 
 sed -i -e "/% QR codes placeholder/{r .github/qr-codes-$LANGUAGE.tex" -e 'd}' metadata.tex
-latexmk -usepretex='\AtBeginDocument{\toggletrue{printable}}' ${ENGINE} -shell-escape "main_${LANGUAGE}"
+for _ in {1..2}
+do
+  ${ENGINE} --shell-escape "\AtBeginDocument{\toggletrue{printable}} \input{main_${LANGUAGE}.tex}"
+done
 git restore index_style.ist
 ${open} main_${LANGUAGE}.pdf &
