@@ -1,4 +1,10 @@
 % !TeX spellcheck = en_US
 \addsection{Index}{\images/knowledge.png}
 \vspace{-3em}
+\newcommand*{\hommIndexLetter}[1]{%
+  {\centering\large\noindent\textbf{#1}\par\nopagebreak}
+}
+\newcommand*{\hommIndexEntry}[2]{%
+  \item\small #1\dotfill{}#2
+}
 \printindex
