@@ -63,6 +63,7 @@ To work on the document on your machine, you need the following:
 - [**po4a**](https://po4a.org/index.php.en) (optional) to work on translating the document to other languages
 - [**pdftoppm**](https://linux.die.net/man/1/pdftoppm) (optional) to make screenshots of rendered PDF pages
 - [**ImageMagick**](https://imagemagick.org/index.php) (optional) to combine screenshots into convenient diffs
+- [**ghostscript**](https://www.ghostscript.com/) (optional) to optimize PDF file sizes
 - [**GIMP**](https://www.gimp.org/) or [**Krita**](https://krita.org/) (optional) to edit some images in `assets` directory
 - [**aspell**](http://aspell.net/) (optional) for spellchecking
 
@@ -180,6 +181,18 @@ tools/compare_pages.sh ~/main_en.pdf en 38 41
 It will produce files: `en-38.png`, `en-39.png`, `en-40.png` and `en-41.png`.
 
 **This script requires `pdftoppm` and `imagemagick` utilities.**
+
+### 🗠 Optimizing PDF files
+
+To reduce output PDF file size significantly, you can use the script utilizing `ghostscript` utility:
+
+```bash
+tools/optimize.sh <LANGUAGE>
+```
+
+It will output `main_<LANGUAGE>_optimized.pdf` file.
+
+As of writing, for English it produces 23 MB `main_en_optimized.pdf` file without noticeable drop in quality compared to 78 MB `main_en.pdf` built by LaTeX.
 
 ### 🔎 Spellchecking
 
