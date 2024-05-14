@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-05-04 16:19+0200\n"
+"POT-Creation-Date: 2024-05-14 21:00+0200\n"
 "PO-Revision-Date: 2024-05-13 17:15+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -28,10 +28,10 @@ msgstr "\\addsection{Правила ШІ}{\\spells/fortune.png}"
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
-#: sections/map_elements.tex:118 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:77
+#: sections/map_elements.tex:122 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:56 sections/town.tex:5
 #: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
@@ -104,7 +104,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:30 sections/ai_rules.tex:81 sections/combat.tex:95
+#: sections/ai_rules.tex:30 sections/ai_rules.tex:83 sections/combat.tex:95
 #: sections/combat.tex:233 sections/expansion_content.tex:65
 #: sections/heroes.tex:34
 #, no-wrap
@@ -228,16 +228,22 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:79
-#, no-wrap
+#: sections/ai_rules.tex:76
+#, fuzzy, no-wrap
+#| msgid ""
+#| "Enemy Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units prioritize attacking Units of the same tier.\n"
+#| "If this is impossible, they attack the closest Unit, prioritizing the lowest tier one.\\par\n"
+#| "Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units prioritize attacking other Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier.\n"
+#| "If there are no Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same tier order.\n"
+#| "If there's more than one valid target, they attack the closest one.\\par\n"
+#| "If there's ever a tie between equally valid targets for any Units, the player chooses which Unit is attacked.\n"
+#| "Enemy units cannot \\hyperlink{Defend}{Defend} unless instructed to.\n"
+#| "\n"
 msgid ""
-"Enemy Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units prioritize attacking Units of the same tier.\n"
-"If this is impossible, they attack the closest Unit, prioritizing the lowest tier one.\\par\n"
-"Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units prioritize attacking other Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier.\n"
-"If there are no Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same tier order.\n"
-"If there's more than one valid target, they attack the closest one.\\par\n"
-"If there's ever a tie between equally valid targets for any Units, the player chooses which Unit is attacked.\n"
-"Enemy units cannot \\hyperlink{Defend}{Defend} unless instructed to.\n"
+"Enemy Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units prioritize attacking Units of the \\textbf{same} tier.\n"
+"If this is impossible, they attack the Unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
+"Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units prioritize attacking other Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
+"If there are no Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same tier order.\\par\n"
 "\n"
 msgstr ""
 "Ворожі Наземні \\includesvg[height=10px]{\\svgs/unit_ground.svg} та Літаючі \\includesvg[height=10px]{\\svgs/unit_flying.svg} Підрозділи спочатку атакують Підрозділи того ж рівня.\n"
@@ -250,7 +256,24 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:83
+#: sections/ai_rules.tex:79
+#, no-wrap
+msgid ""
+"In both cases, if there's more than one valid target, they attack the closest one.\n"
+"If there's ever a tie between equally valid targets, the player chooses which Unit is attacked.\\par\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:81
+#, no-wrap
+msgid ""
+"Enemy units cannot \\hyperlink{Defend}{Defend} unless instructed to.\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:85
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\art/coin.png}\n"
@@ -258,7 +281,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/ai_rules.tex:87
+#: sections/ai_rules.tex:89
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
