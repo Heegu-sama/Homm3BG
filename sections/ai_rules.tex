@@ -71,8 +71,25 @@ When Neutral enemies or AI Heroes activate a unit, they follow a set of automati
 
 Enemy Ground \includesvg[height=10px]{\svgs/unit_ground.svg} and Flying \includesvg[height=10px]{\svgs/unit_flying.svg} Units prioritize attacking Units of the \textbf{same} tier.
 If this is impossible, they attack the Unit of a lower tier (in tier \textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \textbf{ascending} order).\par
+
+\textit{Example: \includesvg[height=10px]{\svgs/golden.svg}\includesvg[height=10px]{\svgs/unit_ground.svg} has this priority:
+\includesvg[height=10px]{\svgs/golden.svg},
+then \includesvg[height=10px]{\svgs/silver.svg},
+then \includesvg[height=10px]{\svgs/bronze.svg},
+then \includesvg[height=10px]{\svgs/azure.svg}.}
+
 Ranged \includesvg[height=10px]{\svgs/unit_ranged.svg} Units prioritize attacking other Ranged \includesvg[height=10px]{\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.
 If there are no Ranged \includesvg[height=10px]{\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \includesvg[height=10px]{\svgs/unit_ground.svg} and Flying \includesvg[height=10px]{\svgs/unit_flying.svg} Units in the same tier order.\par
+
+\textit{Example: \includesvg[height=10px]{\svgs/silver.svg}\includesvg[height=10px]{\svgs/unit_ranged.svg} has this priority:
+\includesvg[height=10px]{\svgs/silver.svg}\includesvg[height=10px]{\svgs/unit_ranged.svg},
+then \includesvg[height=10px]{\svgs/bronze.svg}\includesvg[height=10px]{\svgs/unit_ranged.svg},
+then \includesvg[height=10px]{\svgs/golden.svg}\includesvg[height=10px]{\svgs/unit_ranged.svg},
+then \includesvg[height=10px]{\svgs/azure.svg}\includesvg[height=10px]{\svgs/unit_ranged.svg},
+then \includesvg[height=10px]{\svgs/silver.svg}\includesvg[height=10px]{\svgs/unit_ground.svg}\includesvg[height=10px]{\svgs/unit_flying.svg},
+then \includesvg[height=10px]{\svgs/bronze.svg}\includesvg[height=10px]{\svgs/unit_ground.svg}\includesvg[height=10px]{\svgs/unit_flying.svg},
+then \includesvg[height=10px]{\svgs/golden.svg}\includesvg[height=10px]{\svgs/unit_ground.svg}\includesvg[height=10px]{\svgs/unit_flying.svg},
+then \includesvg[height=10px]{\svgs/azure.svg}\includesvg[height=10px]{\svgs/unit_ground.svg}\includesvg[height=10px]{\svgs/unit_flying.svg}.}
 
 In both cases, if there's more than one valid target, they attack the closest one.
 If there's ever a tie between equally valid targets, the player chooses which Unit is attacked.\par
@@ -81,7 +98,8 @@ Enemy units cannot \hyperlink{Defend}{Defend} unless instructed to.
 
 \vfill
 
-\includegraphics[width=\linewidth]{\art/coin.png}
+\centering
+\includegraphics[width=0.8\linewidth]{\art/coin.png}
 
 \begin{center}
     \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{\art/titan.jpg}
