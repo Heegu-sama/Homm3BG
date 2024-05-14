@@ -17,6 +17,7 @@ env:
   PO4A_VERSION: "0.71"
   PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
   REPO_URL: https://github.com/Heegu-sama/Homm3BG
+  GHOSTSCRIPT_URL: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10030/gs_10.03.0_amd64_snap.tgz
   ARTIFACT_RETENTION_DAYS: 1
 
 jobs:
@@ -93,7 +94,19 @@ jobs:
           latexmk_shell_escape: true
           root_file: main_${{ matrix.language }}.tex
 
-      # Upload non-English PDF in PRs to facilitate the work of translators not having po4a
+      - name: Install ghostscript
+        run: |
+          wget --quiet ${{ env.GHOSTSCRIPT_URL }}
+          tar -xvf gs_10.03.0_amd64_snap.tgz
+          sudo snap install ./gs_10.03.0_amd64_snap/gs_10.03.0_amd64.snap --devmode
+
+      - name: Optimize PDF
+        run: |
+          du -sh main_${{ matrix.language }}.pdf
+          tools/optimize.sh ${{ matrix.language }}
+          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
+          du -sh main_${{ matrix.language }}.pdf
+
       - uses: actions/upload-artifact@v4
         if: github.event_name == 'pull_request'
         with:
@@ -138,6 +151,13 @@ jobs:
           latexmk_use_lualatex: ${{ matrix.luaengine }}
           latexmk_shell_escape: true
           root_file: main_${{ matrix.language }}.tex
+
+      - name: Optimize PDF
+        run: |
+          du -sh main_${{ matrix.language }}.pdf
+          tools/optimize.sh ${{ matrix.language }}
+          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
+          du -sh main_${{ matrix.language }}.pdf
 
       - name: Move file
         run: |
