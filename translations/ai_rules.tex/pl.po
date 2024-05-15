@@ -244,9 +244,6 @@ msgid ""
 msgstr ""
 "Wrogie Jednostki Naziemne \\includesvg[height=10px]{\\svgs/unit_ground.svg} oraz Latające \\includesvg[height=10px]{\\svgs/unit_flying.svg} atakują w pierwszej kolejności Jednostki \\textbf{tego samego} poziomu.\n"
 "Jeśli jest to niemożliwe, atakują Jednostkę niższego poziomu (w malejącej kolejności aż do brązowego), a jeśli i to jest niemożliwe, Jednostkę wyższego poziomu (w rosnącej kolejności poziomów).\\par\n"
-"Jednostki Strzelające \\includesvg[height=10px]{\\svgs/unit_ranged.svg} atakują najpierw inne Jednostki Strzelające \\includesvg[height=10px]{\\svgs/unit_ranged.svg} tego samego poziomu, następnie niższego poziomu, a na końcu wyższego w takiej samej kolejności jak napisano powyżej.\n"
-"Jeśli nie ma Jednostek Strzelających, które mogłyby być celem Ataku, w pierwszej kolejności atakują Jednostki Lądowe \\includesvg[height=10px]{\\svgs/unit_ground.svg} oraz Latające \\includesvg[height=10px]{\\svgs/unit_flying.svg} w tej samej kolejności poziomów.\\par\n"
-"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:80
@@ -259,7 +256,12 @@ msgid ""
 "- \\includesvg[height=10px]{\\svgs/azure.svg}.}\n"
 "\n"
 msgstr ""
-
+"\\textit{Przykład: \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg} kolejności:\n"
+"\\includesvg[height=10px]{\\svgs/golden.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/silver.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}.}\n"
+"\n"
 #. type: multicols
 #: sections/ai_rules.tex:83
 #, fuzzy, no-wrap
@@ -277,8 +279,6 @@ msgid ""
 "If there are no Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same tier order.\\par\n"
 "\n"
 msgstr ""
-"Wrogie Jednostki Naziemne \\includesvg[height=10px]{\\svgs/unit_ground.svg} oraz Latające \\includesvg[height=10px]{\\svgs/unit_flying.svg} atakują w pierwszej kolejności Jednostki \\textbf{tego samego} poziomu.\n"
-"Jeśli jest to niemożliwe, atakują Jednostkę niższego poziomu (w malejącej kolejności aż do brązowego), a jeśli i to jest niemożliwe, Jednostkę wyższego poziomu (w rosnącej kolejności poziomów).\\par\n"
 "Jednostki Strzelające \\includesvg[height=10px]{\\svgs/unit_ranged.svg} atakują najpierw inne Jednostki Strzelające \\includesvg[height=10px]{\\svgs/unit_ranged.svg} tego samego poziomu, następnie niższego poziomu, a na końcu wyższego w takiej samej kolejności jak napisano powyżej.\n"
 "Jeśli nie ma Jednostek Strzelających, które mogłyby być celem Ataku, w pierwszej kolejności atakują Jednostki Lądowe \\includesvg[height=10px]{\\svgs/unit_ground.svg} oraz Latające \\includesvg[height=10px]{\\svgs/unit_flying.svg} w tej samej kolejności poziomów.\\par\n"
 "\n"
@@ -298,7 +298,17 @@ msgid ""
 "- \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
 "- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}.}\n"
 "\n"
-msgstr "\\hommtable{14}{ \\centering \\textbf{Tabela cen}\\\\ \\bigskip \\begin{tabularx}{\\linewidth}{XXXX} \\darkcell{\\color{white}Transakcja} & \\darkcell{...żeby kupić \\includesvg[height=10px]{\\svgs/gold.svg}} & \\darkcell{...żeby kupić \\includesvg[height=10px]{\\svgs/valuablegreater.svg}} & \\darkcell{...żeby kupić \\includesvg[height=10px]{\\svgs/building_materials.svg}} \\\\ \\darkcell{Sprzedaję \\includesvg[height=10px]{\\svgs/gold.svg}...} & \\lightcell{--} & \\lightcell{6 \\includesvg[height=10px]{\\svgs/gold.svg} \\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 \\includesvg[height=10px]{\\svgs/valuablegreater.svg}} & \\lightcell{2 \\includesvg[height=10px]{\\svgs/gold.svg} \\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 \\includesvg[height=10px]{\\svgs/building_materials.svg}} \\\\ \\darkcell{Sprzedaję \\includesvg[height=10px]{\\svgs/valuablegreater.svg}...} & \\lightcell{1 \\includesvg[height=10px]{\\svgs/valuablegreater.svg} \\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 3 \\includesvg[height=10px]{\\svgs/gold.svg}} & \\lightcell{--} & \\lightcell{1 \\includesvg[height=10px]{\\svgs/valuablegreater.svg} \\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 2 \\includesvg[height=10px]{\\svgs/building_materials.svg}} \\\\ \\darkcell{Sprzedaję \\includesvg[height=10px]{\\svgs/building_materials.svg}...} & \\lightcell{1 \\includesvg[height=10px]{\\svgs/building_materials.svg} \\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 \\includesvg[height=10px]{\\svgs/gold.svg}} & \\lightcell{3 \\includesvg[height=10px]{\\svgs/building_materials.svg} \\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 \\includesvg[height=10px]{\\svgs/valuablegreater.svg}} & \\lightcell{--} \\\\ \\end{tabularx} }"
+msgstr ""
+"\\textit{Przykład: \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg} kolejności:\n"
+"\\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}.}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:96
