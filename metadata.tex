@@ -22,6 +22,7 @@
 \usepackage{graphicx, trimclip}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{hyperref}
+\usepackage[none]{hyphenat}
 \usepackage[noautomatic, nonewpage]{imakeidx}
 \usepackage{multicol}
 \usepackage[super]{nth}
@@ -262,11 +263,11 @@
   \bigbreak
 
   \intro{}
+
+  \iftoggle{printable}{}{\bigbreak\nohyphens\heegusquote}
 \end{center}
 
 % QR codes placeholder
-
-\iftoggle{printable}{}{\bigskip\heegusquote}
 
 \begin{tikzpicture}[remember picture, overlay]
   \node(cover)[anchor=center, yshift=12em] at (current page.south) {
