@@ -3,11 +3,6 @@ name: Check for unupdated translations
 on:
   pull_request:
     branches: [main]
-    paths:
-      - 'assets/**'
-      - '!assets/gimp-files/**'
-      - '**.tex'
-      - 'translations/**'
 
 env:
   PO4A_VERSION: "0.71"
