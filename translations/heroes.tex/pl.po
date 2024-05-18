@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-26 16:44+0100\n"
+"POT-Creation-Date: 2024-05-18 21:17+0200\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,16 +19,16 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
-#: sections/all_map_locations.tex:417 sections/combat.tex:5
+#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
+#: sections/all_map_locations.tex:419 sections/combat.tex:5
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
-#: sections/map_elements.tex:99 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:77
+#: sections/map_elements.tex:122 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
-#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:145
+#: sections/scenario_end.tex:5 sections/setup.tex:56 sections/town.tex:5
+#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -36,7 +36,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_heroes.tex:30 sections/ai_heroes.tex:64 sections/combat.tex:95
+#: sections/ai_rules.tex:30 sections/ai_rules.tex:100 sections/combat.tex:95
 #: sections/combat.tex:233 sections/expansion_content.tex:65
 #: sections/heroes.tex:34
 #, no-wrap
@@ -46,8 +46,8 @@ msgid ""
 msgstr "\\empty\n"
 
 #. type: Plain text
-#: sections/all_map_locations.tex:188 sections/credits.tex:5
-#: sections/deckbuilding.tex:160 sections/heroes.tex:70
+#: sections/all_map_locations.tex:190 sections/credits.tex:5
+#: sections/deckbuilding.tex:162 sections/heroes.tex:70
 #: sections/introduction.tex:5
 msgid "\\bigbreak"
 msgstr ""
@@ -74,14 +74,13 @@ msgstr ""
 
 #. type: multicols*
 #: sections/heroes.tex:17
-#, no-wrap
 msgid ""
 "\\subsection*{Main Hero}\n"
 "The Main Hero\\index{Main Hero} is represented by its chosen model, Hero Card, and Your Deck.\n"
 "Each Faction's Main Hero has 3 Movement Points.\n"
 "Only the Main Hero can use Your Deck.\\par\n"
 "Each Main Hero starts the game at Level 1 and can advance up to Level 7 by gaining Experience.\n"
-"Experience is gained from \\hyperlink{Combatexperience}{winning Combat}, Visiting certain \\hyperlink{All Map Locations}{Locations} and the \\hyperlink{Resources}{Treasure Die} \\includesvg[height=10px]{\\svgs/treasure.svg}.\n"
+"Experience is gained from \\hyperlink{Combatexperience}{winning Combat}, Visiting certain \\hyperlink{All Map Locations}{Locations} and the \\hyperlink{Treasure Die}{Treasure Die} \\includesvg[height=10px]{\\svgs/treasure.svg}.\n"
 "Gaining 1 Experience\\index{Experience} is represented by the symbol \\includesvg[height=10px]{\\svgs/experience.svg}.\n"
 "\n"
 msgstr ""
@@ -90,7 +89,7 @@ msgstr ""
 "W każdej Frakcji Bohater Główny ma do wydania 3 Punkty Ruchu.\n"
 "Tylko Bohater Główny może używać Talii.\\par\n"
 "Każdy Bohater Główny rozpoczyna grę na poziomie 1 i może awansować do poziomu 7 zyskując Punkty Doświadczenia (PD).\n"
-"Punkty Doświadczenia zyskuje się przez \\hyperlink{Combatexperience}{zwycięstwo w Walce}, Odwiedzanie konkretnych \\hyperlink{All Map Locations}{Lokacji} oraz \\hyperlink{Resources}{Kości Skarbu} \\includesvg[height=10px]{\\svgs/treasure.svg}.\n"
+"Punkty Doświadczenia zyskuje się przez \\hyperlink{Combatexperience}{zwycięstwo w Walce}, Odwiedzanie konkretnych \\hyperlink{All Map Locations}{Lokacji} oraz \\hyperlink{Treasure Die}{Kości Skarbu} \\includesvg[height=10px]{\\svgs/treasure.svg}.\n"
 "Uzyskanie 1 PD \\index{Doświadczenie} jest reprezentowane przez symbol \\includesvg[height=10px]{\\svgs/experience.svg}.\n"
 "\n"
 
@@ -155,7 +154,6 @@ msgstr "Planszetka Bohatera"
 
 #. type: figure
 #: sections/heroes.tex:70
-#, no-wrap
 msgid ""
 "[h]\n"
 "  \\begin{minipage}[t]{0.5\\textwidth}\n"
@@ -173,7 +171,7 @@ msgid ""
 "      \\item \\textbf{Defense} – Number of Defense Cards in your Starting Deck.\n"
 "      \\item \\textbf{Power} – Number of Power Cards in your Starting Deck.\n"
 "      \\item \\textbf{Knowledge} – Number of Knowledge Cards in your Starting Deck.\n"
-"      \\item \\textbf{Starting Ability} – Reminder for the unique Ability Card\\index{Ability Card} the Hero starts with.\n"
+"      \\item \\textbf{Starting Ability} – Reminder for the unique Ability Card the Hero starts with.\n"
 "      \\item \\textbf{Hero Specialty} – Reminder for the Specialty Cards the Hero adds to their deck at the start of the game and after specific Level ups.\n"
 "        Each hero has three Specialty Cards.\n"
 "      \\item \\textbf{Level Tracker} – Whenever a Main Hero gains 1 or more Experience \\includesvg[height=10px]{\\svgs/experience.svg}, move the cube that number of steps on this track.\n"
@@ -201,7 +199,7 @@ msgstr ""
 "      \\item \\textbf{Obrona} – Określa liczbę Kart Obrony w Talii Początkowej.\n"
 "      \\item \\textbf{Moc} – Określa liczbę Kart Mocy w Talii Początkowej.\n"
 "      \\item \\textbf{Wiedza} – Określa liczbę Kart Wiedzy w Talii Początkowej.\n"
-"      \\item \\textbf{Zdolność Początkowa} – Określa Kartę Zdolności \\index{Karta Zdolości} dołączaną do Talii Początkowej Bohatera.\n"
+"      \\item \\textbf{Zdolność Początkowa} – Określa Kartę Zdolności dołączaną do Talii Początkowej Bohatera.\n"
 "      \\item \\textbf{Specjalność Bohatera} – Określa Karty Specjalności dołączane do Talii Początkowej Bohatera i po osiągnięciu określonych Poziomów.\n"
 "        Każdy Bohater posiada trzy Karty Specjalności.\n"
 "      \\item \\textbf{Tor PD} – Ilekroć Bohater Główny zdobywa 1 lub więcej Punktów Doświadczenia \\includesvg[height=10px]{\\svgs/experience.svg}, przesuń kostkę o tę liczbę pól na Torze PD.\n"
@@ -304,11 +302,10 @@ msgstr ""
 
 #. type: multicols
 #: sections/heroes.tex:150
-#, no-wrap
 msgid ""
 "\\subsection*{\\hypertarget{Level}{Level Effects}}\n"
 "Main Heroes always start each Scenario at Level 1\\index{Level} and may Level up by gaining Experience \\includesvg[height=10px]{\\svgs/experience.svg}.\n"
-"The most common sources of gaining Experience are the \\hyperlink{Resources}{Treasure Die} \\includesvg[height=10px]{\\svgs/treasure.svg} and \\hyperlink{Combatexperience}{Combat}.\n"
+"The most common sources of gaining Experience are the \\hyperlink{Treasure Die}{Treasure Die} \\includesvg[height=10px]{\\svgs/treasure.svg} and \\hyperlink{Combatexperience}{Combat}.\n"
 "Each new Level up requires \\textbf{2 Experience}.\n"
 "When a Main Hero reaches a new Level, resolve the effects of the Level up immediately.\n"
 "Gaining Experience at Level 7 has no effect.\\par\n"
@@ -343,7 +340,7 @@ msgid ""
 msgstr ""
 "\\subsection*{\\hypertarget{Level}{Efekty Poziomów}}\n"
 "Bohater Główny rozpoczyna każdy Scenariusz z Poziomem 1.\\index{Poziom} i może osiągnąć kolejny Poziom poprzez zdobywanie PD \\includesvg[height=10px]{\\svgs/experience.svg}.\n"
-"Najczęściej będzie zdobywać Doświadczenie przez \\hyperlink{Resources}{Kości Skarbu} \\includesvg[height=10px]{\\svgs/treasure.svg} oraz \\hyperlink{Combatexperience}{Walkę}.\n"
+"Najczęściej będzie zdobywać Doświadczenie przez \\hyperlink{Treasure Die}{Kości Skarbu} \\includesvg[height=10px]{\\svgs/treasure.svg} oraz \\hyperlink{Combatexperience}{Walkę}.\n"
 "Każdy kolejny Poziom wymaga \\textbf{2 PD}.\n"
 "Kiedy Bohater Główny osiąga nowy Poziom, natychmiast rozpatrz efekty osiągnięcia Poziomu.\n"
 "Zdobywanie Doświadczenia na Poziomie 7 nie przynosi żadnego rezultatu.\\par\n"

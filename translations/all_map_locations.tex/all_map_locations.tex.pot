@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-05-03 08:54+0100\n"
+"POT-Creation-Date: 2024-05-18 21:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
+#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
 #: sections/all_map_locations.tex:419 sections/combat.tex:5
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
-#: sections/map_elements.tex:118 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:77
+#: sections/map_elements.tex:122 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:56 sections/town.tex:5
 #: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
@@ -58,7 +58,7 @@ msgid ""
 "    \\small\n"
 "    \\mbox{\\textbf{I-VII}} & Field Difficulty corresponding to the level of Neutral Units.\\smallskip \\\\\n"
 "    \\includesvg[height=15px]{\\svgs/treasure.svg} & \\parbox{0.7\\hsize}{\n"
-"        Roll a Treasure Die\\index{Treasure Die}\\index{Dice} and gain the indicated bonus (\\includesvg[height=10px]{\\svgs/resource_die.svg}, \\includesvg[height=10px]{\\svgs/2_treasure_die.svg}, \\includesvg[height=10px]{\\svgs/experience.svg}, or \\includesvg[height=10px]{\\svgs/artifact.svg}).\n"
+"      Roll a \\hypertarget{Treasure Die}{Treasure Die}\\index{Treasure Die}\\index{Dice} and gain the indicated bonus (\\includesvg[height=10px]{\\svgs/resource_die.svg}, \\includesvg[height=10px]{\\svgs/2_treasure_die.svg}, \\includesvg[height=10px]{\\svgs/experience.svg}, or \\includesvg[height=10px]{\\svgs/artifact.svg}).\n"
 "    }\n"
 "    \\begin{tikzpicture}[overlay]\n"
 "      \\node at (1, 0.25) {\\includegraphics[width=0.2\\linewidth]{\\images/treasure_die.png}};\n"
@@ -227,7 +227,7 @@ msgstr ""
 #: sections/all_map_locations.tex:132 sections/credits.tex:35
 #: sections/credits.tex:39 sections/expansion_content.tex:57
 #: sections/game_modes.tex:25 sections/round_structure.tex:28
-#: sections/setup.tex:64 sections/town.tex:28 sections/town.tex:34
+#: sections/setup.tex:115 sections/town.tex:28 sections/town.tex:34
 #: sections/units.tex:104
 #, no-wrap
 msgid ""
@@ -338,7 +338,7 @@ msgstr ""
 
 #. type: Plain text
 #: sections/all_map_locations.tex:190 sections/credits.tex:5
-#: sections/deckbuilding.tex:160 sections/heroes.tex:70
+#: sections/deckbuilding.tex:162 sections/heroes.tex:70
 #: sections/introduction.tex:5
 msgid "\\bigbreak"
 msgstr ""
@@ -655,7 +655,7 @@ msgstr ""
 #: sections/all_map_locations.tex:444
 #, no-wrap
 msgid ""
-"{\\centering\\textbf{\\hypertarget{Random Town}{Random Town}}\\par}\n"
+"{\\centering\\textbf{\\hypertarget{Random Town}{Random Town}\\index{Random Town}}\\par}\n"
 "\\framedimage[\\linewidth]{\\map_locations/random_town.jpg}\n"
 "{\\small Category: \\textbf{Flaggable}\\\\\n"
 "  When revealed, all players roll 2 \\includesvg[height=10px]{\\svgs/resource_die.svg}.\n"
