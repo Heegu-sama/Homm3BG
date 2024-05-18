@@ -80,49 +80,49 @@ jobs:
           export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
           ./${PO4A_DIR}/po4a -v --no-update po4a.cfg
 
-      - name: Compile rule book
-        uses: xu-cheng/latex-action@v3
-        with:
-          extra_system_packages: "inkscape"
-          latexmk_use_lualatex: ${{ matrix.luaengine }}
-          latexmk_shell_escape: true
-          root_file: main_${{ matrix.language }}.tex
-
-      - name: Install ghostscript
-        run: |
-          wget --quiet ${{ env.GHOSTSCRIPT_URL }}
-          tar -xvf gs_10.03.0_amd64_snap.tgz
-          sudo snap install ./gs_10.03.0_amd64_snap/gs_10.03.0_amd64.snap --devmode
-
-      - name: Optimize PDF
-        run: |
-          du -sh main_${{ matrix.language }}.pdf
-          tools/optimize.sh ${{ matrix.language }}
-          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
-          du -sh main_${{ matrix.language }}.pdf
-
-      - uses: actions/upload-artifact@v4
-        if: github.event_name == 'pull_request'
-        with:
-          name: main_${{ matrix.language }}
-          path: main_${{ matrix.language }}.pdf
-          retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
-
-      - name: Install pdfinfo
-        if: ${{ matrix.language == 'en' }}
-        run: sudo apt-get install -y poppler-utils
-
-      - name: Check number of pages
-        id: check_pages
-        if: ${{ matrix.language == 'en' }}
-        run: |
-          NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
-          echo "NUM_OF_PAGES=${NUM_OF_PAGES}" >> "$GITHUB_OUTPUT"
-
-      - name: Move file
-        run: |
-          mkdir ${{ matrix.language }}
-          mv main_${{ matrix.language }}.pdf ${{ matrix.language }}
+      # - name: Compile rule book
+      #   uses: xu-cheng/latex-action@v3
+      #   with:
+      #     extra_system_packages: "inkscape"
+      #     latexmk_use_lualatex: ${{ matrix.luaengine }}
+      #     latexmk_shell_escape: true
+      #     root_file: main_${{ matrix.language }}.tex
+      #
+      # - name: Install ghostscript
+      #   run: |
+      #     wget --quiet ${{ env.GHOSTSCRIPT_URL }}
+      #     tar -xvf gs_10.03.0_amd64_snap.tgz
+      #     sudo snap install ./gs_10.03.0_amd64_snap/gs_10.03.0_amd64.snap --devmode
+      #
+      # - name: Optimize PDF
+      #   run: |
+      #     du -sh main_${{ matrix.language }}.pdf
+      #     tools/optimize.sh ${{ matrix.language }}
+      #     mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
+      #     du -sh main_${{ matrix.language }}.pdf
+      #
+      # - uses: actions/upload-artifact@v4
+      #   if: github.event_name == 'pull_request'
+      #   with:
+      #     name: main_${{ matrix.language }}
+      #     path: main_${{ matrix.language }}.pdf
+      #     retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
+      #
+      # - name: Install pdfinfo
+      #   if: ${{ matrix.language == 'en' }}
+      #   run: sudo apt-get install -y poppler-utils
+      #
+      # - name: Check number of pages
+      #   id: check_pages
+      #   if: ${{ matrix.language == 'en' }}
+      #   run: |
+      #     NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+      #     echo "NUM_OF_PAGES=${NUM_OF_PAGES}" >> "$GITHUB_OUTPUT"
+      #
+      # - name: Move file
+      #   run: |
+      #     mkdir ${{ matrix.language }}
+      #     mv main_${{ matrix.language }}.pdf ${{ matrix.language }}
 
       # Printable build goes below
       - uses: actions/setup-python@v5
@@ -141,15 +141,15 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
-          latexmk_use_lualatex: ${{ matrix.luaengine }}
-          latexmk_shell_escape: true
-          post_compile: |
-            ${{ matrix.luaengine && 'lualatex' || 'pdflatex' }} --shell-escape '\AtBeginDocument{\toggletrue{printable}} \input{main_${{ matrix.language }}.tex}'
+          pre_compile: |
             echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && \
             upmendex -s index_style main_${{ matrix.language }} && \
-            sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}\\par}@g' main_${{ matrix.language }}.ind && \
+            sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}\\par}@g' main_${{ matrix.language }}.ind
+          compiler: ${{ matrix.luaengine && 'lualatex' || 'pdflatex' }}
+          args: --shell-escape '\AtBeginDocument{\toggletrue{printable}} \input{main_${{ matrix.language }}.tex}'
+          post_compile: |
             ${{ matrix.luaengine && 'lualatex' || 'pdflatex' }} --shell-escape '\AtBeginDocument{\toggletrue{printable}} \input{main_${{ matrix.language }}.tex}'
-          root_file: main_${{ matrix.language }}.tex
+          root_file: " "
 
       - name: Optimize PDF
         run: |
