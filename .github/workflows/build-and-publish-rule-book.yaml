@@ -141,14 +141,13 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
-          pre_compile: |
-            echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && \
-            upmendex -s index_style main_${{ matrix.language }} && \
-            sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}\\par}@g' main_${{ matrix.language }}.ind
           compiler: ${{ matrix.luaengine && 'lualatex' || 'pdflatex' }}
           args: --shell-escape '\AtBeginDocument{\toggletrue{printable}} \input{main_${{ matrix.language }}.tex}'
           post_compile: |
-            ${{ matrix.luaengine && 'lualatex' || 'pdflatex' }} --shell-escape '\AtBeginDocument{\toggletrue{printable}} \input{main_${{ matrix.language }}.tex}'
+            echo "icu_locale \"${{ matrix.language }}\"" >> index_style.ist && \
+            upmendex -s index_style main_${{ matrix.language }} && \
+            sed -i 's@\(\\noindent\\textbf{\)\(.\)@\\noindent\\textbf{\2}\\par}@g' main_${{ matrix.language }}.ind && \
+            for _ in {1..2}; do ${{ matrix.luaengine && 'lualatex' || 'pdflatex' }} --shell-escape '\AtBeginDocument{\toggletrue{printable}} \input{main_${{ matrix.language }}.tex}'; done
           root_file: " "
 
       - name: Optimize PDF
