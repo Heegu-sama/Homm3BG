@@ -32,16 +32,16 @@ Click in the table to download the most recent builds in the chosen language:
         </tr>
         <tr>
             <td style="text-align:left">🇬🇧 English</td>
-            <td>-</td>
+            <td style="text-align:center">-</td>
             <td>-</td>
             <td>🇬🇧🪨🖥️</td>
             <td>🇬🇧🪨🖨️</td>
-            <td>️🇬🇧⚗️🖥️</td>
+            <td>️<a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf">🇬🇧⚗️🖥️</a></td>
             <td>🇬🇧⚗️🖨️</td>
         </tr>
         <tr>
             <td style="text-align:left">🇵🇱 Polski</td>
-            <td>100%</td>
+            <td style="text-align:center">100%</td>
             <td>100%</td>
             <td>🇵🇱🪨🖥️</td>
             <td>🇵🇱🪨🖨️</td>
@@ -50,7 +50,7 @@ Click in the table to download the most recent builds in the chosen language:
         </tr>
         <tr>
             <td style="text-align:left">🇪🇸 Español</td>
-            <td>100%</td>
+            <td style="text-align:center">100%</td>
             <td>0%</td>
             <td>🇪🇸🪨🖥️</td>
             <td>🇪🇸🪨🖨️</td>
@@ -59,7 +59,7 @@ Click in the table to download the most recent builds in the chosen language:
         </tr>
         <tr>
             <td style="text-align:left">🇫🇷 Français</td>
-            <td>100%</td>
+            <td style="text-align:center">100%</td>
             <td>100%</td>
             <td>🇫🇷🪨🖥️</td>
             <td>🇫🇷🪨🖨️</td>
@@ -68,7 +68,7 @@ Click in the table to download the most recent builds in the chosen language:
         </tr>
         <tr>
             <td style="text-align:left">🇷🇺 Русский</td>
-            <td>39%</td>
+            <td style="text-align:center">~39%</td>
             <td>0%</td>
             <td>n/a</td>
             <td>n/a</td>
@@ -77,7 +77,7 @@ Click in the table to download the most recent builds in the chosen language:
         </tr>
         <tr>
             <td style="text-align:left">🇺🇦 Українська</td>
-            <td>100%</td>
+            <td style="text-align:center">100%</td>
             <td>0%</td>
             <td>🇺🇦🪨🖥️</td>
             <td>🇺🇦🪨🖨️</td>
@@ -86,7 +86,7 @@ Click in the table to download the most recent builds in the chosen language:
         </tr>
         <tr>
             <td style="text-align:left">🇩🇪 Deutsch</td>
-            <td>~15%</td>
+            <td style="text-align:center">~15%</td>
             <td>0%</td>
             <td>n/a</td>
             <td>n/a</td>
