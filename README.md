@@ -6,6 +6,37 @@ Efforts are ongoing to translate the rule book to languages other than English.
 Please reach out if you'd like to help with translating.
 Click in the table to download the most recent builds in the chosen language:
 
+<table>
+    <thead>
+        <tr>
+            <th>Language</th>
+            <th colspan=2>Progress</th>
+            <th colspan=2>v1.2 - Stable</th>
+            <th colspan=2>Latest Build</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td>Text</td>
+            <td>Images</td>
+            <td>Digital</td>
+            <td>Printable</td>
+            <td>Digital</td>
+            <td>Printable</td>
+        </tr>
+        <tr>
+            <td>🇬🇧 English</td>
+            <td>-</td>
+            <td>-</td>
+            <td>🇬🇧🖥️</td>
+            <td>🇬🇧🖨️</td>
+            <td>🇬🇧🖥️</td>
+            <td>🇬🇧🖨️</td>
+        </tr>
+    </tbody>
+</table>
+
 |                 | Progress |                                📜 **Rewritten Rule Book**                                 |                              🖨️ **Rewritten Rule Book - printable version**                              |
 |:----------------|:--------:|:-----------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------:|
 | 🇬🇧 English    |   100%   | [🇬🇧📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf) | [🇬🇧🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf) |
