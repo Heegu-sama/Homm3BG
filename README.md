@@ -6,13 +6,18 @@ Efforts are ongoing to translate the rule book to languages other than English.
 Please reach out if you'd like to help with translating.
 Click in the table to download the most recent builds in the chosen language:
 
+<style>
+  table,tr,th,td {
+     text-align: center;
+  }
+</style>
 <table>
     <thead>
         <tr>
             <th>Language</th>
             <th colspan=2>Progress</th>
-            <th colspan=2>v1.2 - Stable</th>
-            <th colspan=2>Latest Build</th>
+            <th colspan=2>v1.2 🪨<br>(Stable)</th>
+            <th colspan=2>Latest Build ⚗️<br>(Experimental)</th>
         </tr>
     </thead>
     <tbody>
@@ -26,13 +31,67 @@ Click in the table to download the most recent builds in the chosen language:
             <td>Printable</td>
         </tr>
         <tr>
-            <td>🇬🇧 English</td>
+            <td style="text-align:left">🇬🇧 English</td>
             <td>-</td>
             <td>-</td>
-            <td>🇬🇧🖥️</td>
-            <td>🇬🇧🖨️</td>
-            <td>🇬🇧🖥️</td>
-            <td>🇬🇧🖨️</td>
+            <td>🇬🇧🪨🖥️</td>
+            <td>🇬🇧🪨🖨️</td>
+            <td>️🇬🇧⚗️🖥️</td>
+            <td>🇬🇧⚗️🖨️</td>
+        </tr>
+        <tr>
+            <td style="text-align:left">🇵🇱 Polski</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>🇵🇱🪨🖥️</td>
+            <td>🇵🇱🪨🖨️</td>
+            <td>️🇵🇱⚗️🖥️</td>
+            <td>🇵🇱⚗️🖨️</td>
+        </tr>
+        <tr>
+            <td style="text-align:left">🇪🇸 Español</td>
+            <td>100%</td>
+            <td>0%</td>
+            <td>🇪🇸🪨🖥️</td>
+            <td>🇪🇸🪨🖨️</td>
+            <td>️🇪🇸⚗️🖥️</td>
+            <td>🇪🇸⚗️🖨️</td>
+        </tr>
+        <tr>
+            <td style="text-align:left">🇫🇷 Français</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>🇫🇷🪨🖥️</td>
+            <td>🇫🇷🪨🖨️</td>
+            <td>️🇫🇷⚗️🖥️</td>
+            <td>🇫🇷⚗️🖨️</td>
+        </tr>
+        <tr>
+            <td style="text-align:left">🇷🇺 Русский</td>
+            <td>39%</td>
+            <td>0%</td>
+            <td>n/a</td>
+            <td>n/a</td>
+            <td>️🇷🇺⚗️🖥️</td>
+            <td>🇷🇺⚗️🖨️</td>
+        </tr>
+        <tr>
+            <td style="text-align:left">🇺🇦 Українська</td>
+            <td>100%</td>
+            <td>0%</td>
+            <td>🇺🇦🪨🖥️</td>
+            <td>🇺🇦🪨🖨️</td>
+            <td>️🇺🇦⚗️🖥️</td>
+            <td>🇺🇦⚗️🖨️</td>
+        </tr>
+        <tr>
+            <td style="text-align:left">🇩🇪 Deutsch</td>
+            <td>~15%</td>
+            <td>0%</td>
+            <td>n/a</td>
+            <td>n/a</td>
+            <td>️🇩🇪⚗️🖥️</td>
+            <td>🇩🇪⚗️🖨️</td>
         </tr>
     </tbody>
 </table>
