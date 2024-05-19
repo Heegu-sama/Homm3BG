@@ -166,7 +166,7 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_rules.tex:59
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "AI Heroes use two automated Decks during Combat: the \\textbf{AI Deck}, and the \\textbf{Spell Deck}.\n"
 "The AI Deck is built using three types of AI cards: Might \\includesvg[height=10px]{\\svgs/might.svg}, Magic \\includesvg[height=10px]{\\svgs/magic.svg} and Skill \\includesvg[height=10px]{\\svgs/skill.svg}.\n"
@@ -177,15 +177,15 @@ msgid ""
 "Shuffle the AI and Spell Decks during setup after building them.\n"
 "\n"
 msgstr ""
-"Bohaterowie AI używają dwóch Talii Kart podczas Walki: \\textbf{Talii AI} oraz \\textbf{Talii Magii}. Talia AI jest tworzona przy użyciu trzech rodzajów Kart AI: Mocy \\includesvg[height=10px]{\\svgs/might.svg}, Magii \\includesvg[height=10px]{\\svgs/magic.svg} i Zdolności \\includesvg[height=10px]{\\svgs/skill.svg}.\n"
-"Każdy Scenariusz Kampanii podaje liczbę Kart każdego rodzaju Kart AI wchodzących w skład Talii AI.Karty Mocy \\includesvg[height=10px]{\\svgs/might.svg} i Zdolności \\includesvg[height=10px]{\\svgs/skill.svg} mają dwa warianty. Wybierz te karty \\textbf{losowo} podczas budowania Talii. Jeśli w Talii są Karty Zdolności, wyszukaj Karty Zdolności, do których się odnoszą, i odłóż je na bok.\n"
+"Bohaterowie AI używają dwóch Talii Kart w Walce: \\textbf{AI} oraz \\textbf{Magii}. Talia AI jest tworzona z trzech rodzajów Kart AI: Mocy \\includesvg[height=10px]{\\svgs/might.svg}, Magii \\includesvg[height=10px]{\\svgs/magic.svg} i Umiejętności \\includesvg[height=10px]{\\svgs/skill.svg}.\n"
+"Każdy Scenariusz Kampanii podaje liczbę każdego rodzaju Kart wchodzących w skład Talii AI. Karty Mocy \\includesvg[height=10px]{\\svgs/might.svg} i Umiejętności \\includesvg[height=10px]{\\svgs/skill.svg} mają dwa warianty. Wybierz te karty \\textbf{losowo} podczas budowania Talii. Jeśli do Talii dołączone są Karty Umiejętności, wyszukaj odpowiadające im Karty Zdolności i odłóż je na bok.\n"
 "Stwórz \\textbf{Talię Magii} AI, oddzielając wskazane Zaklęcia od zwykłej Talii Magii.\n"
-"Potasuj Talię AI i Talię Zaklęć podczas przygotowania do gry.\n"
+"Potasuj obie Talie AI podczas przygotowania gry.\n"
 "\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:66
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI Card} and follow its instructions before the Unit moves and/or attacks.\n"
 "If AI Deck is depleted during Combat, stop drawing from it.\n"
@@ -195,12 +195,12 @@ msgid ""
 "If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
 "\n"
 msgstr ""
-"Kiedy Bohater AI \\textbf{Aktywuje} Jednostkę, dobierz Kartę AI \\index{Karta AI} i rozpatrz ją zanim Jednostka wykona ruch lub zaatakuje.\n"
-"Jeżeli Talia AI wyczerpie się podczas Walki, nie dobieraj Kart.\n"
-"Efekt każdej Karty AI zależy od \\hyperlink{Difficulty}{Poziomu Trudności} gry.\n"
-"Karta Mocy \\includesvg[height=10px]{\\svgs/might.svg} zostaje przy Jednostce do momentu gdy nastąpi pierwszy atak/obrona.\n"
-"Talia Zaklęć AI jest używana za każdym razem, gdy dobierana jest Karta Magii \\includesvg[height=10px]{\\svgs/magic.svg} z Talii AI.\n"
-"Jeżeli Bohater AI otrzyma polecenie dobrania Karty, dobierze i rozpatrzy \\textbf{kolejną Kartę} z Talii AI.\n"
+"Kiedy Bohater AI \\textbf{Aktywuje} Jednostkę, dobierz Kartę AI \\index{Karta AI} i rozpatrz ją przed atakiem i/lub ruchem Jednostki.\n"
+"Jeżeli Talia AI wyczerpie się podczas Walki, nie dobieraj z niej Kart.\n"
+"Efekt Kart AI wynika z \\hyperlink{Difficulty}{Poziomu Trudności} gry.\n"
+"Karta Mocy \\includesvg[height=10px]{\\svgs/might.svg} zostaje przy Jednostce do momentu pierwszego ataku/obrony.\n"
+"Talii Zaklęć AI używa się zawsze, gdy dobierana jest Karta Magii \\includesvg[height=10px]{\\svgs/magic.svg} z Talii AI.\n"
+"Jeśli Bohater AI powinien dobrać Kartę, dobierz i rozpatrz \\textbf{kolejną Kartę} z Talii AI.\n"
 "\n"
 
 #. type: multicols
@@ -215,7 +215,7 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_rules.tex:71
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "These rules apply during Combat in \\textbf{Solo}\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
 "When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\\par\n"
@@ -227,26 +227,14 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_rules.tex:74
-#, fuzzy, no-wrap
-#| msgid ""
-#| "Enemy Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units prioritize attacking Units of the same tier.\n"
-#| "If this is impossible, they attack the closest Unit, prioritizing the lowest tier one.\\par\n"
-#| "Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units prioritize attacking other Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier.\n"
-#| "If there are no Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same tier order.\n"
-#| "If there's more than one valid target, they attack the closest one.\\par\n"
-#| "If there's ever a tie between equally valid targets for any Units, the player chooses which Unit is attacked.\n"
-#| "Enemy units cannot \\hyperlink{Defend}{Defend} unless instructed to.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "Enemy Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units prioritize attacking Units of the \\textbf{same} tier.\n"
 "If this is impossible, they attack the Unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
 "\n"
 msgstr ""
 "Wrogie Jednostki Naziemne \\includesvg[height=10px]{\\svgs/unit_ground.svg} oraz Latające \\includesvg[height=10px]{\\svgs/unit_flying.svg} atakują w pierwszej kolejności Jednostki \\textbf{tego samego} poziomu.\n"
-"Jeśli jest to niemożliwe, atakują Jednostkę niższego poziomu (w malejącej kolejności aż do brązowego), a jeśli i to jest niemożliwe, Jednostkę wyższego poziomu (w rosnącej kolejności poziomów).\\par\n"
-"Jednostki Strzelające \\includesvg[height=10px]{\\svgs/unit_ranged.svg} atakują najpierw inne Jednostki Strzelające \\includesvg[height=10px]{\\svgs/unit_ranged.svg} tego samego poziomu, następnie niższego poziomu, a na końcu wyższego w takiej samej kolejności jak napisano powyżej.\n"
-"Jeśli nie ma Jednostek Strzelających, które mogłyby być celem Ataku, w pierwszej kolejności atakują Jednostki Lądowe \\includesvg[height=10px]{\\svgs/unit_ground.svg} oraz Latające \\includesvg[height=10px]{\\svgs/unit_flying.svg} w tej samej kolejności poziomów.\\par\n"
-"\n"
+"Jeśli jest to niemożliwe, atakują Jednostkę niższego poziomu (w \\textbf{malejącej} kolejności aż do brązowego), a jeśli i to jest niemożliwe, Jednostkę wyższego poziomu (w \\textbf{rosnącej} kolejności poziomów).\\par\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:80
@@ -259,34 +247,28 @@ msgid ""
 "- \\includesvg[height=10px]{\\svgs/azure.svg}.}\n"
 "\n"
 msgstr ""
+"\\textit{Przykład: \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg} atakuje kolejno:\n"
+"\\includesvg[height=10px]{\\svgs/golden.svg}\n"
+" \\includesvg[height=10px]{\\svgs/silver.svg}\n"
+" \\includesvg[height=10px]{\\svgs/bronze.svg}\n"
+" \\includesvg[height=10px]{\\svgs/azure.svg}.}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:83
-#, fuzzy, no-wrap
-#| msgid ""
-#| "Enemy Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units prioritize attacking Units of the same tier.\n"
-#| "If this is impossible, they attack the closest Unit, prioritizing the lowest tier one.\\par\n"
-#| "Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units prioritize attacking other Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier.\n"
-#| "If there are no Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same tier order.\n"
-#| "If there's more than one valid target, they attack the closest one.\\par\n"
-#| "If there's ever a tie between equally valid targets for any Units, the player chooses which Unit is attacked.\n"
-#| "Enemy units cannot \\hyperlink{Defend}{Defend} unless instructed to.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units prioritize attacking other Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
 "If there are no Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same tier order.\\par\n"
 "\n"
 msgstr ""
-"Wrogie Jednostki Naziemne \\includesvg[height=10px]{\\svgs/unit_ground.svg} oraz Latające \\includesvg[height=10px]{\\svgs/unit_flying.svg} atakują w pierwszej kolejności Jednostki \\textbf{tego samego} poziomu.\n"
-"Jeśli jest to niemożliwe, atakują Jednostkę niższego poziomu (w malejącej kolejności aż do brązowego), a jeśli i to jest niemożliwe, Jednostkę wyższego poziomu (w rosnącej kolejności poziomów).\\par\n"
-"Jednostki Strzelające \\includesvg[height=10px]{\\svgs/unit_ranged.svg} atakują najpierw inne Jednostki Strzelające \\includesvg[height=10px]{\\svgs/unit_ranged.svg} tego samego poziomu, następnie niższego poziomu, a na końcu wyższego w takiej samej kolejności jak napisano powyżej.\n"
-"Jeśli nie ma Jednostek Strzelających, które mogłyby być celem Ataku, w pierwszej kolejności atakują Jednostki Lądowe \\includesvg[height=10px]{\\svgs/unit_ground.svg} oraz Latające \\includesvg[height=10px]{\\svgs/unit_flying.svg} w tej samej kolejności poziomów.\\par\n"
+"Jednostki Strzelające \\includesvg[height=10px]{\\svgs/unit_ranged.svg} atakują najpierw inne Jednostki Strzelające \\includesvg[height=10px]{\\svgs/unit_ranged.svg} tego samego poziomu, potem niższego poziomu, a na końcu wyższego w takiej samej kolejności jak napisano powyżej.\n"
+"Jeśli nie ma Jednostek Strzelających, które mogłyby być celem Ataku, najpierw atakują Jednostki Naziemne \\includesvg[height=10px]{\\svgs/unit_ground.svg} oraz Latające \\includesvg[height=10px]{\\svgs/unit_flying.svg} w tej samej kolejności poziomów.\\par\n"
 "\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:93
-#, fuzzy, no-wrap
-#| msgid "\\hommtable{14}{ \\centering \\textbf{Trade Table}\\\\ \\bigskip \\begin{tabularx}{\\linewidth}{XXXX} \\darkcell{\\color{white}Sells/gets} & \\darkcell{...to purchase \\includesvg[height=10px]{\\svgs/gold.svg}} & \\darkcell{...to purchase \\includesvg[height=10px]{\\svgs/valuablegreater.svg}} & \\darkcell{...to purchase \\includesvg[height=10px]{\\svgs/building_materials.svg}} \\\\ \\darkcell{I am selling \\includesvg[height=10px]{\\svgs/gold.svg}...} & \\lightcell{--} & \\lightcell{6 \\includesvg[height=10px]{\\svgs/gold.svg} \\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 \\includesvg[height=10px]{\\svgs/valuablegreater.svg}} & \\lightcell{2 \\includesvg[height=10px]{\\svgs/gold.svg} \\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 \\includesvg[height=10px]{\\svgs/building_materials.svg}} \\\\ \\darkcell{I am selling \\includesvg[height=10px]{\\svgs/valuablegreater.svg}...} & \\lightcell{1 \\includesvg[height=10px]{\\svgs/valuablegreater.svg} \\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 3 \\includesvg[height=10px]{\\svgs/gold.svg}} & \\lightcell{--} & \\lightcell{1 \\includesvg[height=10px]{\\svgs/valuablegreater.svg} \\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 2 \\includesvg[height=10px]{\\svgs/building_materials.svg}} \\\\ \\darkcell{I am selling \\includesvg[height=10px]{\\svgs/building_materials.svg}...} & \\lightcell{1 \\includesvg[height=10px]{\\svgs/building_materials.svg} \\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 \\includesvg[height=10px]{\\svgs/gold.svg}} & \\lightcell{3 \\includesvg[height=10px]{\\svgs/building_materials.svg} \\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 \\includesvg[height=10px]{\\svgs/valuablegreater.svg}} & \\lightcell{--} \\\\ \\end{tabularx} }"
+#, no-wrap
 msgid ""
 "\\textit{Example: \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg} has this priority:\n"
 "\\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
@@ -298,11 +280,21 @@ msgid ""
 "- \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
 "- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}.}\n"
 "\n"
-msgstr "\\hommtable{14}{ \\centering \\textbf{Tabela cen}\\\\ \\bigskip \\begin{tabularx}{\\linewidth}{XXXX} \\darkcell{\\color{white}Transakcja} & \\darkcell{...żeby kupić \\includesvg[height=10px]{\\svgs/gold.svg}} & \\darkcell{...żeby kupić \\includesvg[height=10px]{\\svgs/valuablegreater.svg}} & \\darkcell{...żeby kupić \\includesvg[height=10px]{\\svgs/building_materials.svg}} \\\\ \\darkcell{Sprzedaję \\includesvg[height=10px]{\\svgs/gold.svg}...} & \\lightcell{--} & \\lightcell{6 \\includesvg[height=10px]{\\svgs/gold.svg} \\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 \\includesvg[height=10px]{\\svgs/valuablegreater.svg}} & \\lightcell{2 \\includesvg[height=10px]{\\svgs/gold.svg} \\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 \\includesvg[height=10px]{\\svgs/building_materials.svg}} \\\\ \\darkcell{Sprzedaję \\includesvg[height=10px]{\\svgs/valuablegreater.svg}...} & \\lightcell{1 \\includesvg[height=10px]{\\svgs/valuablegreater.svg} \\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 3 \\includesvg[height=10px]{\\svgs/gold.svg}} & \\lightcell{--} & \\lightcell{1 \\includesvg[height=10px]{\\svgs/valuablegreater.svg} \\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 2 \\includesvg[height=10px]{\\svgs/building_materials.svg}} \\\\ \\darkcell{Sprzedaję \\includesvg[height=10px]{\\svgs/building_materials.svg}...} & \\lightcell{1 \\includesvg[height=10px]{\\svgs/building_materials.svg} \\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 \\includesvg[height=10px]{\\svgs/gold.svg}} & \\lightcell{3 \\includesvg[height=10px]{\\svgs/building_materials.svg} \\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 \\includesvg[height=10px]{\\svgs/valuablegreater.svg}} & \\lightcell{--} \\\\ \\end{tabularx} }"
+msgstr ""
+"\\textit{Przykład: \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg} atakuje kolejno:\n"
+"\\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}.}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:96
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "In both cases, if there's more than one valid target, they attack the closest one.\n"
 "If there's ever a tie between equally valid targets, the player chooses which Unit is attacked.\\par\n"
