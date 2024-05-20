@@ -29,64 +29,64 @@ Click in the table to download the most recent builds in the chosen language:
             <td>🇬🇧 English</td>
             <td align="center">-</td>
             <td align="center">-</td>
-            <td align="center"><a href="#">🇬🇧🪨🖥️</a></td>
-            <td align="center"><a href="#">🇬🇧🪨🖨️</a></td>
-            <td align="center">️<a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf">🇬🇧⚗️🖥️</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf">🇬🇧⚗️🖨️</a></td>
+            <td align="center"><a href="#">download</a></td>
+            <td align="center"><a href="#">download</a></td>
+            <td align="center">️<a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf">download</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf">download</a></td>
         </tr>
         <tr>
             <td>🇵🇱 Polski</td>
             <td align="center">100%</td>
             <td align="center">100%</td>
-            <td align="center"><a href="#">🇵🇱🪨🖥️</a></td>
-            <td align="center"><a href="#">🇵🇱🪨🖨️</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf">️🇵🇱⚗️🖥️</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf">🇵🇱⚗️🖨️</a></td>
+            <td align="center"><a href="#">pobierz</a></td>
+            <td align="center"><a href="#">pobierz</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf">️pobierz</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf">pobierz</a></td>
         </tr>
         <tr>
             <td>🇪🇸 Español</td>
             <td align="center">100%</td>
             <td align="center">0%</td>
-            <td align="center"><a href="#">🇪🇸🪨🖥️</a></td>
-            <td align="center"><a href="#">🇪🇸🪨🖨️</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf">️🇪🇸⚗️🖥️</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf">🇪🇸⚗️🖨️</a></td>
+            <td align="center"><a href="#">descargar</a></td>
+            <td align="center"><a href="#">descargar</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf">️descargar</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf">descargar</a></td>
         </tr>
         <tr>
             <td>🇫🇷 Français</td>
             <td align="center">100%</td>
             <td align="center">100%</td>
-            <td align="center"><a href="#">🇫🇷🪨🖥️</a></td>
-            <td align="center"><a href="#">🇫🇷🪨🖨️</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf">️🇫🇷⚗️🖥️</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf">🇫🇷⚗️🖨️</a></td>
+            <td align="center"><a href="#">télécharger</a></td>
+            <td align="center"><a href="#">télécharger</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf">️télécharger</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf">télécharger</a></td>
         </tr>
         <tr>
             <td>🇷🇺 Русский</td>
             <td align="center">~39%</td>
             <td align="center">0%</td>
-            <td align="center">n/a</td>
-            <td align="center">n/a</td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf">️🇷🇺⚗️🖥️</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf">🇷🇺⚗️🖨️</a></td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf">️скачать</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf">скачать</a></td>
         </tr>
         <tr>
             <td>🇺🇦 Українська</td>
             <td align="center">100%</td>
             <td align="center">0%</td>
-            <td align="center"><a href="#">🇺🇦🪨🖥️</a></td>
-            <td align="center"><a href="#">🇺🇦🪨🖨️</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf">️🇺🇦⚗️🖥️</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf">🇺🇦⚗️🖨️</a></td>
+            <td align="center"><a href="#">завантажити</a></td>
+            <td align="center"><a href="#">завантажити</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf">️завантажити</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf">завантажити</a></td>
         </tr>
         <tr>
             <td>🇩🇪 Deutsch</td>
             <td align="center">~15%</td>
             <td align="center">0%</td>
-            <td align="center">n/a</td>
-            <td align="center">n/a</td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/main_de.pdf">️🇩🇪⚗️🖥️</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/printable_de.pdf">🇩🇪⚗️🖨️</a></td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/main_de.pdf">️speichern</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/printable_de.pdf">speichern</a></td>
         </tr>
     </tbody>
 </table>
@@ -293,5 +293,5 @@ It does not contain names (e.g., "BoardGameGeek") or parameter values (e.g., "px
 ## ✨ Assets
 
 All assets come from publicly available sources.
-Some of the images in the rule book (all in the [`assets/examples`](https://github.com/Heegu-sama/Homm3BG/tree/main/assets/examples) directory as of writing) were generated by [GIMP](https://www.gimp.org/).
-Their respective XCF files reside in [`assets/gimp-files`](https://github.com/Heegu-sama/Homm3BG/tree/main/assets/gimp-files) directory.
+Some of the images in the rule book (all in the [`assets/examples`](https://github.com/Heegu-sama/Homm3BG/tree/mai—ssets/examples) directory as of writing) were generated by [GIMP](https://www.gimp.org/).
+Their respective XCF files reside in [`assets/gimp-files`](https://github.com/Heegu-sama/Homm3BG/tree/mai—ssets/gimp-files) directory.
