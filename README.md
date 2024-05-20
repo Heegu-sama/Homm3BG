@@ -10,83 +10,83 @@ Click in the table to download the most recent builds in the chosen language:
     <thead>
         <tr>
             <th>Language</th>
-            <th colspan=2>Progress</th>
-            <th colspan=2>Version 1.2 🪨<br>(Stable)</th>
-            <th colspan=2>Latest Build ⚗️<br>(Experimental)</th>
+            <th colspan=2 align="center">Progress</th>
+            <th colspan=2 align="center">Version 1.2 🪨<br>(Stable)</th>
+            <th colspan=2 align="center">Latest Build ⚗️<br>(Experimental)</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td></td>
-            <td>✍️<br>Text</td>
-            <td>🏞️<br>Images</td>
-            <td>🖥️<br>Digital</td>
-            <td>🖨️<br>Printable</td>
-            <td>🖥️<br>Digital</td>
-            <td>🖨️<br>Printable</td>
+            <td align="center"></td>
+            <td align="center">✍️<br>Text</td>
+            <td align="center">🏞️<br>Images</td>
+            <td align="center">🖥️<br>Digital</td>
+            <td align="center">🖨️<br>Printable</td>
+            <td align="center">🖥️<br>Digital</td>
+            <td align="center">🖨️<br>Printable</td>
         </tr>
         <tr>
-            <td style="text-align:left">🇬🇧 English</td>
-            <td style="text-align:center">-</td>
-            <td>-</td>
-            <td><a href="#">🇬🇧🪨🖥️</a></td>
-            <td><a href="#">🇬🇧🪨🖨️</a></td>
-            <td>️<a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf">🇬🇧⚗️🖥️</a></td>
-            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf">🇬🇧⚗️🖨️</a></td>
+            <td>🇬🇧 English</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center"><a href="#">🇬🇧🪨🖥️</a></td>
+            <td align="center"><a href="#">🇬🇧🪨🖨️</a></td>
+            <td align="center">️<a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf">🇬🇧⚗️🖥️</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf">🇬🇧⚗️🖨️</a></td>
         </tr>
         <tr>
-            <td style="text-align:left">🇵🇱 Polski</td>
-            <td style="text-align:center">100%</td>
-            <td>100%</td>
-            <td><a href="#">🇵🇱🪨🖥️</a></td>
-            <td><a href="#">🇵🇱🪨🖨️</a></td>
-            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf">️🇵🇱⚗️🖥️</a></td>
-            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf">🇵🇱⚗️🖨️</a></td>
+            <td>🇵🇱 Polski</td>
+            <td align="center">100%</td>
+            <td align="center">100%</td>
+            <td align="center"><a href="#">🇵🇱🪨🖥️</a></td>
+            <td align="center"><a href="#">🇵🇱🪨🖨️</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf">️🇵🇱⚗️🖥️</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf">🇵🇱⚗️🖨️</a></td>
         </tr>
         <tr>
-            <td style="text-align:left">🇪🇸 Español</td>
-            <td style="text-align:center">100%</td>
-            <td>0%</td>
-            <td><a href="#">🇪🇸🪨🖥️</a></td>
-            <td><a href="#">🇪🇸🪨🖨️</a></td>
-            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf">️🇪🇸⚗️🖥️</a></td>
-            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf">🇪🇸⚗️🖨️</a></td>
+            <td>🇪🇸 Español</td>
+            <td align="center">100%</td>
+            <td align="center">0%</td>
+            <td align="center"><a href="#">🇪🇸🪨🖥️</a></td>
+            <td align="center"><a href="#">🇪🇸🪨🖨️</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf">️🇪🇸⚗️🖥️</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf">🇪🇸⚗️🖨️</a></td>
         </tr>
         <tr>
-            <td style="text-align:left">🇫🇷 Français</td>
-            <td style="text-align:center">100%</td>
-            <td>100%</td>
-            <td><a href="#">🇫🇷🪨🖥️</a></td>
-            <td><a href="#">🇫🇷🪨🖨️</a></td>
-            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf">️🇫🇷⚗️🖥️</a></td>
-            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf">🇫🇷⚗️🖨️</a></td>
+            <td>🇫🇷 Français</td>
+            <td align="center">100%</td>
+            <td align="center">100%</td>
+            <td align="center"><a href="#">🇫🇷🪨🖥️</a></td>
+            <td align="center"><a href="#">🇫🇷🪨🖨️</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf">️🇫🇷⚗️🖥️</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf">🇫🇷⚗️🖨️</a></td>
         </tr>
         <tr>
-            <td style="text-align:left">🇷🇺 Русский</td>
-            <td style="text-align:center">~39%</td>
-            <td>0%</td>
-            <td>n/a</td>
-            <td>n/a</td>
-            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf">️🇷🇺⚗️🖥️</a></td>
-            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf">🇷🇺⚗️🖨️</a></td>
+            <td>🇷🇺 Русский</td>
+            <td align="center">~39%</td>
+            <td align="center">0%</td>
+            <td align="center">n/a</td>
+            <td align="center">n/a</td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf">️🇷🇺⚗️🖥️</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf">🇷🇺⚗️🖨️</a></td>
         </tr>
         <tr>
-            <td style="text-align:left">🇺🇦 Українська</td>
-            <td style="text-align:center">100%</td>
-            <td>0%</td>
-            <td><a href="#">🇺🇦🪨🖥️</a></td>
-            <td><a href="#">🇺🇦🪨🖨️</a></td>
-            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf">️🇺🇦⚗️🖥️</a></td>
-            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf">🇺🇦⚗️🖨️</a></td>
+            <td>🇺🇦 Українська</td>
+            <td align="center">100%</td>
+            <td align="center">0%</td>
+            <td align="center"><a href="#">🇺🇦🪨🖥️</a></td>
+            <td align="center"><a href="#">🇺🇦🪨🖨️</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf">️🇺🇦⚗️🖥️</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf">🇺🇦⚗️🖨️</a></td>
         </tr>
         <tr>
-            <td style="text-align:left">🇩🇪 Deutsch</td>
-            <td style="text-align:center">~15%</td>
-            <td>0%</td>
-            <td>n/a</td>
-            <td>n/a</td>
-            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/main_de.pdf">️🇩🇪⚗️🖥️</a></td>
-            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/printable_de.pdf">🇩🇪⚗️🖨️</a></td>
+            <td>🇩🇪 Deutsch</td>
+            <td align="center">~15%</td>
+            <td align="center">0%</td>
+            <td align="center">n/a</td>
+            <td align="center">n/a</td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/main_de.pdf">️🇩🇪⚗️🖥️</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/printable_de.pdf">🇩🇪⚗️🖨️</a></td>
         </tr>
     </tbody>
 </table>
