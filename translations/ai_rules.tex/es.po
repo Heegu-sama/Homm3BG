@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-05-04 16:19+0200\n"
+"POT-Creation-Date: 2024-05-19 08:45+0200\n"
 "PO-Revision-Date: 2024-04-15 17:20+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -30,10 +30,10 @@ msgstr ""
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
-#: sections/map_elements.tex:118 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:77
+#: sections/map_elements.tex:122 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:56 sections/town.tex:5
 #: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
@@ -106,7 +106,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:30 sections/ai_rules.tex:81 sections/combat.tex:95
+#: sections/ai_rules.tex:30 sections/ai_rules.tex:100 sections/combat.tex:95
 #: sections/combat.tex:233 sections/expansion_content.tex:65
 #: sections/heroes.tex:34
 #, no-wrap
@@ -123,6 +123,7 @@ msgid ""
 "\n"
 msgstr ""
 "\\subsection*{Mazo IA}\n"
+"\\vspace{-1em}\n"
 "\n"
 
 #. type: multicols
@@ -178,12 +179,12 @@ msgid ""
 "Shuffle the AI and Spell Decks during setup after building them.\n"
 "\n"
 msgstr ""
-"La IA usa dos Mazos automáticos durante el Combate: el \\textbf{Mazo IA} y el \\textbf{Mazo de Hechizos}.\n"
+"La IA usa dos Mazos automáticamente durante el Combate: el \\textbf{Mazo IA} y el \\textbf{Mazo de Hechizos}.\n"
 "El mazo de la IA se construye con tres tipos de cartas: Fuerza \\includesvg[height=10px]{\\svgs/might.svg}, Magia \\includesvg[height=10px]{\\svgs/magic.svg} y Habilidad \\includesvg[height=10px]{\\svgs/skill.svg}.\n"
-"Cada escenario de Campaña indica el número de cada tipo de Carta incluida en el Mazo de la IA.\n"
+"Cada escenario de Campaña indica el número de cada tipo de Cartas del Mazo de la IA.\n"
 "Fuerza \\includesvg[height=10px]{\\svgs/might.svg} y Habilidad \\includesvg[height=10px]{\\svgs/skill.svg} tienen dos variaciones. Escoge tres cartas \\textbf{aleatorias} cuando construyas el Mazo.\n"
-"Si se incluyen Cartas de Habilidad, busca y aparta la Carta de Habilidad relacionada con ella.\n"
-"Crea el \\textbf{Mazo de Hechizos} de la IA separando los Hechizos indicados del Mazo de Hechizos normal.\n"
+"Si se incluyen Cartas de Habilidad, busca y aparta la Carta de Habilidad indicada.\n"
+"Crea el \\textbf{Mazo de Hechizos} de la IA separando los Hechizos indicados del Mazo normal.\n"
 "Baraja los dos mazos durante la configuración después de construirlos.\n"
 "\n"
 
@@ -200,11 +201,11 @@ msgid ""
 "\n"
 msgstr ""
 "Cuando la IA \\textbf{Activa} una Unidad, roba una Carta de IA\\index{Cartas de IA} y sigue sus instrucciones antes de que la Unidad se mueva y/o ataque.\n"
-"Si el mazo de la IA se agota durante el combate, deja de utilizarlo.\n"
-"El efecto de cada carta de IA depende de la \\hyperlink{Difficulty}{Dificultad}.\n"
-"La carta de Fuerza \\includesvg[height=10px]{\\svgs/might.svg} se adjunta a la unidad hasta que se produce el primer ataque/defensa respectivo.\n"
-"El Mazo de Hechizos IA se utiliza siempre que una Carta Mágica \\includesvg[height=10px]{\\svgs/magic.svg} es robada.\n"
-"Si a la IA se le ordena robar una carta, robará y resolverá \\textbf{otra carta} del Mazo IA.\n"
+"Si el Mazo de la IA se agota durante el combate, deja de utilizarlo.\n"
+"El efecto de cada Carta de la IA depende de la \\hyperlink{Difficulty}{Dificultad} del juego.\n"
+"La Carta \\includesvg[height=10px]{\\svgs/might.svg} se adjunta a la unidad hasta que se produce su primer ataque/defensa.\n"
+"Los Hechizos en la IA se utiliza cuando se roba una Carta \\includesvg[height=10px]{\\svgs/magic.svg}.\n"
+"Si a la IA se le ordena robar una carta, robará y resolverá \\textbf{otra carta}.\n"
 "\n"
 
 #. type: multicols
@@ -215,52 +216,126 @@ msgid ""
 "\n"
 msgstr ""
 "\\subsection*{Combate contra IA}\n"
+"\\vspace{-0.5em}\n"
 "\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:71
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "These rules apply during Combat in \\textbf{Solo}\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
+#| "When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\\par\n"
+#| "\n"
 msgid ""
-"These rules apply during Combat in \\textbf{Solo}\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
+"\\hypertarget{AI Units}{These rules} apply during Combat in \\textbf{Solo}\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
 "When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\\par\n"
 "\n"
 msgstr ""
-"Estas reglas se aplican durante el Combate en Escenarios \\textbf{Solo}\\index{Solitario} y \\textbf{Cooperativo}.\n"
-"Cuando los enemigos neutrales o los héroes de la IA activan una unidad, siguen una serie de instrucciones automáticas:\\par\n"
+"Estas reglas aplican en Combates en Escenarios \\textbf{Solitario}\\index{Solitario} y \\textbf{Cooperativo}.\n"
+"Cuando los enemigos Neutrales o la IA activan una unidad, siguen unas instrucciones automáticas:\\par\n"
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:79
+#: sections/ai_rules.tex:74
 #, no-wrap
 msgid ""
-"Enemy Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units prioritize attacking Units of the same tier.\n"
-"If this is impossible, they attack the closest Unit, prioritizing the lowest tier one.\\par\n"
-"Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units prioritize attacking other Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier.\n"
-"If there are no Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same tier order.\n"
-"If there's more than one valid target, they attack the closest one.\\par\n"
-"If there's ever a tie between equally valid targets for any Units, the player chooses which Unit is attacked.\n"
-"Enemy units cannot \\hyperlink{Defend}{Defend} unless instructed to.\n"
+"Enemy Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units prioritize attacking Units of the \\textbf{same} tier.\n"
+"If this is impossible, they attack the Unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
 "\n"
 msgstr ""
-"Enemigos \\includesvg[height=10px]{\\svgs/unit_ground.svg} y \\includesvg[height=10px]{\\svgs/unit_flying.svg} dan prioridad a las unidades atacantes del mismo nivel.\n"
-"Si no es posible, atacan a la Unidad más cercana, dando prioridad a la de nivel más bajo.\\par\n"
-"Unidades \\includesvg[height=10px]{\\svgs/unit_ranged.svg} priorizan el ataque a otras Unidades \\includesvg[height=10px]{\\svgs/unit_ranged.svg} del mismo nivel, después bajo nivel, y finalmente las de alto.\n"
-"Si no hay de Rango \\includesvg[height=10px]{\\svgs/unit_ranged.svg} a las que atacar, se prioriza \\includesvg[height=10px]{\\svgs/unit_ground.svg} and \\includesvg[height=10px]{\\svgs/unit_flying.svg} en el mismo orden de nivel.\n"
-"Si hay más de un objetivo válido, atacan al más cercano.\\par\n"
-"Si hay un empate entre objetivos válidos para cualquier Unidad, el jugador elige qué Unidad es atacada.\n"
-"Las unidades enemigas no se pueden \\hyperlink{Defend}{Defender} a menos que se indique.\n"
+"Enemigos Terrestres \\includesvg[height=10px]{\\svgs/unit_ground.svg} y Voladores \\includesvg[height=10px]{\\svgs/unit_flying.svg} dan prioridad a las Unidades del \\textbf{mismo} nivel.\n"
+"Si no fuese posible, atacarían la Unidad con nivel menor (en orden de nivel \\textbf{descendiente}, hasta bronce), y si esto tampoco fuese posible, atacarían la Unidad con nivel mayor (en orden de nivel \\textbf{ascendente}).\\par\n"
+"\n"
+
+#. type: multicols
+#: sections/ai_rules.tex:80
+#, no-wrap
+msgid ""
+"\\textit{Example: \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg} has this priority:\n"
+"\\includesvg[height=10px]{\\svgs/golden.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/silver.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}.}\n"
+"\n"
+msgstr ""
+"\\textit{Ejemplo: \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg} prioriza:\n"
+"\\includesvg[height=10px]{\\svgs/golden.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/silver.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}.}\n"
 "\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:83
 #, no-wrap
 msgid ""
-"\\includegraphics[width=\\linewidth]{\\art/coin.png}\n"
+"Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units prioritize attacking other Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
+"If there are no Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same tier order.\\par\n"
+"\n"
+msgstr ""
+"Unidades a Distancia \\includesvg[height=10px]{\\svgs/unit_ranged.svg} priorizan el ataque a otras Unidades a Distancia \\includesvg[height=10px]{\\svgs/unit_ranged.svg} del mismo nivel, después de menor nivel y finalmente de mayor nivel, usando el mismo orden anterior.\n"
+"Si no hay Unidades a Distancia \\includesvg[height=10px]{\\svgs/unit_ranged.svg} a las que atacar, se priorizan Unidades Terrestres \\includesvg[height=10px]{\\svgs/unit_ground.svg} y Voladores \\includesvg[height=10px]{\\svgs/unit_flying.svg} en el mismo orden de nivel.\\par\n"
+"\n"
+
+#. type: multicols
+#: sections/ai_rules.tex:93
+#, no-wrap
+msgid ""
+"\\textit{Example: \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg} has this priority:\n"
+"\\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}.}\n"
+"\n"
+msgstr ""
+"\\textit{Ejemplo: \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg} prioriza:\n"
+"\\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}.}\n"
+"\n"
+
+#. type: multicols
+#: sections/ai_rules.tex:96
+#, no-wrap
+msgid ""
+"In both cases, if there's more than one valid target, they attack the closest one.\n"
+"If there's ever a tie between equally valid targets, the player chooses which Unit is attacked.\\par\n"
+"\n"
+msgstr ""
+"En ambos casos, si hay más de un objetivo válido, se atacaría al más cercano.\n"
+"Si hay empate entre objetivos válidos, el jugador elige qué Unidad es atacada.\\par\n"
+"\n"
+
+#. type: multicols
+#: sections/ai_rules.tex:98
+#, no-wrap
+msgid ""
+"Enemy units cannot \\hyperlink{Defend}{Defend} unless instructed to.\n"
+"\n"
+msgstr ""
+"Las Unidades Enemigas no pueden \\hyperlink{Defend}{Defenderse} salvo que se indique.\n"
+"\n"
+
+#. type: multicols
+#: sections/ai_rules.tex:103
+#, no-wrap
+msgid ""
+"\\centering\n"
+"\\includegraphics[width=0.9\\linewidth]{\\art/coin.png}\n"
 "\n"
 msgstr ""
 
 #. type: multicols
-#: sections/ai_rules.tex:87
+#: sections/ai_rules.tex:107
 #, no-wrap
 msgid ""
 "\\begin{center}\n"

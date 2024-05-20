@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-05-04 22:21+0000\n"
+"POT-Creation-Date: 2024-05-19 08:45+0200\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -24,10 +24,10 @@ msgstr ""
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
-#: sections/map_elements.tex:118 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:77
+#: sections/map_elements.tex:122 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:56 sections/town.tex:5
 #: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
@@ -61,7 +61,7 @@ msgstr ""
 #: sections/all_map_locations.tex:132 sections/credits.tex:35
 #: sections/credits.tex:39 sections/expansion_content.tex:57
 #: sections/game_modes.tex:25 sections/round_structure.tex:28
-#: sections/setup.tex:64 sections/town.tex:28 sections/town.tex:34
+#: sections/setup.tex:115 sections/town.tex:28 sections/town.tex:34
 #: sections/units.tex:104
 #, no-wrap
 msgid ""
@@ -197,7 +197,7 @@ msgid ""
 "\\includegraphics[height=30px]{\\images/attack.png} \\textbf{Attack} – The amount of damage this Unit deals when it attacks.\\par\n"
 "\\includegraphics[height=30px]{\\images/defense.png} \\textbf{Defense} - The amount by which this Unit reduces oncoming Attack damage.\n"
 "Does not apply to damage received from Spells or other non-attack effects.\\par\n"
-"\\includegraphics[height=30px]{\\images/hp.png} \\textbf{\\hypertarget{HP}{HP}} - The maximum amount of damage a Unit can sustain before it is defeated.\n"
+"\\includegraphics[height=30px]{\\images/hp.png} \\textbf{\\hypertarget{HP}{HP}} - The amount of damage required to defeat the Unit.\n"
 "``Few'' Units are discarded from Combat and their owner's Unit Deck when defeated.\n"
 "``Pack'' Units are turned back to ``Few'' Units, with any excess damage placed on their ``Few'' side.\n"
 "Units retain their ``Few'' or ``Pack'' status between Combats.\n"
@@ -209,7 +209,7 @@ msgstr ""
 "\\includegraphics[height=30px]{\\images/attack.png} \\textbf{Atak} – Ilość obrażeń zadawanych przez tę Jednostkę podczas Ataku.\\par\n"
 "\\includegraphics[height=30px]{\\images/defense.png} \\textbf{Obrona} - Ilość, o jaką ta Jednostka zmniejsza obrażenia od Ataku.\n"
 "Nie dotyczy obrażeń otrzymanych od Zaklęć lub innych efektów niewynikających z ataku.\\par\n"
-"\\includegraphics[height=30px]{\\images/hp.png} \\textbf{\\hypertarget{HP}{Punkty Zdrowia}} - Maksymalna liczba obrażeń, jaką Jednostka może odnieść, zanim zostanie pokonana.\n"
+"\\includegraphics[height=30px]{\\images/hp.png} \\textbf{\\hypertarget{HP}{Punkty Zdrowia}} - Ilość obrażeń wymagana do pokonana Jednostki.\n"
 ",,Garstka'' po pokonaniu jest odrzucana z Walki i Talii Jednostek ich właściciela.\n"
 ",,Grupa'' jest odwracana na stronę ,,Garstki'', a wszelkie nadmiarowe obrażenia umieszczane są na ,,Garstce''.\n"
 "Jednostki pozostają ,,Garstką'' lub ,,Grupą'' pomiędzy Walkami.\n"
@@ -306,7 +306,7 @@ msgid ""
 "  \\item\\textbf{Passive} \\includesvg[height=10px]{\\svgs/unit_passive.svg} resolves whenever its condition is met.\n"
 "  \\item\\textbf{Retaliate} \\includesvg[height=10px]{\\svgs/unit_retaliate.svg} resolves when the Unit retaliates.\n"
 "  \\item In any other cases without one of the above icons, the Unit's ability is used according to its text.\n"
-"    Units may also use \\hyperlink{Playerdecks}{these} symbols.\n"
+"    Units may also use symbols representing \\hyperlink{Card Effects}{Card Effects}.\n"
 "\\end{itemize}\n"
 "\n"
 msgstr ""
@@ -319,7 +319,7 @@ msgstr ""
 "  \\item\\textbf{Bierna} \\includesvg[height=10px]{\\svgs/unit_passive.svg} rozpatruje się za każdym razem, gdy spełniony jest dany warunek.\n"
 "  \\item\\textbf{Kontratak} \\includesvg[height=10px]{\\svgs/unit_retaliate.svg} rozpatruje się, gdy Jednostka kontratakuje.\n"
 "  \\item W pozostałych przypadkach zdolność Jednostki jest używana zgodnie z jej tekstem.\n"
-"    Jednostki mogą także używać \\hyperlink{Playerdecks}{tych} symboli efektów.\n"
+"    Jednostki mogą także używać symboli oznaczających \\hyperlink{Card Effects}{Efekty Kart}.\n"
 "\\end{itemize}\n"
 "\n"
 
@@ -332,7 +332,7 @@ msgid ""
 "\\begin{itemize}\n"
 "  \\item \\textbf{Ground}\\index{Ground Units} \\includesvg[height=10px]{\\svgs/unit_ground.svg} Units may move up to 3 spaces and then attack an adjacent enemy.\n"
 "  \\item \\textbf{Flying}\\index{Flying Units} \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units may move up to 3 spaces, \\textbf{ignoring Combat Obstacles}, and then attack an adjacent enemy.\n"
-"  \\item \\textbf{Ranged}\\index{Ranged Units} \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units may attack \\textbf{any Unit anywhere} and then move up to 1 space OR move up to 1 space without attacking.\n"
+"  \\item \\textbf{Ranged}\\index{Ranged Units} \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units may attack \\textbf{any enemy Unit anywhere} and then move up to 1 space OR move up to 1 space without attacking.\n"
 "\\end{itemize}\n"
 "If a \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Unit is next to an enemy Unit, its attack target \\textbf{must be} that adjacent enemy.\n"
 "When attacking an adjacent enemy in this way, the \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Unit suffers a Combat penalty\\index{Combat Penalty}: throw two Attack Dice (instead of one) and \\textbf{apply the smaller result}.\\par\n"
@@ -377,7 +377,7 @@ msgstr ""
 "Oprócz \\includesvg[height=10px]{\\svgs/bronze.svg}, \\includesvg[height=10px]{\\svgs/silver.svg} i \\includesvg[height=10px]{\\svgs/golden.svg}, istnieją także Błękitne \\includesvg[height=10px]{\\svgs/azure.svg} Jednostki Neutralne, które są najsilniejsze w grze.\\par\n"
 "Każda z tych Talii powinna być oddzielona od siebie i potasowana podczas przygotowania.\n"
 "Jeśli w Talii Jednostek Neutralnych skończą się Karty, przetasuj odrzucone karty w nową Talię.\n"
-"Kiedy rozpocznie się Walka z Jednostkami Neutralnymi, wylosuj \\hyperlink{Difficulty}{odpowiednią liczbę} Jednostek każdego poziomu, aby wziąć udział w tej Walce.\\par\n"
+"Kiedy rozpocznie się Walka z Jednostkami Neutralnymi, wylosuj \\hyperlink{Difficulty}{odpowiednią liczbę} Jednostek każdego poziomu, aby wzięły udział w tej Walce.\\par\n"
 "Gracze mogą dodawać Jednostki Neutralne do swojej Talii Jednostek poprzez różne efekty opisane w Zasadach Specyficznych dla Scenariusza lub dzięki Karcie Zdolności Dyplomacji.\n"
 "\\textbf{Jednostki Neutralne nie mogą zostać Wzmocnione}, ponieważ są jednostronne.\n"
 "Gdy Jednostka Neutralna zostanie pokonana, umieść ją na odpowiednim Stosie Neutralnych Kart Odrzuconych.\\par\n"

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-05-04 22:21+0000\n"
+"POT-Creation-Date: 2024-05-19 08:45+0200\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -24,10 +24,10 @@ msgstr ""
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
-#: sections/map_elements.tex:118 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:77
+#: sections/map_elements.tex:122 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:56 sections/town.tex:5
 #: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
@@ -36,7 +36,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:30 sections/ai_rules.tex:81 sections/combat.tex:95
+#: sections/ai_rules.tex:30 sections/ai_rules.tex:100 sections/combat.tex:95
 #: sections/combat.tex:233 sections/expansion_content.tex:65
 #: sections/heroes.tex:34
 #, no-wrap
@@ -389,13 +389,13 @@ msgid ""
 "\\subsection*{\\hypertarget{combatround}{Combat Round Structure}}\n"
 "Combat is divided into Rounds, during which all of the Units participating in that Combat \\textbf{Activate once} in Initiative order.\n"
 "After each Unit has Activated, a new Combat Round begins.\n"
-"Combat lasts until all Units on one side are eliminated, a player has to \\textbf{Retreat} when fighting Neutral Units, or a player \\textbf{Surrenders} to another player.\n"
+"Combat lasts until all Units on one side are eliminated, a player has to \\textbf{Retreat}\\index{Retreat} when fighting Neutral Units, or a player \\textbf{Surrenders} to another player.\n"
 "\n"
 msgstr ""
 "\\subsection*{\\hypertarget{combatround}{Struktura Rundy Walki}}\n"
 "Walka składa się z Rund, w których Jednostki \\textbf{Aktywowane są raz} zgodnie z Inicjatywą.\n"
 "Po Aktywacji wszystkich Jednostek zaczyna się nowa Runda.\n"
-"Walka trwa się, dopóki wszystkie Jednostki jednej ze stron zostaną pokonane, gracz musi \\textbf{Wycofać się} z walcząc z Jednostkami Neutralnymi lub \\textbf{Poddaje się} przeciwnikowi.\n"
+"Walka trwa, dopóki wszystkie Jednostki jednej ze stron zostaną pokonane, gracz musi \\textbf{Wycofać się}\\index{Wycofywanie się} z walki z Jednostkami Neutralnymi, lub \\textbf{Poddaje się} przeciwnikowi.\n"
 "\n"
 
 #. type: multicols
@@ -422,7 +422,7 @@ msgstr ""
 "\\begin{itemize}\n"
 "  \\item Gracze Aktywują swoje Jednostki w kolejności malejącej \\hyperlink{Initiative}{Inicjatywy}. \\textbf{W przypadku remisu} aktywacja jednostek odbywa się na przemian, zaczynając od Gracza Atakującego.\n"
 "  \\item Po Aktywacji Jednostki połóż na niej Kostkę Frakcji, aby zaznaczyć, że została Aktywowana w tej Rundzie Walki.\n"
-"  \\item Aktywna Jednostka może poruszać się i atakować zgodnie ze swoim \\hyperlink{Unittype}{typem}. Jednostki Neutralne muszą atakować, o ile to możliwe.\n"
+"  \\item Aktywna Jednostka może poruszać się i atakować zgodnie ze swoim \\hyperlink{Unittype}{rodzajem}. Jednostki Neutralne muszą atakować, o ile to możliwe.\n"
 "  \\item Zamiast Atakować, Jednostka może \\hyperlink{Defend}{się bronić}.\n"
 "  Wrogie Jednostki Neutralne nie mogą się bronić, nawet jeśli są kontrolowane przez drugiego Gracza.\n"
 "  \\item Przed atakiem Jednostki obaj Gracze mogą \\hyperlink{CombatCards}{zagrywać Karty}. Karty są rozpatrywane w kolejności, w której Gracze zdecydowali się je zagrać.\n"
@@ -528,12 +528,12 @@ msgstr ""
 msgid ""
 "\\subsection*{\\hypertarget{Quick}{Quick Combat}}\\index{Quick Combat}\n"
 "If your Hero's Level is higher than a Field's Difficulty when Combat against Neutral Units would begin, \\textbf{no Combat} takes place.\n"
-"The player is considered to have beaten the Neutral Units by default and gains no rewards from the Combat.\n"
+"The player is considered to have beaten the Neutral Units by default and gains no rewards from the Combat itself before Visiting the Field.\n"
 "\n"
 msgstr ""
 "\\subsection*{\\hypertarget{Quick}{Szybka Walka}}\\index{Szybka Walka}\n"
 "Jeśli Poziom twojego Bohatera jest wyższy niż poziom Trudności Pola, odnosisz zwycięstwo \\textbf{bez Walki}.\n"
-"Gracz nie zdobywa żadnych nagród z Walki.\n"
+"Gracz nie zdobywa żadnych nagród z Walki przed Odwiedzeniem Pola.\n"
 "\n"
 
 #. type: multicols
@@ -541,11 +541,11 @@ msgstr ""
 #, no-wrap
 msgid ""
 "\\subsection*{Campaign and Cooperative Combat}\n"
-"During these game modes, all enemy Units activate according to the rules in \\hyperlink{AIrules}{the next section}.\n"
+"During these game modes, all enemy Units activate as described in the \\hyperlink{AI Units}{AI Rules section}.\n"
 "\n"
 msgstr ""
 "\\subsection*{Kampania i Walka Kooperacyjna}\n"
-"W tych Trybach Gry, wszystkie Wrogie Jednostki aktywują się zgodnie z zasadami \\hyperlink{AIrules}{opisanymi w następnej sekcji}.\n"
+"W tych Trybach Gry wszystkie Wrogie Jednostki aktywują się, jak opisano w sekcji \\hyperlink{AI Units}{Zasady AI}.\n"
 "\n"
 
 #. type: scaledfigure

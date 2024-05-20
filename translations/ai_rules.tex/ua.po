@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-05-04 16:19+0200\n"
-"PO-Revision-Date: 2024-05-13 17:15+0200\n"
+"POT-Creation-Date: 2024-05-19 08:45+0200\n"
+"PO-Revision-Date: 2024-05-15 11:50+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: ua\n"
@@ -28,10 +28,10 @@ msgstr "\\addsection{Правила ШІ}{\\spells/fortune.png}"
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
-#: sections/map_elements.tex:118 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:77
+#: sections/map_elements.tex:122 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:56 sections/town.tex:5
 #: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
@@ -93,18 +93,18 @@ msgid ""
 "Any differences to the above will be described in any given Scenario's own rules.\n"
 "\n"
 msgstr ""
-"Герої ШІ повинні відкривати Плитки Мапи як зазвичай, витративши 1 ОП перед тим, як переміститися на них.\n"
-"Гравець обирає орієнтацію цієї Плитки.\\par\n"
-"Герої ШІ не можуть Здатися, і ви не можете Здатися їм;\n"
+"Герої ШІ відкривають Плитки Мапи як зазвичай, витративши 1 ОП перед тим, як переміститися на них.\n"
+"Гравець обирає орієнтацію Плитки.\\par\n"
+"Герої ШІ не Здаються, і ви не можете Здатися їм;\n"
 "Герой ШІ б'ється, доки не втратить всі Підрозділи.\n"
-"Перемога в Бою проти Героя ШІ не дає жодних нагород, якщо це не передбачено Сценарієм.\n"
+"Перемога в Бою проти Героя ШІ не дає жодних нагород, якщо це не зазначено в Сценарії.\n"
 "Герої ШІ не мають Планшету Міста, Ресурсів або Картки Героя.\n"
 "Їхні Підрозділи фіксовані і визначені в Сценарії або іншими правилами.\\par\n"
-"Будь-які відмінності від вищезазначеного будуть описані в умовах конкретного Сценарію.\n"
+"Будь-які відмінності будуть описані в умовах конкретного Сценарію.\n"
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:30 sections/ai_rules.tex:81 sections/combat.tex:95
+#: sections/ai_rules.tex:30 sections/ai_rules.tex:100 sections/combat.tex:95
 #: sections/combat.tex:233 sections/expansion_content.tex:65
 #: sections/heroes.tex:34
 #, no-wrap
@@ -176,13 +176,12 @@ msgid ""
 "Shuffle the AI and Spell Decks during setup after building them.\n"
 "\n"
 msgstr ""
-"Під час Бою герої ШІ використовують дві колоди: the \\textbf{Колоду ШІ}, та \\textbf{Колоду Заклинань}.\n"
+"Під час Бою Герої ШІ використовують дві колоди: \\textbf{Колоду ШІ}, та \\textbf{Колоду Заклинань}.\n"
 "Колода ШІ складається з трьох видів Карт ШІ: Меч \\includesvg[height=10px]{\\svgs/might.svg}, Магія \\includesvg[height=10px]{\\svgs/magic.svg} та Здібності \\includesvg[height=10px]{\\svgs/skill.svg}.\n"
 "У кожному Сценарії Кампанії вказано кількість Карт кожного типу, що входять до Колоди ШІ.\n"
 "Карти Меча \\includesvg[height=10px]{\\svgs/might.svg} та Здібності \\includesvg[height=10px]{\\svgs/skill.svg} мають по два варіанти. Вибирайте ці Карти \\textbf{випадковим чином} під час приготування Колоди.\n"
-"Якщо в колоді є Карти Здібностей, знайдіть і відкладіть відповідні Карти Здібностей.\n"
+"Якщо в Колоді є Карти Здібностей, знайдіть і відкладіть відповідні Карти Здібностей.\n"
 "Створіть \\textbf{Колоду Заклинань} ШІ відокремивши вказані Заклинання від загальної Колоди Заклинань.\n"
-"Перетасуйте Колоди ШІ та Заклинань .\n"
 "\n"
 
 #. type: multicols
@@ -197,12 +196,12 @@ msgid ""
 "If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
 "\n"
 msgstr ""
-"Коли Герой ШІ \\textbf{Активує} Підрозділ, візьміть Карту ШІ\\index{Карта ШІ} і дотримуйтесь її інструкцій перед тим, як Підрозділ зробить хід або атаку .\n"
+"Коли Герой ШІ \\textbf{Активує} Підрозділ, візьміть Карту ШІ\\index{Карта ШІ} і дотримуйтесь її інструкцій перед тим, як Підрозділ зробить хід або атаку.\n"
 "Якщо колода ШІ закінчується під час Бою, не беріть з неї Карти.\n"
 "Ефект кожної Карти ШІ залежить від \\hyperlink{Difficulty}{Складності Гри}.\n"
 "Карта Меча \\includesvg[height=10px]{\\svgs/might.svg} прикріплюється до Підрозділу, до першої атаки/захисту.\n"
-"Колода Заклинань ШІ використовується, коли витягується Карта Магії \\includesvg[height=10px]{\\svgs/magic.svg}.\n"
-"Якщо Герою ШІ вказано взяти карту, він витягує і розігрує \\textbf{ще одну Карту} з Колоди ШІ.\n"
+"Колода Заклинань ШІ використовується, коли з Колоди ШІ береться Карта Магії \\includesvg[height=10px]{\\svgs/magic.svg}.\n"
+"Якщо Герою ШІ вказано взяти карту, він бере і розігрує \\textbf{ще одну Карту} з Колоди ШІ.\n"
 "\n"
 
 #. type: multicols
@@ -217,48 +216,121 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_rules.tex:71
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "These rules apply during Combat in \\textbf{Solo}\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
+#| "When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\\par\n"
+#| "\n"
 msgid ""
-"These rules apply during Combat in \\textbf{Solo}\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
+"\\hypertarget{AI Units}{These rules} apply during Combat in \\textbf{Solo}\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
 "When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\\par\n"
 "\n"
 msgstr ""
 "Ці правила застосовуються під час Битв в \\textbf{Одиночному}\\index{Одиночний Режим} і \\textbf{Кооперативному} Режимах.\n"
-"Коли Нейтральні вороги або Герої ШІ активують Підрозділ, вони виконують команди:\\par\n"
+"Коли Нейтральні вороги або Герої ШІ активують Підрозділ, вони роблять наступне:\\par\n"
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:79
+#: sections/ai_rules.tex:74
 #, no-wrap
 msgid ""
-"Enemy Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units prioritize attacking Units of the same tier.\n"
-"If this is impossible, they attack the closest Unit, prioritizing the lowest tier one.\\par\n"
-"Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units prioritize attacking other Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier.\n"
-"If there are no Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same tier order.\n"
-"If there's more than one valid target, they attack the closest one.\\par\n"
-"If there's ever a tie between equally valid targets for any Units, the player chooses which Unit is attacked.\n"
-"Enemy units cannot \\hyperlink{Defend}{Defend} unless instructed to.\n"
+"Enemy Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units prioritize attacking Units of the \\textbf{same} tier.\n"
+"If this is impossible, they attack the Unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
 "\n"
 msgstr ""
-"Ворожі Наземні \\includesvg[height=10px]{\\svgs/unit_ground.svg} та Літаючі \\includesvg[height=10px]{\\svgs/unit_flying.svg} Підрозділи спочатку атакують Підрозділи того ж рівня.\n"
-"Якщо це неможливо, вони атакують найближчий Підрозділ, віддаючи пріоритет найнижчому рівню.\\par\n"
-"Стрілецькі \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Підрозділи спочатку атакують інших Стрільців \\includesvg[height=10px]{\\svgs/unit_ranged.svg} того ж рівня, потім нижчого рівня, і, нарешті, вищого рівня.\n"
-"Якщо немає Стрілецьких \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Підрозділів для атаки, спочатку атакують Наземні \\includesvg[height=10px]{\\svgs/unit_ground.svg} та Літаючі \\includesvg[height=10px]{\\svgs/unit_flying.svg} Підрозділи в тому ж порядку рівня.\n"
-"Якщо є більше однієї придатної цілі, вони атакують найближчу.\\par\n"
-"Якщо є рівність між  цілями атаки для будь-якого Підрозділу, гравець обирає, який Підрозділ буде атаковано.\n"
-"Ворожі підрозділи не можуть \\hyperlink{Defend}{Захищатися} якщо не отримають відповідної вказівки.\n"
+"Наземні \\includesvg[height=10px]{\\svgs/unit_ground.svg} та Літаючі \\includesvg[height=10px]{\\svgs/unit_flying.svg} Підрозділи ШІ пріоритетно атакують Підрозділи \\textbf{того ж} рівня.\n"
+"Якщо це неможливо, вони атакують Підрозділ нижчого рівня (в порядку \\textbf{зменшення} рівня), якщо це також неможливо, вони атакують Підрозділ вищого рівня(в порядку \\textbf{зростання} рівня).\\par\n"
+"\n"
+
+#. type: multicols
+#: sections/ai_rules.tex:80
+#, no-wrap
+msgid ""
+"\\textit{Example: \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg} has this priority:\n"
+"\\includesvg[height=10px]{\\svgs/golden.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/silver.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}.}\n"
+"\n"
+msgstr ""
+"\\textit{Приклад: \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg} має пріоритет:\n"
+"\\includesvg[height=10px]{\\svgs/golden.svg}\n"
+" \\includesvg[height=10px]{\\svgs/silver.svg}\n"
+" \\includesvg[height=10px]{\\svgs/bronze.svg}\n"
+" \\includesvg[height=10px]{\\svgs/azure.svg}.}\n"
 "\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:83
 #, no-wrap
 msgid ""
-"\\includegraphics[width=\\linewidth]{\\art/coin.png}\n"
+"Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units prioritize attacking other Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
+"If there are no Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same tier order.\\par\n"
+"\n"
+msgstr ""
+"Стрілецькі \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Підрозділи пріоритетно атакують інші Стрілецькі \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Підрозділи того ж рівня, потім нижчого рівня, і, нарешті, вищого рівня, з тим самим порядком рівня, що і вище.\n"
+"Якщо немає Стрілецьких \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Підрозділів для атаки, пріоритет віддається Наземним \\includesvg[height=10px]{\\svgs/unit_ground.svg} та Літаючим \\includesvg[height=10px]{\\svgs/unit_flying.svg} Підрозділам (в тому самому порядку рівня).\\par\n"
+"\n"
+
+#. type: multicols
+#: sections/ai_rules.tex:93
+#, no-wrap
+msgid ""
+"\\textit{Example: \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg} has this priority:\n"
+"\\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}.}\n"
+"\n"
+msgstr ""
+"\\textit{Приклад: \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg} має пріоритет:\n"
+"\\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}.}\n"
+"\n"
+
+#. type: multicols
+#: sections/ai_rules.tex:96
+#, no-wrap
+msgid ""
+"In both cases, if there's more than one valid target, they attack the closest one.\n"
+"If there's ever a tie between equally valid targets, the player chooses which Unit is attacked.\\par\n"
+"\n"
+msgstr ""
+"Якщо є більше однієї придатної цілі, вони атакують найближчу.\n"
+"У випадку рівності цілей, гравець обирає, який з Підрозділів буде атаковано.\\par\n"
+"\n"
+
+#. type: multicols
+#: sections/ai_rules.tex:98
+#, no-wrap
+msgid ""
+"Enemy units cannot \\hyperlink{Defend}{Defend} unless instructed to.\n"
+"\n"
+msgstr ""
+"Ворожі Підрозділи \\hyperlink{Defend}{не можуть Захищатися} без відповідної вказівки.\n"
+"\n"
+
+#. type: multicols
+#: sections/ai_rules.tex:103
+#, no-wrap
+msgid ""
+"\\centering\n"
+"\\includegraphics[width=0.9\\linewidth]{\\art/coin.png}\n"
 "\n"
 msgstr ""
 
 #. type: multicols
-#: sections/ai_rules.tex:87
+#: sections/ai_rules.tex:107
 #, no-wrap
 msgid ""
 "\\begin{center}\n"

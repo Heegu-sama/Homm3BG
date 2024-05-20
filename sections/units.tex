@@ -42,7 +42,7 @@ When you do so, you can instantly Recruit and Reinforce \textbf{any number} of t
 \includegraphics[height=30px]{\images/attack.png} \textbf{Attack} – The amount of damage this Unit deals when it attacks.\par
 \includegraphics[height=30px]{\images/defense.png} \textbf{Defense} - The amount by which this Unit reduces oncoming Attack damage.
 Does not apply to damage received from Spells or other non-attack effects.\par
-\includegraphics[height=30px]{\images/hp.png} \textbf{\hypertarget{HP}{HP}} - The maximum amount of damage a Unit can sustain before it is defeated.
+\includegraphics[height=30px]{\images/hp.png} \textbf{\hypertarget{HP}{HP}} - The amount of damage required to defeat the Unit.
 ``Few'' Units are discarded from Combat and their owner's Unit Deck when defeated.
 ``Pack'' Units are turned back to ``Few'' Units, with any excess damage placed on their ``Few'' side.
 Units retain their ``Few'' or ``Pack'' status between Combats.
@@ -97,7 +97,7 @@ Most Units have a \textbf{special ability}\index{Special Ability}:\par
   \item\textbf{Passive} \includesvg[height=10px]{\svgs/unit_passive.svg} resolves whenever its condition is met.
   \item\textbf{Retaliate} \includesvg[height=10px]{\svgs/unit_retaliate.svg} resolves when the Unit retaliates.
   \item In any other cases without one of the above icons, the Unit's ability is used according to its text.
-    Units may also use \hyperlink{Playerdecks}{these} symbols.
+    Units may also use symbols representing \hyperlink{Card Effects}{Card Effects}.
 \end{itemize}
 
 \vspace*{\fill}
@@ -109,7 +109,7 @@ There are three types of Units:
 \begin{itemize}
   \item \textbf{Ground}\index{Ground Units} \includesvg[height=10px]{\svgs/unit_ground.svg} Units may move up to 3 spaces and then attack an adjacent enemy.
   \item \textbf{Flying}\index{Flying Units} \includesvg[height=10px]{\svgs/unit_flying.svg} Units may move up to 3 spaces, \textbf{ignoring Combat Obstacles}, and then attack an adjacent enemy.
-  \item \textbf{Ranged}\index{Ranged Units} \includesvg[height=10px]{\svgs/unit_ranged.svg} Units may attack \textbf{any Unit anywhere} and then move up to 1 space OR move up to 1 space without attacking.
+  \item \textbf{Ranged}\index{Ranged Units} \includesvg[height=10px]{\svgs/unit_ranged.svg} Units may attack \textbf{any enemy Unit anywhere} and then move up to 1 space OR move up to 1 space without attacking.
 \end{itemize}
 If a \includesvg[height=10px]{\svgs/unit_ranged.svg} Unit is next to an enemy Unit, its attack target \textbf{must be} that adjacent enemy.
 When attacking an adjacent enemy in this way, the \includesvg[height=10px]{\svgs/unit_ranged.svg} Unit suffers a Combat penalty\index{Combat Penalty}: throw two Attack Dice (instead of one) and \textbf{apply the smaller result}.\par

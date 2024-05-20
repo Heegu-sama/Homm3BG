@@ -7,7 +7,9 @@ import sys
 
 HYPERLINKS_TO_REPLACE = [
     "AIrules",
+    "AI Units",
     "Ability",
+    "Card Effects",
     "Combat",
     "Defend",
     "Difficulty",
