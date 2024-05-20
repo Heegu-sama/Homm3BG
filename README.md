@@ -6,13 +6,7 @@ Efforts are ongoing to translate the rule book to languages other than English.
 Please reach out if you'd like to help with translating.
 Click in the table to download the most recent builds in the chosen language:
 
-<style>
-  table,tr,th,td {
-     text-align: center;
-     border: 1px solid;
-  }
-</style>
-<table>
+<table style="text-align:center">
     <thead>
         <tr>
             <th>Language</th>
