@@ -9,6 +9,7 @@ Click in the table to download the most recent builds in the chosen language:
 <style>
   table,tr,th,td {
      text-align: center;
+     border: 1px solid;
   }
 </style>
 <table>
@@ -16,55 +17,55 @@ Click in the table to download the most recent builds in the chosen language:
         <tr>
             <th>Language</th>
             <th colspan=2>Progress</th>
-            <th colspan=2>v1.2 🪨<br>(Stable)</th>
+            <th colspan=2>Version 1.2 🪨<br>(Stable)</th>
             <th colspan=2>Latest Build ⚗️<br>(Experimental)</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td></td>
-            <td>Text</td>
-            <td>Images</td>
-            <td>Digital</td>
-            <td>Printable</td>
-            <td>Digital</td>
-            <td>Printable</td>
+            <td>✍️<br>Text</td>
+            <td>🏞️<br>Images</td>
+            <td>🖥️<br>Digital</td>
+            <td>🖨️<br>Printable</td>
+            <td>🖥️<br>Digital</td>
+            <td>🖨️<br>Printable</td>
         </tr>
         <tr>
             <td style="text-align:left">🇬🇧 English</td>
             <td style="text-align:center">-</td>
             <td>-</td>
-            <td>🇬🇧🪨🖥️</td>
-            <td>🇬🇧🪨🖨️</td>
+            <td><a href="#">🇬🇧🪨🖥️</a></td>
+            <td><a href="#">🇬🇧🪨🖨️</a></td>
             <td>️<a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf">🇬🇧⚗️🖥️</a></td>
-            <td>🇬🇧⚗️🖨️</td>
+            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf">🇬🇧⚗️🖨️</a></td>
         </tr>
         <tr>
             <td style="text-align:left">🇵🇱 Polski</td>
             <td style="text-align:center">100%</td>
             <td>100%</td>
-            <td>🇵🇱🪨🖥️</td>
-            <td>🇵🇱🪨🖨️</td>
-            <td>️🇵🇱⚗️🖥️</td>
-            <td>🇵🇱⚗️🖨️</td>
+            <td><a href="#">🇵🇱🪨🖥️</a></td>
+            <td><a href="#">🇵🇱🪨🖨️</a></td>
+            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf">️🇵🇱⚗️🖥️</a></td>
+            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf">🇵🇱⚗️🖨️</a></td>
         </tr>
         <tr>
             <td style="text-align:left">🇪🇸 Español</td>
             <td style="text-align:center">100%</td>
             <td>0%</td>
-            <td>🇪🇸🪨🖥️</td>
-            <td>🇪🇸🪨🖨️</td>
-            <td>️🇪🇸⚗️🖥️</td>
-            <td>🇪🇸⚗️🖨️</td>
+            <td><a href="#">🇪🇸🪨🖥️</a></td>
+            <td><a href="#">🇪🇸🪨🖨️</a></td>
+            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf">️🇪🇸⚗️🖥️</a></td>
+            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf">🇪🇸⚗️🖨️</a></td>
         </tr>
         <tr>
             <td style="text-align:left">🇫🇷 Français</td>
             <td style="text-align:center">100%</td>
             <td>100%</td>
-            <td>🇫🇷🪨🖥️</td>
-            <td>🇫🇷🪨🖨️</td>
-            <td>️🇫🇷⚗️🖥️</td>
-            <td>🇫🇷⚗️🖨️</td>
+            <td><a href="#">🇫🇷🪨🖥️</a></td>
+            <td><a href="#">🇫🇷🪨🖨️</a></td>
+            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf">️🇫🇷⚗️🖥️</a></td>
+            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf">🇫🇷⚗️🖨️</a></td>
         </tr>
         <tr>
             <td style="text-align:left">🇷🇺 Русский</td>
@@ -72,17 +73,17 @@ Click in the table to download the most recent builds in the chosen language:
             <td>0%</td>
             <td>n/a</td>
             <td>n/a</td>
-            <td>️🇷🇺⚗️🖥️</td>
-            <td>🇷🇺⚗️🖨️</td>
+            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf">️🇷🇺⚗️🖥️</a></td>
+            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf">🇷🇺⚗️🖨️</a></td>
         </tr>
         <tr>
             <td style="text-align:left">🇺🇦 Українська</td>
             <td style="text-align:center">100%</td>
             <td>0%</td>
-            <td>🇺🇦🪨🖥️</td>
-            <td>🇺🇦🪨🖨️</td>
-            <td>️🇺🇦⚗️🖥️</td>
-            <td>🇺🇦⚗️🖨️</td>
+            <td><a href="#">🇺🇦🪨🖥️</a></td>
+            <td><a href="#">🇺🇦🪨🖨️</a></td>
+            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf">️🇺🇦⚗️🖥️</a></td>
+            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf">🇺🇦⚗️🖨️</a></td>
         </tr>
         <tr>
             <td style="text-align:left">🇩🇪 Deutsch</td>
@@ -90,23 +91,21 @@ Click in the table to download the most recent builds in the chosen language:
             <td>0%</td>
             <td>n/a</td>
             <td>n/a</td>
-            <td>️🇩🇪⚗️🖥️</td>
-            <td>🇩🇪⚗️🖨️</td>
+            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/main_de.pdf">️🇩🇪⚗️🖥️</a></td>
+            <td><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/printable_de.pdf">🇩🇪⚗️🖨️</a></td>
         </tr>
     </tbody>
 </table>
 
-|                 | Progress |                                📜 **Rewritten Rule Book**                                 |                              🖨️ **Rewritten Rule Book - printable version**                              |
-|:----------------|:--------:|:-----------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------:|
-| 🇬🇧 English    |   100%   | [🇬🇧📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf) | [🇬🇧🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf) |
-| 🇵🇱 Polski     |   100%   | [🇵🇱📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf) | [🇵🇱🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf) |
-| 🇪🇸 Español    |   ~95%   | [🇪🇸📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf) | [🇪🇸🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf) |
-| 🇫🇷 Français   |   100%   | [🇫🇷📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf) | [🇫🇷🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf) |
-| 🇷🇺 Русский    |   ~39%   | [🇷🇺📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf) | [🇷🇺🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf) |
-| 🇺🇦 Українська |   ~95%   | [🇺🇦📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf) | [🇺🇦🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf)|
-| 🇩🇪 Deutsch    |   ~15%   | [🇩🇪📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/main_de.pdf) | [🇩🇪🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/printable_de.pdf)|
+🪨 Stable release is the latest one officially released.
+It should be free of any major issues.<br>
+⚗️ Experimental builds are made from the main branch every time a new change is introduced.
+You can expect things to break, like having incorrect layout or not all the text translated.
 
-🖨️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
+🖥️ The digital build is intended to be read on electronic devices.
+It has convenient hyperlinks that navigate you around the text.<br>
+🖨️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end.
+Best served for those who would like to have it on paper 🤞
 
 This repository used to host [**Comprehensive Components List**](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf) listing all the cards, minis, tokens, etc. for every box, but after a while ⚠️ ️️**Archon released their own version of it, and you should use it instead. Find it on 👉 [their website](https://archon-studio.com/downloads/heroes-iii) 👈 called "Content Guide"**.
 
@@ -123,25 +122,17 @@ If you read the thread linked above you should understand how frustrating this h
 
 ### 🛠️ How?
 
-I am completely rewriting the rule book in LaTeX.
-It's possible that a finalized version will be later put together using other tools such as Adobe Visual Studio.
-
 This is a communal effort.
 This repository serves both as a means for me to preserve my work, but also for others to contribute to it as writers, proofreaders, or layout designers.
-If you wish to contribute directly, please contact me on BoardGameGeek or discord, my username is Heegu on both platforms.
+
+### 💪 Contributing
+
+Please discuss any and all factual errors, bad language or other errors you've found.
+You can do this by opening issues, pull requests with suggestions or writing in the BGG thread.
 
 ### 🔮 The Future
 
 All new version of the rule book and their change logs will be published here and in the BGG thread.
-I will probably submit an indefinite number of changes before changing the version number again.
-The aim is to have a vastly superior "1.0" version ready before most people receive their pledges.
-
-The current aim is to produce a document that's meant more for digital reading, as most references to other rules and sections within the document are accomplished by using hyperlinks in the text.
-I know most people would also love a version that's designed more for printing, I'll see if I later have the energy to create that as well.
-A printable document would probably be more of a shorter reference, this document will always have 30+ pages.
-
-Please discuss any and all factual errors, bad language or other errors you've found by either contacting me directly or in the thread.
-You can do this by reaching out to me directly or by opening pull requests with suggestions.
 
 ## 💻 Local Development
 
