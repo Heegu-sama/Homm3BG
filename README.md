@@ -6,7 +6,7 @@ Efforts are ongoing to translate the rule book to languages other than English.
 Please reach out if you'd like to help with translating.
 Click in the table to download the most recent builds in the chosen language:
 
-<table style="text-align:center">
+<table>
     <thead>
         <tr>
             <th>Language</th>
@@ -17,7 +17,7 @@ Click in the table to download the most recent builds in the chosen language:
     </thead>
     <tbody>
         <tr>
-            <td align="center"></td>
+            <td align="center">🌍</td>
             <td align="center">✍️<br>Text</td>
             <td align="center">🏞️<br>Images</td>
             <td align="center">🖥️<br>Digital</td>
