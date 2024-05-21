@@ -3,6 +3,5 @@ if ($ENV{HOMM3_PRINTABLE}) {
   $pre_tex_code = '\AtBeginDocument{\toggletrue{printable}}';
 
   my $lang = $ENV{HOMM3_LANG};
-  $lang = $lang . '_' . uc($lang) . '.UTF-8';
-  $makeindex = "tools/makeindex.py --input %S --output %D --language $lang";
+  $makeindex = "sh -c 'upmendex -s <(cat index_style.ist; echo icu_locale \"$lang\") -o %D %S'";
 }
