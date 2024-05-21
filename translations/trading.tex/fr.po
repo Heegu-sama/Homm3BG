@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-29 14:03+0200\n"
+"POT-Creation-Date: 2024-05-20 22:11+0200\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
-#: sections/all_map_locations.tex:417 sections/combat.tex:5
+#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
+#: sections/all_map_locations.tex:419 sections/combat.tex:5
 #: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
 #: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
-#: sections/map_elements.tex:99 sections/player_turns.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:77
+#: sections/map_elements.tex:122 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:56 sections/town.tex:5
 #: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
 #, no-wrap
 msgid ""
@@ -35,6 +35,16 @@ msgstr ""
 "{2}\n"
 "\n"
 
+#. type: multicols
+#: sections/all_map_locations.tex:33 sections/all_map_locations.tex:61
+#: sections/all_map_locations.tex:150 sections/expansion_content.tex:103
+#: sections/trading.tex:21 sections/units.tex:169 sections/units.tex:173
+#, no-wrap
+msgid ""
+"\\medskip\n"
+"\n"
+msgstr ""
+
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/trading.tex:4
@@ -42,12 +52,12 @@ msgid "\\addsection{Trading}{\\skills/armorer.png}"
 msgstr "\\addsection{Échange}{\\skills/armorer.png}"
 
 #. type: multicols
-#: sections/trading.tex:20
+#: sections/trading.tex:19
 #, no-wrap
 msgid ""
 "The \\hyperlink{Trading Post}{Trading Post Field} and other effects allow you to either:\n"
 "\\begin{itemize}\n"
-"  \\item \\hypertarget{Trading}{trade}\\index{Trading} multiple Resources with the game in accordance to the table below,\n"
+"  \\item \\hypertarget{Trading}{trade}\\index{Trading} multiple Resources with the game in accordance to the \\hyperlink{Trade Table}{table at the back cover},\n"
 "  \\item \\textbf{remove a card} from your hand at the trading post to gain 1 \\includesvg[height=10px]{\\svgs/gold.svg},\n"
 "    \\note{5}{Specialty, Statistic, Starting Ability and Magic Arrows \\textbf{cannot be removed} in the Trading Post.}\\par\n"
 "  \\item or buy a \\hyperlink{War Machines}{War Machine}, if you have the Rampart expansion.\n"
@@ -56,7 +66,6 @@ msgid ""
 "\\begin{itemize}\n"
 "  \\item In Alliance Scenarios, allies may trade Resources freely at any time on their Turns except during Combat.\n"
 "  \\item In Cooperative Scenarios, Resources may be given to other players when Visiting a Trading Post.\n"
-"  \\columnbreak\n"
 "  \\item In both Scenario types, allies may trade \\textbf{Spell} and \\textbf{Artifact} cards in any mix if they have heroes on adjacent Fields.\n"
 "    Only \\textbf{cards from their hands} may be traded and you must give and receive an equal amount of cards.\n"
 "\\end{itemize}\n"
@@ -64,7 +73,7 @@ msgid ""
 msgstr ""
 "Le \\hyperlink{Trading Post}{Site Comptoir} et d'autres effets vous permettent soit :\n"
 "\\begin{itemize}\n"
-"  \\item d'\\hypertarget{Trading}{Échanger}\\index{Échange} des Ressources avec le jeu selon la table ci-dessous ;\n"
+"  \\item d'\\hypertarget{Trading}{Échanger}\\index{Échange} des Ressources avec le jeu selon la \\hyperlink{Trade Table}{table au dos de ce livret} ;\n"
 "  \\item de \\textbf{Détruire une carte} de votre main au Comptoir et gagner 1 \\includesvg[height=10px]{\\svgs/gold.svg} ;\n"
 "    \\note{5}{Spécialisation, Caractéristique, Compétence de Départ et Flèche Magique \\textbf{ne peuvent pas être Détruites} au Comptoir.}\\par\n"
 "  \\item ou d'acheter une \\hyperlink{War Machines}{Machine de Guerre}, si vous avez l'extension Rempart.\n"
@@ -73,78 +82,26 @@ msgstr ""
 "\\begin{itemize}\n"
 "  \\item en Alliance, les alliés peuvent échanger des Ressources comme il veulent pendant leurs Tours sauf en Combat ;\n"
 "  \\item en Coopératif, les Ressources peuvent être données à d'autres joueurs lors d'une Exploration du Comptoir ;\n"
-"  \\columnbreak\n"
 "  \\item dans ces deux cas, les alliés peuvent échanger des \\textbf{Sorts} et des \\textbf{Artefacts} comme ils veulent si leurs Héros sont adjacents.\n"
 "    Seules les \\textbf{cartes de leur main} peuvent être échangées : données et reçues en quantité égale.\n"
 "\\end{itemize}\n"
 "\n"
 
 #. type: multicols
-#: sections/trading.tex:23
+#: sections/trading.tex:25
 #, no-wrap
 msgid ""
-"\\vspace*{\\fill}\n"
-"\\includegraphics[width=\\linewidth]{\\art/ammo_cart.png}\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
+"\\end{center}\n"
 "\n"
 msgstr ""
 
-#. type: Plain text
-#: sections/trading.tex:40
+#. type: scaledfigure
+#: sections/trading.tex:31
+#, no-wrap
 msgid ""
-"\\hommtable{14}{ \\centering \\textbf{Trade Table}\\\\ \\bigskip "
-"\\begin{tabularx}{\\linewidth}{XXXX} \\darkcell{\\color{white}Sells/gets} & "
-"\\darkcell{...to purchase \\includesvg[height=10px]{\\svgs/gold.svg}} & "
-"\\darkcell{...to purchase \\includesvg[height=10px]{\\svgs/valuablegreater."
-"svg}} & \\darkcell{...to purchase \\includesvg[height=10px]{\\svgs/"
-"building_materials.svg}} \\\\ \\darkcell{I am selling "
-"\\includesvg[height=10px]{\\svgs/gold.svg}...} & \\lightcell{--} & "
-"\\lightcell{6 \\includesvg[height=10px]{\\svgs/gold.svg} "
-"\\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 "
-"\\includesvg[height=10px]{\\svgs/valuablegreater.svg}} & \\lightcell{2 "
-"\\includesvg[height=10px]{\\svgs/gold.svg} "
-"\\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 "
-"\\includesvg[height=10px]{\\svgs/building_materials.svg}} \\\\ \\darkcell{I "
-"am selling \\includesvg[height=10px]{\\svgs/valuablegreater.svg}...} & "
-"\\lightcell{1 \\includesvg[height=10px]{\\svgs/valuablegreater.svg} "
-"\\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 3 "
-"\\includesvg[height=10px]{\\svgs/gold.svg}} & \\lightcell{--} & "
-"\\lightcell{1 \\includesvg[height=10px]{\\svgs/valuablegreater.svg} "
-"\\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 2 "
-"\\includesvg[height=10px]{\\svgs/building_materials.svg}} \\\\ \\darkcell{I "
-"am selling \\includesvg[height=10px]{\\svgs/building_materials.svg}...} & "
-"\\lightcell{1 \\includesvg[height=10px]{\\svgs/building_materials.svg} "
-"\\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 "
-"\\includesvg[height=10px]{\\svgs/gold.svg}} & \\lightcell{3 "
-"\\includesvg[height=10px]{\\svgs/building_materials.svg} "
-"\\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 "
-"\\includesvg[height=10px]{\\svgs/valuablegreater.svg}} & \\lightcell{--} \\"
-"\\ \\end{tabularx} }"
+"[blanker]\n"
+"  \\centering\n"
+"  \\includegraphics[width=\\linewidth, height=\\myspace, keepaspectratio]{\\art/gold_dragon.jpg}"
 msgstr ""
-"\\hommtable{14}{ \\centering \\textbf{Table de conversion} \\\\ \\bigskip "
-"\\begin{tabularx}{\\linewidth}{XXXX} \\darkcell{\\color{white}Vente/Achat} & "
-"\\darkcell{...pour acheter \\includesvg[height=10px]{\\svgs/gold.svg}} & "
-"\\darkcell{...pour acheter \\includesvg[height=10px]{\\svgs/valuablegreater."
-"svg}} & \\darkcell{...pour acheter \\includesvg[height=10px]{\\svgs/"
-"building_materials.svg}} \\\\ \\darkcell{Je vends \\includesvg[height=10px]"
-"{\\svgs/gold.svg}...} & \\lightcell{--} & \\lightcell{6 "
-"\\includesvg[height=10px]{\\svgs/gold.svg} "
-"\\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 "
-"\\includesvg[height=10px]{\\svgs/valuablegreater.svg}} & \\lightcell{2 "
-"\\includesvg[height=10px]{\\svgs/gold.svg} "
-"\\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 "
-"\\includesvg[height=10px]{\\svgs/building_materials.svg}} \\\\ \\darkcell{Je "
-"vends \\includesvg[height=10px]{\\svgs/valuablegreater.svg}...} & "
-"\\lightcell{1 \\includesvg[height=10px]{\\svgs/valuablegreater.svg} "
-"\\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 3 "
-"\\includesvg[height=10px]{\\svgs/gold.svg}} & \\lightcell{--} & "
-"\\lightcell{1 \\includesvg[height=10px]{\\svgs/valuablegreater.svg} "
-"\\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 2 "
-"\\includesvg[height=10px]{\\svgs/building_materials.svg}} \\\\ \\darkcell{Je "
-"vends \\includesvg[height=10px]{\\svgs/building_materials.svg}...} & "
-"\\lightcell{1 \\includesvg[height=10px]{\\svgs/building_materials.svg} "
-"\\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 "
-"\\includesvg[height=10px]{\\svgs/gold.svg}} & \\lightcell{3 "
-"\\includesvg[height=10px]{\\svgs/building_materials.svg} "
-"\\includesvg[height=0.5\\baselineskip]{\\svgs/arrow_right_gray.svg} 1 "
-"\\includesvg[height=10px]{\\svgs/valuablegreater.svg}} & \\lightcell{--} \\"
-"\\ \\end{tabularx} }"
