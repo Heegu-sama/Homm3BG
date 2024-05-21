@@ -140,8 +140,8 @@ jobs:
       - name: Compile printable rule book
         uses: xu-cheng/latex-action@v3
         with:
-          extra_system_packages: "inkscape"
-          pre_compile: export HOMM3_PRINTABLE=1
+          extra_system_packages: "inkscape py3-icu"
+          pre_compile: export HOMM3_PRINTABLE=1 HOMM3_LANG=${{ matrix.language }}
           latexmk_use_lualatex: ${{ matrix.luaengine }}
           latexmk_shell_escape: true
           root_file: main_${{ matrix.language }}.tex

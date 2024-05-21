@@ -28,7 +28,7 @@ python .github/insert_printable_hyperlinks.py "${SECTIONS}"
 
 sed -i -e "/% QR codes placeholder/{r .github/qr-codes-$LANGUAGE.tex" -e 'd}' metadata.tex
 
-export HOMM3_PRINTABLE=1
+export HOMM3_PRINTABLE=1 HOMM3_LANG=${LANGUAGE}
 latexmk ${ENGINE} -shell-escape main_${LANGUAGE}.tex
 
 ${open} main_${LANGUAGE}.pdf &
