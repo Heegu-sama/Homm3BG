@@ -8,9 +8,9 @@ FILE_VERSION=$(echo "${VERSION}" | tr -d .)
 declare -A languages=(
   ["en"]="English"
   ["pl"]="Polski"
-  ["es"]="Español"
-  ["fr"]="Français"
-  ["ua"]="Українська"
+  ["es"]="Espanol"
+  ["fr"]="Francais"
+  ["ua"]="Ukrainska"
 )
 
 echo "Building release ${VERSION} for ${languages[$LANGUAGE]}..."

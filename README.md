@@ -29,8 +29,8 @@ Click in the table to download the most recent builds in the chosen language:
             <td>🇬🇧 English</td>
             <td align="center">-</td>
             <td align="center">-</td>
-            <td align="center"><a href="#">download</a></td>
-            <td align="center"><a href="#">download</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_English_Rules_Rewrite_12.pdf">download</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_English_Rules_Rewrite_12_Printable.pdf">download</a></td>
             <td align="center">️<a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf">download</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf">download</a></td>
         </tr>
@@ -38,8 +38,8 @@ Click in the table to download the most recent builds in the chosen language:
             <td>🇵🇱 Polski</td>
             <td align="center">100%</td>
             <td align="center">100%</td>
-            <td align="center"><a href="#">pobierz</a></td>
-            <td align="center"><a href="#">pobierz</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Polski_Rules_Rewrite_12.pdf">pobierz</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Polski_Rules_Rewrite_12_Printable.pdf">pobierz</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf">️pobierz</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf">pobierz</a></td>
         </tr>
@@ -47,8 +47,8 @@ Click in the table to download the most recent builds in the chosen language:
             <td>🇪🇸 Español</td>
             <td align="center">100%</td>
             <td align="center">0%</td>
-            <td align="center"><a href="#">descargar</a></td>
-            <td align="center"><a href="#">descargar</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Espanol_Rules_Rewrite_12.pdf">descargar</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Espanol_Rules_Rewrite_12_Printable.pdf">descargar</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf">️descargar</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf">descargar</a></td>
         </tr>
@@ -56,8 +56,8 @@ Click in the table to download the most recent builds in the chosen language:
             <td>🇫🇷 Français</td>
             <td align="center">100%</td>
             <td align="center">100%</td>
-            <td align="center"><a href="#">télécharger</a></td>
-            <td align="center"><a href="#">télécharger</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Francais_Rules_Rewrite_12.pdf">télécharger</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Francais_Rules_Rewrite_12_Printable.pdf">télécharger</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf">️télécharger</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf">télécharger</a></td>
         </tr>
@@ -74,8 +74,8 @@ Click in the table to download the most recent builds in the chosen language:
             <td>🇺🇦 Українська</td>
             <td align="center">100%</td>
             <td align="center">0%</td>
-            <td align="center"><a href="#">завантажити</a></td>
-            <td align="center"><a href="#">завантажити</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Ukrainska_Rules_Rewrite_12.pdf">завантажити</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Ukrainska_Rules_Rewrite_12_Printable.pdf">завантажити</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf">️завантажити</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf">завантажити</a></td>
         </tr>
