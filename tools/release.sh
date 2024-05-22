@@ -18,10 +18,10 @@ mkdir -p release-${VERSION}
 
 tools/build.sh ${LANGUAGE}
 tools/optimize.sh ${LANGUAGE}
-mv main_${LANGUAGE}_optimized.pdf release-${VERSION}/Heroes3_${languages[$LANGUAGE]}_Rules_Rewrite_12.pdf
+mv main_${LANGUAGE}_optimized.pdf release-${VERSION}/Heroes3_${languages[$LANGUAGE]}_Rules_Rewrite_${VERSION}.pdf
 
 tools/make_printable.sh ${LANGUAGE}
 git restore metadata.tex sections/
 tools/optimize.sh ${LANGUAGE}
-mv main_${LANGUAGE}_optimized.pdf release-${VERSION}/Heroes3_${languages[$LANGUAGE]}_Rules_Rewrite_12_Printable.pdf
+mv main_${LANGUAGE}_optimized.pdf release-${VERSION}/Heroes3_${languages[$LANGUAGE]}_Rules_Rewrite_${VERSION}_Printable.pdf
 echo "Done."
