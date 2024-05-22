@@ -6,17 +6,100 @@ Efforts are ongoing to translate the rule book to languages other than English.
 Please reach out if you'd like to help with translating.
 Click in the table to download the most recent builds in the chosen language:
 
-|                 | Progress |                                📜 **Rewritten Rule Book**                                 |                              🖨️ **Rewritten Rule Book - printable version**                              |
-|:----------------|:--------:|:-----------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------:|
-| 🇬🇧 English    |   100%   | [🇬🇧📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf) | [🇬🇧🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf) |
-| 🇵🇱 Polski     |   100%   | [🇵🇱📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf) | [🇵🇱🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf) |
-| 🇪🇸 Español    |   ~95%   | [🇪🇸📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf) | [🇪🇸🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf) |
-| 🇫🇷 Français   |   100%   | [🇫🇷📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf) | [🇫🇷🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf) |
-| 🇷🇺 Русский    |   ~39%   | [🇷🇺📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf) | [🇷🇺🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf) |
-| 🇺🇦 Українська |   ~95%   | [🇺🇦📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf) | [🇺🇦🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf)|
-| 🇩🇪 Deutsch    |   ~15%   | [🇩🇪📜](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/main_de.pdf) | [🇩🇪🖨️](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/printable_de.pdf)|
+<table>
+    <thead>
+        <tr>
+            <th>Language</th>
+            <th colspan=2 align="center">Progress</th>
+            <th colspan=2 align="center">Version 1.2 🪨<br>(Stable)</th>
+            <th colspan=2 align="center">Latest Build ⚗️<br>(Experimental)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center">🌍</td>
+            <td align="center">✍️<br>Text</td>
+            <td align="center">🏞️<br>Images</td>
+            <td align="center">🖥️<br>Digital</td>
+            <td align="center">🖨️<br>Printable</td>
+            <td align="center">🖥️<br>Digital</td>
+            <td align="center">🖨️<br>Printable</td>
+        </tr>
+        <tr>
+            <td>🇬🇧 English</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_English_Rules_Rewrite_12.pdf">download</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_English_Rules_Rewrite_12_Printable.pdf">download</a></td>
+            <td align="center">️<a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf">download</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf">download</a></td>
+        </tr>
+        <tr>
+            <td>🇵🇱 Polski</td>
+            <td align="center">100%</td>
+            <td align="center">100%</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Polski_Rules_Rewrite_12.pdf">pobierz</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Polski_Rules_Rewrite_12_Printable.pdf">pobierz</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf">️pobierz</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf">pobierz</a></td>
+        </tr>
+        <tr>
+            <td>🇪🇸 Español</td>
+            <td align="center">100%</td>
+            <td align="center">0%</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Espanol_Rules_Rewrite_12.pdf">descargar</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Espanol_Rules_Rewrite_12_Printable.pdf">descargar</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf">️descargar</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf">descargar</a></td>
+        </tr>
+        <tr>
+            <td>🇫🇷 Français</td>
+            <td align="center">100%</td>
+            <td align="center">100%</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Francais_Rules_Rewrite_12.pdf">télécharger</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Francais_Rules_Rewrite_12_Printable.pdf">télécharger</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf">️télécharger</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf">télécharger</a></td>
+        </tr>
+        <tr>
+            <td>🇷🇺 Русский</td>
+            <td align="center">~39%</td>
+            <td align="center">0%</td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf">️скачать</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf">скачать</a></td>
+        </tr>
+        <tr>
+            <td>🇺🇦 Українська</td>
+            <td align="center">100%</td>
+            <td align="center">0%</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Ukrainska_Rules_Rewrite_12.pdf">завантажити</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Ukrainska_Rules_Rewrite_12_Printable.pdf">завантажити</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf">️завантажити</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf">завантажити</a></td>
+        </tr>
+        <tr>
+            <td>🇩🇪 Deutsch</td>
+            <td align="center">~15%</td>
+            <td align="center">0%</td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/main_de.pdf">️speichern</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/printable_de.pdf">speichern</a></td>
+        </tr>
+    </tbody>
+</table>
 
-🖨️ The printable build appends page numbers to select clickable hyperlinks, and includes an index page at the end 🤞
+🪨 Stable release is the latest one officially released.
+It should be free of any major issues.<br>
+⚗️ Experimental builds are made from the main branch every time a new change is introduced.
+You can expect things to break, like having incorrect layout or not all the text translated.
+
+🖥️ The digital build is intended to be read on electronic devices.
+It has convenient hyperlinks that navigate you around the text.<br>
+🖨️ The printable build appends page numbers to select clickable hyperlinks, includes an index page at the end, and makes sure the document has 56 pages to be print friendly.
+Best served for those who would like to have it on paper 🤞
 
 This repository used to host [**Comprehensive Components List**](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf) listing all the cards, minis, tokens, etc. for every box, but after a while ⚠️ ️️**Archon released their own version of it, and you should use it instead. Find it on 👉 [their website](https://archon-studio.com/downloads/heroes-iii) 👈 called "Content Guide"**.
 
@@ -33,25 +116,17 @@ If you read the thread linked above you should understand how frustrating this h
 
 ### 🛠️ How?
 
-I am completely rewriting the rule book in LaTeX.
-It's possible that a finalized version will be later put together using other tools such as Adobe Visual Studio.
-
 This is a communal effort.
 This repository serves both as a means for me to preserve my work, but also for others to contribute to it as writers, proofreaders, or layout designers.
-If you wish to contribute directly, please contact me on BoardGameGeek or discord, my username is Heegu on both platforms.
+
+### 💪 Contributing
+
+Please discuss any and all factual errors, bad language or other errors you've found.
+You can do this by opening issues, pull requests with suggestions or writing in the BGG thread.
 
 ### 🔮 The Future
 
 All new version of the rule book and their change logs will be published here and in the BGG thread.
-I will probably submit an indefinite number of changes before changing the version number again.
-The aim is to have a vastly superior "1.0" version ready before most people receive their pledges.
-
-The current aim is to produce a document that's meant more for digital reading, as most references to other rules and sections within the document are accomplished by using hyperlinks in the text.
-I know most people would also love a version that's designed more for printing, I'll see if I later have the energy to create that as well.
-A printable document would probably be more of a shorter reference, this document will always have 30+ pages.
-
-Please discuss any and all factual errors, bad language or other errors you've found by either contacting me directly or in the thread.
-You can do this by reaching out to me directly or by opening pull requests with suggestions.
 
 ## 💻 Local Development
 

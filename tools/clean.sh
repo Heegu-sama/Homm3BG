@@ -4,6 +4,7 @@ rm -f * 2> /dev/null
 git restore \
   README.md \
   index_style.ist \
+  latexmkrc \
   main_de.tex \
   main_en.tex \
   main_es.tex \
