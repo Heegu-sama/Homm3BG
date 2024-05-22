@@ -16,12 +16,18 @@ echo "Building release ${VERSION} for ${languages[$LANGUAGE]}..."
 
 mkdir -p release-${VERSION}
 
-tools/build.sh ${LANGUAGE}
-tools/optimize.sh ${LANGUAGE}
+echo "Building digital version for ${languages[$LANGUAGE]}..."
+tools/build.sh ${LANGUAGE} &> /dev/null
+echo "Please inspect the PDF file."
+echo "Optimizing digital build..."
+tools/optimize.sh ${LANGUAGE} &> /dev/null
 mv main_${LANGUAGE}_optimized.pdf release-${VERSION}/Heroes3_${languages[$LANGUAGE]}_Rules_Rewrite_${VERSION}.pdf
 
-tools/make_printable.sh ${LANGUAGE}
+echo "Building printable version for ${languages[$LANGUAGE]}..."
+tools/make_printable.sh ${LANGUAGE} &> /dev/null
 git restore metadata.tex sections/
-tools/optimize.sh ${LANGUAGE}
+echo "Please inspect the PDF file."
+echo "Optimizing printable build..."
+tools/optimize.sh ${LANGUAGE} &> /dev/null
 mv main_${LANGUAGE}_optimized.pdf release-${VERSION}/Heroes3_${languages[$LANGUAGE]}_Rules_Rewrite_${VERSION}_Printable.pdf
 echo "Done."
