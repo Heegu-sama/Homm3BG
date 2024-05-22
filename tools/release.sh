@@ -12,7 +12,7 @@ declare -A languages=(
   ["ua"]="Українська"
 )
 
-echo "Building release ${VERSOPN} for ${languages[$LANGUAGE]}..."
+echo "Building release ${VERSION} for ${languages[$LANGUAGE]}..."
 
 mkdir -p release-${VERSION}
 
