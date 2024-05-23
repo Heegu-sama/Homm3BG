@@ -251,7 +251,20 @@
   \iftoggle{printable}{}{\bigbreak\heegusquote}
 \end{center}
 
-% QR codes placeholder
+\iftoggle{printable}{
+  \bigbreak
+
+  \begin{multicols}{2}
+  \centering
+  \includegraphics[width=0.8\linewidth]{\qr/github.png}\\
+  \qrgithub
+
+  \columnbreak
+
+  \includegraphics[width=0.8\linewidth]{\qr/bgg.png}\\
+  \qrbgg
+  \end{multicols}
+}{}
 
 \begin{tikzpicture}[remember picture, overlay]
   \node(cover)[anchor=center, yshift=12em] at (current page.south) {
