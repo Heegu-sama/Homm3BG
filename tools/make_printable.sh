@@ -23,9 +23,6 @@ esac
 
 po4a --no-update po4a.cfg
 
-find ${SECTIONS} -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
-python .github/insert_printable_hyperlinks.py "${SECTIONS}"
-
 export HOMM3_PRINTABLE=1 HOMM3_LANG=${LANGUAGE}
 latexmk ${ENGINE} -shell-escape main_${LANGUAGE}.tex
 
