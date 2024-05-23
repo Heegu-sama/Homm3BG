@@ -12,12 +12,12 @@
     \small
     \mbox{\textbf{I-VII}} & Field Difficulty corresponding to the level of Neutral Units.\smallskip \\
     \includesvg[height=15px]{\svgs/treasure.svg} & \parbox{0.7\hsize}{
-      Roll a \hypertarget{Treasure Die}{Treasure Die}\index{Treasure Die}\index{Dice} and gain the indicated bonus (\includesvg[height=10px]{\svgs/resource_die.svg}, \includesvg[height=10px]{\svgs/2_treasure_die.svg}, \includesvg[height=10px]{\svgs/experience.svg}, or \includesvg[height=10px]{\svgs/artifact.svg}).
+      Roll a \pagetarget{Treasure Die}{Treasure Die}\index{Treasure Die}\index{Dice} and gain the indicated bonus (\includesvg[height=10px]{\svgs/resource_die.svg}, \includesvg[height=10px]{\svgs/2_treasure_die.svg}, \includesvg[height=10px]{\svgs/experience.svg}, or \includesvg[height=10px]{\svgs/artifact.svg}).
     }
     \begin{tikzpicture}[overlay]
       \node at (1, 0.25) {\includegraphics[width=0.2\linewidth]{\images/treasure_die.png}};
     \end{tikzpicture} \\
-    \includesvg[height=15px]{\svgs/resource_die.svg} & Roll a \hyperlink{Resources}{Resource Die} and gain the indicated Resources. \\
+    \includesvg[height=15px]{\svgs/resource_die.svg} & Roll a \pagelink{Resources}{Resource Die} and gain the indicated Resources. \\
     \includesvg[height=15px]{\svgs/2_treasure_die.svg} & Roll 2 Resource Dice and choose the bonus from one of them. \\
     \includesvg[height=15px]{\svgs/experience.svg} & Gain one Experience Point. \\
     \includesvg[height=15px]{\svgs/artifact.svg} & Search (2) the Artifact Deck. \\
@@ -25,7 +25,7 @@
     \includesvg[height=15px]{\svgs/morale_positive.svg} & Gain Positive Morale. \\
     \includesvg[height=15px]{\svgs/morale_negative.svg} & Gain Negative Morale. \\
     \includesvg[height=15px]{\svgs/movement.svg} & Gain 1 Movement Point for this turn. \\
-    {\huge\textbf{?}} & Special effect, see \hyperlink{Revisitable Fields}{Revisitable} or \hyperlink{Other Fields}{Other} fields.\\
+    {\huge\textbf{?}} & Special effect, see \pagelink{Revisitable Fields}{Revisitable} or \pagelink{Other Fields}{Other} fields.\\
   \end{tabularx}
 \endgroup
 
@@ -55,7 +55,7 @@
   You must always place a Black Cube on such Visitable Fields even if you choose not to use that Field's effect.
 }
 
-The effects of the following \textbf{Visitable} \hypertarget{All Map Locations}{fields} are explained by the symbols on the left:
+The effects of the following \textbf{Visitable} \pagetarget{All Map Locations}{fields} are explained by the symbols on the left:
 
 \medskip
 
@@ -135,7 +135,7 @@ The effects of the following \textbf{Visitable} fields are explained by the symb
 \subsection*{Towns, Mines and Settlements}
 \textbf{Towns} are always located in the center of a Starting (I) Tile.
 Flagging an enemy Town prevents their Secondary Heroes from spawning there and Main Heroes from moving there if defeated.
-Flagging a Town can cause \hyperlink{End}{Player Elimination}, and Scenarios typically have special rewards for Flagging them.
+Flagging a Town can cause \pagelink{End}{Player Elimination}, and Scenarios typically have special rewards for Flagging them.
 Flagging a Town also gives you a \textbf{Faction Cube} from its original owner.
 Otherwise, Flagging a Town does not affect its original owner in any way.
 They do not lose access to their Town board or its functions.
@@ -148,7 +148,7 @@ You also do not gain access to their Town board or Faction Units, unlike in the 
 
 \medskip
 
-\hypertarget{Mines}{\textbf{Mines}}\index{Mines} are Flaggable Fields which increase a specific resource's income when Flagged.
+\pagetarget{Mines}{\textbf{Mines}}\index{Mines} are Flaggable Fields which increase a specific resource's income when Flagged.
 If you are the first one to Flag a mine, it also immediately provides you with its income.
 All mines have the \includesvg[height=10px]{\svgs/ongoing.svg} symbol and a picture of the Resource they produce next to it.
 
@@ -188,7 +188,7 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
 \end{multicols*}
 \bigbreak
 
-\subsection*{\hypertarget{Revisitable Fields}{Revisitable Fields}}
+\subsection*{\pagetarget{Revisitable Fields}{Revisitable Fields}}
 
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
@@ -248,18 +248,18 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \hypertarget{Trading Post}{\textbf{Trading Post}}\par
+    \pagetarget{Trading Post}{\textbf{Trading Post}}\par
     \framedimage[\textwidth]{\map_locations/trading_post.jpg}
     \caption{\small Category: \textbf{Revisitable}\\
-      \textbf{Choose one}: \protect\hyperlink{Trading}{Trade} resources OR Remove a card OR buy a \protect\hyperlink{War Machines}{War Machine}.
+      \textbf{Choose one}: \protect\pagelink{Trading}{Trade} resources OR Remove a card OR buy a \protect\pagelink{War Machines}{War Machine}.
     }
   \end{minipage}\hfill
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \phantom{j}\hypertarget{War Machine Factory}{\textbf{War Machine Factory}}\par
+    \phantom{j}\pagetarget{War Machine Factory}{\textbf{War Machine Factory}}\par
     \framedimage[\textwidth]{\map_locations/war_machine_factory.jpg}
-    \caption{\small Category: \textbf{Revisitable}\\Buy a \protect\hyperlink{War Machines}{War Machine}.\phantom{.......}}
+    \caption{\small Category: \textbf{Revisitable}\\Buy a \protect\pagelink{War Machines}{War Machine}.\phantom{.......}}
   \end{minipage}
 \end{figure}
 
@@ -272,7 +272,7 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
     \caption{\small Category: \textbf{Revisitable}\\
       Gain 1 MP \includesvg[height=8px]{\svgs/movement.svg}.
       It lasts for only one Turn.
-      See \protect\hyperlink{Movement}{Movement Actions}.
+      See \protect\pagelink{Movement}{Movement Actions}.
     }
   \end{minipage}\hfill
 \end{figure}
@@ -281,7 +281,7 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
   \node at (16, 4.5) {\includegraphics[width=0.5\linewidth]{\art/pegasi.png}};
 \end{tikzpicture}
 
-\subsection*{\hypertarget{Other Fields}{Other Fields}}
+\subsection*{\pagetarget{Other Fields}{Other Fields}}
 
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
@@ -308,7 +308,7 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \phantom{j}\textbf{\hypertarget{Grail}{Grail}}\par
+    \phantom{j}\textbf{\pagetarget{Grail}{Grail}}\par
     \framedimage[\linewidth]{\map_locations/grail.jpg}
     \caption{\small Category: \textbf{Visitable}\\Gain a Grail Token.
     Only one Grail Token can exist in the game, do not gain another if this Field's Black Cube is removed or if there are multiple Grail Fields.
@@ -431,7 +431,7 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
 
 \bigskip
 
-{\centering\textbf{\hypertarget{Random Town}{Random Town}\index{Random Town}}\par}
+{\centering\textbf{\pagetarget{Random Town}{Random Town}\index{Random Town}}\par}
 \framedimage[\linewidth]{\map_locations/random_town.jpg}
 {\small Category: \textbf{Flaggable}\\
   When revealed, all players roll 2 \includesvg[height=10px]{\svgs/resource_die.svg}.
