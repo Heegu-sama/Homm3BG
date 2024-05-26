@@ -124,18 +124,9 @@ jobs:
           mkdir ${{ matrix.language }}
           mv main_${{ matrix.language }}.pdf ${{ matrix.language }}
 
-      # Printable build goes below
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Add pages to select hyperlinks
+      - name: Prepare for printable
         run: |
-          find ${{ matrix.sections }} -type f -execdir sed -i 's@\\hypertarget@\\pagetarget@g' '{}' +
-          python .github/insert_printable_hyperlinks.py ${{ matrix.sections }}
-
-      - name: Add QR codes
-        run: sed -i -e '/% QR codes placeholder/{r .github/qr-codes-${{ matrix.language }}.tex' -e 'd}' metadata.tex
+          rm *.aux
 
       - name: Compile printable rule book
         uses: xu-cheng/latex-action@v3
