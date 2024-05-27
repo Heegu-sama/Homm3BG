@@ -2,7 +2,7 @@
 
 LANGUAGE=$1
 
-VERSION=$(grep Version main_en.tex | grep -Po "\d.+$")
+VERSION=$(grep Version main_${LANGUAGE}.tex | grep -Po "\d.+$")
 FILE_VERSION=$(echo "${VERSION}" | tr -d .)
 
 declare -A languages=(
