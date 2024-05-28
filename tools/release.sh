@@ -2,8 +2,8 @@
 
 LANGUAGE=$1
 
-VERSION=$(grep Version main_${LANGUAGE}.tex | grep -Po "\d.+$")
-FILE_VERSION=$(echo "${VERSION}" | tr -d .)
+VERSION=$(grep -Po "\d{1,}(\.\d{1,}){1,2}$" main_${LANGUAGE}.tex)
+FILE_VERSION=$(echo "${VERSION}" | tr . _)
 
 declare -A languages=(
   ["en"]="English"
