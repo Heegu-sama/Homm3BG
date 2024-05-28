@@ -66,7 +66,7 @@ jobs:
 
       - name: Replace rule book version with a warning
         run: |
-          VERSION=$(grep -P "^[\ ]*${{ matrix.version }} \d{1,}.\d{1,}$" main_${{ matrix.language }}.tex)
+          VERSION=$(grep -P "^[\ ]*${{ matrix.version }} \d{1,}(\.\d{1,}){1,2}$" main_${{ matrix.language }}.tex)
           WARNING="${{ matrix.warning }} \\\href{${{ env.REPO_URL }}}{${GITHUB_SHA::7}}."
           sed -i "s@$VERSION@$WARNING@g" main_${{ matrix.language }}.tex
 
