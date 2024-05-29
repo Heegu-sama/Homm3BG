@@ -175,6 +175,10 @@
   \end{tikzpicture}
 }
 
+% Create Heroes-styled framed canvas for a table. Accepts three arguments:
+% 1) [Optional] Drop shadow opacity percentage, defaults to 15. Set to 0 for no shadow.
+% 2) Height specified in verses (lines of text)
+% 3) Table contents like title and tabularx environment
 \newcommand{\hommtable}[3][15]{
   \begin{tikzpicture}
     \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#2\baselineskip}{\layout/table-background.jpg}}};
@@ -198,6 +202,7 @@
     \end{pgfonlayer}
   \end{tikzpicture}
 }
+% End of Heroes-styled canvas definition.
 
 \definecolor{darkcellborder}{HTML}{634831}
 \definecolor{darkcellbg}{HTML}{20160C}
