@@ -176,10 +176,10 @@
 }
 
 % Create Heroes-styled framed canvas for a table. Accepts three arguments:
-% 1) [Optional] Drop shadow opacity percentage, defaults to 15. Set to 0 for no shadow.
+% 1) [Optional] Drop shadow description. Use [] as the first arg to delete it.
 % 2) Height specified in verses (lines of text)
 % 3) Table contents like title and tabularx environment
-\newcommand{\hommtable}[3][15]{
+\newcommand{\hommtable}[3][shade, blur shadow={shadow opacity=15}]{
   \begin{tikzpicture}
     \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#2\baselineskip}{\layout/table-background.jpg}}};
     \draw [bordermidyellow, thick] ([xshift=+1pt, yshift=-1pt] current bounding box.north west) rectangle ([xshift=-1pt, yshift=1pt] current bounding box.south east);
@@ -198,7 +198,7 @@
       \end{varwidth}
     };
     \begin{pgfonlayer}{background}
-      \draw [shade, blur shadow={shadow opacity=#1}] (current bounding box.north west) rectangle (current bounding box.south east);
+      \draw [#1] (current bounding box.north west) rectangle (current bounding box.south east);
     \end{pgfonlayer}
   \end{tikzpicture}
 }
