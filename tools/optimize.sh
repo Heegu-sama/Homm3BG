@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
 LANGUAGE=$1
+CMYK=$2
+
+if [ ${CMYK} == "cmyk" ]
+then
+  ARGS=-sColorConversionStrategy=CMYK
+fi
 
 
 gs -o main_${LANGUAGE}_optimized.pdf \
@@ -8,4 +14,4 @@ gs -o main_${LANGUAGE}_optimized.pdf \
   -dCompatibilityLevel=1.5 \
   -dPDFSETTINGS=/prepress \
   -dDetectDuplicateImages=true \
-  main_${LANGUAGE}.pdf
+  ${ARGS} main_${LANGUAGE}.pdf
