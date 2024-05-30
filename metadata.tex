@@ -170,7 +170,9 @@
       \end{varwidth}
     };
     \begin{pgfonlayer}{background}
-      \draw [shade, blur shadow={shadow opacity=15}] (current bounding box.north west) rectangle (current bounding box.south east);
+      \begin{scope}[blend mode=multiply]
+        \draw [shade, blur shadow={shadow opacity=15}] (current bounding box.north west) rectangle (current bounding box.south east);
+      \end{scope}
     \end{pgfonlayer}
   \end{tikzpicture}
 }
@@ -194,7 +196,9 @@
       \end{varwidth}
     };
     \begin{pgfonlayer}{background}
-      \draw [shade, blur shadow={shadow opacity=15}] (current bounding box.north west) rectangle (current bounding box.south east);
+      \begin{scope}[blend mode=multiply]
+        \draw [shade, fill=black, opacity=0.15, blur shadow={shadow opacity=15}] ([xshift=0.1pt, yshift=-0.1pt] current bounding box.north west) rectangle ([xshift=-0.1pt, yshift=0.1pt] current bounding box.south east);
+      \end{scope}
     \end{pgfonlayer}
   \end{tikzpicture}
 }
