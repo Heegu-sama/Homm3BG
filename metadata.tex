@@ -170,14 +170,20 @@
       \end{varwidth}
     };
     \begin{pgfonlayer}{background}
-      \draw [shade, blur shadow={shadow opacity=15}] (current bounding box.north west) rectangle (current bounding box.south east);
+      \begin{scope}[blend mode=multiply]
+        \draw [shade, blur shadow={shadow opacity=15}] (current bounding box.north west) rectangle (current bounding box.south east);
+      \end{scope}
     \end{pgfonlayer}
   \end{tikzpicture}
 }
 
-\newcommand{\hommtable}[2]{
+% Create Heroes-styled framed canvas for a table. Accepts three arguments:
+% 1) [Optional] Drop shadow description. Use [] as the first arg to delete it.
+% 2) Height specified in verses (lines of text)
+% 3) Table contents like title and tabularx environment
+\newcommand{\hommtable}[3][shade, blur shadow={shadow opacity=15}]{
   \begin{tikzpicture}
-    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/table-background.jpg}}};
+    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#2\baselineskip}{\layout/table-background.jpg}}};
     \draw [bordermidyellow, thick] ([xshift=+1pt, yshift=-1pt] current bounding box.north west) rectangle ([xshift=-1pt, yshift=1pt] current bounding box.south east);
     \draw [borderoutyellow, thick] (current bounding box.north west) rectangle (current bounding box.south east);
     \draw [borderinyellow, thick] ([xshift=+3pt, yshift=-3pt] current bounding box.north west) rectangle ([xshift=-3pt, yshift=3pt] current bounding box.south east);
@@ -188,16 +194,19 @@
         \color{arylideyellow}
         \hypersetup{linkcolor=amber}
         \setlength{\tabcolsep}{0.3em}
-        #2
+        #3
         \egroup
       }
       \end{varwidth}
     };
     \begin{pgfonlayer}{background}
-      \draw [shade, blur shadow={shadow opacity=15}] (current bounding box.north west) rectangle (current bounding box.south east);
+      \begin{scope}[blend mode=multiply]
+        \draw [#1] (current bounding box.north west) rectangle (current bounding box.south east);
+      \end{scope}
     \end{pgfonlayer}
   \end{tikzpicture}
 }
+% End of Heroes-styled canvas definition.
 
 \definecolor{darkcellborder}{HTML}{634831}
 \definecolor{darkcellbg}{HTML}{20160C}

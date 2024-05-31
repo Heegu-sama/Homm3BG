@@ -29,6 +29,6 @@ tools/make_printable.sh ${LANGUAGE} &> /dev/null
 git restore metadata.tex sections/
 echo "Please inspect the PDF file."
 echo "Optimizing printable build..."
-tools/optimize.sh ${LANGUAGE} &> /dev/null
+tools/optimize.sh ${LANGUAGE} cmyk &> /dev/null
 mv main_${LANGUAGE}_optimized.pdf release-${VERSION}/Heroes3_${languages[$LANGUAGE]}_Rules_Rewrite_${FILE_VERSION}_Printable.pdf
 echo "Done."

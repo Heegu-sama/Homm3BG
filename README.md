@@ -98,7 +98,7 @@ You can expect things to break, like having incorrect layout or not all the text
 
 🖥️ The digital build is intended to be read on electronic devices.
 It has convenient hyperlinks that navigate you around the text.<br>
-🖨️ The printable build appends page numbers to select clickable hyperlinks, includes an index page at the end, and makes sure the document has 56 pages to be print friendly.
+🖨️ The printable build appends page numbers to select clickable hyperlinks, includes an index page at the end, and makes sure the document has 56 pages, and uses CMYK to be print friendly.
 Best served for those who would like to have it on paper 🤞
 
 This repository used to host [**Comprehensive Components List**](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf) listing all the cards, minis, tokens, etc. for every box, but after a while ⚠️ ️️**Archon released their own version of it, and you should use it instead. Find it on 👉 [their website](https://archon-studio.com/downloads/heroes-iii) 👈 called "Content Guide"**.
