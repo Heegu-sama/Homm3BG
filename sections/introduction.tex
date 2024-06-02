@@ -12,6 +12,14 @@
   footskip=2.05cm,
 }
 
+\AddToHook{shipout/background}{%
+  \ifodd\value{page}
+    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}%
+  \else
+    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-even.png}}%
+  \fi
+}
+
 \addsection{Introduction}{\spells/magic_arrow.png}
 
 The continent of Antagarich is at war as several different Factions, led by their Heroes, battle for supremacy. Choose your Faction and Hero and banish your unruly enemies from these lands!
