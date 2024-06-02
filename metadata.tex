@@ -1,7 +1,6 @@
 % Set page size and margins
 \usepackage[
   a4paper,
-  twoside,
   top=2cm,
   bottom=3cm,
   left=2cm,
@@ -243,11 +242,15 @@
 % Background
 \AddToHook{shipout/background}{%
   \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}
-  \ifodd\value{page}
-    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}
-  \else
-    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-even.png}}
-  \fi
+  \iftoggle{printable}{
+    \ifodd\value{page}
+      \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}
+    \else
+      \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-even.png}}
+    \fi
+  }{
+    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}
+  }
 }
 
 \makeindex[columns=3, title=,]
@@ -293,16 +296,18 @@
 
 \clearpage
 
-\newgeometry{
-  a4paper,
-  twoside,
-  top=2cm,
-  bottom=3cm,
-  left=2.5cm,
-  right=1.5cm,
-  marginparwidth=1.75cm,
-  footskip=2.05cm,
-}
+\iftoggle{printable}{
+  \newgeometry{
+    a4paper,
+    twoside,
+    top=2cm,
+    bottom=3cm,
+    left=2.5cm,
+    right=1.5cm,
+    marginparwidth=1.75cm,
+    footskip=2.05cm,
+  }
+}{}
 
 \begin{multicols*}{2}
 \tableofcontents
