@@ -12,7 +12,7 @@ Click in the table to download the most recent builds in the chosen language:
             <th>Language</th>
             <th colspan=2 align="center">Progress</th>
             <th colspan=2 align="center">Version 1.2 🪨<br>(Stable)</th>
-            <th colspan=2 align="center">Latest Build ⚗️<br>(Experimental)</th>
+            <th colspan=3 align="center">Latest Build ⚗️<br>(Experimental)</th>
         </tr>
     </thead>
     <tbody>
@@ -24,6 +24,7 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center">🖨️<br>Printable</td>
             <td align="center">🖥️<br>Digital</td>
             <td align="center">🖨️<br>Printable</td>
+            <td align="center">🖨️<br>Printable<br><i>(without art backgrounds)</i></td>
         </tr>
         <tr>
             <td>🇬🇧 English</td>
@@ -33,6 +34,7 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_English_Rules_Rewrite_12_Printable.pdf">download</a></td>
             <td align="center">️<a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf">download</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf">download</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/no_art_background_en.pdf">download</a></td>
         </tr>
         <tr>
             <td>🇵🇱 Polski</td>
@@ -42,6 +44,7 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Polski_Rules_Rewrite_12_Printable.pdf">pobierz</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf">️pobierz</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf">pobierz</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/no_art_background_pl.pdf">pobierz</a></td>
         </tr>
         <tr>
             <td>🇪🇸 Español</td>
@@ -51,6 +54,7 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Espanol_Rules_Rewrite_12_Printable.pdf">descargar</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf">️descargar</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf">descargar</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/no_art_background_es.pdf">descargar</a></td>
         </tr>
         <tr>
             <td>🇫🇷 Français</td>
@@ -60,6 +64,7 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Francais_Rules_Rewrite_12_Printable.pdf">télécharger</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf">️télécharger</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf">télécharger</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/no_art_background_fr.pdf">télécharger</a></td>
         </tr>
         <tr>
             <td>🇷🇺 Русский</td>
@@ -69,6 +74,7 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center">—</td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf">️скачать</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf">скачать</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/no_art_background_ru.pdf">скачать</a></td>
         </tr>
         <tr>
             <td>🇺🇦 Українська</td>
@@ -78,6 +84,7 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Ukrainska_Rules_Rewrite_12_Printable.pdf">завантажити</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf">️завантажити</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf">завантажити</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/no_art_background_ua.pdf">завантажити</a></td>
         </tr>
         <tr>
             <td>🇩🇪 Deutsch</td>
@@ -87,6 +94,7 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center">—</td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/main_de.pdf">️speichern</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/printable_de.pdf">speichern</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/no_art_background_de.pdf">speichern</a></td>
         </tr>
     </tbody>
 </table>
@@ -99,7 +107,8 @@ You can expect things to break, like having incorrect layout or not all the text
 🖥️ The digital build is intended to be read on electronic devices.
 It has convenient hyperlinks that navigate you around the text.<br>
 🖨️ The printable build appends page numbers to select clickable hyperlinks, includes an index page at the end, and makes sure the document has 56 pages, and uses CMYK to be print friendly.
-Best served for those who would like to have it on paper 🤞
+Best served for those who would like to have it on paper 🤞<br>
+🖨️ The printable build **without art backgrounds** is the same as the regular printable build but without the backgrounds as the name suggests. This is for people who want to save their toners or don't have printers that can print edge to edge where the white borders around the art backgrounds don't look that good.
 
 This repository used to host [**Comprehensive Components List**](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf) listing all the cards, minis, tokens, etc. for every box, but after a while ⚠️ ️️**Archon released their own version of it, and you should use it instead. Find it on 👉 [their website](https://archon-studio.com/downloads/heroes-iii) 👈 called "Content Guide"**.
 
