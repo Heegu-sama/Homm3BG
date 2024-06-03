@@ -176,6 +176,29 @@ jobs:
             exit 1
           fi
 
+      - name: Compile printable rule book without art backgrounds
+        uses: xu-cheng/latex-action@v3
+        if: github.event_name != 'pull_request'
+        with:
+          extra_system_packages: "inkscape"
+          pre_compile: export HOMM3_PRINTABLE=1 HOMM3_NO_ART_BACKGROUND=1 HOMM3_LANG=${{ matrix.language }}
+          latexmk_use_lualatex: ${{ matrix.luaengine }}
+          latexmk_shell_escape: true
+          root_file: main_${{ matrix.language }}.tex
+
+      - name: Optimize PDF
+        if: github.event_name != 'pull_request'
+        run: |
+          du -sh main_${{ matrix.language }}.pdf
+          tools/optimize.sh ${{ matrix.language }} cmyk
+          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
+          du -sh main_${{ matrix.language }}.pdf
+
+      - name: Move file
+        if: github.event_name != 'pull_request'
+        run: |
+          mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/no_art_background_${{ matrix.language }}.pdf
+
       - name: Publish ${{ matrix.language }} in artifacts repository
         if: github.event_name != 'pull_request'
         uses: peaceiris/actions-gh-pages@v4
