@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-04-12 10:05+0200\n"
+"POT-Creation-Date: 2024-06-03 15:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,13 +18,15 @@ msgstr ""
 
 #.  !TeX spellcheck = en_US
 #. type: tikzpicture
-#: sections/title_page.tex:13
+#: sections/title_page.tex:15
 #, no-wrap
 msgid ""
 "[remember picture, overlay, inner sep=10pt]\n"
-"  \\node(cover)[anchor=center] at (current page.center) {\n"
-"    \\includegraphics[height=\\paperheight, keepaspectratio]{\\layout/cover.jpg}\n"
-"  };\n"
+"  \\iftoggle{printablenobg}{}{\n"
+"    \\node(cover)[anchor=center] at (current page.center) {\n"
+"      \\includegraphics[height=\\paperheight, keepaspectratio]{\\layout/cover.jpg}\n"
+"    };\n"
+"  }\n"
 "  \\node(title)[minimum width = \\paperwidth, anchor=center, yshift=-10em] at (current page.north) {\n"
 "    \\includegraphics[width=0.6\\paperwidth]{\\layout/cover_title.png}\n"
 "  };\n"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-05-30 01:04+0200\n"
+"POT-Creation-Date: 2024-06-03 15:52+0200\n"
 "PO-Revision-Date: 2024-05-11 20:48+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,18 +17,17 @@ msgstr ""
 "X-Generator: Poedit 3.4.4\n"
 
 #.  !TeX spellcheck = en_US
-#. type: tikzpicture
-#: sections/back_cover.tex:8
-#, no-wrap
+#. type: Plain text
+#: sections/back_cover.tex:10
 msgid ""
-"[remember picture, overlay, inner sep=10pt]\n"
-"  \\node(cover)[anchor=center] at (current page.center) {\n"
-"    \\includegraphics[height=\\paperheight, keepaspectratio]{\\layout/back.jpg}\n"
-"  };"
+"\\iftoggle{printablenobg}{}{ \\begin{tikzpicture}[remember picture, overlay, "
+"inner sep=10pt] \\node(cover)[anchor=center] at (current page.center) "
+"{ \\includegraphics[height=\\paperheight, keepaspectratio]{\\layout/back."
+"jpg} }; \\end{tikzpicture} }"
 msgstr ""
 
 #. type: Plain text
-#: sections/back_cover.tex:30
+#: sections/back_cover.tex:33
 #, fuzzy
 #| msgid ""
 #| "\\hommtable{21}{ \\pagetarget{Difficulty Table}{} \\centering \\medskip "
@@ -122,7 +121,7 @@ msgstr ""
 "\\azure \\azure} \\\\ \\end{tabularx} }"
 
 #. type: Plain text
-#: sections/back_cover.tex:44
+#: sections/back_cover.tex:47
 #, fuzzy
 #| msgid ""
 #| "\\hommtable{14}{ \\centering \\textbf{\\pagetarget{Trade Table}{Trade "
