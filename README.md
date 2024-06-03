@@ -24,7 +24,7 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center">🖨️<br>Printable</td>
             <td align="center">🖥️<br>Digital</td>
             <td align="center">🖨️<br>Printable</td>
-            <td align="center">🖨️<br>Printable<br><i>(without art backgrounds)</i></td>
+            <td align="center">🤑<br>Economy Printable</td>
         </tr>
         <tr>
             <td>🇬🇧 English</td>
