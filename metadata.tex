@@ -6,7 +6,7 @@
   left=2cm,
   right=2cm,
   marginparwidth=1.75cm,
-  footskip=2.05cm
+  footskip=2.05cm,
 ]{geometry}
 
 % Useful packages
@@ -126,7 +126,7 @@
     \end{tikzpicture}
     }
   }
-  \begin{fullwidth}[leftmargin=0.16\textwidth]
+  \begin{fullwidth}[leftmargin=0.16\textwidth, outermargin=0.16\textwidth, innermargin=0.16\textwidth]
     \begin{center}
       \vspace*{\lang_header_adjustment}
       \sectionheadertext{#1}
@@ -245,7 +245,13 @@
   \iftoggle{noartbackground}{}{
     \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}
   }
-  \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}%
+  \iftoggle{printable}{
+    \ifodd\value{page}
+      \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}
+    \else
+      \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-even.png}}
+    \fi
+  }{\put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}}
 }
 
 \makeindex[columns=3, title=,]
@@ -253,6 +259,20 @@
 \begin{document}
 
 \include{\sections/title_page.tex}
+
+\iftoggle{printable}{
+  \newgeometry{
+    a4paper,
+    twoside,
+    top=2cm,
+    bottom=3cm,
+    left=2.5cm,
+    right=1.5cm,
+    marginparwidth=1.75cm,
+    footskip=2.05cm,
+  }
+}{}
+
 
 \author{Hermanni ``Heegu'' Karppela}
 \maketitle
