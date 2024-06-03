@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-04-26 15:42+0200\n"
+"POT-Creation-Date: 2024-06-03 10:39+0200\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -18,17 +18,26 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#. type: multicols
-#: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
-#: sections/all_map_locations.tex:417 sections/combat.tex:5
-#: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
+#. type: Plain text
+#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
+#: sections/components.tex:5 sections/credits.tex:6 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
-#: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:54
-#: sections/map_elements.tex:99 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
-#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:145
+#: sections/map_elements.tex:5 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/setup.tex:5 sections/trading.tex:5
+msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
+#: sections/all_map_locations.tex:421 sections/combat.tex:5
+#: sections/combat.tex:140 sections/credits.tex:10 sections/deckbuilding.tex:7
+#: sections/difficulty.tex:7 sections/expansion_content.tex:7
+#: sections/expansion_content.tex:51 sections/game_modes.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:79
+#: sections/map_elements.tex:124 sections/player_turns.tex:7
+#: sections/resources.tex:7 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:58 sections/town.tex:5
+#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:160
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -36,7 +45,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/deckbuilding.tex:78 sections/resources.tex:31
+#: sections/deckbuilding.tex:78 sections/resources.tex:33
 msgid "\\columnbreak"
 msgstr ""
 
@@ -47,7 +56,7 @@ msgid "\\addsection{Resources}{\\skills/estates.png}"
 msgstr "\\addsection{Zasoby}{\\skills/estates.png}"
 
 #. type: multicols
-#: sections/resources.tex:23
+#: sections/resources.tex:25
 #, no-wrap
 msgid ""
 "\\pagetarget{Resources}{There}\\index{Resources} are three types of Resources in the game: Gold \\includesvg[height=10px]{\\svgs/gold.svg}, Building Materials \\includesvg[height=10px]{\\svgs/building_materials.svg}, and Valuables \\includesvg[height=10px]{\\svgs/valuablegreater.svg}.\n"
@@ -87,7 +96,7 @@ msgstr ""
 "  \\footnotesize\\textcolor{darkcandyapplered}{\\textit{\\textbf{Kosztowności}}}"
 
 #. type: Plain text
-#: sections/resources.tex:27
+#: sections/resources.tex:29
 msgid ""
 "Players start each Scenario with the number of Resources indicated in that "
 "Scenario’s setup.  Resources can also be \\pagelink{Trading}{traded}.  "
@@ -98,12 +107,12 @@ msgstr ""
 "{handlować}. Nie ma ograniczeń w ilości posiadanych Zasobów."
 
 #. type: textcolor{#2}
-#: sections/resources.tex:37
+#: sections/resources.tex:39
 msgid "\\textbf{\\textit{Resource Production Tracker}}"
 msgstr "\\textbf{\\textit{Tor Przychodu}}"
 
 #. type: Plain text
-#: sections/resources.tex:49
+#: sections/resources.tex:51
 msgid ""
 "Possible Resource Die\\index{Resource Die}\\index{Dice} "
 "\\includesvg[height=10px]{\\svgs/resource_die.svg} results:"
@@ -112,12 +121,12 @@ msgstr ""
 "\\includesvg[height=10px]{\\svgs/resource_die.svg}, możesz zyskać:"
 
 #. type: itemize
-#: sections/resources.tex:49
+#: sections/resources.tex:51
 msgid "sep{8pt}"
 msgstr ""
 
 #. type: itemize
-#: sections/resources.tex:49
+#: sections/resources.tex:51
 msgid ""
 "[{\\includesvg[height=15px]{\\svgs/2_building_materials.svg}}] — 2 x "
 "Building Materials"
@@ -125,7 +134,7 @@ msgstr ""
 "[{\\includesvg[height=15px]{\\svgs/2_building_materials.svg}}] — 2 x Budulce"
 
 #. type: itemize
-#: sections/resources.tex:49
+#: sections/resources.tex:51
 msgid ""
 "[{\\includesvg[height=15px]{\\svgs/4_building_materials.svg}}] — 4 x "
 "Building Materials"
@@ -133,29 +142,29 @@ msgstr ""
 "[{\\includesvg[height=15px]{\\svgs/4_building_materials.svg}}] — 4 x Budulce"
 
 #. type: itemize
-#: sections/resources.tex:49
+#: sections/resources.tex:51
 msgid "[{\\includesvg[height=15px]{\\svgs/1_valuables.svg}}] — 1 x Valuables"
 msgstr ""
 "[{\\includesvg[height=15px]{\\svgs/1_valuables.svg}}] — 1 x Kosztowności"
 
 #. type: itemize
-#: sections/resources.tex:49
+#: sections/resources.tex:51
 msgid "[{\\includesvg[height=15px]{\\svgs/2_valuables.svg}}] — 2 x Valuables"
 msgstr ""
 "[{\\includesvg[height=15px]{\\svgs/2_valuables.svg}}] — 2 x Kosztowności"
 
 #. type: itemize
-#: sections/resources.tex:49
+#: sections/resources.tex:51
 msgid "[{\\includesvg[height=15px]{\\svgs/3_gold.svg}}] — 3 x Gold"
 msgstr "[{\\includesvg[height=15px]{\\svgs/3_gold.svg}}] — 3 x Złoto"
 
 #. type: itemize
-#: sections/resources.tex:49
+#: sections/resources.tex:51
 msgid "[{\\includesvg[height=15px]{\\svgs/6_gold.svg}}] — 6 x Gold"
 msgstr "[{\\includesvg[height=15px]{\\svgs/6_gold.svg}}] — 6 x Złoto"
 
 #. type: tikzpicture
-#: sections/resources.tex:53
+#: sections/resources.tex:55
 #, no-wrap
 msgid ""
 "[overlay]\n"
@@ -163,7 +172,7 @@ msgid ""
 msgstr ""
 
 #. type: scaledfigure
-#: sections/resources.tex:61
+#: sections/resources.tex:63
 #, no-wrap
 msgid ""
 "[blanker]\n"
