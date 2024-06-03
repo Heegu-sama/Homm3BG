@@ -3,7 +3,7 @@
 LANGUAGE=$1
 CMYK=$2
 
-if [ ${CMYK} == "cmyk" ]
+if [[ ${CMYK} == "cmyk" ]]
 then
   ARGS=-sColorConversionStrategy=CMYK
 fi
