@@ -34,7 +34,7 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_English_Rules_Rewrite_12_Printable.pdf">download</a></td>
             <td align="center">️<a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf">download</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf">download</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/no_art_background_en.pdf">download</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/economy_printable_en.pdf">download</a></td>
         </tr>
         <tr>
             <td>🇵🇱 Polski</td>
@@ -44,7 +44,7 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Polski_Rules_Rewrite_12_Printable.pdf">pobierz</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf">️pobierz</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf">pobierz</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/no_art_background_pl.pdf">pobierz</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/economy_printable_pl.pdf">pobierz</a></td>
         </tr>
         <tr>
             <td>🇪🇸 Español</td>
@@ -54,7 +54,7 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Espanol_Rules_Rewrite_12_Printable.pdf">descargar</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf">️descargar</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf">descargar</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/no_art_background_es.pdf">descargar</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/economy_printable_es.pdf">descargar</a></td>
         </tr>
         <tr>
             <td>🇫🇷 Français</td>
@@ -64,7 +64,7 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Francais_Rules_Rewrite_12_Printable.pdf">télécharger</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf">️télécharger</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf">télécharger</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/no_art_background_fr.pdf">télécharger</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/economy_printable_fr.pdf">télécharger</a></td>
         </tr>
         <tr>
             <td>🇷🇺 Русский</td>
@@ -74,7 +74,7 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center">—</td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf">️скачать</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf">скачать</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/no_art_background_ru.pdf">скачать</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/economy_printable_ru.pdf">скачать</a></td>
         </tr>
         <tr>
             <td>🇺🇦 Українська</td>
@@ -84,7 +84,7 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Ukrainska_Rules_Rewrite_12_Printable.pdf">завантажити</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf">️завантажити</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf">завантажити</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/no_art_background_ua.pdf">завантажити</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/economy_printable_ua.pdf">завантажити</a></td>
         </tr>
         <tr>
             <td>🇩🇪 Deutsch</td>
@@ -94,7 +94,7 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center">—</td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/main_de.pdf">️speichern</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/printable_de.pdf">speichern</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/no_art_background_de.pdf">speichern</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/economy_printable_de.pdf">speichern</a></td>
         </tr>
     </tbody>
 </table>

@@ -197,7 +197,7 @@ jobs:
       - name: Move file
         if: github.event_name != 'pull_request'
         run: |
-          mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/no_art_background_${{ matrix.language }}.pdf
+          mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/economy_printable_${{ matrix.language }}.pdf
 
       - name: Publish ${{ matrix.language }} in artifacts repository
         if: github.event_name != 'pull_request'
