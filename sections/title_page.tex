@@ -1,7 +1,7 @@
 % !TeX spellcheck = en_US
 \thispagestyle{empty}
 \begin{tikzpicture}[remember picture, overlay, inner sep=10pt]
-  \iftoggle{printablenobg}{}{
+  \iftoggle{noartbackground}{}{
     \node(cover)[anchor=center] at (current page.center) {
       \includegraphics[height=\paperheight, keepaspectratio]{\layout/cover.jpg}
     };

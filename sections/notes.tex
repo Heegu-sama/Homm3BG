@@ -2,7 +2,7 @@
 \addsection{Notes}{\spells/cure.png}
 
 \AddToHookNext{shipout/background}{%
-  \iftoggle{printablenobg}{}{
+  \iftoggle{noartbackground}{}{
     \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/castle_background.jpg}}
   }
   \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}%
