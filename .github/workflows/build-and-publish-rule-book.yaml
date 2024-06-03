@@ -178,7 +178,7 @@ jobs:
 
       - name: Compile economy printable rule book without art backgrounds
         uses: xu-cheng/latex-action@v3
-        #if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request'
         with:
           extra_system_packages: "inkscape"
           pre_compile: export HOMM3_PRINTABLE=1 HOMM3_NO_ART_BACKGROUND=1 HOMM3_LANG=${{ matrix.language }}
@@ -187,7 +187,7 @@ jobs:
           root_file: main_${{ matrix.language }}.tex
 
       - name: Optimize PDF
-        #if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request'
         run: |
           du -sh main_${{ matrix.language }}.pdf
           tools/optimize.sh ${{ matrix.language }} cmyk
@@ -195,16 +195,9 @@ jobs:
           du -sh main_${{ matrix.language }}.pdf
 
       - name: Move file
-        #if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request'
         run: |
           mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/economy_printable_${{ matrix.language }}.pdf
-
-      - uses: actions/upload-artifact@v4
-        #if: github.event_name == 'pull_request'
-        with:
-          name: economy_printable_${{ matrix.language }}
-          path: ${{ matrix.language }}/economy_printable_${{ matrix.language }}.pdf
-          retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
 
       - name: Publish ${{ matrix.language }} in artifacts repository
         if: github.event_name != 'pull_request'
