@@ -64,6 +64,7 @@
 
 \setlength{\columnsep}{1cm}
 \newtoggle{printable}
+\newtoggle{printablenobg}
 
 % Variables
 \def\_assets{assets}
@@ -241,7 +242,9 @@
 
 % Background
 \AddToHook{shipout/background}{%
-  \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}%
+  \iftoggle{printablenobg}{}{
+    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}
+  }
   \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}%
 }
 

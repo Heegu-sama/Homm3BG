@@ -174,6 +174,12 @@ Then, use the script:
 tools/make_printable.sh <LANGUAGE>
 ```
 
+To make a printable version without any background images, add `--no-bg` flag
+
+```bash
+tools/make_printable.sh <LANGUAGE> --no-bg
+```
+
 ### 🌍 Translations
 
 Make sure you have [`po4a`](https://po4a.org/index.php.en) installed ([MacOS instructions](https://formulae.brew.sh/formula/po4a)).
