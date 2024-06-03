@@ -98,7 +98,14 @@ You can expect things to break, like having incorrect layout or not all the text
 
 🖥️ The digital build is intended to be read on electronic devices.
 It has convenient hyperlinks that navigate you around the text.<br>
-🖨️ The printable build appends page numbers to select clickable hyperlinks, includes an index page at the end, and makes sure the document has 56 pages, and uses CMYK to be print friendly.
+🖨️ The printable build introduces the following changes:
+ - appends page numbers to clickable hyperlinks (stable) 👆
+ - includes an index page at the end (stable) 📋
+ - makes sure the document has 56 pages (stable) 🪄
+ - makes margins asymmetric for easier binding/glueing (experimental) 📕
+ - uses [CMYK](https://en.wikipedia.org/wiki/CMYK_color_model) (experimental) 🎨
+
+all of which to be print friendly.
 Best served for those who would like to have it on paper 🤞
 
 This repository used to host [**Comprehensive Components List**](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf) listing all the cards, minis, tokens, etc. for every box, but after a while ⚠️ ️️**Archon released their own version of it, and you should use it instead. Find it on 👉 [their website](https://archon-studio.com/downloads/heroes-iii) 👈 called "Content Guide"**.
@@ -166,9 +173,6 @@ or press the `Build & View` ▶️ (F5) button in TeXstudio while having any `ma
 
 To build the printable version in a given language, make sure you've built a regular one first at least once.
 Then, use the script:
-
-> ⚠️ Be careful, as it edits all the files!
-> Also, you'll need [Python](https://www.python.org/) for this 🐍
 
 ```bash
 tools/make_printable.sh <LANGUAGE>
