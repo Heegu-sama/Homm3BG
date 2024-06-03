@@ -108,7 +108,8 @@ You can expect things to break, like having incorrect layout or not all the text
 It has convenient hyperlinks that navigate you around the text.<br>
 🖨️ The printable build appends page numbers to select clickable hyperlinks, includes an index page at the end, and makes sure the document has 56 pages, and uses CMYK to be print friendly.
 Best served for those who would like to have it on paper 🤞<br>
-🖨️ The printable build **without art backgrounds** is the same as the regular printable build but without the backgrounds as the name suggests. This is for people who want to save their toners or don't have printers that can print edge to edge where the white borders around the art backgrounds don't look that good.
+🤑 The economy printable build has **no art backgrounds**. Other than that, it's the same as the regular printable build.
+This is for people who want to save their toners or don't have printers that can print edge to edge where the white borders around the art backgrounds don't look that good.
 
 This repository used to host [**Comprehensive Components List**](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf) listing all the cards, minis, tokens, etc. for every box, but after a while ⚠️ ️️**Archon released their own version of it, and you should use it instead. Find it on 👉 [their website](https://archon-studio.com/downloads/heroes-iii) 👈 called "Content Guide"**.
 
