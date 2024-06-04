@@ -5,7 +5,7 @@ FLAG=$2
 
 export HOMM3_PRINTABLE=1 HOMM3_LANG=${LANGUAGE}
 
-if [[ ! -z ${FLAG} ]] && [[ "${FLAG}" == "--no-bg" ]]; then
+if [[ "${FLAG}" == "--no-bg" ]]; then
     export HOMM3_NO_ART_BACKGROUND=1
 fi
 
