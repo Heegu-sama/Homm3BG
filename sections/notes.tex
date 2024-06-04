@@ -1,11 +1,8 @@
 % !TeX spellcheck = en_US
 \addsection{Notes}{\spells/cure.png}
 
+\pagestyle{empty}
+
 \AddToHookNext{shipout/background}{%
   \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/castle_background.jpg}}%
-  \ifodd\value{page}
-    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}
-  \else
-    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-even.png}}
-  \fi
 }
