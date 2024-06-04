@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 LANGUAGE=$1
 
 VERSION=$(grep -Eo "\d{1,}(\.\d{1,}){1,2}$" main_${LANGUAGE}.tex)
