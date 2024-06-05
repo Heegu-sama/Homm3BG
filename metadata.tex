@@ -41,6 +41,7 @@
 \usepackage{wrapfig}
 \usepackage[most]{tcolorbox}
 \usepackage{catchfile}
+\usepackage{xstring}
 \newtcolorbox{scaledfigure}[1][]{height fill, space to=\myspace,#1}
 \hypersetup{
   colorlinks=true,
@@ -89,6 +90,8 @@
 \def\notes_svgs{\svgs/for-notes}
 \def\tables{\_assets/tables}
 \def\qr{\_assets/qr-codes}
+
+\def\repourl{https://github.com/Heegu-sama/Homm3BG}
 
 \renewcommand{\labelitemi}{\includegraphics[width=0.7em, valign=c]{\layout/listdot.png}}
 
@@ -287,12 +290,11 @@
 
 \begin{center}
   \getenv[\githubsha]{GITHUB_SHA}
-  \getenv[\repourl]{REPO_URL}
 
   \ifdefempty{\githubsha}{
     \versionlabel{} \input{.version}
   }{
-    \versionwarning{} \href{\repourl}{\githubsha}.
+    \versionwarning{} \href{\repourl}{\StrLeft{\githubsha}{7}}.
   }
 
   \bigbreak
