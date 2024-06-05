@@ -3,7 +3,9 @@
 
 % Language setting
 \usepackage[T1]{fontenc}
-\usepackage[czech]{babel}
+
+% czech babel is buggy - if there is yshift with negative numbers, it gets broken (replaced by 0)
+\usepackage[english]{babel} 
 
 \def\sections{sections/translated/cs}
 \def\lang_header_adjustment{0px}
