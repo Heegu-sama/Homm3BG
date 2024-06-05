@@ -42,10 +42,4 @@ echo "Optimizing economy printable build..."
 tools/optimize.sh ${LANGUAGE} cmyk &> /dev/null
 mv main_${LANGUAGE}_optimized.pdf release-${VERSION}/Heroes3_${languages[$LANGUAGE]}_Rules_Rewrite_${FILE_VERSION}_Economy_Printable.pdf
 
-echo "Updating README links..."
-sed -E -i.tmp "s;Version [.0-9]+;Version ${VERSION};" README.md
-sed -E -i.tmp "s;releases/download/v[^/]+;releases/download/v${VERSION};" README.md
-sed -E -i.tmp "s;Rules_Rewrite_[0-9]+;Rules_Rewrite_${FILE_VERSION};" README.md
-rm -f README.md.tmp
-
 echo "Done."
