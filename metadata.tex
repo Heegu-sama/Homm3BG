@@ -74,6 +74,7 @@
 \setlength{\columnsep}{1cm}
 \newtoggle{printable}
 \newtoggle{noartbackground}
+\newtoggle{githubbuild}
 
 % Variables
 \def\_assets{assets}
@@ -290,12 +291,11 @@
 \maketitle
 
 \begin{center}
-  \getenv[\githubsha]{GITHUB_SHA}
-
-  \ifdefempty{\githubsha}{
-    \versionlabel{} \input{.version}
-  }{
+  \iftoggle{githubbuild}{
+    \getenv[\githubsha]{GITHUB_SHA}
     \versionwarning{} \href{\repourl}{\StrLeft{\githubsha}{7}}.
+  }{
+    \versionlabel{} \input{.version}
   }
 
   \bigbreak
