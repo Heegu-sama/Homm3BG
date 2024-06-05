@@ -40,6 +40,7 @@
 \usepackage{varwidth}
 \usepackage{wrapfig}
 \usepackage[most]{tcolorbox}
+\usepackage{catchfile}
 \newtcolorbox{scaledfigure}[1][]{height fill, space to=\myspace,#1}
 \hypersetup{
   colorlinks=true,
@@ -52,6 +53,13 @@
 % Set the default spacing between paragraphs. Remove indentation.
 \usepackage[skip=6pt, indent=0pt]{parskip}
 \setstretch{1}
+
+% Get version from env
+% \getenv{variable_name} just prints the value
+% \getenv[\macro]{variable_name} stores the value in \macro for reusability
+\newcommand{\getenv}[2][]{%
+  \CatchFileEdef{\value}{"|kpsewhich --var-value #2"}{\endlinechar=-1}%
+  \if\relax\detokenize{#1}\relax\value\else\let#1\value\fi}
 
 % Add dots to the table of contents
 \renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
@@ -278,7 +286,7 @@
 \maketitle
 
 \begin{center}
-  \version{}
+  \versionlabel{} \getenv{HOMM3_VERSION}
 
   \bigbreak
 
