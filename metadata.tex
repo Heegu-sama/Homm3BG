@@ -286,7 +286,15 @@
 \maketitle
 
 \begin{center}
-  \versionlabel{} \getenv{HOMM3_VERSION}
+  \getenv[\githubsha]{GITHUB_SHA}
+  \getenv[\repourl]{REPO_URL}
+  \getenv[\version]{HOMM3_VERSION}
+
+  \ifdefempty{\githubsha}{
+    \versionlabel{} \version
+  }{
+    \versionwarning{} \href{\repourl}{\githubsha}.
+  }
 
   \bigbreak
 
