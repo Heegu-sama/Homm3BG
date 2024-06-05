@@ -5,6 +5,7 @@ git restore \
   README.md \
   index_style.ist \
   latexmkrc \
+  main_cs.tex \
   main_de.tex \
   main_en.tex \
   main_es.tex \
