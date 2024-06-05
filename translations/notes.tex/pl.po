@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-06-03 10:39+0200\n"
+"POT-Creation-Date: 2024-06-03 22:34+0200\n"
 "PO-Revision-Date: 2024-04-19 23:04+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -24,11 +24,12 @@ msgid "\\addsection{Notes}{\\spells/cure.png}"
 msgstr "\\addsection{Notatki}{\\spells/cure.png}"
 
 #. type: Plain text
-#: sections/notes.tex:11
+#: sections/notes.tex:13
 msgid ""
-"\\AddToHookNext{shipout/background}{\\put (0in,-\\paperheight)"
-"{\\includegraphics[width=\\paperwidth,height=\\paperheight]{\\layout/"
-"castle_background.jpg}}\\ifodd\\value{page} \\put (0in,-\\paperheight)"
+"\\AddToHookNext{shipout/background}{\\iftoggle{noartbackground}{}{ \\put "
+"(0in,-\\paperheight){\\includegraphics[width=\\paperwidth,"
+"height=\\paperheight]{\\layout/castle_background.jpg}} } "
+"\\ifodd\\value{page} \\put (0in,-\\paperheight)"
 "{\\includegraphics[width=\\paperwidth,height=0.05\\paperheight]{\\layout/"
 "bottom-odd.png}} \\else \\put (0in,-\\paperheight)"
 "{\\includegraphics[width=\\paperwidth,height=0.05\\paperheight]{\\layout/"
