@@ -12,7 +12,6 @@ env:
   PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
   GHOSTSCRIPT_URL: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10030/gs_10.03.0_amd64_snap.tgz
   ARTIFACT_RETENTION_DAYS: 1
-  HOMM3_GITHUB_BUILD: 1
 
 jobs:
   build:
@@ -66,6 +65,7 @@ jobs:
           extra_system_packages: "inkscape"
           latexmk_use_lualatex: ${{ matrix.luaengine }}
           latexmk_shell_escape: true
+          pre_compile: export HOMM3_GITHUB_BUILD=1
           root_file: main_${{ matrix.language }}.tex
 
       - name: Install ghostscript
@@ -112,7 +112,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           extra_system_packages: "inkscape"
-          pre_compile: export HOMM3_PRINTABLE=1 HOMM3_LANG=${{ matrix.language }}
+          pre_compile: export HOMM3_PRINTABLE=1 HOMM3_LANG=${{ matrix.language }} HOMM3_GITHUB_BUILD=1
           latexmk_use_lualatex: ${{ matrix.luaengine }}
           latexmk_shell_escape: true
           root_file: main_${{ matrix.language }}.tex
@@ -161,7 +161,7 @@ jobs:
         if: github.event_name != 'pull_request'
         with:
           extra_system_packages: "inkscape"
-          pre_compile: export HOMM3_PRINTABLE=1 HOMM3_NO_ART_BACKGROUND=1 HOMM3_LANG=${{ matrix.language }}
+          pre_compile: export HOMM3_PRINTABLE=1 HOMM3_NO_ART_BACKGROUND=1 HOMM3_LANG=${{ matrix.language }} HOMM3_GITHUB_BUILD=1
           latexmk_use_lualatex: ${{ matrix.luaengine }}
           latexmk_shell_escape: true
           root_file: main_${{ matrix.language }}.tex
