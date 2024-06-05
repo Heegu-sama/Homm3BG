@@ -64,6 +64,7 @@
 
 \setlength{\columnsep}{1cm}
 \newtoggle{printable}
+\newtoggle{noartbackground}
 
 % Variables
 \def\_assets{assets}
@@ -241,7 +242,9 @@
 
 % Background
 \AddToHook{shipout/background}{%
-  \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}
+  \iftoggle{noartbackground}{}{
+    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}
+  }
   \iftoggle{printable}{
     \ifodd\value{page}
       \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}

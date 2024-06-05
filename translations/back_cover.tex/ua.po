@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-06-03 10:39+0200\n"
+"POT-Creation-Date: 2024-06-03 22:34+0200\n"
 "PO-Revision-Date: 2024-05-11 20:48+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -21,18 +21,17 @@ msgstr ""
 msgid "\\restoregeometry"
 msgstr ""
 
-#. type: tikzpicture
-#: sections/back_cover.tex:11
-#, no-wrap
+#. type: Plain text
+#: sections/back_cover.tex:13
 msgid ""
-"[remember picture, overlay, inner sep=10pt]\n"
-"  \\node(cover)[anchor=center] at (current page.center) {\n"
-"    \\includegraphics[height=\\paperheight, keepaspectratio]{\\layout/back.jpg}\n"
-"  };"
+"\\iftoggle{noartbackground}{}{ \\begin{tikzpicture}[remember picture, "
+"overlay, inner sep=10pt] \\node(cover)[anchor=center] at (current page."
+"center) { \\includegraphics[height=\\paperheight, keepaspectratio]{\\layout/"
+"back.jpg} }; \\end{tikzpicture} }"
 msgstr ""
 
 #. type: Plain text
-#: sections/back_cover.tex:33
+#: sections/back_cover.tex:36
 #, fuzzy
 #| msgid ""
 #| "\\hommtable{21}{ \\pagetarget{Difficulty Table}{} \\centering \\medskip "
@@ -126,7 +125,7 @@ msgstr ""
 "\\azure \\azure} \\\\ \\end{tabularx} }"
 
 #. type: Plain text
-#: sections/back_cover.tex:47
+#: sections/back_cover.tex:50
 #, fuzzy
 #| msgid ""
 #| "\\hommtable{14}{ \\centering \\textbf{\\pagetarget{Trade Table}{Trade "

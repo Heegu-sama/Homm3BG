@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
+set -e
+
 LANGUAGE=$1
 
-VERSION=$(grep -Po "\d{1,}(\.\d{1,}){1,2}$" main_${LANGUAGE}.tex)
+VERSION=$(grep -Eo "[0-9]+(\.[0-9]+){1,2}$" main_${LANGUAGE}.tex)
 FILE_VERSION=$(echo "${VERSION}" | tr . _)
 
 declare -A languages=(
@@ -31,4 +33,13 @@ echo "Please inspect the PDF file."
 echo "Optimizing printable build..."
 tools/optimize.sh ${LANGUAGE} cmyk &> /dev/null
 mv main_${LANGUAGE}_optimized.pdf release-${VERSION}/Heroes3_${languages[$LANGUAGE]}_Rules_Rewrite_${FILE_VERSION}_Printable.pdf
+
+echo "Building economy printable version for ${languages[$LANGUAGE]}..."
+tools/make_printable.sh ${LANGUAGE} --no-bg &> /dev/null
+git restore metadata.tex sections/
+echo "Please inspect the PDF file."
+echo "Optimizing economy printable build..."
+tools/optimize.sh ${LANGUAGE} cmyk &> /dev/null
+mv main_${LANGUAGE}_optimized.pdf release-${VERSION}/Heroes3_${languages[$LANGUAGE]}_Rules_Rewrite_${FILE_VERSION}_Economy_Printable.pdf
+
 echo "Done."
