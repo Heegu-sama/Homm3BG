@@ -59,7 +59,7 @@
 % \getenv{variable_name} just prints the value
 % \getenv[\macro]{variable_name} stores the value in \macro for reusability
 \newcommand{\getenv}[2][]{%
-  \CatchFileEdef{\value}{"|kpsewhich --var-value #2"}{\endlinechar=-1}%
+  \CatchFileEdef{\value}{"|echo \$#2"}{\endlinechar=-1}%
   \if\relax\detokenize{#1}\relax\value\else\let#1\value\fi}
 
 % Add dots to the table of contents
