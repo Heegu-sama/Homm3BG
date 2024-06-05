@@ -24,25 +24,18 @@ jobs:
       matrix:
         include:
           - language: en
-            sections: "sections"
             luaengine: false
           - language: pl
-            sections: "sections/translated/pl"
             luaengine: false
           - language: es
-            sections: "sections/translated/es"
             luaengine: false
           - language: fr
-            sections: "sections/translated/fr"
             luaengine: false
           - language: ru
-            sections: "sections/translated/ru"
             luaengine: true
           - language: ua
-            sections: "sections/translated/ua"
             luaengine: true
           - language: de
-            sections: "sections/translated/de"
             luaengine: true
 
     steps:
