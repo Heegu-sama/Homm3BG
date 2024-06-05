@@ -288,10 +288,9 @@
 \begin{center}
   \getenv[\githubsha]{GITHUB_SHA}
   \getenv[\repourl]{REPO_URL}
-  \getenv[\version]{HOMM3_VERSION}
 
   \ifdefempty{\githubsha}{
-    \versionlabel{} \version
+    \versionlabel{} \input{.version}
   }{
     \versionwarning{} \href{\repourl}{\githubsha}.
   }
