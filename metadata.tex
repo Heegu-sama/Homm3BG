@@ -40,6 +40,8 @@
 \usepackage{varwidth}
 \usepackage{wrapfig}
 \usepackage[most]{tcolorbox}
+\usepackage{catchfile}
+\usepackage{xstring}
 \newtcolorbox{scaledfigure}[1][]{height fill, space to=\myspace,#1}
 \hypersetup{
   colorlinks=true,
@@ -53,6 +55,13 @@
 \usepackage[skip=6pt, indent=0pt]{parskip}
 \setstretch{1}
 
+% Get version from env
+% \getenv{variable_name} just prints the value
+% \getenv[\macro]{variable_name} stores the value in \macro for reusability
+\newcommand{\getenv}[2][]{%
+  \CatchFileEdef{\value}{"|echo \$#2"}{\endlinechar=-1}%
+  \if\relax\detokenize{#1}\relax\value\else\let#1\value\fi}
+
 % Add dots to the table of contents
 \renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
 \renewcommand\cftsecdotsep{\cftdot}
@@ -65,6 +74,7 @@
 \setlength{\columnsep}{1cm}
 \newtoggle{printable}
 \newtoggle{noartbackground}
+\newtoggle{githubbuild}
 
 % Variables
 \def\_assets{assets}
@@ -81,6 +91,9 @@
 \def\notes_svgs{\svgs/for-notes}
 \def\tables{\_assets/tables}
 \def\qr{\_assets/qr-codes}
+
+\def\repourl{https://github.com/Heegu-sama/Homm3BG}
+\def\bggthreadurl{https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project}
 
 \renewcommand{\labelitemi}{\includegraphics[width=0.7em, valign=c]{\layout/listdot.png}}
 
@@ -278,7 +291,12 @@
 \maketitle
 
 \begin{center}
-  \version{}
+  \iftoggle{githubbuild}{
+    \getenv[\githubsha]{GITHUB_SHA}
+    \versionwarning{} \href{\repourl}{\StrLeft{\githubsha}{7}}.
+  }{
+    \versionlabel{} \input{.version}
+  }
 
   \bigbreak
 
