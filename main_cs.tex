@@ -3,7 +3,8 @@
 
 % Language setting
 \usepackage[T1]{fontenc}
-\usepackage[czech]{babel} 
+\usepackage[czech]{babel}
+\usepackage{fontspec}
 
 \def\sections{sections/translated/cs}
 \def\lang_header_adjustment{-8px}
@@ -26,6 +27,10 @@
 
 \newcommand{\qrgithub}{Naskenuj pro otevření \textbf{GitHub} repozitáře.}
 \newcommand{\qrbgg}{Naskenuj pro otevření \textbf{BoardGameGeek} vlákna.}
+
+\newcommand{\sectionheadertext}[1]{
+  \color{antiquewhite} \section*{\MakeUppercase{\textbf{#1}}}
+}
 
 \title{\includegraphics[width=6cm]{\images/title.png}\\Revidovaná pravidla}
 
