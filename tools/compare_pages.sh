@@ -69,6 +69,27 @@ ensure_base_file() {
   fi
 }
 
+parse_pages() {
+  local range="$1"
+  pages=()
+
+  IFS=',' read -ra parts <<< "$range"
+
+  for part in "${parts[@]}"; do
+    if [[ $part == *"-"* ]]; then
+      start=$(echo "$part" | cut -d"-" -f1)
+      end=$(echo "$part" | cut -d"-" -f2)
+      for ((i=start; i<=end; i++)); do
+        pages+=($i)
+      done
+    else
+      pages+=($part)
+    fi
+  done
+
+  echo "${pages[@]}"
+}
+
 #
 # MAIN FLOW
 #
@@ -110,24 +131,20 @@ mkdir -p $cache_dir
 ensure_base_file "$language" "$printable"
 base_file=$(base_file_path "$language" "$printable")
 
-first_page="$range"
-last_page="$range"
-if [[ $range == *"-"* ]]; then
-  IFS="-" read -ra pages <<< "$range"
-  first_page="${pages[0]}"
-  last_page="${pages[1]}"
-fi
-
 random_dir="$(mktemp -d)"
 trap 'rm -rf -- "$random_dir"' EXIT
 
-echo "Making images of ${base_file} and main_${language}.pdf..."
-pdftoppm "${base_file}" "${random_dir}/aa" -f "${first_page}" -l "${last_page}" -png -progress &
-pdftoppm "main_${language}.pdf" "${random_dir}/bb" -f "${first_page}" -l "${last_page}" -png -progress &
+pages=$(parse_pages "$range")
+
+for page in $pages; do
+  echo "Making images of ${base_file} and main_${language}.pdf for page ${page}..."
+  pdftoppm "${base_file}" "${random_dir}/aa" -f "${page}" -l "${page}" -png -progress &
+  pdftoppm "main_${language}.pdf" "${random_dir}/bb" -f "${page}" -l "${page}" -png -progress &
+done
+
 wait
 
-for page in $(seq ${first_page} ${last_page})
-do
+for page in $pages; do
   echo "Combining pages $(printf %02d $page)..."
   montage ${random_dir}/*$(printf %02d $page).png -tile 2x1 -geometry +0+0 ${random_dir}/${language}-$(printf %02d $page).png && \
   rm ${random_dir}/aa-$(printf %02d $page).png ${random_dir}/bb-$(printf %02d $page).png &
