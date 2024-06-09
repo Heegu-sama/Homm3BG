@@ -4,5 +4,7 @@
 \pagestyle{empty}
 
 \AddToHookNext{shipout/background}{%
-  \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/castle_background.jpg}}%
+  \iftoggle{noartbackground}{}{
+    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/castle_background.jpg}}%
+  }
 }
