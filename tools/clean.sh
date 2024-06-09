@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 rm -f * 2> /dev/null
+rm -rf cache
 git restore \
   README.md \
   index_style.ist \
