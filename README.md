@@ -68,7 +68,7 @@ Click in the table to download the most recent builds in the chosen language:
         </tr>
         <tr>
             <td>🇷🇺 Русский</td>
-            <td align="center">~39%</td>
+            <td align="center">~69%</td>
             <td align="center">0%</td>
             <td align="center">—</td>
             <td align="center">—</td>
