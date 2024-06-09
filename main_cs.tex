@@ -29,7 +29,18 @@
 \newcommand{\qrbgg}{Naskenuj pro otevření \textbf{BoardGameGeek} vlákna.}
 
 \newcommand{\sectionheadertext}[1]{
-  \color{antiquewhite} \section*{\MakeUppercase{\textbf{#1}}}
+  \newfontfamily{\liberation}{LiberationSerif}
+  [
+    Path = ./assets/fonts/,
+    Extension = .ttf,
+    UprightFont = *-Regular,
+    ItalicFont = *-Italic,
+    BoldFont = *-Bold,
+    BoldItalicFont = *-BoldItalic
+  ]
+  {
+    \color{antiquewhite} \section*{\MakeUppercase{\textbf{\liberation #1}}}
+  }
 }
 
 \title{\includegraphics[width=6cm]{\images/title.png}\\Revidovaná pravidla}
