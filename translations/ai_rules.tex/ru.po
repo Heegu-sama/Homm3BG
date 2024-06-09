@@ -21,10 +21,8 @@ msgstr ""
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/ai_rules.tex:3
-#, fuzzy
-#| msgid "\\addsection{Round Structure}{\\spells/forgetfulness.png}"
 msgid "\\addsection{AI Rules}{\\spells/fortune.png}"
-msgstr "\\addsection{Состав Раунда}{\\spells/forgetfulness.png}"
+msgstr "\\addsection{Правила ИИ}{\\spells/fortune.png}"
 
 #. type: Plain text
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
@@ -68,6 +66,17 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{Ход ИИ героя}\n"
+"\\pagetarget{AIrules}{ИИ герои} используются в Кампаниях.\n"
+"Они начинают с собственным городом и имеют 3 ОП, всегда используя их для выполнения следующих действий в (порядке убывания приоритета):\n"
+"\\begin{itemize}\n"
+"  \\item Если герой игрока находится на том же элементе карты, использовать все ОП для столкновения с героем и началом сражения.\n"
+"  \\item Если на элементе карты есть шахты или посёлки, которые ИИ может захватить, передвинуться к ближайшему.\n"
+"  \\item Продвигаться в сторону города игрока.\n"
+"Повторяйте эту последовательность до использования всех ОП.\n"
+"ИИ герои ходят после хода игрока.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:21
@@ -77,6 +86,8 @@ msgid ""
 "They gain no benefits from any Fields.\n"
 "\n"
 msgstr ""
+"ИИ герои всегда \\textbf{автоматически выигрывают сражения} против любых нейтральных отрядов, одновременно \\textbf{захватывая или посещая все поля}, через которые они передвигаются, но не получают бонусов от этих полей.\n"
+
 
 #. type: multicols
 #: sections/ai_rules.tex:30
@@ -92,6 +103,14 @@ msgid ""
 "Any differences to the above will be described in any given Scenario's own rules.\n"
 "\n"
 msgstr ""
+"ИИ герои исследуют перевернутые элементы карты по общим правилам, используя 1 ОП.\n"
+"Игрок выбирает ориентацию такого элемента.\\par\n"
+"ИИ герои не могут сдаться, вы также не можете сдаться им; \n"
+"они всегда будут сражаться до последнего отряда.\n"
+"Победа в сражении против ИИ героев не даёт никаких наград, если сценарием не указано иное.\n"
+"ИИ герои не имеют карты города, ресурсов и карты героя.\n"
+"Их отряды постоянны и определяются сценарием или иными правилами.\\par\n"
+"Любые отличия от указанного выше будут описаны в правилах конкретного сценария.\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:32 sections/ai_rules.tex:102 sections/combat.tex:95
@@ -110,6 +129,8 @@ msgid ""
 "\\subsection*{AI Decks}\n"
 "\n"
 msgstr ""
+"\\subsection*{ИИ колоды}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:53
@@ -133,6 +154,23 @@ msgid ""
 "    \\item[\\textbf{7.}] Card Type\n"
 "  \\end{itemize}\\vspace*{\\fill}"
 msgstr ""
+"\\begin{multicols*}{2}\n"
+"  \\begin{center}\n"
+"    \\vspace*{-1.5em}\\includegraphics[width=1.3\\linewidth]{\\cards/ai.png}\n"
+"    \\phantom{\\ldots\\ldots}\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{AI Card}}}}\n"
+"  \\end{center}\n"
+"  \\vspace*{\\fill}\n"
+"  \\columnbreak\n"
+"  \\scriptsize\n"
+"  \\begin{itemize}[itemsep=0pt]\n"
+"    \\item[\\textbf{1.}] Название\n"
+"    \\item[\\textbf{2.}] Описание\n"
+"    \\item[\\textbf{3.}] Сложность «легко»\n"
+"    \\item[\\textbf{4.}] Сложность \\\\«нормально»\n"
+"    \\item[\\textbf{5.}] Сложность \\\\«эксперт»\n"
+"    \\item[\\textbf{6.}] Сложность \\\\«невозможно»\n"
+"    \\item[\\textbf{7.}] Тип карты\n"
+"  \\end{itemize}\\vspace*{\\fill}"
 
 #. type: multicols
 #: sections/ai_rules.tex:61
@@ -147,6 +185,14 @@ msgid ""
 "Shuffle the AI and Spell Decks during setup after building them.\n"
 "\n"
 msgstr ""
+"ИИ герои используют две колоды в ходе сражения: \\textbf{ИИ колоду} и \\textbf{колоду заклинаний}.\n"
+"ИИ колоды собираются с ипользованием трех типов ИИ карт: силы \\includesvg[height=10px]{\\svgs/might.svg}, магии \\includesvg[height=10px]{\\svgs/magic.svg} и навыков \\includesvg[height=10px]{\\svgs/skill.svg}.\n"
+"Каждый сценарий в Кампании описывает количество карт каждого типа в ИИ колоде.\n"
+"Карты силы \\includesvg[height=10px]{\\svgs/might.svg} и умений \\includesvg[height=10px]{\\svgs/skill.svg} имеют два типа. Выберите их \\textbf{случайным образом} во время формирования колоды.\n"
+"При необходимости найдите и добавьте соответствующие карты из колоды навыков.\n"
+"Сформируйте ИИ \\textbf{колоду заклинаний}, набрав карты из колоды заклинаний.\n"
+"Перемешайте обе колоды после их формирования.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:68
@@ -160,6 +206,13 @@ msgid ""
 "If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
 "\n"
 msgstr ""
+"При\\textbf{активации} ИИ отряда возьмите ИИ карту\\index{AI Card} и следуйте ее инструкциям перед движением и/или атакой отряда.\n"
+"Если ИИ колода была полностью выбрана в ходе сражения, не используйте её.\n"
+"Эффект от каждой ИИ карты зависит от \\pagelink{Difficulty}{сложности} игры.\n"
+"Карты силы \\includesvg[height=10px]{\\svgs/might.svg} действуют на отряд до момента, пока не произойдет соответствующая атака/защита.\n"
+"ИИ колода заклинаний используется, если выпадает карта магии \\includesvg[height=10px]{\\svgs/magic.svg}.\n"
+"Если ИИ герой должен набрать карту, он набирает и применяет \\textbf{следующую карту} из ИИ колоды.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:70
