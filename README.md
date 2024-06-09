@@ -96,6 +96,16 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/printable_de.pdf">speichern</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/economy_printable_de.pdf">speichern</a></td>
         </tr>
+        <tr>
+            <td>🇨🇿 Čeština</td>
+            <td align="center">1%</td>
+            <td align="center">0%</td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cs/main_cs.pdf">stáhnout</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cs/printable_cs.pdf">stáhnout</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cs/economy_printable_cs.pdf">stáhnout</a></td>
+        </tr>
     </tbody>
 </table>
 
@@ -173,7 +183,7 @@ tools/build.sh en
 
 or press the `Build & View` ▶️ (F5) button in TeXstudio on the `main_en.tex` file.
 
-To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua` and `de` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
+To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, `de` and `cs` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
 
 ```bash
 tools/build.sh <LANGUAGE>

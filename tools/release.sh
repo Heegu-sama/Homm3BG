@@ -4,7 +4,7 @@ set -e
 
 LANGUAGE=$1
 
-VERSION=$(grep -Eo "[0-9]+(\.[0-9]+){1,2}$" main_${LANGUAGE}.tex)
+VERSION=$(cat .version)
 FILE_VERSION=$(echo "${VERSION}" | tr . _)
 
 declare -A languages=(
