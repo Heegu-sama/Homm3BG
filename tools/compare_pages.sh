@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 cache_dir="$(pwd)/cache"
 
 #
@@ -7,51 +6,67 @@ cache_dir="$(pwd)/cache"
 #
 
 help() {
-  echo "Usage: $0 -l <language> [--language=<language>] [-p] [--printable] -r <range> [--range=<range>] [-s] [--single-page]"
-  echo "-r, --range: use single page number or dash-separated range of pages"
+  echo "
+    Usage: ./tools/compare_pages.sh -l <language> -r <range> [OPTIONS]
+
+    Mandatory Arguments:
+      -l, --language <language>     Specify the language for comparison (en, de, es, fr, pl, ru, ua, cs, ...).
+      -r, --range <range>           Provide comma-separated list of pages or range of pages you want to compare. 
+
+    Optional Arguments:
+      -p, --printable               Compares your build against 'printable' build.
+      -s, --single-page             Combines all compared pages into a single image.
+
+    Examples:
+      ./tools/compare_pages.sh -l en -r 1
+      ./tools/compare_pages.sh --language en --range 1
+
+      ./tools/compare_pages.sh -l en -r 1,5-7,30 --single-page --printable
+          - This will produce files 'en-01.png, en-05.png, en-06.png, en-07.png and en-30.png'.
+          - Then because there is the '--single-page' parameter, it combines them to a single file 'en-all.png'.
+          - It will use 'printable_en.pdf' from the repository as baseline because '--printable' was specified.
+            It would use 'main_en.pdf' if this parameter was omitted.
+  "
+
   exit 2
 }
 
-url() {
-  type=$([[ "$2" -eq 1 ]] && echo "printable" || echo "main")
-  echo "https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/${1}/${type}_${1}.pdf"
-}
-
 file_type() {
-  [[ "$1" -eq 1 ]] && echo "printable" || echo "main"
+  local printable="$1"
+  [[ "$printable" -eq 1 ]] && echo "printable" || echo "main"
 }
 
 base_file_path() {
   local language="$1"
   local printable="$2"
-  type=$(file_type $printable)
+  local type=$(file_type "$printable")
 
   echo "${cache_dir}/${type}_${language}.pdf"
 }
 
 download_base_file() {
-  echo "Downloading base file..."
-
   local language="$1"
   local printable="$2"
-  type=$(file_type "$printable")
+  local type=$(file_type "$printable")
+  local url="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/${language}/${type}_${language}.pdf"
+  local output_file=$(base_file_path "$language" "$printable")
 
-  url="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/${language}/${type}_${language}.pdf"
-  curl -o "${cache_dir}/${type}_${language}.pdf" "$url"
+  mkdir -p "$cache_dir"
+  curl -o "$output_file" "$url"
 }
 
 file_mod_time() {
   local file=$1
-  if [[ "$(uname)" == "Darwin" ]]; then
+  if [[ "$(uname -s)" == "Darwin" ]]; then
     stat -f %m "$file"
   else 
     stat -c %Y "$file"
   fi
 }
 
+# Only download a base file if it's not already present locally or
+# is older than 1 hour. Otherwise we use the cached one to speed-up the workflow.
 ensure_base_file() {
-  echo "Checking if there is the base file for comparison..."
-
   local language="$1"
   local printable="$2"
   local base_file=$(base_file_path "$language" "$printable")
@@ -67,11 +82,15 @@ ensure_base_file() {
   else
     download_base_file "$language" "$printable"
   fi
+
+  echo "$base_file"
 }
 
+# Parses the --range argument into an array of pages.
+# e.g. '1,2,4-6,20' becomes [1,2,4,5,6,20]
 parse_pages() {
   local range="$1"
-  pages=()
+  local pages=()
 
   IFS=',' read -ra parts <<< "$range"
 
@@ -95,8 +114,8 @@ parse_pages() {
 #
 
 language=""
-printable=0
 range=""
+printable=0
 single_page=0
 
 while [[ "$1" != "" ]]; do
@@ -126,36 +145,37 @@ if [[ -z "$language" || -z "$range" ]]; then
   help
 fi
 
-mkdir -p $cache_dir
+echo "Checking if there is the base file for comparison..."
+base_file=$(ensure_base_file "$language" "$printable")
 
-ensure_base_file "$language" "$printable"
-base_file=$(base_file_path "$language" "$printable")
-
-random_dir="$(mktemp -d)"
-trap 'rm -rf -- "$random_dir"' EXIT
+tmp_dir="$(mktemp -d)"
+trap 'rm -rf -- "$tmp_dir"' EXIT
 
 pages=$(parse_pages "$range")
 
 for page in $pages; do
   echo "Making images of ${base_file} and main_${language}.pdf for page ${page}..."
-  pdftoppm "${base_file}" "${random_dir}/aa" -f "${page}" -l "${page}" -png -progress &
-  pdftoppm "main_${language}.pdf" "${random_dir}/bb" -f "${page}" -l "${page}" -png -progress &
+  pdftoppm "${base_file}" "${tmp_dir}/aa" -f "${page}" -l "${page}" -png -progress &
+  pdftoppm "main_${language}.pdf" "${tmp_dir}/bb" -f "${page}" -l "${page}" -png -progress &
 done
 
 wait
 
 for page in $pages; do
   echo "Combining pages $(printf %02d $page)..."
-  montage ${random_dir}/*$(printf %02d $page).png -tile 2x1 -geometry +0+0 ${random_dir}/${language}-$(printf %02d $page).png && \
-  rm ${random_dir}/aa-$(printf %02d $page).png ${random_dir}/bb-$(printf %02d $page).png &
+  montage ${tmp_dir}/*$(printf %02d $page).png -tile 2x1 -geometry +0+0 ${tmp_dir}/${language}-$(printf %02d $page).png && \
+  rm ${tmp_dir}/aa-$(printf %02d $page).png ${tmp_dir}/bb-$(printf %02d $page).png &
 done
 
 
 if [[ "$single_page" -eq 1 ]]; then
   wait
-  montage ${random_dir}/${language}* -tile "1x" -geometry +0+0 ${random_dir}/${language}-all.png
+  montage ${tmp_dir}/${language}* -tile "1x" -geometry +0+0 ${tmp_dir}/${language}-all.png
 fi
 
 wait
-mv ${random_dir}/${language}* .
+
+mkdir -p screenshots
+mv ${tmp_dir}/${language}* screenshots
+
 echo "Done."

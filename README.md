@@ -272,18 +272,17 @@ tools/pdf2image.sh en 5
 If you'd like to show a single image of two instances of the same page side-by-side (before|after style), you can use the following script:
 
 ```bash
-tools/compare_pages.sh <FILE_COMPARED_AGAINST> <LANGUAGE> <FIRST_PAGE> <LAST_PAGE>
+tools/compare_pages.sh
 ```
 
-Let's assume you have `main_en.pdf` in your home directory downloaded from GitHub, and in your current working directory you have a build you're working on.
-You'd like to have images comparing pages 38 through 41.
-Here's how to use it:
+The script takes local `main_<language>.pdf` that you built and which contains your changes and compares it with the latest build
+of the same language in this repository (e.i. the baseline). 
+
+Run the following for further explanation and usage:
 
 ```bash
-tools/compare_pages.sh ~/main_en.pdf en 38 41
+tools/compare_pages.sh  --help
 ```
-
-It will produce files: `en-38.png`, `en-39.png`, `en-40.png` and `en-41.png`.
 
 **This script requires `pdftoppm` and `imagemagick` utilities.**
 
