@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-06-03 10:39+0200\n"
+"POT-Creation-Date: 2024-06-10 22:30+0200\n"
 "PO-Revision-Date: 2024-06-03 10:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -28,7 +28,7 @@ msgstr ""
 #. type: multicols
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
 #: sections/all_map_locations.tex:421 sections/combat.tex:5
-#: sections/combat.tex:140 sections/credits.tex:10 sections/deckbuilding.tex:7
+#: sections/combat.tex:141 sections/credits.tex:10 sections/deckbuilding.tex:7
 #: sections/difficulty.tex:7 sections/expansion_content.tex:7
 #: sections/expansion_content.tex:51 sections/game_modes.tex:5
 #: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:79
@@ -53,7 +53,7 @@ msgstr ""
 #. type: Plain text
 #: sections/map_elements.tex:3
 msgid "\\addsection{Map Elements}{\\skills/logistics.png}"
-msgstr ""
+msgstr "\\addsection{Prvky Mapy}{\\skills/logistics.png}"
 
 #. type: multicols*
 #: sections/map_elements.tex:13
@@ -68,6 +68,14 @@ msgid ""
 "Starting (I) Tiles are the easiest while Center (VI–VII) Tiles are the most difficult.\\par\n"
 "\n"
 msgstr ""
+"{2}\n"
+"Mapa každého Scénáře se skládá ze čtyř typů \\pagetarget{Map}{Mapových} Dílků.\n"
+"Hráči začínají na Startovním (I) Dílkem své Frakce.\n"
+"Následující stránka popisuje, jak mohou být ostatní dílky umístěny a objeveny.\n"
+"Během přípravy hry by všechny dílky měly být náhodně vybrány z možných Dílků podle popisu ve Scénáři a zamíchány, přičemž zůstávají lícem dolů.\\par\n"
+"\\textbf{Římská číslice} na každém dílku popisuje \\textbf{obtížnost Neutrálních Jednotek} na daném dílku, stejně jako počet odměn, které hráči mohou na daném dílku očekávat.\n"
+"Startovní (I) Dílky jsou nejjednodušší, zatímco Středové (VI–VII) Dílky jsou nejobtížnější.\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:19
@@ -103,6 +111,24 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{Popis Dílků Mapy\\index{Dílek Mapy}}\n"
+"\\vspace*{\\lang_header_adjustment}\n"
+"Každý Dílek Mapy je rozdělen do 7 samostatných \\textbf{Polí}, která mohou vaši Hrdinové \\textbf{Navštívit}.\n"
+"Když se váš Hrdina přesune na Pole, musí ho Navštívit, pokud je to možné nebo\n"
+"nejprve začít \\pagelink{Combat}{Boj} proti nepřátelům, kteří ho střeží a Navštívit ihned po vyhraném boji.\n"
+"Prázdná Pole\\index{Prázdné Pole} nedělají nic.\n"
+"Plné žluté čáry na okraji Pole nelze překročit.\n"
+"\\pagelink{Difficulty}{Římské číslice} napsané na Poli označují, že Pole je střeženo Neutrálními nepřáteli, se kterými se musí bojovat, aby ho bylo možné Navštívit.\\par\n"
+"\\columnbreak\n"
+"\\includegraphics[width=\\linewidth]{\\images/maptiles.png}\n"
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\item[\\textbf{1.}] Startovní Dílek Mapy: I\n"
+"  \\item[\\textbf{2.}] Daleký Dílek Mapy: II-III\n"
+"  \\item[\\textbf{3.}] Blízký Dílek Mapy: IV-V\n"
+"  \\item[\\textbf{4.}] Středový Dílek Mapy: VI-VII\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:39
@@ -152,6 +178,17 @@ msgid ""
 "    \\item[\\textbf{7.}] Tile name like \\\\{} \\texttt{F2} or \\texttt{\\#N3}\n"
 "  "
 msgstr ""
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\begin{multicols}{2}\n"
+"    \\item[\\textbf{1.}] Prázdné Pole\n"
+"    \\item[\\textbf{2.}] Lokace\n"
+"    \\item[\\textbf{3.}] Symbol Artefaktu\n"
+"    \\item[\\textbf{4.}] Obtížnost Pole\n"
+"    \\item[\\textbf{5.}] Hranice\n"
+"    \\item[\\textbf{6.}] Blokované Pole\n"
+"    \\item[\\textbf{7.}] Název Dílku, např. \\\\{} \\texttt{F2} nebo \\texttt{\\#N3}\n"
+"  "
 
 #. type: multicols*
 #: sections/map_elements.tex:70
@@ -169,6 +206,9 @@ msgid ""
 "  Blocked Field cannot be entered, but can be exited.\n"
 "}"
 msgstr ""
+"\\note{3}{\n"
+"  Na Blokované Pole nelze vstoupit, ale lze jej opustit.\n"
+"}"
 
 #. type: multicols
 #: sections/map_elements.tex:94
@@ -190,6 +230,21 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Categories}{Kategorie Lokací}}\n"
+"Návštěva Polí poskytuje Hrdinům výhody, jako je získávání Surovin nebo Karet (viz \\pagelink{All Map Locations}{Všechny Lokace na Mapě}).\n"
+"Existují tři kategorie Polí:\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{Navštívitelné} – Jakmile toto pole Navštívíte, umístěte na něj Černou Kostičku.\n"
+"    Považujte jej za Prázdné Pole, dokud na něm je Černá Kostička.\n"
+"  \\item \\textbf{Obsaditelné} – Tato Pole mohou být hráči zabrána a poskytují pasivní výhody.\n"
+"    Když jedno Navštívíte, umístěte na něj svou Kostičku Frakce.\n"
+"    Nepřátelští Hrdinové, kteří Navštíví vaše Obsazená Pole, nahradí vaši Kostičku svou, aby \\textbf{ukradli} efekty Pole.\n"
+"    Spojenečtí Hrdinové považují Obsazená Pole \\textbf{za prázdná}.\n"
+"  \\item \\textbf{Opakovaně navštívitelné} – Toto Pole můžete Navštívit vícekrát.\n"
+"    Při Návštěvě na něj neumisťujte žádné Kostičky.\n"
+"    Můžete zaplatit 1 BP za opětovnou Návštěvu tohoto Pole.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:101
@@ -203,6 +258,13 @@ msgid ""
 "You may always rotate Map Tiles when placing or revealing them.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Placing}{Umísťování a Objevování Nových Dílků}}\\index{Objevování Dílků}\n"
+"Hrdinové mohou utratit 1 BP za odhalení sousedního lícem dolů obráceného Dílku, nebo za umístění Dalekého (II–III) Dílku Mapy ze své vlastní zásoby Dílků.\n"
+"Všechny lícem dolů obrácené Dílky by měly být \\textbf{skryty před všemi hráči}, dokud nejsou připraveny k umístění nebo odhalení.\n"
+"Nové Dílky musí sousedět s polem, na kterém stojí Hrdina, který utratil BP a musí být propojeny alespoň se dvěma dalšími existujícími Dílky.\n"
+"Nové Dílky musí být také umístěny tak, aby existovala platná cesta, která je nakonec spojí se všemi ostatními Dílky.\n"
+"Mapové Dílky můžete vždy při umísťování nebo odhalování otočit.\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:106
@@ -214,6 +276,11 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\medskip\n"
+"\\note{6}{\n"
+"  Když Navštívíte Navštívitelné Pole, \\textbf{musíte} na toto Pole umístit Černou Kostičku, i když nemůžete nebo nechcete použít účinky tohoto Pole.\n"
+"}\n"
+"\n"
 
 #. type: figure*
 #: sections/map_elements.tex:118
@@ -228,11 +295,19 @@ msgid ""
 "    \\node at (3.9, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{be adjacent to two other tiles}}}}};\n"
 "  \\end{tikzpicture}"
 msgstr ""
+"[!hb]\n"
+"  \\centering\n"
+"  \\includegraphics[width=0.95\\textwidth]{\\images/placement.png}\n"
+"  \\begin{tikzpicture}[overlay]\n"
+"    \\node at (-4, 9) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Tento dílek sem nelze přidat}}}}};\n"
+"    \\node at (-4, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{Tento dílek lze přidat sem, protože bude}}}}};\n"
+"    \\node at (-4, 0.6) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{sousedět se dvěma dalšími dílky}}}}};\n"
+"  \\end{tikzpicture}"
 
 #. type: subsection{#2}
 #: sections/map_elements.tex:122
 msgid "Example Turn"
-msgstr ""
+msgstr "Příklad Tahu"
 
 #. type: multicols*
 #: sections/map_elements.tex:127
@@ -242,6 +317,9 @@ msgid ""
 "    She spends 1 MP to move onto the Mine, which begins \\pagelink{Combat}{Combat} against Neutral Units, since the Field has a \\pagelink{Difficulty}{Difficulty Rating} and has not been previously Flagged by any player.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Alice chce zabrat sousední \\pagelink{Mines}{Důl} tím, že ho Obsadí se svým Hlavním Hrdinou, Nekromantem Sandrem.\n"
+"    Utrácí 1 BP, aby se přesunula na Důl, kde začíná \\pagelink{Combat}{Boj} proti Neutrálním Jednotkám, protože Pole má \\pagelink{Difficulty}{Hodnocení Obtížnosti} a nebylo dříve Obsazeno žádným hráčem.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:129
@@ -260,6 +338,10 @@ msgid ""
 "During the Combat, she casts the Lightning Bolt, and Empowers \\includesvg[height=0.8\\baselineskip]{\\svgs/empower.svg} it with Haste's alternative (bottom) effect, which makes the Lightning Bolt deal 3 damage \\includesvg[height=0.8\\baselineskip]{\\svgs/damage.svg}, killing the Troglodytes and winning the Combat.}\n"
 "\n"
 msgstr ""
+"\\textit{Důl se ukáže být střežen Troglodyty, kteří mají 3 životy \\includesvg[height=0.8\\baselineskip]{\\svgs/health_points.svg}.\n"
+"Alicina současná ruka obsahuje Kartu Moci, Blesk, Zrychlení a Městský Portál.\n"
+"Během Boje sesílá Blesk a Posiluje \\includesvg[height=0.8\\baselineskip]{\\svgs/empower.svg} ho alternativním (spodním) efektem Zrychlení, což způsobí, že Blesk udělí 3 zranění \\includesvg[height=0.8\\baselineskip]{\\svgs/damage.svg}, zabíjí Troglodyty a Alice vyhrává Boj.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:135
@@ -276,6 +358,8 @@ msgid ""
 "\\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell Card per Combat Round.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Boj trval pouze jedno Kolo, takže Alice by nemohla seslat jak Blesk, tak Zrychlení, protože hráči jsou omezeni na hraní pouze jedné Karty Kouzla za Kolo Boje.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:144
@@ -288,6 +372,12 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\textit{Alice nyní Obsazuje Důl umístěním jedné ze svých Kostiček Frakce na něj.\n"
+"    Obsazení tohoto konkrétního Dolu zvyšuje její produkci Stavebních Materiálů \\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg} o 2 a také okamžitě získává produkční hodnotu Dolu 2 \\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg}, protože byla první hráčkou, která ho Obsadila.}\\par\n"
+"\\textit{Poté chce Alice zpět bránit dříve Obsazenou Osadu sesláním Městského Portálu, který jí ještě zůstal v ruce.\n"
+"    Její Hrdina je na Úrovni 2, takže ho může Posílit Expertním Efektem Karty Moci \\includesvg[height=0.8\\baselineskip]{\\svgs/expert.svg}, což jí po seslání udělí další Bod Pohybu.\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:146

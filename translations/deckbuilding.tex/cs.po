@@ -46,7 +46,7 @@ msgstr ""
 #. type: Plain text
 #: sections/deckbuilding.tex:3
 msgid "\\addsection{Deck-building}{\\skills/wisdom.png}"
-msgstr ""
+msgstr "\\addsection{Stavba Balíčku}{\\skills/wisdom.png}"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:12
@@ -58,6 +58,12 @@ msgid ""
 "Each player's Deck starts with 9 cards, built during the game's setup.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Playerdecks}{Hráčské Balíčky}}\n"
+"\\vspace*{\\lang_header_adjustment}\n"
+"Všichni hráči mají unikátní Balíček, který reprezentuje Dovednosti a Vybavení jejich Hlavního Hrdiny.\n"
+"Balíčky mohou obsahovat Karty Statistik, Dovedností, Kouzel, Artefaktů a Specializace Hlavního Hrdiny.\n"
+"Balíček každého hráče začíná s 9 kartami vybranými během přípravy hry.\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:34
@@ -86,6 +92,31 @@ msgid ""
 "\\end{enumerate}\n"
 "\n"
 msgstr ""
+"\\vspace*{\\lang_header_adjustment}\n"
+"\\vspace*{\\lang_header_adjustment}\n"
+"\\subsection*{Obecná Pravidla Karet}\n"
+"\\vspace*{\\lang_header_adjustment}\n"
+"\\begin{enumerate}\n"
+"  \\item Karty mohou být hrány \\textbf{pouze ve vašem Tahu} nebo v \\pagelink{Combat}{Boji} zahrnujícím vašeho \\textbf{Hlavního Hrdinu}.\n"
+"  \\item Kartu po použití odhoďte.\n"
+"    Každý hráč má svou Odhazovací Hromádku\\index{Odhazovací Hromádka}.\n"
+"  \\item Pokud je váš Balíček prázdný, když potřebujete dobrat Kartu, \\textbf{zamíchejte svou Odhazovací Hromádku} do nového Balíčku a doberte z něj.\n"
+"  \\item Kdykoliv váš Hrdina získá Kartu z jakéhokoliv důvodu, dejte ji \\textbf{přímo do vaší ruky}, pokud není uvedeno jinak.\n"
+"  \\item Kdykoliv máte pokyn \\textbf{Hledat} (X)\\index{Hledat (X)} v Balíčku Dovedností, Artefaktů nebo Kouzel, můžete buďto prohlédnout vrchních (X) Karet z daného Balíčku, jednu z nich si vzít do ruky a ostatní odhodit, \\textbf{NEBO} můžete místo toho získat vrchní Kartu z Odhazovací Hromádky daného Balíčku.\n"
+"  \\item Balíčky Dovedností, Artefaktů a Kouzel mají každý svou vlastní Odhazovací Hromádku, vytvořenou během přípravy hry, což vám pomáhá je identifikovat.\n"
+"    Pokud Balíček někdy dojde, zamíchejte ho a odhoďte jeho vrchní Kartu, aby vznikla nová Odhazovací Hromádka.\n"
+"    Kdykoliv je jedna z těchto Odhazovacích Hromádek prázdná, \\textbf{doplňte ji} vrchní Kartou z odpovídajícího Balíčku.\n"
+"  \\item Karty mají následující \\pagetarget{Card Effects}{typy efektů}:\n"
+"  \\begin{itemize}\n"
+"    \\item \\textbf{Okamžité} \\includesvg[height=10px]{\\svgs/instant.svg} Efekty jsou vyřešeny okamžitě.\n"
+"    \\item \\textbf{Aktivační} \\includesvg[height=10px]{\\svgs/activation.svg} Efekty musí být hrány při Aktivaci vaší vlastní Jednotky v Boji.\n"
+"    \\item \\textbf{Mapové} \\includesvg[height=10px]{\\svgs/map.svg} Efekty nemohou být použity během Boje.\n"
+"    \\item \\textbf{Pokračující} \\includesvg[height=10px]{\\svgs/ongoing.svg} Efekty\\index{Pokračující Efekty} trvají, dokud nejsou spotřebovány nebo dokud hráč, který je zahrál, nezačne své další Kolo (podle toho, co nastane dříve).\n"
+"    \\item \\textbf{Trvalé} \\includesvg[height=10px]{\\svgs/permanent.svg} Karty\\index{Trvalé Karty} zůstávají ve hře, dokud nejsou odhozeny nebo nahrazeny.\n"
+"      \\textbf{Můžete mít současně pouze jednu trvalou Kartu}; hraní další odhodí první.\n"
+"  \\end{itemize}\n"
+"\\end{enumerate}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:37
@@ -112,6 +143,8 @@ msgid ""
 "\\subsection*{\\pagetarget{Ability}{Ability} and \\pagetarget{Statistic}{Statistic} Cards}\n"
 "\n"
 msgstr ""
+"\\subsection*{Karty \\pagetarget{Ability}{Dovedností} and \\pagetarget{Statistic}{Statistik}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:47
@@ -124,6 +157,12 @@ msgid ""
 "\\bigskip\n"
 "\n"
 msgstr ""
+"Všechny Karty Dovedností\\index{Karta Dovednosti} a Statistik\\index{Karta Statistik} mají \\textbf{Základní Efekt}\\index{Základní Efekt} a silnější \\textbf{Expertní} \\includesvg[height=10px]{\\svgs/expert.svg} \\textbf{Efekt}\\index{Expertní Efekt}, který je zobrazen pod Základním Efektem.\n"
+"Kdykoliv hrajete Kartu Dovedností nebo Statistik, musíte si vybrat, který efekt používáte.\n"
+"Počet \\includesvg[height=10px]{\\svgs/expert.svg} Efektů, které můžete použít v každém Kole, je omezen \\pagelink{Level}{Úrovní} vašeho Hlavního Hrdiny.\n"
+"Sledujte počet použití jakýmkoliv vhodným způsobem, například přesouváním Černých Kostek na a z Karty Hrdiny.\\par\n"
+"\\bigskip\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:74
@@ -149,6 +188,25 @@ msgid ""
 "    \\item[\\textbf{4.}] Faction-specific Card*\n"
 "  \\end{itemize}"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{\\cards/ability.png}\n"
+"\\vspace{-2em}\n"
+"\\begin{multicols*}{2}\n"
+"  \\footnotesize\n"
+"  \\begin{center}\n"
+"    \\phantom{\\ldots}\\textbf{\\textit{\\textcolor{darkcandyapplered}{Karta Dovednosti}}}\n"
+"  \\end{center}\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{1.}] Jméno\n"
+"    \\item[\\textbf{2.}] Základní Efekt\n"
+"  \\end{itemize}\n"
+"  \\columnbreak\n"
+"  \\begin{center}\n"
+"    \\textbf{\\textit{\\textcolor{darkcandyapplered}{Karta Statistik}}}\\phantom{\\ldots}\n"
+"  \\end{center}\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{3.}] Expertní Efekt\n"
+"    \\item[\\textbf{4.}] Karta specifická pro danou Frakci*\n"
+"  \\end{itemize}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:74
@@ -160,6 +218,13 @@ msgid ""
 "gain it.  Non-Necropolis players \\textbf{cannot use} Faction Specific Cards "
 "from their hand in any way besides for effects that discard them.  }"
 msgstr ""
+"\\bigbreak \\note{11}{Některé karty jsou omezeny na Frakci Nekropolis "
+"\\includesvg[height=10px]{\\svgs/necro-note.svg}. Když hráč, který není z "
+"této Frakce, takovou Kartu\\index{Karta Nekropole} dobere z Balíčku "
+"Dovedností, může ji buďto odhodit a dobrat si novou Kartu jako náhradu, nebo "
+"si ji ponechat. Hráči, kteří nejsou z této Frakce, \\textbf{nemohou} Karty "
+"specifické pro Nekropolis zahrát ze své ruky žádným způsobem kromě efektů, "
+"které je odhodí.}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:78 sections/resources.tex:33
@@ -169,7 +234,7 @@ msgstr ""
 #. type: subsection{#2}
 #: sections/deckbuilding.tex:80
 msgid "\\pagetarget{Artifact}{Artifact} Cards"
-msgstr ""
+msgstr "Karty \\pagetarget{Artifact}{Artefaktů}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:110
@@ -183,6 +248,14 @@ msgid ""
 "Level.  They are gained through map exploration.\\par Artifacts can be "
 "\\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgstr ""
+"Karty Artefaktů\\index{Karta Artefaktu} mají horní a spodní efekt. Když "
+"jednu hrajete, musíte \\textbf{vybrat, který efekt} používáte. Jsou "
+"rozděleny do 3 Úrovní: Malé, Velké a Relikvie. Tyto Úrovně se vztahují k "
+"celkové Síle Karty a mohou být zmíněny při řešení určitých efektů nebo během "
+"přípravy Scénáře. Všechny Karty Artefaktů jsou normálně zamíchány dohromady, "
+"aby vytvořily Balíček Artefaktů bez ohledu na jejich Úroveň. Jsou získávány "
+"průzkumem mapy.\\par Artefakty mohou být \\pagelink{Trading}{směněny} v "
+"Alianci a Kooperativních Scénářích."
 
 #. type: multicols*
 #: sections/deckbuilding.tex:110
@@ -202,6 +275,19 @@ msgid ""
 "    \\phantom{\\ldots}\\textbf{\\textit{\\textcolor{darkcandyapplered}{Relic Artifact}}}\n"
 "  \\end{center}"
 msgstr ""
+"{2}\n"
+"  \\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}\n"
+"  \\footnotesize\n"
+"    \\null\\hfill\\textbf{\\textit{\\textcolor{darkcandyapplered}{Velký Artefakt}}}\n"
+"  \\columnbreak\n"
+"  \\begin{center}\n"
+"    \\phantom{\\ldots}\\\\\n"
+"    \\phantom{\\ldots}\\includegraphics[width=0.6\\linewidth]{\\cards/minor_artifact.png}\\\\\n"
+"    \\phantom{\\ldots}\\textbf{\\textit{\\textcolor{darkcandyapplered}{Malý Artefakt}}}\\\\\n"
+"    \\vspace{3em}\n"
+"    \\phantom{\\ldots}\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}\\\\\n"
+"    \\phantom{\\ldots}\\textbf{\\textit{\\textcolor{darkcandyapplered}{Relikvie}}}\n"
+"  \\end{center}"
 
 #. type: multicols
 #: sections/deckbuilding.tex:110
@@ -216,6 +302,14 @@ msgid ""
 "    \\item[\\textbf{3.}] Fluff\n"
 "  \\end{itemize}"
 msgstr ""
+"{2}\n"
+"  \\footnotesize\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{1.}] Jméno\n"
+"    \\item[\\textbf{2.}] Efekt\n"
+"    \\columnbreak\n"
+"    \\item[\\textbf{3.}] Příběhový text\n"
+"  \\end{itemize}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:115
@@ -225,7 +319,7 @@ msgstr ""
 #. type: subsection{#2}
 #: sections/deckbuilding.tex:117
 msgid "\\pagetarget{spells}{Spell Cards}"
-msgstr ""
+msgstr "\\pagetarget{spells}{Karty Kouzel}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:124
@@ -243,6 +337,17 @@ msgid ""
 "{\\svgs/empower.svg} played so far, and if you stop playing cards, the power "
 "dissipates."
 msgstr ""
+"Karty Kouzel\\index{Karta Kouzla} mají tři možné primární efekty. Použití "
+"horní, základní, verze Kouzla nemá žádné dodatečné náklady. K přístupu k "
+"ostatním efektům můžete \\textbf{Posílit} Kouzlo\\index{Posílení Kouzla} "
+"zaplacením uvedené ceny (3) a dosáhnout silnějšího efektu (4). Tuto cenu "
+"můžete zaplatit hraním jiných karet s efektem Posílení "
+"\\includesvg[height=10px]{\\svgs/empower.svg} před sesláním Kouzla (např. "
+"Karta Statistiky - Moc). Všechny Karty Kouzel mají také alternativní spodní "
+"(5) \\includesvg[height=10px]{\\svgs/empower.svg} efekt. Nemůžete zachovat "
+"zahrané \\includesvg[height=10px]{\\svgs/empower.svg} na později: seslání "
+"Kouzla spotřebuje všechny dosud zahrané \\includesvg[height=10px]{\\svgs/"
+"empower.svg}, a pokud přestanete hrát karty, moc se rozplyne."
 
 #. type: Plain text
 #: sections/deckbuilding.tex:142
@@ -256,6 +361,14 @@ msgid ""
 "\\item[\\textbf{4.}] \\textbf{Spell Effect} \\item[\\textbf{5.}] "
 "\\textbf{Alternative\\\\Effect} \\item[] \\end{itemize} \\end{multicols} }"
 msgstr ""
+"{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/spell_example."
+"png}\\\\ \\medskip "
+"\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Karta "
+"Kouzla}}}} \\scriptsize \\begin{multicols}{2} \\begin{itemize}[itemsep=5pt] "
+"\\item[\\textbf{1.}] \\textbf{Jméno Kouzla} \\item[\\textbf{2.}] "
+"\\textbf{Škola Magie} \\item[\\textbf{3.}] \\textbf{Cena\\\\za Posílení} "
+"\\item[\\textbf{4.}] \\textbf{Efekt Kouzla} \\item[\\textbf{5.}] "
+"\\textbf{Alternativní\\\\Efekt} \\item[] \\end{itemize} \\end{multicols} }"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:146
@@ -266,6 +379,11 @@ msgid ""
 "\\textbf{same Round} when the Guild is constructed. Spells can also be "
 "\\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgstr ""
+"Kouzla mohou být získána postavením Cechu Mágů\\index{Cech Mágů}. Stavba "
+"také umožňuje použít Žeton Knihy Kouzel\\index{Žeton Knihy Kouzel} k nákupu "
+"dalších Kouzel. Žeton nelze použít během \\textbf{stejného Kola}, ve kterém "
+"byl Cech postaven. Kouzla mohou být také \\pagelink{Trading}{směněna} v "
+"Alianci a Kooperativních Scénářích."
 
 #. type: Plain text
 #: sections/deckbuilding.tex:148
@@ -273,6 +391,8 @@ msgid ""
 "During Combat, \\textbf{only one Spell Card} may be played by each player "
 "\\textbf{per Combat Round}."
 msgstr ""
+"Během Boje může každý hráč \\textbf{použít pouze jednu Kartu Kouzla} "
+"\\textbf{za Kolo Boje}."
 
 #. type: Plain text
 #: sections/deckbuilding.tex:152
@@ -281,11 +401,14 @@ msgid ""
 "other than your hand (such as directly from the Spell Deck), place that "
 "Spell into your Discard Pile after casting it.  }"
 msgstr ""
+"\\note{7}{Když použijete efekt, který vám umožní seslat Kouzlo z jiného "
+"místa než z vaší ruky (například přímo z Balíčku Kouzel), po seslání tohoto "
+"Kouzla jej umístěte do své Odhazovací Hromádky.}"
 
 #. type: subsection{#2}
 #: sections/deckbuilding.tex:154
 msgid "\\pagetarget{Specialty}{Hero Specialty Cards}"
-msgstr ""
+msgstr "\\pagetarget{Specialty}{Karty Specializace Hrdiny}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:158
@@ -295,6 +418,11 @@ msgid ""
 "many of these Cards have effects which resemble Spell Cards, Specialty Cards "
 "are their \\textbf{own unique category of cards}."
 msgstr ""
+"Karty Specializace Hrdiny\\index{Karta Specializace} jsou získávány během "
+"\\pagelink{Level}{nových Úrovní}. Každý Hlavní Hrdina má unikátní sadu Karet "
+"Specializace. I když mnoho z těchto Karet má efekty, které se podobají "
+"Kartám Kouzel, Karty Specializace jsou \\textbf{vlastní unikátní kategorií "
+"karet}."
 
 #. type: Plain text
 #: sections/deckbuilding.tex:165
@@ -303,11 +431,14 @@ msgid ""
 "png}\\\\ \\medskip \\footnotesize\\textit{A Level 4 Specialty Card, "
 "belonging to Catherine the Knight.} }"
 msgstr ""
+"{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/specialty."
+"png}\\\\ \\medskip \\footnotesize\\textit{Karta Specializace Úrovně 4, "
+"patřící rytířce Catherine.} }"
 
 #. type: subsection{#2}
 #: sections/deckbuilding.tex:175
 msgid "Searching Example"
-msgstr ""
+msgstr "Příklad Hledání"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:185
@@ -328,3 +459,18 @@ msgid ""
 "png}\\par \\textit{He decides to keep the Fireball, placing it into his hand "
 "and discarding the Magic Arrow into the Spell Discard Pile.}"
 msgstr ""
+"\\textit{Bob, který hraje za čaroděje Deemera, postavil během předchozího "
+"Herního Kola Cech Mágů, což mu nyní umožňuje použít Žeton Knihy Kouzel k "
+"nákupu dalších Kouzel.}\\par \\includegraphics[width=\\linewidth]{\\examples/"
+"deemer_receiving_spellbook.png}\\par \\textit{Používá Žeton a platí cenu 5 "
+"\\includesvg[height=10px]{\\svgs/gold.svg} uvedenou na jeho Desce Města, což "
+"mu umožňuje \\textbf{Hledat (2)} v Balíčku Kouzel.}\\par "
+"\\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par "
+"\\filbreak \\textit{Nyní má na výběr buď získat vrchní Kartu z Odhazovací "
+"Hromádky Karet Kouzel, nebo se podívat na dvě vrchní Karty z Balíčku Kouzel "
+"a jednu z nich získat. Nemá zájem o získání Kouzla Prokletí, které je na "
+"vrcholu Odhazovací Hromádky, a místo toho se rozhodne podívat se dvě Karty – "
+"Magickou Šipku a Ohnivou Kouli.} \\includegraphics[width=\\linewidth]"
+"{\\examples/fireball_over_magic_arrow.png}\\par \\textit{Rozhodne se "
+"ponechat si Ohnivou Kouli. Vloží ji do své ruky a odhodí Magickou Šipku do "
+"Odhazovací Hromádky Karet Kouzel.}"
