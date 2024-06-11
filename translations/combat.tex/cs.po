@@ -56,7 +56,7 @@ msgstr ""
 #. type: Plain text
 #: sections/combat.tex:3
 msgid "\\addsection{Combat}{\\skills/attack.png}"
-msgstr ""
+msgstr "\\addsection{Boj}{\\skills/attack.png}"
 
 #. type: multicols
 #: sections/combat.tex:7
@@ -65,6 +65,8 @@ msgid ""
 "\\pagetarget{Combat}{Combat}\\index{Combat} with \\textbf{Neutral Units} starts when a Hero moves to an \\textbf{unvisited} Field with a roman numeral, signifying the \\hyperlink{Difficulty Table}{type and number} of Neutral Units guarding that Field.\n"
 "\n"
 msgstr ""
+"\\pagetarget{Combat}{Boj}\\index{Boj} s \\textbf{Neutrálními Jednotkami} začíná, když se Hrdina přesune na \\textbf{nenavštívené} Pole s římskou číslicí, která označuje \\hyperlink{Difficulty Table}{typ a počet} Neutrálních Jednotek, které toto Pole střeží.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:14
@@ -78,6 +80,13 @@ msgid ""
 "Players are able to start multiple Combats during their Turn.\n"
 "\n"
 msgstr ""
+"Boj s \\textbf{jiným hráčem} může začít dvěma způsoby:\n"
+"\\begin{itemize}\n"
+"  \\item Přesunete se na jakékoliv Pole obsahující jednoho z jejich Hrdinů.\n"
+"  \\item Přesunete se do jimi vlastněného Města nebo Osady.\n"
+"\\end{itemize}\n"
+"Hráči mohou během svého Kola začít více Bojů.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:16
@@ -86,7 +95,7 @@ msgid ""
 "\\subsection*{\\pagetarget{Combatsetup}{Combat Setup}}\n"
 "\n"
 msgstr ""
-"\\subsection*{\\pagetarget{Combatsetup}{Combat Setup}}\n"
+"\\subsection*{\\pagetarget{Combatsetup}{Příprava Boje}}\n"
 "\\vspace*{\\lang_header_adjustment}\n"
 
 #. type: multicols
@@ -98,6 +107,9 @@ msgid ""
 "Follow these steps when Combat begins against \\textbf{Neutral Units}:\n"
 "\n"
 msgstr ""
+"Boj se vyhodnocuje na 4 x 5 Desce Bojiště, která se skládá ze dvou Zadních linií a dvou Předních linií na opačných koncích a prostředního řádku.\n"
+"Když začíná Boj proti \\textbf{Neutrálním Jednotkám}, postupujte podle těchto kroků:\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:51
@@ -135,6 +147,37 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\begin{itemize}\n"
+"  \\item Vyberte si jednu ze stran Bojové desky jako svou vlastní.\n"
+"    Umístěte až 5 svých Karet Jednotek volně na Zadní a Přední linie této strany.\n"
+"  \\item Zkontrolujte \\hyperlink{Difficulty Table}{\\textbf{Tabulku Obtížnosti}} \\iftoggle{printable}{(na zadní straně pravidel)}{} a doberte odpovídající počet Karet Neutrálních Jednotek z jejich Balíčků.\n"
+"  \\item Neutrální Jednotky jsou umístěny různě podle Herního Režimu:\n"
+"  \\item Ve Scénářích \\textbf{Střet} nebo \\textbf{Aliance} ovládá Neutrální Jednotky nepřátelský hráč sedící po vaší pravici a rozhoduje o jejich umístění.\n"
+"    \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Jednotky musí být umístěny v Zadní linii, pokud je to možné.\n"
+"  \\item Ve Scénářích \\textbf{Kampaň} nebo \\textbf{Kooperativní} jsou Neutrální Jednotky umístěny zleva doprava z pohledu hráče.\n"
+"Nejprve umístěte jakékoli \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Jednotky do Zadní linie\\index{Rozmístění Jednotek}.\n"
+"Pak umístěte jakékoli \\includesvg[height=10px]{\\svgs/unit_ground.svg} nebo \\includesvg[height=10px]{\\svgs/unit_flying.svg} Jednotky do Přední linie.\n"
+"Pokud není dostatek místa k umístění Jednotky do její správné linie, umístěte ji do druhé linie.\n"
+"Jednotky musí být umístěny v \\textbf{klesajícím} pořadí Iniciativy\\index{Iniciativa}.\n"
+"Pokud je remíza, umístěte nejprve Jednotky vyšší úrovně.\n"
+"Pokud je stále remíza, rozhodnou o pořadí hráči.\n"
+"\\end{itemize}\n"
+"Příprava Jednotek při boji \\textbf{s jinými hráči}:\n"
+"\\begin{itemize}[wide]\n"
+"  \\item Útočící hráč umístí až 5 Jednotek na svou vybranou stranu Desky Bojiště, a pak následuje obránce.\n"
+"  \\item Pokud Boj probíhá ve Městě s Citadelou, obránce přidá karty \\pagelink{Walls}{Zdí, Brány a Střílny} po umístění svých Jednotek.\n"
+"\\end{itemize}\n"
+"\\vfill\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=0.55\\linewidth]{\\art/aging.png}\n"
+"\\end{center}\n"
+"\\vfill\n"
+"\\note{11}{\n"
+"    Pokud je vaše Město nebo Osada napadena nepřátelským Hrdinou a váš Hrdina není na tomto Poli, můžete okamžitě \\textbf{zaplatit 8} \\includesvg[height=10px]{\\svgs/gold.svg} a bránit se \\textbf{pouze s vašimi Jednotkami}.\n"
+"    Během tohoto Boje nemůžete použít svůj Balíček, protože váš Hlavní Hrdina není přítomen.\n"
+"    Placení tohoto Zlata představuje náklady na přepravu armády.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:79
@@ -169,7 +212,7 @@ msgid ""
 "The Unit cannot take another Defense Action during that activation.\n"
 "\n"
 msgstr ""
-"\\subsection*{\\pagetarget{Combatterminology}{Combat Terminology}}\n"
+"\\subsection*{\\pagetarget{Combatterminology}{Terminologie Boje}}\n"
 "\\vspace*{\\lang_header_adjustment}The following terms are used to describe effects and elements during Combat:\\par\n"
 "\\textbf{Attacking Player} – The player who started the Combat.\\par\n"
 "\\textbf{Defending Player} – The player whom Combat was started against.\\par\n"
