@@ -167,7 +167,6 @@
 \definecolor{borderinyellow}{HTML}{B09E69}
 \definecolor{bordermidyellow}{HTML}{6f6749}
 % Create note box
-\providecommand{\notefont}[0]{\fontfamily{ptm}\selectfont}
 \newcommand{\note}[2]{
   \begin{tikzpicture}
     \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/table-background.jpg}}};
@@ -175,12 +174,10 @@
     \draw [borderinyellow, thick] ([xshift=+2.8pt, yshift=-2.8pt] current bounding box.north west) rectangle ([xshift=-2.8pt, yshift=2.8pt] current bounding box.south east);
     \node at (current bounding box.center) {
       \begin{varwidth}{0.85\linewidth}
-      \notefont{
-        \color{arylideyellow}
-        \hypersetup{linkcolor=amber}
-        #2
-        \hypersetup{linkcolor=goldenbrown}
-      }
+      \color{arylideyellow}
+      \hypersetup{linkcolor=amber}
+      #2
+      \hypersetup{linkcolor=goldenbrown}
       \end{varwidth}
     };
     \begin{pgfonlayer}{background}
@@ -203,14 +200,12 @@
     \draw [borderinyellow, thick] ([xshift=+3pt, yshift=-3pt] current bounding box.north west) rectangle ([xshift=-3pt, yshift=3pt] current bounding box.south east);
     \node at (current bounding box.center) {
       \begin{varwidth}{0.95\linewidth}
-      \notefont{
-        \bgroup
-        \color{arylideyellow}
-        \hypersetup{linkcolor=amber}
-        \setlength{\tabcolsep}{0.3em}
-        #3
-        \egroup
-      }
+      \bgroup
+      \color{arylideyellow}
+      \hypersetup{linkcolor=amber}
+      \setlength{\tabcolsep}{0.3em}
+      #3
+      \egroup
       \end{varwidth}
     };
     \begin{pgfonlayer}{background}
