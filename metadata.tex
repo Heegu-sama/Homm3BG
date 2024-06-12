@@ -150,6 +150,11 @@
 }
 %End of create section heading.
 
+% Languages that have issues with header alignment also have different
+% spacing around subsection titles. This should apply the same correction
+% and there shouldn't be any need for \vspace*{\lang_header_adjustment}
+\titlespacing*{\subsection}{0em}{1.1em}{0.2em}
+
 \newcommand\picdims[4][]{%
   \setbox0=\hbox{\includegraphics[#1]{#4}}%
   \clipbox{.5\dimexpr\wd0-#2\relax{} %
