@@ -12,6 +12,16 @@
   \titlespacing*{\subsection}{0em}{0.9em}{0.2em}
 }
 
+\newfontfamily{\liberation}{LiberationSerif}
+  [
+    Path = ./assets/fonts/,
+    Extension = .ttf,
+    UprightFont = *-Regular,
+    ItalicFont = *-Italic,
+    BoldFont = *-Bold,
+    BoldItalicFont = *-BoldItalic
+  ]
+
 \newcommand{\versionlabel}{Verze}
 \newcommand{\versionwarning}{Toto je nepublikovaná verze vyrobená z GitHub commitu}
 
@@ -32,20 +42,12 @@
 \newcommand{\qrbgg}{Naskenuj pro otevření \textbf{BoardGameGeek} vlákna.}
 
 \newcommand{\sectionheadertext}[1]{
-  \newfontfamily{\liberation}{LiberationSerif}
-  [
-    Path = ./assets/fonts/,
-    Extension = .ttf,
-    UprightFont = *-Regular,
-    ItalicFont = *-Italic,
-    BoldFont = *-Bold,
-    BoldItalicFont = *-BoldItalic
-  ]
   {
     \color{antiquewhite} \section*{\MakeUppercase{\textbf{\liberation #1}}}
   }
 }
 
 \title{\includegraphics[width=6cm]{\images/title.png}\\Revidovaná pravidla}
+\newcommand{\notefont}[0]{\liberation\selectfont}
 
 \input{metadata.tex}
