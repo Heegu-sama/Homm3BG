@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-05-04 22:21+0000\n"
+"POT-Creation-Date: 2024-06-15 01:46+0100\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,16 +19,16 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/all_map_locations.tex:419 sections/combat.tex:5
-#: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
-#: sections/difficulty.tex:5 sections/expansion_content.tex:5
-#: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
-#: sections/map_elements.tex:118 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
-#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
+#: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
+#: sections/all_map_locations.tex:421 sections/combat.tex:5
+#: sections/combat.tex:141 sections/credits.tex:10 sections/deckbuilding.tex:7
+#: sections/difficulty.tex:7 sections/expansion_content.tex:7
+#: sections/expansion_content.tex:51 sections/game_modes.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:79
+#: sections/map_elements.tex:124 sections/player_turns.tex:7
+#: sections/resources.tex:7 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:58 sections/town.tex:5
+#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:160
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -36,11 +36,11 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/all_map_locations.tex:132 sections/credits.tex:35
-#: sections/credits.tex:39 sections/expansion_content.tex:57
+#: sections/all_map_locations.tex:134 sections/credits.tex:38
+#: sections/credits.tex:42 sections/expansion_content.tex:59
 #: sections/game_modes.tex:25 sections/round_structure.tex:28
-#: sections/setup.tex:64 sections/town.tex:28 sections/town.tex:34
-#: sections/units.tex:104
+#: sections/round_structure.tex:32 sections/setup.tex:117 sections/town.tex:28
+#: sections/town.tex:34 sections/units.tex:103
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -79,32 +79,48 @@ msgid ""
 "Keep playing new Rounds until any of the Scenario's ending conditions have been met.\n"
 "\n"
 msgstr ""
-"Rozgrywka podzielona jest na \\pagetarget{Rounds}{Rundy}, podczas których każdy gracz wykonuje swoją Turę w kolejności zgodnej z ruchem wskazówek zegara, zaczynając od gracza rozpoczynającego grę.\n"
-"W swoich Turach gracze przemieszczają swoich \\pagelink{Heroes}{Bohaterów} po Mapie Gry, budują nowe Budynki w swoich \\pagelink{Town}{Miastach} i rekrutują \\pagelink{Units}{Jednostki}, próbując spełnić warunek zwycięstwa Scenariusza.\\par\n"
-"\\textbf{Na początku każdej Rundy}, z wyjątkiem pierwszej, wykonaj następujące kroki:\n"
+"Gra jest podzielona na \\pagetarget{Rounds}{Rundy}, podczas których każdy gracz wykonuje swoją Turę zgodnie z ruchem wskazówek zegara, zaczynając od gracza rozpoczynającego.\n"
+"Podczas swoich Tur gracze przemieszczają swoich \\pagelink{Heroes}{Bohaterów} po Mapie Gry, budują nowe Budynki w swoim \\pagelink{Town}{Mieście}, i Rekrutują \\pagelink{Units}{Jednostki}, próbując spełnić warunki zwycięstwa Scenariusza.\\par\n"
+"Wykonaj następujące kroki \\textbf{na początku każdej Rundy} oprócz pierwszej:\n"
 "\\begin{itemize}\n"
-" \\item Obróć na aktywną stronę użyte Żetony Budowy, Populacji i Księgi Zaklęć.\n"
-" \\item Obróć na aktywną, zieloną stronę użyte Żetony Ruchu (PR).\n"
-" \\item Odzyskaj wszystkie Efekty Mistrzowskie \\includesvg[height=10px]{\\svgs/expert.svg}.\n"
+"  \\item Obróć na aktywną stronę użyte Żetony Budowy, Populacji i/lub Księgi Zaklęć.\n"
+"  \\item Obróć na aktywną, zieloną stronę użyte Żetony (Punkty) Ruchu (PR).\n"
+"  \\item Odzyskaj wszystkie Efekty Mistrzowskie \\includesvg[height=10px]{\\svgs/expert.svg}.\n"
 "\\end{itemize}\n"
-"Następnie, w zależności od aktualnie rozgrywanej Rundy, gracze zdobywają zasoby lub rozpatrują Kartę Astrologowie Ogłaszają:\n"
+"Następnie, w zależności od numeru bieżącej Rundy, gracze albo zdobywają Zasoby, albo rozpatrują Kartę Astrologowie Ogłaszają:\n"
 "\\begin{itemize}\n"
-" \\item Rundy o numerach nieparzystych to \\textbf{Rundy Zasobów}.\n"
-" Wszyscy gracze otrzymują przychód z \\pagelink{Mines}{Budynków Miasta, Osad i Kopalni}, które kontrolują.\n"
-" W pierwszej Rundzie pomiń ten krok.\n"
-" \\item Rundy o numerach parzystych to \\textbf{Rundy Astrologów}.\n"
-" Dobierz Kartę Astrologowie Ogłaszają\\index{Karta Astrologowie Ogłaszają} i rozpatrz jej efekty.\n"
-" \\item Jeśli Tor Rund wskazuje na nastąpienie Wydarzenia Czasowego będącego elementem Scenariusza, rozpatrz je.\n"
+"  \\item Rundy o nieparzystych numerach to \\textbf{Rundy Zasobów}.\n"
+"    Wszyscy gracze otrzymują przychód z \\pagelink{Mines}{Budynków, Osad i Kopalni}, które kontrolują.\n"
+"    W pierwszej Rundzie pomiń ten krok.\n"
+"  \\item Rundy o parzystych numerach to \\textbf{Rundy Astrologów}.\n"
+"    Dobierz Kartę Astrologowie Ogłaszają\\index{Karta Astrologowie Ogłaszają} i rozpatrz ją.\n"
+"  \\item Jeśli Scenariusz ma zaplanowane Wydarzenia oznaczone na Torze Rund, które teraz następują, rozpatrz je.\n"
 "\\end{itemize}\n"
-"Po rozpoczęciu Rundy, gracze podejmują Tury zgodnie z ruchem wskazówek zegara, tak jak opisano w następnym rozdziale.\n"
-"Po zakończeniu swoich Tur, wszyscy gracze przesuwają Czarną Kostkę na Torze Rund o jedno pole i rozpoczynają kolejną Rundę.\n"
-"Kontynuuj rozgrywkę według tego schematu do momentu spełnienia warunków zakończenia Scenariusza.\n"
+"Po rozpoczęciu Rundy, gracze wykonują Tury zgodnie z ruchem wskazówek zegara, jak opisano w następnyn rozdziale.\n"
+"Po zakończeniu Tur wszystkich graczy, przesuń Czarną Kostkę na Torze Rund o jedno pole i rozpocznij kolejną Rundy.\n"
+"Kontynuuj rozgrywkę w nowych Rundach, aż zostaną spełnione jakiekolwiek warunki zakończenia Scenariusza.\n"
 "\n"
 
 #. type: multicols*
 #: sections/round_structure.tex:30
 #, no-wrap
 msgid ""
-"\\includegraphics[width=1.8\\linewidth]{\\art/minotaur.png}\n"
+"\\hspace{1em}\\includegraphics[width=1.6\\linewidth]{\\art/minotaur.png}\n"
 "\n"
 msgstr ""
+
+#. type: multicols*
+#: sections/round_structure.tex:37
+#, no-wrap
+msgid ""
+"\\note{6}{\n"
+"  In the Alliance game, teams take turns alternately.\n"
+"  At the start of your team's first turn of the Round, choose who goes first and last in that Round.\n"
+"}\n"
+"\n"
+msgstr ""
+"\\note{6}{\n"
+"  W trybie Sojuszu drużyny zmieniają się na przemian.\n"
+"  Na początku pierwszej tury swojej drużyny w Rundzie należy wybrać, kto będzie pierwszy i ostatni w danej Rundzie.\n"
+"}\n"
+"\n"
