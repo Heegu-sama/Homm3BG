@@ -68,14 +68,14 @@ msgid ""
 msgstr ""
 "\\subsection*{Ход ИИ героя}\n"
 "\\pagetarget{AIrules}{ИИ герои} используются в Кампаниях.\n"
-"Они начинают с собственным городом и имеют 3 ОП, всегда используя их для выполнения следующих действий в (порядке убывания приоритета):\n"
+"Они начинают с собственным городом и имеют 3 ОП, всегда используя их для выполнения следующих действий в порядке убывания приоритета:\n"
 "\\begin{itemize}\n"
-"  \\item Если герой игрока находится на том же элементе карты, использовать все ОП для столкновения с героем и началом сражения.\n"
-"  \\item Если на элементе карты есть шахты или посёлки, которые ИИ может захватить, передвинуться к ближайшему.\n"
+"  \\item Если герой игрока находится на том же элементе карты — использовать все ОП для столкновения с героем и началом сражения.\n"
+"  \\item Если на элементе карты есть шахты или посёлки, которые ИИ может захватить — переместиться к ближайшему.\n"
 "  \\item Продвигаться в сторону города игрока.\n"
+"\\end{itemize}\n"
 "Повторяйте эту последовательность до использования всех ОП.\n"
 "ИИ герои ходят после хода игрока.\n"
-"\\end{itemize}\n"
 "\n"
 
 #. type: multicols
@@ -186,12 +186,12 @@ msgid ""
 "\n"
 msgstr ""
 "ИИ герои используют две колоды в ходе сражения: \\textbf{ИИ колоду} и \\textbf{колоду заклинаний}.\n"
-"ИИ колоды собираются с ипользованием трех типов ИИ карт: силы \\includesvg[height=10px]{\\svgs/might.svg}, магии \\includesvg[height=10px]{\\svgs/magic.svg} и навыков \\includesvg[height=10px]{\\svgs/skill.svg}.\n"
-"Каждый сценарий в Кампании описывает количество карт каждого типа в ИИ колоде.\n"
+"В ходе сражения ИИ герои используют две колоды: \\textbf{ИИ} и \\textbf{колоду заклинаний}.\n"
+"ИИ колоды собираются из трех типов ИИ карт: силы \\includesvg[height=10px]{\\svgs/might.svg}, магии \\includesvg[height=10px]{\\svgs/magic.svg} и умений \\includesvg[height=10px]{\\svgs/skill.svg}.\n"
+"Сценарий кампании описывает количество карт каждого типа в ИИ колоде.\n"
 "Карты силы \\includesvg[height=10px]{\\svgs/might.svg} и умений \\includesvg[height=10px]{\\svgs/skill.svg} имеют два типа. Выберите их \\textbf{случайным образом} во время формирования колоды.\n"
 "При необходимости найдите и добавьте соответствующие карты из колоды навыков.\n"
-"Сформируйте ИИ \\textbf{колоду заклинаний}, набрав карты из колоды заклинаний.\n"
-"Перемешайте обе колоды после их формирования.\n"
+"Сформируйте ИИ \\textbf{колоду заклинаний} из колоды заклинаний.\n"
 "\n"
 
 #. type: multicols
@@ -206,10 +206,10 @@ msgid ""
 "If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
 "\n"
 msgstr ""
-"При\\textbf{активации} ИИ отряда возьмите ИИ карту\\index{AI Card} и следуйте ее инструкциям перед движением и/или атакой отряда.\n"
-"Если ИИ колода была полностью выбрана в ходе сражения, не используйте её.\n"
+"При \\textbf{активации} ИИ отряда возьмите ИИ карту\\index{AI Card} и следуйте ее инструкциям перед движением и/или атакой отряда.\n"
+"Если ИИ колода закончилась в ходе сражения, не используйте её.\n"
 "Эффект от каждой ИИ карты зависит от \\pagelink{Difficulty}{сложности} игры.\n"
-"Карты силы \\includesvg[height=10px]{\\svgs/might.svg} действуют на отряд до момента, пока не произойдет соответствующая атака/защита.\n"
+"Карты силы \\includesvg[height=10px]{\\svgs/might.svg} действуют на отряд до момента соответствующей атаки/защиты.\n"
 "ИИ колода заклинаний используется, если выпадает карта магии \\includesvg[height=10px]{\\svgs/magic.svg}.\n"
 "Если ИИ герой должен набрать карту, он набирает и применяет \\textbf{следующую карту} из ИИ колоды.\n"
 "\n"
@@ -221,6 +221,8 @@ msgid ""
 "\\subsection*{Combat against AI}\n"
 "\n"
 msgstr ""
+"\\subsection*{Сражение против ИИ}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:73
@@ -230,6 +232,9 @@ msgid ""
 "When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\\par\n"
 "\n"
 msgstr ""
+"\\pagetarget{AI Units}{Данные правила} применяются в сражениях в сценариях \\textbf{одиночного режима}\\index{Solo} и \\textbf{кооператива}.\n"
+"Когда нейтральный противник или ИИ герой активирует отряд, действуют следующие правила:\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:76
@@ -239,6 +244,9 @@ msgid ""
 "If this is impossible, they attack the Unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
 "\n"
 msgstr ""
+"Приоритетом атаки вражеских наземных \\includesvg[height=10px]{\\svgs/unit_ground.svg} и летающих \\includesvg[height=10px]{\\svgs/unit_flying.svg} отрядов являются отряды \\textbf{того же} уровня.\n"
+"Если это невозможно, они атакуют отряд меньшего уровня (в порядке \\textbf{убывания} уровня вплоть до бронзового); если и это невозможно, то атакуют отряд высшего уровня (в порядке \\textbf{возрастания} уровня).\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:82
@@ -251,6 +259,12 @@ msgid ""
 "- \\includesvg[height=10px]{\\svgs/azure.svg}.}\n"
 "\n"
 msgstr ""
+"\\textit{Пример: \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg} имеет приоритет\n"
+"\\includesvg[height=10px]{\\svgs/golden.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/silver.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}.}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:85
@@ -260,6 +274,9 @@ msgid ""
 "If there are no Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same tier order.\\par\n"
 "\n"
 msgstr ""
+"Стрелковые \\includesvg[height=10px]{\\svgs/unit_ranged.svg} отряды предпочитают атаковать других стрелков \\includesvg[height=10px]{\\svgs/unit_ranged.svg} того же уровня, потом уровнем ниже, далее высшим уровнем, используя очередность, описанную выше.\n"
+"Если нет возможности атаковать стрелков \\includesvg[height=10px]{\\svgs/unit_ranged.svg}, они выбирают наземные \\includesvg[height=10px]{\\svgs/unit_ground.svg} и летающие \\includesvg[height=10px]{\\svgs/unit_flying.svg} отряды того же уровня.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:95
@@ -276,6 +293,16 @@ msgid ""
 "- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}.}\n"
 "\n"
 msgstr ""
+"\\textit{Пример: \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg} имеет приоритет\n"
+"\\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}.}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:98
@@ -285,6 +312,9 @@ msgid ""
 "If there's ever a tie between equally valid targets, the player chooses which Unit is attacked.\\par\n"
 "\n"
 msgstr ""
+"В обоих случаях, если имеется несколько равнозначных целей, атакуется ближайшая.\n"
+"Если и в данном случае условия равны, то игрок выбирает отряд, который подвергнется атаке.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:100
@@ -293,6 +323,8 @@ msgid ""
 "Enemy units cannot \\pagelink{Defend}{Defend} unless instructed to.\n"
 "\n"
 msgstr ""
+"Вражеские отряды не могут \\pagelink{Defend}{защищаться}, если не указано иное.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:105
