@@ -58,7 +58,7 @@ msgstr ""
 #. type: Plain text
 #: sections/combat.tex:3
 msgid "\\addsection{Combat}{\\skills/attack.png}"
-msgstr ""
+msgstr "\\addsection{Сражение}{\\skills/attack.png}"
 
 #. type: multicols
 #: sections/combat.tex:7
@@ -67,6 +67,8 @@ msgid ""
 "\\pagetarget{Combat}{Combat}\\index{Combat} with \\textbf{Neutral Units} starts when a Hero moves to an \\textbf{unvisited} Field with a roman numeral, signifying the \\hyperlink{Difficulty Table}{type and number} of Neutral Units guarding that Field.\n"
 "\n"
 msgstr ""
+"\\pagetarget{Combat}{Сражение}\\index{Combat} с \\textbf{нейтральными отрядами} начинается при попадании героя на \\textbf{непосещённое} поле с римской цифрой, обозначающей \\hyperlink{Difficulty Table}{тип и количество} нейтральных отрядов, охраняющих это поле.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:14
@@ -80,6 +82,13 @@ msgid ""
 "Players are able to start multiple Combats during their Turn.\n"
 "\n"
 msgstr ""
+"Сражение с \\textbf{другим игроком} может начаться двумя способами:\n"
+"\\begin{itemize}\n"
+"  \\item при попадании на поле с одним из вражеских героев.\n"
+"  \\item при попадании на поле с замком или посёлком, которыми они владеют.\n"
+"\\end{itemize}\n"
+"Игроки могут участвовать в нескольких сражениях за свой ход.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:16
@@ -88,6 +97,8 @@ msgid ""
 "\\subsection*{\\pagetarget{Combatsetup}{Combat Setup}}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Combatsetup}{Подготовка к сражению}}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:20
@@ -98,6 +109,9 @@ msgid ""
 "Follow these steps when Combat begins against \\textbf{Neutral Units}:\n"
 "\n"
 msgstr ""
+"Сражение происходит на доске 4х5, состоящую из двух расположенных друг напротив друга передовых линий и тыла, а также средней линии.\n"
+"При сражении с \\textbf{нейтральными отрядами} выполните следующие шаги:\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:51
@@ -135,6 +149,36 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\begin{itemize}\n"
+"  \\item Выберите одну из сторон доски.\n"
+"    Расположите до 5 карт ваших отрядов в удобном порядке на передовой и в тылу.\n"
+"  \\item Проверьте \\hyperlink{Difficulty Table}{\\textbf{таблицу сложности}} и наберите соответствующее количество карт нейтральных отрядов.\n"
+"  \\item Если вы играете в \\textbf{Столкновение (Clash)} или \\textbf{Альянс}, то игрок, сидящий справа от вас, контролирует нейтральные отряды и сам выбирает их расстановку.\n"
+"    \\includesvg[height=10px]{\\svgs/unit_ranged.svg} отряды должны быть помещены в тыл (если возможно).\n"
+"  \\item При игре в \\textbf{Кампанию} или \\textbf{Кооператив} нейтральные отряды располагаются слева направо.\n"
+"Разместите \\includesvg[height=10px]{\\svgs/unit_ranged.svg} отряды первыми в тылу\\index{Units Placement}.\n"
+"Далее, разместите \\includesvg[height=10px]{\\svgs/unit_ground.svg} и \\includesvg[height=10px]{\\svgs/unit_flying.svg} отряды на передовой.\n"
+"Если у вас нет возможности разместить отряд по этим правилам, поместите его в другое свободное поле.\n"
+"Отряды должны быть размещены в порядке \\textbf{убывания} скорости\\index{Initiative}.\n"
+"При одинаковой скорости расположите отряды с более высоким уровнем первыми.\n"
+"При одинаковом уровне игрок выбирает порядок самостоятельно.\n"
+"\\end{itemize}\n"
+"Расстановка отрядов при сражении с \\textbf{другими игроками}:\n"
+"\\begin{itemize}[wide]\n"
+"  \\item Атакующий игрок располагает до 5 отрядов на своей стороне доски сражения, обороняющийся игрок располагает свои отряды следующим.\n"
+"  \\item Если сражение происходит в городе с Цитаделью, защитник добавляет карты \\pagelink{Walls}{стен, ворот и стрелковой башни} после размещения отрядов.\n"
+"\\end{itemize}\n"
+"\\vfill\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=0.55\\linewidth]{\\art/aging.png}\n"
+"\\end{center}\n"
+"\\vfill\n"
+"\\note{11}{\n"
+"    Если ваш город или посёлок атакован вражеским героем, и вашего героя нет на этом поле, вы можете мгновенно \\textbf{заплатить 8} \\includesvg[height=10px]{\\svgs/gold.svg} для участия в сражении, \\textbf{используя только отряды}.\n"
+"    Вы не можете пользоваться колодой в этом сражении, так как оно происходит без героя.\n"
+"    Оплата золотом представляет оплату доставки армии в это место.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:79
@@ -169,6 +213,34 @@ msgid ""
 "The Unit cannot take another Defense Action during that activation.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Combatterminology}{Терминология сражения}}\n"
+"Для описания эффектов и элементов сражения используются следующие термины:\\par\n"
+"\\textbf{Атакующий игрок} — игрок, который начал сражение.\\par\n"
+"\\textbf{Обороняющийся игрок} — игрок, против которого было начато сражение.\\par\n"
+"\\textbf{Активация} — момент начала действий следующего в очереди (по скорости) отряда.\\par\n"
+"\\textbf{Смежный отряд} — отряд, непосредственно граничащий с вражеским по любой общей стороне (не по диагонали).\\par\n"
+"\\textbf{Раунд} — полный цикл последовательной активации всех отрядов каждого из игроков.\\par\n"
+"\\textbf{Препятствия}\\index{Combat Obstacles}\\index{Obstacles, Combat} — любая карта на доске сражений считается препятствием.\n"
+"Препятствия блокируют движение всех нелетающих отрядов.\\smallskip\\par\n"
+"\\begin{tikzpicture}[overlay]\n"
+"  \\node at (7, 0) {\\includegraphics[width=0.2\\linewidth]{\\images/attack_die.png}};\n"
+"\\end{tikzpicture}\\parbox{0.7\\hsize}{\\textbf{Кубик атаки}\\index{Attack Die}\\index{Dice} — красный кубик со значениями от -1 до +1.\n"
+"В \\textbf{момент атаки} бросьте кубик и\n"
+"примените результат к значению атаки отряда.}\\par\\smallskip\n"
+"\\textbf{\\pagetarget{Retaliate}{Контрудар}} — если отряд выживает после атаки смежного отряда, он наносит контрудар атаковавшему противнику.\n"
+"Каждый отряд может произвести \\textbf{только 1} контрудар\\index{Retaliation Attack} за раунд.\n"
+"Контрудары работают аналогично обычной атаке, но они не могут спровоцировать ответный контрудар.\n"
+"Отметьте чёрным кубиком отряды, совершившие контрудар.\\par\n"
+"\\textbf{\\pagetarget{Paralysis}{Паралич}}\\index{Paralysis} \\includesvg[height=10px]{\\svgs/paralysis.svg} – некоторые эффекты помещают жетон паралича на отряд.\n"
+"Этот отряд \\textbf{пропускает свою следующую активацию}. Уберите жетон вместо активации.\n"
+"Если отряд \\textbf{был атакован или получил любой урон} до этого, \\textbf{уберите жетон}.\n"
+"Жетон не запрещает отрядам наносить контрудар.\\par\n"
+"\\textbf{\\pagetarget{Defend}{Защита}} \\includesvg[height=10px]{\\svgs/defense.svg} – отряд может получить жетон защиты в конце активации вместо атаки.\n"
+"Когда отряд с жетоном защиты атакован, бросьте кубик атаки после основного броска атаки.\n"
+"Если выпадет «+1», обороняющийся отряд получает 1 дополнительное очко защиты в эту атаку.\n"
+"Если отряд обладал жетоном защиты в начале его активации, уберите этот жетон.\n"
+"Отряд не может сыграть ещё одну защиту в ходе этой активации.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:90
@@ -186,6 +258,17 @@ msgid ""
 "If you cannot win the Combat before the end of the current Combat Round, you must either \\pagelink{Endcombat}{Retreat}\\index{Retreat} or spend 1 MP from the Hero that started the Combat in order to play another Round.\\par\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{CombatCards}{Использование карт в сражении}}\n"
+"Вы можете колдовать \\textbf{только одно заклинание за раунд}.\n"
+"Текущие \\includesvg[height=10px]{\\svgs/ongoing.svg} и эффекты \\includesvg[height=10px]{\\svgs/activation.svg} активации могут быть использованы только \\textbf{во время активации отряда перед его атакой}.\n"
+"Текущие эффекты\\index{Ongoing Effects} длятся до конца сражения или пока эффект не будет использован.\\par\n"
+"Мгновенные \\includesvg[height=10px]{\\svgs/instant.svg} карты могут быть сыграны \\textbf{в любое время}, кроме момента между броском кубика атаки и нанесения урона, если не указано иное.\n"
+"Эффекты от увеличения \\includesvg[height=10px]{\\svgs/attack.svg} отряда (например картами статистики) завершаются после первой атаки или в конце активации отряда, если он не атаковал.\n"
+"Увеличение \\includesvg[height=10px]{\\svgs/defense.svg} завершаются таким же образом.\n"
+"\\subsection*{\\pagetarget{Timelimit}{Лимиты времени сражения}}\\index{Time Limit}\n"
+"Сражения против нейтральных отрядов имеют лимит в \\textbf{один раунд}.\n"
+"Если вы не можете завершить сражение до конца текущего раунда, вы должны либо \\pagelink{Endcombat}{отступить}\\index{Retreat}, либо использовать 1 ОП героя, начавшего сражение, для получения дополнительного раунда.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:94
@@ -194,6 +277,8 @@ msgid ""
 "\\note{5}{Combats against Azure \\includesvg[height=10px]{\\svgs/azure-note.svg} Units, other players, or \\pagelink{AIrules}{AI Heroes} have no time limit.}\n"
 "\n"
 msgstr ""
+"\\note{5}{Сражения против Лазурных \\includesvg[height=10px]{\\svgs/azure-note.svg} отрядов, других игроков и \\pagelink{AIrules}{ИИ героев} не имеют лимитов по раундам.}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:100
@@ -220,6 +305,8 @@ msgid ""
 "\\subsection*{\\pagetarget{Walls}{Defending a Town With\\\\a Citadel\\raggedright}}\\index{Defending Town}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Walls}{Оборона города с Цитаделью\\raggedright}}\\index{Defending Town}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:111
@@ -233,6 +320,13 @@ msgid ""
 "If they are targeted by a \\includesvg[height=10px]{\\svgs/unit_ranged.svg} attack performed from the opponent's side of the Combat Board, \\textbf{reduce the attack's damage by 1}.\n"
 "\n"
 msgstr ""
+"Когда город с цитаделью подвергается атаке, защитник, разместив отряды на доске сражения, добавляет 3 стены и 1 ворота в любом порядке в среднем ряду.\n"
+"Карта ворот \\textbf{не является препятствием для обороняющегося героя}.\n"
+"Стены и ворота\\index{Walls and Gate} могут быть уничтожены атакой любого смежного \\includesvg[height=10px]{\\svgs/unit_ground.svg} или \\includesvg[height=10px]{\\svgs/unit_flying.svg} отряда.\n"
+"\\par\n"
+"Обороняющиеся отряды, находящиеся \\textbf{на одной вертикальной линии} со стеной или воротами, получают защиту от \\includesvg[height=10px]{\\svgs/unit_ranged.svg} атак.\n"
+"Если они подвергаются \\includesvg[height=10px]{\\svgs/unit_ranged.svg} атаке, выполненной со стороны противника, \\textbf{уменьшите урон от атаки на 1}.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:116
@@ -244,6 +338,11 @@ msgid ""
 "The defender also gains the Arrow Tower\\index{Arrow Tower} Unit Card which is placed next to the Combat Board.\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=0.6\\linewidth]{\\cards/arrow_tower.png}\n"
+"\\end{center}\n"
+"Защитник также получает карту стрелковой башни\\index{Arrow Tower}, которую располагает рядом с доской сражений.\n"
+"\n"
 
 #. type: figure*
 #: sections/combat.tex:139
@@ -268,6 +367,24 @@ msgid ""
 "  \\hfill%\n"
 "  \\mbox{}%"
 msgstr ""
+"[h]\n"
+"  \\mbox{}%\n"
+"  \\hfill%\n"
+"  \\begin{minipage}[t]{0.415\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=\\linewidth]{\\examples/ranged_protected.png}\n"
+"  \\caption[halberdiers protected]{\\textit{Когда алебардщики находятся за неразрушенными воротами, они \\textbf{защищены} от атак из-за линии стены.\n"
+"    Урон от \\includesvg[height=10px]{\\svgs/unit_ranged.svg} атаки Злобоглазов \\textbf{уменьшается на 1}.}}\n"
+"  \\end{minipage}\n"
+"  \\hfill%\n"
+"  \\begin{minipage}[t]{0.415\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=\\linewidth]{\\examples/ranged_unprotected.png}\n"
+"    \\caption[halberdiers unprotected]{\\textit{Так как Алебардщики находятся за разрушенной стеной, \\textbf{защита не работает}.\n"
+"      Злобоглазы атакуют \\textbf{без штрафа}.}}\n"
+"  \\end{minipage}\n"
+"  \\hfill%\n"
+"  \\mbox{}%"
 
 #. type: multicols
 #: sections/combat.tex:146
@@ -279,6 +396,11 @@ msgid ""
 "Combat lasts until all Units on one side are eliminated, a player has to \\textbf{Retreat}\\index{Retreat} when fighting Neutral Units, or a player \\textbf{Surrenders} to another player.\n"
 "\n"
 msgstr ""
+"\\subsection*{Структура раунда сражения}\n"
+"Сражение разбито на раунды, в которых отряды \\textbf{активируются} для противостояния в порядке скорости (один раз за раунд).\n"
+"После завершения активации последнего отряда начинается новый раунд.\n"
+"Когда все отряды одной из сторон уничтожены, либо игрок \\textbf{отступил} (при сражении с нейтральными отрядами) или \\textbf{сдался}, сражение завершается.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:161
@@ -300,6 +422,21 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"Этапы раунда:\n"
+"\\begin{itemize}\n"
+"  \\item Игроки активируют свои отряды в порядке убывания \\pagelink{Initiative}{скорости} отряда. \\textbf{Если они совпадают}, атакущие и обороняющие активируются по очереди, начиная с атакующих.\n"
+"  \\item Во время активации отряда, положите на него кубик фракции для отображения активации в текущем раунде.\n"
+"  \\item Активированные отряды могут двигаться и атаковать в соответствии с их \\pagelink{Unittype}{типом}. Нейтральные отряды, контролируемые другим игроком, по возможности должны всегда атаковать.\n"
+"  \\item Вместо атаки отряд может \\pagelink{Defend}{защищаться}.\n"
+"  Нейтральные отряды не могут защищаться, даже если контролируются другим игроком.\n"
+"  \\item Перед атакой отряда оба игрока могут \\pagelink{CombatCards}{сыграть карты}. Эффекты применяются в том же порядке, в котором играются карты.\n"
+"  \\item После объявления атаки, когда все карты были сыграны, бросьте кубик атаки.\n"
+"    Измените значение атаки отряда, применив результат кубика, отнимите от него значение защиты обороняющегося отряда и нанесите оставшийся \\pagelink{HP}{урон} обороняющемуся отряду.\n"
+"  \\item При атаке смежным отрядом обороняющийся \\pagelink{Retaliate}{контратакует}, если ещё не делал этого в текущем раунде.\n"
+"  \\item Продолжайте активировать отряды один за другим;\n"
+"в конце активации последнего отряда раунд завершается.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:185
@@ -330,6 +467,30 @@ msgid ""
 "After winning Combat, Heroes \\textbf{must} Visit the Field where the Combat took place.\n"
 "\n"
 msgstr ""
+"% TODO https://github.com/Heegu-sama/Homm3BG/issues/405\n"
+"\\subsection*{\\pagetarget{Endcombat}{Завершение сражения}}\n"
+"Если все отряды одной из сторон были уничтожены, сражение завершается.\n"
+"Сторона с любым количеством выживших отрядов считается победившей.\n"
+"Если вы \\pagelink{Timelimit}{не успели уничтожить противника} или потеряли все свои отряды в сражении, вы должны \\textbf{отступить}: поместите выжившие отряды обратно в колоду и верните героя на \\textbf{предыдущее поле}.\n"
+"Отступление не несёт никаких негативных последствий.\\par\n"
+"\\note{9}{\n"
+"  \\textbf{Важное исключение}: Если \\textbf{все} отряды из вашей \\textbf{колоды отрядов} были повержены в нейтральном сражении, ваш основной герой должен быть перемещен в дружественный город или посёлок.\n"
+"  Вторичные герои удаляются из игры, пока не будут наняты снова.\\par\n"
+"}\\par\n"
+"Если вы уничтожили все вражеские отряды в сражении против \\textbf{героя другого игрока}, проигравший игрок \\textbf{теряет мораль} и должен \\textbf{заплатить победителю} 5 \\includesvg[height=10px]{\\svgs/gold.svg}.\n"
+"При поражении \\textbf{вторичного героя} вы не теряете мораль и не платите \\includesvg[height=10px]{\\svgs/gold.svg}.\n"
+"Однако, проигравший \\textbf{в любом случае отдаёт победителю} один из своих \\pagelink{End}{кубиков фракции}.\n"
+"Переместите основного героя или уберите вторичного из игры при поражении.\n"
+"Поражение основного героя может быть причиной \\pagelink{End}{выбывания игрока из игры}.\\par\n"
+"Вы можете \\textbf{сдаться}\\index{сдаться} другому игроку, заплатив ему 10 \\includesvg[height=10px]{\\svgs/gold.svg} в момент активации отряда.\n"
+"Решение о сдаче не несёт других последствий для игрока; победитель не получает кубик фракции.\\par\n"
+"\\note{4}{Вы не можете сдаться, если обороняете город.}\\par\n"
+"Если вторичный герой подвергается атаке, то вместо сражения он может \\textbf{отступить} для сохранения отрядов.\n"
+"Когда это происходит, атакующий всё также получает кубик фракции от поверженного героя.\\par\n"
+"Когда сражение заканчивается, здоровье всех выживших отрядов восстанавиливается.\n"
+"Поместите все отряды игрока обратно в колоду отрядов и сбросьте все оставшиеся вражеские нейтральные отряды.\n"
+"После победы в сражении герой \\textbf{обязан} посетить поле, на котором состоялось сражение.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:187
@@ -338,6 +499,8 @@ msgid ""
 "\\subsection*{\\pagetarget{Combatexperience}{Combat Experience}}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Combatexperience}{Боевой опыт}}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:196
@@ -353,6 +516,15 @@ msgid ""
 "You also do not gain Experience from \\textbf{defeating} a Secondary Hero, or if an enemy Hero \\textbf{Surrenders} to you.\n"
 "\n"
 msgstr ""
+"Побеждая в сражениях, основные герои зарабатывают опыт\\index{Experience}.\n"
+"Если сложность нейтрального поля или уровень побежденного вражеского основного героя \\textbf{равны} вашему уровню, получите 1 \\includesvg[height=10px]{\\svgs/experience.svg}.\n"
+"Если же эти значения \\textbf{выше} вашего уровня, получите 2 \\includesvg[height=10px]{\\svgs/experience.svg}.\n"
+"Победа в сражениях с Лазурными нейтральными отрядами \\includesvg[height=10px]{\\svgs/azure.svg} \\textbf{мгновенно} повышает уровень героя до 7 .\n"
+"Если вы получили несколько уровней за раз, примените все эффекты от них по порядку.\n"
+"Повышение уровня должно быть выполнено \\textbf{до} применения остальных эффектов поля, на котором состоялось сражение.\\par\n"
+"Вторичные герои не могут зарабатывать опыт.\n"
+"Также опыта не приносит победа над \\textbf{вторичным героем} или если вражеский герой \\textbf{сдался}.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:200
@@ -363,6 +535,10 @@ msgid ""
 "The player is considered to have beaten the Neutral Units by default and gains no rewards from the Combat itself before Visiting the Field.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Quick}{Быстрое сражение}}\\index{Quick Combat}\n"
+"Если вы собираетесь сразиться с нейтральными отрядами на поле, сложность которого ниже вашего уровня, сражения \\textbf{не происходит}.\n"
+"Считается, что герой одержал победу над нейтральными отрядами, и вы не получаете наград перед посещением поля.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:203
@@ -372,11 +548,14 @@ msgid ""
 "During these game modes, all enemy Units activate as described in the \\pagelink{AI Units}{AI Rules section}.\n"
 "\n"
 msgstr ""
+"\\subsection*{Сражения в Кампании и Кооперативе}\n"
+"В ходе данных игровых режимов все вражеские отряды активируются по \\pagelink{AIrules}{правилам для ИИ}.\n"
+"\n"
 
 #. type: subsection{#2}
 #: sections/combat.tex:213
 msgid "Combat Example"
-msgstr ""
+msgstr "Пример сражения"
 
 #. type: multicols*
 #: sections/combat.tex:220
@@ -390,6 +569,13 @@ msgid ""
 "They would both be permitted to play any number of additional cards in any order, but they decide to stop after playing these cards.}\\par\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\textit{Зомби Боба собираются атаковать Грифонов Алисы.\n"
+"Когда Боб объявил атаку, оба игрока имеют возможность изменить атаку и защиту своих отрядов, сыграв любое количество \\includesvg[height=10px]{\\svgs/instant.svg} карт, увеличивающих \\includesvg[height=10px]{\\svgs/attack.svg} атакующих отрядов или \\includesvg[height=10px]{\\svgs/defense.svg} обороняющихся.}\\par\n"
+"\\textit{Боб решает сыграть карту атаки +1, повышая атаку Зомби с 2 до 3.\n"
+"Алиса отвечает, сыграв карту защиты +1, увеличивая защиту Грифонов с 0 до 1.\n"
+"Игроки могли сыграть дополнительные карты в любом порядке, но приняли решение остановиться на данном этапе.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:222
@@ -412,6 +598,14 @@ msgid ""
 "The previously played Attack and Defense cards no longer have any effect.}\n"
 "\n"
 msgstr ""
+"\\textit{После того как были сыграны все карты, бросается кубик атаки, изменяя количество урона, наносимого атакующим отрядом.\n"
+"Бобу выпадает +1.\n"
+"Это повышает атаку Зомби с 3 до 4, которая уменьшается защитой Грифонов, равной 1. Таким образом, 3 урона \\includesvg[height=10px]{\\svgs/damage.svg} помещается на Грифонов. Так как их HP равен \\includesvg[height=10px]{\\svgs/health_points.svg} 4, они не переворачиваются на сторону «few».}\\par\n"
+"\\textit{Грифоны не отмечены чёрным кубиком, поэтому они начинают контратаку.\n"
+"По правилам они должны быть отмечены чёрным кубиком, однако их \\includesvg[height=10px]{\\svgs/unit_retaliate.svg} способность позволяет им контратаковать неограниченное количество раз, поэтому кубик не устанавливается.}\\par\n"
+"\\textit{Оба игрока имеют возможность модифицировать статистику их отрядов снова в ходе контратаки.\n"
+"Ранее сыгранные карты атаки и защиты не дают никаких эффектов.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:234
