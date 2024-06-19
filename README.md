@@ -106,6 +106,16 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cs/printable_cs.pdf">stáhnout</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cs/economy_printable_cs.pdf">stáhnout</a></td>
         </tr>
+        <tr>
+            <td>עברית</td>
+            <td align="center">10%</td>
+            <td align="center">0%</td>
+            <td align="center">—</td>
+            <td align="center">-</td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+        </tr>
     </tbody>
 </table>
 
