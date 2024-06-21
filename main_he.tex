@@ -3,30 +3,42 @@
 
 
 % Language setting
+\usepackage[utf8]{inputenc}
 \usepackage{fontspec} % For font settings
 \usepackage{polyglossia} % Better for handling multiple languages with XeLaTeX or LuaLaTeX
-
+\setmainfont[
+  Path = ./assets/fonts/,
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic]{LiberationSerif}
 % Set languages
 \setmainlanguage{hebrew} % Set the main language to Hebrew
 \setotherlanguage{english} % Optional: if you have English text as well
 
-% Set main font for Latin script (English)
-\setmainfont{Times New Roman}
-
 % Set font for Hebrew script
-\newfontfamily\hebrewfont{Times New Roman}[
+\newfontfamily\hebrewfont{LiberationSerif}[
+  Path=./assets/fonts/,
+  Extension=.ttf,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont = *-BoldItalic,
   Script=Hebrew,
   Scale=MatchLowercase
 ]
 
-% Set font for monospace (if needed)
-\newfontfamily\hebrewfonttt{DejaVu Sans Mono}[
+\newfontfamily\hebrewfonttt{LiberationSerif}[
+  Path = ./assets/fonts/,
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic,
   Script=Hebrew,
   Scale=MatchLowercase
 ]
-
-% If you need to use monospace font for both scripts
-\setmonofont{DejaVu Sans Mono}
 
 
 \def\sections{sections/translated/he}
