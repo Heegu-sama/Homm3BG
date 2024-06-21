@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
 "POT-Creation-Date: 2024-06-11 09:41+0200\n"
-"PO-Revision-Date: 2024-05-21 11:34+0200\n"
+"PO-Revision-Date: 2024-06-21 14:02+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: ua\n"
@@ -114,7 +114,7 @@ msgstr ""
 
 #. type: multicols
 #: sections/combat.tex:51
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "\\begin{itemize}\n"
 "  \\item Choose one of the Combat Board's sides as your own.\n"
@@ -151,7 +151,7 @@ msgstr ""
 "\\begin{itemize}\n"
 "  \\item Виберіть одну зі сторін Бойового Поля.\n"
 "    Помістіть до 5 Карт своїх Підрозділів на Тиловій та Передовій лінії вашої сторони Поля.\n"
-"  \\item Перевірте \\hyperlink{Difficulty Table}{\\textbf{Таблицю Складності}} і візьміть відповідну кількість карт Нейтральних Підрозділів з їх Колод.\n"
+"  \\item Перевірте \\hyperlink{Difficulty Table}{\\textbf{Таблицю Складності}} \\iftoggle{printable}{(на звороті обкладинки)}{} і візьміть відповідну кількість карт Нейтральних Підрозділів з їх Колод.\n"
 "  \\item Нейтральні Підрозділи розміщуються відповідно до Режиму Гри:\n"
 "  \\item У \\textbf{Сутичці} та \\textbf{Альянсі} гравець праворуч від вас, контролює Нейтральні Підрозділи і приймає рішення про їх розміщення.\n"
 "    \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Підрозділи, за можливістю, розміщуються на Тиловій Лінії.\n"
@@ -182,7 +182,7 @@ msgstr ""
 
 #. type: multicols
 #: sections/combat.tex:79
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Combatterminology}{Combat Terminology}}\n"
 "The following terms are used to describe effects and elements during Combat:\\par\n"
@@ -224,7 +224,7 @@ msgstr ""
 "Вони блокують переміщення усіх нелітаючих Підрозділів.\\smallskip\\par\n"
 "\\begin{tikzpicture}[overlay]\n"
 "  \\node at (7, 0) {\\includegraphics[width=0.2\\linewidth]{\\images/attack_die.png}};\n"
-"\\end{tikzpicture}\\parbox{0.7\\hsize}{\\textbf{Кістка Атаки}\\index{Кістка Атаки}\\index{Кістка} – червона Кістка, результати якої варіюються -1 +1.\n"
+"\\end{tikzpicture}\\parbox{0.7\\hsize}{\\textbf{Кістка Атаки}\\index{Кістка Атаки}\\index{Кістка} – червона Кістка, результати якої варіюються -1 to +1.\n"
 "Кидайте Кістку \\textbf{щоразу, коли Підрозділ атакує} і\n"
 "додайте результат до значення Атаки Підрозділу.}\\par\\smallskip\n"
 "\\textbf{\\pagetarget{Retaliate}{Атака Відплати}} – якщо Підрозділ пережив атаку від суміжного Підрозділу, він проводить атаку у відповідь.\n"
@@ -232,10 +232,10 @@ msgstr ""
 "Атаки Відплати розглядаються, як і звичайні атаки, але вони не спричиняють іншу Атаку Відплати.\n"
 "Позначайте Підрозділи, які здійснили Атаку Відплати в цьому Раунді, Чорним Кубиком.\\par\n"
 "\\textbf{\\pagetarget{Paralysis}{Параліч}}\\index{Параліч} \\includesvg[height=10px]{\\svgs/paralysis.svg} – Деякі ефекти кладуть жетон Паралічу на Підрозділи.\n"
-"Паралізований Підрозділ \\textbf{пропускає свою наступну Активацію}.Замість активації Підрозділу зніміть з нього жетон Паралічу.\n"
+"Паралізований Підрозділ \\textbf{пропускає свою наступну Активацію}. Замість активації Підрозділу зніміть з нього жетон Паралічу.\n"
 "Якщо Підрозділ \\textbf{атакують, або він отримав рани} до наступної Активації, \\textbf{зніміть Жетон}.\n"
 "Параліч не заважає проведенню Атаки Відплати.\\par\n"
-"\\textbf{\\pagetarget{Defend}{Захист}} \\includesvg[height=10px]{\\svgs/defense.svg} – Замість атаки підрозділ може отримати Жетон Захисту.\n"
+"\\textbf{\\pagetarget{Defend}{Захист}} \\includesvg[height=10px]{\\svgs/defense.svg} – Замість атаки підрозділ може отримати Жетон Захисту і завершити свою Активацію замість атаки.\n"
 "Коли Підрозділ, з Жетоном Захисту, атакують, киньте Кістку Атаки після кидка атаки нападника.\n"
 "Якщо результат ``+1'', цей Підрозділ отримує +1 Захист від цієї атаки.\n"
 "Якщо на початку Активації Підрозділ має Жетон Захисту, скиньте його.\n"
@@ -244,18 +244,7 @@ msgstr ""
 
 #. type: multicols
 #: sections/combat.tex:90
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\subsection*{\\pagetarget{CombatCards}{Using Cards During Combat}}\n"
-#| "You may only use \\textbf{one Spell per Combat Round}.\n"
-#| "Ongoing \\includesvg[height=10px]{\\svgs/ongoing.svg} and \\includesvg[height=10px]{\\svgs/activation.svg} Activate effects can be used only \\textbf{when Activating one of your Units and before it attacks}.\n"
-#| "Ongoing effects\\index{Ongoing Effects} last until end of Combat or if the effect on the card is used up.\\par\n"
-#| "Instant \\includesvg[height=10px]{\\svgs/instant.svg} Cards may be played \\textbf{at any time} except between rolling the Combat Die and resolving damage unless otherwise stated.\n"
-#| "Instant Cards which increase a Unit's \\includesvg[height=10px]{\\svgs/attack.svg} or \\includesvg[height=10px]{\\svgs/defense.svg}, such as the Attack and Defense Statistic cards, \\textbf{must} be played after an attack has been announced and persist only for the duration of that attack.\n"
-#| "\\subsection*{\\pagetarget{Timelimit}{Combat Time Limits}}\\index{Time Limit}\n"
-#| "Combats against Neutral Units have a time limit of \\textbf{one Combat Round}.\n"
-#| "If you cannot win the Combat before the end of the current Combat Round, you must either \\pagelink{Endcombat}{Retreat}\\index{Retreat} or spend 1 MP from the Hero that started the Combat in order to play another Round.\\par\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{CombatCards}{Using Cards During Combat}}\n"
 "You may only use \\textbf{one Spell per Combat Round}.\n"
@@ -271,10 +260,11 @@ msgid ""
 msgstr ""
 "\\subsection*{\\pagetarget{CombatCards}{Використання Карт в Бою}}\n"
 "Ви можете використати лише \\textbf{одне Заклинання за Раунд Бою}.\n"
-"Ефекти ``Триваючий'' \\includesvg[height=10px]{\\svgs/ongoing.svg} і ``Активація'' \\includesvg[height=10px]{\\svgs/activation.svg} можуть використовуватися тільки \\textbf{під час Активації Підрозділу але до проведення атаки}.\n"
-"Триваючі ефекти\\index{Триваючі Ефекти} діють до кінця Бою або до завершення їх ефекту.\\par\n"
-"Миттєві \\includesvg[height=10px]{\\svgs/instant.svg} Карти можна розігрувати \\textbf{в будь-який час}, окрім проміжку між кидком Бойової Кістки та нанесенням ран, якщо не вказано інакше.\n"
-"Миттєві Карти, які збільшують \\includesvg[height=10px]{\\svgs/attack.svg} або \\includesvg[height=10px]{\\svgs/defense.svg} Підрозділу, \\textbf{повинні} розігруватися після оголошення атаки і діють лише до кінця цієї атаки.\n"
+"Ефекти \"Триваючий\"\\includesvg[height=10px]{\\svgs/ongoing.svg} і `\"Активація\" \\includesvg[height=10px]{\\svgs/activation.svg} можуть використовуватися тільки \\textbf{під час Активації Підрозділу але до проведення атаки}.\n"
+"Триваючі ефекти\\index{Триваючі ефекти} діють до кінця Бою або до завершення їх ефекту.\\par\n"
+"Миттєві \\includesvg[height=10px]{\\svgs/instant.svg} Карти можна розігрувати \\textbf{в будь-який час} окрім проміжку між кидком Бойової Кістки та нанесенням ран, якщо не вказано інакше.\n"
+"Ефекти збільшення \\includesvg[height=10px]{\\svgs/attack.svg} Підрозділу (наприклад Картами Характеристик), закінчуються, коли завершується або: перша атака, цього Підрозділу, або активація, залежно від того, що настане раніше..\n"
+"Збілшення \\includesvg[height=10px]{\\svgs/defense.svg} закінчується тим самим чином.\n"
 "\\subsection*{\\pagetarget{Timelimit}{Обмеження Часу Битви}}\\index{Обмеження Часу}\n"
 "Битви проти Нейтральних Підрозділів мають обмеження у часі - \\textbf{один Бойовий Раунд}.\n"
 "Якщо ви не перемогли в Битві до кінця Раунду Битви, ви повинні або \\pagelink{Endcombat}{Відступити}\\index{Відступ} або витратити 1 ОП Героя, що почав Битву, щоб зіграти ще один Раунд.\\par\n"
@@ -414,7 +404,7 @@ msgstr ""
 
 #. type: multicols
 #: sections/combat.tex:161
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "Structure of a Combat Round:\n"
 "\\begin{itemize}\n"
