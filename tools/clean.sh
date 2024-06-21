@@ -11,6 +11,7 @@ git restore \
   main_en.tex \
   main_es.tex \
   main_fr.tex \
+  main_he.tex \
   main_pl.tex \
   main_ru.tex \
   main_ua.tex \

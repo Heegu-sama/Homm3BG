@@ -106,6 +106,16 @@ Click in the table to download the most recent builds in the chosen language:
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cs/printable_cs.pdf">stáhnout</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cs/economy_printable_cs.pdf">stáhnout</a></td>
         </tr>
+        <tr>
+            <td>🇮🇱 עברית</td>
+            <td align="center">10%</td>
+            <td align="center">0%</td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+        </tr>
     </tbody>
 </table>
 
@@ -276,7 +286,7 @@ tools/compare_pages.sh -l <language> -r <range> [OPTIONS]
 ```
 
 The script takes local `main_<language>.pdf` that you built and which contains your changes and compares it with the latest build
-of the same language in this repository (e.i. the baseline). 
+of the same language in this repository (e.i. the baseline).
 
 Imagine you want to compare pages 1, then range from 5 to 7, and page 30 in English version. Here's how to use it:
 
@@ -285,7 +295,7 @@ Imagine you want to compare pages 1, then range from 5 to 7, and page 30 in Engl
 ```
 
 It will produce the following files: `en-01.png`, `en-05.png`, `en-06.png`, `en-07.png` and `en-30.png`.
-          
+
 Open help for more examples and detailed description:
 
 ```bash
