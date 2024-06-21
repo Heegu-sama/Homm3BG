@@ -1,0 +1,57 @@
+% !TeX spellcheck = en_US
+\documentclass[12pt]{article}
+
+
+% Language setting
+\usepackage{fontspec} % For font settings
+\usepackage{polyglossia} % Better for handling multiple languages with XeLaTeX or LuaLaTeX
+
+% Set languages
+\setmainlanguage{hebrew} % Set the main language to Hebrew
+\setotherlanguage{english} % Optional: if you have English text as well
+
+% Set main font for Latin script (English)
+\setmainfont{Times New Roman}
+
+% Set font for Hebrew script
+\newfontfamily\hebrewfont{Times New Roman}[
+  Script=Hebrew,
+  Scale=MatchLowercase
+]
+
+% Set font for monospace (if needed)
+\newfontfamily\hebrewfonttt{DejaVu Sans Mono}[
+  Script=Hebrew,
+  Scale=MatchLowercase
+]
+
+% If you need to use monospace font for both scripts
+\setmonofont{DejaVu Sans Mono}
+
+
+\def\sections{sections/translated/he}
+\def\lang_header_adjustment{0px}
+
+\newcommand{\versionlabel}{גרסא}
+\newcommand{\versionwarning}{This is an unreleased version built on GitHub from commit}
+
+\newcommand{\intro}{
+זהו פרוייקט קהילתי מבוסס \href{https://github.com/Heegu-sama/Homm3BG}{גיט}.
+ כלל הציבור מוזמים להשתתף, לשנות ולתקן שגיאות.
+אם ברצונך להעיר הערות, ניתן לעשות זאת \href{https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project}{בדיון ב-\textenglish{BoardGameGeek}}
+}
+\newcommand{\pageshorthand}{ע.}
+
+
+\newcommand{\heegusquote}{
+  \textit{אני עושה זאת מתוך אהבה ללמוד משחקים והרצון להבין את עומקם.}
+  \\
+  {\small — \textenglish{Heegu}}
+}
+
+\newcommand{\qrgithub}{סרוק על מנת לפתוח את הגיט ב\textbf{\textenglish{GitHub}}.}
+\newcommand{\qrbgg}{סרוק על מנת לפתוח את הדיון ב-\textbf{ֿֿֿֿ\textenglish{BoardGameGeek}}.}
+\title{\includegraphics[width=6cm]{\images/title.png}\\שכתוב החוקים}
+
+
+\input{metadata.tex}

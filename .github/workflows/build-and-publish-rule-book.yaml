@@ -39,6 +39,8 @@ jobs:
             luaengine: false
           - language: cs
             luaengine: true
+          - language: he
+            luaengine: true
 
     steps:
       - name: Set up repository
@@ -191,7 +193,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ["pl", "es", "fr", "ru", "ua", "de", "cs"]
+        language: ["pl", "es", "fr", "ru", "ua", "de", "cs", "he"]
 
     steps:
       - name: Install pdfinfo
