@@ -251,6 +251,10 @@
 \newcommand{\pagetarget}[2]{\label{#1}\hypertarget{#1}{#2}}
 \newcommand{\pagelink}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{ \textmd{(\pageshorthand\,\pageref{#1})}}{}}
 
+% Stubs for polyglossia package used for Hebrew but not other languages
+\providecommand{\mainlanguagename}[0]{}
+\providecommand{\textlang}[2]{#2}
+
 % Command for overlay circled text
 \definecolor{goblin}{HTML}{3b7c33}
 \newcommand\encircle[1]{%
@@ -291,7 +295,7 @@
 }{}
 
 
-\author{Hermanni ``Heegu'' Karppela}
+\author{\textlang{english}{Hermanni ``Heegu'' Karppela}}
 \maketitle
 
 \begin{center}
@@ -299,7 +303,7 @@
     \getenv[\githubsha]{GITHUB_SHA}
     \versionwarning{} \href{\repourl}{\StrLeft{\githubsha}{7}}.
   }{
-    \versionlabel{} \input{.version}
+    \textlang{\mainlanguagename}{\versionlabel{} \textlang{english}{\input{.version}}}
   }
 
   \bigbreak
@@ -324,12 +328,12 @@
   \end{multicols}
 }{}
 
-\begin{tikzpicture}[remember picture, overlay]
+\textlang{english}{\begin{tikzpicture}[remember picture, overlay]
   \node(cover)[anchor=center, yshift=12em] at (current page.south) {
     \includegraphics[width=1.01\paperwidth, keepaspectratio]{\art/castle_bottom.png}
     \thispagestyle{empty}
   };
-\end{tikzpicture}
+\end{tikzpicture}}
 
 \clearpage
 
