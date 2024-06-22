@@ -14,8 +14,15 @@
   BoldFont = *-Bold,
   BoldItalicFont = *-BoldItalic]{LiberationSerif}
 % Set languages
-\setmainlanguage[calendar=hebrew,numerals=hebrew]{hebrew} % Set the main language to Hebrew
+\setmainlanguage[calendar=hebrew]{hebrew} % Set the main language to Hebrew
 \setotherlanguage{english} % Optional: if you have English text as well
+
+% Command to enforce LTR for English text and numbers
+\newcommand{\LTRtext}[1]{\bgroup\foreignlanguage{english}{#1}\egroup}
+
+% Redefine \thepage to enforce LTR numerals in page numbers
+\let\oldthepage\thepage
+\renewcommand{\thepage}{\LTRtext{\oldthepage}}
 
 % Set font for Hebrew script
 \newfontfamily\hebrewfont{LiberationSerif}[
