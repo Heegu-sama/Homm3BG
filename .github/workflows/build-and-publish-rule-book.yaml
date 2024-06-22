@@ -201,12 +201,12 @@ jobs:
       - name: Download PDFs
         uses: actions/download-artifact@v4
         with:
-          path: main_${{ matrix.language }}
+          pattern: "*_${{ matrix.language }}"
 
       - name: Check number of pages in digital version
         run: |
-          file main_${{ matrix.language }}/main_${{ matrix.language }}/main_${{ matrix.language }}.pdf
-          ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}/main_${{ matrix.language }}/main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          file main_${{ matrix.language }}/main_${{ matrix.language }}.pdf
+          ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}/main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
           echo "Expected number of pages: ${{ needs.build.outputs.number_of_pages }}"
           echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
           if [[ ${{ needs.build.outputs.number_of_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
@@ -216,8 +216,8 @@ jobs:
 
       - name: Check number of pages in printable version
         run: |
-          file main_${{ matrix.language }}/printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf
-          ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}/printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          file printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf
+          ACTUAL_NUM_OF_PAGES=$(pdfinfo printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
           echo "Expected number of pages: ${{ needs.build.outputs.number_of_printable_pages }}"
           echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
           if [[ ${{ needs.build.outputs.number_of_printable_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
