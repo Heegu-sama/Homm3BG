@@ -1,5 +1,5 @@
 % !TeX spellcheck = en_US
-\thispagestyle{empty}\textlang{english}{
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture, overlay, inner sep=10pt]
   \iftoggle{noartbackground}{}{
     \node(cover)[anchor=center] at (current page.center) {
@@ -12,4 +12,4 @@
   \node(subtitle)[anchor=center, yshift=10em] at (current page.south) {
     \includegraphics[width=0.6\paperwidth]{\layout/cover_subtitle.png}
   };
-\end{tikzpicture}}
+\end{tikzpicture}
