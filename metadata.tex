@@ -175,7 +175,7 @@
 \providecommand{\notefont}[0]{\fontfamily{ptm}\selectfont}
 \newcommand{\note}[2]{
   \begin{tikzpicture}
-    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/table-background.jpg}}};
+    \textlang{english}{\draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/table-background.jpg}}};}
     \draw [borderoutyellow, very thick] (current bounding box.north west) rectangle (current bounding box.south east);
     \draw [borderinyellow, thick] ([xshift=+2.8pt, yshift=-2.8pt] current bounding box.north west) rectangle ([xshift=-2.8pt, yshift=2.8pt] current bounding box.south east);
     \node at (current bounding box.center) {
@@ -202,7 +202,7 @@
 % 3) Table contents like title and tabularx environment
 \newcommand{\hommtable}[3][shade, blur shadow={shadow opacity=15}]{
   \begin{tikzpicture}
-    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#2\baselineskip}{\layout/table-background.jpg}}};
+    \textlang{english}{\draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#2\baselineskip}{\layout/table-background.jpg}}};}
     \draw [bordermidyellow, thick] ([xshift=+1pt, yshift=-1pt] current bounding box.north west) rectangle ([xshift=-1pt, yshift=1pt] current bounding box.south east);
     \draw [borderoutyellow, thick] (current bounding box.north west) rectangle (current bounding box.south east);
     \draw [borderinyellow, thick] ([xshift=+3pt, yshift=-3pt] current bounding box.north west) rectangle ([xshift=-3pt, yshift=3pt] current bounding box.south east);
@@ -251,6 +251,10 @@
 \newcommand{\pagetarget}[2]{\label{#1}\hypertarget{#1}{#2}}
 \newcommand{\pagelink}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{ \textmd{(\pageshorthand\,\pageref{#1})}}{}}
 
+% Stubs for polyglossia package used for Hebrew but not other languages
+\providecommand{\mainlanguagename}[0]{}
+\providecommand{\textlang}[2]{#2}
+
 % Command for overlay circled text
 \definecolor{goblin}{HTML}{3b7c33}
 \newcommand\encircle[1]{%
@@ -258,17 +262,24 @@
   \node (X) [draw=white, shape=circle, inner sep=0, fill=goblin, text=white, blur shadow={shadow blur steps=5}] {\strut \textbf{#1}};%
 }
 
+\providetoggle{textright2left}
 % Background
 \AddToHook{shipout/background}{%
   \iftoggle{noartbackground}{}{
     \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}
   }
   \iftoggle{printable}{
-    \ifodd\value{page}
-      \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}
-    \else
-      \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-even.png}}
-    \fi
+    \iftoggle{textright2left}{
+      \ifodd\value{page}
+        \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-even.png}}
+      \else
+        \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}
+    \fi}{%
+      \ifodd\value{page}
+        \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}
+      \else
+        \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-even.png}}
+    \fi}
   }{\put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}}
 }
 
@@ -291,7 +302,7 @@
 }{}
 
 
-\author{Hermanni ``Heegu'' Karppela}
+\author{\textlang{english}{Hermanni ``Heegu'' Karppela}}
 \maketitle
 
 \begin{center}
@@ -299,7 +310,7 @@
     \getenv[\githubsha]{GITHUB_SHA}
     \versionwarning{} \href{\repourl}{\StrLeft{\githubsha}{7}}.
   }{
-    \versionlabel{} \input{.version}
+    \textlang{\mainlanguagename}{\versionlabel{} \textlang{english}{\input{.version}}}
   }
 
   \bigbreak
@@ -324,12 +335,12 @@
   \end{multicols}
 }{}
 
-\begin{tikzpicture}[remember picture, overlay]
+\textlang{english}{\begin{tikzpicture}[remember picture, overlay]
   \node(cover)[anchor=center, yshift=12em] at (current page.south) {
     \includegraphics[width=1.01\paperwidth, keepaspectratio]{\art/castle_bottom.png}
     \thispagestyle{empty}
   };
-\end{tikzpicture}
+\end{tikzpicture}}
 
 \clearpage
 
