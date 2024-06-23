@@ -202,7 +202,7 @@
 % 3) Table contents like title and tabularx environment
 \newcommand{\hommtable}[3][shade, blur shadow={shadow opacity=15}]{
   \begin{tikzpicture}
-    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#2\baselineskip}{\layout/table-background.jpg}}};
+    \textlang{english}{\draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#2\baselineskip}{\layout/table-background.jpg}}};}
     \draw [bordermidyellow, thick] ([xshift=+1pt, yshift=-1pt] current bounding box.north west) rectangle ([xshift=-1pt, yshift=1pt] current bounding box.south east);
     \draw [borderoutyellow, thick] (current bounding box.north west) rectangle (current bounding box.south east);
     \draw [borderinyellow, thick] ([xshift=+3pt, yshift=-3pt] current bounding box.north west) rectangle ([xshift=-3pt, yshift=3pt] current bounding box.south east);
