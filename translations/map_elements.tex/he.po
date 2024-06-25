@@ -53,7 +53,7 @@ msgstr ""
 #. type: Plain text
 #: sections/map_elements.tex:3
 msgid "\\addsection{Map Elements}{\\skills/logistics.png}"
-msgstr ""
+msgstr "\\addsection{\\texthebrew{רכיבי המפה}}{\\skills/logistics.png}"
 
 #. type: multicols*
 #: sections/map_elements.tex:13
@@ -68,6 +68,14 @@ msgid ""
 "Starting (I) Tiles are the easiest while Center (VI–VII) Tiles are the most difficult.\\par\n"
 "\n"
 msgstr ""
+"{2}\n"
+"כל תרחיש בנוי מארבעה סוגים של אריחי \\pagetarget{Map}{מפה}. \n"
+"השחקנים מתחילים על אריח הצבא ההתחלתי (I) שלהם.\n"
+"ניתן להניח ולחשוף אריחים אחרים לפי המתואר בעמוד הבא.\n"
+"בזמן הכנת המשחק יש לבחור באופן אקראי מתוך מאגר האריחים הנדרשים לתרחיש, לערבב אותם ולשמור אותם מונחים כלפי מטה.\\par\n"
+"\\textbf{הספרה הרומית} על כל אריח מייצגת את \\textbf{דרגת הקושי הכללית} של היחידות הניטרליות, כמו גם מספר הפרסים שניתן לצפות למצוא על אריח זה. "
+"האריחים ההתחלתיים (I) הם הקלים ביותר בעוד שאריחי המרכז \\textenglish{(VI-VII)} הם הקשים ביותר.\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:19
@@ -103,6 +111,23 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{מבנה אריחי המפה\\index{Map Tile}}\n"
+"כל אריח מפה מחולק ל-7 \\textbf{שדות} נפרדים שגיבוריך יכולים \\textbf{לבקר}. "
+"כאשר הגיבור שלך נע לשדה, הוא מוכרח לבקר בו באופן מיידי, לחלופין\n"
+"להילחם ב\\pagelink{Combat}{קרב} נגד האויבים המגנים על השדה, לפני שיוכל לבקר בו.\n"
+"שדות ריקים\\index{Empty Field} אינם מניבים דבר כאשר מבקרים בהם.\n"
+"לא ניתן לעבור שדה עם קו גבול מודגש בצהוב.\n"
+"\\pagelink{Difficulty}{מספרים רומיים} הכתובים על שדה מציינים את דרגת הקושי של היחידות הניטרליות שצריך להילחם על מנת לבקר בשדה זה.\\par\n"
+"\\columnbreak\n"
+"\\includegraphics[width=\\linewidth]{\\images/maptiles.png}\n"
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\item[\\textbf{1.}] אריח מפה התחלתי: I\n"
+"  \\item[\\textbf{2.}] אריח מפה רחוק: \\textenglish{II-III}\n"
+"  \\item[\\textbf{3.}] אריח מפה קרוב: \\textenglish{IV-V}\n"
+"  \\item[\\textbf{4.}] אריח מפה מרכזי: \\textenglish{VI-VII}\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:39
@@ -135,6 +160,23 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"    \\begin{scope}[xscale=-1] \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=0.75\\linewidth]{\\images/fields.png}}};\n"
+"    \\draw (0, -0.3) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
+"    \\draw (-1.9, 0) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (2.3, 0) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (-1.4, 1.7) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (0.6, -1.9) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (0.5, 1.7) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (1.4, -2.2) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
+"    \\draw (1.4, 2.5) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
+"    \\draw (1.4, -1) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
+"    \\draw (-1, 0.5) node {\\encircle{\\phantom{.}5\\phantom{.}}};\n"
+"    \\draw (-1.1, -1.1) node {\\encircle{\\phantom{.}6\\phantom{.}}};\n"
+"    \\draw (-1.4, -1.7) node {\\encircle{\\phantom{.}7\\phantom{.}}};\n"
+"  \\end{scope} \\end{tikzpicture}\n"
+"  \\end{scriptsize}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:68
@@ -152,6 +194,17 @@ msgid ""
 "    \\item[\\textbf{7.}] Tile name like \\\\{} \\texttt{F2} or \\texttt{\\#N3}\n"
 "  "
 msgstr ""
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\begin{multicols}{2}\n"
+"    \\item[\\textbf{1.}] שדה ריק\n"
+"    \\item[\\textbf{2.}] מקום\n"
+"    \\item[\\textbf{3.}] סמל חפץ\n"
+"    \\item[\\textbf{4.}] דרגת הקושי של השדה\n"
+"    \\item[\\textbf{5.}] גבול השדה\n"
+"    \\item[\\textbf{6.}] שדה חסום\n"
+"    \\item[\\textbf{7.}] שם האריח  \\\\{} \\texttt{\\textenglish{F2}} או \\texttt{\\textenglish{\\#N3}} לדוגמה\n"
+"  "
 
 #. type: multicols*
 #: sections/map_elements.tex:70
@@ -169,6 +222,9 @@ msgid ""
 "  Blocked Field cannot be entered, but can be exited.\n"
 "}"
 msgstr ""
+"\\note{3}{\n"
+"  \\texthebrew{אי אפשר להיכנס לשדה חסום אך אפשר לצאת מתוכו}.\n"
+"}"
 
 #. type: multicols
 #: sections/map_elements.tex:94
@@ -190,6 +246,20 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Categories}{סיווג מקומות}}\n"
+"ביקור בשדות עשוי לזכות גיבור במספר יתרונות כגון קלפים או משאבים  (ראה \\pagelink{All Map Locations}{מקרא מקומות}).\n"
+"יש שלושה סיווגים למקומות:\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{ניתן לביקור} – ברגע שאתה מבקר בשדה, הנח קובייה שחורה עליו והתייחס אליו כאל שדה ריק כל עוד הקובייה השחורה נמצאת עליו.\n"
+"  \\item \\textbf{ניתן לכיבוש} – שדות אלו יכולים להיכבש על ידי שחקנים ולספק הכנסה פסיבית.\n"
+"    כאשר אתה מבקר בשדה זה, הנח את קוביית הצבא שלך עליו.\n"
+"    גיבורי היריב המבקרים בשדות הכבושים שלך יחליפו את הקוביה שלך בשלהם כדי \\textbf{לגנוב} את האפקט של השדה.\n"
+"    גיבורים שנמצאים בברית איתך מתייחסים לשדות אלו  \\textbf{כשדות ריקים}.\n"
+"  \\item \\textbf{ניתן לביקור חוזר} – תוכל לבקר בשדה מספר פעמים.\n"
+"    אל תשים את קוביית הצבא שלך.\n"
+"    ניתן להשתמש בנקודת תנועה נוספת על מנת לבקר בשדה בשנית.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:101
@@ -203,6 +273,13 @@ msgid ""
 "You may always rotate Map Tiles when placing or revealing them.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Placing}{להניח ולחשוף אריחים חדשים}}\\index{Discovering Tiles}\n"
+"גיבורים רשאים להשתמש בנקודת תנועה על מנת לחשוף אריח סמוך, או להניח אריח רחוק \\textenglish{(II-III)} מתוך מאגר האריחים שלהם. .\n"
+"כל האריחים צריכים להיות \\textbf{מוסתרים מכל השחקנים} עד לרגע שהם נחשפים או מונחים.\n"
+"עליך להניח אריחים חדשים סמוך לגיבור שהשתמש בנקודת התנועה, ועליהם להיות מחוברים לפחות לשני אריחים קיימים.\n"
+"בנוסף, עליך למקם אותם כך שיהיה מסלול חוקי מהאריח אל שאר האריחים.\n"
+"אתה תמיד רשאי לסובב את האריחים בזמן הנחתם או חשיפתם.\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:106
@@ -214,6 +291,11 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\medskip\n"
+"\\note{6}{\n"
+" \\texthebrew{ כאשר אתה מבקר בשדה שניתן לביקור, אתה \\textbf{חייב} להניח עליו קובייה שחורה אפילו אם אתה לא יכול, או לא רוצה להפעיל את האפקט שלו}.\n"
+"}\n"
+"\n"
 
 #. type: figure*
 #: sections/map_elements.tex:118
@@ -228,11 +310,19 @@ msgid ""
 "    \\node at (3.9, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{be adjacent to two other tiles}}}}};\n"
 "  \\end{tikzpicture}"
 msgstr ""
+"[!hb]\n"
+"  \\centering\n"
+"  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
+"  \\begin{tikzpicture}[overlay]\n"
+"    \\begin{scope}[xscale=-1]\\node at (5, 10) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{אינך רשאי להוסיף את האריח כאן}}}}};\n"
+"    \\node at (5, 1.4) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{אתה רשאי להוסיף את האריח כאן מכיוון}}}}};\n"
+"    \\node at (3.9, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{שהוא יהיה סמוך לשני אריחים אחרים}}}}};\n"
+"  \\end{scope}\\end{tikzpicture}"
 
 #. type: subsection{#2}
 #: sections/map_elements.tex:122
 msgid "Example Turn"
-msgstr ""
+msgstr "תור לדוגמה"
 
 #. type: multicols*
 #: sections/map_elements.tex:127
@@ -242,6 +332,9 @@ msgid ""
 "    She spends 1 MP to move onto the Mine, which begins \\pagelink{Combat}{Combat} against Neutral Units, since the Field has a \\pagelink{Difficulty}{Difficulty Rating} and has not been previously Flagged by any player.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{אליס רוצה לכבוש  \\pagelink{Mines}{מכרה} סמוך בעזרת הגיבור הראשי שלה, בעל האוב סנדרו \\textenglish{(Sandro the Necromancer)}.\n"
+"    היא משתמשת בנקודת תנועה כדי להיכנס למכרה, מה שמוביל \\pagelink{Combat}{לקרב} נגד יחידות ניטרליות , מכיוון שלשדה יש  \\pagelink{Difficulty}{דרגת קושי} ואף שחקן לא כבש אותו לפני כן.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:129
@@ -260,6 +353,11 @@ msgid ""
 "During the Combat, she casts the Lightning Bolt, and Empowers \\includesvg[height=0.8\\baselineskip]{\\svgs/empower.svg} it with Haste's alternative (bottom) effect, which makes the Lightning Bolt deal 3 damage \\includesvg[height=0.8\\baselineskip]{\\svgs/damage.svg}, killing the Troglodytes and winning the Combat.}\n"
 "\n"
 msgstr ""
+"\\textit{המכרה מתברר כמוגן על ידי שוכני מערות \\textenglish{(Troglodytes)}, עם 3 \\textenglish{HP} \\includesvg[height=0.8\\baselineskip]{\\svgs/health_points.svg}.\n"
+"היד של אליס מכילה קלף כח קסם (\\textenglish{Power}), ברק (\\textenglish{Lightning Bolt}), מהירות (\\textenglish{Haste}) ושער העיר (\\textenglish{Town Portal}).\n"
+"במהלך הקרב היא הטילה את לחש הברק וחיזקה\\includesvg[height=0.8\\baselineskip]{\\svgs/empower.svg} אותו עם האפקט החלופי של לחש המהירות. בכך לחש הברק הוריד 3\\includesvg[height=0.8\\baselineskip]{\\svgs/damage.svg} חיים והביס את שוכני המערות. אליס ניצחה בקרב."
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:135
@@ -276,6 +374,8 @@ msgid ""
 "\\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell Card per Combat Round.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{אליס לא יכלה להשתמש גם בלחש המהירות וגם בלחש הברק מכיוון ששחקנים רשאים לשחק בלחש אחד בכל סבב קרב והקרב ארך סבב אחד.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:144
@@ -288,6 +388,12 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\textit{כעת, אליס כבשה את המכרה ומניחה אחת מקוביות הצבא שלה עליו.\n"
+"    כיבוש המכרה הספציפי הזה מעלה את ייצור האבנים \\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg} ב-2, בנוסף, מכיוון שהיא השחקנית הראשונה שכבשה את המכרה, היא מקבלת מיד 2 אבנים \\includesvg[height=0.8\\baselineskip]{\\svgs/building_materials.svg}.}\\par\n"
+"\\textit{לאחר מכן, אליס רוצה לחזור להגן על יישוב שלה שנכבש מקודם, ולכן מטילה את לחש שער העיר שנותר אצלה ביד.\n"
+"    מכיוון שהגיבור שלה ברמה 2, היא יכולה להשתמש באפקט המומחה \\includesvg[height=0.8\\baselineskip]{\\svgs/expert.svg} של קלף כח הקסם, להעצים את הלחש ולזכות בנקודת תנועה נוספת לאחר השימוש בו.\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:146
