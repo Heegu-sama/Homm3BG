@@ -8,7 +8,7 @@ esac
 LANGUAGE=$1
 
 case "${LANGUAGE}" in
-  ru|ua|cs)
+  ru|ua|cs|he)
     ENGINE=-pdflua
     ;;
   *)

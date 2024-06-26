@@ -1,0 +1,77 @@
+% !TeX spellcheck = en_US
+\documentclass[12pt]{article}
+
+
+% Language setting
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec} % For font settings
+\usepackage{polyglossia} % Better for handling multiple languages with XeLaTeX or LuaLaTeX
+\setmainfont[
+  Path = ./assets/fonts/,
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic]{LiberationSerif}
+% Set languages
+\setmainlanguage[calendar=hebrew]{hebrew} % Set the main language to Hebrew
+\setotherlanguage{english} % Optional: if you have English text as well
+
+% Command to enforce LTR for English text and numbers
+\newcommand{\LTRtext}[1]{\bgroup\foreignlanguage{english}{#1}\egroup}
+
+% Redefine \thepage to enforce LTR numerals in page numbers
+\let\oldthepage\thepage
+\renewcommand{\thepage}{\LTRtext{\oldthepage}}
+
+% Set font for Hebrew script
+\newfontfamily\hebrewfont{LiberationSerif}[
+  Path=./assets/fonts/,
+  Extension=.ttf,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont = *-BoldItalic,
+  Script=Hebrew,
+  Scale=MatchLowercase
+]
+
+\newfontfamily\hebrewfonttt{LiberationSerif}[
+  Path = ./assets/fonts/,
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic,
+  Script=Hebrew,
+  Scale=MatchLowercase
+]
+
+
+\def\sections{sections/translated/he}
+\def\lang_header_adjustment{0px}
+\newtoggle{textright2left}
+\toggletrue{textright2left}
+
+\newcommand{\versionlabel}{גרסא}
+\newcommand{\versionwarning}{This is an unreleased version built on GitHub from commit}
+
+\newcommand{\intro}{
+זהו פרוייקט קהילתי מבוסס \href{https://github.com/Heegu-sama/Homm3BG}{גיט}.
+ כל מי שרוצה מוזמן לשנות ולתקן שגיאות.
+הערות אפשר לכתוב \href{https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project}{בדיון ב-\textenglish{BoardGameGeek}}
+}
+\newcommand{\pageshorthand}{ע.}
+
+\newcommand{\heegusquote}{
+  \textit{אני עושה זאת מתוך אהבה ללמוד משחקים והרצון להבין את עומקם.}
+  \\
+  {\small — \textenglish{Heegu}}
+}
+
+\newcommand{\qrgithub}{סרוק על מנת לפתוח את הגיט ב\textbf{\textenglish{GitHub}}.}
+\newcommand{\qrbgg}{סרוק על מנת לפתוח את הדיון ב-\textbf{ֿֿֿֿ\textenglish{BoardGameGeek}}.}
+\title{\includegraphics[width=6cm]{\images/title.png}\\שכתוב החוקים}
+
+
+\input{metadata.tex}
