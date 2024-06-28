@@ -60,7 +60,7 @@ msgstr ""
 #. type: Plain text
 #: sections/difficulty.tex:3
 msgid "\\addsection{Difficulty}{\\spells/berserk.png}"
-msgstr ""
+msgstr "\\addsection{Сложность}{\\spells/berserk.png}"
 
 #. type: multicols
 #: sections/difficulty.tex:16
@@ -76,6 +76,15 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"В ходе подготовки к игре игроки должны выбрать \\pagetarget{Difficulty}{сложность}\\index{Difficulty}.\n"
+"Существует четыре уровня сложности, каждый из которых имеет разное количество стартовых бонусов\\index{Starting Bonus}, получаемого игроками на 16 шаге подготовки :\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{Лёгкий} – бросьте 2 \\includesvg[height=10px]{\\svgs/resource_die.svg} и получите ресурсы с обоих ИЛИ дважды \\textbf{ищите} (2) в колоде артефактов.\n"
+"  \\item \\textbf{Нормальный} – бросьте 2 \\includesvg[height=10px]{\\svgs/resource_die.svg} и получите ресурсы с одного из них ИЛИ \\textbf{ищите} (2) в колоде артефактов.\n"
+"  \\item \\textbf{Тяжёлый} – бросьте 1 \\includesvg[height=10px]{\\svgs/resource_die.svg} и получите ресурсы ИЛИ сбрасывайте карты из колоды артефактов, пока не найдёте 1 слабый артефакт, после чего возьмите его в руку.\n"
+"  \\item \\textbf{Невозможный} – не имеет бонусов.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/difficulty.tex:20
@@ -84,6 +93,8 @@ msgid ""
 "Campaign missions have unique bonuses that \\textbf{replace} the regular starting bonus.\n"
 "\n"
 msgstr ""
+"Миссии Кампании имеют уникальные бонусы, \\textbf{заменяющие} обычные стартовые.\n"
+"\n"
 
 #. type: multicols
 #: sections/difficulty.tex:24
@@ -94,6 +105,10 @@ msgid ""
 "The chosen difficulty also determines the number and type of neutral enemies that are encountered during Neutral Combat according to the \\hyperlink{Difficulty Table}{table} at the back cover of the book.\n"
 "\n"
 msgstr ""
+"Все \\textbf{артефакты}, полученные из стартового бонуса, помещаются непосредственно \\textbf{в руку}, а не перемешиваются в стартовой колоде.\n"
+"Если в качестве стартового бонуса вы искали артефакты, то после завершения поиска соедените вместе колоду артефактов и её сброс\\index{Discard Pile}, перемешайте, после чего поместите одну верхнюю карту в сброс.\\par\n"
+"Выбранная сложность также определяет количество и тип нейтральных отрядов, с которыми вы сталкиваетесь в сражениях, в соответствии с \\hyperlink{Difficulty Table}{таблицей} на обратной стороне кнги.\n"
+"\n"
 
 #. type: Plain text
 #: sections/difficulty.tex:62
@@ -129,6 +144,37 @@ msgid ""
 "would normally go to your hand now go immediately to your discard pile "
 "instead.} \\\\ \\end{tabularx} }"
 msgstr ""
+"\\hommtable{38}{ \\centering \\textbf{Таблица дополнительных правил}\\\\ "
+"\\small { \\color{white} Вы можете добавлять правила для изменения сложности "
+"игры.\\\\ } \\bigskip \\begin{tabularx}{\\linewidth}"
+"{>{\\hsize=0.3\\hsize\\linewidth=\\hsize}X "
+">{\\hsize=1.7\\hsize\\linewidth=\\hsize}X} \\darkcell[1.0]{\\color{white}"
+"Сложность} & \\darkcell[1.0]{Изменения в стандартных правилах} \\\\ "
+"\\darkcell[1.2]{Увеличение} & \\lightcell[1.2]{Города не производят ресурсы "
+"после \\textbf{захвата}, но игроки могут использовать здания захваченных "
+"городов.} \\\\ \\darkcell[0.7]{Увеличение} & \\lightcell[0.7]{Вы не можете "
+"перебросить кубик.} \\\\ \\darkcell[0.7]{Увеличение} & \\lightcell[0.7]{Все "
+"кубики сокровищ и ресурсов приносят только 1 ресурс.} \\\\ \\darkcell[0.7]"
+"{Увеличение} & \\lightcell[0.7]{Стартовый бонус отсутствует.} \\\\ "
+"\\darkcell[0.7]{Уменьшение} & \\lightcell[0.7]{Вы начинаете игру с вторичным "
+"героем.} \\\\ \\darkcell[0.7]{Уменьшение} & \\lightcell[0.7]{Каждый отряд "
+"наносит как минимум 1 \\includesvg[height=10px]{\\svgs/damage-table.svg} в "
+"ходе атаки.} \\\\ \\darkcell[0.7]{Уменьшение} & \\lightcell[0.7]{Все шахты и "
+"посёлки приносят двойной доход.} \\\\ \\darkcell[1.2]{Уменьшение} & "
+"\\lightcell[1.2]{Вы можете менять свои ресурсы в любое время, рынок "
+"становится \\textbf{посещаемым} и приносит вам 1 карту из колоды "
+"артефактов.} \\\\ \\darkcell[0.7]{Уменьшение} & \\lightcell[0.7]{Продление "
+"битвы не требует траты ОП.} \\\\ \\darkcell[1.1]{Вариативность} & "
+"\\lightcell[1.1]{Кубик атаки больше не влияет на урон (но все еще влияет на "
+"способности).} \\\\ \\darkcell[1.1]{Вариативность} & \\lightcell[1.1]{Карта "
+"предсказаний астрологов дополнительно активируется в начале каждого "
+"ресурсного раунда.} \\\\ \\darkcell[1.2]{Вариативность} & \\lightcell[1.2]"
+"{Карты предсказаний астрологов не набираются.} \\\\ \\darkcell[1.1]"
+"{Вариативность} & \\lightcell[1.1]{Чёрные кубики на всех "
+"\\textbf{посещаемых} полях убираются в 4, 8, и 12 раундах.} \\\\ "
+"\\darkcell[1.2]{Вариативность} & \\lightcell[1.2]{Карты, которые должны были "
+"немедленно набираться в руку, теперь помещаются непосредственно в ваш "
+"сброс.} \\\\ \\end{tabularx} }"
 
 #. type: Plain text
 #: sections/difficulty.tex:65
