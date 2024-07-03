@@ -59,7 +59,7 @@ msgstr ""
 #. type: Plain text
 #: sections/combat.tex:3
 msgid "\\addsection{Combat}{\\skills/attack.png}"
-msgstr ""
+msgstr "\\addsection{\\texthebrew{קרבות}}{\\skills/attack.png}"
 
 #. type: multicols
 #: sections/combat.tex:7
@@ -68,6 +68,8 @@ msgid ""
 "\\pagetarget{Combat}{Combat}\\index{Combat} with \\textbf{Neutral Units} starts when a Hero moves to an \\textbf{unvisited} Field with a roman numeral, signifying the \\hyperlink{Difficulty Table}{type and number} of Neutral Units guarding that Field.\n"
 "\n"
 msgstr ""
+"\\pagetarget{Combat}{קרב}\\index{Combat} נגד \\textbf{יחידות נטרליות} מתרחש כאשר גיבור מגיע לשדה \\textbf{שלא הגיעו אליו קודם לכן} ושמסומנת עליו ספרה רומית. הספרה מציינת את \\hyperlink{Difficulty Table}{הסוג ואת מספר} היחידות הנטרליות השומרות על השדה.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:14
@@ -81,6 +83,13 @@ msgid ""
 "Players are able to start multiple Combats during their Turn.\n"
 "\n"
 msgstr ""
+"קרב נגד \\textbf{שחקן אחר} יכול להתרחש בשני מקרים:\n"
+"\\begin{itemize}\n"
+"  \\item אתה מגיע לשדה בו נמצא גיבור יריב.\n"
+"  \\item אתה מגיע לטירה או ליישוב השייך לשחקן אחר.\n"
+"\\end{itemize}\n"
+"השחקנים יכולים לבצע מספר קרבות במהלך תורם.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:18
@@ -92,6 +101,7 @@ msgid ""
 "\n"
 msgstr ""
 
+
 #. type: multicols
 #: sections/combat.tex:20
 #, no-wrap
@@ -99,6 +109,8 @@ msgid ""
 "\\subsection*{\\pagetarget{Combatsetup}{Combat Setup}}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Combatsetup}{הכנת הקרב}}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:24
@@ -109,6 +121,10 @@ msgid ""
 "Follow these steps when Combat begins against \\textbf{Neutral Units}:\n"
 "\n"
 msgstr ""
+"% TODO info about battlefield expansion\n"
+"הקרבות מתבצעים על לוח הקרבות בגודל \\textenglish{ 4 x 5 }. הלוח מכיל שני קווים אחוריים, שני קווים קדמיים בשני הצדדים וקו אמצע.\n"
+"בצע את השלבים הבאים כאשר אתה מתחיל קרב כנגד \\textbf{יחידות נטרליות}:\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:45
@@ -148,6 +164,37 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\begin{itemize}\n"
+"  \\item בחר את הצד שלך על לוח הקרבות.\n"
+"    הנח עד 5 מהיחידות שלך על הלוח. אתה יכול לבחור היכן על הקו הקדמי והקו האחרוי להניח כל יחידה.\n"
+"  \\item בדוק את \\hyperlink{Difficulty Table}{\\textbf{טבלת הקושי}} \\iftoggle{printable}{(על הכריכה האחורית)}{} ושלוף מספר מתאים של יחידות נטרליות מהחפיסות הרלוונטיות.\n"
+"  \\item את היחידות הנטרליות מניחים בצורה שונה על הלוח, בהתאם למצב המשחק:\n"
+"  \\item בתרחיש מסוג \\textbf{התגוששות} או \\textbf{בריתות}, השחקן היריב השיוב לימינך שולט על היחידות הנטרליות וקובע את המיקומים ההתחלתיים שלהם.\n"
+"     אם ניתן, יש להניח את יחידות ה-\\includesvg[height=10px]{\\svgs/unit_ranged.svg} בקו האחורי.\n"
+"  \\item בתרחיש מסוג\\textbf{קמפיין} או \\textbf{שיתוף פעולה}, יש להניח את היחידות הנטרליות משמאל לימין, מנקודת המבט של השחקן.\n"
+"ראשית, הנח את יחידות ה-\\includesvg[height=10px]{\\svgs/unit_ranged.svg} בקו האחורי\\index{Units Placement}.\n"
+"לאחר מכן, הנח את יחידות ה-\\includesvg[height=10px]{\\svgs/unit_ground.svg} או את יחידות ה-\\includesvg[height=10px]{\\svgs/unit_flying.svg} בקו הקדמי.\n"
+"אן אין מספיק מקום להניח יחידה בקו הנכון שלה, שימו אותה בקו השני.\n"
+"יש להניח את היחידות בסדר מהירות\\textenglish{(Initiative)} \\textbf{יורד}\\index{Initiative}.\n"
+"אם יש שיוויון, הנח את היחידה בדרגה הגבוהה יותר ראשונה.\n"
+"אם עדיין יש שיוויון, השחקן מחליט על הסדר ביניהן.\n"
+"\\end{itemize}\n"
+"הכנת היחידות כאשר נלחמים נגד \\textbf{שחקן אחר}:\n"
+"\\begin{itemize}[wide]\n"
+"  \\item השחקן התוקף מניח לכל היותר 5 יחדיות על הצד שבחר בלוח הקרבות, ולאחריו מניח השחקן המתגונן.\n"
+"  \\item אם הקרב מתרחש על טירה מבוצרת (טירה שיש לה \\textenglish{Citadel}), השחקן המתגונן מוסיף את קלפי\\pagelink{Walls}{החומה, השער ומגדל החצים} לאחר שסיים להניח את היחידות שלו.\n"
+"\\end{itemize}\n"
+"\\vfill\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=0.55\\linewidth]{\\art/aging.png}\n"
+"\\end{center}\n"
+"\\vfill\n"
+"\\note{11}{\\texthebrew{\n"
+"    אם אויב תוקף טירה או יישוב שלך, והגיבור שלך לא נוכח, אתה יכול \\textbf{לשלם מיידית 8} \\includesvg[height=10px]{\\svgs/gold.svg} על מנת להלחם בקרב הגנה \\textbf{בו מותר לך להשתמש אך ורק ביחידות שלך}.\n"
+"    אינך יכול להשתמש בחפיסה שלך במהלך הקרב הזה, שכן הגיבור הראשי שלך אינו נוכח.\n"
+"    תשלום הזהב מייצג את עלות השינוע של היחידות שלך למקום הקרב.\n"
+"}}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:81
@@ -182,6 +229,34 @@ msgid ""
 "The Unit cannot take another Defense Action during that activation.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Combatterminology}{מונחים במהלך הקרב}}\n"
+"המונחים הבאים משמים לתיאור אירועים ורכיבים שונים במהלך הקרב:\\par\n"
+"\\textbf{השחקן התוקף} – השחקן שהתחיל את הקרב.\\par\n"
+"\\textbf{השחקן המתגונן} – השחקן אותו תקף השחקן התוקף.\\par\n"
+"\\textbf{הפעלה} – יחידה מופעלת ברגע שהיא היחידה הבאה בסדר המהירות.\\par\n"
+"\\textbf{יחידה סמוכה} – יחידה נחשבת ״סמוכה״ ליחידה אחרת אם היא נמצאת במרחק של משבצת אחת ממנה (לא באלכסון).\\par\n"
+"\\textbf{סבב קרב} – סבב שלם בו הופעלו כל היחידות של כל השחקנים.\\par\n"
+"\\textbf{מכשול}\\index{Combat Obstacles}\\index{Obstacles, Combat} – כל קלף על לוח המשחק הוא מכשול.\n"
+"הם מונעים מעבר של כל היחידות שאינן מעופפות.\\smallskip\\par\n"
+"\\begin{tikzpicture}[overlay]\n"
+"  \\node at (7, 0) {\\includegraphics[width=0.2\\linewidth]{\\images/attack_die.png}};\n"
+"\\end{tikzpicture}\\parbox{0.7\\hsize}{\\textbf{קובית התקפה}\\index{Attack Die}\\index{Dice} – קוביה אדומה שהתוצאות בה הן בין 1- ל-1+.\n"
+"הטל את הקוביה \\textbf{בכל פעם שיחידה תוקפת} והוסף את התוצאה של הקוביה\n"
+"לערך ההתקפה של היחידה.}\\par\\smallskip\n"
+"\\textbf{\\pagetarget{Retaliate}{תקיפת נגד}} – אם יחידה שרדה את ההתקפה של יחידה סמוכה היא תוקפת חזרה את היחידה התוקפת.\n"
+"כל יחידה יכולה לבצע תקיפת נגד \\textbf{אחת בלבד}\\index{Retaliation Attack} בכל סבב קרב.\n"
+"תקיפות נגד זהות לחלוטין לתקיפה רגילה, אך אינן יכולות להוביל למתפקת נגד נוספת.\n"
+"סמן יחידות שכבר ביצעו תקיפת נגד בקוביה שחורה.\\par\n"
+"\\textbf{\\pagetarget{Paralysis}{קיפאון}}\\index{Paralysis} \\includesvg[height=10px]{\\svgs/paralysis.svg} – חלק מהאפקטים מחייבים לשים אסימון קיפאון על יחידות.\n"
+"אותה יחידה That Unit \\textbf{תחוייב לדלג על ההפעלה הבאה שלה}. הורד את האסימון במקום להפעיל אותה.\n"
+"אם היחידה \\textbf{מותקפת (גם אם לא ירדו לה חיים) או נפגעת (כלומר יורדים לה חיים)} לפני כן, \\textbf{הורד את האסימון}.\n"
+"האיסמון לא מונע מהיחידה לבצע תקיפת נגד.\\par\n"
+"\\textbf{\\pagetarget{Defend}{הגנה}} \\includesvg[height=10px]{\\svgs/defense.svg} – שחקן יכול להחליט לוותר על הפעלה של יחידה על מנת להביא לה אסימון הגנה במקום.\n"
+"כאשר יחידה עם אסימון הגנה מותקפת, יש לזרוק קובית התקפה נוספת לאחר הזריקה של ההתקפה.\n"
+"אם יצא ״1+״ בקוביה, היחידה המגנה תקבל נקודת הגנה אחת נוספת עבור המתקפה הנוכחית.\n"
+"אם יש ליחידה אסימון הגנה בתחילה ההפעלה שלה, יש להסיר אותו. \n"
+"אותה יחידה לא יכולה לקבל אסימון הגנה נוסף באותה הפעלה.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:86
@@ -193,6 +268,11 @@ msgid ""
 "Combat lasts until all Units on one side are eliminated, a player has to \\textbf{Retreat}\\index{Retreat} when fighting Neutral Units, or a player \\textbf{Surrenders} to another player.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{combatround}{מבנה סבב קרבות}}\n"
+"הקרב מחולק לסבבים, בכל סבב כל היחידות המשתתפות בקרב יפעלו \\textbf{פעם אחת} לפי סדר המהירות.\n"
+"לאחר שכל היחידות הופעלו, מתחיל סבב קרבות חדש.\n"
+"הקרב ממשיך עד שכל היחידות של צד אחד חוסלו, שחקן נאלץ \\textbf{לברוח}\\index{Retreat} בזמן שנלחם ביחידות נטרליות, או ששחקן \\textbf{נכנע} לשחקן אחר.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:101
@@ -214,7 +294,21 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
-
+"המבנה של סבב הקרבות:\n"
+"\\begin{itemize}\n"
+"  \\item השחקנים מפעילים את היחידות שלהם בסדר יוריד לפי ה\\pagelink{Initiative}{מהירות} של היחידות שלהם. \\textbf{אם יש שיוויון}, התוקף והמתגונן יפעילו לסרוגין, התוקף יפעיל ראשון.\n"
+"  \\item לאחר שהיחידה הופעילה, הניחו עליה קובית צבא לסמן כי היחידה כבר הופעלה בסבב הנוכחי.\n"
+"  \\item יחידות מופעלות יכולות לזוז ולתקוף לפי ה\\pagelink{Unittype}{סוג} שלהן. יחידות נייטרליות, המופעלות על ידי השחקן היריב, חייבות לתקוף אם הן יכולות.\n"
+"  \\item במקום לתקוף, יחידה רשאית \\pagelink{Defend}{להגן}.\n"
+"  בקרב מול יחידה נייטרלית, היחידות הנייטרליות אינן יכולות להגן, אפילו אם הן נשלטות על ידי שחקן אחר.\n"
+"  \\item לפי שיחידה תוקפת, שני השחקנים יכולים \\pagelink{CombatCards}{להשתמש בקלפים}. את הקלפים מפעילים בסדר בו השחקנים מחליטים להפעיל אותם.\n"
+"  \\item לאחר שהיחידה תקפה וכל השחקנים שיחקו את כל הקלפים שלהם, יש לזרוק את קובית ההתקפה.\n"
+"    עדכנו את ההתקפה של היחידה לפי התוצאה בקוביה, ואז הפחיתו ממנה את ההגנה של היחידה המותקפת, שאר המתקפה היא \\pagelink{HP}{עוצמת הפגיעה} ליחידה המתגוננת.\n"
+"  \\item אם היחידה המתגוננת צמודה לתוקף, היא מבצעת \\pagelink{Retaliate}{התקפת נגד} אם היא לא עשתה זאת כבר בסבב הנוכחי.\n"
+"  \\item המשיכו להפעיל את היחידות עד שכולן הופעלו.\n"
+"לאחר שהיחידה האחרונה הופעלה, סבב הקרב נגמר.\n"
+"\\end{itemize}\n"
+"\n"
 #. type: multicols
 #: sections/combat.tex:105
 #, fuzzy, no-wrap
@@ -249,6 +343,7 @@ msgid ""
 "\\note{5}{Combats against Azure \\includesvg[height=10px]{\\svgs/azure-note.svg} Units, other players, or \\pagelink{AIrules}{AI Heroes} have no time limit, and you cannot Retreat from them.}\n"
 "\n"
 msgstr ""
+"\\note{5}{\\texthebrew{אין הגבלת זמן בקרבות כנגד יחידות בדרגת תכלת\\textenglish{(Azure)} \\includesvg[height=10px]{\\svgs/azure-note.svg},בקרבות כנגד שחקנים אחרים, או בקרבות כנגד \\pagelink{AIrules}{שחקן IA}.}\n"
 
 #. type: multicols
 #: sections/combat.tex:121
@@ -263,6 +358,17 @@ msgid ""
 "The increased \\includesvg[height=10px]{\\svgs/defense.svg} expires in a similar way.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{CombatCards}{שימוש בקלפי במהלך הקרב}}\n"
+"ניתן להשתמש \\textbf{בקלף קסם אחד בלבד בכל סבב קרב}.\n"
+"ניתן להשתמש באפקטים מתמשכים \\includesvg[height=10px]{\\svgs/ongoing.svg} ו- \\includesvg[height=10px]{\\svgs/activation.svg} רק \\textbf{כאשר אחת היחידות שלך היא היחידה הפעילה ורק לפני שהיא תוקפת}.\n"
+"אפקטים מתמשכים \\index{Ongoing Effects} נשארים עד לסוף הקרב או עד שנגמרו השימושים בקלף.\\par\n"
+"ניתן לשחק בקלפים מידיים \\includesvg[height=10px]{\\svgs/instant.svg} \\textbf{בכל רגע נתון} למעט בין זריקת קובית התקיפה ובין הורדת נקודות הפגיעה, אלא אם כן צויין אחרת.\n"
+"קלפים המחזקים את ה- \\includesvg[height=10px]{\\svgs/attack.svg} של היחידה (למשל קלפי סטטיסטיקה), מסתיימים בהתקפה הראשונה של היחידה, או כאשר ההפעלה שלה מסתיימת, המוקדם מביניהם.\n"
+"חיזוק ה-\\includesvg[height=10px]{\\svgs/defense.svg} מסתיים באופן דומה.\n"
+"\\subsection*{\\pagetarget{Timelimit}{Combat Time Limits}}\\index{Time Limit}\n"
+"לקרבות נגד יחידות נטרליות יש מגבלת זמן של \\textbf{סבב קרבות אחד}.\n"
+"אם אתה לא מנצח את הקרב לפני הסיום של סבב הקרבות הנוכחי, עליך \\pagelink{Endcombat}{לסגת}\\index{Retreat} או להשתמש בנקודת תנועה נוספת של הגיבור שהתחיל את הקרב על מנת להמשיך את הקרב לסבב נוסף.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:126
@@ -274,6 +380,19 @@ msgid ""
 "Move any player owned Units back to their Unit Deck and discard any leftover enemy Neutral Units.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Endcombat}{סוף הקרב}}\n"
+"הקרב מסתיים ברגע שכל היחידות של צד אחד הושמדו.\n"
+"הצד שיש לו עדיין יחידות הוא המנצח.\n"
+"בקרב נגד \\textbf{יחידות נטרליות}, אתה חייב \\textbf{לסגת} אם \\pagelink{Timelimit}{נגמר לך הזמן} או אם היחידות שלך חוסלו; החזר את כל היחידות ששרדו בחזרה לחפיסת היחידות והחזר את הגיבור לשדה \\textbf{בו היה לפני הקרב}.\n"
+"אין שום השפעה שלילית אחרת לנסיגה.\\par\n"
+"\\note{9}{\n"
+"  \\texthebrew{\\textbf{יוצא מן הכלל חשוב}: If \\textbf{all} of your Units from your \\textbf{Unit Deck} were defeated during Neutral Combat, your Main Hero must be moved to a friendly Town or Settlement.\n"
+"  Secondary Heroes are removed from the game until Recruited again.\\par\n"
+"}}\\par\n"
+"If you defeat all Units during Combat against \\textbf{another player's Main Hero}, the defeated player \\textbf{loses Morale} and has to \\textbf{pay the winner} 5 \\includesvg[height=10px]{\\svgs/gold.svg}.\n"
+"Do not lose Morale or pay \\includesvg[height=10px]{\\svgs/gold.svg} if a \\textbf{Secondary Hero} is defeated.\n"
+"\\textbf{In both cases}, the defeated player also \\textbf{gives the winner} one of their \\pagelink{End}{Faction Cubes}.\n"
+
 
 #. type: multicols
 #: sections/combat.tex:139
