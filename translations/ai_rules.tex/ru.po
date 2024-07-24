@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-06-03 10:39+0200\n"
+"POT-Creation-Date: 2024-07-24 22:55+0300\n"
 "PO-Revision-Date: 2024-04-21 09:09+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -36,7 +36,7 @@ msgstr ""
 #. type: multicols
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
 #: sections/all_map_locations.tex:421 sections/combat.tex:5
-#: sections/combat.tex:140 sections/credits.tex:10 sections/deckbuilding.tex:7
+#: sections/credits.tex:10 sections/deckbuilding.tex:7
 #: sections/difficulty.tex:7 sections/expansion_content.tex:7
 #: sections/expansion_content.tex:51 sections/game_modes.tex:5
 #: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:79
@@ -111,8 +111,8 @@ msgstr ""
 "Любые отличия от указанного выше будут описаны в правилах конкретного сценария.\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:32 sections/ai_rules.tex:102 sections/combat.tex:95
-#: sections/combat.tex:233 sections/expansion_content.tex:67
+#: sections/ai_rules.tex:32 sections/ai_rules.tex:104 sections/combat.tex:47
+#: sections/combat.tex:190 sections/expansion_content.tex:67
 #: sections/heroes.tex:34
 #, no-wrap
 msgid ""
@@ -235,75 +235,79 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:76
+#: sections/ai_rules.tex:77
 #, no-wrap
 msgid ""
-"Enemy Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units prioritize attacking Units of the \\textbf{same} tier.\n"
-"If this is impossible, they attack the Unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
+"\\begin{itemize}\n"
+"  \\item Enemy Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units prioritize attacking Units of the \\textbf{same} tier.\n"
+"  If this is impossible, they attack the Unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
 "\n"
 msgstr ""
-"Приоритетом атаки вражеских наземных \\includesvg[height=10px]{\\svgs/unit_ground.svg} и летающих \\includesvg[height=10px]{\\svgs/unit_flying.svg} отрядов являются отряды \\textbf{того же} уровня.\n"
-"Если это невозможно, они атакуют отряд меньшего уровня (в порядке \\textbf{убывания} уровня вплоть до бронзового); если и это невозможно, то атакуют отряд высшего уровня (в порядке \\textbf{возрастания} уровня).\\par\n"
+"\\begin{itemize}\n"
+"  \\item Приоритетом атаки вражеских наземных \\includesvg[height=10px]{\\svgs/unit_ground.svg} и летающих \\includesvg[height=10px]{\\svgs/unit_flying.svg} отрядов являются отряды \\textbf{того же} уровня.\n"
+"  Если это невозможно, они атакуют отряд меньшего уровня (в порядке \\textbf{убывания} уровня вплоть до бронзового); если и это невозможно, то атакуют отряд высшего уровня (в порядке \\textbf{возрастания} уровня).\\par\n"
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:82
+#: sections/ai_rules.tex:83
 #, no-wrap
 msgid ""
-"\\textit{Example: \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg} has this priority:\n"
-"\\includesvg[height=10px]{\\svgs/golden.svg}\n"
-"- \\includesvg[height=10px]{\\svgs/silver.svg}\n"
-"- \\includesvg[height=10px]{\\svgs/bronze.svg}\n"
-"- \\includesvg[height=10px]{\\svgs/azure.svg}.}\n"
+"  \\textit{Example: \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg} has this priority:\n"
+"  \\includesvg[height=10px]{\\svgs/golden.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/silver.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/bronze.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/azure.svg}.}\n"
 "\n"
 msgstr ""
-"\\textit{Пример: \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg} имеет приоритет\n"
-"\\includesvg[height=10px]{\\svgs/golden.svg}\n"
-"– \\includesvg[height=10px]{\\svgs/silver.svg}\n"
-"– \\includesvg[height=10px]{\\svgs/bronze.svg}\n"
-"– \\includesvg[height=10px]{\\svgs/azure.svg}.}\n"
+"  \\textit{Пример: \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg} имеет приоритет\n"
+"  \\includesvg[height=10px]{\\svgs/golden.svg}\n"
+"  – \\includesvg[height=10px]{\\svgs/silver.svg}\n"
+"  – \\includesvg[height=10px]{\\svgs/bronze.svg}\n"
+"  – \\includesvg[height=10px]{\\svgs/azure.svg}.}\n"
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:85
+#: sections/ai_rules.tex:86
 #, no-wrap
 msgid ""
-"Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units prioritize attacking other Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
-"If there are no Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same tier order.\\par\n"
+"  \\item Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units prioritize attacking other Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
+"  If there are no Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same tier order.\\par\n"
 "\n"
 msgstr ""
-"Стрелковые \\includesvg[height=10px]{\\svgs/unit_ranged.svg} отряды предпочитают атаковать других стрелков \\includesvg[height=10px]{\\svgs/unit_ranged.svg} того же уровня, потом уровнем ниже, далее высшим уровнем, используя очерёдность, описанную выше.\n"
-"Если нет возможности атаковать стрелков \\includesvg[height=10px]{\\svgs/unit_ranged.svg}, они выбирают наземные \\includesvg[height=10px]{\\svgs/unit_ground.svg} и летающие \\includesvg[height=10px]{\\svgs/unit_flying.svg} отряды в том же порядке.\\par\n"
+"  \\item Стрелковые \\includesvg[height=10px]{\\svgs/unit_ranged.svg} отряды предпочитают атаковать других стрелков \\includesvg[height=10px]{\\svgs/unit_ranged.svg} того же уровня, потом уровнем ниже, далее высшим уровнем, используя очерёдность, описанную выше.\n"
+"  Если нет возможности атаковать стрелков \\includesvg[height=10px]{\\svgs/unit_ranged.svg}, они выбирают наземные \\includesvg[height=10px]{\\svgs/unit_ground.svg} и летающие \\includesvg[height=10px]{\\svgs/unit_flying.svg} отряды в том же порядке.\\par\n"
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:95
+#: sections/ai_rules.tex:97
 #, no-wrap
 msgid ""
-"\\textit{Example: \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg} has this priority:\n"
-"\\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
-"- \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
-"- \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
-"- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
-"- \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
-"- \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
-"- \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
-"- \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}.}\n"
+"  \\textit{Example: \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg} has this priority:\n"
+"  \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}.}\n"
+"\\end{itemize}\n"
 "\n"
 msgstr ""
-"\\textit{Пример: \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg} имеет приоритет\n"
-"\\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
-"– \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
-"– \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
-"– \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
-"– \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
-"– \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
-"– \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
-"– \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}.}\n"
+"  \\textit{Пример: \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg} имеет приоритет\n"
+"  \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"  – \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"  – \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"  – \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"  – \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"  – \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"  – \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"  – \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}.}\n"
+"\\end{itemize}\n"
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:98
+#: sections/ai_rules.tex:100
 #, no-wrap
 msgid ""
 "In both cases, if there's more than one valid target, they attack the closest one.\n"
@@ -315,7 +319,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:100
+#: sections/ai_rules.tex:102
 #, no-wrap
 msgid ""
 "Enemy units cannot \\pagelink{Defend}{Defend} unless instructed to.\n"
@@ -325,16 +329,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:105
-#, no-wrap
-msgid ""
-"\\centering\n"
-"\\includegraphics[width=0.9\\linewidth]{\\art/coin.png}\n"
-"\n"
-msgstr ""
-
-#. type: multicols
-#: sections/ai_rules.tex:109
+#: sections/ai_rules.tex:108
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
