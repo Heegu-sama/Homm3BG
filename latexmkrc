@@ -9,6 +9,9 @@ if ($ENV{HOMM3_NO_ART_BACKGROUND}) {
 if ($ENV{HOMM3_GITHUB_BUILD}) {
   $toggles .= '\toggletrue{githubbuild}'
 }
+if ($ENV{TRANSLATED_AUTHOR}) {
+  $toggles .= '\toggletrue{translatedauthor}'
+}
 
 if ($toggles) {
   &alt_tex_cmds;

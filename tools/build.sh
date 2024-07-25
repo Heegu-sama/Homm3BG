@@ -16,6 +16,10 @@ case "${LANGUAGE}" in
     ;;
 esac
 
+if [[ ${LANGUAGE} == ru ]]; then
+  export TRANSLATED_AUTHOR=1
+fi
+
 if [[ ${LANGUAGE} != en ]]; then
   po4a --no-update po4a.cfg
 fi
