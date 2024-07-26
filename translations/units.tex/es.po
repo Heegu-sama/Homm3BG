@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-06-03 10:39+0200\n"
+"POT-Creation-Date: 2024-07-26 09:59+0200\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,14 +19,14 @@ msgstr ""
 #. type: multicols
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
 #: sections/all_map_locations.tex:421 sections/combat.tex:5
-#: sections/combat.tex:140 sections/credits.tex:10 sections/deckbuilding.tex:7
+#: sections/credits.tex:10 sections/deckbuilding.tex:7
 #: sections/difficulty.tex:7 sections/expansion_content.tex:7
 #: sections/expansion_content.tex:51 sections/game_modes.tex:5
 #: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:79
 #: sections/map_elements.tex:124 sections/player_turns.tex:7
 #: sections/resources.tex:7 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:58 sections/town.tex:5
-#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:160
+#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:162
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -36,7 +36,7 @@ msgstr ""
 #. type: multicols
 #: sections/all_map_locations.tex:35 sections/all_map_locations.tex:63
 #: sections/all_map_locations.tex:152 sections/expansion_content.tex:105
-#: sections/trading.tex:24 sections/units.tex:168 sections/units.tex:172
+#: sections/trading.tex:24 sections/units.tex:170 sections/units.tex:174
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -45,7 +45,7 @@ msgstr ""
 
 #. type: multicols
 #: sections/all_map_locations.tex:54 sections/all_map_locations.tex:426
-#: sections/credits.tex:36 sections/difficulty.tex:18
+#: sections/combat.tex:152 sections/credits.tex:36 sections/difficulty.tex:18
 #: sections/expansion_content.tex:20 sections/expansion_content.tex:65
 #: sections/game_modes.tex:27 sections/scenario_end.tex:23
 #: sections/units.tex:105
@@ -59,8 +59,8 @@ msgstr ""
 #: sections/all_map_locations.tex:134 sections/credits.tex:38
 #: sections/credits.tex:42 sections/expansion_content.tex:59
 #: sections/game_modes.tex:25 sections/round_structure.tex:28
-#: sections/setup.tex:117 sections/town.tex:28 sections/town.tex:34
-#: sections/units.tex:103
+#: sections/round_structure.tex:32 sections/setup.tex:117 sections/town.tex:28
+#: sections/town.tex:34 sections/units.tex:103
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -76,8 +76,8 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/all_map_locations.tex:435 sections/combat.tex:91
-#: sections/player_turns.tex:39 sections/units.tex:179
+#: sections/all_map_locations.tex:435 sections/player_turns.tex:39
+#: sections/units.tex:181
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -353,7 +353,20 @@ msgstr ""
 
 #. type: multicols
 #: sections/units.tex:129
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{\\pagetarget{Neutral Units}{Neutral Units}}\n"
+#| "Neutral Units\\index{Neutral Units} guard the various locations on the Game Map.\n"
+#| "Starting and winning Combat against them is necessary to Visit most Locations.\n"
+#| "Neutral Units are spread into four different tiers, each with their own Deck.\n"
+#| "In addition to \\includesvg[height=10px]{\\svgs/bronze.svg}, \\includesvg[height=10px]{\\svgs/silver.svg} and \\includesvg[height=10px]{\\svgs/golden.svg}, there are also Azure \\includesvg[height=10px]{\\svgs/azure.svg} Neutral Units which are the strongest in the game.\\par\n"
+#| "Each of these Decks should always be kept separate from each other and shuffled during setup.\n"
+#| "If a Neutral Unit Deck ever runs out of Cards, reshuffle the discard into a new Deck.\n"
+#| "When a Combat against Neutral Units starts, draw \\pagelink{Difficulty}{the appropriate number} of Units from each tier to take part in that Combat.\\par\n"
+#| "It is possible for players to gain Neutral Units to their Unit Deck through various effects, such as Scenario-Specific Rules or the Diplomacy Ability Card.\n"
+#| "\\textbf{Neutral Units cannot be Reinforced}, as they are single sided.\n"
+#| "Whenever a Neutral Unit is defeated from anywhere, place it into the appropriate Neutral Discard Pile.\\par\n"
+#| "\n"
 msgid ""
 "\\subsection*{\\pagetarget{Neutral Units}{Neutral Units}}\n"
 "Neutral Units\\index{Neutral Units} guard the various locations on the Game Map.\n"
@@ -382,16 +395,18 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:132
+#: sections/units.tex:134
 #, no-wrap
 msgid ""
-"\\vfill\n"
-"\\hfill\\includegraphics[width=0.7\\linewidth]{\\art/cerberi.png}\n"
+"\\note{8}{\n"
+"  Having a \\includesvg[height=10px]{\\svgs/golden.svg} Dwelling built in your Town allows you to draw an \\includesvg[height=10px]{\\svgs/azure.svg} Unit Card using the basic (top) effect of a Diplomacy Ability Card.\n"
+"  This effect does not apply to Dungeon's Portal of Summoning.\n"
+"}\n"
 "\n"
 msgstr ""
 
 #. type: Plain text
-#: sections/units.tex:155
+#: sections/units.tex:157
 msgid ""
 "\\hommtable{13}{ \\begin{tabularx}{\\linewidth}{XXXXX} & \\darkcell{Town "
 "Building} & \\darkcell{Castle} & \\darkcell{Dungeon} & "
@@ -425,7 +440,7 @@ msgstr ""
 "\\ \\end{tabularx} }"
 
 #. type: multicols
-#: sections/units.tex:162
+#: sections/units.tex:164
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\art/lich.jpg}\n"
@@ -433,7 +448,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:164
+#: sections/units.tex:166
 #, no-wrap
 msgid ""
 "\\subsection*{Gameplay Example}\n"
@@ -443,7 +458,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:166
+#: sections/units.tex:168
 #, no-wrap
 msgid ""
 "\\textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons, Empowering \\includesvg[height=10px]{\\svgs/empower.svg} the Spell by 2 with the Expert  Effect \\includesvg[height=10px]{\\svgs/expert.svg} of a Power Card.}\n"
@@ -453,7 +468,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:170
+#: sections/units.tex:172
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/alamar_empowering_magic_arrow.png}\n"
@@ -461,7 +476,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:177
+#: sections/units.tex:179
 #, no-wrap
 msgid ""
 "\\textit{The Skeletons take 3 damage \\includesvg[height=10px]{\\svgs/damage.svg} from the Spell.\n"
@@ -477,7 +492,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:181
+#: sections/units.tex:183
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/skeletons_flipped.png}\n"
