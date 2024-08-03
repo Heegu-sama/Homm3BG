@@ -75,6 +75,7 @@
 \newtoggle{printable}
 \newtoggle{noartbackground}
 \newtoggle{githubbuild}
+\newtoggle{translatedauthor}
 
 % Variables
 \def\_assets{assets}
@@ -302,7 +303,13 @@
 }{}
 
 
-\author{\textlang{english}{Hermanni ``Heegu'' Karppela}}
+\author{
+  \iftoggle{translatedauthor}{
+    \textlang{\mainlanguagename}{\translatedauthorname{}}
+  }{
+    \textlang{english}{Hermanni ``Heegu'' Karppela}
+  }
+}
 \maketitle
 
 \begin{center}
