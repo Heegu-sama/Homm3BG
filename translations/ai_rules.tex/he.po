@@ -20,7 +20,7 @@ msgstr ""
 #. type: Plain text
 #: sections/ai_rules.tex:3
 msgid "\\addsection{AI Rules}{\\spells/fortune.png}"
-msgstr ""
+msgstr "\\addsection{\\texthebrew{חוקים ל-IA}}{\\spells/fortune.png}"
 
 #. type: Plain text
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
@@ -64,6 +64,17 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{תור הגיבור של הIA}\n"
+"\\pagetarget{AIrules}{במהלך הקמפיינים} השחקן ישחק נגד גיבורי IA.\n"
+"הם מתחילים בטירה שלהם, יש להם 3 נקודות תנועה, והם תמיד ישתמשו בהם לבצע את הפעולות הבאות בסדר עדיפות יורד:\n"
+"\\begin{itemize}\n"
+"  \\item אם גיבור של השחקן נמצא באותו אריח איתו, הוא ישתמש בכל נקודות התנועה שלו במטרה להתקרב אליו ולהתחיל קרב.\n"
+"  \\item אם קיימים מכרות או יישובים, שה-IA יכול לכבוש באריח בו הוא נמצא, לך להכי קרוב.\n"
+"  \\item אחרת, לך לכיוון הטירה של השחקן.\n"
+"יש לחזור על הסדר הזה עד שהגיבור משתמש בכל נקודות התנועה שלו.\n"
+"גיבורי ה-IA משחקים אחרי השחקן.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:21
@@ -73,6 +84,8 @@ msgid ""
 "They gain no benefits from any Fields.\n"
 "\n"
 msgstr ""
+"גיבורי IA תמיד \\textbf{מנצחים אוטומטית קרבות} כנגד יריבים ניטרליים. כמו כן, הם  \\textbf{כובשים או מבקרים בכל השדות} שהם עוברים דרכם.\n"
+"הם לא מקבלים שום דבר מאף שדה.\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:30
@@ -88,6 +101,15 @@ msgid ""
 "Any differences to the above will be described in any given Scenario's own rules.\n"
 "\n"
 msgstr ""
+"גיבורי IA חייבים לגלות אריחי מפה הפוכים כרגיל. הם משתמשים בנקודת תנועה אחת לפני שהם זזים אליהם.\n"
+"השחקן בוחר איך לסובב את האריח.\\par\n"
+"גיבורי IA אינם נכנעים ולא ניתן להיכנע בפניהם;\n"
+"הם תמיד ילחמו עד היחידה האחרונה.\n"
+"ניצחון בקרב כנגד גיבור IA לא מזכה באף פרס, אלא אם כן צויין אחרת בתרחיש.\n"
+"לגיבורי IA אין לא טירה, לא משאבים ולא כרטיס גיבור.\n"
+"היחידות שלהן קבועות מראש ומוגדרות בהכנה של התרחיש או בחוקים אחרים.\\par\n"
+"כל שינוי מהחוקים המתוארים לעיל יצויין במפורש בחוקים של התרחיש הספציפי.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:32 sections/ai_rules.tex:104 sections/combat.tex:47
@@ -106,6 +128,8 @@ msgid ""
 "\\subsection*{AI Decks}\n"
 "\n"
 msgstr ""
+"\\subsection*{החפיסה של ה-IA}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:53
@@ -129,6 +153,23 @@ msgid ""
 "    \\item[\\textbf{7.}] Card Type\n"
 "  \\end{itemize}\\vspace*{\\fill}"
 msgstr ""
+"\\begin{multicols*}{2}\n"
+"  \\begin{center}\n"
+"    \\vspace*{-1.5em}\\includegraphics[width=1.3\\linewidth]{\\cards/ai.png}\n"
+"    \\phantom{\\ldots\\ldots}\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{קלף IA}}}}\n"
+"  \\end{center}\n"
+"  \\vspace*{\\fill}\n"
+"  \\columnbreak\n"
+"  \\scriptsize\n"
+"  \\begin{itemize}[itemsep=0pt]\n"
+"    \\item[\\textbf{1.}] שם\n"
+"    \\item[\\textbf{2.}] תיאור\n"
+"    \\item[\\textbf{3.}] רמה קלה\n"
+"    \\item[\\textbf{4.}] רמה רגילה\n"
+"    \\item[\\textbf{5.}] רמת מומחה\n"
+"    \\item[\\textbf{6.}] רמת\\\\בלתי אפשרי\n"
+"    \\item[\\textbf{7.}] סוג הקלף\n"
+"  \\end{itemize}\\vspace*{\\fill}"
 
 #. type: multicols
 #: sections/ai_rules.tex:61
@@ -143,6 +184,14 @@ msgid ""
 "Shuffle the AI and Spell Decks during setup after building them.\n"
 "\n"
 msgstr ""
+"גיבור ה-IA משתמש בשתי חפיסות אוטומטיות במהלך הקרב: \\textbf{חפיסת ה-IA}, ו\\textbf{חפיסת הקסמים}.\n"
+"חפיסת ה-IA מרוכבת מ-3 סוגי קלפים: עוצמה \\includesvg[height=10px]{\\svgs/might.svg}, קסם \\includesvg[height=10px]{\\svgs/magic.svg} ומומחיות \\includesvg[height=10px]{\\svgs/skill.svg}.\n"
+"בכל תרחיש קמפיין מצויין מספר הקלפים מכל סוג שירכיבו ביחד את החפיסה.\n"
+"לקלפי עוצמה \\includesvg[height=10px]{\\svgs/might.svg} ולקלפי מומחיות \\includesvg[height=10px]{\\svgs/skill.svg} יש שני סוגים. בחרו את הקלפים הללו \\textbf{אקראית} כשאתם בונים את החפיסה.\n"
+"אם קלפי מומחיות כלולים בחפיסה, יש לשים בצד את קלפי היכולת המתאימים להם.\n"
+"על מנת לבנות את \\textbf{חפיסת הקסמים} של שחקן ה-IA יש להפריד את הקסמים הרלוונטים מהחפיסה הרגילה.\n"
+"ערבבו את חפיסות ה-IA והקסמים במהלך ההכנה של התרחיש, לאחר שהרכבתם אותן.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:68
@@ -156,6 +205,13 @@ msgid ""
 "If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
 "\n"
 msgstr ""
+"כאשר גיבור IA \\textbf{מפעיל} יחידה, שלפו קלף IA\\index{AI Card} מהחפיסה ועקבו אחרי ההוראות שבקלף לפני שהיחידה זזה ו/או תוקפת.\n"
+"אם חפיסת ה-IA נגמרת במהלך קרב, הפסיקו לשלוף ממנה קלפים.\n"
+"ההשפעה של כל קלף IA תלויה ברמת \\pagelink{Difficulty}{הקושי} של המשחק.\n"
+"קלף העוצמה \\includesvg[height=10px]{\\svgs/might.svg} יהיה צמוד ליחידה עד להתקפה/ההגנה הבאה שלה.\n"
+"בכל פעם ששחקן ה-IA שולף קלף קסם  \\includesvg[height=10px]{\\svgs/magic.svg} הוא ישתמש בחפיסת הקסמים שלו.\n"
+"אם גיבור IA צריכים לשלוף קלף, הם ישלפו קלף, ואז הם יפעילו \\textbf{קלף אחר} מחפיסת ה-IA.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:70
@@ -163,7 +219,7 @@ msgstr ""
 msgid ""
 "\\subsection*{Combat against AI}\n"
 "\n"
-msgstr ""
+msgstr "\\subsection*{קרב נגד IA}\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:73
@@ -173,6 +229,8 @@ msgid ""
 "When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\\par\n"
 "\n"
 msgstr ""
+"\\pagetarget{AI Units}{חוקים אלו} חלים במהלך הקרבות בתרחשים מסוג \\textbf{קמפיין לשחקן יחיד}\\index{Solo Mode} ומסוג \\textbf{שיתוף פעולה}.\n"
+"כאשר יחידות אויב נייטרליות או גיבורי IA מפעילים יחידה, הם פועלים לפי סט הפעולות האוטומטי הבא:\\par\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:77
@@ -183,6 +241,10 @@ msgid ""
 "  If this is impossible, they attack the Unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
 "\n"
 msgstr ""
+"\\begin{itemize}\n"
+"  \\item יחידות אויב רגליות \\includesvg[height=10px]{\\svgs/unit_ground.svg} או מעופפות \\includesvg[height=10px]{\\svgs/unit_flying.svg} תתעדפנה לתקוף יחידות \\textbf{באותה} הרמה.\n"
+"  אם זה לא מתאפשר, הן תתקופנה יחידות מדרגה נמוכה יותר (בסדר \\textbf{יורד}, עד לדרגת נחושת), ואם גם זה בלתי אפשרי, הן תתקופנה יחידות בדרגה גבוהה יותר(בסדר \\textbf{עולה}).\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:83
@@ -195,6 +257,12 @@ msgid ""
 "  - \\includesvg[height=10px]{\\svgs/azure.svg}.}\n"
 "\n"
 msgstr ""
+"  \\textit{לדוגמה: ל-\\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg} יש סדר העדיפות הבא:\n"
+"  \\includesvg[height=10px]{\\svgs/golden.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/silver.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/bronze.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/azure.svg}.}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:86
@@ -204,6 +272,9 @@ msgid ""
 "  If there are no Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same tier order.\\par\n"
 "\n"
 msgstr ""
+"  \\item יחידות קשתים \\includesvg[height=10px]{\\svgs/unit_ranged.svg} תתעדפנה לתקוף קשתים אחרים \\includesvg[height=10px]{\\svgs/unit_ranged.svg} באותה הדרגה ואז בדרגה נמוכה יותר ולבסוף בדרגה גבוה יותר, לפי אותו סדר לעיל.\n"
+"  אם אין אף יחידת קשתים \\includesvg[height=10px]{\\svgs/unit_ranged.svg} אותה הם יכולים לתקוף, הם יתקפו יחידות רגלים \\includesvg[height=10px]{\\svgs/unit_ground.svg} ויחידות מעופפים \\includesvg[height=10px]{\\svgs/unit_flying.svg} באותו סדר דרגות.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:97
@@ -221,6 +292,17 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"  \\textit{לדוגמה: ל-\\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg} יש סדר העדיפות הבא:\n"
+"  \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
+"  - \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}.}\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:100
@@ -230,6 +312,9 @@ msgid ""
 "If there's ever a tie between equally valid targets, the player chooses which Unit is attacked.\\par\n"
 "\n"
 msgstr ""
+"בשני ההמקרים, אם קיימת יותר ממטרה אחת אותה ניתן לתקוף, היחידה תתקוף את הקרובה יותר.\n"
+"אם שתי המטרות קרובות באותה המידה, השחקן בוחר איזו מטרה תותקף.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:102
@@ -238,6 +323,8 @@ msgid ""
 "Enemy units cannot \\pagelink{Defend}{Defend} unless instructed to.\n"
 "\n"
 msgstr ""
+"יחידות אויב אינן יכולות \\pagelink{Defend}{להגן} אלא אם כן הן קיבלו הוראה מיוחדת לכך.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:108
