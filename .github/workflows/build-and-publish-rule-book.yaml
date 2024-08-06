@@ -87,7 +87,7 @@ jobs:
 
       - name: Install pdfinfo
         if: ${{ matrix.language == 'en' }}
-        run: sudo apt-get install -y poppler-utils
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
 
       - name: Check number of pages
         id: check_pages
@@ -197,7 +197,7 @@ jobs:
 
     steps:
       - name: Install pdfinfo
-        run: sudo apt-get install -y poppler-utils
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
 
 
       - name: Download PDFs
