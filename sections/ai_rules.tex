@@ -51,19 +51,19 @@ Any differences to the above will be described in any given Scenario's own rules
   \end{itemize}\vspace*{\fill}
 \end{multicols*}
 
-AI Heroes use two automated Decks during Combat: the \textbf{AI Deck}, and the \textbf{Spell Deck}.
-The AI Deck is built using three types of AI cards: Might \includesvg[height=10px]{\svgs/might.svg}, Magic \includesvg[height=10px]{\svgs/magic.svg} and Skill \includesvg[height=10px]{\svgs/skill.svg}.
-Each Campaign scenario lists the number of each type of Card included in the AI Deck.
-Might \includesvg[height=10px]{\svgs/might.svg} and Skill \includesvg[height=10px]{\svgs/skill.svg} Cards have two variations. Choose these cards \textbf{randomly} when building the Deck.
+AI Heroes use two Decks during Combat: the \textbf{AI Deck}, and the \textbf{AI Spell Deck}.
+The AI Deck consists of three types of AI cards: Might \svg{might}, Magic \svg{magic} and Skill \svg{skill}.
+Each Campaign scenario lists the number and types of Cards to include during setup.
+Choose these cards \textbf{randomly} when building the Deck.
 If Skill Cards are included, search for and set aside the Ability Card related to it.
-Build the AI's \textbf{Spell Deck} by separating the indicated Spells from the regular Spell Deck.
-Shuffle the AI and Spell Decks during setup after building them.
+Build the \textbf{AI Spell Deck} by separating the indicated Spells from the regular Spell Deck.
+Shuffle these Decks during setup after building them.
 
 When an AI Hero \textbf{Activates} a Unit, draw an AI Card\index{AI Card} and follow its instructions before the Unit moves and/or attacks.
 If AI Deck is depleted during Combat, stop drawing from it.
 The effect of each AI card depends of the game's \pagelink{Difficulty}{Difficulty}.
-The Might Card \includesvg[height=10px]{\svgs/might.svg} is attached to the unit until the first respective attack/defence happens.
-The AI Spell Deck is used whenever a Magic Card \includesvg[height=10px]{\svgs/magic.svg} is drawn.
+The Might Card \svg{might} is attached to the unit until the first respective attack/defence happens.
+The AI Spell Deck is used whenever a Magic Card \svg{magic} is drawn.
 If an AI Hero is instructed to draw a card, they will draw and resolve \textbf{another card} from the AI Deck.
 
 \subsection*{Combat against AI}
@@ -72,27 +72,27 @@ If an AI Hero is instructed to draw a card, they will draw and resolve \textbf{a
 When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\par
 
 \begin{itemize}
-  \item Enemy Ground \includesvg[height=10px]{\svgs/unit_ground.svg} and Flying \includesvg[height=10px]{\svgs/unit_flying.svg} Units prioritize attacking Units of the \textbf{same} tier.
+  \item Enemy Ground \svg{unit_ground} and Flying \svg{unit_flying} Units prioritize attacking Units of the \textbf{same} tier.
   If this is impossible, they attack the Unit of a lower tier (in tier \textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \textbf{ascending} order).\par
 
-  \textit{Example: \includesvg[height=10px]{\svgs/golden.svg}\includesvg[height=10px]{\svgs/unit_ground.svg} has this priority:
-  \includesvg[height=10px]{\svgs/golden.svg}
-  - \includesvg[height=10px]{\svgs/silver.svg}
-  - \includesvg[height=10px]{\svgs/bronze.svg}
-  - \includesvg[height=10px]{\svgs/azure.svg}.}
+  \textit{Example: \svg{golden}\svg{unit_ground} has this priority:
+  \svgunit{golden}
+  - \svgunit{silver}
+  - \svgunit{bronze}
+  - \svgunit{azure}.}
 
-  \item Ranged \includesvg[height=10px]{\svgs/unit_ranged.svg} Units prioritize attacking other Ranged \includesvg[height=10px]{\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.
-  If there are no Ranged \includesvg[height=10px]{\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \includesvg[height=10px]{\svgs/unit_ground.svg} and Flying \includesvg[height=10px]{\svgs/unit_flying.svg} Units in the same tier order.\par
+  \item Ranged \svg{unit_ranged} Units prioritize attacking other Ranged \svg{unit_ranged} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.
+  If there are no Ranged \svg{unit_ranged} Units for them to target, they prioritize Ground \svg{unit_ground} and Flying \svg{unit_flying} Units in the same tier order.\par
 
-  \textit{Example: \includesvg[height=10px]{\svgs/silver.svg}\includesvg[height=10px]{\svgs/unit_ranged.svg} has this priority:
-  \includesvg[height=10px]{\svgs/silver.svg}\includesvg[height=10px]{\svgs/unit_ranged.svg}
-  - \includesvg[height=10px]{\svgs/bronze.svg}\includesvg[height=10px]{\svgs/unit_ranged.svg}
-  - \includesvg[height=10px]{\svgs/golden.svg}\includesvg[height=10px]{\svgs/unit_ranged.svg}
-  - \includesvg[height=10px]{\svgs/azure.svg}\includesvg[height=10px]{\svgs/unit_ranged.svg}
-  - \includesvg[height=10px]{\svgs/silver.svg}\includesvg[height=10px]{\svgs/unit_ground.svg}\includesvg[height=10px]{\svgs/unit_flying.svg}
-  - \includesvg[height=10px]{\svgs/bronze.svg}\includesvg[height=10px]{\svgs/unit_ground.svg}\includesvg[height=10px]{\svgs/unit_flying.svg}
-  - \includesvg[height=10px]{\svgs/golden.svg}\includesvg[height=10px]{\svgs/unit_ground.svg}\includesvg[height=10px]{\svgs/unit_flying.svg}
-  - \includesvg[height=10px]{\svgs/azure.svg}\includesvg[height=10px]{\svgs/unit_ground.svg}\includesvg[height=10px]{\svgs/unit_flying.svg}.}
+  \textit{Example: \svg{silver}\svg{unit_ranged} has this priority:
+  \svg{silver}\svg{unit_ranged}
+  - \svgunit{bronze}\svg{unit_ranged}
+  - \svgunit{golden}\svg{unit_ranged}
+  - \svgunit{azure}\svg{unit_ranged}
+  - \svgunit{silver}\svg{unit_ground}\svg{unit_flying}
+  - \svgunit{bronze}\svg{unit_ground}\svg{unit_flying}
+  - \svgunit{golden}\svg{unit_ground}\svg{unit_flying}
+  - \svgunit{azure}\svg{unit_ground}\svg{unit_flying}.}
 \end{itemize}
 
 In both cases, if there's more than one valid target, they attack the closest one.

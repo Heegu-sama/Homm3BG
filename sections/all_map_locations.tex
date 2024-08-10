@@ -13,20 +13,20 @@
   \begin{tabularx}{\linewidth}{Y m{0.8\linewidth}}
     \small
     \mbox{\textbf{I-VII}} & Field Difficulty corresponding to the level of Neutral Units.\smallskip \\
-    \includesvg[height=15px]{\svgs/treasure.svg} & \parbox{0.7\hsize}{
-      Roll a \pagetarget{Treasure Die}{Treasure Die}\index{Treasure Die}\index{Dice} and gain the indicated bonus (\includesvg[height=10px]{\svgs/resource_die.svg}, \includesvg[height=10px]{\svgs/2_treasure_die.svg}, \includesvg[height=10px]{\svgs/experience.svg}, or \includesvg[height=10px]{\svgs/artifact.svg}).
+    \svg[15]{treasure} & \parbox{0.7\hsize}{
+      Roll a \pagetarget{Treasure Die}{Treasure Die}\index{Treasure Die}\index{Dice} and gain the indicated bonus (\svg{resource_die}, \svg{2_treasure_die}, \svg{experience}, or \svg{artifact}).
     }
     \begin{tikzpicture}[overlay]
       \node at (1, 0.25) {\includegraphics[width=0.2\linewidth]{\images/treasure_die.png}};
     \end{tikzpicture} \\
-    \includesvg[height=15px]{\svgs/resource_die.svg} & Roll a \pagelink{Resources}{Resource Die} and gain the indicated Resources. \\
-    \includesvg[height=15px]{\svgs/2_treasure_die.svg} & Roll 2 Resource Dice and choose the bonus from one of them. \\
-    \includesvg[height=15px]{\svgs/experience.svg} & Gain one Experience Point. \\
-    \includesvg[height=15px]{\svgs/artifact.svg} & Search (2) the Artifact Deck. \\
-    \includesvg[height=15px]{\svgs/spellpower.svg} & Search (2) the Spell Deck. \\
-    \includesvg[height=15px]{\svgs/morale_positive.svg} & Gain Positive Morale. \\
-    \includesvg[height=15px]{\svgs/morale_negative.svg} & Gain Negative Morale. \\
-    \includesvg[height=15px]{\svgs/movement.svg} & Gain 1 Movement Point for this turn. \\
+    \svg[15]{resource_die} & Roll a \pagelink{Resources}{Resource Die} and gain the indicated Resources. \\
+    \svg[15]{2_treasure_die} & Roll 2 Resource Dice and choose the bonus from one of them. \\
+    \svg[15]{experience} & Gain one Experience Point. \\
+    \svg[15]{artifact} & Search (2) the Artifact Deck. \\
+    \svg[15]{spellpower} & Search (2) the Spell Deck. \\
+    \svg[15]{morale_positive} & Gain Positive Morale. \\
+    \svg[15]{morale_negative} & Gain Negative Morale. \\
+    \svg[15]{movement} & Gain 1 Movement Point for this turn. \\
     {\huge\textbf{?}} & Special effect, see \pagelink{Revisitable Fields}{Revisitable} or \pagelink{Other Fields}{Other} fields.\\
   \end{tabularx}
 \endgroup
@@ -35,18 +35,18 @@
 
 \begin{itemize}[itemsep=0.4em]
   \item [{\LARGE\textbf{+}}]
-    \includesvg[height=0.8\baselineskip]{\svgs/gold.svg}/\includesvg[height=0.8\baselineskip]{\svgs/building_materials.svg}/\includesvg[height=0.8\baselineskip]{\svgs/valuablegreater.svg} —
+    \svg{gold}/\svg{building_materials}/\svg{valuablegreater} —
     Immediately gain the indicated Resource.
-  \item [{\includesvg[height=15px]{\svgs/ongoing.svg}}]
-    \includesvg[height=0.8\baselineskip]{\svgs/gold.svg}/\includesvg[height=0.8\baselineskip]{\svgs/building_materials.svg}/\includesvg[height=0.8\baselineskip]{\svgs/valuablegreater.svg} —
+  \item [{\svg[15]{ongoing}}]
+    \svg{gold}/\svg{building_materials}/\svg{valuablegreater} —
     Increase the production of the indicated Resource.
     If it is \textbf{Flagged} for the first time, you also gain it immediately.
-  \item [{\includesvg[height=0.8\baselineskip]{\svgs/pay_v2.svg}}]
-    \includesvg[height=0.8\baselineskip]{\svgs/gold.svg}/\includesvg[height=0.8\baselineskip]{\svgs/building_materials.svg}/\includesvg[height=0.8\baselineskip]{\svgs/valuablegreater.svg} \includesvg[height=0.8\baselineskip]{\svgs/arrow_right.svg} —
+  \item [{\svg{pay_v2}}]
+    \svg{gold}/\svg{building_materials}/\svg{valuablegreater} \svg{arrow_right} —
     The Player needs to pay the indicated Resource to gain something.
   \item [{\LARGE\textbf{2}}] {\LARGE\textbf{x}} —
     Perform the {\LARGE\textbf{x}} action twice.
-  \item [{\LARGE\textbf{2}}] \includesvg[height=0.8\baselineskip]{\svgs/treasure.svg}/{\LARGE\textbf{2}} \includesvg[height=0.8\baselineskip]{\svgs/resource_die.svg} \includesvg[height=0.8\baselineskip]{\svgs/arrow_right.svg}{\LARGE\textbf{1}} —
+  \item [{\LARGE\textbf{2}}] \svg[15]{treasure}{\LARGE\textbf{/2}} \svg[15]{resource_die} \svg[15]{arrow_right}{\LARGE\textbf{1}} —
     Roll 2 Treasure or Resource Dice and choose one to be resolved.
 \end{itemize}
 
@@ -127,7 +127,7 @@ The effects of the following \textbf{Visitable} fields are explained by the symb
 
   \phantom{j}\textbf{Windmill}\\
   \framedimage[\linewidth]{\map_locations/windmill.jpg}
-  {\small Due to a misprint, the Windmill on the tile \texttt{\#N3} has a \textbf{?}. It should be ``\textbf{+}1 \includesvg[height=0.8\baselineskip]{\svgs/valuablegreater.svg}''.}
+  {\small Due to a misprint, the Windmill on the tile \texttt{\#N3} has a \textbf{?}. It should be ``\textbf{+}1 \svg{valuablegreater}''.}
 }
 
 \vspace*{\fill}
@@ -152,22 +152,22 @@ You also do not gain access to their Town board or Faction Units, unlike in the 
 
 \pagetarget{Mines}{\textbf{Mines}}\index{Mines} are Flaggable Fields which increase a specific resource's income when Flagged.
 If you are the first one to Flag a mine, it also immediately provides you with its income.
-All mines have the \includesvg[height=10px]{\svgs/ongoing.svg} symbol and a picture of the Resource they produce next to it.
+All mines have the \svg{ongoing} symbol and a picture of the Resource they produce next to it.
 
 \begin{center}
   \includegraphics[width=0.55\linewidth]{\images/mine_example.png}\\
-  \textit{A mine that produces \includesvg[height=10px]{\svgs/valuablegreater.svg}, guarded by Level 3 Neutral Units.
-    The first player to Flag this Field would immediately gain one \includesvg[height=10px]{\svgs/valuablegreater.svg} in addition to increasing their \includesvg[height=10px]{\svgs/valuablegreater.svg} income.
+  \textit{A mine that produces \svg{valuablegreater}, guarded by Level 3 Neutral Units.
+    The first player to Flag this Field would immediately gain one \svg{valuablegreater} in addition to increasing their \svg{valuablegreater} income.
   }
 \end{center}
 \columnbreak
 
 \textbf{Settlements}\index{Settlement} act as a spawn point for Secondary Heroes, and as a place for Main Heroes to move to when defeated.
-When you Flag a Settlement, choose whether to increase your \includesvg[height=10px]{\svgs/gold.svg}, \includesvg[height=10px]{\svgs/building_materials.svg} or \includesvg[height=10px]{\svgs/valuablegreater.svg} income by one space.
+When you Flag a Settlement, choose whether to increase your \svg{gold}, \svg{building_materials} or \svg{valuablegreater} income by one space.
 As with Mines, if you are the first player to Flag a Settlement, you \textbf{immediately} gain Resources equal to that increase in production.
 Mark the Settlement with an appropriate Resource Token to show which Resource it produces.
 When you Flag an enemy Settlement, you may change this Resource.\par
-Additionally, \textbf{instead of increasing Resource Production}, you may choose to \textbf{Reinforce} one of your \includesvg[height=10px]{\svgs/bronze.svg} or \includesvg[height=10px]{\svgs/silver.svg} Units immediately for half the normal cost, rounded up.
+Additionally, \textbf{instead of increasing Resource Production}, you may choose to \textbf{Reinforce} one of your \svgunit{bronze} or \svgunit{silver} Units immediately for half the normal cost, rounded up.
 If you were the first player to Flag the Settlement, Reinforce that Unit \textbf{for free} instead.
 Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
 
@@ -199,8 +199,8 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
     \textbf{Library}\par
     \framedimage[\textwidth]{\map_locations/library.jpg}
     \caption{\small Category: \textbf{Revisitable}\\You may
-      \includesvg[height=8px]{\svgs/pay_v2.svg}
-      3 \includesvg[height=8px]{\svgs/gold.svg}
+      \svg{pay_v2}
+      3 \svg{gold}
       to Remove 1 Statistic Card from your hand or Discard Pile and replace it with any other Statistic Card.
       You may do this twice per Visit.}
   \end{minipage}\hfill
@@ -214,9 +214,9 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
       You may buy one of them for:
       \begin{itemize}
       \setlength\itemsep{-4pt}
-        \item [5] \includesvg[height=8px]{\svgs/gold.svg} if it is a \textbf{Minor} Artifact
-        \item [7] \includesvg[height=8px]{\svgs/gold.svg} if it is a \textbf{Major} Artifact
-        \item [10] \includesvg[height=8px]{\svgs/gold.svg} if it is a \textbf{Relic} Artifact
+        \item [5] \svg{gold} if it is a \textbf{Minor} Artifact
+        \item [7] \svg{gold} if it is a \textbf{Major} Artifact
+        \item [10] \svg{gold} if it is a \textbf{Relic} Artifact
       \end{itemize}
       }
   \end{minipage}
@@ -238,8 +238,8 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
     \phantom{j}\textbf{Tavern}\par
     \framedimage[\textwidth]{\map_locations/tavern.jpg}
     \caption{\small Category: \textbf{Revisitable}\\
-      You can \includesvg[height=8px]{\svgs/pay_v2.svg}
-      7 \includesvg[height=8px]{\svgs/gold.svg}
+      You can \svg{pay_v2}
+      7 \svg{gold}
       to gain a Secondary Hero.
       Place their model on this Field.
       Then, choose one enemy player to discard 1 random card from their hand.}
@@ -272,7 +272,7 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
     \phantom{j}\textbf{Stables}\par
     \framedimage[\textwidth]{\map_locations/stables.jpg}
     \caption{\small Category: \textbf{Revisitable}\\
-      Gain 1 MP \includesvg[height=8px]{\svgs/movement.svg}.
+      Gain 1 \svgeven{movement}.
       It lasts for only one Turn.
       See \protect\pagelink{Movement}{Movement Actions}.
     }
@@ -292,10 +292,10 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
     \textbf{Tree of Knowledge}\par
     \framedimage[\linewidth]{\map_locations/tree_of_knowledge.jpg}
     \caption{\small Category: \textbf{Visitable}\\You may
-      \includesvg[height=8px]{\svgs/pay_v2.svg}
-       3 \includesvg[height=8px]{\svgs/valuablegreater.svg} or
-       10 \includesvg[height=8px]{\svgs/gold.svg} to gain
-       2 \includesvg[height=8px]{\svgs/experience.svg}.}
+      \svg{pay_v2}
+       3 \svg{valuablegreater} or
+       10 \svg{gold} to gain
+       2 \svg{experience}.}
   \end{minipage}\hfill
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
@@ -335,8 +335,8 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
     \phantom{j}\textbf{Hill Fort}\par
     \framedimage[\linewidth]{\map_locations/hill_fort.jpg}
     \caption{\small Category: \textbf{Visitable}\\
-      You may immediately Reinforce one of your \includesvg[height=8px]{\svgs/bronze.svg} or \includesvg[height=8px]{\svgs/silver.svg} Units.
-      The Reinforcement cost is reduced by 3 \includesvg[height=8px]{\svgs/gold.svg} to a minimum of 0.}
+      You may immediately Reinforce one of your \svgunit{bronze} or \svgunit{silver} Units.
+      The Reinforcement cost is reduced by 3 \svg{gold} to a minimum of 0.}
   \end{minipage}\hfill
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
@@ -346,7 +346,7 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
     \caption{\small Category: \textbf{Visitable}\\
       Gain a Secondary Hero.
       Place their model on this Field.
-      If you already have a Secondary Hero, gain 3 \includesvg[height=8px]{\svgs/gold.svg} instead.}
+      If you already have a Secondary Hero, gain 3 \svg{gold} instead.}
   \end{minipage}
 \end{figure}
 
@@ -391,9 +391,9 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
       Depending on the result, do the following:
       \begin{itemize}
         \setlength\itemsep{-0.2em}
-        \item[ \textbf{+1}] - Gain a Statistic Card of your choice or Remove a Statistic Card from your hand.
-        \item[\textbf{0}] - Draw 2 Cards from the Ability Deck, gain one of them and discard the other.
-        \item[\textbf{-1}] - Draw 2 Cards from the Spell Deck, gain one of them and discard the other.
+        \item[ \textbf{+1}] -- Gain a Statistic Card of your choice or Remove a Statistic Card from your hand.
+        \item[\textbf{0}] -- Draw 2 Cards from the Ability Deck, gain one of them and discard the other.
+        \item[\textbf{-1}] -- Draw 2 Cards from the Spell Deck, gain one of them and discard the other.
         \end{itemize}
        }
   \end{minipage}
@@ -413,7 +413,7 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
     \textbf{University}\par
     \framedimage[\linewidth]{\map_locations/university.jpg}
     \caption{\small Category: \textbf{Visitable}\\
-      \includesvg[height=8px]{\svgs/pay_v2.svg} 6 \includesvg[height=8px]{\svgs/gold.svg} to \textbf{Search (4)} the Ability Discard Pile.}
+      \svg{pay_v2} 6 \svg{gold} to \textbf{Search (4)} the Ability Discard Pile.}
   \end{minipage}
 \end{figure}
 
@@ -436,12 +436,12 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
 {\centering\textbf{\pagetarget{Random Town}{Random Town}\index{Random Town}}\par}
 \framedimage[\linewidth]{\map_locations/random_town.jpg}
 {\small Category: \textbf{Flaggable}\\
-  When revealed, all players roll 2 \includesvg[height=10px]{\svgs/resource_die.svg}.
+  When revealed, all players roll 2 \svg{resource_die}.
   The highest roller chooses an unused Faction.
   The random Town is defended by Units from that Faction.
-  They have a ``Pack'' of \includesvg[height=10px]{\svgs/bronze.svg}, two ``Packs'' of \includesvg[height=10px]{\svgs/silver.svg}, and two ``Fews'' of \includesvg[height=10px]{\svgs/golden.svg} Units.
-  The \includesvg[height=10px]{\svgs/bronze.svg} Unit is chosen by the player who controls the Units during that Combat.
-  Flagging it increases \includesvg[height=10px]{\svgs/gold.svg} production by 10, which is also gained immediately if you are the first to Flag it.
+  They have a ``Pack'' of \svgunit{bronze}, two ``Packs'' of \svgunit{silver}, and two ``Fews'' of \svgunit{golden} Units.
+  The \svgunit{bronze} Unit is chosen by the player who controls the Units during that Combat.
+  Flagging it increases \svg{gold} production by 10, which is also gained immediately if you are the first to Flag it.
 }
 
 \end{multicols*}
