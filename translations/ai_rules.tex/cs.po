@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-07-24 22:55+0300\n"
+"POT-Creation-Date: 2024-08-10 22:57+0200\n"
 "PO-Revision-Date: 2024-06-03 10:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -41,7 +41,7 @@ msgstr ""
 #: sections/map_elements.tex:124 sections/player_turns.tex:7
 #: sections/resources.tex:7 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:58 sections/town.tex:5
-#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:160
+#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:162
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -114,7 +114,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:32 sections/ai_rules.tex:104 sections/combat.tex:47
-#: sections/combat.tex:190 sections/expansion_content.tex:67
+#: sections/combat.tex:185 sections/expansion_content.tex:67
 #: sections/heroes.tex:34
 #, no-wrap
 msgid ""
@@ -174,15 +174,24 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_rules.tex:61
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "AI Heroes use two automated Decks during Combat: the \\textbf{AI Deck}, and the \\textbf{Spell Deck}.\n"
+#| "The AI Deck is built using three types of AI cards: Might \\includesvg[height=10px]{\\svgs/might.svg}, Magic \\includesvg[height=10px]{\\svgs/magic.svg} and Skill \\includesvg[height=10px]{\\svgs/skill.svg}.\n"
+#| "Each Campaign scenario lists the number of each type of Card included in the AI Deck.\n"
+#| "Might \\includesvg[height=10px]{\\svgs/might.svg} and Skill \\includesvg[height=10px]{\\svgs/skill.svg} Cards have two variations. Choose these cards \\textbf{randomly} when building the Deck.\n"
+#| "If Skill Cards are included, search for and set aside the Ability Card related to it.\n"
+#| "Build the AI's \\textbf{Spell Deck} by separating the indicated Spells from the regular Spell Deck.\n"
+#| "Shuffle the AI and Spell Decks during setup after building them.\n"
+#| "\n"
 msgid ""
-"AI Heroes use two automated Decks during Combat: the \\textbf{AI Deck}, and the \\textbf{Spell Deck}.\n"
-"The AI Deck is built using three types of AI cards: Might \\includesvg[height=10px]{\\svgs/might.svg}, Magic \\includesvg[height=10px]{\\svgs/magic.svg} and Skill \\includesvg[height=10px]{\\svgs/skill.svg}.\n"
-"Each Campaign scenario lists the number of each type of Card included in the AI Deck.\n"
-"Might \\includesvg[height=10px]{\\svgs/might.svg} and Skill \\includesvg[height=10px]{\\svgs/skill.svg} Cards have two variations. Choose these cards \\textbf{randomly} when building the Deck.\n"
+"AI Heroes use two Decks during Combat: the \\textbf{AI Deck}, and the \\textbf{AI Spell Deck}.\n"
+"The AI Deck consists of three types of AI cards: Might \\svg{might}, Magic \\svg{magic} and Skill \\svg{skill}.\n"
+"Each Campaign scenario lists the number and types of Cards to include during setup.\n"
+"Choose these cards \\textbf{randomly} when building the Deck.\n"
 "If Skill Cards are included, search for and set aside the Ability Card related to it.\n"
-"Build the AI's \\textbf{Spell Deck} by separating the indicated Spells from the regular Spell Deck.\n"
-"Shuffle the AI and Spell Decks during setup after building them.\n"
+"Build the \\textbf{AI Spell Deck} by separating the indicated Spells from the regular Spell Deck.\n"
+"Shuffle these Decks during setup after building them.\n"
 "\n"
 msgstr ""
 "AI Hrdinové používají během Boje dva Balíčky: \\textbf{AI Balíček} a \\textbf{Balíček Kouzel}.\n"
@@ -196,13 +205,21 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_rules.tex:68
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI Card} and follow its instructions before the Unit moves and/or attacks.\n"
+#| "If AI Deck is depleted during Combat, stop drawing from it.\n"
+#| "The effect of each AI card depends of the game's \\pagelink{Difficulty}{Difficulty}.\n"
+#| "The Might Card \\includesvg[height=10px]{\\svgs/might.svg} is attached to the unit until the first respective attack/defence happens.\n"
+#| "The AI Spell Deck is used whenever a Magic Card \\includesvg[height=10px]{\\svgs/magic.svg} is drawn.\n"
+#| "If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
+#| "\n"
 msgid ""
 "When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI Card} and follow its instructions before the Unit moves and/or attacks.\n"
 "If AI Deck is depleted during Combat, stop drawing from it.\n"
 "The effect of each AI card depends of the game's \\pagelink{Difficulty}{Difficulty}.\n"
-"The Might Card \\includesvg[height=10px]{\\svgs/might.svg} is attached to the unit until the first respective attack/defence happens.\n"
-"The AI Spell Deck is used whenever a Magic Card \\includesvg[height=10px]{\\svgs/magic.svg} is drawn.\n"
+"The Might Card \\svg{might} is attached to the unit until the first respective attack/defence happens.\n"
+"The AI Spell Deck is used whenever a Magic Card \\svg{magic} is drawn.\n"
 "If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
 "\n"
 msgstr ""
@@ -238,10 +255,15 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_rules.tex:77
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{itemize}\n"
+#| "  \\item Enemy Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units prioritize attacking Units of the \\textbf{same} tier.\n"
+#| "  If this is impossible, they attack the Unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
+#| "\n"
 msgid ""
 "\\begin{itemize}\n"
-"  \\item Enemy Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units prioritize attacking Units of the \\textbf{same} tier.\n"
+"  \\item Enemy Ground \\svg{unit_ground} and Flying \\svg{unit_flying} Units prioritize attacking Units of the \\textbf{same} tier.\n"
 "  If this is impossible, they attack the Unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
 "\n"
 msgstr ""
@@ -252,13 +274,20 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_rules.tex:83
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\textit{Example: \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg} has this priority:\n"
+#| "  \\includesvg[height=10px]{\\svgs/golden.svg}\n"
+#| "  - \\includesvg[height=10px]{\\svgs/silver.svg}\n"
+#| "  - \\includesvg[height=10px]{\\svgs/bronze.svg}\n"
+#| "  - \\includesvg[height=10px]{\\svgs/azure.svg}.}\n"
+#| "\n"
 msgid ""
-"  \\textit{Example: \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg} has this priority:\n"
-"  \\includesvg[height=10px]{\\svgs/golden.svg}\n"
-"  - \\includesvg[height=10px]{\\svgs/silver.svg}\n"
-"  - \\includesvg[height=10px]{\\svgs/bronze.svg}\n"
-"  - \\includesvg[height=10px]{\\svgs/azure.svg}.}\n"
+"  \\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority:\n"
+"  \\svgunit{golden}\n"
+"  - \\svgunit{silver}\n"
+"  - \\svgunit{bronze}\n"
+"  - \\svgunit{azure}.}\n"
 "\n"
 msgstr ""
 "  \\textit{Příklad: \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg} má priority:\n"
@@ -270,10 +299,14 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_rules.tex:86
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\item Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units prioritize attacking other Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
+#| "  If there are no Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same tier order.\\par\n"
+#| "\n"
 msgid ""
-"  \\item Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units prioritize attacking other Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
-"  If there are no Ranged \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Units for them to target, they prioritize Ground \\includesvg[height=10px]{\\svgs/unit_ground.svg} and Flying \\includesvg[height=10px]{\\svgs/unit_flying.svg} Units in the same tier order.\\par\n"
+"  \\item Ranged \\svg{unit_ranged} Units prioritize attacking other Ranged \\svg{unit_ranged} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
+"  If there are no Ranged \\svg{unit_ranged} Units for them to target, they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} Units in the same tier order.\\par\n"
 "\n"
 msgstr ""
 "  \\item Střelecké \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Jednotky upřednostňují útok na jiné Střelecké \\includesvg[height=10px]{\\svgs/unit_ranged.svg} Jednotky stejné úrovně, poté nižší úrovně, a nakonec vyšší úrovně, ve stejném pořadí úrovní jako výše.\n"
@@ -284,29 +317,18 @@ msgstr ""
 #: sections/ai_rules.tex:97
 #, no-wrap
 msgid ""
-"  \\textit{Example: \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg} has this priority:\n"
-"  \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
-"  - \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
-"  - \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
-"  - \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
-"  - \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
-"  - \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
-"  - \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
-"  - \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}.}\n"
+"  \\textit{Example: \\svg{silver}\\svg{unit_ranged} has this priority:\n"
+"  \\svg{silver}\\svg{unit_ranged}\n"
+"  - \\svgunit{bronze}\\svg{unit_ranged}\n"
+"  - \\svgunit{golden}\\svg{unit_ranged}\n"
+"  - \\svgunit{azure}\\svg{unit_ranged}\n"
+"  - \\svgunit{silver}\\svg{unit_ground}\\svg{unit_flying}\n"
+"  - \\svgunit{bronze}\\svg{unit_ground}\\svg{unit_flying}\n"
+"  - \\svgunit{golden}\\svg{unit_ground}\\svg{unit_flying}\n"
+"  - \\svgunit{azure}\\svg{unit_ground}\\svg{unit_flying}.}\n"
 "\\end{itemize}\n"
 "\n"
 msgstr ""
-"  \\textit{Příklad: \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg} má priority:\n"
-"  \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
-"  - \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
-"  - \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
-"  - \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ranged.svg}\n"
-"  - \\includesvg[height=10px]{\\svgs/silver.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
-"  - \\includesvg[height=10px]{\\svgs/bronze.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
-"  - \\includesvg[height=10px]{\\svgs/golden.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}\n"
-"  - \\includesvg[height=10px]{\\svgs/azure.svg}\\includesvg[height=10px]{\\svgs/unit_ground.svg}\\includesvg[height=10px]{\\svgs/unit_flying.svg}.}\n"
-"\\end{itemize}\n"
-"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:100

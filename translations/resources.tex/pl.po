@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-07-01 14:14+0100\n"
+"POT-Creation-Date: 2024-08-10 22:57+0200\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -30,14 +30,14 @@ msgstr ""
 #. type: multicols
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
 #: sections/all_map_locations.tex:421 sections/combat.tex:5
-#: sections/combat.tex:141 sections/credits.tex:10 sections/deckbuilding.tex:7
+#: sections/credits.tex:10 sections/deckbuilding.tex:7
 #: sections/difficulty.tex:7 sections/expansion_content.tex:7
 #: sections/expansion_content.tex:51 sections/game_modes.tex:5
 #: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:79
 #: sections/map_elements.tex:124 sections/player_turns.tex:7
 #: sections/resources.tex:7 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:58 sections/town.tex:5
-#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:160
+#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:162
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -45,7 +45,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/deckbuilding.tex:78 sections/resources.tex:33
+#: sections/deckbuilding.tex:79 sections/resources.tex:33
 msgid "\\columnbreak"
 msgstr ""
 
@@ -57,11 +57,29 @@ msgstr "\\addsection{Zasoby}{\\skills/estates.png}"
 
 #. type: multicols
 #: sections/resources.tex:25
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\pagetarget{Resources}{There}\\index{Resources} are three types of Resources in the game: Gold \\includesvg[height=10px]{\\svgs/gold.svg}, Building Materials \\includesvg[height=10px]{\\svgs/building_materials.svg}, and Valuables \\includesvg[height=10px]{\\svgs/valuablegreater.svg}.\n"
+#| "Resources are spent during the game to expand your \\pagelink{Town}{Town}, to Recruit \\pagelink{Units}{Units}, and to purchase \\pagelink{spells}{Spells}.\n"
+#| "You can gain Resources from the \\pagelink{Mines}{Settlements and Mines} that you have \\pagelink{Categories}{Flagged}, and also by playing Cards and rolling Resource Dice \\includesvg[height=10px]{\\svgs/resource_die.svg}.\n"
+#| "Whenever a player's Resource Production is increased or decreased, move that Resource's cube on its production track the appropriate number of spaces.\\par\n"
+#| "\\begin{multicols}{3}\n"
+#| "  \\centering\n"
+#| "  \\vspace*{\\fill}\n"
+#| "  \\includegraphics[width=0.8\\linewidth]{\\images/gold.png}\n"
+#| "  \\footnotesize\\textcolor{darkcandyapplered}{\\textit{\\textbf{Gold \\phantom{Materials}}}}\n"
+#| "  \\columnbreak\n"
+#| "  \\vspace*{\\fill}\n"
+#| "  \\includegraphics[width=0.8\\linewidth]{\\images/building_materials.png}\n"
+#| "  \\footnotesize\\textcolor{darkcandyapplered}{\\textit{\\textbf{Building Materials}}}\n"
+#| "  \\columnbreak\n"
+#| "  \\vspace*{\\fill}\n"
+#| "  \\includegraphics[width=0.8\\linewidth]{\\images/valuables.png}\n"
+#| "  \\footnotesize\\textcolor{darkcandyapplered}{\\textit{\\textbf{Valuables \\phantom{Materials}}}}"
 msgid ""
-"\\pagetarget{Resources}{There}\\index{Resources} are three types of Resources in the game: Gold \\includesvg[height=10px]{\\svgs/gold.svg}, Building Materials \\includesvg[height=10px]{\\svgs/building_materials.svg}, and Valuables \\includesvg[height=10px]{\\svgs/valuablegreater.svg}.\n"
+"\\pagetarget{Resources}{There}\\index{Resources} are three types of Resources in the game: Gold \\svg{gold}, Building Materials \\svg{building_materials}, and Valuables \\svg{valuablegreater}.\n"
 "Resources are spent during the game to expand your \\pagelink{Town}{Town}, to Recruit \\pagelink{Units}{Units}, and to purchase \\pagelink{spells}{Spells}.\n"
-"You can gain Resources from the \\pagelink{Mines}{Settlements and Mines} that you have \\pagelink{Categories}{Flagged}, and also by playing Cards and rolling Resource Dice \\includesvg[height=10px]{\\svgs/resource_die.svg}.\n"
+"You can gain Resources from the \\pagelink{Mines}{Settlements and Mines} that you have \\pagelink{Categories}{Flagged}, and also by playing Cards and rolling Resource Dice \\svg{resource_die}.\n"
 "Whenever a player's Resource Production is increased or decreased, move that Resource's cube on its production track the appropriate number of spaces.\\par\n"
 "\\begin{multicols}{3}\n"
 "  \\centering\n"
@@ -113,9 +131,13 @@ msgstr "\\textbf{\\textit{Tor Przychodu}}"
 
 #. type: Plain text
 #: sections/resources.tex:51
+#, fuzzy
+#| msgid ""
+#| "Possible Resource Die\\index{Resource Die}\\index{Dice} "
+#| "\\includesvg[height=10px]{\\svgs/resource_die.svg} results:"
 msgid ""
-"Possible Resource Die\\index{Resource Die}\\index{Dice} "
-"\\includesvg[height=10px]{\\svgs/resource_die.svg} results:"
+"Possible Resource Die\\index{Resource Die}\\index{Dice} \\svg{resource_die} "
+"results:"
 msgstr ""
 "Rzucając \\index{Kość Zasobów}\\index{Kość} Kością Zasobów "
 "\\includesvg[height=10px]{\\svgs/resource_die.svg}, możesz zyskać:"
@@ -127,40 +149,54 @@ msgstr ""
 
 #. type: itemize
 #: sections/resources.tex:51
-msgid ""
-"[{\\includesvg[height=15px]{\\svgs/2_building_materials.svg}}] — 2 × "
-"Building Materials"
+#, fuzzy
+#| msgid ""
+#| "[{\\includesvg[height=15px]{\\svgs/2_building_materials.svg}}] — 2 × "
+#| "Building Materials"
+msgid "[{\\svg[15]{2_building_materials}}] — 2 × Building Materials"
 msgstr ""
 "[{\\includesvg[height=15px]{\\svgs/2_building_materials.svg}}] — 2 × Budulce"
 
 #. type: itemize
 #: sections/resources.tex:51
-msgid ""
-"[{\\includesvg[height=15px]{\\svgs/4_building_materials.svg}}] — 4 × "
-"Building Materials"
+#, fuzzy
+#| msgid ""
+#| "[{\\includesvg[height=15px]{\\svgs/4_building_materials.svg}}] — 4 × "
+#| "Building Materials"
+msgid "[{\\svg[15]{4_building_materials}}] — 4 × Building Materials"
 msgstr ""
 "[{\\includesvg[height=15px]{\\svgs/4_building_materials.svg}}] — 4 × Budulce"
 
 #. type: itemize
 #: sections/resources.tex:51
-msgid "[{\\includesvg[height=15px]{\\svgs/1_valuables.svg}}] — 1 × Valuables"
+#, fuzzy
+#| msgid ""
+#| "[{\\includesvg[height=15px]{\\svgs/1_valuables.svg}}] — 1 × Valuables"
+msgid "[{\\svg[15]{1_valuables}}] — 1 × Valuables"
 msgstr ""
 "[{\\includesvg[height=15px]{\\svgs/1_valuables.svg}}] — 1 × Kosztowności"
 
 #. type: itemize
 #: sections/resources.tex:51
-msgid "[{\\includesvg[height=15px]{\\svgs/2_valuables.svg}}] — 2 × Valuables"
+#, fuzzy
+#| msgid ""
+#| "[{\\includesvg[height=15px]{\\svgs/2_valuables.svg}}] — 2 × Valuables"
+msgid "[{\\svg[15]{2_valuables}}] — 2 × Valuables"
 msgstr ""
 "[{\\includesvg[height=15px]{\\svgs/2_valuables.svg}}] — 2 × Kosztowności"
 
 #. type: itemize
 #: sections/resources.tex:51
-msgid "[{\\includesvg[height=15px]{\\svgs/3_gold.svg}}] — 3 × Gold"
+#, fuzzy
+#| msgid "[{\\includesvg[height=15px]{\\svgs/3_gold.svg}}] — 3 × Gold"
+msgid "[{\\svg[15]{3_gold}}] — 3 × Gold"
 msgstr "[{\\includesvg[height=15px]{\\svgs/3_gold.svg}}] — 3 × Złoto"
 
 #. type: itemize
 #: sections/resources.tex:51
-msgid "[{\\includesvg[height=15px]{\\svgs/6_gold.svg}}] — 6 × Gold"
+#, fuzzy
+#| msgid "[{\\includesvg[height=15px]{\\svgs/6_gold.svg}}] — 6 × Gold"
+msgid "[{\\svg[15]{6_gold}}] — 6 × Gold"
 msgstr "[{\\includesvg[height=15px]{\\svgs/6_gold.svg}}] — 6 × Złoto"
 
 #. type: tikzpicture
