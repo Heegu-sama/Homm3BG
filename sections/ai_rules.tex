@@ -75,7 +75,7 @@ When Neutral enemies or AI Heroes activate a unit, they follow a set of automati
   \item Enemy Ground \svg{unit_ground} and Flying \svg{unit_flying} Units prioritize attacking Units of the \textbf{same} tier.
   If this is impossible, they attack the Unit of a lower tier (in tier \textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \textbf{ascending} order).\par
 
-  \textit{Example: \svg{golden}\svg{unit_ground} has this priority:
+  \textit{Example: \svgunit{golden}\svg{unit_ground} has this priority:
   \svgunit{golden}
   - \svgunit{silver}
   - \svgunit{bronze}
@@ -84,8 +84,8 @@ When Neutral enemies or AI Heroes activate a unit, they follow a set of automati
   \item Ranged \svg{unit_ranged} Units prioritize attacking other Ranged \svg{unit_ranged} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.
   If there are no Ranged \svg{unit_ranged} Units for them to target, they prioritize Ground \svg{unit_ground} and Flying \svg{unit_flying} Units in the same tier order.\par
 
-  \textit{Example: \svg{silver}\svg{unit_ranged} has this priority:
-  \svg{silver}\svg{unit_ranged}
+  \textit{Example: \svgunit{silver}\svg{unit_ranged} has this priority:
+  \svgunit{silver}\svg{unit_ranged}
   - \svgunit{bronze}\svg{unit_ranged}
   - \svgunit{golden}\svg{unit_ranged}
   - \svgunit{azure}\svg{unit_ranged}
