@@ -13,9 +13,9 @@ Each Faction Unit is double-sided, with a weaker ``Few'' side, and a stronger ``
 Units should be always kept on their correct side when moved or inspected.\par
 A player's Unit Deck may have any number of Units, but \textbf{only up to 5 Units} can be selected to fight during \pagelink{Combatsetup}{Combat Setup}.
 If a Unit is defeated in Combat, \textbf{discard it} from your Unit Deck.\par
-Units may be Recruited\index{Recruiting} and Reinforced\index{Reinforcing} by flipping the Population Token\index{Population Token} and paying the Unit's Recruitment \includesvg[height=10px]{\svgs/pay.svg} or Reinforcement \includesvg[height=10px]{\svgs/reinforce.svg} cost.
+Units may be Recruited\index{Recruiting} and Reinforced\index{Reinforcing} by flipping the Population Token\index{Population Token} and paying the Unit's Recruitment \svg{pay} or Reinforcement \svgeven{reinforce} cost.
 When you do so, you can instantly Recruit and Reinforce \textbf{any number} of times, provided you have enough Resources and the prerequisite Buildings to do so.\par
-\textbf{Recruiting} a Unit requires that your Town has a Dwelling of that Unit's Level (\includesvg[height=10px]{\svgs/bronze.svg}\includesvg[height=10px]{\svgs/silver.svg}\includesvg[height=10px]{\svgs/golden.svg}).
+\textbf{Recruiting} a Unit requires that your Town has a Dwelling of that Unit's Level (\svgunit{bronze}\svgunit{silver}\svgunit{golden}).
 \textbf{Reinforcing} requires that your Town has a Citadel in addition to a Dwelling of that Unit's Level.\par
 
 \note{13}{
@@ -88,13 +88,13 @@ Units with a higher Initiative Activate first.
 
 Most Units have a \textbf{special ability}\index{Special Ability}:\par
 \begin{itemize}[wide]
-  \item\textbf{Activation} \includesvg[height=10px]{\svgs/activation.svg} resolves when the Unit is Activated.
-  \item\textbf{Attack} \includesvg[height=10px]{\svgs/unit_attack.svg} resolves when the Unit attacks during its Activation.
+  \item\textbf{Activation} \svg{activation} resolves when the Unit is Activated.
+  \item\textbf{Attack} \svg{unit_attack} resolves when the Unit attacks during its Activation.
     In case of multiple attacks, resolve the effect for \textbf{the first attack only}.
-  \item\textbf{Other} \includesvg[height=10px]{\svgs/unit_other.svg} may be resolved instead of the Unit's normal Activation.
+  \item\textbf{Other} \svg{unit_other} may be resolved instead of the Unit's normal Activation.
     It replaces all movement and/or attacking.
-  \item\textbf{Passive} \includesvg[height=10px]{\svgs/unit_passive.svg} resolves whenever its condition is met.
-  \item\textbf{Retaliate} \includesvg[height=10px]{\svgs/unit_retaliate.svg} resolves when the Unit retaliates.
+  \item\textbf{Passive} \svg{unit_passive} resolves whenever its condition is met.
+  \item\textbf{Retaliate} \svg{unit_retaliate} resolves when the Unit retaliates.
   \item In any other cases without one of the above icons, the Unit's ability is used according to its text.
     Units may also use symbols representing \pagelink{Card Effects}{Card Effects}.
 \end{itemize}
@@ -106,20 +106,20 @@ Most Units have a \textbf{special ability}\index{Special Ability}:\par
 \subsection*{\pagetarget{Unittype}{Unit Types}}
 There are three types of Units:
 \begin{itemize}
-  \item \textbf{Ground}\index{Ground Units} \includesvg[height=10px]{\svgs/unit_ground.svg} Units may move up to 3 spaces and then attack an adjacent enemy.
-  \item \textbf{Flying}\index{Flying Units} \includesvg[height=10px]{\svgs/unit_flying.svg} Units may move up to 3 spaces, \textbf{ignoring Combat Obstacles}, and then attack an adjacent enemy.
-  \item \textbf{Ranged}\index{Ranged Units} \includesvg[height=10px]{\svgs/unit_ranged.svg} Units may attack \textbf{any enemy Unit anywhere} and then move up to 1 space OR move up to 1 space without attacking.
+  \item \textbf{Ground}\index{Ground Units} \svg{unit_ground} Units may move up to 3 spaces and then attack an adjacent enemy.
+  \item \textbf{Flying}\index{Flying Units} \svgeven{unit_flying} Units may move up to 3 spaces, \textbf{ignoring Combat Obstacles}, and then attack an adjacent enemy.
+  \item \textbf{Ranged}\index{Ranged Units} \svg{unit_ranged} Units may attack \textbf{any enemy Unit anywhere} and then move up to 1 space OR move up to 1 space without attacking.
 \end{itemize}
-If a \includesvg[height=10px]{\svgs/unit_ranged.svg} Unit is next to an enemy Unit, its attack target \textbf{must be} that adjacent enemy.
-When attacking an adjacent enemy in this way, the \includesvg[height=10px]{\svgs/unit_ranged.svg} Unit suffers a Combat penalty\index{Combat Penalty}: throw two Attack Dice (instead of one) and \textbf{apply the smaller result}.\par
-This penalty is also applied if the \includesvg[height=10px]{\svgs/unit_ranged.svg} Unit attacks from its own Backline into the enemy's Backline.
-Walls and Gates may also \pagelink{Walls}{reduce} the damage from  \includesvg[height=10px]{\svgs/unit_ranged.svg} attacks.
+If a \svg{unit_ranged} Unit is next to an enemy Unit, its attack target \textbf{must be} that adjacent enemy.
+When attacking an adjacent enemy in this way, the \svg{unit_ranged} Unit suffers a Combat penalty\index{Combat Penalty}: throw two Attack Dice (instead of one) and \textbf{apply the smaller result}.\par
+This penalty is also applied if the \svg{unit_ranged} Unit attacks from its own Backline into the enemy's Backline.
+Walls and Gates may also \pagelink{Walls}{reduce} the damage from  \svg{unit_ranged} attacks.
 
 \subsection*{\pagetarget{Neutral Units}{Neutral Units}}
 Neutral Units\index{Neutral Units} guard the various locations on the Game Map.
 Starting and winning Combat against them is necessary to Visit most Locations.
 Neutral Units are spread into four different tiers, each with their own Deck.
-In addition to \includesvg[height=10px]{\svgs/bronze.svg}, \includesvg[height=10px]{\svgs/silver.svg} and \includesvg[height=10px]{\svgs/golden.svg}, there are also Azure \includesvg[height=10px]{\svgs/azure.svg} Neutral Units which are the strongest in the game.\par
+In addition to \svgunit{bronze}, \svgunit{silver} and \svgunit{golden}, there are also Azure \svgunit{azure} Neutral Units which are the strongest in the game.\par
 Each of these Decks should always be kept separate from each other and shuffled during setup.
 If a Neutral Unit Deck ever runs out of Cards, reshuffle the discard into a new Deck.
 When a Combat against Neutral Units starts, draw \pagelink{Difficulty}{the appropriate number} of Units from each tier to take part in that Combat.\par
@@ -128,7 +128,7 @@ It is possible for players to gain Neutral Units to their Unit Deck through vari
 Whenever a Neutral Unit is defeated from anywhere, place it into the appropriate Neutral Discard Pile.\par
 
 \note{8}{
-  Having a \includesvg[height=10px]{\svgs/golden.svg} Dwelling built in your Town allows you to draw an \includesvg[height=10px]{\svgs/azure.svg} Unit Card using the basic (top) effect of a Diplomacy Ability Card.
+  Having a \svgunit{golden} Dwelling built in your Town allows you to draw an \svgunit{azure} Unit Card using the basic (top) effect of a Diplomacy Ability Card.
   This effect does not apply to Dungeon's Portal of Summoning.
 }
 
@@ -137,17 +137,17 @@ Whenever a Neutral Unit is defeated from anywhere, place it into the appropriate
 \hommtable{13}{
   \begin{tabularx}{\linewidth}{XXXXX}
     & \darkcell{Town Building} & \darkcell{Castle} & \darkcell{Dungeon} & \darkcell{Necropolis} \\
-    \darkcell[1.6]{\includesvg[height=12px]{\svgs/bronze.svg} \\ Bronze Units} &
+    \darkcell[1.6]{\svgunit[12]{bronze} \\ Bronze Units} &
       \lightcell[1.6]{Tier 1 \\ Dwelling} &
       \lightcell[1.6]{Halberdiers, Marksmen, Griffins} &
       \lightcell[1.6]{Troglodytes, Harpies, Evil Eyes} &
       \lightcell[1.6]{Skeletons, Zombies, Wraiths} \\
-    \darkcell[1.2]{\includesvg[height=12px]{\svgs/silver.svg} \\ Silver Units} &
+    \darkcell[1.2]{\svgunit[12]{silver} \\ Silver Units} &
       \lightcell[1.2]{Tier 2 \\ Dwelling} &
       \lightcell[1.2]{Crusaders, Zealots} &
       \lightcell[1.2]{Medusas, Minotaurs} &
       \lightcell[1.2]{Vampires,\\ Liches} \\
-    \darkcell[1.2]{\includesvg[height=12px]{\svgs/golden.svg} \\ Gold Units} &
+    \darkcell[1.2]{\svgunit[12]{golden} \\ Gold Units} &
       \lightcell[1.2]{Tier 3 \\ Dwelling} &
       \lightcell[1.2]{Champions, Archangels} &
       \lightcell[1.2]{Manticores, Black Dragons} &
@@ -164,7 +164,7 @@ Whenever a Neutral Unit is defeated from anywhere, place it into the appropriate
 
 \subsection*{Gameplay Example}
 
-\textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons, Empowering \includesvg[height=10px]{\svgs/empower.svg} the Spell by 2 with the Expert  Effect \includesvg[height=10px]{\svgs/expert.svg} of a Power Card.}
+\textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons, Empowering \svg{empower} the Spell by 2 with the Expert  Effect \svgeven{expert} of a Power Card.}
 
 \medskip
 
@@ -172,9 +172,9 @@ Whenever a Neutral Unit is defeated from anywhere, place it into the appropriate
 
 \medskip
 
-\textit{The Skeletons take 3 damage \includesvg[height=10px]{\svgs/damage.svg} from the Spell.
-  Their Defense \includesvg[height=10px]{\svgs/defense.svg} of 1 does not reduce the damage, because it only applies against attacks.
-  The Skeletons have a HP \includesvg[height=10px]{\svgs/health_points.svg} of only 2, so they are now turned to their ``Few'' side and 1 leftover damage \includesvg[height=10px]{\svgs/damage.svg} is placed on them.
+\textit{The Skeletons take 3 damage \svg{damage} from the Spell.
+  Their Defense \svg{defense} of 1 does not reduce the damage, because it only applies against attacks.
+  The Skeletons have a HP \svg{health_points} of only 2, so they are now turned to their ``Few'' side and 1 leftover damage \svg{damage} is placed on them.
 }
 
 \bigskip

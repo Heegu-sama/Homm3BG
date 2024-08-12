@@ -105,6 +105,16 @@
 \definecolor{darkcandyapplered}{rgb}{0.64, 0.0, 0.0}
 \definecolor{goldenbrown}{rgb}{0.6, 0.4, 0.08}
 
+\newcommand{\svg}[2][10]{%
+  {\raisebox{-0.15\height}{\includesvg[height=#1px]{\svgs/\detokenize{#2}.svg}}}%
+}%
+\newcommand{\svgunit}[2][10]{%
+  {\raisebox{-0.1\height}{\includesvg[height=#1px]{\svgs/\detokenize{#2}.svg}}}%
+}%
+\newcommand{\svgeven}[2][10]{%
+  \includesvg[height=#1px]{\svgs/\detokenize{#2}.svg}%
+}%
+
 % Command to frame images
 \newcommand\framedimage[2][]{%
   \begin{tikzpicture}
