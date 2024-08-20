@@ -312,7 +312,12 @@
 }{}
 
 
-\author{\textlang{english}{Hermanni ``Heegu'' Karppela}}
+% Let main_xx.tex provide translated \author
+\ifdefvoid{\translatedauthor}{
+  \author{\textlang{english}{Hermanni ``Heegu'' Karppela}}
+}{
+  \author{\translatedauthor}
+}
 \maketitle
 
 \begin{center}
