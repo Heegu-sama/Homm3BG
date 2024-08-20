@@ -8,7 +8,7 @@
 At the start of your Turn, refresh your hand of Cards following these steps:
 \begin{itemize}
   \item Discard any number of Cards from your hand.
-If your current hand exceeds your Hand Limit \includesvg[height=10px]{\svgs/hand.svg}, you must discard down to match the Limit.
+If your current hand exceeds your Hand Limit \svg{hand}, you must discard down to match the Limit.
   \item You may then draw Cards up to your Hand Limit.
   \item Resolve any ``at the beginning of your turn'' abilities after drawing.
 \end{itemize}
@@ -30,7 +30,7 @@ For every 1 MP spent, you can perform one of the following Actions:
 \end{itemize}
 
 \begin{center}
-  \includesvg[width=0.6\linewidth]{\images/movement_tokens.svg}\\
+  \includesvg[width=0.6\linewidth]{\images/movement_tokens}\\
   \medskip
   \footnotesize\textit{An active and an inactive Movement Token.}
 \end{center}
@@ -44,7 +44,7 @@ Allied Heroes can move through each other but cannot stop their movement in the 
 When you move through a Field with an allied Hero, do not \pagelink{Categories}{Visit} the Field that the allied Hero is standing on.\par
 
 \note{10}{
-  Whenever you are instructed to gain (additional) MP, sometimes represented by the symbol \includesvg[height=10px]{\svgs/movement-note.svg}, that MP persists for \textbf{only the Turn it was gained on}.
+  Whenever you are instructed to gain (additional) MP, sometimes represented by the symbol \svgeven{movement-note}, that MP persists for \textbf{only the Turn it was gained on}.
   In the unlikely situation that two allied Heroes are forced onto the same Field, you must use your next MP to move one of them away from that Field.
 }
 
@@ -70,7 +70,7 @@ You cannot use that Action again until the start of the next Round, when the Tok
 
 \subsection*{\pagetarget{Morale}{Morale} Actions}\index{Morale Actions}
 Players can gain or lose Morale through various game effects.
-When you gain Morale, take a Positive Morale Token\index{Positive Morale} \includesvg[height=10px]{\svgs/morale_positive.svg}.
+When you gain Morale, take a Positive Morale Token\index{Positive Morale} \svg{morale_positive}.
 You may only have one such Token.
 If you are about to gain a second Token, you may immediately spend the first one before gaining the second.
 A Positive Morale Token may be spent to perform any of the following Actions at any time:
@@ -79,11 +79,11 @@ A Positive Morale Token may be spent to perform any of the following Actions at 
   \item Discard any number of Cards, then draw that many Cards.
   \item Reroll any Die you have thrown.
 \end{itemize}
-If you lose Morale, discard a Positive Morale Token \includesvg[height=10px]{\svgs/morale_positive.svg} if you have one, otherwise gain a Negative Morale\index{Negative Morale} Token \includesvg[height=10px]{\svgs/morale_negative.svg}.
+If you lose Morale, discard a Positive Morale Token \svg{morale_positive} if you have one, otherwise gain a Negative Morale\index{Negative Morale} Token \svg{morale_negative}.
 Inversely, gaining Positive Morale while you have a Negative Morale Token discards the Token.
 If you would gain a second Negative Morale Token, you must instead \textbf{discard your hand of Cards} the next time you end your Turn.\par
 
-\note{5}{The Necropolis \includesvg[height=10px]{\svgs/necro-note.svg} Faction ignores any Morale effects.
+\note{5}{The Necropolis \svg{necro-note} Faction ignores any Morale effects.
   They cannot ever gain or lose Morale for any reason.
 }
 
@@ -94,10 +94,10 @@ If you would gain a second Negative Morale Token, you must instead \textbf{disca
 \subsection*{Example Turn}
 
 \textit{Alice, who is playing the Hero Catherine the Knight, begins her Turn.
-She has 3 cards in her hand from the previous round, and decides to discard 2 of them before drawing cards from her Deck up to her Hand Limit \includesvg[height=10px]{\svgs/hand.svg}.
+She has 3 cards in her hand from the previous round, and decides to discard 2 of them before drawing cards from her Deck up to her \mbox{Hand Limit \svg{hand}.}
 The current limit is 5, since her Main Hero is Level 3, so she draws 4 cards after discarding (see \pagelink{Level}{Level Effects}).}\par
-\textit{She then spends her Build Token to construct the \includesvg[height=10px]{\svgs/golden.svg} Dwelling, and then her Population Token to \pagelink{Units}{Recruit} the \includesvg[height=10px]{\svgs/golden.svg} Unit Champions.
-She can do this, as she had previously built the prerequisite lower Level Dwellings (\includesvg[height=10px]{\svgs/bronze.svg} and \includesvg[height=10px]{\svgs/silver.svg}) and has enough \pagelink{Resources}{Resources} to both Build the Dwelling and to Recruit the Champions.}\par
+\textit{She then spends her Build Token to construct the \svgunit{golden} Dwelling, and then her Population Token to \pagelink{Units}{Recruit} the \svgunit{golden} Unit Champions.
+She can do this, as she had previously built the prerequisite lower Level Dwellings (\svgunit{bronze} and \svgunit{silver}) and has enough \pagelink{Resources}{Resources} to both Build the Dwelling and to Recruit the Champions.}\par
 \textit{Now prepared for an upcoming battle, she spends a Movement Point to move her Main Hero to an adjacent Field currently occupied by Sandro the Necromancer, an enemy Main Hero controlled by Bob.
 As Alice announces her intent to start Combat, both players still have an opportunity to perform Town Actions.}\par
 

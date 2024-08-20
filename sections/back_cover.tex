@@ -19,10 +19,10 @@
   \textbf{Field Difficulty Level Table}\\
   \bigskip
 
-  \newcommand{\bronze}[0]{\includesvg[height=12px]{\svgs/bronze.svg}}
-  \newcommand{\silver}[0]{\includesvg[height=12px]{\svgs/silver.svg}}
-  \newcommand{\golden}[0]{\includesvg[height=12px]{\svgs/golden.svg}}
-  \newcommand{\azure}[0]{\includesvg[height=12px]{\svgs/azure.svg}}
+  \newcommand{\bronze}[0]{\svgeven[12]{bronze}}
+  \newcommand{\silver}[0]{\svgeven[12]{silver}}
+  \newcommand{\golden}[0]{\svgeven[12]{golden}}
+  \newcommand{\azure}[0]{\svgeven[12]{azure}}
   \begin{tabularx}{\linewidth}{p{0.15\linewidth}XXXX} & \darkcell{Easy} & \darkcell{Normal} & \darkcell{Hard} & \darkcell{Impossible} \\
     \darkcell{Level I} & \lightcell{\bronze} & \lightcell{\bronze} & \lightcell{\bronze \bronze} & \lightcell{\bronze \bronze \bronze} \\
     \darkcell{Level II} & \lightcell{\bronze \bronze} & \lightcell{\bronze \bronze} & \lightcell{\bronze \bronze \bronze} & \lightcell{\bronze \bronze \silver} \\
@@ -42,9 +42,9 @@
   \bigskip
 
   \begin{tabularx}{\linewidth}{XXXX}
-    \darkcell{\color{white}Sells/gets} & \darkcell{...to purchase \includesvg[height=10px]{\svgs/gold.svg}} & \darkcell{...to purchase \includesvg[height=10px]{\svgs/valuablegreater.svg}} & \darkcell{...to purchase \includesvg[height=10px]{\svgs/building_materials.svg}} \\
-    \darkcell{I am selling \includesvg[height=10px]{\svgs/gold.svg}...} & \lightcell{--} & \lightcell{6 \includesvg[height=10px]{\svgs/gold.svg} \includesvg[height=0.5\baselineskip]{\svgs/arrow_right_gray.svg} 1 \includesvg[height=10px]{\svgs/valuablegreater.svg}} & \lightcell{2 \includesvg[height=10px]{\svgs/gold.svg} \includesvg[height=0.5\baselineskip]{\svgs/arrow_right_gray.svg} 1 \includesvg[height=10px]{\svgs/building_materials.svg}} \\
-    \darkcell{I am selling \includesvg[height=10px]{\svgs/valuablegreater.svg}...} & \lightcell{1 \includesvg[height=10px]{\svgs/valuablegreater.svg} \includesvg[height=0.5\baselineskip]{\svgs/arrow_right_gray.svg} 3 \includesvg[height=10px]{\svgs/gold.svg}} & \lightcell{--} & \lightcell{1 \includesvg[height=10px]{\svgs/valuablegreater.svg} \includesvg[height=0.5\baselineskip]{\svgs/arrow_right_gray.svg} 2 \includesvg[height=10px]{\svgs/building_materials.svg}} \\
-    \darkcell{I am selling \includesvg[height=10px]{\svgs/building_materials.svg}...} & \lightcell{1 \includesvg[height=10px]{\svgs/building_materials.svg} \includesvg[height=0.5\baselineskip]{\svgs/arrow_right_gray.svg} 1 \includesvg[height=10px]{\svgs/gold.svg}} & \lightcell{3 \includesvg[height=10px]{\svgs/building_materials.svg} \includesvg[height=0.5\baselineskip]{\svgs/arrow_right_gray.svg} 1 \includesvg[height=10px]{\svgs/valuablegreater.svg}} & \lightcell{--} \\
+    \darkcell{\color{white}Sells/gets} & \darkcell{...to purchase \svg{gold}} & \darkcell{...to purchase \svg{valuablegreater}} & \darkcell{...to purchase \svg{building_materials}} \\
+    \darkcell{I am selling \svg{gold} ...} & \lightcell{--} & \lightcell{6 \svg{gold} \svgeven[7]{arrow_right_gray} 1 \svg{valuablegreater}} & \lightcell{2 \svg{gold} \svgeven[7]{arrow_right_gray} 1 \svg{building_materials}} \\
+    \darkcell{I am selling \svg{valuablegreater} ...} & \lightcell{1 \svg{valuablegreater} \svgeven[7]{arrow_right_gray} 3 \svg{gold}} & \lightcell{--} & \lightcell{1 \svg{valuablegreater} \svgeven[7]{arrow_right_gray} 2 \svg{building_materials}} \\
+    \darkcell{I am selling \svg{building_materials} ...} & \lightcell{1 \svg{building_materials} \svgeven[7]{arrow_right_gray} 1 \svg{gold}} & \lightcell{3 \svg{building_materials} \svgeven[7]{arrow_right_gray} 1 \svg{valuablegreater}} & \lightcell{--} \\
   \end{tabularx}
 }
