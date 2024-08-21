@@ -77,7 +77,8 @@ msgstr ""
 "  \\item Wchodząc na Pole okupowane przez wrogiego Bohatera\n"
 "  \\item Zajmując wcześniej zdobyte przez przeciwnika Miasto lub Osadę.\n"
 "\\end{itemize}\n"
-"Gracz może rozpocząć wiele Walk podczas tej samej Tury.\n"
+"Gracz może rozpocząć wiele Walk podczas tej samej Tury.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:20
@@ -90,11 +91,12 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
-"\\note{10}{\n"
+"\\note{11}{\n"
 "  Jeśli twoje Miasto lub Osada są atakowane przez wrogiego Bohatera, a twój Bohater nie znajduje się na tym Polu, możesz \\textbf{zapłacić 8 \\svg{gold}, aby bronić się tylko Jednostkami}.\n"
 "  Twój Bohater nie bierze udziału w tej Walce, przez co nie możesz korzystać ze swojej Talii.\n"
 "  Opłata jest kosztem transportu armii na miejsce Walki.\n"
-"}\n"
+"}\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:24
@@ -105,6 +107,10 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{6}{\n"
+"  Gdy atakowany jest \\pagelink{Secondary}{Bohater Pomocniczy}, może on \\textbf{wybrać} \\pagelink{Endcombat}{natychmiastową porażkę} zamiast Walki, co pozwala zachować Jednostki.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:26
@@ -124,8 +130,8 @@ msgid ""
 "\n"
 msgstr ""
 "\\subsection*{\\pagetarget{Quick}{Szybka Walka}}\\index{Szybka Walka}\n"
-"Jeśli Poziom twojego Bohatera jest wyższy niż poziom Trudności Pola, odnosisz zwycięstwo \\textbf{bez Walki}.\n"
-"Gracz nie zdobywa żadnych nagród z Walki przed Odwiedzeniem Pola.\n"
+"Jeśli Poziom twojego Bohatera jest wyższy niż Poziom Trudności Pola, gdy ma się rozpocząć Walka z Jednostkami Neutralnymi, \\textbf{Walka nie odbywa się}.\n"
+"Gracz automatycznie pokonuje Jednostki Neutralne i nie otrzymuje żadnych nagród z Walki przed Odwiedzeniem Pola.\n"
 "\n"
 
 #. type: multicols
@@ -331,10 +337,11 @@ msgid ""
 "\n"
 msgstr ""
 "\\subsection*{\\pagetarget{Timelimit}{Limit Czasu Walki}}\\index{Limit!Czasu Walki}\n"
-"Walka przeciwko Jednostkom Neutralnym ma Limit Czasowy - trwa \\textbf{tylko jedną Rundę Walki}.\n"
-"Jeśli nie wygrasz Walki przed końcem Rundy Walki, musisz \\pagelink{Endcombat}{Wycofać się}\\index{Wycofywanie się} lub wydać 1 PR Bohatera, który rozpoczął Walkę, aby móc ją przedłużyć o kolejną rundę.\n"
-"Kiedy się Wycofujesz, \\hyperlink{Endcombat}{zakończ Walkę} i przemieść Bohatera, który rozpoczął Walkę, z powrotem na Pole, które \\textbf{ostatnio Odwiedził}.\n"
-"Nie ma żadnych innych negatywnych konsekwencji Wycofania się.\\par\n"
+"Walki z Neutralnymi Jednostkami mają Limit Czasu wynoszący \\textbf{jedną Rundę Walki}.\n"
+"Po zakończeniu każdej Rundy Walki masz możliwość \\textbf{Wycofania się}\\index{Wycofanie} lub wydania 1 PR Bohatera, który rozpoczął Walkę, aby rozegrać kolejną Rundę.\n"
+"Wycofując się, \\hyperlink{Endcombat}{zakończ Walkę} i przesuń Bohatera, który rozpoczął Walkę, z powrotem na Pole, które \\textbf{ostatnio Odwiedził}.\n"
+"Nie ma innych negatywnych konsekwencji Wycofania się.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:115
@@ -344,6 +351,7 @@ msgid ""
 "\n"
 msgstr ""
 "\\note{5}{Walka przeciwko Błękitnym \\svgunit{azure-note} Jednostkom, innym graczom lub \\pagelink{AIrules}{Bohaterom AI} nie ma limitu czasu i nie możesz się z niej wycofać.}\n"
+"\\vspace{-1em}\n"
 "\n"
 
 #. type: multicols
