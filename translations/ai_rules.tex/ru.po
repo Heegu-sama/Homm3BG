@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-08-11 23:28+0200\n"
+"POT-Creation-Date: 2024-08-24 23:58+0300\n"
 "PO-Revision-Date: 2024-04-21 09:09+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -43,7 +43,7 @@ msgstr ""
 #: sections/map_elements.tex:124 sections/player_turns.tex:7
 #: sections/resources.tex:7 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:58 sections/town.tex:5
-#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:162
+#: sections/trading.tex:7
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -111,9 +111,8 @@ msgstr ""
 "Любые отличия от указанного выше будут описаны в правилах конкретного сценария.\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:32 sections/ai_rules.tex:104 sections/combat.tex:45
-#: sections/combat.tex:183 sections/expansion_content.tex:67
-#: sections/heroes.tex:34
+#: sections/ai_rules.tex:32 sections/ai_rules.tex:104 sections/combat.tex:185
+#: sections/expansion_content.tex:67 sections/heroes.tex:34
 #, no-wrap
 msgid ""
 "\\vfill\n"
@@ -172,16 +171,7 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_rules.tex:61
-#, fuzzy, no-wrap
-#| msgid ""
-#| "AI Heroes use two automated Decks during Combat: the \\textbf{AI Deck}, and the \\textbf{Spell Deck}.\n"
-#| "The AI Deck is built using three types of AI cards: Might \\svg{might}, Magic \\svg{magic} and Skill \\svg{skill}.\n"
-#| "Each Campaign scenario lists the number of each type of Card included in the AI Deck.\n"
-#| "Might \\svg{might} and Skill \\svg{skill} Cards have two variations. Choose these cards \\textbf{randomly} when building the Deck.\n"
-#| "If Skill Cards are included, search for and set aside the Ability Card related to it.\n"
-#| "Build the AI's \\textbf{Spell Deck} by separating the indicated Spells from the regular Spell Deck.\n"
-#| "Shuffle the AI and Spell Decks during setup after building them.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "AI Heroes use two Decks during Combat: the \\textbf{AI Deck}, and the \\textbf{AI Spell Deck}.\n"
 "The AI Deck consists of three types of AI cards: Might \\svg{might}, Magic \\svg{magic} and Skill \\svg{skill}.\n"
@@ -193,25 +183,17 @@ msgid ""
 "\n"
 msgstr ""
 "Герои ИИ используют две колоды в ходе сражения: \\textbf{колоду ИИ} и \\textbf{колоду заклинаний}.\n"
-"В ходе сражения герои ИИ используют две колоды: \\textbf{ИИ} и \\textbf{колоду заклинаний}.\n"
 "Колоды ИИ собираются из трех типов ИИ карт: силы \\svg{might}, магии \\svg{magic} и умений \\svg{skill}.\n"
 "Сценарий кампании описывает количество карт каждого типа в колоде ИИ.\n"
-"Карты силы \\svg{might} и умений \\svg{skill} имеют два варианта. Выберите их \\textbf{случайным образом} во время формирования колоды.\n"
+"Выберите эти карты \\textbf{случайным образом} во время сбора колоды.\n"
 "При необходимости найдите и добавьте соответствующие карты из колоды навыков.\n"
 "Сформируйте \\textbf{колоду заклинаний ИИ} из колоды заклинаний.\n"
+"Перемешайте колоды после их сбора.\n"
 "\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:68
-#, fuzzy, no-wrap
-#| msgid ""
-#| "When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI Card} and follow its instructions before the Unit moves and/or attacks.\n"
-#| "If AI Deck is depleted during Combat, stop drawing from it.\n"
-#| "The effect of each AI card depends of the game's \\pagelink{Difficulty}{Difficulty}.\n"
-#| "The Might Card \\svg{might} is attached to the unit until the first respective attack/defence happens.\n"
-#| "The AI Spell Deck is used whenever a Magic Card \\svg{magic} is drawn.\n"
-#| "If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI Card} and follow its instructions before the Unit moves and/or attacks.\n"
 "If AI Deck is depleted during Combat, stop drawing from it.\n"
@@ -221,7 +203,7 @@ msgid ""
 "If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
 "\n"
 msgstr ""
-"При \\textbf{активации} отряда ИИ возьмите карту ИИ\\index{AI Card} и следуйте ее инструкциям перед движением и/или атакой отряда.\n"
+"При \\textbf{активации} отряда ИИ возьмите карту ИИ\\index{ИИ, карты} и следуйте ее инструкциям перед движением и/или атакой отряда.\n"
 "Если колода ИИ закончилась в ходе сражения, не используйте её.\n"
 "Эффект от каждой карты ИИ зависит от \\pagelink{Difficulty}{сложности} игры.\n"
 "Карты силы \\svg{might} действуют на отряд до момента соответствующей атаки/защиты.\n"
@@ -247,7 +229,7 @@ msgid ""
 "When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\\par\n"
 "\n"
 msgstr ""
-"\\pagetarget{AI Units}{Данные правила} применяются в сражениях в сценариях \\textbf{Одиночного режима}\\index{Solo} и \\textbf{Кооператива}.\n"
+"\\pagetarget{AI Units}{Данные правила} применяются в сражениях в сценариях \\textbf{Одиночного режима}\\index{Одиночный режим} и \\textbf{Кооператива}.\n"
 "Когда нейтральный противник или герой ИИ активирует отряд, действуют следующие правила:\\par\n"
 "\n"
 
@@ -311,6 +293,17 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"  \\textit{Пример: \\svgunit{silver}\\svg{unit_ranged} имеют приоритет:\n"
+"  \\svgunit{silver}\\svg{unit_ranged}\n"
+"  - \\svgunit{bronze}\\svg{unit_ranged}\n"
+"  - \\svgunit{golden}\\svg{unit_ranged}\n"
+"  - \\svgunit{azure}\\svg{unit_ranged}\n"
+"  - \\svgunit{silver}\\svg{unit_ground}\\svg{unit_flying}\n"
+"  - \\svgunit{bronze}\\svg{unit_ground}\\svg{unit_flying}\n"
+"  - \\svgunit{golden}\\svg{unit_ground}\\svg{unit_flying}\n"
+"  - \\svgunit{azure}\\svg{unit_ground}\\svg{unit_flying}.}\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:100
