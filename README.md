@@ -69,7 +69,7 @@ Click in the table to download the most recent builds in the chosen language:
         <tr>
             <td>🇷🇺 Русский</td>
             <td align="center">100%</td>
-            <td align="center">0</td>
+            <td align="center">0%</td>
             <td align="center">—</td>
             <td align="center">—</td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf">️скачать</a></td>
