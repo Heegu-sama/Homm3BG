@@ -11,7 +11,7 @@ help() {
 
     Mandatory Arguments:
       -l, --language <language>     Specify the language for comparison (en, de, es, fr, pl, ru, ua, cs, ...).
-      -r, --range <range>           Provide comma-separated list of pages or range of pages you want to compare. 
+      -r, --range <range>           Provide comma-separated list of pages or range of pages you want to compare.
 
     Optional Arguments:
       -p, --printable               Compares your build against 'printable' build.
@@ -59,7 +59,7 @@ file_mod_time() {
   local file=$1
   if [[ "$(uname -s)" == "Darwin" ]]; then
     stat -f %m "$file"
-  else 
+  else
     stat -c %Y "$file"
   fi
 }
@@ -155,8 +155,8 @@ pages=$(parse_pages "$range")
 
 for page in $pages; do
   echo "Making images of ${base_file} and main_${language}.pdf for page ${page}..."
-  pdftoppm "${base_file}" "${tmp_dir}/aa" -f "${page}" -l "${page}" -png -progress &
-  pdftoppm "main_${language}.pdf" "${tmp_dir}/bb" -f "${page}" -l "${page}" -png -progress &
+  pdftoppm "${base_file}" "${tmp_dir}/aa" -f "${page}" -l "${page}" -png &
+  pdftoppm "main_${language}.pdf" "${tmp_dir}/bb" -f "${page}" -l "${page}" -png &
 done
 
 wait
