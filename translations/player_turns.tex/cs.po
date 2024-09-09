@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-08-10 22:57+0200\n"
+"POT-Creation-Date: 2024-09-10 00:14+0100\n"
 "PO-Revision-Date: 2024-06-03 10:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -43,7 +43,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/all_map_locations.tex:435 sections/player_turns.tex:39
+#: sections/all_map_locations.tex:435 sections/player_turns.tex:40
 #: sections/units.tex:181
 #, no-wrap
 msgid ""
@@ -52,7 +52,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:40 sections/player_turns.tex:57
+#: sections/deckbuilding.tex:40 sections/player_turns.tex:58
 #: sections/units.tex:34
 #, no-wrap
 msgid ""
@@ -67,14 +67,28 @@ msgid "\\addsection{Player Turns}{\\spells/dimension_door.png}"
 msgstr "\\addsection{Tahy hráčů}{\\spells/dimension_door.png}"
 
 #. type: multicols
-#: sections/player_turns.tex:19
-#, no-wrap
+#: sections/player_turns.tex:20
+#, fuzzy, no-wrap
+#| msgid ""
+#| "At the start of your Turn, refresh your hand of Cards following these steps:\n"
+#| "\\begin{itemize}\n"
+#| "  \\item Discard any number of Cards from your hand.\n"
+#| "If your current hand exceeds your Hand Limit \\svg{hand}, you must discard down to match the Limit.\n"
+#| "  \\item You may then draw Cards up to your Hand Limit.\n"
+#| "  \\item Resolve any ``at the beginning of your turn'' abilities after drawing.\n"
+#| "\\end{itemize}\n"
+#| "Your current Hand Limit\\index{Hand Limit} depends on your Main Hero's \\pagelink{Level}{Level}.\n"
+#| "The beginning of your Turn is the only time your Hand Limit is checked.\\par\n"
+#| "There are three types of Actions players may take: \\textbf{Movement}, \\textbf{Town}, and \\textbf{Morale}.\n"
+#| "Once all players have spent all their Movement Points and do not wish to use any further Town or Morale Actions, the current Round is over.\n"
+#| "\n"
 msgid ""
-"At the start of your Turn, refresh your hand of Cards following these steps:\n"
+"At the start of your Turn, perform following steps:\n"
 "\\begin{itemize}\n"
 "  \\item Discard any number of Cards from your hand.\n"
 "If your current hand exceeds your Hand Limit \\svg{hand}, you must discard down to match the Limit.\n"
 "  \\item You may then draw Cards up to your Hand Limit.\n"
+"  \\item Regain uses for Expert Effects \\svgeven{expert}.\n"
 "  \\item Resolve any ``at the beginning of your turn'' abilities after drawing.\n"
 "\\end{itemize}\n"
 "Your current Hand Limit\\index{Hand Limit} depends on your Main Hero's \\pagelink{Level}{Level}.\n"
@@ -97,7 +111,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/player_turns.tex:31
+#: sections/player_turns.tex:32
 #, no-wrap
 msgid ""
 "\\subsection*{Movement Actions}\n"
@@ -127,7 +141,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/player_turns.tex:37
+#: sections/player_turns.tex:38
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -145,7 +159,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/player_turns.tex:45
+#: sections/player_turns.tex:46
 #, no-wrap
 msgid ""
 "Mark the amount of MP you have used by flipping your Movement Tokens over to their brown, inactive side.\n"
@@ -163,10 +177,16 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/player_turns.tex:50
-#, no-wrap
+#: sections/player_turns.tex:51
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\note{10}{\n"
+#| "  Whenever you are instructed to gain (additional) MP, sometimes represented by the symbol \\svgeven{movement-note}, that MP persists for \\textbf{only the Turn it was gained on}.\n"
+#| "  In the unlikely situation that two allied Heroes are forced onto the same Field, you must use your next MP to move one of them away from that Field.\n"
+#| "}\n"
+#| "\n"
 msgid ""
-"\\note{10}{\n"
+"\\note{9}{\n"
 "  Whenever you are instructed to gain (additional) MP, sometimes represented by the symbol \\svgeven{movement-note}, that MP persists for \\textbf{only the Turn it was gained on}.\n"
 "  In the unlikely situation that two allied Heroes are forced onto the same Field, you must use your next MP to move one of them away from that Field.\n"
 "}\n"
@@ -179,18 +199,25 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/player_turns.tex:55
-#, no-wrap
+#: sections/player_turns.tex:56
+#, fuzzy, no-wrap
+#| msgid ""
+#| "{\\centering\\phantom{Star Axis}\\par}\n"
+#| "\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
+#| "\n"
 msgid ""
 "\\vfill\n"
 "\\begin{center}\n"
-"  \\includegraphics[width=0.8\\linewidth]{\\art/town_portal.png}\n"
+"  \\includegraphics[width=0.7\\linewidth]{\\art/town_portal.png}\n"
 "\\end{center}\n"
 "\n"
 msgstr ""
+"{\\centering\\phantom{Hvězdná Osa}\\par}\n"
+"\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
+"\n"
 
 #. type: multicols
-#: sections/player_turns.tex:70
+#: sections/player_turns.tex:71
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Town Actions}{Town Actions}\\index{Town Actions}}\n"
@@ -222,7 +249,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/player_turns.tex:85
+#: sections/player_turns.tex:86
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Morale}{Morale} Actions}\\index{Morale Actions}\n"
@@ -258,7 +285,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/player_turns.tex:89
+#: sections/player_turns.tex:90
 #, no-wrap
 msgid ""
 "\\note{5}{The Necropolis \\svg{necro-note} Faction ignores any Morale effects.\n"
@@ -272,7 +299,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/player_turns.tex:93
+#: sections/player_turns.tex:94
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -282,7 +309,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/player_turns.tex:95
+#: sections/player_turns.tex:96
 #, no-wrap
 msgid ""
 "\\subsection*{Example Turn}\n"
@@ -292,7 +319,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/player_turns.tex:103
+#: sections/player_turns.tex:104
 #, no-wrap
 msgid ""
 "\\textit{Alice, who is playing the Hero Catherine the Knight, begins her Turn.\n"
@@ -314,7 +341,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/player_turns.tex:105
+#: sections/player_turns.tex:106
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/catherine_attacks_sandro.png}\n"
@@ -322,7 +349,7 @@ msgid ""
 msgstr ""
 
 #. type: scaledfigure
-#: sections/player_turns.tex:113
+#: sections/player_turns.tex:114
 #, no-wrap
 msgid ""
 "[blanker]\n"
