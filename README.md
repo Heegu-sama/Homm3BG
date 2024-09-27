@@ -1,12 +1,5 @@
 # Heroes of Might & Magic III: The Board Game 🐴 🛡️ ⚔️️<br>Rule Book Rewrite Project 📜🪶
 
-[![](assets/github/title-page-small.png)](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf)[![](assets/github/contents-small.gif)](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf)
-
-### 💡 What Is This?
-
-This project aims to rewrite the original rule book, in which the amount of vague language was just too vast to ignore.
-Its aim is to explain the rules clearly and concisely, and should eventually have an answer for any basic rules query you might have.
-
 Efforts are ongoing to translate the rule book to languages other than English.
 **Want to help? Join us [on Discord](https://discord.gg/khV8Ckw8RD).**
 
@@ -145,6 +138,11 @@ Best served for those who would like to have it on paper 🤞<br>
 This is for people who want to save their toners or don't have printers that can print edge to edge where the white borders around the art backgrounds don't look that good.
 
 This repository used to host [**Comprehensive Components List**](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf) listing all the cards, minis, tokens, etc. for every box, but after a while ⚠️ ️️**Archon released their own version of it, and you should use it instead. Find it on 👉 [their website](https://archon-studio.com/downloads/heroes-iii) 👈 called "Content Guide"**.
+
+### 💡 What Is This?
+
+This project aims to rewrite the original rule book, in which the amount of vague language was just too vast to ignore.
+Its aim is to explain the rules clearly and concisely, and should eventually have an answer for any basic rules query you might have.
 
 ### 🤔 Why?
 
@@ -326,3 +324,8 @@ Their respective XCF files reside in [`assets/gimp-files`](https://github.com/He
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Heegu-sama/Homm3BG&type=Date&branch=master)](https://star-history.com/#Heegu-sama/Homm3BG&Date)
+
+## 🛡️ Other Community Projects
+
+- [Fan-Made Mission Book](https://github.com/qwrtln/Homm3BG-mission-book)
+- [Board Game Cards Databse](https://github.com/Mirzipan/Homm3_BG_Database)
