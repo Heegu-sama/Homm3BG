@@ -1,12 +1,17 @@
 # Heroes of Might & Magic III: The Board Game 🐴 🛡️ ⚔️️<br>Rule Book Rewrite Project 📜🪶
 
-|:----------:|:----------:|
+|   |   |
+|:-:|:-:|
 | [![image](assets/github/title-page.png)](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf) | ![](assets/github/contents.gif) |
 
-Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1) 🤓
+### 💡 What Is This?
+
+This project aims to rewrite the original rule book, in which the amount of vague language was just too vast to ignore.
+Its aim is to explain the rules clearly and concisely, and should eventually have an answer for any basic rules query you might have.
 
 Efforts are ongoing to translate the rule book to languages other than English.
-Please reach out if you'd like to help with translating.
+**Want to help? Join us [on Discord](https://discord.gg/khV8Ckw8RD).**
+
 Click in the table to download the most recent builds in the chosen language:
 
 <table>
@@ -143,13 +148,9 @@ This is for people who want to save their toners or don't have printers that can
 
 This repository used to host [**Comprehensive Components List**](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf) listing all the cards, minis, tokens, etc. for every box, but after a while ⚠️ ️️**Archon released their own version of it, and you should use it instead. Find it on 👉 [their website](https://archon-studio.com/downloads/heroes-iii) 👈 called "Content Guide"**.
 
-### 💡 What Is This?
-
-This project aims to rewrite the original rule book, in which the amount of vague language was just too vast to ignore.
-
-This repository hosts a document that aims to explain the rules clearly and concisely, and should eventually have an answer for any basic rules query you might have.
-
 ### 🤔 Why?
+
+Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1).
 
 The content in the official English rule book is, simply put, insufficient as a teaching tool for the game or as a general rules reference.
 If you read the thread linked above you should understand how frustrating this has been for me.
@@ -157,7 +158,7 @@ If you read the thread linked above you should understand how frustrating this h
 ### 🛠️ How?
 
 This is a communal effort.
-This repository serves both as a means for me to preserve my work, but also for others to contribute to it as writers, proofreaders, or layout designers.
+This repository serves both as a means to preserve the work, but also for others to contribute to it as writers, proofreaders, or layout designers.
 
 ### 💪 Contributing
 
@@ -195,7 +196,7 @@ tools/build.sh en
 
 or press the `Build & View` ▶️ (F5) button in TeXstudio on the `main_en.tex` file.
 
-To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, `de` and `cs` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
+To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, `de` `cs`, and `he` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
 
 ```bash
 tools/build.sh <LANGUAGE>
