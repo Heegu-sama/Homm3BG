@@ -5,7 +5,7 @@ case "$(uname -s)" in
     Linux*)     open=xdg-open;;
 esac
 
-LANGUAGE=$1
+LANGUAGE=${1:-en}
 
 case "${LANGUAGE}" in
   ru|ua|cs|he)
