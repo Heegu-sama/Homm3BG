@@ -1,8 +1,6 @@
 # Heroes of Might & Magic III: The Board Game 🐴 🛡️ ⚔️️<br>Rule Book Rewrite Project 📜🪶
 
-|   |   |
-|:-:|:-:|
-| [![image](assets/github/title-page.png)](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf) | ![](assets/github/contents.gif) |
+[![image](assets/github/title-page-small.png)](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf)![](assets/github/contents-small.gif)
 
 ### 💡 What Is This?
 
