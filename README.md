@@ -276,6 +276,8 @@ To process a single page, use:
 tools/pdf2image.sh en 5
 ```
 
+Screenshots will appear in ignored `screenshots` direcotry, in the form of `en-05.png`, `en-06.png`, etc.
+
 ### 🎭 Comparing two pages side by side
 
 If you'd like to show a single image of two instances of the same page side-by-side (before|after style), you can use the following script:
@@ -293,7 +295,7 @@ Imagine you want to compare pages 1, then range from 5 to 7, and page 30 in Engl
 ./tools/compare_pages.sh -l en -r 1,5-7,30
 ```
 
-It will produce the following files: `en-01.png`, `en-05.png`, `en-06.png`, `en-07.png` and `en-30.png`.
+It will produce the following files in the `screenshots` directory: `en-01.png`, `en-05.png`, `en-06.png`, `en-07.png` and `en-30.png`.
 
 Open help for more examples and detailed description:
 
