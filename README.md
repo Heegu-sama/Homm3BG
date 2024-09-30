@@ -1,9 +1,8 @@
 # Heroes of Might & Magic III: The Board Game 🐴 🛡️ ⚔️️<br>Rule Book Rewrite Project 📜🪶
 
-Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1) 🤓
-
 Efforts are ongoing to translate the rule book to languages other than English.
-Please reach out if you'd like to help with translating.
+**Want to help? Join us [on Discord](https://discord.gg/khV8Ckw8RD).**
+
 Click in the table to download the most recent builds in the chosen language:
 
 <table>
@@ -143,10 +142,11 @@ This repository used to host [**Comprehensive Components List**](https://raw.git
 ### 💡 What Is This?
 
 This project aims to rewrite the original rule book, in which the amount of vague language was just too vast to ignore.
-
-This repository hosts a document that aims to explain the rules clearly and concisely, and should eventually have an answer for any basic rules query you might have.
+Its aim is to explain the rules clearly and concisely, and should eventually have an answer for any basic rules query you might have.
 
 ### 🤔 Why?
+
+Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1).
 
 The content in the official English rule book is, simply put, insufficient as a teaching tool for the game or as a general rules reference.
 If you read the thread linked above you should understand how frustrating this has been for me.
@@ -154,7 +154,7 @@ If you read the thread linked above you should understand how frustrating this h
 ### 🛠️ How?
 
 This is a communal effort.
-This repository serves both as a means for me to preserve my work, but also for others to contribute to it as writers, proofreaders, or layout designers.
+This repository serves both as a means to preserve the work, but also for others to contribute to it as writers, proofreaders, or layout designers.
 
 ### 💪 Contributing
 
@@ -177,7 +177,6 @@ To work on the document on your machine, you need the following:
 - [**ImageMagick**](https://imagemagick.org/index.php) (optional) to combine screenshots into convenient diffs
 - [**ghostscript**](https://www.ghostscript.com/) (optional) to optimize PDF file sizes
 - [**GIMP**](https://www.gimp.org/) or [**Krita**](https://krita.org/) (optional) to edit some images in `assets` directory
-- [**aspell**](http://aspell.net/) (optional) for spellchecking
 
 To build the document in English, either run this in the command line:
 
@@ -193,7 +192,7 @@ tools/build.sh en
 
 or press the `Build & View` ▶️ (F5) button in TeXstudio on the `main_en.tex` file.
 
-To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, `de` and `cs` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
+To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, `de` `cs`, and `he` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
 
 ```bash
 tools/build.sh <LANGUAGE>
@@ -277,6 +276,8 @@ To process a single page, use:
 tools/pdf2image.sh en 5
 ```
 
+Screenshots will appear in ignored `screenshots` direcotry, in the form of `en-05.png`, `en-06.png`, etc.
+
 ### 🎭 Comparing two pages side by side
 
 If you'd like to show a single image of two instances of the same page side-by-side (before|after style), you can use the following script:
@@ -294,7 +295,7 @@ Imagine you want to compare pages 1, then range from 5 to 7, and page 30 in Engl
 ./tools/compare_pages.sh -l en -r 1,5-7,30
 ```
 
-It will produce the following files: `en-01.png`, `en-05.png`, `en-06.png`, `en-07.png` and `en-30.png`.
+It will produce the following files in the `screenshots` directory: `en-01.png`, `en-05.png`, `en-06.png`, `en-07.png` and `en-30.png`.
 
 Open help for more examples and detailed description:
 
@@ -316,29 +317,17 @@ It will output `main_<LANGUAGE>_optimized.pdf` file.
 
 As of writing, for English it produces 23 MB `main_en_optimized.pdf` file without noticeable drop in quality compared to 78 MB `main_en.pdf` built by LaTeX.
 
-### 🔎 Spellchecking
-
-TeXstudio has built-in spellchecking, but the first steps have been made towards automated spellchecking with aspell.
-For local development, after installing the tool, you can run it from the command line for example with
-
-```bash
-aspell -d en_US -p=./.aspell.homm3.pws --mode=tex --dont-backup check main.tex
-```
-
-or when wanting to check all `.tex` files then with
-
-```bash
-find . -type f -name "*.tex" -exec aspell -d en_US -p=./.aspell.homm3.pws --mode=tex --dont-backup check {} \;
-```
-
-Please note that currently the tool will flag many parameters in LaTeX commands.
-We are currently looking into how best to remediate this.
-
-The personal dictionary `.aspell.homm3.pwd` currently contains only game-related words.
-It does not contain names (e.g., "BoardGameGeek") or parameter values (e.g., "px", "svg") in order to minimize the chances of false-negatives in the main body of text.
-
 ## ✨ Assets
 
 All assets come from publicly available sources.
 Some of the images in the rule book (all in the [`assets/examples`](https://github.com/Heegu-sama/Homm3BG/tree/main/assets/examples) directory as of writing) were generated by [GIMP](https://www.gimp.org/).
 Their respective XCF files reside in [`assets/gimp-files`](https://github.com/Heegu-sama/Homm3BG/tree/main/assets/gimp-files) directory.
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Heegu-sama/Homm3BG&type=Date&branch=master)](https://star-history.com/#Heegu-sama/Homm3BG&Date)
+
+## 🛡️ Other Community Projects
+
+- [Fan-Made Mission Book](https://github.com/qwrtln/Homm3BG-mission-book)
+- [Board Game Cards Databse](https://github.com/Mirzipan/Homm3_BG_Database)
