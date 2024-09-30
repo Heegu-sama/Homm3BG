@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 env:
-  PO4A_VERSION: "0.71"
+  PO4A_VERSION: "0.73"
   PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
         run: |
           export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
           export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
-          ./${PO4A_DIR}/po4a -v po4a.cfg
+          ./${PO4A_DIR}/po4a po4a.cfg
           if [[ `git status --porcelain translations` ]]; then
             echo "There are uncommited changes to translations:"
             git status --porcelain translations
