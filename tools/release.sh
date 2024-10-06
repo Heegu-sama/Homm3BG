@@ -13,6 +13,10 @@ declare -A languages=(
   ["es"]="Espanol"
   ["fr"]="Francais"
   ["ua"]="Ukrainska"
+  ["cs"]="Cestina"
+  ["ru"]="Russkiy"
+  ["he"]="Ivrrit"
+  ["de"]="Deutsch"
 )
 
 echo "Building release ${VERSION} for ${languages[$LANGUAGE]}..."
