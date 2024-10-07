@@ -10,7 +10,7 @@ on:
 env:
   PO4A_VERSION: "0.73"
   PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
-  GHOSTSCRIPT_URL: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10030/gs_10.03.0_amd64_snap.tgz
+  GHOSTSCRIPT_URL: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10040/gs_10.04.0_amd64_snap.tgz
   ARTIFACT_RETENTION_DAYS: 1
 
 jobs:
@@ -85,8 +85,8 @@ jobs:
           path: main_${{ matrix.language }}.pdf
           retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
 
-      - name: Install pdfinfo
-        if: ${{ matrix.language == 'en' }}
+      - name: Install poppler
+        if: github.event_name == 'pull_request'
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
 
       - name: Check number of pages
@@ -95,6 +95,19 @@ jobs:
         run: |
           NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
           echo "NUM_OF_PAGES=${NUM_OF_PAGES}" >> "$GITHUB_OUTPUT"
+
+      - name: Check for broken CMap
+        if: github.event_name == 'pull_request'
+        run: |
+          QUOTE=$(grep -A1 heegusquote main_en.tex | tail -1 | grep -o "{.*}" | tail -c +2 | head -c -2)
+          pdftotext main_${{ matrix.language }}.pdf
+          if grep -iq $QUOTE main_${{ matrix.language }}.txt
+          then
+            echo "All good"
+          else
+            echo "The CMap in main_${{ matrix.language }}.pdf file is broken. See the output of 'Optimize PDF' step above."
+            exit 1
+          fi
 
       - name: Move file
         run: |
@@ -140,7 +153,7 @@ jobs:
           echo "NUM_OF_PRINTABLE_PAGES=${NUM_OF_PAGES}" >> "$GITHUB_OUTPUT"
 
       - name: Check if printable page number matches
-        if: ${{ matrix.language == 'en' }}
+        if: ${{ matrix.language == 'en' && github.event_name == 'pull_request' }}
         run: |
           PAGES_DIGITAL="${{ steps.check_pages.outputs.num_of_pages }}"
           PAGES_PRINTABLE="${{ steps.check_printable_pages.outputs.num_of_printable_pages }}"
@@ -196,9 +209,8 @@ jobs:
         language: ["pl", "es", "fr", "ru", "ua", "de", "cs", "he"]
 
     steps:
-      - name: Install pdfinfo
+      - name: Install poppler
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
-
 
       - name: Download PDFs
         uses: actions/download-artifact@v4
