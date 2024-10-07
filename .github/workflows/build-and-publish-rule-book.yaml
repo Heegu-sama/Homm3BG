@@ -99,9 +99,9 @@ jobs:
       - name: Check for broken CMap
         if: github.event_name == 'pull_request'
         run: |
-          QUOTE=$(grep -A1 heegusquote main_en.tex | tail -1 | grep -o "{.*}" | tail -c +2 | head -c -2)
+          QUOTE=$(grep -A1 heegusquote main_${{ matrix.language }}.tex | tail -1 | grep -o "{.*}" | tail -c +2 | head -c -2)
           pdftotext main_${{ matrix.language }}.pdf
-          if grep -iq $QUOTE main_${{ matrix.language }}.txt
+          if grep -iq "$QUOTE" main_${{ matrix.language }}.txt
           then
             echo "All good"
           else
