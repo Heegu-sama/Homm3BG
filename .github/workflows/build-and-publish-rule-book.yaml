@@ -99,9 +99,9 @@ jobs:
       - name: Check for broken CMap
         if: github.event_name == 'pull_request'
         run: |
-          QUOTE=$(grep "intro" main_${{ matrix.language }}.tex -A2 | tail -1 | awk '{$1=$1};1')
+          NEEDLE=$(grep TEST_SUBSTRING= main_${{ matrix.language }}.tex cut -f2 -d=)
           pdftotext main_${{ matrix.language }}.pdf - | tr '\n' ' ' > main_${{ matrix.language }}.txt
-          if grep -iq "$QUOTE" main_${{ matrix.language }}.txt
+          if grep -iq "$NEEDLE" main_${{ matrix.language }}.txt
           then
             echo "All good"
           else
