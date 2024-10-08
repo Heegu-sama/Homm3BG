@@ -99,7 +99,7 @@ jobs:
       - name: Check for broken CMap
         if: github.event_name == 'pull_request'
         run: |
-          NEEDLE="$(grep TEST_SUBSTRING= main_${{ matrix.language }}.tex cut -f2 -d=)"
+          NEEDLE="$(grep TEST_SUBSTRING= main_${{ matrix.language }}.tex | cut -f2 -d=)"
           if [[ -z "$NEEDLE" ]]; then
             echo "No TEST_SUBSTRING found in main_${{ matrix.language }}.tex."
             exit 1
