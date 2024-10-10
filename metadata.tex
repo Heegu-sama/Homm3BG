@@ -323,7 +323,7 @@
 \begin{center}
   \iftoggle{githubbuild}{
     \getenv[\githubsha]{GITHUB_SHA}
-    \versionwarning{} \href{\repourl}{\StrLeft{\githubsha}{7}}.
+    \versionwarning{} \href{\repourl}{\textlang{english}{\StrLeft{\githubsha}{7}}}.
   }{
     \textlang{\mainlanguagename}{\versionlabel{} \textlang{english}{\input{.version}}}
   }
