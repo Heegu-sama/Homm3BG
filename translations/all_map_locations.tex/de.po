@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
 "POT-Creation-Date: 2024-08-11 00:12+0200\n"
-"PO-Revision-Date: 2024-10-22 13:09+0200\n"
+"PO-Revision-Date: 2024-10-22 13:34+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -21,22 +21,22 @@ msgstr ""
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
 #: sections/components.tex:5 sections/credits.tex:6 sections/deckbuilding.tex:5
 #: sections/difficulty.tex:5 sections/expansion_content.tex:5
-#: sections/map_elements.tex:5 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/setup.tex:5 sections/trading.tex:5
+#: sections/map_elements.tex:5 sections/player_turns.tex:5 sections/resources.tex:5
+#: sections/setup.tex:5 sections/trading.tex:5
 msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
 msgstr ""
 
 #. type: multicols
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
-#: sections/all_map_locations.tex:421 sections/combat.tex:5
-#: sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/difficulty.tex:7 sections/expansion_content.tex:7
-#: sections/expansion_content.tex:51 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:79
-#: sections/map_elements.tex:124 sections/player_turns.tex:7
-#: sections/resources.tex:7 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:58 sections/town.tex:5
-#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:162
+#: sections/all_map_locations.tex:421 sections/combat.tex:5 sections/credits.tex:10
+#: sections/deckbuilding.tex:7 sections/difficulty.tex:7
+#: sections/expansion_content.tex:7 sections/expansion_content.tex:51
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
+#: sections/map_elements.tex:79 sections/map_elements.tex:124
+#: sections/player_turns.tex:7 sections/resources.tex:7
+#: sections/round_structure.tex:5 sections/scenario_end.tex:5 sections/setup.tex:58
+#: sections/town.tex:5 sections/trading.tex:7 sections/units.tex:5
+#: sections/units.tex:162
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -167,8 +167,7 @@ msgstr ""
 #: sections/all_map_locations.tex:54 sections/all_map_locations.tex:426
 #: sections/credits.tex:36 sections/difficulty.tex:18
 #: sections/expansion_content.tex:20 sections/expansion_content.tex:65
-#: sections/game_modes.tex:27 sections/scenario_end.tex:23
-#: sections/units.tex:105
+#: sections/game_modes.tex:27 sections/scenario_end.tex:23 sections/units.tex:105
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -241,8 +240,8 @@ msgid ""
 "The effects of the following \\textbf{Visitable} fields are explained by the "
 "symbols on the previous page:"
 msgstr ""
-"Effekte der folgenden \\textbf{besuchbaren} Orte sind durch die Symbole auf "
-"der vorherigen Seite erklärt:"
+"Effekte der folgenden \\textbf{besuchbaren} Orte sind durch die Symbole auf der "
+"vorherigen Seite erklärt:"
 
 #. type: multicols*
 #: sections/all_map_locations.tex:132
@@ -386,7 +385,7 @@ msgstr ""
 "\\textbf{Städte} befinden sich in der Mitte der Startgebiete (I).\n"
 "Eine gegnerische Stadt zu erobern, verhindert, dass deren Nebenhelden dort rekrutiert werden oder besiegte Haupthelden sich dorthin zurückziehen können.\n"
 "Außerdem erhält der Eroberer einen \\textbf{Fraktionswürfel} vom ursprünglichen Besitzer.\n"
-"Erobern von Städten kann zum \\pagelink{End}{Sieg eines Szenarios} führen (z.B. durch Spielereliminierung; Erhalt von Fraktionswürfeln). Je nach Szenario kann es weitere Belohnungen für Stadteroberungen geben.\n"
+"Erobern von Städten kann zum \\pagelink{End}{Spielsieg} führen (z.B. durch Spielereliminierung; Erhalt von Fraktionswürfeln). Je nach Szenario gibt es weitere Belohnungen für Stadteroberungen.\n"
 "Ansonsten haben Stadteroberungen keine Auswirkungen für die ursprünglichen Besitzer.\n"
 "Sie behalten Zugang zu allen Funktionen ihres Stadttableaus.\n"
 "Der Eroberer erhält wiederum keinen Zugang zum Stadttableau oder zu den Fraktionseinheiten.\n"
@@ -459,12 +458,13 @@ msgid ""
 "\n"
 msgstr ""
 "\\textbf{Siedlungen}\\index{Siedlung} sind Orte, an denen Nebenhelden platziert werden und zu denen sich besiegte Haupthelden zurückziehen können.\n"
-"Wer eine Siedlung einnimmt, wählt genau einen der folgenden Effekte: \\ (1) Erhöhe ein Einkommen deiner Wahl (\\svg{gold}, \\svg{building_materials} oder \\svg{valuablegreater}) um eine Stufe.\n"
+"Wer eine Siedlung einnimmt, wählt genau einen der folgenden Effekte: ENTWEDER erhöhe ein Einkommen deiner Wahl (\\svg{gold}, \\svg{building_materials} oder \\svg{valuablegreater}) um eine Stufe.\n"
 "Wie bei Minen erhält der erste Spieler, der die Siedlung einnimmt das gewählte Einkommen einmal \\textbf{sofort} ausbezahlt.\n"
-"Markiere die Siedlung mit einem Ressourcenmarker der gewählten Art, um die Art des Einkommens anzuzeigen.\\\v(2) \\textbf{Anstatt das Einkommen zu erhöhen}, kannst du eine deiner \\svgunit{bronze}- oder \\svgunit{silver}-Einheiten zu halben Kosten (aufgerundet) \\textbf{verstärken}.\n"
+"Markiere die Siedlung mit einem Ressourcenmarker der gewählten Art, um die Art des Einkommens anzuzeigen.\n"
+"Eroberst du eine gegnerische Siedlung, darfst du die Ressourcenart auch wechseln.\\par\n"
+"ODER \\textbf{anstatt das Einkommen zu erhöhen}, kannst du eine deiner \\svgunit{bronze}- oder \\svgunit{silver}-Einheiten zu halben Kosten (aufgerundet) \\textbf{verstärken}.\n"
 "Bist du der erste Spieler, der die Siedlung einnimmt, ist das Verstärken dieser Einheit sogar \\textbf{kostenlos}.\n"
 "Platziere keinen Ressourcenmarker auf dieser Siedlung.\n"
-"Eroberst du eine gegnerische Siedlung, darfst du dich von neuem entscheiden und mögliche Ressourcenmarker auch wechseln.\\par\n"
 "\n"
 "\n"
 
@@ -510,8 +510,7 @@ msgstr ""
 "\\end{minipage}"
 
 #. type: Plain text
-#: sections/all_map_locations.tex:192 sections/credits.tex:8
-#: sections/heroes.tex:70
+#: sections/all_map_locations.tex:192 sections/credits.tex:8 sections/heroes.tex:70
 msgid "\\bigbreak"
 msgstr ""
 
