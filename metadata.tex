@@ -138,25 +138,28 @@
     \color{antiquewhite} \section*{\MakeUppercase{#1}}
   }
 }
-\newcommand{\addsection}[2]{
+\newcommand{\addsection}[3][1]{
+  \def\oneliner{\equal{#1}{1}}
   \vspace*{-5em}
   \hspace*{-1em}
   \makebox[0pt][l]{
   \raisebox{-\totalheight}[0pt][7pt]{
     \begin{tikzpicture}
       \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\layout/section_heading.jpg}};
-      \draw (-6.2, 0) node {\includegraphics[width=0.125\textwidth]{#2}};
+      \draw (-6.2, 0) node {\includegraphics[width=0.125\textwidth]{#3}};
     \end{tikzpicture}
     }
   }
   \begin{fullwidth}[leftmargin=0.16\textwidth, outermargin=0.16\textwidth, innermargin=0.16\textwidth]
     \begin{center}
       \vspace*{\lang_header_adjustment}
-      \sectionheadertext{#1}
-      \cleardoublepage\phantomsection\addcontentsline{toc}{section}{\protect\numberline{}#1}
+      \ifthenelse{\oneliner}{}{\vspace{-13pt}}
+      \sectionheadertext{#2}
+      \cleardoublepage\phantomsection\addcontentsline{toc}{section}{\protect\numberline{}#2}
     \end{center}
   \end{fullwidth}
   \vspace{1.75em}
+  \ifthenelse{\oneliner}{}{\vspace{-13pt}}
 }
 %End of create section heading.
 
