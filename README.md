@@ -9,8 +9,6 @@
 
 **Join us [on Discord](https://discord.gg/khV8Ckw8RD) to help with translating or just to get in touch!**
 
-Click in the table to download the most recent builds in the chosen language:
-
 <table>
     <thead>
         <tr>
