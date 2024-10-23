@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
 "POT-Creation-Date: 2024-08-10 22:57+0200\n"
-"PO-Revision-Date: 2024-05-06 07:36+0000\n"
+"PO-Revision-Date: 2024-10-23 08:30+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -15,6 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
 
 #. type: Plain text
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
@@ -53,7 +54,7 @@ msgstr ""
 #. type: Plain text
 #: sections/map_elements.tex:3
 msgid "\\addsection{Map Elements}{\\skills/logistics.png}"
-msgstr ""
+msgstr "\\addsection{Abenteuerkarte}{\\skills/logistics.png}"
 
 #. type: multicols*
 #: sections/map_elements.tex:13
@@ -68,6 +69,14 @@ msgid ""
 "Starting (I) Tiles are the easiest while Center (VI–VII) Tiles are the most difficult.\\par\n"
 "\n"
 msgstr ""
+"{2}\n"
+"In jedem Szenario wird die Abenteuerkarte aus \\pagetarget{Map}{Gebieten} zusammengesetzt.\n"
+"Es gibt vier Gebietsarten: Die Spieler beginnen in fraktionsspezifischen Startgebieten (I).\n"
+"Wie weitere Gebiete entdeckt oder neu platziert werden, wird auf der nächsten Seite beschrieben.\n"
+"Während des Spielaufbaus werden aus allen verfügbaren Gebieten eines Typs die benötigten Gebiete zufällig und verdeckt gezogen und gemäß Szenariobeschreibung angeordnet.\\par\n"
+"Die \\textbf{römischen Zahlen} auf jedem Gebietsteil weist auf den \\textbf{Schwierigkeitsgrad neutraler Einheiten} sowie auf den Wert der Belohnungen hin, die die Spieler dort finden können.\n"
+"Startgebiete (I) weisen die niedrigste und Zentralgebiete (VI–VII) die höchste Schwierigkeit auf.\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:19
@@ -103,6 +112,23 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{Aufbau eines Gebiets\\index{Gebiet}}\n"
+"Jedes Gebiet ist in 7 separate \\textbf{Felder} aufgeteilt, die deine Helden \\textbf{besuchen} können.\n"
+"Bewegt sich dein Held auf ein Feld, muss zuerst ein \\pagelink{Combat}{Kampf} abgehandelt werden, falls vorhanden,\n"
+"ehe der \\textbf{Ort} auf dem Feld besucht werden muss. \n"
+"Auf leeren Feldern \\index{Leere Felder} geschieht beim Besuchen nichts.\n"
+"Durchgezogene gelbe Linien zwischen Feldern können nicht passiert werden.\n"
+"\\pagelink{Difficulty}{Römische Zahle} weisen auf einen Kampf gegen neutrale Einheiten hin, der erst gewonnen werden muss, bevor der Ort besucht t.\\par\n"
+"\\columnbreak\n"
+"\\includegraphics[width=\\linewidth]{\\images/maptiles.png}\n"
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\item[\\textbf{1.}] Startgebiete: I\n"
+"  \\item[\\textbf{2.}] Ferne Gebiete: II-III\n"
+"  \\item[\\textbf{3.}] Nahe Gebiete: IV-V\n"
+"  \\item[\\textbf{4.}] Zentralgebiete: VI-VII\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:39
@@ -152,6 +178,17 @@ msgid ""
 "    \\item[\\textbf{7.}] Tile name like \\\\{} \\texttt{F2} or \\texttt{\\#N3}\n"
 "  "
 msgstr ""
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\begin{multicols}{2}\n"
+"    \\item[\\textbf{1.}] Leeres Feld\n"
+"    \\item[\\textbf{2.}] Ort\n"
+"    \\item[\\textbf{3.}] Artefaktsymbol\n"
+"    \\item[\\textbf{4.}] Feld-Schwierigkeit\n"
+"    \\item[\\textbf{5.}] Durchgezogene Linie\n"
+"    \\item[\\textbf{6.}] Blockiertes Feld\n"
+"    \\item[\\textbf{7.}] Gebiets-Nr. (z.B. \\\\{} \\texttt{F2} oder \\texttt{\\#N3})\n"
+"  "
 
 #. type: multicols*
 #: sections/map_elements.tex:70
@@ -169,6 +206,9 @@ msgid ""
 "  Blocked Field cannot be entered, but can be exited.\n"
 "}"
 msgstr ""
+"\\note{3}{\n"
+"  Blockierte Felder können nicht betreten, aber verlassen werden.\n"
+"}"
 
 #. type: multicols
 #: sections/map_elements.tex:94
@@ -190,6 +230,21 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Categories}{Kategorien der Orte}}\n"
+"Visiting Fields provides Heroes with benefits, such as gaining Resources or Cards (see \\pagelink{All Map Locations}{Orte auf der Abenteuerkarte}).\n"
+"Es gibt folgende 3 Kategorien:\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{Besuchbar} – Sobald der Ort besucht wurde, wird dort ein Statuswürfel platziert.\n"
+"    Solange ein Statuswürfel auf dem Ort liegt, wird dieser wie ein leeres Feld behandelt.\n"
+"  \\item \\textbf{Einnehmbar} – Diese Orte können von Spielern kontrolliert werden und liefern passive Vorteile.\n"
+"    Nach deinem Besuch platziere einen eigenen Fraktionswürfel auf dem Ort.\n"
+"    Gegnerische Helden, die deinen eingenommen Orte betreten, ersetzen deinen Fraktionswürfel durch ihren eigenen und \\textbf{stehlen} so den Effekt des Ortes.\n"
+"    Verbündete Helden behandeln eingenommene Orte \\textbf{als leere Felder}.\n"
+"  \\item \\textbf{Mehrfach besuchbar} – Diese Orte können mehrfach besucht werden.\n"
+"    Platziere keinen Würfel auf Ihnen.\n"
+"    Du darfst 1 BP ausgeben, um den Ort erneut zu besuchen.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:101
@@ -203,6 +258,13 @@ msgid ""
 "You may always rotate Map Tiles when placing or revealing them.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Placing}{Platzieren und Entdecken von Gebieten}}\\index{Gebiete entdecken}\n"
+"Helden dürfen 1 BP ausgeben, um entweder ein angrenzendes, verdecktes Gebiet zu entdecken oder ein fernes Gebiet (II–III) aus ihrem eigenen Vorrat platzieren.\n"
+"Alle unentdeckten Gebiete sind stets\\textbf{allen Spielern verborgen} bis sie platziert oder aufgedeckt werden.\n"
+"Neue Teile müssen angrenzend an den Helden, der den BP ausgab, platziert werden und dabei mit mindestens zwei existierenden Gebieten verbunden sein.\n"
+"Außerdem dürfen sie nur so platziert werden, dass ein gültiger Pfad zwischen allen Gebieten gewährleistet bleibt.\n"
+"Du darfst Gebiete immer frei ausrichten, wenn du sie entdeckst oder platzierst.\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:106
@@ -214,6 +276,11 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\medskip\n"
+"\\note{6}{\n"
+"  Wird ein besuchbarer Ort besucht, \\textbf{muss immer} ein Statuswürfel platziert werden, auch wenn du den Effekt nicht abhandeln kannst oder möchtest.\n"
+"}\n"
+"\n"
 
 #. type: figure*
 #: sections/map_elements.tex:118
@@ -228,11 +295,19 @@ msgid ""
 "    \\node at (3.9, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{be adjacent to two other tiles}}}}};\n"
 "  \\end{tikzpicture}"
 msgstr ""
+"[!hb]\n"
+"  \\centering\n"
+"  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
+"  \\begin{tikzpicture}[overlay]\n"
+"    \\node at (5, 10) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Das Gebiet darf hier nicht platziert werden}}}}};\n"
+"    \\node at (5, 1.4) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{Das Gebiet darf hier platziert werden, weil es}}}}};\n"
+"    \\node at (3.9, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{an zwei andere Gebiete angrenzt}}}}};\n"
+"  \\end{tikzpicture}"
 
 #. type: subsection{#2}
 #: sections/map_elements.tex:122
 msgid "Example Turn"
-msgstr ""
+msgstr "Beispiel-Spielzug"
 
 #. type: multicols*
 #: sections/map_elements.tex:127
@@ -242,6 +317,9 @@ msgid ""
 "    She spends 1 MP to move onto the Mine, which begins \\pagelink{Combat}{Combat} against Neutral Units, since the Field has a \\pagelink{Difficulty}{Difficulty Rating} and has not been previously Flagged by any player.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Alicia möchte mit ihrem Haupthelden Sandro eine angrenzende \\pagelink{Mines}{Mine} einnehmen.\n"
+"    Sie gibt 1 BP aus, um ihren Helden zur Mine zu bewegen, wodurch ein \\pagelink{Combat}{Kampf} gegen Neutrale Einheiten ausgelöst wird, da der Ort \\pagelink{Difficulty}{Schwierigkeitsgrad} der Stufe 1 besitzt und kein anderer Spieler ihn zuvor eingenommen hat.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:129
@@ -260,6 +338,10 @@ msgid ""
 "During the Combat, she casts the Lightning Bolt, and Empowers \\svg{empower} it with Haste's alternative (bottom) effect, which makes the Lightning Bolt deal 3 damage \\svg{damage}, killing the Troglodytes and winning the Combat.}\n"
 "\n"
 msgstr ""
+"\\textit{Die Mine wird von Troglodyten bewacht, die 3 LP \\svg{health_points} haben.\n"
+"Alicias Handkarten sind die Zauber Eile, Blitzstrahl und Stadtportal, sowie eine Karte Zauberkraft.\n"
+"Sie spielt Blitzstrahl aus und verstärkt \\svg{empower} diesen durch den alternativen (unteren) Effekt von Eile, wodurch Blitzstrahl 3 Schaden \\svg{damage} zufügt, die Troglodyten besiegt werden und der Kampf gewonnen wird.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:135
@@ -276,6 +358,8 @@ msgid ""
 "\\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell Card per Combat Round.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Alicia hätte nicht beide Zauber Blitzstrahl und Eile spielen dürfen, da pro Kampfrunde nur ein Zauber erlaubt ist und dieser Kampf nur eine Kampfrunde angedauert hat. .}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:144
@@ -288,6 +372,12 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\textit{Alicia nimmt die Mine nun ein, indem sie einen Fraktionswürfel auf ihr platziert.\n"
+"    Dadurch erhöht sich ihr \\svg{building_materials}-Einkommen um 2 und sie erhält sofort das Grundeinkommen der Mine in Höhe von 2 \\svg{building_materials} einmal ausbezahlt, da sie der erste Spieler war, der die Mine eingenommen hat.}\\par\n"
+"\\textit{Anschließend möchte Alicia sich zu einer zuvor eroberten Siedlung bewegen und zaubert dazu Stadtportal, das sie noch auf der Hand hält.\n"
+"    Da sie Heldenstufe 2 hat, darf sie den Experteneffekt \\svgeven{expert} von Zauberkraft nutzen, um nach dem Zaubern noch einen zusätzlichen BP zu erhalten.\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:146
