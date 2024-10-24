@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
 "POT-Creation-Date: 2024-08-10 22:57+0200\n"
-"PO-Revision-Date: 2024-04-19 21:21+0200\n"
+"PO-Revision-Date: 2024-10-24 23:55+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -15,6 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
 
 #. type: Plain text
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
@@ -64,7 +65,7 @@ msgstr ""
 #. type: Plain text
 #: sections/player_turns.tex:3
 msgid "\\addsection{Player Turns}{\\spells/dimension_door.png}"
-msgstr ""
+msgstr "\\addsection{Spielerzüge}{\\spells/dimension_door.png}"
 
 #. type: multicols
 #: sections/player_turns.tex:19
@@ -83,6 +84,18 @@ msgid ""
 "Once all players have spent all their Movement Points and do not wish to use any further Town or Morale Actions, the current Round is over.\n"
 "\n"
 msgstr ""
+"Zu Beginn deines Spielzuges erneuere deine Kartenhand in dieser Reihenfolge:\n"
+"\\begin{itemize}\n"
+"  \\item Wirf beliebig viele unliebsame Karten ab.\n"
+"Falls deine aktuellen Handkarten dein Handkartenlimit \\svg{hand} übersteigen, musst du Karten bis zum Handkartenlimit abwerfen.\n"
+"  \\item Ziehe Karten nach bis zu deinem Handkartenlimit.\n"
+"  \\item Handle beliebige ``Zu Beginn deines Zuges''-Fähigkeiten ab.\n"
+"\\end{itemize}\n"
+"Dein Handkartenlimit \\index{Handkartenlimit} richtet sich nach der \\pagelink{Level}{Stufe} deines Haupthelden.\n"
+"Es wird nur zu Beginn deines Spielzuges geprüft.\\par\n"
+"Während des Zuges führen die Spieler drei Arten von Aktionen aus: \\textbf{Bewegungsaktionen}, \\textbf{Stadtaktionen}, und \\textbf{Moralaktionen}.\n"
+"Sobald alle Spieler alle Bewegungsaktionen ausgeführt haben und keine Stadt- oder Moralaktionen mehr ausführen möchten, endet die Runde.\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:31
@@ -101,6 +114,18 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{Bewegungsaktionen}\n"
+"\\pagetarget{Movement}{Bewegungsaktionen}\\index{Bewegungsaktionen} werden durch das Ausgeben von Bewegungspunkten (BP) abgehandelt.\n"
+"Bewegungsaktionen können  \\textbf{nur im eigenen Spielzug} ausgeführt werden.\\par\n"
+"Mit jedem BP kann eine der folgenden Aktionen durchgeführt werden:\n"
+"\\begin{itemize}\n"
+"  \\item Bewege einen Helden auf ein angrenzendes Feld und besuche dieses Feld.\n"
+"  \\item \\pagelink{Categories}{Besuche} den Ort des Feldes erneut, auf dem sich dein Held befindet.\n"
+"  \\item \\pagelink{Timelimit}{Verlängere einen Kampf} gegen neutrale Einheiten um eine zusätzliche Kampfrunde.\n"
+"  \\item \\pagelink{Placing}{Entdecke} ein an deinen Helden angrenzendes, verdecktes Gebiet.\n"
+"  \\item Platziere ein neues Gebiet aus deinem Vorrat ferner Gebiete (II–III).\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:37
@@ -113,6 +138,12 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\includesvg[width=0.6\\linewidth]{\\images/movement_tokens}\\\\\n"
+"  \\medskip\n"
+"  \\footnotesize\\textit{Ein aktiver und inaktiver Bewegungsmarker.}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:45
@@ -125,6 +156,12 @@ msgid ""
 "When you move through a Field with an allied Hero, do not \\pagelink{Categories}{Visit} the Field that the allied Hero is standing on.\\par\n"
 "\n"
 msgstr ""
+"Markiere genutzte BP durch Drehen der zugehörigen Bewegungsmarker auf die inaktive (rote) Seite.\n"
+"Falls ein Spieler auch einen \\pagelink{Secondary}{Nebenhelden} besitzt, werden die BP der Helden getrennt behandelt.\n"
+"Helden können BP in beliebiger Reihenfolge ausgeben.\\par\n"
+"Helden dürfen sich durch von verbündeten Helden besetzte Felder bewegen, aber ihre Bewegung dort nicht beenden.\n"
+"Die besetzten Felder werden in diesem Fall von dem sich bewegenden Helden nicht \\pagelink{Categories}{besucht}.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:50
@@ -136,6 +173,11 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{10}{\n"
+"  Jedesmal, wenn du (zusätzliche) BP erhältst, in der Regel markiert durch das Symbol \\svgeven{movement-note}, gelten diese BP \\textbf{nur im aktuellen Spielzug}.\n"
+"  Befinden sich einmal beide deiner Helden auf demselben Feld, musst du den nächsten BP nutzen, um einen der Helden von dem Feld weg zu bewegen.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:55
@@ -147,6 +189,11 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\vfill\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=0.7\\linewidth]{\\art/town_portal.png}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:70
@@ -166,6 +213,19 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Town Actions}{Stadtaktionen}\\index{Stadtaktionen}}\n"
+"Jede unten aufgeführte Stadtaktion kann  \\textbf{nur einmal pro Runde} ausgeführt werden.\n"
+"Jede Stadtaktion kann während irgendeines (auch gegnerischen) Spielerzuges zu irgendeinem Zeitpunkt durchgeführt werden, außer im Kampf. Es dürfen aber keine Aktionen dadurch unterbrochen werden.\n"
+"Zum Beispiel dürfen nicht mehrere Spieler zeitgleich Zauber kaufen und ziehen.\\par\n"
+"Sobald ein Spieler einen Kampf ankündigt, haben allen Spieler noch Gelegenheit beliebig viele Stadtaktionen auszuführen, bevor der \\pagelink{Combatsetup}{Kampf startet.}\\par\n"
+"Nach einer ausgeführten Stadtaktion, drehe den entsprechende Marker auf dem Stadttableau auf seine inaktive Seite.\n"
+"Diese Stadtaktion kann erst wieder in der nächsten Spielrunde erneut ausgeführt werden.\n"
+"\\begin{itemize}\n"
+"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/build.png}}] Baumarker\\index{Baumarker}: wird zum Ausbau der \\pagelink{Town}{Stadt} genutzt.\n"
+"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/population.png}}] Bevölkerungsmarker\\index{Bevölkerungsmarker}: wird zum Rekrutieren und Verstärken von \\pagelink{Units}{Einheiten} oder zum Rekrutieren eines \\pagelink{Secondary}{Nebenhelden} genutzt.\n"
+"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/spells.png}}]Zauberbuchmarker\\index{Zauberbuchmarker}: wird zum Kaufen von \\pagelink{spells}{Zaubern} genutzt. Das Stadtgebäude Magiergilde wird hierfür benötigt.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:85
@@ -187,6 +247,21 @@ msgid ""
 "If you would gain a second Negative Morale Token, you must instead \\textbf{discard your hand of Cards} the next time you end your Turn.\\par\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Morale}{Moral}aktionen}\\index{Moralaktionen}\n"
+"Die Spieler können durch verschiedene Effekte Moral erhalten oder verlieren.\n"
+"Erhälst du Moral, nimm einen Gute-Moral-Marker\\index{Gute Moral} \\svg{morale_positive}.\n"
+"Du darfst höchsten einen solchen Marker haben.\n"
+"Erhälst du einen zweiten, darfst du den ersten sofort ausgeben, um den zweiten behalten zu können.\n"
+"Gute-Moral-Marker dürfen jederzeit für einen der folgenden Effekte ausgegeben werden:\n"
+"\\begin{itemize}\n"
+"  \\item Ziehe eine Karte von deinem Deck.\n"
+"  \\item Wirf eine beliebige Anzahl Handkarten ab und ziehe dieselbe Anzahl an Karten nach.\n"
+"  \\item Würfle einen soeben geworfenen Würfel neu.\n"
+"\\end{itemize}\n"
+"Falls du Moral verlierst, entferne - falls vorhanden - einen Gute-Moral-Marker \\svg{morale_positive}. Anderenfalls erhalte einen Schlechte-Moral-\\index{Schlechte Moral}Marker \\svg{morale_negative}.\n"
+"Umgekehrt: Erhältst du Moral und hast einen Schlechte-Moral-Marker, wirf diesen ab.\n"
+"Falls du einen zweiten Schlechte-Moral-Marker erhalten würdest \\textbf{wirf stattdessen alle Handkarten} am Ende deines Zuges ab.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:89
@@ -197,6 +272,10 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{5}{Die Nekropolis \\svg{necro-note} Fraktion ignoriert sämtliche Moral-Effekte.\n"
+"  Sie kann niemals Moral erhalten oder verlieren.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:93
@@ -207,6 +286,10 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\makebox[\\linewidth]{\\includegraphics[width=1.0\\linewidth]{\\art/shield.png}}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:95
@@ -215,6 +298,8 @@ msgid ""
 "\\subsection*{Example Turn}\n"
 "\n"
 msgstr ""
+"\\subsection*{Beispiel-Spielzug}\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:103
@@ -229,6 +314,14 @@ msgid ""
 "As Alice announces her intent to start Combat, both players still have an opportunity to perform Town Actions.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Alicia spielt mit Schlossheldin Catherine und beginnt ihren Zug.\n"
+"Sie hat 3 Karten aus der vorherigen Runde auf der Hand und möchte 2 davon abwerfen, bevor sie bis zum \\mbox{Handkartenlimit \\svg{hand}} nachzieht.\n"
+"Ihr Handkartenlimit ist 5, da ihr Hauptheld auf Stufe 3 ist. Also zieht sie nach dem Abwerfen noch 4 Karten (siehe \\pagelink{Level}{Stufeneffekte}).}\\par\n"
+"\\textit{Anschließend nutzt sie zuerst den Baumarker, um die \\svgunit{golden} Behausung zu bauen, und danach den Bevölkerungsmarker, um die \\svgunit{golden} Einheit Kämpe zu \\pagelink{Units}{rekrutieren}.\n"
+"Sie darf dies nur tun, da sie die niederen Behausungen (\\svgunit{bronze} und \\svgunit{silver}) bereits errichtet hat und genügend \\pagelink{Resources}{Ressourcen} für den Bau der Behausung und die Rekrutierung der Kämpen besitzt.}\\par\n"
+"\\textit{So vorbereitet auf den Kampf gibt sie einen BP aus, um ihren Helden auf das angrenzende Feld zu bewegen, dass vom Haupthelden Sandro ihres Mitspielers Bob besetzt ist.\n"
+"Alicia und Bob haben jetzt noch Gelegenheit, weitere Stadtaktionen durchzuführen. Alicia hat aber bereits gebaut und rekrutiert und darf nur noch Zauber kaufen.}\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/player_turns.tex:105
