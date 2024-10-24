@@ -1,9 +1,13 @@
-# Heroes of Might & Magic III: The Board Game 🐴 🛡️ ⚔️️<br>Rule Book Rewrite Project 📜🪶
+<div align="center">
+  <h1>Heroes of Might & Magic III: The Board Game<br>Rule Book Rewrite Project</h1>
 
-Efforts are ongoing to translate the rule book to languages other than English.
-**Want to help? Join us [on Discord](https://discord.gg/khV8Ckw8RD).**
+  <p align="center">
+    <img src="https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white">
+    <a href="https://discord.gg/Y4uM9pPWF6"><img src="https://dcbadge.limes.pink/api/server/Y4uM9pPWF6"></a>
+  </p>
+</div>
 
-Click in the table to download the most recent builds in the chosen language:
+**Join us [on Discord](https://discord.gg/khV8Ckw8RD) to help with translating or just to get in touch!**
 
 <table>
     <thead>
@@ -136,8 +140,6 @@ all of which to be print friendly.
 Best served for those who would like to have it on paper 🤞<br>
 🤑 The economy printable build has **no art backgrounds**. Other than that, it's the same as the regular printable build.
 This is for people who want to save their toners or don't have printers that can print edge to edge where the white borders around the art backgrounds don't look that good.
-
-This repository used to host [**Comprehensive Components List**](https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/components_list_en/components_list_en.pdf) listing all the cards, minis, tokens, etc. for every box, but after a while ⚠️ ️️**Archon released their own version of it, and you should use it instead. Find it on 👉 [their website](https://archon-studio.com/downloads/heroes-iii) 👈 called "Content Guide"**.
 
 ### 💡 What Is This?
 
