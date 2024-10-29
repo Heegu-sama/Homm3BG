@@ -47,7 +47,7 @@ jobs:
         run: |
           export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
           export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
-          ./${PO4A_DIR}/po4a -v po4a.cfg
+          ./${PO4A_DIR}/po4a --no-translations -v po4a.cfg
 
       - name: Check git changes
         run: git status --porcelain translations > files.txt
