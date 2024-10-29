@@ -54,7 +54,7 @@ jobs:
           export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
           tar -xf ${PO4A_DIR}.tar.gz
           export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
-          ./${PO4A_DIR}/po4a -v --no-update po4a.cfg
+          ./${PO4A_DIR}/po4a --no-update po4a.cfg
 
       - name: Compile rule book
         uses: xu-cheng/latex-action@v3
