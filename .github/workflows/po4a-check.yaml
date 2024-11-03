@@ -28,7 +28,7 @@ jobs:
         run: |
           export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
           export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
-          ./${PO4A_DIR}/po4a po4a.cfg
+          ./${PO4A_DIR}/po4a --no-translations po4a.cfg
           if [[ `git status --porcelain translations` ]]; then
             echo "There are uncommited changes to translations:"
             git status --porcelain translations
