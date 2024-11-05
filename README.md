@@ -81,7 +81,7 @@
         </tr>
         <tr>
             <td>🇺🇦 Українська</td>
-            <td align="center">100%</td>
+            <td align="center">90%</td>
             <td align="center">0%</td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Ukrainska_Rules_Rewrite_12.pdf">завантажити</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Ukrainska_Rules_Rewrite_12_Printable.pdf">завантажити</a></td>
@@ -91,7 +91,7 @@
         </tr>
         <tr>
             <td>🇩🇪 Deutsch</td>
-            <td align="center">~15%</td>
+            <td align="center">50%</td>
             <td align="center">0%</td>
             <td align="center">—</td>
             <td align="center">—</td>
@@ -111,7 +111,7 @@
         </tr>
         <tr>
             <td>🇮🇱 עברית</td>
-            <td align="center">10%</td>
+            <td align="center">100%</td>
             <td align="center">0%</td>
             <td align="center">—</td>
             <td align="center">—</td>
