@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
 "POT-Creation-Date: 2024-08-12 21:41+0200\n"
-"PO-Revision-Date: 2024-05-03 18:11+0200\n"
+"PO-Revision-Date: 2024-11-07 22:57+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -15,6 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
 
 #. type: Plain text
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
@@ -58,7 +59,7 @@ msgstr ""
 #. type: Plain text
 #: sections/difficulty.tex:3
 msgid "\\addsection{Difficulty}{\\spells/berserk.png}"
-msgstr ""
+msgstr "\\addsection[2]{Szenario-\\break{}Schwierigkeit}{\\spells/berserk.png}"
 
 #. type: multicols
 #: sections/difficulty.tex:16
@@ -74,6 +75,15 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"Während des Spielaufbaus wählen die Spieler eine von vier \\pagetarget{Difficulty}{Szenario-Schwierigkeitsstufen}\\index{Szenario-Schwierigkeit}.\n"
+"Diese legt den Startbonus\\index{Startbonus}, den die Spieler während Schritt 16 des Spielaufbaus erhalten, sowie die Stärke neutraler Einheiten fest. Folgende Startboni gibt es:\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{Leicht} – Wirf 2 \\svg{resource_die} und handle beide ab – ODER – \\textbf{Durchsuche} (2) das Artefakt-Deck zweimal nacheinander.\n"
+"  \\item \\textbf{Normal} – Wirf 2 \\svg{resource_die} und handle einen von ihnen ab – ODER – \\textbf{Durchsuche} (2) das Artefakt-Deck.\n"
+"  \\item \\textbf{Experte} – Wirf 1 \\svg{resource_die} und handle ihn ab – ODER – decke Karten vom Artefakt-Deck auf bis du ein gewöhnliches Artefakt findest und nimm es auf die Hand.\n"
+"  \\item \\textbf{Unmöglich} – Kein Startbonus.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/difficulty.tex:20
@@ -82,6 +92,8 @@ msgid ""
 "Campaign missions have unique bonuses that \\textbf{replace} the regular starting bonus.\n"
 "\n"
 msgstr ""
+"Szenarien einer Kampagne haben eigene Startboni, welche die regulären \\textbf{ersetzen}.\n"
+"\n"
 
 #. type: multicols
 #: sections/difficulty.tex:24
@@ -92,6 +104,10 @@ msgid ""
 "The chosen difficulty also determines the number and type of neutral enemies that are encountered during Neutral Combat according to the \\hyperlink{Difficulty Table}{table} at the back cover of the book.\n"
 "\n"
 msgstr ""
+"Alle durch Startboni erhaltenen \\textbf{Artefakte} werden direkt auf die \\textbf{Hand} genommen und nicht in das Startdeck gemischt.\n"
+"Falls du das Artefakt-Deck durchsucht hast, mische das Deck und seinen Ablagestapel\\index{Ablagestapel} anschließend wieder zusammen und wirf dann das oberste Artefakt ab, um einen neuen Ablagestapel zu bilden.\\par\n"
+"Die gewählte Szenario-Schwierigkeit bestimmt außerdem die Anzahl und die Stufen neutraler Einheiten, die euch in neutralen Kämpfen begegnen. In der \\hyperlink{Difficulty Table}{Übersicht auf dem rückseitigen Cover} kann nachgesehen werden, welche Einheiten euch je nach Szenario- und Feld-Schwierigkeit (I - VII) begegnen werden.\n"
+"\n"
 
 #. type: Plain text
 #: sections/difficulty.tex:62
@@ -127,6 +143,38 @@ msgid ""
 "would normally go to your hand now go immediately to your discard pile "
 "instead.} \\\\ \\end{tabularx} }"
 msgstr ""
+"\\hommtable{38}{ \\centering \\textbf{Übersicht über optionale "
+"Spielanpassungen}\\\\ \\small { \\color{white} Diese Regelanpassungen "
+"erhöhen oder senken den Schwierigkeitsgrad einer Partie.\\\\ } \\bigskip "
+"\\begin{tabularx}{\\linewidth}{>{\\hsize=0.3\\hsize\\linewidth=\\hsize}X "
+">{\\hsize=1.7\\hsize\\linewidth=\\hsize}X} \\darkcell[1.5]{\\color{white}"
+"Szenario\\-Schwierig\\-keit...} & \\darkcell[1.5]{Änderungen im Vergleich zu "
+"den Standardregeln} \\\\ \\darkcell[1.2]{...erhöhen} & \\lightcell[1.2]"
+"{Städte produzieren keine Ressourcen mehr, sobald sie \\textbf{eingenommen} "
+"wurden, aber ihr dürft die Gebäude einer durch euch eroberten Stadt nutzen.} "
+"\\\\ \\darkcell[0.8]{...erhöhen} & \\lightcell[0.8]{Würfelwürfe dürfen nicht "
+"wiederholt werden.} \\\\ \\darkcell[0.8]{...erhöhen} & \\lightcell[0.8]{Alle "
+"Schatz- und Ressourcenwürfel liefern nur 1 Ressource ihrer Art.} \\\\ "
+"\\darkcell[0.8]{...erhöhen} & \\lightcell[0.8]{Erhalte keinen Startbonus.} \\"
+"\\ \\darkcell[0.8]{...senken} & \\lightcell[0.8]{Ihr beginnt die Partie "
+"zusätzlich mit einem Nebenhelden.} \\\\ \\darkcell[0.8]{...senken} & "
+"\\lightcell[0.8]{Jede Einheit fügt während eines Angriffs immer mindestens 1 "
+"\\svg{damage-table} zu.} \\\\ \\darkcell[0.8]{...senken} & \\lightcell[0.8]"
+"{Alle Minen und Siedlungen produzieren doppelt so viele Ressourcen.} \\\\ "
+"\\darkcell[1.2]{...senken} & \\lightcell[1.2]{Ihr dürft jederzeit Ressourcen "
+"tauschen. Der Handelsposten wird \\textbf{besuchbar} und ihr zieht 1 Karte "
+"vom Artefakt-Deck, sobald ihr ihn besucht.} \\\\ \\darkcell[0.8]{...senken} "
+"& \\lightcell[0.8]{Das Verlängern der Kämpfe um eine Kampfrunde kostet "
+"keinen BP mehr.} \\\\ \\darkcell[0.8]{Variante} & \\lightcell[0.8]{Der "
+"Angriffswürfel beeinflusst keinen Schaden mehr (nur noch Fähigkeiten.)} \\\\ "
+"\\darkcell[0.8]{Variante} & \\lightcell[0.8]{Auch zu Beginn der "
+"Ressourcenrunden werden Astrologenkarten gezogen.} \\\\ \\darkcell[0.8]"
+"{Variante} & \\lightcell[0.8]{Es werden keine Astrologenkarten mehr "
+"gezogen.} \\\\ \\darkcell[0.8]{Variante} & \\lightcell[0.8]{Entferne zu "
+"Beginn der 4./8./12. Runde alle Statusmarker von \\textbf{besuchbaren} "
+"Orten.} \\\\ \\darkcell[1.2]{Variante} & \\lightcell[1.2]{Karten, die ihr "
+"normalerweise sofort auf die Hand nehmen würdet, legt ihr stattdessen nun "
+"zuerst auf den eigenen Ablagestapel.} \\\\ \\end{tabularx} }"
 
 #. type: Plain text
 #: sections/difficulty.tex:65
