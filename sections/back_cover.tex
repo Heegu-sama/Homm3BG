@@ -23,7 +23,13 @@
   \newcommand{\silver}[0]{\svgeven[12]{silver}}
   \newcommand{\golden}[0]{\svgeven[12]{golden}}
   \newcommand{\azure}[0]{\svgeven[12]{azure}}
-  \begin{tabularx}{\linewidth}{p{0.15\linewidth}XXXX} & \darkcell{Easy} & \darkcell{Normal} & \darkcell{Hard} & \darkcell{Impossible} \\
+  \begin{tabularx}{\linewidth}{>{\hsize=0.15\hsize\linewidth=\hsize}X
+                               >{\hsize=0.1885\hsize\linewidth=\hsize}X
+                               >{\hsize=0.1885\hsize\linewidth=\hsize}X
+                               >{\hsize=0.1885\hsize\linewidth=\hsize}X
+                               >{\hsize=0.1885\hsize\linewidth=\hsize}X
+                               } &
+    \darkcell{Easy} & \darkcell{Normal} & \darkcell{Hard} & \darkcell{Impossible} \\
     \darkcell{Level I} & \lightcell{\bronze} & \lightcell{\bronze} & \lightcell{\bronze \bronze} & \lightcell{\bronze \bronze \bronze} \\
     \darkcell{Level II} & \lightcell{\bronze \bronze} & \lightcell{\bronze \bronze} & \lightcell{\bronze \bronze \bronze} & \lightcell{\bronze \bronze \silver} \\
     \darkcell{Level III} & \lightcell{\bronze \silver} & \lightcell{\bronze \bronze \silver} & \lightcell{\bronze \silver \silver} & \lightcell{\silver \silver \silver} \\
@@ -41,7 +47,11 @@
   \textbf{\pagetarget{Trade Table}{Trade Table}}\\
   \bigskip
 
-  \begin{tabularx}{\linewidth}{XXXX}
+  \begin{tabularx}{\linewidth}{>{\hsize=0.23\hsize\linewidth=\hsize}X
+                               >{\hsize=0.23\hsize\linewidth=\hsize}X
+                               >{\hsize=0.23\hsize\linewidth=\hsize}X
+                               >{\hsize=0.23\hsize\linewidth=\hsize}X
+                              }
     \darkcell{\color{white}Sells/gets} & \darkcell{...to purchase \svg{gold}} & \darkcell{...to purchase \svg{valuablegreater}} & \darkcell{...to purchase \svg{building_materials}} \\
     \darkcell{I am selling \svg{gold} ...} & \lightcell{--} & \lightcell{6 \svg{gold} \svgeven[7]{arrow_right_gray} 1 \svg{valuablegreater}} & \lightcell{2 \svg{gold} \svgeven[7]{arrow_right_gray} 1 \svg{building_materials}} \\
     \darkcell{I am selling \svg{valuablegreater} ...} & \lightcell{1 \svg{valuablegreater} \svgeven[7]{arrow_right_gray} 3 \svg{gold}} & \lightcell{--} & \lightcell{1 \svg{valuablegreater} \svgeven[7]{arrow_right_gray} 2 \svg{building_materials}} \\
