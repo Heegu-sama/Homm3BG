@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      release_dir: ${{ steps.dir.outputs.dir_name }}
+      artifact_name: ${{ steps.artifact_name.outputs.artifact_name }}
     strategy:
       fail-fast: false
       matrix:
@@ -69,12 +69,11 @@ jobs:
       - name: Set version
         run: echo "VERSION=$(cat .version | tr . _)" >> $GITHUB_ENV
 
-      - name: Create release dir
-        id: dir
+      - name: Create artifact name
+        id: artifact_name
         run: |
-          DIR_NAME="Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}"
-          mkdir -p ${DIR_NAME}
-          echo "dir_name=${DIR_NAME}" >> "$GITHUB_OUTPUT"
+          ARTIFACT_NAME="Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}"
+          echo "ARTIFACT_NAME=${ARTIFACT_NAME}" >> "$GITHUB_OUTPUT"
 
       - name: Compile rule book
         uses: xu-cheng/latex-action@v3
@@ -140,6 +139,6 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: ${{ steps.dir.outputs.release_dir }}
+          name: ${{ steps.artifact_name.outputs.artifact_name }}
           path: "*.pdf"
           retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
