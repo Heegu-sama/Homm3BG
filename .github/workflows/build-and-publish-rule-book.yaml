@@ -184,7 +184,7 @@ jobs:
         if: github.event_name != 'pull_request'
         run: |
           du -sh main_${{ matrix.language }}.pdf
-          tools/optimize.sh ${{ matrix.language }} --mono
+          tools/optimize.sh ${{ matrix.language }} --cmyk
           mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
           du -sh main_${{ matrix.language }}.pdf
 
