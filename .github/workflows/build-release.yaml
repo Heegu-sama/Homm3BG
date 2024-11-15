@@ -18,23 +18,14 @@ jobs:
       matrix:
         include:
           - language: en
-            luaengine: false
           - language: pl
-            luaengine: false
           - language: es
-            luaengine: false
           - language: fr
-            luaengine: false
           - language: ru
-            luaengine: true
           - language: ua
-            luaengine: true
           - language: de
-            luaengine: false
           - language: cs
-            luaengine: true
           - language: he
-            luaengine: true
 
     steps:
       - name: Set up repository
@@ -44,6 +35,7 @@ jobs:
         if: ${{ matrix.language != 'en' }}
         run: |
           sudo apt-get install -y po4a  # installs po4a dependencies
+          which po4a
           wget --quiet ${{ env.PO4A_GH_URL }}/v${{ env.PO4A_VERSION }}/po4a-${{ env.PO4A_VERSION}}.tar.gz
           export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
           tar -xf ${PO4A_DIR}.tar.gz
@@ -57,4 +49,8 @@ jobs:
           sudo snap install ./*_amd64_snap/*_amd64.snap --devmode
 
       - name: Build release version
-        run: echo "This workflow is a stub"
+        uses: xu-cheng/texlive-action@v2
+        with:
+          scheme: full
+          run: |
+            tools/release.sh ${{ matrix.language }}
