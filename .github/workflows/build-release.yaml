@@ -67,7 +67,7 @@ jobs:
           sudo snap install ./*_amd64_snap/*_amd64.snap --devmode
 
       - name: Set version
-        run: echo "VERSION=$(cat .version)" >> $GITHUB_ENV
+        run: echo "VERSION=$(cat .version | tr . _)" >> $GITHUB_ENV
 
       - name: Create release dir
         id: dir
@@ -141,5 +141,5 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.dir.outputs.release_dir }}
-          path: *.pdf
+          path: "*.pdf"
           retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
