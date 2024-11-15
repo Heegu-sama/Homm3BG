@@ -16,8 +16,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - language: en
-          # - language: pl
+          # - language: en
+          - language: pl
           # - language: es
           # - language: fr
           # - language: ru
@@ -30,7 +30,7 @@ jobs:
       - name: Set up repository
         uses: actions/checkout@v4
 
-      - name: Generate translations for ${{ matrix.language }}
+      - name: Install po4a
         if: ${{ matrix.language != 'en' }}
         run: |
           sudo apt-get install -y po4a  # installs po4a dependencies

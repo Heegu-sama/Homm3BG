@@ -24,10 +24,10 @@ echo "Building release ${VERSION} for ${languages[$LANGUAGE]}..."
 mkdir -p "release-${VERSION}"
 
 echo "Building digital version for ${languages[$LANGUAGE]}..."
-tools/build.sh "${LANGUAGE}" &> /dev/null
+tools/build.sh "${LANGUAGE}" # &> /dev/null
 echo "Please inspect the PDF file."
 echo "Optimizing digital build..."
-tools/optimize.sh "${LANGUAGE}" &> /dev/null
+tools/optimize.sh "${LANGUAGE}" # &> /dev/null
 mv "main_${LANGUAGE}_optimized.pdf" "release-${VERSION}/Heroes3_${languages[$LANGUAGE]}_Rules_Rewrite_${FILE_VERSION}.pdf"
 
 echo "Building printable version for ${languages[$LANGUAGE]}..."
