@@ -75,7 +75,7 @@ case "$(uname -s)" in
 esac
 
 
-case "${language}" in
+case "${LANGUAGE}" in
   ru|ua|cs|he)
     ENGINE=-pdflua
     ;;
@@ -84,7 +84,7 @@ case "${language}" in
     ;;
 esac
 
-if [[ ${language} != en ]]; then
+if [[ ${LANGUAGE} != en ]]; then
   po4a --no-update po4a.cfg \
     2> >(grep -v "unmatched end of environment .multicols\| (po4a::tex)$" >&2) \
     | grep "/${LANGUAGE}/"  # limit output to specified language
