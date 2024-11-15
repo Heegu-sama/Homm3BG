@@ -18,33 +18,33 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # - language: en
-          #   language_name: English
-          #   luaengine: false
+          - language: en
+            language_name: English
+            luaengine: false
           - language: pl
             language_name: Polski
             luaengine: false
-          # - language: es
-          #   language_name: Espanol
-          #   luaengine: false
-          # - language: fr
-          #   language_name: Francais
-          #   luaengine: false
-          # - language: ru
-          #   language_name: Russkiy
-          #   luaengine: true
-          # - language: ua
-          #   language_name: Ukrainska
-          #   luaengine: true
-          # - language: de
-          #   language_name: Deutsch
-          #   luaengine: false
-          # - language: cs
-          #   language_name: Cestina
-          #   luaengine: true
-          # - language: he
-          #   language_name: Ivrit
-          #   luaengine: true
+          - language: es
+            language_name: Espanol
+            luaengine: false
+          - language: fr
+            language_name: Francais
+            luaengine: false
+          - language: ru
+            language_name: Russkiy
+            luaengine: true
+          - language: ua
+            language_name: Ukrainska
+            luaengine: true
+          - language: de
+            language_name: Deutsch
+            luaengine: false
+          - language: cs
+            language_name: Cestina
+            luaengine: true
+          - language: he
+            language_name: Ivrit
+            luaengine: true
 
     steps:
       - name: Set up repository
@@ -109,7 +109,7 @@ jobs:
       - name: Optimize PDF
         run: |
           du -sh main_${{ matrix.language }}.pdf
-          tools/optimize.sh ${{ matrix.language }}
+          tools/optimize.sh ${{ matrix.language }} --cmyk
           mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
           du -sh main_${{ matrix.language }}.pdf
 
@@ -129,7 +129,7 @@ jobs:
       - name: Optimize PDF
         run: |
           du -sh main_${{ matrix.language }}.pdf
-          tools/optimize.sh ${{ matrix.language }} cmyk
+          tools/optimize.sh ${{ matrix.language }} --mono
           mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
           du -sh main_${{ matrix.language }}.pdf
 

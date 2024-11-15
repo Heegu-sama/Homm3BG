@@ -5,7 +5,7 @@ on:
     branches:
       - main
   pull_request:
-    branches: [none]
+    branches: [main]
 
 env:
   PO4A_VERSION: "0.73"
@@ -134,7 +134,7 @@ jobs:
       - name: Optimize PDF
         run: |
           du -sh main_${{ matrix.language }}.pdf
-          tools/optimize.sh ${{ matrix.language }} cmyk
+          tools/optimize.sh ${{ matrix.language }} --cmyk
           mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
           du -sh main_${{ matrix.language }}.pdf
 
@@ -184,7 +184,7 @@ jobs:
         if: github.event_name != 'pull_request'
         run: |
           du -sh main_${{ matrix.language }}.pdf
-          tools/optimize.sh ${{ matrix.language }} cmyk
+          tools/optimize.sh ${{ matrix.language }} --mono
           mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
           du -sh main_${{ matrix.language }}.pdf
 
