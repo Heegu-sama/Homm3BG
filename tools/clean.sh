@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-rm -f * 2> /dev/null
-rm -rf cache
+rm -f ./* 2> /dev/null
+rm -rf cache screenshots sections svg-inkscape
 git restore \
   README.md \
   index_style.ist \
@@ -16,4 +16,5 @@ git restore \
   main_ru.tex \
   main_ua.tex \
   metadata.tex \
-  po4a.cfg
+  po4a.cfg \
+  sections/
