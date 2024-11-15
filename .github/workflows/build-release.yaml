@@ -12,25 +12,45 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      release_dir: ${{ steps.dir.outputs.dir_name }}
     strategy:
       fail-fast: false
       matrix:
         include:
           # - language: en
+          #   language_name: English
+          #   luaengine: false
           - language: pl
+            language_name: Polski
+          #   luaengine: false
           # - language: es
+          #   language_name: Espanol
+          #   luaengine: false
           # - language: fr
+          #   language_name: Francais
+          #   luaengine: false
           # - language: ru
+          #   language_name: Russkiy
+          #   luaengine: true
           # - language: ua
+          #   language_name: Ukrainska
+          #   luaengine: true
           # - language: de
+          #   language_name: Deutsch
+          #   luaengine: false
           # - language: cs
+          #   language_name: Cestina
+          #   luaengine: true
           # - language: he
+          #   language_name: Ivrit
+          #   luaengine: true
 
     steps:
       - name: Set up repository
         uses: actions/checkout@v4
 
-      - name: Install po4a
+      - name: Generate translations for ${{ matrix.language }}
         if: ${{ matrix.language != 'en' }}
         run: |
           sudo apt-get install -y po4a  # installs po4a dependencies
@@ -38,8 +58,7 @@ jobs:
           export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
           tar -xf ${PO4A_DIR}.tar.gz
           export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
-          # ./${PO4A_DIR}/po4a --no-update po4a.cfg
-          sudo mv ./${PO4A_DIR}/po4a $(which po4a)
+          ./${PO4A_DIR}/po4a --no-update po4a.cfg
 
       - name: Install ghostscript
         run: |
@@ -47,10 +66,37 @@ jobs:
           tar -xvf *_amd64_snap.tgz
           sudo snap install ./*_amd64_snap/*_amd64.snap --devmode
 
-      - name: Build release version
-        uses: xu-cheng/texlive-action@v2
+      - name: Set version
+        run: echo "VERSION=$(cat .version)" >> $GITHUB_ENV
+
+      - name: Create release dir
+        id: dir
+        run: |
+          DIR_NAME="Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}"
+          mkdir -p ${DIR_NAME}
+          echo "dir_name=${DIR_NAME}" >> "$GITHUB_OUTPUT"
+
+      - name: Compile rule book
+        uses: xu-cheng/latex-action@v3
         with:
-          scheme: full
-          run: |
-            apk add inkscape
-            tools/release.sh ${{ matrix.language }}
+          extra_system_packages: "inkscape"
+          latexmk_use_lualatex: ${{ matrix.luaengine }}
+          latexmk_shell_escape: true
+          root_file: main_${{ matrix.language }}.tex
+
+      - name: Optimize PDF
+        run: |
+          du -sh main_${{ matrix.language }}.pdf
+          tools/optimize.sh ${{ matrix.language }}
+          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
+          du -sh main_${{ matrix.language }}.pdf
+
+      - name: Rename file
+        run: |
+          mv "main_${LANGUAGE}_optimized.pdf" "${{ steps.dir.outputs.release_dir }}/Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}.pdf"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.dir.outputs.release_dir }}
+          path: ${{ steps.dir.outputs.release_dir }}
+          retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
