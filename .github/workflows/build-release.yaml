@@ -131,7 +131,7 @@ jobs:
         run: |
           du -sh main_${{ matrix.language }}.pdf
           tools/optimize.sh ${{ matrix.language }} cmyk
-          mv main_${{ matrix.language }}.pdf main_${{ matrix.language }}.pdf
+          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
           du -sh main_${{ matrix.language }}.pdf
 
       - name: Rename file
