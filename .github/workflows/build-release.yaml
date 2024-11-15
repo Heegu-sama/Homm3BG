@@ -12,20 +12,19 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    outputs:
     strategy:
       fail-fast: false
       matrix:
         include:
           - language: en
-          - language: pl
-          - language: es
-          - language: fr
-          - language: ru
-          - language: ua
-          - language: de
-          - language: cs
-          - language: he
+          # - language: pl
+          # - language: es
+          # - language: fr
+          # - language: ru
+          # - language: ua
+          # - language: de
+          # - language: cs
+          # - language: he
 
     steps:
       - name: Set up repository
