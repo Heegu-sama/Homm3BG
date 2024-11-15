@@ -213,13 +213,13 @@ To build the printable version in a given language, make sure you've built a reg
 Then, use the script:
 
 ```bash
-tools/make_printable.sh <LANGUAGE>
+tools/build.sh <LANGUAGE> --printable
 ```
 
 To make a printable version without any background images, add `--no-bg` flag
 
 ```bash
-tools/make_printable.sh <LANGUAGE> --no-bg
+tools/build.sh <LANGUAGE> --printable --no-bg
 ```
 
 ### 🌍 Translations
