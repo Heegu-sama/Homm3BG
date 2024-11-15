@@ -34,12 +34,12 @@ jobs:
         if: ${{ matrix.language != 'en' }}
         run: |
           sudo apt-get install -y po4a  # installs po4a dependencies
-          which po4a
           wget --quiet ${{ env.PO4A_GH_URL }}/v${{ env.PO4A_VERSION }}/po4a-${{ env.PO4A_VERSION}}.tar.gz
           export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
           tar -xf ${PO4A_DIR}.tar.gz
           export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
-          ./${PO4A_DIR}/po4a --no-update po4a.cfg
+          # ./${PO4A_DIR}/po4a --no-update po4a.cfg
+          sudo mv ./${PO4A_DIR}/po4a $(which po4a)
 
       - name: Install ghostscript
         run: |
@@ -52,4 +52,5 @@ jobs:
         with:
           scheme: full
           run: |
+            apk add inkscape
             tools/release.sh ${{ matrix.language }}
