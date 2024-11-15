@@ -23,7 +23,7 @@ jobs:
           #   luaengine: false
           - language: pl
             language_name: Polski
-          #   luaengine: false
+            luaengine: false
           # - language: es
           #   language_name: Espanol
           #   luaengine: false
@@ -93,7 +93,7 @@ jobs:
 
       - name: Rename file
         run: |
-          mv "main_$${{ matrix.language }}_optimized.pdf" Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}.pdf"
+          mv "main_${{ matrix.language }}_optimized.pdf" "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}.pdf"
 
       - name: Prepare for printable
         run: rm *.aux
@@ -116,7 +116,7 @@ jobs:
 
       - name: Rename file
         run: |
-          mv "main_$${{ matrix.language }}_optimized.pdf" Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Printable.pdf"
+          mv "main_${{ matrix.language }}_optimized.pdf" "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Printable.pdf"
 
       - name: Compile economy printable rule book without art backgrounds
         uses: xu-cheng/latex-action@v3
@@ -136,7 +136,7 @@ jobs:
 
       - name: Rename file
         run: |
-          mv "main_$${{ matrix.language }}_optimized.pdf" Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Economy_Printable.pdf"
+          mv "main_${{ matrix.language }}_optimized.pdf" "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Economy_Printable.pdf"
 
       - uses: actions/upload-artifact@v4
         with:
