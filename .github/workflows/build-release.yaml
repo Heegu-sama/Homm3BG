@@ -93,10 +93,53 @@ jobs:
 
       - name: Rename file
         run: |
-          mv "main_${LANGUAGE}_optimized.pdf" "${{ steps.dir.outputs.release_dir }}/Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}.pdf"
+          mv "main_$${{ matrix.language }}_optimized.pdf" Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}.pdf"
+
+      - name: Prepare for printable
+        run: rm *.aux
+
+      - name: Compile printable rule book
+        uses: xu-cheng/latex-action@v3
+        with:
+          extra_system_packages: "inkscape"
+          pre_compile: export HOMM3_PRINTABLE=1 HOMM3_LANG=${{ matrix.language }}
+          latexmk_use_lualatex: ${{ matrix.luaengine }}
+          latexmk_shell_escape: true
+          root_file: main_${{ matrix.language }}.tex
+
+      - name: Optimize PDF
+        run: |
+          du -sh main_${{ matrix.language }}.pdf
+          tools/optimize.sh ${{ matrix.language }}
+          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
+          du -sh main_${{ matrix.language }}.pdf
+
+      - name: Rename file
+        run: |
+          mv "main_$${{ matrix.language }}_optimized.pdf" Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Printable.pdf"
+
+      - name: Compile economy printable rule book without art backgrounds
+        uses: xu-cheng/latex-action@v3
+        with:
+          extra_system_packages: "inkscape"
+          pre_compile: export HOMM3_PRINTABLE=1 HOMM3_NO_ART_BACKGROUND=1 HOMM3_LANG=${{ matrix.language }}
+          latexmk_use_lualatex: ${{ matrix.luaengine }}
+          latexmk_shell_escape: true
+          root_file: main_${{ matrix.language }}.tex
+
+      - name: Optimize PDF
+        run: |
+          du -sh main_${{ matrix.language }}.pdf
+          tools/optimize.sh ${{ matrix.language }} cmyk
+          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
+          du -sh main_${{ matrix.language }}.pdf
+
+      - name: Rename file
+        run: |
+          mv "main_$${{ matrix.language }}_optimized.pdf" Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Economy_Printable.pdf"
 
       - uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.dir.outputs.release_dir }}
-          path: ${{ steps.dir.outputs.release_dir }}
+          path: *.pdf
           retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
