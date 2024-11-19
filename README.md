@@ -331,7 +331,7 @@ tools/optimize.sh <LANGUAGE>
 
 It will output `main_<LANGUAGE>_optimized.pdf` file.
 
-As of writing, for English it produces 23 MB `main_en_optimized.pdf` file without noticeable drop in quality compared to 78 MB `main_en.pdf` built by LaTeX.
+As of writing, for English it produces 24 MB `main_en_optimized.pdf` file without noticeable drop in quality compared to 80 MB `main_en.pdf` built by LaTeX.
 
 </details>
 
