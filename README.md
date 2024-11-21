@@ -122,6 +122,9 @@
     </tbody>
 </table>
 
+<details>
+<summary>Click to see the details regarding every version</summary>
+
 🪨 Stable release is the latest one officially released.
 It should be free of any major issues.<br>
 ⚗️ Experimental builds are made from the main branch every time a new change is introduced.
@@ -140,6 +143,7 @@ all of which to be print friendly.
 Best served for those who would like to have it on paper 🤞<br>
 🤑 The economy printable build has **no art backgrounds**. Other than that, it's the same as the regular printable build.
 This is for people who want to save their toners or don't have printers that can print edge to edge where the white borders around the art backgrounds don't look that good.
+</details>
 
 ### 💡 What Is This?
 
@@ -180,6 +184,9 @@ To work on the document on your machine, you need the following:
 - [**ghostscript**](https://www.ghostscript.com/) (optional) to optimize PDF file sizes
 - [**GIMP**](https://www.gimp.org/) or [**Krita**](https://krita.org/) (optional) to edit some images in `assets` directory
 
+<details>
+<summary>Click to learn about the technicalities</summary>
+
 To build the document in English, either run this in the command line:
 
 ```bash
@@ -189,12 +196,12 @@ latexmk -pdf -silent -shell-escape "main_en"
 or use the script:
 
 ```bash
-tools/build.sh en
+tools/build.sh
 ```
 
 or press the `Build & View` ▶️ (F5) button in TeXstudio on the `main_en.tex` file.
 
-To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, `de` `cs`, and `he` are supported), make sure you have `po4a` (version 0.70 or higher) and use the script:
+To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, `de` `cs`, and `he` are supported, `en` is the default), make sure you have `po4a` (version 0.70 or higher) and use the script:
 
 ```bash
 tools/build.sh <LANGUAGE>
@@ -206,44 +213,41 @@ To build the printable version in a given language, make sure you've built a reg
 Then, use the script:
 
 ```bash
-tools/make_printable.sh <LANGUAGE>
+tools/build.sh <LANGUAGE> --printable
 ```
 
 To make a printable version without any background images, add `--no-bg` flag
 
 ```bash
-tools/make_printable.sh <LANGUAGE> --no-bg
+tools/build.sh <LANGUAGE> --printable --no-bg
 ```
 
 ### 🌍 Translations
 
-Make sure you have [`po4a`](https://po4a.org/index.php.en) installed ([MacOS instructions](https://formulae.brew.sh/formula/po4a)).
+<details>
+<summary>Click to see details</summary>
+
+Make sure you have [`po4a`](https://github.com/mquinson/po4a) installed.
 
 To translate a particular section:
 
 - Go to `translations/<section_name>` and open `<lang>.po` file, e.g., `translations/introduction.tex/pl.po`
 - Choose a fragment to translate. Those start with `msgid`. Write your new text in the line below starting with `msgstr`. Example:
 
-    ```tex
+    ```po
     msgid "\\addsection{Introduction}{\\spells/magic_arrow.png}"
     msgstr "\\addsection{Wprowadzenie}{\\spells/magic_arrow.png}"
     ```
 
   This text (`msgstr`) will replace the original (`msgid`) in your translation.
-- Regenerate your localized section:
-
-    ```bash
-    po4a --no-update po4a.cfg
-    ```
-
-  Disregard the errors about mismatched `multicols`, as this is an upstream parser issue.
-- Rebuild your PDF file (or press Build ▶️ in TeXStudio).
+- Rebuild using the script:
 
    ```bash
-   latexmk -pdf -silent -shell-escape "main_<lang>"
+   tools/build.sh <LANGUAGE>
    ```
 
 - Commit and repeat!
+
 
 #### Finding fuzzy translations
 
@@ -257,7 +261,12 @@ tools/find_fuzzy.sh <lang>
 
 It will show all the fuzzy translations in the `*.po` files for the specified language.
 
+</details>
+
 ### 📸 Screenshots
+
+<details>
+<summary>Click to see details</summary>
 
 It is a good practice to share screenshots of your work in pull requests.
 You can the script to make PNG images of specified page(s):
@@ -280,7 +289,7 @@ tools/pdf2image.sh en 5
 
 Screenshots will appear in ignored `screenshots` direcotry, in the form of `en-05.png`, `en-06.png`, etc.
 
-### 🎭 Comparing two pages side by side
+#### 🎭 Comparing two pages side by side
 
 If you'd like to show a single image of two instances of the same page side-by-side (before|after style), you can use the following script:
 
@@ -307,7 +316,12 @@ tools/compare_pages.sh -h
 
 **This script requires `pdftoppm` and `imagemagick` utilities.**
 
+</details>
+
 ### 🗠 Optimizing PDF files
+
+<details>
+<summary>Click to see details</summary>
 
 To reduce output PDF file size significantly, you can use the script utilizing `ghostscript` utility:
 
@@ -318,6 +332,10 @@ tools/optimize.sh <LANGUAGE>
 It will output `main_<LANGUAGE>_optimized.pdf` file.
 
 As of writing, for English it produces 23 MB `main_en_optimized.pdf` file without noticeable drop in quality compared to 78 MB `main_en.pdf` built by LaTeX.
+
+</details>
+
+</details>
 
 ## ✨ Assets
 
