@@ -1,0 +1,144 @@
+name: Build release version
+
+on:
+  workflow_dispatch:
+
+env:
+  PO4A_VERSION: "0.73"
+  PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
+  GHOSTSCRIPT_URL: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10030/gs_10.03.0_amd64_snap.tgz
+  ARTIFACT_RETENTION_DAYS: 1
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      artifact_name: ${{ steps.artifact_name.outputs.artifact_name }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - language: en
+            language_name: English
+            luaengine: false
+          - language: pl
+            language_name: Polski
+            luaengine: false
+          - language: es
+            language_name: Espanol
+            luaengine: false
+          - language: fr
+            language_name: Francais
+            luaengine: false
+          - language: ru
+            language_name: Russkiy
+            luaengine: true
+          - language: ua
+            language_name: Ukrainska
+            luaengine: true
+          - language: de
+            language_name: Deutsch
+            luaengine: false
+          - language: cs
+            language_name: Cestina
+            luaengine: true
+          - language: he
+            language_name: Ivrit
+            luaengine: true
+
+    steps:
+      - name: Set up repository
+        uses: actions/checkout@v4
+
+      - name: Generate translations for ${{ matrix.language }}
+        if: ${{ matrix.language != 'en' }}
+        run: |
+          sudo apt-get install -y po4a  # installs po4a dependencies
+          wget --quiet ${{ env.PO4A_GH_URL }}/v${{ env.PO4A_VERSION }}/po4a-${{ env.PO4A_VERSION}}.tar.gz
+          export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
+          tar -xf ${PO4A_DIR}.tar.gz
+          export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
+          ./${PO4A_DIR}/po4a --no-update po4a.cfg
+
+      - name: Install ghostscript
+        run: |
+          wget --quiet ${{ env.GHOSTSCRIPT_URL }}
+          tar -xvf *_amd64_snap.tgz
+          sudo snap install ./*_amd64_snap/*_amd64.snap --devmode
+
+      - name: Set version
+        run: echo "VERSION=$(cat .version | tr . _)" >> $GITHUB_ENV
+
+      - name: Create artifact name
+        id: artifact_name
+        run: |
+          ARTIFACT_NAME="Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}"
+          echo "ARTIFACT_NAME=${ARTIFACT_NAME}" >> "$GITHUB_OUTPUT"
+
+      - name: Compile rule book
+        uses: xu-cheng/latex-action@v3
+        with:
+          extra_system_packages: "inkscape"
+          latexmk_use_lualatex: ${{ matrix.luaengine }}
+          latexmk_shell_escape: true
+          root_file: main_${{ matrix.language }}.tex
+
+      - name: Optimize PDF
+        run: |
+          du -sh main_${{ matrix.language }}.pdf
+          tools/optimize.sh ${{ matrix.language }}
+          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
+          du -sh main_${{ matrix.language }}.pdf
+
+      - name: Rename file
+        run: |
+          mv "main_${{ matrix.language }}.pdf" "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}.pdf"
+
+      - name: Prepare for printable
+        run: rm *.aux
+
+      - name: Compile printable rule book
+        uses: xu-cheng/latex-action@v3
+        with:
+          extra_system_packages: "inkscape"
+          pre_compile: export HOMM3_PRINTABLE=1 HOMM3_LANG=${{ matrix.language }}
+          latexmk_use_lualatex: ${{ matrix.luaengine }}
+          latexmk_shell_escape: true
+          root_file: main_${{ matrix.language }}.tex
+
+      - name: Optimize PDF
+        run: |
+          du -sh main_${{ matrix.language }}.pdf
+          tools/optimize.sh ${{ matrix.language }} --cmyk
+          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
+          du -sh main_${{ matrix.language }}.pdf
+
+      - name: Rename file
+        run: |
+          mv "main_${{ matrix.language }}.pdf" "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Printable.pdf"
+
+      - name: Compile economy printable rule book without art backgrounds
+        uses: xu-cheng/latex-action@v3
+        with:
+          extra_system_packages: "inkscape"
+          pre_compile: export HOMM3_PRINTABLE=1 HOMM3_NO_ART_BACKGROUND=1 HOMM3_LANG=${{ matrix.language }}
+          latexmk_use_lualatex: ${{ matrix.luaengine }}
+          latexmk_shell_escape: true
+          root_file: main_${{ matrix.language }}.tex
+
+      - name: Optimize PDF
+        run: |
+          du -sh main_${{ matrix.language }}.pdf
+          tools/optimize.sh ${{ matrix.language }} --cmyk
+          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
+          du -sh main_${{ matrix.language }}.pdf
+
+      - name: Rename file
+        run: |
+          mv "main_${{ matrix.language }}.pdf" "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Economy_Printable.pdf"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.artifact_name.outputs.artifact_name }}
+          path: "*.pdf"
+          retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
