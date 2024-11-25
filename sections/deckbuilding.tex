@@ -80,22 +80,42 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
 \subsection*{\pagetarget{Artifact}{Artifact} Cards}
 
 Artifact Cards\index{Artifact Card} have a top and bottom effect. When you play one, you must \textbf{choose which effect} you are using.
-They are divided into 3 Levels: Minor, Major, and Relic.
+They are divided into 3 Levels: Minor, Major, and Relic, with different border color.
 These Levels relate to the overall Power of the Card and may be referenced when resolving certain effects or during Scenario setup.
 Otherwise, all Artifact Cards are normally shuffled together to form the Artifact Deck regardless of their Level.
 They are gained through map exploration.\par
 Artifacts can be \pagelink{Trading}{traded} in Alliance and Cooperative Scenarios.\par
 \begin{multicols*}{2}
-  \includegraphics[width=1.2\linewidth]{\cards/artifact.png}
+  \begin{scriptsize}
+  \begin{tikzpicture}
+    \draw (0, 0) node {\includegraphics[width=1.2\linewidth]{\cards/artifact.png}};
+    \draw (-1.3, 2.1) node {\encircle{1}};
+    \draw (1.3, -0.9) node {\encircle{2}};
+    \draw (1.4, 2.6) node {\encircle{3}};
+    \draw (-1, -1.9) node {\encircle{4}};
+  \end{tikzpicture}
+  \end{scriptsize}
   \footnotesize
     \null\hfill\textbf{\textit{\textcolor{darkcandyapplered}{Major Artifact}}}
   \columnbreak
   \begin{center}
     \phantom{\ldots}\\
-    \phantom{\ldots}\includegraphics[width=0.6\linewidth]{\cards/minor_artifact.png}\\
+    \phantom{\ldots}
+    \begin{scriptsize}
+    \begin{tikzpicture}
+      \draw (0, 0) node {\includegraphics[width=0.6\linewidth]{\cards/minor_artifact.png}};
+      \draw (-0.7, 0.5) node {\encircle{3}};
+    \end{tikzpicture}
+    \end{scriptsize}\\
     \phantom{\ldots}\textbf{\textit{\textcolor{darkcandyapplered}{Minor Artifact}}}\\
     \vspace{3em}
-    \phantom{\ldots}\includegraphics[width=0.6\linewidth]{\cards/relic_artifact.png}\\
+    \phantom{\ldots}
+    \begin{scriptsize}
+    \begin{tikzpicture}
+      \draw (0, 0) node {\includegraphics[width=0.6\linewidth]{\cards/relic_artifact.png}};
+      \draw (-0.7, 0.5) node {\encircle{3}};
+    \end{tikzpicture}
+    \end{scriptsize}\\
     \phantom{\ldots}\textbf{\textit{\textcolor{darkcandyapplered}{Relic Artifact}}}
   \end{center}
 \end{multicols*}
@@ -105,7 +125,8 @@ Artifacts can be \pagelink{Trading}{traded} in Alliance and Cooperative Scenario
     \item[\textbf{1.}] Name
     \item[\textbf{2.}] Effect
     \columnbreak
-    \item[\textbf{3.}] Fluff
+    \item[\textbf{3.}] Level
+    \item[\textbf{4.}] Fluff
   \end{itemize}
 \end{multicols}
 
