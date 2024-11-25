@@ -46,12 +46,21 @@ The number of \svgeven{expert} Effects you can use each Round is limited by your
 Track the number of uses you have in any suitable manner, such as by moving Black Cubes on and off your Hero Card.\par
 \bigskip
 
-\includegraphics[width=\linewidth]{\cards/ability.png}
 \vspace{-2em}
 \begin{multicols*}{2}
   \footnotesize
   \begin{center}
-    \phantom{\ldots}\textbf{\textit{\textcolor{darkcandyapplered}{Ability Card}}}
+    \begin{scriptsize}
+    \begin{tikzpicture}
+      \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/necromancy_card.png}};
+      \draw (0.75, 0.4) node {\encircle{1}};
+      \draw (-1, -0.5) node {\encircle{2}};
+      \draw (-1, -1.5) node {\encircle{3}};
+      \draw (1.5, -0.8) node {\encircle{4}};
+      \draw (1.5, -1.9) node {\encircle{4}};
+    \end{tikzpicture}
+    \end{scriptsize}
+    \textbf{\textit{\textcolor{darkcandyapplered}{Ability Card}}}
   \end{center}
   \begin{itemize}
     \item[\textbf{1.}] Name
@@ -59,7 +68,15 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
   \end{itemize}
   \columnbreak
   \begin{center}
-    \textbf{\textit{\textcolor{darkcandyapplered}{Statistic Card}}}\phantom{\ldots}
+    \begin{scriptsize}
+    \begin{tikzpicture}
+      \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/knowledge.png}};
+      \draw (0.75, 0.4) node {\encircle{1}};
+      \draw (-1, -0.5) node {\encircle{2}};
+      \draw (-1, -1.5) node {\encircle{3}};
+    \end{tikzpicture}
+    \end{scriptsize}
+    \textbf{\textit{\textcolor{darkcandyapplered}{Statistic Card}}}
   \end{center}
   \begin{itemize}
     \item[\textbf{3.}] Expert Effect
