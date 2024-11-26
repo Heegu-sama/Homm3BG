@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-08-11 23:28+0200\n"
+"POT-Creation-Date: 2024-11-26 00:45+0000\n"
 "PO-Revision-Date: 2024-06-03 10:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -41,7 +41,7 @@ msgstr ""
 #: sections/map_elements.tex:124 sections/player_turns.tex:7
 #: sections/resources.tex:7 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:58 sections/town.tex:5
-#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:162
+#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:167
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -113,9 +113,8 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:32 sections/ai_rules.tex:104 sections/combat.tex:45
-#: sections/combat.tex:183 sections/expansion_content.tex:67
-#: sections/heroes.tex:34
+#: sections/ai_rules.tex:32 sections/ai_rules.tex:115 sections/combat.tex:185
+#: sections/expansion_content.tex:67 sections/heroes.tex:34
 #, no-wrap
 msgid ""
 "\\vfill\n"
@@ -133,13 +132,48 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:53
+#: sections/ai_rules.tex:38
 #, no-wrap
 msgid ""
 "\\begin{multicols*}{2}\n"
 "  \\begin{center}\n"
-"    \\vspace*{-1.5em}\\includegraphics[width=1.3\\linewidth]{\\cards/ai.png}\n"
+"    \\vspace*{-1.5em}\n"
+"    \\begin{tikzpicture}\n"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:64
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{multicols*}{2}\n"
+#| "  \\begin{center}\n"
+#| "    \\vspace*{-1.5em}\\includegraphics[width=1.3\\linewidth]{\\cards/ai.png}\n"
+#| "    \\phantom{\\ldots\\ldots}\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{AI Card}}}}\n"
+#| "  \\end{center}\n"
+#| "  \\vspace*{\\fill}\n"
+#| "  \\columnbreak\n"
+#| "  \\scriptsize\n"
+#| "  \\begin{itemize}[itemsep=0pt]\n"
+#| "    \\item[\\textbf{1.}] Name\n"
+#| "    \\item[\\textbf{2.}] Description\n"
+#| "    \\item[\\textbf{3.}] Easy Modifier\n"
+#| "    \\item[\\textbf{4.}] Normal Modifier\n"
+#| "    \\item[\\textbf{5.}] Expert Modifier\n"
+#| "    \\item[\\textbf{6.}] Impossible\\\\Modifier\n"
+#| "    \\item[\\textbf{7.}] Card Type\n"
+#| "  \\end{itemize}\\vspace*{\\fill}"
+msgid ""
+"      \\draw (0, 0) node {\\includegraphics[width=1.3\\linewidth]{\\cards/ai.png}};\n"
+"      \\draw (-0.7, 2.5) node {\\encircle{1}};\n"
+"      \\draw (1.5, 1.2) node {\\encircle{2}};\n"
+"      \\draw (-1.5, 0) node {\\encircle{3}};\n"
+"      \\draw (0.5, 0) node {\\encircle{4}};\n"
+"      \\draw (-1.5, -1.2) node {\\encircle{5}};\n"
+"      \\draw (0.5, -1.2) node {\\encircle{6}};\n"
+"      \\draw (-0.5, -2.5) node {\\encircle{7}};\n"
+"    \\end{tikzpicture}\\\\\n"
 "    \\phantom{\\ldots\\ldots}\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{AI Card}}}}\n"
+"    \\vspace*{-1em}\n"
 "  \\end{center}\n"
 "  \\vspace*{\\fill}\n"
 "  \\columnbreak\n"
@@ -173,7 +207,7 @@ msgstr ""
 "  \\end{itemize}\\vspace*{\\fill}"
 
 #. type: multicols
-#: sections/ai_rules.tex:61
+#: sections/ai_rules.tex:72
 #, no-wrap
 msgid ""
 "AI Heroes use two Decks during Combat: the \\textbf{AI Deck}, and the \\textbf{AI Spell Deck}.\n"
@@ -195,7 +229,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:68
+#: sections/ai_rules.tex:79
 #, no-wrap
 msgid ""
 "When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI Card} and follow its instructions before the Unit moves and/or attacks.\n"
@@ -215,7 +249,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:70
+#: sections/ai_rules.tex:81
 #, no-wrap
 msgid ""
 "\\subsection*{Combat against AI}\n"
@@ -225,7 +259,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:73
+#: sections/ai_rules.tex:84
 #, no-wrap
 msgid ""
 "\\pagetarget{AI Units}{These rules} apply during Combat in \\textbf{Solo}\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
@@ -237,7 +271,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:77
+#: sections/ai_rules.tex:88
 #, no-wrap
 msgid ""
 "\\begin{itemize}\n"
@@ -251,7 +285,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:83
+#: sections/ai_rules.tex:94
 #, no-wrap
 msgid ""
 "  \\textit{Example: \\svgunit{golden}\\svg{unit_ground} has this priority:\n"
@@ -269,7 +303,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:86
+#: sections/ai_rules.tex:97
 #, no-wrap
 msgid ""
 "  \\item Ranged \\svg{unit_ranged} Units prioritize attacking other Ranged \\svg{unit_ranged} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
@@ -281,7 +315,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:97
+#: sections/ai_rules.tex:108
 #, no-wrap
 msgid ""
 "  \\textit{Example: \\svgunit{silver}\\svg{unit_ranged} has this priority:\n"
@@ -309,7 +343,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:100
+#: sections/ai_rules.tex:111
 #, no-wrap
 msgid ""
 "In both cases, if there's more than one valid target, they attack the closest one.\n"
@@ -321,7 +355,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:102
+#: sections/ai_rules.tex:113
 #, no-wrap
 msgid ""
 "Enemy units cannot \\pagelink{Defend}{Defend} unless instructed to.\n"
@@ -331,7 +365,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:108
+#: sections/ai_rules.tex:119
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
