@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
 "POT-Creation-Date: 2024-08-21 09:37+0100\n"
-"PO-Revision-Date: 2024-04-26 15:42+0200\n"
+"PO-Revision-Date: 2024-11-26 22:25+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -15,6 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
@@ -46,7 +47,7 @@ msgstr ""
 #. type: Plain text
 #: sections/combat.tex:3
 msgid "\\addsection{Combat}{\\skills/attack.png}"
-msgstr ""
+msgstr "\\addsection{Kampf}{\\skills/attack.png}"
 
 #. type: multicols
 #: sections/combat.tex:7
@@ -55,6 +56,8 @@ msgid ""
 "\\pagetarget{Combat}{Combat}\\index{Combat} with \\textbf{Neutral Units} starts when a Hero moves to an \\textbf{unvisited} Field with a roman numeral, signifying the \\hyperlink{Difficulty Table}{type and number} of Neutral Units guarding that Field.\n"
 "\n"
 msgstr ""
+"Ein \\pagetarget{Combat}{Kampf}\\index{Kampf} gegen \\textbf{neutrale Einheiten} startet, wenn ein Held sich auf einen \\textbf{unbesuchten Ort} mit römischer Zahl bewegt, die auf \\hyperlink{Difficulty Table}{Typ und Anzahl} der bewachenden Einheiten hinweist.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:14
@@ -68,6 +71,13 @@ msgid ""
 "Players are able to start multiple Combats during their Turn.\n"
 "\n"
 msgstr ""
+"Ein Kampf gegen \\textbf{einen anderen Spieler} kann auf zwei Weisen starten:\n"
+"\\begin{itemize}\n"
+"  \\item Du bewegst deinen Helden auf das Feld eines gegnerischen Helden.\n"
+"  \\item Du bewegst dich in eine vom Gegenspieler kontrollierte Stadt oder Siedlung.\n"
+"\\end{itemize}\n"
+"Die Spieler können mehrere Kämpfe in ihrem Spielzug starten.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:20
@@ -80,6 +90,12 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{10}{\n"
+"  Falls deine Stadt oder Siedlung angegriffen wird und dein Hauptheld nicht vor Ort ist, darfst du sofort \\textbf{8 \\svg{gold} bezahlen, um deine Einheiten in diesem Kampf verwenden können}.\n"
+"  Du kannst dein Deck nicht verwenden, da dein Hauptheld nicht anwesend ist.\n"
+"  Die Zahlung der Goldkosten repräsentiert die Transportkosten für deine Armee.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:24
@@ -90,6 +106,10 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{6}{\n"
+"  Wird dein \\pagelink{Secondary}{Nebenheld} angegriffen, \\textbf{darfst} du ihn \\pagelink{Endcombat}{sofort als besiegt} erklären anstatt zu kämpfen. Dies bewahrt deine Einheiten womöglich vor unnötigen Verlusten.\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:26
@@ -108,6 +128,10 @@ msgid ""
 "The player is considered to have beaten the Neutral Units by default and gains no rewards from the Combat itself before Visiting the Field.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Quick}{Schneller Kampf}}\\index{Schneller Kampf}\n"
+"Falls deine Heldenstufe höher ist als die Schwierigkeit des Feldes, auf dem der Kampf gegen neutrale Einheiten ausgetragen würde, findet \\textbf{kein Kampf} statt.\n"
+"Es wird davon ausgegangen, dass der Spieler den Kampf gewonnen hätte. Er erhält keine Belohnungen aus dem Kampf selbst und besucht danach sofort den Ort des Feldes.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:32
@@ -116,6 +140,8 @@ msgid ""
 "\\subsection*{\\pagetarget{Combatsetup}{Combat Setup}}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Combatsetup}{Kampfaufbau}}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:36
@@ -126,6 +152,10 @@ msgid ""
 "Follow these steps when Combat begins against \\textbf{Neutral Units}:\n"
 "\n"
 msgstr ""
+"% TODO info about battlefield expansion\n"
+"Der Kampf wird auf dem 4x5-Kampf-Spielplan ausgetragen, der an den gegenüberliegenden Kanten aus zwei hinteren und zwei vorderen Kampfreihen besteht, sowie eine Mittelreihe.\n"
+"Beginnt ein Kampf gegen \\textbf{neutrale Einheiten}, führt folgende Schritte durch:\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:55
@@ -151,6 +181,25 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\begin{itemize}\n"
+"  \\item Wähle eine Seite des Kampf-Spielplans und platziere dort bis zu 5 eigene Einheiten aus dem Einheitendeck frei auf vorderer und hinterer Kampfreihe.\n"
+"  \\item Prüfe die \\hyperlink{Difficulty Table}{\\textbf{Schwierigkeit der neutralen Einheiten}} \\iftoggle{printable}{(auf dem rückseitigen Cover)}{} und ziehe die entsprechende Anzahl neutraler Einheiten von ihren Decks.\n"
+"  \\item Neutrale Einheiten werden je nach Spielmodus unterschiedlich aufgestellt:\n"
+"  \\item In \\textbf{Konflikt-} oder \\textbf{Allianz-}Szenarien kontrolliert der Gegenspieler rechts von dir die neutralen Einheiten und entscheidet über ihre Aufstellung. \\svg{unit_ranged}-Einheiten müssen (falls möglich) in der hinteren Schlachtreihe platziert werden.\n"
+"  \\item In \\textbf{Kampagnen-} oder \\textbf{kooperativen} Szenarien werden neutrale Einheiten aus Sicht des Angreifers von links nach rechts platziert:\n"
+"Platziere zuerst alle \\svg{unit_ranged}-Einheiten in der hinteren Kampfreihe\\index{Kampfaufstellung neutraler Einheiten}.\n"
+"Platziere dann \\svg{unit_ground}- und \\svg{unit_flying}-Einheiten in der vorderen Kampfreihe.\n"
+"Ist nicht genug Platz in der richtigen Kampfreihe, platziere die Einheiten in der anderen.\n"
+"Platziere die Einheiten in \\textbf{absteigender} Initiativ-\\index{Initiativwert}Reihenfolge.\n"
+"Im Falle eines Gleichstandes platziere zuerst Einheiten höherer Stufe.\n"
+"Ist auch die Stufe gleich, entscheidet der Spieler..\n"
+"\\end{itemize}\n"
+"Aufstellung im Kampf gegen \\textbf{andere Spieler}:\n"
+"\\begin{itemize}\n"
+"  \\item Der Angreifer platziert zuerst bis zu 5 seiner Einheiten auf der gewählten Kampfseite, gefolgt von dem Verteidiger.\n"
+"  \\item Ist es ein Kampf gegen eine Stadt mit Zitadelle, platziert der Verteidiger zusätzlich \\pagelink{Walls}{Mauern, Tor und Geschützturm}, nachdem er die Einheiten platziert hat.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:83
@@ -185,6 +234,34 @@ msgid ""
 "The Unit cannot take another Defense Action during that activation.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Combatterminology}{Grundbegriffe im Kampf}}\n"
+"Folgende Begriffe erklären Grundprinzipien im Kampf:\\par\n"
+"\\textbf{Angreifer} – Der Spieler, der den Kampf initiiert.\\par\n"
+"\\textbf{Verteidiger} – Der Spieler, gegen den ein Kampf initiiert wurde.\\par\n"
+"\\textbf{Aktivierung} – Eine Einheit wird aktiviert, wenn sie als nächstes in Initiativ-Reihenfolge am Zug ist.\\par\n"
+"\\textbf{Angrenzende Einheit} – Zwei Einheiten sind angrenzend, wenn sie sich auf horizontal (nicht diagonal) benachbarten Feldern befinden.\\par\n"
+"\\textbf{Kampfrunde} – Der Zyklus, in dem alle Einheiten beider Spieler aktiviert wurden.\\par\n"
+"\\textbf{Hindernisse}\\index{Kampfhindernisse}\\index{Hindernisse, Kampf} – Jede Karte auf dem Kampf-Spielplan ist ein Hindernis.\n"
+"Es blockiert die Bewegung nicht-fliegender Einheiten.\\smallskip\\par\n"
+"\\begin{tikzpicture}[overlay]\n"
+"  \\node at (7, 0) {\\includegraphics[width=0.2\\linewidth]{\\images/attack_die.png}};\n"
+"\\end{tikzpicture}\\parbox{0.7\\hsize}{\\textbf{Angriffswürfel}\\index{Angriffswürfel}\\index{Würfel} – Ein roter Würfel mit Ergebnissen von -1 bis 1.\n"
+"Er wird \\textbf{immer gewürfelt, wenn eine Einheit angreift}, und\n"
+"sein Ergebnis wird zum Angriffswert hinzuaddiert.}\\par\\smallskip\n"
+"\\textbf{\\pagetarget{Retaliate}{Vergeltungsangriff}} – Überlebt eine Einheit einen Nahkampfangriff gegen sich, führt sie einen Vergeltungsangriff aus.\n"
+"Jede Einheit kann \\textbf{nur 1} Vergeltungsangriff\\index{Vergeltungsangriff} pro Kampfrunde ausführen.\n"
+"Sie werden genauso abgehandelt wie normale Angriffe, ziehen aber keine weiteren Vergeltungsangriffe nach sich.\n"
+"Markiere Einheiten, die bereits einen Vergeltungsangriff diese Kampfrunde durchgeführt haben, mit einem Statuswürfel.\\par\n"
+"\\textbf{\\pagetarget{Paralysis}{Lähmung}}\\index{Lähmung} \\svg{paralysis} – Einige Effekte platzieren Lähmungsmarker auf Einheiten.\n"
+"Solche Einheiten \\textbf{verlieren ihre nächste Aktivierung}. Statt einer Aktivierung wird der Lähmungsmarker entfernt.\n"
+"Wird die Einheit zuvor schon \\textbf{angegriffen oder erleidet Schaden,} \\textbf{wird der Marker vorzeitig entfernt}.\n"
+"Der Marker verhindert nicht, dass Einheiten Vergeltungsangriffe durchführen.\\par\n"
+"\\textbf{\\pagetarget{Defend}{Verteidigen}} \\svg{defense} – Einheiten können sich entscheiden einen Verteidigungsmarker zu erhalten und ihre Aktivierung dadurch beenden, anstatt anzugreifen.\n"
+"Wird eine Einheit mit Verteidigungsmarker angegriffen, würfelt sie nach dem Angriff einen Angriffswürfel.\n"
+"Bei einer ``+1'' steigt ihr Verteidigungswert um 1 gegen diesen Angriff.\n"
+"Erst zu Beginn der nächsten Aktivierung wird der Verteidigungsmarker abgeworfen.\n"
+"Einheiten dürfen nicht zwei Aktivierungen in Folge verteidigen.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:88
@@ -196,6 +273,11 @@ msgid ""
 "Combat lasts until all Units on one side are eliminated, a player has to \\textbf{Retreat}\\index{Retreat} when fighting Neutral Units, or a player \\textbf{Surrenders} to another player.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{combatround}{Ablauf einer Kampfrunde}}\n"
+"Der Kampf ist in Runden gegliedert, in denen jede am Kampf beteiligte Einheit \\textbf{einmal aktiviert wird} in absteigender Initiativ-Reihenfolge.\n"
+"Anschließend beginnt eine neue Kampfrunde.\n"
+"Ein Kampf endet, wenn entweder alle Einheiten einer Seite besiegt sind, ein Spieler vor neutralen Einheiten \\textbf{fliehen}\\index{Fliehen} muss oder gegenüber einem anderen Spieler \\textbf{kapituliert}.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:103
@@ -217,6 +299,21 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"Ablauf einer Kampfrunde:\n"
+"\\begin{itemize}\n"
+"  \\item Die Einheiten werden in absteigender Reihenfolge ihres \\pagelink{Initiative}{Initiativwertes} aktiviert. \\textbf{Bei Gleichstand} werden die Einheiten von Angreifer und Verteidiger abwechselnd aktiviert, beginnend beim Angreifer.\n"
+"  \\item Auf eine bereits aktivierte Einheit wird ein Fraktionswürfel gelegt.\n"
+"  \\item Aktivierte Einheiten dürfen sich bewegen und angreifen abhängig ihres \\pagelink{Unittype}{Typs}. Neutrale Einheiten, kontrolliert von einem Gegenspieler, müssen immer angreifen, sofern möglich.\n"
+"  \\item Anstatt anzugreifen darf eine Einheit auch \\pagelink{Defend}{verteidigen}.\n"
+"  In neutralen Kämpfen dürfen gegnerische neutrale Einheiten niemals verteidigen, auch nicht, wenn ein Gegenspieler sie kontrolliert.\n"
+"  \\item Bevor eine Einheit angreift, dürfen beide Spieler \\pagelink{CombatCards}{Karten spielen}. Karten werden in der Reihenfolge abgehandelt, in der sie gespielt wurden.\n"
+"  \\item Nachdem ein Angriff einer Einheit angekündigt wurde und alle Karten gespielt wurden, würfle den Angriffswürfel.\n"
+"    Addiere das Wurfergebnis zum Angriffswert der Einheit, reduziere ihn dann um den Verteidigungswert der verteidigenden Einheit, und füge das Ergebnis als \\pagelink{HP}{Schaden} der verteidigenden Einheit zu.\n"
+"  \\item War es ein Nahkampfangriff gegen eine verteidigende Einheit, führe nun deren \\pagelink{Retaliate}{Vergeltungsangriff} aus, sofern sie diese Kampfrunde noch keinen ausgeführt hat.\n"
+"  \\item Setze die Aktivierungen der übrigen Einheiten fort, bis alle Einheiten aktiviert wurden.\n"
+"Nachdem die letzte Einheit aktiviert wurde, endet die Kampfrunde.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:107
@@ -239,6 +336,12 @@ msgid ""
 "There are no other negative consequences to Retreating.\\par\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Timelimit}{Zeitlimit in Kämpfen}}\\index{Zeitlimit}\n"
+"Kämpfe gegen neutrale Einheiten dauern regulär \\textbf{nur eine Kampfrunde}.\n"
+"Am Ende jeder Kampfrunde kannst du entscheiden, entweder \\textbf{zu fliehen}\\index{Fliehen} oder einen BP des kämpfenden Helden auszugeben, um den Kampf um eine Kampfrunde zu verlängern.\n"
+"Fliehst du, dann \\hyperlink{Endcombat}{endet der Kampf} und du bewegst deinen Helden zurück auf das Feld, das er \\textbf{zuvor besucht hat}.\n"
+"Fliehen hat keine weiteren negativen Konsequenzen.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:115
@@ -247,6 +350,8 @@ msgid ""
 "\\note{5}{Combats against Azure \\svgunit{azure-note} Units, other players, or \\pagelink{AIrules}{AI Heroes} have no time limit, and you cannot Retreat from them.}\n"
 "\n"
 msgstr ""
+"\\note{5}{Kämpfe gegen \\svgunit{azure-note}-Einheiten,andere Spieler oder \\pagelink{AIrules}{Bot-Helden} haben kein Zeitlimit und du kannst nicht aus ihnen fliehen.}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:123
@@ -261,6 +366,13 @@ msgid ""
 "The increased \\svg{defense} expires in a similar way.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{CombatCards}{Karten im Kampf spielen}}\n"
+"Du darfst \\textbf{nur einen Zauber pro Kampfrunde} spielen.\n"
+"Anhaltende \\svg{ongoing} und \\svg{activation} Aktivierungseffekte dürfen \\textbf{nur während der Aktivierung einer eigenen Einheit und vor ihrem Angriff} gespielt werden.\n"
+"Anhaltenden Effekte\\index{Anhaltende Effekte} enden am Ende des Kampfes oder falls der beschriebene Effekt eingetreten ist.\\par\n"
+"Soforteffekte\\svg{instant} dürfen \\textbf{jederzeit} gespielt werde außer zwischen dem Werfen des Angriffswürfels und dem Zufügen des Schadens.\n"
+"Effekte, die den Angriffs-\\svg{attack} oder Verteidigungswert \\svg{defense} einer Einheit erhöhen (z. B. durch Statistikkarten), erlöschen, sobald der erste Angriff dieser Einheit abgehandelt wurde oder die aktuelle Aktivierung endet, je nachdem, was zuerst passiert.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:128
@@ -272,6 +384,11 @@ msgid ""
 "Move any player owned Units back to their Unit Deck and discard any leftover enemy Neutral Units.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Endcombat}{Ende des Kampfes}}\n"
+"Sobald alle Einheiten einer Seite besiegt sind, endet der Kampf sofort und die Seite der überlebenden Einheiten wird zum Sieger.\n"
+"Nach einem Kampf wird aller Schaden auf überlebenden Einheiten geheilt.\n"
+"Überlebende Fraktionseinheiten kommen zurück in ihre Einheitendecks. Überlebende neutrale Einheiten werden abgeworfen.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:139
@@ -289,6 +406,17 @@ msgid ""
 "After winning Combat and getting the \\pagelink{Combatexperience}{Experience}, Heroes \\textbf{must} Visit the Field where the Combat took place.\n"
 "\n"
 msgstr ""
+"Besiegte Haupthelden \\textbf{müssen} zu einer verbündeten Stadt oder Siedlung bewegt werden, während Nebenhelden aus dem Spiel entfernt werden bis sie neu rekrutiert werden.\n"
+"Das Besiegen eines Haupthelden kann \\pagelink{End}{Spielereliminierung} zur Folge haben.\\par\n"
+"Besiegst du alle Einheiten \\textbf{des Haupthelden eines anderen Spielers}, dann \\textbf{verliert dieser Moral} und muss \\textbf{dem Sieger 5} \\svg{gold} \\textbf{zahlen}.\n"
+"Verliere weder Moral noch zahle \\svg{gold}, falls dein \\textbf{Nebenheld} besiegt wurde.\n"
+"\\textbf{In beiden Fällen} gibt der besiegte Spieler \\textbf{dem Sieger} einen seiner \\pagelink{End}{Fraktionswürfel}.\n"
+"Während einer Aktivierung einer eigenen Einheit darfst vor einem anderen Spieler \\textbf{kapitulieren}\\index{kapitulieren}, indem du ihm 10 \\svg{gold} zahlst.\n"
+"Tust du dies, bewege deinen Haupthelden (bzw. entferne deinen Nebenhelden aus dem Spiel) so als hättest du alle Einheiten verloren.\n"
+"Es gibt keine weiteren Konsequenzen und der Sieger erhält keinen Fraktionswürfel.\\par\n"
+"\\note{4}{Du kannst nicht kapitulieren, wenn du eine Stadt verteidigst.}\\par\n"
+"Nachdem ein Kampf gewonnen und \\pagelink{Combatexperience}{Erfahrung} erhalten wurde, \\textbf{muss} der Held den Ort besuchen, auf dem der Kampf stattfand.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:141
@@ -297,6 +425,8 @@ msgid ""
 "\\subsection*{\\pagetarget{Combatexperience}{Combat Experience}}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Combatexperience}{Erfahrungspunkte im Kampf}}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:150
@@ -312,6 +442,15 @@ msgid ""
 "You also do not gain Experience from \\textbf{defeating} a Secondary Hero, or if an enemy Hero \\textbf{Surrenders} to you.\n"
 "\n"
 msgstr ""
+"Kämpfe zu gewinnen liefert deinem Haupthelden Erfahrungspunkte\\index{Erfahrung}.\n"
+"War die Schwierigkeit der neutralen Einheiten oder die Stufe des besiegten gegnerischen Haupthelden \\textbf{genauso groß} wie deine Stufe, erhalte 1 \\svg{experience}.\n"
+"Waren sie \\textbf{höher} als deine Stufe, dann erhalte 2 \\svg{experience}.\n"
+"Ein Sieg in einem neutralen Kampf gegen \\svgunit{azure}-Einheiten lässt deinen Haupthelden \\textbf{sofort} Stufe 7 erreichen.\n"
+"Erreichst du neue Stufen zeitgleich, handle ihre Effekte der Reihe nach ab.\n"
+"Neue Stufeneffekte müssen abgehandelt werden, bevor der Ort besucht wird..\\par\n"
+"Nebenhelden können nie Erfahrung erhalten.\n"
+"Du kannst auch nie Erfahrung erhalten durch \\textbf{Besiegen} eines Nebenhelden oder falls ein gegnerischer Held \\textbf{kapituliert}.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:153
@@ -321,6 +460,9 @@ msgid ""
 "During these game modes, all enemy Units activate as described in the \\pagelink{AI Units}{AI Rules section}.\n"
 "\n"
 msgstr ""
+"\\subsection*{Kämpfe in Kampagnen- und kooperativen Szenarien}\n"
+"Abweichende Kampfregeln für diese Spielmodi sind unter \\pagelink{AI Units}{Bot-Regeln} beschrieben .\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:156
@@ -344,7 +486,7 @@ msgstr ""
 #. type: subsection{#2}
 #: sections/combat.tex:166
 msgid "Combat Example"
-msgstr ""
+msgstr "Beispiel für einen Kampf"
 
 #. type: multicols*
 #: sections/combat.tex:173
@@ -358,6 +500,13 @@ msgid ""
 "They would both be permitted to play any number of additional cards in any order, but they decide to stop after playing these cards.}\\par\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\textit{Bobs Zombies möchten Alicias Greife angreifen.\n"
+"Nachdem Bob dies angekündigt hat, dürfen beide Spieler Soforteffekte \\svg{instant} ausspielen, um z.B. den Angriffswert \\svg{attack} der eigenen angreifenden Einheit oder den Verteidigungswert \\svg{defense} der eigenen verteidigenden Einheit zu erhöhen.}\\par\n"
+"\\textit{Bob spielt eine Angriffs-Statistik, um den Angriffswert der Zombies von 2 auf 3 zu erhöhen.\n"
+"Alicia erwidert dies mit einer +1 Verteidigungs-Statistik und erhöht die Verteidigung der Greife von 0 auf 1.\n"
+"Sie dürften beide noch weitere Karten in beliebiger Reihenfolge spielen, entscheiden sich aber nach dem Spielen dieser Karten nun zu passen.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:175
@@ -380,6 +529,14 @@ msgid ""
 "The previously played Attack and Defense cards no longer have any effect.}\n"
 "\n"
 msgstr ""
+"\\textit{Nachdem alle Karten gespielt wurden, wird der Angriffswürfel geworfen, um den Angriffswert der angreifenden Zombies zu modifizieren.\n"
+"Bob wirft eine +1.\n"
+"Dies erhöht den Angriffswert der Zombies von 3 auf 4, der durch den Verteidigungswert von 1 der Greife wieder auf 3 reduziert wird. Somit werden 3 \\svg{damage} auf den Greifen platziert. Da sie 4 LP \\svg{health_points} haben, werden sie noch nicht zu auf die Wenige-Seite gedreht.}\\par\n"
+"\\textit{Auf den Greifen liegt kein Statuswürfel, also führen sie nun einen Vergeltungsangriff aus.\n"
+"Normalerweise würde nun ein Statuswürfel paltziert, aber ihre Einheitenfähigkeit \\svg{unit_retaliate} erlaubt ihnen unbegrenzt Anzahl an Vergeltungsangriffen auszuführen. Daher wird kein Statuswürfel platziert.}\\par\n"
+"\\textit{Beide Spieler dürfen erneut Karten ausspielen, um die Werte ihrer Einheiten anzupassen..\n"
+"Die zuvor gespielten Statistikkarten haben keinen Effekt mehr.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:187
@@ -403,6 +560,15 @@ msgid ""
 "If they are targeted by a \\svg{unit_ranged} attack performed from the opponent's side of the Combat Board, \\textbf{reduce the attack's damage by 1}.\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\subsection*{\\pagetarget{Walls}{Belagerungskampf in einer Stadt mit Zitadelle}}\\index{Belagerungskampf}\n"
+"Wird eine Stadt mit Zitadelle angegriffen, fügt der Verteidiger der mittleren Kampfreihe des Kampf-Spielplans 3 Mauern und das Tor in beliebiger Anordnung hinzu nachdem er seine Einheiten platziert hat.\n"
+"Das Tor zählt \\textbf{für den Verteidiger nicht als Hindernis}.\n"
+"Mauern und Tor\\index{Mauern und Tor} können durch angrenzende \\svg{unit_ground}- oder \\svg{unit_flying}-Einheiten zerstört werden.\n"
+"\\par\n"
+"Verteidigende Einheiten, die sich \\textbf{in derselben Spalte hinter} einer intakten Mauer- oder Torkarte befinden, erhalten einen Schutz vor \\svg{unit_ranged}-Angriffen.\n"
+"Sind sie Ziel von \\svg{unit_ranged}-Angriffen von der gegnerischen Seite des Kampfspielplans, \\textbf{reduziere den erlittenen Schaden um 1}.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:207
@@ -415,6 +581,12 @@ msgid ""
 "The defender also gains the Arrow Tower\\index{Arrow Tower} Unit Card which is placed next to the Combat Board.\n"
 "The attacker doesn't need to destroy it to win the Combat."
 msgstr ""
+"\\columnbreak\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=0.6\\linewidth]{\\cards/arrow_tower.png}\n"
+"\\end{center}\n"
+"Der Verteidiger erhält außerdem die Geschützturm\\index{Geschützturm}-Einheitenkarte, die neben dem Kampfspielplan platziert wird.\n"
+"Der Angreifer braucht diesen nicht zu zerstören, um den Kampf zu gewinnen."
 
 #. type: figure*
 #: sections/combat.tex:228
@@ -439,3 +611,21 @@ msgid ""
 "  \\hfill%\n"
 "  \\mbox{}%"
 msgstr ""
+"[h]\n"
+"  \\mbox{}%\n"
+"  \\hfill%\n"
+"  \\begin{minipage}[t]{0.415\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=\\linewidth]{\\examples/ranged_protected.png}\n"
+"  \\caption[halberdiers protected]{\\textit{Die Hellebardiere hinter dem intakten Tor \\textbf{sind geschützt}, wenn sie von der anderen Seite der Mauern angegriffen werden.\n"
+"    Der \\svg{unit_ranged}-Schaden der Augen des Bösen wird \\textbf{um 1 reduziert}.}}\n"
+"  \\end{minipage}\n"
+"  \\hfill%\n"
+"  \\begin{minipage}[t]{0.415\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=\\linewidth]{\\examples/ranged_unprotected.png}\n"
+"    \\caption[halberdiers unprotected]{\\textit{Da die Hellebardiere hinter eine beschädigten Mauer stehen sind sie \\textbf{nicht geschützt}.\n"
+"      Die Augen des Bösen greifen \\textbf{ohne Nachteile} an.}}\n"
+"  \\end{minipage}\n"
+"  \\hfill%\n"
+"  \\mbox{}%"
