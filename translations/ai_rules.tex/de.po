@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
 "POT-Creation-Date: 2024-08-11 23:28+0200\n"
-"PO-Revision-Date: 2024-05-04 16:19+0200\n"
+"PO-Revision-Date: 2024-10-11 01:01+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -15,12 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
 
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/ai_rules.tex:3
 msgid "\\addsection{AI Rules}{\\spells/fortune.png}"
-msgstr ""
+msgstr "\\addsection{KI Regeln}{\\spells/fortune.png}"
 
 #. type: Plain text
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
@@ -64,6 +65,17 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{KI Helden Runde}\n"
+"\\pagetarget{AIrules}{ KI Helden} werden in den Kampagnen eingesetzt.\n"
+"Sie beginnen in ihrer Stadt und haben 3 BP, die sie immer ausgeben, um die folgenden Aktionen in absteigender Priorität auszuführen:\n"
+"\\begin{itemize}\n"
+"  \\item Befindet sich der Held eines Spielers auf demselben Gebiet wie die KI, gibt diese alle BP aus, um sich auf den Helden zuzubewegen und zu versuchen, einen Kampf zu beginnen.\n"
+"  \\item Wenn sich auf demselben Gebiet Minen oder Siedlungen befinden, die die KI markieren könnte, bewegt sie sich zur Nächstgelegenen.\n"
+"  \\item Andernfalls bewegt sie sich auf die Stadt des Spielers zu.\n"
+"Wiederhole diese Sequenz, bis alle BPs aufgebraucht sind.\n"
+"Die KI Helden kommen nach dem Spieler an die Reihe.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:21
@@ -73,6 +85,9 @@ msgid ""
 "They gain no benefits from any Fields.\n"
 "\n"
 msgstr ""
+"KI Helden gewinnen immer automatisch den Kampf \\textbf{automatically win Combat} gegen alle neutralen Einheiten, während sie gleichzeitig alle Felder, durch die sie sich bewegen, markieren oder aufsuchen. \\textbf{Flagging or Visiting all Fields}.\n"
+"Sie erhalten keine Vorteile von Feldern.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:30
@@ -88,6 +103,15 @@ msgid ""
 "Any differences to the above will be described in any given Scenario's own rules.\n"
 "\n"
 msgstr ""
+"KI Helden müssen verdeckte Gebiete wie üblich entdecken, indem sie 1 BP ausgeben, bevor sie sich auf sie bewegen.\n"
+"Der Spieler wählt die Ausrichtung des Gebiets\n"
+"KI Helden können sich nicht ergeben und du kannst dich ihnen nicht ergeben;\n"
+"sie werden immer kämpfen, bis sie keine Einheiten mehr haben.\n"
+"Wenn man einen Kampf gegen einen KI Helden gewinnt, erhält man keine Belohnungen, außer dies ist im Szenario angegeben.\n"
+"KI Helden haben weder ein Stadttableau noch Ressourcen oder eine Heldenkarte.\n"
+"Ihre Einheiten sind statisch und werden durch den Aufbau des Szenarios oder durch andere Regeln definiert.\\par\n"
+"Alle Abweichungen von den oben genannten Regeln werden in den Regeln des jeweiligen Szenarios beschrieben.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:32 sections/ai_rules.tex:104 sections/combat.tex:45
@@ -106,6 +130,8 @@ msgid ""
 "\\subsection*{AI Decks}\n"
 "\n"
 msgstr ""
+"\\subsection*{KI Decks}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:53
@@ -143,6 +169,14 @@ msgid ""
 "Shuffle these Decks during setup after building them.\n"
 "\n"
 msgstr ""
+"KI Helden verwenden während des Kampfes zwei Decks: das KI-Deck und das KI-Zauberdeck.\n"
+"Das KI-Deck besteht aus drei Arten von KI-Karten: Macht \\svg{might}, Magie \\svg{magic} und Fertigkeiten \\svg{skill}.\n"
+"Jedes Kampagnenszenario listet die Anzahl und den Typ der Karten auf, die bei der Aufstellung zu verwenden sind.\n"
+"Wähle diese Karten zufällig \\textbf{randomly}, wenn du das Deck zusammenstellst.\n"
+"Wenn Fertigkeitskarten enthalten sind, suche nach der dazugehörigen Fähigkeitskarte und lege sie beiseite.\n"
+"Bilde das KI Zauberdeck \\textbf{AI Spell Deck}, indem du die angegebenen Zaubersprüche vom normalen Zauberdeck trennst.\n"
+"Mische diese Decks, nachdem du sie gebaut hast.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:68
@@ -156,6 +190,13 @@ msgid ""
 "If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
 "\n"
 msgstr ""
+"Wenn ein KI Held eine Einheit aktiviert \\textbf{Activates} , ziehe eine KI-Karte\\index{KI-Karte} und befolge ihre Anweisungen, bevor sich die Einheit bewegt und/oder angreift.\n"
+"Wenn das KI Deck während des Kampfes aufgebraucht ist,  wird nicht mehr gezogen.\n"
+"Der Effekt jeder KI Karte hängt vom \\pagelink{Difficulty}{Schwierigkeitsgrad} des Spiels ab.\n"
+"Die Machtkarte \\svg{might} wird an die Einheit angehängt, bis der erste entsprechende Angriff/Verteidigung erfolgt.\n"
+"Das KI Zauberdeck wird verwendet, wenn eine Zauberkarte \\svg{magic} gezogen wird.\n"
+"Wenn ein KI Held angewiesen wird, eine Karte zu ziehen, zieht er eine weitere Karte aus dem KI Deck und handelt sie ab.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:70
@@ -163,7 +204,7 @@ msgstr ""
 msgid ""
 "\\subsection*{Combat against AI}\n"
 "\n"
-msgstr ""
+msgstr "\\subsection*{Kampf gegen die KI}\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:73
@@ -173,6 +214,9 @@ msgid ""
 "When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\\par\n"
 "\n"
 msgstr ""
+"\\pagetarget{AI Units}{Diese Regeln} gelten während des Kampfes in \\textbf{Solo}\\index{Solomodus} und kooperativen\\textbf{Cooperative} Szenarien.\n"
+"Wenn neutrale Feinde oder KI Helden eine Einheit aktivieren, folgen sie einer Reihe von automatischen Anweisungen:\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:77
@@ -183,6 +227,10 @@ msgid ""
 "  If this is impossible, they attack the Unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
 "\n"
 msgstr ""
+"\\begin{itemize}\n"
+"  \\item Feindliche Bodeneinheiten \\svg{unit_ground} und fliegende \\svg{unit_flying} Einheiten priorisieren Angriffe gegen Einheiten des selben \\textbf{same} Ranges.\n"
+"  Wenn dies nicht geht, greifen sie Einheiten eines niedrigeren Ranges (in Rang- \\textbf{descending} ordnung runter bis Bronze) an, und wenn dies  auch nicht möglich ist, attackieren sie Einheiten eines höheren Ranges. (in Rang \\textbf{ascending} ordnung).\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:83
@@ -195,6 +243,12 @@ msgid ""
 "  - \\svgunit{azure}.}\n"
 "\n"
 msgstr ""
+"  \\textit{Beispiel: \\svgunit{golden}\\svg{unit_ground} haben diese Prioritäten:\n"
+"  \\svgunit{golden}\n"
+"  - \\svgunit{silver}\n"
+"  - \\svgunit{bronze}\n"
+"  - \\svgunit{azure}.}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:86
@@ -204,6 +258,9 @@ msgid ""
 "  If there are no Ranged \\svg{unit_ranged} Units for them to target, they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} Units in the same tier order.\\par\n"
 "\n"
 msgstr ""
+"\\item Fernkämpfer \\svg{unit_ranged} priorisieren andere Fernkämpfer \\svg{unit_ranged} des selben Rangs, dann die mit niedrigerem Rang und zuletzt die mit einem höheren Rang. Nutze die selbe Rangordnung wie oben.\n"
+"Wenn es keine Fernkämpfer \\svg{unit_ranged} als Ziele gibt, priorisieren sie Bodeneinheiten \\svg{unit_ground} und fliegende Einheiten \\svg{unit_flying} in der selben Rangordnung.\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:97
@@ -221,6 +278,17 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"  \\textit{Beispiel: \\svgunit{silver}\\svg{unit_ranged} haben diese Prioritäten:\n"
+"  \\svgunit{silver}\\svg{unit_ranged}\n"
+"  - \\svgunit{bronze}\\svg{unit_ranged}\n"
+"  - \\svgunit{golden}\\svg{unit_ranged}\n"
+"  - \\svgunit{azure}\\svg{unit_ranged}\n"
+"  - \\svgunit{silver}\\svg{unit_ground}\\svg{unit_flying}\n"
+"  - \\svgunit{bronze}\\svg{unit_ground}\\svg{unit_flying}\n"
+"  - \\svgunit{golden}\\svg{unit_ground}\\svg{unit_flying}\n"
+"  - \\svgunit{azure}\\svg{unit_ground}\\svg{unit_flying}.}\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:100
@@ -230,6 +298,10 @@ msgid ""
 "If there's ever a tie between equally valid targets, the player chooses which Unit is attacked.\\par\n"
 "\n"
 msgstr ""
+"In beiden Fällen gilt, wenn es mehr als ein gültiges Ziel gibt, greifen sie das Nähere an.\n"
+"Sollte es dann noch mehrere gleiche gültige Ziele geben, darf der Spieler entscheiden welche Einheit attackiert wird.\\par\n"
+"\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:102
@@ -238,6 +310,8 @@ msgid ""
 "Enemy units cannot \\pagelink{Defend}{Defend} unless instructed to.\n"
 "\n"
 msgstr ""
+"Feindliche Einheiten können nicht verteidigen \\pagelink{Defend}{Defend}, es sei denn, sie erhalten den Befehl dazu.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:108
