@@ -46,12 +46,21 @@ The number of \svgeven{expert} Effects you can use each Round is limited by your
 Track the number of uses you have in any suitable manner, such as by moving Black Cubes on and off your Hero Card.\par
 \bigskip
 
-\includegraphics[width=\linewidth]{\cards/ability.png}
 \vspace{-2em}
 \begin{multicols*}{2}
   \footnotesize
   \begin{center}
-    \phantom{\ldots}\textbf{\textit{\textcolor{darkcandyapplered}{Ability Card}}}
+    \begin{scriptsize}
+    \begin{tikzpicture}
+      \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/necromancy_card.png}};
+      \draw (0.75, 0.4) node {\encircle{1}};
+      \draw (-1, -0.5) node {\encircle{2}};
+      \draw (-1, -1.5) node {\encircle{3}};
+      \draw (1.5, -0.8) node {\encircle{4}};
+      \draw (1.5, -1.9) node {\encircle{4}};
+    \end{tikzpicture}
+    \end{scriptsize}
+    \textbf{\textit{\textcolor{darkcandyapplered}{Ability Card}}}
   \end{center}
   \begin{itemize}
     \item[\textbf{1.}] Name
@@ -59,7 +68,15 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
   \end{itemize}
   \columnbreak
   \begin{center}
-    \textbf{\textit{\textcolor{darkcandyapplered}{Statistic Card}}}\phantom{\ldots}
+    \begin{scriptsize}
+    \begin{tikzpicture}
+      \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/knowledge.png}};
+      \draw (0.75, 0.4) node {\encircle{1}};
+      \draw (-1, -0.5) node {\encircle{2}};
+      \draw (-1, -1.5) node {\encircle{3}};
+    \end{tikzpicture}
+    \end{scriptsize}
+    \textbf{\textit{\textcolor{darkcandyapplered}{Statistic Card}}}
   \end{center}
   \begin{itemize}
     \item[\textbf{3.}] Expert Effect
@@ -80,22 +97,42 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
 \subsection*{\pagetarget{Artifact}{Artifact} Cards}
 
 Artifact Cards\index{Artifact Card} have a top and bottom effect. When you play one, you must \textbf{choose which effect} you are using.
-They are divided into 3 Levels: Minor, Major, and Relic.
+They are divided into 3 Levels: Minor, Major, and Relic, with different border color.
 These Levels relate to the overall Power of the Card and may be referenced when resolving certain effects or during Scenario setup.
 Otherwise, all Artifact Cards are normally shuffled together to form the Artifact Deck regardless of their Level.
 They are gained through map exploration.\par
 Artifacts can be \pagelink{Trading}{traded} in Alliance and Cooperative Scenarios.\par
 \begin{multicols*}{2}
-  \includegraphics[width=1.2\linewidth]{\cards/artifact.png}
+  \begin{scriptsize}
+  \begin{tikzpicture}
+    \draw (0, 0) node {\includegraphics[width=1.2\linewidth]{\cards/artifact.png}};
+    \draw (-1.3, 2.1) node {\encircle{1}};
+    \draw (1.3, -0.9) node {\encircle{2}};
+    \draw (1.4, 2.6) node {\encircle{3}};
+    \draw (-1, -1.9) node {\encircle{4}};
+  \end{tikzpicture}
+  \end{scriptsize}
   \footnotesize
     \null\hfill\textbf{\textit{\textcolor{darkcandyapplered}{Major Artifact}}}
   \columnbreak
   \begin{center}
     \phantom{\ldots}\\
-    \phantom{\ldots}\includegraphics[width=0.6\linewidth]{\cards/minor_artifact.png}\\
+    \phantom{\ldots}
+    \begin{scriptsize}
+    \begin{tikzpicture}
+      \draw (0, 0) node {\includegraphics[width=0.6\linewidth]{\cards/minor_artifact.png}};
+      \draw (-0.7, 0.5) node {\encircle{3}};
+    \end{tikzpicture}
+    \end{scriptsize}\\
     \phantom{\ldots}\textbf{\textit{\textcolor{darkcandyapplered}{Minor Artifact}}}\\
     \vspace{3em}
-    \phantom{\ldots}\includegraphics[width=0.6\linewidth]{\cards/relic_artifact.png}\\
+    \phantom{\ldots}
+    \begin{scriptsize}
+    \begin{tikzpicture}
+      \draw (0, 0) node {\includegraphics[width=0.6\linewidth]{\cards/relic_artifact.png}};
+      \draw (-0.7, 0.5) node {\encircle{3}};
+    \end{tikzpicture}
+    \end{scriptsize}\\
     \phantom{\ldots}\textbf{\textit{\textcolor{darkcandyapplered}{Relic Artifact}}}
   \end{center}
 \end{multicols*}
@@ -105,7 +142,8 @@ Artifacts can be \pagelink{Trading}{traded} in Alliance and Cooperative Scenario
     \item[\textbf{1.}] Name
     \item[\textbf{2.}] Effect
     \columnbreak
-    \item[\textbf{3.}] Fluff
+    \item[\textbf{3.}] Level
+    \item[\textbf{4.}] Fluff
   \end{itemize}
 \end{multicols}
 
@@ -121,11 +159,19 @@ Using the topmost, basic version of the Spell has no additional costs.
 To access the other effects, you may \textbf{Empower} a Spell\index{Empowering Spells} by paying the indicated cost (3) to get a more powerful outcome (4).
 You may pay this cost by playing other cards for their Empower \svg{empower} effect (e.g. the Spell Power Statistic) before casting the Spell.
 All Spell Cards also have an alternative bottom (5) \svg{empower} effect.
-You cannot preserve the played \svg{empower}: casting a Spell consumes all the \svg{empower} played so far, and if you stop playing cards, the power dissipates.\par
+You cannot preserve the played \svg{empower}: casting a Spell consumes all the \svg{empower} played so far, and if you stop playing cards, the power dissipates.
+You may use a cheaper \svg{empower} effect than what you've paid for, though.\par
 
 {
   \centering
-  \includegraphics[width=0.6\linewidth]{\cards/spell_example.png}\\
+  \begin{tikzpicture}
+    \draw (0, 0) node {\includegraphics[width=0.6\linewidth]{\cards/spell.png}};
+    \draw (-1.3, 2.5) node {\encircle{1}};
+    \draw (-1.8, 0.3) node {\encircle{2}};
+    \draw (-1.1, -1) node {\encircle{3}};
+    \draw (1.1, -1) node {\encircle{4}};
+    \draw (0.8, -2.8) node {\encircle{5}};
+  \end{tikzpicture}\\
   \medskip
   \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Spell Card}}}}
   \scriptsize
