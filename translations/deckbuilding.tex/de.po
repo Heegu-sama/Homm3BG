@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-11-13 10:43+0100\n"
-"PO-Revision-Date: 2024-05-03 12:03+0200\n"
+"POT-Creation-Date: 2024-08-11 22:50+0200\n"
+"PO-Revision-Date: 2024-12-05 16:08+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -15,6 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
 
 #. type: Plain text
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
@@ -47,6 +48,7 @@ msgstr ""
 #: sections/deckbuilding.tex:3
 msgid "\\addsection{Deck-building}{\\skills/wisdom.png}"
 msgstr ""
+"\\addsection[2]{Karten- und \\break{}Spielerdecks}{\\skills/wisdom.png}"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:12
@@ -58,6 +60,11 @@ msgid ""
 "Each player's Deck starts with 9 cards, built during the game's setup.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Playerdecks}{Spielerdecks}}\n"
+"Alle Spieler haben ein einzigartiges Deck, das die Fähigkeiten und die Ausrüstung ihres Haupthelden repräsentiert.\n"
+"Dein Deck kann Statistiken, Fähigkeiten, Zauber, Artefakte und die Sonderfähigkeiten des Haupthelden enthalten.\n"
+"Jedes Spielerdeck enthält zu Spielbeginn 9 Karten.\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:35
@@ -87,6 +94,29 @@ msgid ""
 "\\end{enumerate}\n"
 "\n"
 msgstr ""
+"\\subsection*{Allgemeine Regeln zu Karten}\n"
+"\\begin{enumerate}\n"
+"  \\item Karten können \\textbf{nur im eigenen Zug} oder in einem \\pagelink{Combat}{Kampf} des eigenen \\textbf{Hauptheldens} gespielt werden.\n"
+"  \\item Wurde der Effekt einer Karte vollständig abgehandelt,\n"
+"    wird die Karte auf den eigenen Ablagestapel\\index{Ablagestapel} abgeworfen.\n"
+"  \\item Musst Karten ziehen und dein Deck ist leer, \\textbf{mische deinen Ablagestapel} und bilde daraus ein neues Deck.\n"
+"  \\item Wenn nicht anders angegeben nimmst du eine Karte, wodurch auch immer du sie erhältst, \\textbf{direkt auf die Hand}.\n"
+"  \\item Fordert ein Effekt dich auf die Aktion \\textbf{Durchsuche (X)} \\index{Durchsuche (X)} auf ein bestimmtes Deck (z.B. das Zauberdeck) anzuwenden, darfst du entweder die obersten X Karten dieses Decks ansehen, eine davon auf die Hand nehmen und die übrigen abwerfen \\textbf{ODER} die oberste Karte des offenen Ablagestapels dieses Decks auf die Hand nehmen.\n"
+"  \\item Die Fähigkeiten-, Artefakt- und Zauber-Decks haben je ihren eigenen Ablagestapel, die während des Spielaufbaus gebildet werden.\n"
+"    Ist ein Deck leer, wird sein Ablagestapel zu einem neuen Deck gemischt und die oberste Karte abgeworfen, um einen neuen Ablagestapel zu bilden.\n"
+"    Ist der Ablagestapel eines Decks leer, \\textbf{fülle ihn wieder auf} durch Abwerfen der obersten Karte dieses Decks.\n"
+"  \\item Karten haben folgende \\pagetarget{Card Effects}{Karteneffekte}:\n"
+"  \\begin{itemize}\n"
+"    \\item \\textbf{Soforteffekte} \\svg{instant} werden sofort abgehandelt.\n"
+"    \\item \\textbf{Aktivierungseffekte} \\svg{activation} müssen während der Aktivierung einer eigenen Einheit im Kampf gespielt werden.\n"
+"    \\item \\textbf{Abenteuereffekte} \\svg{map} können nicht im Kampf gespielt werden.\n"
+"    \\item \\textbf{Anhaltende Effekte} \\svg{ongoing}\\index{Anhaltender Effekt} dauern an, bis der beschriebene Effekt vollständig abgehandelt wurde oder der ausführende Spieler seinen nächsten Spielzug beginnt (je nachdem, was zuerst eintritt).\n"
+"    \\item \\textbf{Bleibende Karten} \\svg{permanent} \\index{Bleibende Karten} bleiben im Spiel, bis sie abgelegt oder ersetzt werden.\n"
+"      \\textbf{Du darfst jederzeit nur eine bleibende Karte im Spiel haben}; spielst du eine weitere aus, wirf die erste ab.\n"
+"  \\end{itemize}\n"
+"  \\item Fordert ein Effekt dich auf, eine Karte zu \\textbf{entfernen}, entferne sie vollständig aus dem Spiel.\n"
+"\\end{enumerate}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:38
@@ -96,6 +126,9 @@ msgid ""
 "\\hfill\\includegraphics[width=0.9\\linewidth]{\\art/coin.png}\n"
 "\n"
 msgstr ""
+"\\vfill\n"
+"\\hfill\\includegraphics[width=0.68\\linewidth]{\\art/coin.png}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:40 sections/player_turns.tex:57
@@ -113,6 +146,8 @@ msgid ""
 "\\subsection*{\\pagetarget{Ability}{Ability} and \\pagetarget{Statistic}{Statistic} Cards}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Ability}{Fähigkeits-} und \\pagetarget{Statistic}{Statistik}karten}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:48
@@ -125,6 +160,12 @@ msgid ""
 "\\bigskip\n"
 "\n"
 msgstr ""
+"Alle Fähigkeits-\\index{Fähigkeitskarte} und Statistikkarten\\index{Statistikkarte} haben einen \\textbf{Basis-}\\index{Basiseffekt} und einen stärkeren \\textbf{Experteneffekt}\\index{Experteneffekt} \\svgeven{expert}, der unterhalb des Basiseffekts abgedruckt ist.\n"
+"Beim Ausspielen dieser Karten musst du entscheiden, welchen der beiden Effekte du nutzen willst.\n"
+"Die Anzahl an \\svgeven{expert}-Effekten ist pro Runde limitiert durch die \\pagelink{Level}{Erfahrungsstufe} deines Haupthelden.\n"
+"Zähle die Anzahl verbrauchter und verfügbarer Experteneffekte auf eine sinnvolle Weise, z.B. durch Verschieben eines Statuswürfels von und auf dein Heldentableau.\\par\n"
+"\\bigskip\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:53
@@ -168,6 +209,23 @@ msgid ""
 "  \\begin{center}\n"
 "    \\begin{scriptsize}\n"
 msgstr ""
+"      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/necromancy_card.png}};\n"
+"      \\draw (0.75, 0.4) node {\\encircle{1}};\n"
+"      \\draw (-1, -0.5) node {\\encircle{2}};\n"
+"      \\draw (-1, -1.5) node {\\encircle{3}};\n"
+"      \\draw (1.5, -0.8) node {\\encircle{4}};\n"
+"      \\draw (1.5, -1.9) node {\\encircle{4}};\n"
+"    \\end{tikzpicture}\n"
+"    \\end{scriptsize}\n"
+"    \\textbf{\\textit{\\textcolor{darkcandyapplered}{Fähigkeitskarte}}}\n"
+"  \\end{center}\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{1.}] Name\n"
+"    \\item[\\textbf{2.}] Basiseffekt\n"
+"  \\end{itemize}\n"
+"  \\columnbreak\n"
+"  \\begin{center}\n"
+"    \\begin{scriptsize}\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:92
@@ -186,6 +244,18 @@ msgid ""
 "    \\item[\\textbf{4.}] Faction-specific Card*\n"
 "  \\end{itemize}"
 msgstr ""
+"      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/knowledge.png}};\n"
+"      \\draw (0.75, 0.4) node {\\encircle{1}};\n"
+"      \\draw (-1, -0.5) node {\\encircle{2}};\n"
+"      \\draw (-1, -1.5) node {\\encircle{3}};\n"
+"    \\end{tikzpicture}\n"
+"    \\end{scriptsize}\n"
+"    \\textbf{\\textit{\\textcolor{darkcandyapplered}{Statistikkarte}}}\n"
+"  \\end{center}\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{3.}] Experteneffekt\n"
+"    \\item[\\textbf{4.}] Fraktionssymbol*\n"
+"  \\end{itemize}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:92
@@ -197,6 +267,12 @@ msgid ""
 "\\textbf{cannot use} Faction Specific Cards from their hand in any way "
 "besides for effects that discard them.  }"
 msgstr ""
+"\\bigbreak \\note{11}{ *Einige Karten sind nur für die Nekropolis-Fraktion "
+"verwendbar \\svg{necro-note}.  Zieht ein Spieler einer anderen Fraktion eine "
+"solche Karte\\index{Necropolis Card} vom Fähigkeiten-Deck, darf er sie "
+"abwerfen und eine Ersatzkarte ziehen.  Er darf die Karte auch behalten, "
+"\\textbf{kann sie aber auf keine andere Art nutzen}, außer zum Abwerfen "
+"aufgrund von Effekten anderer Karten.  }"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:96 sections/resources.tex:33
@@ -206,7 +282,7 @@ msgstr ""
 #. type: subsection{#2}
 #: sections/deckbuilding.tex:98
 msgid "\\pagetarget{Artifact}{Artifact} Cards"
-msgstr ""
+msgstr "\\pagetarget{Artifact}{Artefakt}karten"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:106
@@ -221,6 +297,15 @@ msgid ""
 "exploration.\\par Artifacts can be \\pagelink{Trading}{traded} in Alliance "
 "and Cooperative Scenarios."
 msgstr ""
+"Artefaktkarten\\index{Artefaktkarten} haben einen oberen und einen unteren "
+"Effekt. Beim Ausspielen musst du \\textbf{den Effekt wählen}, den du nutzen "
+"willst.  Artefakte haben drei Seltenheitsstufen (erkennbar an der "
+"Rahmenfarbe): Gewöhnliche, seltene und Relikt-Artefakte.  Diese Stufen "
+"beziehen sich auf die Effektstärken der Karten und können für Effekte "
+"anderer Karten oder spezifische Szenarioregeln wichtig sein.  Regulär bilden "
+"alle Artefakte (unabhängig der Kategorie) das Artefakt-Deck.  Man erhält sie "
+"durch die Erkundungen auf der Abenteuerkarte.\\par Artefakte können in "
+"Allianz- oder kooperativen Szenarien \\pagelink{Trading}{gehandelt} werden."
 
 #. type: multicols*
 #: sections/deckbuilding.tex:106
@@ -256,6 +341,20 @@ msgid ""
 "    \\phantom{\\ldots}\n"
 "    \\begin{scriptsize}\n"
 msgstr ""
+"    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
+"    \\draw (-1.3, 2.1) node {\\encircle{1}};\n"
+"    \\draw (1.3, -0.9) node {\\encircle{2}};\n"
+"    \\draw (1.4, 2.6) node {\\encircle{3}};\n"
+"    \\draw (-1, -1.9) node {\\encircle{4}};\n"
+"  \\end{tikzpicture}\n"
+"  \\end{scriptsize}\n"
+"  \\footnotesize\n"
+"    \\null\\hfill\\textbf{\\textit{\\textcolor{darkcandyapplered}{Seltenes Artefakt}}}\n"
+"  \\columnbreak\n"
+"  \\begin{center}\n"
+"    \\phantom{\\ldots}\\\\\n"
+"    \\phantom{\\ldots}\n"
+"    \\begin{scriptsize}\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:130
@@ -270,16 +369,18 @@ msgid ""
 "    \\phantom{\\ldots}\n"
 "    \\begin{scriptsize}\n"
 msgstr ""
+"      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/minor_artifact.png}};\n"
+"      \\draw (-0.7, 0.5) node {\\encircle{3}};\n"
+"    \\end{tikzpicture}\n"
+"    \\end{scriptsize}\\\\\n"
+"    \\phantom{\\ldots}\\textbf{\\textit{\\textcolor{darkcandyapplered}{Gewöhnliches Artefakt}}}\\\\\n"
+"    \\vspace{3em}\n"
+"    \\phantom{\\ldots}\n"
+"    \\begin{scriptsize}\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:148
-#, fuzzy, no-wrap
-#| msgid ""
-#| "      \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/mmback.png}};\n"
-#| "      \\node at (1.5, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}};\n"
-#| "    \\end{tikzpicture}\n"
-#| "    \\caption{\\textbf{\\pagelink{spells}{Spell Card}}}\n"
-#| "  \\end{subfigure}"
+#, no-wrap
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}};\n"
 "      \\draw (-0.7, 0.5) node {\\encircle{3}};\n"
@@ -288,11 +389,12 @@ msgid ""
 "    \\phantom{\\ldots}\\textbf{\\textit{\\textcolor{darkcandyapplered}{Relic Artifact}}}\n"
 "  \\end{center}"
 msgstr ""
-"      \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/mmback.png}};\n"
-"      \\node at (1.5, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}};\n"
+"      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}};\n"
+"      \\draw (-0.7, 0.5) node {\\encircle{3}};\n"
 "    \\end{tikzpicture}\n"
-"    \\caption{\\textbf{\\pagelink{spells}{Zauberkarten}} \\iftoggle{printable}{\\phantom{Statistickarten}{}}}\n"
-"  \\end{subfigure}\\iftoggle{printable}{\\vspace*{-0.5em}}{}"
+"    \\end{scriptsize}\\\\\n"
+"    \\phantom{\\ldots}\\textbf{\\textit{\\textcolor{darkcandyapplered}{Relikt-Artefakt}}}\n"
+"  \\end{center}"
 
 #. type: multicols
 #: sections/deckbuilding.tex:148
@@ -308,6 +410,15 @@ msgid ""
 "    \\item[\\textbf{4.}] Fluff\n"
 "  \\end{itemize}"
 msgstr ""
+"{2}\n"
+"  \\footnotesize\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{1.}] Name\n"
+"    \\item[\\textbf{2.}] Effekt\n"
+"    \\columnbreak\n"
+"    \\item[\\textbf{3.}] Seltenheit\n"
+"    \\item[\\textbf{4.}] Hintergrundgeschichte\n"
+"  \\end{itemize}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:154
@@ -317,7 +428,7 @@ msgstr ""
 #. type: subsection{#2}
 #: sections/deckbuilding.tex:156
 msgid "\\pagetarget{spells}{Spell Cards}"
-msgstr ""
+msgstr "\\pagetarget{spells}{Zauberkarten}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:126
@@ -334,6 +445,17 @@ msgid ""
 "cards, the power dissipates.  You may use a cheaper \\svg{empower} effect "
 "than what you've paid for, though."
 msgstr ""
+"Zauberkarten\\index{Zauberkarten} haben drei mögliche primäre Effekte.  Die "
+"Nutzung des obersten Basiseffektes hat (meist) keine weiteren Kosten.  Um "
+"einen der beiden stärkeren primären Effekte (4) zu nutzen, muss der Zauber "
+"\\textbf{verstärkt}\\index{Zauber verstärken} werden, indem die Kosten des "
+"Effektes (3) durch Ausspielen anderer Karten mit Verstärkungseffekt "
+"\\svg{empower} (z. B. der Statistikkarte Zauberkraft) bezahlt werden.  Alle "
+"Zauber können auch mit ihrem alternativen unteren \\svg{empower}-Effekt (5) "
+"gespielt werden, um andere Zauber zu verstärken.  Du darfst eine niedrigere "
+"Effektstärke wählen, kannst gespielte \\svg{empower}-Effekte aber nicht "
+"aufsparen: Das Abhandeln eines Zaubers verbraucht alle ausgespielten "
+"\\svg{empower}-Effekte."
 
 #. type: Plain text
 #: sections/deckbuilding.tex:144
@@ -350,6 +472,17 @@ msgid ""
 "\\item[\\textbf{4.}] \\textbf{Spell Effect} \\item[\\textbf{5.}] "
 "\\textbf{Alternative\\\\Effect} \\item[] \\end{itemize} \\end{multicols} }"
 msgstr ""
+"{ \\centering \\begin{tikzpicture} \\draw (0, 0) node "
+"{\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}}; \\draw (-1.3, "
+"2.5) node {\\encircle{1}}; \\draw (-1.8, 0.3) node {\\encircle{2}}; \\draw "
+"(-1.1, -1) node {\\encircle{3}}; \\draw (1.1, -1) node {\\encircle{4}}; "
+"\\draw (0.8, -2.8) node {\\encircle{5}}; \\end{tikzpicture}\\\\ \\medskip "
+"\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}"
+"{Zauberkarte}}}} \\scriptsize \\begin{multicols}{2} \\begin{itemize}"
+"[itemsep=5pt] \\item[\\textbf{1.}] \\textbf{Name} \\item[\\textbf{2.}] "
+"\\textbf{Magieschule} \\item[\\textbf{3.}] \\textbf{Kosten\\\\zum "
+"Verstärken} \\item[\\textbf{4.}] \\textbf{Zaubereffekt} \\item[\\textbf{5.}] "
+"\\textbf{Alternativer\\\\Effekt} \\item[] \\end{itemize} \\end{multicols} }"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:148
@@ -360,6 +493,12 @@ msgid ""
 "\\textbf{same Round} when the Guild is constructed. Spells can also be "
 "\\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgstr ""
+"Zauber können beim Bau der Magiergilde\\index{Magiergilde} erhalten werden.  "
+"Außerdem ermöglicht die Magiergilde den Kauf neuer Zauber durch Nutzung des "
+"Zauberbuchmarkers\\index{Zauberbuchmarker}.  Der Marker kann nicht in "
+"\\textbf{derselben Runde} genutzt werden, in der die Magiergilde gebaut "
+"wurde. Zauber können in Allianz- oder kooperativen Szenarien auch "
+"\\pagelink{Trading}{gehandelt} werden."
 
 #. type: Plain text
 #: sections/deckbuilding.tex:150
@@ -367,6 +506,8 @@ msgid ""
 "During Combat, \\textbf{only one Spell Card} may be played by each player "
 "\\textbf{per Combat Round}."
 msgstr ""
+"Jeder Spieler darf im Kampf \\textbf{nur einen Zauber} \\textbf{pro "
+"Kampfrunde} ausspielen."
 
 #. type: Plain text
 #: sections/deckbuilding.tex:154
@@ -375,11 +516,14 @@ msgid ""
 "other than your hand (such as directly from the Spell Deck), place that "
 "Spell into your Discard Pile after casting it.  }"
 msgstr ""
+"\\note{6}{ Wenn ein Effekt dir erlaubt, einen Zauber auszuspielen, den du "
+"nicht auf der Hand hältst (sondern z. B. direkt vom Zauberdeck), wirf diesen "
+"Zauber anschließend auf deinen Ablagestapel.  }"
 
 #. type: subsection{#2}
 #: sections/deckbuilding.tex:156
 msgid "\\pagetarget{Specialty}{Hero Specialty Cards}"
-msgstr ""
+msgstr "\\pagetarget{Specialty}{Sonderfähigkeitskarten\\\\der Helden}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:160
@@ -389,6 +533,11 @@ msgid ""
 "many of these Cards have effects which resemble Spell Cards, Specialty Cards "
 "are their \\textbf{own unique category of cards}."
 msgstr ""
+"Sonderfähigkeitskarten\\index{Sonderfähigkeitskarten} erhalten die Spieler "
+"beim \\pagelink{Level}{Stufenaufstieg}.  Jeder Hauptheld hat ein "
+"einzigartiges Set an Sonderfähigkeiten.  Auch wenn viele Effekte dieser "
+"Karten Effekten von Zaubern ähneln, sind Sonderfähigkeiten eine "
+"\\textbf{eigene Kategorie an Karten}."
 
 #. type: Plain text
 #: sections/deckbuilding.tex:167
@@ -397,11 +546,14 @@ msgid ""
 "png}\\\\ \\medskip \\footnotesize\\textit{A Level 4 Specialty Card, "
 "belonging to Catherine the Knight.} }"
 msgstr ""
+"{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/specialty."
+"png}\\\\ \\medskip \\footnotesize\\textit{Sonderfähigkeitskarte Stufe IV von "
+"Catherine, der Ritterin} }"
 
 #. type: subsection{#2}
 #: sections/deckbuilding.tex:177
 msgid "Searching Example"
-msgstr ""
+msgstr "Beispiel einer\\\\Durchsuchen-Aktion"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:187
@@ -422,3 +574,18 @@ msgid ""
 "the Fireball, placing it into his hand and discarding the Magic Arrow into "
 "the Spell Discard Pile.}"
 msgstr ""
+"\\textit{Bob spielt Deemer, den Hexer, und besitzt eine Magiergilde seit der "
+"vorherigen Runde, die ihm erlaubt mithilfe des Zauberbuchmarkers neue Zauber "
+"zu kaufen.}\\par \\includegraphics[width=\\linewidth]{\\examples/"
+"deemer_receiving_spellbook.png}\\par \\textit{Er nutzt den Marker und "
+"bezahlt die auf seinem Stadttableau angegebenen 5 \\svg{gold}, um die Aktion "
+"\\textbf{Durchsuche (2) das Zauber-Deck} durchzuführen.}\\par "
+"\\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par "
+"\\filbreak \\textit{Er hat nun die Wahl entweder die oberste Karte des "
+"Zauber-Ablagestapels zu erhalten oder die obersten 2 Karten des Zauber-Decks "
+"zu ziehen und eine davon auf die Hand zu nehmen.  Da er am Zauber Fluch, der "
+"oben auf dem Ablagestapel liegt, nicht interessiert ist, zieht er "
+"stattdessen zwei Karten – Magischer Pfeil und Feuerball.} "
+"\\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow."
+"png}\\par \\textit{Er entscheidet sich dafür, den Feuerball zu behalten und "
+"wirft den Magischen Pfeil auf den Zauber-Ablagestapel.}"
