@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-11-08 12:19+0100\n"
-"PO-Revision-Date: 2024-11-14 21:42+0100\n"
+"POT-Creation-Date: 2024-11-26 01:19+0000\n"
+"PO-Revision-Date: 2024-12-11 15:43+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -27,7 +27,7 @@ msgstr ""
 #: sections/map_elements.tex:124 sections/player_turns.tex:7
 #: sections/resources.tex:7 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:58 sections/town.tex:5
-#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:167
+#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:192
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -37,7 +37,7 @@ msgstr ""
 #. type: multicols
 #: sections/all_map_locations.tex:35 sections/all_map_locations.tex:63
 #: sections/all_map_locations.tex:152 sections/expansion_content.tex:105
-#: sections/trading.tex:24 sections/units.tex:175 sections/units.tex:179
+#: sections/trading.tex:24 sections/units.tex:200 sections/units.tex:204
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -49,7 +49,7 @@ msgstr ""
 #: sections/credits.tex:36 sections/difficulty.tex:18
 #: sections/expansion_content.tex:20 sections/expansion_content.tex:65
 #: sections/game_modes.tex:27 sections/scenario_end.tex:23
-#: sections/units.tex:105
+#: sections/units.tex:130
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -61,7 +61,7 @@ msgstr ""
 #: sections/credits.tex:42 sections/expansion_content.tex:59
 #: sections/game_modes.tex:25 sections/round_structure.tex:28
 #: sections/round_structure.tex:32 sections/setup.tex:117 sections/town.tex:28
-#: sections/town.tex:34 sections/units.tex:103
+#: sections/town.tex:34 sections/units.tex:128
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -69,7 +69,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/all_map_locations.tex:175 sections/units.tex:88
+#: sections/all_map_locations.tex:175 sections/units.tex:113
 #, no-wrap
 msgid ""
 "\\bigbreak\n"
@@ -78,7 +78,7 @@ msgstr ""
 
 #. type: multicols
 #: sections/all_map_locations.tex:435 sections/player_turns.tex:39
-#: sections/units.tex:186
+#: sections/units.tex:211
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -92,6 +92,15 @@ msgstr ""
 msgid ""
 "\\clearpage\n"
 "\n"
+msgstr ""
+
+#. type: multicols
+#: sections/deckbuilding.tex:54 sections/deckbuilding.tex:72
+#: sections/deckbuilding.tex:122 sections/deckbuilding.tex:131
+#: sections/expansion_content.tex:72 sections/expansion_content.tex:110
+#: sections/units.tex:60 sections/units.tex:87
+#, no-wrap
+msgid "    \\begin{tikzpicture}\n"
 msgstr ""
 
 #.  !TeX spellcheck = en_US
@@ -227,16 +236,32 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:86
+#: sections/units.tex:59
 #, no-wrap
 msgid ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth]{\\cards/units.png}\n"
-"\\end{center}\n"
-"\\vspace{-1em}\n"
 "\\begin{multicols*}{2}\n"
 "  \\footnotesize\n"
 "  \\begin{center}\n"
+"    \\begin{scriptsize}\n"
+msgstr ""
+
+#. type: multicols
+#: sections/units.tex:86
+#, no-wrap
+msgid ""
+"      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/unit-few.png}};\n"
+"      \\draw (-0.6, 2) node {\\encircle{1}};\n"
+"      \\draw (1.5, 2.1) node {\\encircle{2}};\n"
+"      \\draw (-0.5, 1.4) node {\\encircle{3}};\n"
+"      \\draw (-1.5, 1.3) node {\\encircle{4}};\n"
+"      \\draw (-1.5, 0.6) node {\\encircle{5}};\n"
+"      \\draw (-1.5, -0.1) node {\\encircle{6}};\n"
+"      \\draw (-1.5, -0.8) node {\\encircle{7}};\n"
+"      \\draw (-0.3, -1) node {\\encircle{8}};\n"
+"      \\draw (1, -1) node {\\encircle{9}};\n"
+"      \\draw (0.6, -2) node {\\encircle{11}};\n"
+"    \\end{tikzpicture}\n"
+"    \\end{scriptsize}\n"
 "    \\textbf{\\textit{\\textcolor{darkcandyapplered}{Unit Card (Few)}}}\n"
 "  \\end{center}\n"
 "  \\begin{itemize}\n"
@@ -249,6 +274,51 @@ msgid ""
 "  \\end{itemize}\n"
 "  \\columnbreak\n"
 "  \\begin{center}\n"
+"    \\begin{scriptsize}\n"
+msgstr ""
+"     \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{translations/assets/de/unit-few.png}};\n"
+"      \\draw (-0.6, 2) node {\\encircle{1}};\n"
+"      \\draw (1.5, 2.1) node {\\encircle{2}};\n"
+"      \\draw (-0.5, 1.4) node {\\encircle{3}};\n"
+"      \\draw (-1.5, 1.3) node {\\encircle{4}};\n"
+"      \\draw (-1.5, 0.6) node {\\encircle{5}};\n"
+"      \\draw (-1.5, -0.1) node {\\encircle{6}};\n"
+"      \\draw (-1.5, -0.8) node {\\encircle{7}};\n"
+"      \\draw (-0.3, -1) node {\\encircle{8}};\n"
+"      \\draw (1, -1) node {\\encircle{9}};\n"
+"      \\draw (0.6, -2) node {\\encircle{11}};\n"
+"    \\end{tikzpicture}\n"
+"    \\end{scriptsize}\n"
+"    \\textbf{\\textit{\\textcolor{darkcandyapplered}{Einheitenkarte (Wenige)}}}\n"
+"  \\end{center}\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{1.}] {Name}\n"
+"    \\item[\\textbf{2.}] {Stufe}\n"
+"    \\item[\\textbf{3.}] {Typ}\n"
+"    \\item[\\textbf{4.}] {Angriffswert}\n"
+"    \\item[\\textbf{5.}] {Verteidgungswert}\n"
+"    \\item[\\textbf{6.}] {Lebenspunkte}\n"
+"  \\end{itemize}\n"
+"  \\columnbreak\n"
+"  \\begin{center}\n"
+"    \\begin{scriptsize}\n"
+
+#. type: multicols
+#: sections/units.tex:111
+#, no-wrap
+msgid ""
+"      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/unit-pack.png}};\n"
+"      \\draw (-0.6, 2) node {\\encircle{1}};\n"
+"      \\draw (1.5, 2.1) node {\\encircle{2}};\n"
+"      \\draw (-0.5, 1.4) node {\\encircle{3}};\n"
+"      \\draw (-1.5, 1.3) node {\\encircle{4}};\n"
+"      \\draw (-1.5, 0.6) node {\\encircle{5}};\n"
+"      \\draw (-1.5, -0.1) node {\\encircle{6}};\n"
+"      \\draw (-1.5, -0.8) node {\\encircle{7}};\n"
+"      \\draw (0.3, -1) node {\\encircle{10}};\n"
+"      \\draw (0.6, -2) node {\\encircle{11}};\n"
+"    \\end{tikzpicture}\n"
+"    \\end{scriptsize}\n"
 "    \\textbf{\\textit{\\textcolor{darkcandyapplered}{Unit Card (Pack)}}}\n"
 "  \\end{center}\n"
 "  \\begin{itemize}\n"
@@ -260,38 +330,31 @@ msgid ""
 "    % \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
 "  \\end{itemize}"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth]{\\cards/units.png}\n"
-"\\end{center}\n"
-"\\vspace{-1em}\n"
-"\\begin{multicols*}{2}\n"
-"  \\footnotesize\n"
-"  \\begin{center}\n"
-"    \\textbf{\\textit{\\textcolor{darkcandyapplered}{Einheitenkarte (Wenige)}}}\n"
-"  \\end{center}\n"
-"  \\begin{itemize}\n"
-"    \\item[\\textbf{1.}] {Name}\n"
-"    \\item[\\textbf{2.}] {Stufe}\n"
-"    \\item[\\textbf{3.}] {Typ}\n"
-"    \\item[\\textbf{4.}] {Angriffswert}\n"
-"    \\item[\\textbf{5.}] {Verteidigungswert}\n"
-"    \\item[\\textbf{6.}] {Lebenspunkte}\n"
-"  \\end{itemize}\n"
-"  \\columnbreak\n"
-"  \\begin{center}\n"
+"      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{translations/assets/de/unit-pack.png}};\n"
+"      \\draw (-0.6, 2) node {\\encircle{1}};\n"
+"      \\draw (1.5, 2.1) node {\\encircle{2}};\n"
+"      \\draw (-0.5, 1.4) node {\\encircle{3}};\n"
+"      \\draw (-1.5, 1.3) node {\\encircle{4}};\n"
+"      \\draw (-1.5, 0.6) node {\\encircle{5}};\n"
+"      \\draw (-1.5, -0.1) node {\\encircle{6}};\n"
+"      \\draw (-1.5, -0.8) node {\\encircle{7}};\n"
+"      \\draw (0.3, -1) node {\\encircle{10}};\n"
+"      \\draw (0.6, -2) node {\\encircle{11}};\n"
+"    \\end{tikzpicture}\n"
+"    \\end{scriptsize}\n"
 "    \\textbf{\\textit{\\textcolor{darkcandyapplered}{Einheitenkarte (Rudel)}}}\n"
 "  \\end{center}\n"
 "  \\begin{itemize}\n"
 "    \\item[\\textbf{7.}] {Initiativwert}\n"
 "    \\item[\\textbf{8.}] {Rekrutierungskosten}\n"
 "    \\item[\\textbf{9.}] {Verstärkungskosten}\n"
-"    \\item[\\textbf{10.}]{Symbol für den Status ``Rudel''}\n"
+"    \\item[\\textbf{10.}]{Rudel-Symbol}\n"
 "    \\item[\\textbf{11.}]{Einheitenfähigkeiten}\n"
 "    % \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
 "  \\end{itemize}"
 
 #. type: multicols
-#: sections/units.tex:101
+#: sections/units.tex:126
 #, no-wrap
 msgid ""
 "Most Units have a \\textbf{special ability}\\index{Special Ability}:\\par\n"
@@ -323,7 +386,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:117
+#: sections/units.tex:142
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Unittype}{Unit Types}}\n"
@@ -353,7 +416,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:129
+#: sections/units.tex:154
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Neutral Units}{Neutral Units}}\n"
@@ -383,7 +446,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:134
+#: sections/units.tex:159
 #, no-wrap
 msgid ""
 "\\note{8}{\n"
@@ -399,7 +462,7 @@ msgstr ""
 "\n"
 
 #. type: Plain text
-#: sections/units.tex:162
+#: sections/units.tex:187
 msgid ""
 "\\hommtable{13}{ \\begin{tabularx}{\\linewidth}"
 "{>{\\hsize=0.181\\hsize\\linewidth=\\hsize}X "
@@ -444,7 +507,7 @@ msgstr ""
 "\\end{tabularx} }"
 
 #. type: multicols
-#: sections/units.tex:169
+#: sections/units.tex:194
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\art/lich.jpg}\n"
@@ -452,7 +515,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:171
+#: sections/units.tex:196
 #, no-wrap
 msgid ""
 "\\subsection*{Gameplay Example}\n"
@@ -462,7 +525,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:173
+#: sections/units.tex:198
 #, no-wrap
 msgid ""
 "\\textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons, Empowering \\svg{empower} the Spell by 2 with the Expert  Effect \\svgeven{expert} of a Power Card.}\n"
@@ -472,7 +535,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:177
+#: sections/units.tex:202
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/alamar_empowering_magic_arrow.png}\n"
@@ -480,7 +543,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:184
+#: sections/units.tex:209
 #, no-wrap
 msgid ""
 "\\textit{The Skeletons take 3 damage \\svg{damage} from the Spell.\n"
@@ -496,7 +559,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:188
+#: sections/units.tex:213
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/skeletons_flipped.png}\n"
