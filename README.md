@@ -91,8 +91,8 @@
         </tr>
         <tr>
             <td>🇩🇪 Deutsch</td>
-            <td align="center">50%</td>
-            <td align="center">0%</td>
+            <td align="center">100%</td>
+            <td align="center">100%</td>
             <td align="center">—</td>
             <td align="center">—</td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/main_de.pdf">️speichern</a></td>
@@ -345,7 +345,13 @@ Their respective XCF files reside in [`assets/gimp-files`](https://github.com/He
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Heegu-sama/Homm3BG&type=Date&branch=master)](https://star-history.com/#Heegu-sama/Homm3BG&Date)
+<a href="https://star-history.com/#Heegu-sama/Homm3BG&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Heegu-sama/Homm3BG&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Heegu-sama/Homm3BG&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Heegu-sama/Homm3BG&type=Date" />
+  </picture>
+</a>
 
 ## 🛡️ Other Community Projects
 
