@@ -91,8 +91,8 @@
         </tr>
         <tr>
             <td>🇩🇪 Deutsch</td>
-            <td align="center">50%</td>
-            <td align="center">0%</td>
+            <td align="center">100%</td>
+            <td align="center">100%</td>
             <td align="center">—</td>
             <td align="center">—</td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/main_de.pdf">️speichern</a></td>
