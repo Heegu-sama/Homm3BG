@@ -164,8 +164,8 @@ jobs:
           echo "Number of pages in digital:   ${PAGES_DIGITAL}"
           echo "Number of pages in printable: ${PAGES_PRINTABLE}"
           # The goal of this check is to make sure that printable version has 56 pages - divisible by 4 to be print friendly.
-          # Currenty, digital version has 53 pages, so the printable should have 3 more, hence +3 in the check.
-          if [[ $((${PAGES_DIGITAL}+3)) != ${PAGES_PRINTABLE} ]]; then
+          # Currenty, digital version has 54 pages, so the printable should have 2 more, hence +2 in the check.
+          if [[ $((${PAGES_DIGITAL}+2)) != ${PAGES_PRINTABLE} ]]; then
             echo "Pages in digital and printable versions differ by too much. See above. Please investigate this."
             exit 1
           fi
