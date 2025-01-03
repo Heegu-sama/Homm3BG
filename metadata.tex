@@ -80,8 +80,8 @@
 % Useful to make the printable version have correct number of pages.
 \newtoggle{printable_quote_separate_page}
 \newtoggle{printable_notes_page}
-\togglefalse{printable_quote_separate_page}
-\toggletrue{printable_notes_page}
+\toggletrue{printable_quote_separate_page}
+\togglefalse{printable_notes_page}
 
 \AtBeginDocument{
   \iftoggle{printable}{}{
@@ -413,13 +413,13 @@
 
 \include{\sections/map_elements.tex}
 
-\include{\sections/units.tex}
-
-\include{\sections/combat.tex}
-
 \iftoggle{printable_quote_separate_page}{
   \include{\sections/quote_page.tex}
 }{}
+
+\include{\sections/units.tex}
+
+\include{\sections/combat.tex}
 
 \include{\sections/ai_rules.tex}
 
