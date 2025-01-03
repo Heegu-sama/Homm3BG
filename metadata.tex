@@ -76,6 +76,21 @@
 \newtoggle{noartbackground}
 \newtoggle{githubbuild}
 
+% Control addition of certain pages in the printable version.
+% Useful to make the printable version have correct number of pages.
+\newtoggle{printable_quote_separate_page}
+\newtoggle{printable_notes_page}
+\togglefalse{printable_quote_separate_page}
+\toggletrue{printable_notes_page}
+
+\AtBeginDocument{
+  \iftoggle{printable}{}{
+    % If printable was disabled, automatically disable related flags.
+    \togglefalse{printable_quote_separate_page}
+    \togglefalse{printable_notes_page}
+  }
+}
+
 % Variables
 \def\_assets{assets}
 
@@ -331,16 +346,20 @@
     \textlang{\mainlanguagename}{\versionlabel{} \textlang{english}{\input{.version}}}
   }
 
-  \bigbreak
+  \iftoggle{printable}{
+    \iftoggle{printable_quote_separate_page}{\bigbreak}{\medskip}
+  }{\bigbreak}
 
   \intro{}
 
-  \iftoggle{printable}{}{\bigbreak\heegusquote}
+  \iftoggle{printable}{
+    \iftoggle{printable_quote_separate_page}{\bigbreak}{\heegusquote}
+  }{
+    \bigbreak\heegusquote
+  }
 \end{center}
 
 \iftoggle{printable}{
-  \bigbreak
-
   \begin{multicols}{2}
   \centering
   \includegraphics[width=0.8\linewidth]{\qr/github.png}\\
@@ -398,7 +417,9 @@
 
 \include{\sections/combat.tex}
 
-\iftoggle{printable}{\include{\sections/quote_page.tex}}{}
+\iftoggle{printable_quote_separate_page}{
+  \include{\sections/quote_page.tex}
+}{}
 
 \include{\sections/ai_rules.tex}
 
@@ -416,7 +437,7 @@
 
 \include{\sections/credits.tex}
 
-\iftoggle{printable}{\include{\sections/notes.tex}}{}
+\iftoggle{printable_notes_page}{\include{\sections/notes.tex}}{}
 
 \include{\sections/back_cover.tex}
 
