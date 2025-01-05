@@ -1,10 +1,9 @@
 % !TeX spellcheck = en_US
 \addsection{Notes}{\spells/cure.png}
 
-\pagestyle{empty}
-
 \AddToHookNext{shipout/background}{%
   \iftoggle{noartbackground}{}{
     \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/castle_background.jpg}}%
   }
+  \drawbottom
 }

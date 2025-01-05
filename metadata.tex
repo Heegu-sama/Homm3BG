@@ -290,6 +290,20 @@
   \node (X) [draw=white, shape=circle, inner sep=0, fill=goblin, text=white, blur shadow={shadow blur steps=5}] {\strut \textbf{#1}};%
 }
 
+\newcommand{\drawbottom}{
+  \iftoggle{textright2left}{
+    \ifodd\value{page}
+      \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-even.png}}
+    \else
+      \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}
+  \fi}{%
+    \ifodd\value{page}
+      \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}
+    \else
+      \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-even.png}}
+  \fi}
+}
+
 \providetoggle{textright2left}
 % Background
 \AddToHook{shipout/background}{%
@@ -297,17 +311,7 @@
     \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}
   }
   \iftoggle{printable}{
-    \iftoggle{textright2left}{
-      \ifodd\value{page}
-        \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-even.png}}
-      \else
-        \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}
-    \fi}{%
-      \ifodd\value{page}
-        \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}
-      \else
-        \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-even.png}}
-    \fi}
+    \drawbottom
   }{\put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}}
 }
 
