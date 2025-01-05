@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-11-26 01:19+0000\n"
+"POT-Creation-Date: 2025-01-05 14:13+0000\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -18,15 +18,15 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
-#: sections/all_map_locations.tex:421 sections/combat.tex:5
+#: sections/all_map_locations.tex:421 sections/combat.tex:7
 #: sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/difficulty.tex:7 sections/expansion_content.tex:7
-#: sections/expansion_content.tex:51 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:79
-#: sections/map_elements.tex:124 sections/player_turns.tex:7
-#: sections/resources.tex:7 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:58 sections/town.tex:5
-#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:192
+#: sections/difficulty.tex:7 sections/expansion_content.tex:5
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
+#: sections/map_elements.tex:79 sections/map_elements.tex:124
+#: sections/player_turns.tex:7 sections/resources.tex:7
+#: sections/round_structure.tex:5 sections/scenario_end.tex:5
+#: sections/setup.tex:58 sections/town.tex:7 sections/trading.tex:7
+#: sections/units.tex:5 sections/units.tex:198
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -35,8 +35,8 @@ msgstr ""
 
 #. type: multicols
 #: sections/all_map_locations.tex:35 sections/all_map_locations.tex:63
-#: sections/all_map_locations.tex:152 sections/expansion_content.tex:105
-#: sections/trading.tex:24 sections/units.tex:200 sections/units.tex:204
+#: sections/all_map_locations.tex:152 sections/expansion_content.tex:56
+#: sections/trading.tex:24 sections/units.tex:206 sections/units.tex:210
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -46,9 +46,8 @@ msgstr ""
 #. type: multicols
 #: sections/all_map_locations.tex:54 sections/all_map_locations.tex:426
 #: sections/credits.tex:36 sections/difficulty.tex:18
-#: sections/expansion_content.tex:20 sections/expansion_content.tex:65
 #: sections/game_modes.tex:27 sections/scenario_end.tex:23
-#: sections/units.tex:130
+#: sections/units.tex:136
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -57,10 +56,10 @@ msgstr ""
 
 #. type: multicols
 #: sections/all_map_locations.tex:134 sections/credits.tex:38
-#: sections/credits.tex:42 sections/expansion_content.tex:59
-#: sections/game_modes.tex:25 sections/round_structure.tex:28
-#: sections/round_structure.tex:32 sections/setup.tex:117 sections/town.tex:28
-#: sections/town.tex:34 sections/units.tex:128
+#: sections/credits.tex:42 sections/game_modes.tex:25
+#: sections/round_structure.tex:28 sections/round_structure.tex:32
+#: sections/setup.tex:117 sections/town.tex:30 sections/town.tex:36
+#: sections/units.tex:134
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -68,7 +67,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/all_map_locations.tex:175 sections/units.tex:113
+#: sections/all_map_locations.tex:175 sections/units.tex:119
 #, no-wrap
 msgid ""
 "\\bigbreak\n"
@@ -77,7 +76,7 @@ msgstr ""
 
 #. type: multicols
 #: sections/all_map_locations.tex:435 sections/player_turns.tex:39
-#: sections/units.tex:211
+#: sections/units.tex:217
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -86,7 +85,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/deckbuilding.tex:40 sections/player_turns.tex:57
-#: sections/units.tex:34
+#: sections/units.tex:40
 #, no-wrap
 msgid ""
 "\\clearpage\n"
@@ -96,8 +95,8 @@ msgstr ""
 #. type: multicols
 #: sections/deckbuilding.tex:54 sections/deckbuilding.tex:72
 #: sections/deckbuilding.tex:122 sections/deckbuilding.tex:131
-#: sections/expansion_content.tex:72 sections/expansion_content.tex:110
-#: sections/units.tex:60 sections/units.tex:87
+#: sections/expansion_content.tex:61 sections/units.tex:66
+#: sections/units.tex:93
 #, no-wrap
 msgid "    \\begin{tikzpicture}\n"
 msgstr ""
@@ -167,17 +166,23 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:32
+#: sections/units.tex:38
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
-"  \\iftoggle{printable}{}{\\hspace{1em}}\n"
-"\\includegraphics[width=1.2\\linewidth]{\\art/gorgone.png}\n"
+"\\iftoggle{printable}{}{\\hspace{1em}}\n"
+"\\includegraphics[width=\\iftoggle{printable}{\n"
+"  \\ifodd\\value{page}\n"
+"    1.2\\linewidth\n"
+"  \\else\n"
+"    1.32\\linewidth\n"
+"  \\fi\n"
+"}{1.2\\linewidth}]{\\art/gorgone.png}\n"
 "\n"
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:38
+#: sections/units.tex:44
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -189,7 +194,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:40
+#: sections/units.tex:46
 #, no-wrap
 msgid ""
 "\\vspace{0pt}\n"
@@ -197,7 +202,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:51
+#: sections/units.tex:57
 #, no-wrap
 msgid ""
 "\\includegraphics[height=30px]{\\images/attack.png} \\textbf{Attack} – The amount of damage this Unit deals when it attacks.\\par\n"
@@ -225,7 +230,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:55
+#: sections/units.tex:61
 #, no-wrap
 msgid ""
 "\\vfill\n"
@@ -235,7 +240,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:59
+#: sections/units.tex:65
 #, no-wrap
 msgid ""
 "\\begin{multicols*}{2}\n"
@@ -245,7 +250,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:86
+#: sections/units.tex:92
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{multicols*}{2}\n"
@@ -312,7 +317,7 @@ msgstr ""
 "  \\end{itemize}\\vspace*{\\fill}"
 
 #. type: multicols
-#: sections/units.tex:111
+#: sections/units.tex:117
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{multicols*}{2}\n"
@@ -375,7 +380,7 @@ msgstr ""
 "  \\end{itemize}\\vspace*{\\fill}"
 
 #. type: multicols
-#: sections/units.tex:126
+#: sections/units.tex:132
 #, no-wrap
 msgid ""
 "Most Units have a \\textbf{special ability}\\index{Special Ability}:\\par\n"
@@ -407,7 +412,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:142
+#: sections/units.tex:148
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Unittype}{Unit Types}}\n"
@@ -437,7 +442,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:154
+#: sections/units.tex:160
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Neutral Units}{Neutral Units}}\n"
@@ -467,7 +472,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:159
+#: sections/units.tex:165
 #, no-wrap
 msgid ""
 "\\note{8}{\n"
@@ -483,7 +488,7 @@ msgstr ""
 "\n"
 
 #. type: Plain text
-#: sections/units.tex:187
+#: sections/units.tex:193
 msgid ""
 "\\hommtable{13}{ \\begin{tabularx}{\\linewidth}"
 "{>{\\hsize=0.181\\hsize\\linewidth=\\hsize}X "
@@ -527,7 +532,7 @@ msgstr ""
 "Terror, \\\\ Drag. Fantasma} \\\\ \\end{tabularx} }"
 
 #. type: multicols
-#: sections/units.tex:194
+#: sections/units.tex:200
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\art/lich.jpg}\n"
@@ -535,7 +540,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:196
+#: sections/units.tex:202
 #, no-wrap
 msgid ""
 "\\subsection*{Gameplay Example}\n"
@@ -545,7 +550,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:198
+#: sections/units.tex:204
 #, no-wrap
 msgid ""
 "\\textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons, Empowering \\svg{empower} the Spell by 2 with the Expert  Effect \\svgeven{expert} of a Power Card.}\n"
@@ -555,7 +560,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:202
+#: sections/units.tex:208
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/alamar_empowering_magic_arrow.png}\n"
@@ -563,7 +568,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:209
+#: sections/units.tex:215
 #, no-wrap
 msgid ""
 "\\textit{The Skeletons take 3 damage \\svg{damage} from the Spell.\n"
@@ -579,7 +584,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:213
+#: sections/units.tex:219
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/skeletons_flipped.png}\n"
