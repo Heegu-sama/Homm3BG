@@ -80,8 +80,8 @@
 % Useful to make the printable version have correct number of pages.
 \newtoggle{printable_quote_separate_page}
 \newtoggle{printable_notes_page}
-\toggletrue{printable_quote_separate_page}
-\togglefalse{printable_notes_page}
+\togglefalse{printable_quote_separate_page}
+\toggletrue{printable_notes_page}
 
 \AtBeginDocument{
   \iftoggle{printable}{}{
@@ -433,11 +433,11 @@
 
 \include{\sections/all_map_locations.tex}
 
-\iftoggle{printable}{\include{\sections/index.tex}}{}
+\iftoggle{printable_notes_page}{\include{\sections/notes.tex}}{}
 
 \include{\sections/credits.tex}
 
-\iftoggle{printable_notes_page}{\include{\sections/notes.tex}}{}
+\iftoggle{printable}{\include{\sections/index.tex}}{}
 
 \include{\sections/back_cover.tex}
 
