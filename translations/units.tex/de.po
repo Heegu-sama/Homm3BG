@@ -168,12 +168,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/units.tex:38
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\vspace*{\\fill}\n"
-#| "\\hspace{-3em}\n"
-#| "\\includegraphics[width=\\iftoggle{printable}{1.5}{1.7}\\linewidth]{\\art/medusa.png}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
 "\\iftoggle{printable}{}{\\hspace{1em}}\n"
@@ -187,8 +182,19 @@ msgid ""
 "\n"
 msgstr ""
 "\\vspace*{\\fill}\n"
-"\\hspace{-2em}\n"
-"\\includegraphics[width=\\iftoggle{printable}{1.5}{1.6}\\linewidth]{\\art/medusa.png}\n"
+"\\iftoggle{printable}{\n"
+"  \\ifodd\\value{page}\n"
+"  \\else\n"
+"    \\hspace{4em}"
+"  \\fi\n"
+"}{\\hspace{1em}}\n"
+"\\includegraphics[width=\\iftoggle{printable}{\n"
+"  \\ifodd\\value{page}\n"
+"    1.2\\linewidth\n"
+"  \\else\n"
+"    1.1\\linewidth\n"
+"  \\fi\n"
+"}{1.2\\linewidth}]{\\art/gorgone.png}\n"
 "\n"
 
 #. type: multicols
