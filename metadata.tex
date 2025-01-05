@@ -77,6 +77,21 @@
 \newtoggle{noartbackground}
 \newtoggle{githubbuild}
 
+% Control addition of certain pages in the printable version.
+% Useful to make the printable version have correct number of pages.
+\newtoggle{printable_quote_separate_page}
+\newtoggle{printable_notes_page}
+\togglefalse{printable_quote_separate_page}
+\toggletrue{printable_notes_page}
+
+\AtBeginDocument{
+  \iftoggle{printable}{}{
+    % If printable was disabled, automatically disable related flags.
+    \togglefalse{printable_quote_separate_page}
+    \togglefalse{printable_notes_page}
+  }
+}
+
 % Variables
 \def\_assets{assets}
 
@@ -276,6 +291,20 @@
   \node (X) [draw=white, shape=circle, inner sep=0, fill=goblin, text=white, blur shadow={shadow blur steps=5}] {\strut \textbf{#1}};%
 }
 
+\newcommand{\drawbottom}{
+  \iftoggle{textright2left}{
+    \ifodd\value{page}
+      \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-even.png}}
+    \else
+      \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}
+  \fi}{%
+    \ifodd\value{page}
+      \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}
+    \else
+      \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-even.png}}
+  \fi}
+}
+
 \providetoggle{textright2left}
 % Background
 \AddToHook{shipout/background}{%
@@ -283,17 +312,7 @@
     \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}
   }
   \iftoggle{printable}{
-    \iftoggle{textright2left}{
-      \ifodd\value{page}
-        \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-even.png}}
-      \else
-        \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}
-    \fi}{%
-      \ifodd\value{page}
-        \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-odd.png}}
-      \else
-        \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom-even.png}}
-    \fi}
+    \drawbottom
   }{\put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}}
 }
 
@@ -332,16 +351,20 @@
     \textlang{\mainlanguagename}{\versionlabel{} \textlang{english}{\input{.version}}}
   }
 
-  \bigbreak
+  \iftoggle{printable}{
+    \iftoggle{printable_quote_separate_page}{\bigbreak}{\medskip}
+  }{\bigbreak}
 
   \intro{}
 
-  \iftoggle{printable}{}{\bigbreak\heegusquote}
+  \iftoggle{printable}{
+    \iftoggle{printable_quote_separate_page}{\bigbreak}{\heegusquote}
+  }{
+    \bigbreak\heegusquote
+  }
 \end{center}
 
 \iftoggle{printable}{
-  \bigbreak
-
   \begin{multicols}{2}
   \centering
   \includegraphics[width=0.8\linewidth]{\qr/github.png}\\
@@ -395,11 +418,13 @@
 
 \include{\sections/map_elements.tex}
 
+\iftoggle{printable_quote_separate_page}{
+  \include{\sections/quote_page.tex}
+}{}
+
 \include{\sections/units.tex}
 
 \include{\sections/combat.tex}
-
-\iftoggle{printable}{\include{\sections/quote_page.tex}}{}
 
 \include{\sections/ai_rules.tex}
 
@@ -413,11 +438,11 @@
 
 \include{\sections/all_map_locations.tex}
 
-\iftoggle{printable}{\include{\sections/index.tex}}{}
+\iftoggle{printable_notes_page}{\include{\sections/notes.tex}}{}
 
 \include{\sections/credits.tex}
 
-\iftoggle{printable}{\include{\sections/notes.tex}}{}
+\iftoggle{printable}{\include{\sections/index.tex}}{}
 
 \include{\sections/back_cover.tex}
 

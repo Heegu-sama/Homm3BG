@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-01-02 16:09+0000\n"
+"POT-Creation-Date: 2025-01-05 13:21+0000\n"
 "PO-Revision-Date: 2024-06-09 09:28+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,9 +19,9 @@ msgstr ""
 #. type: Plain text
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
 #: sections/components.tex:5 sections/credits.tex:6 sections/deckbuilding.tex:5
-#: sections/difficulty.tex:5 sections/expansion_content.tex:5
-#: sections/map_elements.tex:5 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/setup.tex:5 sections/trading.tex:5
+#: sections/difficulty.tex:5 sections/map_elements.tex:5
+#: sections/player_turns.tex:5 sections/resources.tex:5 sections/setup.tex:5
+#: sections/trading.tex:5
 msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
 msgstr ""
 
@@ -29,13 +29,13 @@ msgstr ""
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
 #: sections/all_map_locations.tex:421 sections/combat.tex:5
 #: sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/difficulty.tex:7 sections/expansion_content.tex:7
-#: sections/expansion_content.tex:51 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:79
-#: sections/map_elements.tex:124 sections/player_turns.tex:7
-#: sections/resources.tex:7 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:58 sections/town.tex:5
-#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:192
+#: sections/difficulty.tex:7 sections/expansion_content.tex:5
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
+#: sections/map_elements.tex:79 sections/map_elements.tex:124
+#: sections/player_turns.tex:7 sections/resources.tex:7
+#: sections/round_structure.tex:5 sections/scenario_end.tex:5
+#: sections/setup.tex:58 sections/town.tex:5 sections/trading.tex:7
+#: sections/units.tex:5 sections/units.tex:192
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -176,8 +176,8 @@ msgstr ""
 #. type: multicols
 #: sections/deckbuilding.tex:54 sections/deckbuilding.tex:72
 #: sections/deckbuilding.tex:122 sections/deckbuilding.tex:131
-#: sections/expansion_content.tex:72 sections/expansion_content.tex:110
-#: sections/units.tex:60 sections/units.tex:87
+#: sections/expansion_content.tex:61 sections/units.tex:60
+#: sections/units.tex:87
 #, no-wrap
 msgid "    \\begin{tikzpicture}\n"
 msgstr ""
@@ -307,7 +307,8 @@ msgstr ""
 "שלו בכלל בשום צורה שהיא למעט עבור אפקטים שזורקים את הקלף.  }}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:96 sections/resources.tex:33
+#: sections/deckbuilding.tex:96 sections/deckbuilding.tex:264
+#: sections/resources.tex:33
 msgid "\\columnbreak"
 msgstr ""
 
@@ -357,7 +358,7 @@ msgid ""
 msgstr ""
 
 #. type: figure
-#: sections/deckbuilding.tex:107 sections/expansion_content.tex:143
+#: sections/deckbuilding.tex:107 sections/expansion_content.tex:94
 #: sections/map_elements.tex:40 sections/setup.tex:9
 #, no-wrap
 msgid "  \\begin{tikzpicture}\n"
@@ -479,18 +480,13 @@ msgstr ""
 "    \\item[\\textbf{3.}] סיפור רקע\n"
 "  \\end{itemize}"
 
-#. type: Plain text
-#: sections/deckbuilding.tex:154
-msgid "\\filbreak"
-msgstr ""
-
 #. type: subsection{#2}
-#: sections/deckbuilding.tex:156
+#: sections/deckbuilding.tex:154
 msgid "\\pagetarget{spells}{Spell Cards}"
 msgstr "\\pagetarget{spells}{קלפי קסם}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:164
+#: sections/deckbuilding.tex:162
 #, fuzzy
 #| msgid ""
 #| "Spell Cards\\index{Spell Card} have three possible primary effects.  "
@@ -530,7 +526,7 @@ msgstr ""
 "זול יותר ממה ששילמת עליו."
 
 #. type: Plain text
-#: sections/deckbuilding.tex:189
+#: sections/deckbuilding.tex:193
 #, fuzzy
 #| msgid ""
 #| "{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/"
@@ -547,12 +543,14 @@ msgid ""
 "2.5) node {\\encircle{1}}; \\draw (-1.8, 0.3) node {\\encircle{2}}; \\draw "
 "(-1.1, -1) node {\\encircle{3}}; \\draw (1.1, -1) node {\\encircle{4}}; "
 "\\draw (0.8, -2.8) node {\\encircle{5}}; \\end{tikzpicture}\\\\ \\medskip "
-"\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Spell "
-"Card}}}} \\scriptsize \\begin{multicols}{2} \\begin{itemize}[itemsep=5pt] "
-"\\item[\\textbf{1.}] \\textbf{Spell Name} \\item[\\textbf{2.}] "
-"\\textbf{School of Magic} \\item[\\textbf{3.}] \\textbf{Cost\\\\to Empower} "
-"\\item[\\textbf{4.}] \\textbf{Spell Effect} \\item[\\textbf{5.}] "
-"\\textbf{Alternative\\\\Effect} \\item[] \\end{itemize} \\end{multicols} }"
+"\\footnotesize \\textbf{\\textit{\\textcolor{darkcandyapplered}{Spell "
+"Card}}}\\par \\noindent \\begin{minipage}[t]{0.5\\linewidth} \\begin{itemize}"
+"[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt] \\item[\\textbf{1.}] "
+"Spell Name \\item[\\textbf{2.}] School of Magic \\item[\\textbf{3.}] Cost to "
+"Empower \\end{itemize} \\end{minipage} \\begin{minipage}[t]{0.4\\linewidth} "
+"\\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt] "
+"\\item[\\textbf{4.}] Spell Effect \\item[\\textbf{5.}] Alternative\\\\Effect "
+"\\end{itemize} \\end{minipage} }"
 msgstr ""
 "{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/spell_example."
 "png}\\\\ \\medskip "
@@ -564,7 +562,7 @@ msgstr ""
 "\\textbf{השפעה\\\\ אלטרנטיבית} \\item[] \\end{itemize} \\end{multicols} }"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:193
+#: sections/deckbuilding.tex:197
 msgid ""
 "Spells can be gained by Building the Mage Guild\\index{Mage Guild}.  "
 "Building it also enables you to use the Spell Book Token\\index{Spell Book "
@@ -579,7 +577,7 @@ msgstr ""
 "\\pagelink{Trading}{לסחור} בקסמים בתרחישים מסוג בריתות ושיתוף פעולה."
 
 #. type: Plain text
-#: sections/deckbuilding.tex:195
+#: sections/deckbuilding.tex:199
 msgid ""
 "During Combat, \\textbf{only one Spell Card} may be played by each player "
 "\\textbf{per Combat Round}."
@@ -588,29 +586,152 @@ msgstr ""
 "קרב}."
 
 #. type: Plain text
-#: sections/deckbuilding.tex:199
+#: sections/deckbuilding.tex:202
+#, fuzzy
+#| msgid ""
+#| "\\note{6}{ When you use an effect which lets you cast a Spell from "
+#| "somewhere other than your hand (such as directly from the Spell Deck), "
+#| "place that Spell into your Discard Pile after casting it.  }"
 msgid ""
-"\\note{6}{ When you use an effect which lets you cast a Spell from somewhere "
-"other than your hand (such as directly from the Spell Deck), place that "
-"Spell into your Discard Pile after casting it.  }"
+"\\columnbreak When you use an effect which lets you cast a Spell from "
+"somewhere other than your hand (such as directly from the Spell Deck), place "
+"that Spell into your Discard Pile after casting it."
 msgstr ""
 "\\note{6}{\\texthebrew{ כאשר משתמשים באפקט המאפשר להטיל קסם לא מהיד אלא "
 "ממקום אחר (כמו למשל ישירות מחפיסת הקסמים), לאחר הטלת הקסם, יש להניח את הקסם "
 "ישר בערימת הקלפים המושלכים.  }}"
 
+#. type: center
+#: sections/deckbuilding.tex:208
+#, fuzzy
+#| msgid ""
+#| "\\hspace{1em}\\includegraphics[width=1.6\\linewidth]{\\art/minotaur.png}\n"
+#| "\n"
+msgid ""
+"\\transparent{0.3}{\\includegraphics[width=0.9\\linewidth]{\\art/air_magic."
+"png}}"
+msgstr ""
+"\\hspace{1em}\\reflectbox{\\includegraphics[width=1.6\\linewidth]{\\art/"
+"minotaur.png}}\n"
+"\n"
+
+#. type: subsubsection{#2}
+#: sections/deckbuilding.tex:214
+msgid "Schools of Magic"
+msgstr ""
+
+#. type: Plain text
+#: sections/deckbuilding.tex:214
+msgid ""
+"All Spell Cards belong to one School of Magic\\index{Schools of Magic}: "
+"either Air, Fire, Earth or Water.  Spells with one School symbol on them are "
+"called \\textbf{Basic Spells}\\index{Basic Spell}, while Spells with four "
+"identical symbols are called \\textbf{Expert Spells}\\index{Expert Spell}.  "
+"\\textbf{Magic Arrow} is a Basic Spell; when casting the \\textbf{Magic "
+"Arrow}, you must select which School it belongs to.  By default there's no "
+"difference, but certain game effects can refer to specific Schools and to "
+"Basic/Expert Spells."
+msgstr ""
+
+#. type: minipage
+#: sections/deckbuilding.tex:241
+#, fuzzy
+#| msgid ""
+#| "\\begin{minipage}[t]{0.48\\textwidth}\n"
+#| "  \\centering\n"
+#| "  \\minipage[b]{0.5\\textwidth}\n"
+#| "    \\centering\n"
+#| "    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire."
+#| "png}\n"
+#| "    \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Fire}}}\n"
+#| "  \\endminipage\n"
+#| "  \\minipage[b]{0.5\\textwidth}\n"
+#| "    \\centering\n"
+#| "    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_water."
+#| "png}\n"
+#| "    \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Water}}}\n"
+#| "  \\endminipage\n"
+#| "  \\hfill\\allowbreak%\n"
+#| "  \\bigbreak\n"
+#| "  \\minipage[b]{0.5\\textwidth}\n"
+#| "    \\centering\n"
+#| "    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_air.png}\n"
+#| "    \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Air}}}\n"
+#| "  \\endminipage\n"
+#| "  \\minipage[b]{0.5\\textwidth}\n"
+#| "    \\centering\n"
+#| "    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_earth."
+#| "png}\n"
+#| "    \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Earth}}}\n"
+#| "  \\endminipage\n"
+#| "  \\bigbreak\n"
+#| "\\end{minipage}\n"
+#| "\n"
+msgid ""
+"\\minipage[b]{0.5\\textwidth} \\centering "
+"\\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire.png} "
+"\\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Fire}}} "
+"\\endminipage \\minipage[b]{0.5\\textwidth} \\centering "
+"\\includegraphics[width=0.75\\linewidth]{\\images/school_of_water.png} "
+"\\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Water}}} "
+"\\endminipage \\hfill\\allowbreak\\bigbreak \\minipage[b]{0.5\\textwidth} "
+"\\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_air."
+"png} \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Air}}} "
+"\\endminipage \\minipage[b]{0.5\\textwidth} \\centering "
+"\\includegraphics[width=0.75\\linewidth]{\\images/school_of_earth.png} "
+"\\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Earth}}} "
+"\\endminipage \\bigbreak"
+msgstr ""
+"\\begin{minipage}[t]{0.48\\textwidth}\n"
+"  \\centering\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire.png}\n"
+"    \\textit{\\textbf{\\textcolor{darkcandyapplered}{קטגורית הקסם אש}}}\n"
+"  \\endminipage\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_water.png}\n"
+"    \\textit{\\textbf{\\textcolor{darkcandyapplered}{קטגורית הקסם מים}}}\n"
+"  \\endminipage\n"
+"  \\hfill\\allowbreak%\n"
+"  \\bigbreak\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_air.png}\n"
+"    \\textit{\\textbf{\\textcolor{darkcandyapplered}{קטגורית הקסם אוויר}}}\n"
+"  \\endminipage\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_earth.png}\n"
+"    \\textit{\\textbf{\\textcolor{darkcandyapplered}{קטגורית הקסם אדמה}}}\n"
+"  \\endminipage\n"
+"  \\bigbreak\n"
+"\\end{minipage}\n"
+"\n"
+
 #. type: subsection{#2}
-#: sections/deckbuilding.tex:201
+#: sections/deckbuilding.tex:244
 msgid "\\pagetarget{Specialty}{Hero Specialty Cards}"
 msgstr ""
 "\\pagetarget{Specialty}{קלפי המומחיות של הגיבור (\\textenglish{Specialty})}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:205
+#: sections/deckbuilding.tex:249
+#, fuzzy
+#| msgid ""
+#| "Hero Specialty Cards\\index{Specialty Card} are gained from "
+#| "\\pagelink{Level}{Level ups}.  Each Main Hero has a unique set of "
+#| "Specialty Cards.  While many of these Cards have effects which resemble "
+#| "Spell Cards, Specialty Cards are their \\textbf{own unique category of "
+#| "cards}."
 msgid ""
 "Hero Specialty Cards\\index{Specialty Card} are gained from \\pagelink{Level}"
 "{Level ups}.  Each Main Hero has a unique set of Specialty Cards.  While "
-"many of these Cards have effects which resemble Spell Cards, Specialty Cards "
-"are their \\textbf{own unique category of cards}."
+"many of these Cards have effects which resemble Spell Cards and even make "
+"use of \\svg{empower} and Schools of Magic, Specialty Cards are their "
+"\\textbf{own unique category of cards}.  For example, the limit of 1 Spell "
+"per Combat Round doesn't apply to Specialty Cards."
 msgstr ""
 "את קלפי המומחיות של הגיבור\\index{קלף מיומנות מיוחדת} מקבלים "
 "\\pagelink{Level}{מעליית רמה}.  לכל גיבור ראשי יש סט ייחודי של קלפי מומחיות. "
@@ -618,30 +739,42 @@ msgstr ""
 "מומחיות הן \\textbf{סוגה ייחודית של קלפים}."
 
 #. type: Plain text
-#: sections/deckbuilding.tex:212
+#: sections/deckbuilding.tex:257
+#, fuzzy
+#| msgid ""
+#| "{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/specialty."
+#| "png}\\\\ \\medskip \\footnotesize\\textit{A Level 4 Specialty Card, "
+#| "belonging to Catherine the Knight.} }"
 msgid ""
-"{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/specialty."
-"png}\\\\ \\medskip \\footnotesize\\textit{A Level 4 Specialty Card, "
-"belonging to Catherine the Knight.} }"
+"{ \\medskip \\centering \\includegraphics[width=0.7\\linewidth]{\\cards/"
+"specialty.png}\\\\ \\medskip \\footnotesize\\textit{A Level 4 Specialty "
+"Card, belonging to Catherine the Knight.} }"
 msgstr ""
 "{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/specialty."
 "png}\\\\ \\medskip \\footnotesize\\textit{קלף מומיות רמה 4, השייך לאבירה "
 "קת׳רין \\textenglish{(Catherine the Knight)}.} }"
 
 #. type: subsection{#2}
-#: sections/deckbuilding.tex:222
+#: sections/deckbuilding.tex:267
 msgid "Searching Example"
 msgstr "דוגמה לחיפוש"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:232
+#: sections/deckbuilding.tex:269
 msgid ""
 "\\textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during "
 "the previous Game Round, enabling him to now use his Spell Book Token to "
-"purchase additional Spells.}\\par \\includegraphics[width=\\linewidth]"
-"{\\examples/deemer_receiving_spellbook.png}\\par \\textit{He spends the "
-"token and pays the cost of 5 \\svg{gold} indicated on his Town Board, "
-"allowing him to \\textbf{Search (2)} the Spell Deck.}\\par "
+"purchase additional Spells.}"
+msgstr ""
+"\\textit{בוב, המשחק את הגיבור דימר המכשף (\\textenglish{Deemer the "
+"Warlock}), בנה גילדת קסמים במהלך סיבוב המשחק הקודם, וכעת יכול להשתמש באסימון "
+"ספר הקסמים על מנת לקנות קסמים נוספים.}"
+
+#. type: Plain text
+#: sections/deckbuilding.tex:278
+msgid ""
+"\\textit{He spends the token and pays the cost of 5 \\svg{gold} indicated on "
+"his Town Board, allowing him to \\textbf{Search (2)} the Spell Deck.}\\par "
 "\\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par "
 "\\filbreak \\textit{He now has the choice of either gaining the top Card of "
 "the Spell Card Discard Pile, or drawing the top two Cards of the Spell Deck "
@@ -652,12 +785,8 @@ msgid ""
 "the Fireball, placing it into his hand and discarding the Magic Arrow into "
 "the Spell Discard Pile.}"
 msgstr ""
-"\\textit{בוב, המשחק את הגיבור דימר המכשף (\\textenglish{Deemer the "
-"Warlock}), בנה גילדת קסמים במהלך סיבוב המשחק הקודם, וכעת יכול להשתמש באסימון "
-"ספר הקסמים על מנת לקנות קסמים נוספים.}\\par "
-"\\includegraphics[width=\\linewidth]{\\examples/deemer_receiving_spellbook."
-"png}\\par \\textit{הוא משתמש באסימון ומשלם את העלות של 5 \\svg{gold} כפי "
-"שמצויין בלוח הטירה שלו. כעת הוא יכול \\textbf{לחפש (2)} בחפיסת הקסמים.}\\par "
+"\\textit{הוא משתמש באסימון ומשלם את העלות של 5 \\svg{gold} כפי שמצויין בלוח "
+"הטירה שלו. כעת הוא יכול \\textbf{לחפש (2)} בחפיסת הקסמים.}\\par "
 "\\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par "
 "\\filbreak \\textit{כעת הוא יכול לבחור לקחת את הקלף העליון מערימת הקלפים "
 "הזרוקים, או לחלופין לשלוף שני קלפים מראש חפיסת הקסמים ולקבל את אחד מהם. הוא "
