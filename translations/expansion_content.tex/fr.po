@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-01-03 23:29+0000\n"
+"POT-Creation-Date: 2025-01-02 11:09+0000\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -16,11 +16,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#. type: Plain text
+#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
+#: sections/components.tex:5 sections/credits.tex:6 sections/deckbuilding.tex:5
+#: sections/difficulty.tex:5 sections/expansion_content.tex:5
+#: sections/map_elements.tex:5 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/setup.tex:5 sections/trading.tex:5
+msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
+msgstr ""
+
 #. type: multicols
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
 #: sections/all_map_locations.tex:421 sections/combat.tex:5
 #: sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/difficulty.tex:7 sections/expansion_content.tex:5
+#: sections/difficulty.tex:7 sections/expansion_content.tex:7
 #: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
 #: sections/map_elements.tex:79 sections/map_elements.tex:124
 #: sections/player_turns.tex:7 sections/resources.tex:7
@@ -37,7 +46,7 @@ msgstr ""
 
 #. type: multicols
 #: sections/all_map_locations.tex:35 sections/all_map_locations.tex:63
-#: sections/all_map_locations.tex:152 sections/expansion_content.tex:56
+#: sections/all_map_locations.tex:152 sections/expansion_content.tex:62
 #: sections/trading.tex:24 sections/units.tex:200 sections/units.tex:204
 #, no-wrap
 msgid ""
@@ -48,14 +57,14 @@ msgstr ""
 #. type: multicols
 #: sections/deckbuilding.tex:54 sections/deckbuilding.tex:72
 #: sections/deckbuilding.tex:122 sections/deckbuilding.tex:131
-#: sections/expansion_content.tex:61 sections/units.tex:60
-#: sections/units.tex:87
+#: sections/expansion_content.tex:21 sections/expansion_content.tex:67
+#: sections/units.tex:60 sections/units.tex:87
 #, no-wrap
 msgid "    \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: figure
-#: sections/deckbuilding.tex:107 sections/expansion_content.tex:94
+#: sections/deckbuilding.tex:107 sections/expansion_content.tex:100
 #: sections/map_elements.tex:40 sections/setup.tex:9
 #, no-wrap
 msgid "  \\begin{tikzpicture}\n"
@@ -69,26 +78,6 @@ msgstr "\\addsection{Contenu des Extensions}{\\skills/pathfinding.png}"
 
 #. type: multicols*
 #: sections/expansion_content.tex:10
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=0.55\\linewidth]{\\art/wyvern.png}\n"
-#| "\\end{center}\n"
-#| "\n"
-msgid ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-"\\end{center}\n"
-"\\columnbreak\n"
-"\n"
-msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=0.55\\linewidth]{\\art/wyvern.png}\n"
-"\\end{center}\n"
-"\n"
-
-#. type: multicols*
-#: sections/expansion_content.tex:13
 #, no-wrap
 msgid ""
 "\\subsection*{Permanent cards}\n"
@@ -100,7 +89,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/expansion_content.tex:19
+#: sections/expansion_content.tex:16
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{War Machines}{War Machines}}\n"
@@ -118,52 +107,38 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/expansion_content.tex:42
-#, fuzzy, no-wrap
-#| msgid ""
-#| "      \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=0.8\\textwidth]{\\cards/war_machine.png}}};\n"
-#| "      \\draw (0.8, 3.6) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
-#| "      \\draw (0, -2.8) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-#| "      \\draw (-1.2, -1.7) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
-#| "      \\draw (0.9, -1.7) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
-#| "    \\end{tikzpicture}\n"
-#| "  \\end{scriptsize}\n"
-#| "  \\break\n"
-#| "  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{War Machine Card}}}}\n"
-#| "  \\scriptsize\n"
-#| "  \\begin{multicols}{2}\n"
-#| "    \\begin{itemize}\n"
-#| "      \\item[\\textbf{1.}] \\textbf{Name}\n"
-#| "      \\item[\\textbf{2.}] \\textbf{Effect}\n"
-#| "      \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
-#| "      \\item[\\textbf{3.}] \\textbf{War Machine Factory cost}\n"
-#| "      \\item[\\textbf{4.}] \\textbf{Trading Post cost}\n"
-#| "    \\end{itemize}\n"
-#| "  "
+#: sections/expansion_content.tex:20
+#, no-wrap
 msgid ""
-"{\n"
-"  \\bigskip\n"
+"\\begin{minipage}[h]{\\linewidth}\n"
+"  \\vspace{0pt}\n"
 "  \\centering\n"
 "  \\begin{scriptsize}\n"
-"    \\begin{tikzpicture}\n"
-"      \\draw (0, 0) node[inner sep=0] {\\includegraphics[width=0.8\\linewidth]{\\cards/war_machine.png}};\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/expansion_content.tex:40
+#, no-wrap
+msgid ""
+"      \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=0.8\\textwidth]{\\cards/war_machine.png}}};\n"
 "      \\draw (0.8, 3.6) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
 "      \\draw (0, -2.8) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
 "      \\draw (-1.2, -1.7) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
 "      \\draw (0.9, -1.7) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
 "    \\end{tikzpicture}\n"
 "  \\end{scriptsize}\n"
-"\n"
-"  \\footnotesize\n"
-"  \\textbf{\\textit{\\textcolor{darkcandyapplered}{War Machine Card}}}\n"
-"  \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt]\n"
-"    \\item[\\textbf{1.}] Name\n"
-"    \\item[\\textbf{2.}] Effect\n"
-"    \\item[\\textbf{3.}] Cost in a War Machine Factory\n"
-"    \\item[\\textbf{4.}] Cost in a Trading Post\n"
-"  \\end{itemize}\n"
-"}\n"
-"\n"
+"  \\break\n"
+"  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{War Machine Card}}}}\n"
+"  \\scriptsize\n"
+"  \\begin{multicols}{2}\n"
+"    \\begin{itemize}\n"
+"      \\item[\\textbf{1.}] \\textbf{Name}\n"
+"      \\item[\\textbf{2.}] \\textbf{Effect}\n"
+"      \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
+"      \\item[\\textbf{3.}] \\textbf{War Machine Factory cost}\n"
+"      \\item[\\textbf{4.}] \\textbf{Trading Post cost}\n"
+"    \\end{itemize}\n"
+"  "
 msgstr ""
 "      \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=0.8\\textwidth]{translations/assets/fr/cards/war_machine_fr.png}}};\n"
 "      \\draw (0.8, 3.6) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
@@ -186,22 +161,40 @@ msgstr ""
 "  "
 
 #. type: multicols*
-#: sections/expansion_content.tex:54
+#: sections/expansion_content.tex:42 sections/expansion_content.tex:85
+#, no-wrap
+msgid ""
+"\\end{minipage}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/expansion_content.tex:50
 #, fuzzy, no-wrap
 #| msgid ""
-#| "\\subsection*{\\pagetarget{Events}{Events}}\n"
-#| "Added by the Fortress expansion.\n"
-#| "Event cards\\index{Event Cards} may be used in games with more than one player.\n"
-#| "Shuffle the Event Deck during setup.\n"
-#| "At the start of each Resource Round (except the first Round), draw and read the next Event Card after receiving Resources.\n"
-#| "The first Event is drawn by the starting player.\n"
-#| "\\textbf{Change the player who draws the Event in a clockwise order} every time a new Event is drawn.\n"
-#| "Resolve any effects in clockwise order starting with the player who drew the Card.\n"
-#| "Any cards which were revealed as a part of resolving an Event should be shuffled back into their respective Decks afterwards.\n"
+#| "\\begin{center}\n"
+#| "  \\includegraphics[width=0.55\\linewidth]{\\art/wyvern.png}\n"
+#| "\\end{center}\n"
 #| "\n"
 msgid ""
-"\\vspace*{\\fill}\n"
+"\\vfill\n"
 "\\columnbreak\n"
+"\\vfill\n"
+"\\begin{center}\n"
+"    \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/dwarf.png}\n"
+"\\end{center}\n"
+"\\columnbreak\n"
+"\n"
+msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=0.55\\linewidth]{\\art/wyvern.png}\n"
+"\\end{center}\n"
+"\n"
+
+#. type: multicols*
+#: sections/expansion_content.tex:60
+#, no-wrap
+msgid ""
 "\\subsection*{\\pagetarget{Events}{Events}}\n"
 "Added by the Fortress expansion.\n"
 "Event cards\\index{Event Cards} may be used in games with more than one player.\n"
@@ -225,7 +218,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/expansion_content.tex:60
+#: sections/expansion_content.tex:66
 #, no-wrap
 msgid ""
 "\\begin{minipage}[h]{\\linewidth}\n"
@@ -235,25 +228,8 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/expansion_content.tex:77
-#, fuzzy, no-wrap
-#| msgid ""
-#| "      \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\cards/event.png}}};\n"
-#| "      \\draw (1, 1.8) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
-#| "      \\draw (-2, 0.4) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-#| "      \\draw (2.5, -1.1) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
-#| "    \\end{tikzpicture}\n"
-#| "  \\end{scriptsize}\n"
-#| "  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Event Card}}}}\n"
-#| "  \\scriptsize\n"
-#| "  \\begin{multicols}{2}\n"
-#| "    \\begin{itemize}\n"
-#| "      \\item[\\textbf{1.}] \\textbf{Name}\n"
-#| "      \\item[\\textbf{2.}] \\textbf{Fluff}\n"
-#| "      \\item[\\textbf{3.}] \\textbf{Effect}\n"
-#| "      \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
-#| "    \\end{itemize}\n"
-#| "  "
+#: sections/expansion_content.tex:83
+#, no-wrap
 msgid ""
 "      \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\cards/event.png}}};\n"
 "      \\draw (1, 1.8) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
@@ -261,13 +237,13 @@ msgid ""
 "      \\draw (2.5, -1.1) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
 "    \\end{tikzpicture}\n"
 "  \\end{scriptsize}\n"
-"  \\footnotesize\n"
-"  \\textbf{\\textit{\\textcolor{darkcandyapplered}{Event Card}}}\n"
+"  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Event Card}}}}\n"
+"  \\scriptsize\n"
 "  \\begin{multicols}{2}\n"
 "    \\begin{itemize}\n"
-"      \\item[\\textbf{1.}] Name\n"
-"      \\item[\\textbf{2.}] Fluff\n"
-"      \\item[\\textbf{3.}] Effect\n"
+"      \\item[\\textbf{1.}] \\textbf{Name}\n"
+"      \\item[\\textbf{2.}] \\textbf{Fluff}\n"
+"      \\item[\\textbf{3.}] \\textbf{Effect}\n"
 "      \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
 "    \\end{itemize}\n"
 "  "
@@ -290,15 +266,7 @@ msgstr ""
 "  "
 
 #. type: multicols*
-#: sections/expansion_content.tex:79
-#, no-wrap
-msgid ""
-"\\end{minipage}\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/expansion_content.tex:87
+#: sections/expansion_content.tex:93
 #, no-wrap
 msgid ""
 "\\subsection*{Summoning}\n"
@@ -320,7 +288,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/expansion_content.tex:92
+#: sections/expansion_content.tex:98
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Empowered Statistic}{Empowered} Statistic Cards}\\index{Empowered Statistic Card}\n"
@@ -336,40 +304,14 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/expansion_content.tex:93
+#: sections/expansion_content.tex:99
 #, no-wrap
 msgid "\\begin{scriptsize}\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/expansion_content.tex:120
-#, fuzzy, no-wrap
-#| msgid ""
-#| "    \\draw (-2, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/empowered_statistic.png}}};\n"
-#| "    \\draw (2.4, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/statistic.png}}};\n"
-#| "    \\draw (-1.2, 1.9) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
-#| "    \\draw (3.2, 0.3) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
-#| "    \\draw (-2.7, -1.4) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-#| "    \\draw (1.7, -0.6) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-#| "    \\draw (1.7, -1.7) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
-#| "  \\end{tikzpicture}\n"
-#| "\\end{scriptsize}\n"
-#| "\\vspace{-2em}\n"
-#| "\\begin{multicols}{2}\n"
-#| "  \\centering\n"
-#| "  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Empowered Statistic Card}}}}\n"
-#| "  \\scriptsize\n"
-#| "  \\begin{itemize}\n"
-#| "    \\item[\\textbf{1.}] \\textbf{Name}\n"
-#| "    \\item[\\textbf{2.}] \\textbf{Basic Effect}\n"
-#| "  \\end{itemize}\n"
-#| "  \\columnbreak\n"
-#| "  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Statistic Card \\phantom{Empowered}}}}}\n"
-#| "  \\scriptsize\n"
-#| "  \\begin{itemize}\n"
-#| "    \\item[\\textbf{3.}] \\textbf{Expert Effect}\n"
-#| "    \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
-#| "  \\end{itemize}"
+#: sections/expansion_content.tex:126
+#, no-wrap
 msgid ""
 "    \\draw (-2, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/empowered_statistic.png}}};\n"
 "    \\draw (2.4, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/statistic.png}}};\n"
@@ -386,14 +328,14 @@ msgid ""
 "  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Empowered Statistic Card}}}}\n"
 "  \\scriptsize\n"
 "  \\begin{itemize}\n"
-"    \\item[\\textbf{1.}] Name\n"
-"    \\item[\\textbf{2.}] Basic Effect\n"
+"    \\item[\\textbf{1.}] \\textbf{Name}\n"
+"    \\item[\\textbf{2.}] \\textbf{Basic Effect}\n"
 "  \\end{itemize}\n"
 "  \\columnbreak\n"
-"  \\footnotesize\n"
-"  \\textbf{\\textit{\\textcolor{darkcandyapplered}{Statistic Card \\phantom{Empowered}}}}\n"
+"  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Statistic Card \\phantom{Empowered}}}}}\n"
+"  \\scriptsize\n"
 "  \\begin{itemize}\n"
-"    \\item[\\textbf{3.}] Expert Effect\n"
+"    \\item[\\textbf{3.}] \\textbf{Expert Effect}\n"
 "    \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
 "  \\end{itemize}"
 msgstr ""
@@ -424,7 +366,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: multicols*
-#: sections/expansion_content.tex:124
+#: sections/expansion_content.tex:130
 #, no-wrap
 msgid ""
 "\\subsection*{Random Town}\\index{Random Town}\n"
@@ -436,7 +378,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/expansion_content.tex:130
+#: sections/expansion_content.tex:136
 #, no-wrap
 msgid ""
 "\\vfill\n"
