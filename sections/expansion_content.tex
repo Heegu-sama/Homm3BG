@@ -1,53 +1,15 @@
 % !TeX spellcheck = en_US
 \addsection{Expansion Content}{\skills/pathfinding.png}
 
-\iftoggle{printable}{\vspace{-\baselineskip}}{}
+\begin{multicols*}{2}
 
-\begin{multicols}{2}
-
-\subsection*{Schools of Magic}
-Most expansions have effects which refer to Schools of Magic\index{Schools of Magic}.
-All Spell Cards belong to one School: either Air, Fire, Earth or Water.
-When casting the \textbf{Magic Arrow Spell}, you must select which School it belongs to.
-\textbf{Hero specialty cards are not Spells} even though some of them have a School of Magic.
-Spells with one School symbol on them are \textbf{Basic Spells}, while Spells with four identical symbols are \textbf{Expert Spells}. Certain game effects may affect only one of these types.
+\begin{center}
+  \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{\art/efreet.jpg}
+\end{center}
+\columnbreak
 
 \subsection*{Permanent cards}
 Added by the stretch goals and Rampart expansions, explained in \pagelink{Playerdecks}{Player Decks}.
-
-
-\columnbreak
-
-\begin{minipage}[t]{0.48\textwidth}
-  \centering
-  \minipage[b]{0.5\textwidth}
-    \centering
-    \includegraphics[width=0.75\linewidth]{\images/school_of_fire.png}
-    \textit{\textbf{\textcolor{darkcandyapplered}{School of Fire}}}
-  \endminipage
-  \minipage[b]{0.5\textwidth}
-    \centering
-    \includegraphics[width=0.75\linewidth]{\images/school_of_water.png}
-    \textit{\textbf{\textcolor{darkcandyapplered}{School of Water}}}
-  \endminipage
-  \hfill\allowbreak%
-  \bigbreak
-  \minipage[b]{0.5\textwidth}
-    \centering
-    \includegraphics[width=0.75\linewidth]{\images/school_of_air.png}
-    \textit{\textbf{\textcolor{darkcandyapplered}{School of Air}}}
-  \endminipage
-  \minipage[b]{0.5\textwidth}
-    \centering
-    \includegraphics[width=0.75\linewidth]{\images/school_of_earth.png}
-    \textit{\textbf{\textcolor{darkcandyapplered}{School of Earth}}}
-  \endminipage
-  \bigbreak
-\end{minipage}
-
-\end{multicols}
-
-\begin{multicols*}{2}
 
 \subsection*{\pagetarget{War Machines}{War Machines}}
 Added by the Rampart expansion.
@@ -55,42 +17,31 @@ War Machines\index{War Machines} are permanent Cards that can be bought at eithe
 If you buy one at the Trading Post, \textbf{you cannot use} any of the other normal functions of that Field during that Visit.
 War machines are also more expensive at the Trading Post.
 
-\vspace*{\fill}
-
-\begin{center}
-  \includegraphics[width=\linewidth]{\art/land_mine.png}
-\end{center}
-
-\columnbreak
-
-\vfill
-
-\begin{minipage}[h]{\linewidth}
-  \vspace{0pt}
+{
+  \bigskip
   \centering
   \begin{scriptsize}
     \begin{tikzpicture}
-      \draw (0, 0) node[inner sep=0] {\makebox[\textwidth][c]{\includegraphics[width=0.8\textwidth]{\cards/war_machine.png}}};
+      \draw (0, 0) node[inner sep=0] {\includegraphics[width=0.8\linewidth]{\cards/war_machine.png}};
       \draw (0.8, 3.6) node {\encircle{\phantom{.}1\phantom{.}}};
       \draw (0, -2.8) node {\encircle{\phantom{.}2\phantom{.}}};
       \draw (-1.2, -1.7) node {\encircle{\phantom{.}3\phantom{.}}};
       \draw (0.9, -1.7) node {\encircle{\phantom{.}4\phantom{.}}};
     \end{tikzpicture}
   \end{scriptsize}
-  \break
-  \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{War Machine Card}}}}
-  \scriptsize
-  \begin{multicols}{2}
-    \begin{itemize}
-      \item[\textbf{1.}] \textbf{Name}
-      \item[\textbf{2.}] \textbf{Effect}
-      \item[\textbf{\phantom{.}}] \phantom{.}
-      \item[\textbf{3.}] \textbf{War Machine Factory cost}
-      \item[\textbf{4.}] \textbf{Trading Post cost}
-    \end{itemize}
-  \end{multicols}
-\end{minipage}
 
+  \footnotesize
+  \textbf{\textit{\textcolor{darkcandyapplered}{War Machine Card}}}
+  \begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt]
+    \item[\textbf{1.}] Name
+    \item[\textbf{2.}] Effect
+    \item[\textbf{3.}] Cost in a War Machine Factory
+    \item[\textbf{4.}] Cost in a Trading Post
+  \end{itemize}
+}
+
+\vspace*{\fill}
+\columnbreak
 \subsection*{\pagetarget{Events}{Events}}
 Added by the Fortress expansion.
 Event cards\index{Event Cards} may be used in games with more than one player.
@@ -114,13 +65,13 @@ Any cards which were revealed as a part of resolving an Event should be shuffled
       \draw (2.5, -1.1) node {\encircle{\phantom{.}3\phantom{.}}};
     \end{tikzpicture}
   \end{scriptsize}
-  \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Event Card}}}}
-  \scriptsize
+  \footnotesize
+  \textbf{\textit{\textcolor{darkcandyapplered}{Event Card}}}
   \begin{multicols}{2}
     \begin{itemize}
-      \item[\textbf{1.}] \textbf{Name}
-      \item[\textbf{2.}] \textbf{Fluff}
-      \item[\textbf{3.}] \textbf{Effect}
+      \item[\textbf{1.}] Name
+      \item[\textbf{2.}] Fluff
+      \item[\textbf{3.}] Effect
       \item[\textbf{\phantom{.}}] \phantom{.}
     \end{itemize}
   \end{multicols}
@@ -153,17 +104,16 @@ They have only one effect which is identical to the normal Statistic's Expert Ef
 \vspace{-2em}
 \begin{multicols}{2}
   \centering
-  \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Empowered Statistic Card}}}}
-  \scriptsize
+  \footnotesize
+  \textbf{\textit{\textcolor{darkcandyapplered}{Empowered Statistic Card}}}
   \begin{itemize}
-    \item[\textbf{1.}] \textbf{Name}
-    \item[\textbf{2.}] \textbf{Basic Effect}
+    \item[\textbf{1.}] Name
+    \item[\textbf{2.}] Basic Effect
   \end{itemize}
   \columnbreak
-  \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Statistic Card \phantom{Empowered}}}}}
-  \scriptsize
+  \textbf{\textit{\textcolor{darkcandyapplered}{Statistic Card \phantom{Empowered}}}}
   \begin{itemize}
-    \item[\textbf{3.}] \textbf{Expert Effect}
+    \item[\textbf{3.}] Expert Effect
     \item[\textbf{\phantom{.}}] \phantom{.}
   \end{itemize}
 \end{multicols}
