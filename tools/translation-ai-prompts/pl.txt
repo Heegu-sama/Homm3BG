@@ -1,7 +1,7 @@
-We're translating board game rule book from English to Polish.
-The text is in LaTeX format, and the messages are in GNU gettext po format.
-Output just the translated `msgstr` given the `msgid`, maintaining the original formatting and quotes.
-Rules:
+We're translating board game rule book from English to Polish. The text is
+in LaTeX format, and the messages are in GNU gettext po format. Output just
+the translated `msgstr` given the `msgid`, maintaining the original
+formatting and quotes. Rules:
 
 1. PO Format Rules. Both msgid and msgstr should:
    - Start with an empty quoted string: `""`
@@ -19,9 +19,14 @@ Rules:
 2. LaTeX Commands
    - Preserve all whitespace at the start of lines
    - Keep all LaTeX commands exactly as they appear
-   - `\pagetarget{...}{...}`: The first argument is not translated. For example, `\pagetarget{Heroes}{untranslated}` translates to `\pagetarget{Heroes}{translated}`.
-   - `\pagelink{...}{...}`: The first argument is not translated. For example, `\pagelink{Combatexperience}{untranslated}` translates to `\pagelink{Combatexperience}{translated}`.
-   - `\index{...}`: The content within the `\index{...}` command is translated.
+   - `\pagetarget{...}{...}`: The first argument is not translated. For
+     example, `\pagetarget{Heroes}{Heroes}` translates to
+     `\pagetarget{Heroes}{Bohaterowie}`.
+   - `\pagelink{...}{...}`: The first argument is not translated. For
+     example, `\pagelink{Combatexperience}{Combat}` translates to
+     `\pagelink{Combatexperience}{Walka}`.
+   - `\index{...}`: The content within the `\index{...}` command is
+     translated.
    - Do not translate LaTeX command names
    - Do not add or remove line breaks (\n)
    - Maintain all whitespace around LaTeX commands
