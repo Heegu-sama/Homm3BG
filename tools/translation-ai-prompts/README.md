@@ -14,10 +14,10 @@ Free tier models also work, but they give noticeably worse results.
 
 Start a new conversation with the AI.
 Copy the entire prompt in a chosen language in this directory.
-For instance, if you're translating to Polsh, copy `polish.txt`.
-If the file for your language doesn't exist, it should be created first.
-Make a copy of `generic.txt` and rename it to the name of the language.
-Then, fill up all the `[...]` (but not `...`) placeholders in the prompt with specific game terms and examples.
+For instance, if you're translating to Polsh, copy `pl.txt`.
+If the file for your language isn't tranlsated yet, you should do that first.
+Translate the prompt for your language in `translations/prompt.txt/<your_language>.po`, run `po4a`, and commit the result.
+Then, copy the resulting file `tools/translation-ai-prompts/<your_language>.txt`.
 **Send this as your first message to the AI to establish the context.**
 
 ### **Sending translation requests**

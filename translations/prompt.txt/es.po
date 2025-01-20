@@ -1,0 +1,344 @@
+# Spanish translations for Homm package
+# Copyright (C) 2025 Free Software Foundation, Inc.
+# This file is distributed under the same license as the Homm package.
+# Automatically generated, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Homm 3BG-rules-rewrite\n"
+"POT-Creation-Date: 2025-01-19 20:35+0100\n"
+"PO-Revision-Date: 2025-01-19 20:30+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:5
+msgid ""
+"We're translating board game rule book from English to [...].  The text is "
+"in LaTeX format, and the messages are in GNU gettext po format.  Output just "
+"the translated `msgstr` given the `msgid`, maintaining the original "
+"formatting and quotes.  Rules:"
+msgstr ""
+"We're translating board game rule book from English to Spanish.  The text is "
+"in LaTeX format, and the messages are in GNU gettext po format.  Output just "
+"the translated `msgstr` given the `msgid`, maintaining the original "
+"formatting and quotes.  Rules:"
+
+#. type: Bullet: '1. '
+#: tools/translation-ai-prompts/prompt.txt:18
+msgid "PO Format Rules. Both msgid and msgstr should:"
+msgstr ""
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:18
+msgid "Start with an empty quoted string: `\"\"`"
+msgstr ""
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:18
+msgid "Have each line on a new line"
+msgstr ""
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:18
+msgid "Have each line surrounded by quotes"
+msgstr ""
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:18
+#, no-wrap
+msgid ""
+"   - End each quoted line with \\n\n"
+"   Example:\n"
+"   msgid \"\"\n"
+"   \"First line\\n\"\n"
+"   \"Second line\\n\"\n"
+"   msgstr \"\"\n"
+"   \"[...]\\n\"\n"
+"   \"[...]\\n\"\n"
+msgstr ""
+
+#. type: Bullet: '2. '
+#: tools/translation-ai-prompts/prompt.txt:39
+msgid "LaTeX Commands"
+msgstr ""
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:39
+msgid "Preserve all whitespace at the start of lines"
+msgstr ""
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:39
+msgid "Keep all LaTeX commands exactly as they appear"
+msgstr ""
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:39
+msgid ""
+"`\\pagetarget{...}{...}`: The first argument is not translated. For example, "
+"`\\pagetarget{Heroes}{Heroes}` translates to `\\pagetarget{Heroes}{[...]}`."
+msgstr ""
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:39
+msgid ""
+"`\\pagelink{...}{...}`: The first argument is not translated. For example, "
+"`\\pagelink{Combatexperience}{Combat}` translates to "
+"`\\pagelink{Combatexperience}{[...]}`."
+msgstr ""
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:39
+msgid ""
+"`\\index{...}`: The content within the `\\index{...}` command is translated."
+msgstr ""
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:39
+msgid "Do not translate LaTeX command names"
+msgstr ""
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:39
+msgid "Do not add or remove line breaks (\\n)"
+msgstr ""
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:39
+msgid "Maintain all whitespace around LaTeX commands"
+msgstr ""
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:39
+msgid "Maintain line breaks exactly as they appear in the source text"
+msgstr ""
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:39
+msgid "Special commands to keep unchanged:"
+msgstr ""
+
+#. type: Bullet: '     - '
+#: tools/translation-ai-prompts/prompt.txt:39
+msgid "SVG icons (\\svg{damage-table})"
+msgstr ""
+
+#. type: Bullet: '     - '
+#: tools/translation-ai-prompts/prompt.txt:39
+msgid "Spacing commands (\\bigskip, \\hsize, etc.)"
+msgstr ""
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:39
+msgid "For tables (like \\hommtable, \\tabularx):"
+msgstr ""
+
+#. type: Bullet: '     - '
+#: tools/translation-ai-prompts/prompt.txt:39
+msgid "Keep all sizing parameters unchanged (e.g., {38}, {0.3\\hsize})"
+msgstr ""
+
+#. type: Bullet: '     - '
+#: tools/translation-ai-prompts/prompt.txt:39
+msgid "Preserve all cell styling commands (\\darkcell, \\lightcell)"
+msgstr ""
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:39
+#, no-wrap
+msgid ""
+"     - Maintain table column specifications\n"
+"   Example:\n"
+"   msgid \"\\\\darkcell[1.5]{\\\\color{white}Game Difficulty}\"\n"
+"   msgstr \"\\\\darkcell[1.5]{\\\\color{white}[...]}\"\n"
+msgstr ""
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:43
+#, no-wrap
+msgid ""
+"3. Capitalization\n"
+"Maintain the capitalization of the words as in the original text.\n"
+"If in English there is \"Hero\", the translation should also be capitalized.\n"
+msgstr ""
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:49
+#, no-wrap
+msgid ""
+"4. Example\n"
+"Given the following `msgid`:\n"
+"\"  \\\\pagetarget{Heroes}{Players} always control a Main Hero and may additionally also recruit a Secondary Hero.\\n\"\n"
+"The output should be:\n"
+"\"  \\\\pagetarget{Heroes}{[...]} [...]\\n\"\n"
+msgstr ""
+
+#. type: Bullet: '5. '
+#: tools/translation-ai-prompts/prompt.txt:51
+msgid "Specific term translations without capitalization"
+msgstr ""
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:63
+#, no-wrap
+msgid ""
+"Factions:\n"
+"   - \"castle\" translates to \"[...]\"\n"
+"   - \"conflux\" translates to \"[...]\"\n"
+"   - \"cove\" translates to \"[...]\"\n"
+"   - \"dungeon\" translates to \"[...]\"\n"
+"   - \"fortress\" translates to \"[...]\"\n"
+"   - \"inferno\" translates to \"[...]\"\n"
+"   - \"necropolis\" translates to \"[...]\"\n"
+"   - \"rampart\" translates to \"[...]\"\n"
+"   - \"stronghold\" translates to \"[...]\"\n"
+"   - \"tower\" translates to \"[...]\"\n"
+msgstr ""
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:83
+#, no-wrap
+msgid ""
+"Units:\n"
+"   - \"boars\" translates to \"[...]\"\n"
+"   - \"champions\" translates to \"[...]\"\n"
+"   - \"deck of unit cards\" translates to \"[...]\"\n"
+"   - \"dendroids\" translates to \"[...]\"\n"
+"   - \"dread knights\" translates to \"[...]\"\n"
+"   - \"familiars\" translates to \"[...]\"\n"
+"   - \"few\" translates to \"[...]\"\n"
+"   - \"griffins\" translates to \"[...]\"\n"
+"   - \"hp\" translates to \"[...]\"\n"
+"   - \"liches\" translates to \"[...]\"\n"
+"   - \"marksmen\" translates to \"[...]\"\n"
+"   - \"pack\" translates to \"[...]\"\n"
+"   - \"recruited or reinforced\" translates to \"[...]\"\n"
+"   - \"reinforce\" translates to \"[...]\"\n"
+"   - \"reinforced\" translates to \"[...]\"\n"
+"   - \"unit cards\" translates to \"[...]\"\n"
+"   - \"units\" translates to \"[...]\"\n"
+"   - \"zealots\" tarnslates to \"[...]\"\n"
+msgstr ""
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:95
+#, no-wrap
+msgid ""
+"Heroes:\n"
+"   - \"ability\" translates to \"[...]\"\n"
+"   - \"experience\" translates to \"[...]\"\n"
+"   - \"expert effects\" translates to \"[...]\"\n"
+"   - \"hero\" translates to \"[...]\"\n"
+"   - \"heroes\" translates to \"[...]\"\n"
+"   - \"level tracker\" translates to \"[...]\"\n"
+"   - \"level\" translates to \"[...]\"\n"
+"   - \"main hero\" translates to \"[...]\"\n"
+"   - \"secondary hero\" translates to \"[...]\"\n"
+"   - \"specialty\" translates to \"[...]\"\n"
+msgstr ""
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:112
+#, no-wrap
+msgid ""
+"Map Locations:\n"
+"   - \"center field\" translates to \"[...]\"\n"
+"   - \"central map tile\" translates to \"[...]\"\n"
+"   - \"dragon utopia\" translates to \"[...]\"\n"
+"   - \"far map tile\" translates to \"[...]\"\n"
+"   - \"field\" translates to \"[...]\"\n"
+"   - \"locations\" translates to \"[...]\"\n"
+"   - \"map tile\" translates to \"[...]\"\n"
+"   - \"near map tile\" translates to \"[...]\"\n"
+"   - \"random town\" translates to \"[...]\"\n"
+"   - \"revisitable\" translates to \"[...]\"\n"
+"   - \"settlement\" translates to \"[...]\"\n"
+"   - \"starting (i) map tile\" translates to \"[...]\"\n"
+"   - \"tile\" translates to \"[...]\"\n"
+"   - \"trading post\" translates to \"[...]\"\n"
+"   - \"water wheel\" translates to \"[...]\"\n"
+msgstr ""
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:119
+#, no-wrap
+msgid ""
+"Resources:\n"
+"   - \"building materials\" translates to \"[...]\"\n"
+"   - \"resource production tracker\" translates to \"[...]\"\n"
+"   - \"resources\" translates to \"[...]\"\n"
+"   - \"treasure die\" translates to \"[...]\"\n"
+"   - \"valuables\" translates to \"[...]\"\n"
+msgstr ""
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:131
+#, no-wrap
+msgid ""
+"Deck-building:\n"
+"   - \"ability card\" translates to \"[...]\"\n"
+"   - \"deck\" translates to \"[...]\"\n"
+"   - \"decks\" translates to \"[...]\"\n"
+"   - \"discard pile\" translates to \"[...]\"\n"
+"   - \"discard\" translates to \"[...]\"\n"
+"   - \"hand limit\" translates to \"[...]\"\n"
+"   - \"player decks\" translates to \"[...]\"\n"
+"   - \"search\" translates to \"[...]\"\n"
+"   - \"specialty card\" translates to \"[...]\"\n"
+"   - \"spell cards\" translates to \"[...]\"\n"
+msgstr ""
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:136
+#, no-wrap
+msgid ""
+"AI Deck:\n"
+"   - \"magic card\" translates to \"[...]\"\n"
+"   - \"might card\" translates to \"[...]\"\n"
+"   - \"skill card\" translates to \"[...]\"\n"
+msgstr ""
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:141
+#, no-wrap
+msgid ""
+"Town:\n"
+"   - \"buildings\" translates to \"[...]\"\n"
+"   - \"dwelling\" translates to \"[...]\"\n"
+"   - \"population token\" translates to \"[...]\"\n"
+msgstr ""
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:150
+#, no-wrap
+msgid ""
+"Combat:\n"
+"   - \"arrow tower\" translates to \"[...]\"\n"
+"   - \"back line\" translates to \"[...]\"\n"
+"   - \"combat board\" translates to \"[...]\"\n"
+"   - \"combat\" translates to \"[...]\"\n"
+"   - \"damage\" translates to \"[...]\"\n"
+"   - \"front line\" translates to \"[...]\"\n"
+"   - \"winning combat\" translates to \"[...]\"\n"
+msgstr ""
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:159
+#, no-wrap
+msgid ""
+"Other:\n"
+"   - \"core rulebook\" translates to \"[...]\"\n"
+"   - \"effects\" translates to \"[...]\"\n"
+"   - \"game setup\" translates to \"[...]\"\n"
+"   - \"map setup\" translates to \"[...]\"\n"
+"   - \"player elimination\" translates to \"[...]\"\n"
+"   - \"player setup\" translates to \"[...]\"\n"
+"   - \"round tracker\" translates to \"[...]\"\n"
+"   - \"war machine\" translates to \"[...]\"\n"
+msgstr ""
