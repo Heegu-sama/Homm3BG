@@ -227,6 +227,8 @@ tools/build.sh <LANGUAGE> --printable --no-bg
 <details>
 <summary>Click to see details</summary>
 
+**We have a guide on [using AI for translations](tools/translation-ai-prompts/README.md).**
+
 Make sure you have [`po4a`](https://github.com/mquinson/po4a) installed.
 
 To translate a particular section:

@@ -1,0 +1,159 @@
+We're translating board game rule book from English to [...].
+The text is in LaTeX format, and the messages are in GNU gettext po format.
+Output just the translated `msgstr` given the `msgid`, maintaining the original formatting and quotes.
+Rules:
+
+1. PO Format Rules. Both msgid and msgstr should:
+   - Start with an empty quoted string: `""`
+   - Have each line on a new line
+   - Have each line surrounded by quotes
+   - End each quoted line with \n
+   Example:
+   msgid ""
+   "First line\n"
+   "Second line\n"
+   msgstr ""
+   "[...]\n"
+   "[...]\n"
+
+2. LaTeX Commands
+   - Preserve all whitespace at the start of lines
+   - Keep all LaTeX commands exactly as they appear
+   - `\pagetarget{...}{...}`: The first argument is not translated. For example, `\pagetarget{Heroes}{Heroes}` translates to `\pagetarget{Heroes}{[...]}`.
+   - `\pagelink{...}{...}`: The first argument is not translated. For example, `\pagelink{Combatexperience}{Combat}` translates to `\pagelink{Combatexperience}{[...]}`.
+   - `\index{...}`: The content within the `\index{...}` command is translated.
+   - Do not translate LaTeX command names
+   - Do not add or remove line breaks (\n)
+   - Maintain all whitespace around LaTeX commands
+   - Maintain line breaks exactly as they appear in the source text
+   - Special commands to keep unchanged:
+     - SVG icons (\svg{damage-table})
+     - Spacing commands (\bigskip, \hsize, etc.)
+   - For tables (like \hommtable, \tabularx):
+     - Keep all sizing parameters unchanged (e.g., {38}, {0.3\hsize})
+     - Preserve all cell styling commands (\darkcell, \lightcell)
+     - Maintain table column specifications
+   Example:
+   msgid "\\darkcell[1.5]{\\color{white}Game Difficulty}"
+   msgstr "\\darkcell[1.5]{\\color{white}[...]}"
+
+3. Capitalization
+Maintain the capitalization of the words as in the original text.
+If in English there is "Hero", the translation should also be capitalized.
+
+4. Example
+Given the following `msgid`:
+"  \\pagetarget{Heroes}{Players} always control a Main Hero and may additionally also recruit a Secondary Hero.\n"
+The output should be:
+"  \\pagetarget{Heroes}{[...]} [...]\n"
+
+5. Specific term translations without capitalization
+
+Factions:
+   - "castle" translates to "[...]"
+   - "conflux" translates to "[...]"
+   - "cove" translates to "[...]"
+   - "dungeon" translates to "[...]"
+   - "fortress" translates to "[...]"
+   - "inferno" translates to "[...]"
+   - "necropolis" translates to "[...]"
+   - "rampart" translates to "[...]"
+   - "stronghold" translates to "[...]"
+   - "tower" translates to "[...]"
+
+Units:
+   - "boars" translates to "[...]"
+   - "champions" translates to "[...]"
+   - "deck of unit cards" translates to "[...]"
+   - "dendroids" translates to "[...]"
+   - "dread knights" translates to "[...]"
+   - "familiars" translates to "[...]"
+   - "few" translates to "[...]"
+   - "griffins" translates to "[...]"
+   - "hp" translates to "[...]"
+   - "liches" translates to "[...]"
+   - "marksmen" translates to "[...]"
+   - "pack" translates to "[...]"
+   - "recruited or reinforced" translates to "[...]"
+   - "reinforce" translates to "[...]"
+   - "reinforced" translates to "[...]"
+   - "unit cards" translates to "[...]"
+   - "units" translates to "[...]"
+   - "zealots" tarnslates to "[...]"
+
+Heroes:
+   - "ability" translates to "[...]"
+   - "experience" translates to "[...]"
+   - "expert effects" translates to "[...]"
+   - "hero" translates to "[...]"
+   - "heroes" translates to "[...]"
+   - "level tracker" translates to "[...]"
+   - "level" translates to "[...]"
+   - "main hero" translates to "[...]"
+   - "secondary hero" translates to "[...]"
+   - "specialty" translates to "[...]"
+
+Map Locations:
+   - "center field" translates to "[...]"
+   - "central map tile" translates to "[...]"
+   - "dragon utopia" translates to "[...]"
+   - "far map tile" translates to "[...]"
+   - "field" translates to "[...]"
+   - "locations" translates to "[...]"
+   - "map tile" translates to "[...]"
+   - "near map tile" translates to "[...]"
+   - "random town" translates to "[...]"
+   - "revisitable" translates to "[...]"
+   - "settlement" translates to "[...]"
+   - "starting (i) map tile" translates to "[...]"
+   - "tile" translates to "[...]"
+   - "trading post" translates to "[...]"
+   - "water wheel" translates to "[...]"
+
+Resources:
+   - "building materials" translates to "[...]"
+   - "resource production tracker" translates to "[...]"
+   - "resources" translates to "[...]"
+   - "treasure die" translates to "[...]"
+   - "valuables" translates to "[...]"
+
+Deck-building:
+   - "ability card" translates to "[...]"
+   - "deck" translates to "[...]"
+   - "decks" translates to "[...]"
+   - "discard pile" translates to "[...]"
+   - "discard" translates to "[...]"
+   - "hand limit" translates to "[...]"
+   - "player decks" translates to "[...]"
+   - "search" translates to "[...]"
+   - "specialty card" translates to "[...]"
+   - "spell cards" translates to "[...]"
+
+AI Deck:
+   - "magic card" translates to "[...]"
+   - "might card" translates to "[...]"
+   - "skill card" translates to "[...]"
+
+Town:
+   - "buildings" translates to "[...]"
+   - "dwelling" translates to "[...]"
+   - "population token" translates to "[...]"
+
+Combat:
+   - "arrow tower" translates to "[...]"
+   - "back line" translates to "[...]"
+   - "combat board" translates to "[...]"
+   - "combat" translates to "[...]"
+   - "damage" translates to "[...]"
+   - "front line" translates to "[...]"
+   - "winning combat" translates to "[...]"
+
+Other:
+   - "core rulebook" translates to "[...]"
+   - "effects" translates to "[...]"
+   - "game setup" translates to "[...]"
+   - "map setup" translates to "[...]"
+   - "player elimination" translates to "[...]"
+   - "player setup" translates to "[...]"
+   - "round tracker" translates to "[...]"
+   - "war machine" translates to "[...]"

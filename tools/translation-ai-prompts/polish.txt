@@ -1,0 +1,162 @@
+We're translating board game rule book from English to Polish.
+The text is in LaTeX format, and the messages are in GNU gettext po format.
+Output just the translated `msgstr` given the `msgid`, maintaining the original formatting and quotes.
+Rules:
+
+1. PO Format Rules. Both msgid and msgstr should:
+   - Start with an empty quoted string: `""`
+   - Have each line on a new line
+   - Have each line surrounded by quotes
+   - End each quoted line with \n
+   Example:
+   msgid ""
+   "First line\n"
+   "Second line\n"
+   msgstr ""
+   "Pierwsza linia\n"
+   "Druga linia\n"
+
+2. LaTeX Commands
+   - Preserve all whitespace at the start of lines
+   - Keep all LaTeX commands exactly as they appear
+   - `\pagetarget{...}{...}`: The first argument is not translated. For example, `\pagetarget{Heroes}{untranslated}` translates to `\pagetarget{Heroes}{translated}`.
+   - `\pagelink{...}{...}`: The first argument is not translated. For example, `\pagelink{Combatexperience}{untranslated}` translates to `\pagelink{Combatexperience}{translated}`.
+   - `\index{...}`: The content within the `\index{...}` command is translated.
+   - Do not translate LaTeX command names
+   - Do not add or remove line breaks (\n)
+   - Maintain all whitespace around LaTeX commands
+   - Maintain line breaks exactly as they appear in the source text
+   - Special commands to keep unchanged:
+     - SVG icons (\svg{damage-table})
+     - Spacing commands (\bigskip, \hsize, etc.)
+   - For tables (like \hommtable, \tabularx):
+     - Keep all sizing parameters unchanged (e.g., {38}, {0.3\hsize})
+     - Preserve all cell styling commands (\darkcell, \lightcell)
+     - Maintain table column specifications
+   Example:
+   msgid "\\darkcell[1.5]{\\color{white}Game Difficulty}"
+   msgstr "\\darkcell[1.5]{\\color{white}Poziom Trudności}"
+
+3. Capitalization
+Maintain the capitalization of the words as in the original text.
+If in English there is "Hero", the translation should also be capitalized ("Bohater", not "bohater").
+
+4. Example
+Given the following `msgid`:
+"  \\pagetarget{Heroes}{Players} always control a Main Hero and may additionally also recruit a Secondary Hero.\n"
+The output should be:
+"  \\pagetarget{Heroes}{Gracze} zawsze dowodzą Bohaterem Głównym, mogą również zrekrutować Bohatera Pomocniczego.\n"
+
+5. Specific term translations without capitalization
+
+Factions:
+   - "castle" translates to "zamek"
+   - "conflux" translates to "wrota żywiołów"
+   - "cove" translates to "przystań"
+   - "dungeon" translates to "lochy"
+   - "fortress" translates to "cytadela"
+   - "inferno" translates to "inferno"
+   - "necropolis" translates to "nekropolia"
+   - "rampart" translates to "bastion"
+   - "stronghold" translates to "twierdza"
+   - "tower" translates to "forteca"
+
+Units:
+   - "boars" translates to "dziki"
+   - "champions" translates to "czempioni"
+   - "deck of unit cards" translates to "talia jednostek"
+   - "dendroids" translates to "enty"
+   - "dread knights" translates to "rycerze grozy"
+   - "familiars" translates to "chowańce"
+   - "few" translates to "garstka"
+   - "griffins" translates to "gryfy"
+   - "griffins" translates to "gryfy"
+   - "hp" translates to "punkty zdrowia"
+   - "liches" translates to "licze"
+   - "marksmen" translates to "kusznicy"
+   - "neutral units" translates to "neutralne jednostki"
+   - "pack" translates to "grupa"
+   - "recruited or reinforced" translates to "zrekrutowane lub wcmocnione"
+   - "reinforce" translates to "wzmocnić"
+   - "reinforced" translates to "wzmocniony"
+   - "unit cards" translates to "karty jednostek"
+   - "units" translates to "jednostki"
+   - "zealots" tarnslates to "kapłani"
+
+Heroes:
+   - "ability" translates to "zdolność"
+   - "experience" translates to "doświadczenie"
+   - "expert cffects" translates to "efekty mistrzowskie"
+   - "hero" translates to "bohater"
+   - "heroes" translates to "bohaterowie"
+   - "level tracker" translates to "tor poziomu"
+   - "level" translates to "poziom"
+   - "main hero" translates to "bohater głowny"
+   - "secondary hero" translates to "bohater pomocniczy"
+   - "specialty" translates to "specjalność"
+
+Map Locations:
+   - "center field" translates to "środkowe pole"
+   - "central map tile" translates to "centralny kafelek mapy"
+   - "dragon utopia" translates to "smocza utopia"
+   - "far map tile" translates to "daleki kafelek mapy"
+   - "field" translates to "pole"
+   - "locations" translates to "lokacje"
+   - "map tile" translates to "kafelek mapy"
+   - "near map tile" translates to "bliski kafelek mapy"
+   - "near map tile" translates to "bliski kafelek mapy"
+   - "random town" translates to "losowe miasto"
+   - "revisitable" translates to "wielokrotny"
+   - "settlement" translates to "osada"
+   - "starting (i) map tile" translates to "początkowy (i) kafelek mapy"
+   - "tile" translates to "kafelek"
+   - "trading post" translates to "punkt handlowy"
+   - "water wheel" translates to "młyn wodny"
+
+Resources:
+   - "building materials" translates to "budulce"
+   - "resource production tracker" translates to "tor przychodu"
+   - "resources" translates to "zasoby"
+   - "treasure die" translates to "kość skarbu"
+   - "valuables" translates to "kosztowności"
+
+Deck-building:
+   - "ability card" translates to "karta zdolności"
+   - "deck" translates to "talia"
+   - "decks" translates to "talie"
+   - "discard pile" translates to "stos kart odrzuconych"
+   - "discard" translates to "odrzuć"
+   - "hand limit" translates to "limit kart na ręce"
+   - "player decks" translates to "talie graczy"
+   - "search" translates to "przeszukaj"
+   - "specialty card" translates to "karta specjalności"
+   - "spell cards" translates to "karty zaklęć"
+
+AI Deck:
+   - "magic card" translates to "karta magii"
+   - "might card" translates to "karta mocy"
+   - "skill card" translates to "karta umiejętności"
+
+Town:
+   - "buildings" translates to "budynki"
+   - "dwelling" translates to "siedlisko"
+   - "population token" translates to "żeton populacji"
+
+Combat:
+   - "arrow tower" translates to "wieża łuczicza"
+   - "back line" translates to "druga linia"
+   - "combat board" translates to "plansza walki"
+   - "combat" translates to "walka"
+   - "damage" translates to "obrażenia"
+   - "front line" translates to "pierwsza linia"
+   - "winning combat" translates to "wygranie walki"
+
+Other:
+   - "core rulebook" translates to "księga zasad"
+   - "effects" translates to "efekty"
+   - "game setup" translates to "przygotowanie gry"
+   - "map setup" translates to "przygotowanie mapy"
+   - "player elimination" translates to "eliminacja gracza"
+   - "player setup" translates to "przygotowanie graczy"
+   - "round tracker" translates to "tor rund"
+   - "war machine" translates to "machina wojenna"
