@@ -165,7 +165,7 @@ This repository serves both as a means to preserve the work, but also for others
 ### 💪 Contributing
 
 Please discuss any and all factual errors, bad language or other errors you've found.
-You can do this by opening issues/PRs with suggestions, writing in the BGG thread, or joining us [on Discord](https://discord.gg/khV8Ckw8RD).
+You can do this by opening issues/PRs with suggestions, writing in the BGG thread, or joining us [on Discord](https://discord.gg/Y4uM9pPWF6).
 
 ### 🔮 The Future
 
