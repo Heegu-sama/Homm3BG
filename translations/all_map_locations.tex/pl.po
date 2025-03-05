@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2024-11-13 13:00+0100\n"
+"POT-Creation-Date: 2025-03-05 22:02+0000\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -20,24 +20,25 @@ msgstr ""
 
 #. type: Plain text
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/components.tex:5 sections/credits.tex:6 sections/deckbuilding.tex:5
-#: sections/difficulty.tex:5 sections/expansion_content.tex:5
+#: sections/combat.tex:5 sections/components.tex:5 sections/credits.tex:6
+#: sections/deckbuilding.tex:5 sections/difficulty.tex:5
 #: sections/map_elements.tex:5 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/setup.tex:5 sections/trading.tex:5
+#: sections/resources.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/trading.tex:5
 msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
 msgstr ""
 
 #. type: multicols
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
-#: sections/all_map_locations.tex:421 sections/combat.tex:5
+#: sections/all_map_locations.tex:421 sections/combat.tex:7
 #: sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/difficulty.tex:7 sections/expansion_content.tex:7
-#: sections/expansion_content.tex:51 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:79
-#: sections/map_elements.tex:124 sections/player_turns.tex:7
-#: sections/resources.tex:7 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:58 sections/town.tex:5
-#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:162
+#: sections/difficulty.tex:7 sections/expansion_content.tex:5
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
+#: sections/map_elements.tex:79 sections/map_elements.tex:124
+#: sections/player_turns.tex:7 sections/resources.tex:7
+#: sections/round_structure.tex:5 sections/scenario_end.tex:5
+#: sections/setup.tex:58 sections/town.tex:7 sections/trading.tex:7
+#: sections/units.tex:5 sections/units.tex:198
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -116,8 +117,8 @@ msgstr ""
 
 #. type: multicols
 #: sections/all_map_locations.tex:35 sections/all_map_locations.tex:63
-#: sections/all_map_locations.tex:152 sections/expansion_content.tex:105
-#: sections/trading.tex:24 sections/units.tex:170 sections/units.tex:174
+#: sections/all_map_locations.tex:152 sections/expansion_content.tex:56
+#: sections/trading.tex:24 sections/units.tex:206 sections/units.tex:210
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -167,9 +168,8 @@ msgstr ""
 #. type: multicols
 #: sections/all_map_locations.tex:54 sections/all_map_locations.tex:426
 #: sections/credits.tex:36 sections/difficulty.tex:18
-#: sections/expansion_content.tex:20 sections/expansion_content.tex:65
-#: sections/game_modes.tex:27 sections/scenario_end.tex:23
-#: sections/units.tex:105
+#: sections/game_modes.tex:30 sections/scenario_end.tex:23
+#: sections/units.tex:136
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -352,10 +352,9 @@ msgstr ""
 
 #. type: multicols
 #: sections/all_map_locations.tex:134 sections/credits.tex:38
-#: sections/credits.tex:42 sections/expansion_content.tex:59
-#: sections/game_modes.tex:25 sections/round_structure.tex:28
-#: sections/round_structure.tex:32 sections/setup.tex:117 sections/town.tex:28
-#: sections/town.tex:34 sections/units.tex:103
+#: sections/credits.tex:42 sections/round_structure.tex:28
+#: sections/round_structure.tex:33 sections/setup.tex:117 sections/town.tex:30
+#: sections/town.tex:36 sections/units.tex:134
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -470,7 +469,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:175 sections/units.tex:88
+#: sections/all_map_locations.tex:175 sections/units.tex:119
 #, no-wrap
 msgid ""
 "\\bigbreak\n"
@@ -706,11 +705,16 @@ msgstr ""
 
 #. type: tikzpicture
 #: sections/all_map_locations.tex:285
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[overlay]\n"
+#| "  \\node at (12, -0.5) {\\includegraphics[width=0.6\\linewidth]{\\art/griffin.png}};"
 msgid ""
 "[overlay]\n"
-"  \\node at (16, 4.5) {\\includegraphics[width=0.5\\linewidth]{\\art/pegasi.png}};"
+"  \\node[opacity=0.3] at (16, 4.5) {\\includegraphics[width=0.5\\linewidth]{\\art/pegasi.png}};"
 msgstr ""
+"[overlay]\n"
+"  \\node at (12, 0.5) {\\includegraphics[width=0.6\\linewidth]{\\art/griffin.png}};"
 
 #. type: subsection{#2}
 #: sections/all_map_locations.tex:287
@@ -1026,7 +1030,7 @@ msgstr ""
 
 #. type: multicols
 #: sections/all_map_locations.tex:435 sections/player_turns.tex:39
-#: sections/units.tex:181
+#: sections/units.tex:217
 #, no-wrap
 msgid ""
 "\\bigskip\n"
