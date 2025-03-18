@@ -99,38 +99,101 @@ The effects of the following \textbf{Visitable} fields are explained by the symb
 
   \bigskip
 
-  \phantom{j}\textbf{Learning Stone}\\
+  \textbf{Learning Stone}\\
   \framedimage[\linewidth]{\map_locations/learning_stone.jpg}\\
 
   \bigskip
 
-  \phantom{j}\textbf{Shrine of Magic Gesture/Incantation}\\
-  \framedimage[\linewidth]{\map_locations/shrine_of_magic_whatever.jpg}\\
+  \phantom{j}\textbf{Grave}\phantom{j}\\
+  \framedimage[\linewidth]{\map_locations/grave.jpg}\\
 
   \vspace*{\fill}
   \filbreak
 
-  \phantom{j}\textbf{Water Wheel}\\
+  \phantom{j}\textbf{Water Wheel}\phantom{j}\\
   \framedimage[\linewidth]{\map_locations/water_wheel.jpg}\\
 
   \bigskip
 
-  \phantom{j}\textbf{Temple}\\
+  \phantom{j}\textbf{Temple}\phantom{j}\\
   \framedimage[\linewidth]{\map_locations/temple.jpg}\\
 
   \bigskip
 
-  \phantom{j}\textbf{Pandora's Box}\\
-  \framedimage[\linewidth]{\map_locations/pandoras_box.jpg}\\
+  \phantom{j}\textbf{Windmill}\phantom{j}\\
+  \framedimage[\linewidth]{\map_locations/windmill.jpg}
+  {\small Due to a misprint, the Windmill on the tile \texttt{\#N3} has a \textbf{?}. It should be ``\textbf{+}1 \svg{valuablegreater}''.}
 
   \bigskip
 
-  \phantom{j}\textbf{Windmill}\\
-  \framedimage[\linewidth]{\map_locations/windmill.jpg}
-  {\small Due to a misprint, the Windmill on the tile \texttt{\#N3} has a \textbf{?}. It should be ``\textbf{+}1 \svg{valuablegreater}''.}
+  \vspace{-4px}
+  \phantom{j}\textbf{Shrine of Magic Gesture/Incantation}\\
+  \framedimage[\linewidth]{\map_locations/shrine_of_magic_whatever.jpg}\\
+  \vspace{-2px}
+  \framedimage[\linewidth]{\map_locations/shrine_of_magic_whatever_water.jpg}\\
+
+
+  \vspace*{\fill}
 }
 
-\vspace*{\fill}
+\pagebreak
+
+{\centering
+
+  \phantom{j}\textbf{Pandora's Box}\phantom{j}\\
+  \framedimage[\linewidth]{\map_locations/pandoras_boxes.jpg}\\
+
+  \bigskip
+
+  \phantom{j}\textbf{Mermaid}\phantom{j}\\
+  \framedimage[\linewidth]{\map_locations/mermaid.jpg}\\
+
+  \bigskip
+
+  \phantom{j}\textbf{Derelict Ship}\phantom{j}\\
+  \framedimage[\linewidth]{\map_locations/derelict_ship.jpg}\\
+
+  \bigskip
+
+  \phantom{j}\textbf{Temple of the Sea}\phantom{j}\\
+  \framedimage[\linewidth]{\map_locations/temple_of_the_sea.jpg}\\
+
+  \bigskip
+
+  \vspace*{\fill}
+  \columnbreak
+
+  \phantom{j}\textbf{Flotsam}\phantom{j}\\
+  \framedimage[\linewidth]{\map_locations/flotsam.jpg}\\
+
+  \bigskip
+
+  \phantom{j}\textbf{Sea Barrel}\phantom{j}\\
+  \framedimage[\linewidth]{\map_locations/sea_barrel.jpg}\\
+
+  \bigskip
+
+  \phantom{j}\textbf{Shipwreck}\phantom{j}\\
+  \framedimage[\linewidth]{\map_locations/shipwreck.jpg}\\
+
+  \bigskip
+
+  \phantom{j}\textbf{Buoy}\phantom{j}\\
+  \framedimage[\linewidth]{\map_locations/buoy.jpg}\\
+
+  \bigskip
+
+  \phantom{j}\textbf{Shipwreck Survivor}\phantom{j}\\
+  \framedimage[\linewidth]{\map_locations/shipwreck_survivor.jpg}\\
+
+  \bigskip
+
+  \vspace*{\fill}
+}
+
+\begin{tikzpicture}[overlay]
+  \node[opacity=0.2] at (-6, 2.1) {\includegraphics[width=\linewidth]{\art/cannon.png}};
+\end{tikzpicture}
 
 \pagebreak
 
@@ -182,6 +245,9 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
   \includegraphics[width=0.44\linewidth]{\map_locations/fortress_settlement.png}
   \includegraphics[width=0.44\linewidth]{\map_locations/inferno_settlement.png}
   \includegraphics[width=0.44\linewidth]{\map_locations/tower_settlement.png}
+  \includegraphics[width=0.44\linewidth]{\map_locations/stronghold_settlement.png}
+  \includegraphics[width=0.44\linewidth]{\map_locations/conflux_settlement.png}
+  \includegraphics[width=0.44\linewidth]{\map_locations/cove_settlement.png}
   \par
   \textit{All possible Settlements.
   Each is styled after a different Faction.
@@ -269,20 +335,61 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \phantom{j}\textbf{Stables}\par
+    \phantom{j}\textbf{One-Way Entrance Monolith}\par
+    \framedimage[\textwidth]{\map_locations/one-way_monolith_entrance.jpg}
+    \caption{\small Category: \textbf{Revisitable}\\
+      Move your Hero to the corresponding Exit Monolith (see below).
+    }
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \textbf{Two-Way Monolith}\par
+    \framedimage[\textwidth]{\map_locations/two-way_monolith.jpg}
+    \caption{\small Category: \textbf{Revisitable}\\
+      Move your Hero to the corresponding Two-Way Monolith.
+    }
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \phantom{j}\textbf{One-Way Exit Monolith}\par
+    \framedimage[\textwidth]{\map_locations/one-way_monolith_exit.jpg}
+    \caption{\raggedright \small Category: \textbf{Revisitable}\\
+      \raggedright Treat it as an empty Field.
+    }
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \phantom{j}\textbf{Stables}\phantom{j}\par
     \framedimage[\textwidth]{\map_locations/stables.jpg}
     \caption{\small Category: \textbf{Revisitable}\\
       Gain 1 \svgeven{movement}.
       It lasts for only one Turn.
       See \protect\pagelink{Movement}{Movement Actions}.
     }
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \phantom{j}\textbf{Subterranean Gate}\par
+    \framedimage[\textwidth]{\map_locations/subterranean_gate.jpg}
+    \caption{\raggedright \small Category: \textbf{Revisitable}\\
+      Move to the connected location on the adjacent Subterranean Tile.
+    }
   \end{minipage}\hfill
 \end{figure}
 
 \begin{tikzpicture}[overlay]
-  \node[opacity=0.3] at (16, 4.5) {\includegraphics[width=0.5\linewidth]{\art/pegasi.png}};
+  \node[opacity=0.2] at (14, 1.5) {\includegraphics[width=0.6\linewidth]{\art/storm_elemental.png}};
 \end{tikzpicture}
-
 \subsection*{\pagetarget{Other Fields}{Other Fields}}
 
 \begin{figure}[H]
@@ -320,10 +427,12 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \phantom{j}\textbf{Market of Time}\par
-    \framedimage[\linewidth]{\map_locations/market_of_time.jpg}
-    \caption{\small Category: \textbf{Visitable}\\ Remove one card from your hand.
-      Then \textbf{Search (2)} the Ability, Spell, or Artifact Deck.
+    \phantom{j}\textbf{Elemental Conflux}\phantom{j}\par
+    \framedimage[\linewidth]{\map_locations/elemental_conflux.jpg}
+    \caption{\small Category: \textbf{Visitable}\\
+      For every Dwelling you have, draw from the corresponding Neutral Unit Decks until you find ``Elementals'' Cards.
+      You can recruit one of those Units if you  \svg{pay_v2} its recruitment cost.
+      Shuflle the remaining Units back into ther respective Decks.
     }
   \end{minipage}
 \end{figure}
@@ -417,31 +526,112 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
   \end{minipage}
 \end{figure}
 
-\begin{multicols*}{2}
+\begin{figure}[H]
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \phantom{j}\textbf{Faerie Ring}\phantom{j}\par
+    \framedimage[\linewidth]{\map_locations/faerie_ring.jpg}
+    \caption{\small Category: \textbf{Visitable}\\
+      Remove one Card from your hand, then Search (2) the Card's deck.
+      You cannot remove Statistics, Starting Ability, or Specialty cards.}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \phantom{j}\textbf{Star Axis}\phantom{j}\par
+    \framedimage[\linewidth]{\map_locations/star_axis.jpg}
+    \caption{\small Category: \textbf{Flaggable}\\
+      You may Remove one of your Statistic cards from your hand and replace it with an \textbf{Empowered} one of the same type.
+      When you Flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}
+  \end{minipage}
+\end{figure}
 
-{\centering\phantom{Star Axis}\par}
-\includegraphics[width=\linewidth]{\art/unicorn.jpg}
+\begin{figure}[H]
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \textbf{Cyclops Stockpile}\par
+    \framedimage[\linewidth]{\map_locations/cyclops_stockpile.jpg}
+    \caption{\small Category: \textbf{Visitable}\\
+      When preparing the Neutral Army guarding this location, instead of drawing 1 \svgunit{azure} Unit, find 2 \svgunit{golden} Cyclops and add them to the Neutral Army (look for them first in the \svgunit{golden} discard pile, and then in the \svgunit{golden} Neutral Uni Deck).
+      If you win the Combat, roll and resolve 4 \svg{resource_die}.
+      Any additional effects depend on the scenario.
+    }
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \phantom{j}\textbf{Random Town}\phantom{j}\par
+    \framedimage[\linewidth]{\map_locations/random_town.jpg}
+    \caption{\small Category: \textbf{Flaggable}\\
+      When revealed, all players roll 2 \svg{resource_die}.
+      The highest roller chooses an unused Faction.
+      The random Town is defended by Units from that Faction.
+      They have a ``Pack'' of \svgunit{bronze}, two ``Packs'' of \svgunit{silver}, and two ``Fews'' of \svgunit{golden} Units.
+      The \svgunit{bronze} Unit is chosen by the player who controls the Units during that Combat.
+      Flagging it increases \svg{gold} production by 10, which is also gained immediately if you are the first to Flag it.
+    }
+  \end{minipage}
+\end{figure}
 
-\columnbreak
+\begin{figure}[H]
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \textbf{Spell Scroll}\par
+    \framedimage[\linewidth]{\map_locations/spell_scroll.jpg}
+    \caption{\small Category: \textbf{Visitable}\\
+      Take a Spell Scroll Card, place it near your Hero Card, then follow its instructions.
+    }
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \phantom{j}\textbf{Market of Time}\phantom{j}\par
+    \framedimage[\linewidth]{\map_locations/market_of_time.jpg}
+    \caption{\small Category: \textbf{Visitable}\\ Remove one card from your hand.
+      Then \textbf{Search (2)} the Ability, Spell, or Artifact Deck.
+    }
+  \end{minipage}
+\end{figure}
 
-{\centering\textbf{Star Axis}\par}
-\framedimage[\linewidth]{\map_locations/star_axis.jpg}
-{\small Category: \textbf{Flaggable}\\
-  You may Remove one of your Statistic cards from your hand and replace it with an \textbf{Empowered} one of the same type.
-  When you Flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.
-}
+\begin{figure}[H]
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \phantom{j}\textbf{Sea Chest\phantom{j}}\par
+    \captionsetup{singlelinecheck=off}
+    \framedimage[\linewidth]{\map_locations/sea_chest.jpg}
+    \caption[sea chest]{\small Category: \textbf{Visitable}\\
+      Roll 1 Attack Die.
+      Depending on the result, do the following:
+      \begin{itemize}
+        \setlength\itemsep{-0.2em}
+        \item[\textbf{+1}] -- Search (1) \svg{artifact}.
+        \item[\textbf{0}] -- Gain 5 \svg{gold}.
+        \item[\textbf{-1}] -- Gain nothing.
+      \end{itemize}
+     }
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \phantom{j}\textbf{Jetsam\phantom{j}}\par
+    \captionsetup{singlelinecheck=off}
+    \framedimage[\linewidth]{\map_locations/jetsam.jpg}
+    \caption[jetsam]{\small Category: \textbf{Visitable}\\
+      Roll 1 Attack Die.
+      Depending on the result, do the following:
+      \begin{itemize}
+        \setlength\itemsep{-0.2em}
+        \item[\textbf{+1}] -- Roll and resolve 2 \svg{resource_die}.
+        \item[\textbf{0}] -- Roll and resolve 1 \svg{resource_die}.
+        \item[\textbf{-1}] -- Gain nothing.
+      \end{itemize}
+     }
+  \end{minipage}
+\end{figure}
 
-\bigskip
-
-{\centering\textbf{\pagetarget{Random Town}{Random Town}\index{Random Town}}\par}
-\framedimage[\linewidth]{\map_locations/random_town.jpg}
-{\small Category: \textbf{Flaggable}\\
-  When revealed, all players roll 2 \svg{resource_die}.
-  The highest roller chooses an unused Faction.
-  The random Town is defended by Units from that Faction.
-  They have a ``Pack'' of \svgunit{bronze}, two ``Packs'' of \svgunit{silver}, and two ``Fews'' of \svgunit{golden} Units.
-  The \svgunit{bronze} Unit is chosen by the player who controls the Units during that Combat.
-  Flagging it increases \svg{gold} production by 10, which is also gained immediately if you are the first to Flag it.
-}
-
-\end{multicols*}
+\vspace*{\fill}
+\includegraphics[width=\linewidth]{\art/thunderbird.jpg}
