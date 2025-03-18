@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-01-05 13:46+0000\n"
+"POT-Creation-Date: 2025-03-05 22:02+0000\n"
 "PO-Revision-Date: 2024-06-11 09:41+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -21,7 +21,8 @@ msgstr ""
 #: sections/combat.tex:5 sections/components.tex:5 sections/credits.tex:6
 #: sections/deckbuilding.tex:5 sections/difficulty.tex:5
 #: sections/map_elements.tex:5 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/setup.tex:5 sections/trading.tex:5
+#: sections/resources.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/trading.tex:5
 msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
 msgstr ""
 
@@ -34,8 +35,8 @@ msgstr ""
 #: sections/map_elements.tex:79 sections/map_elements.tex:124
 #: sections/player_turns.tex:7 sections/resources.tex:7
 #: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:58 sections/town.tex:5 sections/trading.tex:7
-#: sections/units.tex:5 sections/units.tex:192
+#: sections/setup.tex:58 sections/town.tex:7 sections/trading.tex:7
+#: sections/units.tex:5 sections/units.tex:198
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -43,7 +44,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:114 sections/combat.tex:187 sections/heroes.tex:34
+#: sections/ai_rules.tex:116 sections/combat.tex:187 sections/heroes.tex:34
 #, no-wrap
 msgid ""
 "\\vfill\n"
@@ -166,14 +167,34 @@ msgstr ""
 
 #. type: multicols
 #: sections/combat.tex:57
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{itemize}\n"
+#| "  \\item Choose one of the Combat Board's sides as your own. Place up to 5 of your Unit cards freely onto the Back and Frontlines of that side.\n"
+#| "  \\item Check the \\hyperlink{Difficulty Table}{\\textbf{Difficulty Table}} \\iftoggle{printable}{(on the back cover)}{} and draw the corresponding number of Neutral Unit cards from their Decks.\n"
+#| "  \\item The Neutral Units are placed differently depending on the Game Mode:\n"
+#| "  \\item In \\textbf{Clash} or \\textbf{Alliance} Scenarios, the enemy player sitting to your right controls the Neutral Units and decides their placement. \\svg{unit_ranged} Units must be placed in the Backline if possible.\n"
+#| "  \\item In \\textbf{Campaign} or \\textbf{Cooperative} scenarios, Neutral Units are placed from left to right from the player's perspective.\n"
+#| "First, place any \\svg{unit_ranged} Units in the Backline\\index{Units Placement}.\n"
+#| "Then, place any \\svg{unit_ground} or \\svg{unit_flying} Units in the Frontline.\n"
+#| "If there's not enough room to place a Unit in its correct line, place them in the other one.\n"
+#| "Units must be placed in \\textbf{descending} Initiative\\index{Initiative} order.\n"
+#| "If there's a tie, place higher tier Units first.\n"
+#| "If there's still a tie, the players decide the order.\n"
+#| "\\end{itemize}\n"
+#| "Unit setup when fighting \\textbf{other players}:\n"
+#| "\\begin{itemize}\n"
+#| "  \\item The attacking player places up to 5 Units on their chosen side of the Combat Board, followed by the defender.\n"
+#| "  \\item If the Combat takes place in a Town with a Citadel, the defender adds the \\pagelink{Walls}{Wall, Gate and Arrow Tower} cards after placing their Units.\n"
+#| "\\end{itemize}\n"
+#| "\n"
 msgid ""
 "\\begin{itemize}\n"
 "  \\item Choose one of the Combat Board's sides as your own. Place up to 5 of your Unit cards freely onto the Back and Frontlines of that side.\n"
 "  \\item Check the \\hyperlink{Difficulty Table}{\\textbf{Difficulty Table}} \\iftoggle{printable}{(on the back cover)}{} and draw the corresponding number of Neutral Unit cards from their Decks.\n"
 "  \\item The Neutral Units are placed differently depending on the Game Mode:\n"
 "  \\item In \\textbf{Clash} or \\textbf{Alliance} Scenarios, the enemy player sitting to your right controls the Neutral Units and decides their placement. \\svg{unit_ranged} Units must be placed in the Backline if possible.\n"
-"  \\item In \\textbf{Campaign} or \\textbf{Cooperative} scenarios, Neutral Units are placed from left to right from the player's perspective.\n"
+"  \\item \\pagetarget{CombatAISetup}In \\textbf{Campaign} or \\textbf{Cooperative} scenarios, Neutral Units are placed from left to right from the player's perspective.\n"
 "First, place any \\svg{unit_ranged} Units in the Backline\\index{Units Placement}.\n"
 "Then, place any \\svg{unit_ground} or \\svg{unit_flying} Units in the Frontline.\n"
 "If there's not enough room to place a Unit in its correct line, place them in the other one.\n"
@@ -324,13 +345,24 @@ msgstr ""
 
 #. type: multicols
 #: sections/combat.tex:109
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{center}\n"
+#| "  \\includegraphics[width=\\linewidth]{\\art/earthquake.png}\n"
+#| "\\end{center}\n"
+#| "\n"
 msgid ""
 "\\begin{center}\n"
-"  \\includegraphics[width=0.55\\linewidth]{\\art/wyvern.png}\n"
+"  \\transparent{0.3}\\includegraphics[width=0.55\\linewidth]{\\art/wyvern.png}\n"
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\vfill\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=\\linewidth]{\\art/earthquake.png}\n"
+"\\end{center}\n"
+"\\vfill\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:115
@@ -434,7 +466,7 @@ msgid ""
 "\n"
 msgstr ""
 "\\vspace*{\\fill}\n"
-"\\includegraphics[width=\\linewidth]{\\art/cerberi.png}\n"
+"\\transparent{0.3}{\\includegraphics[width=\\linewidth]{\\art/cerberi.png}}\n"
 "\\subsection*{\\pagetarget{Combatexperience}{ניסיון קרב}}\n"
 "\n"
 
@@ -476,12 +508,21 @@ msgstr ""
 
 #. type: multicols
 #: sections/combat.tex:158
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\vfill\n"
+#| "\\hspace{-2em}\n"
+#| "\\includegraphics[width=\\linewidth]{\\art/behemoth.png}\n"
+#| "\n"
 msgid ""
 "\\vspace*{\\fill}\n"
-"\\hspace{-2em}\\includegraphics[width=\\linewidth]{\\art/gremlin.png}\n"
+"\\hspace{-2em}{\\transparent{0.3}\\includegraphics[width=\\linewidth]{\\art/gremlin.png}}\n"
 "\n"
 msgstr ""
+"\\vfill\n"
+"\\hspace{-2em}\n"
+"\\reflectbox{\\includegraphics[width=\\linewidth]{\\art/behemoth.png}}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:162
@@ -550,11 +591,16 @@ msgstr ""
 
 #. type: multicols*
 #: sections/combat.tex:189
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\hspace{1em}\\includegraphics[width=1.6\\linewidth]{\\art/minotaur.png}\n"
+#| "\n"
 msgid ""
-"\\includegraphics[width=\\linewidth]{\\art/prayer.png}\n"
+"{\\transparent{0.3}\\includegraphics[width=\\linewidth]{\\art/prayer.png}}\n"
 "\n"
 msgstr ""
+"\\hspace{1em}\\reflectbox{\\includegraphics[width=1.6\\linewidth]{\\art/minotaur.png}}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:202

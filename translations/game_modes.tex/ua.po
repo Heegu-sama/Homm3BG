@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2024-05-03 08:54+0100\n"
+"POT-Creation-Date: 2025-01-19 16:09+0000\n"
 "PO-Revision-Date: 2024-05-14 13:25+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,16 +17,16 @@ msgstr ""
 "X-Generator: Poedit 3.4.4\n"
 
 #. type: multicols
-#: sections/ai_heroes.tex:5 sections/all_map_locations.tex:5
-#: sections/all_map_locations.tex:419 sections/combat.tex:5
-#: sections/combat.tex:140 sections/credits.tex:7 sections/deckbuilding.tex:5
-#: sections/difficulty.tex:5 sections/expansion_content.tex:5
-#: sections/expansion_content.tex:49 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:73
-#: sections/map_elements.tex:118 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:5 sections/town.tex:5
-#: sections/trading.tex:4 sections/units.tex:5 sections/units.tex:161
+#: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
+#: sections/all_map_locations.tex:421 sections/combat.tex:7
+#: sections/credits.tex:10 sections/deckbuilding.tex:7
+#: sections/difficulty.tex:7 sections/expansion_content.tex:5
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
+#: sections/map_elements.tex:79 sections/map_elements.tex:124
+#: sections/player_turns.tex:7 sections/resources.tex:7
+#: sections/round_structure.tex:5 sections/scenario_end.tex:5
+#: sections/setup.tex:58 sections/town.tex:7 sections/trading.tex:7
+#: sections/units.tex:5 sections/units.tex:198
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -34,26 +34,13 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/all_map_locations.tex:52 sections/all_map_locations.tex:424
-#: sections/credits.tex:33 sections/difficulty.tex:16
-#: sections/expansion_content.tex:18 sections/expansion_content.tex:63
-#: sections/game_modes.tex:27 sections/scenario_end.tex:23
-#: sections/units.tex:106
+#: sections/all_map_locations.tex:54 sections/all_map_locations.tex:426
+#: sections/credits.tex:36 sections/difficulty.tex:18
+#: sections/game_modes.tex:30 sections/scenario_end.tex:23
+#: sections/units.tex:136
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
-"\n"
-msgstr ""
-
-#. type: multicols
-#: sections/all_map_locations.tex:132 sections/credits.tex:35
-#: sections/credits.tex:39 sections/expansion_content.tex:57
-#: sections/game_modes.tex:25 sections/round_structure.tex:28
-#: sections/setup.tex:64 sections/town.tex:28 sections/town.tex:34
-#: sections/units.tex:104
-#, no-wrap
-msgid ""
-"\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
 
@@ -64,23 +51,27 @@ msgid "\\addsection{Game Modes}{\\skills/intelligence.png}"
 msgstr "\\addsection{Режими Гри}{\\skills/intelligence.png}"
 
 #. type: multicols*
-#: sections/game_modes.tex:8
+#: sections/game_modes.tex:10
 #, no-wrap
 msgid ""
-"Each game of Heroes III is played using a Scenario from the Mission Book.\n"
-"There are four types of Scenarios:\n"
+"Each game of Heroes III is played using a \\textbf{Scenario} from the Mission Book.\n"
+"The core game only allows you to choose scenarios for 1-3 players. For 4 or more players, expansions are required.\\par\n"
+"In addition to the scenario objectives, read the \\pagelink{End}{general victory conditions} depending on the scenario type.\\par\n"
+"There are several types of scenarios:\n"
 "\n"
 msgstr ""
-"Кожна партія Heroes III грається за Сценарієм з Книги місій. \n"
-"Існує чотири типи Сценаріїв:\n"
-"\n"
 
 #. type: multicols*
-#: sections/game_modes.tex:11
-#, no-wrap
+#: sections/game_modes.tex:14
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{Clash}\n"
+#| "A fully competitive mode for 2--3 players.\n"
+#| "\n"
 msgid ""
 "\\subsection*{Clash}\n"
-"A fully competitive mode for 2--3 players.\n"
+"A fully competitive mode.\n"
+"Your opponents control Neutral Units in your Combat.\n"
 "\n"
 msgstr ""
 "\\subsection*{Сутичка}\n"
@@ -88,12 +79,18 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/game_modes.tex:16
-#, no-wrap
+#: sections/game_modes.tex:19
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{Campaign}\n"
+#| "A single player mode of interconnected Scenarios against an enemy AI.\n"
+#| "For rules unique to Solo Mode\\index{Solo Mode}, see \\pagelink{AIrules}{the AI rules} and \\pagelink{End}{Scenario end}.\n"
+#| "Further rules changes are detailed in the Campaign Mission Books.\n"
+#| "\n"
 msgid ""
 "\\subsection*{Campaign}\n"
-"A single player mode of interconnected Scenarios against an enemy AI.\n"
-"For rules unique to Solo Mode\\index{Solo Mode}, see \\pagelink{AIrules}{the AI rules} and \\pagelink{End}{Scenario end}.\n"
+"A single player mode\\index{Solo Mode} of interconnected Scenarios against an enemy AI.\n"
+"For rules unique to Solo Mode, see \\pagelink{AIrules}{the AI rules}.\n"
 "Further rules changes are detailed in the Campaign Mission Books.\n"
 "\n"
 msgstr ""
@@ -104,12 +101,16 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/game_modes.tex:20
-#, no-wrap
+#: sections/game_modes.tex:22
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{Alliance}\n"
+#| "A 2 vs.~2 team-based mode.\n"
+#| "You will need an expansion pack to play a 4-player game.\n"
+#| "\n"
 msgid ""
 "\\subsection*{Alliance}\n"
-"A 2 vs.~2 team-based mode.\n"
-"You will need an expansion pack to play a 4-player game.\n"
+"Usually a 2 vs.~2 team-based mode with expanded opportunities to \\pagelink{Trading}{trade} between allied players.\n"
 "\n"
 msgstr ""
 "\\subsection*{Альянс}\n"
@@ -118,21 +119,63 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/game_modes.tex:23
+#: sections/game_modes.tex:25
 #, no-wrap
 msgid ""
 "\\subsection*{Cooperative}\n"
-"A Cooperative mode for 2--3 players where everyone shares the same goal.\n"
+"A Cooperative mode where everyone shares the same goal. \\pagelink{AI Units}{The AI rules} and expanded \\pagelink{Trading}{Trading rules} apply here.\n"
 "\n"
 msgstr ""
-"\\subsection*{Кооператив}\n"
-"Кооперативний режим для 2--3 гравців, де всі мають спільну мету.\n"
-"\n"
 
 #. type: multicols*
-#: sections/game_modes.tex:29
+#: sections/game_modes.tex:28
 #, no-wrap
 msgid ""
-"\\includegraphics[width=\\linewidth]{\\art/archer.jpg}\n"
+"\\subsection*{Tournament}\n"
+"A 1 vs.~1 mode with different way of building Map and scoring. See the Tournament Book.\n"
 "\n"
 msgstr ""
+
+#. type: multicols*
+#: sections/game_modes.tex:32
+#, no-wrap
+msgid ""
+"In addition, the \\textbf{Battlefield Expansion} introduces two focused 1 vs.~1 modes without Scenarios (see the expansion's rulebook):\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/game_modes.tex:35
+#, no-wrap
+msgid ""
+"\\subsubsection*{Adventure}\n"
+"The Map exploration is replaced with Adventure Cards, culminating in a tactical combat on a large hexagonal battlefield.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/game_modes.tex:38
+#, no-wrap
+msgid ""
+"\\subsubsection*{Skirmish}\n"
+"Skip the exploration phase and engage directly in tactical combat.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/game_modes.tex:43
+#, fuzzy, no-wrap
+#| msgid ""
+#| "{\\centering\\phantom{Star Axis}\\par}\n"
+#| "\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
+#| "\n"
+msgid ""
+"\\bigskip\n"
+"\\vspace*{\\fill}\n"
+"\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
+"\\vspace*{\\fill}\n"
+"\n"
+msgstr ""
+"{\\centering\\phantom{Зоряна Вісь}\\par}\n"
+"\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
+"\n"
