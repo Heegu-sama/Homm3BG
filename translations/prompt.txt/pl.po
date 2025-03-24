@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG-rules-rewrite\n"
-"POT-Creation-Date: 2025-01-19 20:35+0100\n"
+"POT-Creation-Date: 2025-03-24 16:06+0100\n"
 "PO-Revision-Date: 2025-01-19 20:30+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -18,40 +18,36 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 
 #. type: Plain text
-#: tools/translation-ai-prompts/prompt.txt:5
+#: tools/translation-ai-prompts/prompt.txt:4
 msgid ""
 "We're translating board game rule book from English to [...].  The text is "
-"in LaTeX format, and the messages are in GNU gettext po format.  Output just "
-"the translated `msgstr` given the `msgid`, maintaining the original "
-"formatting and quotes.  Rules:"
+"in LaTeX format, and the messages are in GNU gettext po format.  Rules:"
 msgstr ""
 "We're translating board game rule book from English to Polish. The text is "
-"in LaTeX format, and the messages are in GNU gettext po format. Output just "
-"the translated `msgstr` given the `msgid`, maintaining the original "
-"formatting and quotes. Rules:"
+"in LaTeX format, and the messages are in GNU gettext po format. Rules:"
 
 #. type: Bullet: '1. '
-#: tools/translation-ai-prompts/prompt.txt:18
+#: tools/translation-ai-prompts/prompt.txt:17
 msgid "PO Format Rules. Both msgid and msgstr should:"
 msgstr ""
 
 #. type: Bullet: '   - '
-#: tools/translation-ai-prompts/prompt.txt:18
+#: tools/translation-ai-prompts/prompt.txt:17
 msgid "Start with an empty quoted string: `\"\"`"
 msgstr ""
 
 #. type: Bullet: '   - '
-#: tools/translation-ai-prompts/prompt.txt:18
+#: tools/translation-ai-prompts/prompt.txt:17
 msgid "Have each line on a new line"
 msgstr ""
 
 #. type: Bullet: '   - '
-#: tools/translation-ai-prompts/prompt.txt:18
+#: tools/translation-ai-prompts/prompt.txt:17
 msgid "Have each line surrounded by quotes"
 msgstr ""
 
 #. type: Plain text
-#: tools/translation-ai-prompts/prompt.txt:18
+#: tools/translation-ai-prompts/prompt.txt:17
 #, no-wrap
 msgid ""
 "   - End each quoted line with \\n\n"
@@ -73,22 +69,22 @@ msgstr ""
 "   \"Druga linia\\n\"\n"
 
 #. type: Bullet: '2. '
-#: tools/translation-ai-prompts/prompt.txt:39
+#: tools/translation-ai-prompts/prompt.txt:38
 msgid "LaTeX Commands"
 msgstr ""
 
 #. type: Bullet: '   - '
-#: tools/translation-ai-prompts/prompt.txt:39
+#: tools/translation-ai-prompts/prompt.txt:38
 msgid "Preserve all whitespace at the start of lines"
 msgstr ""
 
 #. type: Bullet: '   - '
-#: tools/translation-ai-prompts/prompt.txt:39
+#: tools/translation-ai-prompts/prompt.txt:38
 msgid "Keep all LaTeX commands exactly as they appear"
 msgstr ""
 
 #. type: Bullet: '   - '
-#: tools/translation-ai-prompts/prompt.txt:39
+#: tools/translation-ai-prompts/prompt.txt:38
 msgid ""
 "`\\pagetarget{...}{...}`: The first argument is not translated. For example, "
 "`\\pagetarget{Heroes}{Heroes}` translates to `\\pagetarget{Heroes}{[...]}`."
@@ -98,7 +94,7 @@ msgstr ""
 "{Bohaterowie}`."
 
 #. type: Bullet: '   - '
-#: tools/translation-ai-prompts/prompt.txt:39
+#: tools/translation-ai-prompts/prompt.txt:38
 msgid ""
 "`\\pagelink{...}{...}`: The first argument is not translated. For example, "
 "`\\pagelink{Combatexperience}{Combat}` translates to "
@@ -109,63 +105,63 @@ msgstr ""
 "`\\pagelink{Combatexperience}{Walka}`."
 
 #. type: Bullet: '   - '
-#: tools/translation-ai-prompts/prompt.txt:39
+#: tools/translation-ai-prompts/prompt.txt:38
 msgid ""
 "`\\index{...}`: The content within the `\\index{...}` command is translated."
 msgstr ""
 
 #. type: Bullet: '   - '
-#: tools/translation-ai-prompts/prompt.txt:39
+#: tools/translation-ai-prompts/prompt.txt:38
 msgid "Do not translate LaTeX command names"
 msgstr ""
 
 #. type: Bullet: '   - '
-#: tools/translation-ai-prompts/prompt.txt:39
+#: tools/translation-ai-prompts/prompt.txt:38
 msgid "Do not add or remove line breaks (\\n)"
 msgstr ""
 
 #. type: Bullet: '   - '
-#: tools/translation-ai-prompts/prompt.txt:39
+#: tools/translation-ai-prompts/prompt.txt:38
 msgid "Maintain all whitespace around LaTeX commands"
 msgstr ""
 
 #. type: Bullet: '   - '
-#: tools/translation-ai-prompts/prompt.txt:39
+#: tools/translation-ai-prompts/prompt.txt:38
 msgid "Maintain line breaks exactly as they appear in the source text"
 msgstr ""
 
 #. type: Bullet: '   - '
-#: tools/translation-ai-prompts/prompt.txt:39
+#: tools/translation-ai-prompts/prompt.txt:38
 msgid "Special commands to keep unchanged:"
 msgstr ""
 
 #. type: Bullet: '     - '
-#: tools/translation-ai-prompts/prompt.txt:39
+#: tools/translation-ai-prompts/prompt.txt:38
 msgid "SVG icons (\\svg{damage-table})"
 msgstr ""
 
 #. type: Bullet: '     - '
-#: tools/translation-ai-prompts/prompt.txt:39
+#: tools/translation-ai-prompts/prompt.txt:38
 msgid "Spacing commands (\\bigskip, \\hsize, etc.)"
 msgstr ""
 
 #. type: Bullet: '   - '
-#: tools/translation-ai-prompts/prompt.txt:39
+#: tools/translation-ai-prompts/prompt.txt:38
 msgid "For tables (like \\hommtable, \\tabularx):"
 msgstr ""
 
 #. type: Bullet: '     - '
-#: tools/translation-ai-prompts/prompt.txt:39
+#: tools/translation-ai-prompts/prompt.txt:38
 msgid "Keep all sizing parameters unchanged (e.g., {38}, {0.3\\hsize})"
 msgstr ""
 
 #. type: Bullet: '     - '
-#: tools/translation-ai-prompts/prompt.txt:39
+#: tools/translation-ai-prompts/prompt.txt:38
 msgid "Preserve all cell styling commands (\\darkcell, \\lightcell)"
 msgstr ""
 
 #. type: Plain text
-#: tools/translation-ai-prompts/prompt.txt:39
+#: tools/translation-ai-prompts/prompt.txt:38
 #, no-wrap
 msgid ""
 "     - Maintain table column specifications\n"
@@ -179,7 +175,7 @@ msgstr ""
 "   msgstr \"\\\\darkcell[1.5]{\\\\color{white}Poziom Trudności}\"\n"
 
 #. type: Plain text
-#: tools/translation-ai-prompts/prompt.txt:43
+#: tools/translation-ai-prompts/prompt.txt:42
 #, no-wrap
 msgid ""
 "3. Capitalization\n"
@@ -191,7 +187,7 @@ msgstr ""
 "If in English there is \"Hero\", the translation should also be capitalized (\"Bohater\", not \"bohater\").\n"
 
 #. type: Plain text
-#: tools/translation-ai-prompts/prompt.txt:49
+#: tools/translation-ai-prompts/prompt.txt:48
 #, no-wrap
 msgid ""
 "4. Example\n"
@@ -207,12 +203,39 @@ msgstr ""
 "\"  \\\\pagetarget{Heroes}{Gracze} zawsze dowodzą Bohaterem Głównym, mogą również zrekrutować Bohatera Pomocniczego.\\n\"\n"
 
 #. type: Bullet: '5. '
-#: tools/translation-ai-prompts/prompt.txt:51
+#: tools/translation-ai-prompts/prompt.txt:54
+msgid "Output"
+msgstr ""
+
+#. type: Bullet: '  - '
+#: tools/translation-ai-prompts/prompt.txt:54
+msgid "Output a copyable code block"
+msgstr ""
+
+#. type: Bullet: '  - '
+#: tools/translation-ai-prompts/prompt.txt:54
+msgid ""
+"Output just the translated `msgstr` given the `msgid`, maintaining the "
+"original formatting and quotes."
+msgstr ""
+
+#. type: Bullet: '  - '
+#: tools/translation-ai-prompts/prompt.txt:54
+msgid "If the code block starts with a line `msgstr \"\"`, omit this line"
+msgstr ""
+
+#. type: Bullet: '  - '
+#: tools/translation-ai-prompts/prompt.txt:54
+msgid "The block should include the final newline"
+msgstr ""
+
+#. type: Bullet: '6. '
+#: tools/translation-ai-prompts/prompt.txt:56
 msgid "Specific term translations without capitalization"
 msgstr ""
 
 #. type: Plain text
-#: tools/translation-ai-prompts/prompt.txt:63
+#: tools/translation-ai-prompts/prompt.txt:68
 #, no-wrap
 msgid ""
 "Factions:\n"
@@ -240,7 +263,7 @@ msgstr ""
 "   - \"tower\" translates to \"forteca\"\n"
 
 #. type: Plain text
-#: tools/translation-ai-prompts/prompt.txt:83
+#: tools/translation-ai-prompts/prompt.txt:88
 #, no-wrap
 msgid ""
 "Units:\n"
@@ -286,7 +309,7 @@ msgstr ""
 "   - \"zealots\" tarnslates to \"kapłani\"\n"
 
 #. type: Plain text
-#: tools/translation-ai-prompts/prompt.txt:95
+#: tools/translation-ai-prompts/prompt.txt:100
 #, no-wrap
 msgid ""
 "Heroes:\n"
@@ -314,7 +337,7 @@ msgstr ""
 "   - \"specialty\" translates to \"specjalność\"\n"
 
 #. type: Plain text
-#: tools/translation-ai-prompts/prompt.txt:112
+#: tools/translation-ai-prompts/prompt.txt:117
 #, no-wrap
 msgid ""
 "Map Locations:\n"
@@ -353,7 +376,7 @@ msgstr ""
 "   - \"water wheel\" translates to \"młyn wodny\"\n"
 
 #. type: Plain text
-#: tools/translation-ai-prompts/prompt.txt:119
+#: tools/translation-ai-prompts/prompt.txt:124
 #, no-wrap
 msgid ""
 "Resources:\n"
@@ -371,7 +394,7 @@ msgstr ""
 "   - \"valuables\" translates to \"kosztowności\"\n"
 
 #. type: Plain text
-#: tools/translation-ai-prompts/prompt.txt:131
+#: tools/translation-ai-prompts/prompt.txt:136
 #, no-wrap
 msgid ""
 "Deck-building:\n"
@@ -399,21 +422,23 @@ msgstr ""
 "   - \"spell cards\" translates to \"karty zaklęć\"\n"
 
 #. type: Plain text
-#: tools/translation-ai-prompts/prompt.txt:136
+#: tools/translation-ai-prompts/prompt.txt:142
 #, no-wrap
 msgid ""
 "AI Deck:\n"
 "   - \"magic card\" translates to \"[...]\"\n"
 "   - \"might card\" translates to \"[...]\"\n"
 "   - \"skill card\" translates to \"[...]\"\n"
+"   - \"ai deck\" translates to \"[...]\"\n"
 msgstr ""
 "AI Deck:\n"
 "   - \"magic card\" translates to \"karta magii\"\n"
 "   - \"might card\" translates to \"karta mocy\"\n"
 "   - \"skill card\" translates to \"karta umiejętności\"\n"
+"   - \"ai deck\" translates to \"talia ai\"\n"
 
 #. type: Plain text
-#: tools/translation-ai-prompts/prompt.txt:141
+#: tools/translation-ai-prompts/prompt.txt:147
 #, no-wrap
 msgid ""
 "Town:\n"
@@ -427,7 +452,7 @@ msgstr ""
 "   - \"population token\" translates to \"żeton populacji\"\n"
 
 #. type: Plain text
-#: tools/translation-ai-prompts/prompt.txt:150
+#: tools/translation-ai-prompts/prompt.txt:156
 #, no-wrap
 msgid ""
 "Combat:\n"
@@ -449,7 +474,7 @@ msgstr ""
 "   - \"winning combat\" translates to \"wygranie walki\"\n"
 
 #. type: Plain text
-#: tools/translation-ai-prompts/prompt.txt:159
+#: tools/translation-ai-prompts/prompt.txt:165
 #, no-wrap
 msgid ""
 "Other:\n"
