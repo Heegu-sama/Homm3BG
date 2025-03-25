@@ -92,16 +92,7 @@ if [[ ${LANGUAGE} != en ]]; then
 
     echo -e "---\npo4a failed for language ${LANGUAGE}, please fix the errors."
 
-    po_error_found=0
-    while IFS= read -r -d '' file; do
-      if ! msgfmt -c --check-format "$file" -o /dev/null 2>&1; then
-        po_error_found=1
-      fi
-    done < <(find translations -name "$LANGUAGE.po" -type f -print0)
-
-    if [[ $po_error_found -ne 0 ]]; then
-      echo "Please fix the issues with ${LANGUAGE}.po files before building."
-    fi
+    find translations -name "$LANGUAGE.po" -type f -exec msgfmt -c --check-format -o /dev/null '{}' \;
 
     exit 1
   fi
