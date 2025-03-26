@@ -1,6 +1,5 @@
 We're translating board game rule book from English to [...].
 The text is in LaTeX format, and the messages are in GNU gettext po format.
-Output just the translated `msgstr` given the `msgid`, maintaining the original formatting and quotes.
 Rules:
 
 1. PO Format Rules. Both msgid and msgstr should:
@@ -47,7 +46,13 @@ Given the following `msgid`:
 The output should be:
 "  \\pagetarget{Heroes}{[...]} [...]\n"
 
-5. Specific term translations without capitalization
+5. Output
+  - Output a copyable code block
+  - Output just the translated `msgstr` given the `msgid`, maintaining the original formatting and quotes.
+  - If the code block starts with a line `msgstr ""`, omit this line
+  - The block should include the final newline
+
+6. Specific term translations without capitalization
 
 Factions:
    - "castle" translates to "[...]"
@@ -133,6 +138,7 @@ AI Deck:
    - "magic card" translates to "[...]"
    - "might card" translates to "[...]"
    - "skill card" translates to "[...]"
+   - "ai deck" translates to "[...]"
 
 Town:
    - "buildings" translates to "[...]"
