@@ -8,8 +8,6 @@ on:
     branches: [main]
 
 env:
-  PO4A_VERSION: "0.73"
-  PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
   GHOSTSCRIPT_URL: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10030/gs_10.03.0_amd64_snap.tgz
   ARTIFACT_RETENTION_DAYS: 1
 
@@ -48,13 +46,30 @@ jobs:
 
       - name: Generate translations for ${{ matrix.language }}
         if: ${{ matrix.language != 'en' }}
-        run: |
-          sudo apt-get install -y po4a  # required as standalone po4a is missing some deps
-          wget --quiet ${{ env.PO4A_GH_URL }}/v${{ env.PO4A_VERSION }}/po4a-${{ env.PO4A_VERSION}}.tar.gz  # sadly the version from apt isn't working
-          export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
-          tar -xf ${PO4A_DIR}.tar.gz
-          export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
-          ./${PO4A_DIR}/po4a --no-update po4a.cfg
+        uses: qwrtln/po4a-action@v1
+        with:
+          version: "0.73"
+          config: "po4a.cfg"
+          args: "--no-update"
+
+      - name: Cache LaTeX packages and build
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.texlive
+            ~/.texmf-var
+            ./**/*.aux
+            ./**/*.log
+            ./**/*.toc
+            ./**/*.out
+          key: >-
+            texlive-${{ matrix.language }}-${{
+            matrix.language == 'en'
+            && hashFiles('main_en.tex', 'metadata.tex', 'sections/*.tex')
+            || hashFiles('main_${{ matrix.language }}.tex', 'metadata.tex', format('sections/translated/{0}/*.tex', matrix.language))
+            }}
+          restore-keys: |
+            texlive-${{ matrix.language }}-
 
       - name: Compile rule book
         uses: xu-cheng/latex-action@v3
