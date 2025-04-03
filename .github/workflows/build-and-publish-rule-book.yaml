@@ -59,9 +59,11 @@ jobs:
             ~/.texlive
             ~/.texmf-var
             ./**/*.aux
+            ./**/*.fdb_latexmk
+            ./**/*.fls
             ./**/*.log
-            ./**/*.toc
             ./**/*.out
+            ./**/*.toc
           key: >-
             texlive-${{ matrix.language }}-${{
             matrix.language == 'en'
