@@ -68,7 +68,7 @@ jobs:
             texlive-${{ matrix.language }}-${{
             matrix.language == 'en'
             && hashFiles('main_en.tex', 'metadata.tex', 'sections/*.tex')
-            || hashFiles('main_${{ matrix.language }}.tex', 'metadata.tex', format('sections/translated/{0}/*.tex', matrix.language))
+            || hashFiles(format('main_{0}.tex', matrix.language), 'metadata.tex', format('sections/translated/{0}/*.tex', matrix.language))
             }}
           restore-keys: |
             texlive-${{ matrix.language }}-
