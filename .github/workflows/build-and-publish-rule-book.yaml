@@ -84,33 +84,58 @@ jobs:
       fail-fast: false
       matrix:
         language: ["pl", "es", "fr", "ru", "ua", "de", "cs", "he"]
-        build_type: ["digital", "printable"]
     steps:
-      - name: Download English ${{ matrix.build_type }} page count artifact
+      - name: Download English digital page count artifact
         uses: actions/download-artifact@v4
         with:
-          name: en_${{ matrix.build_type }}_page_count
-          path: ./en_page_count
+          name: en_digital_page_count
+          path: ./en_digital_page_count
 
-      - name: Download ${{ matrix.language }}-${{ matrix.build_type }} page count artifact
+      - name: Download ${{ matrix.language }} digital page count artifact
         uses: actions/download-artifact@v4
         with:
-          name: ${{ matrix.language }}_${{ matrix.build_type }}_page_count
-          path: ./${{ matrix.language }}_page_count
+          name: ${{ matrix.language }}_digital_page_count
+          path: ./${{ matrix.language }}_digital_page_count
 
-      - name: Check number of pages
+      - name: Check number of pages for digital version
         run: |
-          EXPECTED_NUM_OF_PAGES=$(cat ./en_page_count/en_${{ matrix.build_type }}_page_count.txt)
-          ACTUAL_NUM_OF_PAGES=$(cat ./${{ matrix.language }}_page_count/${{ matrix.language }}_${{ matrix.build_type }}_page_count.txt)
+          EXPECTED_NUM_OF_PAGES=$(cat ./en_digital_page_count/en_digital_page_count.txt)
+          ACTUAL_NUM_OF_PAGES=$(cat ./${{ matrix.language }}_digital_page_count/${{ matrix.language }}_digital_page_count.txt)
 
           echo "Expected number of pages: ${EXPECTED_NUM_OF_PAGES}"
           echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
 
           if [[ ${EXPECTED_NUM_OF_PAGES} != ${ACTUAL_NUM_OF_PAGES} ]]; then
-            echo "The ${{ matrix.build_type }} document in ${{ matrix.language }} language doesn't have the correct number of pages. See the output above."
+            echo "The digital document in ${{ matrix.language }} language doesn't have the correct number of pages. See the output above."
+            exit 1
+          fi
+
+      - name: Download English printable page count artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: en_printable_page_count
+          path: ./en_printable_page_count
+
+      - name: Download ${{ matrix.language }} printable page count artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ matrix.language }}_printable_page_count
+          path: ./${{ matrix.language }}_printable_page_count
+
+      - name: Check number of pages for printable version
+        run: |
+          EXPECTED_NUM_OF_PAGES=$(cat ./en_printable_page_count/en_printable_page_count.txt)
+          ACTUAL_NUM_OF_PAGES=$(cat ./${{ matrix.language }}_printable_page_count/${{ matrix.language }}_printable_page_count.txt)
+
+          echo "Expected number of pages: ${EXPECTED_NUM_OF_PAGES}"
+          echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
+
+          if [[ ${EXPECTED_NUM_OF_PAGES} != ${ACTUAL_NUM_OF_PAGES} ]]; then
+            echo "The printable document in ${{ matrix.language }} language doesn't have the correct number of pages. See the output above."
             exit 1
           fi
 
       - uses: geekyeggo/delete-artifact@v5
+        if: ${{ always() }}
         with:
-          name: ${{ matrix.language }}_${{ matrix.build_type }}_page_count
+          name: ${{ matrix.language }}_*_page_count
