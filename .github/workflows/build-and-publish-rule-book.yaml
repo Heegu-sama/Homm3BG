@@ -33,7 +33,7 @@ jobs:
         EOF
         echo "matrix=$(jq -c . matrix.json)" >> $GITHUB_OUTPUT
 
-  standard-build:
+  build:
     needs: matrix-setup
     strategy:
       fail-fast: false
@@ -42,9 +42,9 @@ jobs:
     with:
       language: ${{ matrix.language }}
       luaengine: ${{ matrix.luaengine }}
-      build_type: standard
+      build_type: digital
 
-  printable-build:
+  printable_build:
     needs: matrix-setup
     strategy:
       fail-fast: false
@@ -55,7 +55,7 @@ jobs:
       luaengine: ${{ matrix.luaengine }}
       build_type: printable
 
-  economy-build:
+  economy_build:
     needs: matrix-setup
     if: github.event_name != 'pull_request'
     strategy:
@@ -78,41 +78,36 @@ jobs:
       #     force_orphan: true
 
   check_pages:
+    needs: [build, printable_build]
+    if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
-    needs: [standard-build, printable-build]
-    if: github.event_name == 'pull_request'
     strategy:
       fail-fast: false
       matrix:
         language: ["pl", "es", "fr", "ru", "ua", "de", "cs", "he"]
-
     steps:
-      - name: Install poppler
-        run: sudo apt-get update && sudo apt-get install -y poppler-utils
-
-      - name: Download PDFs
-        uses: actions/download-artifact@v4
-        with:
-          pattern: "*_${{ matrix.language }}"
-
       - name: Check number of pages in digital version
         run: |
-          file main_${{ matrix.language }}/main_${{ matrix.language }}.pdf
-          ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}/main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
-          echo "Expected number of pages: ${{ needs.build.outputs.number_of_pages }}"
+          EXPECTED_NUM_OF_PAGES="${{ needs.standard-build.outputs.en_num_of_pages }}"
+          ACTUAL_NUM_OF_PAGES="${{ needs.standard-build.outputs['${{ matrix.language }}_num_of_pages'] }}"
+
+          echo "Expected number of pages: ${EXPECTED_NUM_OF_PAGES}"
           echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
-          if [[ ${{ needs.build.outputs.number_of_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
+
+          if [[ ${EXPECTED_NUM_OF_PAGES} != ${ACTUAL_NUM_OF_PAGES} ]]; then
             echo "The digital document in ${{ matrix.language }} language doesn't have correct number of pages. See the output above."
             exit 1
           fi
 
       - name: Check number of pages in printable version
         run: |
-          file printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf
-          ACTUAL_NUM_OF_PAGES=$(pdfinfo printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
-          echo "Expected number of pages: ${{ needs.build.outputs.number_of_printable_pages }}"
+          EXPECTED_NUM_OF_PAGES="${{ needs.printable-build.outputs.en_num_of_pages }}"
+          ACTUAL_NUM_OF_PAGES="${{ needs.printable-build.outputs['${{ matrix.language }}_num_of_pages'] }}"
+
+          echo "Expected number of pages: ${EXPECTED_NUM_OF_PAGES}"
           echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
-          if [[ ${{ needs.build.outputs.number_of_printable_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
+
+          if [[ ${EXPECTED_NUM_OF_PAGES} != ${ACTUAL_NUM_OF_PAGES} ]]; then
             echo "The printable document in ${{ matrix.language }} language doesn't have correct number of pages. See the output above."
             exit 1
           fi

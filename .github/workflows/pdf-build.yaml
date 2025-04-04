@@ -14,8 +14,8 @@ on:
       build_type:
         required: true
         type: string
-        description: 'Type of build: standard, printable, or economy'
-        default: 'standard'
+        description: 'Type of build: digital, printable, or economy'
+        default: 'digital'
       artifact_retention_days:
         required: false
         type: number
@@ -71,7 +71,7 @@ jobs:
       - name: Set build environment variables
         id: set_env
         run: |
-          if [[ "${{ inputs.build_type }}" == "standard" ]]; then
+          if [[ "${{ inputs.build_type }}" == "digital" ]]; then
             echo "HOMM3_PRINTABLE=" >> $GITHUB_ENV
             echo "HOMM3_NO_ART_BACKGROUND=" >> $GITHUB_ENV
             echo "OUTPUT_FILENAME=main_${{ inputs.language }}.pdf" >> $GITHUB_ENV
@@ -106,7 +106,7 @@ jobs:
       - name: Optimize PDF
         run: |
           du -sh main_${{ inputs.language }}.pdf
-          if [[ "${{ inputs.build_type }}" == "standard" ]]; then
+          if [[ "${{ inputs.build_type }}" == "digital" ]]; then
             tools/optimize.sh ${{ inputs.language }}
           else
             tools/optimize.sh ${{ inputs.language }} --cmyk
