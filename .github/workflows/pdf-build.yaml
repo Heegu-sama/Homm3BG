@@ -36,13 +36,6 @@ jobs:
       - name: Set up repository
         uses: actions/checkout@v4
 
-
-      - name: Check files
-        run: |
-          rm .gitignore
-          git status
-          ls -l
-
       - name: Generate translations
         if: ${{ inputs.language != 'en' }}
         uses: qwrtln/po4a-action@v1
@@ -51,23 +44,17 @@ jobs:
           config: "po4a.cfg"
           args: "--no-update"
 
-      - name: Check files
-        run: |
-          git status
-          ls -l
-
       - name: Cache LaTeX packages and build
         uses: actions/cache@v4
         with:
           path: |
-            ~/.texlive
-            ~/.texmf-var
             ./**/*.aux
             ./**/*.fdb_latexmk
             ./**/*.fls
             ./**/*.log
             ./**/*.out
             ./**/*.toc
+            ./svg-inkscape
           key: >-
             texlive-${{ inputs.language }}-${{ inputs.build_type }}-${{
             inputs.language == 'en'
@@ -76,11 +63,6 @@ jobs:
             }}
           restore-keys: |
             texlive-${{ inputs.language }}-${{ inputs.build_type }}-
-
-      - name: Check files
-        run: |
-          git status
-          ls -l
 
       - name: Set build environment variables
         id: set_env
