@@ -36,6 +36,12 @@ jobs:
       - name: Set up repository
         uses: actions/checkout@v4
 
+      - name: Check files
+        run: |
+          rm .gitignore
+          git status
+          ls -l
+
       - name: Generate translations
         if: ${{ inputs.language != 'en' }}
         uses: qwrtln/po4a-action@v1
@@ -43,6 +49,11 @@ jobs:
           version: "0.73"
           config: "po4a.cfg"
           args: "--no-update"
+
+      - name: Check files
+        run: |
+          git status
+          ls -l
 
       - name: Cache LaTeX packages and build
         uses: actions/cache@v4
@@ -55,6 +66,7 @@ jobs:
             ./**/*.out
             ./**/*.toc
             ./svg-inkscape
+            ./.texcache
           key: >-
             texlive-${{ inputs.language }}-${{ inputs.build_type }}-${{
             inputs.language == 'en'
@@ -63,6 +75,11 @@ jobs:
             }}
           restore-keys: |
             texlive-${{ inputs.language }}-${{ inputs.build_type }}-
+
+      - name: Check files
+        run: |
+          git status
+          ls -l
 
       - name: Set build environment variables
         id: set_env
@@ -90,8 +107,23 @@ jobs:
           extra_system_packages: "inkscape"
           latexmk_use_lualatex: ${{ inputs.luaengine }}
           latexmk_shell_escape: true
-          pre_compile: export HOMM3_GITHUB_BUILD=1 HOMM3_PRINTABLE=${{ env.HOMM3_PRINTABLE }} HOMM3_NO_ART_BACKGROUND=${{ env.HOMM3_NO_ART_BACKGROUND }} HOMM3_LANG=${{ inputs.language }}
+          pre_compile: |
+            export HOMM3_GITHUB_BUILD=1 HOMM3_PRINTABLE=${{ env.HOMM3_PRINTABLE }} HOMM3_NO_ART_BACKGROUND=${{ env.HOMM3_NO_ART_BACKGROUND }} HOMM3_LANG=${{ inputs.language }}
+            if [ -d "./.texcache" ]; then
+              mkdir -p /opt/texlive/texdir/texmf-var /root/texlive/texmf-var
+              cp -r ./.texcache/* /opt/texlive/texdir/texmf-var/ 2>/dev/null || true
+              cp -r ./.texcache/* /root/texlive/texmf-var/ 2>/dev/null || true
+            fi
           root_file: main_${{ inputs.language }}.tex
+          post_compile: |
+            mkdir -p ./.texcache
+            # Copy from TeX directories to our cache directory
+            if [ -d "/opt/texlive/texdir/texmf-var" ]; then
+              cp -r /opt/texlive/texdir/texmf-var/* ./.texcache/ 2>/dev/null || true
+            fi
+            if [ -d "/root/texlive/texmf-var" ]; then
+              cp -r /root/texlive/texmf-var/* ./.texcache/ 2>/dev/null || true
+            fi
 
       - name: Check files
         run: |
