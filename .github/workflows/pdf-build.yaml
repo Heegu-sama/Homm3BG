@@ -36,12 +36,6 @@ jobs:
       - name: Set up repository
         uses: actions/checkout@v4
 
-      - name: Check files
-        run: |
-          rm .gitignore
-          git status
-          ls -la
-
       - name: Generate translations
         if: ${{ inputs.language != 'en' }}
         uses: qwrtln/po4a-action@v1
@@ -50,13 +44,6 @@ jobs:
           config: "po4a.cfg"
           args: "--no-update"
 
-      - name: Check files
-        run: |
-          git status
-          ls -la
-
-      # Caching stragegy based on texlive.profile of the GitHub action's container that follows
-      # https://github.com/xu-cheng/latex-docker/blob/master/texlive.profile
       - name: Cache LaTeX packages and build
         uses: actions/cache@v4
         with:
@@ -68,7 +55,6 @@ jobs:
             ./**/*.out
             ./**/*.toc
             ./svg-inkscape
-            ./.texcache
           key: >-
             texlive-${{ inputs.language }}-${{ inputs.build_type }}-${{
             inputs.language == 'en'
@@ -77,11 +63,6 @@ jobs:
             }}
           restore-keys: |
             texlive-${{ inputs.language }}-${{ inputs.build_type }}-
-
-      - name: Check files
-        run: |
-          git status
-          ls -la
 
       - name: Set build environment variables
         id: set_env
@@ -109,28 +90,8 @@ jobs:
           extra_system_packages: "inkscape"
           latexmk_use_lualatex: ${{ inputs.luaengine }}
           latexmk_shell_escape: true
-          pre_compile: |
-            export HOMM3_GITHUB_BUILD=1 HOMM3_PRINTABLE=${{ env.HOMM3_PRINTABLE }} HOMM3_NO_ART_BACKGROUND=${{ env.HOMM3_NO_ART_BACKGROUND }} HOMM3_LANG=${{ inputs.language }}
-            if [[ -d "./.texcache" ]]; then
-              mkdir -p /opt/texlive/texdir/texmf-var /root/texlive/texmf-var
-              cp -r ./.texcache/* /opt/texlive/texdir/texmf-var/ 2>/dev/null || true
-              cp -r ./.texcache/* /root/texlive/texmf-var/ 2>/dev/null || true
-            fi
+          pre_compile: export HOMM3_GITHUB_BUILD=1 HOMM3_PRINTABLE=${{ env.HOMM3_PRINTABLE }} HOMM3_NO_ART_BACKGROUND=${{ env.HOMM3_NO_ART_BACKGROUND }} HOMM3_LANG=${{ inputs.language }}
           root_file: main_${{ inputs.language }}.tex
-          post_compile: |
-            mkdir -p ./.texcache
-            # Copy from TeX directories to our cache directory
-            if [[ -d "/opt/texlive/texdir/texmf-var" ]]; then
-              cp -r /opt/texlive/texdir/texmf-var/* ./.texcache/ 2>/dev/null || true
-            fi
-            if [[ -d "/root/texlive/texmf-var" ]]; then
-              cp -r /root/texlive/texmf-var/* ./.texcache/ 2>/dev/null || true
-            fi
-
-      - name: Check files
-        run: |
-          git status
-          ls -l
 
       - name: Install ghostscript
         run: |
@@ -188,6 +149,7 @@ jobs:
           retention-days: ${{ inputs.artifact_retention_days }}
 
       - name: Upload page count artifact
+        if: ${{ github.event_name == 'pull_request' }}
         uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.language }}_${{ inputs.build_type }}_page_count
