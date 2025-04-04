@@ -111,6 +111,6 @@ jobs:
             exit 1
           fi
 
-      - uses: geekyeggo/delete-artifact@v2
+      - uses: geekyeggo/delete-artifact@v5
         with:
           name: ${{ matrix.language }}_${{ matrix.build_type }}_page_count

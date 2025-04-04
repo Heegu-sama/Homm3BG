@@ -36,6 +36,13 @@ jobs:
       - name: Set up repository
         uses: actions/checkout@v4
 
+
+      - name: Check files
+        run: |
+          rm .gitignore
+          git status
+          ls -l
+
       - name: Generate translations
         if: ${{ inputs.language != 'en' }}
         uses: qwrtln/po4a-action@v1
@@ -43,6 +50,11 @@ jobs:
           version: "0.73"
           config: "po4a.cfg"
           args: "--no-update"
+
+      - name: Check files
+        run: |
+          git status
+          ls -l
 
       - name: Cache LaTeX packages and build
         uses: actions/cache@v4
@@ -64,6 +76,11 @@ jobs:
             }}
           restore-keys: |
             texlive-${{ inputs.language }}-${{ inputs.build_type }}-
+
+      - name: Check files
+        run: |
+          git status
+          ls -l
 
       - name: Set build environment variables
         id: set_env
@@ -93,6 +110,11 @@ jobs:
           latexmk_shell_escape: true
           pre_compile: export HOMM3_GITHUB_BUILD=1 HOMM3_PRINTABLE=${{ env.HOMM3_PRINTABLE }} HOMM3_NO_ART_BACKGROUND=${{ env.HOMM3_NO_ART_BACKGROUND }} HOMM3_LANG=${{ inputs.language }}
           root_file: main_${{ inputs.language }}.tex
+
+      - name: Check files
+        run: |
+          git status
+          ls -l
 
       - name: Install ghostscript
         run: |
