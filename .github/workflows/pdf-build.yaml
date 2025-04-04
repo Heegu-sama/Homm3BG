@@ -21,10 +21,7 @@ on:
         type: number
         default: 1
         description: 'Number of days to retain artifacts'
-    outputs:
-      num_of_pages:
-        description: 'Number of pages in the PDF'
-        value: ${{ jobs.build.outputs.num_of_pages }}
+
 
 env:
   GHOSTSCRIPT_URL: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10030/gs_10.03.0_amd64_snap.tgz
@@ -123,11 +120,11 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
 
       - name: Check number of pages
-        id: check_pages
         run: |
           NUM_OF_PAGES=$(pdfinfo output/${{ env.OUTPUT_FILENAME }} | awk '/^Pages:/ {print $2}')
-          echo "num_of_pages=${NUM_OF_PAGES}" >> "$GITHUB_OUTPUT"
           echo "Number of pages: ${NUM_OF_PAGES}"
+          mkdir -p page_count
+          echo "${NUM_OF_PAGES}" > page_count/${{ inputs.language }}_${{ inputs.build_type }}_page_count.txt
 
       - name: Check for broken CMap
         run: |
@@ -150,4 +147,11 @@ jobs:
         with:
           name: ${{ env.ARTIFACT_NAME }}
           path: output/${{ env.OUTPUT_FILENAME }}
+          retention-days: ${{ inputs.artifact_retention_days }}
+
+      - name: Upload page count artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.language }}_${{ inputs.build_type }}_page_count
+          path: page_count/${{ inputs.language }}_${{ inputs.build_type }}_page_count.txt
           retention-days: ${{ inputs.artifact_retention_days }}
