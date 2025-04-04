@@ -102,10 +102,10 @@ jobs:
       - name: Optimize PDF
         run: |
           du -sh main_${{ inputs.language }}.pdf
-          if [[ "${{ inputs.build_type }}" == "digital" ]]; then
-            tools/optimize.sh ${{ inputs.language }}
-          else
+          if [[ "${{ inputs.build_type }}" == "printable" ]]; then
             tools/optimize.sh ${{ inputs.language }} --cmyk
+          else
+            tools/optimize.sh ${{ inputs.language }}
           fi
           mv main_${{ inputs.language }}_optimized.pdf main_${{ inputs.language }}.pdf
           du -sh main_${{ inputs.language }}.pdf
@@ -149,7 +149,7 @@ jobs:
           retention-days: ${{ inputs.artifact_retention_days }}
 
       - name: Upload page count artifact
-        if: ${{ github.event_name == 'pull_request' }}
+        if: ${{ github.event_name == 'pull_request' && inputs.build_type != 'economy' }}
         uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.language }}_${{ inputs.build_type }}_page_count

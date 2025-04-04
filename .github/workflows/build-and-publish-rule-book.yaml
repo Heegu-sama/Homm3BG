@@ -56,7 +56,7 @@ jobs:
 
   economy_build:
     needs: matrix-setup
-    # if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request'
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
@@ -133,7 +133,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     needs: [digital_build, printable_build, economy_build]
-    # if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request'
     strategy:
       fail-fast: false
       matrix:
@@ -153,7 +153,6 @@ jobs:
         run: ls -la ${{ matrix.language }}
 
       - name: Publish ${{ matrix.language }} in artifacts repository
-        if: github.event_name != 'pull_request'
         uses: peaceiris/actions-gh-pages@v4
         with:
           deploy_key: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}
