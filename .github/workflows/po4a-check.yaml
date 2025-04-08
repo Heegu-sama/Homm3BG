@@ -4,10 +4,6 @@ on:
   pull_request:
     branches: [main]
 
-env:
-  PO4A_VERSION: "0.73"
-  PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
-
 jobs:
   check_po4a:
     if: github.event_name == 'pull_request'
@@ -17,18 +13,15 @@ jobs:
       - name: Set up repository
         uses: actions/checkout@v4
 
-      - name: Install po4a
-        run: |
-          sudo apt-get install -y po4a  # required as standalone po4a is missing some deps
-          wget --quiet ${{ env.PO4A_GH_URL }}/v${{ env.PO4A_VERSION }}/po4a-${{ env.PO4A_VERSION}}.tar.gz  # sadly the version from apt isn't working
-          export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
-          tar -xf ${PO4A_DIR}.tar.gz
+      - name: Run po4a
+        uses: qwrtln/po4a-action@v1
+        with:
+          version: "0.73"
+          config: "po4a.cfg"
+          args: "--no-translations"
 
       - name: Check if translations require updating
         run: |
-          export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
-          export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
-          ./${PO4A_DIR}/po4a --no-translations po4a.cfg
           if [[ `git status --porcelain translations` ]]; then
             echo "There are uncommited changes to translations:"
             git status --porcelain translations

@@ -7,194 +7,127 @@ on:
   pull_request:
     branches: [main]
 
-env:
-  PO4A_VERSION: "0.73"
-  PO4A_GH_URL: https://github.com/mquinson/po4a/releases/download
-  GHOSTSCRIPT_URL: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10030/gs_10.03.0_amd64_snap.tgz
-  ARTIFACT_RETENTION_DAYS: 1
-
 jobs:
-  build:
+  matrix-setup:
     runs-on: ubuntu-latest
     outputs:
-      number_of_pages: ${{ steps.check_pages.outputs.num_of_pages }}
-      number_of_printable_pages: ${{ steps.check_printable_pages.outputs.num_of_printable_pages }}
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+    - id: set-matrix
+      run: |
+        cat << 'EOF' > matrix.json
+        {
+          "include": [
+            { "language": "en", "luaengine": false },
+            { "language": "pl", "luaengine": false },
+            { "language": "es", "luaengine": false },
+            { "language": "fr", "luaengine": false },
+            { "language": "ru", "luaengine": true },
+            { "language": "ua", "luaengine": true },
+            { "language": "de", "luaengine": false },
+            { "language": "cs", "luaengine": true },
+            { "language": "he", "luaengine": true }
+          ]
+        }
+        EOF
+        echo "matrix=$(jq -c . matrix.json)" >> $GITHUB_OUTPUT
+
+  digital_build:
+    needs: matrix-setup
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
+    uses: ./.github/workflows/pdf-build.yaml
+    with:
+      language: ${{ matrix.language }}
+      luaengine: ${{ matrix.luaengine }}
+      build_type: digital
+
+  printable_build:
+    needs: matrix-setup
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
+    uses: ./.github/workflows/pdf-build.yaml
+    with:
+      language: ${{ matrix.language }}
+      luaengine: ${{ matrix.luaengine }}
+      build_type: printable
+      convert_to_cmyk: true
+
+  economy_build:
+    needs: matrix-setup
+    if: github.event_name != 'pull_request'
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
+    uses: ./.github/workflows/pdf-build.yaml
+    with:
+      language: ${{ matrix.language }}
+      luaengine: ${{ matrix.luaengine }}
+      build_type: economy
+
+  check_pages:
+    needs: [digital_build, printable_build]
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    container:
+      image: minidocks/poppler
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - language: en
-            luaengine: false
-          - language: pl
-            luaengine: false
-          - language: es
-            luaengine: false
-          - language: fr
-            luaengine: false
-          - language: ru
-            luaengine: true
-          - language: ua
-            luaengine: true
-          - language: de
-            luaengine: false
-          - language: cs
-            luaengine: true
-          - language: he
-            luaengine: true
-
+        language: ["pl", "es", "fr", "ru", "ua", "de", "cs", "he"]
     steps:
-      - name: Set up repository
-        uses: actions/checkout@v4
-
-      - name: Generate translations for ${{ matrix.language }}
-        if: ${{ matrix.language != 'en' }}
-        run: |
-          sudo apt-get install -y po4a  # required as standalone po4a is missing some deps
-          wget --quiet ${{ env.PO4A_GH_URL }}/v${{ env.PO4A_VERSION }}/po4a-${{ env.PO4A_VERSION}}.tar.gz  # sadly the version from apt isn't working
-          export PO4A_DIR="po4a-${{ env.PO4A_VERSION }}"
-          tar -xf ${PO4A_DIR}.tar.gz
-          export PERL5LIB="${PO4A_DIR}/lib:${PERL5LIB}"
-          ./${PO4A_DIR}/po4a --no-update po4a.cfg
-
-      - name: Compile rule book
-        uses: xu-cheng/latex-action@v3
-        with:
-          extra_system_packages: "inkscape"
-          latexmk_use_lualatex: ${{ matrix.luaengine }}
-          latexmk_shell_escape: true
-          pre_compile: export HOMM3_GITHUB_BUILD=1
-          root_file: main_${{ matrix.language }}.tex
-
-      - name: Install ghostscript
-        run: |
-          wget --quiet ${{ env.GHOSTSCRIPT_URL }}
-          tar -xvf *_amd64_snap.tgz
-          sudo snap install ./*_amd64_snap/*_amd64.snap --devmode
-
-      - name: Optimize PDF
-        run: |
-          du -sh main_${{ matrix.language }}.pdf
-          tools/optimize.sh ${{ matrix.language }}
-          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
-          du -sh main_${{ matrix.language }}.pdf
-
-      - uses: actions/upload-artifact@v4
-        if: github.event_name == 'pull_request'
+      - name: Download digital PDF
+        uses: actions/download-artifact@v4
         with:
           name: main_${{ matrix.language }}
-          path: main_${{ matrix.language }}.pdf
-          retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
 
-      - name: Install poppler
-        if: github.event_name == 'pull_request'
-        run: sudo apt-get update && sudo apt-get install -y poppler-utils
-
-      - name: Check number of pages
-        id: check_pages
-        if: ${{ matrix.language == 'en' }}
+      - name: Check number of pages in digital version
         run: |
-          NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
-          echo "NUM_OF_PAGES=${NUM_OF_PAGES}" >> "$GITHUB_OUTPUT"
-
-      - name: Check for broken CMap
-        if: github.event_name == 'pull_request'
-        run: |
-          NEEDLE="$(grep TEST_SUBSTRING= main_${{ matrix.language }}.tex | cut -f2 -d=)"
-          if [[ -z "$NEEDLE" ]]; then
-            echo "No TEST_SUBSTRING found in main_${{ matrix.language }}.tex."
-            exit 1
-          fi
-          pdftotext main_${{ matrix.language }}.pdf - | tr '\n' ' ' > main_${{ matrix.language }}.txt
-          if grep -iq "$NEEDLE" main_${{ matrix.language }}.txt
-          then
-            echo "All good"
-          else
-            echo "The CMap in main_${{ matrix.language }}.pdf file is broken. See the output of 'Optimize PDF' step above."
+          ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          echo "Expected number of pages: ${{ needs.digital_build.outputs.number_of_pages }}"
+          echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
+          if [[ ${{ needs.digital_build.outputs.number_of_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
+            echo "The digital document in ${{ matrix.language }} language doesn't have correct number of pages. See the output above."
             exit 1
           fi
 
-      - name: Move file
-        run: |
-          mkdir ${{ matrix.language }}
-          mv main_${{ matrix.language }}.pdf ${{ matrix.language }}
-
-      - name: Prepare for printable
-        run: |
-          rm *.aux
-
-      - name: Compile printable rule book
-        uses: xu-cheng/latex-action@v3
-        with:
-          extra_system_packages: "inkscape"
-          pre_compile: export HOMM3_PRINTABLE=1 HOMM3_LANG=${{ matrix.language }} HOMM3_GITHUB_BUILD=1
-          latexmk_use_lualatex: ${{ matrix.luaengine }}
-          latexmk_shell_escape: true
-          root_file: main_${{ matrix.language }}.tex
-
-      - name: Optimize PDF
-        run: |
-          du -sh main_${{ matrix.language }}.pdf
-          tools/optimize.sh ${{ matrix.language }} --cmyk
-          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
-          du -sh main_${{ matrix.language }}.pdf
-
-      - name: Move file
-        run: |
-          mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
-
-      - uses: actions/upload-artifact@v4
-        if: github.event_name == 'pull_request'
+      - name: Download printable PDF
+        uses: actions/download-artifact@v4
         with:
           name: printable_${{ matrix.language }}
-          path: ${{ matrix.language }}/printable_${{ matrix.language }}.pdf
-          retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
 
-      - name: Check number of printable pages
-        id: check_printable_pages
-        if: ${{ matrix.language == 'en' }}
+      - name: Check number of pages in printable version
         run: |
-          NUM_OF_PAGES=$(pdfinfo ${{ matrix.language }}/printable_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
-          echo "NUM_OF_PRINTABLE_PAGES=${NUM_OF_PAGES}" >> "$GITHUB_OUTPUT"
-
-      - name: Check if printable page number matches
-        if: ${{ matrix.language == 'en' && github.event_name == 'pull_request' }}
-        run: |
-          PAGES_DIGITAL="${{ steps.check_pages.outputs.num_of_pages }}"
-          PAGES_PRINTABLE="${{ steps.check_printable_pages.outputs.num_of_printable_pages }}"
-          echo "Number of pages in digital:   ${PAGES_DIGITAL}"
-          echo "Number of pages in printable: ${PAGES_PRINTABLE}"
-          # The goal of this check is to make sure that printable version has 56 pages - divisible by 4 to be print friendly.
-          # Currenty, digital version has 54 pages, so the printable should have 2 more, hence +2 in the check.
-          if [[ $((${PAGES_DIGITAL}+2)) != ${PAGES_PRINTABLE} ]]; then
-            echo "Pages in digital and printable versions differ by too much. See above. Please investigate this."
+          ACTUAL_NUM_OF_PAGES=$(pdfinfo printable_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          echo "Expected number of pages: ${{ needs.printable_build.outputs.number_of_pages }}"
+          echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
+          if [[ ${{ needs.printable_build.outputs.number_of_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
+            echo "The digital document in ${{ matrix.language }} language doesn't have correct number of pages. See the output above."
             exit 1
           fi
 
-      - name: Compile economy printable rule book without art backgrounds
-        uses: xu-cheng/latex-action@v3
-        if: github.event_name != 'pull_request'
+  publish:
+    runs-on: ubuntu-latest
+    needs: [digital_build, printable_build, economy_build]
+    if: github.event_name != 'pull_request'
+    strategy:
+      fail-fast: false
+      matrix:
+        language: ["en", "pl", "es", "fr", "ru", "ua", "de", "cs", "he"]
+    steps:
+      - name: Create dir
+        run: mkdir ${{ matrix.language }}
+
+      - name: Download compiled books
+        uses: actions/download-artifact@v4
         with:
-          extra_system_packages: "inkscape"
-          pre_compile: export HOMM3_PRINTABLE=1 HOMM3_NO_ART_BACKGROUND=1 HOMM3_LANG=${{ matrix.language }} HOMM3_GITHUB_BUILD=1
-          latexmk_use_lualatex: ${{ matrix.luaengine }}
-          latexmk_shell_escape: true
-          root_file: main_${{ matrix.language }}.tex
-
-      - name: Optimize PDF
-        if: github.event_name != 'pull_request'
-        run: |
-          du -sh main_${{ matrix.language }}.pdf
-          tools/optimize.sh ${{ matrix.language }} --cmyk
-          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
-          du -sh main_${{ matrix.language }}.pdf
-
-      - name: Move file
-        if: github.event_name != 'pull_request'
-        run: |
-          mv main_${{ matrix.language }}.pdf ${{ matrix.language }}/economy_printable_${{ matrix.language }}.pdf
+          pattern: "*_${{ matrix.language }}"
+          path: ${{ matrix.language }}
+          merge-multiple: true
 
       - name: Publish ${{ matrix.language }} in artifacts repository
-        if: github.event_name != 'pull_request'
         uses: peaceiris/actions-gh-pages@v4
         with:
           deploy_key: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}
@@ -202,43 +135,3 @@ jobs:
           publish_branch: ${{ matrix.language }}
           publish_dir: ./${{ matrix.language }}
           force_orphan: true
-
-  check_pages:
-    runs-on: ubuntu-latest
-    needs: build
-    if: github.event_name == 'pull_request'
-    strategy:
-      fail-fast: false
-      matrix:
-        language: ["pl", "es", "fr", "ru", "ua", "de", "cs", "he"]
-
-    steps:
-      - name: Install poppler
-        run: sudo apt-get update && sudo apt-get install -y poppler-utils
-
-      - name: Download PDFs
-        uses: actions/download-artifact@v4
-        with:
-          pattern: "*_${{ matrix.language }}"
-
-      - name: Check number of pages in digital version
-        run: |
-          file main_${{ matrix.language }}/main_${{ matrix.language }}.pdf
-          ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}/main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
-          echo "Expected number of pages: ${{ needs.build.outputs.number_of_pages }}"
-          echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
-          if [[ ${{ needs.build.outputs.number_of_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
-            echo "The digital document in ${{ matrix.language }} language doesn't have correct number of pages. See the output above."
-            exit 1
-          fi
-
-      - name: Check number of pages in printable version
-        run: |
-          file printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf
-          ACTUAL_NUM_OF_PAGES=$(pdfinfo printable_${{ matrix.language }}/printable_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
-          echo "Expected number of pages: ${{ needs.build.outputs.number_of_printable_pages }}"
-          echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
-          if [[ ${{ needs.build.outputs.number_of_printable_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
-            echo "The printable document in ${{ matrix.language }} language doesn't have correct number of pages. See the output above."
-            exit 1
-          fi

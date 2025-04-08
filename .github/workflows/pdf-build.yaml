@@ -1,0 +1,131 @@
+name: Build PDF Document
+
+on:
+  workflow_call:
+    inputs:
+      language:
+        required: true
+        type: string
+        description: 'Language code (e.g., en, pl, fr)'
+      luaengine:
+        required: true
+        type: boolean
+        description: 'Whether to use LuaLaTeX'
+      build_type:
+        required: true
+        type: string
+        description: 'Type of build: digital, printable, or economy'
+        default: 'digital'
+      convert_to_cmyk:
+        required: false
+        type: boolean
+        default: false
+      artifact_retention_days:
+        required: false
+        type: number
+        default: 1
+        description: 'Number of days to retain artifacts'
+    outputs:
+      number_of_pages:
+        value: ${{ jobs.build.outputs.number_of_pages }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      number_of_pages: ${{ steps.check_pages.outputs.number_of_pages }}
+
+    steps:
+      - name: Set up repository
+        uses: actions/checkout@v4
+
+      - name: Generate translations
+        if: ${{ inputs.language != 'en' }}
+        uses: qwrtln/po4a-action@v1
+        with:
+          version: "0.73"
+          config: "po4a.cfg"
+          args: "--no-update"
+
+      - name: Cache LaTeX packages and build
+        uses: actions/cache@v4
+        with:
+          path: |
+            ./**/*.aux
+            ./**/*.fdb_latexmk
+            ./**/*.fls
+            ./**/*.log
+            ./**/*.out
+            ./**/*.toc
+            ./svg-inkscape
+          key: >-
+            texlive-${{ inputs.language }}-${{ inputs.build_type }}-${{
+            inputs.language == 'en'
+            && hashFiles('main_en.tex', 'metadata.tex', 'sections/*.tex')
+            || hashFiles(format('main_{0}.tex', inputs.language), 'metadata.tex', format('sections/translated/{0}/*.tex', inputs.language))
+            }}
+          restore-keys: |
+            texlive-${{ inputs.language }}-${{ inputs.build_type }}-
+
+      - name: Set build environment variables
+        id: set_env
+        run: |
+          if [[ "${{ inputs.build_type }}" == "digital" ]]; then
+            echo "HOMM3_PRINTABLE=" >> $GITHUB_ENV
+            echo "HOMM3_NO_ART_BACKGROUND=" >> $GITHUB_ENV
+            echo "OUTPUT_FILENAME=main_${{ inputs.language }}.pdf" >> $GITHUB_ENV
+            echo "ARTIFACT_NAME=main_${{ inputs.language }}" >> $GITHUB_ENV
+          elif [[ "${{ inputs.build_type }}" == "printable" ]]; then
+            echo "HOMM3_PRINTABLE=1" >> $GITHUB_ENV
+            echo "HOMM3_NO_ART_BACKGROUND=" >> $GITHUB_ENV
+            echo "OUTPUT_FILENAME=printable_${{ inputs.language }}.pdf" >> $GITHUB_ENV
+            echo "ARTIFACT_NAME=printable_${{ inputs.language }}" >> $GITHUB_ENV
+          elif [[ "${{ inputs.build_type }}" == "economy" ]]; then
+            echo "HOMM3_PRINTABLE=1" >> $GITHUB_ENV
+            echo "HOMM3_NO_ART_BACKGROUND=1" >> $GITHUB_ENV
+            echo "OUTPUT_FILENAME=economy_printable_${{ inputs.language }}.pdf" >> $GITHUB_ENV
+            echo "ARTIFACT_NAME=economy_printable_${{ inputs.language }}" >> $GITHUB_ENV
+          fi
+
+      - name: Compile PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          extra_system_packages: "inkscape"
+          latexmk_use_lualatex: ${{ inputs.luaengine }}
+          latexmk_shell_escape: true
+          pre_compile: export HOMM3_GITHUB_BUILD=1 HOMM3_PRINTABLE=${{ env.HOMM3_PRINTABLE }} HOMM3_NO_ART_BACKGROUND=${{ env.HOMM3_NO_ART_BACKGROUND }} HOMM3_LANG=${{ inputs.language }}
+          root_file: main_${{ inputs.language }}.tex
+
+      - name: Find test string
+        id: test
+        if: github.event_name == 'pull_request'
+        run: |
+          NEEDLE="$(grep TEST_SUBSTRING= main_${{ inputs.language }}.tex | cut -f2 -d=)"
+          if [[ -z "$NEEDLE" ]]; then
+            echo "No TEST_SUBSTRING found in main_${{ inputs.language }}.tex."
+            exit 1
+          fi
+          echo "NEEDLE=$NEEDLE" >> $GITHUB_OUTPUT
+
+      - name: Optimize PDF
+        id: optimize
+        uses: qwrtln/optimize-pdf@v1
+        with:
+          file-name: main_${{ inputs.language }}.pdf
+          quality-level: prepress
+          output-file: ${{ env.OUTPUT_FILENAME }}
+          test-string: ${{ steps.test.outputs.needle }}
+          convert-to-cmyk: ${{ inputs.convert_to_cmyk }}
+
+      - name: Check number of pages
+        if: ${{ inputs.language == 'en' }}
+        id: check_pages
+        run: |
+          echo "number_of_pages=${{ steps.optimize.outputs.page-count }}" > $GITHUB_OUTPUT
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ARTIFACT_NAME }}
+          path: ${{ env.OUTPUT_FILENAME }}
+          retention-days: ${{ inputs.artifact_retention_days }}
