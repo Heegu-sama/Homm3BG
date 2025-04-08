@@ -4,14 +4,11 @@ on:
   workflow_dispatch:
 
 env:
-  GHOSTSCRIPT_URL: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10050/gs_10.05_amd64_snap.tgz
   ARTIFACT_RETENTION_DAYS: 1
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    outputs:
-      artifact_name: ${{ steps.artifact_name.outputs.artifact_name }}
     strategy:
       fail-fast: false
       matrix:
@@ -56,12 +53,6 @@ jobs:
           config: "po4a.cfg"
           args: "--no-update"
 
-      - name: Install ghostscript
-        run: |
-          wget --quiet ${{ env.GHOSTSCRIPT_URL }}
-          tar -xvf *_amd64_snap.tgz
-          sudo snap install ./*_amd64_snap/*_amd64.snap --devmode
-
       - name: Set version
         run: echo "VERSION=$(cat .version | tr . _)" >> $GITHUB_ENV
 
@@ -80,15 +71,11 @@ jobs:
           root_file: main_${{ matrix.language }}.tex
 
       - name: Optimize PDF
-        run: |
-          du -sh main_${{ matrix.language }}.pdf
-          tools/optimize.sh ${{ matrix.language }}
-          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
-          du -sh main_${{ matrix.language }}.pdf
-
-      - name: Rename file
-        run: |
-          mv "main_${{ matrix.language }}.pdf" "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}.pdf"
+        uses: qwrtln/optimize-pdf@v1
+        with:
+          file-name: main_${{ inputs.language }}.pdf
+          quality-level: prepress
+          output-file: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}.pdf"
 
       - name: Prepare for printable
         run: rm *.aux
@@ -103,15 +90,12 @@ jobs:
           root_file: main_${{ matrix.language }}.tex
 
       - name: Optimize PDF
-        run: |
-          du -sh main_${{ matrix.language }}.pdf
-          tools/optimize.sh ${{ matrix.language }} --cmyk
-          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
-          du -sh main_${{ matrix.language }}.pdf
-
-      - name: Rename file
-        run: |
-          mv "main_${{ matrix.language }}.pdf" "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Printable.pdf"
+        uses: qwrtln/optimize-pdf@v1
+        with:
+          file-name: main_${{ inputs.language }}.pdf
+          quality-level: prepress
+          output-file: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Printable.pdf"
+          convert-to-cmyk: true
 
       - name: Compile economy printable rule book without art backgrounds
         uses: xu-cheng/latex-action@v3
@@ -123,18 +107,14 @@ jobs:
           root_file: main_${{ matrix.language }}.tex
 
       - name: Optimize PDF
-        run: |
-          du -sh main_${{ matrix.language }}.pdf
-          tools/optimize.sh ${{ matrix.language }} --cmyk
-          mv main_${{ matrix.language }}_optimized.pdf main_${{ matrix.language }}.pdf
-          du -sh main_${{ matrix.language }}.pdf
-
-      - name: Rename file
-        run: |
-          mv "main_${{ matrix.language }}.pdf" "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Economy_Printable.pdf"
+        uses: qwrtln/optimize-pdf@v1
+        with:
+          file-name: main_${{ inputs.language }}.pdf
+          quality-level: prepress
+          output-file: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Economy_Printable.pdf"
 
       - uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.artifact_name.outputs.artifact_name }}
-          path: "*.pdf"
+          path: "Heroes3*.pdf"
           retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}

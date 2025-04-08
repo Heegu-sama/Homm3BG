@@ -53,6 +53,7 @@ jobs:
       language: ${{ matrix.language }}
       luaengine: ${{ matrix.luaengine }}
       build_type: printable
+      convert_to_cmyk: true
 
   economy_build:
     needs: matrix-setup
@@ -70,65 +71,42 @@ jobs:
     needs: [digital_build, printable_build]
     if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
+    container:
+      image: minidocks/poppler
     strategy:
       fail-fast: false
       matrix:
         language: ["pl", "es", "fr", "ru", "ua", "de", "cs", "he"]
     steps:
-      - name: Download English digital page count artifact
+      - name: Download digital PDF
         uses: actions/download-artifact@v4
         with:
-          name: en_digital_page_count
-          path: ./en_digital_page_count
+          name: main_${{ matrix.language }}
 
-      - name: Download ${{ matrix.language }} digital page count artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: ${{ matrix.language }}_digital_page_count
-          path: ./${{ matrix.language }}_digital_page_count
-
-      - name: Check number of pages for digital version
+      - name: Check number of pages in digital version
         run: |
-          EXPECTED_NUM_OF_PAGES=$(cat ./en_digital_page_count/en_digital_page_count.txt)
-          ACTUAL_NUM_OF_PAGES=$(cat ./${{ matrix.language }}_digital_page_count/${{ matrix.language }}_digital_page_count.txt)
-
-          echo "Expected number of pages: ${EXPECTED_NUM_OF_PAGES}"
+          ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          echo "Expected number of pages: ${{ needs.build.outputs.number_of_pages }}"
           echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
-
-          if [[ ${EXPECTED_NUM_OF_PAGES} != ${ACTUAL_NUM_OF_PAGES} ]]; then
-            echo "The digital document in ${{ matrix.language }} language doesn't have the correct number of pages. See the output above."
+          if [[ ${{ needs.digital_build.outputs.number_of_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
+            echo "The digital document in ${{ matrix.language }} language doesn't have correct number of pages. See the output above."
             exit 1
           fi
 
-      - name: Download English printable page count artifact
+      - name: Download printable PDF
         uses: actions/download-artifact@v4
         with:
-          name: en_printable_page_count
-          path: ./en_printable_page_count
+          name: printable_${{ matrix.language }}
 
-      - name: Download ${{ matrix.language }} printable page count artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: ${{ matrix.language }}_printable_page_count
-          path: ./${{ matrix.language }}_printable_page_count
-
-      - name: Check number of pages for printable version
+      - name: Check number of pages in printable version
         run: |
-          EXPECTED_NUM_OF_PAGES=$(cat ./en_printable_page_count/en_printable_page_count.txt)
-          ACTUAL_NUM_OF_PAGES=$(cat ./${{ matrix.language }}_printable_page_count/${{ matrix.language }}_printable_page_count.txt)
-
-          echo "Expected number of pages: ${EXPECTED_NUM_OF_PAGES}"
+          ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          echo "Expected number of pages: ${{ needs.build.outputs.number_of_pages }}"
           echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
-
-          if [[ ${EXPECTED_NUM_OF_PAGES} != ${ACTUAL_NUM_OF_PAGES} ]]; then
-            echo "The printable document in ${{ matrix.language }} language doesn't have the correct number of pages. See the output above."
+          if [[ ${{ needs.printable_build.outputs.number_of_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
+            echo "The digital document in ${{ matrix.language }} language doesn't have correct number of pages. See the output above."
             exit 1
           fi
-
-      - uses: geekyeggo/delete-artifact@v5
-        if: ${{ always() }}
-        with:
-          name: ${{ matrix.language }}_*_page_count
 
   publish:
     runs-on: ubuntu-latest
@@ -148,9 +126,6 @@ jobs:
           pattern: "*_${{ matrix.language }}"
           path: ${{ matrix.language }}
           merge-multiple: true
-
-      - name: Verify files
-        run: ls -la ${{ matrix.language }}
 
       - name: Publish ${{ matrix.language }} in artifacts repository
         uses: peaceiris/actions-gh-pages@v4

@@ -16,21 +16,21 @@ on:
         type: string
         description: 'Type of build: digital, printable, or economy'
         default: 'digital'
+      convert_to_cmyk:
+        required: false
+        type: boolean
+        default: false
       artifact_retention_days:
         required: false
         type: number
         default: 1
         description: 'Number of days to retain artifacts'
 
-
-env:
-  GHOSTSCRIPT_URL: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10030/gs_10.03.0_amd64_snap.tgz
-
 jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      num_of_pages: ${{ steps.check_pages.outputs.num_of_pages }}
+      number_of_pages: ${{ steps.check_pages.outputs.number_of_pages }}
 
     steps:
       - name: Set up repository
@@ -93,65 +93,35 @@ jobs:
           pre_compile: export HOMM3_GITHUB_BUILD=1 HOMM3_PRINTABLE=${{ env.HOMM3_PRINTABLE }} HOMM3_NO_ART_BACKGROUND=${{ env.HOMM3_NO_ART_BACKGROUND }} HOMM3_LANG=${{ inputs.language }}
           root_file: main_${{ inputs.language }}.tex
 
-      - name: Install ghostscript
-        run: |
-          wget --quiet ${{ env.GHOSTSCRIPT_URL }}
-          tar -xvf *_amd64_snap.tgz
-          sudo snap install ./*_amd64_snap/*_amd64.snap --devmode
-
-      - name: Optimize PDF
-        run: |
-          du -sh main_${{ inputs.language }}.pdf
-          if [[ "${{ inputs.build_type }}" == "printable" ]]; then
-            tools/optimize.sh ${{ inputs.language }} --cmyk
-          else
-            tools/optimize.sh ${{ inputs.language }}
-          fi
-          mv main_${{ inputs.language }}_optimized.pdf main_${{ inputs.language }}.pdf
-          du -sh main_${{ inputs.language }}.pdf
-
-      - name: Rename output file
-        run: |
-          mkdir -p output
-          mv main_${{ inputs.language }}.pdf output/${{ env.OUTPUT_FILENAME }}
-
-      - name: Install poppler
-        run: sudo apt-get update && sudo apt-get install -y poppler-utils
-
-      - name: Check number of pages
-        run: |
-          NUM_OF_PAGES=$(pdfinfo output/${{ env.OUTPUT_FILENAME }} | awk '/^Pages:/ {print $2}')
-          echo "Number of pages: ${NUM_OF_PAGES}"
-          mkdir -p page_count
-          echo "${NUM_OF_PAGES}" > page_count/${{ inputs.language }}_${{ inputs.build_type }}_page_count.txt
-
-      - name: Check for broken CMap
+      - name: Find test string
+        id: test
         run: |
           NEEDLE="$(grep TEST_SUBSTRING= main_${{ inputs.language }}.tex | cut -f2 -d=)"
           if [[ -z "$NEEDLE" ]]; then
             echo "No TEST_SUBSTRING found in main_${{ inputs.language }}.tex."
             exit 1
           fi
-          pdftotext output/${{ env.OUTPUT_FILENAME }} - | tr '\n' ' ' > output/${{ env.OUTPUT_FILENAME }}.txt
-          if grep -iq "$NEEDLE" output/${{ env.OUTPUT_FILENAME }}.txt
-          then
-            echo "All good"
-          else
-            echo "The CMap in output/${{ env.OUTPUT_FILENAME }} file is broken. See the output of 'Optimize PDF' step above."
-            exit 1
-          fi
+          echo "NEEDLE=$NEEDLE" >> $GITHUB_OUTPUT
+
+      - name: Optimize PDF
+        id: optimize
+        uses: qwrtln/optimize-pdf@v1
+        with:
+          file-name: main_${{ inputs.language }}.pdf
+          quality-level: prepress
+          output-file: output/${{ env.OUTPUT_FILENAME }}
+          test-string: ${{ steps.test.outputs.needle }}
+          convert-to-cmyk: ${{ inputs.convert_to_cmyk }}
+
+      - name: Check number of pages
+        if: ${{ inputs.language == 'en' }}
+        id: check_pages
+        run: |
+          echo "number_of_pages=${{ steps.optimize.outputs.page_count }}" > $GITHUB_OUTPUT
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.ARTIFACT_NAME }}
           path: output/${{ env.OUTPUT_FILENAME }}
-          retention-days: ${{ inputs.artifact_retention_days }}
-
-      - name: Upload page count artifact
-        if: ${{ github.event_name == 'pull_request' && inputs.build_type != 'economy' }}
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ inputs.language }}_${{ inputs.build_type }}_page_count
-          path: page_count/${{ inputs.language }}_${{ inputs.build_type }}_page_count.txt
           retention-days: ${{ inputs.artifact_retention_days }}
