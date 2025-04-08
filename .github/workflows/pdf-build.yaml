@@ -25,6 +25,9 @@ on:
         type: number
         default: 1
         description: 'Number of days to retain artifacts'
+    outputs:
+      number_of_pages:
+        value: ${{ jobs.build.outputs.number_of_pages }}
 
 jobs:
   build:
@@ -106,7 +109,7 @@ jobs:
 
       - name: Optimize PDF
         id: optimize
-        uses: qwrtln/optimize-pdf@main
+        uses: qwrtln/optimize-pdf@v1
         with:
           file-name: main_${{ inputs.language }}.pdf
           quality-level: prepress
