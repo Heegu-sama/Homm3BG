@@ -97,6 +97,9 @@ jobs:
           output-file: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Printable.pdf"
           convert-to-cmyk: true
 
+      - name: Prepare for economy printable
+        run: rm *.aux
+
       - name: Compile economy printable rule book without art backgrounds
         uses: xu-cheng/latex-action@v3
         with:
