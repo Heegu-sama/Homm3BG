@@ -78,6 +78,9 @@ jobs:
       matrix:
         language: ["pl", "es", "fr", "ru", "ua", "de", "cs", "he"]
     steps:
+      - name: Dump needs context
+        run: echo '${{ toJSON(needs) }}' | jq
+
       - name: Download digital PDF
         uses: actions/download-artifact@v4
         with:
