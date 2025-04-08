@@ -47,26 +47,6 @@ jobs:
           config: "po4a.cfg"
           args: "--no-update"
 
-      - name: Cache LaTeX packages and build
-        uses: actions/cache@v4
-        with:
-          path: |
-            ./**/*.aux
-            ./**/*.fdb_latexmk
-            ./**/*.fls
-            ./**/*.log
-            ./**/*.out
-            ./**/*.toc
-            ./svg-inkscape
-          key: >-
-            texlive-${{ inputs.language }}-${{ inputs.build_type }}-${{
-            inputs.language == 'en'
-            && hashFiles('main_en.tex', 'metadata.tex', 'sections/*.tex')
-            || hashFiles(format('main_{0}.tex', inputs.language), 'metadata.tex', format('sections/translated/{0}/*.tex', inputs.language))
-            }}
-          restore-keys: |
-            texlive-${{ inputs.language }}-${{ inputs.build_type }}-
-
       - name: Set build environment variables
         id: set_env
         run: |
@@ -87,8 +67,46 @@ jobs:
             echo "ARTIFACT_NAME=economy_printable_${{ inputs.language }}" >> $GITHUB_ENV
           fi
 
+      - name: Cache built PDF
+        uses: actions/cache@v4
+        if: github.event_name == 'pull_request'
+        id: cache-pdf
+        with:
+          path: |
+            ./${{ env.OUTPUT_FILENAME }}
+          key: >-
+            pdf-${{ inputs.build_type }}-${{ inputs.language }}-${{
+            inputs.language == 'en'
+            && hashFiles('main_en.tex', 'metadata.tex', 'sections/*.tex', 'assets/**/*', 'latexmkrc', 'index_style.ist')
+            || hashFiles('main_${{ inputs.language }}.tex', 'metadata.tex', format('sections/translated/{0}/*.tex', inputs.language), 'assets/**/*', format('translations/assets/{0}/**/*', inputs.language), 'latexmkrc', 'index_style.ist')
+            }}
+          restore-keys: |
+            pdf-${{ inputs.build_type }}-${{ inputs.language }}-
+
+      - name: Cache LaTeX packages and build
+        uses: actions/cache@v4
+        if: steps.cache-pdf.outputs.cache-hit != 'true'
+        with:
+          path: |
+            ./**/*.aux
+            ./**/*.fdb_latexmk
+            ./**/*.fls
+            ./**/*.log
+            ./**/*.out
+            ./**/*.toc
+            ./svg-inkscape
+          key: >-
+            texlive-${{ inputs.language }}-${{ inputs.build_type }}-${{
+            inputs.language == 'en'
+            && hashFiles('main_en.tex', 'metadata.tex', 'sections/*.tex')
+            || hashFiles(format('main_{0}.tex', inputs.language), 'metadata.tex', format('sections/translated/{0}/*.tex', inputs.language))
+            }}
+          restore-keys: |
+            texlive-${{ inputs.language }}-${{ inputs.build_type }}-
+
       - name: Compile PDF
         uses: xu-cheng/latex-action@v3
+        if: steps.cache-pdf.outputs.cache-hit != 'true'
         with:
           extra_system_packages: "inkscape"
           latexmk_use_lualatex: ${{ inputs.luaengine }}
@@ -98,7 +116,7 @@ jobs:
 
       - name: Find test string
         id: test
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' && steps.cache-pdf.outputs.cache-hit != 'true'
         run: |
           NEEDLE="$(grep TEST_SUBSTRING= main_${{ inputs.language }}.tex | cut -f2 -d=)"
           if [[ -z "$NEEDLE" ]]; then
@@ -110,6 +128,7 @@ jobs:
       - name: Optimize PDF
         id: optimize
         uses: qwrtln/optimize-pdf@v1
+        if: steps.cache-pdf.outputs.cache-hit != 'true'
         with:
           file-name: main_${{ inputs.language }}.pdf
           quality-level: prepress
@@ -118,9 +137,15 @@ jobs:
           convert-to-cmyk: ${{ inputs.convert_to_cmyk }}
 
       - name: Check number of pages
-        if: ${{ inputs.language == 'en' }}
+        if: inputs.language == 'en'
         id: check_pages
         run: |
+          if [[ ${{ steps.cache-pdf.outputs.cache-hit }} = 'true' ]]; then
+            NUMBER_OF_PAGES=$(docker run --rm  -v "`pwd`:/app" -w /app minidocks/poppler pdfinfo ${{ env.OUTPUT_FILENAME }} | awk '/^Pages:/ {print $2}')
+          else
+            NUMBER_OF_PAGES=${{ steps.optimize.outputs.page-count }}
+          fi
+          echo $NUMBER_OF_PAGES
           echo "number_of_pages=${{ steps.optimize.outputs.page-count }}" > $GITHUB_OUTPUT
 
       - name: Upload PDF artifact
