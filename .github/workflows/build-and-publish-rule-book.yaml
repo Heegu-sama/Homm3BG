@@ -71,15 +71,17 @@ jobs:
     needs: [digital_build, printable_build]
     if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
-    container:
-      image: minidocks/poppler
+    # container:
+    #   image: minidocks/poppler
     strategy:
       fail-fast: false
       matrix:
         language: ["pl", "es", "fr", "ru", "ua", "de", "cs", "he"]
     steps:
       - name: Dump needs context
-        run: echo '${{ toJSON(needs) }}' | jq
+        run: |
+          sudo apt-get install -y jq
+          echo '${{ toJSON(needs) }}' | jq
 
       - name: Download digital PDF
         uses: actions/download-artifact@v4
@@ -88,7 +90,7 @@ jobs:
 
       - name: Check number of pages in digital version
         run: |
-          ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          ACTUAL_NUM_OF_PAGES=$(docker run -v "`pwd`:/app" -w /app minidocks/poppler pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
           echo "Expected number of pages: ${{ needs.digital_build.outputs.number_of_pages }}"
           echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
           if [[ ${{ needs.digital_build.outputs.number_of_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
@@ -103,7 +105,7 @@ jobs:
 
       - name: Check number of pages in printable version
         run: |
-          ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
+          ACTUAL_NUM_OF_PAGES=$(docker run -v "`pwd`:/app" -w /app minidocks/poppler pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
           echo "Expected number of pages: ${{ needs.printable_build.outputs.number_of_pages }}"
           echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
           if [[ ${{ needs.printable_build.outputs.number_of_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then

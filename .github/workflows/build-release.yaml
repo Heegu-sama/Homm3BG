@@ -73,7 +73,7 @@ jobs:
       - name: Optimize PDF
         uses: qwrtln/optimize-pdf@v1
         with:
-          file-name: main_${{ inputs.language }}.pdf
+          file-name: main_${{ matrix.language }}.pdf
           quality-level: prepress
           output-file: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}.pdf"
 
@@ -92,7 +92,7 @@ jobs:
       - name: Optimize PDF
         uses: qwrtln/optimize-pdf@v1
         with:
-          file-name: main_${{ inputs.language }}.pdf
+          file-name: main_${{ matrix.language }}.pdf
           quality-level: prepress
           output-file: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Printable.pdf"
           convert-to-cmyk: true
@@ -109,7 +109,7 @@ jobs:
       - name: Optimize PDF
         uses: qwrtln/optimize-pdf@v1
         with:
-          file-name: main_${{ inputs.language }}.pdf
+          file-name: main_${{ matrix.language }}.pdf
           quality-level: prepress
           output-file: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Economy_Printable.pdf"
 
