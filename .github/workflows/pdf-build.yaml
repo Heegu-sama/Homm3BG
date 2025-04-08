@@ -95,6 +95,7 @@ jobs:
 
       - name: Find test string
         id: test
+        if: github.event_name == 'pull_request'
         run: |
           NEEDLE="$(grep TEST_SUBSTRING= main_${{ inputs.language }}.tex | cut -f2 -d=)"
           if [[ -z "$NEEDLE" ]]; then
@@ -105,7 +106,7 @@ jobs:
 
       - name: Optimize PDF
         id: optimize
-        uses: qwrtln/optimize-pdf@v1
+        uses: qwrtln/optimize-pdf@main
         with:
           file-name: main_${{ inputs.language }}.pdf
           quality-level: prepress
