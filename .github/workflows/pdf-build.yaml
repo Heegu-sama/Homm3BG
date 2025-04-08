@@ -145,7 +145,6 @@ jobs:
           else
             NUMBER_OF_PAGES=${{ steps.optimize.outputs.page-count }}
           fi
-          echo $NUMBER_OF_PAGES
           echo "number_of_pages=${{ steps.optimize.outputs.page-count }}" > $GITHUB_OUTPUT
 
       - name: Upload PDF artifact
