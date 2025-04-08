@@ -140,7 +140,7 @@ jobs:
         if: inputs.language == 'en'
         id: check_pages
         run: |
-          if [[ ${{ steps.cache-pdf.outputs.cache-hit }} = 'true' ]]; then
+          if [[ "${{ steps.cache-pdf.outputs.cache-hit }}" == 'true' ]]; then
             NUMBER_OF_PAGES=$(docker run --rm  -v "`pwd`:/app" -w /app minidocks/poppler pdfinfo ${{ env.OUTPUT_FILENAME }} | awk '/^Pages:/ {print $2}')
           else
             NUMBER_OF_PAGES=${{ steps.optimize.outputs.page-count }}
