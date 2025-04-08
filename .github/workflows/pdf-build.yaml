@@ -109,7 +109,7 @@ jobs:
         with:
           file-name: main_${{ inputs.language }}.pdf
           quality-level: prepress
-          output-file: output/${{ env.OUTPUT_FILENAME }}
+          output-file: ${{ env.OUTPUT_FILENAME }}
           test-string: ${{ steps.test.outputs.needle }}
           convert-to-cmyk: ${{ inputs.convert_to_cmyk }}
 
@@ -123,5 +123,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.ARTIFACT_NAME }}
-          path: output/${{ env.OUTPUT_FILENAME }}
+          path: ${{ env.OUTPUT_FILENAME }}
           retention-days: ${{ inputs.artifact_retention_days }}
