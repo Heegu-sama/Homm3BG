@@ -121,7 +121,7 @@ jobs:
         if: ${{ inputs.language == 'en' }}
         id: check_pages
         run: |
-          echo "number_of_pages=${{ steps.optimize.outputs.page_count }}" > $GITHUB_OUTPUT
+          echo "number_of_pages=${{ steps.optimize.outputs.page-count }}" > $GITHUB_OUTPUT
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
