@@ -25,7 +25,7 @@ jobs:
           if [[ `git status --porcelain translations` ]]; then
             echo "There are uncommited changes to translations:"
             git status --porcelain translations
-            git diff > po4a.patch
+            git diff | tee po4a.patch
             exit 1
           fi
 
