@@ -25,5 +25,14 @@ jobs:
           if [[ `git status --porcelain translations` ]]; then
             echo "There are uncommited changes to translations:"
             git status --porcelain translations
+            git diff > po4a.patch
             exit 1
           fi
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: po4a-patch
+          path: po4a.patch
+          retention-days: 1
+          if-no-files-found: ignore
