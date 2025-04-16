@@ -83,18 +83,28 @@ jobs:
           restore-keys: |
             pdf-${{ inputs.build_type }}-${{ inputs.language }}-
 
+      - name: Cache Inkscape artifacts
+        if: steps.cache-pdf.outputs.cache-hit != 'true'
+        uses: actions/cache@v4
+        with:
+          path: |
+            ./svg-inkscape
+          key: >-
+            inkscape-${{ hashFiles('assets/glyphs/*') }}
+          restore-keys: |
+            inkscape-
+
       - name: Cache LaTeX packages and build
         uses: actions/cache@v4
         if: steps.cache-pdf.outputs.cache-hit != 'true'
         with:
           path: |
+            ./main_${{ matrix.language }}.aux
+            ./main_${{ matrix.language }}.fdb_latexmk
+            ./main_${{ matrix.language }}.fls
+            ./main_${{ matrix.language }}.out
+            ./main_${{ matrix.language }}.toc
             ./**/*.aux
-            ./**/*.fdb_latexmk
-            ./**/*.fls
-            ./**/*.log
-            ./**/*.out
-            ./**/*.toc
-            ./svg-inkscape
           key: >-
             texlive-${{ inputs.language }}-${{ inputs.build_type }}-${{
             inputs.language == 'en'
@@ -102,7 +112,7 @@ jobs:
             || hashFiles(format('main_{0}.tex', inputs.language), 'metadata.tex', format('sections/translated/{0}/*.tex', inputs.language))
             }}
           restore-keys: |
-            texlive-${{ inputs.language }}-${{ inputs.build_type }}-
+            texlive-${{ inputs.build_type }}-${{ inputs.language }}-
 
       - name: Compile PDF
         uses: xu-cheng/latex-action@v3

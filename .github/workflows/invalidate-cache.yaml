@@ -1,0 +1,76 @@
+name: Invalidate cache on comment
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  actions: write
+  contents: read
+  issues: read
+  pull-requests: write
+
+jobs:
+  check-comment:
+    name: Invalidate cache
+    if: (github.event.issue.pull_request && startsWith(github.event.comment.body, 'Invalidate cache'))
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+
+    steps:
+      - uses: xt0rted/pull-request-comment-branch@v2
+        id: comment-branch
+
+      - name: Set up repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.comment-branch.outputs.head_ref }}
+
+      - name: Check if user has write access
+        id: write_access
+        uses: prince-chrismc/check-actor-permissions-action@v3
+        with:
+          permission: write
+
+      - name: Get cache prefix
+        run: |
+          comment="${{ env.COMMENT }}"
+          cache_prefix="${comment#Invalidate cache }"
+          echo "CACHE_PREFIX=$cache_prefix" >> $GITHUB_ENV
+        env:
+          COMMENT: ${{ github.event.comment.body }}
+
+      - name: List caches
+        run: |
+          gh api repos/${{ github.repository }}/actions/caches | jq -c '{caches: [.actions_caches[] | select(.key | startswith("${{ env.CACHE_PREFIX }}"))]}' > caches.json
+
+      - name: Add comment
+        run: |
+          if [[ $(jq '.caches | length == 0' caches.json) == "true" ]]; then
+            echo 'No caches found matching prefix `${{ env.CACHE_PREFIX }}` 🤨' >> body.txt
+          else
+            CACHE_COUNT=$(jq '.caches | length' caches.json)
+            gh cache list -k ${{ env.CACHE_PREFIX }} --json id -q '.[].id' | xargs -n 1 gh cache delete
+            jq '.caches[] | { key,size: (if .size_in_bytes < 1024 then "\(.size_in_bytes) bytes"
+                elif .size_in_bytes < 1048576 then "\(.size_in_bytes/1024 | floor) KB"
+                elif .size_in_bytes < 1073741824 then "\(.size_in_bytes/1048576 | floor) MB"
+            else "\(.size_in_bytes/1073741824 | floor) GB" end), ref, created_at, last_accessed_at, id, version }' caches.json >> formatted-caches.txt
+            (
+              echo "Invalidated ${CACHE_COUNT} cache(s) 💾 matching prefix \`${{ env.CACHE_PREFIX }}\`"
+              echo "<details><summary>Click to see the list:</summary>"
+              echo
+              echo '```json'
+              cat formatted-caches.txt
+              echo '```'
+              echo "</details>"
+            ) >> body.txt
+          fi
+          gh pr comment ${{ steps.comment-branch.outputs.head_ref }} --body-file body.txt
+
+      - name: Comment about non-membership status
+        if: ${{ failure() && steps.write_access.conclusion == 'failure' }}
+        run: |
+          gh pr comment ${{ steps.comment-branch.outputs.head_ref }} --body "⛔ Sorry, only members with write access are allowed to run this action!"
+        env:
+          GH_TOKEN: ${{ github.token }}
