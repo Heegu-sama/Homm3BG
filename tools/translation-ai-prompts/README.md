@@ -7,7 +7,7 @@ While AI does not translate perfectly, it can help you achieve the desired resul
 
 ### **Choose an AI Model**
 
-[Claude](https://claude.ai) and [GPT-4](https://openai.com/product/gpt-4) have been tested and proven to work well.
+[Claude Sonnet](https://claude.ai) and [GPT-4](https://openai.com/product/gpt-4) have been tested and proven to work well.
 Free tier models also work, but they give noticeably worse results.
 
 ### **Set up your prompt**
@@ -58,5 +58,5 @@ Sometimes it works best to start a new chat.
 
 ### Managing prompts
 
-Maintaining a good prompt is a process, so changes to the `generic.txt` template are welcome.
+Maintaining a good prompt is a process, so changes to the `prompt.txt` template are welcome.
 One can always add more game terms, and state LaTeX and po formatting rules more clearly.
