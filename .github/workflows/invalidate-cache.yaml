@@ -47,10 +47,10 @@ jobs:
 
       - name: Add comment
         run: |
-          if [[ $(jq '.caches | length == 0' caches.json) == "true" ]]; then
+          CACHE_COUNT=$(jq '.caches | length' caches.json)
+          if [[ ${CACHE_COUNT} == 0 ]]; then
             echo 'No caches found matching prefix `${{ env.CACHE_PREFIX }}` 🤨' >> body.txt
           else
-            CACHE_COUNT=$(jq '.caches | length' caches.json)
             gh cache list -k ${{ env.CACHE_PREFIX }} --json id -q '.[].id' | xargs -n 1 gh cache delete
             jq '.caches[] | { key,size: (if .size_in_bytes < 1024 then "\(.size_in_bytes) bytes"
                 elif .size_in_bytes < 1048576 then "\(.size_in_bytes/1024 | floor) KB"
