@@ -226,13 +226,17 @@ All mines have the \svg{ongoing} symbol and a picture of the Resource they produ
 \columnbreak
 
 \textbf{Settlements}\index{Settlement} act as a spawn point for Secondary Heroes, and as a place for Main Heroes to move to when defeated.
-When you Flag a Settlement, choose whether to increase your \svg{gold}, \svg{building_materials} or \svg{valuablegreater} income by one space.
-As with Mines, if you are the first player to Flag a Settlement, you \textbf{immediately} gain Resources equal to that increase in production.
-Mark the Settlement with an appropriate Resource Token to show which Resource it produces.
-When you Flag an enemy Settlement, you may change this Resource.\par
-Additionally, \textbf{instead of increasing Resource Production}, you may choose to \textbf{Reinforce} one of your \svgunit{bronze} or \svgunit{silver} Units immediately for half the normal cost, rounded up.
-If you were the first player to Flag the Settlement, Reinforce that Unit \textbf{for free} instead.
-Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
+When you Flag a Settlement, choose one of the following options: 
+\begin{itemize} 
+  \item Increase your \svg{gold}, \svg{building_materials} or \svg{valuablegreater} income by one space.
+    As with Mines, if you are the first player to Flag a Settlement, you \textbf{immediately} gain Resources equal to that increase in production.
+      Mark the Settlement with an appropriate Resource Token to show which Resource it produces.  
+      When you Flag an enemy Settlement, you may change this Resource.
+      If your Settlement is lost, decrease its production.
+  \item \textbf{Or Reinforce} one of your \svgunit{bronze} or \svgunit{silver} Units immediately for half the normal cost, rounded up.
+    If you were the first player to Flag the Settlement, Reinforce that Unit \textbf{for free} instead.
+    Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
+\end{itemize}
 
 \bigbreak
 
@@ -319,7 +323,7 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
     \pagetarget{Trading Post}{\textbf{Trading Post}}\par
     \framedimage[\textwidth]{\map_locations/trading_post.jpg}
     \caption{\small Category: \textbf{Revisitable}\\
-      \textbf{Choose one}: \protect\pagelink{Trading}{Trade} resources OR Remove a card OR buy a \protect\pagelink{War Machines}{War Machine}.
+      \textbf{Choose one}: \protect\pagelink{Trading}{Trade} resources OR Remove one card and gain 1 \svg{gold} OR buy a \protect\pagelink{War Machines}{War Machine} at a higher cost.
     }
   \end{minipage}\hfill
   \begin{minipage}[t]{0.47\textwidth}
@@ -327,7 +331,7 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
     \centering
     \phantom{j}\pagetarget{War Machine Factory}{\textbf{War Machine Factory}}\par
     \framedimage[\textwidth]{\map_locations/war_machine_factory.jpg}
-    \caption{\small Category: \textbf{Revisitable}\\Buy a \protect\pagelink{War Machines}{War Machine}.\phantom{.......}}
+    \caption{\small Category: \textbf{Revisitable}\\Buy a \protect\pagelink{War Machines}{War Machine} at a lower cost.\phantom{.......}}
   \end{minipage}
 \end{figure}
 
@@ -410,7 +414,7 @@ Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
     \centering
     \textbf{Redwood Observatory}\par
     \framedimage[\linewidth]{\map_locations/redwood_observatory.jpg}
-    \caption{\small Category: \textbf{Visitable}\\Discover a face down Tile adjacent to this one.}
+    \caption{\small Category: \textbf{Visitable}\\Discover a Tile adjacent to this one (either a face down one, or a \protect\pagelink{Placing}{new one} from your supply).}
   \end{minipage}
 \end{figure}
 
