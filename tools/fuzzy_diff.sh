@@ -1,3 +1,23 @@
+# Function to print usage information
+usage() {
+  echo "Usage: $0 [PO file]"
+  echo "Example: $0 translations/ai_rules/cs.po"
+  echo
+  echo "Shows difference in the first fuzzy section of the supplied PO file."
+  exit 1
+}
+
+if [[ $# -eq 1 ]]
+then
+  case $1 in
+    -h|--help)
+        usage
+    ;;
+  esac
+else
+    usage
+fi
+
 MYTMPDIR="$(mktemp -d)"
 trap 'rm -rf -- "$MYTMPDIR"' EXIT
 msgattrib --only-fuzzy $1 > "$MYTMPDIR/fuzzy_only.po"
