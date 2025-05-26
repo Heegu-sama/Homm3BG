@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Function to print usage information
 usage() {
   echo "Usage: $0 [PO file]"
