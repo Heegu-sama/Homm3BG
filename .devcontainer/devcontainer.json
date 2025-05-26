@@ -1,11 +1,12 @@
 {
   "image": "ghcr.io/qwrtln/homm3bg:latest",
-  
+  "entrypoint": ["/bin/bash"],
   "customizations": {
-    // Configure properties specific to VS Code.
     "vscode": {
-      // Add the IDs of extensions you want installed when the container is created.
-      "extensions": ["streetsidesoftware.code-spell-checker"]
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "mrorz.language-gettext"
+      ]
     }
   }
 }
