@@ -222,6 +222,15 @@ To make a printable version without any background images, add `--no-bg` flag
 tools/build.sh <LANGUAGE> --printable --no-bg
 ```
 
+### 📱 In-browser development using Codespaces
+
+If you have a GitHub account, you can select in-browser development option by clicking on the green `Code` button and then selecting `Codespaces`.
+This will start a unique container with the whole development IDE called VS Code.
+Once the IDE is started, you can use the bash scripts and git as usual on a Linux machine.
+
+> Please note that You can be charged for using Codespaces according to your Github plan. However, there are free options.
+
+
 ### 🌍 Translations
 
 <details>
@@ -262,6 +271,22 @@ tools/find_fuzzy.sh <lang>
 ```
 
 It will show all the fuzzy translations in the `*.po` files for the specified language.
+
+#### Resolving fuzzy translations
+
+Sometimes it is not clear, what changes in the original document rendered into fuzzy sections.
+You can use `fuzzy_diff.sh` script to visualize the first fuzzy section in a selected file.
+For example, the command:
+
+```bash
+tools/fuzzy_diff.sh translations/ai_rules.tex/cs.po
+```
+
+will show the difference between the old and new version of the original language for the first fuzzy section in the Czech translation of the file ai_rules.tex.
+Once you remove the fuzzy flag, you can rerun the program to proceed to the next fuzzy section.
+In common cases there are only simple changes in the original language, such as change of formatting.
+Therefore, you don`t need to update the whole translation.
+
 
 </details>
 
