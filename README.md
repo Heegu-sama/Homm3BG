@@ -222,10 +222,11 @@ To make a printable version without any background images, add `--no-bg` flag
 tools/build.sh <LANGUAGE> --printable --no-bg
 ```
 
-## 📱 In-browser development using Codespaces
+### 📱 In-browser development using Codespaces
 
-If you have a Github account, you can select in-browser development option by clicking on the green `Code` button and then selecting `Codespaces` this will start a unique container with the whole development IDE called VS Code.
-Once the IDE is started, you can use the bash scripts and git as usual on a linux machine.
+If you have a GitHub account, you can select in-browser development option by clicking on the green `Code` button and then selecting `Codespaces`.
+This will start a unique container with the whole development IDE called VS Code.
+Once the IDE is started, you can use the bash scripts and git as usual on a Linux machine.
 
 > Please note that You can be charged for using Codespaces according to your Github plan. However, there are free options.
 
