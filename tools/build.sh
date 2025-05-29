@@ -3,13 +3,14 @@
 
 # Default values
 LANGUAGE="en"
+SECTION_SEARCH=""
 
 # Valid language codes
 valid_languages=("en" "pl" "es" "fr" "ua" "ru" "cs" "he" "de")
 
 # Function to print usage information
 usage() {
-  echo "Usage: $0 [language] [-p|--printable] [-n|--no-bg]"
+  echo "Usage: $0 [language] [-p|--printable] [-n|--no-bg] [-s|--section SEARCH]"
   echo "Example: $0 fr --printable --no-bg"
   echo
   echo "Positional arguments:"
@@ -19,6 +20,7 @@ usage() {
   echo "Options:"
   echo "  -p, --printable    Enable printable mode"
   echo "  -n, --no-bg        Disable background"
+  echo "  -s, --section      Build a single section matching the input given"
   exit 1
 }
 
@@ -55,6 +57,15 @@ while [[ $# -gt 0 ]]; do
         export HOMM3_NO_ART_BACKGROUND=1
         shift
         ;;
+    -s|--section)
+        shift
+        if [[ $# -lt 1 ]]; then
+          echo "Error: -s|--section requires a string argument" >&2
+          usage
+        fi
+        SECTION_SEARCH="$1"
+        shift
+        ;;
     -h|--help)
         usage
         ;;
@@ -83,6 +94,26 @@ case "${LANGUAGE}" in
     ENGINE=-pdf
     ;;
 esac
+
+if [[ -n "${SECTION_SEARCH}" ]]; then
+  TARGET=$(grep "include{" structure.tex | grep "$SECTION_SEARCH")
+
+  # Target is empty
+  if [[ -z "$TARGET" ]]; then
+    echo "Error: No section found matching '$SECTION_SEARCH'" >&2
+    exit 1
+  fi
+
+  # Target is ambiguous
+  if [[ $(echo "$TARGET" | wc -l) -gt 1 ]]; then
+    echo "Error: Multiple sections found matching '$SECTION_SEARCH':" >&2
+    echo "$TARGET" >&2
+    exit 1
+  fi
+
+  trap "git restore structure.tex" EXIT
+  echo "$TARGET" > structure.tex
+fi
 
 if [[ ${LANGUAGE} != en ]]; then
   # limit output to specified language
