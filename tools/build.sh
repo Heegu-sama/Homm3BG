@@ -119,6 +119,7 @@ cleanup() {
     git restore structure.tex
   fi
   if [[ ${LANGUAGE} != en ]]; then
+    true
     git restore po4a.cfg
   fi
 }
@@ -127,7 +128,7 @@ trap cleanup EXIT
 
 if [[ ${LANGUAGE} != en ]]; then
   # limit output to specified language
-  sed -i "s/pl es fr ru ua de cs he/${LANGUAGE}/" po4a.cfg
+  sed -i'' "s/^\[po4a_langs\].*$/[po4a_langs] ${LANGUAGE}/" po4a.cfg
   if ! po4a --no-update po4a.cfg \
        2> >(grep -v "unmatched end of environment .multicols\| (po4a::tex)$" >&2) \
        | grep "/${LANGUAGE}/"; then
@@ -146,7 +147,7 @@ rm -f "main_${LANGUAGE}.aux" && \
 ${open} "main_${LANGUAGE}.pdf" &> /dev/null &
 
 # Optimize PDF if it's a single section and ghostscript is available
-if [[ "${SECTION_SEARCH}" != "" ]] && command -v gs >/dev/null 2>&1; then
+if [[ -n "${SECTION_SEARCH}" ]] && command -v gs >/dev/null 2>&1; then
   tools/optimize.sh "${LANGUAGE}"
   mv "main_${LANGUAGE}_optimized.pdf" "main_${LANGUAGE}.pdf"
 fi
