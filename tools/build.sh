@@ -119,7 +119,6 @@ cleanup() {
     git restore structure.tex
   fi
   if [[ ${LANGUAGE} != en ]]; then
-    true
     git restore po4a.cfg
   fi
 }
