@@ -144,3 +144,9 @@ fi
 rm -f "main_${LANGUAGE}.aux" && \
   latexmk ${ENGINE} -shell-escape "main_${LANGUAGE}.tex"
 ${open} "main_${LANGUAGE}.pdf" &> /dev/null &
+
+# Optimize PDF if it's a single section and ghostscript is available
+if [[ "${SECTION_SEARCH}" != "" ]] && command -v gs >/dev/null 2>&1; then
+  tools/optimize.sh "${LANGUAGE}"
+  mv "main_${LANGUAGE}_optimized.pdf" "main_${LANGUAGE}.pdf"
+fi
