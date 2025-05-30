@@ -177,6 +177,7 @@ To work on the document on your machine, you need the following:
 
 - [**MiKTeX**](https://miktex.org/) for Windows, [**MacTeX**](https://www.tug.org/mactex/) for MacOS, [**TeX Live**](https://www.tug.org/texlive/) for Linux (required) to build the PDF file from LaTeX files
 - [**Inkscape**](https://inkscape.org/) (required) to render glyphs in the document (while installing on Windows, make sure to tick `Add Inkscape to the System Path` option)
+- [**Perl**](https://www.perl.org/) (optional but recommended) to use the build script
 - [**TeXstudio**](https://www.texstudio.org/) (optional) to edit LaTeX files and rebuild the PDF file quickly
 - [**po4a**](https://po4a.org/index.php.en) (optional) to work on translating the document to other languages
 - [**pdftoppm**](https://linux.die.net/man/1/pdftoppm) (optional) to make screenshots of rendered PDF pages
@@ -187,19 +188,15 @@ To work on the document on your machine, you need the following:
 <details>
 <summary>Click to learn about the technicalities</summary>
 
-To build the document in English, either run this in the command line:
+There is a number of ways to build the project:
 
-```bash
-latexmk -pdf -silent -shell-escape "main_en"
-```
+#### ⌨️ Build Script
 
-or use the script:
+To build the document in English, it's best to use the script (requires Perl):
 
 ```bash
 tools/build.sh
 ```
-
-or press the `Build & View` ▶️ (F5) button in TeXstudio on the `main_en.tex` file.
 
 To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, `de` `cs`, and `he` are supported, `en` is the default), make sure you have `po4a` (version 0.70 or higher) and use the script:
 
@@ -207,10 +204,27 @@ To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, 
 tools/build.sh <LANGUAGE>
 ```
 
+#### 📱 In-browser development using Codespaces
+
+You can select in-browser development option by clicking on the green `Code` button and then selecting `Codespaces`.
+This will start a unique container with the whole development IDE called VS Code.
+Once the IDE is started, you can use the bash scripts and git as usual on a Linux machine.
+
+> Please note that You can be charged for using Codespaces according to your Github plan. However, there are free options.
+
+
+Alternatively, use this command:
+
+```bash
+latexmk -pdf -silent -shell-escape "main_en"
+```
+
+or press the `Build & View` ▶️ (F5) button in TeXstudio on the `main_en.tex` file.
+
+
 or press the `Build & View` ▶️ (F5) button in TeXstudio while having any `main_<LANGUAGE>.tex` file open, after running `po4a` (see `Translations` below for details).
 
-To build the printable version in a given language, make sure you've built a regular one first at least once.
-Then, use the script:
+To build the printable version in a given language, supply an argument:
 
 ```bash
 tools/build.sh <LANGUAGE> --printable
@@ -222,13 +236,8 @@ To make a printable version without any background images, add `--no-bg` flag
 tools/build.sh <LANGUAGE> --printable --no-bg
 ```
 
-### 📱 In-browser development using Codespaces
+Command shorthands (`-p` for printable and `-n` for no bg) also work.
 
-If you have a GitHub account, you can select in-browser development option by clicking on the green `Code` button and then selecting `Codespaces`.
-This will start a unique container with the whole development IDE called VS Code.
-Once the IDE is started, you can use the bash scripts and git as usual on a Linux machine.
-
-> Please note that You can be charged for using Codespaces according to your Github plan. However, there are free options.
 
 
 ### 🌍 Translations
