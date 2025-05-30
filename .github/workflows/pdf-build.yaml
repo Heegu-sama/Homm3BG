@@ -77,8 +77,8 @@ jobs:
           key: >-
             pdf-${{ inputs.build_type }}-${{ inputs.language }}-${{
             inputs.language == 'en'
-            && hashFiles('main_en.tex', 'metadata.tex', 'sections/*.tex', 'assets/**/*', 'latexmkrc', 'index_style.ist')
-            || hashFiles('main_${{ inputs.language }}.tex', 'metadata.tex', format('sections/translated/{0}/*.tex', inputs.language), 'assets/**/*', format('translations/assets/{0}/**/*', inputs.language), 'latexmkrc', 'index_style.ist')
+            && hashFiles('main_en.tex', 'metadata.tex', 'structure.tex', 'sections/*.tex', 'assets/**/*', 'latexmkrc', 'index_style.ist')
+            || hashFiles('main_${{ inputs.language }}.tex', 'metadata.tex', 'structure.tex', format('sections/translated/{0}/*.tex', inputs.language), 'assets/**/*', format('translations/assets/{0}/**/*', inputs.language), 'latexmkrc', 'index_style.ist')
             }}
           restore-keys: |
             pdf-${{ inputs.build_type }}-${{ inputs.language }}-
@@ -108,8 +108,8 @@ jobs:
           key: >-
             texlive-${{ inputs.language }}-${{ inputs.build_type }}-${{
             inputs.language == 'en'
-            && hashFiles('main_en.tex', 'metadata.tex', 'sections/*.tex')
-            || hashFiles(format('main_{0}.tex', inputs.language), 'metadata.tex', format('sections/translated/{0}/*.tex', inputs.language))
+            && hashFiles('main_en.tex', 'metadata.tex', 'structure.tex', 'sections/*.tex')
+            || hashFiles(format('main_{0}.tex', inputs.language), 'metadata.tex', 'structure.tex', format('sections/translated/{0}/*.tex', inputs.language))
             }}
           restore-keys: |
             texlive-${{ inputs.build_type }}-${{ inputs.language }}-

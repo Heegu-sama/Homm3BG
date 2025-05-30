@@ -3,13 +3,14 @@
 
 # Default values
 LANGUAGE="en"
+SECTION_SEARCH=""
 
 # Valid language codes
 valid_languages=("en" "pl" "es" "fr" "ua" "ru" "cs" "he" "de")
 
 # Function to print usage information
 usage() {
-  echo "Usage: $0 [language] [-p|--printable] [-n|--no-bg]"
+  echo "Usage: $0 [language] [-p|--printable] [-n|--no-bg] [-s|--section SEARCH]"
   echo "Example: $0 fr --printable --no-bg"
   echo
   echo "Positional arguments:"
@@ -19,6 +20,7 @@ usage() {
   echo "Options:"
   echo "  -p, --printable    Enable printable mode"
   echo "  -n, --no-bg        Disable background"
+  echo "  -s, --section      Build a single section matching the input given"
   exit 1
 }
 
@@ -55,6 +57,15 @@ while [[ $# -gt 0 ]]; do
         export HOMM3_NO_ART_BACKGROUND=1
         shift
         ;;
+    -s|--section)
+        shift
+        if [[ $# -lt 1 ]]; then
+          echo "Error: -s|--section requires a string argument" >&2
+          usage
+        fi
+        SECTION_SEARCH="$1"
+        shift
+        ;;
     -h|--help)
         usage
         ;;
@@ -84,8 +95,39 @@ case "${LANGUAGE}" in
     ;;
 esac
 
+if [[ -n "${SECTION_SEARCH}" ]]; then
+  TARGET=$(grep "include{" structure.tex | grep "$SECTION_SEARCH")
+
+  # Target is empty
+  if [[ -z "$TARGET" ]]; then
+    echo "Error: No section found matching '$SECTION_SEARCH'" >&2
+    exit 1
+  fi
+
+  # Target is ambiguous
+  if [[ $(echo "$TARGET" | wc -l) -gt 1 ]]; then
+    echo "Error: Multiple sections found matching '$SECTION_SEARCH':" >&2
+    echo "$TARGET" >&2
+    exit 1
+  fi
+
+  echo "$TARGET" > structure.tex
+fi
+
+cleanup() {
+  if [[ -n "${SECTION_SEARCH}" ]]; then
+    git restore structure.tex
+  fi
+  if [[ ${LANGUAGE} != en ]]; then
+    git restore po4a.cfg
+  fi
+}
+
+trap cleanup EXIT
+
 if [[ ${LANGUAGE} != en ]]; then
   # limit output to specified language
+  sed -i'' "s/^\[po4a_langs\].*$/[po4a_langs] ${LANGUAGE}/" po4a.cfg
   if ! po4a --no-update po4a.cfg \
        2> >(grep -v "unmatched end of environment .multicols\| (po4a::tex)$" >&2) \
        | grep "/${LANGUAGE}/"; then
@@ -102,3 +144,9 @@ fi
 rm -f "main_${LANGUAGE}.aux" && \
   latexmk ${ENGINE} -shell-escape "main_${LANGUAGE}.tex"
 ${open} "main_${LANGUAGE}.pdf" &> /dev/null &
+
+# Optimize PDF if it's a single section and ghostscript is available
+if [[ -n "${SECTION_SEARCH}" ]] && command -v gs >/dev/null 2>&1; then
+  tools/optimize.sh "${LANGUAGE}"
+  mv "main_${LANGUAGE}_optimized.pdf" "main_${LANGUAGE}.pdf"
+fi

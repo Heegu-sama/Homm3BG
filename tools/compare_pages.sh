@@ -178,4 +178,4 @@ wait
 mkdir -p screenshots
 mv ${tmp_dir}/${language}* screenshots
 
-echo "Done."
+echo "Done. Images saved to screenshots directory."

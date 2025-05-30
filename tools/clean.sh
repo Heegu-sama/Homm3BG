@@ -17,4 +17,5 @@ git restore \
   main_ua.tex \
   metadata.tex \
   po4a.cfg \
-  sections/
+  sections/ \
+  structure.tex
