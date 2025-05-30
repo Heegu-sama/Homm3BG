@@ -192,53 +192,47 @@ There is a number of ways to build the project:
 
 #### ⌨️ Build Script
 
-To build the document in English, it's best to use the script (requires Perl):
+To build the document in English, it's best to use the script (requires Perl, works on Win/Lin/Mac):
 
 ```bash
 tools/build.sh
 ```
 
-To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, `de` `cs`, and `he` are supported, `en` is the default), make sure you have `po4a` (version 0.70 or higher) and use the script:
+To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, `de` `cs`, and `he` are supported, `en` is the default), make sure you have `po4a` (version 0.70 or higher) and use the script (works on Lin/Mac):
 
 ```bash
 tools/build.sh <LANGUAGE>
 ```
 
-#### 📱 In-browser development using Codespaces
+If you're working on a single section and want to build only that, you can save time by using the `-s` option.
+For example:
+
+```bash
+tools/build.sh fr -s ai_rules
+```
+It will compile just the AI Rules section in French.
+
+See `tools/build.sh --help` for more details.
+
+
+#### 📱 In-browser using Codespaces
 
 You can select in-browser development option by clicking on the green `Code` button and then selecting `Codespaces`.
 This will start a unique container with the whole development IDE called VS Code.
-Once the IDE is started, you can use the bash scripts and git as usual on a Linux machine.
+Once the IDE is started, you can use the bash scripts and git as usual, and build the project in your web browser just like described above ☝️
 
-> Please note that You can be charged for using Codespaces according to your Github plan. However, there are free options.
+> Please note that on GitHub's free tier you're eligible for 60 hours of Codespaces per month.
 
+#### 📱 GUI Editor
 
-Alternatively, use this command:
+If you prefer a TeX editor, use latexmk to build the document.
+For instance, to configure TeXstudio to build the document, you can use this command:
 
-```bash
-latexmk -pdf -silent -shell-escape "main_en"
+```
+latexmk -pdf -synctex=1 -interaction=nonstopmode %.tex
 ```
 
-or press the `Build & View` ▶️ (F5) button in TeXstudio on the `main_en.tex` file.
-
-
-or press the `Build & View` ▶️ (F5) button in TeXstudio while having any `main_<LANGUAGE>.tex` file open, after running `po4a` (see `Translations` below for details).
-
-To build the printable version in a given language, supply an argument:
-
-```bash
-tools/build.sh <LANGUAGE> --printable
-```
-
-To make a printable version without any background images, add `--no-bg` flag
-
-```bash
-tools/build.sh <LANGUAGE> --printable --no-bg
-```
-
-Command shorthands (`-p` for printable and `-n` for no bg) also work.
-
-
+After setting it in options, press the `Build & View` ▶️ (F5) button on the `main_en.tex` file.
 
 ### 🌍 Translations
 
