@@ -177,6 +177,7 @@ To work on the document on your machine, you need the following:
 
 - [**MiKTeX**](https://miktex.org/) for Windows, [**MacTeX**](https://www.tug.org/mactex/) for MacOS, [**TeX Live**](https://www.tug.org/texlive/) for Linux (required) to build the PDF file from LaTeX files
 - [**Inkscape**](https://inkscape.org/) (required) to render glyphs in the document (while installing on Windows, make sure to tick `Add Inkscape to the System Path` option)
+- [**Perl**](https://www.perl.org/) (optional but recommended) to use the build script
 - [**TeXstudio**](https://www.texstudio.org/) (optional) to edit LaTeX files and rebuild the PDF file quickly
 - [**po4a**](https://po4a.org/index.php.en) (optional) to work on translating the document to other languages
 - [**pdftoppm**](https://linux.die.net/man/1/pdftoppm) (optional) to make screenshots of rendered PDF pages
@@ -187,40 +188,51 @@ To work on the document on your machine, you need the following:
 <details>
 <summary>Click to learn about the technicalities</summary>
 
-To build the document in English, either run this in the command line:
+There is a number of ways to build the project:
 
-```bash
-latexmk -pdf -silent -shell-escape "main_en"
-```
+#### ⌨️ Build Script
 
-or use the script:
+To build the document in English, it's best to use the script (requires Perl, works on Win/Lin/Mac):
 
 ```bash
 tools/build.sh
 ```
 
-or press the `Build & View` ▶️ (F5) button in TeXstudio on the `main_en.tex` file.
-
-To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, `de` `cs`, and `he` are supported, `en` is the default), make sure you have `po4a` (version 0.70 or higher) and use the script:
+To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, `de` `cs`, and `he` are supported, `en` is the default), make sure you have `po4a` (version 0.70 or higher) and use the script (works on Lin/Mac):
 
 ```bash
 tools/build.sh <LANGUAGE>
 ```
 
-or press the `Build & View` ▶️ (F5) button in TeXstudio while having any `main_<LANGUAGE>.tex` file open, after running `po4a` (see `Translations` below for details).
-
-To build the printable version in a given language, make sure you've built a regular one first at least once.
-Then, use the script:
+If you're working on a single section and want to build only that, you can save time by using the `-s` option.
+For example:
 
 ```bash
-tools/build.sh <LANGUAGE> --printable
+tools/build.sh fr -s ai_rules
+```
+It will compile just the AI Rules section in French.
+
+See `tools/build.sh --help` for more details.
+
+
+#### 📱 In-browser using Codespaces
+
+You can select in-browser development option by clicking on the green `Code` button and then selecting `Codespaces`.
+This will start a unique container with the whole development IDE called VS Code.
+Once the IDE is started, you can use the bash scripts and git as usual, and build the project in your web browser just like described above ☝️
+
+> Please note that on GitHub's free tier you're eligible for 60 hours of Codespaces per month.
+
+#### 📱 GUI Editor
+
+If you prefer a TeX editor, use latexmk to build the document.
+For instance, to configure TeXstudio to build the document, you can use this command:
+
+```
+latexmk -pdf -synctex=1 -interaction=nonstopmode %.tex
 ```
 
-To make a printable version without any background images, add `--no-bg` flag
-
-```bash
-tools/build.sh <LANGUAGE> --printable --no-bg
-```
+After setting it in options, press the `Build & View` ▶️ (F5) button on the `main_en.tex` file.
 
 ### 🌍 Translations
 
@@ -262,6 +274,22 @@ tools/find_fuzzy.sh <lang>
 ```
 
 It will show all the fuzzy translations in the `*.po` files for the specified language.
+
+#### Resolving fuzzy translations
+
+Sometimes it is not clear, what changes in the original document rendered into fuzzy sections.
+You can use `fuzzy_diff.sh` script to visualize the first fuzzy section in a selected file.
+For example, the command:
+
+```bash
+tools/fuzzy_diff.sh translations/ai_rules.tex/cs.po
+```
+
+will show the difference between the old and new version of the original language for the first fuzzy section in the Czech translation of the file ai_rules.tex.
+Once you remove the fuzzy flag, you can rerun the program to proceed to the next fuzzy section.
+In common cases there are only simple changes in the original language, such as change of formatting.
+Therefore, you don`t need to update the whole translation.
+
 
 </details>
 
@@ -359,3 +387,5 @@ Their respective XCF files reside in [`assets/gimp-files`](https://github.com/He
 
 - [Fan-Made Mission Book](https://github.com/qwrtln/Homm3BG-mission-book)
 - [Board Game Cards Databse](https://github.com/Mirzipan/Homm3_BG_Database)
+- [Factory Rule Book](https://github.com/piotrbruzda/Homm3BG-FactoryRulebook)
+- [Scenario Map Editor](https://github.com/zedero/HoMM3Boardgame)

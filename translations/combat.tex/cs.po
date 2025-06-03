@@ -24,7 +24,7 @@ msgstr ""
 #: sections/resources.tex:5 sections/setup.tex:5 sections/town.tex:5
 #: sections/trading.tex:5
 msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
-msgstr ""
+msgstr "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
 
 #. type: multicols
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
@@ -41,6 +41,8 @@ msgid ""
 "{2}\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:116 sections/combat.tex:195 sections/heroes.tex:34
@@ -49,6 +51,8 @@ msgid ""
 "\\vfill\n"
 "\n"
 msgstr ""
+"\\vfill\n"
+"\n"
 
 #.  !TeX spellcheck = en_US
 #. type: Plain text
@@ -97,7 +101,7 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
-"\\note{11}{\n"
+"\\note{10}{\n"
 "  Pokud je vaše Město nebo Osada napadena nepřátelským Hrdinou a váš Hrdina není na tomto Poli, můžete okamžitě \\textbf{zaplatit 8} \\svg{gold} a bránit se \\textbf{pouze s vašimi Jednotkami}.\n"
 "  Během tohoto Souboje nemůžete použít svůj Balíček, protože váš Hlavní Hrdina není přítomen.\n"
 "  Placení těchto Zlaťáků představuje náklady na přepravu armády.\n"
@@ -125,6 +129,8 @@ msgid ""
 "\\vspace*{-3em}\n"
 "\n"
 msgstr ""
+"\\vspace*{-3em}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:32
@@ -159,7 +165,7 @@ msgid ""
 "Follow these steps when Combat begins against \\textbf{Neutral Units}:\n"
 "\n"
 msgstr ""
-"Souboj se odehrává na 4×5 Desce Bojiště, která se skládá ze dvou řad Zadních, dvou Předních a jedné prostřední.\n"
+"Souboj se odehrává na Desce Bojiště 4×5, která se skládá ze dvou řad Zadních, dvou Předních a jedné prostřední.\n"
 "V Souboji proti \\textbf{Neutrálním Jednotkám}, postupujte podle těchto kroků:\n"
 "\n"
 
@@ -209,36 +215,7 @@ msgstr ""
 
 #. type: multicols
 #: sections/combat.tex:85
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\subsection*{\\pagetarget{Combatterminology}{Combat Terminology}}\n"
-#| "The following terms are used to describe effects and elements during Combat:\\par\n"
-#| "\\textbf{Attacking Player} – The player who started the Combat.\\par\n"
-#| "\\textbf{Defending Player} – The player whom Combat was started against.\\par\n"
-#| "\\textbf{Activation} – A Unit Activates when it is next in the Initiative order.\\par\n"
-#| "\\textbf{Adjacent Unit} – A Unit is directly adjacent to another if it is one space away in a cardinal direction (nondiagonal).\\par\n"
-#| "\\textbf{Combat Round} – A full cycle of all Units of each player being Activated.\\par\n"
-#| "\\textbf{Combat Obstacles}\\index{Combat Obstacles}\\index{Obstacles, Combat} – Every card on the Combat Board is a Combat Obstacle.\n"
-#| "They block the movement of all non-flying Units.\\smallskip\\par\n"
-#| "\\begin{tikzpicture}[overlay]\n"
-#| "  \\node at (7, 0) {\\includegraphics[width=0.2\\linewidth]{\\images/attack_die.png}};\n"
-#| "\\end{tikzpicture}\\parbox{0.7\\hsize}{\\textbf{Attack Die}\\index{Attack Die}\\index{Dice} – A red Die whose results range from -1 to +1.\n"
-#| "Roll the Die \\textbf{whenever a Unit attacks} and\n"
-#| "add the result to the Unit's Attack value.}\\par\\smallskip\n"
-#| "\\textbf{\\pagetarget{Retaliate}{Retaliation Attack}} – If a Unit survives an attack by an adjacent Unit, it performs an attack back at that Unit.\n"
-#| "Each Unit can perform \\textbf{only 1} Retaliation Attack\\index{Retaliation Attack} per Combat Round.\n"
-#| "Retaliation Attacks function identically to normal attacks, but they cannot cause another Retaliation Attack.\n"
-#| "Mark Units which have performed a Retaliation Attack this Round with a black cube.\\par\n"
-#| "\\textbf{\\pagetarget{Paralysis}{Paralysis}}\\index{Paralysis} \\svg{paralysis} – Some effects place a Paralysis Token on Units.\n"
-#| "That Unit \\textbf{must skip its next Activation}. Remove the Token instead of activating it.\n"
-#| "If the Unit \\textbf{is attacked or takes any damage} before that time, \\textbf{remove the Token}.\n"
-#| "The Token does not prevent Units from performing Retaliation Attacks.\\par\n"
-#| "\\textbf{\\pagetarget{Defend}{Defend}} \\svg{defense} – Units may choose to gain a Defense Token and end the Activation instead of attacking.\n"
-#| "When a Unit with a Defense Token is attacked, make another roll with the attack Die after the initial attack roll.\n"
-#| "If you roll a ``+1'', the defending Unit gains an extra 1 Defense for this attack.\n"
-#| "If a Unit has a Defense Token at the start of its activation, discard it.\n"
-#| "The Unit cannot take another Defense Action during that activation.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Combatterminology}{Combat Terminology}}\n"
 "The following terms are used to describe effects and elements during Combat:\\par\n"
@@ -288,8 +265,8 @@ msgstr ""
 "Odvetné Útoky fungují stejně jako normální útoky, ale nemohou způsobit další Odvetný Útok.\n"
 "Označte Jednotky, které provedly Odvetný Útok v tomto Kole, Černou Kostičkou.\\par\n"
 "\\textbf{\\pagetarget{Paralysis}{Ochromení}}\\index{Ochromení} \\svg{paralysis} – Některé efekty umístí na Jednotky Žeton Ochromení.\n"
-"Tato Jednotka \\textbf{musí přeskočit svou další Aktivaci} a následně odstranit Žeton.\n"
-"Pokud je Jednotka \\textbf{napadena nebo utrpí jakékoliv poškození} dříve, \\textbf{odstraňte Žeton}.\n"
+"Pokud je Jednotka s Žetonem Ochromení Aktivována \\textbf{přeskočte její Aktivaci} a místo Aktivace odstraňte Žeton.\n"
+"Pokud je Jednotka s Žetonem Ochromení \\textbf{napadena nebo utrpí jakékoliv poškození}, \\textbf{odstraňte Žeton}.\n"
 "Žeton nebrání Jednotkám v provádění Odvetných Útoků.\\par\n"
 "\\textbf{\\pagetarget{Defend}{Obrana}} \\svg{defense} – Jednotky se mohou rozhodnout získat Obranný Žeton a ukončit Aktivaci místo útoku.\n"
 "Když je Jednotka s Žetonem Obrany napadena, proveďte další hod Kostkou Útoku po počátečním útočném hodu.\n"
@@ -358,6 +335,10 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\transparent{0.3}\\includegraphics[width=0.55\\linewidth]{\\art/wyvern.png}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:115
@@ -530,6 +511,10 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=\\linewidth]{\\art/dendroid.jpg}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: subsection{#2}
 #: sections/combat.tex:176
@@ -563,6 +548,8 @@ msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/zombies_attack_griffins.png}\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{\\examples/zombies_attack_griffins.png}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:193
@@ -593,6 +580,8 @@ msgid ""
 "{\\transparent{0.3}\\includegraphics[width=\\linewidth]{\\art/prayer.png}}\n"
 "\n"
 msgstr ""
+"{\\transparent{0.3}\\includegraphics[width=\\linewidth]{\\art/prayer.png}}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:210

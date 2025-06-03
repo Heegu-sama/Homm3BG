@@ -1,0 +1,112 @@
+\include{\sections/title_page.tex}
+
+% Let main_xx.tex provide translated \author
+\ifdefvoid{\translatedauthor}{
+  \author{\textlang{english}{Hermanni ``Heegu'' Karppela}}
+}{
+  \author{\translatedauthor}
+}
+\maketitle
+
+\begin{center}
+  \iftoggle{githubbuild}{
+    \getenv[\githubsha]{GITHUB_SHA}
+    \versionwarning{} \href{\repourl}{\textlang{english}{\StrLeft{\githubsha}{7}}}.
+  }{
+    \textlang{\mainlanguagename}{\versionlabel{} \textlang{english}{\input{.version}}}
+  }
+
+  \iftoggle{printable}{
+    \iftoggle{printable_quote_separate_page}{\bigbreak}{\medskip}
+  }{\bigbreak}
+
+  \intro{}
+
+  \iftoggle{printable}{
+    \iftoggle{printable_quote_separate_page}{\bigbreak}{\heegusquote}
+  }{
+    \bigbreak\heegusquote
+  }
+\end{center}
+
+\iftoggle{printable}{
+  \begin{multicols}{2}
+  \centering
+  \includegraphics[width=0.8\linewidth]{\qr/github.png}\\
+  \qrgithub
+
+  \columnbreak
+
+  \includegraphics[width=0.8\linewidth]{\qr/bgg.png}\\
+  \qrbgg
+  \end{multicols}
+}{}
+
+\textlang{english}{\begin{tikzpicture}[remember picture, overlay]
+  \node(cover)[anchor=center, yshift=12em] at (current page.south) {
+    \includegraphics[width=1.01\paperwidth, keepaspectratio]{\art/castle_bottom.png}
+    \thispagestyle{empty}
+  };
+\end{tikzpicture}}
+
+\clearpage
+
+\begin{multicols*}{2}
+\tableofcontents
+\vspace*{\fill}
+\columnbreak
+\vspace*{\fill}
+\includegraphics[width=\linewidth]{\art/black_dragon.jpg}
+\end{multicols*}
+
+\clearpage
+
+\include{\sections/introduction.tex}
+
+\include{\sections/game_modes.tex}
+
+\include{\sections/components.tex}
+
+\include{\sections/setup.tex}
+
+\include{\sections/round_structure.tex}
+
+\include{\sections/player_turns.tex}
+
+\include{\sections/heroes.tex}
+
+\include{\sections/deckbuilding.tex}
+
+\include{\sections/resources.tex}
+
+\include{\sections/town.tex}
+
+\include{\sections/map_elements.tex}
+
+\iftoggle{printable_quote_separate_page}{
+  \include{\sections/quote_page.tex}
+}{}
+
+\include{\sections/units.tex}
+
+\include{\sections/combat.tex}
+
+\include{\sections/ai_rules.tex}
+
+\include{\sections/difficulty.tex}
+
+\include{\sections/trading.tex}
+
+\include{\sections/scenario_end.tex}
+
+\include{\sections/expansion_content.tex}
+
+\include{\sections/all_map_locations.tex}
+
+\iftoggle{printable_notes_page}{\include{\sections/notes.tex}}{}
+
+\include{\sections/credits.tex}
+
+\iftoggle{printable}{\include{\sections/index.tex}}{}
+
+\include{\sections/back_cover.tex}
