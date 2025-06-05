@@ -1,0 +1,29 @@
+name: Check trailing whitespace
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  trailing_whitespace:
+    runs-on: ubuntu-latest
+    name: Check trailing whitespace
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Find trailing whitespace
+        run: |
+          ERRORS=0
+          for f in $(git grep -Il '')
+          do
+            if grep -q -P '\s+$' "$f"; then
+              grep -nHP '\s+$' "$f"
+              ERRORS=1
+            fi
+          done
+
+          if [[ $ERRORS == 1 ]]; then
+              echo "Trailing whitespace found, see the output above. Please remove trailing whitespace."
+            exit 1
+          fi
