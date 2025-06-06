@@ -67,11 +67,7 @@ msgstr "\\addsection{Доповнення}{\\skills/pathfinding.png}"
 
 #. type: multicols*
 #: sections/expansion_content.tex:10
-#, fuzzy, no-wrap
-#| msgid ""
-#| "{\\centering\\phantom{Star Axis}\\par}\n"
-#| "\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\begin{center}\n"
 "  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
@@ -79,8 +75,10 @@ msgid ""
 "\\columnbreak\n"
 "\n"
 msgstr ""
-"{\\centering\\phantom{Зоряна Вісь}\\par}\n"
-"\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
+"\\end{center}\n"
+"\\columnbreak\n"
 "\n"
 
 #. type: multicols*
@@ -115,7 +113,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/expansion_content.tex:42
-#, fuzzy, no-wrap
+#, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=0.8\\textwidth]{\\cards/war_machine.png}}};\n"
 #| "      \\draw (0.8, 3.6) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
@@ -161,29 +159,33 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
-"      \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=0.8\\textwidth]{\\cards/war_machine.png}}};\n"
+"{\n"
+"  \\bigskip\n"
+"  \\centering\n"
+"  \\begin{scriptsize}\n"
+"    \\begin{tikzpicture}\n"
+"      \\draw (0, 0) node[inner sep=0] {\\includegraphics[width=0.8\\linewidth]{\\cards/war_machine.png}};\n"
 "      \\draw (0.8, 3.6) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
 "      \\draw (0, -2.8) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
 "      \\draw (-1.2, -1.7) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
 "      \\draw (0.9, -1.7) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
 "    \\end{tikzpicture}\n"
 "  \\end{scriptsize}\n"
-"  \\break\n"
-"  \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Карта Бойової Машини}}}}\n"
-"  \\scriptsize\n"
-"  \\begin{multicols}{2}\n"
-"    \\begin{itemize}\n"
-"      \\item[\\textbf{1.}] \\textbf{Назва}\n"
-"      \\item[\\textbf{2.}] \\textbf{Ефект}\n"
-"      \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
-"      \\item[\\textbf{3.}] \\textbf{Вартість на Фабриці Бойових Машин}\n"
-"      \\item[\\textbf{4.}] \\textbf{Вартість на Торговому Посту}\n"
-"    \\end{itemize}\n"
-"  "
+"\n"
+"  \\footnotesize\n"
+"  \\textbf{\\textit{\\textcolor{darkcandyapplered}{Карта Військової Машини}}}\n"
+"  \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt]\n"
+"    \\item[\\textbf{1.}] Назва\n"
+"    \\item[\\textbf{2.}] Ефект\n"
+"    \\item[\\textbf{3.}] Вартість у Фабриці Військових Машин\n"
+"    \\item[\\textbf{4.}] Вартість у Торговому Посту\n"
+"  \\end{itemize}\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/expansion_content.tex:54
-#, fuzzy, no-wrap
+#, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{Events}{Events}}\n"
 #| "Added by the Fortress expansion.\n"
@@ -232,7 +234,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/expansion_content.tex:77
-#, fuzzy, no-wrap
+#, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\cards/event.png}}};\n"
 #| "      \\draw (1, 1.8) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
@@ -295,7 +297,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/expansion_content.tex:87
-#, fuzzy, no-wrap
+#, no-wrap
 #| msgid ""
 #| "\\subsection*{Summoning}\n"
 #| "Some cards from the Inferno expansion may Summon Units\\index{Summoning} during Combat.\n"
@@ -324,7 +326,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/expansion_content.tex:92
-#, fuzzy, no-wrap
+#, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{Empowered Statistic}{Empowered} Statistic Cards}\\index{Empowered Statistic Card}\n"
 #| "Added by the Inferno expansion.\n"
@@ -352,7 +354,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/expansion_content.tex:119
-#, fuzzy, no-wrap
+#, no-wrap
 #| msgid ""
 #| "    \\draw (-2, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/empowered_statistic.png}}};\n"
 #| "    \\draw (2.4, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/statistic.png}}};\n"
