@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-05-29 11:33+0000\n"
+"POT-Creation-Date: 2025-04-07 10:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,7 +43,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:116 sections/combat.tex:195 sections/heroes.tex:34
+#: sections/ai_rules.tex:116 sections/combat.tex:187 sections/heroes.tex:34
 #, no-wrap
 msgid ""
 "\\vfill\n"
@@ -271,55 +271,35 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:127
+#: sections/combat.tex:130
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Endcombat}{End of Combat}}\n"
+"If all units on one side are defeated, the combat ends immediately, and the side with any surviving units is the winner.\n"
+"When Combat ends, all damage is healed from all surviving Units.\n"
+"Move any player owned Units back to their Unit Deck and discard any leftover enemy Neutral Units.\n"
 "\n"
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:134
+#: sections/combat.tex:141
 #, no-wrap
 msgid ""
-"A combat against Neutrals has 3 possible endings: \n"
-"\\begin{itemize}\n"
-"\t\\item If all neutral units are defeated the players Hero is the \\textbf{winner}.\n"
-"\t\\item If the player runs out of time or loses all combating units, but has still units in his Unit Deck, the Hero performs a \\textbf{Retreat}.\n"
-"\t\\item If the player loses all combating Units and haven't any Units in his Unit Deck that Hero is \\textbf{defeated}.\n"
-"\\end{itemize} \n"
-"\n"
-msgstr ""
-
-#. type: multicols
-#: sections/combat.tex:142
-#, no-wrap
-msgid ""
-"A combat against another players Hero has 2 possible endings:\n"
-"\\begin{itemize}\n"
-"\t\\item If all units on one side are defeated, the combat ends immediately, and the side with any surviving units is the \\textbf{winner}, the other side is \\textbf{defeated}.\n"
-"\t\\item Instead of activating one of your Units, a Hero can decide to \\textbf{Surrender} to the other players Hero by paying them 10 \\svg{gold} to prevent his army. In this case the combat ends immediately without having a winning or defeated hero.\n"
-"\\end{itemize} \n"
+"Defeated Main Heroes \\textbf{have to move} to a friendly Town or Settlement, while Secondary Heroes are removed from the game until Recruited again.\n"
+"Defeating a Main Hero may cause \\pagelink{End}{Player Elimination}.\\par\n"
+"If you defeat all Units during Combat against \\textbf{another player's Main Hero}, the defeated player \\textbf{loses Morale} and has to \\textbf{pay the winner} 5 \\svg{gold}.\n"
+"Do not lose Morale or pay \\svg{gold} if a \\textbf{Secondary Hero} is defeated.\n"
+"\\textbf{In both cases}, the defeated player also \\textbf{gives the winner} one of their \\pagelink{End}{Faction Cubes}.\n"
+"You may \\textbf{Surrender}\\index{Surrender} to another player by paying them 10 \\svg{gold} when activating a Unit.\n"
+"Move your Main Hero or remove your Secondary Hero from the game as if you were defeated by losing your Units.\n"
+"There are no other direct consequences to Surrendering; the winner does not gain a Faction Cube.\\par\n"
 "\\note{4}{You cannot surrender when defending a Town.}\\par\n"
-"When Combat ends, all damage is healed from all surviving Units. Move any players owned Units back to their Unit Deck and discard any leftover enemy Neutral Units. Depending on the type and result of the combat, players must resolve the following consequences for themselves:\n"
+"After winning Combat and getting the \\pagelink{Combatexperience}{Experience}, Heroes \\textbf{must} Visit the Field where the Combat took place.\n"
 "\n"
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:149
-#, no-wrap
-msgid ""
-"A \\textbf{winning Hero} of a combat remains on the map, gets \\pagelink{Combatexperience}{Experience}, if it was the main hero and after that he must Visit the Field where the combat took place.\\par\n"
-"A \\textbf{Retreating Hero} from a combat with Neutrals has to move back to the last visited Field on the map.\\par\n"
-"A \\textbf{defeated Main Hero} has to move to a friendly town or settlement. Was he defeated by another players Hero, he loses 1 Moral and has to pay 5 \\svg{gold} to the winning Hero. Furthermore he gives a \\pagelink{End}{Faction Cube} to the winning player. Defeating a Main Hero may cause \\pagelink{End}{Player Elimination}.\\par \n"
-"A \\textbf{defeated Secondary Hero} (even instantly defeated without combat) is removed from the map. If defeated by another players hero they gets also a Faction Cube.\\par\n"
-"A \\textbf{Surrendering Hero} doesn’t count as defeated. Move your surrendered main hero to a town or settlement, or remove your secondary hero from the map as if he had been defeated. The other player neither get Experience nor Faction Cubes.\\par\n"
-"Remember to receive the starting units of the chosen scenario for free each time your Unit Deck is empty after a combat.\n"
-"\n"
-msgstr ""
-
-#. type: multicols
-#: sections/combat.tex:151
+#: sections/combat.tex:143
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Combatexperience}{Combat Experience}}\n"
@@ -327,7 +307,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:160
+#: sections/combat.tex:152
 #, no-wrap
 msgid ""
 "Winning Combat with your Main Hero usually grants them Experience\\index{Experience}.\n"
@@ -342,7 +322,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:163
+#: sections/combat.tex:155
 #, no-wrap
 msgid ""
 "\\subsection*{Campaign and Cooperative\\\\Combat}\n"
@@ -351,7 +331,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:166
+#: sections/combat.tex:158
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -360,7 +340,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:170
+#: sections/combat.tex:162
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -370,12 +350,12 @@ msgid ""
 msgstr ""
 
 #. type: subsection{#2}
-#: sections/combat.tex:176
+#: sections/combat.tex:168
 msgid "Combat Example"
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:183
+#: sections/combat.tex:175
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -388,7 +368,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:185
+#: sections/combat.tex:177
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/zombies_attack_griffins.png}\n"
@@ -396,7 +376,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:193
+#: sections/combat.tex:185
 #, no-wrap
 msgid ""
 "\\textit{After all cards for the attack have been played, the Attack Die is thrown to further modify the amount of damage the attacking Unit deals.\n"
@@ -410,7 +390,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:197
+#: sections/combat.tex:189
 #, no-wrap
 msgid ""
 "{\\transparent{0.3}\\includegraphics[width=\\linewidth]{\\art/prayer.png}}\n"
@@ -418,14 +398,14 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:210
+#: sections/combat.tex:202
 #, no-wrap
 msgid ""
 "{2}\n"
 "\\subsection*{\\pagetarget{Walls}{Defending a Town With\\\\a Citadel\\raggedright}}\\index{Defending Town}\n"
-"When you defend your Town and it has a Citadel, you add the 3 Wall and 1 Gate Obstacles in any order to the Middle Row of the Combat Board after placing your Units. \\textbf{Don't use Walls and Gate}, if you defend an enemy town, which you've conquered before, \\textbf{even not} if it is a town with a citadel. The Gate Card is \\textbf{not an Obstacle to the defending player}. Defending units may move through the gate and may stop on it. \n"
-"\\par\n"
-"The Wall and Gate\\index{Walls and Gate} cards can be destroyed by any adjacent \\svg{unit_ground} or \\svg{unit_flying} Unit's attack, even by your own defending units. These Attacks don't count as normal attacks: They are always successful and they don't activate any of the attacking unit's \\svg{unit_attack} abilities and you cannot play any cards or throw the attack die to affect the attack's result.\n"
+"When a Town with a Citadel is attacked, the defender adds the 3 Wall and 1 Gate Obstacles in any order to the Middle Row of the Combat Board after placing their Units.\n"
+"The Gate Card is \\textbf{not an Obstacle to the defending player}.\n"
+"The Wall and Gate\\index{Walls and Gate} cards can be destroyed by any adjacent \\svg{unit_ground} or \\svg{unit_flying} Unit's attack.\n"
 "\\par\n"
 "Defending Units standing on their own side and \\textbf{in the same column} as a Wall or a Gate gain protection from \\svg{unit_ranged} attacks.\n"
 "If they are targeted by a \\svg{unit_ranged} attack performed from the opponent's side of the Combat Board, \\textbf{reduce the attack's damage by 1}.\n"
@@ -433,21 +413,19 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:219
+#: sections/combat.tex:209
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
 "\\begin{center}\n"
 "  \\includegraphics[width=0.6\\linewidth]{\\cards/arrow_tower.png}\n"
 "\\end{center}\n"
-"The defender also gains the Arrow Tower\\index{Arrow Tower} Unit Card which is placed next to the Combat Board. It acts like any Ranged unit, except that it is not affected by anything related to its positioning. For example it never gets ranged penalty against enemy units and vice versa. Only Ranged attacks and spells can destroy the Arrow Tower, but it is instantly destroyed, when all Walls and the Gate are destroyed.\n"
-"The attacker doesn't need to destroy it to win the Combat.\n"
-"\\par\n"
-"\\note{8}{In a siege against AI, the Arrow Tower follows the priority-rules like a \\svgunit{silver} Unit. But if there are more valid targets, it cannot attack the nearest one, so it will attack the one that is closest to perishing (smallest difference between \\svg{health_points} and current \\svg{damage}).}"
+"The defender also gains the Arrow Tower\\index{Arrow Tower} Unit Card which is placed next to the Combat Board.\n"
+"The attacker doesn't need to destroy it to win the Combat."
 msgstr ""
 
 #. type: figure*
-#: sections/combat.tex:240
+#: sections/combat.tex:230
 #, no-wrap
 msgid ""
 "[h]\n"
