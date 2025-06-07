@@ -67,7 +67,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/deckbuilding.tex:35
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "\\subsection*{General Card Rules}\n"
 "\\begin{enumerate}\n"
@@ -103,15 +103,16 @@ msgstr ""
 "  \\item Колоди Здібностей, Артефактів і Заклинань мають окремі Стоси Скиду.\n"
 "    Якщо в Скиді закінчуються Карти, перетасуйте Скид і скиньте верхню Карту, щоб сформувати новий Стос Скиду.\n"
 "    Щоразу, коли в Стосі Скиду немає Карти, \\textbf{покладіть на нього} верхню Картку з цієї Колоди.\n"
-"  \\item Картки мають наступні типи ефектів:\n"
+"  \\item Картки мають наступні \\pagetarget{Card Effects}{типи ефектів}:\n"
 "  \\begin{itemize}\n"
 "    \\item \\textbf{Миттєвий} \\svg{instant} Ефект діє негайно.\n"
 "    \\item \\textbf{Активація} \\svg{activation} Ефект може бути розіграний під час активації вашого Підрозділу в Бою.\n"
 "    \\item \\textbf{Мапа} \\svg{map} Ефект не може бути розіграний під час Бою.\n"
-"    \\item \\textbf{Триваючий} \\svg{ongoing} Ефект діє до моменту, поки він не буде вичерпаний або поки гравець, що розіграв його,не почне свій наступний Хід.\n"
-"    \\item \\textbf{Постійний} \\svg{permanent} Карта\\index{Постійні Карти} залишається у грі поки не буде скинута або замінена.\n"
+"    \\item \\textbf{Триваючий} \\svg{ongoing} Ефект\\index{Триваючі Ефекти} діє до моменту, поки він не буде вичерпаний або поки гравець, що розіграв його, не почне свій наступний Хід (залежно від того, що станеться раніше).\n"
+"    \\item \\textbf{Постійні} \\svg{permanent} Карти\\index{Постійні Карти} залишаються у грі поки не будуть скинуті або замінені.\n"
 "      \\textbf{Одночасно у вас може бути тільки одна Постійна Карта}; розігравши іншу, ви скидаєте попередню.\n"
 "  \\end{itemize}\n"
+"  \\item Щоразу, коли вам вказано \\textbf{вилучити Карту}, вилучіть її повністю з гри.\n"
 "\\end{enumerate}\n"
 "\n"
 
@@ -281,16 +282,6 @@ msgstr "\\pagetarget{Artifact}{Карти Артефактів}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:106
-#, fuzzy
-#| msgid ""
-#| "Artifact Cards\\index{Artifact Card} have a top and bottom effect. When "
-#| "you play one, you must \\textbf{choose which effect} you are using.  They "
-#| "are divided into 3 Levels: Minor, Major, and Relic.  These Levels relate "
-#| "to the overall Power of the Card and may be referenced when resolving "
-#| "certain effects or during Scenario setup.  Otherwise, all Artifact Cards "
-#| "are normally shuffled together to form the Artifact Deck regardless of "
-#| "their Level.  They are gained through map exploration.\\par Artifacts can "
-#| "be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgid ""
 "Artifact Cards\\index{Artifact Card} have a top and bottom effect. When you "
 "play one, you must \\textbf{choose which effect} you are using.  They are "
@@ -304,12 +295,13 @@ msgid ""
 msgstr ""
 "Карти Артефактів\\index{Карти Артефактів} мають верхній і нижній ефект. Коли "
 "ви розігруєте таку Карту, ви повинні \\textbf{обрати ефект} який буде "
-"використано. Артефакти поділяються на 3 Рівні: Малі, Великі і Реліквії. Ці "
-"рівні визначають загальну Силу Карти і можуть бути використані при вирішенні "
-"певних ефектів або під час підготовки Сценарію. Для формування Колоди "
-"Артефактів, затасуйте всі Карти Артефактів разом. Артефакти можна отримати "
-"під час дослідження Мапи.\\par Артефакти можна \\pagelink{Trading}"
-"{обмінювати} в Сценаріях з режимом Альянс та Кооператив."
+"використано. Артефакти поділяються на 3 Рівні: Малі, Великі і Реліквії, з "
+"різними кольорами рамок. Ці рівні визначають загальну Силу Карти і можуть "
+"бути використані при вирішенні певних ефектів або під час підготовки "
+"Сценарію. Для формування Колоди Артефактів, затасуйте всі Карти Артефактів "
+"разом. Артефакти можна отримати під час дослідження Мапи.\\par Артефакти "
+"можна \\pagelink{Trading}{обмінювати} в Сценаріях з режимом Альянс та "
+"Кооператив."
 
 #. type: multicols*
 #: sections/deckbuilding.tex:106
@@ -328,7 +320,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/deckbuilding.tex:121
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
 "    \\draw (-1.3, 2.1) node {\\encircle{1}};\n"
@@ -402,16 +394,7 @@ msgstr ""
 
 #. type: multicols
 #: sections/deckbuilding.tex:148
-#, fuzzy, no-wrap
-#| msgid ""
-#| "{2}\n"
-#| "  \\footnotesize\n"
-#| "  \\begin{itemize}\n"
-#| "    \\item[\\textbf{1.}] Name\n"
-#| "    \\item[\\textbf{2.}] Effect\n"
-#| "    \\columnbreak\n"
-#| "    \\item[\\textbf{3.}] Fluff\n"
-#| "  \\end{itemize}"
+#, no-wrap
 msgid ""
 "{2}\n"
 "  \\footnotesize\n"
@@ -429,7 +412,8 @@ msgstr ""
 "    \\item[\\textbf{1.}] Назва\n"
 "    \\item[\\textbf{2.}] Ефект\n"
 "    \\columnbreak\n"
-"    \\item[\\textbf{3.}] Художній текст\n"
+"    \\item[\\textbf{3.}] Рівень\n"
+"    \\item[\\textbf{4.}] Художній текст\n"
 "  \\end{itemize}"
 
 #. type: Plain text
@@ -446,7 +430,6 @@ msgstr "\\pagetarget{spells}{Карти Заклинань}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:162
-#, fuzzy
 msgid ""
 "Spell Cards\\index{Spell Card} have three possible primary effects.  Using "
 "the topmost, basic version of the Spell usually has no additional costs.  To "
@@ -463,28 +446,18 @@ msgstr ""
 "Карти Заклинань\\index{Карти Заклинань} мають три основні ефекти. "
 "Використання, базового ефекту Заклинання не потребує додаткових витрат.  Для "
 "отримання доступу до інших ефектів, ви можете \\textbf{Посилити} "
-"Заклинання\\index{Посиленні Заклинання} сплативши вказану вартість (3) щоб "
-"отримати більш потужний результат (4).Перед тим, як розіграти Заклинання, ви "
-"можете сплатити цю вартість, розігравши інші Карти використавши їх ефект "
-"Посилення \\svg{empower} .  Всі Карти Заклинань також мають альтернативний "
-"(5) \\svg{empower} ефект."
+"Заклинання\\index{Посилені Заклинання} сплативши вказану вартість (3) щоб "
+"отримати більш потужний результат (4). Ви можете сплатити цю вартість, "
+"розігравши інші Карти використавши їх ефект Посилення \\svg{empower} "
+"(наприклад, Характеристику Сили Заклинань) перед розіграшем Заклинання. Всі "
+"Карти Заклинань також мають альтернативний нижній (5) \\svg{empower} ефект. "
+"Ви не можете зберігати зіграні \\svg{empower}: розіграш Заклинання споживає "
+"всі \\svg{empower} зіграні досі, і якщо ви припиняєте грати Карти, сила "
+"розсіюється. Проте ви можете використати дешевший \\svg{empower} ефект, ніж "
+"той, за який ви заплатили."
 
 #. type: Plain text
 #: sections/deckbuilding.tex:193
-#, fuzzy
-#| msgid ""
-#| "{ \\centering \\begin{tikzpicture} \\draw (0, 0) node "
-#| "{\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}}; \\draw "
-#| "(-1.3, 2.5) node {\\encircle{1}}; \\draw (-1.8, 0.3) node "
-#| "{\\encircle{2}}; \\draw (-1.1, -1) node {\\encircle{3}}; \\draw (1.1, -1) "
-#| "node {\\encircle{4}}; \\draw (0.8, -2.8) node {\\encircle{5}}; "
-#| "\\end{tikzpicture}\\\\ \\medskip "
-#| "\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Spell "
-#| "Card}}}} \\scriptsize \\begin{multicols}{2} \\begin{itemize}[itemsep=5pt] "
-#| "\\item[\\textbf{1.}] \\textbf{Spell Name} \\item[\\textbf{2.}] "
-#| "\\textbf{School of Magic} \\item[\\textbf{3.}] \\textbf{Cost\\\\to "
-#| "Empower} \\item[\\textbf{4.}] \\textbf{Spell Effect} \\item[\\textbf{5.}] "
-#| "\\textbf{Alternative\\\\Effect} \\item[] \\end{itemize} \\end{multicols} }"
 msgid ""
 "{ \\centering \\begin{tikzpicture} \\draw (0, 0) node "
 "{\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}}; \\draw (-1.3, "
@@ -515,7 +488,6 @@ msgstr ""
 
 #. type: Plain text
 #: sections/deckbuilding.tex:197
-#, fuzzy
 msgid ""
 "Spells can be gained by Building the Mage Guild\\index{Mage Guild}.  "
 "Building it also enables you to use the Spell Book Token\\index{Spell Book "
@@ -536,19 +508,19 @@ msgid ""
 "During Combat, \\textbf{only one Spell Card} may be played by each player "
 "\\textbf{per Combat Round}."
 msgstr ""
+"Під час Бою, кожен гравець може розіграти \\textbf{тільки одну Карту "
+"Заклинання} \\textbf{за Раунд Бою}."
 
 #. type: Plain text
 #: sections/deckbuilding.tex:202
-#, fuzzy
 msgid ""
 "\\columnbreak When you use an effect which lets you cast a Spell from "
 "somewhere other than your hand (such as directly from the Spell Deck), place "
 "that Spell into your Discard Pile after casting it."
 msgstr ""
-"\\note{11}{ Під час Бою, кожен гравець може розіграти \\textbf{тільки одну "
-"Карту Заклинання} \\textbf{за Раунд Бою}.  \\medskip Коли ви використовуєте "
-"ефект, який дозволяє вам розіграти Заклинання не з руки (наприклад, прямо з "
-"Колоди Заклинань), після розіграшу покладіть це Заклинання у ваш Скид. }"
+"Коли ви використовуєте ефект, який дозволяє вам розіграти Заклинання не з "
+"руки (наприклад, прямо з Колоди Заклинань), після розіграшу покладіть це "
+"Заклинання у ваш Скид."
 
 #. type: center
 #: sections/deckbuilding.tex:208
@@ -556,11 +528,13 @@ msgid ""
 "{\\transparent{0.3}\\includegraphics[width=0.9\\linewidth]{\\art/air_magic."
 "png}}"
 msgstr ""
+"{\\transparent{0.3}\\includegraphics[width=0.8\\linewidth]{\\art/air_magic."
+"png}}"
 
 #. type: subsubsection{#2}
 #: sections/deckbuilding.tex:214
 msgid "Schools of Magic"
-msgstr ""
+msgstr "Школи Магії"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:214
@@ -574,41 +548,18 @@ msgid ""
 "difference, but certain game effects can refer to specific Schools and to "
 "Basic/Expert Spells."
 msgstr ""
+"Всі Карти Заклинань належать до однієї Школи Магії\\index{Школи Магії}: або "
+"Повітря, Вогню, Землі чи Води. Заклинання з одним символом Школи називаються "
+"\\textbf{Базовими Заклинаннями}\\index{Базове Заклинання}, тоді як "
+"Заклинання з чотирма однаковими символами називаються \\textbf{Експертними "
+"Заклинаннями}\\index{Експертне Заклинання}. \\textbf{Чарівна Стріла} є "
+"Базовим Заклинанням; під час розіграшу \\textbf{Чарівної Стріли}, ви повинні "
+"вибрати до якої Школи вона належить. За замовчуванням немає різниці, але "
+"певні ігрові ефекти можуть посилатися на конкретні Школи та на Базові/"
+"Експертні Заклинання."
 
 #. type: minipage
 #: sections/deckbuilding.tex:241
-#, fuzzy
-#| msgid ""
-#| "\\begin{minipage}[t]{0.48\\textwidth}\n"
-#| "  \\centering\n"
-#| "  \\minipage[b]{0.5\\textwidth}\n"
-#| "    \\centering\n"
-#| "    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire."
-#| "png}\n"
-#| "    \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Fire}}}\n"
-#| "  \\endminipage\n"
-#| "  \\minipage[b]{0.5\\textwidth}\n"
-#| "    \\centering\n"
-#| "    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_water."
-#| "png}\n"
-#| "    \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Water}}}\n"
-#| "  \\endminipage\n"
-#| "  \\hfill\\allowbreak%\n"
-#| "  \\bigbreak\n"
-#| "  \\minipage[b]{0.5\\textwidth}\n"
-#| "    \\centering\n"
-#| "    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_air.png}\n"
-#| "    \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Air}}}\n"
-#| "  \\endminipage\n"
-#| "  \\minipage[b]{0.5\\textwidth}\n"
-#| "    \\centering\n"
-#| "    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_earth."
-#| "png}\n"
-#| "    \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Earth}}}\n"
-#| "  \\endminipage\n"
-#| "  \\bigbreak\n"
-#| "\\end{minipage}\n"
-#| "\n"
 msgid ""
 "\\minipage[b]{0.5\\textwidth} \\centering "
 "\\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire.png} "
@@ -649,8 +600,7 @@ msgstr ""
 "    \\textit{\\textbf{\\textcolor{darkcandyapplered}{Школа Землі}}}\n"
 "  \\endminipage\n"
 "  \\bigbreak\n"
-"\\end{minipage}\n"
-"\n"
+"\\end{minipage}"
 
 #. type: subsection{#2}
 #: sections/deckbuilding.tex:244
@@ -659,13 +609,6 @@ msgstr "\\pagetarget{Specialty}{Карти Спеціалізації Героя
 
 #. type: Plain text
 #: sections/deckbuilding.tex:249
-#, fuzzy
-#| msgid ""
-#| "Hero Specialty Cards\\index{Specialty Card} are gained from "
-#| "\\pagelink{Level}{Level ups}.  Each Main Hero has a unique set of "
-#| "Specialty Cards.  While many of these Cards have effects which resemble "
-#| "Spell Cards, Specialty Cards are their \\textbf{own unique category of "
-#| "cards}."
 msgid ""
 "Hero Specialty Cards\\index{Specialty Card} are gained from \\pagelink{Level}"
 "{Level ups}.  Each Main Hero has a unique set of Specialty Cards.  While "
@@ -677,16 +620,13 @@ msgstr ""
 "Карти Спеціалізації Героя\\index{Карти Спеціалізації} отримуються під час "
 "\\pagelink{Level}{підвищення Рівня}. Кожен Головний Герой має унікальний "
 "набір Карт Спеціалізації. Хоча багато з цих Карт мають ефекти, схожі на "
-"ефекти Карт Заклинань, Карти Спеціалізації  \\textbf{є окремою унікальною "
-"категорією Карт}."
+"ефекти Карт Заклинань і навіть використовують \\svg{empower} та Школи Магії, "
+"Карти Спеціалізації \\textbf{є окремою унікальною категорією Карт}. "
+"Наприклад, обмеження в 1 Заклинання за Раунд Бою не стосується Карт "
+"Спеціалізації."
 
 #. type: Plain text
 #: sections/deckbuilding.tex:257
-#, fuzzy
-#| msgid ""
-#| "{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/specialty."
-#| "png}\\\\ \\medskip \\footnotesize\\textit{A Level 4 Specialty Card, "
-#| "belonging to Catherine the Knight.} }"
 msgid ""
 "{ \\medskip \\centering \\includegraphics[width=0.7\\linewidth]{\\cards/"
 "specialty.png}\\\\ \\medskip \\footnotesize\\textit{A Level 4 Specialty "
