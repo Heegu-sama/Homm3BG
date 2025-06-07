@@ -199,36 +199,27 @@ The previously played Attack and Defense cards no longer have any effect.}
 
 \clearpage
 
-\begin{multicols}{2}
+\begin{multicols*}{2}
 \subsection*{\pagetarget{Walls}{Defending a Town With\\a Citadel\raggedright}}\index{Defending Town}
 When you defend your Town and it has a Citadel, you add the 3 Wall and 1 Gate Obstacles in any order to the Middle Row of the Combat Board after placing your Units. \textbf{Don't use Walls and Gate}, if you defend an enemy town, which you've conquered before, \textbf{even not} if it is a town with a citadel. The Gate Card is \textbf{not an Obstacle to the defending player}. Defending units may move through the gate and may stop on it.
-\par
+
+\vspace*{\fill}
+\includegraphics[width=\linewidth]{\examples/ranged_protected.png}
+{\textit{When the Halberdiers are behind a non-destroyed Gate, they \textbf{are protected} when attacked from behind the Wall line.
+  The \svg{unit_ranged} attack damage of Evil Eyes is \textbf{reduced by 1}.}}
+\columnbreak
+
 The Wall and Gate\index{Walls and Gate} cards can be destroyed by any adjacent \svg{unit_ground} or \svg{unit_flying} Unit's attack, even by your own defending units. These Attacks don't count as normal attacks: They are always successful and they don't activate any of the attacking unit's \svg{unit_attack} abilities and you cannot play any cards or throw the attack die to affect the attack's result.
-\par
+
 Defending Units standing on their own side and \textbf{in the same column} as a Wall or a Gate gain protection from \svg{unit_ranged} attacks.
 If they are targeted by a \svg{unit_ranged} attack performed from the opponent's side of the Combat Board, \textbf{reduce the attack's damage by 1}.
-\end{multicols}
 
-\vfill
-\begin{figure*}[h]
-  \mbox{}%
-  \hfill%
-  \begin{minipage}[t]{0.415\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{\examples/ranged_protected.png}
-  \caption[halberdiers protected]{\textit{When the Halberdiers are behind a non-destroyed Gate, they \textbf{are protected} when attacked from behind the Wall line.
-    The \svg{unit_ranged} attack damage of Evil Eyes is \textbf{reduced by 1}.}}
-  \end{minipage}
-  \hfill%
-  \begin{minipage}[t]{0.415\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{\examples/ranged_unprotected.png}
-    \caption[halberdiers unprotected]{\textit{Because the Halberdiers are not behind a non-destroyed Wall, \textbf{protection doesn't work}.
-      Evil Eyes attack \textbf{without penalty}.}}
-  \end{minipage}
-  \hfill%
-  \mbox{}%
-\end{figure*}
+\vspace*{\fill}
+\includegraphics[width=\linewidth]{\examples/ranged_unprotected.png}
+{\textit{Because the Halberdiers are not behind a non-destroyed Wall, \textbf{protection doesn't work}.
+  Evil Eyes attack \textbf{without penalty}.}}
+\newline\newline
+\end{multicols*}
 
 \clearpage
 
@@ -243,7 +234,7 @@ The attacker doesn't need to destroy it to win the Combat.
 \note{9}{In a siege against AI, the Arrow Tower follows the priority-rules like a \svgunit{silver} Unit. But if there are many valid targets, it cannot attack the nearest one, so it will attack the one that is closest to perishing (the smallest difference between \svg{health_points-note} and current \svg{damage-table}).}
 
 \begin{center}
-  \includegraphics[width=\linewidth]{\art/dendroid.jpg}
+  \includegraphics[width=1.05\linewidth]{\art/arrow_tower.jpg}
 \end{center}
 
 \end{multicols}
