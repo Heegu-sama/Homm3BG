@@ -113,13 +113,41 @@
 
 \renewcommand{\labelitemi}{\includegraphics[width=0.7em, valign=c]{\layout/listdot.png}}
 
-% Colors
+% Utility colors
 \definecolor{amber}{rgb}{1.0, 0.49, 0.0}
 \definecolor{antiquewhite}{rgb}{0.98, 0.92, 0.84}
 \definecolor{arylideyellow}{rgb}{0.96, 0.89, 0.58}
 \definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
 \definecolor{darkcandyapplered}{rgb}{0.64, 0.0, 0.0}
 \definecolor{goldenbrown}{rgb}{0.6, 0.4, 0.08}
+% Expansion colors
+\definecolor{tower}{HTML}{F5F5F5}      % whitesmoke
+\definecolor{rampart}{HTML}{228B22}    % forestgreen
+\definecolor{fortress}{HTML}{556B2F}   % darkolivegreen
+\definecolor{inferno}{HTML}{B22222}    % firebrick
+\definecolor{stronghold}{HTML}{D2B48C} % tan
+\definecolor{conflux}{HTML}{DA70D6}    % orchid
+\definecolor{cove}{HTML}{20B2AA}       % lightseagreen
+
+\newcommand{\expansion}[2]{%
+  \begin{tcolorbox}[
+    enhanced,
+    colback=white,
+    opacityback=0,
+    colframe=white,
+    opacityframe=0,
+    borderline west={3pt}{-8pt}{#1},
+    boxsep=0pt,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    boxrule=0pt,
+    arc=0pt,
+  ]
+  #2
+  \end{tcolorbox}
+}
 
 \newcommand{\svg}[2][10]{%
   {\raisebox{-0.15\height}{\includesvg[height=#1px]{\svgs/\detokenize{#2}.svg}}}%
