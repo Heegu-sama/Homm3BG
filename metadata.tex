@@ -121,7 +121,7 @@
 \definecolor{darkcandyapplered}{rgb}{0.64, 0.0, 0.0}
 \definecolor{goldenbrown}{rgb}{0.6, 0.4, 0.08}
 % Expansion colors
-\definecolor{tower}{HTML}{F5F5F5}      % whitesmoke
+\definecolor{tower}{HTML}{AAAAAA}      % gray
 \definecolor{rampart}{HTML}{228B22}    % forestgreen
 \definecolor{fortress}{HTML}{556B2F}   % darkolivegreen
 \definecolor{inferno}{HTML}{B22222}    % firebrick
@@ -129,24 +129,35 @@
 \definecolor{conflux}{HTML}{DA70D6}    % orchid
 \definecolor{cove}{HTML}{20B2AA}       % lightseagreen
 
-\newcommand{\expansion}[2]{%
-  \begin{tcolorbox}[
-    enhanced,
-    colback=white,
-    opacityback=0,
-    colframe=white,
-    opacityframe=0,
-    borderline west={3pt}{-8pt}{#1},
-    boxsep=0pt,
-    left=0pt,
-    right=0pt,
-    top=0pt,
-    bottom=0pt,
-    boxrule=0pt,
-    arc=0pt,
-  ]
-  #2
-  \end{tcolorbox}
+\newtcolorbox{expansion}[1]{
+  enhanced,
+  title=\textbf{\scriptsize \MakeUppercase{#1 expansion}},
+  coltitle=#1,
+  colback=#1,
+  colbacktitle=#1,
+  colframe=#1,
+  opacityfill=0,
+  size=small,
+  boxrule=0pt,
+  arc=0pt,
+  oversize,
+  beforeafter skip balanced=0.3\baselineskip plus 1pt,
+  overlay={
+    \fill[
+      #1,
+      path fading=east,
+      opacity=0.08
+    ]
+      ([xshift=-5pt, yshift=3pt]frame.north west) rectangle
+      ([xshift=5pt, yshift=-5pt]frame.south east);
+    \fill[
+      top color=#1,
+      bottom color=#1!60!white,
+      rounded corners=1.5pt
+    ]
+    ([xshift=-8pt, yshift=3pt]frame.north west) rectangle
+    ([xshift=-5pt, yshift=-5pt]frame.south west);
+  },
 }
 
 \newcommand{\svg}[2][10]{%
