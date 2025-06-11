@@ -131,13 +131,13 @@
 \definecolor{battlefield}{HTML}{505050}   % dark gray
 \definecolor{navalbattles}{HTML}{2E5984}  % dark deep blue
 
-\newcommand{\expansiontext}[2]{%
-  \ifstrempty{#1}{#2 expansion}{#1}%
+\newcommand{\expansiontext}[1]{%
+  #1 expansion%
 }
 
 \newtcolorbox{expansion}[2][]{
   enhanced,
-  title=\textbf{\tiny\MakeUppercase{\expansiontext{#1}{#2}}},
+  title=\textbf{\tiny\MakeUppercase{\expansiontext{#2}}},
   coltitle=#2,
   colback=#2,
   colbacktitle=#2,
@@ -164,7 +164,14 @@
     ([xshift=-8pt, yshift=3pt]frame.north west) rectangle
     ([xshift=-5pt, yshift=-3pt]frame.south west);
   },
+  #1
 }
+
+% used in components
+\newenvironment{expansionmini}[1]{\begin{expansion}[%
+  size=minimal,
+  beforeafter skip balanced=0pt,
+]{#1}}{\end{expansion}}
 
 \newcommand{\svg}[2][10]{%
   {\raisebox{-0.15\height}{\includesvg[height=#1px]{\svgs/\detokenize{#2}.svg}}}%
