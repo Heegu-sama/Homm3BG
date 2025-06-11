@@ -121,21 +121,27 @@
 \definecolor{darkcandyapplered}{rgb}{0.64, 0.0, 0.0}
 \definecolor{goldenbrown}{rgb}{0.6, 0.4, 0.08}
 % Expansion colors
-\definecolor{tower}{HTML}{AAAAAA}      % gray
+\definecolor{tower}{HTML}{909090}      % gray
 \definecolor{rampart}{HTML}{228B22}    % forestgreen
 \definecolor{fortress}{HTML}{556B2F}   % darkolivegreen
 \definecolor{inferno}{HTML}{B22222}    % firebrick
-\definecolor{stronghold}{HTML}{D2B48C} % tan
-\definecolor{conflux}{HTML}{DA70D6}    % orchid
+\definecolor{stronghold}{HTML}{A67C52} % tan
+\definecolor{conflux}{HTML}{C158C1}    % orchid
 \definecolor{cove}{HTML}{20B2AA}       % lightseagreen
+\definecolor{battlefield}{HTML}{505050}   % dark gray
+\definecolor{navalbattles}{HTML}{2E5984}  % dark deep blue
 
-\newtcolorbox{expansion}[1]{
+\newcommand{\expansiontext}[2]{%
+  \ifstrempty{#1}{#2 expansion}{#1}%
+}
+
+\newtcolorbox{expansion}[2][]{
   enhanced,
-  title=\textbf{\scriptsize \MakeUppercase{#1 expansion}},
-  coltitle=#1,
-  colback=#1,
-  colbacktitle=#1,
-  colframe=#1,
+  title=\textbf{\tiny\MakeUppercase{\expansiontext{#1}{#2}}},
+  coltitle=#2,
+  colback=#2,
+  colbacktitle=#2,
+  colframe=#2,
   opacityfill=0,
   size=small,
   boxrule=0pt,
@@ -144,19 +150,19 @@
   beforeafter skip balanced=0.3\baselineskip plus 1pt,
   overlay={
     \fill[
-      #1,
+      #2,
       path fading=east,
       opacity=0.08
     ]
       ([xshift=-5pt, yshift=3pt]frame.north west) rectangle
-      ([xshift=5pt, yshift=-5pt]frame.south east);
+      ([xshift=5pt, yshift=-3pt]frame.south east);
     \fill[
-      top color=#1,
-      bottom color=#1!60!white,
+      top color=#2,
+      bottom color=#2,
       rounded corners=1.5pt
     ]
     ([xshift=-8pt, yshift=3pt]frame.north west) rectangle
-    ([xshift=-5pt, yshift=-5pt]frame.south west);
+    ([xshift=-5pt, yshift=-3pt]frame.south west);
   },
 }
 
