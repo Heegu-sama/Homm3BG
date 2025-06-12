@@ -27,6 +27,20 @@
 \newcommand{\qrgithub}{Skanuj, aby otworzyć repozytorium na \textbf{GitHubie}.}
 \newcommand{\qrbgg}{Skanuj, aby otworzyć wątek na \textbf{BoardGameGeeku}.}
 
+\newcommand{\expansiontext}[1]{%
+  \stringswitch{#1}{
+    {tower}{Forteca}
+    {rampart}{Bastion}
+    {fortress}{Cytadela}
+    {inferno}{Inferno}
+    {stronghold}{Twierdza}
+    {conflux}{Wrota Żywiołów}
+    {cove}{Przystań}
+    {battlefield}{Pole Bitwy}
+    {navalbattles}{Bitwy Morskie}
+  }{Rozszerzenie #1}
+}
+
 \title{\includegraphics[width=6cm]{\images/title.png}\\Przepisanie}
 
 \input{metadata.tex}
