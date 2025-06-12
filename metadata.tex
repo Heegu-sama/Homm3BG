@@ -43,6 +43,7 @@
 \usepackage[most]{tcolorbox}
 \usepackage{catchfile}
 \usepackage{xstring}
+\usepackage{expl3}
 \newtcolorbox{scaledfigure}[1][]{height fill, space to=\myspace,#1}
 \hypersetup{
   colorlinks=true,
@@ -131,10 +132,6 @@
 \definecolor{battlefield}{HTML}{505050}   % dark gray
 \definecolor{navalbattles}{HTML}{2E5984}  % dark deep blue
 
-\newcommand{\expansiontext}[1]{%
-  #1 expansion%
-}
-
 \newtcolorbox{expansion}[2][]{
   enhanced,
   title=\textbf{\tiny\MakeUppercase{\expansiontext{#2}}},
@@ -172,6 +169,14 @@
   size=minimal,
   beforeafter skip balanced=0pt,
 ]{#1}}{\end{expansion}}
+
+% https://tex.stackexchange.com/questions/675895/how-to-use-full-string-conditionals-in-latex
+\ExplSyntaxOn
+\NewDocumentCommand{\stringswitch}{mmm}
+ {
+  \str_case_e:nnF { #1 } { #2 } { #3 }
+ }
+\ExplSyntaxOff
 
 \newcommand{\svg}[2][10]{%
   {\raisebox{-0.15\height}{\includesvg[height=#1px]{\svgs/\detokenize{#2}.svg}}}%
