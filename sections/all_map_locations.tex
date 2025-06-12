@@ -104,9 +104,13 @@ The effects of the following \textbf{Visitable} fields are explained by the symb
 
   \bigskip
 
+  \vspace*{-0.1\baselineskip}
+  \begin{expansion}{cove}
+  \vspace*{-0.5\baselineskip}
+  \centering
   \phantom{j}\textbf{Grave}\phantom{j}\\
   \framedimage[\linewidth]{\map_locations/grave.jpg}\\
-
+  \end{expansion}
   \vspace*{\fill}
   \filbreak
 
@@ -145,6 +149,9 @@ The effects of the following \textbf{Visitable} fields are explained by the symb
 
   \bigskip
 
+  \vspace*{-0.6\baselineskip}
+  \begin{expansion}{cove}
+  \centering
   \phantom{j}\textbf{Mermaid}\phantom{j}\\
   \framedimage[\linewidth]{\map_locations/mermaid.jpg}\\
 
@@ -157,13 +164,14 @@ The effects of the following \textbf{Visitable} fields are explained by the symb
 
   \phantom{j}\textbf{Temple of the Sea}\phantom{j}\\
   \framedimage[\linewidth]{\map_locations/temple_of_the_sea.jpg}\\
+  \end{expansion}
 
   \bigskip
 
   \vspace*{\fill}
   \columnbreak
 
-  \vspace*{-2.0\baselineskip}
+  \vspace*{-1.75\baselineskip}
   \begin{expansion}{cove}
   \centering
   \phantom{j}\textbf{Flotsam}\phantom{j}\\
@@ -269,6 +277,51 @@ When you Flag a Settlement, choose one of the following options:
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
+    \centering
+    \phantom{j}\textbf{Stables}\phantom{j}\par
+    \framedimage[\textwidth]{\map_locations/stables.jpg}
+    \caption{\small Category: \textbf{Revisitable}\\
+      Gain 1 \svgeven{movement}.
+      It lasts for only one Turn.
+      See \protect\pagelink{Movement}{Movement Actions}.
+    }
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \textbf{Sanctuary}\par
+    \framedimage[\textwidth]{\map_locations/sanctuary.jpg}
+    \caption{\small Category: \textbf{Revisitable}\\
+      Heroes on this Field cannot be attacked by other Heroes.
+      Friendly Heroes can move through enemy Heroes on this Field but cannot stop here.}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \pagetarget{Trading Post}{\textbf{Trading Post}}\par
+    \framedimage[\textwidth]{\map_locations/trading_post.jpg}
+    \caption{\small Category: \textbf{Revisitable}\\
+      \textbf{Choose one}: \protect\pagelink{Trading}{Trade} resources OR Remove one card and gain 1 \svg{gold} OR buy a \protect\pagelink{War Machines}{War Machine} at a higher cost.
+    }
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+  \vspace*{-0.9\baselineskip}
+  \begin{expansion}{rampart}
+    \centering
+    \phantom{j}\pagetarget{War Machine Factory}{\textbf{War Machine Factory}}\par
+    \framedimage[\textwidth]{\map_locations/war_machine_factory.jpg}
+    \caption{\small Category: \textbf{Revisitable}\\Buy a \protect\pagelink{War Machines}{War Machine} at a lower cost.\phantom{.......}}
+  \end{expansion}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
   \vspace*{-0.9\baselineskip}
   \begin{expansion}{tower}
     \centering
@@ -299,55 +352,6 @@ When you Flag a Settlement, choose one of the following options:
       \end{itemize}
       }
     \end{expansion}
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[H]
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \textbf{Sanctuary}\par
-    \framedimage[\textwidth]{\map_locations/sanctuary.jpg}
-    \caption{\small Category: \textbf{Revisitable}\\
-      Heroes on this Field cannot be attacked by other Heroes.
-      Friendly Heroes can move through enemy Heroes on this Field but cannot stop here.}
-  \end{minipage}\hfill
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \vspace*{-0.9\baselineskip}
-    \begin{expansion}{tower}
-    \centering
-    \phantom{j}\textbf{Tavern}\par
-    \framedimage[\textwidth]{\map_locations/tavern.jpg}
-    \caption{\small Category: \textbf{Revisitable}\\
-      You can \svg{pay_v2}
-      7 \svg{gold}
-      to gain a Secondary Hero.
-      Place their model on this Field.
-      Then, choose one enemy player to discard 1 random card from their hand.}
-    \end{expansion}
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[H]
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \pagetarget{Trading Post}{\textbf{Trading Post}}\par
-    \framedimage[\textwidth]{\map_locations/trading_post.jpg}
-    \caption{\small Category: \textbf{Revisitable}\\
-      \textbf{Choose one}: \protect\pagelink{Trading}{Trade} resources OR Remove one card and gain 1 \svg{gold} OR buy a \protect\pagelink{War Machines}{War Machine} at a higher cost.
-    }
-  \end{minipage}\hfill
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-  \vspace*{-0.9\baselineskip}
-  \begin{expansion}{rampart}
-    \centering
-    \phantom{j}\pagetarget{War Machine Factory}{\textbf{War Machine Factory}}\par
-    \framedimage[\textwidth]{\map_locations/war_machine_factory.jpg}
-    \caption{\small Category: \textbf{Revisitable}\\Buy a \protect\pagelink{War Machines}{War Machine} at a lower cost.\phantom{.......}}
-  \end{expansion}
   \end{minipage}
 \end{figure}
 
@@ -393,14 +397,18 @@ When you Flag a Settlement, choose one of the following options:
   \end{minipage}\hfill
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
+    \vspace*{-0.9\baselineskip}
+    \begin{expansion}{tower}
     \centering
-    \phantom{j}\textbf{Stables}\phantom{j}\par
-    \framedimage[\textwidth]{\map_locations/stables.jpg}
+    \phantom{j}\textbf{Tavern}\par
+    \framedimage[\textwidth]{\map_locations/tavern.jpg}
     \caption{\small Category: \textbf{Revisitable}\\
-      Gain 1 \svgeven{movement}.
-      It lasts for only one Turn.
-      See \protect\pagelink{Movement}{Movement Actions}.
-    }
+      You can \svg{pay_v2}
+      7 \svg{gold}
+      to gain a Secondary Hero.
+      Place their model on this Field.
+      Then, choose one enemy player to discard 1 random card from their hand.}
+    \end{expansion}
   \end{minipage}
 \end{figure}
 
@@ -459,17 +467,53 @@ When you Flag a Settlement, choose one of the following options:
   \end{minipage}\hfill
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
-    \vspace*{-0.9\baselineskip}
-    \begin{expansion}{conflux}
     \centering
-    \phantom{j}\textbf{Elemental Conflux}\phantom{j}\par
-    \framedimage[\linewidth]{\map_locations/elemental_conflux.jpg}
+    \phantom{j}\textbf{Obelisk}\par
+    \framedimage[\linewidth]{\map_locations/obelisk.jpg}
+    \caption{\small Category: \textbf{Flaggable}\\
+      The Obelisk's effects depend on the Scenario.
+      When you Flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \textbf{Magic Spring}\par
+    \framedimage[\linewidth]{\map_locations/magic_spring.jpg}
     \caption{\small Category: \textbf{Visitable}\\
-      For every Dwelling you have, draw from the corresponding Neutral Unit Decks until you find one ``Elementals'' Unit from each (reshuffle if you run out of Units before finding one).
-      You can recruit one of those Elementals if you \svg{pay_v2} its recruitment cost.
-      Shuffle the remaining Units back into their respective Decks.
-    }
-    \end{expansion}
+      You may look at the top 3 Cards of your Discard Pile and return one of them to your Hand.
+      Return the remaining cards to the top of your Discard Pile in any order.}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \phantom{j}\textbf{Witch Hut}\par
+    \framedimage[\linewidth]{\map_locations/witch_hut.jpg}
+    \caption{\small Category: \textbf{Visitable}\\
+      \textbf{Choose one}: Remove an Ability card from your hand OR look at the top card of the Ability Deck and put that card into your hand or into the Ability Deck Discard Pile.}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \textbf{Dragon Utopia}\par
+    \framedimage[\linewidth]{\map_locations/dragon_utopia.jpg}
+    \caption{\small Category: \textbf{Flaggable}\\Effects depend on the Scenario.}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+  \vspace*{-0.9\baselineskip}
+  \begin{expansion}{tower}
+    \centering
+    \textbf{University}\par
+    \framedimage[\linewidth]{\map_locations/university.jpg}
+    \caption{\small Category: \textbf{Visitable}\\
+      \svg{pay_v2} 6 \svg{gold} to \textbf{Search (4)} the Ability Discard Pile.}
+  \end{expansion}
   \end{minipage}
 \end{figure}
 
@@ -504,32 +548,17 @@ When you Flag a Settlement, choose one of the following options:
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
+    \vspace*{-0.9\baselineskip}
+    \begin{expansion}{conflux}
     \centering
-    \textbf{Magic Spring}\par
-    \framedimage[\linewidth]{\map_locations/magic_spring.jpg}
+    \phantom{j}\textbf{Elemental Conflux}\phantom{j}\par
+    \framedimage[\linewidth]{\map_locations/elemental_conflux.jpg}
     \caption{\small Category: \textbf{Visitable}\\
-      You may look at the top 3 Cards of your Discard Pile and return one of them to your Hand.
-      Return the remaining cards to the top of your Discard Pile in any order.}
-  \end{minipage}\hfill
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \phantom{j}\textbf{Witch Hut}\par
-    \framedimage[\linewidth]{\map_locations/witch_hut.jpg}
-    \caption{\small Category: \textbf{Visitable}\\
-      \textbf{Choose one}: Remove an Ability card from your hand OR look at the top card of the Ability Deck and put that card into your hand or into the Ability Deck Discard Pile.}
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[H]
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \phantom{j}\textbf{Obelisk}\par
-    \framedimage[\linewidth]{\map_locations/obelisk.jpg}
-    \caption{\small Category: \textbf{Flaggable}\\
-      The Obelisk's effects depend on the Scenario.
-      When you Flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}
+      For every Dwelling you have, draw from the corresponding Neutral Unit Decks until you find one ``Elementals'' Unit from each (reshuffle if you run out of Units before finding one).
+      You can recruit one of those Elementals if you \svg{pay_v2} its recruitment cost.
+      Shuffle the remaining Units back into their respective Decks.
+    }
+    \end{expansion}
   \end{minipage}\hfill
     \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
@@ -550,27 +579,6 @@ When you Flag a Settlement, choose one of the following options:
         \end{itemize}
        }
     \end{expansion}
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[H]
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \textbf{Dragon Utopia}\par
-    \framedimage[\linewidth]{\map_locations/dragon_utopia.jpg}
-    \caption{\small Category: \textbf{Flaggable}\\Effects depend on the Scenario.}
-  \end{minipage}\hfill
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-  \vspace*{-0.9\baselineskip}
-  \begin{expansion}{tower}
-    \centering
-    \textbf{University}\par
-    \framedimage[\linewidth]{\map_locations/university.jpg}
-    \caption{\small Category: \textbf{Visitable}\\
-      \svg{pay_v2} 6 \svg{gold} to \textbf{Search (4)} the Ability Discard Pile.}
-  \end{expansion}
   \end{minipage}
 \end{figure}
 
