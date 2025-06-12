@@ -132,13 +132,9 @@
 \definecolor{battlefield}{HTML}{505050}   % dark gray
 \definecolor{navalbattles}{HTML}{2E5984}  % dark deep blue
 
-\newtcolorbox{expansion}[2][]{
+\newtcolorbox{expansioninternal}[3][]{
   enhanced,
-  title=\textbf{\tiny\MakeUppercase{\expansiontext{#2}}},
-  coltitle=#2,
-  colback=#2,
-  colbacktitle=#2,
-  colframe=#2,
+  title=\textbf{\tiny#3},
   opacityfill=0,
   size=small,
   boxrule=0pt,
@@ -164,6 +160,27 @@
   #1
 }
 
+\ExplSyntaxOn
+\NewDocumentEnvironment{expansion}{ O{} m +b }{
+  \clist_set:Nn \l_tmpa_clist {#2}
+
+  % Use first expansion for color
+  \tl_clear_new:N \l_firstexpname_tl
+  \tl_set:No \l_firstexpname_tl {\clist_item:Nn \l_tmpa_clist {1}}
+
+  % All expansions for the title
+  \tl_clear_new:N \l_exptitles_tl
+  \seq_clear:N \l_tmpa_seq
+  \clist_map_inline:Nn \l_tmpa_clist {
+    \seq_put_right:No \l_tmpa_seq {\color{##1}\MakeUppercase{\expansiontext{##1}}}
+  }
+  \tl_set:No \l_exptitles_tl {\seq_use:Nn \l_tmpa_seq { ,~ }}
+  \begin{expansioninternal}[#1]{\l_firstexpname_tl}{\l_exptitles_tl}
+    #3
+  \end{expansioninternal}
+}{}
+\ExplSyntaxOff
+
 % used in components
 \newenvironment{expansionmini}[1]{\begin{expansion}[%
   size=minimal,
@@ -172,10 +189,9 @@
 
 % https://tex.stackexchange.com/questions/675895/how-to-use-full-string-conditionals-in-latex
 \ExplSyntaxOn
-\NewDocumentCommand{\stringswitch}{mmm}
- {
+\NewDocumentCommand{\stringswitch}{mmm}{
   \str_case_e:nnF { #1 } { #2 } { #3 }
- }
+}
 \ExplSyntaxOff
 
 \newcommand{\svg}[2][10]{%
