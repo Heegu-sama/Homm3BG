@@ -19,34 +19,34 @@
     \begin{tikzpicture}[overlay]
       \node at (1, 0.25) {\includegraphics[width=0.2\linewidth]{\images/treasure_die.png}};
     \end{tikzpicture} \\
-    \svg[15]{resource_die} & Roll a \pagelink{Resources}{Resource Die} and gain the indicated Resources. \\
+    \svg[14]{resource_die} & Roll a \pagelink{Resources}{Resource Die} and gain the indicated Resources. \\
     \svg[15]{2_treasure_die} & Roll 2 Resource Dice and choose the bonus from one of them. \\
-    \svg[15]{experience} & Gain one Experience Point. \\
+    \svg[14]{experience} & Gain one Experience Point. \\
     \svg[15]{artifact} & Search (2) the Artifact Deck. \\
     \svg[15]{spellpower} & Search (2) the Spell Deck. \\
-    \svg[15]{morale_positive} & Gain Positive Morale. \\
-    \svg[15]{morale_negative} & Gain Negative Morale. \\
-    \svg[15]{movement} & Gain 1 Movement Point for this turn. \\
-    {\huge\textbf{?}} & Special effect, see \pagelink{Revisitable Fields}{Revisitable} or \pagelink{Other Fields}{Other} fields.\\
+    \svg[11]{morale_positive} & Gain Positive Morale. \\
+    \svg[11]{morale_negative} & Gain Negative Morale. \\
+    \svg[14]{movement} & Gain 1 Movement Point for this turn. \\
+    {\LARGE\textbf{?}} & Special effect, see \pagelink{Revisitable Fields}{Revisitable} or \pagelink{Other Fields}{Other} fields.\\
   \end{tabularx}
 \endgroup
 
 \medskip
 
 \begin{itemize}[itemsep=0.4em]
-  \item [{\LARGE\textbf{+}}]
-    \svg{gold}/\svg{building_materials}/\svg{valuablegreater} —
+  \item [{\LARGE$\boldsymbol{+}$}]
+    \svg{gold}$\boldsymbol{/}$\svg{building_materials}$\boldsymbol{/}$\svg{valuablegreater} —
     Immediately gain the indicated Resource.
-  \item [{\svg[15]{ongoing}}]
-    \svg{gold}/\svg{building_materials}/\svg{valuablegreater} —
+  \item [{\svg[14]{ongoing}}]
+    \svg{gold}$\boldsymbol{/}$\svg{building_materials}$\boldsymbol{/}$\svg{valuablegreater} —
     Increase the production of the indicated Resource.
     If it is \textbf{Flagged} for the first time, you also gain it immediately.
-  \item [{\svg[15]{pay_v2}}]
-    \svg{gold}/\svg{building_materials}/\svg{valuablegreater} \svg{arrow_right} —
+  \item [{\svg[10]{pay_v2}}]
+    \svg{gold}$\boldsymbol{/}$\svg{building_materials}$\boldsymbol{/}$\svg{valuablegreater} \svg{arrow_right} —
     The Player needs to pay the indicated Resource to gain something.
   \item [{\LARGE\textbf{2}}] {\LARGE\textbf{x}} —
     Perform the {\LARGE\textbf{x}} action twice.
-  \item [{\LARGE\textbf{2}}] \svg[15]{treasure}{\LARGE\textbf{/2}} \svg[15]{resource_die} \svgeven{arrow_right}{\LARGE\textbf{1}} —
+  \item [{\LARGE\textbf{2}}] \svg[14]{treasure}{\LARGE\textbf{$\boldsymbol{/}$2}} \svg[14]{resource_die} \svgeven{arrow_right}{\LARGE\textbf{1}} —
     Roll 2 Treasure or Resource Dice and choose one to be resolved.
 \end{itemize}
 
