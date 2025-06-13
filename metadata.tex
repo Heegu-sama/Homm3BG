@@ -177,6 +177,42 @@
     #3
   \end{tcolorbox}
 }{}
+
+% used in all map locations
+% For images with captions
+\NewDocumentCommand{\expansionlabel}{ m }{
+  \clist_set:Nn \l_tmpa_clist {#1}
+  % Use first expansion for color
+  \tl_clear_new:N \l_firstexpname_tl
+  \tl_set:No \l_firstexpname_tl {\clist_item:Nn \l_tmpa_clist {1}}
+  % All expansions for the title
+  \tl_clear_new:N \l_exptitles_tl
+  \seq_clear:N \l_tmpa_seq
+  \clist_map_inline:Nn \l_tmpa_clist {
+    \seq_put_right:No \l_tmpa_seq {\MakeUppercase{\use:c{expansiontext}{##1}}}
+  }
+  \tl_set:No \l_exptitles_tl {\seq_use:Nn \l_tmpa_seq { ,~ }}
+
+  \vspace{-\baselineskip}\makebox[\columnwidth][r]{\textcolor{\l_firstexpname_tl}{\tiny\raisebox{0.8\baselineskip}{\textbf{\l_exptitles_tl} \hspace{2pt}\raisebox{-0.08\baselineskip}{\rule{2.2mm}{2.2mm}}}}}
+}
+
+% For images without captions
+\NewDocumentCommand{\expansionlabelnocap}{ m }{
+  \clist_set:Nn \l_tmpa_clist {#1}
+  % Use first expansion for color
+  \tl_clear_new:N \l_firstexpname_tl
+  \tl_set:No \l_firstexpname_tl {\clist_item:Nn \l_tmpa_clist {1}}
+  % All expansions for the title
+  \tl_clear_new:N \l_exptitles_tl
+  \seq_clear:N \l_tmpa_seq
+  \clist_map_inline:Nn \l_tmpa_clist {
+    \seq_put_right:No \l_tmpa_seq {\MakeUppercase{\use:c{expansiontext}{##1}}}
+  }
+  \tl_set:No \l_exptitles_tl {\seq_use:Nn \l_tmpa_seq { ,~ }}
+
+  \makebox[\columnwidth][r]{\textcolor{\l_firstexpname_tl}{\tiny\raisebox{\baselineskip}{\textbf{\l_exptitles_tl} \hspace{2pt}\raisebox{-0.08\baselineskip}{\rule{2.2mm}{2.2mm}}}}}
+  \vspace{-\baselineskip}
+}
 \ExplSyntaxOff
 
 % used in components
