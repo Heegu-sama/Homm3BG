@@ -64,22 +64,52 @@ file_mod_time() {
   fi
 }
 
+# Check if cached PDF is up-to-date
+is_pdf_current() {
+  local pdf_file="$1"
+
+  if [[ ! -f "$pdf_file" ]]; then
+    return 1
+  fi
+
+  # Check if poppler is available
+  if command -v pdftotext >/dev/null 2>&1; then
+    # Get 7-character commit SHA from main branch (matching PDF format)
+    local pattern
+    pattern=$(git --no-pager log main -1 --format="%h" 2>/dev/null)
+    pattern=${pattern:0:7}
+
+    if [[ -n "$pattern" ]]; then
+      # Extract text from PDF and check for commit SHA
+      if pdftotext "$pdf_file" - 2>/dev/null | grep -q "$pattern"; then
+        return 0
+      else
+        return 1
+      fi
+    fi
+  fi
+
+  # Fallback to time-based check
+  local mod_time now age
+  mod_time=$(file_mod_time "$pdf_file")
+  now=$(date +%s)
+  age=$((now - mod_time))  # seconds
+
+  if [[ $age -gt 3600 ]]; then
+    return 1
+  else
+    return 0
+  fi
+}
+
 # Only download a base file if it's not already present locally or
-# is older than 1 hour. Otherwise we use the cached one to speed-up the workflow.
+# is outdated based on commit SHA (with poppler) or age (fallback).
 ensure_base_file() {
   local language="$1"
   local printable="$2"
   local base_file=$(base_file_path "$language" "$printable")
 
-  if [[ -f $base_file ]]; then
-    mod_time=$(file_mod_time "$base_file")
-    now=$(date +%s)
-    age=$((now - mod_time))  # seconds
-
-    if [[ $age -gt 3600 ]]; then
-      download_base_file "$language" "$printable"
-    fi
-  else
+  if ! is_pdf_current "$base_file"; then
     download_base_file "$language" "$printable"
   fi
 
