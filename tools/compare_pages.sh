@@ -78,28 +78,18 @@ is_pdf_current() {
   now=$(date +%s)
   age=$((now - mod_time))  # seconds
 
-  # If file is newer than 1 hour, consider it current
-  if [[ $age -le 3600 ]]; then
+  # If file is newer than 3 hours, consider it current
+  if [[ $age -le 10800 ]]; then
     return 0
   fi
 
-  # File is older than 1 hour, check commit SHA if possible
-  if command -v pdftotext >/dev/null 2>&1; then
-    local upstream
-    upstream=$(git rev-parse --abbrev-ref main@{upstream})
-    local main_remote="${upstream%/*}"
-
-    git fetch "$main_remote" main 2>/dev/null
-    local pattern
-    pattern=$(git --no-pager log "$upstream" -1 --format="%h")
-    pattern=${pattern:0:7}
-
-    if [[ -n "$pattern" ]]; then
-      if pdftotext "$pdf_file" - 2>/dev/null | grep -q "$pattern"; then
-        return 0
-      else
-        return 1
-      fi
+  # File is older than 3 hours, check commit SHA using GitHub API
+  if command -v pdftotext >/dev/null 2>&1 && command -v curl >/dev/null 2>&1; then
+    # Get latest commit SHA and check if it's in the PDF
+    local latest_sha
+    latest_sha=$(curl -s -f -H "Accept: application/vnd.github.VERSION.sha" "https://api.github.com/repos/Heegu-sama/Homm3BG/commits/main" 2>/dev/null)
+    if [[ -n "$latest_sha" ]] && pdftotext "$pdf_file" - 2>/dev/null | grep -q "${latest_sha:0:7}"; then
+      return 0
     fi
   fi
   return 1
