@@ -85,18 +85,16 @@ is_pdf_current() {
 
   # File is older than 1 hour, check commit SHA if possible
   if command -v pdftotext >/dev/null 2>&1; then
-    # Get the remote for main branch
     local upstream
     upstream=$(git rev-parse --abbrev-ref main@{upstream})
     local main_remote="${upstream%/*}"
 
-    git fetch "$main_remote" main
+    git fetch "$main_remote" main 2>/dev/null
     local pattern
     pattern=$(git --no-pager log "$upstream" -1 --format="%h")
     pattern=${pattern:0:7}
 
     if [[ -n "$pattern" ]]; then
-      # Extract text from PDF and check for commit SHA
       if pdftotext "$pdf_file" - 2>/dev/null | grep -q "$pattern"; then
         return 0
       else
