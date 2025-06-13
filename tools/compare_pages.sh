@@ -72,11 +72,23 @@ is_pdf_current() {
     return 1
   fi
 
-  # Check if poppler is available
+  # First check: time-based check (fast)
+  local mod_time now age
+  mod_time=$(file_mod_time "$pdf_file")
+  now=$(date +%s)
+  age=$((now - mod_time))  # seconds
+
+  # If file is newer than 1 hour, consider it current
+  if [[ $age -le 3600 ]]; then
+    return 0
+  fi
+
+  # File is older than 1 hour, check commit SHA if possible
   if command -v pdftotext >/dev/null 2>&1; then
-    # Get 7-character commit SHA from main branch (matching PDF format)
+    # Get 7-character commit SHA from remote main branch (matching PDF format)
+    git fetch origin main 2>/dev/null
     local pattern
-    pattern=$(git --no-pager log main -1 --format="%h" 2>/dev/null)
+    pattern=$(git --no-pager log origin/main -1 --format="%h" 2>/dev/null)
     pattern=${pattern:0:7}
 
     if [[ -n "$pattern" ]]; then
@@ -89,17 +101,7 @@ is_pdf_current() {
     fi
   fi
 
-  # Fallback to time-based check
-  local mod_time now age
-  mod_time=$(file_mod_time "$pdf_file")
-  now=$(date +%s)
-  age=$((now - mod_time))  # seconds
-
-  if [[ $age -gt 3600 ]]; then
-    return 1
-  else
-    return 0
-  fi
+  return 1
 }
 
 # Only download a base file if it's not already present locally or
