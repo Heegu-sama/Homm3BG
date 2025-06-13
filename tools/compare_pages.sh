@@ -85,10 +85,14 @@ is_pdf_current() {
 
   # File is older than 1 hour, check commit SHA if possible
   if command -v pdftotext >/dev/null 2>&1; then
-    # Get 7-character commit SHA from remote main branch (matching PDF format)
-    git fetch origin main 2>/dev/null
+    # Get the remote for main branch
+    local upstream
+    upstream=$(git rev-parse --abbrev-ref main@{upstream})
+    local main_remote="${upstream%/*}"
+
+    git fetch "$main_remote" main
     local pattern
-    pattern=$(git --no-pager log origin/main -1 --format="%h" 2>/dev/null)
+    pattern=$(git --no-pager log "$upstream" -1 --format="%h")
     pattern=${pattern:0:7}
 
     if [[ -n "$pattern" ]]; then
@@ -100,12 +104,11 @@ is_pdf_current() {
       fi
     fi
   fi
-
   return 1
 }
 
 # Only download a base file if it's not already present locally or
-# is outdated based on commit SHA (with poppler) or age (fallback).
+# is outdated based on age or commit SHA (with poppler).
 ensure_base_file() {
   local language="$1"
   local printable="$2"
