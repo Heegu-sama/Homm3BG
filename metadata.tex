@@ -178,6 +178,15 @@
   \end{tcolorbox}
 }{}
 
+% Helper function for the tikz square
+\cs_new:Nn \__expansion_tikz_square: {
+  \begin{tikzpicture}[baseline=0]
+    \fill[\l_firstexpname_tl] (0,0) rectangle (2.2mm,2.2mm);
+    \draw[borderinyellow,~line~width=0.9pt] (0,0) rectangle (2.2mm,2.2mm);
+    \draw[borderoutyellow,~line~width=0.8pt] (current~bounding~box.north~west) rectangle (current~bounding~box.south~east);
+  \end{tikzpicture}
+}
+
 % used in all map locations
 % For images with captions
 \NewDocumentCommand{\expansionlabel}{ m }{
@@ -193,13 +202,9 @@
   }
   \tl_set:No \l_exptitles_tl {\seq_use:Nn \l_tmpa_seq { ,~ }}
 
-\vspace{-\baselineskip}\makebox[1.0055\columnwidth][r]{\textcolor{\l_firstexpname_tl}{\tiny\raisebox{0.8\baselineskip}{\textbf{\l_exptitles_tl} \hspace{2pt}\raisebox{-0.08\baselineskip}{%
-\begin{tikzpicture}[baseline=0]
-  \fill[\l_firstexpname_tl] (0,0) rectangle (2.2mm,2.2mm);
-  \draw[borderinyellow,~line~width=0.9pt] (0,0) rectangle (2.2mm,2.2mm);
-  \draw[borderoutyellow,~line~width=0.8pt] (current~bounding~box.north~west) rectangle (current~bounding~box.south~east);
-\end{tikzpicture}%
-}}}}
+  \vspace{-\baselineskip}\makebox[1.0055\columnwidth][r]{\textcolor{\l_firstexpname_tl}{\tiny\raisebox{0.8\baselineskip}{\textbf{\l_exptitles_tl} \hspace{2pt}\raisebox{-0.08\baselineskip}{%
+    \__expansion_tikz_square:
+  }}}}
 
 }
 
@@ -218,11 +223,7 @@
   \tl_set:No \l_exptitles_tl {\seq_use:Nn \l_tmpa_seq { ,~ }}
 
   \vspace{-\baselineskip}\makebox[1.0055\columnwidth][r]{\textcolor{\l_firstexpname_tl}{\tiny\raisebox{-1.1\baselineskip}{\textbf{\l_exptitles_tl} \hspace{2pt}\raisebox{-0.08\baselineskip}{%
-  \begin{tikzpicture}[baseline=0]
-    \fill[\l_firstexpname_tl] (0,0) rectangle (2.2mm,2.2mm);
-    \draw[borderinyellow,~line~width=0.9pt] (0,0) rectangle (2.2mm,2.2mm);
-    \draw[borderoutyellow,~line~width=0.8pt] (current~bounding~box.north~west) rectangle (current~bounding~box.south~east);
-  \end{tikzpicture}%
+    \__expansion_tikz_square:
   }}}}
   \vspace{-0.6\baselineskip}
 }
