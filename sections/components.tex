@@ -8,14 +8,18 @@ This guide provides a visual overview of all components included in every expans
 \vspace*{-1em}
 \begin{figure}[H]
   \centering
-  \begin{subfigure}[t]{0.4\linewidth}
+  \begin{subfigure}[b]{0.4\linewidth}
     \includegraphics[width=\linewidth]{\images/combat_board.png}
     \caption{\textbf{\pagelink{Combat}{Combat Board}}}
   \end{subfigure}
   ~
-  \begin{subfigure}[t]{0.4\linewidth}
-    \includegraphics[width=\linewidth]{\images/battlefield-alone.png}
-    \caption{\textbf{Battlefield Board} \\\textit{(Battlefield Expansion)}}
+  \begin{subfigure}[b]{0.4\linewidth}
+    \begin{expansionmini}{battlefield}
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=\linewidth]{\images/battlefield-alone.png}};
+      \end{tikzpicture}
+      \caption{\textbf{Battlefield Board}}
+    \end{expansionmini}
   \end{subfigure}
 \end{figure}
 \vspace*{-1.5em}
@@ -23,8 +27,12 @@ This guide provides a visual overview of all components included in every expans
   \centering
   \begin{subfigure}[b]{0.16\linewidth}
     \centering
-    \includegraphics[width=0.6\linewidth]{\images/initiative-bf.png}
-    \caption{\textbf{Initiative Token} \textit{(Battlefield Expansion)}}
+    \begin{expansionmini}{battlefield}
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\images/initiative-bf.png}};
+      \end{tikzpicture}
+      \caption{\textbf{Initiative Token}}
+    \end{expansionmini}
   \end{subfigure}
   ~
   \begin{subfigure}[b]{0.25\linewidth}
@@ -122,18 +130,22 @@ This guide provides a visual overview of all components included in every expans
 \begin{figure}[H]
   \centering
   \begin{subfigure}[b]{0.27\linewidth}
-    \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.45\linewidth]{\cards/morale-positive-back.png}};
-      \node at (1.9, 0.1) {\includegraphics[width=0.45\linewidth]{\cards/morale-positive.png}};
-    \end{tikzpicture}
-    \caption{\textbf{Positive Morale Card} \textit{(Battlefield Expansion)}}
+    \begin{expansionmini}{battlefield}
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=0.45\linewidth]{\cards/morale-positive-back.png}};
+        \node at (1.9, 0.1) {\includegraphics[width=0.45\linewidth]{\cards/morale-positive.png}};
+      \end{tikzpicture}
+      \caption{\textbf{Positive Morale Card}}
+    \end{expansionmini}
   \end{subfigure}
   \begin{subfigure}[b]{0.27\linewidth}
-    \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.45\linewidth]{\cards/morale-negative-back.png}};
-      \node at (1.9, 0.1) {\includegraphics[width=0.45\linewidth]{\cards/morale-negative.png}};
-    \end{tikzpicture}
-    \caption{\textbf{Negative Morale Card} \textit{(Battlefield Expansion)}}
+    \begin{expansionmini}{battlefield}
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=0.45\linewidth]{\cards/morale-negative-back.png}};
+        \node at (1.9, 0.1) {\includegraphics[width=0.45\linewidth]{\cards/morale-negative.png}};
+      \end{tikzpicture}
+      \caption{\textbf{Negative Morale Card}}
+    \end{expansionmini}
   \end{subfigure}
   \begin{subfigure}[b]{0.4\linewidth}
     \centering
@@ -148,15 +160,18 @@ This guide provides a visual overview of all components included in every expans
 \vspace*{-4em}
 \begin{figure}[H]
   \centering
-  \begin{subfigure}[t]{0.23\linewidth}
+  \begin{subfigure}[b]{0.23\linewidth}
     \centering
-    \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.8\linewidth]{\cards/event-back.png}};
-      \node at (0.7, 1.2) {\includegraphics[width=0.8\linewidth]{\cards/event.png}};
-    \end{tikzpicture}
-    \caption{\textbf{\pagelink{Events}{Event Card}}\\\textit{(Fortress Expansion)}}
+    \begin{expansionmini}{fortress}
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=0.8\linewidth]{\cards/event-back.png}};
+        \node at (0.7, 1.2) {\includegraphics[width=0.8\linewidth]{\cards/event.png}};
+      \end{tikzpicture}
+      \caption{\textbf{\pagelink{Events}{Event Card}}}
+    \end{expansionmini}
   \end{subfigure}
-  \begin{subfigure}[t]{0.25\linewidth}
+  \hspace*{-0.5em}
+  \begin{subfigure}[b]{0.25\linewidth}
     \centering
     \begin{tikzpicture}
       \node at (0, 0) {\includegraphics[width=0.7\linewidth]{\cards/astrolog-back.png}};
@@ -164,15 +179,20 @@ This guide provides a visual overview of all components included in every expans
     \end{tikzpicture}
     \caption{\textbf{\pagelink{Rounds}{Astrologers Proclaim Card}}}
   \end{subfigure}
-  \begin{subfigure}[t]{0.23\linewidth}
+  \begin{subfigure}[b]{0.23\linewidth}
     \centering
     \includegraphics[width=\linewidth]{\cards/aiback.png}
     \caption{\textbf{\pagelink{AIrules}{AI Card}}}
   \end{subfigure}
-  \begin{subfigure}[t]{0.25\linewidth}
+  \hspace*{0.5em}
+  \begin{subfigure}[b]{0.25\linewidth}
     \centering
-    \includegraphics[width=\linewidth]{\cards/adventure.png}
-    \caption{\textbf{Adventure Card} \textit{(Battlefield Expansion)}}
+    \begin{expansionmini}{battlefield}
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=\linewidth]{\cards/adventure.png}};
+      \end{tikzpicture}
+      \caption{\textbf{Adventure Card}}
+    \end{expansionmini}
   \end{subfigure}
 \end{figure}
 \vspace*{-2em}
@@ -206,15 +226,17 @@ This guide provides a visual overview of all components included in every expans
 \vspace*{-2em}
 \begin{figure}[H]
   \centering
-  \begin{subfigure}[t]{0.23\linewidth}
+  \begin{subfigure}[b]{0.23\linewidth}
     \centering
-    \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
-      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/war_machine.png}};
-    \end{tikzpicture}
-    \caption{\textbf{\pagelink{War Machines}{War Machine Card}} \textit{(Rampart Expansion)}}
+    \begin{expansionmini}{rampart}
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
+        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/war_machine.png}};
+      \end{tikzpicture}
+      \caption{\textbf{\pagelink{War Machines}{War Machine Card}}}
+    \end{expansionmini}
   \end{subfigure}
-  \begin{subfigure}[t]{0.23\linewidth}
+  \begin{subfigure}[b]{0.23\linewidth}
     \centering
     \begin{tikzpicture}
       \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
@@ -222,21 +244,24 @@ This guide provides a visual overview of all components included in every expans
     \end{tikzpicture}
     \caption{\textbf{\pagelink{Specialty}{Hero Specialty Card}}}
   \end{subfigure}
-  \begin{subfigure}[t]{0.23\linewidth}
+  \begin{subfigure}[b]{0.23\linewidth}
     \centering
     \begin{tikzpicture}
       \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
       \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/statistic.png}};
     \end{tikzpicture}
-    \caption{\textbf{\pagelink{Statistic}{Statistic Card}}}
+    \caption{\textbf{\pagelink{Statistic}{Statistic Card}\\\phantom{blah}}}
   \end{subfigure}
-  \begin{subfigure}[t]{0.23\linewidth}
+  \hspace*{1em}
+  \begin{subfigure}[b]{0.23\linewidth}
     \centering
-    \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
-      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/empowered_statistic.png}};
-    \end{tikzpicture}
-    \caption{\textbf{\pagelink{Empowered Statistic}{Empowered Statistic Card}} \textit{(Inferno Expansion)}}
+    \begin{expansionmini}{inferno}
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
+        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/empowered_statistic.png}};
+      \end{tikzpicture}
+      \caption{\textbf{\pagelink{Empowered Statistic}{Empowered Statistic Card}}}
+    \end{expansionmini}
   \end{subfigure}
 \end{figure}
 \vspace*{\iftoggle{printable}{-2em}{-3em}}
@@ -313,8 +338,10 @@ This guide provides a visual overview of all components included in every expans
   \centering
   \begin{subfigure}[b]{\iftoggle{printable}{0.8\linewidth}{\linewidth}}
     \centering
-    \includegraphics[width=\linewidth]{\images/battlefield-obstacles.png}
-    \caption{\textbf{Obstacles} \textit{(Battlefield Expansion)}}
+    \begin{expansionmini}{battlefield}
+      \includegraphics[width=\linewidth]{\images/battlefield-obstacles.png}
+      \caption{\textbf{Obstacles}}
+    \end{expansionmini}
   \end{subfigure}
 \end{figure}
 \end{paracol}
