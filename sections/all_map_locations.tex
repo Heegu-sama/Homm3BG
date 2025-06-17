@@ -261,6 +261,7 @@ All mines have the \svg{ongoing} symbol and a picture of the Resource they produ
 \begin{multicols}{2}
 \subsection*{Settlements}
 \textbf{Settlements}\index{Settlement} act as a spawn point for Secondary Heroes, and as a place for Main Heroes to move to when defeated.
+They also prevent \pagelink{End}{Player Elimination}.
 When you Flag a Settlement, choose one of the following options:
 \begin{itemize}
   \item Increase your \svg{gold}, \svg{building_materials} or \svg{valuablegreater} income by one space.
@@ -273,19 +274,29 @@ When you Flag a Settlement, choose one of the following options:
     Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
 \end{itemize}
 
+\vspace*{\fill}
 \columnbreak
 
 \subsection*{Random Town}\pagetarget{Random Town}{}
 \framedimage[\linewidth]{\map_locations/random_town.jpg}
 \expansionlabel{inferno}
-{\small Category: \textbf{Flaggable}\\
-  When revealed, all players roll 2 \svg{resource_die}.
-  The highest roller chooses an unused Faction.
-  The random Town is defended by Units from that Faction.
-  They have a ``Pack'' of \svgunit{bronze}, two ``Packs'' of \svgunit{silver}, and two ``Fews'' of \svgunit{golden} Units.
-  The \svgunit{bronze} Unit is chosen by the player who controls the Units during that Combat.
-  Flagging it increases \svg{gold} production by 10, which is also gained immediately if you are the first to Flag it.
-}
+
+\bigskip
+When revealed, all players roll 2 \svg{resource_die}.
+The highest roller chooses an unused Faction.
+\begin{expansion}{stretchgoal2}
+  Instead, draw a random unused Town Card to determine the Faction.
+\end{expansion}
+The Random Town is defended by Units from that Faction:
+\begin{itemize}
+  \item a ``Pack'' of \svgunit{bronze} Units, chosen by the player who controls the defense during this Combat,
+  \item two ``Packs'' of \svgunit{silver} Units,
+  \item two ``Fews'' of \svgunit{golden} Units.
+\end{itemize}
+Add \pagelink{Walls}{Walls and the Gate} for this Combat, but not the Arrow Tower.
+
+Flagging the Random Town increases \svg{gold} production by 10, which is also gained immediately if you are the first to Flag it.
+While you have the Random Town Flagged, treat it as a Settlement.
 
 \end{multicols}
 \vspace*{\fill}
