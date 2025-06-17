@@ -277,26 +277,31 @@ When you Flag a Settlement, choose one of the following options:
 \vspace*{\fill}
 \columnbreak
 
-\subsection*{Random Town}\pagetarget{Random Town}{}
-\framedimage[\linewidth]{\map_locations/random_town.jpg}
-\expansionlabel{inferno}
+\begin{expansion}[before=\vspace*{-11mm}]{inferno}
+  \subsection*{Random Town}\pagetarget{Random Town}{}
+  \framedimage[\linewidth]{\map_locations/random_town.jpg}
 
-\bigskip
-When revealed, all players roll 2 \svg{resource_die}.
-The highest roller chooses an unused Faction.
-\begin{expansion}{stretchgoal2}
-  Instead, draw a random unused Town Card to determine the Faction.
+  \medskip
+  When revealed, all players roll 2 \svg{resource_die}.
+  The highest roller chooses an unused Faction.
+
+  \medskip
+  \begin{expansion}[left=-1mm]{stretchgoals2}
+    Instead, draw a random unused Town Card to determine the Faction.
+  \end{expansion}
+
+  The Random Town is defended by Units from that Faction:
+  \begin{itemize}
+    \item a ``Pack'' of \svgunit{bronze} Units, chosen by the player who controls the defense during this Combat,
+    \item two ``Packs'' of \svgunit{silver} Units,
+    \item two ``Fews'' of \svgunit{golden} Units.
+  \end{itemize}
+  Add \pagelink{Walls}{Walls and the Gate} for this Combat, but not the Arrow Tower.
+  \medskip
+
+  Flagging the Random Town increases \svg{gold} production by 10, which is also gained immediately if you are the first to Flag it.
+  While you have the Random Town Flagged, treat it as a Settlement.
 \end{expansion}
-The Random Town is defended by Units from that Faction:
-\begin{itemize}
-  \item a ``Pack'' of \svgunit{bronze} Units, chosen by the player who controls the defense during this Combat,
-  \item two ``Packs'' of \svgunit{silver} Units,
-  \item two ``Fews'' of \svgunit{golden} Units.
-\end{itemize}
-Add \pagelink{Walls}{Walls and the Gate} for this Combat, but not the Arrow Tower.
-
-Flagging the Random Town increases \svg{gold} production by 10, which is also gained immediately if you are the first to Flag it.
-While you have the Random Town Flagged, treat it as a Settlement.
 
 \end{multicols}
 \vspace*{\fill}
