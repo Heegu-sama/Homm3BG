@@ -289,13 +289,12 @@ When you Flag a Settlement, choose one of the following options:
   \framedimage[\linewidth]{\map_locations/random_town.jpg}
 
   \medskip
-  When revealed, all players roll 2 \svg{resource_die}.
-  The highest roller chooses an unused Faction.
-
-  \medskip
-  \begin{expansion}[left=-1mm]{stretchgoals2}
-    Instead, draw a random unused Town Card to determine the Faction.
-  \end{expansion}
+  When revealed, choose a Faction not in play. Either:
+  \begin{itemize}
+    \item All players roll 2 \svg{resource_die}.
+      The highest roller chooses, OR
+    \item Draw a random unused Town Card from Strechgoals 2.
+  \end{itemize}
 
   The Random Town is defended by Units from that Faction:
   \begin{itemize}
@@ -315,8 +314,8 @@ When you Flag a Settlement, choose one of the following options:
 
 \begin{center}
   \framedimage[\linewidth]{\map_locations/settlements-expansions.png}\\
-  \textit{Settlements from expansions. They all work identically.\\
-    Each is styled after a different Faction.
+  \textit{Settlements from expansions. Each is styled after a different Faction.\\
+    They all work identically.
    }
 \end{center}
 \vspace*{\fill}
@@ -462,9 +461,15 @@ When you Flag a Settlement, choose one of the following options:
   \end{minipage}\hfill
 \end{figure}
 
-\begin{tikzpicture}[overlay]
-  \node[opacity=0.2] at (14, 1.5) {\includegraphics[width=0.6\linewidth]{\art/storm_elemental.png}};
+% \begin{tikzpicture}[overlay]
+%   \node[opacity=0.2] at (14, 1.5) {\includegraphics[width=0.6\linewidth]{\art/storm_elemental.png}};
+% \end{tikzpicture}
+\begin{tikzpicture}[remember picture, overlay]
+  \node[opacity=0.2] at ([xshift=14em, yshift=17.5em]current page.south) {\includegraphics[width=0.6\linewidth, trim=0 100pt 0 0, clip]{\art/storm_elemental.png}};
 \end{tikzpicture}
+
+
+
 \subsection*{\pagetarget{Other Fields}{Other Fields}}
 
 \begin{figure}[H]
@@ -671,8 +676,8 @@ When you Flag a Settlement, choose one of the following options:
   \end{minipage}
 \end{figure}
 
-\begin{tikzpicture}[overlay]
-  \node[opacity=0.15] at (14, 2.1) {\includegraphics[width=0.5\linewidth]{\art/cyclop.png}};
+\begin{tikzpicture}[remember picture, overlay]
+  \node[opacity=0.15] at ([xshift=13em, yshift=16.7em]current page.south) {\includegraphics[width=0.5\linewidth, trim=0 200pt 0 0, clip]{\art/cyclops.png}};
 \end{tikzpicture}
 
 \begin{figure}[H]
