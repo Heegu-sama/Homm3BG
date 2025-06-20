@@ -136,20 +136,24 @@
 \definecolor{stretchgoals2}{HTML}{000000}  % TODO choose color
 
 \ExplSyntaxOn
-\NewDocumentEnvironment{expansion}{ O{} m +b }{
-  \clist_set:Nn \l_tmpa_clist {#2}
+\cs_new:Nn \__expansion_color_titles:NNn {
+  \clist_set:Nn \l_tmpa_clist {#3}
 
   % Use first expansion for color
-  \tl_clear_new:N \l_firstexpname_tl
-  \tl_set:No \l_firstexpname_tl {\clist_item:Nn \l_tmpa_clist {1}}
+  \tl_clear_new:N #1
+  \tl_set:No #1 {\clist_item:Nn \l_tmpa_clist {1}}
 
   % All expansions for the title
-  \tl_clear_new:N \l_exptitles_tl
+  \tl_clear_new:N #2
   \seq_clear:N \l_tmpa_seq
   \clist_map_inline:Nn \l_tmpa_clist {
     \seq_put_right:No \l_tmpa_seq {\color{##1}\MakeUppercase{\expansiontext{##1}}}
   }
-  \tl_set:No \l_exptitles_tl {\seq_use:Nn \l_tmpa_seq { ,~ }}
+  \tl_set:No #2 {\seq_use:Nn \l_tmpa_seq { ,~ }}
+}
+
+\NewDocumentEnvironment{expansion}{ O{} m +b }{
+  \__expansion_color_titles:NNn \l_expcolor_tl \l_exptitles_tl {#2}
 
   \begin{tcolorbox}[
     enhanced,
@@ -162,15 +166,15 @@
     beforeafter~skip~balanced=0.3\baselineskip~plus~1pt,
     overlay={
       \fill[
-        \l_firstexpname_tl,
+        \l_expcolor_tl,
         path~fading=east,
         opacity=0.08
       ]
         ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
         ([xshift=5pt, yshift=-3pt]frame.south~east);
       \fill[
-        top~color=\l_firstexpname_tl,
-        bottom~color=\l_firstexpname_tl,
+        top~color=\l_expcolor_tl,
+        bottom~color=\l_expcolor_tl,
         rounded~corners=1.5pt
       ]
       ([xshift=-8pt, yshift=3pt]frame.north~west) rectangle
@@ -182,9 +186,9 @@
 }{}
 
 % Helper function for the tikz square
-\cs_new:Nn \__expansion_tikz_square: {
+\cs_new:Nn \__expansion_tikz_square:n {
   \begin{tikzpicture}[baseline=0]
-    \fill[\l_firstexpname_tl] (0,0) rectangle (2.2mm,2.2mm);
+    \fill[#1] (0,0) rectangle (2.2mm,2.2mm);
     \draw[borderinyellow,~line~width=0.9pt] (0,0) rectangle (2.2mm,2.2mm);
     \draw[borderoutyellow,~line~width=0.7pt] (current~bounding~box.north~west) rectangle (current~bounding~box.south~east);
   \end{tikzpicture}
@@ -193,40 +197,20 @@
 % used in all map locations
 % For images with captions
 \NewDocumentCommand{\expansionlabel}{ m }{
-  \clist_set:Nn \l_tmpa_clist {#1}
-  % Use first expansion for color
-  \tl_clear_new:N \l_firstexpname_tl
-  \tl_set:No \l_firstexpname_tl {\clist_item:Nn \l_tmpa_clist {1}}
-  % All expansions for the title
-  \tl_clear_new:N \l_exptitles_tl
-  \seq_clear:N \l_tmpa_seq
-  \clist_map_inline:Nn \l_tmpa_clist {
-    \seq_put_right:No \l_tmpa_seq {\MakeUppercase{\use:c{expansiontext}{##1}}}
-  }
-  \tl_set:No \l_exptitles_tl {\seq_use:Nn \l_tmpa_seq { ,~ }}
+  \__expansion_color_titles:NNn \l_expcolor_tl \l_exptitles_tl {#1}
 
-  \vspace{-\baselineskip}\makebox[1.0055\linewidth][r]{\textcolor{\l_firstexpname_tl}{\tiny\raisebox{0.8\baselineskip}{\textbf{\l_exptitles_tl} \hspace{2pt}\raisebox{-0.14\baselineskip}{%
-    \__expansion_tikz_square:
+  \vspace{-\baselineskip}\makebox[1.0055\linewidth][r]{\textcolor{\l_expcolor_tl}{\tiny\raisebox{0.8\baselineskip}{\textbf{\l_exptitles_tl} \hspace{2pt}\raisebox{-0.14\baselineskip}{%
+    \__expansion_tikz_square:n {\l_expcolor_tl}
   }}}}
 
 }
 
 % For images without captions
 \NewDocumentCommand{\expansionlabelnocap}{ m }{
-  \clist_set:Nn \l_tmpa_clist {#1}
-  % Use first expansion for color
-  \tl_clear_new:N \l_firstexpname_tl
-  \tl_set:No \l_firstexpname_tl {\clist_item:Nn \l_tmpa_clist {1}}
-  % All expansions for the title
-  \tl_clear_new:N \l_exptitles_tl
-  \seq_clear:N \l_tmpa_seq
-  \clist_map_inline:Nn \l_tmpa_clist {
-    \seq_put_right:No \l_tmpa_seq {\MakeUppercase{\use:c{expansiontext}{##1}}}
-  }
-  \tl_set:No \l_exptitles_tl {\seq_use:Nn \l_tmpa_seq { ,~ }}
+  \__expansion_color_titles:NNn \l_expcolor_tl \l_exptitles_tl {#1}
 
-  \vspace{-\baselineskip}\makebox[1.0055\linewidth][r]{\textcolor{\l_firstexpname_tl}{\tiny\raisebox{-1.1\baselineskip}{\textbf{\l_exptitles_tl} \hspace{2pt}\raisebox{-0.14\baselineskip}{%
-    \__expansion_tikz_square:
+  \vspace{-\baselineskip}\makebox[1.0055\linewidth][r]{\textcolor{\l_expcolor_tl}{\tiny\raisebox{-1.1\baselineskip}{\textbf{\l_exptitles_tl} \hspace{2pt}\raisebox{-0.14\baselineskip}{%
+    \__expansion_tikz_square:n {\l_expcolor_tl}
   }}}}
   \vspace{-0.6\baselineskip}
 }
