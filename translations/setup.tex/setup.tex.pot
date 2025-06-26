@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-11-12 18:43+0000\n"
+"POT-Creation-Date: 2025-06-26 23:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,24 +18,24 @@ msgstr ""
 
 #. type: Plain text
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/components.tex:5 sections/credits.tex:6 sections/deckbuilding.tex:5
-#: sections/difficulty.tex:5 sections/expansion_content.tex:5
+#: sections/combat.tex:5 sections/components.tex:5 sections/credits.tex:6
+#: sections/deckbuilding.tex:5 sections/difficulty.tex:5
 #: sections/map_elements.tex:5 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/setup.tex:5 sections/trading.tex:5
+#: sections/resources.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/trading.tex:5
 msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
 msgstr ""
 
-#. type: multicols
+#. type: multicols*
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
-#: sections/all_map_locations.tex:421 sections/combat.tex:5
-#: sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/difficulty.tex:7 sections/expansion_content.tex:7
-#: sections/expansion_content.tex:51 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:116 sections/map_elements.tex:79
-#: sections/map_elements.tex:124 sections/player_turns.tex:7
-#: sections/resources.tex:7 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:58 sections/town.tex:5
-#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:162
+#: sections/combat.tex:7 sections/credits.tex:10 sections/deckbuilding.tex:7
+#: sections/difficulty.tex:7 sections/expansion_content.tex:5
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
+#: sections/map_elements.tex:79 sections/map_elements.tex:125
+#: sections/player_turns.tex:7 sections/resources.tex:7
+#: sections/round_structure.tex:5 sections/scenario_end.tex:5
+#: sections/setup.tex:59 sections/town.tex:7 sections/trading.tex:7
+#: sections/units.tex:5 sections/units.tex:198
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -43,11 +43,8 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/all_map_locations.tex:134 sections/credits.tex:38
-#: sections/credits.tex:42 sections/expansion_content.tex:59
-#: sections/game_modes.tex:25 sections/round_structure.tex:28
-#: sections/round_structure.tex:32 sections/setup.tex:117 sections/town.tex:28
-#: sections/town.tex:34 sections/units.tex:103
+#: sections/credits.tex:38 sections/credits.tex:42 sections/setup.tex:121
+#: sections/town.tex:30 sections/town.tex:36 sections/units.tex:134
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -55,7 +52,7 @@ msgid ""
 msgstr ""
 
 #. type: figure
-#: sections/expansion_content.tex:143 sections/map_elements.tex:40
+#: sections/deckbuilding.tex:237 sections/map_elements.tex:40
 #: sections/setup.tex:9
 #, no-wrap
 msgid "  \\begin{tikzpicture}\n"
@@ -77,7 +74,7 @@ msgid ""
 msgstr ""
 
 #. type: figure
-#: sections/setup.tex:55
+#: sections/setup.tex:56
 #, no-wrap
 msgid ""
 "    \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=1.25\\linewidth]{\\images/setup.png}}};\n"
@@ -123,12 +120,13 @@ msgid ""
 "    \\draw (5.1, 5.8) node {\\encircle{18}};\n"
 "    \\draw (-4.8, -2) node {\\encircle{19}};\n"
 "    \\draw (-7.1, -1.5) node {\\encircle{20}};\n"
+"    \\draw (-9.1, -1.5) node {\\encircle{21}};\n"
 "  \\end{tikzpicture}\n"
 "  \\end{scriptsize}"
 msgstr ""
 
 #. type: multicols*
-#: sections/setup.tex:60
+#: sections/setup.tex:61
 #, no-wrap
 msgid ""
 "This section will guide you through the process of setting up a Scenario from the Mission Book.\n"
@@ -136,7 +134,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/setup.tex:113
+#: sections/setup.tex:117
 #, no-wrap
 msgid ""
 "\\begin{enumerate}\n"
@@ -187,6 +185,9 @@ msgid ""
 "    Check the Scenario for which starting Units you receive and place them into a pile near your Town Board, separate from the rest of your Faction’s Units.\n"
 "  \\item Place the Round Tracker next to the game map and place a Black Cube on the ``1'' space.\n"
 "  \\item Shuffle the Astrologers Proclaim Cards and place them face down next to the Round Tracker.\n"
+"  \\begin{expansion}[before skip balanced=0.3em,left=7mm]{fortress}\n"
+"    \\item Shuffle the Event Cards and place them face down next to the Round Tracker.\n"
+"  \\end{expansion}\n"
 "  \\item Orientate your Starting Tile to your liking.\n"
 "    Choose which Hero model represents your Main Hero in this game and place the chosen model on the center Field of your Starting Tile.\n"
 "  \\item Choose a starting player. The starting player never changes during the game.\n"
@@ -195,7 +196,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/setup.tex:115
+#: sections/setup.tex:119
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\art/halberdier.jpg}\n"
