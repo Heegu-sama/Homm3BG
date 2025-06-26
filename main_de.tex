@@ -29,6 +29,21 @@
 
 \title{\includegraphics[width=6cm]{\images/title.png}\\Neufassung}
 
+\newcommand{\expansiontext}[1]{%
+  \stringswitch{#1}{
+    % {tower}{...}
+    % {rampart}{...}
+    % {fortress}{...}
+    % {inferno}{...}
+    % {stronghold}{...}
+    % {conflux}{...}
+    % {cove}{...}
+    % {battlefield}{...}
+    % {navalbattles}{...}
+    % {stretchgoals2}{...}
+  }{#1}%
+}
+
 \input{metadata.tex}
 
 % TEST_SUBSTRING=Feedback hinterlassen möchtest

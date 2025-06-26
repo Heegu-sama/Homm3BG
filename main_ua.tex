@@ -42,6 +42,21 @@
 }
 \newcommand{\notefont}[0]{}
 
+\newcommand{\expansiontext}[1]{%
+  \stringswitch{#1}{
+    % {tower}{...}
+    % {rampart}{...}
+    % {fortress}{...}
+    % {inferno}{...}
+    % {stronghold}{...}
+    % {conflux}{...}
+    % {cove}{...}
+    % {battlefield}{...}
+    % {navalbattles}{...}
+    % {stretchgoals2}{...}
+  }{#1}%
+}
+
 \input{metadata.tex}
 
 % TEST_SUBSTRING=Вітаються будь-які зміни
