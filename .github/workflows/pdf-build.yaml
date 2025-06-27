@@ -39,22 +39,22 @@ jobs:
       - name: Set up repository
         uses: actions/checkout@v4
 
-      - name: Cache po4a entries [${{ matrix.language }}]
-        if: matrix.language != 'en' && github.event_name == 'pull_request'
+      - name: Cache po4a entries [${{ inputs.language }}]
+        if: inputs.language != 'en' && github.event_name == 'pull_request'
         id: cache-po4a
         uses: actions/cache@v4
         with:
           path: |
-            sections/translated/${{ matrix.language }}/*.tex
+            sections/translated/${{ inputs.language }}/*.tex
           key: >-
             po4a-${{ matrix.language }}-${{
-              hashFiles('po4a.cfg', format('translations/*/{0}.po', matrix.language), 'translations/*/*.pot')
+              hashFiles('po4a.cfg', format('translations/*/{0}.po', inputs.language), 'translations/*/*.pot')
             }}
           restore-keys: |
             po4a-${{ matrix.language }}-
 
       - name: Generate translations [${{ inputs.language }}]
-        if: ${{ inputs.language != 'en' }}
+        if: inputs.language != 'en' && steps.cache-po4a.outputs.cache-hit != 'true'
         uses: qwrtln/po4a-action@v1.2
         with:
           version: "0.73"
