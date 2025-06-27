@@ -47,11 +47,11 @@ jobs:
           path: |
             sections/translated/${{ inputs.language }}/*.tex
           key: >-
-            po4a-${{ matrix.language }}-${{
+            po4a-${{ inputs.language }}-${{
               hashFiles('po4a.cfg', format('translations/*/{0}.po', inputs.language), 'translations/*/*.pot')
             }}
           restore-keys: |
-            po4a-${{ matrix.language }}-
+            po4a-${{ inputs.language }}-
 
       - name: Generate translations [${{ inputs.language }}]
         if: inputs.language != 'en' && steps.cache-po4a.outputs.cache-hit != 'true'
@@ -114,11 +114,11 @@ jobs:
         if: steps.cache-pdf.outputs.cache-hit != 'true'
         with:
           path: |
-            ./main_${{ matrix.language }}.aux
-            ./main_${{ matrix.language }}.fdb_latexmk
-            ./main_${{ matrix.language }}.fls
-            ./main_${{ matrix.language }}.out
-            ./main_${{ matrix.language }}.toc
+            ./main_${{ inputs.language }}.aux
+            ./main_${{ inputs.language }}.fdb_latexmk
+            ./main_${{ inputs.language }}.fls
+            ./main_${{ inputs.language }}.out
+            ./main_${{ inputs.language }}.toc
             ./**/*.aux
           key: >-
             texlive-${{ inputs.language }}-${{ inputs.build_type }}-${{
