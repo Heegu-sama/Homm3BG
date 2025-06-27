@@ -41,7 +41,7 @@ jobs:
 
       - name: Generate translations
         if: ${{ inputs.language != 'en' }}
-        uses: qwrtln/po4a-action@v1
+        uses: qwrtln/po4a-action@v1.2
         with:
           version: "0.73"
           config: "po4a.cfg"
