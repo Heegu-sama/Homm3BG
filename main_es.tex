@@ -38,6 +38,21 @@
 
 \title{\includegraphics[width=6cm]{\images/title.png}\\Reescritura}
 
+\newcommand{\expansiontext}[1]{%
+  \stringswitch{#1}{
+    % {tower}{...}
+    % {rampart}{...}
+    % {fortress}{...}
+    % {inferno}{...}
+    % {stronghold}{...}
+    % {conflux}{...}
+    % {cove}{...}
+    % {battlefield}{...}
+    % {navalbattles}{...}
+    % {stretchgoals2}{...}
+  }{#1 \mbox{expansion}}%
+}
+
 \input{metadata.tex}
 
 % TEST_SUBSTRING=porque me apasiona aprender

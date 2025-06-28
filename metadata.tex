@@ -43,6 +43,7 @@
 \usepackage[most]{tcolorbox}
 \usepackage{catchfile}
 \usepackage{xstring}
+\usepackage{expl3}
 \newtcolorbox{scaledfigure}[1][]{height fill, space to=\myspace,#1}
 \hypersetup{
   colorlinks=true,
@@ -76,6 +77,8 @@
 \newtoggle{printable}
 \newtoggle{noartbackground}
 \newtoggle{githubbuild}
+
+\setlist[itemize,2]{leftmargin=15pt, label=$\triangleright$}
 
 % Control addition of certain pages in the printable version.
 % Useful to make the printable version have correct number of pages.
@@ -113,13 +116,118 @@
 
 \renewcommand{\labelitemi}{\includegraphics[width=0.7em, valign=c]{\layout/listdot.png}}
 
-% Colors
+% Utility colors
 \definecolor{amber}{rgb}{1.0, 0.49, 0.0}
 \definecolor{antiquewhite}{rgb}{0.98, 0.92, 0.84}
 \definecolor{arylideyellow}{rgb}{0.96, 0.89, 0.58}
 \definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
 \definecolor{darkcandyapplered}{rgb}{0.64, 0.0, 0.0}
 \definecolor{goldenbrown}{rgb}{0.6, 0.4, 0.08}
+% Expansion colors
+\definecolor{tower}{HTML}{909090}      % gray
+\definecolor{rampart}{HTML}{228B22}    % forestgreen
+\definecolor{fortress}{HTML}{556B2F}   % darkolivegreen
+\definecolor{inferno}{HTML}{B22222}    % firebrick
+\definecolor{stronghold}{HTML}{A67C52} % tan
+\definecolor{conflux}{HTML}{C158C1}    % orchid
+\definecolor{cove}{HTML}{20B2AA}       % lightseagreen
+\definecolor{battlefield}{HTML}{505050}   % dark gray
+\definecolor{navalbattles}{HTML}{2E5984}  % dark deep blue
+\definecolor{stretchgoals2}{HTML}{000000}  % TODO choose color
+
+\ExplSyntaxOn
+\cs_new:Nn \__expansion_color_titles:NNn {
+  \clist_set:Nn \l_tmpa_clist {#3}
+
+  % Use first expansion for color
+  \tl_clear_new:N #1
+  \tl_set:No #1 {\clist_item:Nn \l_tmpa_clist {1}}
+
+  % All expansions for the title
+  \tl_clear_new:N #2
+  \seq_clear:N \l_tmpa_seq
+  \clist_map_inline:Nn \l_tmpa_clist {
+    \seq_put_right:No \l_tmpa_seq {\color{##1}\MakeUppercase{\expansiontext{##1}}}
+  }
+  \tl_set:No #2 {\seq_use:Nn \l_tmpa_seq { ,~ }}
+}
+
+\NewDocumentEnvironment{expansion}{ O{} m +b }{
+  \__expansion_color_titles:NNn \l_expcolor_tl \l_exptitles_tl {#2}
+
+  \begin{tcolorbox}[
+    enhanced,
+    title=\textbf{\tiny\l_exptitles_tl},
+    opacityfill=0,
+    size=small,
+    boxrule=0pt,
+    arc=0pt,
+    oversize,
+    beforeafter~skip~balanced=0.3\baselineskip~plus~1pt,
+    overlay={
+      \fill[
+        \l_expcolor_tl,
+        path~fading=east,
+        opacity=0.08
+      ]
+        ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
+        ([xshift=5pt, yshift=-3pt]frame.south~east);
+      \fill[
+        top~color=\l_expcolor_tl,
+        bottom~color=\l_expcolor_tl,
+        rounded~corners=1.5pt
+      ]
+      ([xshift=-8pt, yshift=3pt]frame.north~west) rectangle
+      ([xshift=-5pt, yshift=-3pt]frame.south~west);
+    },
+    #1]
+    #3
+  \end{tcolorbox}
+}{}
+
+% Helper function for the tikz square
+\cs_new:Nn \__expansion_tikz_square:n {
+  \begin{tikzpicture}[baseline=0]
+    \fill[#1] (0,0) rectangle (2.2mm,2.2mm);
+    \draw[borderinyellow,~line~width=0.9pt] (0,0) rectangle (2.2mm,2.2mm);
+    \draw[borderoutyellow,~line~width=0.7pt] (current~bounding~box.north~west) rectangle (current~bounding~box.south~east);
+  \end{tikzpicture}
+}
+
+% used in all map locations
+% For images with captions
+\NewDocumentCommand{\expansionlabel}{ m }{
+  \__expansion_color_titles:NNn \l_expcolor_tl \l_exptitles_tl {#1}
+
+  \vspace{-\baselineskip}\makebox[1.0055\linewidth][r]{\textcolor{\l_expcolor_tl}{\tiny\raisebox{0.8\baselineskip}{\textbf{\l_exptitles_tl} \hspace{2pt}\raisebox{-0.14\baselineskip}{%
+    \__expansion_tikz_square:n {\l_expcolor_tl}
+  }}}}
+
+}
+
+% For images without captions
+\NewDocumentCommand{\expansionlabelnocap}{ m }{
+  \__expansion_color_titles:NNn \l_expcolor_tl \l_exptitles_tl {#1}
+
+  \vspace{-\baselineskip}\makebox[1.0055\linewidth][r]{\textcolor{\l_expcolor_tl}{\tiny\raisebox{-1.1\baselineskip}{\textbf{\l_exptitles_tl} \hspace{2pt}\raisebox{-0.14\baselineskip}{%
+    \__expansion_tikz_square:n {\l_expcolor_tl}
+  }}}}
+  \vspace{-0.6\baselineskip}
+}
+\ExplSyntaxOff
+
+% used in components
+\newenvironment{expansionmini}[1]{\begin{expansion}[%
+  size=minimal,
+  beforeafter skip balanced=0pt,
+]{#1}}{\end{expansion}}
+
+% https://tex.stackexchange.com/questions/675895/how-to-use-full-string-conditionals-in-latex
+\ExplSyntaxOn
+\NewDocumentCommand{\stringswitch}{mmm}{
+  \str_case_e:nnF { #1 } { #2 } { #3 }
+}
+\ExplSyntaxOff
 
 \newcommand{\svg}[2][10]{%
   {\raisebox{-0.15\height}{\includesvg[height=#1px]{\svgs/\detokenize{#2}.svg}}}%

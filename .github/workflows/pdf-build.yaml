@@ -39,13 +39,28 @@ jobs:
       - name: Set up repository
         uses: actions/checkout@v4
 
-      - name: Generate translations
-        if: ${{ inputs.language != 'en' }}
-        uses: qwrtln/po4a-action@v1
+      - name: Cache po4a entries [${{ inputs.language }}]
+        if: inputs.language != 'en' && github.event_name == 'pull_request'
+        id: cache-po4a
+        uses: actions/cache@v4
+        with:
+          path: |
+            sections/translated/${{ inputs.language }}/*.tex
+          key: >-
+            po4a-${{ inputs.language }}-${{
+              hashFiles('po4a.cfg', format('translations/*/{0}.po', inputs.language), 'translations/*/*.pot')
+            }}
+          restore-keys: |
+            po4a-${{ inputs.language }}-
+
+      - name: Generate translations [${{ inputs.language }}]
+        if: inputs.language != 'en' && steps.cache-po4a.outputs.cache-hit != 'true'
+        uses: qwrtln/po4a-action@v1.2
         with:
           version: "0.73"
           config: "po4a.cfg"
           args: "--no-update"
+          language: ${{ inputs.language }}
 
       - name: Set build environment variables
         id: set_env
@@ -99,11 +114,11 @@ jobs:
         if: steps.cache-pdf.outputs.cache-hit != 'true'
         with:
           path: |
-            ./main_${{ matrix.language }}.aux
-            ./main_${{ matrix.language }}.fdb_latexmk
-            ./main_${{ matrix.language }}.fls
-            ./main_${{ matrix.language }}.out
-            ./main_${{ matrix.language }}.toc
+            ./main_${{ inputs.language }}.aux
+            ./main_${{ inputs.language }}.fdb_latexmk
+            ./main_${{ inputs.language }}.fls
+            ./main_${{ inputs.language }}.out
+            ./main_${{ inputs.language }}.toc
             ./**/*.aux
           key: >-
             texlive-${{ inputs.language }}-${{ inputs.build_type }}-${{

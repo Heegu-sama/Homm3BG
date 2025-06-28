@@ -27,6 +27,13 @@
 \newcommand{\qrgithub}{Scan to open \textbf{GitHub} repository.}
 \newcommand{\qrbgg}{Scan to open \textbf{BoardGameGeek} thread.}
 
+\newcommand{\expansiontext}[1]{%
+  \stringswitch{#1}{
+    {navalbattles}{Naval Battles expansion}
+    {stretchgoals2}{Stretch Goals 2 expansion}
+  }{#1 \mbox{expansion}}%
+}
+
 \title{\includegraphics[width=6cm]{\images/title.png}\\The Rewrite}
 
 \input{metadata.tex}

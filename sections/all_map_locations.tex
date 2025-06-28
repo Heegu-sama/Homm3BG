@@ -19,34 +19,34 @@
     \begin{tikzpicture}[overlay]
       \node at (1, 0.25) {\includegraphics[width=0.2\linewidth]{\images/treasure_die.png}};
     \end{tikzpicture} \\
-    \svg[15]{resource_die} & Roll a \pagelink{Resources}{Resource Die} and gain the indicated Resources. \\
+    \svg[14]{resource_die} & Roll a \pagelink{Resources}{Resource Die} and gain the indicated Resources. \\
     \svg[15]{2_treasure_die} & Roll 2 Resource Dice and choose the bonus from one of them. \\
-    \svg[15]{experience} & Gain one Experience Point. \\
+    \svg[14]{experience} & Gain one Experience Point. \\
     \svg[15]{artifact} & Search (2) the Artifact Deck. \\
     \svg[15]{spellpower} & Search (2) the Spell Deck. \\
-    \svg[15]{morale_positive} & Gain Positive Morale. \\
-    \svg[15]{morale_negative} & Gain Negative Morale. \\
-    \svg[15]{movement} & Gain 1 Movement Point for this turn. \\
-    {\huge\textbf{?}} & Special effect, see \pagelink{Revisitable Fields}{Revisitable} or \pagelink{Other Fields}{Other} fields.\\
+    \svg[11]{morale_positive} & Gain Positive Morale. \\
+    \svg[11]{morale_negative} & Gain Negative Morale. \\
+    \svg[14]{movement} & Gain 1 Movement Point for this turn. \\
+    {\LARGE\textbf{?}} & Special effect, see \pagelink{Settlements}{Settlements}, \pagelink{Revisitable Fields}{Revisitable} or \pagelink{Other Fields}{Other} fields.\\
   \end{tabularx}
 \endgroup
 
 \medskip
 
 \begin{itemize}[itemsep=0.4em]
-  \item [{\LARGE\textbf{+}}]
-    \svg{gold}/\svg{building_materials}/\svg{valuablegreater} —
+  \item [{\LARGE$\boldsymbol{+}$}]
+    \svg{gold}$\boldsymbol{/}$\svg{building_materials}$\boldsymbol{/}$\svg{valuablegreater} —
     Immediately gain the indicated Resource.
-  \item [{\svg[15]{ongoing}}]
-    \svg{gold}/\svg{building_materials}/\svg{valuablegreater} —
+  \item [{\svg[14]{ongoing}}]
+    \svg{gold}$\boldsymbol{/}$\svg{building_materials}$\boldsymbol{/}$\svg{valuablegreater} —
     Increase the production of the indicated Resource.
-    If it is \textbf{Flagged} for the first time, you also gain it immediately.
-  \item [{\svg[15]{pay_v2}}]
-    \svg{gold}/\svg{building_materials}/\svg{valuablegreater} \svg{arrow_right} —
+    If it is \textbf{Flagged} for the first time, you also gain it immediately. See \pagelink{Mines}{Mines}.
+  \item [{\svg[10]{pay_v2}}]
+    \svg{gold}$\boldsymbol{/}$\svg{building_materials}$\boldsymbol{/}$\svg{valuablegreater} \svg{arrow_right} —
     The Player needs to pay the indicated Resource to gain something.
   \item [{\LARGE\textbf{2}}] {\LARGE\textbf{x}} —
     Perform the {\LARGE\textbf{x}} action twice.
-  \item [{\LARGE\textbf{2}}] \svg[15]{treasure}{\LARGE\textbf{/2}} \svg[15]{resource_die} \svgeven{arrow_right}{\LARGE\textbf{1}} —
+  \item [{\LARGE\textbf{2}}] \svg[14]{treasure}{\LARGE\textbf{$\boldsymbol{/}$2}} \svg[14]{resource_die} \svgeven{arrow_right}{\LARGE\textbf{1}} —
     Roll 2 Treasure or Resource Dice and choose one to be resolved.
 \end{itemize}
 
@@ -104,10 +104,8 @@ The effects of the following \textbf{Visitable} fields are explained by the symb
 
   \bigskip
 
-  \phantom{j}\textbf{Grave}\phantom{j}\\
-  \framedimage[\linewidth]{\map_locations/grave.jpg}\\
-
-  \vspace*{\fill}
+  \phantom{j}\textbf{Shrine of Magic Gesture/Incantation}\\
+  \framedimage[\linewidth]{\map_locations/shrine_of_magic_whatever.jpg}\\
   \filbreak
 
   \phantom{j}\textbf{Water Wheel}\phantom{j}\\
@@ -120,17 +118,16 @@ The effects of the following \textbf{Visitable} fields are explained by the symb
 
   \bigskip
 
-  \phantom{j}\textbf{Windmill}\phantom{j}\\
-  \framedimage[\linewidth]{\map_locations/windmill.jpg}
-  {\small Due to a misprint, the Windmill on the tile \texttt{\#N3} has a \textbf{?}. It should be ``\textbf{+}1 \svg{valuablegreater}''.}
+  \phantom{j}\textbf{Grave}\phantom{j}\\
+  \framedimage[\linewidth]{\map_locations/grave.jpg}\\
+  \expansionlabelnocap{cove}
 
   \bigskip
 
-  \vspace{-4px}
-  \phantom{j}\textbf{Shrine of Magic Gesture/Incantation}\\
-  \framedimage[\linewidth]{\map_locations/shrine_of_magic_whatever.jpg}\\
-  \vspace{-2px}
-  \framedimage[\linewidth]{\map_locations/shrine_of_magic_whatever_water.jpg}\\
+  \vspace*{-2pt}
+  \phantom{j}\textbf{Windmill}\phantom{j}\\
+  \framedimage[\linewidth]{\map_locations/windmill.jpg}
+  {\small Due to a misprint, the Windmill on the tile \texttt{\#N3} has a \textbf{?}. It should be ``\textbf{+}1 \svg{valuablegreater}''.}
 
 
   \vspace*{\fill}
@@ -142,21 +139,32 @@ The effects of the following \textbf{Visitable} fields are explained by the symb
 
   \phantom{j}\textbf{Pandora's Box}\phantom{j}\\
   \framedimage[\linewidth]{\map_locations/pandoras_boxes.jpg}\\
+  \expansionlabelnocap{cove}
 
   \bigskip
 
+  \centering
   \phantom{j}\textbf{Mermaid}\phantom{j}\\
   \framedimage[\linewidth]{\map_locations/mermaid.jpg}\\
+  \expansionlabelnocap{cove}
 
   \bigskip
 
   \phantom{j}\textbf{Derelict Ship}\phantom{j}\\
   \framedimage[\linewidth]{\map_locations/derelict_ship.jpg}\\
+  \expansionlabelnocap{cove}
 
   \bigskip
 
   \phantom{j}\textbf{Temple of the Sea}\phantom{j}\\
   \framedimage[\linewidth]{\map_locations/temple_of_the_sea.jpg}\\
+  \expansionlabelnocap{cove}
+
+  \bigskip
+
+  \phantom{j}\textbf{Shrine of Magic Gesture/Incantation}\\
+  \framedimage[\linewidth]{\map_locations/shrine_of_magic_whatever_water.jpg}\\
+  \expansionlabelnocap{cove}
 
   \bigskip
 
@@ -165,39 +173,43 @@ The effects of the following \textbf{Visitable} fields are explained by the symb
 
   \phantom{j}\textbf{Flotsam}\phantom{j}\\
   \framedimage[\linewidth]{\map_locations/flotsam.jpg}\\
+  \expansionlabelnocap{cove}
 
   \bigskip
 
   \phantom{j}\textbf{Sea Barrel}\phantom{j}\\
   \framedimage[\linewidth]{\map_locations/sea_barrel.jpg}\\
+  \expansionlabelnocap{cove}
 
   \bigskip
 
   \phantom{j}\textbf{Shipwreck}\phantom{j}\\
   \framedimage[\linewidth]{\map_locations/shipwreck.jpg}\\
+  \expansionlabelnocap{cove}
 
   \bigskip
 
   \phantom{j}\textbf{Buoy}\phantom{j}\\
   \framedimage[\linewidth]{\map_locations/buoy.jpg}\\
+  \expansionlabelnocap{cove}
 
   \bigskip
 
   \phantom{j}\textbf{Shipwreck Survivor}\phantom{j}\\
   \framedimage[\linewidth]{\map_locations/shipwreck_survivor.jpg}\\
+  \expansionlabelnocap{cove}
 
   \bigskip
 
   \vspace*{\fill}
 }
 
-\begin{tikzpicture}[overlay]
-  \node[opacity=0.15] at (-6, 2.1) {\includegraphics[width=0.8\linewidth]{\art/diplomats_ring.png}};
-\end{tikzpicture}
+\end{multicols*}
 
 \pagebreak
 
-\subsection*{Towns, Mines and Settlements}
+\begin{multicols}{2}
+\subsection*{Towns}
 \textbf{Towns} are always located in the center of a Starting (I) Tile.
 Flagging an enemy Town prevents their Secondary Heroes from spawning there and Main Heroes from moving there if defeated.
 Flagging a Town can cause \pagelink{End}{Player Elimination}, and Scenarios typically have special rewards for Flagging them.
@@ -208,12 +220,18 @@ You also do not gain access to their Town board or Faction Units, unlike in the 
 
 \begin{center}
   \framedimage[\linewidth]{\images/core_towns.jpg}
-  \textit{Towns from the core game.}
+  \textit{Towns from the core game:\\Necropolis, Castle, and Dungeon.}
+
+  \vspace{1.8em}
+
+  \framedimage[\linewidth]{\map_locations/crystal-mine.jpg}
+  \textit{Various \svg{valuablegreater} mines.}
 \end{center}
 
-\medskip
+\columnbreak
 
-\pagetarget{Mines}{\textbf{Mines}}\index{Mines} are Flaggable Fields which increase a specific resource's income when Flagged.
+\subsection*{Mines}\pagetarget{Mines}
+{\textbf{Mines}}\index{Mines} are Flaggable Fields which increase a specific resource's income when Flagged.
 If you are the first one to Flag a mine, it also immediately provides you with its income.
 All mines have the \svg{ongoing} symbol and a picture of the Resource they produce next to it.
 
@@ -222,10 +240,24 @@ All mines have the \svg{ongoing} symbol and a picture of the Resource they produ
   \textit{A mine that produces \svg{valuablegreater}, guarded by \mbox{Level III} Neutral Units.
     The first player to Flag this Field would immediately gain one \svg{valuablegreater} in addition to increasing their \svg{valuablegreater} income.
   }
-\end{center}
-\columnbreak
 
+  \vspace*{\fill}
+  \framedimage[\linewidth]{\map_locations/ore-gold-mine.jpg}
+  \textit{\svg{building_materials} and \svg{gold} mines.}
+\end{center}
+\end{multicols}
+
+\vspace*{\fill}
+\begin{center}
+  \framedimage[\linewidth]{\map_locations/expansion_towns.png}\\
+  \textit{Towns from expansions:\\Conflux, Stronghold, Cove, Tower, Rampart, Fortress, and Inferno.}
+\end{center}
+\pagebreak
+
+\begin{multicols}{2}
+\subsection*{Settlements}\pagetarget{Settlements}{}
 \textbf{Settlements}\index{Settlement} act as a spawn point for Secondary Heroes, and as a place for Main Heroes to move to when defeated.
+They also prevent \pagelink{End}{Player Elimination}.
 When you Flag a Settlement, choose one of the following options:
 \begin{itemize}
   \item Increase your \svg{gold}, \svg{building_materials} or \svg{valuablegreater} income by one space.
@@ -237,28 +269,53 @@ When you Flag a Settlement, choose one of the following options:
     If you were the first player to Flag the Settlement, Reinforce that Unit \textbf{for free} instead.
     Do not place any Resource Tokens on the Settlement if you choose to Reinforce.
 \end{itemize}
+\textbf{Note:} all Settlements work identically.
 
-\bigbreak
+\begin{center}
+  \framedimage[\linewidth]{\map_locations/core_settlements.jpg}
+  \textit{Settlements from the core game.}
+\end{center}
 
-\begin{minipage}[h]{\linewidth}
-  \centering
-  \includegraphics[width=0.44\linewidth]{\map_locations/castle_settlement.png}
-  \includegraphics[width=0.44\linewidth]{\map_locations/dungeon_settlement.png}
-  \includegraphics[width=0.44\linewidth]{\map_locations/necropolis_settlement.png}
-  \includegraphics[width=0.44\linewidth]{\map_locations/rampart_settlement.png}
-  \includegraphics[width=0.44\linewidth]{\map_locations/fortress_settlement.png}
-  \includegraphics[width=0.44\linewidth]{\map_locations/inferno_settlement.png}
-  \includegraphics[width=0.44\linewidth]{\map_locations/tower_settlement.png}
-  \includegraphics[width=0.44\linewidth]{\map_locations/stronghold_settlement.png}
-  \includegraphics[width=0.44\linewidth]{\map_locations/conflux_settlement.png}
-  \includegraphics[width=0.44\linewidth]{\map_locations/cove_settlement.png}
-  \par
-  \textit{All possible Settlements.
-  Each is styled after a different Faction.
-  They all work identically.}
-\end{minipage}
-\end{multicols*}
-\bigbreak
+\vspace*{\fill}
+\columnbreak
+
+\begin{expansion}[before=\vspace*{-11mm}]{inferno}
+  \subsection*{Random Town}\pagetarget{Random Town}{}
+  \framedimage[\linewidth]{\map_locations/random_town.jpg}
+
+  \medskip
+  When revealed, choose a Faction not in play. Either:
+  \begin{itemize}
+    \item All players roll 2 \svg{resource_die}.
+      The highest roller chooses, OR
+    \begin{expansion}[left=5mm]{stretchgoals2}
+    \item Draw a random unused Town Card.
+    \end{expansion}
+  \end{itemize}
+
+  The Random Town is defended by Units from that Faction:
+  \begin{itemize}
+    \item a ``Pack'' of \svgunit{bronze} Units, chosen by the player who controls the defense during this Combat,
+    \item two ``Packs'' of \svgunit{silver} Units,
+    \item two ``Fews'' of \svgunit{golden} Units.
+  \end{itemize}
+  Add \pagelink{Walls}{Walls and the Gate} for this Combat, but not the Arrow Tower.
+  \medskip
+
+  Flagging the Random Town increases \svg{gold} production by 10, which is also gained immediately if you are the first to Flag it.
+  While you have the Random Town Flagged, treat it as a Settlement.
+\end{expansion}
+
+\end{multicols}
+
+\vfill
+\begin{center}
+  \framedimage[\linewidth]{\map_locations/settlements-expansions.png}\\
+  \textit{Settlements from expansions.\\
+     Each is styled after a different Faction.
+   }
+\end{center}
+\pagebreak
 
 \subsection*{\pagetarget{Revisitable Fields}{Revisitable Fields}}
 
@@ -266,33 +323,14 @@ When you Flag a Settlement, choose one of the following options:
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \textbf{Library}\par
-    \framedimage[\textwidth]{\map_locations/library.jpg}
-    \caption{\small Category: \textbf{Revisitable}\\You may
-      \svg{pay_v2}
-      3 \svg{gold}
-      to Remove 1 Statistic Card from your hand or Discard Pile and replace it with any other Statistic Card.
-      You may do this twice per Visit.}
+    \phantom{j}\textbf{Stables}\phantom{j}\par
+    \framedimage[\textwidth]{\map_locations/stables.jpg}
+    \caption{\small Category: \textbf{Revisitable}\\
+      Gain 1 \svgeven{movement}.
+      It lasts for only one Turn.
+      See \protect\pagelink{Movement}{Movement Actions}.
+    }
   \end{minipage}\hfill
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \captionsetup{singlelinecheck=off}
-    \phantom{j}\textbf{Black Market}\par
-    \framedimage[\textwidth]{\map_locations/black_market.jpg}
-    \caption[black market]{\small Category: \textbf{Revisitable}\\Look at the top 4 cards from the Artifact Discard Pile.
-      You may buy one of them for:
-      \begin{itemize}
-      \setlength\itemsep{-4pt}
-        \item [5] \svg{gold} if it is a \textbf{Minor} Artifact
-        \item [7] \svg{gold} if it is a \textbf{Major} Artifact
-        \item [10] \svg{gold} if it is a \textbf{Relic} Artifact
-      \end{itemize}
-      }
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
@@ -301,18 +339,6 @@ When you Flag a Settlement, choose one of the following options:
     \caption{\small Category: \textbf{Revisitable}\\
       Heroes on this Field cannot be attacked by other Heroes.
       Friendly Heroes can move through enemy Heroes on this Field but cannot stop here.}
-  \end{minipage}\hfill
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \phantom{j}\textbf{Tavern}\par
-    \framedimage[\textwidth]{\map_locations/tavern.jpg}
-    \caption{\small Category: \textbf{Revisitable}\\
-      You can \svg{pay_v2}
-      7 \svg{gold}
-      to gain a Secondary Hero.
-      Place their model on this Field.
-      Then, choose one enemy player to discard 1 random card from their hand.}
   \end{minipage}
 \end{figure}
 
@@ -331,7 +357,40 @@ When you Flag a Settlement, choose one of the following options:
     \centering
     \phantom{j}\pagetarget{War Machine Factory}{\textbf{War Machine Factory}}\par
     \framedimage[\textwidth]{\map_locations/war_machine_factory.jpg}
+    \expansionlabel{rampart}
     \caption{\small Category: \textbf{Revisitable}\\Buy a \protect\pagelink{War Machines}{War Machine} at a lower cost.\phantom{.......}}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \textbf{Library}\par
+    \framedimage[\textwidth]{\map_locations/library.jpg}
+    \expansionlabel{tower}
+    \caption{\small Category: \textbf{Revisitable}\\You may
+      \svg{pay_v2}
+      3 \svg{gold}
+      to Remove 1 Statistic Card from your hand or Discard Pile and replace it with any other Statistic Card.
+      You may do this twice per Visit.}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \captionsetup{singlelinecheck=off}
+    \centering
+    \phantom{j}\textbf{Black Market}\par
+    \framedimage[\textwidth]{\map_locations/black_market.jpg}
+    \expansionlabel{tower}
+    \caption[black market]{\small Category: \textbf{Revisitable}\\Look at the top 4 cards from the Artifact Discard Pile.
+      You may buy one of them for:
+      \begin{itemize}
+      \setlength\itemsep{-4pt}
+        \item [5] \svg{gold} if it is a \textbf{Minor} Artifact
+        \item [7] \svg{gold} if it is a \textbf{Major} Artifact
+        \item [10] \svg{gold} if it is a \textbf{Relic} Artifact
+      \end{itemize}
+      }
   \end{minipage}
 \end{figure}
 
@@ -341,6 +400,7 @@ When you Flag a Settlement, choose one of the following options:
     \centering
     \phantom{j}\textbf{One-Way Entrance Monolith}\par
     \framedimage[\textwidth]{\map_locations/one-way_monolith_entrance.jpg}
+    \expansionlabel{conflux}
     \caption{\small Category: \textbf{Revisitable}\\
       Move your Hero to the corresponding Exit Monolith (see below).
     }
@@ -350,6 +410,7 @@ When you Flag a Settlement, choose one of the following options:
     \centering
     \textbf{Two-Way Monolith}\par
     \framedimage[\textwidth]{\map_locations/two-way_monolith.jpg}
+    \expansionlabel{conflux}
     \caption{\small Category: \textbf{Revisitable}\\
       Move your Hero to the corresponding Two-Way Monolith.
     }
@@ -362,6 +423,7 @@ When you Flag a Settlement, choose one of the following options:
     \centering
     \phantom{j}\textbf{One-Way Exit Monolith}\par
     \framedimage[\textwidth]{\map_locations/one-way_monolith_exit.jpg}
+    \expansionlabel{conflux}
     \caption{\raggedright \small Category: \textbf{Revisitable}\\
       \raggedright Treat it as an empty Field.
     }
@@ -369,13 +431,15 @@ When you Flag a Settlement, choose one of the following options:
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \phantom{j}\textbf{Stables}\phantom{j}\par
-    \framedimage[\textwidth]{\map_locations/stables.jpg}
+    \phantom{j}\textbf{Tavern}\par
+    \framedimage[\textwidth]{\map_locations/tavern.jpg}
+    \expansionlabel{tower}
     \caption{\small Category: \textbf{Revisitable}\\
-      Gain 1 \svgeven{movement}.
-      It lasts for only one Turn.
-      See \protect\pagelink{Movement}{Movement Actions}.
-    }
+      You can \svg{pay_v2}
+      7 \svg{gold}
+      to gain a Secondary Hero.
+      Place their model on this Field.
+      Then, choose one enemy player to discard 1 random card from their hand.}
   \end{minipage}
 \end{figure}
 
@@ -385,6 +449,7 @@ When you Flag a Settlement, choose one of the following options:
     \centering
     \phantom{j}\textbf{Subterranean Gate}\par
     \framedimage[\textwidth]{\map_locations/subterranean_gate.jpg}
+    \expansionlabel{stronghold}
     \caption{\raggedright \small Category: \textbf{Revisitable}\\
       Move to the connected location on the adjacent Subterranean Tile.
       Treat both sides of the Gate as a single Field.
@@ -392,9 +457,10 @@ When you Flag a Settlement, choose one of the following options:
   \end{minipage}\hfill
 \end{figure}
 
-\begin{tikzpicture}[overlay]
-  \node[opacity=0.2] at (14, 1.5) {\includegraphics[width=0.6\linewidth]{\art/storm_elemental.png}};
+\begin{tikzpicture}[remember picture, overlay]
+  \node[opacity=0.2] at ([xshift=14em, yshift=17.5em]current page.south) {\includegraphics[width=0.6\linewidth, trim=0 100pt 0 0, clip]{\art/storm_elemental.png}};
 \end{tikzpicture}
+
 \subsection*{\pagetarget{Other Fields}{Other Fields}}
 
 \begin{figure}[H]
@@ -432,35 +498,11 @@ When you Flag a Settlement, choose one of the following options:
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \phantom{j}\textbf{Elemental Conflux}\phantom{j}\par
-    \framedimage[\linewidth]{\map_locations/elemental_conflux.jpg}
-    \caption{\small Category: \textbf{Visitable}\\
-      For every Dwelling you have, draw from the corresponding Neutral Unit Decks until you find one ``Elementals'' Unit from each (reshuffle if you run out of Units before finding one).
-      You can recruit one of those Elementals if you \svg{pay_v2} its recruitment cost.
-      Shuffle the remaining Units back into their respective Decks.
-    }
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[H]
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \phantom{j}\textbf{Hill Fort}\par
-    \framedimage[\linewidth]{\map_locations/hill_fort.jpg}
-    \caption{\small Category: \textbf{Visitable}\\
-      You may immediately Reinforce one of your \svgunit{bronze} or \svgunit{silver} Units.
-      The Reinforcement cost is reduced by 3 \svg{gold} to a minimum of 0.}
-  \end{minipage}\hfill
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \phantom{j}\textbf{Prison}\par
-    \framedimage[\linewidth]{\map_locations/prison.jpg}
-    \caption{\small Category: \textbf{Visitable}\\
-      Gain a Secondary Hero.
-      Place their model on this Field.
-      If you already have a Secondary Hero, gain 3 \svg{gold} instead.}
+    \phantom{j}\textbf{Obelisk}\par
+    \framedimage[\linewidth]{\map_locations/obelisk.jpg}
+    \caption{\small Category: \textbf{Flaggable}\\
+      The Obelisk's effects depend on the Scenario.
+      When you Flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}
   \end{minipage}
 \end{figure}
 
@@ -488,35 +530,6 @@ When you Flag a Settlement, choose one of the following options:
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \phantom{j}\textbf{Obelisk}\par
-    \framedimage[\linewidth]{\map_locations/obelisk.jpg}
-    \caption{\small Category: \textbf{Flaggable}\\
-      The Obelisk's effects depend on the Scenario.
-      When you Flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}
-  \end{minipage}\hfill
-    \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \captionsetup{singlelinecheck=off}
-    \centering
-    \phantom{j}\textbf{Scholar}\par
-    \framedimage[\linewidth]{\map_locations/scholar.jpg}
-    \caption[scholar they]{\small Category: \textbf{Visitable}\\
-      Roll 1 Attack Die.
-      Depending on the result, do the following:
-      \begin{itemize}
-        \setlength\itemsep{-0.2em}
-        \item[ \textbf{+1}] -- Gain a Statistic Card of your choice or Remove a Statistic Card from your hand.
-        \item[\textbf{0}] -- Draw 2 Cards from the Ability Deck, gain one of them and discard the other.
-        \item[\textbf{-1}] -- Draw 2 Cards from the Spell Deck, gain one of them and discard the other.
-        \end{itemize}
-       }
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[H]
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
     \textbf{Dragon Utopia}\par
     \framedimage[\linewidth]{\map_locations/dragon_utopia.jpg}
     \caption{\small Category: \textbf{Flaggable}\\Effects depend on the Scenario.}
@@ -526,6 +539,7 @@ When you Flag a Settlement, choose one of the following options:
     \centering
     \textbf{University}\par
     \framedimage[\linewidth]{\map_locations/university.jpg}
+    \expansionlabel{tower}
     \caption{\small Category: \textbf{Visitable}\\
       \svg{pay_v2} 6 \svg{gold} to \textbf{Search (4)} the Ability Discard Pile.}
   \end{minipage}
@@ -535,8 +549,66 @@ When you Flag a Settlement, choose one of the following options:
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
+    \phantom{j}\textbf{Hill Fort}\par
+    \framedimage[\linewidth]{\map_locations/hill_fort.jpg}
+    \expansionlabel{tower}
+    \caption{\small Category: \textbf{Visitable}\\
+      You may immediately Reinforce one of your \svgunit{bronze} or \svgunit{silver} Units.
+      The Reinforcement cost is reduced by 3 \svg{gold} to a minimum of 0.}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \phantom{j}\textbf{Prison}\par
+    \framedimage[\linewidth]{\map_locations/prison.jpg}
+    \expansionlabel{tower}
+    \caption{\small Category: \textbf{Visitable}\\
+      Gain a Secondary Hero.
+      Place their model on this Field.
+      If you already have a Secondary Hero, gain 3 \svg{gold} instead.}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \phantom{j}\textbf{Elemental Conflux}\phantom{j}\par
+    \framedimage[\linewidth]{\map_locations/elemental_conflux.jpg}
+    \expansionlabel{conflux}
+    \caption{\small Category: \textbf{Visitable}\\
+      For every Dwelling you have, draw from the corresponding Neutral Unit Decks until you find one ``Elementals'' Unit from each (reshuffle if you run out of Units before finding one).
+      You can recruit one of those Elementals if you \svg{pay_v2} its recruitment cost.
+      Shuffle the remaining Units back into their respective Decks.
+    }
+  \end{minipage}\hfill
+    \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \captionsetup{singlelinecheck=off}
+    \centering
+    \phantom{j}\textbf{Scholar}\par
+    \framedimage[\linewidth]{\map_locations/scholar.jpg}
+    \expansionlabel{fortress}
+    \caption[scholar they]{\small Category: \textbf{Visitable}\\
+      Roll 1 Attack Die.
+      Depending on the result, do the following:
+      \begin{itemize}
+        \setlength\itemsep{-0.2em}
+        \item[ \textbf{+1}] -- Gain a Statistic Card of your choice or Remove a Statistic Card from your hand.
+        \item[\textbf{0}] -- Draw 2 Cards from the Ability Deck, gain one of them and discard the other.
+        \item[\textbf{\textminus{}1}] -- Draw 2 Cards from the Spell Deck, gain one of them and discard the other.
+        \end{itemize}
+       }
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
     \phantom{j}\textbf{Faerie Ring}\phantom{j}\par
     \framedimage[\linewidth]{\map_locations/faerie_ring.jpg}
+    \expansionlabel{conflux}
     \caption{\small Category: \textbf{Visitable}\\
       Remove one Card from your hand, then Search (2) the Card's deck.
       You cannot remove Statistics, Starting Ability, or Specialty cards.}
@@ -546,6 +618,7 @@ When you Flag a Settlement, choose one of the following options:
     \centering
     \phantom{j}\textbf{Star Axis}\phantom{j}\par
     \framedimage[\linewidth]{\map_locations/star_axis.jpg}
+    \expansionlabel{inferno}
     \caption{\small Category: \textbf{Flaggable}\\
       You may Remove one of your Statistic cards from your hand and replace it with an \textbf{Empowered} one of the same type.
       When you Flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}
@@ -556,36 +629,9 @@ When you Flag a Settlement, choose one of the following options:
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \textbf{Cyclops Stockpile}\par
-    \framedimage[\linewidth]{\map_locations/cyclops_stockpile.jpg}
-    \caption{\small Category: \textbf{Visitable}\\
-      When preparing the Neutral Army guarding this location, instead of drawing 1 \svgunit{azure} Unit, find 2 \svgunit{golden} Cyclops and add them to the Neutral Army (look for them first in the \svgunit{golden} discard pile, and then in the \svgunit{golden} Neutral Unit Deck).
-      If you win the Combat, roll and resolve 4 \svg{resource_die}.
-      Any additional effects depend on the scenario.
-    }
-  \end{minipage}\hfill
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \phantom{j}\textbf{\pagetarget{Random Town}{Random Town}}\phantom{j}\par
-    \framedimage[\linewidth]{\map_locations/random_town.jpg}
-    \caption{\small Category: \textbf{Flaggable}\\
-      When revealed, all players roll 2 \svg{resource_die}.
-      The highest roller chooses an unused Faction.
-      The random Town is defended by Units from that Faction.
-      They have a ``Pack'' of \svgunit{bronze}, two ``Packs'' of \svgunit{silver}, and two ``Fews'' of \svgunit{golden} Units.
-      The \svgunit{bronze} Unit is chosen by the player who controls the Units during that Combat.
-      Flagging it increases \svg{gold} production by 10, which is also gained immediately if you are the first to Flag it.
-    }
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[H]
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
     \textbf{Spell Scroll}\par
     \framedimage[\linewidth]{\map_locations/spell_scroll.jpg}
+    \expansionlabel{stronghold}
     \caption{\small Category: \textbf{Visitable}\\
       Take a Spell Scroll Card, place it near your Hero Card, then follow its instructions.
     }
@@ -595,6 +641,7 @@ When you Flag a Settlement, choose one of the following options:
     \centering
     \phantom{j}\textbf{Market of Time}\phantom{j}\par
     \framedimage[\linewidth]{\map_locations/market_of_time.jpg}
+    \expansionlabel{tower}
     \caption{\small Category: \textbf{Visitable}\\ Remove one card from your hand.
       Then \textbf{Search (2)} the Ability, Spell, or Artifact Deck.
     }
@@ -605,9 +652,33 @@ When you Flag a Settlement, choose one of the following options:
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
+    \textbf{Cyclops Stockpile}\par
+    \framedimage[\linewidth]{\map_locations/cyclops_stockpile.jpg}
+    \expansionlabel{stronghold}
+    \caption{\small Category: \textbf{Visitable}\\
+      When preparing the Neutral Army guarding this location, instead of drawing 1 \svgunit{azure} Unit, find 2 \svgunit{golden} Cyclops and add them to the Neutral Army (look for them first in the \svgunit{golden} discard pile, and then in the \svgunit{golden} Neutral Unit Deck).
+      If you win the Combat, roll and resolve 4 \svg{resource_die}.
+      Any additional effects depend on the scenario.
+    }
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+  \end{minipage}
+\end{figure}
+
+\begin{tikzpicture}[remember picture, overlay]
+  \node[opacity=0.15] at ([xshift=13em, yshift=16.7em]current page.south) {\includegraphics[width=0.5\linewidth, trim=0 200pt 0 0, clip]{\art/cyclops.png}};
+\end{tikzpicture}
+
+\begin{figure}[H]
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
     \phantom{j}\textbf{Sea Chest\phantom{j}}\par
     \captionsetup{singlelinecheck=off}
     \framedimage[\linewidth]{\map_locations/sea_chest.jpg}
+    \expansionlabel{cove}
     \caption[sea chest]{\small Category: \textbf{Visitable}\\
       Roll 1 Attack Die.
       Depending on the result, do the following:
@@ -615,7 +686,7 @@ When you Flag a Settlement, choose one of the following options:
         \setlength\itemsep{-0.2em}
         \item[\textbf{+1}] -- Search (1) \svg{artifact}.
         \item[\textbf{0}] -- Gain 5 \svg{gold}.
-        \item[\textbf{-1}] -- Gain nothing.
+        \item[\textbf{\textminus{}1}] -- Gain nothing.
       \end{itemize}
      }
   \end{minipage}\hfill
@@ -625,6 +696,7 @@ When you Flag a Settlement, choose one of the following options:
     \phantom{j}\textbf{Jetsam\phantom{j}}\par
     \captionsetup{singlelinecheck=off}
     \framedimage[\linewidth]{\map_locations/jetsam.jpg}
+    \expansionlabel{cove}
     \caption[jetsam]{\small Category: \textbf{Visitable}\\
       Roll 1 Attack Die.
       Depending on the result, do the following:
@@ -632,7 +704,7 @@ When you Flag a Settlement, choose one of the following options:
         \setlength\itemsep{-0.2em}
         \item[\textbf{+1}] -- Roll and resolve 2 \svg{resource_die}.
         \item[\textbf{0}] -- Roll and resolve 1 \svg{resource_die}.
-        \item[\textbf{-1}] -- Gain nothing.
+        \item[\textbf{\textminus{}1}] -- Gain nothing.
       \end{itemize}
      }
   \end{minipage}
