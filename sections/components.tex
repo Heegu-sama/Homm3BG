@@ -214,12 +214,16 @@ This guide provides a visual overview of all components included in every expans
     \end{expansionmini}
   \end{subfigure}
   ~
-  \begin{subfigure}[c]{0.2\linewidth}
-    \begin{expansionmini}{conflux,cove,stronghold}
+  \begin{subfigure}[c]{0.15\linewidth}
+    \begin{expansionmini}{conflux}
       \centering
-      \vspace{0.5em}
-      \includegraphics[width=0.4\linewidth]{\images/time-token.png}
-      \caption{\textbf{Time Token}}
+      \begin{tikzpicture}
+        \node at (0, 0.7) {\includegraphics[width=0.5\linewidth]{\images/summon-token-earth.png}};
+        \node at (0.7, 0.7) {\includegraphics[width=0.5\linewidth]{\images/summon-token-fire.png}};
+        \node at (0, 0) {\includegraphics[width=0.5\linewidth]{\images/summon-token-water.png}};
+        \node at (0.7, 0) {\includegraphics[width=0.5\linewidth]{\images/summon-token-air.png}};
+      \end{tikzpicture}
+      \caption{\textbf{Summon Token}}
     \end{expansionmini}
   \end{subfigure}
 \end{figure}
@@ -292,14 +296,17 @@ This guide provides a visual overview of all components included in every expans
   \end{subfigure}
 \end{figure}
 
-\vspace*{-1em}
+\vspace*{-1.5em}
 \begin{figure}[H]
   \centering
   \begin{subfigure}[c]{0.15\linewidth}
     \begin{expansionmini}{stronghold}
       \centering
       \vspace{0.5em}
-      \includegraphics[width=0.5\linewidth]{\images/quicksand-token.png}
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=0.5\linewidth]{\images/quicksand-token-2.png}};
+        \node at (0.7, 0) {\includegraphics[width=0.5\linewidth]{\images/quicksand-token.png}};
+      \end{tikzpicture}
       \caption{\textbf{Quicksand Token}}
     \end{expansionmini}
   \end{subfigure}
@@ -308,8 +315,11 @@ This guide provides a visual overview of all components included in every expans
     \begin{expansionmini}{cove}
       \centering
       \vspace{0.5em}
-      \includegraphics[width=0.5\linewidth]{\images/clone-token.png}
-      \caption{\textbf{Clone Token \phantom{Population}}}
+      \begin{tikzpicture}
+        \node at (0, 0.2) {\includegraphics[width=0.7\linewidth]{\images/clone-token-2.png}};
+        \node at (0.7, 0) {\includegraphics[width=0.5\linewidth]{\images/clone-token.png}};
+      \end{tikzpicture}
+      \caption{\textbf{Clone Token}}
     \end{expansionmini}
   \end{subfigure}
   ~
@@ -317,7 +327,11 @@ This guide provides a visual overview of all components included in every expans
     \begin{expansionmini}{stretchgoals2}
       \centering
       \vspace{0.5em}
-      \includegraphics[width=0.5\linewidth]{\images/land-mine-token.png}
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=0.5\linewidth]{\images/land-mine-token-0.png}};
+        \node at (0.5, 0) {\includegraphics[width=0.5\linewidth]{\images/land-mine-token.png}};
+        \node at (1, 0) {\includegraphics[width=0.5\linewidth]{\images/land-mine-token-2.png}};
+      \end{tikzpicture}
       \caption{\textbf{Land Mine Token}}
     \end{expansionmini}
   \end{subfigure}
@@ -331,12 +345,12 @@ This guide provides a visual overview of all components included in every expans
     \end{expansionmini}
   \end{subfigure}
   ~
-  \begin{subfigure}[c]{0.15\linewidth}
-    \begin{expansionmini}{conflux}
+  \begin{subfigure}[c]{0.2\linewidth}
+    \begin{expansionmini}{conflux,cove,stronghold}
       \centering
       \vspace{0.5em}
-      \includegraphics[width=0.5\linewidth]{\images/summon-token.png}
-      \caption{\textbf{Summon Token}}
+      \includegraphics[width=0.4\linewidth]{\images/time-token.png}
+      \caption{\textbf{Time Token}}
     \end{expansionmini}
   \end{subfigure}
 \end{figure}
@@ -360,6 +374,7 @@ This guide provides a visual overview of all components included in every expans
       \centering
       \vspace{0.5em}
       \includegraphics[width=0.4\linewidth]{\images/crown-token.png}
+      \vspace*{-0.5em}
       \caption{\textbf{Empowered Ability Token}}
     \end{expansionmini}
     \vspace{1em}
@@ -375,10 +390,11 @@ This guide provides a visual overview of all components included in every expans
     \begin{expansion}{battlefield}
       \centering
       \includegraphics[width=\linewidth]{\images/battlefield-obstacles.png}
-      \caption{\textbf{Obstacles}}
+      \caption{\textbf{Battlefield Obstacles}}
     \end{expansion}
   \end{subfigure}
 \end{figure}
+\vspace*{-1em}
 
 \clearpage
 
