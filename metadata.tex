@@ -157,7 +157,8 @@
 
   \begin{tcolorbox}[
     enhanced,
-    title=\textbf{\tiny\l_exptitles_tl},
+    before~title=\raggedright\tiny,
+    title=\textbf{\l_exptitles_tl},
     opacityfill=0,
     size=small,
     boxrule=0pt,
@@ -220,6 +221,7 @@
 \newenvironment{expansionmini}[1]{\begin{expansion}[%
   size=minimal,
   beforeafter skip balanced=0pt,
+  left=-1mm,
 ]{#1}}{\end{expansion}}
 
 % https://tex.stackexchange.com/questions/675895/how-to-use-full-string-conditionals-in-latex
