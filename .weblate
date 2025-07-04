@@ -1,0 +1,16 @@
+discover:
+  match: 'translations/*/**.po'
+  component: 'translations/(?P<component>[^/]*)/.*\\.po'
+  language_regex: 'translations/[^/]*/(?P<language>[^/]*)\\.po'
+
+  push_branch: 'weblate/${language}/${component}'
+  branch: 'main'  # Your default branch where templates are stored
+
+  push_on_commit: true
+  merge_style: 'rebase'
+  file_format: 'po'
+
+  new_base: 'translations/${component}/${component}.pot'
+  base_file_template: 'translations/${component}/${component}.pot'
+  template: 'translations/${component}/${component}.pot'
+  filemask: 'translations/${component}/*.po'
