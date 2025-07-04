@@ -36,7 +36,7 @@
         </tr>
         <tr>
             <td>🇵🇱 Polski<br>
-            <img src="https://hosted.weblate.org/widgets/homm3bg-rules-rewrite/pl/svg-badge.svg">
+            <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/pl/svg-badge.svg">
             </td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Polski_Rules_Rewrite_1_3.pdf">pobierz</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Polski_Rules_Rewrite_1_3_Printable.pdf">pobierz</a></td>
@@ -76,7 +76,7 @@
         </tr>
         <tr>
             <td>🇺🇦 Українська<br>
-            <img src="https://hosted.weblate.org/widgets/homm3bg-rules-rewrite/ua/svg-badge.svg">
+            <img src="https://hosted.weblate.org/widgets/homm3bg-rules-rewrite/uk/svg-badge.svg">
             </td>
             <td align="center">—</td>
             <td align="center">—</td>
