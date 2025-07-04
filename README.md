@@ -36,7 +36,9 @@
         </tr>
         <tr>
             <td>🇵🇱 Polski<br>
-            <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/pl/svg-badge.svg">
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/pl/svg-badge.svg" alt="Translation status" />
+              </a>
             </td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Polski_Rules_Rewrite_1_3.pdf">pobierz</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Polski_Rules_Rewrite_1_3_Printable.pdf">pobierz</a></td>
@@ -46,7 +48,9 @@
         </tr>
         <tr>
             <td>🇪🇸 Español<br>
-            <img src="https://hosted.weblate.org/widgets/homm3bg-rules-rewrite/es/svg-badge.svg">
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/es/svg-badge.svg" alt="Translation status" />
+              </a>
             </td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Espanol_Rules_Rewrite_1_3.pdf">descargar</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Espanol_Rules_Rewrite_1_3_Printable.pdf">descargar</a></td>
@@ -56,7 +60,9 @@
         </tr>
         <tr>
             <td>🇫🇷 Français<br>
-            <img src="https://hosted.weblate.org/widgets/homm3bg-rules-rewrite/fr/svg-badge.svg">
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/fr/svg-badge.svg" alt="Translation status" />
+              </a>
             </td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Francais_Rules_Rewrite_1_3.pdf">télécharger</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Francais_Rules_Rewrite_1_3_Printable.pdf">télécharger</a></td>
@@ -66,7 +72,9 @@
         </tr>
         <tr>
             <td>🇷🇺 Русский<br>
-            <img src="https://hosted.weblate.org/widgets/homm3bg-rules-rewrite/ru/svg-badge.svg">
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/ru/svg-badge.svg" alt="Translation status" />
+              </a>
             </td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Russkiy_Rules_Rewrite_1_3.pdf">скачать</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Russkiy_Rules_Rewrite_1_3_Printable.pdf">скачать</a></td>
@@ -76,7 +84,9 @@
         </tr>
         <tr>
             <td>🇺🇦 Українська<br>
-            <img src="https://hosted.weblate.org/widgets/homm3bg-rules-rewrite/uk/svg-badge.svg">
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/uk/svg-badge.svg" alt="Translation status" />
+              </a>
             </td>
             <td align="center">—</td>
             <td align="center">—</td>
@@ -86,7 +96,9 @@
         </tr>
         <tr>
             <td>🇩🇪 Deutsch<br>
-            <img src="https://hosted.weblate.org/widgets/homm3bg-rules-rewrite/de/svg-badge.svg">
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/de/svg-badge.svg" alt="Translation status" />
+              </a>
             </td>
             <td align="center">—</td>
             <td align="center">—</td>
@@ -96,7 +108,9 @@
         </tr>
         <tr>
             <td>🇨🇿 Čeština<br>
-            <img src="https://hosted.weblate.org/widgets/homm3bg-rules-rewrite/cs/svg-badge.svg">
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/cs/svg-badge.svg" alt="Translation status" />
+              </a>
             </td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Cestina_Rules_Rewrite_1_3.pdf">stáhnout</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Cestina_Rules_Rewrite_1_3_Printable.pdf">stáhnout</a></td>
@@ -106,7 +120,9 @@
         </tr>
         <tr>
             <td>🇮🇱 עברית<br>
-            <img src="https://hosted.weblate.org/widgets/homm3bg-rules-rewrite/he/svg-badge.svg">
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/he/svg-badge.svg" alt="Translation status" />
+              </a>
             </td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Ivrit_Rules_Rewrite_1_3.pdf">הורדה</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Ivrit_Rules_Rewrite_1_3_Printable.pdf">הורדה</a></td>
