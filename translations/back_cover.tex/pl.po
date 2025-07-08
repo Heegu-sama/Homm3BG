@@ -21,7 +21,7 @@ msgstr ""
 #. type: Plain text
 #: sections/back_cover.tex:4
 msgid "\\restoregeometry"
-msgstr ""
+msgstr "\\restoregeometry"
 
 #. type: Plain text
 #: sections/back_cover.tex:13
@@ -31,6 +31,10 @@ msgid ""
 "page.center) { \\includegraphics[height=\\paperheight, keepaspectratio]"
 "{\\layout/back.jpg} }; \\end{tikzpicture} }"
 msgstr ""
+"\\iftoggle{noartbackground}{}{ \\begin{tikzpicture}[remember picture, "
+"overlay, inner sep=10pt] \\node(cover)[anchor=center] at (current "
+"page.center) { \\includegraphics[height=\\paperheight, keepaspectratio]"
+"{\\layout/back.jpg} }; \\end{tikzpicture} }"
 
 #. type: Plain text
 #: sections/back_cover.tex:42

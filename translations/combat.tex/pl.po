@@ -26,7 +26,7 @@ msgstr ""
 #: sections/resources.tex:5 sections/setup.tex:5 sections/town.tex:5
 #: sections/trading.tex:5
 msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
-msgstr ""
+msgstr "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
 
 #. type: multicols*
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
@@ -43,6 +43,8 @@ msgid ""
 "{2}\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:116 sections/combat.tex:196 sections/heroes.tex:34
@@ -91,31 +93,17 @@ msgstr ""
 
 #. type: multicols*
 #: sections/combat.tex:18
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\note{6}{\n"
-#| "  When a \\pagelink{Secondary}{Secondary Hero} is attacked, they \\textbf{may choose} to be \\pagelink{Endcombat}{instantly defeated} instead of engaging in Combat, which helps to preserve the Units.\n"
-#| "}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "When a \\pagelink{Secondary}{Secondary Hero} is attacked, they \\textbf{may choose} to be \\pagelink{Endcombat}{instantly defeated} instead of engaging in Combat, which helps to preserve the Units.\n"
 "\n"
 msgstr ""
-"\\note{6}{\n"
-"  Gdy atakowany jest \\pagelink{Secondary}{Bohater Pomocniczy}, może on \\textbf{wybrać} \\pagelink{Endcombat}{natychmiastową porażkę} zamiast Walki, co pozwala zachować Jednostki.\n"
-"}\n"
+"Gdy atakowany jest \\pagelink{Secondary}{Bohater Pomocniczy}, może on \\textbf{wybrać} \\pagelink{Endcombat}{natychmiastową porażkę} zamiast Walki, co pozwala zachować Jednostki.\n"
 "\n"
 
 #. type: multicols*
 #: sections/combat.tex:26
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\note{10}{\n"
-#| "  If your Town or Settlement is attacked by an enemy Hero and your Hero is not on that Field, you may immediately \\textbf{pay 8 \\svg{gold} to defend with only your Units}.\n"
-#| "  You cannot use your Deck during this Combat, as your Main Hero is not present.\n"
-#| "  Paying this Gold represents the cost of transporting the army there.\n"
-#| "}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\vspace{1em}\n"
 "\\note{10}{\n"
@@ -126,7 +114,9 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
-"\\note{11}{\n"
+"\\vspace{0.5em}\n"
+"\\note{10.8}{\n"
+"  \\vspace{0.3em}\n"
 "  Jeśli twoje Miasto lub Osada są atakowane przez wrogiego Bohatera, a twój Bohater nie znajduje się na tym Polu, możesz \\textbf{zapłacić 8 \\svg{gold}, aby bronić się tylko Jednostkami}.\n"
 "  Twój Bohater nie bierze udziału w tej Walce, przez co nie możesz korzystać ze swojej Talii.\n"
 "  Opłata jest kosztem transportu armii na miejsce Walki.\n"
@@ -173,27 +163,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/combat.tex:56
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{itemize}\n"
-#| "  \\item Choose one of the Combat Board's sides as your own. Place up to 5 of your Unit cards freely onto the Back and Frontlines of that side.\n"
-#| "  \\item Check the \\hyperlink{Difficulty Table}{\\textbf{Difficulty Table}} \\iftoggle{printable}{(on the back cover)}{} and draw the corresponding number of Neutral Unit cards from their Decks.\n"
-#| "  \\item The Neutral Units are placed differently depending on the Game Mode:\n"
-#| "  \\item In \\textbf{Clash} or \\textbf{Alliance} Scenarios, the enemy player sitting to your right controls the Neutral Units and decides their placement. \\svg{unit_ranged} Units must be placed in the Backline if possible.\n"
-#| "  \\item \\pagetarget{CombatAISetup}In \\textbf{Campaign} or \\textbf{Cooperative} scenarios, Neutral Units are placed from left to right from the player's perspective.\n"
-#| "First, place any \\svg{unit_ranged} Units in the Backline\\index{Units Placement}.\n"
-#| "Then, place any \\svg{unit_ground} or \\svg{unit_flying} Units in the Frontline.\n"
-#| "If there's not enough room to place a Unit in its correct line, place them in the other one.\n"
-#| "Units must be placed in \\textbf{descending} Initiative\\index{Initiative} order.\n"
-#| "If there's a tie, place higher tier Units first.\n"
-#| "If there's still a tie, the players decide the order.\n"
-#| "\\end{itemize}\n"
-#| "Unit setup when fighting \\textbf{other players}:\n"
-#| "\\begin{itemize}\n"
-#| "  \\item The attacking player places up to 5 Units on their chosen side of the Combat Board, followed by the defender.\n"
-#| "  \\item If the Combat takes place in a Town with a Citadel, the defender adds the \\pagelink{Walls}{Wall, Gate and Arrow Tower} cards after placing their Units.\n"
-#| "\\end{itemize}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\begin{itemize}\n"
 "  \\item Choose one of the Combat Board's sides as your own. Place up to 5 of your Unit cards freely onto the Back and Frontlines of that side.\n"
@@ -227,6 +197,7 @@ msgstr ""
 "Jednostki muszą być rozstawione w kolejności \\textbf{malejącej} Inicjatywy\\index{Inicjatywa}. \n"
 "Jeśli jest remis, zacznij od Jednostek wyższego poziomu.\n"
 "Jeśli wciąż jest remis, decyzja o rozstawieniu należy do gracza.\n"
+"Sprawdź rozdział \\pagelink{AI Units}{\\textbf{Walka z AI}} po szczegółowe instrukcje.\n"
 "\\end{itemize}\n"
 "Rozstawianie Jednostek w przypadku Walki z \\textbf{innym Graczem} przebiega następująco:\n"
 "\\begin{itemize}\n"
@@ -343,7 +314,7 @@ msgstr ""
 "  \\item Przed atakiem Jednostki obaj Gracze mogą \\pagelink{CombatCards}{zagrywać Karty}. Karty są rozpatrywane w kolejności, w której Gracze zdecydowali się je zagrać.\n"
 "  \\item Po deklaracji ataku Jednostki i zagraniu Kart rzuć Kością Ataku.\n"
 "    Zmodyfikuj atak Jednostki atakującej o wynik i odejmij wartość Obrony Jednostki broniącej się. Wynik to \\pagelink{HP}{obrażenia}, które otrzymuje Jednostka broniąca się.\n"
-"  \\item Jeśli Jednostka broniąca się sąsiadowała z Jednostką atakującą, wykonuje \\pagelink{Retaliate}{Kontratak}, jeśli jeszcze tego nie zrobiła w tej rundzie.\n"
+"  \\item Jeśli Jednostka broniąca się sąsiadowała z Jednostką atakującą, wykonuje \\pagelink{Retaliate}{Kontratak}, jeśli jeszcze tego nie zrobiła w tej Rundzie.\n"
 "  \\item Aktywuj Jednostki aż wszystkie zostaną Aktywowane.\n"
 "Runda Walki kończy się po ostatniej Aktywacji.\n"
 "\\end{itemize}\n"
@@ -351,31 +322,21 @@ msgstr ""
 
 #. type: multicols*
 #: sections/combat.tex:108
-#, fuzzy, no-wrap
-#| msgid ""
-#| "{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/prayer.png}}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\begin{center}\n"
 "  \\transparent{0.2}\\includegraphics[width=1.05\\linewidth]{\\art/wyvern.png}\n"
 "\\end{center}\n"
 "\n"
 msgstr ""
-"\\vspace*{\\fill}{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/prayer.png}}\n"
+"\\begin{center}\n"
+"  \\transparent{0.2}\\includegraphics[width=1.05\\linewidth]{\\art/wyvern.png}\n"
+"\\end{center}\n"
 "\n"
 
 #. type: multicols*
 #: sections/combat.tex:116
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\subsection*{\\pagetarget{CombatCards}{Using Cards During Combat}}\n"
-#| "You may only use \\textbf{one Spell per Combat Round}.\n"
-#| "Ongoing \\svg{ongoing} and \\svg{activation} Activate effects can be used only \\textbf{when Activating one of your Units and before it attacks}.\n"
-#| "Ongoing effects\\index{Ongoing Effects} last until end of Combat or if the effect on the card is used up.\\par\n"
-#| "Instant \\svg{instant} Cards may be played \\textbf{at any time} except between rolling the Attack Die and resolving damage unless otherwise stated.\n"
-#| "Effects of increasing a Unit's \\svg{attack} (e.g. by the Statistics Cards), expire whenever the first attack performed by that unit resolves or the Activation ends, whichever comes first.\n"
-#| "The increased \\svg{defense} expires in a similar way.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{CombatCards}{Using Cards During Combat}}\n"
 "You may only use \\textbf{one Spell per Combat Round}, unlike being able to play any number of other Cards.\n"
@@ -387,7 +348,7 @@ msgid ""
 "\n"
 msgstr ""
 "\\subsection*{\\pagetarget{CombatCards}{Wykorzystywanie Kart w Walce}}\n"
-"W ciągu jednej Rundy Walki \\textbf{możesz użyć tylko jednej Karty Zaklęcia}.\n"
+"W ciągu jednej Rundy Walki \\textbf{możesz użyć tylko jednej Karty Zaklęcia} w przeciwieństwie do możliwości zagrania dowolnej liczby innych Kart.\n"
 "Efektów Krótkotrwałych \\svg{ongoing} oraz Aktywacji \\svg{activation} można użyć tylko \\textbf{podczas Aktywacji swojej Jednostki oraz przed jej atakiem}.\n"
 "Efekty Krótkotrwałe\\index{Efekt!Krótkotrwały} trwają do końca Walki lub do momentu ich wykorzystania.\\par\n"
 "Karty z Efektem Natychmiastowym \\svg{instant} można zagrać \\textbf{w dowolnym momencie} poza czasem pomiędzy rzutami Kością Ataku i rozpatrywaniem obrażeń, o ile opis Karty nie stanowi inaczej.\n"
@@ -396,14 +357,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/combat.tex:122
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\subsection*{\\pagetarget{Timelimit}{Combat Time Limits}}\\index{Time Limit}\n"
-#| "Combats against Neutral Units have a time limit of \\textbf{one Combat Round}.\n"
-#| "At the end of every Combat Round you have an option to either \\textbf{Retreat}\\index{Retreat} or spend 1 MP from the Hero that started the Combat in order to play another Round.\n"
-#| "When you Retreat, \\hyperlink{Endcombat}{end the Combat}, and move the Hero that started the Combat back to the Field they \\textbf{last Visited}.\n"
-#| "There are no other negative consequences to Retreating.\\par\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Timelimit}{Combat Time Limits}}\\index{Time Limit}\n"
 "Combats against Neutral Units have a time limit of \\textbf{one Combat Round}.\n"
@@ -414,37 +368,32 @@ msgid ""
 msgstr ""
 "\\subsection*{\\pagetarget{Timelimit}{Limit Czasu Walki}}\\index{Limit!Czasu Walki}\n"
 "Walki z Jednostkami Neutralnymi mają Limit Czasu wynoszący \\textbf{jedną Rundę Walki}.\n"
-"Po zakończeniu każdej Rundy Walki masz możliwość \\textbf{Wycofania się}\\index{Wycofanie} lub wydania 1 PR Bohatera, który rozpoczął Walkę, aby rozegrać kolejną Rundę.\n"
-"Wycofując się, \\hyperlink{Endcombat}{zakończ Walkę} i przesuń Bohatera, który rozpoczął Walkę, z powrotem na Pole, które \\textbf{ostatnio Odwiedził}.\n"
+"Po zakończeniu każdej Rundy Walki masz możliwość \\textbf{Wycofania się}\\index{Wycofanie} lub wydania 1 \\svgeven{movement} Bohatera, który rozpoczął Walkę, aby rozegrać kolejną Rundę.\n"
+"Wycofując się, zakończ Walkę i przesuń Bohatera, który rozpoczął Walkę, z powrotem na Pole, które \\textbf{ostatnio Odwiedził}.\n"
 "Nie ma innych negatywnych konsekwencji Wycofania się.\\par\n"
 "\n"
 
 #. type: multicols*
 #: sections/combat.tex:124
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\note{5}{Combats against Azure \\svgunit{azure-note} Units, other players, or \\pagelink{AIrules}{AI Heroes} have no time limit, and you cannot Retreat from them.}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\note{5}{Combats against Azure \\svgunit{azure} Units, other players, or \\pagelink{AIrules}{AI Heroes} have no time limit, and you cannot Retreat from them.}\n"
 "\n"
 msgstr ""
-"\\note{5}{Walka przeciwko Błękitnym \\svgunit{azure-note} Jednostkom, innym graczom lub \\pagelink{AIrules}{Bohaterom AI} nie ma limitu czasu i nie możesz się z niej wycofać.}\n"
+"\\note{5}{Walka przeciwko Błękitnym \\svgunit{azure} Jednostkom, innym graczom lub \\pagelink{AIrules}{Bohaterom AI} nie ma limitu czasu i nie możesz się z niej wycofać.}\n"
 "\\vspace{-1em}\n"
 "\n"
 
 #. type: multicols*
 #: sections/combat.tex:127
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\subsection*{\\pagetarget{Combatsetup}{Combat Setup}}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\vspace*{-1em}\n"
 "\\subsection*{\\pagetarget{Endcombat}{End of Combat}}\n"
 "\n"
 msgstr ""
-"\\subsection*{\\pagetarget{Combatsetup}{Przygotowanie Walki}}\n"
+"\\vspace*{-1em}\n"
+"\\subsection*{\\pagetarget{Endcombat}{Koniec Walki}}\n"
 "\n"
 
 #. type: multicols*
@@ -459,6 +408,13 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"Walka przeciwko Jednostkom Neutralnym ma trzy możliwe wyniki:\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{Zwycięstwo:} Wszystkie Jednostki Neutralne zostają pokonane.\n"
+"  \\item \\textbf{Wycofanie się:} Graczowi kończy się czas lub traci wszystkie walczące Jednostki, ale nadal ma Jednostki w swojej Talii Jednostek.\n"
+"  \\item \\textbf{Porażka:} Gracz traci wszystkie walczące Jednostki i nie ma żadnych Jednostek w swojej Talii Jednostek.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:142
@@ -473,6 +429,13 @@ msgid ""
 "\\note{3.5}{You cannot surrender when defending a Town.}\\par\n"
 "\n"
 msgstr ""
+"Walka przeciwko Bohaterowi innego gracza ma dwa możliwe wyniki:\n"
+"\\begin{itemize}\n"
+" \\item \\textbf{Zwycięstwo/Porażka:} Jeśli wszystkie Jednostki jednej strony są pokonane, strona z ocalałymi Jednostkami wygrywa, druga strona jest pokonana.\n"
+" \\item \\textbf{Poddanie się:} Zamiast aktywować swoją Jednostkę, Bohater może poddać się Bohaterowi drugiego gracza, płacąc mu 10 \\svg{gold}, aby zapobiec pokonaniu swojej armii. W tym przypadku Walka kończy się natychmiast bez zwycięskiego lub pokonanego Bohatera.\n"
+"\\end{itemize}\n"
+"\\note{3}{\\vspace{1em}Broniąc Miasta, nie możesz się poddać.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:145
@@ -482,6 +445,9 @@ msgid ""
 "When Combat ends, all damage is healed from all surviving Units. Move any player-owned Units back to their Unit Deck and discard any leftover enemy Neutral Units. Depending on the type and result of the combat, players must resolve the following consequences for themselves:\n"
 "\n"
 msgstr ""
+"\\newpage\n"
+"Po Walce wszystkie obrażenia są odrzucane, a wszystkie ocalałe Jednostki należące do gracza wracają do Talii Jednostek. Odrzuć wszelkie pozostałe wrogie Neutralne Jednostki. W zależności od typu i wyniku Walki gracze muszą rozpatrzyć następujące konsekwencje:\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:152
@@ -495,6 +461,13 @@ msgid ""
 "Remember to receive the starting units of the chosen scenario for free each time your Unit Deck is empty after a combat.\n"
 "\n"
 msgstr ""
+"\\textbf{Zwycięski Bohater} otrzymuje \\pagelink{Combatexperience}{Doświadczenie}, jeśli był Bohaterem Głównym. Jeśli był atakującym, odwiedza Pole, na którym miała miejsce walka.\\par\n"
+"\\textbf{Bohater wycofujący się} z Walki z Jednostkami Neutralnymi musi wrócić na ostatnie odwiedzone Pole na mapie (bez odwiedzania go).\\par\n"
+"\\textbf{Pokonany Bohater Główny} musi przenieść się do przyjaznego Miasta lub Osady. Jeśli został pokonany przez Bohatera innego gracza, otrzymuje 1~\\svg{morale_negative} i musi zapłacić 5 \\svg{gold} zwycięskiemu Bohaterowi. Ponadto daje \\pagelink{End}{Kostkę Frakcji} zwycięskiemu graczowi. Pokonanie Bohatera Głównego może spowodować \\pagelink{End}{Eliminację Gracza}.\\par\n"
+"\\textbf{Pokonany Bohater Pomocniczy} (nawet natychmiast pokonany bez walki) jest usuwany z mapy. Jeśli został pokonany przez Bohatera innego gracza, tamten gracz również otrzymuje Kostkę Frakcji.\\par\n"
+"\\textbf{Bohater poddający się} nie liczy się jako pokonany. Przenieś poddającego się Bohatera Głównego do Miasta lub Osady, albo usuń Bohatera Pomocniczego z mapy tak, jakby został pokonany. Drugi gracz nie otrzymuje ani Doświadczenia, ani Kostki Frakcji.\\par\n"
+"Pamiętaj, aby otrzymać początkowe Jednostki wybranego scenariusza za darmo za każdym razem, gdy twoja Talia Jednostek jest pusta po Walce.\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:154
@@ -521,13 +494,13 @@ msgid ""
 "\n"
 msgstr ""
 "Po wygranej Walce Bohater Główny zdobywa Doświadczenie\\index{Doświadczenie}.\n"
-"Jeśli Poziom Trudności Pola albo Poziom Wrogiego Bohatera jest \\textbf{równy} Twojemu Poziomowi, otrzymujesz \\mbox{1 \\svg{experience}.}\n"
+"Jeśli Poziom Trudności Pola albo Poziom Wrogiego Bohatera jest \\textbf{równy} Twojemu Poziomowi, otrzymujesz 1~\\svg{experience}.\n"
 "Jeśli jest \\textbf{wyższy} niż twój Poziom, zdobywasz 2 \\svg{experience}.\n"
 "Pokonanie \\svgunit{azure} Jednostek Neutralnych \\textbf{natychmiast} awansuje Twojego Bohatera na 7 Poziom.\n"
 "Jeśli zdobędziesz kilka Poziomów na raz, rozpatrz ich efekty po kolei.\n"
 "Poziomy muszą być rozpatrzone przed Odwiedzeniem Pola, na którym odbyła się Walka.\\par\n"
 "Bohater Pomocniczy nie otrzymuje Doświadczenia \n"
-"ani ty nie otrzymasz PD za \\textbf{pokonanie} Bohatera Pomocniczego lub gdy wrogi Bohater \\textbf{się Podda}.\n"
+"ani ty nie otrzymasz Doświadczenia za \\textbf{pokonanie} Bohatera Pomocniczego lub gdy wrogi Bohater \\textbf{się Podda}.\n"
 "\n"
 
 #. type: multicols*
@@ -544,11 +517,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/combat.tex:171
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\hspace{2em}\n"
-#| "{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/clone.png}}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
 "\\begin{center}\n"
@@ -557,8 +526,9 @@ msgid ""
 "\n"
 msgstr ""
 "\\vspace*{\\fill}\n"
-"\\hspace{2em}\n"
-"{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/clone.png}}\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=\\linewidth]{\\art/magma_elemental.jpg}\n"
+"\\end{center}\n"
 "\n"
 
 #. type: subsection{#2}
@@ -581,7 +551,7 @@ msgstr ""
 "{2}\n"
 "\\textit{Zombie Boba atakują Gryfy Alicji.\n"
 "Po deklaracji ataku obaj gracze mogą zmodyfikować Atak i Obronę swoich Jednostek zagrywając dowolną liczbę \\svg{instant} Kart zwiększających ich \\svg{attack} lub \\svg{defense}.}\\par\n"
-"\\textit{Bob decyduje sę zagrać Kartę Ataku +1, zwiększając Atak Zombie z 2 na 3.\n"
+"\\textit{Bob decyduje się zagrać Kartę Ataku +1, zwiększając Atak Zombie z 2 na 3.\n"
 "Alicja odpowiada zagrywając Kartę Obrony +1, zwiększając obronę Gryfów z 0 do 1.\n"
 "Oboje mogą zagrać dowolną liczbę dodatkowych Kart w dowolnej kolejności, lecz decydują się na tym poprzestać.}\\par\n"
 "\n"
@@ -613,7 +583,7 @@ msgstr ""
 "Bob wyrzuca +1.\n"
 "Zwiększa to Atak Zombie z 3 na 4, który zostaje pomniejszony o wartość Obrony Gryfów (1). Gryfy otrzymują 3 \\svg{damage}. Ponieważ ich PZ \\svg{health_points} wynosi 4, ich Karta nie zostaje obrócona na stronę \"Kilka\" .}\\par\n"
 "\\textit{Na Gryfach nie ma położonej Czarnej Kostki, więc wykonują one Kontratak.\n"
-"Z reguły powinno się na nich kłaść Kostkę, jednakże ich Specjalna \\svg{unit_retaliate} Zdolność umożliwia wykonanie Kontrataku nieograniczoną ilość razy, więc Kostki się nie umieszcza.}\\par\n"
+"Z reguły powinno się na nich kłaść Kostkę, jednakże ich Specjalna \\svg{unit_retaliate} Zdolność umożliwia wykonanie Kontrataku nieograniczoną liczbę razy, więc Kostki się nie umieszcza.}\\par\n"
 "\\textit{Obaj Gracze ponownie mogą zmodyfikować Statystyki swoich Jednostek podczas Kontrataku.\n"
 "Poprzednio zagrane Karty Ataku i Obrony nie wliczają się już do tego ataku.}\n"
 "\n"
@@ -640,6 +610,13 @@ msgid ""
 "Defending Units may move through the Gate and may stop on it.\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\subsection*{\\pagetarget{Walls}{Obrona Miasta z Cytadelą}}\\index{Obrona Miasta}\n"
+"Gdy bronisz swojego Miasta, które ma Cytadelę, dodajesz 3 Mury i 1 Bramę jako Przeszkody w dowolnej kolejności do środkowego rzędu Planszy Walki po rozstawieniu swoich Jednostek.\n"
+"\\textbf{Nie używaj Murów i Bramy}, jeśli bronisz wrogiego Miasta, które wcześniej zdobyłeś, \\textbf{nawet jeśli} to Miasto ma Cytadelę.\n"
+"Karta Bramy \\textbf{nie jest Przeszkodą dla broniącego gracza}.\n"
+"Jednostki broniące mogą przechodzić przez Bramę i mogą się na niej zatrzymać.\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:215
@@ -652,6 +629,12 @@ msgid ""
 "\\columnbreak\n"
 "\n"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\\includegraphics[width=\\linewidth]{\\examples/ranged_protected.png}\n"
+"{\\textit{Halabardnicy znajdują się za niezniszczonym Murem. \\textbf{Są chronieni} przed atakami z przeciwnej strony Muru.\n"
+"  Obrażenia ataku \\svg{unit_ranged} Złych Oczu są \\textbf{zmniejszone o 1}.}}\n"
+"\\newline\\columnbreak\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:218
@@ -661,6 +644,9 @@ msgid ""
 "These Attacks don't count as normal attacks: They are always successful and they don't activate any of the attacking unit's \\svg{unit_attack} abilities, and you cannot play any cards or throw the attack die to affect the attack's result.\n"
 "\n"
 msgstr ""
+"Mury i Bramę\\index{Mury i Brama} można zniszczyć atakiem dowolnej sąsiadującej z nimi Jednostki \\svg{unit_ground} lub \\svg{unit_flying}, nawet broniącej.\n"
+"Te Ataki nie liczą się jako normalne ataki: zawsze są skuteczne i nie aktywują żadnych zdolności \\svg{unit_attack} atakującej Jednostki, a ty nie możesz zagrać żadnych kart ani rzucić Kością Ataku, aby wpłynąć na ich wynik.\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:221
@@ -670,6 +656,9 @@ msgid ""
 "If they are targeted by a \\svg{unit_ranged} attack performed from the opponent's side of the Combat Board, \\textbf{reduce the attack's damage by 1}.\n"
 "\n"
 msgstr ""
+"Jednostki broniące stojące po swojej stronie i \\textbf{w tej samej kolumnie} co Mur lub Brama otrzymują ochronę przed atakami \\svg{unit_ranged}.\n"
+"Jeśli są celem ataku \\svg{unit_ranged} wykonanego z przeciwnej strony Planszy Walki, \\textbf{zmniejsz obrażenia tego ataku o 1}.\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:228
@@ -681,6 +670,11 @@ msgid ""
 "  Evil Eyes attack \\textbf{without penalty}.}}\n"
 "\\newline\\newline"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\\includegraphics[width=\\linewidth]{\\examples/ranged_unprotected.png}\n"
+"{\\textit{Ponieważ Mur chroniący Halabardników został zniszczony, \\textbf{nie są oni chronieni}.\n"
+"  Złe Oczy atakują \\textbf{bez kary}.}}\n"
+"\\newline\\newline"
 
 #. type: multicols
 #: sections/combat.tex:240
@@ -697,6 +691,16 @@ msgid ""
 "The attacker doesn't need to destroy it to win the Combat.\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=0.6\\linewidth]{translations/assets/pl/arrow_tower.png}\n"
+"\\end{center}\n"
+"Gracz broniący się otrzymuje również Kartę Jednostki Wieży Łuczniczej\\index{Wieża Łucznicza}, która jest umieszczana obok Planszy Walki.\n"
+"Działa jak każda Jednostka \\svg{unit_ranged} Dystansowa, z wyjątkiem tego, że nie wpływa na nią nic związane z jej pozycjonowaniem: \n"
+"nigdy nie otrzymuje kary do Walki przeciwko wrogim Jednostkom i \\textit{vice versa}.\n"
+"Tylko ataki dystansowe i Efekty Kart mogą zniszczyć Wieżę Łuczniczą, ale jest ona natychmiast niszczona, gdy wszystkie Mury i Brama zostają zniszczone.\n"
+"Atakujący nie musi jej zniszczyć, aby wygrać Walkę.\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:243
@@ -706,18 +710,20 @@ msgid ""
 "\\note{9}{In a siege against AI, the Arrow Tower follows the priority-rules like a Silver \\svgunit{silver} Unit. But if there are many valid targets, it cannot attack the nearest one, so it will attack the one that is closest to perishing (the smallest difference between \\svg{health_points-note} and current \\svg{damage-table}).}\n"
 "\n"
 msgstr ""
+"\\vspace{1em}\n"
+"\\note{9}{W oblężeniu przeciwko AI Wieża Łucznicza atakuje jak Srebrna \\svgunit{silver} Jednostka. Jeśli jest więcej niż jeden możliwy cel, nie może atakować najbliższego, więc zaatakuje ten, który jest najbliżej śmierci (najmniejsza różnica między \\svg{health_points-note} a obecnymi \\svg{damage-table}).}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:247
-#, fuzzy, no-wrap
-#| msgid ""
-#| "{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/prayer.png}}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\begin{center}\n"
 "  \\includegraphics[width=1.05\\linewidth]{\\art/arrow_tower.jpg}\n"
 "\\end{center}\n"
 "\n"
 msgstr ""
-"\\vspace*{\\fill}{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/prayer.png}}\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=1.05\\linewidth]{\\art/arrow_tower.jpg}\n"
+"\\end{center}\n"
 "\n"
