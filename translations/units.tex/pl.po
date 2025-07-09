@@ -33,6 +33,8 @@ msgid ""
 "{2}\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\n"
 
 #. type: multicols*
 #: sections/all_map_locations.tex:35 sections/all_map_locations.tex:63
@@ -42,6 +44,8 @@ msgid ""
 "\\medskip\n"
 "\n"
 msgstr ""
+"\\medskip\n"
+"\n"
 
 #. type: multicols
 #: sections/all_map_locations.tex:54 sections/all_map_locations.tex:232
@@ -53,6 +57,8 @@ msgid ""
 "\\columnbreak\n"
 "\n"
 msgstr ""
+"\\columnbreak\n"
+"\n"
 
 #. type: multicols
 #: sections/credits.tex:38 sections/credits.tex:42 sections/setup.tex:121
@@ -62,6 +68,8 @@ msgid ""
 "\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:40 sections/player_turns.tex:57
@@ -71,6 +79,8 @@ msgid ""
 "\\clearpage\n"
 "\n"
 msgstr ""
+"\\clearpage\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:54 sections/deckbuilding.tex:72
@@ -78,7 +88,7 @@ msgstr ""
 #: sections/deckbuilding.tex:261 sections/units.tex:66 sections/units.tex:93
 #, no-wrap
 msgid "    \\begin{tikzpicture}\n"
-msgstr ""
+msgstr "    \\begin{tikzpicture}\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:39 sections/units.tex:227
@@ -87,6 +97,8 @@ msgid ""
 "\\bigskip\n"
 "\n"
 msgstr ""
+"\\bigskip\n"
+"\n"
 
 #.  !TeX spellcheck = en_US
 #. type: Plain text
@@ -120,7 +132,7 @@ msgstr ""
 "Każdy Scenariusz posiada instrukcję wskazującą, które Karty Jednostek powinny być zawarte w twojej początkowej Talii Jednostek.\n"
 "Talia ta powinna być oddzielona od reszty Jednostek twojej Frakcji.\\par\n"
 "Każda Jednostka Frakcji jest dwustronna, posiada słabszą stronę ,,Garstki'' oraz silniejszą stronę ,,Grupy''.\n"
-",,Garstka'' jednostek może być ulepszona do ,,Grupy'' poprzez \\textbf{Wzmocnienie}. ,,Grupa'' jednostek może zostać zredukowana do ,,Garstki'' na skutek otrzymana obrażeń.\n"
+",,Garstka'' jednostek może być ulepszona do ,,Grupy'' poprzez \\textbf{Wzmocnienie}. ,,Grupa'' jednostek może zostać zredukowana do ,,Garstki'' na skutek otrzymanych obrażeń.\n"
 "Karty Jednostek powinny być zawsze odwrócone na właściwą stronę podczas ich przemieszczania lub sprawdzania.\\par\n"
 "Talia Jednostek gracza może zawierać dowolną liczbę Jednostek, ale \\textbf{tylko do 5 Jednostek} może zostać wybrane do Walki podczas \\pagelink{Combatsetup}{Przygotowania Walki}.\n"
 "Jeśli Jednostka zostanie pokonana w Walce, \\textbf{odrzuć ją} z Talii Jednostek.\\par\n"
@@ -167,6 +179,16 @@ msgid ""
 "}{1.2\\linewidth}]{\\art/gorgone.png}}\n"
 "\n"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\\iftoggle{printable}{}{\\hspace{1em}}\n"
+"{\\transparent{0.2}\\includegraphics[width=\\iftoggle{printable}{\n"
+"  \\ifodd\\value{page}\n"
+"    1.2\\linewidth\n"
+"  \\else\n"
+"    1.32\\linewidth\n"
+"  \\fi\n"
+"}{1.2\\linewidth}]{\\art/gorgone.png}}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:44
@@ -187,6 +209,8 @@ msgid ""
 "\\vspace{0pt}\n"
 "\n"
 msgstr ""
+"\\vspace{0pt}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:57
@@ -207,7 +231,7 @@ msgstr ""
 "\\includegraphics[height=30px]{\\images/attack.png} \\textbf{Atak} – Ilość obrażeń zadawanych przez tę Jednostkę podczas Ataku.\\par\n"
 "\\includegraphics[height=30px]{\\images/defense.png} \\textbf{Obrona} - Ilość, o jaką ta Jednostka zmniejsza obrażenia od Ataku.\n"
 "Nie dotyczy obrażeń otrzymanych od Zaklęć lub innych efektów niewynikających z ataku.\\par\n"
-"\\includegraphics[height=30px]{\\images/hp.png} \\textbf{\\pagetarget{HP}{Punkty Zdrowia}} - Ilość obrażeń wymagana do pokonana Jednostki.\n"
+"\\includegraphics[height=30px]{\\images/hp.png} \\textbf{\\pagetarget{HP}{Punkty Zdrowia}} - Ilość obrażeń wymagana do pokonania Jednostki.\n"
 ",,Garstka'' po pokonaniu jest odrzucana z Walki i Talii Jednostek ich właściciela.\n"
 ",,Grupa'' jest odwracana na stronę ,,Garstki'', a wszelkie nadmiarowe obrażenia umieszczane są na ,,Garstce''.\n"
 "Jednostki pozostają ,,Garstką'' lub ,,Grupą'' pomiędzy Walkami.\n"
@@ -225,6 +249,10 @@ msgid ""
 "{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/behemoth.png}}\n"
 "\n"
 msgstr ""
+"\\vfill\n"
+"\\hspace{-2em}\n"
+"{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/behemoth.png}}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:65
@@ -235,6 +263,10 @@ msgid ""
 "  \\begin{center}\n"
 "    \\begin{scriptsize}\n"
 msgstr ""
+"\\begin{multicols*}{2}\n"
+"  \\footnotesize\n"
+"  \\begin{center}\n"
+"    \\begin{scriptsize}\n"
 
 #. type: multicols
 #: sections/units.tex:92
@@ -351,6 +383,8 @@ msgid ""
 "\\bigbreak\n"
 "\n"
 msgstr ""
+"\\bigbreak\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:132
@@ -453,9 +487,10 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
-"\\note{8}{\n"
+"\\vspace{1em}\n"
+"\\note{9}{\n"
 "  Posiadanie zbudowanego \\svgunit{golden} Siedliska w swoim Mieście pozwala na dobranie \\svgunit{azure} Karty Jednostki, korzystając z podstawowego (górnego) efektu Karty Zdolności Dyplomacji.\n"
-"  Ten efekt nie dotyczy Portalu Przyzywania frakcji Lochów.\n"
+"  Ten efekt nie dotyczy innych sposobów, jak np. Portalu Przyzywania frakcji Lochów.\n"
 "}\n"
 "\n"
 
@@ -506,16 +541,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/units.tex:210
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\subsection*{Summoning}\n"
-#| "Some cards from the Inferno expansion may Summon Units\\index{Summoning} during Combat.\n"
-#| "This effect cannot Summon Units from the Neutral Units Deck.\n"
-#| "Place the summoned Unit adjacent to the summoning Unit.\n"
-#| "Summoned Units Activate in the Round they were summoned if their Initiative is lower or equal to the Initiative of the currently Activated Unit.\n"
-#| "Otherwise, treat them as if they already activated this Combat Round.\n"
-#| "After Combat, unless stated otherwise, the Summoned Units are added to your Unit Deck.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\begin{expansion}{inferno}\n"
 "  \\subsection*{\\pagetarget{Summoning}{Summoning}}\n"
@@ -530,13 +556,17 @@ msgid ""
 "\\framedimage[\\linewidth]{\\art/pit_lord_cropped.jpg}\n"
 "\n"
 msgstr ""
-"\\subsection*{Przyzwanie}\n"
-"Niektóre Karty z rozszerzenia Inferno mogą Przyzwać\\index{Przyzwanie} Jednostki podczas Walki.\n"
-"Tym efektem nie można Przyzywać Jednostek z Talii Jednostek Neutralnych.\n"
-"Przyzwaną Jednostkę należy umieścić obok Jednostki, która Przyzwała.\n"
-"Przyzwane Jednostki Aktywują się w Rundzie, w której je przyzwano, jeśli ich Inicjatywa jest niższa lub równa Inicjatywie aktualnie Aktywowanej Jednostki.\n"
-"W przeciwnym razie traktuj je tak, jakby już aktywowały się w tej Rundzie Walki.\n"
-"Po Walce, o ile nie określono inaczej, Przyzwane Jednostki trafiają do twojej Talii Jednostek.\n"
+"\\begin{expansion}{inferno}\n"
+"  \\subsection*{Przyzwanie}\n"
+"  Czarci Lordowie z rozszerzenia Inferno mogą Przyzwać\\index{Przyzwanie} Jednostki podczas Walki.\n"
+"  Tym efektem nie można Przyzywać Jednostek z Talii Jednostek Neutralnych.\n"
+"  Przyzwaną Jednostkę należy umieścić obok Jednostki, która Przyzwała.\n"
+"  Przyzwane Jednostki Aktywują się w Rundzie, w której je przyzwano, jeśli ich Inicjatywa jest niższa lub równa Inicjatywie aktualnie Aktywowanej Jednostki.\n"
+"  W przeciwnym razie traktuj je tak, jakby już aktywowały się w tej Rundzie Walki.\n"
+"  Po Walce, o ile nie określono inaczej, Przyzwane Jednostki trafiają do twojej Talii Jednostek.\n"
+"\\end{expansion}\n"
+"\\vspace*{\\fill}\n"
+"\\framedimage[\\linewidth]{\\art/pit_lord_cropped.jpg}\n"
 "\n"
 
 #. type: multicols*
