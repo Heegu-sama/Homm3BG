@@ -26,7 +26,7 @@ msgstr ""
 #: sections/resources.tex:5 sections/setup.tex:5 sections/town.tex:5
 #: sections/trading.tex:5
 msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
-msgstr ""
+msgstr "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
 
 #. type: multicols*
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
@@ -43,13 +43,15 @@ msgid ""
 "{2}\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\n"
 
 #. type: figure
 #: sections/deckbuilding.tex:238 sections/map_elements.tex:40
 #: sections/setup.tex:9
 #, no-wrap
 msgid "  \\begin{tikzpicture}\n"
-msgstr ""
+msgstr "  \\begin{tikzpicture}\n"
 
 #.  !TeX spellcheck = en_US
 #. type: Plain text
@@ -75,7 +77,7 @@ msgstr ""
 "Gracz zaczyna na dedykowanym dla Frakcji Kafelku Początkowym I.\n"
 "Inne Kafelki można umieszczać i odkrywać zgodnie z opisem na następnej stronie.\n"
 "Podczas Przygotowania gry Kafelki ułożone rewersem do góry wybierane są losowo z dostępnej puli, zgodnie z opisem w Scenariuszu. Następnie są tasowane i trzymane rewersem do góry.\n"
-"\\textbf{Cyfra rzymska} na każdym Kafelku opisuje \\textbf{trudność} Jednostek Neutralnych jakie możesz spotkać na danym Kafeku oraz liczbę nagród. Kafelki Początkowe I są najłatwiejsze, zaś Kafelki VI-VII są najtrudniejsze.\\par\n"
+"\\textbf{Cyfra rzymska} na każdym Kafelku opisuje \\textbf{trudność} Jednostek Neutralnych jakie możesz spotkać na danym Kafelku oraz liczbę nagród. Kafelki Początkowe I są najłatwiejsze, zaś Kafelki VI-VII są najtrudniejsze.\\par\n"
 "\n"
 
 #. type: multicols*
@@ -89,6 +91,12 @@ msgid ""
 "\\vfill\n"
 "\n"
 msgstr ""
+"\\vfill\n"
+"\\begin{center}\n"
+"  \\transparent{0.2}\\includegraphics[width=0.6\\linewidth]{\\art/counterstrike.png}\n"
+"\\end{center}\n"
+"\\vfill\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:36
@@ -138,6 +146,9 @@ msgid ""
 "\\begin{center}\n"
 "  \\begin{scriptsize}\n"
 msgstr ""
+"\\vfill\n"
+"\\begin{center}\n"
+"  \\begin{scriptsize}\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:57
@@ -161,6 +172,23 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"    \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=0.75\\linewidth]{\\images/fields.png}}};\n"
+"    \\draw (0, -0.3) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
+"    \\draw (-1.9, 0) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (2.3, 0) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (-1.4, 1.7) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (0.6, -1.9) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (0.5, 1.7) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"    \\draw (1.4, -2.2) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
+"    \\draw (1.4, 2.5) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
+"    \\draw (1.4, -1) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
+"    \\draw (-1, 0.5) node {\\encircle{\\phantom{.}5\\phantom{.}}};\n"
+"    \\draw (-1.1, -1.1) node {\\encircle{\\phantom{.}6\\phantom{.}}};\n"
+"    \\draw (-1.4, -1.7) node {\\encircle{\\phantom{.}7\\phantom{.}}};\n"
+"  \\end{tikzpicture}\n"
+"  \\end{scriptsize}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:68
@@ -197,6 +225,8 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:75
@@ -248,15 +278,7 @@ msgstr ""
 
 #. type: multicols
 #: sections/map_elements.tex:101
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\subsection*{\\pagetarget{Placing}{Placing and Discovering New Tiles}}\\index{Discovering Tiles}\n"
-#| "Heroes may spend 1 MP to either reveal an adjacent face-down Tile, or to place a Far (II–III) Map Tile from their own supply of Tiles.\n"
-#| "All face-down Tiles should be kept \\textbf{hidden from all players} until they are about to be placed or revealed.\n"
-#| "New tiles must be placed adjacent to the Hero who spends the MP, and connected to at least two other existing Tiles.\n"
-#| "New Tiles must also be positioned so that there is a valid path that eventually connects them with all other Tiles.\n"
-#| "You may always rotate Map Tiles when placing or revealing them.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Placing}{Placing and Discovering New Tiles}}\\index{Discovering Tiles}\n"
 "Heroes may spend 1 MP to either reveal an adjacent face-down Tile, or to place a Far (II–III) Map Tile from their own supply of Tiles (scenario rules determine the Tiles in your own supply).\n"
@@ -267,7 +289,7 @@ msgid ""
 "\n"
 msgstr ""
 "\\subsection*{\\pagetarget{Placing}{Dodawanie i Odkrywanie\\\\Kafelków}}\\index{Odkrywanie Kafelków}\n"
-"Bohater może wykorzystać 1 PR, by odkryć zakryty Kafelek lub umieścić na planszy Kafelek Daleki (II–III) z własnej puli.\n"
+"Bohater może wykorzystać 1 PR, by odkryć zakryty Kafelek lub umieścić na planszy Kafelek Daleki (II–III) z własnej puli (pulę określają zasady scenariiusza).\n"
 "Wszystkie zakryte Kafelki powinny być \\textbf{zakryte przed wszystkimi graczami} do momentu aż zostaną odkryte lub umieszczone.\n"
 "Nowe Kafelki muszą być umieszczone obok Bohatera, który wykorzystał 1 PR, i muszą być połączone z co najmniej dwoma innymi Kafelkami.\n"
 "Nowe Kafelki należy układać tak, aby istniała ścieżka do innych Kafelków.\n"
@@ -410,3 +432,6 @@ msgid ""
 "\\hspace{2em}\n"
 "{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/resurrection.png}}"
 msgstr ""
+"\\vfill\n"
+"\\hspace{2em}\n"
+"{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/resurrection.png}}"
