@@ -281,7 +281,7 @@
 %Create section heading with graphics. Argument one is heading name, argument two is picture to use on the left.
 \providecommand{\sectionheadertext}[1]{
   \fontfamily{ptm}\selectfont{
-    \color{antiquewhite} \section*{\MakeUppercase{#1}}
+    \iftoggle{noartbackground}{}{\color{antiquewhite}} \section*{\MakeUppercase{#1}}
   }
 }
 \newcommand{\addsection}[3][1]{
@@ -291,7 +291,11 @@
   \makebox[0pt][l]{
   \raisebox{-\totalheight}[0pt][7pt]{
     \begin{tikzpicture}
-      \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\layout/section_heading.jpg}};
+      \iftoggle{noartbackground}{
+        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\layout/section_heading_monochrome.png}};
+      }{
+        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\layout/section_heading.jpg}};
+      }
       \draw (-6.2, 0) node {\includegraphics[width=0.125\textwidth]{#3}};
     \end{tikzpicture}
     }
