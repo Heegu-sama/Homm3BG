@@ -231,24 +231,17 @@
 
 % LaTeX3 clauses for glyph rendering purposes
 \ExplSyntaxOn
-\clist_new:N \g_unit_list
-\clist_set:Nn \g_unit_list { bronze, silver, golden, azure }
-
 % List of glyphs that don't look good when dropped below the text line
-\clist_new:N \g_nodrop_base_list
-\clist_set:Nn \g_nodrop_base_list { movement, expert, reinforce, level1, level4, level6, unit_flying, arrow_right_gray, arrow_right }
-
 \clist_new:N \g_nodrop_list
-\clist_set_eq:NN \g_nodrop_list \g_nodrop_base_list
-
+\clist_map_inline:nn { movement, expert, reinforce, level1, level4, level6, unit_flying, arrow_right_gray, arrow_right } {
+  \clist_put_right:Nn \g_nodrop_list { #1 }
 % Add the -yellow variants to the list automatically
-\clist_map_inline:Nn \g_nodrop_base_list {
   \clist_put_right:Nn \g_nodrop_list { #1-yellow }
 }
 
 % An "if" defined with LaTeX3 to check if an argument passed to the \svg command is a unit
 \NewDocumentCommand{\ifunit}{mmm}{
-  \clist_if_in:NnTF \g_unit_list {#1} {#2} {#3}
+  \clist_if_in:nnTF { bronze, silver, golden, azure } {#1} {#2} {#3}
 }
 
 % Some glyphs don't look good when dropped below the text line - their list is defined above
