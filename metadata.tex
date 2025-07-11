@@ -230,13 +230,35 @@
 \ExplSyntaxOff
 
 \newcommand{\svg}[2][10]{%
-  {\raisebox{-0.15\height}{\includesvg[height=#1px]{\svgs/\detokenize{#2}.svg}}}%
-}%
+  \iftoggle{noartbackground}{%
+    \IfEndWith{#2}{-yellow}{%
+      \StrGobbleRight{#2}{7}[\svgfilename]%
+      \edef\svgpath{\svgs/\svgfilename.svg}%
+    }{%
+      \edef\svgpath{\svgs/\detokenize{#2}.svg}%
+    }%
+  }{%
+    \edef\svgpath{\svgs/\detokenize{#2}.svg}%
+  }%
+  \newif\ifnoraise
+  \noraisefalse
+  \IfBeginWith{#2}{movement}{\noraisetrue}{}%
+  \IfBeginWith{#2}{expert}{\noraisetrue}{}%
+  \IfBeginWith{#2}{reinforce}{\noraisetrue}{}%
+  \IfBeginWith{#2}{level1}{\noraisetrue}{}%
+  \IfBeginWith{#2}{level4}{\noraisetrue}{}%
+  \IfBeginWith{#2}{level6}{\noraisetrue}{}%
+  \IfBeginWith{#2}{unit_flying}{\noraisetrue}{}%
+  \IfBeginWith{#2}{arrow_right}{\noraisetrue}{}%
+  \IfBeginWith{#2}{arrow_right_gray}{\noraisetrue}{}%
+  \ifnoraise
+    \includesvg[height=#1px]{\svgpath}%
+  \else
+    \raisebox{-0.15\height}{\includesvg[height=#1px]{\svgpath}}%
+  \fi%
+}
 \newcommand{\svgunit}[2][10]{%
   {\raisebox{-0.1\height}{\includesvg[height=#1px]{{\iftoggle{noartbackground}{\svgs/\detokenize{#2}-mono.svg}{\svgs/\detokenize{#2}.svg}}}}}%
-}%
-\newcommand{\svgeven}[2][10]{%
-  \includesvg[height=#1px]{\svgs/\detokenize{#2}.svg}%
 }%
 
 % Command to frame images
