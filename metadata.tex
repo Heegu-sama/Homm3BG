@@ -229,37 +229,45 @@
 }
 \ExplSyntaxOff
 
+\newcommand{\ifunit}[3]{%
+  \IfStrEq{#1}{bronze}{#2}{%
+  \IfStrEq{#1}{silver}{#2}{%
+  \IfStrEq{#1}{golden}{#2}{%
+  \IfStrEq{#1}{azure}{#2}{#3}%
+}}}}
+
+\newcommand{\ifnoraisepfx}[3]{%
+  \IfBeginWith{#1}{movement}{#2}{%
+  \IfBeginWith{#1}{expert}{#2}{%
+  \IfBeginWith{#1}{reinforce}{#2}{%
+  \IfBeginWith{#1}{level1}{#2}{%
+  \IfBeginWith{#1}{level4}{#2}{%
+  \IfBeginWith{#1}{level6}{#2}{%
+  \IfBeginWith{#1}{unit_flying}{#2}{%
+  \IfBeginWith{#1}{arrow_right_gray}{#2}{%
+  \IfBeginWith{#1}{arrow_right}{#2}{#3}%
+}}}}}}}}}
+
 \newcommand{\svg}[2][10]{%
   \iftoggle{noartbackground}{%
     \IfEndWith{#2}{-yellow}{%
       \StrGobbleRight{#2}{7}[\svgfilename]%
       \edef\svgpath{\svgs/\svgfilename.svg}%
     }{%
-      \edef\svgpath{\svgs/\detokenize{#2}.svg}%
+      \ifunit{#2}{\edef\svgpath{\svgs/\detokenize{#2}-mono.svg}}{\edef\svgpath{\svgs/\detokenize{#2}.svg}}%
     }%
   }{%
     \edef\svgpath{\svgs/\detokenize{#2}.svg}%
   }%
   \newif\ifnoraise
   \noraisefalse
-  \IfBeginWith{#2}{movement}{\noraisetrue}{}%
-  \IfBeginWith{#2}{expert}{\noraisetrue}{}%
-  \IfBeginWith{#2}{reinforce}{\noraisetrue}{}%
-  \IfBeginWith{#2}{level1}{\noraisetrue}{}%
-  \IfBeginWith{#2}{level4}{\noraisetrue}{}%
-  \IfBeginWith{#2}{level6}{\noraisetrue}{}%
-  \IfBeginWith{#2}{unit_flying}{\noraisetrue}{}%
-  \IfBeginWith{#2}{arrow_right}{\noraisetrue}{}%
-  \IfBeginWith{#2}{arrow_right_gray}{\noraisetrue}{}%
+  \ifnoraisepfx{#2}{\noraisetrue}{}%
   \ifnoraise
     \includesvg[height=#1px]{\svgpath}%
   \else
-    \raisebox{-0.15\height}{\includesvg[height=#1px]{\svgpath}}%
+    \ifunit{#2}{{\raisebox{-0.1\height}{\includesvg[height=#1px]{\svgpath}}}}{{\raisebox{-0.15\height}{\includesvg[height=#1px]{\svgpath}}}}%
   \fi%
 }
-\newcommand{\svgunit}[2][10]{%
-  {\raisebox{-0.1\height}{\includesvg[height=#1px]{{\iftoggle{noartbackground}{\svgs/\detokenize{#2}-mono.svg}{\svgs/\detokenize{#2}.svg}}}}}%
-}%
 
 % Command to frame images
 \newcommand\framedimage[2][]{%
