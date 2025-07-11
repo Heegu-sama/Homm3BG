@@ -229,12 +229,12 @@
 }
 \ExplSyntaxOff
 
-% LaTeX3 clauses for the purposes of glyphs rendering
+% LaTeX3 clauses for glyph rendering purposes
 \ExplSyntaxOn
 \clist_new:N \g_unit_list
 \clist_set:Nn \g_unit_list { bronze, silver, golden, azure }
 
-% List of glyphs that don't look good when they're below the text line
+% List of glyphs that don't look good when dropped below the text line
 \clist_new:N \g_nodrop_base_list
 \clist_set:Nn \g_nodrop_base_list { movement, expert, reinforce, level1, level4, level6, unit_flying, arrow_right_gray, arrow_right }
 
@@ -246,19 +246,19 @@
   \clist_put_right:Nn \g_nodrop_list { #1-yellow }
 }
 
-% An "if" defined with latex3 to check if an arg passed to the \svg command is a unit
+% An "if" defined with LaTeX3 to check if an argument passed to the \svg command is a unit
 \NewDocumentCommand{\ifunit}{mmm}{
   \clist_if_in:NnTF \g_unit_list {#1} {#2} {#3}
 }
 
-% Some glyphs don't look good when they're below the text line - their list is defined above
+% Some glyphs don't look good when dropped below the text line - their list is defined above
 \NewDocumentCommand{\ifnodrop}{mmm}{
   \clist_if_in:NnTF \g_nodrop_list {#1} {#2} {#3}
 }
 \ExplSyntaxOff
 
 % A handy command to render SVG glyphs
-% Argument 1 is the height in pixels
+% Argument 1 is the height in pixels (defaults to 10)
 % Argument 2 is the glyph name (matching a file)
 \newcommand{\svg}[2][10]{%
   \iftoggle{noartbackground}{%
@@ -267,7 +267,7 @@
       \StrGobbleRight{#2}{7}[\svgfilename]%
       \edef\svgpath{\svgs/\svgfilename.svg}%
     }{%
-      % In the economy printable build we append "-mono" to unit glyphs - those are separate glyphs with letters, because in this mode they can't be differentiated by colors
+      % In the economy printable build, we append "-mono" to unit glyphs - those are separate glyphs with letters because in this mode they can't be differentiated by color
       \ifunit{#2}{\edef\svgpath{\svgs/\detokenize{#2}-mono.svg}}{\edef\svgpath{\svgs/\detokenize{#2}.svg}}%
     }%
   }{%
@@ -277,7 +277,7 @@
     % Don't drop a selection of glyphs below the text line - they look better that way
     \includesvg[height=#1px]{\svgpath}%
   }{%
-    % In all other cases, drop the glyph by -0.1\baselineskip if it's a unit, -0.15\baselineskip otherwise
+    % In all other cases, drop the glyph by 10% of its height if it's a unit, 15% otherwise
     \ifunit{#2}{{\raisebox{-0.1\height}{\includesvg[height=#1px]{\svgpath}}}}{{\raisebox{-0.15\height}{\includesvg[height=#1px]{\svgpath}}}}%
   }%
 }
