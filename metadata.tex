@@ -347,7 +347,6 @@
 \newcommand{\note}[2]{
   \begin{tikzpicture}
     \iftoggle{noartbackground}{
-    %   \node[inner sep=0, minimum width=\linewidth, minimum height=#2\baselineskip] at (0,0) {};
       \node[inner sep=0, minimum width=\linewidth, minimum height=#1\baselineskip] at (0,0) {};
     }{
       \textlang{english}{\draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/table-background.jpg}}};}
@@ -366,11 +365,13 @@
       }
       \end{varwidth}
     };
-    \begin{pgfonlayer}{background}
-      \begin{scope}[blend mode=multiply]
-        \draw [shade, blur shadow={shadow opacity=15}] (current bounding box.north west) rectangle (current bounding box.south east);
-      \end{scope}
-    \end{pgfonlayer}
+    \iftoggle{noartbackground}{}{
+      \begin{pgfonlayer}{background}
+        \begin{scope}[blend mode=multiply]
+          \draw [shade, blur shadow={shadow opacity=15}] (current bounding box.north west) rectangle (current bounding box.south east);
+        \end{scope}
+      \end{pgfonlayer}
+    }
   \end{tikzpicture}
 }
 
@@ -402,11 +403,13 @@
       }
       \end{varwidth}
     };
-    \begin{pgfonlayer}{background}
-      \begin{scope}[blend mode=multiply]
-        \draw [#1] (current bounding box.north west) rectangle (current bounding box.south east);
-      \end{scope}
-    \end{pgfonlayer}
+    \iftoggle{noartbackground}{}{
+      \begin{pgfonlayer}{background}
+        \begin{scope}[blend mode=multiply]
+          \draw [#1] (current bounding box.north west) rectangle (current bounding box.south east);
+        \end{scope}
+      \end{pgfonlayer}
+    }
   \end{tikzpicture}
 }
 % End of Heroes-styled canvas definition.
