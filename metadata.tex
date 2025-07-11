@@ -312,14 +312,21 @@
 \providecommand{\notefont}[0]{\fontfamily{ptm}\selectfont}
 \newcommand{\note}[2]{
   \begin{tikzpicture}
-    \textlang{english}{\draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/table-background.jpg}}};}
+    \iftoggle{noartbackground}{
+    %   \node[inner sep=0, minimum width=\linewidth, minimum height=#2\baselineskip] at (0,0) {};
+      \node[inner sep=0, minimum width=\linewidth, minimum height=#1\baselineskip] at (0,0) {};
+    }{
+      \textlang{english}{\draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/table-background.jpg}}};}
+    }
     \draw [borderoutyellow, very thick] (current bounding box.north west) rectangle (current bounding box.south east);
     \draw [borderinyellow, thick] ([xshift=+2.8pt, yshift=-2.8pt] current bounding box.north west) rectangle ([xshift=-2.8pt, yshift=2.8pt] current bounding box.south east);
     \node at (current bounding box.center) {
       \begin{varwidth}{0.85\linewidth}
       \notefont{
-        \color{arylideyellow}
-        \hypersetup{linkcolor=amber}
+        \iftoggle{noartbackground}{}{
+          \color{arylideyellow}
+          \hypersetup{linkcolor=amber}
+        }
         #2
         \hypersetup{linkcolor=goldenbrown}
       }
@@ -351,8 +358,10 @@
       \begin{varwidth}{0.95\linewidth}
       \notefont{
         \bgroup
-        \color{arylideyellow}
-        \hypersetup{linkcolor=amber}
+        \iftoggle{noartbackground}{}{
+          \color{arylideyellow}
+          \hypersetup{linkcolor=amber}
+        }
         \setlength{\tabcolsep}{0.3em}
         #3
         \egroup
@@ -383,8 +392,8 @@
 
 \newcommand{\lightcell}[2][0.9]{
   \begin{tikzpicture}
-    \filldraw[line width=1.0pt, fill=lightcellbg, fill opacity=0.25, draw=lightcellborder] (0, 0) rectangle (\linewidth, #1);
-    \node[text width=\linewidth, align=center] at (current bounding box.center) {\color{white}#2};
+    \filldraw[line width=1.0pt, fill=\iftoggle{noartbackground}{white}{lightcellbg}, fill opacity=0.25, draw=lightcellbg, fill opacity=0.25, draw=lightcellborder] (0, 0) rectangle (\linewidth, #1);
+    \node[text width=\linewidth, align=center] at (current bounding box.center) {\iftoggle{noartbackground}{}{\color{white}}#2};
   \end{tikzpicture}
 }
 
