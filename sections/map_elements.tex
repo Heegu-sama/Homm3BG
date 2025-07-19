@@ -149,45 +149,69 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 \vfill
 \hspace{2em}
 {\transparent{0.2}\includegraphics[width=\linewidth]{\art/resurrection.png}}
-\end{multicols*}
 
+\begin{expansion}{cove}
+
+\subsection*{Sea Map Tiles}
+Sea Map Tiles have their unique backside and during setup they will placed as shown in the chosen scenario map layout. Discovering sea map tiles work normally.\par
+Sea Map Tiles may contain both land and sea fields. Movement from land to land, from sea to sea or from sea to land work as normal. But when your hero \textbf{enters a sea field from a land field}, their movement for the turn ends. You may use unspent MP for other actions (for example to extend neutral Combats), but you can't move anymore that turn, not even with the help of card effects.
+
+\bigskip
 \begin{multicols*}{2}
-	
+\hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-cove.png}
+\columnbreak
+\hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-sea.png}
+\end{multicols*}
+\medskip
+\begin{center}
+  \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Sea Map Tile}}}}
+\end{center}
+\medskip
+
+\subsection*{Whirlpool Tokens}
+
+Whirlpool Location tokens allow Heroes to travel between them. If your Hero enters a Whirlpool, move him immediately to another Whirlpool Token. If there are more valid targets, roll an Attack die to determine where it takes your hero. Reroll any die, which shows the number, your hero is standing on. After each such travel, lose 1 unit from your Unit Deck. You can recruit it again later. %What is losing mean: complete unit card? Or reduce pack to few?
+\end{expansion}
+
+\begin{expansion}{stronghold}
+
+\subsection*{Subterranean Map Tiles}
+
+Subterranean Map Tiles have their unique backside and will be place during setup as the chosen scenario map layout is shown. They work similar with regular map tiles, except that you cannot move between a Surface and a Subterranean tile without using a Subterranean Gate or a Town Portal Spell. No other move effects from cards can allow you to move from one to the other. % NOTE: Discovering from one to the other should also impossible.
+
+\bigskip
+\begin{center}
+  \begin{scriptsize}
+    \centering
+    \begin{tikzpicture}
+      \node at (0, 0) {\includegraphics[width=0.5\textwidth]{\images/map-tile-stronghold.png}};
+      \node at (0, 2.2) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Stronghold Map Tile}}}}};
+      \node at (3.21, -1.11) {\includegraphics[width=0.5\textwidth]{\images/map-tile-sub.png}};
+      \node at (3.21, -3.41) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Map Tile}}}}};
+      \node[rotate=-60] (gate) at (1.6, -0.53) {\includegraphics[width=0.32\textwidth]{\images/subter-gate-outline.png}};
+      \node at (3.21, 1.11) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Gate}}}}};
+    \end{tikzpicture}
+  \end{scriptsize}
+\end{center}
+
+\subsection*{Subterranean Gate}
+The Subterranean Gate is a Location Token, which represents the way in and out of a Subterranean tile. After discovering a tile with a Subterranean Gate on it, \textbf{choose a field} that is adjacent to the Subterranean tile and place the Subterranean Gate token on both this field and an adjacent field of the Subterranean tile (each half of the token is placed on a different tile). The scenario map layout only shows \textbf{which two tiles are connected} by the Subterranean Gate, \textbf{not the exact fields that must be connected}.\par
+When a Hero enters a Subterranean Gate, discover the Map tile on the other side for free and place it normally, choosing the field that will be replaced by the Subterranean Gate token.
+Both fields covered by the Subterranean Gate token are treated as one field. Once both ends of the Subterranean Gate are placed, it allows traveling both ways.
+
+\end{expansion}
+
 \subsection*{Location Tokens}
 Location Tokens are added by several expansion to the game and they will be placed on specific fields of the map, shown in the scenario's map layout. \textbf{Unless otherwise stated}, the following rules apply to all location tokens:
 \begin{itemize}
   \item When you discover a Tile with a Location Token on it, place the Tile normally and then place the Token on the field indicated by the scenario's map layout.
   \item Placed tokens overwrite the original location on their field.
   \item Token cannot be placed on blocked fields, other tokens, or fields containing locations required to meet any of the scenario's victory conditions. Keep these rules in mind when discovering and rotate a tile with a token on it.
-\end{itemize} 
-  
-\begin{expansion}{cove}
-	
-\subsection*{Sea Map Tiles}	
-Sea Map Tiles have their unique backside and during setup they will placed as shown in the chosen scenario map layout. Discovering sea map tiles work normally.\par 
-Sea Map Tiles may contain both land and sea fields. Movement from land to land, from sea to sea or from sea to land work as normal. But when your hero \textbf{enters a sea field from a land field}, their movement for the turn ends. You may use unspent MP for other actions (for example to extend neutral Combats), but you can't move anymore that turn, not even with the help of card effects. 
+\end{itemize}
+\vspace*{\fill}
 
-SEA MAP TILE ASSET
-
-\subsection*{Whirlpool Tokens}	
-
-Whirlpool Location tokens allow Heroes to travel between them. If your Hero enters a Whirlpool, move him immediately to another Whirlpool Token. If there are more valid targets, roll an Attack die to determine where it takes your hero. Reroll any die, which shows the number, your hero is standing on. After each such travel, lose 1 unit from your Unit Deck. You can recruit it again later. %What is losing mean: complete unit card? Or reduce pack to few?
-\end{expansion}
-
-\begin{expansion}{stronghold}
-	
-\subsection*{Subterranean Tiles}	
-
-Subterranean Map Tiles have their unique backside and will be place during setup as the chosen scenario map layout is shown. They work similar with regular map tiles, except that you cannot move between a Surface and a Subterranean tile without using a Subterranean Gate or a Town Portal Spell. No other move effects from cards can allow you to move from one to the other. % NOTE: Discovering from one to the other should also impossible.
-
-SUBTERRANEAN ASSET HERE
-
-\subsection*{Subterranean Gate}	
-The Subterranean Gate is a Location Token, which represents the way in and out of a Subterranean tile. After discovering a tile with a Subterranean Gate on it, \textbf{choose a field} that is adjacent to the Subterranean tile and place the Subterranean Gate token on both this field and an adjacent field of the Subterranean tile (each half of the token is placed on a different tile). The scenario map layout only shows \textbf{which two tiles are connected} by the Subterranean Gate, \textbf{not the exact fields that must be connected}.\par 
-When a Hero enters a Subterranean Gate, discover the Map tile on the other side for free and place it normally, choosing the field that will be replaced by the Subterranean Gate token.
-Both fields covered by the Subterranean Gate token are treated as one field. Once both ends of the Subterranean Gate are placed, it allows traveling both ways.
-
-\end{expansion}
+\begin{center}
+  \includegraphics[width=\linewidth]{\art/dendroid.jpg}
+\end{center}
 
 \end{multicols*}
-
