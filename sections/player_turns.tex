@@ -3,7 +3,7 @@
 
 \iftoggle{printable}{\vspace{-\baselineskip}}{}
 
-\begin{multicols}{2}
+\begin{multicols*}{2}
 
 At the start of your Turn, refresh your hand of Cards following these steps:
 \begin{itemize}
@@ -85,29 +85,13 @@ If you lose Morale, discard a Positive Morale Token \svg{morale_positive} if you
 Inversely, gaining Positive Morale while you have a Negative Morale Token discards the Token.
 If you would gain a second Negative Morale Token, you must instead \textbf{discard your hand of Cards} the next time you end your Turn.\par
 
+\vspace*{\fill}
+\makebox[\linewidth]{\transparent{0.2}\includegraphics[width=1.1\linewidth]{\art/shield.png}}
+\vspace*{\fill}
+
 \note{5}{The Necropolis \svg{necro-note} Faction ignores any Morale effects.
   They cannot ever gain or lose Morale for any reason.
 }
-\begin{expansion}{battlefield}
-\subsection*{Morale Cards in regular games}\index{Morale Cards}
-
-You can use Morale Cards \textbf{instead} of Tokens. During setup remove all Morale Cards with the battlefield symbol. Then shuffle the positive and negative Morale Card Decks separately and place them face down near the round tracker.
-
-MORALE CARD ASSETS HERE
-
-Every time you gain Positive Morale, discard a negative Morale Card (if you have any); otherwise draw 1 positive Morale Card. You may have \textbf{2 positive Morale Cards at a time}. Don't draw a third card. Every time you lose Morale, discard a positive Morale Card (if you have any), otherwise  draw  1 negative Morale Card. You may have an \textbf{unlimited number of negative Morale Cards}.\par
-Place newly gained Morale Cards face up near your Hero Board. Positive Morale Cards may be used at any moment you wish. Negative Morale Cards must be used the next time when the situation indicated by the card occurs. Put used cards at the bottom of their decks.\par 
-If you must draw a moral card but the respective Morale Deck is empty, reshuffle their discard pile to form a new deck.
-
-\note{5}{Keep in mind that in Adventure- and Skirmish-mode the rules for morale cards differs a bit, read in official rulebooks.
-}
-
-\end{expansion}
-
-
-\begin{center}
-  \makebox[\linewidth]{\transparent{0.2}\includegraphics[width=1.1\linewidth]{\art/shield.png}}
-\end{center}
 
 \subsection*{Example Turn}
 
@@ -120,12 +104,58 @@ She can do this, as she had previously built the prerequisite lower Level Dwelli
 As Alice announces her intent to start Combat, both players still have an opportunity to perform Town Actions.}\par
 
 \includegraphics[width=\linewidth]{\examples/catherine_attacks_sandro.png}
+\vspace*{\fill}
+\columnbreak
 
-\end{multicols}
+\begin{expansion}[before=\vspace*{-11mm}]{battlefield}
+\subsection*{Morale Cards in regular games}\index{Morale Cards}
 
-\vfill
+You can use Morale Cards \textbf{instead} of Tokens.
+During setup, remove all Morale Cards with the Battlefield symbol.
+Then shuffle the Positive and Negative Morale Card Decks separately and place them face down near the Round Tracker.
 
-\begin{scaledfigure}[blanker]
- \centering
- \includegraphics[width=\linewidth, height=\myspace, keepaspectratio]{\art/zealot.jpg}
-\end{scaledfigure}
+\vspace{1em}
+\begin{scriptsize}
+  \begin{tikzpicture}
+    \draw (-2, 0) node[inner sep=0] {\makebox[0.47\linewidth][c]{\includegraphics[width=0.47\linewidth]{\cards/morale-positive.png}}};
+    \draw (2.4, 0) node[inner sep=0] {\makebox[0.47\linewidth][c]{\includegraphics[width=0.47\linewidth]{\cards/morale-negative.png}}};
+    \draw (-1.2, 2.2) node {\encircle{\phantom{.}1\phantom{.}}};
+    \draw (3.2, 2.2) node {\encircle{\phantom{.}1\phantom{.}}};
+    \draw (-3.0, -1.4) node {\encircle{\phantom{.}2\phantom{.}}};
+    \draw (1.5, -1.4) node {\encircle{\phantom{.}2\phantom{.}}};
+    \draw (2.4, -1.9) node {\encircle{\phantom{.}3\phantom{.}}};
+    \draw (-2.0, -1.9) node {\encircle{\phantom{.}3\phantom{.}}};
+  \end{tikzpicture}
+\end{scriptsize}
+\vspace{-1em}
+\begin{multicols*}{2}
+  \centering
+  \footnotesize
+  \textbf{\textit{\textcolor{darkcandyapplered}{Positive Morale Card}}}
+  \vspace{1em}
+  \begin{itemize}
+    \item[\textbf{1.}] Name
+    \item[\textbf{2.}] Effect
+  \end{itemize}
+  \columnbreak
+  \textbf{\textit{\textcolor{darkcandyapplered}{Negative Morale Card}}}
+  \begin{itemize}
+    \item[\textbf{3.}] Battlefield\\Symbol
+    \item[\textbf{\phantom{.}}] \phantom{.}
+  \end{itemize}
+\end{multicols*}
+
+Every time you gain Positive Morale, discard a Negative Morale Card (if you have any); otherwise draw 1 Positive Morale Card.
+You may have \textbf{2 Positive Morale Cards at a time}.
+Don't draw a third card.
+Every time you lose Morale, discard a Positive Morale Card (if you have any); otherwise draw 1 Negative Morale Card.
+You may have an \textbf{unlimited number of Negative Morale Cards}.\par
+Place newly gained Morale Cards face up near your Hero Card.
+Positive Morale Cards may be used at any moment you wish.
+Negative Morale Cards must be used the next time when the situation indicated by the card occurs.
+Put used cards at the bottom of their respective Decks.
+If you must draw a Morale Card but the respective Morale Deck is empty, reshuffle its Discard Pile to form a new Deck.
+
+Keep in mind that in Adventure and Skirmish Mode the rules for Morale Cards differ a bit -- read the official Battlefield rule book.
+\end{expansion}
+\end{multicols*}
