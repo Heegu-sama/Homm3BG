@@ -130,7 +130,7 @@ jobs:
             texlive-${{ inputs.build_type }}-${{ inputs.language }}-
 
       - name: Compile PDF
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         if: steps.cache-pdf.outputs.cache-hit != 'true'
         with:
           extra_system_packages: "inkscape"

@@ -63,7 +63,7 @@ jobs:
           echo "ARTIFACT_NAME=${ARTIFACT_NAME}" >> "$GITHUB_OUTPUT"
 
       - name: Compile rule book
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           extra_system_packages: "inkscape"
           latexmk_use_lualatex: ${{ matrix.luaengine }}
@@ -81,7 +81,7 @@ jobs:
         run: rm *.aux
 
       - name: Compile printable rule book
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           extra_system_packages: "inkscape"
           pre_compile: export HOMM3_PRINTABLE=1 HOMM3_LANG=${{ matrix.language }}
@@ -101,7 +101,7 @@ jobs:
         run: rm *.aux
 
       - name: Compile economy printable rule book without art backgrounds
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           extra_system_packages: "inkscape"
           pre_compile: export HOMM3_PRINTABLE=1 HOMM3_NO_ART_BACKGROUND=1 HOMM3_LANG=${{ matrix.language }}
