@@ -5,7 +5,14 @@
 
 \begin{multicols*}{2}
 
-\pagetarget{Combat}{Combat}\index{Combat} with \textbf{Neutral Units} starts when a Hero moves to an \textbf{unvisited} Field with a roman numeral, signifying the \hyperlink{Difficulty Table}{type and number} of Neutral Units guarding that Field.
+\pagetarget{Combat}{Combat}\index{Combat} with \textbf{Neutral Units} starts in two ways:
+\begin{itemize}
+	\item A Hero moves to an \textbf{unvisited} Field with a roman numeral signifying the \hyperlink{Difficulty Table}{type and number} of Neutral Units guarding that Field. 
+\begin{expansion}{navalbattles}
+	\item A Hero moves to an \textbf{unvisited} \pagelink{Creature Banks}{Creature Bank Location}, which has slightly different rules for combat setup.
+\end{expansion}
+\end{itemize}
+
 
 Combat with \textbf{another player} can start in two ways:
 \begin{itemize}
@@ -80,7 +87,8 @@ The Token does not prevent Units from performing Retaliation Attacks.\par
 When a Unit with a Defense Token is attacked, make another roll with the attack Die after the initial attack roll.
 If you roll a ``+1'', the defending Unit gains an extra 1 Defense for this attack.
 If a Unit has a Defense Token at the start of its activation, discard it.
-The Unit cannot take another Defense Action during that activation.
+The Unit cannot take another Defense Action during that activation.\par
+\begin{expansion}{conflux}\textbf{\pagetarget{Elemental Damage}{Elemental Damage}} – If Units deal elemental damage, they attack normally, but the resulting damage works similary to \svg{damage} dealt by spells and it ignores the unit's \svg{defense}. Elemental damage doesn't count as damage from spells.\end{expansion}
 
 \subsection*{\pagetarget{combatround}{Combat Round Structure}}
 Combat is divided into Rounds, during which all of the Units participating in that Combat \textbf{Activate once} in Initiative order.
@@ -240,6 +248,17 @@ The attacker doesn't need to destroy it to win the Combat.
 
 \vspace{1em}
 \note{9}{In a siege against AI, the Arrow Tower follows the priority-rules like a Silver \svg{silver} Unit. But if there are many valid targets, it cannot attack the nearest one, so it will attack the one that is closest to perishing (the smallest difference between \svg{health_points-yellow} and current \svg{damage-yellow}).}
+
+\subsection*{Alternative Combat Boards}
+\begin{expansion}{navalbattles}
+	As an \textbf{optional rule} you can use the Naval Battle Board for combats at sea locations. At this combat board the two middle spaces are removed, so that Ground \svg{unit_ground} units must navigate around these spaces and Flying \svg{unit_flying} Units can move over them, but still cannot end their movement there. 
+	
+	ASSET HERE
+\end{expansion}
+\vspace{1em}
+\begin{expansion}{battlefield}
+	As an \textbf{optional rule} you can use the Battlefield Board in combats between players in regular games. It is possible, but not recommended to use it also in neutral combats. Read the rule changes about this combat in the official battlefield rulebook.
+\end{expansion}
 
 \begin{center}
   \includegraphics[width=1.05\linewidth]{\art/arrow_tower.jpg}
