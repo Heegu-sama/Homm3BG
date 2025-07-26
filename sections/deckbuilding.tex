@@ -27,9 +27,15 @@ Each player's Deck starts with 9 cards, built during the game's setup.
     \item \textbf{Instant} \svg{instant} Effects are resolved immediately.
     \item \textbf{Activation} \svg{activation} Effects must be played when Activating your own Unit in Combat.
     \item \textbf{Map} \svg{map} Effects cannot be used during Combat.
-    \item \textbf{Ongoing} \svg{ongoing} Effects\index{Ongoing Effects} last until they are used up or until the player who played them starts their next Turn (whichever happens first). You can use Time Tokens to track the duration of ongoing effects.
-    \item \textbf{Permanent} \svg{permanent} Cards\index{Permanent Cards} stay in play until discarded or replaced. When a permanent card is in play, you can still use its effects, either Basic or Expert, not both. If you use the Expert effect, don't add it to the Basic effect. 
-      \textbf{You may only have one permanent Card at a time}; playing another discards the first. 
+    \item \textbf{Ongoing} \svg{ongoing} Effects\index{Ongoing Effects} last until they are used up or until the player who played them starts their next Turn (whichever happens first).
+      \begin{expansion}[before=\vspace*{0pt}]{conflux}
+      \begin{tikzpicture}[overlay]
+        \node at (5.5, 0) {\includegraphics[width=0.22\linewidth]{\images/time-token.png}};
+      \end{tikzpicture}\parbox{0.75\hsize}{You can use Time Tokens\index{Time Token} to track the duration of Ongoing Effects.}
+      \end{expansion}
+    \item \textbf{Permanent} \svg{permanent} Cards\index{Permanent Cards} stay in play until discarded or replaced.
+      \textbf{You may only have one permanent Card at a time}; playing another discards the first.
+      While a Permanent Card is in play, you may use either its Basic or Expert Effect, but not both simultaneously.
   \end{itemize}
   \item Whenever you are instructed to \textbf{remove a Card}, remove it completely from the game.
 \end{enumerate}
