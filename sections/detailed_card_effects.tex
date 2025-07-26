@@ -1,35 +1,51 @@
 % !TeX spellcheck = en_US
 
-\addsection{Detailed Card Effects}{\skills/pathfinding.png}
+\addsection{Detailed Card Effects}{\skills/interference.png}
 
 Most expansions introduce new Cards to the game, which come with unique rules and need their own components.  You find all these specific rules in this chapter, sorted by the card titles. Their belonging components are \textbf{fat printed} and visualized.
 
 \begin{multicols*}{2}
-\begin{footnotesize}
 \begin{expansion}{stronghold}
 	\subsection*{Ogre's Unit Ability}
-	\begin{tikzpicture}[overlay]
-		\node at (7, 0) {\includegraphics[width=0.2\linewidth]{\images/attack-token.png}};
-	\end{tikzpicture}\parbox{0.7\hsize}{The Orge Unit can use his \svg{unit_other} ability to place \textbf{Attack Tokens} on other Unit Cards. Units with such a token gains an additional +1 \svg{attack} or +2 \svg{attack}, as indicated by the Tokens side.}\par\smallskip Each unit can have only one such token at a time. If a unit that already has such a token would gain another one, the player controlling it chooses which one to keep.
+	The Orge Unit can use his \svg{unit_other} ability to place \textbf{Attack Tokens} on other Unit Cards.
+  Units with such a token gains an additional +1 \svg{attack} or +2 \svg{attack}, as indicated by the Tokens side.
+  Each unit can have only one such token at a time.
+  If a unit that already has such a token would gain another one, the player controlling it chooses which one to keep.
+  \bigskip
+  \begin{center}
+    \hspace{2pt}\includegraphics[width=0.3\linewidth]{\images/attack-token.png}\\
+    \vspace*{-3pt}
+    \textbf{\scriptsize\color{darkcandyapplered}Attack Token}
+  \end{center}
 \end{expansion}
 \vspace*{1em}
 \begin{expansion}{stronghold}
 	\subsection*{Behemoth's Unit Ability}
 	\begin{tikzpicture}[overlay]
 		\node at (7, 0) {\includegraphics[width=0.2\linewidth]{\images/corrosion-token.png}};
-	\end{tikzpicture}\parbox{0.7\hsize}{The Behemoth Unit can use his \svg{unit_attack} ability to place a \textbf{Corrosion Token} on the defending units, which reduces their \svg{defense} by 1 to a minimum of "0". A unit can have only one such token at a time.}\par\smallskip 
+	\end{tikzpicture}\parbox{0.7\hsize}{The Behemoth Unit can use his \svg{unit_attack} ability to place a \textbf{Corrosion Token} on the defending units, which reduces their \svg{defense} by 1 to a minimum of "0". A unit can have only one such token at a time.}\par\smallskip
 	If a unit should gain a second token, discard one of the tokens. Unless removed by spells or other effects, a Corrosion Token stays on a unit until end of combat.
 \end{expansion}
 \vspace*{1em}
 \begin{expansion}{stronghold}
 	\subsection*{Quicksand Spell Card}
-	\begin{tikzpicture}[overlay]
-		\node at (7, 0) {\includegraphics[width=0.2\linewidth]{\images/quicksand-token.png}};
-	\end{tikzpicture}\parbox{0.7\hsize}{Depending on the \svg{empower} used, take 2, 4 or 6 \textbf{Quicksand tokens} from the same set  (blue or red). Half of them are empty and half of them have the Quicksand symbol. Shuffle the Token face down and place one each on chosen empty spaces on the combat}\par\smallskip
-	\begin{tikzpicture}[overlay]
-		\node at (7, 0) {\includegraphics[width=0.2\linewidth]{\images/quicksand-token-2.png}};
-	\end{tikzpicture}\parbox{0.7\hsize}{board. If there are not enough empty spaces left to place all of them, discard any leftover tokens. Once they are placed, you can always look at your tokens. When a unit enters a}\par\smallskip
-	space with a Quicksand Token, reveal that token. If it is empty, the unit continues its movement, but if the token shows the Quicksand icon, the unit's movement and activation ends.
+	Depending on the \svg{empower} used, take 2, 4 or 6 \textbf{Quicksand tokens} from the same set  (blue or red).
+  Half of them are empty and half of them have the Quicksand symbol.
+  Shuffle the Token face down and place one each on chosen empty spaces on the combat board.
+  If there are not enough empty spaces left to place all of them, discard any leftover tokens.
+  Once they are placed, you can always look at your tokens.
+  When a unit enters a space with a Quicksand Token, reveal that token.
+  If it is empty, the unit continues its movement, but if the token shows the Quicksand icon, the unit's movement and activation ends.
+  \bigskip
+  \begin{multicols*}{2}
+    \centering
+    \includegraphics[width=0.6\linewidth]{\images/quicksand-token.png}\\
+    \textbf{\scriptsize\color{darkcandyapplered}Quicksand Token\\}
+
+    \columnbreak
+    \includegraphics[width=0.6\linewidth]{\images/quicksand-token-2.png}\\
+    \textbf{\scriptsize\color{darkcandyapplered}Empty Quicksand\\Token}
+  \end{multicols*}
 \end{expansion}
 \vspace*{1em}
 \begin{expansion}{stretchgoals2}
@@ -43,7 +59,7 @@ Most expansions introduce new Cards to the game, which come with unique rules an
 	\subsection*{Land Mine Spell Card}
 	\begin{tikzpicture}[overlay]
 		\node at (7, 0) {\includegraphics[width=0.2\linewidth]{\images/land-mine-token.png}};
-	\end{tikzpicture}\parbox{0.7\hsize}{Depending on the \svg{empower} used, take 2, 4 or 6 \textbf{Land Mine tokens} from the same set  (blue or red). Half of them are empty and half of them have +2}\par\smallskip 
+	\end{tikzpicture}\parbox{0.7\hsize}{Depending on the \svg{empower} used, take 2, 4 or 6 \textbf{Land Mine tokens} from the same set  (blue or red). Half of them are empty and half of them have +2}\par\smallskip
 	\begin{tikzpicture}[overlay]
 		\node at (7, 0) {\includegraphics[width=0.2\linewidth]{\images/land-mine-token-0.png}};
 	\end{tikzpicture}\parbox{0.7\hsize}{\svg{damage} symbol. Shuffle the tokens face down and place one each on chosen empty spaces on the combat board. If there are not enough empty spaces left to place all of them, discard any}\par\smallskip
@@ -55,7 +71,7 @@ Most expansions introduce new Cards to the game, which come with unique rules an
 \vspace*{1em}
 \begin{expansion}{conflux}
 	\subsection*{Summon Elemental Spell Card}
-	These Spells allow you to add a \textbf{Elemental Unit Card} to the combat board during Combat. Keep the Summon Unit Card deck face up near the neutral unit decks. Depending on the \svg{empower} used, you can Summon either a non-Reinforced unit (a Few) or a Reinforced one (a Pack). Take the corresponding Unit card from the deck of the Summoned units and place it on a chosen empty space. You can decide to place the \textbf{Summon Unit Tokens} on the board instead of the cards. Using the battlefield Board you must place the token. Summoned units remain under your control until they perish or the Combat ends, whichever comes first. A summoned unit is not added to your unit deck. 
+	These Spells allow you to add a \textbf{Elemental Unit Card} to the combat board during Combat. Keep the Summon Unit Card deck face up near the neutral unit decks. Depending on the \svg{empower} used, you can Summon either a non-Reinforced unit (a Few) or a Reinforced one (a Pack). Take the corresponding Unit card from the deck of the Summoned units and place it on a chosen empty space. You can decide to place the \textbf{Summon Unit Tokens} on the board instead of the cards. Using the battlefield Board you must place the token. Summoned units remain under your control until they perish or the Combat ends, whichever comes first. A summoned unit is not added to your unit deck.
 \end{expansion}
 \vspace*{1em}
 \begin{expansion}{cove}
@@ -73,7 +89,7 @@ Most expansions introduce new Cards to the game, which come with unique rules an
 	\end{tikzpicture}\parbox{0.7\hsize}{When you cast the Clone spell, choose an allied unit (depending on the \svg{empower} used) and an adjacent empty space on the Combat board to that}\par\smallskip
 	\begin{tikzpicture}[overlay]
 		\node at (7, 0) {\includegraphics[width=0.2\linewidth]{\images/clone-token-2.png}};
-	\end{tikzpicture}\parbox{0.7\hsize}{unit. Then place the small Clone token on the chosen unit and the bigger token of the same color on the empty space. The token on the empty space represents the Clone.}\par\smallskip 
+	\end{tikzpicture}\parbox{0.7\hsize}{unit. Then place the small Clone token on the chosen unit and the bigger token of the same color on the empty space. The token on the empty space represents the Clone.}\par\smallskip
 	It has the same statistics and special abilities as the original unit, but its \svg{health_points} is only 1 and its \svg{defense} is. Additionally , its defense cannot be increased by any effects from cards and other units. %what is with other statistics?
 	If the Cloned unit is attacked or takes even 1 \svg{damage} from a \svg{spellpower}, it perishes. If the original unit is removed from the Combat Board, remove its Clone as well. The Clone doesn't inherit any effects that have been played on the original unit.
 	%in official cove book is a example. is it necessary?.
@@ -91,12 +107,12 @@ Most expansions introduce new Cards to the game, which come with unique rules an
 \vspace*{1em}
 \begin{expansion}{stretchgoals2}
 	\subsection*{Alternative Manticore Card}
-	There is a second, but slightly different copy of a \textbf{Manticore Unit Card} in the game. When you play the dungeon faction, you can choose one of these cards to play with in the current scenario. 
+	There is a second, but slightly different copy of a \textbf{Manticore Unit Card} in the game. When you play the dungeon faction, you can choose one of these cards to play with in the current scenario.
 \end{expansion}
 \vspace*{1em}
 \begin{expansion}{battlefield}
 	\subsection*{Firewall Spell Card}
-	The \textbf{Firewall Tokens} are used instead of the cards on the large battlefield board to mark the effect of the Firewall spell. Remember to place the Spell card next to the battlefield board. When the card is removed or discarded, discard the token, too. If you want you may use the token on the normal Combat Board as well. 
+	The \textbf{Firewall Tokens} are used instead of the cards on the large battlefield board to mark the effect of the Firewall spell. Remember to place the Spell card next to the battlefield board. When the card is removed or discarded, discard the token, too. If you want you may use the token on the normal Combat Board as well.
 \end{expansion}
 \vspace*{1em}
 \begin{expansion}{conflux}
@@ -104,6 +120,5 @@ Most expansions introduce new Cards to the game, which come with unique rules an
 	These \textbf{Firewall Tokens} works identically to the normal Firewall tokens, except that each of them corresponds with one of her Speciality cards, recognizable by the printed Roman numeral.\newline
 	\includegraphics[width=0.4\linewidth]{\images/firewall-vi-token.png}
 \end{expansion}
-\end{footnotesize}
-	
+
 \end{multicols*}
