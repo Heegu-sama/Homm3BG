@@ -3,6 +3,7 @@
 rm -f ./* 2> /dev/null
 rm -rf cache screenshots sections svg-inkscape
 git restore \
+  LICENSE \
   README.md \
   index_style.ist \
   latexmkrc \
@@ -17,5 +18,6 @@ git restore \
   main_ua.tex \
   metadata.tex \
   po4a.cfg \
+  run.sh \
   sections/ \
   structure.tex
