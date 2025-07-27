@@ -399,40 +399,7 @@ When you Flag a Settlement, choose one of the following options:
 \end{figure}
 
 \begin{figure}[H]
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \phantom{j}\textbf{One-Way Entrance Monolith}\par
-    \framedimage[\textwidth]{\map_locations/one-way_monolith_entrance.jpg}
-    \expansionlabel{conflux}
-    \caption{\small Category: \textbf{Revisitable}\\
-      Move your Hero to the corresponding Exit Monolith (see below).
-    }
-  \end{minipage}\hfill
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \textbf{Two-Way Monolith}\par
-    \framedimage[\textwidth]{\map_locations/two-way_monolith.jpg}
-    \expansionlabel{conflux}
-    \caption{\small Category: \textbf{Revisitable}\\
-      Move your Hero to the corresponding Two-Way Monolith.
-    }
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[H]
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \phantom{j}\textbf{One-Way Exit Monolith}\par
-    \framedimage[\textwidth]{\map_locations/one-way_monolith_exit.jpg}
-    \expansionlabel{conflux}
-    \caption{\raggedright \small Category: \textbf{Revisitable}\\
-      \raggedright Treat it as an empty Field.
-    }
-  \end{minipage}\hfill
-  \begin{minipage}[t]{0.47\textwidth}
+    \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \phantom{j}\textbf{Tavern}\par
@@ -445,20 +412,6 @@ When you Flag a Settlement, choose one of the following options:
       Place their model on this Field.
       Then, choose one enemy player to discard 1 random card from their hand.}
   \end{minipage}
-\end{figure}
-
-\begin{figure}[H]
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \phantom{j}\textbf{Subterranean Gate}\par
-    \framedimage[\textwidth]{\map_locations/subterranean_gate.jpg}
-    \expansionlabel{stronghold}
-    \caption{{\raggedright \small Category: \textbf{Revisitable}}\\
-      Move to the connected location on the adjacent Subterranean Tile.
-      Treat both sides of the Gate as a single Field.
-    }
-  \end{minipage}\hfill
 \end{figure}
 
 \begin{tikzpicture}[remember picture, overlay]
@@ -654,20 +607,40 @@ When you Flag a Settlement, choose one of the following options:
 
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \textbf{Cyclops Stockpile}\par
-    \framedimage[\linewidth]{\map_locations/cyclops_stockpile.jpg}
-    \expansionlabel{stronghold}
-    \caption{\small Category: \textbf{Visitable}\\
-      When preparing the Neutral Army guarding this location, instead of drawing 1 \svg{azure} Unit, find 2 \svg{golden} Cyclops and add them to the Neutral Army (look for them first in the \svg{golden} discard pile, and then in the \svg{golden} Neutral Unit Deck).
-      If you win the Combat, roll and resolve 4 \svg{resource_die}.
-      Any additional effects depend on the scenario.
-    }
+  	\vspace{0pt}
+  	\centering
+  	\phantom{j}\textbf{Sea Chest\phantom{j}}\par
+  	\captionsetup{singlelinecheck=off}
+  	\framedimage[\linewidth]{\map_locations/sea_chest.jpg}
+  	\expansionlabel{cove}
+  	\caption[sea chest]{\small Category: \textbf{Visitable}\\
+  		Roll 1 Attack Die.
+  		Depending on the result, do the following:
+  		\begin{itemize}
+  			\setlength\itemsep{-0.2em}
+  			\item[\textbf{+1}] -- Search (1) \svg{artifact}.
+  			\item[\textbf{0}] -- Gain 5 \svg{gold}.
+  			\item[\textbf{\textminus{}1}] -- Gain nothing.
+  		\end{itemize}
+  	}
   \end{minipage}\hfill
   \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
+  	\vspace{0pt}
+  	\centering
+  	\phantom{j}\textbf{Jetsam\phantom{j}}\par
+  	\captionsetup{singlelinecheck=off}
+  	\framedimage[\linewidth]{\map_locations/jetsam.jpg}
+  	\expansionlabel{cove}
+  	\caption[jetsam]{\small Category: \textbf{Visitable}\\
+  		Roll 1 Attack Die.
+  		Depending on the result, do the following:
+  		\begin{itemize}
+  			\setlength\itemsep{-0.2em}
+  			\item[\textbf{+1}] -- Roll and resolve 2 \svg{resource_die}.
+  			\item[\textbf{0}] -- Roll and resolve 1 \svg{resource_die}.
+  			\item[\textbf{\textminus{}1}] -- Gain nothing.
+  		\end{itemize}
+  	}
   \end{minipage}
 \end{figure}
 
@@ -677,47 +650,106 @@ When you Flag a Settlement, choose one of the following options:
 
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \phantom{j}\textbf{Sea Chest\phantom{j}}\par
-    \captionsetup{singlelinecheck=off}
-    \framedimage[\linewidth]{\map_locations/sea_chest.jpg}
-    \expansionlabel{cove}
-    \caption[sea chest]{\small Category: \textbf{Visitable}\\
-      Roll 1 Attack Die.
-      Depending on the result, do the following:
-      \begin{itemize}
-        \setlength\itemsep{-0.2em}
-        \item[\textbf{+1}] -- Search (1) \svg{artifact}.
-        \item[\textbf{0}] -- Gain 5 \svg{gold}.
-        \item[\textbf{\textminus{}1}] -- Gain nothing.
-      \end{itemize}
-     }
+  	\vspace{0pt}
+  	\centering
+  	\textbf{Cyclops Stockpile}\par
+  	\framedimage[\linewidth]{\map_locations/cyclops_stockpile.jpg}
+  	\expansionlabel{stronghold}
+  	\caption{\small Category: \textbf{Visitable}\\
+  		When preparing the Neutral Army guarding this location, instead of drawing 1 \svg{azure} Unit, find 2 \svg{golden} Cyclops and add them to the Neutral Army (look for them first in the \svg{golden} discard pile, and then in the \svg{golden} Neutral Unit Deck).
+  		If you win the Combat, roll and resolve 4 \svg{resource_die}.
+  		Any additional effects depend on the scenario.
+  	}
   \end{minipage}\hfill
   \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \phantom{j}\textbf{Jetsam\phantom{j}}\par
-    \captionsetup{singlelinecheck=off}
-    \framedimage[\linewidth]{\map_locations/jetsam.jpg}
-    \expansionlabel{cove}
-    \caption[jetsam]{\small Category: \textbf{Visitable}\\
-      Roll 1 Attack Die.
-      Depending on the result, do the following:
-      \begin{itemize}
-        \setlength\itemsep{-0.2em}
-        \item[\textbf{+1}] -- Roll and resolve 2 \svg{resource_die}.
-        \item[\textbf{0}] -- Roll and resolve 1 \svg{resource_die}.
-        \item[\textbf{\textminus{}1}] -- Gain nothing.
-      \end{itemize}
-     }
-  \end{minipage}
+  	\vspace{0pt}
+  	\centering
+  	\textbf{Pandora's Box (Variant)}\par
+  	\framedimage[\linewidth]{\map_locations/pandoras_boxes.jpg}
+  	\caption{\small Category: \textbf{Visitable}\\
+  		\begin{expansion}{stretchgoals2}	
+  			\textbf{Game Variant for more randomness:}
+  			Choose one: Resolve the printed effect normally OR draw a Pandora's Box Card and resolve its effect. 
+  		\end{expansion}
+  	}
+  \end{minipage}\hfill
 \end{figure}
 
-\vspace*{\fill}
-\includegraphics[width=\linewidth]{\art/thunderbird.jpg}
-
 \newpage
+
+\subsection*{\pagetarget{Location Token}{Location Token and Creature Banks}}
+
+Keep the rules for \pagelink{Discover Location Token}{discovering Tiles with Location Token} in mind. Below you find the rules for entering a location token.
+
+\begin{figure}[H]
+	\begin{minipage}[t]{0.47\textwidth}
+		\vspace{0pt}
+		\centering
+		\phantom{j}\pagetarget{Monolith}{\textbf{One-Way Entrance Monolith}}\par
+		\framedimage[\textwidth]{\map_locations/one-way_monolith_entrance.jpg}
+		\expansionlabel{conflux}
+		\caption{\small Category: \textbf{Revisitable}\\
+			Move your Hero to the corresponding Exit Monolith (see below).
+		}
+	\end{minipage}\hfill
+	\begin{minipage}[t]{0.47\textwidth}
+		\vspace{0pt}
+		\centering
+		\textbf{Two-Way Monolith}\par
+		\framedimage[\textwidth]{\map_locations/two-way_monolith.jpg}
+		\expansionlabel{conflux}
+		\caption{\small Category: \textbf{Revisitable}\\
+			Move your Hero to the corresponding Two-Way Monolith.
+		}
+	\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{minipage}[t]{0.47\textwidth}
+		\vspace{0pt}
+		\centering
+		\phantom{j}\textbf{One-Way Exit Monolith}\par
+		\framedimage[\textwidth]{\map_locations/one-way_monolith_exit.jpg}
+		\expansionlabel{conflux}
+		\caption{\raggedright \small Category: \textbf{Revisitable}\\
+			\raggedright Treat it as an empty Field.
+		}
+	\end{minipage}\hfill
+	\begin{minipage}[t]{0.47\textwidth}
+		\vspace{0pt}
+		\centering
+		\phantom{j}\textbf{Subterranean Gate}\par
+		\framedimage[\textwidth]{\map_locations/subterranean_gate.jpg}
+		\expansionlabel{stronghold}
+		\caption{{\raggedright \small Category: \textbf{Revisitable}}\\
+			Move to the connected location on the adjacent Subterranean Tile.
+			Treat both sides of the Gate as a single Field.
+		}
+	\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{minipage}[t]{0.47\textwidth}
+		\vspace{0pt}
+		\centering
+		\phantom{j}\pagetarget{Whirlpool}{\textbf{Whirlpool}}\par
+		\framedimage[\textwidth]{\map_locations/tavern.jpg}
+		\expansionlabel{cove}
+		\caption{\small Category: \textbf{Revisitable}\\
+			Move your Hero immediately to another Whirlpool Token.
+			If there are multiple valid targets, roll an Attack Die to determine where it takes your Hero. Reroll any Die which shows the number your Hero is standing on.
+			After each such travel, lose 1 Unit from your Unit Deck. You can Recruit it again later.} % What does losing mean: complete unit card? Or reduce pack to few?
+	\end{minipage}\hfill
+	\begin{minipage}[t]{0.47\textwidth}
+		\vspace{0pt}
+		\centering
+		\phantom{j}\textbf{Creature Bank}\par
+		\framedimage[\textwidth]{\map_locations/tavern.jpg}
+		\expansionlabel{navalbattles}
+		\caption{\small Category: \textbf{Visitable}\\
+			When you enter a Creature Bank (see \pagelink{Creature Banks}{List} below), start a \pagelink{Creature Bank Rules}{Creature Bank Combat} against the specified units. If you win, receive the reward and the bonus (depending on defeated stacked units). Creature banks count as \textbf{land fields} (even if designed as sea locations), and should not be confused with Other Fields of the same name.} 
+	\end{minipage}
+\end{figure}
 
 \begin{table*}[!hb]
   \hommtable[]{50}{
@@ -731,7 +763,7 @@ When you Flag a Settlement, choose one of the following options:
         >{\centering\arraybackslash}X
         >{\centering\arraybackslash}p{0.28\linewidth}
       }
-      \darkcell[1.2]{Creature Bank}
+      \darkcell[1.2]{\pagetarget{Creature Banks}{Creature Bank}}
       & \darkcell[1.2]{Units}
       & \darkcell[1.2]{Reward}
       & \darkcell[1.2]{Extra reward for X Stacks} \\
