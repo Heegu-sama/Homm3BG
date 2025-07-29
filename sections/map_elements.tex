@@ -179,7 +179,7 @@ The following locations are released and they follow slightly different rules wh
 
 \begin{expansion}[before=\vspace*{-11mm}]{stronghold}
   \subsection*{Subterranean Gate Tokens}
-  \pagelink{Subterranean Gate}{\textbf{Subterranean Gate Tokens}} are also determined by a scenario's Map Layout and they connect both a Surface Map Tile and an adjacent Subterranean Map Tile. After discovering one of the corresponding Map Tiles you may choose the position of the Subterranean Gate Token as long as it connects the two indicated Map Tiles and doesn't occupy any blocked fields, other Location Tokens or Locations required for victory conditions.
+  \pagelink{Subterranean Gate}{\textbf{Subterranean Gate Tokens}} are also determined by a scenario's Map Layout and they connect both a Surface Map Tile and an adjacent Subterranean Map Tile. After discovering one of the corresponding Map Tiles you may choose the position of the Subterranean Gate Token as long as it connects the two indicated Map Tiles and doesn't occupy any blocked fields, other Location Tokens or Locations required for victory conditions. The scenario map layout only shows which two two tiles are connected, not the exact fields that must be connected. 
   \begin{center}
     \includegraphics[width=0.6\linewidth]{\map_locations/subterranean_gate_token.png}\\
     \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Gate Token}}}}
@@ -228,8 +228,12 @@ The following locations are released and they follow slightly different rules wh
 \begin{expansion}{stronghold}
   \subsection*{Subterranean Map Tiles}
   Subterranean Map Tiles have a unique backside and are placed during setup as shown in the chosen Scenario map layout.
-  They work similarly to regular Map Tiles, except that you cannot move between a Surface and a Subterranean Tile without using a Subterranean Gate or a Town Portal Spell.
+  They work similarly to regular Map Tiles, except that \textbf{you cannot move between a Surface and a Subterranean Tile without using a Subterranean Gate in between} or a Town Portal Spell. 
   No other movement effects from Cards can allow you to move from one to the other.
+  You also may not discover a Subterranean Map Tile while standing on a Surface Map Tile and vice versa.\par
+  Treat both fields of the Subterranean Gate Token \textbf{as one field.} 
+  When a Hero enters a field with a Subterranean Gate, discover the Map Tile on the other side for free (if it is still not discovered).
+  Otherwise treat a Subterranean Gate Token as empty field.
   % NOTE: Discovering from one to the other should also be impossible.
 \end{expansion}
 
