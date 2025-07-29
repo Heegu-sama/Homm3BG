@@ -661,9 +661,9 @@ When you Flag a Settlement, choose one of the following options:
 
 \newpage
 
-\subsection*{\pagetarget{Location Token}{Location Tokens and Creature Banks}}
+\subsection*{\pagetarget{Location Token}{Location Tokens}}
 
-Keep the rules for \pagelink{Discover Location Token}{discovering Tiles with Location Token} in mind. Below you find the rules for entering a location token.
+The following Fields are found on Location Tokens only, not on regular Map Tiles.
 
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
@@ -706,7 +706,7 @@ Keep the rules for \pagelink{Discover Location Token}{discovering Tiles with Loc
     \framedimage[\textwidth]{\map_locations/subterranean_gate.jpg}
     \expansionlabel{stronghold}
     \caption{{\raggedright \small Category: \textbf{Revisitable}}\\
-      Move to the connected location on the adjacent Subterranean Tile.
+      Move your Hero to the connected location on the adjacent \protect\pagelink{Subterranean Map Tiles}{Subterranean Tile}.
       Treat both sides of the Gate as a single Field.
     }
   \end{minipage}
@@ -718,15 +718,13 @@ Keep the rules for \pagelink{Discover Location Token}{discovering Tiles with Loc
     \centering
     \phantom{j}\textbf{Whirlpool}\par
     \framedimage[\textwidth]{\map_locations/whirlpool.jpg}
-    % \includegraphics[width=0.4\textwidth]{\map_locations/whirlpool-token.png}
     \expansionlabel{cove}
-    \caption{{\raggedright \small Category: \textbf{Revisitable}}\\
-      Move your Hero immediately to another Whirlpool Token.
-      If there are multiple valid targets, roll an Attack Die to determine where it takes your Hero.
-      Reroll any Die which shows the number your Hero is standing on.
-      After each such travel, lose 1 Unit from your Unit Deck.
-      You can Recruit it again later.
-    }
+   \caption{{\raggedright \small Category: \textbf{Revisitable}}\\
+     Move your Hero to another Whirlpool Token.
+     If there are multiple valid targets, roll an Attack Die to determine where your Hero goes.
+     Reroll any Die which shows the number of the Whirlpool your Hero is standing on.
+     After each such travel, lose 1 Unit from your Unit Deck.
+   }
   \end{minipage}\hfill
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
@@ -734,11 +732,11 @@ Keep the rules for \pagelink{Discover Location Token}{discovering Tiles with Loc
     \phantom{j}\textbf{Creature Bank}\par
     \framedimage[\textwidth]{\map_locations/creature_bank.jpg}
     \expansionlabel{navalbattles}
-    \caption{{\raggedright \small Category: \textbf{Revisitable}}\\
-      When you enter a Creature Bank (see \protect\pagelink{Creature Banks}{List} below), start a \protect\pagelink{Creature Bank Rules}{Creature Bank Combat} against the specified units.
-      If you win, receive the reward and the bonus (depending on defeated stacked units).
-      Creature banks count as \textbf{land fields} (even if designed as sea locations), and should not be confused with Other Fields of the same name.
-    }
+   \caption{{\raggedright \small Category: \textbf{Visitable}}\\
+     Start a \protect\pagelink{Creature Banks Rules}{Creature Bank Combat} against the specified Units (see the list on the next page).
+     If you win, receive the reward and a bonus depending on the number of Stacked Units.
+     Creature Banks count as \textbf{land Fields} (even if designed as sea locations) and are NOT treated as other Fields of the same name.
+   }
   \end{minipage}
 \end{figure}
 
