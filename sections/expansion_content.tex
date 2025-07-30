@@ -74,9 +74,11 @@ Added by multiple expansions, explained in \pagelink{Playerdecks}{Player Decks}.
   \end{minipage}
 \end{expansion}
 
-\vspace*{\fill}
+\end{multicols*}
 
-\begin{expansion}[before=\vspace*{0pt}]{navalbattles}
+
+\begin{expansion}{navalbattles}
+  \begin{multicols*}{2}
   \subsection*{\pagetarget{Creature Banks Rules}{Creature Banks}}
   Playing with Creature Banks is an \textbf{optional rule}.
   If you decide to play with Creature Banks follow these rules:\par
@@ -86,22 +88,36 @@ Added by multiple expansions, explained in \pagelink{Playerdecks}{Player Decks}.
   Place the Creature Bank Unit Cards face up near the Neutral Unit decks.
   There is no need to shuffle this deck.
   Shuffle all Stack Tokens and place them near the Creature Bank Unit deck.
-  \vspace*{1em}
 
-  ASSETS %creature bank token; Stack token, Unit Cards in any order? I dont know, which layout looks nice here.
+  \bigskip
+  \begin{multicols*}{2}
+    \begin{center}
+      \vspace*{\fill}
+      \includegraphics[width=0.5\linewidth]{\images/stack_token.png}\\
+      \textbf{\footnotesize\textit{\textcolor{darkcandyapplered}{Stack Token}}}\\
+      \vspace*{\fill}
+      \columnbreak
+      \includegraphics[width=\linewidth]{\cards/creature_bank_unit.png}\\
+      \textbf{\footnotesize\textit{\textcolor{darkcandyapplered}{Creature Bank Unit Card}}}
+    \end{center}
+  \end{multicols*}
+
   \textbf{Placing Creature Bank Tokens:} When you discover a Near or Far Map tile, you may choose to replace one of its blocked fields with a Creature Bank token of the corresponding type.\par
-  \vspace*{1em}
   \textbf{Visiting a Creature Bank Location:} When you enter a Creature Bank Location, you must defeat the corresponding Creature Bank Units defending it.
   If you win, resolve the fields effect and mark it with a black cube.
   Cause these fields haven't any difficulty level, so a Quick Combat is never going to happen, there is no round limit and no need to spend MP to extend the combat and you don't provide any \svg{experience}.
   The defending Units and all effects of all Creature Bank Locations are listed in \pagelink{All Map Locations}{All Map Locations}.
-  \vspace*{1em}
-  \end{expansion}
-  \begin{expansion}{navalbattles}
+
   \textbf{Combat against Creature Banks:} When you start a Combat at a Creature Bank, place up to 5 of your units in the player deployment zone.
   Depending on the Creature Bank you are visiting, take the corresponding units from the Creature Bank Unit deck and place them randomly in the Neutral Unit deployment zone.
 
-  COMBAT MAP ASSET
+  \bigskip
+  \begin{center}
+    \includegraphics[width=\linewidth]{\images/creature_bank_combat_board.png}\\
+    \textbf{\footnotesize\textit{\textcolor{darkcandyapplered}{Green -- player deployment zone}}}\\
+    \textbf{\footnotesize\textit{\textcolor{darkcandyapplered}{Red -- Neutral Unit deployment zone}}}\\
+  \end{center}
+  \bigskip
 
   Based on the scenarios difficulty level, take a number of Stack tokens and place them randomly on up to four different Creature Bank Unit Cards:
   \begin{itemize}
@@ -118,6 +134,5 @@ Added by multiple expansions, explained in \pagelink{Playerdecks}{Player Decks}.
   If you won, you will claim the Creature Bank's reward, as well as an additional reward for every Stacked unit you defeat.
   Some rewards allows you to gain a Stacked Creature Bank Unit card.
   When you gain it, draw a random Stack token and place it on that unit.
+  \end{multicols*}
 \end{expansion}
-
-\end{multicols*}
