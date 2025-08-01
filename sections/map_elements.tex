@@ -257,17 +257,16 @@ Tokens cannot be placed on other Location Tokens or Fields containing Locations 
 
 \vspace*{\fill}
 
-\includegraphics[width=\linewidth]{\images/elemental_tiles.png}
-\begin{enumerate}
+\begin{center}
   \footnotesize
-  \begin{multicols*}{2}
-  \item[\textbf{1.}] Elemental Fire\\Tile
-  \item[\textbf{2.}] Elemental Water\\Tile
-    \columnbreak
-  \item[\textbf{3.}] Elemental Air\\Tile
-  \item[\textbf{4.}] Elemental Earth\\Tile
-  \end{multicols*}
-\end{enumerate}
+  \begin{tikzpicture}
+    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\images/elemental_tiles.png}}};
+    \draw (-2.2, 0.1) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Fire Tile}}}};
+    \draw (-2.2, -4.5) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Air Tile}}}};
+    \draw (2.2, 0.1) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Water Tile}}}};
+    \draw (2.2, -4.5) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Earth Tile}}}};
+  \end{tikzpicture}
+\end{center}
 
 \vspace*{\fill}
 
