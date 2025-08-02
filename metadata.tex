@@ -135,6 +135,9 @@
 \definecolor{navalbattles}{HTML}{2E5984}  % dark deep blue
 \definecolor{stretchgoals2}{HTML}{000000}  % TODO choose color
 
+\AtBeginEnvironment{tcolorbox}{%
+  \setlist[itemize]{itemsep=0.4em, parsep=0pt, topsep=5pt}%
+}
 \ExplSyntaxOn
 \cs_new:Nn \__expansion_color_titles:NNn {
   \clist_set:Nn \l_tmpa_clist {#3}
