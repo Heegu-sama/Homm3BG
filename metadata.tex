@@ -159,7 +159,7 @@
     enhanced,
     title=\textbf{\tiny\l_exptitles_tl},
     opacityfill=0,
-    size=small,
+    size=normal,
     boxrule=0pt,
     arc=0pt,
     oversize,
@@ -168,14 +168,15 @@
       \fill[
         \l_expcolor_tl,
         path~fading=east,
-        opacity=0.08
+        opacity=0.09
       ]
         ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
         ([xshift=5pt, yshift=-3pt]frame.south~east);
       \fill[
         top~color=\l_expcolor_tl,
         bottom~color=\l_expcolor_tl,
-        rounded~corners=1.5pt
+        rounded~corners=1.5pt,
+        opacity=0.5
       ]
       ([xshift=-8pt, yshift=3pt]frame.north~west) rectangle
       ([xshift=-5pt, yshift=-3pt]frame.south~west);
