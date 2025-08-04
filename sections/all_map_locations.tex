@@ -673,13 +673,26 @@ The following Fields are found on Location Tokens only, not on regular Map Tiles
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \phantom{j}\pagetarget{Monolith}{\textbf{One-Way Entrance Monolith}}\par
+    \phantom{j}\pagetarget{Monolith}{\textbf{One-Way Entrance Monolith}}\phantom{j}\par
     \framedimage[\textwidth]{\map_locations/one-way_monolith_entrance.jpg}
     \expansionlabel{conflux}
     \caption{\small Category: \textbf{Revisitable}\\
-      Move your Hero to the corresponding Exit Monolith (see below).
+      Move your Hero to the corresponding Exit Monolith (see to the right).
     }
   \end{minipage}\hfill
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \phantom{j}\textbf{One-Way Exit Monolith}\phantom{j}\par
+    \framedimage[\textwidth]{\map_locations/one-way_monolith_exit.jpg}
+    \expansionlabel{conflux}
+    \caption{\raggedright \small Category: \textbf{Revisitable}\\
+      \raggedright Treat it as an empty Field.
+    }
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
@@ -689,29 +702,17 @@ The following Fields are found on Location Tokens only, not on regular Map Tiles
     \caption{\small Category: \textbf{Revisitable}\\
       Move your Hero to the corresponding Two-Way Monolith.
     }
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[H]
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \phantom{j}\textbf{One-Way Exit Monolith}\par
-    \framedimage[\textwidth]{\map_locations/one-way_monolith_exit.jpg}
-    \expansionlabel{conflux}
-    \caption{\raggedright \small Category: \textbf{Revisitable}\\
-      \raggedright Treat it as an empty Field.
-    }
   \end{minipage}\hfill
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \phantom{j}\textbf{Subterranean Gate}\par
+    \phantom{j}\textbf{Subterranean Gate}\phantom{j}\par
     \framedimage[\textwidth]{\map_locations/subterranean_gate.jpg}
     \expansionlabel{stronghold}
     \caption{{\raggedright \small Category: \textbf{Revisitable}}\\
-      Move your Hero to the connected location on the adjacent \protect\pagelink{Subterranean Map Tiles}{Subterranean Tile}.
+      Connects a sufrace and a \protect\pagelink{Subterranean Map Tiles}{Subterranean Map Tile}.
       Treat both sides of the Gate as a single Field.
+      Discover the connected Field, if it wasn't discovered alrady.
     }
   \end{minipage}
 \end{figure}
@@ -720,7 +721,7 @@ The following Fields are found on Location Tokens only, not on regular Map Tiles
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \phantom{j}\textbf{Whirlpool}\par
+    \phantom{j}\pagetarget{Whirlpool}{\textbf{Whirlpool}}\phantom{j}\par
     \framedimage[\textwidth]{\map_locations/whirlpool.jpg}
     \expansionlabel{cove}
    \caption{{\raggedright \small Category: \textbf{Revisitable}}\\
