@@ -125,9 +125,19 @@ Added by multiple expansions, explained in \pagelink{Playerdecks}{Player Decks}.
 
   \bigskip
   \begin{center}
-    \includegraphics[width=\linewidth]{\images/creature_bank_combat_board.png}\\
-    \textbf{\footnotesize\textit{\textcolor{darkcandyapplered}{6 middle places -- player deployment zone}}}\\
-    \textbf{\footnotesize\textit{\textcolor{darkcandyapplered}{Corners -- Neutral Units deployment zone}}}\\
+    \begin{tikzpicture}
+      \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\images/creature_bank_combat_board.png}}};
+      \draw (0, 0.2) node {\textbf{\footnotesize\textit{\textcolor{darkcandyapplered}{Player deployment}}}};
+      \draw (0, -0.2) node {\textbf{\footnotesize\textit{\textcolor{darkcandyapplered}{zone}}}};
+      \draw (2.9, 1.9) node {\textbf{\footnotesize\textit{\textcolor{black}{Neutral}}}};
+      \draw (2.9, 1.5) node {\textbf{\footnotesize\textit{\textcolor{black}{Unit}}}};
+      \draw (-3.1, 1.9) node {\textbf{\footnotesize\textit{\textcolor{black}{Neutral}}}};
+      \draw (-3.1, 1.5) node {\textbf{\footnotesize\textit{\textcolor{black}{Unit}}}};
+      \draw (2.9, -1.5) node {\textbf{\footnotesize\textit{\textcolor{black}{Neutral}}}};
+      \draw (2.9, -1.9) node {\textbf{\footnotesize\textit{\textcolor{black}{Unit}}}};
+      \draw (-3.1, -1.5) node {\textbf{\footnotesize\textit{\textcolor{black}{Neutral}}}};
+      \draw (-3.1, -1.9) node {\textbf{\footnotesize\textit{\textcolor{black}{Unit}}}};
+    \end{tikzpicture}
   \end{center}
   \bigskip
 
