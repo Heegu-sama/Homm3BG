@@ -7,50 +7,48 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG-rules-rewrite\n"
 "POT-Creation-Date: 2025-03-24 15:15+0000\n"
-"PO-Revision-Date: 2025-01-19 20:30+0100\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-08-08 13:15+0000\n"
+"Last-Translator: Максим Горпиніч <gorpinicmaksim5@gmail.com>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/"
+"homm3bg-rules-rewrite/prompt_txt/uk/>\n"
 "Language: ua\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:4
-#, fuzzy
-#| msgid ""
-#| "We're translating board game rule book from English to [...].  The text "
-#| "is in LaTeX format, and the messages are in GNU gettext po format.  "
-#| "Output just the translated `msgstr` given the `msgid`, maintaining the "
-#| "original formatting and quotes.  Rules:"
 msgid ""
 "We're translating board game rule book from English to [...].  The text is "
 "in LaTeX format, and the messages are in GNU gettext po format.  Rules:"
 msgstr ""
-"We're translating board game rule book from English to Ukrainian.  The text "
-"is in LaTeX format, and the messages are in GNU gettext po format.  Output "
-"just the translated `msgstr` given the `msgid`, maintaining the original "
-"formatting and quotes.  Rules:"
+"Ми перекладаємо книгу правил настільної гри з англійської на [...]. Текст у "
+"форматі LaTeX, а повідомлення у форматі GNU gettext po. Правила:"
 
 #. type: Bullet: '1. '
 #: tools/translation-ai-prompts/prompt.txt:17
 msgid "PO Format Rules. Both msgid and msgstr should:"
 msgstr ""
+"Правила форматування замовлення на замовлення. Як msgid, так і msgstr "
+"повинні:"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:17
 msgid "Start with an empty quoted string: `\"\"`"
-msgstr ""
+msgstr "Почніть з порожнього рядка в лапках: `\"\"`"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:17
 msgid "Have each line on a new line"
-msgstr ""
+msgstr "Розміщуйте кожен рядок на новому рядку"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:17
 msgid "Have each line surrounded by quotes"
-msgstr ""
+msgstr "Кожен рядок взятий у лапки"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:17
@@ -65,21 +63,34 @@ msgid ""
 "   \"[...]\\n\"\n"
 "   \"[...]\\n\"\n"
 msgstr ""
+"   - Закінчуйте кожен цитований рядок словами \\n"
+"\n"
+"   Приклад:\n"
+"   msgid \"\"\n"
+"   \"Перший рядок\\n"
+"\"\n"
+"   \"Другий рядок\\n"
+"\"\n"
+"   msgstr \"\"\n"
+"   \"[...]\\n"
+"\"\n"
+"   \"[...]\\n"
+"\"\n"
 
 #. type: Bullet: '2. '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "LaTeX Commands"
-msgstr ""
+msgstr "Команди LaTeX"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Preserve all whitespace at the start of lines"
-msgstr ""
+msgstr "Зберегти всі пробіли на початку рядків"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Keep all LaTeX commands exactly as they appear"
-msgstr ""
+msgstr "Зберігайте всі команди LaTeX точно так, як вони відображаються"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
@@ -87,6 +98,8 @@ msgid ""
 "`\\pagetarget{...}{...}`: The first argument is not translated. For example, "
 "`\\pagetarget{Heroes}{Heroes}` translates to `\\pagetarget{Heroes}{[...]}`."
 msgstr ""
+"`\\pagetarget{...}{...}`: Перший аргумент не перекладається. Наприклад, `"
+"\\pagetarget{Heroes}{Герої}` перекладається як `\\pagetarget{Герої}{[...]}`."
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
@@ -95,62 +108,70 @@ msgid ""
 "`\\pagelink{Combatexperience}{Combat}` translates to "
 "`\\pagelink{Combatexperience}{[...]}`."
 msgstr ""
+"`\\pagelink{...}{...}`: Перший аргумент не перекладається. Наприклад, `"
+"\\pagelink{Combatexperience}{Бій}` перекладається як `\\pagelink{Бойовий "
+"досвід}{[...]}`."
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid ""
 "`\\index{...}`: The content within the `\\index{...}` command is translated."
-msgstr ""
+msgstr "`\\index{...}`: Вміст команди `\\index{...}` перекладається."
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Do not translate LaTeX command names"
-msgstr ""
+msgstr "Не перекладати назви команд LaTeX"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Do not add or remove line breaks (\\n)"
 msgstr ""
+"Не додавайте та не видаляйте розриви рядків (\\n"
+")"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Maintain all whitespace around LaTeX commands"
-msgstr ""
+msgstr "Зберігати всі пробіли навколо команд LaTeX"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Maintain line breaks exactly as they appear in the source text"
 msgstr ""
+"Зберігайте розриви рядків точно так, як вони відображаються у вихідному "
+"тексті"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Special commands to keep unchanged:"
-msgstr ""
+msgstr "Спеціальні команди, які слід залишити без змін:"
 
 #. type: Bullet: '     - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "SVG icons (\\svg{damage-table})"
-msgstr ""
+msgstr "SVG-іконки (\\svg{damage-table})"
 
 #. type: Bullet: '     - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Spacing commands (\\bigskip, \\hsize, etc.)"
-msgstr ""
+msgstr "Команди інтервалів (\\bigskip, \\hsize, тощо.)"
 
 #. type: Bullet: '   - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "For tables (like \\hommtable, \\tabularx):"
-msgstr ""
+msgstr "Для таблиця (як \\hommtable, \\tabularx):"
 
 #. type: Bullet: '     - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Keep all sizing parameters unchanged (e.g., {38}, {0.3\\hsize})"
 msgstr ""
+"Зберегти всі параметри розміру незмінними (наприклад, {38}, {0.3\\hsize})"
 
 #. type: Bullet: '     - '
 #: tools/translation-ai-prompts/prompt.txt:38
 msgid "Preserve all cell styling commands (\\darkcell, \\lightcell)"
-msgstr ""
+msgstr "Зберегти всі команди стилізації комірок (\\darkcell, \\lightcell)"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:38
@@ -161,6 +182,10 @@ msgid ""
 "   msgid \"\\\\darkcell[1.5]{\\\\color{white}Game Difficulty}\"\n"
 "   msgstr \"\\\\darkcell[1.5]{\\\\color{white}[...]}\"\n"
 msgstr ""
+"     - Збереження специфікацій стовпців таблиці\n"
+"   Приклад:\n"
+"   msgid \"\\\\darkcell[1.5]{\\\\color{white}Складність гри}\"\n"
+"   msgstr \"\\\\darkcell[1.5]{\\\\color{white}[...]}\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:42
@@ -170,6 +195,10 @@ msgid ""
 "Maintain the capitalization of the words as in the original text.\n"
 "If in English there is \"Hero\", the translation should also be capitalized.\n"
 msgstr ""
+"3. Вживання великих літер\n"
+"Зберігайте написання слів з великої літери, як в оригінальному тексті.\n"
+"Якщо в англійській мові є слово «Hero», переклад також слід писати з великої "
+"літери.\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:48
@@ -181,16 +210,24 @@ msgid ""
 "The output should be:\n"
 "\"  \\\\pagetarget{Heroes}{[...]} [...]\\n\"\n"
 msgstr ""
+"4. Приклад\n"
+"Враховуючи наступне `msgid`:\n"
+"\"  \\\\pagetarget{Heroes}{Гравці} завжди контролює Головного Героя та може "
+"додатково завербувати Другорядного Героя.\\n"
+"\"\n"
+"Результат має бути таким:\n"
+"\"  \\\\pagetarget{Герої}{[...]} [...]\\n"
+"\"\n"
 
 #. type: Bullet: '5. '
 #: tools/translation-ai-prompts/prompt.txt:54
 msgid "Output"
-msgstr ""
+msgstr "Вихід"
 
 #. type: Bullet: '  - '
 #: tools/translation-ai-prompts/prompt.txt:54
 msgid "Output a copyable code block"
-msgstr ""
+msgstr "Вивести блок коду, який можна копіювати"
 
 #. type: Bullet: '  - '
 #: tools/translation-ai-prompts/prompt.txt:54
@@ -198,21 +235,23 @@ msgid ""
 "Output just the translated `msgstr` given the `msgid`, maintaining the "
 "original formatting and quotes."
 msgstr ""
+"Вивести лише перекладену `msgstr` з урахуванням `msgid`, зберігаючи "
+"оригінальне форматування та лапки."
 
 #. type: Bullet: '  - '
 #: tools/translation-ai-prompts/prompt.txt:54
 msgid "If the code block starts with a line `msgstr \"\"`, omit this line"
-msgstr ""
+msgstr "Якщо блок коду починається з рядка `msgstr \"\"`, пропустіть цей рядок"
 
 #. type: Bullet: '  - '
 #: tools/translation-ai-prompts/prompt.txt:54
 msgid "The block should include the final newline"
-msgstr ""
+msgstr "Блок повинен містити останній символ нового рядка"
 
 #. type: Bullet: '6. '
 #: tools/translation-ai-prompts/prompt.txt:56
 msgid "Specific term translations without capitalization"
-msgstr ""
+msgstr "Переклади конкретних термінів без великої літери"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:68
@@ -230,6 +269,17 @@ msgid ""
 "   - \"stronghold\" translates to \"[...]\"\n"
 "   - \"tower\" translates to \"[...]\"\n"
 msgstr ""
+"Фракції:\n"
+"   - \"castle\" перекладається як \"[...]\"\n"
+"   - \"conflux\" перекладається як \"[...]\"\n"
+"   - \"cove\" перекладається як \"[...]\"\n"
+"   - \"dungeon\" перекладається як \"[...]\"\n"
+"   - \"fortress\" перекладається як \"[...]\"\n"
+"   - \"inferno\" перекладається як \"[...]\"\n"
+"   - \"necropolis\" перекладається як \"[...]\"\n"
+"   - \"rampart\" перекладається як \"[...]\"\n"
+"   - \"stronghold\" перекладається як \"[...]\"\n"
+"   - \"tower\" перекладається як \"[...]\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:88
@@ -255,6 +305,25 @@ msgid ""
 "   - \"units\" translates to \"[...]\"\n"
 "   - \"zealots\" tarnslates to \"[...]\"\n"
 msgstr ""
+"Одиниці:\n"
+"   - \"boars\" перекладається як \"[...]\"\n"
+"   - \"champions\" перекладається як \"[...]\"\n"
+"   - \"deck of unit cards\" перекладається як \"[...]\"\n"
+"   - \"dendroids\" перекладається як \"[...]\"\n"
+"   - \"dread knights\" перекладається як \"[...]\"\n"
+"   - \"familiars\" перекладається як \"[...]\"\n"
+"   - \"few\" перекладається як \"[...]\"\n"
+"   - \"griffins\" перекладається як \"[...]\"\n"
+"   - \"hp\" перекладається як \"[...]\"\n"
+"   - \"liches\" перекладається як \"[...]\"\n"
+"   - \"marksmen\" перекладається як \"[...]\"\n"
+"   - \"pack\" перекладається як \"[...]\"\n"
+"   - \"recruited or reinforced\" перекладається як \"[...]\"\n"
+"   - \"reinforce\" перекладається як \"[...]\"\n"
+"   - \"reinforced\" перекладається як \"[...]\"\n"
+"   - \"units cards\" перекладається як \"[...]\"\n"
+"   - «units» перекладається як «[...]»\n"
+"   - «zealots» перекладається як «[...]»\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:100
@@ -272,6 +341,17 @@ msgid ""
 "   - \"secondary hero\" translates to \"[...]\"\n"
 "   - \"specialty\" translates to \"[...]\"\n"
 msgstr ""
+"Герої:\n"
+"   - \"ability\" перекладається як \"[...]\"\n"
+"   - \"experience\" перекладається як \"[...]\"\n"
+"   - \"expert effects\" перекладається як \"[...]\"\n"
+"   - \"hero\" перекладається як \"[...]\"\n"
+"   - \"heroes\" перекладається як \"[...]\"\n"
+"   - \"level tracker\" перекладається як \"[...]\"\n"
+"   - \"level\" перекладається як \"[...]\"\n"
+"   - \"main hero\" перекладається як \"[...]\"\n"
+"   - \"secondary hero\" перекладається як \"[...]\"\n"
+"   - \"specialty\" перекладається як \"[...]\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:117
@@ -294,6 +374,22 @@ msgid ""
 "   - \"trading post\" translates to \"[...]\"\n"
 "   - \"water wheel\" translates to \"[...]\"\n"
 msgstr ""
+"Місця на карті:\n"
+"   - \"center field\" перекладається як \"[...]\"\n"
+"   - \"central map tile\" перекладається як \"[...]\"\n"
+"   - \"dragon utopia\" перекладається як \"[...]\"\n"
+"   - \"far map tile\" перекладається як \"[...]\"\n"
+"   - \"field\" перекладається як \"[...]\"\n"
+"   - \"locations\" перекладається як \"[...]\"\n"
+"   - \"map tile\" перекладається як \"[...]\"\n"
+"   - \"near map tile\" перекладається як \"[...]\"\n"
+"   - \"random town\" перекладається як \"[...]\"\n"
+"   - \"revisitable\" перекладається як \"[...]\"\n"
+"   - \"settlement\" перекладається як \"[...]\"\n"
+"   - \"starting (i) map tile\" перекладається як \"[...]\"\n"
+"   - \"tile\" перекладається як \"[...]\"\n"
+"   - \"trading post\" перекладається як \"[...]\"\n"
+"   - \"water wheel\" перекладається як \"[...]\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:124
@@ -306,6 +402,12 @@ msgid ""
 "   - \"treasure die\" translates to \"[...]\"\n"
 "   - \"valuables\" translates to \"[...]\"\n"
 msgstr ""
+"Ресурси:\n"
+"   - \"building materials\" перекладається як \"[...]\"\n"
+"   - \"resource production tracker\"перекладається як \"[...]\"\n"
+"   - \"resources\" перекладається як \"[...]\"\n"
+"   - \"treasure die\" перекладається як \"[...]\"\n"
+"   - \"valuables\" перекладається як \"[...]\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:136
@@ -323,6 +425,17 @@ msgid ""
 "   - \"specialty card\" translates to \"[...]\"\n"
 "   - \"spell cards\" translates to \"[...]\"\n"
 msgstr ""
+"Будівництво палуби:\n"
+"   - \"ability card\" перекладається як \"[...]\"\n"
+"   - \"deck\" перекладається як\"[...]\"\n"
+"   - \"decks\" перекладається як \"[...]\"\n"
+"   - \"discard pile\" перекладається як \"[...]\"\n"
+"   - \"discard\" перекладається як \"[...]\"\n"
+"   - \"hand limit\" перекладається як \"[...]\"\n"
+"   - \"player decks\" перекладається як \"[...]\"\n"
+"   - \"search\" перекладається як \"[...]\"\n"
+"   - \"specialty card\" перекладається як \"[...]\"\n"
+"   - \"spell cards\" перекладається як \"[...]\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:142
@@ -334,6 +447,11 @@ msgid ""
 "   - \"skill card\" translates to \"[...]\"\n"
 "   - \"ai deck\" translates to \"[...]\"\n"
 msgstr ""
+"Колода ШІ:\n"
+"   - \"magic card\" перекладається як \"[...]\"\n"
+"   - \"might card\" перекладається як \"[...]\"\n"
+"   - \"skill card\" перекладається як \"[...]\"\n"
+"   - \"ai deck\" перекладається як \"[...]\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:147
@@ -344,6 +462,10 @@ msgid ""
 "   - \"dwelling\" translates to \"[...]\"\n"
 "   - \"population token\" translates to \"[...]\"\n"
 msgstr ""
+"Місто:\n"
+"   - \"buildings\" перекладається як \"[...]\"\n"
+"   - \"dwelling\" перекладається як \"[...]\"\n"
+"   - \"population token\" перекладається як \"[...]\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:156
@@ -358,6 +480,14 @@ msgid ""
 "   - \"front line\" translates to \"[...]\"\n"
 "   - \"winning combat\" translates to \"[...]\"\n"
 msgstr ""
+"Бій:\n"
+"   - \"arrow tower\" перекладається як \"[...]\"\n"
+"   - \"back line\" перекладається як \"[...]\"\n"
+"   - \"combat board\" перекладається як \"[...]\"\n"
+"   - \"combat\" перекладається як \"[...]\"\n"
+"   - \"damage\" перекладається як \"[...]\"\n"
+"   - \"front line\" перекладається як \"[...]\"\n"
+"   - \"winning combat\" перекладається як \"[...]\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:165
@@ -373,3 +503,12 @@ msgid ""
 "   - \"round tracker\" translates to \"[...]\"\n"
 "   - \"war machine\" translates to \"[...]\"\n"
 msgstr ""
+"Інше:\n"
+"   - \"core rulebook\" перекладається як \"[...]\"\n"
+"   - \"effects\" перекладається як \"[...]\"\n"
+"   - \"game setup\" перекладається як \"[...]\"\n"
+"   - \"map setup\" перекладається як \"[...]\"\n"
+"   - \"player elimination\" перекладається як \"[...]\"\n"
+"   - \"player setup\" перекладається як \"[...]\"\n"
+"   - \"round tracker\" перекладається як \"[...]\"\n"
+"   - \"war machine\" перекладається як \"[...]\"\n"
