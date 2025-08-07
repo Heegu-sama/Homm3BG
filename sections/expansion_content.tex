@@ -125,10 +125,22 @@ Added by multiple expansions, explained in \pagelink{Playerdecks}{Player Decks}.
 
   \bigskip
   \begin{center}
-    \includegraphics[width=\linewidth]{\images/creature_bank_combat_board.png}\\
-    \textbf{\footnotesize\textit{\textcolor{darkcandyapplered}{P -- player deployment zone}}}\\
-    \textbf{\footnotesize\textit{\textcolor{darkcandyapplered}{N -- Neutral Units deployment zone}}}\\
+    \begin{tikzpicture}
+      \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\images/creature_bank_combat_board.png}}};
+      \draw (-1.5, 0.6) node {\includegraphics[width=0.15\linewidth]{\images/P.png}};
+      \draw (-1.5, -0.5) node {\includegraphics[width=0.15\linewidth]{\images/P.png}};
+      \draw (0, 0.6) node {\includegraphics[width=0.15\linewidth]{\images/P.png}};
+      \draw (0, -0.5) node {\includegraphics[width=0.15\linewidth]{\images/P.png}};
+      \draw (1.5, 0.6) node {\includegraphics[width=0.15\linewidth]{\images/P.png}};
+      \draw (1.5, -0.5) node {\includegraphics[width=0.15\linewidth]{\images/P.png}};
+      \draw (2.9, 1.7) node {\includegraphics[width=0.15\linewidth]{\images/N.png}};
+      \draw (2.9, -1.6) node {\includegraphics[width=0.15\linewidth]{\images/N.png}};
+      \draw (-3.1, 1.7) node {\includegraphics[width=0.15\linewidth]{\images/N.png}};
+      \draw (-3.1, -1.6) node {\includegraphics[width=0.15\linewidth]{\images/N.png}};
+    \end{tikzpicture}
   \end{center}
+  \textbf{\footnotesize\textit{\textcolor{darkcandyapplered}{P -- player deployment zone}}}\\
+  \textbf{\footnotesize\textit{\textcolor{darkcandyapplered}{N -- Neutral Units deployment zone}}}\\
   \bigskip
 
   Based on the Scenario's Difficulty Level, take a number of \pagelink{Stack Tokens}{Stack Tokens} and place them randomly on up to four different Creature Bank Unit Cards:
