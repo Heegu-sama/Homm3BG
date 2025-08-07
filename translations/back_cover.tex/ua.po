@@ -7,19 +7,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
 "POT-Creation-Date: 2025-07-04 21:38+0000\n"
-"PO-Revision-Date: 2024-05-11 20:48+0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-08-08 13:15+0000\n"
+"Last-Translator: Максим Горпиніч <gorpinicmaksim5@gmail.com>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/"
+"homm3bg-rules-rewrite/back_cover_tex/uk/>\n"
 "Language: ua\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.4\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #. type: Plain text
 #: sections/back_cover.tex:4
 msgid "\\restoregeometry"
-msgstr ""
+msgstr "\\відновленнягеометрії"
 
 #. type: Plain text
 #: sections/back_cover.tex:13
@@ -29,6 +32,11 @@ msgid ""
 "page.center) { \\includegraphics[height=\\paperheight, keepaspectratio]"
 "{\\layout/back.jpg} }; \\end{tikzpicture} }"
 msgstr ""
+"\\iftoggle{noartbackground}{}{ \\begin{tikzpicture}"
+"[remember picture, overlay, inner sep=10pt] \\n"
+"ode(cover)[anchor=center] at (current page.center) { \\includegraphics"
+"[height=\\paperheight, keepaspectratio]{\\layout/back.jpg} }; \\end"
+"{tikzpicture} }"
 
 #. type: Plain text
 #: sections/back_cover.tex:42
