@@ -228,15 +228,15 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 
 \end{multicols*}
 \begin{multicols}{2}
-\subsection*{\pagetarget{Discover Location Tokens}{Discovering Tiles with Location Tokens}}
+\subsection*{\pagetarget{Discover Location Tokens}{Placing and Discovering Location Tokens}}
 Location Tokens are added by several expansions to the game.
-They are usually placed on specific Fields of the Map when a Hero discovers the associated Map Tile and overwrite the original Location they are placed on.
+They are placed either separately or on specific Fields of the Map Tile when a Hero discovers one with associated Token, and overwrite the original Location they are placed on.
 Tokens cannot be placed on other Location Tokens, Blocked Fields, or Fields containing Locations required to meet any of the Scenario's victory conditions.
 
 \begin{expansion}[before=\vspace*{0pt}]{conflux}
   \subsection*{Monolith Tokens}
-   The position of \pagelink{Monolith}{Monolith} Tokens is determined by the chosen Scenario Layout.
-   If you discover a Tile with one of these Tokens on it, discover the Tile normally and then place the Token on the Field indicated by the Scenario's Map layout.
+   The position of \pagelink{Monolith}{Monoliths} is determined by Scenario Layout.
+   If you discover a Tile with one of these Tokens on it, discover the Tile normally, and then place the Token on the Field indicated by the Scenario's Map layout, or a Field of your choosing if it's not specified.
   \bigskip
   \begin{center}
     \includegraphics[width=0.4\linewidth]{\map_locations/monolith_token.png}\\
@@ -248,17 +248,26 @@ Tokens cannot be placed on other Location Tokens, Blocked Fields, or Fields cont
 
 \begin{expansion}[before=\vspace*{0pt}]{cove}
   \subsection*{Whirlpool Tokens}
-  Discovering \pagelink{Whirlpool}{Whirlpool} Tokens follows the same rules as Monoliths.
+  Discovering \pagelink{Whirlpool}{Whirlpools} follows the same rules as Monoliths.
   \bigskip
+
+  \begin{tikzpicture}
+    \draw (-2.5, 0) node[inner sep=0] {\includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}};
+    \draw (-2.5, -1) node {\Huge\textbf{\textcolor{white}{-1}}};
+    \draw (0, 0) node[inner sep=0] {\includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}};
+    \draw (0, -1) node {\Huge\textbf{\textcolor{white}{0}}};
+    \draw (2.5, 0) node[inner sep=0] {\includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}};
+    \draw (2.5, -1) node {\Huge\textbf{\textcolor{white}{$\boldsymbol{+}$1}}};
+  \end{tikzpicture}
   \begin{center}
-    \includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}\\
-    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Whirlpool Token}}}}
+    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Whirlpool Tokens}}}}
   \end{center}
 \end{expansion}
 
 \begin{expansion}[before=\vspace*{-11mm}]{stronghold}
   \subsection*{Subterranean Gate Tokens}
-  \pagetarget{Subterranean Gate}{Subterranean Gate Tokens} are also determined by a Scenario's Map Layout and connect both a Surface Map Tile and an adjacent Subterranean Map Tile.
+  \pagetarget{Subterranean Gate}{Subterranean Gates} are also determined by a Scenario's Map Layout and connect both a Surface Map Tile and an adjacent Subterranean Map Tile.
+  They cannot be placed outside the Map Tiles.
   After discovering one of the corresponding Map Tiles you may choose the position of the Subterranean Gate Token as long as it connects the two indicated Map Tiles without covering forbidden Fields.
   The Scenario Map layout only shows \textbf{which two Tiles are connected}, not the exact Fields the Token is placed on.
   \bigskip
@@ -273,7 +282,7 @@ Tokens cannot be placed on other Location Tokens, Blocked Fields, or Fields cont
 \begin{expansion}[before=\vspace*{0pt}]{navalbattles}
   \subsection*{Creature Bank Tokens}
   As an \textbf{optional rule} you can decide to play with \pagelink{Creature Banks Rules}{Creature Banks}.
-  If you do, each time a player discovers a Far \mbox{(II--III)} or Near \mbox{(IV--V)} Map Tile, they may decide to draw a Creature Bank Token corresponding to the discovered Map Tile, and -- contrary to the normal rules -- place it on its \textbf{Blocked Field}.
+  If you do, each time you discover a Far \mbox{(II--III)} or Near \mbox{(IV--V)} Map Tile, you may decide to draw a Creature Bank Token corresponding to the discovered Map Tile, and -- contrary to the normal rules -- place it \textbf{only on its Blocked Field}.
   \bigskip
   \begin{center}
     \includegraphics[width=0.4\linewidth]{\map_locations/creature_bank_token.png}\\
