@@ -149,4 +149,144 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 \vfill
 \hspace{2em}
 {\transparent{0.2}\includegraphics[width=\linewidth]{\art/resurrection.png}}
+
+\newpage
+
+\begin{expansion}{cove}
+  \subsection*{Sea Map Tiles}
+  Sea Map Tiles have a unique backside and during setup are placed as shown in the chosen Scenario Map layout.
+  Discovering them works as with regular Tiles.
+  Sea Map Tiles may contain both land and sea Fields.
+  Movement from land to land, from sea to sea, or from sea to land works as normal.
+  However, when your Hero \textbf{enters a sea Field from a land Field}, their movement for the Turn ends.
+  You may use unspent MP for other Actions (for example, to \pagelink{Timelimit}{extend Combat} against Neutral Units), but you cannot move anymore that Turn, not even with the help of Card effects.
+\end{expansion}
+
+\bigskip
+
+\begin{expansion}{conflux}
+  \subsection*{\pagetarget{Elemental Map Tiles}{Elemental Map Tiles}}
+  Each of the Elemental Map Tiles is associated with one \pagelink{Schools of Magic}{School of Magic}.
+  When your Main Hero stands on such a Tile, all cast Spells from that School of Magic have their \svg{empower} increased by 1.
+  % Clarification about main hero is needed.
+\end{expansion}
+
+\bigskip
+
+\begin{expansion}{stronghold}
+  \subsection*{\pagetarget{Subterranean Map Tiles}{Subterranean Map Tiles}}
+  Subterranean Map Tiles have a unique backside and are placed during setup as shown in the chosen Scenario Map layout.
+  They work similarly to regular Map Tiles, except that \textbf{you cannot move between a Surface and a Subterranean Tile without using a \pagelink{Subterranean Gate}{Subterranean Gate} in between} or a Town Portal Spell.
+  No other movement effects from Cards can allow you to move from one to the other.
+  You also may not discover a Subterranean Map Tile while standing on a Surface Map Tile and vice versa.
+  Treat both Fields of the Subterranean Gate Token \textbf{as one Field}.
+  When a Hero enters a Field with a Subterranean Gate, discover the Map Tile on the other side for free (if it is still not discovered).
+  Otherwise treat a Subterranean Gate Token as an empty Field.
+  % NOTE: Discovering from one to the other should also be impossible.
+\end{expansion}
+
+\columnbreak
+
+\begin{multicols*}{2}
+\hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-cove.png}
+\columnbreak
+\hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-sea.png}
 \end{multicols*}
+\begin{center}
+  \vspace*{-0.5em}
+  \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Sea Map Tile}}}}
+\end{center}
+
+\vspace*{\fill}
+
+\begin{center}
+  \footnotesize
+  \begin{tikzpicture}
+    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\images/elemental_tiles.png}}};
+    \draw (-2.2, 0.1) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Fire Tile}}}};
+    \draw (-2.2, -4.5) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Air Tile}}}};
+    \draw (2.2, 0.1) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Water Tile}}}};
+    \draw (2.2, -4.5) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Earth Tile}}}};
+  \end{tikzpicture}
+\end{center}
+
+\vspace*{\fill}
+
+\begin{center}
+  \begin{scriptsize}
+    \centering
+    \begin{tikzpicture}
+      \node at (0, 0) {\includegraphics[width=0.5\linewidth]{\images/map-tile-stronghold.png}};
+      \node at (0, 2.2) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Surface Map Tile}}}}};
+      \node at (3.21, -1.11) {\includegraphics[width=0.5\linewidth]{\images/map-tile-sub.png}};
+      \node at (3.21, -3.41) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Map Tile}}}}};
+      \node[rotate=-60] (gate) at (1.6, -0.53) {\includegraphics[width=0.33\linewidth]{\images/subter-gate-outline.png}};
+      \node at (3.21, 1.11) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Gate}}}}};
+    \end{tikzpicture}
+  \end{scriptsize}
+\end{center}
+
+\end{multicols*}
+\begin{multicols}{2}
+\subsection*{\pagetarget{Discover Location Tokens}{Placing and Discovering Location Tokens}}
+Location Tokens are added by several expansions to the game.
+They are placed either separately or on specific Fields of the Map Tile when a Hero discovers one with associated Token, and overwrite the original Location they are placed on.
+Tokens cannot be placed on other Location Tokens, Blocked Fields, or Fields containing Locations required to meet any of the Scenario's victory conditions.
+
+\begin{expansion}[before=\vspace*{0pt}]{conflux}
+  \subsection*{Monolith Tokens}
+   The position of \pagelink{Monolith}{Monoliths} is determined by Scenario Layout.
+   If you discover a Tile with one of these Tokens on it, discover the Tile normally, and then place the Token on the Field indicated by the Scenario's Map layout, or a Field of your choosing if it's not specified.
+  \bigskip
+  \begin{center}
+    \includegraphics[width=0.4\linewidth]{\map_locations/monolith_token.png}\\
+    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Monolith Token}}}}
+  \end{center}
+\end{expansion}
+
+\bigskip
+
+\begin{expansion}[before=\vspace*{0pt}]{cove}
+  \subsection*{Whirlpool Tokens}
+  Discovering \pagelink{Whirlpool}{Whirlpools} follows the same rules as discovering Monoliths.
+  \bigskip
+
+  \begin{tikzpicture}
+    \draw (-2.5, 0) node[inner sep=0] {\includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}};
+    \draw (-2.5, -1) node {\Huge\textbf{\textcolor{white}{-1}}};
+    \draw (0, 0) node[inner sep=0] {\includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}};
+    \draw (0, -1) node {\Huge\textbf{\textcolor{white}{0}}};
+    \draw (2.5, 0) node[inner sep=0] {\includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}};
+    \draw (2.5, -1) node {\Huge\textbf{\textcolor{white}{$\boldsymbol{+}$1}}};
+  \end{tikzpicture}
+  \begin{center}
+    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Whirlpool Tokens}}}}
+  \end{center}
+\end{expansion}
+
+\begin{expansion}[before=\vspace*{-11mm}]{stronghold}
+  \subsection*{Subterranean Gate Tokens}
+  \pagetarget{Subterranean Gate}{Subterranean Gates} are also determined by a Scenario's Map Layout and connect both a Surface Map Tile and an adjacent Subterranean Map Tile.
+  They cannot be placed outside the Map Tiles.
+  After discovering one of the corresponding Map Tiles you may choose the position of the Subterranean Gate Token as long as it connects the two indicated Map Tiles without covering forbidden Fields.
+  The Scenario Map layout only shows \textbf{which two Tiles are connected}, not the exact Fields the Token is placed on.
+  \bigskip
+  \begin{center}
+    \includegraphics[width=0.6\linewidth]{\map_locations/subterranean_gate_token.png}\\
+    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Gate Token}}}}
+  \end{center}
+\end{expansion}
+
+\bigskip
+
+\begin{expansion}[before=\vspace*{0pt}]{navalbattles}
+  \subsection*{Creature Bank Tokens}
+  As an \textbf{optional rule} you can decide to play with \pagelink{Creature Banks Rules}{Creature Banks}.
+  If you do, each time you discover a Far \mbox{(II--III)} or Near \mbox{(IV--V)} Map Tile, you may decide to draw a Creature Bank Token corresponding to the discovered Map Tile, and -- contrary to the normal rules -- you can place it \textbf{only on its Blocked Field}.
+  \bigskip
+  \begin{center}
+    \includegraphics[width=0.42\linewidth]{\map_locations/creature_bank_token.png}\\
+    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Creature Bank Token}}}}
+  \end{center}
+\end{expansion}
+\end{multicols}
