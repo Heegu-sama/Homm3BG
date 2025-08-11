@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-07-03 16:39+0200\n"
+"POT-Creation-Date: 2025-08-10 23:06+0200\n"
 "PO-Revision-Date: 2024-06-03 10:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -44,12 +44,39 @@ msgstr ""
 "{2}\n"
 "\n"
 
+#. type: multicols
+#: sections/all_map_locations.tex:55 sections/all_map_locations.tex:237
+#: sections/credits.tex:36 sections/expansion_content.tex:192
+#: sections/game_modes.tex:30 sections/map_elements.tex:189
+#: sections/scenario_end.tex:23 sections/units.tex:136
+#, no-wrap
+msgid ""
+"\\columnbreak\n"
+"\n"
+msgstr ""
+"\\columnbreak\n"
+"\n"
+
 #. type: figure
 #: sections/deckbuilding.tex:238 sections/map_elements.tex:40
+#: sections/map_elements.tex:254 sections/player_turns.tex:125
 #: sections/setup.tex:9
 #, no-wrap
 msgid "  \\begin{tikzpicture}\n"
 msgstr "  \\begin{tikzpicture}\n"
+
+#. type: multicols*
+#: sections/expansion_content.tex:176 sections/map_elements.tex:166
+#: sections/map_elements.tex:175 sections/map_elements.tex:248
+#: sections/map_elements.tex:281 sections/player_turns.tex:40
+#: sections/units.tex:227
+#, no-wrap
+msgid ""
+"\\bigskip\n"
+"\n"
+msgstr ""
+"\\bigskip\n"
+"\n"
 
 #.  !TeX spellcheck = en_US
 #. type: Plain text
@@ -433,12 +460,228 @@ msgstr ""
 
 #. type: multicols*
 #: sections/map_elements.tex:152
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\vfill\n"
+#| "\\hspace{2em}\n"
+#| "{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/resurrection.png}}"
 msgid ""
 "\\vfill\n"
 "\\hspace{2em}\n"
-"{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/resurrection.png}}"
+"{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/resurrection.png}}\n"
+"\n"
 msgstr ""
 "\\vfill\n"
 "\\hspace{2em}\n"
 "{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/resurrection.png}}"
+
+#. type: multicols*
+#: sections/map_elements.tex:154
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\clearpage\n"
+#| "\n"
+msgid ""
+"\\newpage\n"
+"\n"
+msgstr ""
+"\\clearpage\n"
+"\n"
+
+#. type: multicols*
+#: sections/map_elements.tex:164
+#, no-wrap
+msgid ""
+"\\begin{expansion}{cove}\n"
+"  \\subsection*{Sea Map Tiles}\n"
+"  Sea Map Tiles have a unique backside and during setup are placed as shown in the chosen Scenario Map layout.\n"
+"  Discovering them works as with regular Tiles.\n"
+"  Sea Map Tiles may contain both land and sea Fields.\n"
+"  Movement from land to land, from sea to sea, or from sea to land works as normal.\n"
+"  However, when your Hero \\textbf{enters a sea Field from a land Field}, their movement for the Turn ends.\n"
+"  You may use unspent MP for other Actions (for example, to \\pagelink{Timelimit}{extend Combat} against Neutral Units), but you cannot move anymore that Turn, not even with the help of Card effects.\n"
+"\\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/map_elements.tex:173
+#, no-wrap
+msgid ""
+"\\begin{expansion}{conflux}\n"
+"  \\subsection*{\\pagetarget{Elemental Map Tiles}{Elemental Map Tiles}}\n"
+"  Each of the Elemental Map Tiles is associated with one \\pagelink{Schools of Magic}{School of Magic}.\n"
+"  When your Main Hero stands on such a Tile, all cast Spells from that School of Magic have their \\svg{empower} increased by 1.\n"
+"  % Clarification about main hero is needed.\n"
+"\\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/map_elements.tex:187
+#, no-wrap
+msgid ""
+"\\begin{expansion}{stronghold}\n"
+"  \\subsection*{\\pagetarget{Subterranean Map Tiles}{Subterranean Map Tiles}}\n"
+"  Subterranean Map Tiles have a unique backside and are placed during setup as shown in the chosen Scenario Map layout.\n"
+"  They work similarly to regular Map Tiles, except that \\textbf{you cannot move between a Surface and a Subterranean Tile without using a \\pagelink{Subterranean Gate}{Subterranean Gate} in between} or a Town Portal Spell.\n"
+"  No other movement effects from Cards can allow you to move from one to the other.\n"
+"  You also may not discover a Subterranean Map Tile while standing on a Surface Map Tile and vice versa.\n"
+"  Treat both Fields of the Subterranean Gate Token \\textbf{as one Field}.\n"
+"  When a Hero enters a Field with a Subterranean Gate, discover the Map Tile on the other side for free (if it is still not discovered).\n"
+"  Otherwise treat a Subterranean Gate Token as an empty Field.\n"
+"  % NOTE: Discovering from one to the other should also be impossible.\n"
+"\\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/map_elements.tex:199
+#, no-wrap
+msgid ""
+"\\begin{multicols*}{2}\n"
+"\\hspace{-0.5em}\\includegraphics[width=1.15\\linewidth]{\\images/map-tile-cove.png}\n"
+"\\columnbreak\n"
+"\\hspace{-0.5em}\\includegraphics[width=1.15\\linewidth]{\\images/map-tile-sea.png}"
+msgstr ""
+
+#. type: center
+#: sections/map_elements.tex:199
+msgid "{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Sea Map Tile}}}}"
+msgstr ""
+
+#. type: tikzpicture
+#: sections/map_elements.tex:210
+#, no-wrap
+msgid ""
+"    \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\images/elemental_tiles.png}}};\n"
+"    \\draw (-2.2, 0.1) node {\\textbf{\\textit{\\textcolor{darkcandyapplered}{Elemental Fire Tile}}}};\n"
+"    \\draw (-2.2, -4.5) node {\\textbf{\\textit{\\textcolor{darkcandyapplered}{Elemental Air Tile}}}};\n"
+"    \\draw (2.2, 0.1) node {\\textbf{\\textit{\\textcolor{darkcandyapplered}{Elemental Water Tile}}}};\n"
+"    \\draw (2.2, -4.5) node {\\textbf{\\textit{\\textcolor{darkcandyapplered}{Elemental Earth Tile}}}};\n"
+"  "
+msgstr ""
+
+#. type: scriptsize
+#: sections/map_elements.tex:218
+#, fuzzy, no-wrap
+#| msgid "    \\begin{tikzpicture}\n"
+msgid ""
+"    \\centering\n"
+"    \\begin{tikzpicture}\n"
+msgstr "    \\begin{tikzpicture}\n"
+
+#. type: scriptsize
+#: sections/map_elements.tex:226
+#, no-wrap
+msgid ""
+"      \\node at (0, 0) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-stronghold.png}};\n"
+"      \\node at (0, 2.2) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Surface Map Tile}}}}};\n"
+"      \\node at (3.21, -1.11) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-sub.png}};\n"
+"      \\node at (3.21, -3.41) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Subterranean Map Tile}}}}};\n"
+"      \\node[rotate=-60] (gate) at (1.6, -0.53) {\\includegraphics[width=0.33\\linewidth]{\\images/subter-gate-outline.png}};\n"
+"      \\node at (3.21, 1.11) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Subterranean Gate}}}}};\n"
+"    \\end{tikzpicture}\n"
+"  "
+msgstr ""
+"      \\node at (0, 0) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-stronghold.png}};\n"
+"      \\node at (0, 2.2) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Surface Map Tile}}}}};\n"
+"      \\node at (3.21, -1.11) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-sub.png}};\n"
+"      \\node at (3.21, -3.41) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Subterranean Map Tile}}}}};\n"
+"      \\node[rotate=\\string-60] (gate) at (1.6, -0.53) {\\includegraphics[width=0.33\\linewidth]{\\images/subter-gate-outline.png}};\n"
+"      \\node at (3.21, 1.11) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Subterranean Gate}}}}};\n"
+"    \\end{tikzpicture}\n"
+"  "
+
+#. type: multicols
+#: sections/map_elements.tex:235
+#, no-wrap
+msgid ""
+"{2}\n"
+"\\subsection*{\\pagetarget{Discover Location Tokens}{Placing and Discovering Location Tokens}}\n"
+"Location Tokens are added by several expansions to the game.\n"
+"They are placed either separately or on specific Fields of the Map Tile when a Hero discovers one with associated Token, and overwrite the original Location they are placed on.\n"
+"Tokens cannot be placed on other Location Tokens, Blocked Fields, or Fields containing Locations required to meet any of the Scenario's victory conditions.\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/map_elements.tex:246
+#, no-wrap
+msgid ""
+"\\begin{expansion}[before=\\vspace*{0pt}]{conflux}\n"
+"  \\subsection*{Monolith Tokens}\n"
+"   The position of \\pagelink{Monolith}{Monoliths} is determined by Scenario Layout.\n"
+"   If you discover a Tile with one of these Tokens on it, discover the Tile normally, and then place the Token on the Field indicated by the Scenario's Map layout, or a Field of your choosing if it's not specified.\n"
+"  \\bigskip\n"
+"  \\begin{center}\n"
+"    \\includegraphics[width=0.4\\linewidth]{\\map_locations/monolith_token.png}\\\\\n"
+"    \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Monolith Token}}}}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/map_elements.tex:253
+#, no-wrap
+msgid ""
+"\\begin{expansion}[before=\\vspace*{0pt}]{cove}\n"
+"  \\subsection*{Whirlpool Tokens}\n"
+"  Discovering \\pagelink{Whirlpool}{Whirlpools} follows the same rules as discovering Monoliths.\n"
+"  \\bigskip\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/map_elements.tex:266
+#, no-wrap
+msgid ""
+"    \\draw (-2.5, 0) node[inner sep=0] {\\includegraphics[width=0.4\\linewidth]{\\map_locations/whirlpool-token.png}};\n"
+"    \\draw (-2.5, -1) node {\\Huge\\textbf{\\textcolor{white}{-1}}};\n"
+"    \\draw (0, 0) node[inner sep=0] {\\includegraphics[width=0.4\\linewidth]{\\map_locations/whirlpool-token.png}};\n"
+"    \\draw (0, -1) node {\\Huge\\textbf{\\textcolor{white}{0}}};\n"
+"    \\draw (2.5, 0) node[inner sep=0] {\\includegraphics[width=0.4\\linewidth]{\\map_locations/whirlpool-token.png}};\n"
+"    \\draw (2.5, -1) node {\\Huge\\textbf{\\textcolor{white}{$\\boldsymbol{+}$1}}};\n"
+"  \\end{tikzpicture}\n"
+"  \\begin{center}\n"
+"    \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Whirlpool Tokens}}}}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/map_elements.tex:279
+#, no-wrap
+msgid ""
+"\\begin{expansion}[before=\\vspace*{-11mm}]{stronghold}\n"
+"  \\subsection*{Subterranean Gate Tokens}\n"
+"  \\pagetarget{Subterranean Gate}{Subterranean Gates} are also determined by a Scenario's Map Layout and connect both a Surface Map Tile and an adjacent Subterranean Map Tile.\n"
+"  They cannot be placed outside the Map Tiles.\n"
+"  After discovering one of the corresponding Map Tiles you may choose the position of the Subterranean Gate Token as long as it connects the two indicated Map Tiles without covering forbidden Fields.\n"
+"  The Scenario Map layout only shows \\textbf{which two Tiles are connected}, not the exact Fields the Token is placed on.\n"
+"  \\bigskip\n"
+"  \\begin{center}\n"
+"    \\includegraphics[width=0.6\\linewidth]{\\map_locations/subterranean_gate_token.png}\\\\\n"
+"    \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Subterranean Gate Token}}}}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/map_elements.tex:292
+#, no-wrap
+msgid ""
+"\\begin{expansion}[before=\\vspace*{0pt}]{navalbattles}\n"
+"  \\subsection*{Creature Bank Tokens}\n"
+"  As an \\textbf{optional rule} you can decide to play with \\pagelink{Creature Banks Rules}{Creature Banks}.\n"
+"  If you do, each time you discover a Far \\mbox{(II--III)} or Near \\mbox{(IV--V)} Map Tile, you may decide to draw a Creature Bank Token corresponding to the discovered Map Tile, and -- contrary to the normal rules -- you can place it \\textbf{only on its Blocked Field}.\n"
+"  \\bigskip\n"
+"  \\begin{center}\n"
+"    \\includegraphics[width=0.42\\linewidth]{\\map_locations/creature_bank_token.png}\\\\\n"
+"    \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Creature Bank Token}}}}\n"
+"  \\end{center}\n"
+"\\end{expansion}"
+msgstr ""
