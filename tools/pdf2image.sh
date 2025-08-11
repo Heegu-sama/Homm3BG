@@ -1,22 +1,27 @@
 #!/usr/bin/env bash
 
 # Default values
-language=""
+language="en"
 range=""
 output_dir="screenshots"
 custom_pdf=""
 
 help() {
   echo "
-    Usage: $(basename "$0") (-l <language> | -f <file>) -r <range>
+    Usage: $(basename "$0") [-l <language>] -r <range> [OPTIONS]
 
-    Mandatory Arguments (choose one):
-      -l, --language <language>     Specify the language for PDF (e.g., en, pl, cs, de, fr).
-      -f, --file <path>             Use a custom PDF file at the specified path.
+    Mandatory Arguments:
       -r, --range <range>           Provide comma-separated list of pages or range of pages.
                                     Examples: 1,3,5 or 1-5 or 1,3-5,7
 
+    Optional Arguments:
+      -l, --language <language>     Specify the language for PDF (en, pl, es, fr, ru, ua, cs, de, he).
+                                    Defaults to 'en' if not specified.
+      -f, --file <path>             Use a custom PDF file at the specified path.
+
     Examples:
+      $(basename "$0") -r 1
+      $(basename "$0") -r 1-5
       $(basename "$0") -l en -r 1
       $(basename "$0") --language en --range 1-5
       $(basename "$0") -f custom.pdf -r 1-3,5
@@ -77,11 +82,6 @@ done
 # Validate arguments
 if [[ -n "$language" && -n "$custom_pdf" ]]; then
   echo "Error: -l/--language and -f/--file options are mutually exclusive."
-  help
-fi
-
-if [[ -z "$language" && -z "$custom_pdf" ]]; then
-  echo "Error: You must specify either -l/--language or -f/--file option."
   help
 fi
 
