@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-08-10 23:06+0200\n"
+"POT-Creation-Date: 2025-08-12 20:43+0200\n"
 "PO-Revision-Date: 2024-04-23 19:52+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -68,8 +68,33 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:36
-#, no-wrap
+#: sections/deckbuilding.tex:43
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{General Card Rules}\n"
+#| "\\begin{enumerate}\n"
+#| "  \\item Cards can be played \\textbf{only on your Turn}, or in a \\pagelink{Combat}{Combat} involving your \\textbf{Main Hero}.\n"
+#| "  \\item After a Card is used, discard it.\n"
+#| "    Each player has their own separate Discard Pile\\index{Discard Pile}.\n"
+#| "  \\item If Your Deck is empty when you need to draw a Card, \\textbf{shuffle your Discard Pile} into a new Deck to draw from.\n"
+#| "  \\item Whenever your Hero gains a Card for any reason, put it \\textbf{directly into your hand} unless otherwise stated.\n"
+#| "  \\item Whenever you are instructed to \\textbf{Search} (X)\\index{Search (X)} the Ability, Artifact, or Spell Deck, you may either look at the top (X) Cards from the specified Deck, take one of them to your hand, and discard the others, \\textbf{OR} instead of looking at the top (X) Cards, gain the top Card from that Deck's Discard Pile.\n"
+#| "  \\item The Ability, Artifact, and Spell Decks each have their own Discard Piles, created during the setup, which help you identify these Decks.\n"
+#| "    If a Deck ever runs out of Cards, reshuffle it and discard its top Card to form a new Discard Pile.\n"
+#| "    Whenever one of these Discard Piles is empty, \\textbf{refill it} with that Deck's top Card.\n"
+#| "  \\columnbreak\n"
+#| "  \\item Cards have the following \\pagetarget{Card Effects}{types of effects}:\n"
+#| "  \\begin{itemize}\n"
+#| "    \\item \\textbf{Instant} \\svg{instant} Effects are resolved immediately.\n"
+#| "    \\item \\textbf{Activation} \\svg{activation} Effects must be played when Activating your own Unit in Combat.\n"
+#| "    \\item \\textbf{Map} \\svg{map} Effects cannot be used during Combat.\n"
+#| "    \\item \\textbf{Ongoing} \\svg{ongoing} Effects\\index{Ongoing Effects} last until they are used up or until the player who played them starts their next Turn (whichever happens first).\n"
+#| "    \\item \\textbf{Permanent} \\svg{permanent} Cards\\index{Permanent Cards} stay in play until discarded or replaced.\n"
+#| "      \\textbf{You may only have one permanent Card at a time}; playing another discards the first.\n"
+#| "  \\end{itemize}\n"
+#| "  \\item Whenever you are instructed to \\textbf{remove a Card}, remove it completely from the game.\n"
+#| "\\end{enumerate}\n"
+#| "\n"
 msgid ""
 "\\subsection*{General Card Rules}\n"
 "\\begin{enumerate}\n"
@@ -89,8 +114,15 @@ msgid ""
 "    \\item \\textbf{Activation} \\svg{activation} Effects must be played when Activating your own Unit in Combat.\n"
 "    \\item \\textbf{Map} \\svg{map} Effects cannot be used during Combat.\n"
 "    \\item \\textbf{Ongoing} \\svg{ongoing} Effects\\index{Ongoing Effects} last until they are used up or until the player who played them starts their next Turn (whichever happens first).\n"
+"      \\begin{expansion}[before skip balanced=0.3em,]{stronghold,conflux,cove}\n"
+"      \\begin{tikzpicture}[overlay]\n"
+"        \\node at (5.5, 0) {\\includegraphics[width=0.22\\linewidth]{\\images/time-token.png}};\n"
+"      \\end{tikzpicture}\\parbox{0.75\\hsize}{You can use Time Tokens\\index{Time Token} to track the duration of Ongoing Effects.}\n"
+"      \\end{expansion}\n"
 "    \\item \\textbf{Permanent} \\svg{permanent} Cards\\index{Permanent Cards} stay in play until discarded or replaced.\n"
+"      They are played the same way as \\svg{activation} and \\svg{map} Cards.\n"
 "      \\textbf{You may only have one permanent Card at a time}; playing another discards the first.\n"
+"      While a Permanent Card is in play, you may use either its Basic or Expert Effect, but not both simultaneously.\n"
 "  \\end{itemize}\n"
 "  \\item Whenever you are instructed to \\textbf{remove a Card}, remove it completely from the game.\n"
 "\\end{enumerate}\n"
@@ -124,7 +156,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:39
+#: sections/deckbuilding.tex:46
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{center}\n"
@@ -133,7 +165,7 @@ msgstr ""
 #| "\n"
 msgid ""
 "\\vfill\n"
-"\\hfill{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/coin.png}}\n"
+"\\hfill{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/quicksand.png}}\n"
 "\n"
 msgstr ""
 "\\begin{center}\n"
@@ -142,7 +174,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:41 sections/player_turns.tex:58
+#: sections/deckbuilding.tex:48 sections/player_turns.tex:58
 #: sections/units.tex:40
 #, no-wrap
 msgid ""
@@ -151,7 +183,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:43
+#: sections/deckbuilding.tex:50
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Ability}{Ability} and \\pagetarget{Statistic}{Statistic} Cards}\n"
@@ -161,7 +193,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:49
+#: sections/deckbuilding.tex:56
 #, no-wrap
 msgid ""
 "All Ability\\index{Ability Card} and Statistic cards\\index{Statistic Cards} have a \\textbf{Basic Effect}\\index{Basic Effect} and a stronger \\textbf{Expert} \\svg{expert} \\textbf{Effect}\\index{Expert Effect}, which is shown below the Basic Effect.\n"
@@ -179,7 +211,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:54
+#: sections/deckbuilding.tex:61
 #, no-wrap
 msgid ""
 "\\vspace{-2em}\n"
@@ -190,15 +222,15 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:55 sections/deckbuilding.tex:73
-#: sections/deckbuilding.tex:105 sections/deckbuilding.tex:253
-#: sections/deckbuilding.tex:262 sections/units.tex:66 sections/units.tex:93
+#: sections/deckbuilding.tex:62 sections/deckbuilding.tex:80
+#: sections/deckbuilding.tex:112 sections/deckbuilding.tex:260
+#: sections/deckbuilding.tex:269 sections/units.tex:66 sections/units.tex:93
 #, no-wrap
 msgid "    \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:72
+#: sections/deckbuilding.tex:79
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\cards/event.png}}};\n"
@@ -254,7 +286,7 @@ msgstr ""
 "  "
 
 #. type: multicols*
-#: sections/deckbuilding.tex:93
+#: sections/deckbuilding.tex:100
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\cards/event.png}}};\n"
@@ -305,7 +337,7 @@ msgstr ""
 "  "
 
 #. type: Plain text
-#: sections/deckbuilding.tex:93
+#: sections/deckbuilding.tex:100
 msgid ""
 "\\bigbreak \\note{11}{ Certain cards are limited to the Necropolis Faction "
 "\\svg{necro-yellow}.  When a non-Necropolis player draws a Necropolis "
@@ -322,13 +354,13 @@ msgstr ""
 "Effets qui les défaussent. }"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:97 sections/deckbuilding.tex:289
-#: sections/deckbuilding.tex:345 sections/resources.tex:33
+#: sections/deckbuilding.tex:104 sections/deckbuilding.tex:296
+#: sections/deckbuilding.tex:352 sections/resources.tex:33
 msgid "\\columnbreak"
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:102
+#: sections/deckbuilding.tex:109
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{Empowered Statistic}{Empowered} Statistic Cards}\\index{Empowered Statistic Card}\n"
@@ -350,7 +382,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:104
+#: sections/deckbuilding.tex:111
 #, no-wrap
 msgid ""
 "  \\bigskip\n"
@@ -358,7 +390,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:132
+#: sections/deckbuilding.tex:139
 #, fuzzy, no-wrap
 #| msgid ""
 #| "    \\draw (-2, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/empowered_statistic.png}}};\n"
@@ -441,7 +473,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:136
+#: sections/deckbuilding.tex:143
 #, fuzzy
 #| msgid ""
 #| "\\begin{center}\n"
@@ -460,12 +492,12 @@ msgstr ""
 "\n"
 
 #. type: subsection{#2}
-#: sections/deckbuilding.tex:138
+#: sections/deckbuilding.tex:145
 msgid "\\pagetarget{spells}{Spell Cards}"
 msgstr "\\pagetarget{spells}{Cartes de Sort}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:146
+#: sections/deckbuilding.tex:153
 #, fuzzy
 #| msgid ""
 #| "Spell Cards\\index{Spell Card} have three possible primary effects.  "
@@ -504,7 +536,7 @@ msgstr ""
 "puissance disparaît."
 
 #. type: Plain text
-#: sections/deckbuilding.tex:177
+#: sections/deckbuilding.tex:184
 #, fuzzy
 #| msgid ""
 #| "{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/"
@@ -541,7 +573,7 @@ msgstr ""
 "\\end{multicols} }"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:181
+#: sections/deckbuilding.tex:188
 msgid ""
 "Spells can be gained by Building the Mage Guild\\index{Mage Guild}.  "
 "Building it also enables you to use the Spell Book Token\\index{Spell Book "
@@ -556,7 +588,7 @@ msgstr ""
 "peuvent être \\pagelink{Trading}{échangés} en Alliance et en Coopération."
 
 #. type: Plain text
-#: sections/deckbuilding.tex:183
+#: sections/deckbuilding.tex:190
 msgid ""
 "During Combat, \\textbf{only one Spell Card} may be played by each player "
 "\\textbf{per Combat Round}."
@@ -565,7 +597,7 @@ msgstr ""
 "par Tour de Combat}."
 
 #. type: Plain text
-#: sections/deckbuilding.tex:186
+#: sections/deckbuilding.tex:193
 #, fuzzy
 #| msgid ""
 #| "\\note{6}{ When you use an effect which lets you cast a Spell from "
@@ -581,7 +613,7 @@ msgstr ""
 "lancé dans votre Défausse.  }"
 
 #. type: center
-#: sections/deckbuilding.tex:192
+#: sections/deckbuilding.tex:199
 #, fuzzy
 #| msgid ""
 #| "\\begin{center}\n"
@@ -600,12 +632,12 @@ msgstr ""
 "\n"
 
 #. type: subsubsection{#2}
-#: sections/deckbuilding.tex:198
+#: sections/deckbuilding.tex:205
 msgid "\\pagetarget{Schools of Magic}{Schools of Magic}"
 msgstr ""
 
 #. type: Plain text
-#: sections/deckbuilding.tex:198
+#: sections/deckbuilding.tex:205
 msgid ""
 "All Spell Cards belong to one School of Magic\\index{Schools of Magic}: "
 "either Air, Fire, Earth or Water.  Spells with one School symbol on them are "
@@ -618,7 +650,7 @@ msgid ""
 msgstr ""
 
 #. type: minipage
-#: sections/deckbuilding.tex:225
+#: sections/deckbuilding.tex:232
 #, fuzzy
 #| msgid ""
 #| "\\begin{minipage}[t]{0.48\\textwidth}\n"
@@ -695,12 +727,12 @@ msgstr ""
 "\n"
 
 #. type: subsection{#2}
-#: sections/deckbuilding.tex:229
+#: sections/deckbuilding.tex:236
 msgid "\\pagetarget{Artifact}{Artifact} Cards"
 msgstr "Cartes d'\\pagetarget{Artifact}{Artefact}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:237
+#: sections/deckbuilding.tex:244
 #, fuzzy
 #| msgid ""
 #| "Artifact Cards\\index{Artifact Card} have a top and bottom effect. When "
@@ -733,7 +765,7 @@ msgstr ""
 "d'Alliance et de Coopération.\\par"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:237
+#: sections/deckbuilding.tex:244
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -741,7 +773,7 @@ msgid ""
 msgstr ""
 
 #. type: figure
-#: sections/deckbuilding.tex:238 sections/map_elements.tex:40
+#: sections/deckbuilding.tex:245 sections/map_elements.tex:40
 #: sections/map_elements.tex:254 sections/player_turns.tex:125
 #: sections/setup.tex:9
 #, no-wrap
@@ -749,7 +781,7 @@ msgid "  \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:252
+#: sections/deckbuilding.tex:259
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{2}\n"
@@ -796,7 +828,7 @@ msgstr ""
 "  \\end{center}"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:261
+#: sections/deckbuilding.tex:268
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/minor_artifact.png}};\n"
@@ -810,7 +842,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:279
+#: sections/deckbuilding.tex:286
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/mmback.png}};\n"
@@ -833,7 +865,7 @@ msgstr ""
 "  \\end{subfigure}"
 
 #. type: multicols
-#: sections/deckbuilding.tex:279
+#: sections/deckbuilding.tex:286
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{2}\n"
@@ -865,7 +897,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: center
-#: sections/deckbuilding.tex:286
+#: sections/deckbuilding.tex:293
 #, fuzzy
 #| msgid ""
 #| "\\begin{center}\n"
@@ -884,12 +916,12 @@ msgstr ""
 "\n"
 
 #. type: subsection{#2}
-#: sections/deckbuilding.tex:289
+#: sections/deckbuilding.tex:296
 msgid "\\pagetarget{Specialty}{Hero Specialty Cards}"
 msgstr "\\pagetarget{Specialty}{Cartes de Spécialisation}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:294
+#: sections/deckbuilding.tex:301
 #, fuzzy
 #| msgid ""
 #| "Hero Specialty Cards\\index{Specialty Card} are gained from "
@@ -911,7 +943,7 @@ msgstr ""
 "\\textbf{propre catégorie de cartes}."
 
 #. type: Plain text
-#: sections/deckbuilding.tex:302
+#: sections/deckbuilding.tex:309
 #, fuzzy
 #| msgid ""
 #| "{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/"
@@ -927,7 +959,7 @@ msgstr ""
 "Spécialisation de Niveau 4, appartenant à Catherine le Chevalier.} }"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:310
+#: sections/deckbuilding.tex:317
 #, fuzzy
 #| msgid ""
 #| "{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/"
@@ -944,7 +976,7 @@ msgstr ""
 "Spécialisation de Niveau 4, appartenant à Catherine le Chevalier.} }"
 
 #. type: expansion
-#: sections/deckbuilding.tex:315
+#: sections/deckbuilding.tex:322
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{Combatexperience}{Combat Experience}}\n"
@@ -958,7 +990,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:319
+#: sections/deckbuilding.tex:326
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{War Machines}{War Machines}}\n"
@@ -981,7 +1013,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:342
+#: sections/deckbuilding.tex:349
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=0.8\\textwidth]{\\cards/war_machine.png}}};\n"
@@ -1049,7 +1081,7 @@ msgstr ""
 
 #.  \vspace*{\fill}
 #. type: Plain text
-#: sections/deckbuilding.tex:349
+#: sections/deckbuilding.tex:356
 #, fuzzy
 #| msgid ""
 #| "\\begin{center}\n"
@@ -1068,12 +1100,12 @@ msgstr ""
 "\n"
 
 #. type: subsection{#2}
-#: sections/deckbuilding.tex:351
+#: sections/deckbuilding.tex:358
 msgid "Searching Example"
 msgstr "Exemple de Fouille"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:353
+#: sections/deckbuilding.tex:360
 msgid ""
 "\\textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during "
 "the previous Game Round, enabling him to now use his Spell Book Token to "
@@ -1084,7 +1116,7 @@ msgstr ""
 "acheter des Sorts supplémentaires.}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:362
+#: sections/deckbuilding.tex:369
 msgid ""
 "\\textit{He spends the token and pays the cost of 5 \\svg{gold} indicated on "
 "his Town Board, allowing him to \\textbf{Search (2)} the Spell Deck.}\\par "
@@ -1112,7 +1144,7 @@ msgstr ""
 "Sort.}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:366
+#: sections/deckbuilding.tex:373
 #, fuzzy
 #| msgid ""
 #| "\\begin{center}\n"
