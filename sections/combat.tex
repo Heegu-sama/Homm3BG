@@ -5,12 +5,14 @@
 
 \begin{multicols*}{2}
 
-\pagetarget{Combat}{Combat}\index{Combat} with \textbf{Neutral Units} starts when a Hero moves to an \textbf{unvisited} Field with a roman numeral signifying the \hyperlink{Difficulty Table}{type and number} of Neutral Units guarding that Field. 
-\begin{expansion}{navalbattles}
-A neutral combat starts as well, when a hero moves to an \textbf{unvisited} \pagelink{All Map Location}{Creature Bank Location}. In this case follow the rules for \pagelink{Creature Banks}{Combat against Creature Banks}.
+\pagetarget{Combat}{Combat}\index{Combat} with \textbf{Neutral Units} starts when a Hero moves to one of the \textbf{unvisited} Fields:
+\begin{itemize}
+  \item A Field with a Roman numeral signifying the \hyperlink{Difficulty Table}{type and number} of Neutral Units guarding that Field, or
+\begin{expansion}[left=4mm]{navalbattles}
+  \item A \pagelink{Creature Banks}{Creature Bank Location}.
+    In this case, follow the rules for \pagelink{Creature Banks Rules}{Combat against Creature Banks}.
 \end{expansion}
-
-
+\end{itemize}
 
 Combat with \textbf{another player} can start in two ways:
 \begin{itemize}
@@ -53,6 +55,8 @@ If there's a tie, place higher tier Units first.
 If there's still a tie, the players decide the order.
 Check the \pagelink{AI Units}{\textbf{Combat against AI}} section for detailed instructions.
 \end{itemize}
+
+\pagebreak
 Unit setup when fighting \textbf{other players}:
 \begin{itemize}
   \item The attacking player places up to 5 Units on their chosen side of the Combat Board, followed by the defender.
@@ -88,6 +92,12 @@ If a Unit has a Defense Token at the start of its activation, discard it.
 The Unit cannot take another Defense Action during that activation.\par
 \begin{expansion}{conflux}\textbf{\pagetarget{Elemental Damage}{Elemental Damage}} – If Units deal elemental damage, they attack normally, but the resulting damage works similary to \svg{damage} dealt by spells and it ignores the unit's \svg{defense}. Elemental damage doesn't count as damage from spells.\end{expansion}
 
+
+\vspace*{\fill}
+\begin{center}
+  \transparent{0.2}\includegraphics[width=1.3\linewidth]{\art/storm_elemental.png}
+\end{center}
+
 \subsection*{\pagetarget{combatround}{Combat Round Structure}}
 Combat is divided into Rounds, during which all of the Units participating in that Combat \textbf{Activate once} in Initiative order.
 After each Unit has Activated, a new Combat Round begins.
@@ -108,10 +118,6 @@ Structure of a Combat Round:
 After the last Unit's activation, the Combat Round ends.
 \end{itemize}
 
-\begin{center}
-  \transparent{0.2}\includegraphics[width=1.05\linewidth]{\art/wyvern.png}
-\end{center}
-
 \subsection*{\pagetarget{CombatCards}{Using Cards During Combat}}
 You may only use \textbf{one Spell per Combat Round}, unlike being able to play any number of other Cards.
 Ongoing \svg{ongoing} and \svg{activation} Activate effects can be used only \textbf{when Activating one of your Units and before it attacks}.
@@ -119,6 +125,10 @@ Ongoing effects\index{Ongoing Effects} last until end of Combat or if the effect
 Instant \svg{instant} Cards may be played \textbf{at any time} except between rolling the Attack Die and resolving damage unless otherwise stated.
 Effects of increasing a Unit's \svg{attack} (e.g. by the Statistics Cards), expire whenever the first attack performed by that unit resolves or the Activation ends, whichever comes first.
 The increased \svg{defense} expires in a similar way.
+
+\begin{center}
+  \transparent{0.15}\includegraphics[width=\linewidth]{\art/wyvern.png}
+\end{center}
 
 \subsection*{\pagetarget{Timelimit}{Combat Time Limits}}\index{Time Limit}
 Combats against Neutral Units have a time limit of \textbf{one Combat Round}.
@@ -146,7 +156,6 @@ Combat against another player's Hero has two possible outcomes:
 \vspace{0.5em}
 \note{3.5}{You cannot surrender when defending a Town.}\par
 
-\newpage
 When Combat ends, all damage is healed from all surviving Units. Move any player-owned Units back to their Unit Deck and discard any leftover enemy Neutral Units. Depending on the type and result of the combat, players must resolve the following consequences for themselves:
 
 A \textbf{Winning Hero} gets \pagelink{Combatexperience}{Experience}, if it was the Main Hero. If it was the attacker they must Visit the Field where the combat took place.\par
@@ -169,11 +178,6 @@ You also do not gain Experience from \textbf{defeating} a Secondary Hero, or if 
 
 \subsection*{Campaign and Cooperative\\Combat}
 During these game modes, all enemy Units activate as described in the \pagelink{AI Units}{AI Rules section}.
-
-\vspace*{\fill}
-\begin{center}
-  \includegraphics[width=\linewidth]{\art/magma_elemental.jpg}
-\end{center}
 
 \end{multicols*}
 
@@ -247,19 +251,21 @@ The attacker doesn't need to destroy it to win the Combat.
 \vspace{1em}
 \note{9}{In a siege against AI, the Arrow Tower follows the priority-rules like a Silver \svg{silver} Unit. But if there are many valid targets, it cannot attack the nearest one, so it will attack the one that is closest to perishing (the smallest difference between \svg{health_points-yellow} and current \svg{damage-yellow}).}
 
-\subsection*{Alternative Combat Boards}
-\begin{expansion}{navalbattles}
-	As an \textbf{optional rule} you can use the Naval Battle Board for combats at sea locations. At this combat board the two middle spaces are removed, so that Ground \svg{unit_ground} units must navigate around these spaces and Flying \svg{unit_flying} Units can move over them, but still cannot end their movement there. 
-	
-	ASSET HERE
-\end{expansion}
-\vspace{1em}
-\begin{expansion}{battlefield}
-	As an \textbf{optional rule} you can use the Battlefield Board in combats between players in regular games. It is possible, but not recommended to use it also in neutral combats. Read the rule changes about this combat in the official battlefield rulebook.
-\end{expansion}
-
 \begin{center}
   \includegraphics[width=1.05\linewidth]{\art/arrow_tower.jpg}
 \end{center}
+
+\newpage
+
+\subsection*{Alternative Combat Boards}
+\begin{expansion}{navalbattles}
+	As an \textbf{optional rule} you can use the Naval Battle Board for combats at sea locations. At this combat board the two middle spaces are removed, so that Ground \svg{unit_ground} units must navigate around these spaces and Flying \svg{unit_flying} Units can move over them, but still cannot end their movement there.
+
+	ASSET HERE
+\end{expansion}
+
+\begin{expansion}{battlefield}
+	As an \textbf{optional rule} you can use the Battlefield Board in combats between players in regular games. It is possible, but not recommended to use it also in neutral combats. Read the rule changes about this combat in the official battlefield rulebook.
+\end{expansion}
 
 \end{multicols}
