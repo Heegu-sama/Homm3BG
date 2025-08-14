@@ -44,6 +44,7 @@
 \usepackage{catchfile}
 \usepackage{xstring}
 \usepackage{expl3}
+\usepackage{wrapfig}
 \newtcolorbox{scaledfigure}[1][]{height fill, space to=\myspace,#1}
 \hypersetup{
   colorlinks=true,
@@ -135,6 +136,9 @@
 \definecolor{navalbattles}{HTML}{2E5984}  % dark deep blue
 \definecolor{stretchgoals2}{HTML}{000000}  % TODO choose color
 
+\AtBeginEnvironment{tcolorbox}{%
+  \setlist[itemize]{itemsep=0.4em, parsep=0pt, topsep=5pt}%
+}
 \ExplSyntaxOn
 \cs_new:Nn \__expansion_color_titles:NNn {
   \clist_set:Nn \l_tmpa_clist {#3}
@@ -149,7 +153,7 @@
   \clist_map_inline:Nn \l_tmpa_clist {
     \seq_put_right:No \l_tmpa_seq {\color{##1}\MakeUppercase{\expansiontext{##1}}}
   }
-  \tl_set:No #2 {\seq_use:Nn \l_tmpa_seq { ,~ }}
+  \tl_set:No #2 {\seq_use:Nn \l_tmpa_seq { \\[-0.7em] }}
 }
 
 \NewDocumentEnvironment{expansion}{ O{} m +b }{
@@ -168,14 +172,15 @@
       \fill[
         \l_expcolor_tl,
         path~fading=east,
-        opacity=0.08
+        opacity=0.09
       ]
         ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
         ([xshift=5pt, yshift=-3pt]frame.south~east);
       \fill[
         top~color=\l_expcolor_tl,
         bottom~color=\l_expcolor_tl,
-        rounded~corners=1.5pt
+        rounded~corners=1.5pt,
+        opacity=0.5
       ]
       ([xshift=-8pt, yshift=3pt]frame.north~west) rectangle
       ([xshift=-5pt, yshift=-3pt]frame.south~west);
@@ -284,6 +289,15 @@
     \draw [borderinyellow, thick] ([xshift=+3pt, yshift=-3pt] current bounding box.north west) rectangle ([xshift=-3pt, yshift=3pt] current bounding box.south east);
   \end{tikzpicture}}
 % End of drop frame definition
+
+\newcommand\squareimage[3][0pt]{%
+  \begin{tikzpicture}[baseline=(current bounding box.center)]
+    \clip (0,0) rectangle (#2,#2);
+    \node[anchor=center,xshift=#1] at (#2/2,#2/2)
+      {\includegraphics[height=#2]{#3}};
+    \draw [borderoutyellow, thick] (0,0) rectangle (#2,#2);
+  \end{tikzpicture}%
+}
 
 \titleformat{\section}
 {\huge}
@@ -430,6 +444,18 @@
   \end{tikzpicture}
 }
 
+\newcommand{\darkcellleft}[2][0.9]{
+  \begin{tikzpicture}
+    \filldraw[line width=1.0pt, fill=darkcellbg, fill opacity=0.5, draw=darkcellborder] (0, 0) rectangle (\linewidth, #1);
+
+    \node[text width=\linewidth, align=left] at (current bounding box.center) {
+      \leftskip=0.4em
+      \rightskip=0pt plus 1fil
+      \textbf{#2}\\
+    };
+  \end{tikzpicture}
+}
+
 \definecolor{lightcellborder}{HTML}{77543e}
 \definecolor{lightcellbg}{HTML}{20160C}
 
@@ -437,6 +463,18 @@
   \begin{tikzpicture}
     \filldraw[line width=1.0pt, fill=\iftoggle{noartbackground}{white}{lightcellbg}, fill opacity=0.25, draw=lightcellbg, fill opacity=0.25, draw=lightcellborder] (0, 0) rectangle (\linewidth, #1);
     \node[text width=\linewidth, align=center] at (current bounding box.center) {\iftoggle{noartbackground}{}{\color{white}}#2};
+  \end{tikzpicture}
+}
+
+\newcommand{\lightcellleft}[2][0.9]{
+  \begin{tikzpicture}
+    \filldraw[line width=1.0pt, fill=\iftoggle{noartbackground}{white}{lightcellbg}, fill opacity=0.25, draw=lightcellbg, fill opacity=0.25, draw=lightcellborder] (0, 0) rectangle (\linewidth, #1);
+    \node[text width=\linewidth, align=left] at (current bounding box.center) {
+      \iftoggle{noartbackground}{}{\color{white}}
+      \leftskip=0.4em
+      \rightskip=0pt plus 1fil
+      #2\\
+    };
   \end{tikzpicture}
 }
 
