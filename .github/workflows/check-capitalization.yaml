@@ -1,0 +1,37 @@
+name: Check capitalization
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  tablint:
+    runs-on: ubuntu-latest
+    name: Check capitalization
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Find wrong caps
+        shell: bash
+        run: |
+          ERRORS=0
+          WORDS=("artifact" "board" "card" "cube" "deck" "faction" "field" "grail" "hero" "level" "round" "scenario" "spell" "tile" "unit")
+          for file in $(git grep -Il '' | grep tex$ | grep -v metadata)
+          do
+            for word in ${WORDS[@]}
+            do
+              if grep -v "% no-check-caps$" $file | grep -q "\s$word\b\|\s${word}s\b\|\s${word}es\b"; then
+                echo "---"
+                echo "Found \"$word\" or its plural instead of capitalized form in $file:" | grep -i $word --color=always
+                grep -nH --color=always "\s$word\b\|\s${word}s\b\|\s${word}es\b" $file
+                ERRORS=1
+              fi
+            done
+          done
+
+          if [[ $ERRORS == 1 ]]; then
+            echo "---"
+            echo "Some words are not capitalized correctly. Please fix them."
+            exit 1
+          fi
