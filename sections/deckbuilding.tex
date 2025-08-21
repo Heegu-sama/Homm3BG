@@ -88,7 +88,7 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
   \end{center}
   \begin{itemize}
     \item[\textbf{3.}] Expert Effect
-    \item[\textbf{4.}] Faction-specific Card*
+    \item[\textbf{4.}] Necropolis-specific Card
   \end{itemize}
 \end{multicols*}
 \bigbreak
@@ -102,44 +102,57 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
 
 \columnbreak
 
-\begin{expansion}[before=\vspace*{-11mm}]{inferno}
+\begin{expansion}[before=\vspace*{-11mm}]{navalbattles}
+  \subsection*{\pagetarget{Empowered Ability}{Empowered} Ability Cards}\index{Empowered Statistic Card}
+  These cards are more powerful versions of the normal Ability cards.
+  They have only one effect which is identical to the normal Ability's Expert Effect, but does not require using your \svg{expert}.
+
+  \medskip
+  These cards can be gained by spending an \pagelink{Empowered Ability Token}{Empowered Ability Token}.
+
+  \medskip
+  There's only 1 copy of each Empowered Ability Card, so if one player takes a particular Empowered Ability Card, they prevent other players from obtaining it.
+\end{expansion}
+
+\bigskip
+\begin{scriptsize}
+  \begin{tikzpicture}
+    \draw (-2, 0) node[inner sep=0] {\makebox[0.47\linewidth][c]{\includegraphics[width=0.47\linewidth]{\cards/empowered-ability.png}}};
+    \draw (2.4, 0) node[inner sep=0] {\makebox[0.47\linewidth][c]{\includegraphics[width=0.47\linewidth]{\cards/empowered-knowledge.png}}};
+    \draw (-1.2, 1.9) node {\encircle{\phantom{.}1\phantom{.}}};
+    \draw (3.2, 1.9) node {\encircle{\phantom{.}1\phantom{.}}};
+    \draw (-2.7, -1.4) node {\encircle{\phantom{.}2\phantom{.}}};
+    \draw (1.7, -1.4) node {\encircle{\phantom{.}2\phantom{.}}};
+    \draw (-1, -2.1) node {\encircle{\phantom{.}3\phantom{.}}};
+  \end{tikzpicture}
+\end{scriptsize}
+\vspace*{-2em}
+\begin{multicols*}{2}
+  \centering
+  \footnotesize
+  \textbf{\textit{\textcolor{darkcandyapplered}{Empowered\\Ability Card}}}
+  \vspace{1em}
+  \begin{itemize}
+    \item[\textbf{1.}] Name
+    \item[\textbf{2.}] Effect
+  \end{itemize}
+  \columnbreak
+  \textbf{\textit{\textcolor{darkcandyapplered}{Empowered\\Statistic Card}}}
+  \begin{itemize}
+    \item[\textbf{3.}] Necropolis-specific Card
+  \end{itemize}
+\end{multicols*}
+
+\begin{expansion}{inferno}
   \subsection*{\pagetarget{Empowered Statistic}{Empowered} Statistic Cards}\index{Empowered Statistic Card}
-  These cards are more powerful versions of the normal Statistics cards.
+  These cards are more powerful versions of the normal Statistic cards.
   They have only one effect which is identical to the normal Statistic's Expert Effect, but does not require using your \svg{expert}.
 
-  \bigskip
-  \begin{scriptsize}
-    \begin{tikzpicture}
-      \draw (-2, 0) node[inner sep=0] {\makebox[0.47\linewidth][c]{\includegraphics[width=0.47\linewidth]{\cards/empowered_statistic.png}}};
-      \draw (2.4, 0) node[inner sep=0] {\makebox[0.47\linewidth][c]{\includegraphics[width=0.47\linewidth]{\cards/statistic.png}}};
-      \draw (-1.2, 1.9) node {\encircle{\phantom{.}1\phantom{.}}};
-      \draw (3.2, 0.3) node {\encircle{\phantom{.}1\phantom{.}}};
-      \draw (-2.7, -1.4) node {\encircle{\phantom{.}2\phantom{.}}};
-      \draw (1.7, -0.6) node {\encircle{\phantom{.}2\phantom{.}}};
-      \draw (1.7, -1.7) node {\encircle{\phantom{.}3\phantom{.}}};
-    \end{tikzpicture}
-  \end{scriptsize}
-  \vspace{-1em}
-  \begin{multicols*}{2}
-    \centering
-    \footnotesize
-    \textbf{\textit{\textcolor{darkcandyapplered}{Empowered Statistic Card}}}
-    \vspace{1em}
-    \begin{itemize}
-      \item[\textbf{1.}] Name
-      \item[\textbf{2.}] Basic Effect
-    \end{itemize}
-    \columnbreak
-    \textbf{\textit{\textcolor{darkcandyapplered}{Statistic Card \phantom{Empowered}}}}
-    \begin{itemize}
-      \item[\textbf{3.}] Expert Effect
-      \item[\textbf{\phantom{.}}] \phantom{.}
-    \end{itemize}
-  \end{multicols*}
+  \medskip
+  These cards can be gained only via certain game effects, such as Visiting a \pagelink{Star Axis}{Star Axis}.
 \end{expansion}
 
 \vspace*{\fill}
-{\transparent{0.2}{\includegraphics[width=1.2\linewidth]{\art/thunder_helmet.png}}}
 
 \subsection*{\pagetarget{spells}{Spell Cards}}
 
@@ -296,9 +309,9 @@ Artifacts can be \pagelink{Trading}{traded} in Alliance and Cooperative Scenario
 \begin{expansion}{stronghold}
 \subsection*{\pagetarget{Spell Scroll Cards}{Spell Scroll Cards}}
 
-During setup shuffle 10 of the Spell Scroll cards into the artifact deck. 
+During setup shuffle 10 of the Spell Scroll cards into the artifact deck.
 Set the remaining 10 cards aside to form a Spell Scroll deck.
-Some locations or scenario effects may call for them later. 
+Some locations or scenario effects may call for them later.
 
 {
 	\medskip
@@ -311,16 +324,16 @@ Some locations or scenario effects may call for them later.
 	\end{center}
 }
 
-When you gain a Spell Scroll place it near your Hero Board, take the 2 top cards from the Spell deck and place them face down on the Spell Scroll. 
-You can look at these spells at any time and they don't count for your hand size limit. 
-You can only have 2 Spell Scrolls at a time. 
-If you gain a third one, draw the new spells normally and then decide whether you discard the newly gained Spell Scroll or replace one you already have (including all spells on it). 
+When you gain a Spell Scroll place it near your Hero Board, take the 2 top cards from the Spell deck and place them face down on the Spell Scroll.
+You can look at these spells at any time and they don't count for your hand size limit.
+You can only have 2 Spell Scrolls at a time.
+If you gain a third one, draw the new spells normally and then decide whether you discard the newly gained Spell Scroll or replace one you already have (including all spells on it).
 
 You can play spells from a Spell Scroll like any other spell with the following exceptions:
 \begin{itemize}
-	\item They don't count towards your spell limit. 
+	\item They don't count towards your spell limit.
 	You can also play a spell from your hand during this Combat round.
-	\item You can only use their lowest \svg{empower} effect. 
+	\item You can only use their lowest \svg{empower} effect.
 	You can't empower the spell with \svg{empower} from any source.
 	% What, if the lowest Power is 1? Can it be still played or not?
 	\item They can't be used to increase the \svg{empower} of another spell.
