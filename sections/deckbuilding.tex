@@ -8,14 +8,14 @@
 \subsection*{\pagetarget{Playerdecks}{Player Decks}}
 All players have a unique Deck which represents their Main Hero's Abilities and Equipment.
 Decks may contain Statistic, Ability, Spell, Artifact and the Main Hero's Specialty Cards.
-Each player's Deck starts with 9 cards, built during the game's setup.
+Each player's Deck starts with 9 Cards, built during the game's setup.
 
 \subsection*{General Card Rules}
 \begin{enumerate}
   \item Cards can be played \textbf{only on your Turn}, or in a \pagelink{Combat}{Combat} involving your \textbf{Main Hero}.
   \item After a Card is used, discard it.
     Each player has their own separate Discard Pile\index{Discard Pile}.
-  \item If Your Deck is empty when you need to draw a Card, \textbf{shuffle your Discard Pile} into a new Deck to draw from.
+  \item If your Deck is empty when you need to draw a Card, \textbf{shuffle your Discard Pile} into a new Deck to draw from.
   \item Whenever your Hero gains a Card for any reason, put it \textbf{directly into your hand} unless otherwise stated.
   \item Whenever you are instructed to \textbf{Search} (X)\index{Search (X)} the Ability, Artifact, or Spell Deck, you may either look at the top (X) Cards from the specified Deck, take one of them to your hand, and discard the others, \textbf{OR} instead of looking at the top (X) Cards, gain the top Card from that Deck's Discard Pile.
   \item The Ability, Artifact, and Spell Decks each have their own Discard Piles, created during the setup, which help you identify these Decks.
@@ -28,21 +28,28 @@ Each player's Deck starts with 9 cards, built during the game's setup.
     \item \textbf{Activation} \svg{activation} Effects must be played when Activating your own Unit in Combat.
     \item \textbf{Map} \svg{map} Effects cannot be used during Combat.
     \item \textbf{Ongoing} \svg{ongoing} Effects\index{Ongoing Effects} last until they are used up or until the player who played them starts their next Turn (whichever happens first).
+      \begin{expansion}[before skip balanced=0.3em,]{stronghold,conflux,cove}
+      \begin{tikzpicture}[overlay]
+        \node at (5.5, 0) {\includegraphics[width=0.22\linewidth]{\images/time-token.png}};
+      \end{tikzpicture}\parbox{0.75\hsize}{You can use Time Tokens\index{Time Token} to track the duration of Ongoing Effects.}
+      \end{expansion}
     \item \textbf{Permanent} \svg{permanent} Cards\index{Permanent Cards} stay in play until discarded or replaced.
+      They are played the same way as \svg{activation} and \svg{map} Cards.
       \textbf{You may only have one permanent Card at a time}; playing another discards the first.
+      While a Permanent Card is in play, you may use either its Basic or Expert Effect, but not both simultaneously.
   \end{itemize}
   \item Whenever you are instructed to \textbf{remove a Card}, remove it completely from the game.
 \end{enumerate}
 
 \vfill
-\hfill{\transparent{0.2}\includegraphics[width=0.9\linewidth]{\art/coin.png}}
+\hfill{\transparent{0.2}\includegraphics[width=0.9\linewidth]{\art/quicksand.png}}
 
 \clearpage
 
 \subsection*{\pagetarget{Ability}{Ability} and \pagetarget{Statistic}{Statistic} Cards}
 
-All Ability\index{Ability Card} and Statistic cards\index{Statistic Cards} have a \textbf{Basic Effect}\index{Basic Effect} and a stronger \textbf{Expert} \svg{expert} \textbf{Effect}\index{Expert Effect}, which is shown below the Basic Effect.
-Whenever you play an Ability or Statistic card, you must choose which effect you are using.
+All Ability\index{Ability Card} and Statistic Cards\index{Statistic Cards} have a \textbf{Basic Effect}\index{Basic Effect} and a stronger \textbf{Expert} \svg{expert} \textbf{Effect}\index{Expert Effect}, which is shown below the Basic Effect.
+Whenever you play an Ability or Statistic Card, you must choose which effect you are using.
 The number of \svg{expert} Effects you can use each Round is limited by your Main Hero's \pagelink{Level}{Level}.
 Track the number of uses you have in any suitable manner, such as by moving Black Cubes on and off your Hero Card.\par
 \bigskip
@@ -86,7 +93,7 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
 \end{multicols*}
 \bigbreak
 \note{11}{
-  Certain cards are limited to the Necropolis Faction \svg{necro-yellow}.
+  Certain Cards are limited to the Necropolis Faction \svg{necro-yellow}.
   When a non-Necropolis player draws a Necropolis Card\index{Necropolis Card} from the Ability Deck, they may either discard it and draw a new Card as a replacement or gain it.
   Non-Necropolis players \textbf{cannot use} Faction Specific Cards from their hand in any way besides for effects that discard them.
 }
@@ -97,7 +104,7 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
 
 \begin{expansion}[before=\vspace*{-11mm}]{inferno}
   \subsection*{\pagetarget{Empowered Statistic}{Empowered} Statistic Cards}\index{Empowered Statistic Card}
-  These cards are more powerful versions of the normal Statistics cards.
+  These Cards are more powerful versions of the normal Statistics Cards.
   They have only one effect which is identical to the normal Statistic's Expert Effect, but does not require using your \svg{expert}.
 
   \bigskip
@@ -139,9 +146,9 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
 Spell Cards\index{Spell Card} have three possible primary effects.
 Using the topmost, basic version of the Spell usually has no additional costs.
 To access the other effects, you may \textbf{Empower} a Spell\index{Empowering Spells} by paying the indicated cost (3) to get a more powerful outcome (4).
-You may pay this cost by playing other cards for their Empower \svg{empower} effect (e.g. the Spell Power Statistic) before casting the Spell.
+You may pay this cost by playing other Cards for their Empower \svg{empower} effect (e.g. the Spell Power Statistic) before casting the Spell.
 All Spell Cards also have an alternative bottom (5) \svg{empower} effect.
-You cannot preserve the played \svg{empower}: casting a Spell consumes all the \svg{empower} played so far, and if you stop playing cards, the power dissipates.
+You cannot preserve the played \svg{empower}: casting a Spell consumes all the \svg{empower} played so far, and if you stop playing Cards, the power dissipates.
 You may use a cheaper \svg{empower} effect than what you've paid for, though.\par
 
 {
@@ -190,7 +197,7 @@ When you use an effect which lets you cast a Spell from somewhere other than you
   \vspace*{\fill}
 \end{center}
 
-\subsubsection*{Schools of Magic}
+\subsubsection*{\pagetarget{Schools of Magic}{Schools of Magic}}
 All Spell Cards belong to one School of Magic\index{Schools of Magic}: either Air, Fire, Earth or Water.
 Spells with one School symbol on them are called \textbf{Basic Spells}\index{Basic Spell}, while Spells with four identical symbols are called \textbf{Expert Spells}\index{Expert Spell}.
 \textbf{Magic Arrow} is a Basic Spell; when casting the \textbf{Magic Arrow}, you must select which School it belongs to.
@@ -289,7 +296,7 @@ Artifacts can be \pagelink{Trading}{traded} in Alliance and Cooperative Scenario
 
 Hero Specialty Cards\index{Specialty Card} are gained from \pagelink{Level}{Level ups}.
 Each Main Hero has a unique set of Specialty Cards.
-While some of these Cards have effects which resemble Spell Cards and even make use of \svg{empower}, Specialty Cards are their \textbf{own unique category of cards}.
+While some of these Cards have effects which resemble Spell Cards and even make use of \svg{empower}, Specialty Cards are their \textbf{own unique category of Cards}.
 For example, the limit of 1 Spell per Combat Round doesn't apply to Specialty Cards.
 
 {

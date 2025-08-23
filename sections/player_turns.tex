@@ -3,7 +3,7 @@
 
 \iftoggle{printable}{\vspace{-\baselineskip}}{}
 
-\begin{multicols}{2}
+\begin{multicols*}{2}
 
 At the start of your Turn, refresh your hand of Cards following these steps:
 \begin{itemize}
@@ -59,7 +59,7 @@ When you move through a Field with an allied Hero, do not \pagelink{Categories}{
 \subsection*{\pagetarget{Town Actions}{Town Actions}\index{Town Actions}}
 You can perform each of the Town Actions listed below \textbf{once per Round}.
 These Actions can be performed at any point during any player's Turn, except during Combat or when your Town Action would interrupt another Action.
-For example, players cannot draw Spell cards simultaneously using the Spell Book Token.\par
+For example, players cannot draw Spell Cards simultaneously using the Spell Book Token.\par
 When a player announces that they are about to start Combat, you may react to it with any number of Town Actions before performing any of the steps of \pagelink{Combatsetup}{setting up Combat.}\par
 After performing a Town Action, flip the respective Token on its inactive side on your Town Board.
 You cannot use that Action again until the start of the next Round, when the Tokens are refreshed.
@@ -68,6 +68,24 @@ You cannot use that Action again until the start of the next Round, when the Tok
   \item [{\includegraphics[height=1.5\baselineskip, valign=c]{\images/population.png}}] Population Token\index{Population Token}, used to Recruit and Reinforce \pagelink{Units}{Units} or to Recruit \pagelink{Secondary}{a Secondary Hero}.
   \item [{\includegraphics[height=1.5\baselineskip, valign=c]{\images/spells.png}}]Spell Book Token\index{Spell Book Token}, used to purchase \pagelink{spells}{Spells}. Requires the Mage Guild Town building to use.
 \end{itemize}
+
+\vspace*{\fill}
+\makebox[\linewidth]{\transparent{0.2}\includegraphics[width=0.8\linewidth]{\art/shield.png}}
+\vspace*{\fill}
+
+\subsection*{Example Turn}
+
+\textit{Alice, who is playing the Hero Catherine the Knight, begins her Turn.
+She has 3 Cards in her hand from the previous Round, and decides to discard 2 of them before drawing Cards from her Deck up to her \mbox{Hand Limit \svg{hand}.}
+The current limit is 5, since her Main Hero is Level 3, so she draws 4 Cards after discarding (see \pagelink{Level}{Level Effects}).}\par
+\textit{She then spends her Build Token to construct the \svg{golden} Dwelling, and then her Population Token to \pagelink{Units}{Recruit} the \svg{golden} Unit Champions.
+She can do this, as she had previously built the prerequisite lower Level Dwellings (\svg{bronze} and \svg{silver}) and has enough \pagelink{Resources}{Resources} to both Build the Dwelling and to Recruit the Champions.}\par
+\textit{Now prepared for an upcoming battle, she spends a Movement Point to move her Main Hero to an adjacent Field currently occupied by Sandro the Necromancer, an enemy Main Hero controlled by Bob.
+As Alice announces her intent to start Combat, both players still have an opportunity to perform Town Actions.}\par
+
+\includegraphics[width=\linewidth]{\examples/catherine_attacks_sandro.png}
+\vspace*{\fill}
+\columnbreak
 
 \subsection*{\pagetarget{Morale}{Morale} Actions}\index{Morale Actions}
 Players can gain or lose Morale through various game effects.
@@ -80,36 +98,75 @@ A Positive Morale Token may be spent to perform any of the following Actions at 
   \item Discard any number of Cards, then draw that many Cards.
   \item Reroll any Die you have thrown.
 \end{itemize}
-\columnbreak
 If you lose Morale, discard a Positive Morale Token \svg{morale_positive} if you have one, otherwise gain a Negative Morale\index{Negative Morale} Token \svg{morale_negative}.
 Inversely, gaining Positive Morale while you have a Negative Morale Token discards the Token.
 If you would gain a second Negative Morale Token, you must instead \textbf{discard your hand of Cards} the next time you end your Turn.\par
 
+\vspace*{\fill}
+\begin{center}
+{\transparent{0.2}\includegraphics[width=\linewidth]{\art/morale_low.png}}
+\end{center}
+\vspace*{\fill}
+
 \note{5}{The Necropolis \svg{necro-yellow} Faction ignores any Morale effects.
   They cannot ever gain or lose Morale for any reason.
 }
+\columnbreak
 
-\begin{center}
-  \makebox[\linewidth]{\transparent{0.2}\includegraphics[width=1.1\linewidth]{\art/shield.png}}
-\end{center}
+\begin{expansion}[before=\vspace*{-11mm}]{battlefield}
+\subsection*{Morale Cards in regular games}\index{Morale Cards}
 
-\subsection*{Example Turn}
+You can use \pagetarget{Morale Cards}{Morale Cards}\index{Morale Cards} \textbf{instead} of Tokens.
+During setup, remove all Morale Cards with the Battlefield symbol.
+Then shuffle the Positive and Negative Morale Card Decks separately and place them face down near the Round Tracker.
 
-\textit{Alice, who is playing the Hero Catherine the Knight, begins her Turn.
-She has 3 cards in her hand from the previous round, and decides to discard 2 of them before drawing cards from her Deck up to her \mbox{Hand Limit \svg{hand}.}
-The current limit is 5, since her Main Hero is Level 3, so she draws 4 cards after discarding (see \pagelink{Level}{Level Effects}).}\par
-\textit{She then spends her Build Token to construct the \svg{golden} Dwelling, and then her Population Token to \pagelink{Units}{Recruit} the \svg{golden} Unit Champions.
-She can do this, as she had previously built the prerequisite lower Level Dwellings (\svg{bronze} and \svg{silver}) and has enough \pagelink{Resources}{Resources} to both Build the Dwelling and to Recruit the Champions.}\par
-\textit{Now prepared for an upcoming battle, she spends a Movement Point to move her Main Hero to an adjacent Field currently occupied by Sandro the Necromancer, an enemy Main Hero controlled by Bob.
-As Alice announces her intent to start Combat, both players still have an opportunity to perform Town Actions.}\par
+\vspace{1em}
+\begin{scriptsize}
+  \begin{tikzpicture}
+    \draw (-2, 0) node[inner sep=0] {\makebox[0.47\linewidth][c]{\includegraphics[width=0.47\linewidth]{\cards/morale-positive.png}}};
+    \draw (2.4, 0) node[inner sep=0] {\makebox[0.47\linewidth][c]{\includegraphics[width=0.47\linewidth]{\cards/morale-negative-battlefield.png}}};
+    \draw (-1.2, 2.2) node {\encircle{\phantom{.}1\phantom{.}}};
+    \draw (3.2, 2.2) node {\encircle{\phantom{.}1\phantom{.}}};
+    \draw (-3.0, -1.4) node {\encircle{\phantom{.}2\phantom{.}}};
+    \draw (1.5, -1.0) node {\encircle{\phantom{.}2\phantom{.}}};
+    \draw (2.0, -2.0) node {\encircle{\phantom{.}3\phantom{.}}};
+  \end{tikzpicture}
+\end{scriptsize}
+\vspace{-1em}
+\begin{multicols*}{2}
+  \centering
+  \footnotesize
+  \textbf{\textit{\textcolor{darkcandyapplered}{Positive Morale Card}}}
 
-\includegraphics[width=\linewidth]{\examples/catherine_attacks_sandro.png}
+  \textbf{\textit{\textcolor{darkcandyapplered}{Negative Morale Card}}}
+\end{multicols*}
+\begin{figure}[H]
+  \centering
+  \footnotesize
+  \begin{subfigure}[t]{0.27\linewidth}
+    \begin{itemize}
+      \item[\textbf{1.}] Name
+      \item[\textbf{2.}] Effect
+    \end{itemize}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.7\linewidth}
+    \begin{itemize}
+      \item[\textbf{3.}] Battlefield symbol\\{\scriptsize\textit{(Use such Cards only in \pagelink{Battlefield Modes}{Adventure and Skirmish} games)}}
+    \end{itemize}
+  \end{subfigure}
+\end{figure}
 
-\end{multicols}
+Every time you gain Positive Morale, discard a Negative Morale Card (if you have any); otherwise draw 1 Positive Morale Card.
+You may have \textbf{2 Positive Morale Cards at a time}.
+Don't draw a third Card.
+Every time you lose Morale, discard a Positive Morale Card (if you have any); otherwise draw 1 Negative Morale Card.
+You may have an \textbf{unlimited number of Negative Morale Cards}.\par
+Place newly gained Morale Cards face up near your Hero Card.
+Positive Morale Cards may be used at any moment you wish.
+Negative Morale Cards must be used the next time when the situation indicated by the Card occurs.
+\textbf{Put used Cards at the bottom of their respective Decks}.
+If you must draw a Morale Card but the respective Morale Deck is empty, reshuffle its Discard Pile to form a new Deck.
 
-\vfill
-
-\begin{scaledfigure}[blanker]
- \centering
- \includegraphics[width=\linewidth, height=\myspace, keepaspectratio]{\art/zealot.jpg}
-\end{scaledfigure}
+Keep in mind that in Adventure and Skirmish Mode the rules for Morale Cards differ a bit -- read the official Battlefield rule book.
+\end{expansion}
+\end{multicols*}

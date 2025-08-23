@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-06-26 23:51+0200\n"
+"POT-Creation-Date: 2025-08-10 23:06+0200\n"
 "PO-Revision-Date: 2025-07-06 10:09+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
 #: sections/combat.tex:7 sections/credits.tex:10 sections/deckbuilding.tex:7
 #: sections/difficulty.tex:7 sections/expansion_content.tex:5
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:117
 #: sections/map_elements.tex:79 sections/map_elements.tex:125
 #: sections/player_turns.tex:7 sections/resources.tex:7
 #: sections/round_structure.tex:5 sections/scenario_end.tex:5
@@ -30,6 +30,27 @@ msgstr ""
 #, no-wrap
 msgid ""
 "{2}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/all_map_locations.tex:55 sections/all_map_locations.tex:237
+#: sections/credits.tex:36 sections/expansion_content.tex:192
+#: sections/game_modes.tex:30 sections/map_elements.tex:189
+#: sections/scenario_end.tex:23 sections/units.tex:136
+#, no-wrap
+msgid ""
+"\\columnbreak\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/credits.tex:38 sections/credits.tex:42
+#: sections/expansion_content.tex:190 sections/setup.tex:121
+#: sections/town.tex:30 sections/town.tex:36 sections/units.tex:134
+#, no-wrap
+msgid ""
+"\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
 
@@ -49,6 +70,7 @@ msgid ""
 "Below you'll find an overview of all expansion content, either as general rules added by multiple expansions, or by unique rules from specific expansions.\n"
 "\n"
 msgstr ""
+"\\vspace*{-1.5em}\n"
 "Es gibt zahlreiche Erweiterungen zu Heroes III: The Boardgame, die dem Spiel neue Spielelemente hinzufügen.\n"
 "Die meisten Regeln aus Erweiterungen in diesem Regelbuch sind direkt in den Kapiteln zu finden, zu denen sie gehören.\n"
 "Dieses Kapitel dient als Überblick über alle Erweiterungsinhalte, die entweder als neue allgemeingültige Regeln durch mehrere Erweiterungen ins Spiel integriert wurden, oder in Form einzigartiger Regeln bestimmter Erweiterungen.\n"
@@ -64,6 +86,7 @@ msgid ""
 "They are explained in \\pagelink{All Map Locations}{All Map Locations}.\n"
 "\n"
 msgstr ""
+"\\vspace*{-0.5em}\n"
 "\\subsection*{Neue Orte auf der Abenteuerkarte}\n"
 "Jede Erweiterung bringt neue Orte ins Spiel, die eure Helden erkunden können.\n"
 "Sie alle sind im Kapitel \\pagelink{All Map Locations}{Orte der Abenteuerkarte} erklärt.\n"
@@ -77,6 +100,7 @@ msgid ""
 "Added by multiple expansions, explained in \\pagelink{Playerdecks}{Player Decks}.\n"
 "\n"
 msgstr ""
+"\\vspace*{-0.5em}\n"
 "\\subsection*{Bleibende Karten}\n"
 "Karten mit einem neuen Karteneffekt, der Spielern dauerhafte Vorteile bringt, erklärt im Kapitel \\pagelink{Playerdecks}{Spielerdecks}.\n"
 "\n"
@@ -146,7 +170,7 @@ msgid ""
 "\\end{expansion}\n"
 "\n"
 msgstr ""
-"\\begin{expansion}{inferno}\n"
+"\\begin{expansion}[before=\\vspace*{-11mm}]{inferno}\n"
 "  \\subsection*{Zufällige Stadt}\\index{Zufällige Stadt}\n"
 "  Ein besonderer Ort auf der Abenteuerkarte, ebenfalls im Kapitel \\pagelink{Random Town}{Orte der Abenteuerkarte} erklärt.\n"
 "\\end{expansion}\n"
@@ -156,15 +180,15 @@ msgstr ""
 #: sections/expansion_content.tex:50
 #, no-wrap
 msgid ""
-"\\begin{expansion}{fortress}\n"
+"\\begin{expansion}[before=\\vspace*{-11mm}]{fortress}\n"
 "  \\subsection*{\\pagetarget{Events}{Events}}\n"
-"  Event cards\\index{Event Cards} may be used in games with more than one player.\n"
+"  Event Cards\\index{Event Cards} may be used in games with more than one player.\n"
 "  Shuffle the Event Deck during setup.\n"
 "  At the start of each Resource Round (except the first Round), draw and read the next Event Card after receiving Resources.\n"
 "  The first Event is drawn by the starting player.\n"
 "  \\textbf{Change the player who draws the Event in a clockwise order} every time a new Event is drawn.\n"
 "  Resolve any effects in clockwise order starting with the player who drew the Card.\n"
-"  Any cards which were revealed as a part of resolving an Event should be shuffled back into their respective Decks afterwards.\n"
+"  Any Cards which were revealed as a part of resolving an Event should be shuffled back into their respective Decks afterwards.\n"
 "\n"
 msgstr ""
 "\\vspace{0.5em}\n"
@@ -250,8 +274,245 @@ msgid ""
 "\n"
 msgstr ""
 
-#. type: multicols*
-#: sections/expansion_content.tex:78
+#. type: expansion
+#: sections/expansion_content.tex:85
 #, no-wrap
-msgid "\\vspace*{\\fill}"
+msgid ""
+"[before=\\vspace*{-11mm}]{navalbattles}\n"
+"  \\begin{multicols*}{2}\n"
+"  \\subsection*{\\pagetarget{Creature Banks Rules}{Creature Banks}}\n"
+"  Playing with Creature Banks is an \\textbf{optional rule}.\n"
+"  If you decide to play with Creature Banks, the following rules apply.\n"
+"\n"
 msgstr ""
+
+#. type: expansion
+#: sections/expansion_content.tex:93
+#, no-wrap
+msgid ""
+"  \\bigskip\n"
+"  \\subsection*{Setup}\n"
+"  Separate the Creature Bank Tokens into two piles (for Near and Far Map Tiles) based on the numerals on their backs.\n"
+"  Shuffle each pile and place them near the Map.\n"
+"  Place the Creature Bank Unit Cards face up near the Neutral Unit Decks.\n"
+"  There is no need to shuffle these Cards.\n"
+"  Shuffle all Stack Tokens and place them near the Creature Bank Unit Cards.\n"
+"\n"
+msgstr ""
+
+#. type: expansion
+#: sections/expansion_content.tex:107
+#, no-wrap
+msgid ""
+"  \\bigskip\n"
+"  \\begin{multicols*}{2}\n"
+"    \\begin{center}\n"
+"      \\includegraphics[width=1.0\\linewidth]{\\images/creature_bank_near.png}\\\\\n"
+"      \\vspace{-0.5em}\\textbf{\\footnotesize\\textit{\\textcolor{darkcandyapplered}{Creature Bank (Near)}}}\\\\\n"
+"      \\vspace*{\\fill}\n"
+"      \\includegraphics[width=0.5\\linewidth]{\\images/stack_token.png}\\\\\n"
+"      \\textbf{\\footnotesize\\textit{\\textcolor{darkcandyapplered}{Stack Token}}}\\\\\n"
+"      \\columnbreak\n"
+"      \\includegraphics[width=\\linewidth]{\\cards/creature_bank_unit.png}\\\\\n"
+"      \\textbf{\\footnotesize\\textit{\\textcolor{darkcandyapplered}{Creature Bank Unit Card}}}\n"
+"    \\end{center}\n"
+"  \\end{multicols*}\n"
+"\n"
+msgstr ""
+
+#. type: expansion
+#: sections/expansion_content.tex:110
+#, no-wrap
+msgid ""
+"  \\subsection*{Placing Creature Bank Tokens}\n"
+"  When you discover a Near or Far Map Tile, you may choose to draw a Creature Bank Token of the corresponding type, and place it on the Tile's Blocked Field.\\par\n"
+"\n"
+msgstr ""
+
+#. type: expansion
+#: sections/expansion_content.tex:115
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{center}\n"
+#| "  \\transparent{0.2}\\includegraphics[width=1.05\\linewidth]{\\art/wyvern.png}\n"
+#| "\\end{center}\n"
+#| "\n"
+msgid ""
+"  \\begin{center}\n"
+"    \\transparent{0.2}\\includegraphics[width=1.1\\linewidth]{\\art/mermaid.png}\n"
+"  \\end{center}\n"
+"  \\columnbreak\n"
+"\n"
+msgstr ""
+"\\empty\n"
+"\n"
+
+#. type: expansion
+#: sections/expansion_content.tex:121
+#, no-wrap
+msgid ""
+"  \\subsection*{Visiting a Creature Bank\\\\Location}\n"
+"  When you enter a Creature Bank Location, you must defeat the corresponding Creature Bank Units defending it.\n"
+"  If you win, resolve the Field's effect and mark it with a Black Cube.\n"
+"  Because these Fields don't have any Difficulty Level, Quick Combat never happens, there is no Round limit, no need to spend MP to extend Combat, and you don't gain any \\svg{experience}.\n"
+"  The defending Units and all effects of all Creature Bank Locations are listed in \\pagelink{Creature Bank List}{All Map Locations}.\n"
+"\n"
+msgstr ""
+
+#. type: expansion
+#: sections/expansion_content.tex:125
+#, no-wrap
+msgid ""
+"  \\subsection*{Combat in a Creature Bank}\n"
+"  When you start Combat at a Creature Bank, place up to 5 of your Units in the player deployment zone.\n"
+"  Depending on the Creature Bank you are visiting, take the corresponding Units from the Creature Bank Unit Cards and place them randomly in the Neutral Unit deployment zone.\n"
+"\n"
+msgstr ""
+
+#. type: expansion
+#: sections/expansion_content.tex:128
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[H]\n"
+#| "  \\centering\n"
+#| "  \\begin{subfigure}[t]{0.23\\linewidth}\n"
+#| "    \\centering\n"
+#| "    \\begin{tikzpicture}\n"
+msgid ""
+"  \\bigskip\n"
+"  \\begin{center}\n"
+"    \\begin{tikzpicture}\n"
+msgstr ""
+"[H]\n"
+"  \\centering\n"
+"  \\begin{subfigure}[b]{0.23\\linewidth}\n"
+"    \\centering\n"
+"    \\begin{tikzpicture}\n"
+
+#. type: expansion
+#: sections/expansion_content.tex:145
+#, no-wrap
+msgid ""
+"      \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\images/creature_bank_combat_board.png}}};\n"
+"      \\draw (-1.5, 0.6) node {\\includegraphics[width=0.15\\linewidth]{\\images/P.png}};\n"
+"      \\draw (-1.5, -0.5) node {\\includegraphics[width=0.15\\linewidth]{\\images/P.png}};\n"
+"      \\draw (0, 0.6) node {\\includegraphics[width=0.15\\linewidth]{\\images/P.png}};\n"
+"      \\draw (0, -0.5) node {\\includegraphics[width=0.15\\linewidth]{\\images/P.png}};\n"
+"      \\draw (1.5, 0.6) node {\\includegraphics[width=0.15\\linewidth]{\\images/P.png}};\n"
+"      \\draw (1.5, -0.5) node {\\includegraphics[width=0.15\\linewidth]{\\images/P.png}};\n"
+"      \\draw (2.9, 1.7) node {\\includegraphics[width=0.15\\linewidth]{\\images/N.png}};\n"
+"      \\draw (2.9, -1.6) node {\\includegraphics[width=0.15\\linewidth]{\\images/N.png}};\n"
+"      \\draw (-3.1, 1.7) node {\\includegraphics[width=0.15\\linewidth]{\\images/N.png}};\n"
+"      \\draw (-3.1, -1.6) node {\\includegraphics[width=0.15\\linewidth]{\\images/N.png}};\n"
+"    \\end{tikzpicture}\n"
+"  \\end{center}\n"
+"  \\textbf{\\footnotesize\\textit{\\textcolor{darkcandyapplered}{P -- player deployment zone}}}\\\\\n"
+"  \\textbf{\\footnotesize\\textit{\\textcolor{darkcandyapplered}{N -- Neutral Units deployment zone}}}\\\\\n"
+"  \\bigskip\n"
+"\n"
+msgstr ""
+
+#. type: expansion
+#: sections/expansion_content.tex:153
+#, no-wrap
+msgid ""
+"  Based on the Scenario's Difficulty Level, take a number of \\pagelink{Stack Tokens}{Stack Tokens} and place them randomly on up to four different Creature Bank Unit Cards:\n"
+"  \\begin{itemize}\n"
+"    \\item \\textbf{Easy}: 1 token\n"
+"    \\item \\textbf{Normal}: 2 tokens\n"
+"    \\item \\textbf{Hard}: 3 tokens\n"
+"    \\item \\textbf{Impossible}: 4 tokens\n"
+"  \\end{itemize}\n"
+"\n"
+msgstr ""
+
+#. type: expansion
+#: sections/expansion_content.tex:155
+#, no-wrap
+msgid "  \\end{multicols*}"
+msgstr ""
+
+#. type: multicols*
+#: sections/expansion_content.tex:163
+#, no-wrap
+msgid ""
+"{2}\n"
+"\\begin{expansion}[before=\\vspace*{-11mm}]{navalbattles}\n"
+"  After Combat, return all Creature Bank Units back to the Creature Bank Units Cards pile.\n"
+"  If you win, you claim the Creature Bank's reward, as well as an additional reward for the Stacked Units you defeated.\n"
+"  Some rewards allow you to gain a Stacked Creature Bank Unit Card.\n"
+"  When you gain it, draw a random Stack Token and place it on that Unit.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/expansion_content.tex:174
+#, no-wrap
+msgid ""
+"  \\subsection*{\\pagetarget{Stack Tokens}{Stack Tokens}}\n"
+"  \\setlength\\intextsep{0pt}\n"
+"  \\setlength\\columnsep{1em}\n"
+"  \\begin{wrapfigure}{r}{0.2\\linewidth}\n"
+"    \\includegraphics[width=\\linewidth]{\\images/stack_token.png}\n"
+"  \\end{wrapfigure}\n"
+"  Each Stack Token modifies a Unit's statistics in the following way: +1~\\svg{attack}, +1~\\svg{defense}, +1~\\svg{health_points}, or +2~\\svg{initiative}.\n"
+"  Furthermore, each Unit with a Stack Token is now a Stacked Unit, which is similar to reinforced Faction Units: instead of removing the Unit Card from the Combat Board when it takes damage equal to or greater than its HP, discard the Stack Token from that Unit and deal any leftover damage (if any), deducting it from the new HP.\n"
+"  Creature Bank Units without a Stack Token are defeated normally.\n"
+"\\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/expansion_content.tex:176 sections/map_elements.tex:166
+#: sections/map_elements.tex:175 sections/map_elements.tex:248
+#: sections/map_elements.tex:281 sections/player_turns.tex:40
+#: sections/units.tex:227
+#, no-wrap
+msgid ""
+"\\bigskip\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/expansion_content.tex:182
+#, no-wrap
+msgid ""
+"\\begin{expansion}{stretchgoals2}\n"
+"  \\subsection*{\\pagetarget{Pandora Card}{Pandora's Box Cards}}\n"
+"  During setup, shuffle the Pandora's Box Cards.\n"
+"  When you Visit a \\pagelink{Pandora Box}{Pandora's Box}, you may optionally draw a Pandora's Box Card and resolve it instead of the location's regular effect.\n"
+"  You still have to mark the Field with a Black Cube.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/expansion_content.tex:188
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\vfill\n"
+#| "\\begin{center}\n"
+#| "  \\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/town_portal.png}\n"
+#| "\\end{center}\n"
+#| "\n"
+msgid ""
+"  \\medskip\n"
+"  \\begin{center}\n"
+"    \\includegraphics[width=0.6\\linewidth]{\\cards/pandora.png}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
+msgstr ""
+"\\vfill\n"
+"\\begin{center}\n"
+"  \\transparent{0.2}\\includegraphics[width=0.7\\linewidth]{\\art/town_portal.png}\n"
+"\\end{center}\n"
+"\n"
+
+#. type: multicols*
+#: sections/expansion_content.tex:194
+#, fuzzy, no-wrap
+#| msgid "{\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/fire_magic.png}}"
+msgid ""
+"\\includegraphics[width=\\linewidth]{\\art/oceanid.jpg}\n"
+"\n"
+msgstr "{\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/fire_magic.png}}"
