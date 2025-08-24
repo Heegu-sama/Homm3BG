@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-06-26 23:51+0200\n"
+"POT-Creation-Date: 2025-08-20 22:08+0200\n"
 "PO-Revision-Date: 2024-04-19 11:33+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -30,7 +30,7 @@ msgstr ""
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
 #: sections/combat.tex:7 sections/credits.tex:10 sections/deckbuilding.tex:7
 #: sections/difficulty.tex:7 sections/expansion_content.tex:5
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:117
 #: sections/map_elements.tex:79 sections/map_elements.tex:125
 #: sections/player_turns.tex:7 sections/resources.tex:7
 #: sections/round_structure.tex:5 sections/scenario_end.tex:5
@@ -44,17 +44,9 @@ msgstr ""
 "{2}\n"
 "\n"
 
-#. type: multicols
-#: sections/credits.tex:38 sections/credits.tex:42 sections/setup.tex:121
-#: sections/town.tex:30 sections/town.tex:36 sections/units.tex:134
-#, no-wrap
-msgid ""
-"\\vspace*{\\fill}\n"
-"\n"
-msgstr ""
-
 #. type: figure
-#: sections/deckbuilding.tex:237 sections/map_elements.tex:40
+#: sections/deckbuilding.tex:245 sections/map_elements.tex:40
+#: sections/map_elements.tex:254 sections/player_turns.tex:125
 #: sections/setup.tex:9
 #, no-wrap
 msgid "  \\begin{tikzpicture}\n"
@@ -118,11 +110,11 @@ msgid ""
 "    \\draw (-4, 4.5) node {\\encircle{11}};\n"
 "    \\draw (-4, -7.5) node {\\encircle{11}};\n"
 "    \\draw (-7.1, 1.5) node {\\encircle{15}};\n"
-"    \\draw (-5.6, 5.5) node {\\encircle{17}};\n"
-"    \\draw (5.1, 5.8) node {\\encircle{18}};\n"
-"    \\draw (-4.8, -2) node {\\encircle{19}};\n"
-"    \\draw (-7.1, -1.5) node {\\encircle{20}};\n"
-"    \\draw (-9.1, -1.5) node {\\encircle{21}};\n"
+"    \\draw (-5.6, 5.5) node {\\encircle{18}};\n"
+"    \\draw (5.1, 5.8) node {\\encircle{19}};\n"
+"    \\draw (-4.8, -2) node {\\encircle{20}};\n"
+"    \\draw (-7.1, -1.5) node {\\encircle{21}};\n"
+"    \\draw (-9.1, -1.5) node {\\encircle{24}};\n"
 "  \\end{tikzpicture}\n"
 "  \\end{scriptsize}"
 msgstr ""
@@ -138,7 +130,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/setup.tex:117
+#: sections/setup.tex:114
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{enumerate}\n"
@@ -163,7 +155,7 @@ msgstr ""
 #| "    \\item[l)]3 × Movement Tokens\n"
 #| "  \\end{itemize}\n"
 #| "  \\item Place one of your Faction Cubes on the first space of the Level Tracker found on the Hero Card (Represented by \\svg{level1}).\n"
-#| "    Your hero is now Level 1.\n"
+#| "    Your Hero is now Level 1.\n"
 #| "  \\item Set up the Map Tiles and other Scenario-specific components as shown in the Mission Book.\n"
 #| "  \\item Place the Town Board of your chosen Faction in front of you and set the Town Building Tiles next to it.\n"
 #| "    Check which Buildings are already built in the Scenario you are about to play, and place the respective Building Tiles on the Town Board.\n"
@@ -217,7 +209,7 @@ msgid ""
 "    \\item[l)]3 × Movement Tokens\n"
 "  \\end{itemize}\n"
 "  \\item Place one of your Faction Cubes on the first space of the Level Tracker found on the Hero Card (Represented by \\svg{level1}).\n"
-"    Your hero is now Level 1.\n"
+"    Your Hero is now Level 1.\n"
 "  \\item Set up the Map Tiles and other Scenario-specific components as shown in the Mission Book.\n"
 "  \\item Place the Town Board of your chosen Faction in front of you and set the Town Building Tiles next to it.\n"
 "    Check which Buildings are already built in the Scenario you are about to play, and place the respective Building Tiles on the Town Board.\n"
@@ -235,7 +227,7 @@ msgid ""
 "  \\item Shuffle your Starting Deck and place it face down next to your Hero Card.\n"
 "    This Deck is your Main Hero's \\textbf{Deck of Might \\& Magic}\\index{Deck of Might \\& Magic}, and is now ready. In this rule book, this is shortened to \\textbf{your Deck}.\n"
 "  \\item Sort the Ability, Artifact, and Spell Cards into 3 face down Decks (including any unused Magic Arrow Spells) and shuffle them.\n"
-"    From each of these Decks, take the top Card and place it face up next to its Deck, creating 3 separate Discard Piles.\n"
+"  \\item From each of these 3 Decks, take the top Card and place it face up next to its Deck, creating 3 separate Discard Piles.\n"
 "  \\item Choose the Scenario's \\pagelink{Difficulty}{Difficulty} and take the corresponding Starting Bonus(es).\n"
 "  \\item Sort the Neutral Units into 4 Decks according to their tier (\\svg{bronze}\\svg{silver}\\svg{golden}\\svg{azure}).\n"
 "    Shuffle these Decks and leave enough room for their Discard Piles.\n"
@@ -243,9 +235,6 @@ msgid ""
 "    Check the Scenario for which starting Units you receive and place them into a pile near your Town Board, separate from the rest of your Faction’s Units.\n"
 "  \\item Place the Round Tracker next to the game map and place a Black Cube on the ``1'' space.\n"
 "  \\item Shuffle the Astrologers Proclaim Cards and place them face down next to the Round Tracker.\n"
-"  \\begin{expansion}[before skip balanced=0.3em,left=7mm]{fortress}\n"
-"    \\item Shuffle the Event Cards and place them face down next to the Round Tracker.\n"
-"  \\end{expansion}\n"
 "  \\item Orientate your Starting Tile to your liking.\n"
 "    Choose which Hero model represents your Main Hero in this game and place the chosen model on the center Field of your Starting Tile.\n"
 "  \\item Choose a starting player. The starting player never changes during the game.\n"
@@ -307,9 +296,58 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/setup.tex:119
+#: sections/setup.tex:145
 #, no-wrap
 msgid ""
-"\\includegraphics[width=\\linewidth]{\\art/halberdier.jpg}\n"
+"\\columnbreak\n"
+"If you're playing with expansions, additionally do the following:\n"
+"\\begin{enumerate}[resume]\n"
+"  \\begin{expansion}[before skip balanced=0.3em,left=7mm]{fortress}\n"
+"    \\item Shuffle the Event Cards and place them face down next to the Round Tracker.\n"
+"  \\end{expansion}\n"
+"  \\begin{expansion}[before skip balanced=0.8em,left=7mm]{navalbattles}\n"
+"    \\item Group Stack Tokens, Far- and Near Creature Bank Tokens into separate piles and shuffle them.\n"
+"      Place Creature Bank Unit Cards near Neutral Unit Decks.\n"
+"  \\end{expansion}\n"
+"  \\begin{expansion}[before skip balanced=0.8em,left=7mm]{conflux}\n"
+"    \\item Place Summon Elemental Cards near Neutral Unit Decks.\n"
+"  \\end{expansion}\n"
+"  \\begin{expansion}[before skip balanced=0.8em,left=7mm]{stronghold}\n"
+"    \\item Shuffle 10 Spell Scroll Cards into the Artifact Deck.\n"
+"      Place the remaining 10 in a separate pile.\n"
+"  \\end{expansion}\n"
+"  \\begin{expansion}[before skip balanced=0.8em,left=7mm]{inferno}\n"
+"    \\item Place the Empowered Statistic Cards face up in a separate pile.\n"
+"  \\end{expansion}\n"
+"  \\begin{expansion}[before skip balanced=0.8em,left=7mm]{navalbattles}\n"
+"    \\item Place the Empowered Ability Cards face up next to the Ability Deck.\n"
+"  \\end{expansion}\n"
+"  \\begin{expansion}[before skip balanced=0.8em,left=7mm]{stretchgoals2}\n"
+"    \\item Shuffle \\pagelink{Pandora Card}{Pandora's Box Cards}.\n"
+"  \\end{expansion}\n"
+"  \\begin{expansion}[before skip balanced=0.8em,left=7mm]{battlefield}\n"
+"    \\item Shuffle \\pagelink{Morale Cards}{Morale Cards}.\n"
+"  \\end{expansion}\n"
+"\\end{enumerate}\n"
 "\n"
 msgstr ""
+
+#. type: multicols*
+#: sections/setup.tex:150
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{center}\n"
+#| "  \\includegraphics[width=\\linewidth]{\\art/dendroid.jpg}\n"
+#| "\\end{center}\n"
+#| "\n"
+msgid ""
+"\\vspace*{\\fill}\n"
+"\\begin{center}\n"
+"  \\transparent{0.2}{\\reflectbox{\\includegraphics[width=\\linewidth, keepaspectratio]{\\art/unicorn.png}}}\n"
+"\\end{center}\n"
+"\n"
+msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=\\linewidth]{\\art/dendroid.jpg}\n"
+"\\end{center}\n"
+"\n"
