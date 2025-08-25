@@ -1,14 +1,50 @@
-% Set page size and margins
-\usepackage[
-  a4paper,
-  top=2cm,
-  bottom=2.3cm,
-  left=2cm,
-  right=2cm,
-  marginparwidth=1.75cm,
-  footskip=1.35cm,
-]{geometry}
+\usepackage{etoolbox}
+\newtoggle{printable}
+\newtoggle{noartbackground}
+\newtoggle{githubbuild}
 
+
+% Computes trimmed size and bleed margins (for print) or plain A4 (for digital)
+\newlength\trimW \setlength\trimW{210mm}
+\newlength\trimH \setlength\trimH{297mm}
+\newlength\bleedTop    \setlength\bleedTop{3mm}
+\newlength\bleedBottom \setlength\bleedBottom{3mm}
+\newlength\bleedLeft   \setlength\bleedLeft{3mm}
+\newlength\bleedRight  \setlength\bleedRight{3mm}
+
+\edef\GEOpw{\the\dimexpr\trimW+\bleedLeft+\bleedRight\relax}
+\edef\GEOph{\the\dimexpr\trimH+\bleedTop+\bleedBottom\relax}
+\edef\GEOlw{\the\trimW}
+\edef\GEOlh{\the\trimH}
+\edef\GEOhx{\the\bleedLeft}
+\edef\GEOvy{\the\bleedTop}
+
+\iftoggle{printable}{%
+  % Printable build with bleed
+  \usepackage[
+    layoutwidth=\GEOlw, layoutheight=\GEOlh,
+    layouthoffset=\bleedLeft, layoutvoffset=\bleedTop,
+    paperwidth=\GEOpw, paperheight=\GEOph,
+    twoside,
+    top=2cm,
+    bottom=2.3cm,
+    left=2.5cm,
+    right=1.5cm,
+    marginparwidth=1.75cm,
+    footskip=1.35cm,
+  ]{geometry}%
+}{%
+  % Digital build (no bleed)
+  \usepackage[
+    a4paper,
+    top=2cm,
+    bottom=2.3cm,
+    left=2cm,
+    right=2cm,
+    marginparwidth=1.75cm,
+    footskip=1.35cm
+  ]{geometry}%
+}
 % Useful packages
 \usepackage[export]{adjustbox}
 \usepackage{amsmath}
@@ -16,7 +52,6 @@
 \usepackage{caption}
 \usepackage[strict]{changepage}
 \usepackage{enumitem}
-\usepackage{etoolbox}
 \usepackage{float}
 \usepackage{fullwidth}
 \usepackage{graphicx, trimclip}
@@ -75,9 +110,6 @@
 \usetikzlibrary{shadows, shadows.blur, calc, backgrounds}
 
 \setlength{\columnsep}{1cm}
-\newtoggle{printable}
-\newtoggle{noartbackground}
-\newtoggle{githubbuild}
 
 \setlist[itemize,2]{leftmargin=15pt, label=$\triangleright$}
 
@@ -521,18 +553,6 @@
 \makeindex[columns=3, title=,]
 
 \begin{document}
-
-\iftoggle{printable}{
-  \newgeometry{
-    twoside,
-    top=2cm,
-    bottom=2.3cm,
-    left=2.5cm,
-    right=1.5cm,
-    marginparwidth=1.75cm,
-    footskip=1.35cm,
-  }
-}{}
 
 \input{structure.tex}
 
