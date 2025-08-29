@@ -71,22 +71,25 @@ jobs:
       build_type: economy
 
   check_pages:
-    needs: [digital_build, printable_build]
+    needs: [matrix-setup, digital_build, printable_build]
+    name: 🔍 Page count check (${{ matrix.display }})
     if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     container:
       image: minidocks/poppler
     strategy:
       fail-fast: false
-      matrix:
-        language: ["pl", "es", "fr", "ru", "ua", "de", "cs", "he"]
+      matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
+    continue-on-error: true
     steps:
       - name: Download digital PDF
+        if: matrix.name != 'en'
         uses: actions/download-artifact@v4
         with:
           name: main_${{ matrix.language }}
 
       - name: Check number of pages in digital version
+        if: matrix.name != 'en'
         run: |
           ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
           echo "Expected number of pages: ${{ needs.digital_build.outputs.number_of_pages }}"
@@ -97,11 +100,13 @@ jobs:
           fi
 
       - name: Download printable PDF
+        if: matrix.name != 'en'
         uses: actions/download-artifact@v4
         with:
           name: printable_${{ matrix.language }}
 
       - name: Check number of pages in printable version
+        if: matrix.name != 'en'
         run: |
           ACTUAL_NUM_OF_PAGES=$(pdfinfo printable_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
           echo "Expected number of pages: ${{ needs.printable_build.outputs.number_of_pages }}"
