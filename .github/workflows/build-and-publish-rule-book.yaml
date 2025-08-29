@@ -18,15 +18,15 @@ jobs:
         cat << 'EOF' > matrix.json
         {
           "include": [
-            { "language": "en", "luaengine": false },
-            { "language": "pl", "luaengine": false },
-            { "language": "es", "luaengine": false },
-            { "language": "fr", "luaengine": false },
-            { "language": "ru", "luaengine": true },
-            { "language": "ua", "luaengine": true },
-            { "language": "de", "luaengine": false },
-            { "language": "cs", "luaengine": true },
-            { "language": "he", "luaengine": true }
+            { "language": "en", "display": "🇺🇸 English", "luaengine": false },
+            { "language": "pl", "display": "🇵🇱 Polski", "luaengine": false },
+            { "language": "es", "display": "🇪🇸 Español", "luaengine": false },
+            { "language": "fr", "display": "🇫🇷 Français", "luaengine": false },
+            { "language": "ru", "display": "🇷🇺 Русский", "luaengine": true },
+            { "language": "ua", "display": "🇺🇦 Українська", "luaengine": true },
+            { "language": "de", "display": "🇩🇪 Deutsch", "luaengine": false },
+            { "language": "cs", "display": "🇨🇿 Čeština", "luaengine": true },
+            { "language": "he", "display": "🇮🇱 עברית", "luaengine": true }
           ]
         }
         EOF
@@ -34,6 +34,7 @@ jobs:
 
   digital_build:
     needs: matrix-setup
+    name: 📱 Digital (${{ matrix.display }})
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
@@ -45,6 +46,7 @@ jobs:
 
   printable_build:
     needs: matrix-setup
+    name: 🖨️ Printable (${{ matrix.display }})
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
@@ -57,6 +59,7 @@ jobs:
 
   economy_build:
     needs: matrix-setup
+    name: 💰 Economy (${{ matrix.display }})
     if: github.event_name != 'pull_request'
     strategy:
       fail-fast: false
