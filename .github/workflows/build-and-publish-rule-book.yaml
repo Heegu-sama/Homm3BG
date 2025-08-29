@@ -88,7 +88,6 @@ jobs:
           name: main_${{ matrix.language }}
 
       - name: Check number of pages in digital version
-        continue-on-error: true
         if: ${{ matrix.name != 'en' }}
         run: |
           ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
