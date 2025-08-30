@@ -1,4 +1,4 @@
-name: Build and Publish Rule Book
+name: Build Rulebook
 
 on:
   push:
@@ -36,7 +36,7 @@ jobs:
 
   digital_build:
     needs: matrix-setup
-    name: 🖥️ Digital [${{ matrix.display }}]
+    name: 🖥️ Digital ${{ matrix.display }}
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
@@ -48,7 +48,7 @@ jobs:
 
   printable_build:
     needs: matrix-setup
-    name: 🖨️ Printable [${{ matrix.display }}]
+    name: 🖨️ Printable ${{ matrix.display }}
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
@@ -61,7 +61,6 @@ jobs:
 
   economy_build:
     needs: matrix-setup
-    name: 🤑 Economy [${{ matrix.display }}]
     if: github.event_name != 'pull_request'
     strategy:
       fail-fast: false
@@ -74,7 +73,7 @@ jobs:
 
   check_pages:
     needs: [matrix-setup, digital_build, printable_build]
-    name: 🔍 Page count check (${{ matrix.display }})
+    name: 🔍 Page count check ${{ matrix.display }}
     if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     container:
