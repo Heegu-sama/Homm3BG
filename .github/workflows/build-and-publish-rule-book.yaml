@@ -1,4 +1,4 @@
-name: Build and Publish Rule Book
+name: Build Rulebook
 
 on:
   push:
@@ -12,28 +12,31 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
+      check-pages-matrix: ${{ steps.set-matrix.outputs.check-pages-matrix }}
     steps:
     - id: set-matrix
       run: |
         cat << 'EOF' > matrix.json
         {
           "include": [
-            { "language": "en", "luaengine": false },
-            { "language": "pl", "luaengine": false },
-            { "language": "es", "luaengine": false },
-            { "language": "fr", "luaengine": false },
-            { "language": "ru", "luaengine": true },
-            { "language": "ua", "luaengine": true },
-            { "language": "de", "luaengine": false },
-            { "language": "cs", "luaengine": true },
-            { "language": "he", "luaengine": true }
+            { "language": "en", "display": "🇺🇸 English", "luaengine": false },
+            { "language": "pl", "display": "🇵🇱 Polski", "luaengine": false },
+            { "language": "es", "display": "🇪🇸 Español", "luaengine": false },
+            { "language": "fr", "display": "🇫🇷 Français", "luaengine": false },
+            { "language": "ru", "display": "🇷🇺 Русский", "luaengine": true },
+            { "language": "ua", "display": "🇺🇦 Українська", "luaengine": true },
+            { "language": "de", "display": "🇩🇪 Deutsch", "luaengine": false },
+            { "language": "cs", "display": "🇨🇿 Čeština", "luaengine": true },
+            { "language": "he", "display": "🇮🇱 עברית", "luaengine": true }
           ]
         }
         EOF
         echo "matrix=$(jq -c . matrix.json)" >> $GITHUB_OUTPUT
+        echo "check-pages-matrix=$(jq -c 'del(.include[] | select(.language == "en"))' matrix.json)" >> $GITHUB_OUTPUT
 
   digital_build:
     needs: matrix-setup
+    name: 🖥️ Digital ${{ matrix.display }}
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
@@ -45,6 +48,7 @@ jobs:
 
   printable_build:
     needs: matrix-setup
+    name: 🖨️ Printable ${{ matrix.display }}
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
@@ -68,15 +72,15 @@ jobs:
       build_type: economy
 
   check_pages:
-    needs: [digital_build, printable_build]
+    needs: [matrix-setup, digital_build, printable_build]
+    name: 🔍 Page count check ${{ matrix.display }}
     if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     container:
       image: minidocks/poppler
     strategy:
       fail-fast: false
-      matrix:
-        language: ["pl", "es", "fr", "ru", "ua", "de", "cs", "he"]
+      matrix: ${{ fromJson(needs.matrix-setup.outputs.check-pages-matrix) }}
     steps:
       - name: Download digital PDF
         uses: actions/download-artifact@v4
@@ -110,12 +114,11 @@ jobs:
 
   publish:
     runs-on: ubuntu-latest
-    needs: [digital_build, printable_build, economy_build]
+    needs: [matrix-setup, digital_build, printable_build, economy_build]
     if: github.event_name != 'pull_request'
     strategy:
       fail-fast: false
-      matrix:
-        language: ["en", "pl", "es", "fr", "ru", "ua", "de", "cs", "he"]
+      matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
     steps:
       - name: Create dir
         run: mkdir ${{ matrix.language }}
