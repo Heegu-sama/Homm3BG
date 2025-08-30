@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
+      check-pages-matrix: ${{ steps.set-matrix.outputs.check-pages-matrix }}
     steps:
     - id: set-matrix
       run: |
@@ -31,10 +32,11 @@ jobs:
         }
         EOF
         echo "matrix=$(jq -c . matrix.json)" >> $GITHUB_OUTPUT
+        echo "check-pages-matrix=$(jq -c 'del(.include[] | select(.language == "en"))' matrix.json)" >> $GITHUB_OUTPUT
 
   digital_build:
     needs: matrix-setup
-    name: 🖥️ Digital (${{ matrix.display }})
+    name: 🖥️ Digital [${{ matrix.display }}]
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
@@ -46,7 +48,7 @@ jobs:
 
   printable_build:
     needs: matrix-setup
-    name: 🖨️ Printable (${{ matrix.display }})
+    name: 🖨️ Printable [${{ matrix.display }}]
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
@@ -59,7 +61,7 @@ jobs:
 
   economy_build:
     needs: matrix-setup
-    name: 💰 Economy (${{ matrix.display }})
+    name: 🤑 Economy [${{ matrix.display }}]
     if: github.event_name != 'pull_request'
     strategy:
       fail-fast: false
@@ -79,16 +81,14 @@ jobs:
       image: minidocks/poppler
     strategy:
       fail-fast: false
-      matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
+      matrix: ${{ fromJson(needs.matrix-setup.outputs.check-pages-matrix) }}
     steps:
       - name: Download digital PDF
-        if: ${{ matrix.language != 'en' }}
         uses: actions/download-artifact@v4
         with:
           name: main_${{ matrix.language }}
 
       - name: Check number of pages in digital version
-        if: ${{ matrix.language != 'en' }}
         run: |
           ACTUAL_NUM_OF_PAGES=$(pdfinfo main_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
           echo "Expected number of pages: ${{ needs.digital_build.outputs.number_of_pages }}"
@@ -99,13 +99,11 @@ jobs:
           fi
 
       - name: Download printable PDF
-        if: ${{ matrix.language != 'en' }}
         uses: actions/download-artifact@v4
         with:
           name: printable_${{ matrix.language }}
 
       - name: Check number of pages in printable version
-        if: ${{ matrix.language != 'en' }}
         run: |
           ACTUAL_NUM_OF_PAGES=$(pdfinfo printable_${{ matrix.language }}.pdf | awk '/^Pages:/ {print $2}')
           echo "Expected number of pages: ${{ needs.printable_build.outputs.number_of_pages }}"
@@ -117,12 +115,11 @@ jobs:
 
   publish:
     runs-on: ubuntu-latest
-    needs: [digital_build, printable_build, economy_build]
+    needs: [matrix-setup, digital_build, printable_build, economy_build]
     if: github.event_name != 'pull_request'
     strategy:
       fail-fast: false
-      matrix:
-        language: ["en", "pl", "es", "fr", "ru", "ua", "de", "cs", "he"]
+      matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
     steps:
       - name: Create dir
         run: mkdir ${{ matrix.language }}
