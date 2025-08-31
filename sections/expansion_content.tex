@@ -180,14 +180,14 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
   On the Battlefield Board you place Obstacle Tokens, which are divided into three types:
   Effect, Obstacle and Wall/Gate.
   Unless otherwise stated these Tokens count and work as \pagelink{Combatterminology}{Combat Obstacles}.
-  To place Effect Obstacles on the Battlefield Board use the Tokens and put the Card beside the Battlefield as a reminder.
+  To place Effect Obstacles on the Battlefield Board you'll need the Card which creates the effect, such as Fire Wall Spell: use the Tokens and put the Card beside the Battlefield as a reminder.
   Effect Obstacles may be entered by Units, if the Card text allows it.
   \vspace*{1em}
   \begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.3\linewidth}
       \centering
-      \includegraphics[width=0.9\linewidth]{\images/bf-obstacle-1.png}
+      \includegraphics[width=0.7\linewidth]{\images/bf-obstacle-1.png}
       \caption{\textbf{\textit{\textcolor{darkcandyapplered}{Effect}}}}
     \end{subfigure}
     \begin{subfigure}[b]{0.3\linewidth}
@@ -209,11 +209,13 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
 
   \subsection*{Rules Changes in Combat Setup}
   \begin{itemize}
-   \item \textbf{Place obstacles} – Starting with the attacking player, both players take turns chosing and placing one Obstacle Token on the Battlefield Board until \textbf{all Obstacle Tokens are placed}. No Obstacle can be adjacent to another Obstacle or to any player's deployment zone.
-  \end{itemize}
-    \includegraphics[width=0.9\linewidth]{\examples/test-battlefield.png}
-  \begin{itemize}
-    \item \textbf{Place Units}  – Starting from the attacking player, the players choose a deployment zone and take turns placing their Units \textbf{one by one}.
+    \item \textbf{Place obstacles} – Starting with the attacking player, both players take turns chosing and placing one Obstacle Token on the Battlefield Board until \textbf{all Obstacle Tokens are placed}. No Obstacle can be adjacent to another Obstacle or to any player's deployment zone.
+    \begin{tikzpicture}
+      \draw (0, 0) node {\includegraphics[width=0.9\linewidth]{\examples/bf-deploy.png}};
+      \draw (2.5, 0) node[rotate=90] {\includegraphics[width=0.9\linewidth]{\examples/bf-deploy-text.png}};
+    \end{tikzpicture}
+    {\footnotesize\textbf{\textit{\textcolor{darkcandyapplered}{Obstacles and models placed correctly are marked with the green border, and incorrectly -- with the red one.}}}}
+    \item \textbf{Place Units} – Starting from the attacking player, the players choose a deployment zone and take turns placing their Units \textbf{one by one}.
     When the last Unit is placed, the Combat begins.
     Only on Player vs. Player Combats the players can decide to allow placing \textbf{up to 7 Units} (instead of 5).
   \end{itemize}
