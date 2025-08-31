@@ -104,7 +104,7 @@ jobs:
           echo "Expected number of pages: ${{ needs.printable_build.outputs.number_of_pages }}"
           echo "Actual number of pages:   ${ACTUAL_NUM_OF_PAGES}"
           if [[ ${{ needs.printable_build.outputs.number_of_pages }} != ${ACTUAL_NUM_OF_PAGES} ]]; then
-            echo "The digital document in ${{ matrix.language }} language doesn't have correct number of pages. See the output above."
+            echo "The printable document in ${{ matrix.language }} language doesn't have correct number of pages. See the output above."
             exit 1
           fi
 
