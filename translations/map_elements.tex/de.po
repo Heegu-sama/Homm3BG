@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
 "POT-Creation-Date: 2025-08-18 22:36+0200\n"
-"PO-Revision-Date: 2025-07-05 10:48+0200\n"
+"PO-Revision-Date: 2025-08-28 15:49+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.7\n"
 
 #. type: Plain text
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
@@ -420,11 +420,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/map_elements.tex:152
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\vfill\n"
-#| "\\hfill{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/coin.png}}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\vfill\n"
 "\\hspace{2em}\n"
@@ -432,7 +428,8 @@ msgid ""
 "\n"
 msgstr ""
 "\\vfill\n"
-"\\hfill{\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/coin.png}}\n"
+"\\hspace{2em}\n"
+"{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/resurrection.png}}\n"
 "\n"
 
 #. type: multicols*
@@ -450,6 +447,16 @@ msgid ""
 "\\end{expansion}\n"
 "\n"
 msgstr ""
+"\\begin{expansion}{cove}\n"
+"  \\subsection*{Seegebiete}\n"
+"  Seegebiete erkennt man an ihrer Rückseite und sie werden gemäß des gewählten Szenario-Layouts platziert.\n"
+"  Du entdeckst sie genauso wie reguläre Gebiete.\n"
+"  Seegebiete können sowohl Land- als auch Seefelder enthalten.\n"
+"  Bewegungen von Land zu Land, von See zu See oder von See zu Land funktionieren wie üblich.\n"
+"  Wenn ein Held aber ein \\textbf{Seefeld ausgehend von einem Landfeld betritt}, endet seine Bewegung sofort.\n"
+"  Du darfst verbleibende BP noch für andere Aktionen nutzen (z. B. um \\pagelink{Timelimit}{einen neutralen Kampf zu verlängern}), aber du kannst diesen Helden nicht mehr bewegen, auch nicht mithilfe von Karteneffekten.\n"
+"\\end{expansion}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:173
@@ -463,6 +470,13 @@ msgid ""
 "\\end{expansion}\n"
 "\n"
 msgstr ""
+"\\begin{expansion}{conflux}\n"
+"  \\subsection*{\\pagetarget{Elemental Map Tiles}{Elementargebiete}}\n"
+"  Jedes Elementargebiet ist einer der vier \\pagelink{Schools of Magic}{Magieschulen} zugeordnet.\n"
+"  Befindet sich dein Hauptheld auf einem Elementargebiet, werden alle Zauber dieser Schule mit einer um 1 erhöhten \\svg{empower} gespielt.\n"
+"  % Clarification about main Hero is needed.\n"
+"\\end{expansion}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:187
@@ -481,6 +495,18 @@ msgid ""
 "\\end{expansion}\n"
 "\n"
 msgstr ""
+"\\begin{expansion}{stronghold}\n"
+"  \\subsection*{\\pagetarget{Subterranean Map Tiles}{Unterweltgebiete}}\n"
+"  Unterweltgebiete erkennt man an ihrer Rückseite und sie werden gemäß des gewählten Szenario-Layouts platziert.\n"
+"  Sie werden wie normale Gebiete behandelt, außer dass \\textbf{du dich zwischen Unterwelt- und Oberweltgebieten nur durch ein \\pagelink{Subterranean Gate}{Tor zur Unterwelt}} oder mit dem Zauber Stadtportal bewegen darfst.\n"
+"  Andere Bewegungseffekte können hier nicht genutzt werden.\n"
+"  Außerdem kannst du kein Unterweltgebiet entdecken, wenn dein Held in der Oberwelt steht, und andersherum.\n"
+"  Behandle beide Felder des Tores zur Unterwelt \\textbf{als ein Feld}.\n"
+"  Wenn ein Held ein Tor zur Unterwelt betritt, entdecke sofort ohne weitere Kosten das Gebiet auf der anderen Seite (falls es noch nicht entdeckt ist).\n"
+"  Anderenfalls behandle Tore zur Unterwelt wie leere Felder.\n"
+"  % NOTE: Discovering from one to the other should also be impossible.\n"
+"\\end{expansion}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:199
@@ -495,7 +521,7 @@ msgstr ""
 #. type: center
 #: sections/map_elements.tex:199
 msgid "{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Sea Map Tile}}}}"
-msgstr ""
+msgstr "{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Seegebiete}}}}"
 
 #. type: tikzpicture
 #: sections/map_elements.tex:210
@@ -508,6 +534,12 @@ msgid ""
 "    \\draw (2.2, -4.5) node {\\textbf{\\textit{\\textcolor{darkcandyapplered}{Elemental Earth Tile}}}};\n"
 "  "
 msgstr ""
+"    \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\images/elemental_tiles.png}}};\n"
+"    \\draw (-2.2, 0.1) node {\\textbf{\\textit{\\textcolor{darkcandyapplered}{Feuer Elementargebiet}}}};\n"
+"    \\draw (-2.2, -4.5) node {\\textbf{\\textit{\\textcolor{darkcandyapplered}{Luft Elementargebiet}}}};\n"
+"    \\draw (2.2, 0.1) node {\\textbf{\\textit{\\textcolor{darkcandyapplered}{Wasser Elementargebiet}}}};\n"
+"    \\draw (2.2, -4.5) node {\\textbf{\\textit{\\textcolor{darkcandyapplered}{Erde Elementargebiet}}}};\n"
+"  "
 
 #. type: scriptsize
 #: sections/map_elements.tex:218
@@ -519,16 +551,7 @@ msgstr ""
 
 #. type: scriptsize
 #: sections/map_elements.tex:226
-#, fuzzy, no-wrap
-#| msgid ""
-#| "[!hb]\n"
-#| "  \\centering\n"
-#| "  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
-#| "  \\begin{tikzpicture}[overlay]\n"
-#| "    \\node at (5, 10) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{You cannot add this Tile here}}}}};\n"
-#| "    \\node at (5, 1.4) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{You can add this Tile here, because it will}}}}};\n"
-#| "    \\node at (3.9, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{be adjacent to two other Tiles}}}}};\n"
-#| "  \\end{tikzpicture}"
+#, no-wrap
 msgid ""
 "      \\node at (0, 0) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-stronghold.png}};\n"
 "      \\node at (0, 2.2) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Surface Map Tile}}}}};\n"
@@ -539,15 +562,14 @@ msgid ""
 "    \\end{tikzpicture}\n"
 "  "
 msgstr ""
-"[!hb]\n"
-"  \\centering\n"
-"  \\iftoggle{printable}{\\vspace{-1.25em}}{\\vspace{-0.5em}}\n"
-"  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
-"  \\begin{tikzpicture}[overlay]\n"
-"    \\node at (5.2, 10) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Ungültige Platzierung für dieses Gebiet}}}}};\n"
-"    \\node at (5, 1.4) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{Das Gebiet darf hier platziert werden, weil es}}}}};\n"
-"    \\node at (3.85, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{an zwei andere Gebiete angrenzt}}}}};\n"
-"  \\end{tikzpicture}"
+"      \\node at (0, 0) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-stronghold.png}};\n"
+"      \\node at (0, 2.2) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Oberweltgebiet}}}}};\n"
+"      \\node at (3.21, -1.11) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-sub.png}};\n"
+"      \\node at (3.21, -3.41) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Unterweltgebiet}}}}};\n"
+"      \\node[rotate=-60] (gate) at (1.6, -0.53) {\\includegraphics[width=0.33\\linewidth]{\\images/subter-gate-outline.png}};\n"
+"      \\node at (3.21, 1.11) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Tor zur Unterwelt}}}}};\n"
+"    \\end{tikzpicture}\n"
+"  "
 
 #. type: multicols
 #: sections/map_elements.tex:235
@@ -560,6 +582,13 @@ msgid ""
 "Tokens cannot be placed on other Location Tokens, Blocked Fields, or Fields containing Locations required to meet any of the Scenario's victory conditions.\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\subsection*{\\pagetarget{Discover Location Tokens}{Platzieren und Entdecken von Ortsmarkern}}\n"
+"Ortsmarker werden durch Erweiterungen dem Spiel hinzugefügt.\n"
+"Sie werden entweder separat im Szenario-Layout platziert oder überdecken bestimmte Felder der Abenteuerkarte, sobald ein Held ein entsprechendes Gebiet entdeckt. \n"
+"Ortsmarker überschreiben den ursprünglichen Ort, den sie überdecken.\n"
+"Sie können weder auf anderen Ortsmarkern, noch auf blockierten Feldern oder auf für die Siegbedingung des Szenarios relevanten Feldern platziert werden.\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:246
@@ -577,6 +606,17 @@ msgid ""
 "\\end{expansion}\n"
 "\n"
 msgstr ""
+"\\begin{expansion}[before=\\vspace*{0pt}]{conflux}\n"
+"  \\subsection*{Teleporter}\n"
+"   Die Positionen von \\pagelink{Monolith}{Teleportern} sind im Szenario-Layout festgelegt.\n"
+"   Beim Entdecken eines Gebiets mit Teleporter, entdecke das Gebiet wie üblich und platziere dann den Teleporter genau auf dem im Szenario-Layout angegebenen Feld, oder (falls nicht angegeben) auf einem Feld deiner Wahl.\n"
+"  \\bigskip\n"
+"  \\begin{center}\n"
+"    \\includegraphics[width=0.4\\linewidth]{\\map_locations/monolith_token.png}\\\\\n"
+"    \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Ortsmarker Teleporter}}}}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:253
@@ -588,6 +628,11 @@ msgid ""
 "  \\bigskip\n"
 "\n"
 msgstr ""
+"\\begin{expansion}[before=\\vspace*{0pt}]{cove}\n"
+"  \\subsection*{Strudel}\n"
+"  Das Platzieren von \\pagelink{Whirlpool}{Strudeln} folgt denselben Regeln wie bei Teleportern.\n"
+"  \\bigskip\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:266
@@ -606,6 +651,18 @@ msgid ""
 "\\end{expansion}\n"
 "\n"
 msgstr ""
+"    \\draw (-2.5, 0) node[inner sep=0] {\\includegraphics[width=0.4\\linewidth]{\\map_locations/whirlpool-token.png}};\n"
+"    \\draw (-2.5, -1) node {\\Huge\\textbf{\\textcolor{white}{-1}}};\n"
+"    \\draw (0, 0) node[inner sep=0] {\\includegraphics[width=0.4\\linewidth]{\\map_locations/whirlpool-token.png}};\n"
+"    \\draw (0, -1) node {\\Huge\\textbf{\\textcolor{white}{0}}};\n"
+"    \\draw (2.5, 0) node[inner sep=0] {\\includegraphics[width=0.4\\linewidth]{\\map_locations/whirlpool-token.png}};\n"
+"    \\draw (2.5, -1) node {\\Huge\\textbf{\\textcolor{white}{$\\boldsymbol{+}$1}}};\n"
+"  \\end{tikzpicture}\n"
+"  \\begin{center}\n"
+"    \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Ortsmarker Strudel}}}}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:279
@@ -625,6 +682,19 @@ msgid ""
 "\\end{expansion}\n"
 "\n"
 msgstr ""
+"\\begin{expansion}[before=\\vspace*{-11mm}]{stronghold}\n"
+"  \\subsection*{Tor zur Unterwelt}\n"
+"  \\pagetarget{Subterranean Gate}{Tore zur Unterwelt} sind ebenfalls im Szenario-Layout vorgeschrieben und verbinden jeweils ein Oberweltgebiet mit einem Unterweltgebiet.\n"
+"  Sie können nicht außerhalb von Gebieten platziert werden.\n"
+"  Nach dem Entdecken eines entsprechenden Gebiets darfst du das Tor zur Unterwelt wie gewünscht platzieren, so lange es die beiden vorgeschriebenen Gebiete verbindet und keine verbotenen Felder überdeckt.\n"
+"  Das Szenario-Layout zeigt nur, \\textbf{welche zwei Gebiete verbunden sind}, aber nicht auf welchen Feldern der Marker platziert wird.\n"
+"  \\bigskip\n"
+"  \\begin{center}\n"
+"    \\includegraphics[width=0.6\\linewidth]{\\map_locations/subterranean_gate_token.png}\\\\\n"
+"    \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Ortsmarker Tor zur Unterwelt}}}}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:292
@@ -641,3 +711,13 @@ msgid ""
 "  \\end{center}\n"
 "\\end{expansion}"
 msgstr ""
+"\\begin{expansion}[before=\\vspace*{0pt}]{navalbattles}\n"
+"  \\subsection*{Kreaturenbanken}\n"
+"  Als \\textbf{optionale Regel} kannst du entscheiden mit \\pagelink{Creature Banks Rules}{Kreaturenbanken} zu spielen.\n"
+"  Jedes Mal, wenn du ein fernes \\mbox{(II--III)} oder nahes Gebiet \\mbox{(IV--V)} entdeckst, darfst du einen Kreaturenbank-Ortsmarker vom zum entdeckten Gebiet passenden Stapel ziehen und -- entgegen der üblichen Regeln -- \\textbf{auf dem blockierten Feld} platzieren.\n"
+"  \\bigskip\n"
+"  \\begin{center}\n"
+"    \\includegraphics[width=0.42\\linewidth]{\\map_locations/creature_bank_token.png}\\\\\n"
+"    \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Ortsmarker Kreaturenbank}}}}\n"
+"  \\end{center}\n"
+"\\end{expansion}"
