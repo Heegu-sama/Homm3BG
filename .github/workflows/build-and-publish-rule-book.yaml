@@ -37,7 +37,7 @@ jobs:
 
   digital_build:
     needs: matrix-setup
-    name: Digital ${{ matrix.display }}
+    name: "[Digital] ${{ matrix.display }}"
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
@@ -49,7 +49,7 @@ jobs:
 
   printable_build:
     needs: matrix-setup
-    name: Printable ${{ matrix.display }}
+    name: "[Printable] ${{ matrix.display }}"
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
