@@ -74,7 +74,7 @@ jobs:
 
   check_pages:
     needs: [matrix-setup, digital_build, printable_build]
-    name: ↔️ Page count check ${{ matrix.display }}
+    name: 🧐 Page count check ${{ matrix.display }}
     if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     container:
