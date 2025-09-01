@@ -63,10 +63,7 @@ msgstr "\\addsection{Сражение}{\\skills/attack.png}"
 
 #. type: multicols*
 #: sections/combat.tex:16
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\pagetarget{Combat}{Combat}\\index{Combat} with \\textbf{Neutral Units} starts when a Hero moves to an \\textbf{unvisited} Field with a roman numeral, signifying the \\hyperlink{Difficulty Table}{type and number} of Neutral Units guarding that Field.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\pagetarget{Combat}{Combat}\\index{Combat} with \\textbf{Neutral Units} starts when a Hero moves to one of the \\textbf{unvisited} Fields:\n"
 "\\begin{itemize}\n"
@@ -78,7 +75,14 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
-"\\pagetarget{Combat}{Сражение}\\index{Сражение} с \\textbf{нейтральными отрядами} начинается при попадании героя на \\textbf{непосещённое} поле с римской цифрой, обозначающей \\hyperlink{Difficulty Table}{тип и количество} нейтральных отрядов, охраняющих это поле.\n"
+"\\pagetarget{Combat}{Сражение}\\index{Сражение} с \\textbf{нейтральными отрядами} начинается при попадании героя на \\textbf{непосещённое} поле с:\n"
+"\\begin{itemize}\n"
+"  \\item Римской цифрой, обозначающей \\hyperlink{Difficulty Table}{тип и количество} нейтральных отрядов, охраняющих это поле.\n"
+"\\begin{expansion}[left=4mm]{navalbattles}\n"
+"  \\item \\pagelink{Creature Banks}{Сокровищницей} — \n"
+"    В этом случае используйте правила \\pagelink{Creature Banks Rules}{сражения в Сокровищнице}.\n"
+"\\end{expansion}\n"
+"\\end{itemize}\n"
 "\n"
 
 #. type: multicols*
@@ -103,31 +107,17 @@ msgstr ""
 
 #. type: multicols*
 #: sections/combat.tex:25
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\note{6}{\n"
-#| "  When a \\pagelink{Secondary}{Secondary Hero} is attacked, they \\textbf{may choose} to be \\pagelink{Endcombat}{instantly defeated} instead of engaging in Combat, which helps to preserve the Units.\n"
-#| "}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "When a \\pagelink{Secondary}{Secondary Hero} is attacked, they \\textbf{may choose} to be \\pagelink{Endcombat}{instantly defeated} instead of engaging in Combat, which helps to preserve the Units.\n"
 "\n"
 msgstr ""
-"\\note{5}{\n"
-"  Если \\pagelink{Secondary}{вторичный герой} подвергается атаке, то вместо сражения он может \\pagelink{Endcombat}{мгновенно проиграть} для сохранения отрядов.\n"
-"}\n"
+"Если \\pagelink{Secondary}{вторичный герой} подвергается атаке, то вместо сражения он может \\pagelink{Endcombat}{мгновенно проиграть} для сохранения отрядов.\n"
 "\n"
 
 #. type: multicols*
 #: sections/combat.tex:33
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\note{10}{\n"
-#| "  If your Town or Settlement is attacked by an enemy Hero and your Hero is not on that Field, you may immediately \\textbf{pay 8 \\svg{gold} to defend with only your Units}.\n"
-#| "  You cannot use your Deck during this Combat, as your Main Hero is not present.\n"
-#| "  Paying this Gold represents the cost of transporting the army there.\n"
-#| "}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\vspace{1em}\n"
 "\\note{10}{\n"
@@ -138,9 +128,11 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\vspace{1em}\n"
 "\\note{10}{\n"
-"    Если ваш город или посёлок атакован, и вашего героя нет на этом поле, вы можете \\textbf{заплатить 8} \\svg{gold} за доставку армии для участия в сражении, \\textbf{используя только отряды}.\n"
-"    Вы не можете пользоваться колодой в этом сражении, так как оно происходит без героя.\n"
+"  \\vspace{1em}\n"
+"  Если ваш город или посёлок атакован, и вашего героя нет на этом поле, вы можете \\textbf{заплатить 8} \\svg{gold} за доставку армии для участия в сражении, \\textbf{используя только отряды}.\n"
+"  Вы не можете пользоваться колодой в этом сражении, так как оно происходит без героя.\n"
 "}\n"
 "\n"
 
@@ -170,12 +162,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/combat.tex:44
-#, fuzzy, no-wrap
-#| msgid ""
-#| "% TODO info about battlefield expansion\n"
-#| "Combat is resolved on the 4×5 Combat Board, which consists of two Backlines and two Frontlines on opposite ends, and a middle row.\n"
-#| "Follow these steps when Combat begins against \\textbf{Neutral Units}:\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "% TODO info about battlefield expansion\n"
 "  Combat is resolved on the 4×5 Combat Board, which consists of two Backlines and two Frontlines on opposite ends, and a middle row.\n"
@@ -183,33 +170,14 @@ msgid ""
 "Follow these steps when Combat begins against \\textbf{Neutral Units}:\n"
 "\n"
 msgstr ""
-"Сражение происходит на доске 4×5, состоящей из двух расположенных друг напротив друга передовых линий и тыла, а также средней линии.\n"
+"  Сражение происходит на доске 4×5, состоящей из двух расположенных друг напротив друга передовых линий и тыла, а также средней линии.\n"
+"Также сражение можно провести на \\pagelink{Alternative Combat Boards}{альтернативных досках}.\n"
 "При сражении с \\textbf{нейтральными отрядами} выполните следующие шаги:\n"
 "\n"
 
 #. type: multicols*
 #: sections/combat.tex:59
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{itemize}\n"
-#| "  \\item Choose one of the Combat Board's sides as your own. Place up to 5 of your Unit Cards freely onto the Back and Frontlines of that side.\n"
-#| "  \\item Check the \\hyperlink{Difficulty Table}{\\textbf{Difficulty Table}} \\iftoggle{printable}{(on the back cover)}{} and draw the corresponding number of Neutral Unit Cards from their Decks.\n"
-#| "  \\item The Neutral Units are placed differently depending on the Game Mode:\n"
-#| "  \\item In \\textbf{Clash} or \\textbf{Alliance} Scenarios, the enemy player sitting to your right controls the Neutral Units and decides their placement. \\svg{unit_ranged} Units must be placed in the Backline if possible.\n"
-#| "  \\item \\pagetarget{CombatAISetup}In \\textbf{Campaign} or \\textbf{Cooperative} Scenarios, Neutral Units are placed from left to right from the player's perspective.\n"
-#| "First, place any \\svg{unit_ranged} Units in the Backline\\index{Units Placement}.\n"
-#| "Then, place any \\svg{unit_ground} or \\svg{unit_flying} Units in the Frontline.\n"
-#| "If there's not enough room to place a Unit in its correct line, place them in the other one.\n"
-#| "Units must be placed in \\textbf{descending} Initiative\\index{Initiative} order.\n"
-#| "If there's a tie, place higher tier Units first.\n"
-#| "If there's still a tie, the players decide the order.\n"
-#| "\\end{itemize}\n"
-#| "Unit setup when fighting \\textbf{other players}:\n"
-#| "\\begin{itemize}\n"
-#| "  \\item The attacking player places up to 5 Units on their chosen side of the Combat Board, followed by the defender.\n"
-#| "  \\item If the Combat takes place in a Town with a Citadel, the defender adds the \\pagelink{Walls}{Wall, Gate and Arrow Tower} Cards after placing their Units.\n"
-#| "\\end{itemize}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\begin{itemize}\n"
 "  \\item Choose one of the Combat Board's sides as your own. Place up to 5 of your Unit Cards freely onto the Back and Frontlines of that side.\n"
@@ -231,18 +199,14 @@ msgstr ""
 "  \\item Выберите одну из сторон доски. Расположите до 5 карт ваших отрядов в удобном порядке на передовой и в тылу.\n"
 "  \\item Проверьте \\hyperlink{Difficulty Table}{\\textbf{таблицу сложности}} \\iftoggle{printable}{(на обратной стороне книги)}{} и наберите соответствующее количество карт нейтральных отрядов.\n"
 "  \\item Расположение нейтральных отрядов зависит от режима игры:\n"
-"  \\item В \\textbf{Столкновении} или \\textbf{Альянсе} игрок, сидящий справа от вас, контролирует нейтральные отряды и выбирает их расстановку. \\svg{unit_ranged} отряды должны быть помещены в тыл (если возможно).\n"
+"  \\item В \\textbf{Столкновении (Clash)} или \\textbf{Альянсе} игрок, сидящий справа от вас, контролирует нейтральные отряды и выбирает их расстановку. \\svg{unit_ranged} отряды должны быть помещены в тыл (если возможно).\n"
 "  \\item \\pagetarget{CombatAISetup}При игре в \\textbf{Кампанию} или \\textbf{Кооператив} нейтральные отряды располагаются слева направо со стороны игрока.\n"
 "Разместите \\svg{unit_ranged} отряды в тылу\\index{Сражение!расстановка отрядов}, \\svg{unit_ground} и \\svg{unit_flying} отряды на передовой.\n"
 "Если отряду не хватает места на его линии, поместите его на другую.\n"
 "Отряды размещаются в порядке \\textbf{убывания} скорости\\index{Скорость отряда}.\n"
 "При одинаковой скорости первыми распологаются отряды с более высоким уровнем.\n"
 "При одинаковом уровне игрок выбирает порядок самостоятельно.\n"
-"\\end{itemize}\n"
-"Расстановка отрядов при сражении с \\textbf{другими игроками}:\n"
-"\\begin{itemize}\n"
-"  \\item Атакующий игрок располагает до 5 отрядов на своей стороне доски сражения, обороняющийся игрок располагает свои отряды следующим.\n"
-"  \\item Если сражение происходит в городе с Цитаделью, защитник добавляет карты \\pagelink{Walls}{стен, ворот и стрелковой башни} после размещения отрядов.\n"
+"См. раздел \\pagelink{AI Units}{\\textbf{сражение против ИИ}} для подробных инструкций.\n"
 "\\end{itemize}\n"
 "\n"
 
@@ -258,39 +222,17 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\pagebreak\n"
+"Расстановка отрядов при сражении с \\textbf{другими игроками}:\n"
+"\\begin{itemize}\n"
+"  \\item Атакующий игрок располагает до 5 отрядов на своей стороне доски сражения, обороняющийся игрок располагает свои отряды следующим.\n"
+"  \\item Если сражение происходит в городе с Цитаделью, защитник добавляет карты \\pagelink{Walls}{стен, ворот и стрелковой башни} после размещения отрядов.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:98
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\subsection*{\\pagetarget{Combatterminology}{Combat Terminology}}\n"
-#| "The following terms are used to describe effects and elements during Combat:\\par\n"
-#| "\\textbf{Attacking Player} – The player who started the Combat.\\par\n"
-#| "\\textbf{Defending Player} – The player whom Combat was started against.\\par\n"
-#| "\\textbf{Activation} – A Unit Activates when it is next in the Initiative order.\\par\n"
-#| "\\textbf{Adjacent Unit} – A Unit is directly adjacent to another if it is one space away in a cardinal direction (nondiagonal).\\par\n"
-#| "\\textbf{Combat Round} – A full cycle of all Units of each player being Activated.\\par\n"
-#| "\\textbf{Combat Obstacles}\\index{Combat Obstacles}\\index{Obstacles, Combat} – Every Card on the Combat Board is a Combat Obstacle.\n"
-#| "They block the movement of all non-flying Units.\\smallskip\\par\n"
-#| "\\begin{tikzpicture}[overlay]\n"
-#| "  \\node at (7, 0) {\\includegraphics[width=0.2\\linewidth]{\\images/attack_die.png}};\n"
-#| "\\end{tikzpicture}\\parbox{0.7\\hsize}{\\textbf{Attack Die}\\index{Attack Die}\\index{Dice} – A red Die whose results range from -1 to +1.\n"
-#| "Roll the Die \\textbf{whenever a Unit attacks} and\n"
-#| "add the result to the Unit's Attack value.}\\par\\smallskip\n"
-#| "\\textbf{\\pagetarget{Retaliate}{Retaliation Attack}} – If a Unit survives an attack by an adjacent Unit, it performs an attack back at that Unit.\n"
-#| "Each Unit can perform \\textbf{only 1} Retaliation Attack\\index{Retaliation Attack} per Combat Round.\n"
-#| "Retaliation Attacks function identically to normal attacks, but they cannot cause another Retaliation Attack.\n"
-#| "Mark Units which have performed a Retaliation Attack this Round with a Black Cube.\\par\n"
-#| "\\textbf{\\pagetarget{Paralysis}{Paralysis}}\\index{Paralysis} \\svg{paralysis} – Some effects place a Paralysis Token on Units.\n"
-#| "If a Unit would Activate with a Paralysis Token on it, \\textbf{skip its Activation} and remove the Token instead.\n"
-#| "If the Unit \\textbf{is attacked or takes any damage} while having the Paralysis Token, remove it.\n"
-#| "The Token does not prevent Units from performing Retaliation Attacks.\\par\n"
-#| "\\textbf{\\pagetarget{Defend}{Defend}} \\svg{defense} – Units may choose to gain a Defense Token and end the Activation instead of attacking.\n"
-#| "When a Unit with a Defense Token is attacked, make another roll with the attack Die after the initial attack roll.\n"
-#| "If you roll a ``+1'', the defending Unit gains an extra 1 Defense for this attack.\n"
-#| "If a Unit has a Defense Token at the start of its activation, discard it.\n"
-#| "The Unit cannot take another Defense Action during that activation.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Combatterminology}{Combat Terminology}}\n"
 "The following terms are used to describe effects and elements during Combat:\\par\n"
@@ -351,18 +293,17 @@ msgstr ""
 "Когда отряд с жетоном защиты атакован, бросьте кубик атаки после основного броска атаки.\n"
 "Если выпадет «+1», обороняющийся отряд получает 1 дополнительное очко защиты в эту атаку.\n"
 "Если отряд обладал жетоном защиты в начале его активации, уберите этот жетон.\n"
-"Отряд не может сыграть ещё одну защиту в ходе этой активации.\n"
+"Отряд не может сыграть ещё одну защиту в ходе этой активации.\\par\n"
+"\\begin{expansion}{conflux}\n"
+"  \\textbf{\\pagetarget{Elemental Damage}{Элементальный урон}} – когда отряды наносят элементальный урон, они атакуют по обычным правилам, однако финальный урон работает по правилам \\svg{damage}, наносимого заклинаниями, и игнорирует \\svg{defense} отряда.\n"
+"  Элементальный урон не считается уроном от заклинаний.\n"
+"\\end{expansion}\n"
+"\n"
 "\n"
 
 #. type: multicols*
 #: sections/combat.tex:103
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\bigskip\n"
-#| "\\vspace*{\\fill}\n"
-#| "\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
-#| "\\vspace*{\\fill}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
 "\\begin{center}\n"
@@ -370,9 +311,10 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
-"\\bigskip\n"
-"\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
-"\\vspace*{-3em}\n"
+"\\vspace*{\\fill}\n"
+"\\begin{center}\n"
+"  \\transparent{0.2}\\includegraphics[width=1.1\\linewidth]{\\art/storm_elemental.png}\n"
+"\\end{center}\n"
 "\n"
 
 #. type: multicols*
@@ -393,23 +335,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/combat.tex:124
-#, fuzzy, no-wrap
-#| msgid ""
-#| "Structure of a Combat Round:\n"
-#| "\\begin{itemize}\n"
-#| "  \\item Players Activate their Units in descending order of Unit \\pagelink{Initiative}{Initiative}. \\textbf{If there's a tie}, alternate between attackers and defenders starting with an attacker.\n"
-#| "  \\item When a Unit Activates, place a Faction Cube on it to indicate it has been Activated this Combat Round.\n"
-#| "  \\item Activated Units may move and attack according to their \\pagelink{Unittype}{type}. Neutral Units controlled by an opposing player must always attack if possible.\n"
-#| "  \\item Instead of attacking, a Unit may \\pagelink{Defend}{defend}.\n"
-#| "  In Neutral Combat, the Neutral enemy Units cannot defend, even when controlled by another player.\n"
-#| "  \\item Before a Unit attacks, both players may \\pagelink{CombatCards}{play Cards}. Cards are resolved in the order in which players decide to play them.\n"
-#| "  \\item After a Unit's attack has been declared and all Cards have been played, roll the Attack Die.\n"
-#| "    Modify the attacking Unit's attack by the Die's result, then reduce it by the defending Unit's Defense, and finally deal the rest as \\pagelink{HP}{damage} to the defending Unit.\n"
-#| "  \\item If the defending Unit was adjacent to the attacker, it \\pagelink{Retaliate}{retaliates} if it hasn't done so this Round.\n"
-#| "  \\item Keep activating Units until they've all been Activated once.\n"
-#| "After the last Unit's activation, the Combat Round ends.\n"
-#| "\\end{itemize}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "Structure of a Combat Round:\n"
 "\\begin{itemize}\n"
@@ -442,20 +368,12 @@ msgstr ""
 "  \\item Продолжайте активировать отряды один за другим;\n"
 "в конце активации последнего отряда раунд завершается.\n"
 "\\end{itemize}\n"
+"\\vspace*{\\fill}\n"
 "\n"
 
 #. type: multicols*
 #: sections/combat.tex:132
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\subsection*{\\pagetarget{CombatCards}{Using Cards During Combat}}\n"
-#| "You may only use \\textbf{one Spell per Combat Round}.\n"
-#| "Ongoing \\svg{ongoing} and \\svg{activation} Activate effects can be used only \\textbf{when Activating one of your Units and before it attacks}.\n"
-#| "Ongoing effects\\index{Ongoing Effects} last until end of Combat or if the effect on the Card is used up.\\par\n"
-#| "Instant \\svg{instant} Cards may be played \\textbf{at any time} except between rolling the Attack Die and resolving damage unless otherwise stated.\n"
-#| "Effects of increasing a Unit's \\svg{attack} (e.g. by the Statistics Cards), expire whenever the first attack performed by that Unit resolves or the Activation ends, whichever comes first.\n"
-#| "The increased \\svg{defense} expires in a similar way.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{CombatCards}{Using Cards During Combat}}\n"
 "You may only use \\textbf{one Spell per Combat Round}, unlike being able to play any number of other Cards.\n"
@@ -466,7 +384,7 @@ msgid ""
 "The increased \\svg{defense} expires in a similar way.\n"
 "\n"
 msgstr ""
-"\\vspace*{-2em}\\subsection*{\\pagetarget{CombatCards}{Использование карт в сражении}}\n"
+"\\subsection*{\\pagetarget{CombatCards}{Использование карт в сражении}}\n"
 "Вы можете колдовать \\textbf{только одно заклинание за раунд сражения}.\n"
 "Продолжительные \\svg{ongoing} и эффекты \\svg{activation} активации могут быть использованы только \\textbf{во время активации отряда перед его атакой}.\n"
 "Продолжительные эффекты\\index{Эффекты карт!продолжительные} длятся до конца сражения или пока эффект не будет использован.\\par\n"
@@ -477,13 +395,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/combat.tex:138
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\bigskip\n"
-#| "\\vspace*{\\fill}\n"
-#| "\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
-#| "\\vspace*{\\fill}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
 "\\begin{center}\n"
@@ -492,21 +404,10 @@ msgid ""
 "\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
-"\\bigskip\n"
-"\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
-"\\vspace*{-3em}\n"
-"\n"
 
 #. type: multicols*
 #: sections/combat.tex:144
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\subsection*{\\pagetarget{Timelimit}{Combat Time Limits}}\\index{Time Limit}\n"
-#| "Combats against Neutral Units have a time limit of \\textbf{one Combat Round}.\n"
-#| "At the end of every Combat Round you have an option to either \\textbf{Retreat}\\index{Retreat} or spend 1 MP from the Hero that started the Combat in order to play another Round.\n"
-#| "When you Retreat, \\hyperlink{Endcombat}{end the Combat}, and move the Hero that started the Combat back to the Field they \\textbf{last Visited}.\n"
-#| "There are no other negative consequences to Retreating.\\par\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Timelimit}{Combat Time Limits}}\\index{Time Limit}\n"
 "Combats against Neutral Units have a time limit of \\textbf{one Combat Round}.\n"
@@ -524,10 +425,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/combat.tex:146
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\note{5}{Combats against Azure \\svg{azure} Units, other players, or \\pagelink{AIrules}{AI Heroes} have no time limit, and you cannot Retreat from them.}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\note{5}{Combats against Azure \\svg{azure} Units, other players, or \\pagelink{AIrules}{AI Heroes} have no time limit, and you cannot Retreat from them.}\n"
 "\n"
@@ -537,16 +435,14 @@ msgstr ""
 
 #. type: multicols*
 #: sections/combat.tex:149
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\subsection*{\\pagetarget{Combatsetup}{Combat Setup}}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\vspace*{-1em}\n"
 "\\subsection*{\\pagetarget{Endcombat}{End of Combat}}\n"
 "\n"
 msgstr ""
-"\\subsection*{\\pagetarget{Combatsetup}{Подготовка к сражению}}\n"
+"\\vspace*{-1em}\n"
+"\\subsection*{\\pagetarget{Endcombat}{Завершение сражения}}\n"
 "\n"
 
 #. type: multicols*
@@ -561,6 +457,13 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"Сражение против нейтральных отрядов имеет три возможных исхода:\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{Победа:} все нейтральные отряды повержены.\n"
+"  \\item \\textbf{Отступление:} у игрока заканчиваются ходы или он теряет все отряды в сражении (но имеет отряды в колоде).\n"
+"  \\item \\textbf{Поражение:} игрок теряет все сражающиеся отряды и не имеет отрядов в колоде.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:164
@@ -575,6 +478,14 @@ msgid ""
 "\\note{3.5}{You cannot surrender when defending a Town.}\\par\n"
 "\n"
 msgstr ""
+"Сражение против другого игрока может закончиться двумя путями:\n"
+"\\begin{itemize}\n"
+" \\item \\textbf{Победа/Поражение:} игрок, потерявший все свои отряды, считается проигравшим. Соответственно, второй игрок считается победителем.\n"
+" \\item \\textbf{Сдача:} вместо активации своих отрядов, игрок может сдаться противнику, заплатив ему 10 \\svg{gold}, чтобы предотвратить уничтожение своей армии. В этом случае сражение завершается мгновенно, ни один из игроков не считается ни победителем, ни проигравшим.\n"
+"\\end{itemize}\n"
+"\\vspace{0.5em}\n"
+"\\note{3.5}{Вы не можете сдаться во время обороны города.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:166
@@ -583,6 +494,8 @@ msgid ""
 "When Combat ends, all damage is healed from all surviving Units. Move any player-owned Units back to their Unit Deck and discard any leftover enemy Neutral Units. Depending on the type and result of the combat, players must resolve the following consequences for themselves:\n"
 "\n"
 msgstr ""
+"Когда сражение завершается, все выжившие отряды восстанавливают здоровье. Верните все отряды игрока в колоду и сбросьте все оставшиеся нейтральные отряды. В зависимости от типа и результата сражения игроки должны выполнить следующие действия:\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:173
@@ -596,6 +509,13 @@ msgid ""
 "Remember to receive the starting Units of the chosen Scenario for free each time your Unit Deck is empty after a combat.\n"
 "\n"
 msgstr ""
+"\\textbf{Победитель} получает \\pagelink{Combatexperience}{опыт}, если сражался основной герой. Если данный игрок атаковал - он должен посетить поле, на котором произошло сражение.\\par\n"
+"\\textbf{Проигравший} в сражении с нейтральными отрядами должен вернуться на последнее посещенное поле (без его посещения).\\par\n"
+"\\textbf{Проигравший главный герой} должен переместиться в дружественный город или посёлок. Если он был побежден другим героем, он получает 1~\\svg{morale_negative} и должен заплатить 5 \\svg{gold} победителю. Также игрок отдаёт \\pagelink{End}{кубик фракции} победителю. Поражение главного героя может стать причиной \\pagelink{End}{выбывания игрока}.\\par\n"
+"\\textbf{Проигравший вторичный герой} (даже при мгновенном поражении без битвы) удаляется с карты. При проигрыше вражескому герою игрок также отдаёт свой кубик фракции.\\par\n"
+"\\textbf{Сдавшийся герой} не считается проигравшим. Переместите сдавшегося главного героя в город или посёлок, или удалите вторичного героя с карты, как в случае с поражением. Другой игрок не получает ни опыта, ни кубик фракции.\\par\n"
+"Не забудьте получить стартовые отряды выбранного сценария каждый раз, когда ваша колода отряда опустошается после боя.\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:175
@@ -718,6 +638,13 @@ msgid ""
 "Defending Units may move through the Gate and may stop on it.\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\subsection*{\\pagetarget{Walls}{Оборона города с\\\\Цитаделью\\raggedright}}\\index{Defending Town}\n"
+"Если вы обороняете город, в котором есть Цитадель, после размещения ваших отрядов поместите 3 карты стен и 1 ворот в любом порядке на средней линии доски сражений.\n"
+"\\textbf{Не используйте стены и ворота} при обороне вражеского города, захваченного вами ранее, \\textbf{даже если} в нём построена Цитадель.\n"
+"Карта ворот \\textbf{не является препятствием для обороняющегося игрока}.\n"
+"Оброняющиеся отряды могу проходить через ворота или останавливаться в них.\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:231
@@ -730,6 +657,12 @@ msgid ""
 "\\columnbreak\n"
 "\n"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\\includegraphics[width=\\linewidth]{\\examples/ranged_protected.png}\n"
+"{\\textit{Когда Алебардщики находятся за целыми воротами, они \\textbf{защищены} при атаке из-за стен.\n"
+"  Сила атаки \\svg{unit_ranged} Злобоглазов \\textbf{уменьшается на 1}.}}\n"
+"\\columnbreak\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:234
@@ -739,6 +672,9 @@ msgid ""
 "These Attacks don't count as normal attacks: They are always successful and they don't activate any of the attacking Unit's \\svg{unit_attack} abilities, and you cannot play any Cards or throw the attack die to affect the attack's result.\n"
 "\n"
 msgstr ""
+"Стены и ворота\\index{Walls and Gate} могут быть разрушены атакой любого смежного \\svg{unit_ground} или \\svg{unit_flying} отряда, даже если это ваш обороняющийся отряд.\n"
+"Такая атака не расценивается как обычная атака: она всегда успешна и не активирует \\svg{unit_attack} способности атакующего отряда, вы также не можете играть карты или бросать кубик атаки для влияние на результат атаки.\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:237
@@ -748,6 +684,9 @@ msgid ""
 "If they are targeted by a \\svg{unit_ranged} attack performed from the opponent's side of the Combat Board, \\textbf{reduce the attack's damage by 1}.\n"
 "\n"
 msgstr ""
+"Обороняющиеся отряды, стоящие на своей стороне \\textbf{на одном столбце} со стенами или воротами, получают защиту от \\svg{unit_ranged} атак.\n"
+"При \\svg{unit_ranged} атаке через стены или ворота, ведущейся с зоны противника, \\textbf{урон уменьшается на 1}.\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:244
@@ -759,6 +698,11 @@ msgid ""
 "  Evil Eyes attack \\textbf{without penalty}.}}\n"
 "\\newline\\newline"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\\includegraphics[width=\\linewidth]{\\examples/ranged_unprotected.png}\n"
+"{\\textit{Так как Алебардщики находятся за разрушенной стеной, \\textbf{защита не работает}.\n"
+"  Злобоглазы атакуют \\textbf{без штрафа}.}}\n"
+"\\newline"
 
 #. type: multicols*
 #: sections/combat.tex:256
@@ -775,6 +719,16 @@ msgid ""
 "The attacker doesn't need to destroy it to win the Combat.\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=0.6\\linewidth]{\\cards/arrow_tower.png}\n"
+"\\end{center}\n"
+"Обороняющийся игрок получает карту стрелковой башни\\index{Arrow Tower}, которую помещает рядом с доской сражений.\n"
+"Она работает как любой \\svg{unit_ranged} отряд, за исключением того, что на неё не влияют ограничения, связанные с её позицией.\n"
+"Например, к ней \\textbf{не применяются стрелковые штрафы} (против вражеских отрядов и наоборот).\n"
+"Только стрелковые атаки и эффекты карт могут уничтожить стрелковую башню, однако она моментально уничтожается, если все стены и ворота разрушены.\n"
+"Атакующему не обязательно уничтожать стрелковую башню для победы в сражении.\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:259
@@ -784,26 +738,19 @@ msgid ""
 "\\note{9}{In a siege against AI, the Arrow Tower follows the priority-rules like a Silver \\svg{silver} Unit. But if there are many valid targets, it cannot attack the nearest one, so it will attack the one that is closest to perishing (the smallest difference between \\svg{health_points-yellow} and current \\svg{damage-yellow}).}\n"
 "\n"
 msgstr ""
+"\\vspace{1em}\n"
+"\\note{9}{В осаде против ИИ стрелковая башня следует приоритету \\svg{silver} отряда. Однако, если имеется несколько целей одного уровня, она не может атаковать ближайшую. В таком случае атакуется отряд, наиболее близкий к поражению (имеющий наименьшую разницу между \\svg{health_points-yellow} и текущим \\svg{damage-yellow}).}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:263
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\bigskip\n"
-#| "\\vspace*{\\fill}\n"
-#| "\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
-#| "\\vspace*{\\fill}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\begin{center}\n"
 "  \\includegraphics[width=1.05\\linewidth]{\\art/arrow_tower.jpg}\n"
 "\\end{center}\n"
 "\n"
 msgstr ""
-"\\bigskip\n"
-"\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
-"\\vspace*{-3em}\n"
-"\n"
 
 #. type: multicols*
 #: sections/combat.tex:265 sections/map_elements.tex:154
@@ -823,16 +770,15 @@ msgid ""
 "  This Board removes the two middle spaces, requiring Ground \\svg{unit_ground} Units to navigate around them while Flying \\svg{unit_flying} Units can move over them but cannot end their movement there.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Alternative Combat Boards}{Альтернативные доски сражений}}\n"
+"\\begin{expansion}{navalbattles}\n"
+"  \\textbf{Опционально} вы можете использовать доску из дополнения Naval Battles для сражений в морских локациях.\n"
+"  Эта доска не имеет двух средних зон, заставляя \\svg{unit_ground} отряды обходить эти места, в то время как \\svg{unit_flying} отряды могут перелетать, но не останавливаться на них (даже для атаки).\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:275
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\bigskip\n"
-#| "\\vspace*{\\fill}\n"
-#| "\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
-#| "\\vspace*{\\fill}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  \\begin{center}\n"
 "    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
@@ -840,10 +786,6 @@ msgid ""
 "\\end{expansion}\n"
 "\n"
 msgstr ""
-"\\bigskip\n"
-"\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
-"\\vspace*{-3em}\n"
-"\n"
 
 #. type: multicols*
 #: sections/combat.tex:281
@@ -856,16 +798,16 @@ msgid ""
 "  Refer to the official Battlefield rulebook for the rule changes regarding this combat type.\n"
 "\n"
 msgstr ""
+"\\vspace{2em}\n"
+"\\begin{expansion}{battlefield}\n"
+"  Также \\textbf{по желанию} вы можете использовать доску из дополнения Battlefield для сражения между игроками.\n"
+"  Вы можете использовать доску и для сражения с нейтральными отрядами, однако это не рекомендуется из–за значительного увеличения времени сражения.\n"
+"  См. официальные правила Battlefield для всех деталей сражения на такой доске.\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:287
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\bigskip\n"
-#| "\\vspace*{\\fill}\n"
-#| "\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
-#| "\\vspace*{\\fill}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  \\begin{center}\n"
 "    \\includegraphics[width=1.05\\linewidth]{\\images/battlefield-board.png}\n"
@@ -874,27 +816,13 @@ msgid ""
 "\\vfill\n"
 "\n"
 msgstr ""
-"\\bigskip\n"
-"\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
-"\\vspace*{-3em}\n"
-"\n"
 
 #. type: multicols*
 #: sections/combat.tex:291
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\bigskip\n"
-#| "\\vspace*{\\fill}\n"
-#| "\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
-#| "\\vspace*{\\fill}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\begin{center}\n"
 "  \\includegraphics[width=1.05\\linewidth]{\\art/crystal_dragon.jpg}\n"
 "\\end{center}\n"
 "\n"
 msgstr ""
-"\\bigskip\n"
-"\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
-"\\vspace*{-3em}\n"
-"\n"
