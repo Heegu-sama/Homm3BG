@@ -161,6 +161,53 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
     \subsection*{Naval Combat Board}
     Using the \pagelink{combat}{Naval Battle Board} lets your Heroes fight a Combat on ships, what is more challenging than on the normal Combat Board.
 \end{expansion}
+
+\begin{expansion}{navalbattles}
+  \subsection*{Empowered Ability Cards}
+  This new type of Cards improves your Heroes Ability Cards and it's explained in \pagelink{Deck-buildung}{Deck-building}.
+
+  \setlength\intextsep{0pt}
+  \setlength\columnsep{1em}
+  \begin{wrapfigure}{r}{0.2\linewidth}
+    \includegraphics[width=\linewidth]{\images/crown-token.png}
+  \end{wrapfigure}
+  You can gain those Cards by spending \textbf{Empowered Ability Tokens}.
+  You can use one of these Tokens at the moment you gain a new Ability Card, regardless of how you obtain it.
+  If you use such a Token, discard it, remove the just gained normal Ability Card from the game and gain the corresponding Empowered Ability Card in its stead.
+  If that Empowered Ability Card isn't available, you can't spend the Empowered Ability Token and must keep it for later turns.
+
+  You can gain Empowered Ability Tokens in certain Scenarios.
+  Other ways to gain them are not known.\\
+
+  \subsubsection*{\textit{Example}}
+  \textit{Crag Hack reaches level 2.
+    The player controlling him decides to perform the Search (2) action and draws two cards from the Ability deck.
+    The cards are Offense and Wisdom.
+    The player chooses Offense and places the other card on the discard pile.}
+
+  \begin{center}
+    \begin{tikzpicture}
+      \draw (-2, 0) node {\includegraphics[width=0.3\linewidth]{\cards/ability-offense.png}};
+      \draw (-1, 1) node {\svg[25]{green_tick}};
+      \draw (2, 0) node {\includegraphics[width=0.3\linewidth]{\cards/ability-wisdom.png}};
+      \draw (3, 1) node {\svg[25]{red_cross}};
+    \end{tikzpicture}
+  \end{center}
+
+  \textit{The player happens to have an Empowered Ability Token.
+    The player may either use it, or save the token for later.
+    The player decides to use it, so they Remove the ``Offense'' Ability card and take the Empowered ``Offense'' Ability card instead.}
+
+  \begin{center}
+    \begin{tikzpicture}
+      \draw (-2, 0) node {\includegraphics[width=0.3\linewidth]{\cards/ability-offense.png}};
+      \draw (-3, -0.5) node {\includegraphics[width=0.15\linewidth]{\images/crown-token.png}};
+      \draw (-3, -1.5) node[rotate=135] {\svg[30]{red_arrow_up}};
+      \draw (2, 0) node {\includegraphics[width=0.3\linewidth]{\cards/ability-offense-empowered.png}};
+      \draw (3, 1) node {\svg[25]{green_tick}};
+    \end{tikzpicture}
+  \end{center}
+\end{expansion}
 \end{multicols*}
 
 \begin{expansion}{battlefield}
@@ -350,25 +397,6 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
   Each Stack Token modifies a Unit's statistics in the following way: +1~\svg{attack}, +1~\svg{defense}, +1~\svg{health_points}, or +2~\svg{initiative}.
   Furthermore, each Unit with a Stack Token is now a Stacked Unit, which is similar to reinforced Faction Units: instead of removing the Unit Card from the Combat Board when it takes damage equal to or greater than its HP, discard the Stack Token from that Unit and deal any leftover damage (if any), deducting it from the new HP.
   Creature Bank Units without a Stack Token are defeated normally.
-\end{expansion}
-
-\vspace*{1em}
-\begin{expansion}{navalbattles}
-  \subsection*{Empowered Ability Cards}
-  This new type of Cards improves your Heroes Ability Cards and it's explained in \pagelink{Deck-buildung}{Deck-building}.
-
-  \setlength\intextsep{0pt}
-  \setlength\columnsep{1em}
-  \begin{wrapfigure}{r}{0.2\linewidth}
-    \includegraphics[width=\linewidth]{\images/crown-token.png}
-  \end{wrapfigure}
-  You can gain those Cards by spending Empowered Ability Tokens.
-  You can use one of these Tokens at that moment you gain a new Ability Card, regardless of how you obtain it.
-  If you use such a Token, discard it, remove the just gained normal Ability Card from the game and get the corresponding Empowered Ability Card in its stead.
-  If that Empowered Ability Card isn't available, you can't spend the Empowered Ability Token and must keep it for later turns.
-
-  You can gain Empowered Ability Tokens in certain Scenarios.
-  Other ways to gain them are not known.
 \end{expansion}
 
 \begin{expansion}{stretchgoals2}
