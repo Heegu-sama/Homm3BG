@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-06-26 23:51+0200\n"
+"POT-Creation-Date: 2025-08-18 23:00+0200\n"
 "PO-Revision-Date: 2024-04-27 17:21+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
 #: sections/combat.tex:7 sections/credits.tex:10 sections/deckbuilding.tex:7
 #: sections/difficulty.tex:7 sections/expansion_content.tex:5
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:117
 #: sections/map_elements.tex:79 sections/map_elements.tex:125
 #: sections/player_turns.tex:7 sections/resources.tex:7
 #: sections/round_structure.tex:5 sections/scenario_end.tex:5
@@ -35,9 +35,20 @@ msgstr ""
 "{2}\n"
 "\n"
 
+#. type: multicols
+#: sections/all_map_locations.tex:53 sections/all_map_locations.tex:235
+#: sections/credits.tex:36 sections/expansion_content.tex:192
+#: sections/game_modes.tex:30 sections/map_elements.tex:189
+#: sections/scenario_end.tex:23 sections/units.tex:136
+#, no-wrap
+msgid ""
+"\\columnbreak\n"
+"\n"
+msgstr ""
+
 #. type: multicols*
-#: sections/all_map_locations.tex:35 sections/all_map_locations.tex:63
-#: sections/trading.tex:27 sections/units.tex:216 sections/units.tex:220
+#: sections/all_map_locations.tex:62 sections/trading.tex:27
+#: sections/units.tex:216 sections/units.tex:220
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -45,18 +56,8 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/all_map_locations.tex:54 sections/all_map_locations.tex:232
-#: sections/credits.tex:36 sections/difficulty.tex:18
-#: sections/game_modes.tex:30 sections/scenario_end.tex:23
-#: sections/units.tex:136
-#, no-wrap
-msgid ""
-"\\columnbreak\n"
-"\n"
-msgstr ""
-
-#. type: multicols
-#: sections/credits.tex:38 sections/credits.tex:42 sections/setup.tex:121
+#: sections/credits.tex:38 sections/credits.tex:42
+#: sections/expansion_content.tex:190 sections/setup.tex:121
 #: sections/town.tex:30 sections/town.tex:36 sections/units.tex:134
 #, no-wrap
 msgid ""
@@ -65,7 +66,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:40 sections/player_turns.tex:57
+#: sections/deckbuilding.tex:48 sections/player_turns.tex:58
 #: sections/units.tex:40
 #, no-wrap
 msgid ""
@@ -74,15 +75,18 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:54 sections/deckbuilding.tex:72
-#: sections/deckbuilding.tex:104 sections/deckbuilding.tex:252
-#: sections/deckbuilding.tex:261 sections/units.tex:66 sections/units.tex:93
+#: sections/deckbuilding.tex:62 sections/deckbuilding.tex:80
+#: sections/deckbuilding.tex:112 sections/deckbuilding.tex:260
+#: sections/deckbuilding.tex:269 sections/units.tex:66 sections/units.tex:93
 #, no-wrap
 msgid "    \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/player_turns.tex:39 sections/units.tex:227
+#: sections/expansion_content.tex:176 sections/map_elements.tex:166
+#: sections/map_elements.tex:175 sections/map_elements.tex:248
+#: sections/map_elements.tex:281 sections/player_turns.tex:40
+#: sections/units.tex:227
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -99,19 +103,19 @@ msgstr "\\addsection{Unités}{\\skills/leadership.png}"
 #: sections/units.tex:20
 #, no-wrap
 msgid ""
-"\\pagetarget{Units}{In}\\index{Units} addition to their Hero and its associated deck, players also have \\textbf{a deck of Unit Cards} which represent the armies moving with their Heroes.\n"
+"\\pagetarget{Units}{In}\\index{Units} addition to their Hero and its associated Deck, players also have \\textbf{a Deck of Unit Cards} which represent the armies moving with their Heroes.\n"
 "Every Faction has access to \\textbf{7 different Units}, each with unique stats and abilities.\n"
 "Units are necessary for winning Combat and fulfilling Scenario goals.\n"
 "Each Scenario's setup instructions indicate which Unit Cards should be included in your initial Unit Deck.\n"
 "This Deck should be kept clearly separated from the rest of your Faction's Units.\\par\n"
 "Each Faction Unit is double-sided, with a weaker ``Few'' side, and a stronger ``Pack'' side.\n"
-"``Few'' units may be upgraded to ``Packs'' by \\textbf{Reinforcing} them, while taking damage can subsequently reduce a Unit back to its ``Few'' side.\n"
+"``Few'' Units may be upgraded to ``Packs'' by \\textbf{Reinforcing} them, while taking damage can subsequently reduce a Unit back to its ``Few'' side.\n"
 "Units should be always kept on their correct side when moved or inspected.\\par\n"
 "A player's Unit Deck may have any number of Units, but \\textbf{only up to 5 Units} can be selected to fight during \\pagelink{Combatsetup}{Combat Setup}.\n"
 "If a Unit is defeated in Combat, \\textbf{discard it} from your Unit Deck.\\par\n"
-"Units may be Recruited\\index{Recruiting} and Reinforced\\index{Reinforcing} by flipping the Population Token\\index{Population Token} and paying the Unit's Recruitment \\svg{pay} or Reinforcement \\svgeven{reinforce} cost.\n"
+"Units may be Recruited\\index{Recruiting} and Reinforced\\index{Reinforcing} by flipping the Population Token\\index{Population Token} and paying the Unit's Recruitment \\svg{recruit} or Reinforcement \\svg{reinforce} cost.\n"
 "When you do so, you can instantly Recruit and Reinforce \\textbf{any number} of times, provided you have enough Resources and the prerequisite Buildings to do so.\\par\n"
-"\\textbf{Recruiting} a Unit requires that your Town has a Dwelling of that Unit's Level (\\svgunit{bronze}\\svgunit{silver}\\svgunit{golden}).\n"
+"\\textbf{Recruiting} a Unit requires that your Town has a Dwelling of that Unit's Level (\\svg{bronze}\\svg{silver}\\svg{golden}).\n"
 "\\textbf{Reinforcing} requires that your Town has a Citadel in addition to a Dwelling of that Unit's Level.\\par\n"
 "\n"
 msgstr ""
@@ -125,9 +129,9 @@ msgstr ""
 "Les Unités doivent rester du bon côté quand elles sont déplacées ou inspectées.\\par\n"
 "Le Deck d’Unité d’un joueur peut avoir n’importe quel nombre de Carte, mais \\textbf{seulement 5 Unités} peuvent être utilisées pendant la \\pagelink{Combatsetup}{mise en place du Combat}.\n"
 "Si une Unité est battue, \\textbf{défaussez-la} de votre Deck d’Unité.\\par\n"
-"Les Unités peuvent être Recrutées\\index{Recrutement} et Améliorées\\index{Amélioration} en utilisant le Jeton Population\\index{Jeton Population} et en payant leur coût de Recrutement \\svg{pay} ou d'Amélioration \\svgeven{reinforce}.\n"
+"Les Unités peuvent être Recrutées\\index{Recrutement} et Améliorées\\index{Amélioration} en utilisant le Jeton Population\\index{Jeton Population} et en payant leur coût de Recrutement \\svg{recruit} ou d'Amélioration \\svg{reinforce}.\n"
 "Si vous le faites, vous pouvez instantanément Recruter ou Améliorer \\textbf{autant de fois que souhaité} tant que vous avez les Ressources et les Bâtiments.\\par\n"
-"\\textbf{Recruter} une Unité requiert dans votre Ville la Demeure de Rang correspondant (\\svgunit{bronze}\\svgunit{silver}\\svgunit{golden}).\n"
+"\\textbf{Recruter} une Unité requiert dans votre Ville la Demeure de Rang correspondant (\\svg{bronze}\\svg{silver}\\svg{golden}).\n"
 "\\textbf{Améliorer} requiert une Citadelle en plus de la Demeure.\\par\n"
 "\n"
 
@@ -145,7 +149,7 @@ msgid ""
 "\n"
 msgstr ""
 "\\note{13}{\n"
-"  Tous les effets qui Améliorent des unités \\textbf{ne requièrent pas} de dépenser le Jeton Population, de posséder une Demeure ou la Citadelle.\\par\n"
+"  Tous les effets qui Améliorent des Unités \\textbf{ne requièrent pas} de dépenser le Jeton Population, de posséder une Demeure ou la Citadelle.\\par\n"
 "\n"
 "  \\medskip\n"
 "\n"
@@ -159,7 +163,7 @@ msgstr ""
 msgid ""
 "\\vspace*{\\fill}\n"
 "\\iftoggle{printable}{}{\\hspace{1em}}\n"
-"{\\transparent{0.3}\\includegraphics[width=\\iftoggle{printable}{\n"
+"{\\transparent{0.2}\\includegraphics[width=\\iftoggle{printable}{\n"
 "  \\ifodd\\value{page}\n"
 "    1.2\\linewidth\n"
 "  \\else\n"
@@ -223,7 +227,7 @@ msgstr ""
 msgid ""
 "\\vfill\n"
 "\\hspace{-2em}\n"
-"{\\transparent{0.3}\\includegraphics[width=\\linewidth]{\\art/behemoth.png}}\n"
+"{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/behemoth.png}}\n"
 "\n"
 msgstr ""
 
@@ -415,7 +419,7 @@ msgid ""
 "There are three types of Units:\n"
 "\\begin{itemize}\n"
 "  \\item \\textbf{Ground}\\index{Ground Units} \\svg{unit_ground} Units may move up to 3 spaces and then attack an adjacent enemy.\n"
-"  \\item \\textbf{Flying}\\index{Flying Units} \\svgeven{unit_flying} Units may move up to 3 spaces, \\textbf{ignoring Combat Obstacles}, and then attack an adjacent enemy.\n"
+"  \\item \\textbf{Flying}\\index{Flying Units} \\svg{unit_flying} Units may move up to 3 spaces, \\textbf{ignoring Combat Obstacles}, and then attack an adjacent enemy.\n"
 "  \\item \\textbf{Ranged}\\index{Ranged Units} \\svg{unit_ranged} Units may attack \\textbf{any enemy Unit anywhere} and then move up to 1 space OR move up to 1 space without attacking.\n"
 "\\end{itemize}\n"
 "If a \\svg{unit_ranged} Unit is next to an enemy Unit, its attack target \\textbf{must be} that adjacent enemy.\n"
@@ -428,7 +432,7 @@ msgstr ""
 "Une Unité appartient à l'une de ces 3 catégories :\n"
 "\\begin{itemize}\n"
 "  \\item \\textbf{Au Sol}\\index{Unités au Sol} \\svg{unit_ground} peut se déplacer de 3 cases puis attaquer un ennemi adjacent ;\n"
-"  \\item \\textbf{Volante}\\index{Unités Volantes} \\svgeven{unit_flying} peut se déplacer de 3 cases, \\textbf{en ignorant les Obstacles}, puis attaquer un ennemi adjacent ;\n"
+"  \\item \\textbf{Volante}\\index{Unités Volantes} \\svg{unit_flying} peut se déplacer de 3 cases, \\textbf{en ignorant les Obstacles}, puis attaquer un ennemi adjacent ;\n"
 "  \\item \\textbf{À Distance}\\index{Unités à Distance} \\svg{unit_ranged} peut attaquer \\textbf{n'importe quelle Unité ennemie, n'importe où} puis bouger d'une case OU bouger d'une case sans attaquer.\n"
 "\\end{itemize}\n"
 "Si une Unité \\svg{unit_ranged} est adjacente à une Unité ennemie, sa cible \\textbf{doit être} cet ennemi.\n"
@@ -445,7 +449,7 @@ msgid ""
 "Neutral Units\\index{Neutral Units} guard the various locations on the Game Map.\n"
 "Starting and winning Combat against them is necessary to Visit most Locations.\n"
 "Neutral Units are spread into four different tiers, each with their own Deck.\n"
-"In addition to \\svgunit{bronze}, \\svgunit{silver} and \\svgunit{golden}, there are also Azure \\svgunit{azure} Neutral Units which are the strongest in the game.\\par\n"
+"In addition to \\svg{bronze}, \\svg{silver} and \\svg{golden}, there are also Azure \\svg{azure} Neutral Units which are the strongest in the game.\\par\n"
 "Each of these Decks should always be kept separate from each other and shuffled during setup.\n"
 "If a Neutral Unit Deck ever runs out of Cards, reshuffle the discard into a new Deck.\n"
 "When a Combat against Neutral Units starts, draw \\pagelink{Difficulty}{the appropriate number} of Units from each tier to take part in that Combat.\\par\n"
@@ -458,7 +462,7 @@ msgstr ""
 "Les Unités Neutres\\index{Unités Neutres} gardent différents lieux sur le Plateau.\n"
 "Gagner des Combats contre elles est nécessaire pour Explorer la plupart des Sites.\n"
 "Les Unités Neutres sont séparées en quatre Rangs, chacun avec sa propre Pile.\n"
-"En plus des \\svgunit{bronze}, \\svgunit{silver} et \\svgunit{golden}, il y a aussi les Unités Neutres Azur \\svgunit{azure} qui sont les plus fortes du jeu.\\par\n"
+"En plus des \\svg{bronze}, \\svg{silver} et \\svg{golden}, il y a aussi les Unités Neutres Azur \\svg{azure} qui sont les plus fortes du jeu.\\par\n"
 "Chaque Pile doit toujours être laissée séparée des autres et mélangée pendant la mise en place.\n"
 "Si une Pile d'Unité Neutre n'a plus de Carte, mélanger sa Défausse pour former une nouvelle Pile.\n"
 "Quand un combat contre des Unités Neutres commence, piochez \\pagelink{Difficulty}{le bon nombre} d'Unités de chaque rang pour participer au Combat.\\par\n"
@@ -472,13 +476,13 @@ msgstr ""
 #, no-wrap
 msgid ""
 "\\note{8}{\n"
-"  Having a \\svgunit{golden} Dwelling built in your Town allows you to draw an \\svgunit{azure} Unit Card using the basic (top) effect of a Diplomacy Ability Card.\n"
+"  Having a \\svg{golden} Dwelling built in your Town allows you to draw an \\svg{azure} Unit Card using the basic (top) effect of a Diplomacy Ability Card.\n"
 "  This effect does not apply to Dungeon's Portal of Summoning.\n"
 "}\n"
 "\n"
 msgstr ""
 "\\note{8}{\n"
-"  Une Demeure \\svgunit{golden} construite dans votre Ville vous permez de piocher une Carte Unité \\svgunit{azure} en utilisant l'effet basique (haut) de la Carte de Compétence Diplomatie.\n"
+"  Une Demeure \\svg{golden} construite dans votre Ville vous permez de piocher une Carte Unité \\svg{azure} en utilisant l'effet basique (haut) de la Carte de Compétence Diplomatie.\n"
 "  Le portail d'invocation du Donjon n'est pas affecté par cet effet.\n"
 "}\n"
 "\n"
@@ -495,13 +499,13 @@ msgid ""
 "\\darkcell{\\raisebox{-1.3\\height}{Town Building}} & \\darkcell{Castle} & "
 "\\darkcell{\\raisebox{-1.3\\height}{Dungeon}} & "
 "\\darkcell{\\raisebox{-1.3\\height}{Necropolis}} \\\\ \\darkcell[1.6]"
-"{\\svgunit[12]{bronze} \\\\ Bronze Units} & \\lightcell[1.6]{Tier 1 \\\\ "
+"{\\svg[12]{bronze} \\\\ Bronze Units} & \\lightcell[1.6]{Tier 1 \\\\ "
 "Dwelling} & \\lightcell[1.6]{Halberdiers, Marksmen, Griffins} & "
 "\\lightcell[1.6]{Troglodytes, Harpies, Evil Eyes} & \\lightcell[1.6]"
-"{Skeletons, Zombies, Wraiths} \\\\ \\darkcell[1.2]{\\svgunit[12]{silver} \\"
-"\\ Silver Units} & \\lightcell[1.2]{Tier 2 \\\\ Dwelling} & \\lightcell[1.2]"
+"{Skeletons, Zombies, Wraiths} \\\\ \\darkcell[1.2]{\\svg[12]{silver} \\\\ "
+"Silver Units} & \\lightcell[1.2]{Tier 2 \\\\ Dwelling} & \\lightcell[1.2]"
 "{Crusaders, Zealots} & \\lightcell[1.2]{Medusas, Minotaurs} & "
-"\\lightcell[1.2]{Vampires,\\\\ Liches} \\\\ \\darkcell[1.2]{\\svgunit[12]"
+"\\lightcell[1.2]{Vampires,\\\\ Liches} \\\\ \\darkcell[1.2]{\\svg[12]"
 "{golden} \\\\ Gold Units} & \\lightcell[1.2]{Tier 3 \\\\ Dwelling} & "
 "\\lightcell[1.2]{Champions, Archangels} & \\lightcell[1.2]{Manticores, Black "
 "Dragons} & \\lightcell[1.2]{Dread Knights, Ghost Dragons} \\\\ "
@@ -532,7 +536,7 @@ msgstr ""
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{Summoning}\n"
-#| "Some cards from the Inferno expansion may Summon Units\\index{Summoning} during Combat.\n"
+#| "Some Cards from the Inferno expansion may Summon Units\\index{Summoning} during Combat.\n"
 #| "This effect cannot Summon Units from the Neutral Units Deck.\n"
 #| "Place the summoned Unit adjacent to the summoning Unit.\n"
 #| "Summoned Units Activate in the Round they were summoned if their Initiative is lower or equal to the Initiative of the currently Activated Unit.\n"
@@ -540,7 +544,7 @@ msgstr ""
 #| "After Combat, unless stated otherwise, the Summoned Units are added to your Unit Deck.\n"
 #| "\n"
 msgid ""
-"\\begin{expansion}{inferno}\n"
+"\\begin{expansion}[before=\\vspace*{-11mm}]{inferno}\n"
 "  \\subsection*{\\pagetarget{Summoning}{Summoning}}\n"
 "  Pit Lords from the Inferno expansion may Summon Units\\index{Summoning} during Combat.\n"
 "  This effect cannot Summon Units from the Neutral Units Deck.\n"
@@ -576,10 +580,10 @@ msgstr ""
 #: sections/units.tex:214
 #, no-wrap
 msgid ""
-"\\textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons, Empowering \\svg{empower} the Spell by 2 with the Expert  Effect \\svgeven{expert} of a Power Card.}\n"
+"\\textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons, Empowering \\svg{empower} the Spell by 2 with the Expert  Effect \\svg{expert} of a Power Card.}\n"
 "\n"
 msgstr ""
-"\\textit{Bob, jouant Alamar le Mage de Guerre, lance une Flèche Magique contre le \\og Groupe \\fg{} de Squelettes d'Alice, Augmentant \\svg{empower} le Sort de 2 avec l'Effet Expert \\svgeven{expert} d'une Carte Puissance.}\n"
+"\\textit{Bob, jouant Alamar le Mage de Guerre, lance une Flèche Magique contre le \\og Groupe \\fg{} de Squelettes d'Alice, Augmentant \\svg{empower} le Sort de 2 avec l'Effet Expert \\svg{expert} d'une Carte Puissance.}\n"
 "\n"
 
 #. type: multicols*

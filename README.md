@@ -13,7 +13,6 @@
     <thead>
         <tr>
             <th>Language</th>
-            <th colspan=2 align="center">Progress</th>
             <th colspan=2 align="center">Version 1.3 🪨<br>(Stable)</th>
             <th colspan=3 align="center">Latest Build ⚗️<br>(Experimental)</th>
         </tr>
@@ -21,8 +20,6 @@
     <tbody>
         <tr>
             <td align="center">🌍</td>
-            <td align="center">✍️<br>Text</td>
-            <td align="center">🏞️<br>Images</td>
             <td align="center">🖥️<br>Digital</td>
             <td align="center">🖨️<br>Printable</td>
             <td align="center">🖥️<br>Digital</td>
@@ -31,8 +28,6 @@
         </tr>
         <tr>
             <td>🇬🇧 English</td>
-            <td align="center">-</td>
-            <td align="center">-</td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_English_Rules_Rewrite_1_3.pdf">download</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_English_Rules_Rewrite_1_3_Printable.pdf">download</a></td>
             <td align="center">️<a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf">download</a></td>
@@ -40,9 +35,11 @@
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/economy_printable_en.pdf">download</a></td>
         </tr>
         <tr>
-            <td>🇵🇱 Polski</td>
-            <td align="center">100%</td>
-            <td align="center">100%</td>
+            <td>🇵🇱 Polski<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/pl/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Polski_Rules_Rewrite_1_3.pdf">pobierz</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Polski_Rules_Rewrite_1_3_Printable.pdf">pobierz</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf">️pobierz</a></td>
@@ -50,9 +47,11 @@
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/economy_printable_pl.pdf">pobierz</a></td>
         </tr>
         <tr>
-            <td>🇪🇸 Español</td>
-            <td align="center">100%</td>
-            <td align="center">0%</td>
+            <td>🇪🇸 Español<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/es/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Espanol_Rules_Rewrite_1_3.pdf">descargar</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Espanol_Rules_Rewrite_1_3_Printable.pdf">descargar</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf">️descargar</a></td>
@@ -60,9 +59,11 @@
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/economy_printable_es.pdf">descargar</a></td>
         </tr>
         <tr>
-            <td>🇫🇷 Français</td>
-            <td align="center">100%</td>
-            <td align="center">100%</td>
+            <td>🇫🇷 Français<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/fr/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Francais_Rules_Rewrite_1_3.pdf">télécharger</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Francais_Rules_Rewrite_1_3_Printable.pdf">télécharger</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf">️télécharger</a></td>
@@ -70,9 +71,11 @@
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/economy_printable_fr.pdf">télécharger</a></td>
         </tr>
         <tr>
-            <td>🇷🇺 Русский</td>
-            <td align="center">100%</td>
-            <td align="center">0%</td>
+            <td>🇷🇺 Русский<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/ru/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Russkiy_Rules_Rewrite_1_3.pdf">скачать</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Russkiy_Rules_Rewrite_1_3_Printable.pdf">скачать</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf">️скачать</a></td>
@@ -80,9 +83,11 @@
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/economy_printable_ru.pdf">скачать</a></td>
         </tr>
         <tr>
-            <td>🇺🇦 Українська</td>
-            <td align="center">90%</td>
-            <td align="center">0%</td>
+            <td>🇺🇦 Українська<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/uk/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
             <td align="center">—</td>
             <td align="center">—</td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf">️завантажити</a></td>
@@ -90,9 +95,11 @@
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/economy_printable_ua.pdf">завантажити</a></td>
         </tr>
         <tr>
-            <td>🇩🇪 Deutsch</td>
-            <td align="center">100%</td>
-            <td align="center">100%</td>
+            <td>🇩🇪 Deutsch<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/de/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
             <td align="center">—</td>
             <td align="center">—</td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/main_de.pdf">️speichern</a></td>
@@ -100,9 +107,11 @@
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/economy_printable_de.pdf">speichern</a></td>
         </tr>
         <tr>
-            <td>🇨🇿 Čeština</td>
-            <td align="center">100%</td>
-            <td align="center">0%</td>
+            <td>🇨🇿 Čeština<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/cs/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Cestina_Rules_Rewrite_1_3.pdf">stáhnout</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Cestina_Rules_Rewrite_1_3_Printable.pdf">stáhnout</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cs/main_cs.pdf">stáhnout</a></td>
@@ -110,9 +119,11 @@
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cs/economy_printable_cs.pdf">stáhnout</a></td>
         </tr>
         <tr>
-            <td>🇮🇱 עברית</td>
-            <td align="center">100%</td>
-            <td align="center">0%</td>
+            <td>🇮🇱 עברית<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/he/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Ivrit_Rules_Rewrite_1_3.pdf">הורדה</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Ivrit_Rules_Rewrite_1_3_Printable.pdf">הורדה</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/he/main_he.pdf">הורדה</a></td>
@@ -166,6 +177,17 @@ This repository serves both as a means to preserve the work, but also for others
 
 Please discuss any and all factual errors, bad language or other errors you've found.
 You can do this by opening issues/PRs with suggestions, writing in the BGG thread, or joining us [on Discord](https://discord.gg/Y4uM9pPWF6).
+
+You can help translate this project using [Weblate](https://weblate.org/en/).
+Click the image to get started:
+
+<a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/287x66-black.png" />
+  <source media="(prefers-color-scheme: light)" srcset="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/287x66-grey.png" />
+  <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/287x66-grey.png">
+</picture>
+</a>
 
 ### 🔮 The Future
 

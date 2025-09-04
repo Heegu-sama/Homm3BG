@@ -121,7 +121,7 @@ jobs:
             ./main_${{ inputs.language }}.toc
             ./**/*.aux
           key: >-
-            texlive-${{ inputs.language }}-${{ inputs.build_type }}-${{
+            texlive-${{ inputs.build_type }}-${{ inputs.language }}-${{
             inputs.language == 'en'
             && hashFiles('main_en.tex', 'metadata.tex', 'structure.tex', 'sections/*.tex')
             || hashFiles(format('main_{0}.tex', inputs.language), 'metadata.tex', 'structure.tex', format('sections/translated/{0}/*.tex', inputs.language))
@@ -130,7 +130,7 @@ jobs:
             texlive-${{ inputs.build_type }}-${{ inputs.language }}-
 
       - name: Compile PDF
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         if: steps.cache-pdf.outputs.cache-hit != 'true'
         with:
           extra_system_packages: "inkscape"

@@ -150,3 +150,5 @@ if [[ -n "${SECTION_SEARCH}" ]] && command -v gs >/dev/null 2>&1; then
   tools/optimize.sh "${LANGUAGE}"
   mv "main_${LANGUAGE}_optimized.pdf" "main_${LANGUAGE}.pdf"
 fi
+
+echo "main_${LANGUAGE}.pdf"

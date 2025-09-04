@@ -2,11 +2,11 @@
 \usepackage[
   a4paper,
   top=2cm,
-  bottom=3cm,
+  bottom=2.3cm,
   left=2cm,
   right=2cm,
   marginparwidth=1.75cm,
-  footskip=2.05cm,
+  footskip=1.35cm,
 ]{geometry}
 
 % Useful packages
@@ -44,6 +44,7 @@
 \usepackage{catchfile}
 \usepackage{xstring}
 \usepackage{expl3}
+\usepackage{wrapfig}
 \newtcolorbox{scaledfigure}[1][]{height fill, space to=\myspace,#1}
 \hypersetup{
   colorlinks=true,
@@ -135,6 +136,9 @@
 \definecolor{navalbattles}{HTML}{2E5984}  % dark deep blue
 \definecolor{stretchgoals2}{HTML}{000000}  % TODO choose color
 
+\AtBeginEnvironment{tcolorbox}{%
+  \setlist[itemize]{itemsep=0.4em, parsep=0pt, topsep=5pt}%
+}
 \ExplSyntaxOn
 \cs_new:Nn \__expansion_color_titles:NNn {
   \clist_set:Nn \l_tmpa_clist {#3}
@@ -149,7 +153,7 @@
   \clist_map_inline:Nn \l_tmpa_clist {
     \seq_put_right:No \l_tmpa_seq {\color{##1}\MakeUppercase{\expansiontext{##1}}}
   }
-  \tl_set:No #2 {\seq_use:Nn \l_tmpa_seq { ,~ }}
+  \tl_set:No #2 {\seq_use:Nn \l_tmpa_seq { \\[-0.7em] }}
 }
 
 \NewDocumentEnvironment{expansion}{ O{} m +b }{
@@ -169,14 +173,15 @@
       \fill[
         \l_expcolor_tl,
         path~fading=east,
-        opacity=0.08
+        opacity=0.09
       ]
         ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
         ([xshift=5pt, yshift=-3pt]frame.south~east);
       \fill[
         top~color=\l_expcolor_tl,
         bottom~color=\l_expcolor_tl,
-        rounded~corners=1.5pt
+        rounded~corners=1.5pt,
+        opacity=0.5
       ]
       ([xshift=-8pt, yshift=3pt]frame.north~west) rectangle
       ([xshift=-5pt, yshift=-3pt]frame.south~west);
@@ -231,15 +236,51 @@
 }
 \ExplSyntaxOff
 
+% LaTeX3 clauses for glyph rendering purposes
+\ExplSyntaxOn
+% List of glyphs that don't look good when dropped below the text line
+\clist_new:N \g_nodrop_list
+\clist_map_inline:nn { movement, expert, reinforce, level1, level4, level6, unit_flying, arrow_right_gray, arrow_right } {
+  \clist_put_right:Nn \g_nodrop_list { #1 }
+% Add the -yellow variants to the list automatically
+  \clist_put_right:Nn \g_nodrop_list { #1-yellow }
+}
+
+% An "if" defined with LaTeX3 to check if an argument passed to the \svg command is a unit
+\NewDocumentCommand{\ifunit}{mmm}{
+  \clist_if_in:nnTF { bronze, silver, golden, azure } {#1} {#2} {#3}
+}
+
+% Some glyphs don't look good when dropped below the text line - their list is defined above
+\NewDocumentCommand{\ifnodrop}{mmm}{
+  \clist_if_in:NnTF \g_nodrop_list {#1} {#2} {#3}
+}
+\ExplSyntaxOff
+
+% A handy command to render SVG glyphs
+% Argument 1 is the height in pixels (defaults to 10)
+% Argument 2 is the glyph name (matching a file)
 \newcommand{\svg}[2][10]{%
-  {\raisebox{-0.15\height}{\includesvg[height=#1px]{\svgs/\detokenize{#2}.svg}}}%
-}%
-\newcommand{\svgunit}[2][10]{%
-  {\raisebox{-0.1\height}{\includesvg[height=#1px]{\svgs/\detokenize{#2}.svg}}}%
-}%
-\newcommand{\svgeven}[2][10]{%
-  \includesvg[height=#1px]{\svgs/\detokenize{#2}.svg}%
-}%
+  \iftoggle{noartbackground}{%
+    % In the economy printable build, we want all glyphs to be black, so we strip the "-yellow" suffix
+    \IfEndWith{#2}{-yellow}{%
+      \StrGobbleRight{#2}{7}[\svgfilename]%
+      \edef\svgpath{\svgs/\svgfilename.svg}%
+    }{%
+      % In the economy printable build, we append "-mono" to unit glyphs - those are separate glyphs with letters because in this mode they can't be differentiated by color
+      \ifunit{#2}{\edef\svgpath{\svgs/\detokenize{#2}-mono.svg}}{\edef\svgpath{\svgs/\detokenize{#2}.svg}}%
+    }%
+  }{%
+    \edef\svgpath{\svgs/\detokenize{#2}.svg}%
+  }%
+  \ifnodrop{#2}{%
+    % Don't drop a selection of glyphs below the text line - they look better that way
+    \includesvg[height=#1px]{\svgpath}%
+  }{%
+    % In all other cases, drop the glyph by 10% of its height if it's a unit, 15% otherwise
+    \ifunit{#2}{{\raisebox{-0.1\height}{\includesvg[height=#1px]{\svgpath}}}}{{\raisebox{-0.15\height}{\includesvg[height=#1px]{\svgpath}}}}%
+  }%
+}
 
 % Command to frame images
 \newcommand\framedimage[2][]{%
@@ -251,6 +292,15 @@
   \end{tikzpicture}}
 % End of drop frame definition
 
+\newcommand\squareimage[3][0pt]{%
+  \begin{tikzpicture}[baseline=(current bounding box.center)]
+    \clip (0,0) rectangle (#2,#2);
+    \node[anchor=center,xshift=#1] at (#2/2,#2/2)
+      {\includegraphics[height=#2]{#3}};
+    \draw [borderoutyellow, thick] (0,0) rectangle (#2,#2);
+  \end{tikzpicture}%
+}
+
 \titleformat{\section}
 {\huge}
 {\filright
@@ -261,7 +311,7 @@
 %Create section heading with graphics. Argument one is heading name, argument two is picture to use on the left.
 \providecommand{\sectionheadertext}[1]{
   \fontfamily{ptm}\selectfont{
-    \color{antiquewhite} \section*{\MakeUppercase{#1}}
+    \iftoggle{noartbackground}{}{\color{antiquewhite}} \section*{\MakeUppercase{#1}}
   }
 }
 \newcommand{\addsection}[3][1]{
@@ -271,7 +321,11 @@
   \makebox[0pt][l]{
   \raisebox{-\totalheight}[0pt][7pt]{
     \begin{tikzpicture}
-      \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\layout/section_heading.jpg}};
+      \iftoggle{noartbackground}{
+        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\layout/section_heading_monochrome.png}};
+      }{
+        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\layout/section_heading.jpg}};
+      }
       \draw (-6.2, 0) node {\includegraphics[width=0.125\textwidth]{#3}};
     \end{tikzpicture}
     }
@@ -314,24 +368,32 @@
 \providecommand{\notefont}[0]{\fontfamily{ptm}\selectfont}
 \newcommand{\note}[2]{
   \begin{tikzpicture}
-    \textlang{english}{\draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/table-background.jpg}}};}
+    \iftoggle{noartbackground}{
+      \node[inner sep=0, minimum width=\linewidth, minimum height=#1\baselineskip] at (0,0) {};
+    }{
+      \textlang{english}{\draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/table-background.jpg}}};}
+    }
     \draw [borderoutyellow, very thick] (current bounding box.north west) rectangle (current bounding box.south east);
     \draw [borderinyellow, thick] ([xshift=+2.8pt, yshift=-2.8pt] current bounding box.north west) rectangle ([xshift=-2.8pt, yshift=2.8pt] current bounding box.south east);
     \node at (current bounding box.center) {
       \begin{varwidth}{0.85\linewidth}
       \notefont{
-        \color{arylideyellow}
-        \hypersetup{linkcolor=amber}
+        \iftoggle{noartbackground}{}{
+          \color{arylideyellow}
+          \hypersetup{linkcolor=amber}
+        }
         #2
         \hypersetup{linkcolor=goldenbrown}
       }
       \end{varwidth}
     };
-    \begin{pgfonlayer}{background}
-      \begin{scope}[blend mode=multiply]
-        \draw [shade, blur shadow={shadow opacity=15}] (current bounding box.north west) rectangle (current bounding box.south east);
-      \end{scope}
-    \end{pgfonlayer}
+    \iftoggle{noartbackground}{}{
+      \begin{pgfonlayer}{background}
+        \begin{scope}[blend mode=multiply]
+          \draw [shade, blur shadow={shadow opacity=15}] (current bounding box.north west) rectangle (current bounding box.south east);
+        \end{scope}
+      \end{pgfonlayer}
+    }
   \end{tikzpicture}
 }
 
@@ -341,7 +403,11 @@
 % 3) Table contents like title and tabularx environment
 \newcommand{\hommtable}[3][shade, blur shadow={shadow opacity=15}]{
   \begin{tikzpicture}
-    \textlang{english}{\draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#2\baselineskip}{\layout/table-background.jpg}}};}
+    \iftoggle{noartbackground}{
+      \node[inner sep=0, minimum width=\linewidth, minimum height=#2\baselineskip] at (0,0) {};
+    }{
+      \textlang{english}{\draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#2\baselineskip}{\layout/table-background.jpg}}};}
+    }
     \draw [bordermidyellow, thick] ([xshift=+1pt, yshift=-1pt] current bounding box.north west) rectangle ([xshift=-1pt, yshift=1pt] current bounding box.south east);
     \draw [borderoutyellow, thick] (current bounding box.north west) rectangle (current bounding box.south east);
     \draw [borderinyellow, thick] ([xshift=+3pt, yshift=-3pt] current bounding box.north west) rectangle ([xshift=-3pt, yshift=3pt] current bounding box.south east);
@@ -349,19 +415,23 @@
       \begin{varwidth}{0.95\linewidth}
       \notefont{
         \bgroup
-        \color{arylideyellow}
-        \hypersetup{linkcolor=amber}
+        \iftoggle{noartbackground}{}{
+          \color{arylideyellow}
+          \hypersetup{linkcolor=amber}
+        }
         \setlength{\tabcolsep}{0.3em}
         #3
         \egroup
       }
       \end{varwidth}
     };
-    \begin{pgfonlayer}{background}
-      \begin{scope}[blend mode=multiply]
-        \draw [#1] (current bounding box.north west) rectangle (current bounding box.south east);
-      \end{scope}
-    \end{pgfonlayer}
+    \iftoggle{noartbackground}{}{
+      \begin{pgfonlayer}{background}
+        \begin{scope}[blend mode=multiply]
+          \draw [#1] (current bounding box.north west) rectangle (current bounding box.south east);
+        \end{scope}
+      \end{pgfonlayer}
+    }
   \end{tikzpicture}
 }
 % End of Heroes-styled canvas definition.
@@ -376,13 +446,37 @@
   \end{tikzpicture}
 }
 
+\newcommand{\darkcellleft}[2][0.9]{
+  \begin{tikzpicture}
+    \filldraw[line width=1.0pt, fill=darkcellbg, fill opacity=0.5, draw=darkcellborder] (0, 0) rectangle (\linewidth, #1);
+
+    \node[text width=\linewidth, align=left] at (current bounding box.center) {
+      \leftskip=0.4em
+      \rightskip=0pt plus 1fil
+      \textbf{#2}\\
+    };
+  \end{tikzpicture}
+}
+
 \definecolor{lightcellborder}{HTML}{77543e}
 \definecolor{lightcellbg}{HTML}{20160C}
 
 \newcommand{\lightcell}[2][0.9]{
   \begin{tikzpicture}
-    \filldraw[line width=1.0pt, fill=lightcellbg, fill opacity=0.25, draw=lightcellborder] (0, 0) rectangle (\linewidth, #1);
-    \node[text width=\linewidth, align=center] at (current bounding box.center) {\color{white}#2};
+    \filldraw[line width=1.0pt, fill=\iftoggle{noartbackground}{white}{lightcellbg}, fill opacity=0.25, draw=lightcellbg, fill opacity=0.25, draw=lightcellborder] (0, 0) rectangle (\linewidth, #1);
+    \node[text width=\linewidth, align=center] at (current bounding box.center) {\iftoggle{noartbackground}{}{\color{white}}#2};
+  \end{tikzpicture}
+}
+
+\newcommand{\lightcellleft}[2][0.9]{
+  \begin{tikzpicture}
+    \filldraw[line width=1.0pt, fill=\iftoggle{noartbackground}{white}{lightcellbg}, fill opacity=0.25, draw=lightcellbg, fill opacity=0.25, draw=lightcellborder] (0, 0) rectangle (\linewidth, #1);
+    \node[text width=\linewidth, align=left] at (current bounding box.center) {
+      \iftoggle{noartbackground}{}{\color{white}}
+      \leftskip=0.4em
+      \rightskip=0pt plus 1fil
+      #2\\
+    };
   \end{tikzpicture}
 }
 
@@ -434,11 +528,11 @@
   \newgeometry{
     twoside,
     top=2cm,
-    bottom=3cm,
+    bottom=2.3cm,
     left=2.5cm,
     right=1.5cm,
     marginparwidth=1.75cm,
-    footskip=2.05cm,
+    footskip=1.35cm,
   }
 }{}
 
