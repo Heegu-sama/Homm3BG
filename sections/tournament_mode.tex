@@ -2,32 +2,35 @@
 
 \begin{multicols*}{2}
 
-The Tournament Mode has some rule changes in order to remove some randomness from the game to allow more tactical decisions and to give players more control.
+The 1 vs. 1 Tournament Mode has some rule changes in order to remove some randomness from the game to allow more tactical decisions and to give players more control.
 
-\subsection*{Changes during setup}
+\subsection*{Changes during Setup}
 
 Do following things during setup:
 \begin{itemize}
-    \item Remove the Ability Card "Diplomacy" and the Artifact Card "Hourglass of the Evil Hour" from the play.
-    \item Both players roll 2 \svg{resource_die}. The player with the highest amount of resources on their die will get to choose who starts and who will go second.
+    \item Remove the Ability Card "Diplomacy" and the Artifact Card "Hourglass of the Evil Hour" from the game before building their belonging decks.
+    \item Both players roll 2 \svg{resource_die}. The player with the highest amount of resources on their dice will get to choose who starts and who will go second.
     \item The second player gains \svg{morale_positive} at the start of the game.
 \end{itemize}
+
+
 \subsection*{Building the Map}
 
-The Map in a Tournament Scenario is build by the players and it's \textbf{completely revealed} at the start of the game.
-The Scenario's Map layout only shows, how the center of the Map should look like and which Tiles are needed to build the rest of the Map.
-The placement decisions of all other Map Tiles assigned to the Scenario is left two both players.
-While placing new Tiles, the \pagelink{Placing}{general rules}
+The Map in a Tournament Scenario is build by the players and it will be \textbf{completely revealed} at the start of the game.
+The Scenario's Map Layout only shows, how the center of the Map should look like and which Tiles are needed to build the rest of the Map.
+The placement decisions of all other Map Tiles assigned to the Scenario is left to both players.\par
+
 Follow these rules to build the Map and \textbf{place all Map Tiles always face up}:
 \begin{enumerate}
-    \item The starting player discovers the Map Tiles in the center of the map and rotate them freely.
-    \item Starting with the second player, both players take turns adding all, if any, of the Near Map Tiles to the scenario Map, one at a time.
+    \item The starting player places the Map Tiles in the center of the map, matching them to the Scenario's Map Layout, and discovers and rotates them freely.
+    \item Starting with the second player, both players take turns adding all, if any, of the Scenario's Near Map Tiles to the Map, one at a time.
     \begin{itemize}
-        \item If possible, a Near Map Tile must be placed next to a Center Map Tile.
+        \item If possible, a Near Map Tiles must be placed next to a Center Map Tile.
         \item At least 2 Near Map Tiles in every Scenario must have an Obelisk location on them.
     \end{itemize}
-    \item Once all Near Map Tiles have been placed, the first player must place their starting Tile adjacent to at least one near Map Tile. The other player must place their Starting Map Tile at the opposite side of the Scenario Map - one the furthermost position away from the first player's Starting Map Tile (counted in Tiles).
-    \item Starting with the First player, both players take turns adding their Far Map Tiles to the Scenario Map, one at a time
+    \item Once all Near Map Tiles have been placed, the first player must place their Starting Map Tile adjacent to at least one Near Map Tile.
+    The other player must place their Starting Map Tile at the opposite side of the Map - on the furthermost position away from the first player's Starting Map Tile (counted in Tiles).
+    \item Starting with the first player, both players take turns adding the Scenario's Far Map Tiles to the Map, one at a time.
     \begin{itemize}
         \item Every player's first Far Map Tile must be placed adjacent to their Starting Map Tile.
         \item The remaining Map tiles must follow the \pagelink{Placing}{standard Tile Placement rules}.
@@ -38,18 +41,29 @@ Follow these rules to build the Map and \textbf{place all Map Tiles always face 
 
 The following rules apply to every tournament scenario:
 \begin{itemize}
-    \item At the Start of the first Round of a Scenario, \textbf{each player can once reshuffle} their hand of cards back into their Deck to draw a new starting hand.
-    \item All players can use morale tokens for a \textbf{new morale action}: During any \textbf{Search} action (regardless of the type of the cards), discard all drawn cards and perform the Search action again.
-    \item If you Remove Artifact Cards during the game, \textbf{keep them beside your Deck} as a reminder until end of game, when your pile of artifact Cards counts toward your final Victory Points score.
-    \item
+    \item At the Start of the first Round of a Scenario, \textbf{each player can once reshuffle} their hand of cards back into their Deck to draw a new starting hand of Cards.
+    \item All players can use Morale Tokens for a \textbf{new Morale Action}: During any \textbf{Search} action (regardless with which type of Cards), discard all drawn Cards and perform the Search action again.
+    \item If you Remove Artifact Cards during the game, \textbf{keep them beside your Deck} as a reminder until end of game, when your pile of Artifact Cards counts toward your final Victory Points score.
+    \item The Redwood Oberservatory Map Location has the following changed effect:
+    \begin{figure}[H]
+        \begin{minipage}[t]{0.47\textwidth}
+            \vspace{0pt}
+            \begin{center}
+            \textbf{Redwood Observatory}\par
+            \framedimage[\linewidth]{\map_locations/redwood_observatory.jpg}
+            \end{center}
+            \small Category: \textbf{Visitable}\\You may choose one Map Tile adjacent to this one that doesn't have a Hero on it. Rotate that tile freely as long as it doesn't contradict the \pagelink{Placing}{standard tile placement rules}.
+        \end{minipage}
+    \end{figure}
+    \item \textbf{Optional rule}: You can decide to play a variant with \pagelink{Splitted Decks}{splitted Artifact and Spell} to have a bit more control what you draw.
 \end{itemize}
 
 \subsection*{Scoring Victory Points}
-When either the scenario reaches its round limit or any player completes the Scenario's victory condition, the game ends and both players count up their Victory Points (VP).
+When either the scenario reaches its round limit or any player completes the Scenario's victory condition, the game ends and both players count up their Victory Points (VP) according to the table below.
 The player with the most VP wins the Scenario.
 
 %I suggest to create a table for victory Points. Something like this one...
-\includegraphics[width=\linewidth]{\tables/test_table.png}
+\includegraphics[width=\linewidth]{\tables/victory_points_table.png}
 
 %\begin{itemize}
     %\item Score \textbf{1 VP} for...
@@ -64,5 +78,24 @@ The player with the most VP wins the Scenario.
     %\item Score \textbf {X VP} for additional objectives outlined in a given Scenario's description.
 %\end{itemize}
 
+\subsection*{\pagetarget{Splitted Decks}{Splitted Artifact and Spell Decks}}
+
+These rules can be used in any scenario, be it in Tournament Mode or in regular games.
+
+During Setup, split the Artifact deck by \pagelink{Artifact}{rarity} into 3 separate decks.
+The order of rarity is Minor, then Major and at least Relic.
+Afterwards split the Spell Deck into 2 separate Decks for \pagelink{Schools of Magic}{Basic and Expert Spells}.
+
+Each time you gain an Artifact Card or a Spell Card \textbf{from Visiting a Map Location}, it depends on your visiting Hero's position on the Map to which deck you have access to, shown at the table below.
+%\begin{itemize}
+    %\item On Starting and Far Map Tiles you may \textbf{only obtain Minor Artifacts and Basic Spells}.
+    %\item On Near Map Tiles you may choose from Minor or Major Artifact Deck or from any Spell Deck.
+    %\item On Center Map Tiles you may choose from any Artifact or Spell Deck.
+%\end{itemize}
+
+\includegraphics[width=\linewidth]{\tables/splitted_decks_table.png}
+
+If you gain an Artifact or a Spell \textbf{outside of a Map Location} (e.g. by buying a Spell in a Mage Guild), \textbf{only your Main Hero's position} is relevant for choosing from the available Decks.
+% clarification: https://discord.com/channels/740870068178649108/897475192677355560/1201813535857057822 Or  https://discord.com/channels/740870068178649108/897475192677355560/1201802322624122930
 
 \end{multicols*}
