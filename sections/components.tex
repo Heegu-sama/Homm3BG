@@ -5,12 +5,6 @@ This guide provides a visual overview of all components included in every expans
 
 \begin{figure}[H]
   \centering
-  \begin{subfigure}[c]{0.15\linewidth}
-    \centering
-    \includegraphics[width=0.6\linewidth]{\images/movement-tokens.png}
-    \caption{\textbf{\pagelink{Movement}{Movement Tokens}}}
-  \end{subfigure}
-  ~
   \begin{subfigure}[c]{0.25\linewidth}
     \centering
     \includegraphics[width=\linewidth]{\images/map-tile-back.png}
@@ -36,12 +30,13 @@ This guide provides a visual overview of all components included in every expans
 
 \begin{figure}[H]
   \centering
-  \begin{subfigure}[c]{0.25\linewidth}
-    \includegraphics[width=\linewidth]{\images/hero.png}
-    \caption{\textbf{\pagelink{Herocard}{Hero Card}}}
+  \begin{subfigure}[c]{0.15\linewidth}
+    \centering
+    \includegraphics[width=0.6\linewidth]{\images/movement-tokens.png}
+    \caption{\textbf{\pagelink{Movement}{Movement Tokens}}}
   \end{subfigure}
   ~
-  \begin{subfigure}[c]{0.12\linewidth}
+  \begin{subfigure}[c]{0.15\linewidth}
     \begin{expansionmini}{navalbattles}
       \vspace{3mm}
       \centering
@@ -68,7 +63,7 @@ This guide provides a visual overview of all components included in every expans
     \end{expansionmini}
   \end{subfigure}
   ~
-  \begin{subfigure}[c]{0.12\linewidth}
+  \begin{subfigure}[c]{0.14\linewidth}
     \begin{expansionmini}{stronghold}
       \centering
       \includegraphics[width=0.9\linewidth,angle=-60]{\images/subter-gate.png}
@@ -80,15 +75,17 @@ This guide provides a visual overview of all components included in every expans
 
 \begin{figure}[H]
   \centering
-  \begin{subfigure}[c]{0.4\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{\images/hero-minis.png}
-    \caption{\textbf{Hero Miniatures}}
+  \begin{subfigure}[c]{0.3\linewidth}
+    \includegraphics[width=\linewidth]{\images/town-empty.png}
+    \caption{\textbf{\pagelink{Town}{Town Board}}}
   \end{subfigure}
   ~
-  \begin{subfigure}[c]{0.25\linewidth}
-    \includegraphics[width=\linewidth]{\images/town.png}
-    \caption{\textbf{\pagelink{Town}{Town Board}}}
+  \begin{subfigure}[c]{0.3\linewidth}
+    \centering
+    \includegraphics[width=0.25\linewidth]{\images/town-tile-1.png}
+    \includegraphics[width=0.25\linewidth]{\images/town-tile-2.png}
+    \includegraphics[width=0.25\linewidth]{\images/town-tile-3.png}
+    \caption{\textbf{\pagelink{Town}{Building Tiles}}}
   \end{subfigure}
   ~
   \begin{subfigure}[c]{0.22\linewidth}
@@ -261,6 +258,7 @@ This guide provides a visual overview of all components included in every expans
 \vspace*{-1em}
 \begin{figure}[H]
   \centering
+  \hfill
   \begin{subfigure}[c]{0.2\linewidth}
     \centering
     \vspace{1em}
@@ -270,6 +268,7 @@ This guide provides a visual overview of all components included in every expans
     \end{tikzpicture}
     \caption{\textbf{\pagelink{Morale}{Morale Token}}}
   \end{subfigure}
+  \hfill
   \begin{subfigure}[c]{0.22\linewidth}
     \begin{expansionmini}{battlefield}
       \centering
@@ -280,7 +279,7 @@ This guide provides a visual overview of all components included in every expans
       \caption{\textbf{Negative Morale Card}}
     \end{expansionmini}
   \end{subfigure}
-  ~
+  \hfill
   \begin{subfigure}[c]{0.22\linewidth}
     \begin{expansionmini}{battlefield}
       \centering
@@ -291,6 +290,8 @@ This guide provides a visual overview of all components included in every expans
       \caption{\textbf{Positive Morale Card}}
     \end{expansionmini}
   \end{subfigure}
+  \hfill
+  ~
 \end{figure}
 
 \vspace*{-1em}
@@ -335,17 +336,17 @@ This guide provides a visual overview of all components included in every expans
     \centering
     \begin{tikzpicture}
       \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
-      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/artifact-front.png}};
+      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/spell.png}};
     \end{tikzpicture}
-    \caption{\textbf{\pagelink{Artifact}{Artifact Card}}}
+    \caption{\textbf{\pagelink{spells}{Spell Card}}}
   \end{subfigure}
   \begin{subfigure}[c]{0.23\linewidth}
     \centering
     \begin{tikzpicture}
       \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
-      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/spell.png}};
+      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/artifact-front.png}};
     \end{tikzpicture}
-    \caption{\textbf{\pagelink{spells}{Spell Card}}}
+    \caption{\textbf{\pagelink{Artifact}{Artifact Card}}}
   \end{subfigure}
   \begin{subfigure}[c]{0.23\linewidth}
     \centering
@@ -367,6 +368,15 @@ This guide provides a visual overview of all components included in every expans
 
 \begin{figure}[H]
   \centering
+  \begin{subfigure}[c]{0.23\linewidth}
+    \centering
+    \begin{tikzpicture}
+      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
+      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/specialty.png}};
+    \end{tikzpicture}
+    \caption{\textbf{\pagelink{Specialty}{Hero Specialty Card}}}
+  \end{subfigure}
+  ~
   \begin{subfigure}[c]{0.22\linewidth}
     \begin{expansionmini}{stronghold}
       \centering
@@ -375,17 +385,6 @@ This guide provides a visual overview of all components included in every expans
         \node at (1.5, 0.1) {\includegraphics[width=0.7\linewidth]{\cards/spell-scroll.png}};
       \end{tikzpicture}
       \caption{\textbf{Spell Scroll Card}}
-    \end{expansionmini}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[c]{0.23\linewidth}
-    \begin{expansionmini}{rampart}
-      \centering
-      \begin{tikzpicture}
-        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
-        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/war_machine.png}};
-      \end{tikzpicture}
-      \caption{\textbf{\pagelink{War Machines}{War Machine Card}}}
     \end{expansionmini}
   \end{subfigure}
   ~
@@ -417,15 +416,6 @@ This guide provides a visual overview of all components included in every expans
   \begin{subfigure}[c]{0.23\linewidth}
     \centering
     \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
-      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/specialty.png}};
-    \end{tikzpicture}
-    \caption{\textbf{\pagelink{Specialty}{Hero Specialty Card}}}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[c]{0.23\linewidth}
-    \centering
-    \begin{tikzpicture}
       \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/unit-pack.png}};
       \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/unit-few.png}};
     \end{tikzpicture}
@@ -440,7 +430,7 @@ This guide provides a visual overview of all components included in every expans
     \end{tikzpicture}
     \caption{\textbf{\pagelink{Neutral Units}{Neutral Unit Card}}}
   \end{subfigure}
-   ~
+  ~
   \begin{subfigure}[c]{0.23\linewidth}
     \begin{expansionmini}{navalbattles}
       \centering
@@ -449,6 +439,17 @@ This guide provides a visual overview of all components included in every expans
         \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/creature-bank.png}};
       \end{tikzpicture}
       \caption{\textbf{{Creature Bank Unit Card}}}
+    \end{expansionmini}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[c]{0.23\linewidth}
+    \begin{expansionmini}{rampart}
+      \centering
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
+        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/war_machine.png}};
+      \end{tikzpicture}
+      \caption{\textbf{\pagelink{War Machines}{War Machine Card}}}
     \end{expansionmini}
   \end{subfigure}
 \end{figure}
@@ -481,6 +482,20 @@ This guide provides a visual overview of all components included in every expans
 \end{figure}
 
 \clearpage
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[c]{0.3\linewidth}
+    \includegraphics[width=\linewidth]{\images/hero.png}
+    \caption{\textbf{\pagelink{Herocard}{Hero Board}}}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[c]{0.4\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{\images/hero-minis.png}
+    \caption{\textbf{Hero Miniatures}}
+  \end{subfigure}
+\end{figure}
 
 \begin{figure}[H]
   \centering
@@ -558,6 +573,7 @@ This guide provides a visual overview of all components included in every expans
   \begin{subfigure}[c]{0.15\linewidth}
     \begin{expansionmini}{navalbattles}
       \centering
+      \vspace{0.5em}
       \includegraphics[width=0.4\linewidth]{\images/crown-token.png}
       \caption{\textbf{Empowered Ability Token}}
     \end{expansionmini}
@@ -596,7 +612,6 @@ This guide provides a visual overview of all components included in every expans
     \caption{\textbf{Resource Dice}}
   \end{subfigure}
 \end{figure}
-
 
 % new content:
 % stronghold: quicksand token, time token, attack token, corrosion token, spell scroll card
