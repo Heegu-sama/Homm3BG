@@ -65,7 +65,7 @@ jobs:
       - name: Compile rule book
         uses: xu-cheng/latex-action@v4
         with:
-          extra_system_packages: "inkscape"
+          docker_image: ghcr.io/qwrtln/homm3bg:latest
           latexmk_use_lualatex: ${{ matrix.luaengine }}
           latexmk_shell_escape: true
           root_file: main_${{ matrix.language }}.tex
@@ -83,7 +83,7 @@ jobs:
       - name: Compile printable rule book
         uses: xu-cheng/latex-action@v4
         with:
-          extra_system_packages: "inkscape"
+          docker_image: ghcr.io/qwrtln/homm3bg:latest
           pre_compile: export HOMM3_PRINTABLE=1 HOMM3_LANG=${{ matrix.language }}
           latexmk_use_lualatex: ${{ matrix.luaengine }}
           latexmk_shell_escape: true
@@ -103,7 +103,7 @@ jobs:
       - name: Compile economy printable rule book without art backgrounds
         uses: xu-cheng/latex-action@v4
         with:
-          extra_system_packages: "inkscape"
+          docker_image: ghcr.io/qwrtln/homm3bg:latest
           pre_compile: export HOMM3_PRINTABLE=1 HOMM3_NO_ART_BACKGROUND=1 HOMM3_LANG=${{ matrix.language }}
           latexmk_use_lualatex: ${{ matrix.luaengine }}
           latexmk_shell_escape: true

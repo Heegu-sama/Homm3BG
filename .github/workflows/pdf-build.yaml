@@ -32,6 +32,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    name: ${{ inputs.language }}
     outputs:
       number_of_pages: ${{ steps.check_pages.outputs.number_of_pages }}
 
@@ -121,7 +122,7 @@ jobs:
             ./main_${{ inputs.language }}.toc
             ./**/*.aux
           key: >-
-            texlive-${{ inputs.language }}-${{ inputs.build_type }}-${{
+            texlive-${{ inputs.build_type }}-${{ inputs.language }}-${{
             inputs.language == 'en'
             && hashFiles('main_en.tex', 'metadata.tex', 'structure.tex', 'sections/*.tex')
             || hashFiles(format('main_{0}.tex', inputs.language), 'metadata.tex', 'structure.tex', format('sections/translated/{0}/*.tex', inputs.language))
@@ -133,7 +134,7 @@ jobs:
         uses: xu-cheng/latex-action@v4
         if: steps.cache-pdf.outputs.cache-hit != 'true'
         with:
-          extra_system_packages: "inkscape"
+          docker_image: ghcr.io/qwrtln/homm3bg:latest
           latexmk_use_lualatex: ${{ inputs.luaengine }}
           latexmk_shell_escape: true
           pre_compile: export HOMM3_GITHUB_BUILD=1 HOMM3_PRINTABLE=${{ env.HOMM3_PRINTABLE }} HOMM3_NO_ART_BACKGROUND=${{ env.HOMM3_NO_ART_BACKGROUND }} HOMM3_LANG=${{ inputs.language }}
