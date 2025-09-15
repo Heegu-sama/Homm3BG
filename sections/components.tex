@@ -385,7 +385,7 @@ This guide provides a visual overview of all components included in every expans
       \centering
       \begin{tikzpicture}
         \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
-        \node at (1.5, 0.1) {\includegraphics[width=0.7\linewidth]{\cards/spell-scroll.png}};
+        \node at (1.5, 0.1) {\includegraphics[width=0.65\linewidth]{\cards/spell-scroll.png}};
       \end{tikzpicture}
       \caption{\textbf{Spell Scroll Card}}
     \end{expansionmini}
@@ -426,12 +426,14 @@ This guide provides a visual overview of all components included in every expans
   \end{subfigure}
   ~
   \begin{subfigure}[c]{0.23\linewidth}
-    \centering
-    \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/neutral-back.png}};
-      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/neutral-front.png}};
-    \end{tikzpicture}
-    \caption{\textbf{\pagelink{Neutral Units}{Neutral Unit Card}}}
+    \begin{expansionmini}{conflux}
+      \centering
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/unit-summoned-pack.png}};
+        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/unit-summoned-few.png}};
+      \end{tikzpicture}
+      \caption{\textbf{Summoned Unit Card}}
+    \end{expansionmini}
   \end{subfigure}
   ~
   \begin{subfigure}[c]{0.23\linewidth}
@@ -462,8 +464,11 @@ This guide provides a visual overview of all components included in every expans
   \hfill
   \begin{subfigure}[c]{0.23\linewidth}
     \centering
-    \includegraphics[width=\linewidth]{\cards/gate.png}
-    \caption{\textbf{\pagelink{Walls}{Gate, Walls Cards}}}
+    \begin{tikzpicture}
+      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/neutral-back.png}};
+      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/neutral-front.png}};
+    \end{tikzpicture}
+    \caption{\textbf{\pagelink{Neutral Units}{Neutral Unit Card}}}
   \end{subfigure}
   \hfill
   \begin{subfigure}[c]{0.23\linewidth}
@@ -473,6 +478,12 @@ This guide provides a visual overview of all components included in every expans
       \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/arrow_tower.png}};
     \end{tikzpicture}
     \caption{\textbf{\pagelink{Walls}{Arrow Tower Card}}}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[c]{0.23\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{\cards/gate.png}
+    \caption{\textbf{\pagelink{Walls}{Gate, Walls Cards}}}
   \end{subfigure}
   \hfill
   \begin{subfigure}[c]{0.23\linewidth}
