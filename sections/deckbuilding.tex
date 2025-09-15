@@ -46,25 +46,22 @@ Each player's Deck starts with 9 Cards, built during the game's setup.
 
 \clearpage
 
-\subsection*{\pagetarget{Ability}{Ability} and \pagetarget{Statistic}{Statistic} Cards}
+\subsection*{\pagetarget{Statistic}{Statistic} and \pagetarget{Ability}{Ability} Cards}
 
-All Ability\index{Ability Card} and Statistic Cards\index{Statistic Cards} have a \textbf{Basic Effect}\index{Basic Effect} and a stronger \textbf{Expert} \svg{expert} \textbf{Effect}\index{Expert Effect}, which is shown below the Basic Effect.
-Whenever you play an Ability or Statistic Card, you must choose which effect you are using.
+All Statistic\index{Statistic Cards} and Ability Cards\index{Ability Card} have a \textbf{Basic Effect}\index{Basic Effect} and a stronger \textbf{Expert} \svg{expert} \textbf{Effect}\index{Expert Effect}, which is shown below the Basic Effect.
+Whenever you play a Statistic or Ability Card, you must choose which effect you are using.
 The number of \svg{expert} Effects you can use each Round is limited by your Main Hero's \pagelink{Level}{Level}.
 Track the number of uses you have in any suitable manner, such as by moving Black Cubes on and off your Hero Card.\par
 \vspace*{\fill}
 \columnbreak
 
-\begin{expansion}[before=\vspace*{-11mm}]{navalbattles}
-  \subsection*{\pagetarget{Empowered Ability}{Empowered} Ability Cards}\index{Empowered Statistic Card}
-  These Cards are more powerful versions of the normal Ability Cards.
-  They have only one effect which is identical to the normal Ability's Expert effect, but does not require using your \svg{expert}.
+\begin{expansion}[before=\vspace*{-2em}]{inferno}
+    \subsection*{\pagetarget{Empowered Statistic}{Empowered} Statistic Cards}\index{Empowered Statistic Card}
+    These Cards are more powerful versions of the normal Statistic Cards.
+    They have only one effect which is identical to the normal Statistic's Expert effect, but does not require using your \svg{expert}.\par
 
-  \medskip
-  These Cards can be gained by spending an \pagelink{Empowered Ability Token}{Empowered Ability Token}.
-
-  \medskip
-  There's only 1 copy of each Empowered Ability Card, so if one player takes a particular Empowered Ability Card, they prevent other players from obtaining it.
+    \medskip
+    These Cards can be gained via certain game effects, such as Visiting a \pagelink{Star Axis}{Star Axis}.
 \end{expansion}
 \end{multicols}
 
@@ -72,16 +69,14 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
   \footnotesize
   \begin{center}
     \begin{scriptsize}
-    \begin{tikzpicture}
-      \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/necromancy_card.png}};
-      \draw (0.75, 0.4) node {\encircle{1}};
-      \draw (-1, -0.5) node {\encircle{2}};
-      \draw (-1, -1.5) node {\encircle{3}};
-      \draw (1.5, -0.8) node {\encircle{4}};
-      \draw (1.5, -1.9) node {\encircle{4}};
-    \end{tikzpicture}
+        \begin{tikzpicture}
+            \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/knowledge.png}};
+            \draw (0.75, 0.4) node {\encircle{1}};
+            \draw (-1, -0.5) node {\encircle{2}};
+            \draw (-1, -1.5) node {\encircle{3}};
+        \end{tikzpicture}
     \end{scriptsize}
-    \textbf{\textit{\textcolor{darkcandyapplered}{Ability Card}}}
+    \textbf{\textit{\textcolor{darkcandyapplered}{Statistic Card}}}
   \end{center}
   \vspace*{\fill}
   \begin{itemize}
@@ -92,14 +87,16 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
 
   \begin{center}
     \begin{scriptsize}
-    \begin{tikzpicture}
-      \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/knowledge.png}};
-      \draw (0.75, 0.4) node {\encircle{1}};
-      \draw (-1, -0.5) node {\encircle{2}};
-      \draw (-1, -1.5) node {\encircle{3}};
-    \end{tikzpicture}
+        \begin{tikzpicture}
+            \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/necromancy_card.png}};
+            \draw (0.75, 0.4) node {\encircle{1}};
+            \draw (-1, -0.5) node {\encircle{2}};
+            \draw (-1, -1.5) node {\encircle{3}};
+            \draw (1.5, -0.8) node {\encircle{4}};
+            \draw (1.5, -1.9) node {\encircle{4}};
+        \end{tikzpicture}
     \end{scriptsize}
-    \textbf{\textit{\textcolor{darkcandyapplered}{Statistic Card}}}
+    \textbf{\textit{\textcolor{darkcandyapplered}{Ability Card}}}
   \end{center}
   \vspace*{\fill}
   \begin{itemize}
@@ -110,14 +107,13 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
 
   \begin{center}
     \begin{scriptsize}
-    \begin{tikzpicture}
-      \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/empowered-ability.png}};
-      \draw (0.75, 1.9) node {\encircle{1}};
-      \draw (-1, -1.5) node {\encircle{2}};
-      \draw (1.5, -1.9) node {\encircle{4}};
-    \end{tikzpicture}
+        \begin{tikzpicture}
+            \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/empowered-knowledge.png}};
+            \draw (0.75, 1.9) node {\encircle{1}};
+            \draw (-1, -1.5) node {\encircle{2}};
+        \end{tikzpicture}
     \end{scriptsize}
-    \textbf{\textit{\textcolor{darkcandyapplered}{Empowered\\Ability Card}}}
+    \textbf{\textit{\textcolor{darkcandyapplered}{Empowered Statistic Card}}}
   \end{center}
   \vspace*{\fill}
   \begin{itemize}
@@ -128,13 +124,14 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
 
   \begin{center}
     \begin{scriptsize}
-    \begin{tikzpicture}
-      \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/empowered-knowledge.png}};
-      \draw (0.75, 1.9) node {\encircle{1}};
-      \draw (-1, -1.5) node {\encircle{2}};
-    \end{tikzpicture}
+        \begin{tikzpicture}
+            \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/empowered-ability.png}};
+            \draw (0.75, 1.9) node {\encircle{1}};
+            \draw (-1, -1.5) node {\encircle{2}};
+            \draw (1.5, -1.9) node {\encircle{4}};
+        \end{tikzpicture}
     \end{scriptsize}
-    \textbf{\textit{\textcolor{darkcandyapplered}{Empowered Statistic Card}}}
+    \textbf{\textit{\textcolor{darkcandyapplered}{Empowered\\Ability Card}}}
   \end{center}
   \begin{itemize}
     \item[\textbf{4.}] Necropolis-specific Card
@@ -153,18 +150,18 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
   When a non-Necropolis player draws a Necropolis Card\index{Necropolis Card} from the Ability Deck, they may either discard it and draw a new Card as a replacement or gain it.
   Non-Necropolis players \textbf{cannot use} Faction Specific Cards from their hand in any way besides for effects that discard them.
 }
-\vspace*{\fill}
+
 \columnbreak
 
 \vspace*{\fill}
-\begin{expansion}[before=\vspace*{-2em}]{inferno}
-  \subsection*{\pagetarget{Empowered Statistic}{Empowered} Statistic Cards}\index{Empowered Statistic Card}
-  The Empowered Statistic Cards work very similarly to Empowered Ability Cards.
-  Their only effect corresponds to the Expert effect of normal Statistic Cards, but without requiring you to use your \svg{expert}.
-  \medskip
-  These Cards can be gained via certain game effects, such as Visiting a \pagelink{Star Axis}{Star Axis}.
+\begin{expansion}[before=\vspace*{-11mm}]{navalbattles}
+    \subsection*{\pagetarget{Empowered Ability}{Empowered} Ability Cards}\index{Empowered Statistic Card}
+    The Empowered Ability Cards work very similarly to Empowered Statistic Cards.
+    Their only effect corresponds to the Expert effect of normal Ability Cards, but without requiring you to use your \svg{expert}.
+
+    \medskip
+    These Cards can be gained by spending \pagelink{Empowered Ability Token}{Empowered Ability Tokens}, which are only available in certain Scenarios (e.~g.~"Island of Fire" from the Naval Battles Mission Book).
 \end{expansion}
-\vspace*{\fill}
 \columnbreak
 
 \subsection*{\pagetarget{spells}{Spell Cards}}
@@ -373,7 +370,7 @@ You can play Spells from a Spell Scroll like any other Spell with the following 
 \begin{itemize}
     \item They don't count towards your Spell Limit.
     You can also play a Spell from your hand during this Combat Round.
-    \item You can only use their lowest \svg{empower} effect.
+    \item You can only use the Spell's lowest Power \svg{empower} effect.
     You can't Empower the Spell with \svg{empower} from any source.
     % What, if the lowest Power is 1? Can it be still played or not?
     \item They can't be used to increase the \svg{empower} of another Spell.
