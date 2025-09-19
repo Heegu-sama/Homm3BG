@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-08-18 23:00+0200\n"
+"POT-Creation-Date: 2025-09-19 08:22+0000\n"
 "PO-Revision-Date: 2025-08-28 16:08+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -30,13 +30,13 @@ msgstr ""
 #. type: multicols*
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
 #: sections/combat.tex:7 sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/difficulty.tex:7 sections/expansion_content.tex:5
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:117
-#: sections/map_elements.tex:79 sections/map_elements.tex:125
-#: sections/player_turns.tex:7 sections/resources.tex:7
-#: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:59 sections/town.tex:7 sections/trading.tex:7
-#: sections/units.tex:5 sections/units.tex:198
+#: sections/deckbuilding.tex:146 sections/difficulty.tex:7
+#: sections/expansion_content.tex:5 sections/game_modes.tex:5
+#: sections/heroes.tex:5 sections/heroes.tex:117 sections/map_elements.tex:79
+#: sections/map_elements.tex:125 sections/player_turns.tex:7
+#: sections/resources.tex:7 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:59 sections/town.tex:7
+#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:198
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -159,9 +159,10 @@ msgstr ""
 
 #. type: multicols
 #: sections/all_map_locations.tex:53 sections/all_map_locations.tex:235
-#: sections/credits.tex:36 sections/expansion_content.tex:192
-#: sections/game_modes.tex:30 sections/map_elements.tex:189
-#: sections/scenario_end.tex:23 sections/units.tex:136
+#: sections/credits.tex:36 sections/deckbuilding.tex:156
+#: sections/expansion_content.tex:192 sections/game_modes.tex:30
+#: sections/map_elements.tex:189 sections/scenario_end.tex:23
+#: sections/units.tex:136
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -195,8 +196,8 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:62 sections/trading.tex:27
-#: sections/units.tex:216 sections/units.tex:220
+#: sections/all_map_locations.tex:62 sections/deckbuilding.tex:370
+#: sections/trading.tex:27 sections/units.tex:216 sections/units.tex:220
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -1249,7 +1250,29 @@ msgstr ""
 
 #. type: figure
 #: sections/all_map_locations.tex:559
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[H]\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\phantom{j}\\textbf{Faerie Ring}\\phantom{j}\\par\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/faerie_ring.jpg}\n"
+#| "    \\expansionlabel{conflux}\n"
+#| "    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+#| "      Remove one Card from your hand, then Search (2) the Card's Deck.\n"
+#| "      You cannot remove Statistics, Starting Ability, or Specialty Cards.}\n"
+#| "  \\end{minipage}\\hfill\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\phantom{j}\\textbf{Star Axis}\\phantom{j}\\par\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/star_axis.jpg}\n"
+#| "    \\expansionlabel{inferno}\n"
+#| "    \\caption{\\small Category: \\textbf{Flaggable}\\\\\n"
+#| "      You may Remove one of your Statistic Cards from your hand and replace it with an \\textbf{Empowered} one of the same type.\n"
+#| "      When you Flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}\n"
+#| "  \\end{minipage}"
 msgid ""
 "[H]\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
@@ -1265,7 +1288,7 @@ msgid ""
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
 "    \\vspace{0pt}\n"
 "    \\centering\n"
-"    \\phantom{j}\\textbf{Star Axis}\\phantom{j}\\par\n"
+"    \\phantom{j}\\pagetarget{Star Axis}{\\textbf{Star Axis}}\\phantom{j}\\par\n"
 "    \\framedimage[\\linewidth]{\\map_locations/star_axis.jpg}\n"
 "    \\expansionlabel{inferno}\n"
 "    \\caption{\\small Category: \\textbf{Flaggable}\\\\\n"
@@ -1426,8 +1449,30 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:645
-#, no-wrap
+#: sections/all_map_locations.tex:647
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[H]\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\textbf{Spell Scroll}\\par\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/spell_scroll.jpg}\n"
+#| "    \\expansionlabel{stronghold}\n"
+#| "    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+#| "      Take a Spell Scroll Card, place it near your Hero Card, then follow its instructions.\n"
+#| "    }\n"
+#| "  \\end{minipage}\\hfill\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\phantom{j}\\textbf{Market of Time}\\phantom{j}\\par\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/market_of_time.jpg}\n"
+#| "    \\expansionlabel{tower}\n"
+#| "    \\caption{\\small Category: \\textbf{Visitable}\\\\ Remove one Card from your hand.\n"
+#| "      Then \\textbf{Search (2)} the Ability, Spell, or Artifact Deck.\n"
+#| "    }\n"
+#| "  \\end{minipage}"
 msgid ""
 "[H]\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
@@ -1437,7 +1482,9 @@ msgid ""
 "    \\framedimage[\\linewidth]{\\map_locations/spell_scroll.jpg}\n"
 "    \\expansionlabel{stronghold}\n"
 "    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
-"      Take a Spell Scroll Card, place it near your Hero Card, then follow its instructions.\n"
+"      Take a Spell Scroll Card from its Deck and place it next to your Hero Card.\n"
+"      Draw two Spells and place them face-down at the Spell Scroll Card.\n"
+"      You can use these Spells \\protect\\pagelink{Spell Scrolls Cards}{with some restrictions}.\n"
 "    }\n"
 "  \\end{minipage}\\hfill\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
@@ -1474,7 +1521,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:660
+#: sections/all_map_locations.tex:662
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1506,7 +1553,7 @@ msgstr ""
 "  \\end{minipage}\\hfill"
 
 #. type: tikzpicture
-#: sections/all_map_locations.tex:664
+#: sections/all_map_locations.tex:666
 #, no-wrap
 msgid ""
 "[remember picture, overlay]\n"
@@ -1516,12 +1563,12 @@ msgstr ""
 "  \\node[opacity=0.15] at ([xshift=13em, yshift=25.3em]current page.south) {\\includegraphics[width=0.8\\linewidth, trim=0 200pt 0 0, clip]{\\art/cyclops.png}};"
 
 #. type: subsection{#2}
-#: sections/all_map_locations.tex:668
+#: sections/all_map_locations.tex:670
 msgid "\\pagetarget{Location Token}{Location Tokens}"
 msgstr "\\pagetarget{Location Token}{Ortsmarker}"
 
 #. type: Plain text
-#: sections/all_map_locations.tex:670
+#: sections/all_map_locations.tex:672
 msgid ""
 "The following Fields are found on Location Tokens only, not on regular Map "
 "Tiles."
@@ -1530,7 +1577,7 @@ msgstr ""
 "Gebieten."
 
 #. type: figure
-#: sections/all_map_locations.tex:693
+#: sections/all_map_locations.tex:695
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1578,7 +1625,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:718
+#: sections/all_map_locations.tex:720
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1630,7 +1677,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:746
+#: sections/all_map_locations.tex:748
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1688,7 +1735,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: table*
-#: sections/all_map_locations.tex:815
+#: sections/all_map_locations.tex:817
 #, no-wrap
 msgid ""
 "[!hb]\n"
@@ -1828,7 +1875,7 @@ msgstr ""
 "  \\expansionlabel{navalbattles}"
 
 #. type: table*
-#: sections/all_map_locations.tex:883
+#: sections/all_map_locations.tex:885
 #, no-wrap
 msgid ""
 "[!hb]\n"
