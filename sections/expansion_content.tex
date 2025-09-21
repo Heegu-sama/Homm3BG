@@ -342,10 +342,16 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
 
     \begin{center}
         \begin{tikzpicture}
-            \draw (-2, 0) node {\includegraphics[width=0.3\linewidth]{\cards/ability-offense.png}};
-            \draw (-1, 1) node {\svg[25]{green_tick}};
-            \draw (2, 0) node {\includegraphics[width=0.3\linewidth]{\cards/ability-wisdom.png}};
-            \draw (3, 1) node {\svg[25]{red_cross}};
+          \draw(1.5, -1.5) node {\includegraphics[width=0.3\linewidth]{\examples/pile.png}};
+          \begin{scope}[cm={cos(45),-0.5*sin(45),sin(45),0.5*cos(45),(1.5,-1.4)}, transform shape]
+            \draw(0, 0) node {\includegraphics[width=0.17\linewidth]{\cards/necromancy_card.png}};
+            \filldraw[fill=black, draw=black, opacity=0.5] (-0.6, -0.9) rectangle(0.6, 0.9);
+          \end{scope}
+          \draw(-1, 0.5) node[rotate=15] {\includegraphics[width=0.3\linewidth]{\cards/ability-wisdom.png}};
+          \begin{scope}[rotate=-15, transform shape]
+            \draw(0, 0) node {\includegraphics[width=0.48\linewidth]{\examples/glow.png}};
+            \draw(0, 0) node {\includegraphics[width=0.3\linewidth]{\cards/ability-offense.png}};
+          \end{scope}
         \end{tikzpicture}
     \end{center}
 
@@ -357,9 +363,11 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
         \begin{tikzpicture}
             \draw (-2, 0) node {\includegraphics[width=0.3\linewidth]{\cards/ability-offense.png}};
             \draw (-3, -0.5) node {\includegraphics[width=0.15\linewidth]{\images/crown-token.png}};
-            \draw (-3, -1.5) node[rotate=135] {\svg[30]{red_arrow_up}};
+            \draw (-3.2, -1) node[cm={-1,0,0,1,(0,0)}] {\includegraphics[width=0.2\linewidth]{\_assets/gimp-files/arrow-curved-red.png}};
             \draw (2, 0) node {\includegraphics[width=0.3\linewidth]{\cards/ability-offense-empowered.png}};
-            \draw (3, 1) node {\svg[25]{green_tick}};
+            \draw (3, 1) node[circular drop shadow={shadow scale=0.8, shadow xshift=0.3ex, shadow yshift=-0.3ex,
+            fill=black, path fading={circle with fuzzy edge 15 percent},
+          every shadow}] {\svg[25]{green_tick}};
         \end{tikzpicture}
     \end{center}
 \end{expansion}
