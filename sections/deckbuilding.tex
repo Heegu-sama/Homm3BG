@@ -53,57 +53,107 @@ Whenever you play a Statistic or Ability Card, you must choose which effect you 
 The number of \svg{expert} Effects you can use each Round is limited by your Main Hero's \pagelink{Level}{Level}.
 Track the number of uses you have in any suitable manner, such as by moving Black Cubes on and off your Hero Card.\par
 
-\begin{multicols*}{2}
-  \footnotesize
-  \begin{center}
-    \begin{scriptsize}
-        \begin{tikzpicture}
-            \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/knowledge.png}};
-            \draw (0.75, 0.4) node {\encircle{1}};
-            \draw (-1, -0.5) node {\encircle{2}};
-            \draw (-1, -1.5) node {\encircle{3}};
-        \end{tikzpicture}
-    \end{scriptsize}
-    \textbf{\textit{\textcolor{darkcandyapplered}{Statistic Card}}}
+\columnbreak
 
-    \vfill
-    \begin{scriptsize}
-        \begin{tikzpicture}
-            \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/necromancy_card.png}};
-            \draw (0.75, 0.4) node {\encircle{1}};
-            \draw (-1, -0.5) node {\encircle{2}};
-            \draw (-1, -1.5) node {\encircle{3}};
-            \draw (1.5, -0.8) node {\encircle{4}};
-            \draw (1.5, -1.9) node {\encircle{4}};
-        \end{tikzpicture}
-    \end{scriptsize}
-    \textbf{\textit{\textcolor{darkcandyapplered}{Ability Card\\\phantom{Blah}}}}
-  \end{center}
-  \columnbreak
+\note{11}{
+  Certain Cards are limited to the Necropolis Faction \svg{necro-yellow}.
+  When a non-Necropolis player draws a Necropolis Card\index{Necropolis Card} from the Ability Deck, they may either discard it and draw a new Card as a replacement or gain it.
+  Non-Necropolis players \textbf{cannot use} Faction Specific Cards from their hand in any way besides for effects that discard them.
+}
+\end{multicols}
 
-  \begin{center}
-    \begin{scriptsize}
-        \begin{tikzpicture}
-            \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/empowered-knowledge.png}};
-            \draw (0.75, 1.9) node {\encircle{1}};
-            \draw (-1, -1.5) node {\encircle{2}};
-        \end{tikzpicture}
-    \end{scriptsize}
-    \textbf{\textit{\textcolor{darkcandyapplered}{Empowered Statistic Card}}}
+\columnratio{0.25}
+\begin{paracol}{2}
+  \begin{expansion}[title=\phantom{\textbf{\tiny{foo}}}, overlay={}]{}
+    \footnotesize
+    \begin{center}
+      \begin{scriptsize}
+          \begin{tikzpicture}
+              \draw (0, 0) node {\includegraphics[width=3.5cm]{\cards/knowledge.png}};
+              \draw (0.75, 0.4) node {\encircle{1}};
+              \draw (-1, -0.5) node {\encircle{2}};
+              \draw (-1, -1.5) node {\encircle{3}};
+          \end{tikzpicture}
+      \end{scriptsize}
+      \textbf{\textit{\textcolor{darkcandyapplered}{Statistic Card\\\phantom{Blah}}}}
+    \end{center}
+  \end{expansion}
+  \switchcolumn
+  \begin{expansion}{inferno}
+    \begin{minipage}[t]{0.3\linewidth}
+      \footnotesize
+      \vspace*{0mm}
+      \begin{center}
+        \begin{scriptsize}
+            \begin{tikzpicture}
+                \draw (0, 0) node {\includegraphics[width=3.5cm]{\cards/empowered-knowledge.png}};
+                \draw (0.75, 1.9) node {\encircle{1}};
+                \draw (-1, -1.5) node {\encircle{2}};
+            \end{tikzpicture}
+        \end{scriptsize}
+        \textbf{\textit{\textcolor{darkcandyapplered}{Empowered\\Statistic Card}}}
+      \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.65\linewidth}
+      \vspace*{0mm}
+      \subsection*{\pagetarget{Empowered Statistic}{Empowered} Statistic Cards}\index{Empowered Statistic Card}
+      These Cards are more powerful versions of the normal Statistic Cards.
+      They have only one effect which is identical to the normal Statistic's Expert effect, but does not require using your \svg{expert}.\par
 
-    \vfill
-    \begin{scriptsize}
-        \begin{tikzpicture}
-            \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/empowered-ability.png}};
-            \draw (0.75, 1.9) node {\encircle{1}};
-            \draw (-1, -1.5) node {\encircle{2}};
-            \draw (1.5, -1.9) node {\encircle{4}};
-        \end{tikzpicture}
-    \end{scriptsize}
-    \textbf{\textit{\textcolor{darkcandyapplered}{Empowered\\Ability Card}}}
-  \end{center}
-\end{multicols*}
+      \medskip
+      These Cards can be gained via certain game effects, such as Visiting a \pagelink{Star Axis}{Star Axis}.
+    \end{minipage}
+  \end{expansion}
+\end{paracol}
+\vspace*{2em}
+\begin{paracol}{2}
+  \begin{expansion}[title=\phantom{\textbf{\tiny{foo}}}, overlay={}]{}
+    \footnotesize
+    \begin{center}
+      \begin{scriptsize}
+          \begin{tikzpicture}
+              \draw (0, 0) node {\includegraphics[width=3.5cm]{\cards/necromancy_card.png}};
+              \draw (0.75, 0.4) node {\encircle{1}};
+              \draw (-1, -0.5) node {\encircle{2}};
+              \draw (-1, -1.5) node {\encircle{3}};
+              \draw (1.5, -0.8) node {\encircle{4}};
+              \draw (1.5, -1.9) node {\encircle{4}};
+          \end{tikzpicture}
+      \end{scriptsize}
+      \textbf{\textit{\textcolor{darkcandyapplered}{Ability Card\\\phantom{Blah}}}}
+    \end{center}
+  \end{expansion}
+  \switchcolumn
+  \begin{expansion}{navalbattles}
+    \begin{minipage}[t]{0.3\linewidth}
+      \footnotesize
+      \vspace*{0mm}
+      \begin{center}
+        \begin{scriptsize}
+            \begin{tikzpicture}
+              \draw (0, 0) node {\includegraphics[width=3.5cm]{\cards/empowered-ability.png}};
+              \draw (0.75, 1.9) node {\encircle{1}};
+              \draw (-1, -1.5) node {\encircle{2}};
+              \draw (1.5, -1.9) node {\encircle{4}};
+            \end{tikzpicture}
+        \end{scriptsize}
+        \textbf{\textit{\textcolor{darkcandyapplered}{Empowered\\Ability Card}}}
+      \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.65\linewidth}
+      \subsection*{\pagetarget{Empowered Ability}{Empowered} Ability Cards}\index{Empowered Statistic Card}
+      The Empowered Ability Cards work very similarly to Empowered Statistic Cards.
+      Their only effect corresponds to the Expert effect of normal Ability Cards, but without requiring you to use your \svg{expert}.
 
+      \medskip
+      These Cards can be gained by spending \pagelink{Empowered Ability Token}{Empowered Ability Tokens}, which are only available in certain Scenarios (e.~g.~"Island of Fire" from the Naval Battles Mission Book).
+    \end{minipage}
+  \end{expansion}
+\end{paracol}
+
+\begin{multicols}{2}
 \begin{multicols*}{2}
   \begin{itemize}
     \item[\textbf{1.}] Name
@@ -112,41 +162,11 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
     \item[\textbf{4.}] Necropolis-specific Card
   \end{itemize}
 \end{multicols*}
-
-%\begin{tikzpicture}[remember picture, overlay]
-%  \node[rotate=-28, opacity=0.15] at ([xshift=0em, yshift=-8em]current page.center) {\includegraphics[width=0.35\linewidth]{\art/frost_ring.png}};
-%\end{tikzpicture}
-%\vspace{23mm}
-
-\columnbreak
-
-\note{11}{
-  Certain Cards are limited to the Necropolis Faction \svg{necro-yellow}.
-  When a non-Necropolis player draws a Necropolis Card\index{Necropolis Card} from the Ability Deck, they may either discard it and draw a new Card as a replacement or gain it.
-  Non-Necropolis players \textbf{cannot use} Faction Specific Cards from their hand in any way besides for effects that discard them.
-}
-
-\vfill
-\begin{expansion}{inferno}
-    \subsection*{\pagetarget{Empowered Statistic}{Empowered} Statistic Cards}\index{Empowered Statistic Card}
-    These Cards are more powerful versions of the normal Statistic Cards.
-    They have only one effect which is identical to the normal Statistic's Expert effect, but does not require using your \svg{expert}.\par
-
-    \medskip
-    These Cards can be gained via certain game effects, such as Visiting a \pagelink{Star Axis}{Star Axis}.
-\end{expansion}
-
-\vfill
-\begin{expansion}{navalbattles}
-    \subsection*{\pagetarget{Empowered Ability}{Empowered} Ability Cards}\index{Empowered Statistic Card}
-    The Empowered Ability Cards work very similarly to Empowered Statistic Cards.
-    Their only effect corresponds to the Expert effect of normal Ability Cards, but without requiring you to use your \svg{expert}.
-
-    \medskip
-    These Cards can be gained by spending \pagelink{Empowered Ability Token}{Empowered Ability Tokens}, which are only available in certain Scenarios (e.~g.~"Island of Fire" from the Naval Battles Mission Book).
-\end{expansion}
-
 \end{multicols}
+
+\begin{tikzpicture}[remember picture, overlay]
+  \node[rotate=-28, opacity=0.15] at ([xshift=10em, yshift=-25em]current page.center) {\includegraphics[width=0.35\linewidth]{\art/frost_ring.png}};
+\end{tikzpicture}
 
 \clearpage
 \begin{multicols*}{2}
