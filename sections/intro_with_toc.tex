@@ -1,0 +1,68 @@
+% !TeX spellcheck = en_US
+
+\title{\includegraphics[width=6cm]{\images/title.png}\\The Rewrite}
+
+% Let main_xx.tex provide translated \author
+\ifdefvoid{\translatedauthor}{
+  \author{\textlang{english}{Hermanni ``Heegu'' Karppela}}
+}{
+  \author{\translatedauthor}
+}
+\maketitle
+
+\begin{center}
+  \iftoggle{githubbuild}{
+    \getenv[\githubsha]{GITHUB_SHA}
+    This is an unreleased version built on GitHub from commit \href{\repourl}{\textlang{english}{\StrLeft{\githubsha}{7}}}.
+  }{
+    \textlang{\mainlanguagename}{Version \textlang{english}{\input{.version}}}
+  }
+
+  \iftoggle{printable}{
+    \iftoggle{printable_quote_separate_page}{\bigbreak}{\medskip}
+  }{\bigbreak}
+
+  This is a community-driven project, which has a \href{\repourl}{GitHub repository}.
+  Everyone is welcome to contribute, make changes, and fix errors.
+  If you simply want to leave feedback, please do so in the original \href{\bggthreadurl}{BoardGameGeek thread}.
+
+  \iftoggle{printable}{
+    \iftoggle{printable_quote_separate_page}{\bigbreak}{
+      \textit{I’m doing this out of the love of learning games and wanting to understand their complexities.}
+      \\
+      {\small — Heegu}
+   }
+  }{
+    \bigbreak\heegusquote
+  }
+\end{center}
+
+\iftoggle{printable}{
+  \begin{multicols}{2}
+  \centering
+  \includegraphics[width=0.8\linewidth]{\qr/github.png}\\
+  Scan to open \textbf{GitHub} repository.
+
+  \columnbreak
+
+  \includegraphics[width=0.8\linewidth]{\qr/bgg.png}\\
+  Scan to open \textbf{BoardGameGeek} thread.
+  \end{multicols}
+}{}
+
+\textlang{english}{\begin{tikzpicture}[remember picture, overlay]
+  \node(cover)[anchor=center, yshift=12em] at (current page.south) {
+    \includegraphics[width=1.01\paperwidth, keepaspectratio]{\art/castle_bottom.png}
+    \thispagestyle{empty}
+  };
+\end{tikzpicture}}
+
+\clearpage
+
+\begin{multicols*}{2}
+\tableofcontents
+\vspace*{\fill}
+\columnbreak
+\vspace*{\fill}
+\includegraphics[width=\linewidth]{\art/black_dragon.jpg}
+\end{multicols*}
