@@ -2,12 +2,7 @@
 
 \title{\includegraphics[width=6cm]{\images/title.png}\\The Rewrite}
 
-% Let main_xx.tex provide translated \author
-\ifdefvoid{\translatedauthor}{
-  \author{\textlang{english}{Hermanni ``Heegu'' Karppela}}
-}{
-  \author{\translatedauthor}
-}
+\author{Hermanni ``Heegu'' Karppela}
 \maketitle
 
 \begin{center}
@@ -26,20 +21,18 @@
   Everyone is welcome to contribute, make changes, and fix errors.
   If you simply want to leave feedback, please do so in the original \href{\bggthreadurl}{BoardGameGeek thread}.
 
-  \iftoggle{printable}{
-    \iftoggle{printable_quote_separate_page}{\bigbreak}{
-      \textit{I’m doing this out of the love of learning games and wanting to understand their complexities.}
-      \\
-      {\small — Heegu}
-   }
-  }{
-    \bigbreak\heegusquote
-  }
+  \textit{I’m doing this out of the love of learning games and wanting to understand their complexities.}
+  \\
+  {\small — Heegu}
 \end{center}
 
-\iftoggle{printable}{
-  \begin{multicols}{2}
+\begin{multicols}{3}
   \centering
+  \includegraphics[width=0.8\linewidth]{\qr/discord.png}\\
+  Scan to join the community \textbf{Discord} server.
+
+  \columnbreak
+
   \includegraphics[width=0.8\linewidth]{\qr/github.png}\\
   Scan to open \textbf{GitHub} repository.
 
@@ -47,8 +40,7 @@
 
   \includegraphics[width=0.8\linewidth]{\qr/bgg.png}\\
   Scan to open \textbf{BoardGameGeek} thread.
-  \end{multicols}
-}{}
+\end{multicols}
 
 \textlang{english}{\begin{tikzpicture}[remember picture, overlay]
   \node(cover)[anchor=center, yshift=12em] at (current page.south) {
