@@ -367,6 +367,14 @@
   \subsectionspacing{}
 \fi
 
+\newcommand{\subheader}[1]{%
+    \begin{center}
+        \textbf{\Large\scshape #1}
+        \\[0.05em]
+        \includegraphics[width=\linewidth,height=1em,keepaspectratio]{\layout/subsection_separator.png}
+    \end{center}
+}
+
 \newcommand\picdims[4][]{%
   \setbox0=\hbox{\includegraphics[#1]{#4}}%
   \clipbox{.5\dimexpr\wd0-#2\relax{} %
