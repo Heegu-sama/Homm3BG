@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG-rules-rewrite\n"
-"POT-Creation-Date: 2025-09-30 17:39+0200\n"
+"POT-Creation-Date: 2025-10-02 22:20+0000\n"
 "PO-Revision-Date: 2025-09-30 17:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -20,33 +20,29 @@ msgstr ""
 msgid "The Rewrite"
 msgstr ""
 
-#.  Let main_xx.tex provide translated \author
-#. type: Plain text
-#: sections/intro_with_toc.tex:12
-msgid ""
-"\\ifdefvoid{\\translatedauthor}{ \\author{\\textlang{english}{Hermanni "
-"``Heegu'' Karppela}} }{ \\author{\\translatedauthor} }"
+#. type: author{#1}
+#: sections/intro_with_toc.tex:7
+msgid "Hermanni ``Heegu'' Karppela"
 msgstr ""
 
 #. type: center
-#: sections/intro_with_toc.tex:20
+#: sections/intro_with_toc.tex:15
 msgid ""
 "\\iftoggle{githubbuild}{ \\getenv[\\githubsha]{GITHUB_SHA} This is an "
 "unreleased version built on GitHub from commit \\href{\\repourl}"
 "{\\textlang{english}{\\StrLeft{\\githubsha}{7}}}.  }"
-"{ \\textlang{\\mainlanguagename}{Version \\textlang{english}"
-"{\\input{.version}}} }"
+"{ \\textlang{\\mainlanguagename}{Version \\textlang{english}{ 1.4 }} }"
 msgstr ""
 
 #. type: center
-#: sections/intro_with_toc.tex:24
+#: sections/intro_with_toc.tex:19
 msgid ""
 "\\iftoggle{printable}{ \\iftoggle{printable_quote_separate_page}{\\bigbreak}"
 "{\\medskip} }{\\bigbreak}"
 msgstr ""
 
 #. type: center
-#: sections/intro_with_toc.tex:28
+#: sections/intro_with_toc.tex:23
 msgid ""
 "This is a community-driven project, which has a \\href{\\repourl}{GitHub "
 "repository}.  Everyone is welcome to contribute, make changes, and fix "
@@ -55,26 +51,66 @@ msgid ""
 msgstr ""
 
 #. type: center
-#: sections/intro_with_toc.tex:39
+#: sections/intro_with_toc.tex:28
 msgid ""
-"\\iftoggle{printable}{ \\iftoggle{printable_quote_separate_page}{\\bigbreak}"
-"{ \\textit{I’m doing this out of the love of learning games and wanting to "
-"understand their complexities.} \\\\ {\\small — Heegu} } }"
-"{ \\bigbreak\\heegusquote }"
+"\\textit{I’m doing this out of the love of learning games and wanting to "
+"understand their complexities.}"
+msgstr ""
+
+#. type: center
+#: sections/intro_with_toc.tex:28
+msgid "{\\small — Heegu}"
+msgstr ""
+
+#. type: multicols
+#: sections/intro_with_toc.tex:33
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{center}\n"
+#| "  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
+#| "\\end{center}\n"
+#| "\\columnbreak\n"
+#| "\n"
+msgid ""
+"{3}\n"
+"  \\centering\n"
+"  \\includegraphics[width=0.8\\linewidth]{\\qr/discord.png}\\\\\n"
+"  Scan to join the community \\textbf{Discord} server.\n"
+"\n"
+msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
+"\\end{center}\n"
+"\\columnbreak\n"
+"\n"
+
+#. type: multicols
+#: sections/intro_with_toc.tex:35 sections/intro_with_toc.tex:40
+#, no-wrap
+msgid ""
+"  \\columnbreak\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/intro_with_toc.tex:38
+#, no-wrap
+msgid ""
+"  \\includegraphics[width=0.8\\linewidth]{\\qr/github.png}\\\\\n"
+"  Scan to open \\textbf{GitHub} repository.\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/intro_with_toc.tex:43
+#, no-wrap
+msgid ""
+"  \\includegraphics[width=0.8\\linewidth]{\\qr/bgg.png}\\\\\n"
+"  Scan to open \\textbf{BoardGameGeek} thread."
 msgstr ""
 
 #. type: Plain text
-#: sections/intro_with_toc.tex:52
-msgid ""
-"\\iftoggle{printable}{ \\begin{multicols}{2} \\centering "
-"\\includegraphics[width=0.8\\linewidth]{\\qr/github.png}\\\\ Scan to open "
-"\\textbf{GitHub} repository.  \\columnbreak "
-"\\includegraphics[width=0.8\\linewidth]{\\qr/bgg.png}\\\\ Scan to open "
-"\\textbf{BoardGameGeek} thread.  \\end{multicols} }{}"
-msgstr ""
-
-#. type: Plain text
-#: sections/intro_with_toc.tex:59
+#: sections/intro_with_toc.tex:51
 #, fuzzy
 #| msgid ""
 #| "{\\centering\\phantom{Star Axis}\\par}\n"
@@ -91,7 +127,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/intro_with_toc.tex:68
+#: sections/intro_with_toc.tex:60
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\bigskip\n"
