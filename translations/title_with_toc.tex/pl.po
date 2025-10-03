@@ -20,12 +20,12 @@ msgstr ""
 #. type: title{#1}
 #: sections/intro_with_toc.tex:4
 msgid "The Rewrite"
-msgstr ""
+msgstr "Przepisanie"
 
 #. type: author{#1}
 #: sections/intro_with_toc.tex:7
 msgid "Hermanni ``Heegu'' Karppela"
-msgstr ""
+msgstr "Hermanni ,,Heegu'' Karppela"
 
 #. type: center
 #: sections/intro_with_toc.tex:15
@@ -35,6 +35,10 @@ msgid ""
 "{\\textlang{english}{\\StrLeft{\\githubsha}{7}}}.  }"
 "{ \\textlang{\\mainlanguagename}{Version \\textlang{english}{\\version}} }"
 msgstr ""
+"\\iftoggle{githubbuild}{ \\getenv[\\githubsha]{GITHUB_SHA} To jest "
+"nieopublikowana wersja zbudowana na GitHubie z commita \\href{\\repourl}"
+"{\\textlang{english}{\\StrLeft{\\githubsha}{7}}}.  }"
+"{ \\textlang{\\mainlanguagename}{Wersja \\textlang{english}{\\version}} }"
 
 #. type: center
 #: sections/intro_with_toc.tex:19
@@ -42,6 +46,8 @@ msgid ""
 "\\iftoggle{printable}{ \\iftoggle{printable_quote_separate_page}{\\bigbreak}"
 "{\\medskip} }{\\bigbreak}"
 msgstr ""
+"\\iftoggle{printable}{ \\iftoggle{printable_quote_separate_page}{\\bigbreak}"
+"{\\medskip} }{\\bigbreak}"
 
 #. type: center
 #: sections/intro_with_toc.tex:23
@@ -51,6 +57,9 @@ msgid ""
 "errors.  If you simply want to leave feedback, please do so in the original "
 "\\href{\\bggthreadurl}{BoardGameGeek thread}."
 msgstr ""
+"Niniejszy projekt jest tworzony przez społeczność w \\href{\\repourl}"
+"{repozytorium na GitHubie}. Zmiany i~poprawki są mile widziane. Feedback "
+"możesz zostawić w \\href{\\bggthreadurl}{wątku na BoardGameGeeku}. "
 
 #. type: center
 #: sections/intro_with_toc.tex:28
@@ -58,20 +67,17 @@ msgid ""
 "\\textit{I’m doing this out of the love of learning games and wanting to "
 "understand their complexities.}"
 msgstr ""
+"\\textit{Robię to z zamiłowania do poznawania gier i chęci zrozumienia ich "
+"złożoności.}"
 
 #. type: center
 #: sections/intro_with_toc.tex:28
 msgid "{\\small — Heegu}"
-msgstr ""
+msgstr "{\\small — Heegu}"
 
 #. type: multicols
 #: sections/intro_with_toc.tex:33
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "{3}\n"
 "  \\centering\n"
@@ -79,22 +85,20 @@ msgid ""
 "  Scan to join the community \\textbf{Discord} server.\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-"\\end{center}\n"
+"{3}\n"
+"  \\centering\n"
+"  \\includegraphics[width=0.8\\linewidth]{\\qr/discord.png}\\\\\n"
+"  Skanuj, aby dołączyć do społeczności na \\textbf{Discordzie}.\n"
 "\n"
 
 #. type: multicols
 #: sections/intro_with_toc.tex:35 sections/intro_with_toc.tex:40
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\columnbreak\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  \\columnbreak\n"
 "\n"
 msgstr ""
-"\\columnbreak\n"
+"  \\columnbreak\n"
 "\n"
 
 #. type: multicols
@@ -105,6 +109,9 @@ msgid ""
 "  Scan to open \\textbf{GitHub} repository.\n"
 "\n"
 msgstr ""
+"  \\includegraphics[width=0.8\\linewidth]{\\qr/github.png}\\\\\n"
+"  Skanuj, aby otworzyć repozytorium na \\textbf{GitHubie}.\n"
+"\n"
 
 #. type: multicols
 #: sections/intro_with_toc.tex:43
@@ -113,35 +120,25 @@ msgid ""
 "  \\includegraphics[width=0.8\\linewidth]{\\qr/bgg.png}\\\\\n"
 "  Scan to open \\textbf{BoardGameGeek} thread."
 msgstr ""
+"  \\includegraphics[width=0.8\\linewidth]{\\qr/bgg.png}\\\\\n"
+"  Skanuj, aby otworzyć wątek na \\textbf{BoardGameGeeku}."
 
 #. type: Plain text
 #: sections/intro_with_toc.tex:51
-#, fuzzy
-#| msgid ""
-#| "\\iftoggle{noartbackground}{}{ \\begin{tikzpicture}[remember picture, "
-#| "overlay, inner sep=10pt] \\node(cover)[anchor=center] at (current "
-#| "page.center) { \\includegraphics[height=\\paperheight, keepaspectratio]"
-#| "{\\layout/back.jpg} }; \\end{tikzpicture} }"
 msgid ""
 "\\textlang{english}{\\begin{tikzpicture}[remember picture, overlay] "
 "\\node(cover)[anchor=center, yshift=12em] at (current page.south) "
 "{ \\includegraphics[width=1.01\\paperwidth, keepaspectratio]{\\art/"
 "castle_bottom.png} \\thispagestyle{empty} }; \\end{tikzpicture}}"
 msgstr ""
-"\\iftoggle{noartbackground}{}{ \\begin{tikzpicture}[remember picture, "
-"overlay, inner sep=10pt] \\node(cover)[anchor=center] at (current "
-"page.center) { \\includegraphics[height=\\paperheight, keepaspectratio]"
-"{\\layout/back.jpg} }; \\end{tikzpicture} }"
+"\\textlang{english}{\\begin{tikzpicture}[remember picture, overlay] "
+"\\node(cover)[anchor=center, yshift=12em] at (current page.south) "
+"{ \\includegraphics[width=1.01\\paperwidth, keepaspectratio]{\\art/"
+"castle_bottom.png} \\thispagestyle{empty} }; \\end{tikzpicture}}"
 
 #. type: multicols*
 #: sections/intro_with_toc.tex:60
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\bigskip\n"
-#| "\\vspace*{\\fill}\n"
-#| "\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
-#| "\\vspace*{\\fill}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "{2}\n"
 "\\tableofcontents\n"
@@ -150,8 +147,9 @@ msgid ""
 "\\vspace*{\\fill}\n"
 "\\includegraphics[width=\\linewidth]{\\art/black_dragon.jpg}"
 msgstr ""
-"\\bigskip\n"
+"{2}\n"
+"\\tableofcontents\n"
 "\\vspace*{\\fill}\n"
-"\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
+"\\columnbreak\n"
 "\\vspace*{\\fill}\n"
-"\n"
+"\\includegraphics[width=\\linewidth]{\\art/black_dragon.jpg}"
