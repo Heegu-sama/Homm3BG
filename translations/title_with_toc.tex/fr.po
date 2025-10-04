@@ -19,7 +19,7 @@ msgstr ""
 #. type: title{#1}
 #: sections/intro_with_toc.tex:4
 msgid "The Rewrite"
-msgstr ""
+msgstr "Révision"
 
 #. type: author{#1}
 #: sections/intro_with_toc.tex:7
@@ -34,6 +34,9 @@ msgid ""
 "{\\textlang{english}{\\StrLeft{\\githubsha}{7}}}.  }"
 "{ \\textlang{\\mainlanguagename}{Version \\textlang{english}{\\version}} }"
 msgstr ""
+"\\iftoggle{githubbuild}{ \\getenv[\\githubsha]{GITHUB_SHA} Ceci est une version non-éditée créée sur GitHub à partir du commit \\href{\\repourl}"
+"{\\textlang{english}{\\StrLeft{\\githubsha}{7}}}.  }"
+"{ \\textlang{\\mainlanguagename}{Version \\textlang{english}{\\version}} }"
 
 #. type: center
 #: sections/intro_with_toc.tex:19
@@ -50,13 +53,16 @@ msgid ""
 "errors.  If you simply want to leave feedback, please do so in the original "
 "\\href{\\bggthreadurl}{BoardGameGeek thread}."
 msgstr ""
+"Ceci est un projet communautaire doté d'un \\href{\\repourl}{dépôt GitHub}. "
+"Vous êtes tous invités à apporter vos contributions, modifications, corrections et traductions. "
+"Si vous souhaitez simplement faire part de vos commentaires, merci de le faire dans le \\href{\\bggthreadurl}{fil de discussion BoardGameGeek} original. "
 
 #. type: center
 #: sections/intro_with_toc.tex:28
 msgid ""
 "\\textit{I’m doing this out of the love of learning games and wanting to "
 "understand their complexities.}"
-msgstr ""
+msgstr "\\textit{J'ai réalisé ce projet par amour de l'apprentissage des jeux et de la compréhension de leur complexité.}"
 
 #. type: center
 #: sections/intro_with_toc.tex:28
@@ -99,6 +105,9 @@ msgid ""
 "  Scan to open \\textbf{GitHub} repository.\n"
 "\n"
 msgstr ""
+"  \\includegraphics[width=0.8\\linewidth]{\\qr/github.png}\\\\\n"
+"  Scannez pour ouvrir le dépôt \\textbf{GitHub}.\n"
+"\n"
 
 #. type: multicols
 #: sections/intro_with_toc.tex:43
@@ -107,6 +116,8 @@ msgid ""
 "  \\includegraphics[width=0.8\\linewidth]{\\qr/bgg.png}\\\\\n"
 "  Scan to open \\textbf{BoardGameGeek} thread."
 msgstr ""
+"  \\includegraphics[width=0.8\\linewidth]{\\qr/bgg.png}\\\\\n"
+"  Scannez pour ouvrir le fil \\textbf{BoardGameGeek}."
 
 #. type: Plain text
 #: sections/intro_with_toc.tex:51
