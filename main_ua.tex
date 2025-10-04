@@ -14,48 +14,11 @@
   BoldItalicFont = *-BoldItalic]{LiberationSerif}
 
 \def\sections{sections/translated/ua}
-\def\lang_header_adjustment{0px}
-
-\newcommand{\versionlabel}{Версія}
-\newcommand{\versionwarning}{Це неопублікована версія, зібрана на GitHub з коміту}
-
-\newcommand{\intro}{
-  Цей проект розвивається спільнотою і має власний \href{\repourl}{репрозиторій на GitHub}.
-  Вітаються будь-які зміни та виправлення.
-  Якщо ви просто хочете залишити відгук, будь ласка, робіть це в оригінальній  \href{\bggthreadurl}{темі на BoardGameGeek}.
-}
-\newcommand{\pageshorthand}{с.}
-
-\newcommand{\heegusquote}{
-  \textit{Я роблю це з любові до вивчення ігор і бажання зрозуміти їхню складність.}
-  \\
-  {\small — Heegu}
-}
-
-\newcommand{\qrgithub}{Відскануйте для переходу в репозиторій \textbf{GitHub}.}
-\newcommand{\qrbgg}{Відскануйте для переходу до теми на \textbf{BoardGameGeek}.}
-
-\title{\includegraphics[width=6cm]{\images/title.png}\\Правила в редакції товариства}
 
 \newcommand{\sectionheadertext}[1]{
   \color{antiquewhite} \section*{\MakeUppercase{\textbf{#1}}}
 }
 \newcommand{\notefont}[0]{}
-
-\newcommand{\expansiontext}[1]{%
-  \stringswitch{#1}{
-    % {tower}{...}
-    % {rampart}{...}
-    % {fortress}{...}
-    % {inferno}{...}
-    % {stronghold}{...}
-    % {conflux}{...}
-    % {cove}{...}
-    % {battlefield}{...}
-    % {navalbattles}{...}
-    % {stretchgoals2}{...}
-  }{#1 \mbox{expansion}}%
-}
 
 \input{metadata.tex}
 

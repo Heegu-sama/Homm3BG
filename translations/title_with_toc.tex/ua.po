@@ -18,7 +18,7 @@ msgstr ""
 #. type: title{#1}
 #: sections/intro_with_toc.tex:4
 msgid "The Rewrite"
-msgstr ""
+msgstr "Правила в редакції товариства"
 
 #. type: author{#1}
 #: sections/intro_with_toc.tex:7
@@ -33,6 +33,9 @@ msgid ""
 "{\\textlang{english}{\\StrLeft{\\githubsha}{7}}}.  }"
 "{ \\textlang{\\mainlanguagename}{Version \\textlang{english}{\\version}} }"
 msgstr ""
+"\\iftoggle{githubbuild}{ \\getenv[\\githubsha]{GITHUB_SHA} Це неопублікована версія, зібрана на GitHub з коміту \\href{\\repourl}"
+"{\\textlang{english}{\\StrLeft{\\githubsha}{7}}}.  }"
+"{ \\textlang{\\mainlanguagename}{Версія \\textlang{english}{\\version}} }"
 
 #. type: center
 #: sections/intro_with_toc.tex:19
@@ -49,13 +52,16 @@ msgid ""
 "errors.  If you simply want to leave feedback, please do so in the original "
 "\\href{\\bggthreadurl}{BoardGameGeek thread}."
 msgstr ""
+"Цей проект розвивається спільнотою і має власний \\href{\\repourl}{репрозиторій на GitHub}. "
+"Вітаються будь-які зміни та виправлення. "
+"Якщо ви просто хочете залишити відгук, будь ласка, робіть це в оригінальній  \\href{\\bggthreadurl}{темі на BoardGameGeek}. "
 
 #. type: center
 #: sections/intro_with_toc.tex:28
 msgid ""
 "\\textit{I’m doing this out of the love of learning games and wanting to "
 "understand their complexities.}"
-msgstr ""
+msgstr "\\textit{Я роблю це з любові до вивчення ігор і бажання зрозуміти їхню складність.}"
 
 #. type: center
 #: sections/intro_with_toc.tex:28
@@ -100,6 +106,9 @@ msgid ""
 "  Scan to open \\textbf{GitHub} repository.\n"
 "\n"
 msgstr ""
+"  \\includegraphics[width=0.8\\linewidth]{\\qr/github.png}\\\\\n"
+"  Відскануйте для переходу в репозиторій \\textbf{GitHub}.\n"
+"\n"
 
 #. type: multicols
 #: sections/intro_with_toc.tex:43
@@ -108,6 +117,8 @@ msgid ""
 "  \\includegraphics[width=0.8\\linewidth]{\\qr/bgg.png}\\\\\n"
 "  Scan to open \\textbf{BoardGameGeek} thread."
 msgstr ""
+"  \\includegraphics[width=0.8\\linewidth]{\\qr/bgg.png}\\\\\n"
+"  Відскануйте для переходу до теми на \\textbf{BoardGameGeek}."
 
 #. type: Plain text
 #: sections/intro_with_toc.tex:51
