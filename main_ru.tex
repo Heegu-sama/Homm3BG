@@ -14,41 +14,11 @@
   BoldItalicFont = *-BoldItalic]{LiberationSerif}
 
 \def\sections{sections/translated/ru}
-\def\lang_header_adjustment{0px}
-\def\translatedauthor{Германни «Heegu» Карппела}
-
-\newcommand{\versionlabel}{Версия}
-\newcommand{\versionwarning}{Данная версия является неопубликованной сборкой из коммита в GitHub}
-
-\newcommand{\intro}{
-  Эта книга поддерживается сообществом в \href{\repourl}{репозитории на GitHub}.
-  Вы можете внести свой вклад в разработку, внести изменения или исправить ошибки.
-  Если вы хотите просто оставить отзыв, сделайте это в \href{\bggthreadurl}{оригинальной ветке BoardGameGeek}.
-}
-\newcommand{\pageshorthand}{стр.}
-
-\newcommand{\heegusquote}{
-  \textit{Я делаю это из любви к изучению игр и желания понять их сложность.}
-  \\
-  {\small — Heegu}
-}
-
-\newcommand{\qrgithub}{Отсканируйте для перехода в репозиторий \textbf{GitHub}.}
-\newcommand{\qrbgg}{Отсканируйте для перехода в ветку \textbf{BoardGameGeek}.}
-
-\title{\includegraphics[width=6cm]{\images/title.png}\\Правила в редакции сообщества}
 
 \newcommand{\sectionheadertext}[1]{
   \color{antiquewhite} \section*{\MakeUppercase{\textbf{#1}}}
 }
 \newcommand{\notefont}[0]{}
-
-\newcommand{\expansiontext}[1]{%
-  \stringswitch{#1}{
-    {navalbattles}{Дополнение <<Naval Battles>>}
-    {stretchgoals2}{Дополнение <<Stretch Goals 2>>}
-  }{Дополнение <<#1>>}%
-}
 
 \input{metadata.tex}
 
