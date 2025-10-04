@@ -62,6 +62,21 @@
 
 \newcommand{\version}{\input{.version}}
 
+\newcommand{\expansiontext}[1]{%
+  \stringswitch{#1}{%
+    {tower}{\tower}
+    {rampart}{\rampart}
+    {fortress}{\fortress}
+    {inferno}{\inferno}
+    {stronghold}{\stronghold}
+    {conflux}{\conflux}
+    {cove}{\cove}
+    {battlefield}{\battelfiled}
+    {navalbattles}{\navalbattles}%
+    {stretchgoals2}{\stretchgoalstwo}%
+  }{#1 \mbox{expansion}}%
+}
+
 % Get version from env
 % \getenv{variable_name} just prints the value
 % \getenv[\macro]{variable_name} stores the value in \macro for reusability

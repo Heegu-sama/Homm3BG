@@ -19,7 +19,7 @@ msgstr ""
 #. type: title{#1}
 #: sections/intro_with_toc.tex:4
 msgid "The Rewrite"
-msgstr ""
+msgstr "Neufassung"
 
 #. type: author{#1}
 #: sections/intro_with_toc.tex:7
@@ -34,6 +34,9 @@ msgid ""
 "{\\textlang{english}{\\StrLeft{\\githubsha}{7}}}.  }"
 "{ \\textlang{\\mainlanguagename}{Version \\textlang{english}{\\version}} }"
 msgstr ""
+"\\iftoggle{githubbuild}{ \\getenv[\\githubsha]{GITHUB_SHA} Dies ist eine unveröffentlichte Version auf GitHub \\href{\\repourl}"
+"{\\textlang{english}{\\StrLeft{\\githubsha}{7}}}.  }"
+"{ \\textlang{\\mainlanguagename}{Version \\textlang{english}{\\version}} }"
 
 #. type: center
 #: sections/intro_with_toc.tex:19
@@ -50,13 +53,16 @@ msgid ""
 "errors.  If you simply want to leave feedback, please do so in the original "
 "\\href{\\bggthreadurl}{BoardGameGeek thread}."
 msgstr ""
+"Dies ist ein Gemeinschaft-Projekt, erreichbar über \\href{\\repourl}{GitHub repository}. "
+"Jeder ist dazu eingeladen sich zu beteiligen, Veränderungen vorzunehmen und Fehler zu korrigieren. "
+"Wenn du ein Feedback hinterlassen möchtest, kannst du dies gern hier tun: \\href{\\bggthreadurl}{BoardGameGeek thread}. "
 
 #. type: center
 #: sections/intro_with_toc.tex:28
 msgid ""
 "\\textit{I’m doing this out of the love of learning games and wanting to "
 "understand their complexities.}"
-msgstr ""
+msgstr "\\textit{Ich tue dies aus Liebe zum Lernen von Spielen\\\\ und weil ich ihre Komplexität verstehen möchte.}"
 
 #. type: center
 #: sections/intro_with_toc.tex:28
@@ -103,6 +109,9 @@ msgid ""
 "  Scan to open \\textbf{GitHub} repository.\n"
 "\n"
 msgstr ""
+"  \\includegraphics[width=0.8\\linewidth]{\\qr/github.png}\\\\\n"
+"  Link zum \\textbf{GitHub} Verzeichnis.\n"
+"\n"
 
 #. type: multicols
 #: sections/intro_with_toc.tex:43
@@ -111,6 +120,8 @@ msgid ""
 "  \\includegraphics[width=0.8\\linewidth]{\\qr/bgg.png}\\\\\n"
 "  Scan to open \\textbf{BoardGameGeek} thread."
 msgstr ""
+"  \\includegraphics[width=0.8\\linewidth]{\\qr/bgg.png}\\\\\n"
+"  Link zum \\textbf{BoardGameGeek} Forum."
 
 #. type: Plain text
 #: sections/intro_with_toc.tex:51
