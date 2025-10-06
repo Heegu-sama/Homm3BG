@@ -1,12 +1,82 @@
 \addsection[2]{Adventure and \break{}Skirmish Mode}{\spells/berserk.png}
 
-intro
-
 \begin{expansion}{battlefield}
+\subsection*{Overview}
+\begin{multicols}{2}
+    The Skirmish and Adventure Mode are similarly structured 1v1 game modes whose central idea is to wage a tactical battle on the large Battlefield board.
+    In both modes, the player who defeats the other player in this tactical battle wins the game.\par
+    \smallskip
+    The two modes differ in the way players build their army and player deck:\par
+    \smallskip
+    In \textbf{Skirmish Mode}, the battle begins almost immediately after players have previously selected pre-constructed armies and expanded their starting deck simply by drawing and selecting additional cards.\par
+    \smallskip
+    In \textbf{Adventure Mode}, a card-driven Adventure Phase is played before the battle.
+    In this phase, players can use Adventure Cards to gather Resources, expand their Town, and develop their Heroes, thus deciding for themselves which Units to Recruit and which types of Cards to include in their Deck, rather than relying on pre-constructed sets.\par
+    \smallskip
+    The next pages show at first a general Setup for both game modes and then explain the specific rules for Skirmish and Adventure Mode separately.\par
+    \vspace*{\fill}
+    \columnbreak
+
+    \textbf{\textit{\textcolor{darkcandyapplered}{Important Note:}}}
+    Both game modes were developed only with the Core Game in mind.
+    Therefore, the official rules leave many questions unanswered, especially (but not exclusively) concerning card effects from expansions.
+    If you don't want to remove all expansion Cards from the game, you'll have no choice but to consult house rules.\par
+    \smallskip
+    The following note box provides some clues about missing clarifications from the developers.
+    When learning the rules you can skip this part for now.\par
+
+    \note{18}{Open Questions in Adventure and Skirmish Mode:
+    \begin{itemize}
+        \item Which else Cards should be remove from the game (beside Diplomacy and Logistics)?
+        \item Which Cards should be removed especially in Skirmish (cause there only Combat effects are useful)?
+        \item How to handle Cards with permanent effects?
+        \item How to handle Cards with Remove effect?
+        \item How to handle Cards with both a Combat and a single-use effect?
+    \end{itemize}
+    }
+\end{multicols}
+\end{expansion}
+
+\newpage
+\begin{expansion}{battlefield}
+    \subsection*{General Setup}
     \begin{multicols*}{2}
-    \subsection*{\pagetarget{Adventure Mode}{Adventure Mode}}
-        text
+        \subsection*{Skirmish Mode}
+        \begin{enumerate}
+            \item Place the Battlefield Board in the middle of the table.
+            \item Each player chooses a Faction and a Hero an takes its following components:
+            \begin{itemize}
+                \item The Hero Card at Level 1
+                \item The Hero's Specialty Cards and its starting Ability Card
+                \item The Faction's 7 Unit Cards and their belonging 7 Unit Miniatures
+                \item 20 Faction Cubes
+            \end{itemize}
+            \item Prepare the Artifact, Spell and Ability Deck normally. Remove the following Ability Cards from play: "Diplomacy", "Logistics"
+            \item Prepare the Positive and Negative \pagelink{Morale Cards}{Morale Cards} including all Cards with battlefield Symbol.
+            \item Put following Tokens ready near the Battlefield Board: Black Cubes, Damage Tokens, Defense/Paralysis Tokens, Obstacles and the Initiative Token
+            \item Put the Attack and Ressource Dice ready.
+            \item Build your starting Deck as normal.
+        \end{enumerate}
+    \columnbreak
+    \subsection*{Additional Steps for Adventure Mode}
+    \begin{enumerate}[resume]
+        \item Prepare all Resource Token and Treasure Dice
+        \item Each player takes the Town Board with following starting requirements:
+        \begin{itemize}
+            \item Mark the income tracks at 10 \svg{gold}, 0 \svg{building_materials} and 0 \svg{valuablegreater}.
+            \item Gain starting ressources 15 \svg{gold}, 3 \svg{building_materials} and 1 \svg{valuablegreater}.
+            \item Start without any Town Building or Units in your Unit Deck
+            %https://boardgamegeek.com/thread/3284421/article/44125381#44125381 (clarification1)
+        \end{itemize}
+        \item Shuffle the Adventure Card Deck and place them face down.
+        \item Place the Round Tracker and place a Black Cube at Round 1.
+    \end{enumerate}\par
+    \medskip
+    After Setup, choose a starting player by rolling a \svg{resource_die}. You can use the Initiativ Token to Track the current starting player.
     \end{multicols*}
+\begin{center}
+    \includegraphics[width=0.9\linewidth]{\images/battlefield_setup.png}
+\end{center}
 \end{expansion}
 
 \newpage
@@ -16,16 +86,16 @@ intro
     \subsection*{\pagetarget{Skirmish Mode}{Skirmish Mode}}
     The Skirmish Mode has no adventure phase. You skip hat phase and you jump straight into battle.\par
     \vspace*{1em}
-    \subsection*{Setup}
-    Both players decide on a game length: \textbf{short, medium or large}. Each player chooses a Faction and a Hero of that Faction. Then build your Starting Deck as normal. Depending on the chosen game length modify your Hero's Level, your Deck (by drawing additional Cards) and your Unit Deck as shown in the Table below.\par
+    \subsection*{Deck-building Phase}
+    Both players decide on a game length: \textbf{short, medium or large}. Depending on the chosen game length both players modify their Hero's Level, their Deck (by drawing additional Cards) and their Unit Deck as shown in the Table below.\par
 
     \columnbreak
-    \subsection*{Start of Combat}
+    \subsection*{Battlefield Combat Phase}
     After Modifying your Deck, shuffle it and draw Cards up to your Hand Limit. Then follow the rules for \pagelink{Battlefield Combat}{Combat on the Battlefield Board} with one additional rule: At the end of each Combat Round \textbf{regain one used \svg{expert}} up to Your Hero's Limit and \textbf{draw 2 Cards from your Deck}.\par
     \vspace*{1em}
     \subsection*{Victory Condition}
     To achieve a victory, one of the players must defeat all the enemy Units.\par
-    \vspace~{\fill}
+    \vspace*{\fill}
     \end{multicols}
 
     \vspace*{1em}
@@ -62,4 +132,90 @@ intro
             \lightcell[2.2]{Use all of your Units (\svg{bronze}, \svg{silver} and \svg{golden}) on "Pack" Site.} \\
         \end{tabularx}
     }
+\end{expansion}
+
+\newpage
+
+\begin{expansion}{battlefield}
+    \begin{multicols}{2}
+    \subsection*{\pagetarget{Adventure Mode}{Adventure Mode}}
+    The Adventure Mode is divided into two Phases: The \textbf{Adventure Phase} and the \textbf{Battlefield Combat Phase}, which works identically as in the Skirmish Mode. The Adventure Phase simulates exploring the world with Adventure Cards. In this Phase both players prepare for Combat by generating resources, recruiting Units, and expanding their Hero's Deck.\par
+    Before starting the game, both players decide for a game length by limiting the Adventure Phase's Round number:
+    \begin{itemize}
+        \item \textbf{Short} game: 9 Rounds.
+        \item \textbf{Medium} game: 13 Rounds.
+        \item \textbf{Large} game: 16 Rounds.
+    \end{itemize}
+    \subsection*{Adventure Phase Structure}
+    The adventure phase lasts a certain number of Rounds, depending on the chosen game length. Follow these steps in the following order during each Round.\par
+        \begin{enumerate}
+            \item \textbf{Move Round Tracker} – Skip this step in the first round. Depending on the type of Round, resolve following effects:
+            \begin{itemize}
+                \item In \textbf{Resource Rounds} both players gets Income as normal.
+                \item In \textbf{Astrologers Rounds} – instead of drawing Astrologers Proclaim Cards - players increase one of their Income Tracks (\svg{gold},\svg{building_materials} or \svg{valuablegreater}) in one of the following ways:
+                \begin{itemize}
+                    \item Choose your preferred Income Track by yourself.
+                    \item Determine the Income Track randomly by rolling a \svg{resource_die}. If you do, get the Basic income of that Resource immediately, which is 5 \svg{gold}, 2 \svg{building_materials} or 1 \svg{valuablegreater}.
+                \end{itemize}
+            \end{itemize}
+            \item \textbf{Drawing Adventure Cards} – The starting Player draws 3 Adventure Cards, keeps one of them and passes the remaining 2 to the other player, who keeps one and discards the other. (\textbf{Note:} In this Step, each player can spend a \svg{movement} effect to discard the drawn Adventure Cards and redrawn that many Cards, hopefully to get a better selection.)\par
+            \item \textbf{Player Turn} – Starting with the starting player both players takes their turn. During their turn, players can resolve Adventure Cards, make Town Actions, resolve their Hero's Level Ups and might play single-use Card Effects.\par
+            \item \textbf{Change Starting Player} – The odd rounds are started by the first player, and the even ones by the second player.\par
+        \end{enumerate}
+    \end{multicols}
+\end{expansion}
+
+\newpage
+\begin{expansion}{battlefield}
+    \begin{multicols}{2}
+    \subsection*{Resolving Adventure Cards}
+    There are two different types of Adventure Cards: Combats or Events.
+    \begin{multicols}{2}
+        \footnotesize
+        \begin{center}
+            \includegraphics[width=1.2\linewidth]{\cards/adventure_event_test.png}
+            \textbf{\textit{\textcolor{darkcandyapplered}{Adventure-Event Card}}}
+            \begin{enumerate}
+                \item[\textbf{1.}] Name
+                \item[\textbf{2.}] Type
+                \item[\textbf{3.}] Effect
+            \end{enumerate}
+        \end{center}
+        \columnbreak
+
+        \begin{center}
+            \includegraphics[width=1.2\linewidth]{\cards/adventure_combat_test.png}
+            \textbf{\textit{\textcolor{darkcandyapplered}{Adventure-Combat Card}}}
+            \begin{enumerate}
+                \item[\textbf{4.}] Combat Power Level
+                \item[\textbf{5.}] Battle Reward
+                \item[\textbf{6.}] Basic Reward
+            \end{enumerate}
+        \end{center}
+    \end{multicols}
+    To resolve an Adventure-Event Card just resolve the printed effect. The effect of the Event Card "Obelik" grows stronger with every own Obelisk Card played before.
+
+    To resolve a Adventure-Combat Card follow these steps:
+    \begin{enumerate}
+        \item \textbf{Choose one Combat Power Level:} Choose it from the Adventure-Combat Card. You want to reach at least that power value to gain the fully reward.
+        \item \textbf{Determine your Combat Power:} Select 2 of your Units and roll 2 Attack dice. Apply both Unit's Attack Value and both Attack Die results to determine your final Combat Power.
+        %https://boardgamegeek.com/thread/3302433/article/44279810#44279810 (strange clarification?)
+        \item \textbf{Get the Reward:} If your Combat Power is equal or higher than your chosen Combat Power level of the Adventure-Combat Card, take both the Basic and the Battle Reward. Otherwise take only the Basic Reward and put \svg{paralysis} at one of your Units that took part in this Combat. This Unit is now stunned. If you choose a stunned Unit for a future Combat, it do not add its Attack value to your Combat Power, but you remove the \svg{paralysis} Token after Combat.
+    \end{enumerate}
+
+    \subsection*{Additional Rules}
+    \begin{itemize}
+        \item Your limit for expert effects \svg{expert} applies for the entire Adventure Phase. You regain all used \svg{expert} at the beginning of the Combat phase.
+        \item Your Deck isn't available during the Adventure Phase. All Cards of your starting Deck are placed face down near your Hero Card and wait for Combat Phase. You can't use your Deck during adventure Phase.
+        \item Each time an effect instructs you to gain new Cards and add them to your Deck (usually by leveling up or by resolving Adventure Cards), you must proceed as follows:
+        \begin{itemize}
+            \item All Cards, that are useful only in Combat, go directly in your Deck and wait there for Combat Phase. Spells go always into your Deck. You can't use these Cards (including Spells) during Adventure Phase.
+            \item All Cards, that aren't useful in Combat, because they provide Resources (e.~g.~"Estates") or \svg{movement}, or they make recruiting cheaper (e.~g.~"Legs of Legion"), are placed face up next to your Hero Card. You can use each of these Cards only once. Remove them from play after using. They don't go in your Deck.
+        \end{itemize}
+    \end{itemize}
+
+    \subsection*{Combat Phase}
+    When the last Round of Adventure Phase ends, the Combat Phase starts. Both players regain all used \svg{expert}. Then, they pick up their set-aside deck, shuffle it, and draw Cards up to their hand limit (depending on their current Hero's Level). They remove all \svg{paralysis} from their recruited Units, take the Miniatures of all of them ad start the Combat on the Battlefield Board following \pagelink{Battlefield Combat}{the general rules for that}.
+    The same exceptions as in Skirmish Mode apply here as well: At the end of each combat Round each player regains one \svg{expert} and draws 2 Cards from their Deck.
+    \end{multicols}
 \end{expansion}
