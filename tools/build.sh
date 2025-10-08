@@ -118,18 +118,14 @@ cleanup() {
   if [[ -n "${SECTION_SEARCH}" ]]; then
     git restore structure.tex
   fi
-  if [[ ${LANGUAGE} != en ]]; then
-    git restore po4a.cfg
-  fi
 }
 
 trap cleanup EXIT
 
 if [[ ${LANGUAGE} != en ]]; then
   # limit output to specified language
-  sed -i'' "s/^\[po4a_langs\].*$/[po4a_langs] ${LANGUAGE}/" po4a.cfg
-  if ! po4a --no-update po4a.cfg \
-       2> >(grep -v "unmatched end of environment .multicols\| (po4a::tex)$" >&2) \
+  if ! po4a --no-update po4a.cfg --target-lang "${LANGUAGE}" \
+       2> >(grep -v "unmatched end of environment\| (po4a::tex)$" >&2) \
        | grep "/${LANGUAGE}/"; then
 
     echo -e "---\npo4a failed for language ${LANGUAGE}, please fix the errors."
