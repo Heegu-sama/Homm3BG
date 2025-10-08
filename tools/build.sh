@@ -125,8 +125,7 @@ trap cleanup EXIT
 if [[ ${LANGUAGE} != en ]]; then
   # limit output to specified language
   if ! po4a --no-update po4a.cfg --target-lang "${LANGUAGE}" \
-       2> >(grep -v "unmatched end of environment\| (po4a::tex)$" >&2) \
-       | grep "/${LANGUAGE}/"; then
+       2> >(grep -v "unmatched end of environment\| (po4a::tex)$" >&2); then
 
     echo -e "---\npo4a failed for language ${LANGUAGE}, please fix the errors."
 
