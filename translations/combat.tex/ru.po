@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-08-18 22:36+0200\n"
+"POT-Creation-Date: 2025-10-08 19:54+0000\n"
 "PO-Revision-Date: 2025-04-14 06:44+0100\n"
 "Last-Translator: Alexey Sokolov <alexey@asokolov.org>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -25,20 +25,19 @@ msgstr ""
 #: sections/combat.tex:5 sections/components.tex:5 sections/credits.tex:6
 #: sections/deckbuilding.tex:5 sections/difficulty.tex:5
 #: sections/map_elements.tex:5 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/setup.tex:5 sections/town.tex:5
-#: sections/trading.tex:5
+#: sections/resources.tex:5 sections/setup.tex:5 sections/trading.tex:5
 msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
 msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
 #: sections/combat.tex:7 sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/difficulty.tex:7 sections/expansion_content.tex:5
+#: sections/difficulty.tex:7 sections/expansion_content.tex:481
 #: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:117
 #: sections/map_elements.tex:79 sections/map_elements.tex:125
 #: sections/player_turns.tex:7 sections/resources.tex:7
 #: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:59 sections/town.tex:7 sections/trading.tex:7
+#: sections/setup.tex:59 sections/town.tex:5 sections/trading.tex:7
 #: sections/units.tex:5 sections/units.tex:198
 #, no-wrap
 msgid ""
@@ -544,7 +543,7 @@ msgstr ""
 "Побеждая в сражениях, основные герои зарабатывают опыт\\index{Опыт}.\n"
 "Если сложность нейтрального поля или уровень побеждённого вражеского основного героя \\textbf{равны} вашему уровню, получите 1 \\svg{experience}.\n"
 "Если же эти значения \\textbf{выше} вашего уровня, получите 2 \\svg{experience}.\n"
-"Победа в сражениях с Лазурными нейтральными отрядами \\svg{azure} \\textbf{мгновенно} повышает уровень героя до 7 .\n"
+"Победа в сражениях с Лазурными нейтральными отрядами \\svg{azure} \\textbf{мгновенно} повышает уровень героя до 7.\n"
 "Если вы получили несколько уровней за раз, примените все эффекты от них по порядку.\n"
 "Повышение уровня должно быть выполнено \\textbf{до} применения остальных эффектов поля, на котором состоялось сражение.\\par\n"
 "Вторичные герои не могут зарабатывать опыт.\n"
@@ -643,7 +642,7 @@ msgstr ""
 "Если вы обороняете город, в котором есть Цитадель, после размещения ваших отрядов поместите 3 карты стен и 1 ворот в любом порядке на средней линии доски сражений.\n"
 "\\textbf{Не используйте стены и ворота} при обороне вражеского города, захваченного вами ранее, \\textbf{даже если} в нём построена Цитадель.\n"
 "Карта ворот \\textbf{не является препятствием для обороняющегося игрока}.\n"
-"Оброняющиеся отряды могу проходить через ворота или останавливаться в них.\n"
+"Обороняющиеся отряды могут проходить через ворота или останавливаться в них.\n"
 "\n"
 
 #. type: multicols*
@@ -762,11 +761,17 @@ msgstr ""
 
 #. type: multicols*
 #: sections/combat.tex:270
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{\\pagetarget{Alternative Combat Boards}{Alternative Combat Boards}}\n"
+#| "\\begin{expansion}{navalbattles}\n"
+#| "  As an \\textbf{optional rule}, you can use the Naval Battle Board for combats at sea locations.\n"
+#| "  This Board removes the two middle spaces, requiring Ground \\svg{unit_ground} Units to navigate around them while Flying \\svg{unit_flying} Units can move over them but cannot end their movement there.\n"
+#| "\n"
 msgid ""
 "\\subsection*{\\pagetarget{Alternative Combat Boards}{Alternative Combat Boards}}\n"
 "\\begin{expansion}{navalbattles}\n"
-"  As an \\textbf{optional rule}, you can use the Naval Battle Board for combats at sea locations.\n"
+"  As an \\textbf{optional rule}, you can use the \\textbf{Naval Battle Board} for combats at sea locations.\n"
 "  This Board removes the two middle spaces, requiring Ground \\svg{unit_ground} Units to navigate around them while Flying \\svg{unit_flying} Units can move over them but cannot end their movement there.\n"
 "\n"
 msgstr ""
@@ -789,13 +794,20 @@ msgstr ""
 
 #. type: multicols*
 #: sections/combat.tex:281
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\vspace{2em}\n"
+#| "\\begin{expansion}{battlefield}\n"
+#| "  As an \\textbf{optional rule}, you can use the Battlefield Board for combats between players in regular games.\n"
+#| "  You can also use it for Neutral Combats, though this is not recommended.\n"
+#| "  Refer to the official Battlefield rulebook for the rule changes regarding this combat type.\n"
+#| "\n"
 msgid ""
 "\\vspace{2em}\n"
 "\\begin{expansion}{battlefield}\n"
-"  As an \\textbf{optional rule}, you can use the Battlefield Board for combats between players in regular games.\n"
+"  As an \\textbf{optional rule}, you can use the \\textbf{Battlefield Board} for combats between players in regular games.\n"
 "  You can also use it for Neutral Combats, though this is not recommended.\n"
-"  Refer to the official Battlefield rulebook for the rule changes regarding this combat type.\n"
+"  Refer to the \\pagelink{Battlefield Combat}{expansion content section} for the rule changes regarding this combat type.\n"
 "\n"
 msgstr ""
 "\\vspace{2em}\n"

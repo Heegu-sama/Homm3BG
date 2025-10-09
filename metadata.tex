@@ -1,3 +1,5 @@
+\input{\sections/language_metadata.tex}
+
 % Set page size and margins
 \usepackage[
   a4paper,
@@ -58,6 +60,23 @@
 \usepackage[skip=6pt, indent=0pt]{parskip}
 \setstretch{1}
 
+\newcommand{\version}{\input{.version}}
+
+\newcommand{\expansiontext}[1]{%
+  \stringswitch{#1}{%
+    {tower}{\tower}
+    {rampart}{\rampart}
+    {fortress}{\fortress}
+    {inferno}{\inferno}
+    {stronghold}{\stronghold}
+    {conflux}{\conflux}
+    {cove}{\cove}
+    {battlefield}{\battelfiled}
+    {navalbattles}{\navalbattles}%
+    {stretchgoals2}{\stretchgoalstwo}%
+  }{#1 \mbox{expansion}}%
+}
+
 % Get version from env
 % \getenv{variable_name} just prints the value
 % \getenv[\macro]{variable_name} stores the value in \macro for reusability
@@ -100,6 +119,7 @@
 \def\_assets{assets}
 
 \def\art{\_assets/art}
+\def\boxcovers{\_assets/box-covers}
 \def\cards{\_assets/cards}
 \def\examples{\_assets/examples}
 \def\images{\_assets/images}
@@ -112,6 +132,7 @@
 \def\tables{\_assets/tables}
 \def\qr{\_assets/qr-codes}
 
+\def\discordurl{https://discord.gg/Y4uM9pPWF6}
 \def\repourl{https://github.com/Heegu-sama/Homm3BG}
 \def\bggthreadurl{https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project}
 
