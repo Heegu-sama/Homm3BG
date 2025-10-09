@@ -23,26 +23,19 @@ Players are able to start multiple Combats during their Turn.
 
 When a \pagelink{Secondary}{Secondary Hero} is attacked, they \textbf{may choose} to be \pagelink{Endcombat}{instantly defeated} instead of engaging in Combat, which helps to preserve the Units.
 
-\subsection*{Campaign and Cooperative\\Combat}
-During these game modes, all enemy Units activate as described in the \pagelink{AI Units}{AI Rules section}.
-
 \vspace*{\fill}
-\note{10}{
-  \vspace{1em}
-  If your Town or Settlement is attacked by an enemy Hero and your Hero is not on that Field, you may immediately \textbf{pay 8 \svg{gold} to defend with only your Units}.
-  You cannot use your Deck during this Combat, as your Main Hero is not present.
-  Paying this Gold represents the cost of transporting the army there.
-}
-\vspace*{\fill}
-
-\columnbreak
 \subheader{\pagetarget{Quick}{Quick Combat}}\index{Quick Combat}
 If your Hero's Level is higher than a Field's Difficulty when Combat against Neutral Units would begin, \textbf{no Combat} takes place.
 The player is considered to have beaten the Neutral Units by default and gains no rewards from the Combat itself before Visiting the Field.
+
 \vspace*{\fill}
+\subheader{Campaign and Cooperative Combat}
+During these game modes, all enemy Units activate as described in the \pagelink{AI Units}{AI Rules section}.
+\columnbreak
+
 \begin{center}
-  \vspace*{-1em}
-  \hspace*{1em}\transparent{0.2}\includegraphics[width=1.6\linewidth]{\art/minotaur.png}
+  % \vspace*{-1em}
+  \includegraphics[width=\linewidth]{\art/rogue.jpg}
 \end{center}
 \end{multicols*}
 
@@ -50,7 +43,7 @@ The player is considered to have beaten the Neutral Units by default and gains n
 \begin{multicols*}{2}
 
 % TODO info about battlefield expansion
-  Combat is resolved on the 4×5 Combat Board, which consists of two Backlines and two Frontlines on opposite ends, and a middle row.
+Combat is resolved on the 4×5 Combat Board, which consists of two Backlines and two Frontlines on opposite ends, and a middle row.
 It can also be resolved on one of the \pagelink{Alternative Combat Boards}{alternative Boards}.
 Follow these steps when Combat begins against \textbf{Neutral Units}:
 
@@ -207,7 +200,7 @@ You also do not gain Experience from \textbf{defeating} a Secondary Hero, or if 
 
 \clearpage
 
-\subsection*{Combat Example}
+\subheader{Combat Example}
 
 \begin{multicols*}{2}
 \textit{Bob's Zombies are about to attack Alice's Griffins.
@@ -234,14 +227,15 @@ The previously played Attack and Defense Cards no longer have any effect.}
 
 \clearpage
 
-\subheader{\pagetarget{Walls}{Defending a Town With a Citadel}}\index{Defending Town}
+\subheader{\pagetarget{Walls}{Defending Town}}\index{Defending Town}
 \begin{multicols}{2}
+When you defend your Town and it \textbf{doesn't have} a Citadel, Combat happens just like on any other Field.
 When you defend your Town and it has a Citadel, you add the 3 Wall and 1 Gate Obstacles in any order to the middle row of the Combat Board after placing your Units.
 \textbf{Don't use Walls and Gate} if you defend an enemy Town, which you've conquered before, \textbf{not even} if it is a Town with a Citadel.
 The Gate Card is \textbf{not an Obstacle to the defending player}.
 Defending Units may move through the Gate and may stop on it.
 
-The Wall and Gate\index{Walls and Gate} Cards can be destroyed by any adjacent \svg{unit_ground} or \svg{unit_flying} Unit's attack, even by your own defending Units.
+\pagetarget{Walls}{The Wall and Gate}\index{Walls and Gate} Cards can be destroyed by any adjacent \svg{unit_ground} or \svg{unit_flying} Unit's attack, even by your own defending Units.
 These Attacks don't count as normal attacks: They are always successful and they don't activate any of the attacking Unit's \svg{unit_attack} abilities, and you cannot play any Cards or throw the attack die to affect the attack's result.
 
 Defending Units standing on their own side and \textbf{in the same column} as a Wall or a Gate gain protection from \svg{unit_ranged} attacks.
@@ -274,9 +268,17 @@ For example it never gets ranged penalty against enemy Units and vice versa.
 Only Ranged attacks and Card Effects can destroy the Arrow Tower, but it is instantly destroyed when all Walls and the Gate are destroyed.
 The attacker doesn't need to destroy it to win the Combat.
 
-\vspace{1em}
-\note{9}{In a siege against AI, the Arrow Tower follows the priority-rules like a Silver \svg{silver} Unit. But if there are many valid targets, it cannot attack the nearest one, so it will attack the one that is closest to perishing (the smallest difference between \svg{health_points-yellow} and current \svg{damage-yellow}).}
+In a siege against AI, the Arrow Tower follows the priority-rules like a Silver \svg{silver} Unit. But if there are many valid targets, it cannot attack the nearest one, so it will attack the one that is closest to perishing (the smallest difference between \svg{health_points} and current \svg{damage}).
 
+\vspace*{\fill}
+\note{10}{
+  \vspace{1em}
+  If your Town or Settlement is attacked by an enemy Hero and your Hero is not on that Field, you may immediately \textbf{pay 8 \svg{gold} to defend with only your Units}.
+  You cannot use your Deck during this Combat, as your Main Hero is not present.
+  Paying this Gold represents the cost of transporting the army there.
+}
+
+\vspace*{-0.8em}
 \begin{center}
   \includegraphics[width=1.05\linewidth]{\art/arrow_tower.jpg}
 \end{center}
