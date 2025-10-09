@@ -23,19 +23,31 @@ Players are able to start multiple Combats during their Turn.
 
 When a \pagelink{Secondary}{Secondary Hero} is attacked, they \textbf{may choose} to be \pagelink{Endcombat}{instantly defeated} instead of engaging in Combat, which helps to preserve the Units.
 
-\vspace{1em}
+\subsection*{Campaign and Cooperative\\Combat}
+During these game modes, all enemy Units activate as described in the \pagelink{AI Units}{AI Rules section}.
+
+\vspace*{\fill}
 \note{10}{
   \vspace{1em}
   If your Town or Settlement is attacked by an enemy Hero and your Hero is not on that Field, you may immediately \textbf{pay 8 \svg{gold} to defend with only your Units}.
   You cannot use your Deck during this Combat, as your Main Hero is not present.
   Paying this Gold represents the cost of transporting the army there.
 }
+\vspace*{\fill}
 
-\subsection*{\pagetarget{Quick}{Quick Combat}}\index{Quick Combat}
+\columnbreak
+\subheader{\pagetarget{Quick}{Quick Combat}}\index{Quick Combat}
 If your Hero's Level is higher than a Field's Difficulty when Combat against Neutral Units would begin, \textbf{no Combat} takes place.
 The player is considered to have beaten the Neutral Units by default and gains no rewards from the Combat itself before Visiting the Field.
+\vspace*{\fill}
+\begin{center}
+  \vspace*{-1em}
+  \hspace*{1em}\transparent{0.2}\includegraphics[width=1.6\linewidth]{\art/minotaur.png}
+\end{center}
+\end{multicols*}
 
-\subsection*{\pagetarget{Combatsetup}{Combat Setup}}
+\subheader{\pagetarget{Combatsetup}{Combat Setup}}
+\begin{multicols*}{2}
 
 % TODO info about battlefield expansion
   Combat is resolved on the 4×5 Combat Board, which consists of two Backlines and two Frontlines on opposite ends, and a middle row.
@@ -57,14 +69,19 @@ If there's still a tie, the players decide the order.
 Check the \pagelink{AI Units}{\textbf{Combat against AI}} section for detailed instructions.
 \end{itemize}
 
-\pagebreak
 Unit setup when fighting \textbf{other players}:
 \begin{itemize}
   \item The attacking player places up to 5 Units on their chosen side of the Combat Board, followed by the defender.
   \item If the Combat takes place in a Town with a Citadel, the defender adds the \pagelink{Walls}{Wall, Gate and Arrow Tower} Cards after placing their Units.
 \end{itemize}
 
-\subsection*{\pagetarget{Combatterminology}{Combat Terminology}}
+\begin{center}
+  \includegraphics[width=\linewidth]{\art/elf.jpg}
+\end{center}
+\end{multicols*}
+
+\subheader{\pagetarget{Combatterminology}{Combat Terminology}}
+\begin{multicols*}{2}
 The following terms are used to describe effects and elements during Combat:\par
 \textbf{Attacking Player} – The player who started the Combat.\par
 \textbf{Defending Player} – The player whom Combat was started against.\par
@@ -98,10 +115,13 @@ The Unit cannot take another Defense Action during that activation.\par
 
 \vspace*{\fill}
 \begin{center}
-  \transparent{0.2}\includegraphics[width=1.3\linewidth]{\art/storm_elemental.png}
+  \hspace*{-2em}\transparent{0.2}\includegraphics[width=1.5\linewidth]{\art/storm_elemental.png}
 \end{center}
+\end{multicols*}
 
-\subsection*{\pagetarget{combatround}{Combat Round Structure}}
+\subheader{\pagetarget{combatround}{Combat Round Structure}}
+\begin{multicols*}{2}
+
 Combat is divided into Rounds, during which all of the Units participating in that Combat \textbf{Activate once} in Initiative order.
 After each Unit has Activated, a new Combat Round begins.
 Combat lasts until all Units on one side are eliminated, a player has to \textbf{Retreat}\index{Retreat} when fighting Neutral Units, or a player \textbf{Surrenders} to another player.
@@ -132,7 +152,7 @@ The increased \svg{defense} expires in a similar way.
 
 \vspace*{\fill}
 \begin{center}
-  \transparent{0.15}\reflectbox{\includegraphics[width=\linewidth]{\art/wyvern.png}}
+  \transparent{0.15}\reflectbox{\includegraphics[width=0.7\linewidth]{\art/wyvern.png}}
 \end{center}
 \vspace*{\fill}
 
@@ -143,10 +163,10 @@ When you Retreat, end the Combat, and move the Hero that started the Combat back
 Retreating has no other penalties.
 
 \note{5}{Combats against Azure \svg{azure} Units, other players, or \pagelink{AIrules}{AI Heroes} have no time limit, and you cannot Retreat from them.}
+\end{multicols*}
 
-\vspace*{-1em}
-\subsection*{\pagetarget{Endcombat}{End of Combat}}
-
+\subheader{\pagetarget{Endcombat}{End of Combat}}
+\begin{multicols*}{2}
 Combat against Neutrals has three possible outcomes:
 \begin{itemize}
   \item \textbf{Win:} All Neutral Units are defeated.
@@ -182,9 +202,6 @@ Level ups must be resolved before Visiting the Field where the Combat happened.\
 Secondary Heroes cannot ever gain Experience.
 You also do not gain Experience from \textbf{defeating} a Secondary Hero, or if an enemy Hero \textbf{Surrenders} to you.
 
-\subsection*{Campaign and Cooperative\\Combat}
-During these game modes, all enemy Units activate as described in the \pagelink{AI Units}{AI Rules section}.
-
 \end{multicols*}
 
 \clearpage
@@ -216,31 +233,33 @@ The previously played Attack and Defense Cards no longer have any effect.}
 
 \clearpage
 
-\begin{multicols*}{2}
-\subsection*{\pagetarget{Walls}{Defending a Town With\\a Citadel\raggedright}}\index{Defending Town}
+\subheader{\pagetarget{Walls}{Defending a Town With a Citadel}}\index{Defending Town}
+\begin{multicols}{2}
 When you defend your Town and it has a Citadel, you add the 3 Wall and 1 Gate Obstacles in any order to the middle row of the Combat Board after placing your Units.
 \textbf{Don't use Walls and Gate} if you defend an enemy Town, which you've conquered before, \textbf{not even} if it is a Town with a Citadel.
 The Gate Card is \textbf{not an Obstacle to the defending player}.
 Defending Units may move through the Gate and may stop on it.
-
-\vspace*{\fill}
-\includegraphics[width=\linewidth]{\examples/ranged_protected.png}
-{\textit{When the Halberdiers are behind a non-destroyed Gate, they \textbf{are protected} when attacked from behind the Wall line.
-  The \svg{unit_ranged} attack damage of Evil Eyes is \textbf{reduced by 1}.}}
-\columnbreak
 
 The Wall and Gate\index{Walls and Gate} Cards can be destroyed by any adjacent \svg{unit_ground} or \svg{unit_flying} Unit's attack, even by your own defending Units.
 These Attacks don't count as normal attacks: They are always successful and they don't activate any of the attacking Unit's \svg{unit_attack} abilities, and you cannot play any Cards or throw the attack die to affect the attack's result.
 
 Defending Units standing on their own side and \textbf{in the same column} as a Wall or a Gate gain protection from \svg{unit_ranged} attacks.
 If they are targeted by a \svg{unit_ranged} attack performed from the opponent's side of the Combat Board, \textbf{reduce the attack's damage by 1}.
+\end{multicols}
+
+\begin{multicols}{2}
+\vspace*{\fill}
+\includegraphics[width=\linewidth]{\examples/ranged_protected.png}
+{\textit{When the Halberdiers are behind a non-destroyed Gate, they \textbf{are protected} when attacked from behind the Wall line.
+  The \svg{unit_ranged} attack damage of Evil Eyes is \textbf{reduced by 1}.}}
+\columnbreak
 
 \vspace*{\fill}
 \includegraphics[width=\linewidth]{\examples/ranged_unprotected.png}
 {\textit{Because the Halberdiers are not behind a non-destroyed Wall, \textbf{protection doesn't work}.
   Evil Eyes attack \textbf{without penalty}.}}
 \newline\newline
-\end{multicols*}
+\end{multicols}
 
 \clearpage
 
@@ -263,7 +282,7 @@ The attacker doesn't need to destroy it to win the Combat.
 
 \newpage
 
-\subsection*{\pagetarget{Alternative Combat Boards}{Alternative Combat Boards}}
+\subheader{\pagetarget{Alternative Combat Boards}{Alternative Combat Boards}}
 \begin{expansion}{navalbattles}
   As an \textbf{optional rule}, you can use the \textbf{Naval Battle Board} for combats at sea locations.
   This Board removes the two middle spaces, requiring Ground \svg{unit_ground} Units to navigate around them while Flying \svg{unit_flying} Units can move over them but cannot end their movement there.
