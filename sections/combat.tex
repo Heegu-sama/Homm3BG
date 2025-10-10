@@ -138,11 +138,11 @@ During these game modes, all enemy Units activate as described in the \pagelink{
 
 \subsection*{\pagetarget{CombatCards}{Using Cards During Combat}}
 You may only use \textbf{one Spell per Combat Round}, unlike being able to play any number of other Cards.
-Ongoing \svg{ongoing} and \svg{activation} Activate effects can be used only \textbf{when Activating one of your Units and before it attacks}.
+Ongoing \svg{ongoing} and \svg{activation} Activation effects can be used only \textbf{when Activating one of your Units and before it attacks}.
 Ongoing effects\index{Ongoing Effects} last until end of Combat or if the effect on the Card is used up.\par
 Instant \svg{instant} Cards may be played \textbf{at any time} except between rolling the Attack Die and resolving damage unless otherwise stated.
 Effects of increasing a Unit's \svg{attack} (e.g. by the Statistics Cards), expire whenever the first attack performed by that Unit resolves or the Activation ends, whichever comes first.
-The increased \svg{defense} expires in a similar way.
+Increased \svg{defense} expires in a similar way.
 
 \vspace*{\fill}
 
@@ -159,25 +159,25 @@ Retreating has no other penalties.
 \begin{multicols*}{2}
 Combat against Neutrals has three possible outcomes:
 \begin{itemize}
-  \item \textbf{Win:} All Neutral Units are defeated.
+  \item \textbf{Victory:} All Neutral Units are defeated.
   \item \textbf{Retreat:} The player runs out of time or loses all combating Units, but still has Units in their Unit Deck.
   \item \textbf{Defeat:} The player loses all combating Units and doesn't have any Units in their Unit Deck.
 \end{itemize}
 
 Combat against another player's Hero has two possible outcomes:
 \begin{itemize}
- \item \textbf{Win/Defeat:} If all Units on one side are defeated, the side with any surviving Units is the winner, the other side is defeated.
- \item \textbf{Surrender:} Instead of activating one of their Units, a Hero can decide to surrender to the other player's Hero by paying them 10 \svg{gold} to prevent their army from being defeated. In this case the Combat ends immediately without having a winning or defeated Hero.
+ \item \textbf{Victory/Defeat:} If all Units on one side are defeated, the side with any surviving Units is the winner, the other side is defeated.
+ \item \textbf{Surrender:} Instead of activating one of their Units, a Hero can decide to surrender to the other player's Hero by paying them 10 \svg{gold} to prevent their army from being defeated. In this case, Combat ends immediately without having a winning or defeated Hero.
 \end{itemize}
 
-When Combat ends, all damage is healed from all surviving Units. Move any player-owned Units back to their Unit Deck and discard any leftover enemy Neutral Units. Depending on the type and result of the combat, players must resolve the following consequences for themselves:
+When Combat ends, all damage is healed from all surviving Units. Move any player-owned Units back to their Unit Deck and discard any leftover enemy Neutral Units. Depending on the type and result of the Combat, players must resolve the following consequences for themselves:
 
-A \textbf{Winning Hero} gets \pagelink{Combatexperience}{Experience}, if it was the Main Hero. If it was the attacker they must Visit the Field where the combat took place.\par
-A \textbf{Retreating Hero} from a combat with Neutrals has to move back to the last visited Field on the map (without Visiting that Field).\par
-A \textbf{defeated Main Hero} has to move to a friendly Town or Settlement. If they were defeated by another player's Hero, they gain 1~\svg{morale_negative} and have to pay 5 \svg{gold} to the winning Hero. Furthermore they give a \pagelink{End}{Faction Cube} to the winning player. Defeating a Main Hero may cause \pagelink{End}{Player Elimination}.\par
+A \textbf{Winning Hero} gets \pagelink{Combatexperience}{Experience}, if it was the Main Hero. If it was, the attacker they must Visit the Field where the Combat took place.\par
+A \textbf{Retreating Hero} from a Combat with Neutral Units has to move back to the last visited Field on the map (without Visiting that Field).\par
+A \textbf{defeated Main Hero} has to move to a friendly Town or Settlement. If they were defeated by another player's Hero, they gain 1~\svg{morale_negative} and have to pay 5 \svg{gold} to the winning Hero. Furthermore, they give a \pagelink{End}{Faction Cube} to the winning player. Defeating a Main Hero may cause \pagelink{End}{Player Elimination}.\par
 A \textbf{defeated Secondary Hero} (even instantly defeated without combat) is removed from the map. If defeated by another player's Hero they also get a Faction Cube.\par
 A \textbf{Surrendering Hero} doesn't count as defeated. Move a surrendering Main Hero to a town or settlement, or remove a Secondary Hero from the map as if they had been defeated. The other player neither gets Experience nor Faction Cubes.\par
-Remember to receive the starting Units of the chosen Scenario for free each time your Unit Deck is empty after a combat.
+Remember to receive the starting Units of the chosen Scenario for free each time your Unit Deck is empty after a Combat.
 
 \subsection*{\pagetarget{Combatexperience}{Combat Experience}}
 
@@ -215,7 +215,7 @@ The previously played Attack and Defense Cards no longer have any effect.}
 
 \vfill
 
-{\transparent{0.2}\includegraphics[width=\linewidth]{\art/prayer.png}}
+{\transparent{0.2}\hspace{-1em}\includegraphics[width=1.7\linewidth]{\art/minotaur.png}}
 
 \end{multicols*}
 
@@ -233,7 +233,7 @@ Defending a Settlement is the same as defending a Town without a Citadel.
 \vspace{0.5em}
 \note{3.5}{You cannot surrender when defending your Faction Town.}\par
 
-\subsection*{Defending Town with a Citadel}
+\subsection*{Defending a Town with a\\Citadel}
 When you defend your Town and it has a Citadel, you add the 3~Wall and 1~Gate Obstacles in any order to the middle row of the Combat Board after placing your Units.
 \textbf{Don't use Walls and Gate} if you defend an enemy Town, which you've conquered before, \textbf{not even} if it is a Town with a Citadel.
 The Gate Card is \textbf{not an Obstacle to the defending player}.
@@ -241,9 +241,6 @@ Defending Units may move through the Gate and may stop on it.
 
 \pagetarget{Walls}{The Wall and Gate}\index{Walls and Gate} Cards can be destroyed by any adjacent \svg{unit_ground} or \svg{unit_flying} Unit's attack, even by your own defending Units.
 These Attacks don't count as normal attacks: They are always successful and they don't activate any of the attacking Unit's \svg{unit_attack} abilities, and you cannot play any Cards or throw the attack die to affect the attack's result.
-
-Defending Units standing on their own side and \textbf{in the same column} as a Wall or a Gate gain protection from \svg{unit_ranged} attacks.
-If they are targeted by a \svg{unit_ranged} attack performed from the opponent's side of the Combat Board, \textbf{reduce the attack's damage by 1}.
 
 \begin{center}
   \includegraphics[width=0.6\linewidth]{\cards/arrow_tower.png}
@@ -255,10 +252,26 @@ Only Ranged attacks and Card Effects can destroy the Arrow Tower, but it is inst
 The attacker doesn't need to destroy it to win the Combat.
 
 In a siege against AI, the Arrow Tower follows the priority-rules like a Silver \svg{silver} Unit. But if there are many valid targets, it cannot attack the nearest one, so it will attack the one that is closest to perishing (the smallest difference between \svg{health_points} and current \svg{damage}).
+
+\vspace*{\fill}
+\begin{center}
+  \transparent{0.2}\includegraphics[width=0.9\linewidth]{\art/coin.png}
+\end{center}
 \end{multicols*}
 
 \newpage
+\begin{multicols}{2}
 \subsection*{Protection from \svg[15]{unit_ranged} Attacks}
+
+Defending Units standing on their own side and \textbf{in the same column} as a Wall or a Gate gain protection from \svg{unit_ranged} attacks.
+If they are targeted by a \svg{unit_ranged} attack performed from the opponent's side of the Combat Board, \textbf{reduce the attack's damage by 1}.
+\vspace*{\fill}
+
+\begin{center}
+  \transparent{0.2}\includegraphics[width=0.9\linewidth]{\art/meteor_shower.png}
+\end{center}
+\end{multicols}
+
 \begin{multicols}{2}
 \vspace*{\fill}
 \includegraphics[width=\linewidth]{\examples/ranged_protected.png}
@@ -272,8 +285,7 @@ In a siege against AI, the Arrow Tower follows the priority-rules like a Silver 
   Evil Eyes attack \textbf{without penalty}.}}
 \newline\newline
 \end{multicols}
-
-\includegraphics[width=\linewidth]{\art/harpy.jpg}
+\newpage
 
 \begin{multicols*}{2}
 
@@ -291,7 +303,7 @@ In a siege against AI, the Arrow Tower follows the priority-rules like a Silver 
 \begin{expansion}{battlefield}
   As an \textbf{optional rule}, you can use the \textbf{Battlefield Board} for combats between players in regular games.
   You can also use it for Neutral Combats, though this is not recommended.
-  Refer to the \pagelink{Battlefield Combat}{expansion content section} for the rule changes regarding this combat type.
+  Refer to the \pagelink{Battlefield Combat}{expansion content section} for the rule changes regarding this Combat type.
 
   \begin{center}
     \includegraphics[width=1.05\linewidth]{\images/battlefield-board.png}
