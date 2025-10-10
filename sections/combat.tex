@@ -172,8 +172,6 @@ Combat against another player's Hero has two possible outcomes:
  \item \textbf{Win/Defeat:} If all Units on one side are defeated, the side with any surviving Units is the winner, the other side is defeated.
  \item \textbf{Surrender:} Instead of activating one of their Units, a Hero can decide to surrender to the other player's Hero by paying them 10 \svg{gold} to prevent their army from being defeated. In this case the Combat ends immediately without having a winning or defeated Hero.
 \end{itemize}
-\vspace{0.5em}
-\note{3.5}{You cannot surrender when defending a Town.}\par
 
 When Combat ends, all damage is healed from all surviving Units. Move any player-owned Units back to their Unit Deck and discard any leftover enemy Neutral Units. Depending on the type and result of the combat, players must resolve the following consequences for themselves:
 
@@ -227,10 +225,16 @@ The previously played Attack and Defense Cards no longer have any effect.}
 
 \clearpage
 
-\subheader{\pagetarget{Walls}{Defending Town}}\index{Defending Town}
-\begin{multicols}{2}
+\subheader{{Defending Town or Settlement}}\index{Defending Town}
+\begin{multicols*}{2}
+If your Town or Settlement is attacked by an enemy Hero and your Hero is not on that Field, you may immediately \textbf{pay 8 \svg{gold} to defend with only your Units}.
+You cannot use your Deck during this Combat, as your Main Hero is not present.
+Paying this Gold represents the cost of transporting the army there.
+
 When you defend your Town and it \textbf{doesn't have} a Citadel, Combat happens just like on any other Field.
-When you defend your Town and it has a Citadel, you add the 3 Wall and 1 Gate Obstacles in any order to the middle row of the Combat Board after placing your Units.
+
+\subsection*{Defending Town with a Citadel}
+When you defend your Town and it has a Citadel, you add the 3~Wall and 1~Gate Obstacles in any order to the middle row of the Combat Board after placing your Units.
 \textbf{Don't use Walls and Gate} if you defend an enemy Town, which you've conquered before, \textbf{not even} if it is a Town with a Citadel.
 The Gate Card is \textbf{not an Obstacle to the defending player}.
 Defending Units may move through the Gate and may stop on it.
@@ -240,8 +244,24 @@ These Attacks don't count as normal attacks: They are always successful and they
 
 Defending Units standing on their own side and \textbf{in the same column} as a Wall or a Gate gain protection from \svg{unit_ranged} attacks.
 If they are targeted by a \svg{unit_ranged} attack performed from the opponent's side of the Combat Board, \textbf{reduce the attack's damage by 1}.
-\end{multicols}
 
+\vspace{0.5em}
+\note{3.5}{You cannot surrender when defending a Town.}\par
+
+\begin{center}
+  \includegraphics[width=0.6\linewidth]{\cards/arrow_tower.png}
+\end{center}
+The defender also gains the Arrow Tower\index{Arrow Tower} Unit Card which is placed next to the Combat Board.
+It acts like any Ranged \svg{unit_ranged} Unit, except that it is not affected by anything related to its positioning.
+For example it never gets ranged penalty against enemy Units and vice versa.
+Only Ranged attacks and Card Effects can destroy the Arrow Tower, but it is instantly destroyed when all Walls and the Gate are destroyed.
+The attacker doesn't need to destroy it to win the Combat.
+
+In a siege against AI, the Arrow Tower follows the priority-rules like a Silver \svg{silver} Unit. But if there are many valid targets, it cannot attack the nearest one, so it will attack the one that is closest to perishing (the smallest difference between \svg{health_points} and current \svg{damage}).
+\end{multicols*}
+
+\newpage
+\subsection*{Protection from \svg[15]{unit_ranged} Attacks}
 \begin{multicols}{2}
 \vspace*{\fill}
 \includegraphics[width=\linewidth]{\examples/ranged_protected.png}
@@ -256,59 +276,37 @@ If they are targeted by a \svg{unit_ranged} attack performed from the opponent's
 \newline\newline
 \end{multicols}
 
-\clearpage
+% \vspace*{-0.8em}
+% \begin{center}
+%   \includegraphics[width=1.05\linewidth]{\art/arrow_tower.jpg}
+% \end{center}
 
-\begin{multicols*}{2}
-\begin{center}
-  \includegraphics[width=0.6\linewidth]{\cards/arrow_tower.png}
-\end{center}
-The defender also gains the Arrow Tower\index{Arrow Tower} Unit Card which is placed next to the Combat Board.
-It acts like any Ranged \svg{unit_ranged} Unit, except that it is not affected by anything related to its positioning.
-For example it never gets ranged penalty against enemy Units and vice versa.
-Only Ranged attacks and Card Effects can destroy the Arrow Tower, but it is instantly destroyed when all Walls and the Gate are destroyed.
-The attacker doesn't need to destroy it to win the Combat.
-
-In a siege against AI, the Arrow Tower follows the priority-rules like a Silver \svg{silver} Unit. But if there are many valid targets, it cannot attack the nearest one, so it will attack the one that is closest to perishing (the smallest difference between \svg{health_points} and current \svg{damage}).
-
-\vspace*{\fill}
-\note{10}{
-  \vspace{1em}
-  If your Town or Settlement is attacked by an enemy Hero and your Hero is not on that Field, you may immediately \textbf{pay 8 \svg{gold} to defend with only your Units}.
-  You cannot use your Deck during this Combat, as your Main Hero is not present.
-  Paying this Gold represents the cost of transporting the army there.
-}
-
-\vspace*{-0.8em}
-\begin{center}
-  \includegraphics[width=1.05\linewidth]{\art/arrow_tower.jpg}
-\end{center}
-
-\newpage
-
-\subheader{\pagetarget{Alternative Combat Boards}{Alternative Combat Boards}}
-\begin{expansion}{navalbattles}
-  As an \textbf{optional rule}, you can use the \textbf{Naval Battle Board} for combats at sea locations.
-  This Board removes the two middle spaces, requiring Ground \svg{unit_ground} Units to navigate around them while Flying \svg{unit_flying} Units can move over them but cannot end their movement there.
-
-  \begin{center}
-    \includegraphics[width=1.05\linewidth]{\images/naval_combat.png}
-  \end{center}
-\end{expansion}
-
-\vspace{2em}
-\begin{expansion}{battlefield}
-  As an \textbf{optional rule}, you can use the \textbf{Battlefield Board} for combats between players in regular games.
-  You can also use it for Neutral Combats, though this is not recommended.
-  Refer to the \pagelink{Battlefield Combat}{expansion content section} for the rule changes regarding this combat type.
-
-  \begin{center}
-    \includegraphics[width=1.05\linewidth]{\images/battlefield-board.png}
-  \end{center}
-\end{expansion}
-\vfill
-
-\begin{center}
-  \includegraphics[width=1.05\linewidth]{\art/crystal_dragon.jpg}
-\end{center}
-
-\end{multicols*}
+% \begin{multicols*}
+%
+% \subheader{\pagetarget{Alternative Combat Boards}{Alternative Combat Boards}}
+% \begin{expansion}{navalbattles}
+%   As an \textbf{optional rule}, you can use the \textbf{Naval Battle Board} for combats at sea locations.
+%   This Board removes the two middle spaces, requiring Ground \svg{unit_ground} Units to navigate around them while Flying \svg{unit_flying} Units can move over them but cannot end their movement there.
+%
+%   \begin{center}
+%     \includegraphics[width=1.05\linewidth]{\images/naval_combat.png}
+%   \end{center}
+% \end{expansion}
+%
+% \vspace{2em}
+% \begin{expansion}{battlefield}
+%   As an \textbf{optional rule}, you can use the \textbf{Battlefield Board} for combats between players in regular games.
+%   You can also use it for Neutral Combats, though this is not recommended.
+%   Refer to the \pagelink{Battlefield Combat}{expansion content section} for the rule changes regarding this combat type.
+%
+%   \begin{center}
+%     \includegraphics[width=1.05\linewidth]{\images/battlefield-board.png}
+%   \end{center}
+% \end{expansion}
+% \vfill
+%
+% \begin{center}
+%   \includegraphics[width=1.05\linewidth]{\art/crystal_dragon.jpg}
+% \end{center}
+%
+% \end{multicols*}
