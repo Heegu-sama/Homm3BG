@@ -15,14 +15,14 @@
 Combat with \textbf{another player} can start in two ways:
 \begin{itemize}
   \item You move into any Field containing one of their Heroes.
-  \item You move into a Town or Settlement owned by them, see \pagelink{Town Siege}{Town Siege}.
+  \item You move into a Town or Settlement owned by them, see \pagelink{Town Combat}{Town Combat}.
 \end{itemize}
 Players are able to start multiple Combats during their Turn.
 
 When a \pagelink{Secondary}{Secondary Hero} is attacked, they \textbf{may choose} to be \pagelink{Endcombat}{instantly defeated} instead of engaging in Combat, which helps to preserve the Units.
 
 \begin{center}
-  \transparent{0.2}\includegraphics[width=0.7\linewidth]{\art/wyvern.png}
+  \transparent{0.2}\includegraphics[width=0.6\linewidth]{\art/wyvern.png}
 \end{center}
 
 \pagetarget{Quick}{\subheader{Quick Combat}}\index{Quick Combat}
@@ -30,7 +30,6 @@ If your Hero's Level is higher than a Field's Difficulty when Combat against Neu
 The player is considered to have beaten the Neutral Units by default and gains no rewards from the Combat itself before Visiting the Field.
 
 \vspace*{\fill}
-\columnbreak
 
 \begin{center}
   % \vspace*{-1em}
@@ -41,7 +40,6 @@ The player is considered to have beaten the Neutral Units by default and gains n
 \pagetarget{Combatsetup}{\subheader{Combat Setup}}
 \begin{multicols*}{2}
 
-% TODO info about battlefield expansion
 Combat is resolved on the 4×5 Combat Board, which consists of two Backlines and two Frontlines on opposite ends, and a middle row.
 It can also be resolved on one of the \pagelink{Alternative Combat Boards}{alternative Boards}.
 Follow these steps when Combat begins against \textbf{Neutral Units}:
@@ -229,7 +227,7 @@ The previously played Attack and Defense Cards no longer have any effect.}
 
 \clearpage
 
-\pagetarget{Town Siege}{\subheader{Town Siege}}\index{Defending Town}
+\pagetarget{Town Combat}{\subheader{Town Combat}}\index{Defending Town}
 \begin{multicols*}{2}
 If your Town or Settlement is attacked by an enemy Hero and your Hero is not on that Field, you may immediately \textbf{pay 8 \svg{gold} to defend with only your Units}.
 You cannot use your Deck during this Combat, as your Main Hero is not present.
@@ -241,16 +239,17 @@ Defending a Settlement is the same as defending a Town without a Citadel.
 \vspace{0.5em}
 \note{3.5}{You cannot surrender when defending your Faction Town.}\par
 
-\subsection*{Defending a Town with a\\Citadel}
+\pagetarget{Walls}{\subsection*{Defending a Town with a\\Citadel}}\index{Walls and Gate}
 When you defend your Town and it has a Citadel, you add the 3~Wall and 1~Gate Obstacles in any order to the middle row of the Combat Board after placing your Units.
 \textbf{Don't use Walls and Gate} if you defend an enemy Town, which you've conquered before, \textbf{not even} if it is a Town with a Citadel.
 The Gate Card is \textbf{not an Obstacle to the defending player}.
 Defending Units may move through the Gate and may stop on it.
 
-\pagetarget{Walls}{The Wall and Gate}\index{Walls and Gate} Cards can be destroyed by any adjacent \svg{unit_ground} or \svg{unit_flying} Unit's attack, even by your own defending Units.
+Walls \pagelink{Walls protection}{protect the Defending Units behind it}.
+
+The Wall and Gate Cards can be destroyed by any adjacent \svg{unit_ground} or \svg{unit_flying} Unit's attack, even by your own defending Units.
 These Attacks don't count as normal attacks: They are always successful and they don't activate any of the attacking Unit's \svg{unit_attack} abilities, and you cannot play any Cards or throw the attack die to affect the attack's result.
 
-Walls \pagelink{Walls protection}{protect the Defending Units behind it}.
 \vspace*{\fill}
 \columnbreak
 
