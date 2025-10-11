@@ -349,12 +349,12 @@
     \end{tikzpicture}
     }
   }
+  \phantomsection\addcontentsline{toc}{section}{\protect\mbox{#2}}
   \begin{fullwidth}[leftmargin=0.16\textwidth, outermargin=0.16\textwidth, innermargin=0.16\textwidth]
     \begin{center}
       \vspace*{\lang_header_adjustment}
       \ifthenelse{\oneliner}{}{\vspace{-13pt}}
       \sectionheadertext{#2}
-      \cleardoublepage\phantomsection\addcontentsline{toc}{section}{\protect\mbox{#2}}
     \end{center}
   \end{fullwidth}
   \vspace{1.75em}
@@ -367,11 +367,9 @@
   \subsectionspacing{}
 \fi
 
-\newcounter{subheadcounter}
 \newcommand{\subheader}[2][true]{%
-    \stepcounter{subheadcounter}%
     \ifstrequal{#1}{false}{}{%
-        \addcontentsline{toc}{subsection}{\protect #2}%
+        \phantomsection\addcontentsline{toc}{subsection}{\protect #2}%
     }%
     \begin{center}
         \textbf{\Large\scshape #2}
