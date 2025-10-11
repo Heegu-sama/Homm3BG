@@ -367,7 +367,10 @@
   \subsectionspacing{}
 \fi
 
+\newcounter{subheadcounter}
 \newcommand{\subheader}[1]{%
+    \stepcounter{subheadcounter}%
+    \pdfbookmark[2]{#1}{subheader\thesubheadcounter}%
     \begin{center}
         \textbf{\Large\scshape #1}
         \\[0.05em]
