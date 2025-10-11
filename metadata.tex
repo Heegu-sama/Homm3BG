@@ -354,7 +354,7 @@
       \vspace*{\lang_header_adjustment}
       \ifthenelse{\oneliner}{}{\vspace{-13pt}}
       \sectionheadertext{#2}
-      \cleardoublepage\phantomsection\addcontentsline{toc}{section}{\protect\numberline{}\mbox{#2}}
+      \cleardoublepage\phantomsection\addcontentsline{toc}{section}{\protect\mbox{#2}}
     \end{center}
   \end{fullwidth}
   \vspace{1.75em}
@@ -368,16 +368,17 @@
 \fi
 
 \newcounter{subheadcounter}
-\newcommand{\subheader}[1]{%
+\newcommand{\subheader}[2][true]{%
     \stepcounter{subheadcounter}%
-    \pdfbookmark[2]{#1}{subheader\thesubheadcounter}%
+    \ifstrequal{#1}{false}{}{%
+        \addcontentsline{toc}{subsection}{\protect #2}%
+    }%
     \begin{center}
-        \textbf{\Large\scshape #1}
+        \textbf{\Large\scshape #2}
         \\[0.05em]
         \includegraphics[width=\linewidth,height=1em,keepaspectratio]{\layout/subsection_separator.png}
     \end{center}
 }
-
 \newcommand\picdims[4][]{%
   \setbox0=\hbox{\includegraphics[#1]{#4}}%
   \clipbox{.5\dimexpr\wd0-#2\relax{} %
@@ -565,6 +566,16 @@
     footskip=1.35cm,
   }
 }{}
+
+\makeatletter
+\renewcommand\tableofcontents{%
+  \pdfbookmark[1]{\contentsname}{toc}%
+  \subheader[false]{\contentsname}
+  \begin{multicols}{2}
+    \@starttoc{toc}%
+  \end{multicols}
+}
+\makeatother
 
 \input{structure.tex}
 
