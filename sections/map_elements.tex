@@ -11,11 +11,10 @@ During the game's setup, all face-down Tiles should be selected randomly from th
 The \textbf{roman numeral} on each Tile describes the overall \textbf{difficulty of Neutral Units} on that Tile, as well as the number of rewards players can expect to find on that Tile.
 Starting (I) Tiles are the easiest while Center (VI–VII) Tiles are the most difficult.\par
 
-% \vfill
+\vspace*{\fill}
 \begin{center}
-  \transparent{0.2}\includegraphics[width=0.4\linewidth]{\art/counterstrike.png}
+  \transparent{0.2}\includegraphics[width=0.6\linewidth]{\art/earth_magic.png}
 \end{center}
-\vfill
 
 \subsection*{Map Tile Anatomy}\index{Map Tile}
 Each Map Tile is divided into 7 separate \textbf{Fields} that your Heroes can \textbf{Visit}.
@@ -95,7 +94,7 @@ There are three categories of Fields:
 \vspace*{\fill}
 \columnbreak
 
-\pagetarget{Placing}{\subheader{Placing and Discovering New Tiles}}\index{Discovering Tiles}
+\pagetarget{Placing}{\subsection*{Placing and Discovering New Tiles}}\index{Discovering Tiles}
 Heroes may spend 1 MP to either reveal an adjacent face-down Tile, or to place a Far (II–III) Map Tile from their own supply of Tiles (scenario rules determine the Tiles in your own supply).
 All face-down Tiles should be kept \textbf{hidden from all players} until they are about to be placed or revealed.
 New Tiles must be placed adjacent to the Hero who spends the MP, and connected to at least two other existing Tiles.
@@ -156,48 +155,8 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 
 \clearpage
 
-\begin{multicols}{2}
 \subheader{Expansion Tiles}
 \begin{multicols}{2}
-\hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-cove.png}
-\columnbreak
-\hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-sea.png}
-\end{multicols}
-\begin{center}
-  \vspace*{-0.5em}
-  \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Sea Map Tile}}}}
-\end{center}
-
-\vspace*{\fill}
-
-\begin{center}
-  \footnotesize
-  \begin{tikzpicture}
-    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\images/elemental_tiles.png}}};
-    \draw (-2.2, 0.1) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Fire Tile}}}};
-    \draw (-2.2, -4.5) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Air Tile}}}};
-    \draw (2.2, 0.1) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Water Tile}}}};
-    \draw (2.2, -4.5) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Earth Tile}}}};
-  \end{tikzpicture}
-\end{center}
-
-\vspace*{\fill}
-
-\begin{center}
-  \begin{scriptsize}
-    \centering
-    \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.5\linewidth]{\images/map-tile-stronghold.png}};
-      \node at (0, 2.2) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Surface Map Tile}}}}};
-      \node at (3.21, -1.11) {\includegraphics[width=0.5\linewidth]{\images/map-tile-sub.png}};
-      \node at (3.21, -3.41) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Map Tile}}}}};
-      \node[rotate=-60] (gate) at (1.6, -0.53) {\includegraphics[width=0.33\linewidth]{\images/subter-gate-outline.png}};
-      \node at (3.21, 1.11) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Gate}}}}};
-    \end{tikzpicture}
-  \end{scriptsize}
-\end{center}
-\columnbreak
-
 \begin{expansion}{cove}
   \subsection*{\pagetarget{Sea Map Tiles}{Sea Map Tiles}}
   Sea Map Tiles have a unique backside and during setup are placed as shown in the chosen Scenario Map layout.
@@ -230,6 +189,47 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
   Otherwise treat a Subterranean Gate Token as an empty Field.
   % NOTE: Discovering from one to the other should also be impossible.
 \end{expansion}
+\columnbreak
+
+\begin{multicols}{2}
+  \hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-cove.png}
+  \columnbreak
+  \hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-sea.png}
+\end{multicols}
+\begin{center}
+  \vspace*{-0.5em}
+  \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Sea Map Tile}}}}
+\end{center}
+
+\vspace*{\fill}
+
+\begin{center}
+  \vspace*{-3em}
+  \footnotesize
+  \begin{tikzpicture}
+    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\images/elemental_tiles.png}}};
+    \draw (-2.2, 0.1) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Fire Tile}}}};
+    \draw (-2.2, -4.5) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Air Tile}}}};
+    \draw (2.2, 0.1) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Water Tile}}}};
+    \draw (2.2, -4.5) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Earth Tile}}}};
+  \end{tikzpicture}
+\end{center}
+
+\vspace*{\fill}
+
+\begin{center}
+  \begin{scriptsize}
+    \centering
+    \begin{tikzpicture}
+      \node at (0, 0) {\includegraphics[width=0.5\linewidth]{\images/map-tile-stronghold.png}};
+      \node at (0, 2.2) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Surface Map Tile}}}}};
+      \node at (3.21, -1.11) {\includegraphics[width=0.5\linewidth]{\images/map-tile-sub.png}};
+      \node at (3.21, -3.41) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Map Tile}}}}};
+      \node[rotate=-60] (gate) at (1.6, -0.53) {\includegraphics[width=0.33\linewidth]{\images/subter-gate-outline.png}};
+      \node at (3.21, 1.11) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Gate}}}}};
+    \end{tikzpicture}
+  \end{scriptsize}
+\end{center}
 \end{multicols}
 \clearpage
 
