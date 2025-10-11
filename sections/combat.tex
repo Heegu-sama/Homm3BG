@@ -21,7 +21,10 @@ Players are able to start multiple Combats during their Turn.
 
 When a \pagelink{Secondary}{Secondary Hero} is attacked, they \textbf{may choose} to be \pagelink{Endcombat}{instantly defeated} instead of engaging in Combat, which helps to preserve the Units.
 
-\vspace*{\fill}
+\begin{center}
+  \transparent{0.2}\includegraphics[width=0.7\linewidth]{\art/wyvern.png}
+\end{center}
+
 \subheader{\pagetarget{Quick}{Quick Combat}}\index{Quick Combat}
 If your Hero's Level is higher than a Field's Difficulty when Combat against Neutral Units would begin, \textbf{no Combat} takes place.
 The player is considered to have beaten the Neutral Units by default and gains no rewards from the Combat itself before Visiting the Field.
@@ -81,7 +84,8 @@ The following terms are used to describe effects and elements during Combat:\par
 \textbf{Combat Obstacles}\index{Combat Obstacles}\index{Obstacles, Combat} – Every Card on the Combat Board is a Combat Obstacle.
 They block the movement of all non-flying Units.\smallskip\par
 \begin{tikzpicture}[overlay]
-  \node at (7, 0) {\includegraphics[width=0.2\linewidth]{\images/attack_die.png}};
+  \node[blend mode=multiply, opacity=0.7] at (7, 0) {\includegraphics[width=0.2\linewidth]{\images/attack_die.png}};
+  \node[blend mode=multiply, opacity=1.0] at (7, 0) {\includegraphics[width=0.2\linewidth]{\images/attack_die.png}};
 \end{tikzpicture}\parbox{0.7\hsize}{\textbf{Attack Die}\index{Attack Die}\index{Dice} – A red Die whose results range from -1 to +1.
 Roll the Die \textbf{whenever a Unit attacks} and
 add the result to the Unit's Attack value.}\par\smallskip
@@ -190,6 +194,10 @@ Level ups must be resolved before Visiting the Field where the Combat happened.\
 Secondary Heroes cannot ever gain Experience.
 You also do not gain Experience from \textbf{defeating} a Secondary Hero, or if an enemy Hero \textbf{Surrenders} to you.
 
+\vspace*{\fill}
+\begin{center}
+  \transparent{0.2}\includegraphics[width=0.8\linewidth]{\art/basilisk.png}
+\end{center}
 \end{multicols*}
 
 \clearpage
@@ -241,6 +249,8 @@ Defending Units may move through the Gate and may stop on it.
 
 \pagetarget{Walls}{The Wall and Gate}\index{Walls and Gate} Cards can be destroyed by any adjacent \svg{unit_ground} or \svg{unit_flying} Unit's attack, even by your own defending Units.
 These Attacks don't count as normal attacks: They are always successful and they don't activate any of the attacking Unit's \svg{unit_attack} abilities, and you cannot play any Cards or throw the attack die to affect the attack's result.
+\vspace*{\fill}
+\columnbreak
 
 \begin{center}
   \includegraphics[width=0.6\linewidth]{\cards/arrow_tower.png}
@@ -255,7 +265,7 @@ In a siege against AI, the Arrow Tower follows the priority-rules like a Silver 
 
 \vspace*{\fill}
 \begin{center}
-  \transparent{0.2}\includegraphics[width=0.9\linewidth]{\art/coin.png}
+  \transparent{0.2}\includegraphics[width=0.95\linewidth]{\art/coin.png}
 \end{center}
 \end{multicols*}
 
@@ -268,7 +278,7 @@ If they are targeted by a \svg{unit_ranged} attack performed from the opponent's
 \vspace*{\fill}
 
 \begin{center}
-  \transparent{0.2}\includegraphics[width=0.9\linewidth]{\art/meteor_shower.png}
+  \transparent{0.2}\includegraphics[width=\linewidth]{\art/curse.png}
 \end{center}
 \end{multicols}
 
@@ -312,7 +322,7 @@ If they are targeted by a \svg{unit_ranged} attack performed from the opponent's
 \vfill
 
 \begin{center}
-  \includegraphics[width=1.05\linewidth]{\art/crystal_dragon.jpg}
+  \includegraphics[width=1.05\linewidth]{\art/rust_dragon.jpg}
 \end{center}
 
 \end{multicols*}
