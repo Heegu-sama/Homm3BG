@@ -367,6 +367,17 @@
   \subsectionspacing{}
 \fi
 
+\newcounter{subheadcounter}
+\newcommand{\subheader}[1]{%
+    \stepcounter{subheadcounter}%
+    \pdfbookmark[2]{#1}{subheader\thesubheadcounter}%
+    \begin{center}
+        \textbf{\Large\scshape #1}
+        \\[0.05em]
+        \includegraphics[width=\linewidth,height=1em,keepaspectratio]{\layout/subsection_separator.png}
+    \end{center}
+}
+
 \newcommand\picdims[4][]{%
   \setbox0=\hbox{\includegraphics[#1]{#4}}%
   \clipbox{.5\dimexpr\wd0-#2\relax{} %
