@@ -377,6 +377,14 @@
         \includegraphics[width=\linewidth,height=1em,keepaspectratio]{\layout/subsection_separator.png}
     \end{center}
 }
+
+\newcommand{\separator}{
+  \vspace*{\fill}
+  {\transparent{0.3}\includegraphics[width=\linewidth,height=1em,keepaspectratio]{\layout/subsection_separator.png}}
+  \vspace*{\fill}
+}
+
+
 \newcommand\picdims[4][]{%
   \setbox0=\hbox{\includegraphics[#1]{#4}}%
   \clipbox{.5\dimexpr\wd0-#2\relax{} %
