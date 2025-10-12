@@ -229,26 +229,26 @@ The previously played Attack and Defense Cards no longer have any effect.}
 
 \pagetarget{Siege Combat}{\subheader{Siege Combat}}
 \begin{multicols*}{2}
-If your Town or Settlement is attacked by an enemy Hero and your Hero is not on that Field, you may immediately \textbf{pay 8 \svg{gold} to defend with only your Units}.
+When an enemy Hero attacks your Town or Settlement and your Hero is not present on that Field, you may immediately \textbf{pay 8 \svg{gold} to defend with only your Units}.
 You cannot use your Deck during this Combat, as your Main Hero is not present.
 Paying this Gold represents the cost of transporting the army there.
 
-When you defend your besieged Town and it \textbf{doesn't have} a Citadel, Combat happens just like on any other Field.
-Defending a Settlement is the same as defending a Town without a Citadel.
+When you defend a Town \textbf{without a Citadel}, resolve Combat normally on the standard Combat Board.
+Defending a Settlement follows the same rules as defending a Town without a Citadel.
 
 \vspace{0.5em}
-\note{3.5}{Note: you cannot surrender when defending your besieged Faction Town.}\par
+\note{3.5}{Note: you cannot surrender when defending your Faction Town.}\par
 
 \pagetarget{Walls}{\subsection*{Defending a Town with a\\Citadel}}\index{Walls and Gate}
 When you defend your Town and it has a Citadel, you add the 3~Wall and 1~Gate Obstacles in any order to the middle row of the Combat Board after placing your Units.
 \textbf{Don't use Walls and Gate} if you defend an enemy Town, which you've conquered before, \textbf{not even} if it is a Town with a Citadel.
-The Gate Card is \textbf{not an Obstacle to the defending player}.
+The Gate Card is \textbf{not an Obstacle} to the defending player.
 Defending Units may move through the Gate and may stop on it.
 
-Walls \pagelink{Walls protection}{protect the Defending Units behind it}.
+Walls \pagelink{Walls protection}{protect defending Units behind them}.
 
 The Wall and Gate Cards can be destroyed by any adjacent \svg{unit_ground} or \svg{unit_flying} Unit's attack, even by your own defending Units.
-These Attacks don't count as normal attacks: They are always successful and they don't activate any of the attacking Unit's \svg{unit_attack} abilities, and you cannot play any Cards or throw the Attack Die to affect the attack's result.
+These attacks don't count as normal attacks: They are always successful and don't activate any of the attacking Unit's \svg{unit_attack} abilities, and you cannot play any Cards or throw the Attack Die to affect the attack's result.
 
 \vspace*{\fill}
 \columnbreak
@@ -257,13 +257,13 @@ These Attacks don't count as normal attacks: They are always successful and they
   \includegraphics[width=0.6\linewidth]{\cards/arrow_tower.png}
 \end{center}
 The defender also gains the Arrow Tower\index{Arrow Tower} Unit Card which is placed next to the Combat Board.
-It acts like any Ranged \svg{unit_ranged} Unit, except that it is not affected by anything related to its positioning.
+It acts like a Ranged \svg{unit_ranged} Unit, except that it is not affected by anything related to its positioning.
 For example, it never gets ranged penalty against enemy Units and vice versa.
 Only Ranged attacks and Card Effects can destroy the Arrow Tower, but it is instantly destroyed when all Walls and the Gate are destroyed.
 The attacker doesn't need to destroy it to win the Combat.
 
-In a siege against AI, the Arrow Tower follows the priority-rules like a Silver \svg{silver} Unit.
-But if there are many valid targets, it cannot attack the nearest one, so it will attack the one that is closest to perishing (the smallest difference between \svg{health_points} and current \svg{damage}).
+In a siege against an AI Hero, the Arrow Tower follows the priority rules like a Silver \svg{silver} Unit.
+However, if there are multiple equally valid targets, it will attack the target closest to being destroyed (the smallest difference between \svg{health_points} and current \svg{damage}).
 
 \vspace*{\fill}
 \begin{center}
@@ -275,7 +275,7 @@ But if there are many valid targets, it cannot attack the nearest one, so it wil
 \begin{multicols}{2}
 \subsection*{\pagetarget{Walls protection}{Protection} from \svg[15]{unit_ranged} Attacks}
 
-Defending Units standing on their own side and \textbf{in the same column} as an undestroyed Wall or a Gate gain protection from \svg{unit_ranged} attacks.
+Defending Units standing on their own side and \textbf{in the same column} as a non-destroyed Wall or Gate gain protection from \svg{unit_ranged} attacks.
 If they are targeted by a \svg{unit_ranged} attack performed from the opponent's side of the Combat Board, \textbf{reduce the attack's damage by 1}.
 \vspace*{\fill}
 
@@ -287,7 +287,7 @@ If they are targeted by a \svg{unit_ranged} attack performed from the opponent's
 \begin{multicols}{2}
 \vspace*{\fill}
 \includegraphics[width=\linewidth]{\examples/ranged_protected.png}
-{\textit{When the Halberdiers are behind a non-destroyed Gate, they \textbf{are protected} when attacked from behind the Wall line.
+{\textit{When the Halberdiers are behind a non-destroyed Gate, they \textbf{are protected} when attacked from the opponent's side of the Combat Board.
   The \svg{unit_ranged} attack damage of Evil Eyes is \textbf{reduced by 1}.}}
 \columnbreak
 
