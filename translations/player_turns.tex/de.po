@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-10-08 19:54+0000\n"
+"POT-Creation-Date: 2025-10-13 10:03+0000\n"
 "PO-Revision-Date: 2025-08-29 17:09+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,50 +19,43 @@ msgstr ""
 
 #. type: Plain text
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/combat.tex:5 sections/components.tex:5 sections/credits.tex:6
-#: sections/deckbuilding.tex:5 sections/difficulty.tex:5
-#: sections/map_elements.tex:5 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/setup.tex:5 sections/trading.tex:5
+#: sections/components.tex:5 sections/credits.tex:6 sections/deckbuilding.tex:5
+#: sections/difficulty.tex:5 sections/map_elements.tex:5
+#: sections/player_turns.tex:5 sections/resources.tex:5 sections/setup.tex:5
+#: sections/trading.tex:5
 msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
 msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
-#: sections/combat.tex:7 sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/difficulty.tex:7 sections/expansion_content.tex:481
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:117
-#: sections/map_elements.tex:79 sections/map_elements.tex:125
-#: sections/player_turns.tex:7 sections/resources.tex:7
-#: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:59 sections/town.tex:5 sections/trading.tex:7
-#: sections/units.tex:5 sections/units.tex:198
+#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
+#: sections/combat.tex:302 sections/credits.tex:10 sections/deckbuilding.tex:7
+#: sections/deckbuilding.tex:52 sections/deckbuilding.tex:441
+#: sections/difficulty.tex:7 sections/expansion_content.tex:491
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:85
+#: sections/map_elements.tex:133 sections/player_turns.tex:7
+#: sections/resources.tex:7 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:59 sections/town.tex:5
+#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:46
+#: sections/units.tex:203
 #, no-wrap
 msgid ""
 "{2}\n"
 "\n"
 msgstr ""
 
-#. type: multicols*
-#: sections/deckbuilding.tex:48 sections/player_turns.tex:58
-#: sections/units.tex:40
-#, no-wrap
-msgid ""
-"\\clearpage\n"
-"\n"
-msgstr ""
-
 #. type: figure
-#: sections/deckbuilding.tex:301 sections/map_elements.tex:40
-#: sections/map_elements.tex:254 sections/player_turns.tex:125
+#: sections/deckbuilding.tex:302 sections/map_elements.tex:47
+#: sections/map_elements.tex:266 sections/player_turns.tex:126
 #: sections/setup.tex:9
 #, no-wrap
 msgid "  \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:166 sections/map_elements.tex:175
-#: sections/map_elements.tex:248 sections/map_elements.tex:281
-#: sections/player_turns.tex:40 sections/units.tex:227
+#: sections/map_elements.tex:177 sections/map_elements.tex:186
+#: sections/map_elements.tex:260 sections/map_elements.tex:293
+#: sections/player_turns.tex:50 sections/units.tex:233
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -106,10 +99,57 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:32
+#: sections/player_turns.tex:24
 #, no-wrap
 msgid ""
-"\\subsection*{Movement Actions}\n"
+"\\vspace*{\\fill}\n"
+"\\begin{center}\n"
+"  \\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/town_portal.png}\n"
+"\\end{center}\n"
+"\n"
+msgstr ""
+"\\vspace*{\\fill}\n"
+"\\begin{center}\n"
+"  \\transparent{0.2}\\includegraphics[width=0.7\\linewidth]{\\art/town_portal.png}\n"
+"\\end{center}\n"
+"\n"
+
+#. type: multicols*
+#: sections/player_turns.tex:29
+#, no-wrap
+msgid ""
+"\\note{10}{\n"
+"  Whenever you are instructed to gain (additional) MP, sometimes represented by the symbol \\svg{movement-yellow}, that MP persists for \\textbf{only the Turn it was gained on}.\n"
+"  In the unlikely situation that two allied Heroes are forced onto the same Field, you must use your next MP to move one of them away from that Field.\n"
+"}\n"
+"\n"
+msgstr ""
+"\\note{10}{\n"
+"  Jedesmal, wenn du (zusätzliche) BP erhältst, in der Regel markiert durch das Symbol \\svg{movement-yellow}, gelten diese BP \\textbf{nur im aktuellen Spielzug}.\n"
+"  Befinden sich einmal beide deiner Helden auf demselben Feld, musst du den nächsten BP nutzen, um einen der Helden von dem Feld weg zu bewegen.\n"
+"}\n"
+"\n"
+
+#. type: multicols*
+#: sections/player_turns.tex:42
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{Movement Actions}\n"
+#| "\\pagetarget{Movement}{Movement Actions}\\index{Movement Actions} are performed by spending Movement Points.\n"
+#| "A player can use Movement Actions \\textbf{only during their own Turn}.\\par\n"
+#| "For every 1 MP spent, you can perform one of the following Actions:\n"
+#| "\\begin{itemize}\n"
+#| "  \\item Move a Hero 1 Field in any direction.\n"
+#| "  \\item \\pagelink{Categories}{Revisit} a Field where your Hero is in.\n"
+#| "  \\item \\pagelink{Timelimit}{Continue Combat} against Neutral Units for 1 additional Combat Round.\n"
+#| "  \\item \\pagelink{Placing}{Discover a face down Map Tile} if your Hero is on a Field next to that Tile.\n"
+#| "  \\columnbreak\n"
+#| "  \\item Place a new Map Tile from your pool of Far (II–III) Map Tiles.\n"
+#| "\\end{itemize}\n"
+#| "\n"
+msgid ""
+"\\columnbreak\n"
+"\\subheader{Movement Actions}\n"
 "\\pagetarget{Movement}{Movement Actions}\\index{Movement Actions} are performed by spending Movement Points.\n"
 "A player can use Movement Actions \\textbf{only during their own Turn}.\\par\n"
 "For every 1 MP spent, you can perform one of the following Actions:\n"
@@ -118,7 +158,6 @@ msgid ""
 "  \\item \\pagelink{Categories}{Revisit} a Field where your Hero is in.\n"
 "  \\item \\pagelink{Timelimit}{Continue Combat} against Neutral Units for 1 additional Combat Round.\n"
 "  \\item \\pagelink{Placing}{Discover a face down Map Tile} if your Hero is on a Field next to that Tile.\n"
-"  \\columnbreak\n"
 "  \\item Place a new Map Tile from your pool of Far (II–III) Map Tiles.\n"
 "\\end{itemize}\n"
 "\n"
@@ -137,7 +176,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:38
+#: sections/player_turns.tex:48
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -155,7 +194,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:46
+#: sections/player_turns.tex:56
 #, no-wrap
 msgid ""
 "Mark the amount of MP you have used by flipping your Movement Tokens over to their brown, inactive side.\n"
@@ -173,42 +212,32 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:51
+#: sections/player_turns.tex:58 sections/units.tex:41
 #, no-wrap
 msgid ""
-"\\note{10}{\n"
-"  Whenever you are instructed to gain (additional) MP, sometimes represented by the symbol \\svg{movement-yellow}, that MP persists for \\textbf{only the Turn it was gained on}.\n"
-"  In the unlikely situation that two allied Heroes are forced onto the same Field, you must use your next MP to move one of them away from that Field.\n"
-"}\n"
+"\\clearpage\n"
 "\n"
 msgstr ""
-"\\note{10}{\n"
-"  Jedesmal, wenn du (zusätzliche) BP erhältst, in der Regel markiert durch das Symbol \\svg{movement-yellow}, gelten diese BP \\textbf{nur im aktuellen Spielzug}.\n"
-"  Befinden sich einmal beide deiner Helden auf demselben Feld, musst du den nächsten BP nutzen, um einen der Helden von dem Feld weg zu bewegen.\n"
-"}\n"
-"\n"
-
-#. type: multicols*
-#: sections/player_turns.tex:56
-#, no-wrap
-msgid ""
-"\\vfill\n"
-"\\begin{center}\n"
-"  \\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/town_portal.png}\n"
-"\\end{center}\n"
-"\n"
-msgstr ""
-"\\vfill\n"
-"\\begin{center}\n"
-"  \\transparent{0.2}\\includegraphics[width=0.7\\linewidth]{\\art/town_portal.png}\n"
-"\\end{center}\n"
-"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:71
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{\\pagetarget{Town Actions}{Town Actions}\\index{Town Actions}}\n"
+#| "You can perform each of the Town Actions listed below \\textbf{once per Round}.\n"
+#| "These Actions can be performed at any point during any player's Turn, except during Combat or when your Town Action would interrupt another Action.\n"
+#| "For example, players cannot draw Spell Cards simultaneously using the Spell Book Token.\\par\n"
+#| "When a player announces that they are about to start Combat, you may react to it with any number of Town Actions before performing any of the steps of \\pagelink{Combatsetup}{setting up Combat.}\\par\n"
+#| "After performing a Town Action, flip the respective Token on its inactive side on your Town Board.\n"
+#| "You cannot use that Action again until the start of the next Round, when the Tokens are refreshed.\n"
+#| "\\begin{itemize}\n"
+#| "  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/build.png}}] Build Token\\index{Build Token}, used to expand your \\pagelink{Town}{Town}.\n"
+#| "  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/population.png}}] Population Token\\index{Population Token}, used to Recruit and Reinforce \\pagelink{Units}{Units} or to Recruit \\pagelink{Secondary}{a Secondary Hero}.\n"
+#| "  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/spells.png}}]Spell Book Token\\index{Spell Book Token}, used to purchase \\pagelink{spells}{Spells}. Requires the Mage Guild Town building to use.\n"
+#| "\\end{itemize}\n"
+#| "\n"
 msgid ""
-"\\subsection*{\\pagetarget{Town Actions}{Town Actions}\\index{Town Actions}}\n"
+"\\pagetarget{Town Actions}{\\subheader{Town Actions}\\index{Town Actions}}\n"
 "You can perform each of the Town Actions listed below \\textbf{once per Round}.\n"
 "These Actions can be performed at any point during any player's Turn, except during Combat or when your Town Action would interrupt another Action.\n"
 "For example, players cannot draw Spell Cards simultaneously using the Spell Book Token.\\par\n"
@@ -251,17 +280,21 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:77
-#, no-wrap
+#: sections/player_turns.tex:78
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{Example Turn}\n"
+#| "\n"
 msgid ""
-"\\subsection*{Example Turn}\n"
+"\\columnbreak\n"
+"\\subheader{Example Turn}\n"
 "\n"
 msgstr ""
 "\\subsection*{Beispiel-Spielzug}\n"
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:85
+#: sections/player_turns.tex:86
 #, no-wrap
 msgid ""
 "\\textit{Alice, who is playing the Hero Catherine the Knight, begins her Turn.\n"
@@ -283,7 +316,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:89
+#: sections/player_turns.tex:90
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/catherine_attacks_sandro.png}\n"
@@ -297,10 +330,26 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:104
-#, no-wrap
+#: sections/player_turns.tex:105
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{\\pagetarget{Morale}{Morale} Actions}\\index{Morale Actions}\n"
+#| "Players can gain or lose Morale through various game effects.\n"
+#| "When you gain Morale, take a Positive Morale Token\\index{Positive Morale} \\svg{morale_positive}.\n"
+#| "You may only have one such Token.\n"
+#| "If you are about to gain a second Token, you may immediately spend the first one before gaining the second.\n"
+#| "A Positive Morale Token may be spent to perform any of the following Actions at any time:\n"
+#| "\\begin{itemize}\n"
+#| "  \\item Draw a Card from your Deck.\n"
+#| "  \\item Discard any number of Cards, then draw that many Cards.\n"
+#| "  \\item Reroll any Die you have thrown.\n"
+#| "\\end{itemize}\n"
+#| "If you lose Morale, discard a Positive Morale Token \\svg{morale_positive} if you have one, otherwise gain a Negative Morale\\index{Negative Morale} Token \\svg{morale_negative}.\n"
+#| "Inversely, gaining Positive Morale while you have a Negative Morale Token discards the Token.\n"
+#| "If you would gain a second Negative Morale Token, you must instead \\textbf{discard your hand of Cards} the next time you end your Turn.\\par\n"
+#| "\n"
 msgid ""
-"\\subsection*{\\pagetarget{Morale}{Morale} Actions}\\index{Morale Actions}\n"
+"\\pagetarget{Morale}{\\subheader{Morale Actions}}\\index{Morale Actions}\n"
 "Players can gain or lose Morale through various game effects.\n"
 "When you gain Morale, take a Positive Morale Token\\index{Positive Morale} \\svg{morale_positive}.\n"
 "You may only have one such Token.\n"
@@ -333,7 +382,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:110
+#: sections/player_turns.tex:111
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -351,7 +400,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:115
+#: sections/player_turns.tex:116
 #, no-wrap
 msgid ""
 "\\note{5}{The Necropolis \\svg{necro-yellow} Faction ignores any Morale effects.\n"
@@ -367,7 +416,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:118
+#: sections/player_turns.tex:119
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{expansion}[before=\\vspace*{-11mm}]{battlefield}\n"
@@ -383,7 +432,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:122
+#: sections/player_turns.tex:123
 #, fuzzy, no-wrap
 #| msgid ""
 #| "You can use \\pagetarget{Morale Cards}{Morale Cards}\\index{Morale Cards} \\textbf{instead} of Tokens.\n"
@@ -402,7 +451,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:124
+#: sections/player_turns.tex:125
 #, no-wrap
 msgid ""
 "\\vspace{1em}\n"
@@ -410,7 +459,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/player_turns.tex:140
+#: sections/player_turns.tex:141
 #, no-wrap
 msgid ""
 "    \\draw (-2, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/morale-positive.png}}};\n"
@@ -446,13 +495,13 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:158
+#: sections/player_turns.tex:159
 #, no-wrap
 msgid "  \\textbf{\\textit{\\textcolor{darkcandyapplered}{Negative Morale Card}}}"
 msgstr "  \\textbf{\\textit{\\textcolor{darkcandyapplered}{Negative-Moral-Karte}}}"
 
 #. type: figure
-#: sections/player_turns.tex:158
+#: sections/player_turns.tex:159
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -486,7 +535,7 @@ msgstr ""
 "  \\end{subfigure}"
 
 #. type: Plain text
-#: sections/player_turns.tex:169
+#: sections/player_turns.tex:170
 msgid ""
 "Every time you gain Positive Morale, discard a Negative Morale Card (if you "
 "have any); otherwise draw 1 Positive Morale Card.  You may have \\textbf{2 "
@@ -515,7 +564,7 @@ msgstr ""
 "ein neues Deck."
 
 #. type: Plain text
-#: sections/player_turns.tex:172
+#: sections/player_turns.tex:173
 msgid ""
 "Keep in mind that in Adventure and Skirmish Mode the rules for Morale Cards "
 "differ a bit -- read the official Battlefield rule book."

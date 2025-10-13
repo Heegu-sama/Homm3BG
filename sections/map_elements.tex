@@ -11,21 +11,27 @@ During the game's setup, all face-down Tiles should be selected randomly from th
 The \textbf{roman numeral} on each Tile describes the overall \textbf{difficulty of Neutral Units} on that Tile, as well as the number of rewards players can expect to find on that Tile.
 Starting (I) Tiles are the easiest while Center (VI–VII) Tiles are the most difficult.\par
 
-\vfill
+\vspace*{\fill}
 \begin{center}
-  \transparent{0.2}\includegraphics[width=0.6\linewidth]{\art/counterstrike.png}
+  \transparent{0.2}\includegraphics[width=0.6\linewidth]{\art/earth_magic.png}
 \end{center}
-\vfill
 
-\subsection*{Map Tile Anatomy\index{Map Tile}}
+\subsection*{Map Tile Anatomy}\index{Map Tile}
 Each Map Tile is divided into 7 separate \textbf{Fields} that your Heroes can \textbf{Visit}.
 When your Hero moves to a Field, they must immediately Visit it, or
 first start a \pagelink{Combat}{Combat} against the enemies guarding it before Visiting.
 Empty Fields\index{Empty Field} do nothing when Visited.
 Solid yellow lines on a Field's edge cannot be passed through.
 \pagelink{Difficulty}{Roman numerals} written on a Field indicate that the Field is guarded by Neutral enemies that must be fought to Visit it.\par
+\note{3}{
+  Blocked Field cannot be entered, but can be exited.
+}
 \columnbreak
+
 \includegraphics[width=\linewidth]{\images/maptiles.png}
+\begin{center}
+  \textbf{\textit{\footnotesize\textcolor{darkcandyapplered}{Types of Map Tiles}}}
+\end{center}
 \begin{itemize}
   \footnotesize
   \item[\textbf{1.}] Starting Map Tiles: I
@@ -34,7 +40,8 @@ Solid yellow lines on a Field's edge cannot be passed through.
   \item[\textbf{4.}] Center Map Tiles: VI-VII
 \end{itemize}
 
-\vfill
+\separator
+
 \begin{center}
   \begin{scriptsize}
   \begin{tikzpicture}
@@ -55,6 +62,9 @@ Solid yellow lines on a Field's edge cannot be passed through.
   \end{scriptsize}
 \end{center}
 
+\begin{center}
+  \textbf{\textit{\footnotesize\textcolor{darkcandyapplered}{Map Tile Anatomy}}}
+\end{center}
 \begin{itemize}
   \footnotesize
   \begin{multicols}{2}
@@ -67,17 +77,13 @@ Solid yellow lines on a Field's edge cannot be passed through.
     \item[\textbf{7.}] Tile name like \\{} \texttt{F2} or \texttt{\#N3}
   \end{multicols}
 \end{itemize}
-
-\note{3}{
-  Blocked Field cannot be entered, but can be exited.
-}
 \end{multicols*}
 
 \clearpage
 
 \begin{multicols}{2}
 
-\subsection*{\pagetarget{Categories}{Location Categories}}
+\pagetarget{Categories}{\subsection*{Location Categories}}
 Visiting Fields provides Heroes with benefits, such as gaining Resources or Cards (see \pagelink{All Map Locations}{All Map Locations}).
 There are three categories of Fields:
 \begin{itemize}
@@ -91,8 +97,10 @@ There are three categories of Fields:
     Do not place any Cubes when you Visit it.
     You may pay 1 MP to Visit this Field again.
 \end{itemize}
+\vspace*{\fill}
+\columnbreak
 
-\subsection*{\pagetarget{Placing}{Placing and Discovering New Tiles}}\index{Discovering Tiles}
+\pagetarget{Placing}{\subheader{Placing and Discovering New Tiles}}\index{Discovering Tiles}
 Heroes may spend 1 MP to either reveal an adjacent face-down Tile, or to place a Far (II–III) Map Tile from their own supply of Tiles (scenario rules determine the Tiles in your own supply).
 All face-down Tiles should be kept \textbf{hidden from all players} until they are about to be placed or revealed.
 New Tiles must be placed adjacent to the Hero who spends the MP, and connected to at least two other existing Tiles.
@@ -119,7 +127,7 @@ You may always rotate Map Tiles when placing or revealing them.
 
 \clearpage
 
-\subsection*{Example Turn}
+\subheader{Example Turn}
 
 \begin{multicols*}{2}
 
@@ -149,9 +157,12 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 \vfill
 \hspace{2em}
 {\transparent{0.2}\includegraphics[width=\linewidth]{\art/resurrection.png}}
+\end{multicols*}
 
-\newpage
+\clearpage
 
+\subheader{Expansion Tiles}
+\begin{multicols}{2}
 \begin{expansion}{cove}
   \subsection*{\pagetarget{Sea Map Tiles}{Sea Map Tiles}}
   Sea Map Tiles have a unique backside and during setup are placed as shown in the chosen Scenario Map layout.
@@ -184,22 +195,22 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
   Otherwise treat a Subterranean Gate Token as an empty Field.
   % NOTE: Discovering from one to the other should also be impossible.
 \end{expansion}
-
 \columnbreak
 
-\begin{multicols*}{2}
-\hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-cove.png}
-\columnbreak
-\hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-sea.png}
-\end{multicols*}
+\begin{multicols}{2}
+  \hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-cove.png}
+  \columnbreak
+  \hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-sea.png}
+\end{multicols}
 \begin{center}
   \vspace*{-0.5em}
   \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Sea Map Tile}}}}
 \end{center}
 
-\vspace*{\fill}
+\separator
 
 \begin{center}
+  \vspace*{-3em}
   \footnotesize
   \begin{tikzpicture}
     \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\images/elemental_tiles.png}}};
@@ -210,7 +221,7 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
   \end{tikzpicture}
 \end{center}
 
-\vspace*{\fill}
+\separator
 
 \begin{center}
   \begin{scriptsize}
@@ -225,22 +236,23 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
     \end{tikzpicture}
   \end{scriptsize}
 \end{center}
+\end{multicols}
+\clearpage
 
-\end{multicols*}
+\pagetarget{Discover Location Tokens}{\subheader{Placing and Discovering Location Tokens}}
 \begin{multicols}{2}
-\subsection*{\pagetarget{Discover Location Tokens}{Placing and Discovering Location Tokens}}
 Location Tokens are added by several expansions to the game.
 They are placed either separately or on specific Fields of the Map Tile when a Hero discovers one with associated Token, and overwrite the original Location they are placed on.
 Tokens cannot be placed on other Location Tokens, Blocked Fields, or Fields containing Locations required to meet any of the Scenario's victory conditions.
 
-\begin{expansion}[before=\vspace*{0pt}]{conflux}
-  \subsection*{\pagetarget{Monolith Tokens}{Monolith Tokens}}
-   The position of \pagelink{Monolith}{Monoliths} is determined by Scenario Layout.
-   If you discover a Tile with one of these Tokens on it, discover the Tile normally, and then place the Token on the Field indicated by the Scenario's Map layout, or a Field of your choosing if it's not specified.
+\begin{expansion}[before=\vspace*{0pt}]{navalbattles}
+  \subsection*{Creature Bank Tokens}
+  As an \textbf{optional rule} you can decide to play with \pagelink{Creature Banks Rules}{Creature Banks}.
+  If you do, each time you discover a Far \mbox{(II--III)} or Near \mbox{(IV--V)} Map Tile, you may decide to draw a Creature Bank Token corresponding to the discovered Map Tile, and -- contrary to the normal rules -- you can place it \textbf{only on its Blocked Field}.
   \bigskip
   \begin{center}
-    \includegraphics[width=0.4\linewidth]{\map_locations/monolith_token.png}\\
-    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Monolith Token}}}}
+    \includegraphics[width=0.42\linewidth]{\map_locations/creature_bank_token.png}\\
+    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Creature Bank Token}}}}
   \end{center}
 \end{expansion}
 
@@ -279,14 +291,14 @@ Tokens cannot be placed on other Location Tokens, Blocked Fields, or Fields cont
 
 \bigskip
 
-\begin{expansion}[before=\vspace*{0pt}]{navalbattles}
-  \subsection*{Creature Bank Tokens}
-  As an \textbf{optional rule} you can decide to play with \pagelink{Creature Banks Rules}{Creature Banks}.
-  If you do, each time you discover a Far \mbox{(II--III)} or Near \mbox{(IV--V)} Map Tile, you may decide to draw a Creature Bank Token corresponding to the discovered Map Tile, and -- contrary to the normal rules -- you can place it \textbf{only on its Blocked Field}.
+\begin{expansion}[before=\vspace*{0pt}]{conflux}
+  \subsection*{\pagetarget{Monolith Tokens}{Monolith Tokens}}
+   The position of \pagelink{Monolith}{Monoliths} is determined by Scenario Layout.
+   If you discover a Tile with one of these Tokens on it, discover the Tile normally, and then place the Token on the Field indicated by the Scenario's Map layout, or a Field of your choosing if it's not specified.
   \bigskip
   \begin{center}
-    \includegraphics[width=0.42\linewidth]{\map_locations/creature_bank_token.png}\\
-    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Creature Bank Token}}}}
+    \includegraphics[width=0.4\linewidth]{\map_locations/monolith_token.png}\\
+    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Monolith Token}}}}
   \end{center}
 \end{expansion}
 \end{multicols}
