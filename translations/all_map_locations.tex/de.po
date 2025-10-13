@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-10-08 19:54+0000\n"
+"POT-Creation-Date: 2025-10-13 10:03+0000\n"
 "PO-Revision-Date: 2025-08-28 16:08+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,23 +19,25 @@ msgstr ""
 
 #. type: Plain text
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/combat.tex:5 sections/components.tex:5 sections/credits.tex:6
-#: sections/deckbuilding.tex:5 sections/difficulty.tex:5
-#: sections/map_elements.tex:5 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/setup.tex:5 sections/trading.tex:5
+#: sections/components.tex:5 sections/credits.tex:6 sections/deckbuilding.tex:5
+#: sections/difficulty.tex:5 sections/map_elements.tex:5
+#: sections/player_turns.tex:5 sections/resources.tex:5 sections/setup.tex:5
+#: sections/trading.tex:5
 msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
 msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
-#: sections/combat.tex:7 sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/difficulty.tex:7 sections/expansion_content.tex:481
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:117
-#: sections/map_elements.tex:79 sections/map_elements.tex:125
-#: sections/player_turns.tex:7 sections/resources.tex:7
-#: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:59 sections/town.tex:5 sections/trading.tex:7
-#: sections/units.tex:5 sections/units.tex:198
+#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
+#: sections/combat.tex:302 sections/credits.tex:10 sections/deckbuilding.tex:7
+#: sections/deckbuilding.tex:52 sections/deckbuilding.tex:441
+#: sections/difficulty.tex:7 sections/expansion_content.tex:491
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:85
+#: sections/map_elements.tex:133 sections/player_turns.tex:7
+#: sections/resources.tex:7 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:59 sections/town.tex:5
+#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:46
+#: sections/units.tex:203
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -51,9 +53,12 @@ msgstr ""
 
 #. type: multicols*
 #: sections/all_map_locations.tex:9
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{Symbols on the Map}\n"
+#| "\n"
 msgid ""
-"\\subsection*{Symbols on the Map}\n"
+"\\subheader{Symbols on the Map}\n"
 "\n"
 msgstr ""
 "\\subsection*{Symbole auf der Abenteuerkarte}\n"
@@ -156,11 +161,10 @@ msgstr ""
 "\\end{itemize}\n"
 "\n"
 
-#. type: multicols
+#. type: multicols*
 #: sections/all_map_locations.tex:53 sections/all_map_locations.tex:235
-#: sections/credits.tex:36 sections/deckbuilding.tex:57
-#: sections/game_modes.tex:30 sections/map_elements.tex:189
-#: sections/scenario_end.tex:23 sections/units.tex:136
+#: sections/credits.tex:36 sections/deckbuilding.tex:59
+#: sections/game_modes.tex:30 sections/scenario_end.tex:23
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -194,8 +198,8 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:62 sections/deckbuilding.tex:378
-#: sections/trading.tex:27 sections/units.tex:216 sections/units.tex:220
+#: sections/all_map_locations.tex:62 sections/deckbuilding.tex:379
+#: sections/trading.tex:27 sections/units.tex:222 sections/units.tex:226
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -518,10 +522,21 @@ msgstr ""
 
 #. type: multicols
 #: sections/all_map_locations.tex:223
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "{2}\n"
+#| "\\subsection*{Towns}\n"
+#| "\\textbf{Towns} are always located in the center of a Starting (I) Tile.\n"
+#| "Flagging an enemy Town prevents their Secondary Heroes from spawning there and Main Heroes from moving there if defeated.\n"
+#| "Flagging a Town can cause \\pagelink{End}{Player Elimination}, and Scenarios typically have special rewards for Flagging them.\n"
+#| "Flagging a Town also gives you a \\textbf{Faction Cube} from its original owner.\n"
+#| "Otherwise, Flagging a Town does not affect its original owner in any way.\n"
+#| "They do not lose access to their Town Board or its functions.\n"
+#| "You also do not gain access to their Town Board or Faction Units, unlike in the video game.\n"
+#| "\n"
 msgid ""
 "{2}\n"
-"\\subsection*{Towns}\n"
+"\\subheader{Towns}\n"
 "\\textbf{Towns} are always located in the center of a Starting (I) Tile.\n"
 "Flagging an enemy Town prevents their Secondary Heroes from spawning there and Main Heroes from moving there if defeated.\n"
 "Flagging a Town can cause \\pagelink{End}{Player Elimination}, and Scenarios typically have special rewards for Flagging them.\n"
@@ -578,9 +593,15 @@ msgstr ""
 
 #. type: multicols
 #: sections/all_map_locations.tex:240
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{Mines}\\pagetarget{Mines}\n"
+#| "{\\textbf{Mines}}\\index{Mines} are Flaggable Fields which increase a specific resource's income when Flagged.\n"
+#| "If you are the first one to Flag a mine, it also immediately provides you with its income.\n"
+#| "All mines have the \\svg{ongoing} symbol and a picture of the Resource they produce next to it.\n"
+#| "\n"
 msgid ""
-"\\subsection*{Mines}\\pagetarget{Mines}\n"
+"\\pagetarget{Mines}{\\subheader{Mines}}\n"
 "{\\textbf{Mines}}\\index{Mines} are Flaggable Fields which increase a specific resource's income when Flagged.\n"
 "If you are the first one to Flag a mine, it also immediately provides you with its income.\n"
 "All mines have the \\svg{ongoing} symbol and a picture of the Resource they produce next to it.\n"
@@ -638,12 +659,34 @@ msgstr ""
 "\\textit{Städte aus Erweiterungen:\\\\Konflux, Burg, Bucht, Turm, "
 "Schutzwall, Festung und Inferno.}"
 
+#. type: Plain text
+#: sections/all_map_locations.tex:276
+msgid "\\pagetarget{Settlements}{\\subheader{Settlements}}"
+msgstr ""
+
 #. type: multicols
 #: sections/all_map_locations.tex:276
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "{2}\n"
+#| "\\subsection*{Settlements}\\pagetarget{Settlements}{}\n"
+#| "\\textbf{Settlements}\\index{Settlement} act as a spawn point for Secondary Heroes, and as a place for Main Heroes to move to when defeated.\n"
+#| "They also prevent \\pagelink{End}{Player Elimination}.\n"
+#| "When you Flag a Settlement, choose one of the following options:\n"
+#| "\\begin{itemize}\n"
+#| "  \\item Increase your \\svg{gold}, \\svg{building_materials} or \\svg{valuablegreater} income by one space.\n"
+#| "    As with Mines, if you are the first player to Flag a Settlement, you \\textbf{immediately} gain Resources equal to that increase in production.\n"
+#| "      Mark the Settlement with an appropriate Resource Token to show which Resource it produces.\n"
+#| "      When you Flag an enemy Settlement, you may change this Resource.\n"
+#| "      If your Settlement is lost, decrease its production.\n"
+#| "  \\item \\textbf{Or Reinforce} one of your \\svg{bronze} or \\svg{silver} Units immediately for half the normal cost, rounded up.\n"
+#| "    If you were the first player to Flag the Settlement, Reinforce that Unit \\textbf{for free} instead.\n"
+#| "    Do not place any Resource Tokens on the Settlement if you choose to Reinforce.\n"
+#| "\\end{itemize}\n"
+#| "\\textbf{Note:} all Settlements work identically.\n"
+#| "\n"
 msgid ""
 "{2}\n"
-"\\subsection*{Settlements}\\pagetarget{Settlements}{}\n"
 "\\textbf{Settlements}\\index{Settlement} act as a spawn point for Secondary Heroes, and as a place for Main Heroes to move to when defeated.\n"
 "They also prevent \\pagelink{End}{Player Elimination}.\n"
 "When you Flag a Settlement, choose one of the following options:\n"
@@ -694,8 +737,8 @@ msgstr ""
 "\\end{center}\n"
 "\n"
 
-#. type: multicols
-#: sections/all_map_locations.tex:284
+#. type: multicols*
+#: sections/all_map_locations.tex:284 sections/combat.tex:254
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -705,9 +748,14 @@ msgstr ""
 
 #. type: multicols
 #: sections/all_map_locations.tex:288
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{expansion}[before=\\vspace*{-11mm}]{inferno}\n"
+#| "  \\subsection*{Random Town}\\pagetarget{Random Town}{}\n"
+#| "  \\framedimage[\\linewidth]{\\map_locations/random_town.jpg}\n"
+#| "\n"
 msgid ""
-"\\begin{expansion}[before=\\vspace*{-11mm}]{inferno}\n"
+"\\begin{expansion}{inferno}\n"
 "  \\subsection*{Random Town}\\pagetarget{Random Town}{}\n"
 "  \\framedimage[\\linewidth]{\\map_locations/random_town.jpg}\n"
 "\n"
@@ -795,9 +843,11 @@ msgstr ""
 "\\textit{Siedlungen aus Erweiterungen.\\\\ Die grafischen Stile sind an die "
 "unterschiedlichen Fraktionen angepasst.}"
 
-#. type: subsection{#2}
+#. type: Plain text
 #: sections/all_map_locations.tex:324
-msgid "\\pagetarget{Revisitable Fields}{Revisitable Fields}"
+#, fuzzy
+#| msgid "\\pagetarget{Revisitable Fields}{Revisitable Fields}"
+msgid "\\pagetarget{Revisitable Fields}{\\subheader{Revisitable Fields}}"
 msgstr "\\pagetarget{Revisitable Fields}{Mehrfach besuchbare Orte}"
 
 #. type: figure
@@ -1001,9 +1051,11 @@ msgstr ""
 "[overlay]\n"
 "  \\node[opacity=0.2] at (16, 5.22) {\\includegraphics[width=0.5\\linewidth]{\\art/pegasi.png}};"
 
-#. type: subsection{#2}
+#. type: Plain text
 #: sections/all_map_locations.tex:421
-msgid "\\pagetarget{Other Fields}{Other Fields}"
+#, fuzzy
+#| msgid "\\pagetarget{Other Fields}{Other Fields}"
+msgid "\\pagetarget{Other Fields}{\\subheader{Other Fields}}"
 msgstr "\\pagetarget{Other Fields}{Andere Orte}"
 
 #. type: figure
@@ -1560,16 +1612,22 @@ msgstr ""
 "[remember picture, overlay]\n"
 "  \\node[opacity=0.15] at ([xshift=13em, yshift=25.3em]current page.south) {\\includegraphics[width=0.8\\linewidth, trim=0 200pt 0 0, clip]{\\art/cyclops.png}};"
 
-#. type: subsection{#2}
+#. type: Plain text
 #: sections/all_map_locations.tex:670
-msgid "\\pagetarget{Location Token}{Location Tokens}"
+#, fuzzy
+#| msgid "\\pagetarget{Location Token}{Location Tokens}"
+msgid "\\pagetarget{Location Token}{\\subheader{Location Tokens}}"
 msgstr "\\pagetarget{Location Token}{Ortsmarker}"
 
 #. type: Plain text
 #: sections/all_map_locations.tex:672
+#, fuzzy
+#| msgid ""
+#| "The following Fields are found on Location Tokens only, not on regular "
+#| "Map Tiles."
 msgid ""
-"The following Fields are found on Location Tokens only, not on regular Map "
-"Tiles."
+"The following Fields are found on single-hex Location Tokens only, not on "
+"regular Map Tiles."
 msgstr ""
 "Die folgenden Orte befinden sich nur auf Ortsmarkern, nicht auf regulären "
 "Gebieten."
@@ -1623,7 +1681,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:720
+#: sections/all_map_locations.tex:721
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1675,7 +1733,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:748
+#: sections/all_map_locations.tex:750
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1733,7 +1791,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: table*
-#: sections/all_map_locations.tex:817
+#: sections/all_map_locations.tex:819
 #, no-wrap
 msgid ""
 "[!hb]\n"
@@ -1873,7 +1931,7 @@ msgstr ""
 "  \\expansionlabel{navalbattles}"
 
 #. type: table*
-#: sections/all_map_locations.tex:885
+#: sections/all_map_locations.tex:887
 #, no-wrap
 msgid ""
 "[!hb]\n"
