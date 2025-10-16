@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-06-26 23:51+0200\n"
+"POT-Creation-Date: 2025-10-13 10:03+0000\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -26,24 +26,25 @@ msgstr "\\addsection{Zasady AI}{\\spells/fortune.png}"
 
 #. type: Plain text
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/combat.tex:5 sections/components.tex:5 sections/credits.tex:6
-#: sections/deckbuilding.tex:5 sections/difficulty.tex:5
-#: sections/map_elements.tex:5 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/components.tex:5 sections/credits.tex:6 sections/deckbuilding.tex:5
+#: sections/difficulty.tex:5 sections/map_elements.tex:5
+#: sections/player_turns.tex:5 sections/resources.tex:5 sections/setup.tex:5
 #: sections/trading.tex:5
 msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
 msgstr "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
 
 #. type: multicols*
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
-#: sections/combat.tex:7 sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/difficulty.tex:7 sections/expansion_content.tex:5
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:116
-#: sections/map_elements.tex:79 sections/map_elements.tex:125
-#: sections/player_turns.tex:7 sections/resources.tex:7
-#: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:59 sections/town.tex:7 sections/trading.tex:7
-#: sections/units.tex:5 sections/units.tex:198
+#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
+#: sections/combat.tex:302 sections/credits.tex:10 sections/deckbuilding.tex:7
+#: sections/deckbuilding.tex:52 sections/deckbuilding.tex:441
+#: sections/difficulty.tex:7 sections/expansion_content.tex:491
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:85
+#: sections/map_elements.tex:133 sections/player_turns.tex:7
+#: sections/resources.tex:7 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:59 sections/town.tex:5
+#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:46
+#: sections/units.tex:203
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -237,17 +238,21 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:80
-#, no-wrap
+#: sections/ai_rules.tex:81
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{Combat against AI}\n"
+#| "\n"
 msgid ""
-"\\subsection*{Combat against AI}\n"
+"\\columnbreak\n"
+"\\subheader{Combat against AI}\n"
 "\n"
 msgstr ""
 "\\subsection*{Walka z AI}\n"
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:83
+#: sections/ai_rules.tex:84
 #, no-wrap
 msgid ""
 "\\pagetarget{AI Units}{These rules} apply during Combat in \\textbf{Solo}\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
@@ -259,7 +264,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:85
+#: sections/ai_rules.tex:86
 #, no-wrap
 msgid ""
 "When Neutral enemies or AI Heroes activate a Unit, they follow a set of automatic instructions:\\par\n"
@@ -269,7 +274,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:89
+#: sections/ai_rules.tex:90
 #, no-wrap
 msgid ""
 "\\begin{itemize}\n"
@@ -283,7 +288,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:95
+#: sections/ai_rules.tex:96
 #, no-wrap
 msgid ""
 "  \\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority:\n"
@@ -301,7 +306,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:98
+#: sections/ai_rules.tex:99
 #, no-wrap
 msgid ""
 "  \\item Ranged \\svg{unit_ranged} Units prioritize attacking other Ranged \\svg{unit_ranged} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
@@ -313,7 +318,7 @@ msgstr ""
 "  \n"
 
 #. type: multicols
-#: sections/ai_rules.tex:109
+#: sections/ai_rules.tex:110
 #, no-wrap
 msgid ""
 "  \\textit{Example: \\svg{silver}\\svg{unit_ranged} has this priority:\n"
@@ -341,7 +346,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:112
+#: sections/ai_rules.tex:113
 #, no-wrap
 msgid ""
 "In both cases, if there's more than one valid target, they attack the closest one.\n"
@@ -353,7 +358,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:114
+#: sections/ai_rules.tex:115
 #, no-wrap
 msgid ""
 "Enemy Units cannot \\pagelink{Defend}{Defend} unless instructed to.\n"
@@ -363,8 +368,8 @@ msgstr ""
 "\\vfill\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:116 sections/combat.tex:196 sections/heroes.tex:34
-#: sections/introduction.tex:86
+#: sections/ai_rules.tex:117 sections/combat.tex:222
+#: sections/introduction.tex:89
 #, no-wrap
 msgid ""
 "\\vfill\n"
@@ -372,7 +377,7 @@ msgid ""
 msgstr "\\empty\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:120
+#: sections/ai_rules.tex:121
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
