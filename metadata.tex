@@ -119,6 +119,7 @@
 \def\_assets{assets}
 
 \def\art{\_assets/art}
+\def\boxcovers{\_assets/box-covers}
 \def\cards{\_assets/cards}
 \def\examples{\_assets/examples}
 \def\images{\_assets/images}
@@ -348,12 +349,12 @@
     \end{tikzpicture}
     }
   }
+  \phantomsection\addcontentsline{toc}{section}{\protect\mbox{#2}}
   \begin{fullwidth}[leftmargin=0.16\textwidth, outermargin=0.16\textwidth, innermargin=0.16\textwidth]
     \begin{center}
       \vspace*{\lang_header_adjustment}
       \ifthenelse{\oneliner}{}{\vspace{-13pt}}
       \sectionheadertext{#2}
-      \cleardoublepage\phantomsection\addcontentsline{toc}{section}{\protect\numberline{}\mbox{#2}}
     \end{center}
   \end{fullwidth}
   \vspace{1.75em}
@@ -365,6 +366,24 @@
 \ifdefined\subsectionspacing
   \subsectionspacing{}
 \fi
+
+\newcommand{\subheader}[2][true]{%
+    \ifstrequal{#1}{false}{}{%
+        \phantomsection\addcontentsline{toc}{subsection}{\protect #2}%
+    }%
+    \begin{center}
+        \textbf{\Large\scshape #2}
+        \\[0.05em]
+        \includegraphics[width=\linewidth,height=1em,keepaspectratio]{\layout/subsection_separator.png}
+    \end{center}
+}
+
+\newcommand{\separator}{
+  \vspace*{\fill}
+  {\transparent{0.3}\includegraphics[width=\linewidth,height=1em,keepaspectratio]{\layout/subsection_separator.png}}
+  \vspace*{\fill}
+}
+
 
 \newcommand\picdims[4][]{%
   \setbox0=\hbox{\includegraphics[#1]{#4}}%
@@ -553,6 +572,16 @@
     footskip=1.35cm,
   }
 }{}
+
+\makeatletter
+\renewcommand\tableofcontents{%
+  \pdfbookmark[1]{\contentsname}{toc}%
+  \subheader[false]{\contentsname}
+  \begin{multicols}{2}
+    \@starttoc{toc}%
+  \end{multicols}
+}
+\makeatother
 
 \input{structure.tex}
 

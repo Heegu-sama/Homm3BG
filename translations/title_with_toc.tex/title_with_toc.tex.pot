@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-10-05 18:28+0000\n"
+"POT-Creation-Date: 2025-10-13 10:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -102,14 +102,12 @@ msgid ""
 "castle_bottom.png} \\thispagestyle{empty} }; \\end{tikzpicture}}"
 msgstr ""
 
-#. type: multicols*
+#. type: tikzpicture
 #: sections/title_with_toc.tex:57
 #, no-wrap
 msgid ""
-"{2}\n"
-"\\tableofcontents\n"
-"\\vspace*{\\fill}\n"
-"\\columnbreak\n"
-"\\vspace*{\\fill}\n"
-"\\includegraphics[width=\\linewidth]{\\art/black_dragon.jpg}"
+"[remember picture, overlay]\n"
+"  \\node(bg)[anchor=center, opacity=0.07, xshift=-3em, yshift=0em] at (current page.center) {\n"
+"    \\includegraphics[width=\\paperwidth, keepaspectratio]{\\art/meteor_shower.png}\n"
+"  };"
 msgstr ""
