@@ -1,8 +1,6 @@
 % !TeX spellcheck = en_US
 \addsection{Combat}{\skills/attack.png}
 
-\iftoggle{printable}{\vspace{-\baselineskip}}{}
-
 \begin{multicols*}{2}
 
 \pagetarget{Combat}{Combat}\index{Combat} with \textbf{Neutral Units} starts when a Hero moves to one of the \textbf{unvisited} Fields:
@@ -17,28 +15,32 @@
 Combat with \textbf{another player} can start in two ways:
 \begin{itemize}
   \item You move into any Field containing one of their Heroes.
-  \item You move into a Town or Settlement owned by them.
+  \item You move into a Town or Settlement owned by them, see \pagelink{Siege Combat}{Siege Combat}.
 \end{itemize}
 Players are able to start multiple Combats during their Turn.
 
 When a \pagelink{Secondary}{Secondary Hero} is attacked, they \textbf{may choose} to be \pagelink{Endcombat}{instantly defeated} instead of engaging in Combat, which helps to preserve the Units.
 
-\vspace{1em}
-\note{10}{
-  \vspace{1em}
-  If your Town or Settlement is attacked by an enemy Hero and your Hero is not on that Field, you may immediately \textbf{pay 8 \svg{gold} to defend with only your Units}.
-  You cannot use your Deck during this Combat, as your Main Hero is not present.
-  Paying this Gold represents the cost of transporting the army there.
-}
+\begin{center}
+  \transparent{0.2}\includegraphics[width=0.6\linewidth]{\art/wyvern.png}
+\end{center}
 
-\subsection*{\pagetarget{Quick}{Quick Combat}}\index{Quick Combat}
+\pagetarget{Quick}{\subheader{Quick Combat}}\index{Quick Combat}
 If your Hero's Level is higher than a Field's Difficulty when Combat against Neutral Units would begin, \textbf{no Combat} takes place.
 The player is considered to have beaten the Neutral Units by default and gains no rewards from the Combat itself before Visiting the Field.
 
-\subsection*{\pagetarget{Combatsetup}{Combat Setup}}
+\vspace*{\fill}
 
-% TODO info about battlefield expansion
-  Combat is resolved on the 4×5 Combat Board, which consists of two Backlines and two Frontlines on opposite ends, and a middle row.
+\begin{center}
+  % \vspace*{-1em}
+  \includegraphics[width=\linewidth]{\art/rogue.jpg}
+\end{center}
+\end{multicols*}
+
+\pagetarget{Combatsetup}{\subheader{Combat Setup}}
+\begin{multicols*}{2}
+
+Combat is resolved on the 4×5 Combat Board, which consists of two Backlines and two Frontlines on opposite ends, and a middle row.
 It can also be resolved on one of the \pagelink{Alternative Combat Boards}{alternative Boards}.
 Follow these steps when Combat begins against \textbf{Neutral Units}:
 
@@ -57,14 +59,20 @@ If there's still a tie, the players decide the order.
 Check the \pagelink{AI Units}{\textbf{Combat against AI}} section for detailed instructions.
 \end{itemize}
 
-\pagebreak
 Unit setup when fighting \textbf{other players}:
 \begin{itemize}
   \item The attacking player places up to 5 Units on their chosen side of the Combat Board, followed by the defender.
   \item If the Combat takes place in a Town with a Citadel, the defender adds the \pagelink{Walls}{Wall, Gate and Arrow Tower} Cards after placing their Units.
+  \vspace*{-4em}
 \end{itemize}
 
-\subsection*{\pagetarget{Combatterminology}{Combat Terminology}}
+\begin{center}
+  \includegraphics[width=\linewidth]{\art/elf.jpg}
+\end{center}
+\end{multicols*}
+
+\pagetarget{Combatterminology}{\subheader{Combat Terminology}}
+\begin{multicols*}{2}
 The following terms are used to describe effects and elements during Combat:\par
 \textbf{Attacking Player} – The player who started the Combat.\par
 \textbf{Defending Player} – The player whom Combat was started against.\par
@@ -74,7 +82,7 @@ The following terms are used to describe effects and elements during Combat:\par
 \textbf{Combat Obstacles}\index{Combat Obstacles}\index{Obstacles, Combat} – Every Card on the Combat Board is a Combat Obstacle.
 They block the movement of all non-flying Units.\smallskip\par
 \begin{tikzpicture}[overlay]
-  \node at (7, 0) {\includegraphics[width=0.2\linewidth]{\images/attack_die.png}};
+  \node[opacity=0.7] at (7, 0) {\includegraphics[width=0.2\linewidth]{\images/attack_die.png}};
 \end{tikzpicture}\parbox{0.7\hsize}{\textbf{Attack Die}\index{Attack Die}\index{Dice} – A red Die whose results range from -1 to +1.
 Roll the Die \textbf{whenever a Unit attacks} and
 add the result to the Unit's Attack value.}\par\smallskip
@@ -98,10 +106,13 @@ The Unit cannot take another Defense Action during that activation.\par
 
 \vspace*{\fill}
 \begin{center}
-  \transparent{0.2}\includegraphics[width=1.3\linewidth]{\art/storm_elemental.png}
+  \hspace*{-2em}\transparent{0.2}\includegraphics[width=1.5\linewidth]{\art/storm_elemental.png}
 \end{center}
+\end{multicols*}
 
-\subsection*{\pagetarget{combatround}{Combat Round Structure}}
+\pagetarget{combatround}{\subheader{Combat Round Structure}}
+\begin{multicols*}{2}
+
 Combat is divided into Rounds, during which all of the Units participating in that Combat \textbf{Activate once} in Initiative order.
 After each Unit has Activated, a new Combat Round begins.
 Combat lasts until all Units on one side are eliminated, a player has to \textbf{Retreat}\index{Retreat} when fighting Neutral Units, or a player \textbf{Surrenders} to another player.
@@ -122,18 +133,18 @@ After the last Unit's activation, the Combat Round ends.
 \end{itemize}
 \vspace*{\fill}
 
+\subsection*{Campaign and Cooperative\\Combat}
+During these game modes, all enemy Units activate as described in the \pagelink{AI Units}{AI Rules section}.
+\vspace*{\fill}
+
 \subsection*{\pagetarget{CombatCards}{Using Cards During Combat}}
 You may only use \textbf{one Spell per Combat Round}, unlike being able to play any number of other Cards.
-Ongoing \svg{ongoing} and \svg{activation} Activate effects can be used only \textbf{when Activating one of your Units and before it attacks}.
+Ongoing \svg{ongoing} and \svg{activation} Activation effects can be used only \textbf{when Activating one of your Units and before it attacks}.
 Ongoing effects\index{Ongoing Effects} last until end of Combat or if the effect on the Card is used up.\par
 Instant \svg{instant} Cards may be played \textbf{at any time} except between rolling the Attack Die and resolving damage unless otherwise stated.
 Effects of increasing a Unit's \svg{attack} (e.g. by the Statistics Cards), expire whenever the first attack performed by that Unit resolves or the Activation ends, whichever comes first.
-The increased \svg{defense} expires in a similar way.
+Increased \svg{defense} expires in a similar way.
 
-\vspace*{\fill}
-\begin{center}
-  \transparent{0.15}\reflectbox{\includegraphics[width=\linewidth]{\art/wyvern.png}}
-\end{center}
 \vspace*{\fill}
 
 \subsection*{\pagetarget{Timelimit}{Combat Time Limits}}\index{Time Limit}
@@ -143,33 +154,31 @@ When you Retreat, end the Combat, and move the Hero that started the Combat back
 Retreating has no other penalties.
 
 \note{5}{Combats against Azure \svg{azure} Units, other players, or \pagelink{AIrules}{AI Heroes} have no time limit, and you cannot Retreat from them.}
+\end{multicols*}
 
-\vspace*{-1em}
-\subsection*{\pagetarget{Endcombat}{End of Combat}}
-
+\pagetarget{Endcombat}{\subheader{End of Combat}}
+\begin{multicols*}{2}
 Combat against Neutrals has three possible outcomes:
 \begin{itemize}
-  \item \textbf{Win:} All Neutral Units are defeated.
+  \item \textbf{Victory:} All Neutral Units are defeated.
   \item \textbf{Retreat:} The player runs out of time or loses all combating Units, but still has Units in their Unit Deck.
   \item \textbf{Defeat:} The player loses all combating Units and doesn't have any Units in their Unit Deck.
 \end{itemize}
 
 Combat against another player's Hero has two possible outcomes:
 \begin{itemize}
- \item \textbf{Win/Defeat:} If all Units on one side are defeated, the side with any surviving Units is the winner, the other side is defeated.
- \item \textbf{Surrender:} Instead of activating one of their Units, a Hero can decide to surrender to the other player's Hero by paying them 10 \svg{gold} to prevent their army from being defeated. In this case the Combat ends immediately without having a winning or defeated Hero.
+ \item \textbf{Victory/Defeat:} If all Units on one side are defeated, the side with any surviving Units is the winner, the other side is defeated.
+ \item \textbf{Surrender:} Instead of activating one of their Units, a Hero can decide to surrender to the other player's Hero by paying them 10 \svg{gold} to prevent their army from being defeated. In this case, Combat ends immediately without having a winning or defeated Hero.
 \end{itemize}
-\vspace{0.5em}
-\note{3.5}{You cannot surrender when defending a Town.}\par
 
-When Combat ends, all damage is healed from all surviving Units. Move any player-owned Units back to their Unit Deck and discard any leftover enemy Neutral Units. Depending on the type and result of the combat, players must resolve the following consequences for themselves:
+When Combat ends, all damage is healed from all surviving Units. Move any player-owned Units back to their Unit Deck and discard any leftover enemy Neutral Units. Depending on the type and result of the Combat, players must resolve the following consequences for themselves:
 
-A \textbf{Winning Hero} gets \pagelink{Combatexperience}{Experience}, if it was the Main Hero. If it was the attacker they must Visit the Field where the combat took place.\par
-A \textbf{Retreating Hero} from a combat with Neutrals has to move back to the last visited Field on the map (without Visiting that Field).\par
-A \textbf{defeated Main Hero} has to move to a friendly Town or Settlement. If they were defeated by another player's Hero, they gain 1~\svg{morale_negative} and have to pay 5 \svg{gold} to the winning Hero. Furthermore they give a \pagelink{End}{Faction Cube} to the winning player. Defeating a Main Hero may cause \pagelink{End}{Player Elimination}.\par
+A \textbf{Winning Hero} gets \pagelink{Combatexperience}{Experience}, if it was the Main Hero. If it was, the attacker they must Visit the Field where the Combat took place.\par
+A \textbf{Retreating Hero} from a Combat with Neutral Units has to move back to the last visited Field on the map (without Visiting that Field).\par
+A \textbf{defeated Main Hero} has to move to a friendly Town or Settlement. If they were defeated by another player's Hero, they gain 1~\svg{morale_negative} and have to pay 5 \svg{gold} to the winning Hero. Furthermore, they give a \pagelink{End}{Faction Cube} to the winning player. Defeating a Main Hero may cause \pagelink{End}{Player Elimination}.\par
 A \textbf{defeated Secondary Hero} (even instantly defeated without combat) is removed from the map. If defeated by another player's Hero they also get a Faction Cube.\par
 A \textbf{Surrendering Hero} doesn't count as defeated. Move a surrendering Main Hero to a town or settlement, or remove a Secondary Hero from the map as if they had been defeated. The other player neither gets Experience nor Faction Cubes.\par
-Remember to receive the starting Units of the chosen Scenario for free each time your Unit Deck is empty after a combat.
+Remember to receive the starting Units of the chosen Scenario for free each time your Unit Deck is empty after a Combat.
 
 \subsection*{\pagetarget{Combatexperience}{Combat Experience}}
 
@@ -182,14 +191,15 @@ Level ups must be resolved before Visiting the Field where the Combat happened.\
 Secondary Heroes cannot ever gain Experience.
 You also do not gain Experience from \textbf{defeating} a Secondary Hero, or if an enemy Hero \textbf{Surrenders} to you.
 
-\subsection*{Campaign and Cooperative\\Combat}
-During these game modes, all enemy Units activate as described in the \pagelink{AI Units}{AI Rules section}.
-
+\vspace*{\fill}
+\begin{center}
+  \transparent{0.2}\includegraphics[width=0.8\linewidth]{\art/basilisk.png}
+\end{center}
 \end{multicols*}
 
 \clearpage
 
-\subsection*{Combat Example}
+\subheader{Combat Example}
 
 \begin{multicols*}{2}
 \textit{Bob's Zombies are about to attack Alice's Griffins.
@@ -210,62 +220,89 @@ The previously played Attack and Defense Cards no longer have any effect.}
 
 \vfill
 
-{\transparent{0.2}\includegraphics[width=\linewidth]{\art/prayer.png}}
+{\transparent{0.2}\hspace{-1em}\includegraphics[width=1.7\linewidth]{\art/minotaur.png}}
 
 \end{multicols*}
 
 \clearpage
 
+\pagetarget{Siege Combat}{\subheader{Siege Combat}}
 \begin{multicols*}{2}
-\subsection*{\pagetarget{Walls}{Defending a Town With\\a Citadel\raggedright}}\index{Defending Town}
-When you defend your Town and it has a Citadel, you add the 3 Wall and 1 Gate Obstacles in any order to the middle row of the Combat Board after placing your Units.
+When an enemy Hero attacks your Town or Settlement and your Hero is not present on that Field, you may immediately \textbf{pay 8 \svg{gold} to defend with only your Units}.
+You cannot use your Deck during this Combat, as your Main Hero is not present.
+Paying this Gold represents the cost of transporting the army there.
+
+When you defend a Town \textbf{without a Citadel}, resolve Combat normally on the standard Combat Board.
+Defending a Settlement follows the same rules as defending a Town without a Citadel.
+
+\vspace{0.5em}
+\note{3.5}{Note: you cannot surrender when defending your Faction Town.}\par
+
+\pagetarget{Walls}{\subsection*{Defending a Town with a\\Citadel}}\index{Walls and Gate}
+When you defend your Town and it has a Citadel, you add the 3~Wall and 1~Gate Obstacles in any order to the middle row of the Combat Board after placing your Units.
 \textbf{Don't use Walls and Gate} if you defend an enemy Town, which you've conquered before, \textbf{not even} if it is a Town with a Citadel.
-The Gate Card is \textbf{not an Obstacle to the defending player}.
+The Gate Card is \textbf{not an Obstacle} to the defending player.
 Defending Units may move through the Gate and may stop on it.
 
+Walls \pagelink{Walls protection}{protect defending Units behind them}.
+
+The Wall and Gate Cards can be destroyed by any adjacent \svg{unit_ground} or \svg{unit_flying} Unit's attack, even by your own defending Units.
+These attacks don't count as normal attacks: They are always successful and don't activate any of the attacking Unit's \svg{unit_attack} abilities, and you cannot play any Cards or throw the Attack Die to affect the attack's result.
+
 \vspace*{\fill}
-\includegraphics[width=\linewidth]{\examples/ranged_protected.png}
-{\textit{When the Halberdiers are behind a non-destroyed Gate, they \textbf{are protected} when attacked from behind the Wall line.
-  The \svg{unit_ranged} attack damage of Evil Eyes is \textbf{reduced by 1}.}}
 \columnbreak
 
-The Wall and Gate\index{Walls and Gate} Cards can be destroyed by any adjacent \svg{unit_ground} or \svg{unit_flying} Unit's attack, even by your own defending Units.
-These Attacks don't count as normal attacks: They are always successful and they don't activate any of the attacking Unit's \svg{unit_attack} abilities, and you cannot play any Cards or throw the attack die to affect the attack's result.
+\begin{center}
+  \includegraphics[width=0.6\linewidth]{\cards/arrow_tower.png}
+\end{center}
+The defender also gains the Arrow Tower\index{Arrow Tower} Unit Card which is placed next to the Combat Board.
+It acts like a Ranged \svg{unit_ranged} Unit, except that it is not affected by anything related to its positioning.
+For example, it never gets ranged penalty against enemy Units and vice versa.
+Only Ranged attacks and Card Effects can destroy the Arrow Tower, but it is instantly destroyed when all Walls and the Gate are destroyed.
+The attacker doesn't need to destroy it to win the Combat.
 
-Defending Units standing on their own side and \textbf{in the same column} as a Wall or a Gate gain protection from \svg{unit_ranged} attacks.
+In a siege against AI, the Arrow Tower follows the priority rules like a Silver \svg{silver} Unit.
+However, if there are multiple equally valid targets, it will attack the target closest to being destroyed (the smallest difference between \svg{health_points} and current \svg{damage}).
+
+\vspace*{\fill}
+\begin{center}
+  \transparent{0.2}\includegraphics[width=0.95\linewidth]{\art/coin.png}
+\end{center}
+\end{multicols*}
+
+\newpage
+\begin{multicols}{2}
+\subsection*{\pagetarget{Walls protection}{Protection} from \svg[15]{unit_ranged} Attacks}
+
+Defending Units standing on their own side and \textbf{in the same column} as a non-destroyed Wall or Gate gain protection from \svg{unit_ranged} attacks.
 If they are targeted by a \svg{unit_ranged} attack performed from the opponent's side of the Combat Board, \textbf{reduce the attack's damage by 1}.
+\vspace*{\fill}
+
+\begin{center}
+  \transparent{0.2}\includegraphics[width=\linewidth]{\art/curse.png}
+\end{center}
+\end{multicols}
+
+\begin{multicols}{2}
+\vspace*{\fill}
+\includegraphics[width=\linewidth]{\examples/ranged_protected.png}
+{\textit{When the Halberdiers are behind a non-destroyed Gate, they \textbf{are protected} when attacked from the opponent's side of the Combat Board.
+  The \svg{unit_ranged} attack damage of Evil Eyes is \textbf{reduced by 1}.}}
+\columnbreak
 
 \vspace*{\fill}
 \includegraphics[width=\linewidth]{\examples/ranged_unprotected.png}
 {\textit{Because the Halberdiers are not behind a non-destroyed Wall, \textbf{protection doesn't work}.
   Evil Eyes attack \textbf{without penalty}.}}
 \newline\newline
-\end{multicols*}
-
-\clearpage
-
-\begin{multicols*}{2}
-\begin{center}
-  \includegraphics[width=0.6\linewidth]{\cards/arrow_tower.png}
-\end{center}
-The defender also gains the Arrow Tower\index{Arrow Tower} Unit Card which is placed next to the Combat Board.
-It acts like any Ranged \svg{unit_ranged} Unit, except that it is not affected by anything related to its positioning.
-For example it never gets ranged penalty against enemy Units and vice versa.
-Only Ranged attacks and Card Effects can destroy the Arrow Tower, but it is instantly destroyed when all Walls and the Gate are destroyed.
-The attacker doesn't need to destroy it to win the Combat.
-
-\vspace{1em}
-\note{9}{In a siege against AI, the Arrow Tower follows the priority-rules like a Silver \svg{silver} Unit. But if there are many valid targets, it cannot attack the nearest one, so it will attack the one that is closest to perishing (the smallest difference between \svg{health_points-yellow} and current \svg{damage-yellow}).}
-
-\begin{center}
-  \includegraphics[width=1.05\linewidth]{\art/arrow_tower.jpg}
-\end{center}
-
+\end{multicols}
 \newpage
 
-\subsection*{\pagetarget{Alternative Combat Boards}{Alternative Combat Boards}}
+\begin{multicols*}{2}
+
+\pagetarget{Alternative Combat Boards}{\subheader{Alternative Combat Boards}}
 \begin{expansion}{navalbattles}
-  As an \textbf{optional rule}, you can use the Naval Battle Board for combats at sea locations.
+  As an \textbf{optional rule}, you can use the \textbf{Naval Battle Board} for combats at sea locations.
   This Board removes the two middle spaces, requiring Ground \svg{unit_ground} Units to navigate around them while Flying \svg{unit_flying} Units can move over them but cannot end their movement there.
 
   \begin{center}
@@ -275,9 +312,9 @@ The attacker doesn't need to destroy it to win the Combat.
 
 \vspace{2em}
 \begin{expansion}{battlefield}
-  As an \textbf{optional rule}, you can use the Battlefield Board for combats between players in regular games.
+  As an \textbf{optional rule}, you can use the \textbf{Battlefield Board} for combats between players in regular games.
   You can also use it for Neutral Combats, though this is not recommended.
-  Refer to the official Battlefield rulebook for the rule changes regarding this combat type.
+  Refer to the \pagelink{Battlefield Combat}{expansion content section} for the rule changes regarding this Combat type.
 
   \begin{center}
     \includegraphics[width=1.05\linewidth]{\images/battlefield-board.png}
@@ -286,7 +323,7 @@ The attacker doesn't need to destroy it to win the Combat.
 \vfill
 
 \begin{center}
-  \includegraphics[width=1.05\linewidth]{\art/crystal_dragon.jpg}
+  \includegraphics[width=1.05\linewidth]{\art/rust_dragon.jpg}
 \end{center}
 
 \end{multicols*}
