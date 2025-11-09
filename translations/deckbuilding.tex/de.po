@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-10-17 11:15+0000\n"
+"POT-Creation-Date: 2025-10-13 11:16+0000\n"
 "PO-Revision-Date: 2025-07-06 08:59+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -30,9 +30,9 @@ msgstr ""
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
 #: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
 #: sections/combat.tex:302 sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/deckbuilding.tex:74 sections/difficulty.tex:7
-#: sections/expansion_content.tex:491 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/map_elements.tex:85
+#: sections/deckbuilding.tex:52 sections/deckbuilding.tex:441
+#: sections/difficulty.tex:7 sections/expansion_content.tex:491
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:85
 #: sections/map_elements.tex:133 sections/player_turns.tex:7
 #: sections/resources.tex:7 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:59 sections/town.tex:5
@@ -46,7 +46,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/all_map_locations.tex:53 sections/all_map_locations.tex:235
-#: sections/credits.tex:36 sections/deckbuilding.tex:81
+#: sections/credits.tex:36 sections/deckbuilding.tex:59
 #: sections/game_modes.tex:30 sections/scenario_end.tex:23
 #, no-wrap
 msgid ""
@@ -55,11 +55,20 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:62 sections/deckbuilding.tex:401
+#: sections/all_map_locations.tex:62 sections/deckbuilding.tex:379
 #: sections/trading.tex:27 sections/units.tex:222 sections/units.tex:226
 #, no-wrap
 msgid ""
 "\\medskip\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/combat.tex:33 sections/combat.tex:149 sections/credits.tex:38
+#: sections/credits.tex:42 sections/deckbuilding.tex:454
+#, no-wrap
+msgid ""
+"\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
 
@@ -71,21 +80,13 @@ msgstr ""
 "\\addsection[2]{Karten- und \\break{}Spielerdecks}{\\skills/wisdom.png}"
 
 #. type: multicols
-#: sections/deckbuilding.tex:14
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\subsection*{\\pagetarget{Playerdecks}{Player Decks}}\n"
-#| "All players have a unique Deck which represents their Main Hero's Abilities and Equipment.\n"
-#| "Decks may contain Statistic, Ability, Spell, Artifact and the Main Hero's Specialty Cards.\n"
-#| "Each player's Deck starts with 9 Cards, built during the game's setup.\n"
-#| "\n"
+#: sections/deckbuilding.tex:12
+#, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Playerdecks}{Player Decks}}\n"
 "All players have a unique Deck which represents their Main Hero's Abilities and Equipment.\n"
 "Decks may contain Statistic, Ability, Spell, Artifact and the Main Hero's Specialty Cards.\n"
-"Each player's Deck starts with 9 Cards, built during the game's setup.\\par\n"
-"\\bigskip\n"
-"\\bigskip\n"
+"Each player's Deck starts with 9 Cards, built during the game's setup.\n"
 "\n"
 msgstr ""
 "\\subsection*{\\pagetarget{Playerdecks}{Spielerdecks}}\n"
@@ -95,7 +96,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:45
+#: sections/deckbuilding.tex:43
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{General Card Rules}\n"
@@ -123,7 +124,7 @@ msgstr ""
 #| "\\end{enumerate}\n"
 #| "\n"
 msgid ""
-"\\subheader{General Card Rules}\n"
+"\\subsection*{General Card Rules}\n"
 "\\begin{enumerate}\n"
 "  \\item Cards can be played \\textbf{only on your Turn}, or in a \\pagelink{Combat}{Combat} involving your \\textbf{Main Hero}.\n"
 "  \\item After a Card is used, discard it.\n"
@@ -180,7 +181,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:48
+#: sections/deckbuilding.tex:46
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\vfill\n"
@@ -194,60 +195,8 @@ msgstr ""
 "\\hfill{\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/coin.png}}\n"
 "\n"
 
-#. type: multicols*
-#: sections/deckbuilding.tex:53
-#, fuzzy, no-wrap
-#| msgid "Searching Example"
-msgid ""
-"{2}\n"
-"    \\subsection*{Searching Example}\n"
-"\n"
-msgstr "Beispiel einer\\\\Durchsuchen-Aktion"
-
-#. type: multicols*
-#: sections/deckbuilding.tex:55
-#, fuzzy, no-wrap
-#| msgid "\\textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during the previous Game Round, enabling him to now use his Spell Book Token to purchase additional Spells.}"
-msgid ""
-"    \\textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during the previous Game Round, enabling him to now use his Spell Book Token to purchase additional Spells.}\n"
-"\n"
-msgstr "\\textit{Bob spielt Deemer, den Hexer, und besitzt eine Magiergilde seit der vorherigen Runde, die ihm erlaubt mithilfe des Zauberbuchmarkers neue Zauber zu kaufen.}"
-
-#. type: multicols*
-#: sections/deckbuilding.tex:64
-#, fuzzy, no-wrap
-#| msgid "\\textit{He spends the token and pays the cost of 5 \\svg{gold} indicated on his Town Board, allowing him to \\textbf{Search (2)} the Spell Deck.}\\par \\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par \\filbreak \\textit{He now has the choice of either gaining the top Card of the Spell Card Discard Pile, or drawing the top two Cards of the Spell Deck and gaining one of them.  He is not interested in gaining the Spell Curse, which is on top of the Discard Pile, and instead decides to draw two Cards – a Magic Arrow and a Fireball.} \\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow.png}\\par \\textit{He decides to keep the Fireball, placing it into his hand and discarding the Magic Arrow into the Spell Discard Pile.}"
-msgid ""
-"    \\includegraphics[width=\\linewidth]{\\examples/deemer_receiving_spellbook.png}\\par\n"
-"    \\textit{He spends the token and pays the cost of 5 \\svg{gold} indicated on his Town Board, allowing him to \\textbf{Search (2)} the Spell Deck.}\\par\n"
-"    \\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par\n"
-"    \\filbreak\n"
-"    \\textit{He now has the choice of either gaining the top Card of the Spell Card Discard Pile, or drawing the top two Cards of the Spell Deck and gaining one of them.\n"
-"        He is not interested in gaining the Spell Curse, which is on top of the Discard Pile, and instead decides to draw two Cards – a Magic Arrow and a Fireball.}\n"
-"    \\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow.png}\\par\n"
-"    \\textit{He decides to keep the Fireball, placing it into his hand and discarding the Magic Arrow into the Spell Discard Pile.}\n"
-"\n"
-msgstr "\\textit{Er nutzt den Marker und bezahlt die auf seinem Stadttableau angegebenen 5 \\svg{gold}, um die Aktion \\textbf{Durchsuche (2) das Zauber-Deck} durchzuführen.}\\par \\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par \\filbreak \\textit{Er hat nun die Wahl entweder die oberste Karte des Zauber-Ablagestapels zu erhalten oder die obersten 2 Karten des Zauber-Decks zu ziehen und eine davon auf die Hand zu nehmen.  Da er am Zauber Fluch, der oben auf dem Ablagestapel liegt, nicht interessiert ist, zieht er stattdessen zwei Karten – Magischer Pfeil und Feuerball.} \\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow.png}\\par \\textit{Er entscheidet sich dafür, den Feuerball zu behalten und wirft den Magischen Pfeil auf den Zauber-Ablagestapel.}"
-
-#. type: multicols*
-#: sections/deckbuilding.tex:66
-#, no-wrap
-msgid ""
-"    \\vspace*{\\fill}\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/deckbuilding.tex:68
-#, fuzzy, no-wrap
-#| msgid "{\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/fire_magic.png}}"
-msgid ""
-"    \\hfill{\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/fire_magic.png}}\n"
-"\n"
-msgstr "{\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/fire_magic.png}}"
-
 #. type: Plain text
-#: sections/deckbuilding.tex:74
+#: sections/deckbuilding.tex:52
 #, fuzzy
 #| msgid ""
 #| "\\subsection*{\\pagetarget{Ability}{Ability} and \\pagetarget{Statistic}"
@@ -262,7 +211,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:79
+#: sections/deckbuilding.tex:57
 #, fuzzy, no-wrap
 #| msgid ""
 #| "All Ability\\index{Ability Card} and Statistic Cards\\index{Statistic Cards} have a \\textbf{Basic Effect}\\index{Basic Effect} and a stronger \\textbf{Expert} \\svg{expert} \\textbf{Effect}\\index{Expert Effect}, which is shown below the Basic Effect.\n"
@@ -286,7 +235,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:87
+#: sections/deckbuilding.tex:65
 #, fuzzy, no-wrap
 #| msgid "\\bigbreak \\note{11}{ Certain Cards are limited to the Necropolis Faction \\svg{necro-yellow}.  When a non-Necropolis player draws a Necropolis Card\\index{Necropolis Card} from the Ability Deck, they may either discard it and draw a new Card as a replacement or gain it.  Non-Necropolis players \\textbf{cannot use} Faction Specific Cards from their hand in any way besides for effects that discard them.  }"
 msgid ""
@@ -298,12 +247,12 @@ msgid ""
 msgstr "\\bigbreak \\note{11}{ *Einige Karten sind nur für die Nekropolis-Fraktion verwendbar \\svg{necro-yellow}.  Zieht ein Spieler einer anderen Fraktion eine solche Karte\\index{Necropolis Card} vom Fähigkeiten-Deck, darf er sie abwerfen und eine Ersatzkarte ziehen.  Er darf die Karte auch behalten, \\textbf{kann sie aber auf keine andere Art nutzen}, außer zum Abwerfen aufgrund von Effekten anderer Karten.  }"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:94
+#: sections/deckbuilding.tex:72
 msgid "\\columnratio{0.25}"
 msgstr ""
 
 #. type: paracol
-#: sections/deckbuilding.tex:94 sections/deckbuilding.tex:139
+#: sections/deckbuilding.tex:72 sections/deckbuilding.tex:117
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -314,7 +263,7 @@ msgid ""
 msgstr ""
 
 #. type: paracol
-#: sections/deckbuilding.tex:95 sections/deckbuilding.tex:140
+#: sections/deckbuilding.tex:73 sections/deckbuilding.tex:118
 #, fuzzy, no-wrap
 #| msgid ""
 #| "  \\bigskip\n"
@@ -327,7 +276,7 @@ msgstr ""
 "    \\begin{tikzpicture}\n"
 
 #. type: paracol
-#: sections/deckbuilding.tex:112
+#: sections/deckbuilding.tex:90
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/knowledge.png}};\n"
@@ -375,7 +324,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: paracol
-#: sections/deckbuilding.tex:113 sections/deckbuilding.tex:160
+#: sections/deckbuilding.tex:91 sections/deckbuilding.tex:138
 #, fuzzy, no-wrap
 #| msgid ""
 #| "  \\bigskip\n"
@@ -388,7 +337,7 @@ msgstr ""
 "    \\begin{tikzpicture}\n"
 
 #. type: paracol
-#: sections/deckbuilding.tex:128
+#: sections/deckbuilding.tex:106
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/knowledge.png}};\n"
@@ -434,7 +383,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: paracol
-#: sections/deckbuilding.tex:133
+#: sections/deckbuilding.tex:111
 #, no-wrap
 msgid ""
 "      \\medskip\n"
@@ -444,7 +393,7 @@ msgid ""
 msgstr ""
 
 #. type: paracol
-#: sections/deckbuilding.tex:159
+#: sections/deckbuilding.tex:137
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/necromancy_card.png}};\n"
@@ -504,7 +453,7 @@ msgstr ""
 "    \\begin{scriptsize}\n"
 
 #. type: paracol
-#: sections/deckbuilding.tex:175
+#: sections/deckbuilding.tex:153
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/knowledge.png}};\n"
@@ -550,7 +499,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: paracol
-#: sections/deckbuilding.tex:180
+#: sections/deckbuilding.tex:158
 #, no-wrap
 msgid ""
 "      \\medskip\n"
@@ -560,7 +509,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:196
+#: sections/deckbuilding.tex:174
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{2}\n"
@@ -594,7 +543,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:196 sections/deckbuilding.tex:419
+#: sections/deckbuilding.tex:174 sections/deckbuilding.tex:397
 #: sections/expansion_content.tex:113 sections/expansion_content.tex:160
 #: sections/expansion_content.tex:175 sections/resources.tex:33
 #, no-wrap
@@ -602,7 +551,7 @@ msgid "\\columnbreak"
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:200
+#: sections/deckbuilding.tex:178
 #, fuzzy, no-wrap
 #| msgid "\\pagetarget{spells}{Spell Cards}"
 msgid ""
@@ -612,7 +561,7 @@ msgid ""
 msgstr "\\pagetarget{spells}{Zauberkarten}"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:208
+#: sections/deckbuilding.tex:186
 #, fuzzy, no-wrap
 #| msgid "Spell Cards\\index{Spell Card} have three possible primary effects.  Using the topmost, basic version of the Spell usually has no additional costs.  To access the other effects, you may \\textbf{Empower} a Spell\\index{Empowering Spells} by paying the indicated cost (3) to get a more powerful outcome (4).  You may pay this cost by playing other Cards for their Empower \\svg{empower} effect (e.g. the Spell Power Statistic) before casting the Spell.  All Spell Cards also have an alternative bottom (5) \\svg{empower} effect.  You cannot preserve the played \\svg{empower}: casting a Spell consumes all the \\svg{empower} played so far, and if you stop playing Cards, the power dissipates.  You may use a cheaper \\svg{empower} effect than what you've paid for, though."
 msgid ""
@@ -627,7 +576,7 @@ msgid ""
 msgstr "Zauberkarten\\index{Zauberkarten} haben drei mögliche primäre Effekte.  Die Nutzung des obersten Basiseffektes hat meist keine weiteren Kosten.  Um einen der beiden stärkeren primären Effekte (4) zu nutzen, muss der Zauber \\textbf{verstärkt}\\index{Zauber verstärken} werden, indem die Kosten des Effektes (3) durch Ausspielen anderer Karten mit Verstärkungseffekt \\svg{empower} (z. B. der Statistikkarte Zauberkraft) bezahlt werden.  Alle Zauber können auch mit ihrem alternativen unteren \\svg{empower}-Effekt (5) gespielt werden, um andere Zauber zu verstärken.  Du darfst eine niedrigere Effektstärke wählen, kannst gespielte \\svg{empower}-Effekte aber nicht aufsparen: Das Abhandeln eines Zaubers verbraucht alle ausgespielten \\svg{empower}-Effekte."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:239
+#: sections/deckbuilding.tex:217
 #, fuzzy, no-wrap
 #| msgid "{ \\centering \\begin{tikzpicture} \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}}; \\draw (-1.3, 2.5) node {\\encircle{1}}; \\draw (-1.8, 0.3) node {\\encircle{2}}; \\draw (-1.1, -1) node {\\encircle{3}}; \\draw (1.1, -1) node {\\encircle{4}}; \\draw (0.8, -2.8) node {\\encircle{5}}; \\end{tikzpicture}\\\\ \\medskip \\footnotesize \\textbf{\\textit{\\textcolor{darkcandyapplered}{Spell Card}}}\\par \\noindent \\begin{minipage}[t]{0.5\\linewidth} \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt] \\item[\\textbf{1.}] Spell Name \\item[\\textbf{2.}] School of Magic \\item[\\textbf{3.}] Cost to Empower \\end{itemize} \\end{minipage} \\begin{minipage}[t]{0.4\\linewidth} \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt] \\item[\\textbf{4.}] Spell Effect \\item[\\textbf{5.}] Alternative\\\\Effect \\end{itemize} \\end{minipage} }"
 msgid ""
@@ -665,7 +614,7 @@ msgid ""
 msgstr "{ \\centering \\begin{tikzpicture} \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{translations/assets/de/spell.png}}; \\draw (-1.3, 2.5) node {\\encircle{1}}; \\draw (-1.8, 0.3) node {\\encircle{2}}; \\draw (-1.1, -1) node {\\encircle{3}}; \\draw (1.1, -1) node {\\encircle{4}}; \\draw (0.8, -2.8) node {\\encircle{5}}; \\end{tikzpicture}\\\\ \\medskip \\footnotesize \\textbf{\\textit{\\textcolor{darkcandyapplered}{Zauberkarte}}}\\par \\noindent \\begin{minipage}[t]{0.5\\linewidth} \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt] \\item[\\textbf{1.}] Name \\item[\\textbf{2.}] Magieschule \\item[\\textbf{3.}] Kosten zum Verstärken \\end{itemize} \\end{minipage} \\begin{minipage}[t]{0.4\\linewidth} \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt] \\item[\\textbf{4.}] Zaubereffekt \\item[\\textbf{5.}] Alternativer\\\\Effekt \\end{itemize} \\end{minipage} }"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:243
+#: sections/deckbuilding.tex:221
 #, fuzzy, no-wrap
 #| msgid "Spells can be gained by Building the Mage Guild\\index{Mage Guild}.  Building it also enables you to use the Spell Book Token\\index{Spell Book Token} for buying additional Spells.  The Token cannot be used during the \\textbf{same Round} when the Guild is constructed. Spells can also be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgid ""
@@ -676,7 +625,7 @@ msgid ""
 msgstr "Zauber können beim Bau der Magiergilde\\index{Magiergilde} erhalten werden.  Außerdem ermöglicht die Magiergilde den Kauf neuer Zauber durch Nutzung des Zauberbuchmarkers\\index{Zauberbuchmarker}.  Der Marker kann nicht in \\textbf{derselben Runde} genutzt werden, in der die Magiergilde gebaut wurde. Zauber können in Allianz- oder kooperativen Szenarien auch \\pagelink{Trading}{gehandelt} werden."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:245
+#: sections/deckbuilding.tex:223
 #, fuzzy, no-wrap
 #| msgid "During Combat, \\textbf{only one Spell Card} may be played by each player \\textbf{per Combat Round}."
 msgid ""
@@ -685,7 +634,7 @@ msgid ""
 msgstr "Jeder Spieler darf im Kampf \\textbf{nur einen Zauber} \\textbf{pro Kampfrunde} ausspielen."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:248
+#: sections/deckbuilding.tex:226
 #, fuzzy, no-wrap
 #| msgid "\\columnbreak When you use an effect which lets you cast a Spell from somewhere other than your hand (such as directly from the Spell Deck), place that Spell into your Discard Pile after casting it."
 msgid ""
@@ -695,7 +644,7 @@ msgid ""
 msgstr "\\columnbreak Wenn ein Effekt dir erlaubt, einen Zauber auszuspielen, den du nicht auf der Hand hältst (sondern z. B. direkt vom Zauberdeck), wirf diesen Zauber anschließend auf deinen Ablagestapel."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:254
+#: sections/deckbuilding.tex:232
 #, fuzzy, no-wrap
 #| msgid ""
 #| "  \\begin{center}\n"
@@ -718,7 +667,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:260
+#: sections/deckbuilding.tex:238
 #, fuzzy, no-wrap
 #| msgid "All Spell Cards belong to one School of Magic\\index{Schools of Magic}: either Air, Fire, Earth or Water.  Spells with one School symbol on them are called \\textbf{Basic Spells}\\index{Basic Spell}, while Spells with four identical symbols are called \\textbf{Expert Spells}\\index{Expert Spell}.  \\textbf{Magic Arrow} is a Basic Spell; when casting the \\textbf{Magic Arrow}, you must select which School it belongs to.  By default there's no difference, but certain game effects can refer to specific Schools and to Basic/Expert Spells."
 msgid ""
@@ -731,7 +680,7 @@ msgid ""
 msgstr "Alle Zauber gehören einer Magieschule\\index{Magieschulen}: Luft, Feuer, Erde oder Wasser. Zauber mit nur einem Schulen-Symbol sind \\textbf{Basiszauber}\\index{Basiszauber}, während solche mit vier identischen Symbolen \\textbf{Expertenzauber}\\index{Expertenzauber} sind. Der \\textbf{Magische Pfeil} gilt als Basiszauber: beim Ausspielen musst du die Magieschule festlegen, der er angehören soll.  Magieschulen haben standardmäßig keine Auswirkungen, aber andere Effekte können sich auf Magieschulen oder auf Basis/Expertenzauber beziehen."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:288
+#: sections/deckbuilding.tex:266
 #, fuzzy, no-wrap
 #| msgid "\\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire.png} \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Fire}}} \\endminipage \\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_water.png} \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Water}}} \\endminipage \\hfill\\allowbreak\\bigbreak \\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_air.png} \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Air}}} \\endminipage \\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_earth.png} \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Earth}}} \\endminipage \\bigbreak"
 msgid ""
@@ -766,7 +715,7 @@ msgid ""
 msgstr "\\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire.png} \\textit{\\textbf{\\textcolor{darkcandyapplered}{Feuermagie}}} \\endminipage \\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_water.png} \\textit{\\textbf{\\textcolor{darkcandyapplered}{Wassermagie}}} \\endminipage \\hfill\\allowbreak\\bigbreak \\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_air.png} \\textit{\\textbf{\\textcolor{darkcandyapplered}{Luftmagie}}} \\endminipage \\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_earth.png} \\textit{\\textbf{\\textcolor{darkcandyapplered}{Erdmagie}}} \\endminipage \\bigbreak"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:291
+#: sections/deckbuilding.tex:269
 #, fuzzy, no-wrap
 #| msgid "\\pagetarget{Specialty}{Hero Specialty Cards}"
 msgid ""
@@ -776,7 +725,7 @@ msgid ""
 msgstr "\\pagetarget{Specialty}{Sonderfähigkeitskarten\\\\der Helden}"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:296
+#: sections/deckbuilding.tex:274
 #, fuzzy, no-wrap
 #| msgid "Hero Specialty Cards\\index{Specialty Card} are gained from \\pagelink{Level}{Level ups}.  Each Main Hero has a unique set of Specialty Cards.  While some of these Cards have effects which resemble Spell Cards and even make use of \\svg{empower}, Specialty Cards are their \\textbf{own unique category of Cards}.  For example, the limit of 1 Spell per Combat Round doesn't apply to Specialty Cards."
 msgid ""
@@ -788,7 +737,7 @@ msgid ""
 msgstr "Sonderfähigkeitskarten\\index{Sonderfähigkeitskarten} erhalten die Spieler beim \\pagelink{Level}{Stufenaufstieg}.  Jeder Hauptheld hat ein einzigartiges Set an Sonderfähigkeiten.  Auch wenn die Effekte dieser Karten oft Zauberkarten ähneln, z. B. \\svg{empower} oder Magieschulen verwenden, sind Sonderfähigkeiten eine \\textbf{eigene Kategorie an Karten}. Zum Beispiel gilt das Zauberlimit pro Kampfrunde nicht für Sonderfähigkeiten."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:304
+#: sections/deckbuilding.tex:282
 #, fuzzy, no-wrap
 #| msgid "{ \\medskip \\centering \\includegraphics[width=0.7\\linewidth]{\\cards/specialty.png}\\\\ \\medskip \\footnotesize\\textit{A Level 4 Specialty Card, belonging to Catherine the Knight.} }"
 msgid ""
@@ -803,7 +752,7 @@ msgid ""
 msgstr "{ \\medskip \\centering \\includegraphics[width=0.66\\linewidth]{translations/assets/de/specialty.png}\\\\ \\medskip \\footnotesize\\textit{Sonderfähigkeit Stufe IV von Ritterin Catherine} }"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:312
+#: sections/deckbuilding.tex:290
 #, fuzzy, no-wrap
 #| msgid "{ \\medskip \\centering \\includegraphics[width=0.7\\linewidth]{\\cards/specialty2.png}\\\\ \\medskip \\footnotesize\\textit{A Level 1 Specialty Card, belonging to Deemer the Warlock. It uses \\svg{empower}, but does NOT belong to any School of Magic, despite the imagery.} }"
 msgid ""
@@ -818,7 +767,7 @@ msgid ""
 msgstr "{ \\medskip\\centering \\includegraphics[width=0.66\\linewidth]{translations/assets/de/specialty2.png}\\\\ \\medskip \\footnotesize\\textit{Sonderfähigkeit Stufe I von Hexer Deemer. Sie benötigt \\svg{empower}, zählt aber trotz des grafischen Designs NICHT zur Erdmagie-Schule.} }"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:315
+#: sections/deckbuilding.tex:293
 #, fuzzy, no-wrap
 #| msgid "\\pagetarget{Artifact}{Artifact} Cards"
 msgid ""
@@ -828,7 +777,7 @@ msgid ""
 msgstr "\\pagetarget{Artifact}{Artefakt}karten"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:323
+#: sections/deckbuilding.tex:301
 #, fuzzy, no-wrap
 #| msgid "Artifact Cards\\index{Artifact Card} have a top and bottom effect. When you play one, you must \\textbf{choose which effect} you are using.  They are divided into 3 Levels: Minor, Major, and Relic, with different border color.  These Levels relate to the overall Power of the Card and may be referenced when resolving certain effects or during Scenario setup.  Otherwise, all Artifact Cards are normally shuffled together to form the Artifact Deck regardless of their Level.  They are gained through map exploration.\\par Artifacts can be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgid ""
@@ -843,7 +792,7 @@ msgid ""
 msgstr "Artefaktkarten\\index{Artefaktkarten} haben einen oberen und einen unteren Effekt. Beim Ausspielen musst du \\textbf{den Effekt wählen}, den du nutzen willst.  Artefakte haben drei Seltenheitsstufen (erkennbar an der Rahmenfarbe): Gewöhnliche, seltene und Relikt-Artefakte.  Diese Stufen beziehen sich auf die Effektstärken der Karten und können für Effekte anderer Karten oder spezifische Szenarioregeln wichtig sein.  Regulär bilden alle Artefakte (unabhängig der Kategorie) das Artefakt-Deck.  Man erhält sie durch die Erkundungen auf der Abenteuerkarte.\\par Artefakte können in Allianz- oder kooperativen Szenarien \\pagelink{Trading}{gehandelt} werden."
 
 #. type: figure
-#: sections/deckbuilding.tex:324 sections/map_elements.tex:47
+#: sections/deckbuilding.tex:302 sections/map_elements.tex:47
 #: sections/map_elements.tex:266 sections/player_turns.tex:126
 #: sections/setup.tex:9
 #, no-wrap
@@ -851,7 +800,7 @@ msgid "  \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:338
+#: sections/deckbuilding.tex:316
 #, no-wrap
 msgid ""
 "    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
@@ -885,7 +834,7 @@ msgstr ""
 "    \\begin{scriptsize}\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:339 sections/deckbuilding.tex:348
+#: sections/deckbuilding.tex:317 sections/deckbuilding.tex:326
 #: sections/expansion_content.tex:79 sections/expansion_content.tex:429
 #: sections/expansion_content.tex:448 sections/units.tex:70
 #: sections/units.tex:97
@@ -894,7 +843,7 @@ msgid "    \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:347
+#: sections/deckbuilding.tex:325
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/minor_artifact.png}};\n"
@@ -916,7 +865,7 @@ msgstr ""
 "    \\begin{scriptsize}\n"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:365
+#: sections/deckbuilding.tex:343
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}};\n"
@@ -934,7 +883,7 @@ msgstr ""
 "  \\end{center}"
 
 #. type: multicols
-#: sections/deckbuilding.tex:365
+#: sections/deckbuilding.tex:343
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{2}\n"
@@ -968,7 +917,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: center
-#: sections/deckbuilding.tex:372
+#: sections/deckbuilding.tex:350
 msgid ""
 "{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/"
 "diplomats_ring.png}}"
@@ -977,7 +926,7 @@ msgstr ""
 "diplomats_ring.png}}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:377
+#: sections/deckbuilding.tex:355
 #, fuzzy, no-wrap
 #| msgid "\\pagetarget{spells}{Spell Cards}"
 msgid ""
@@ -987,7 +936,7 @@ msgid ""
 msgstr "\\pagetarget{spells}{Zauberkarten}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:382
+#: sections/deckbuilding.tex:360
 #, no-wrap
 msgid ""
 "During setup shuffle 10 of the Spell Scroll Cards into the Artifact Deck.\n"
@@ -998,7 +947,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:393
+#: sections/deckbuilding.tex:371
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}};\n"
@@ -1028,7 +977,7 @@ msgstr ""
 "  \\end{center}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:399
+#: sections/deckbuilding.tex:377
 #, no-wrap
 msgid ""
 "\\vspace*{1em}\n"
@@ -1040,7 +989,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:411
+#: sections/deckbuilding.tex:389
 #, no-wrap
 msgid ""
 "You can play Spells from a Spell Scroll like any other Spell with the following exceptions:\n"
@@ -1055,7 +1004,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:419
+#: sections/deckbuilding.tex:397
 #, no-wrap
 msgid ""
 "{stronghold}\n"
@@ -1068,13 +1017,13 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:421
+#: sections/deckbuilding.tex:399
 #, no-wrap
 msgid "If the last Spell on a Spell Scroll is used or sold, place the Spell Scroll back in its Deck."
 msgstr ""
 
 #. type: center
-#: sections/deckbuilding.tex:426
+#: sections/deckbuilding.tex:404
 #, fuzzy
 #| msgid ""
 #| "{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/"
@@ -1087,7 +1036,7 @@ msgstr ""
 "diplomats_ring.png}}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:429
+#: sections/deckbuilding.tex:407
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{rampart,cove}\n"
@@ -1095,7 +1044,7 @@ msgstr ""
 #| "\n"
 msgid ""
 "{rampart,cove}\n"
-"  \\pagetarget{War Machines}{\\subheader{War Machine Cards}}\n"
+"  \\pagetarget{War Machines}{\\subheader{War Machines}}\n"
 "\n"
 msgstr ""
 "{rampart,cove}\n"
@@ -1103,7 +1052,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:433
+#: sections/deckbuilding.tex:411
 #, no-wrap
 msgid ""
 "  War Machines\\index{War Machines} are permanent Cards that can be bought at either a \\pagelink{Trading Post}{Trading Post} or a \\pagelink{War Machine Factory}{War Machine Factory}.\n"
@@ -1117,7 +1066,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:456
+#: sections/deckbuilding.tex:434
 #, no-wrap
 msgid ""
 "  {\n"
@@ -1165,3 +1114,44 @@ msgstr ""
 "      \\item[\\textbf{4.}] Kosten im Handelsposten\n"
 "    \\end{itemize}\n"
 "  }"
+
+#. type: Plain text
+#: sections/deckbuilding.tex:441
+#, fuzzy
+#| msgid "Searching Example"
+msgid "\\subheader{Searching Example}"
+msgstr "Beispiel einer\\\\Durchsuchen-Aktion"
+
+#. type: multicols*
+#: sections/deckbuilding.tex:443
+#, fuzzy, no-wrap
+#| msgid "\\textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during the previous Game Round, enabling him to now use his Spell Book Token to purchase additional Spells.}"
+msgid ""
+"\\textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during the previous Game Round, enabling him to now use his Spell Book Token to purchase additional Spells.}\n"
+"\n"
+msgstr "\\textit{Bob spielt Deemer, den Hexer, und besitzt eine Magiergilde seit der vorherigen Runde, die ihm erlaubt mithilfe des Zauberbuchmarkers neue Zauber zu kaufen.}"
+
+#. type: multicols*
+#: sections/deckbuilding.tex:452
+#, fuzzy, no-wrap
+#| msgid "\\textit{He spends the token and pays the cost of 5 \\svg{gold} indicated on his Town Board, allowing him to \\textbf{Search (2)} the Spell Deck.}\\par \\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par \\filbreak \\textit{He now has the choice of either gaining the top Card of the Spell Card Discard Pile, or drawing the top two Cards of the Spell Deck and gaining one of them.  He is not interested in gaining the Spell Curse, which is on top of the Discard Pile, and instead decides to draw two Cards – a Magic Arrow and a Fireball.} \\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow.png}\\par \\textit{He decides to keep the Fireball, placing it into his hand and discarding the Magic Arrow into the Spell Discard Pile.}"
+msgid ""
+"\\includegraphics[width=\\linewidth]{\\examples/deemer_receiving_spellbook.png}\\par\n"
+"\\textit{He spends the token and pays the cost of 5 \\svg{gold} indicated on his Town Board, allowing him to \\textbf{Search (2)} the Spell Deck.}\\par\n"
+"\\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par\n"
+"\\filbreak\n"
+"\\textit{He now has the choice of either gaining the top Card of the Spell Card Discard Pile, or drawing the top two Cards of the Spell Deck and gaining one of them.\n"
+"He is not interested in gaining the Spell Curse, which is on top of the Discard Pile, and instead decides to draw two Cards – a Magic Arrow and a Fireball.}\n"
+"\\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow.png}\\par\n"
+"\\textit{He decides to keep the Fireball, placing it into his hand and discarding the Magic Arrow into the Spell Discard Pile.}\n"
+"\n"
+msgstr "\\textit{Er nutzt den Marker und bezahlt die auf seinem Stadttableau angegebenen 5 \\svg{gold}, um die Aktion \\textbf{Durchsuche (2) das Zauber-Deck} durchzuführen.}\\par \\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par \\filbreak \\textit{Er hat nun die Wahl entweder die oberste Karte des Zauber-Ablagestapels zu erhalten oder die obersten 2 Karten des Zauber-Decks zu ziehen und eine davon auf die Hand zu nehmen.  Da er am Zauber Fluch, der oben auf dem Ablagestapel liegt, nicht interessiert ist, zieht er stattdessen zwei Karten – Magischer Pfeil und Feuerball.} \\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow.png}\\par \\textit{Er entscheidet sich dafür, den Feuerball zu behalten und wirft den Magischen Pfeil auf den Zauber-Ablagestapel.}"
+
+#. type: multicols*
+#: sections/deckbuilding.tex:456
+#, fuzzy, no-wrap
+#| msgid "{\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/fire_magic.png}}"
+msgid ""
+"\\hfill{\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/fire_magic.png}}\n"
+"\n"
+msgstr "{\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/fire_magic.png}}"
