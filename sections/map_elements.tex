@@ -35,9 +35,9 @@ Solid yellow lines on a Field's edge cannot be passed through.
 \begin{itemize}
   \footnotesize
   \item[\textbf{1.}] Starting Map Tiles: I
-  \item[\textbf{2.}] Far Map Tiles: II-III
-  \item[\textbf{3.}] Near Map Tiles: IV-V
-  \item[\textbf{4.}] Center Map Tiles: VI-VII
+  \item[\textbf{2.}] Far Map Tiles: II--III
+  \item[\textbf{3.}] Near Map Tiles: IV--V
+  \item[\textbf{4.}] Center Map Tiles: VI--VII
 \end{itemize}
 
 \separator
@@ -120,8 +120,8 @@ You may always rotate Map Tiles when placing or revealing them.
   \includegraphics[width=\textwidth]{\images/placement.png}
   \begin{tikzpicture}[overlay]
     \node at (5, 10) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{You cannot add this Tile here}}}}};
-    \node at (5, 1.4) {\footnotesize{\textbf{\textit{\textcolor{cadmiumgreen}{You can add this Tile here, because it will}}}}};
-    \node at (3.9, 1) {\footnotesize{\textbf{\textit{\textcolor{cadmiumgreen}{be adjacent to two other Tiles}}}}};
+    \node at (1, 1.4) [anchor=west] {\footnotesize{\textbf{\textit{\textcolor{cadmiumgreen}{You can add this Tile here, because it will}}}}};
+    \node at (1, 1) [anchor=west] {\footnotesize{\textbf{\textit{\textcolor{cadmiumgreen}{be adjacent to two other Tiles}}}}};
   \end{tikzpicture}
 \end{figure*}
 
@@ -244,6 +244,7 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 Location Tokens are added by several expansions to the game.
 They are placed either separately or on specific Fields of the Map Tile when a Hero discovers one with associated Token, and overwrite the original Location they are placed on.
 Tokens cannot be placed on other Location Tokens, Blocked Fields, or Fields containing Locations required to meet any of the Scenario's victory conditions.
+The effects of Visiting the Location Tokens are described in \pagelink{Location Token}{All Map Locations}.
 
 \begin{expansion}[before=\vspace*{0pt}]{navalbattles}
   \subsection*{Creature Bank Tokens}
