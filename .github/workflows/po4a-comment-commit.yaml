@@ -32,6 +32,28 @@ jobs:
         with:
           permission: write
 
+      - name: Check if PR was approved
+        id: check_approvals
+        run: |
+          PR_NUMBER="${{ github.event.issue.number }}"
+          APPROVALS=$(gh pr view $PR_NUMBER --json reviews --jq '
+            [.reviews[] |
+             select(.state=="APPROVED") |
+             select(.authorAssociation=="COLLABORATOR" or .authorAssociation=="OWNER") |
+             .author.login] | unique | length
+          ')
+
+          echo "Number of approvals: $APPROVALS"
+          echo "approvals=$APPROVALS" >> $GITHUB_OUTPUT
+
+          if [[ "$APPROVALS" -lt 1 ]]; then
+            echo "⛔ The PR is not approved."
+            gh pr comment ${{ github.event.issue.number }} --body "⛔ This PR needs at least 1 approval before running this action."
+            exit 1
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+
       - name: Run po4a
         uses: qwrtln/po4a-action@v1.3
         with:
@@ -64,6 +86,6 @@ jobs:
       - name: Comment about non-membership status
         if: ${{ failure() && steps.write_access.conclusion == 'failure' }}
         run: |
-          gh pr comment ${{ steps.comment-branch.outputs.head_ref }} --body "⛔ Sorry, only members with write access are allowed to run this action!"
+          gh pr comment ${{ steps.comment-branch.outputs.head_ref }} --body "⛔ Only members with write access are allowed to run this action."
         env:
           GH_TOKEN: ${{ github.token }}
