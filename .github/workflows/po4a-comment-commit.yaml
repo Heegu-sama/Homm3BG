@@ -48,6 +48,7 @@ jobs:
 
           if [[ "$APPROVALS" -lt 1 ]]; then
             echo "⛔ The PR is not approved."
+            gh pr comment ${{ github.event.issue.number }} --body "⛔ This PR needs at least 1 approval before running this action."
             exit 1
           fi
         env:
@@ -79,13 +80,6 @@ jobs:
             echo 'Nothing to commit, `po4a` run was clean ✨' >> body.txt
           fi
           gh pr comment ${{ steps.comment-branch.outputs.head_ref }} --body-file body.txt
-        env:
-          GH_TOKEN: ${{ github.token }}
-
-      - name: Comment about missing approvals
-        if: ${{ failure() && steps.check_approvals.conclusion == 'failure' }}
-        run: |
-          gh pr comment ${{ github.event.issue.number }} --body "⛔ This PR needs at least 1 approval before running this action."
         env:
           GH_TOKEN: ${{ github.token }}
 
