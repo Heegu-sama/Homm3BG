@@ -1,7 +1,9 @@
-\addsection{Rule variants}{\spells/misfortune.png}
+% !TeX spellcheck = en_US
+\addsection{Rule Variants}{\spells/clone.png}
+
 \begin{multicols*}{2}
 You may modify the rules to increase or decrease the game's difficulty, or change how the game flows.
-Here are suggestions by game developers:
+These are suggestions from the game developers.
 
 \bigskip
 \subheader{Chaos cards}
@@ -14,18 +16,21 @@ Even if you use Knowledge card to return a spell to your hand, the spell is stil
 
 \bigskip
 \subheader{Neutral army}
-We recommend choosing this additional setting when there are no Heroes with unit-oriented Special Abilities in the game!
-
 When you use a Population token to \textbf{Recruit} units, instead of \textbf{Recruiting} them normally, for every Dwelling you have, draw 2 corresponding Neutral Unit cards.
 You can \textbf{Recruit} any number of these units if you \svg{pay} their \svg{recruit} costs.
 Discard all Units that were not Recruited.
+
+\textbf{Note:} This variant is recommended only when there are no Heroes with unit-oriented Special Abilities in the game.
+
+\vspace*{\fill}
+\begin{center}
+  \transparent{0.2}\includegraphics[width=0.5\linewidth]{\art/leprechaun.png}
+\end{center}
 \vspace*{\fill}
 
 \columnbreak
 \subheader{Draft start}
 This rule allows you to modify your starting deck by drafting its contents during the game’s setup.
-Recommended for 3+ players.
-
 After choosing your Heroes, instead of creating their normal starting decks, follow the steps below.
 For each chosen Hero, take their Starting Ability card from the Ability deck, and their Level 1 Specialty card and set them aside.
 
@@ -42,43 +47,49 @@ At this point, a Might Hero’s deck should consist of 18 cards, and a Magic Her
 
 Each player selects 7 cards from their deck (discarding the rest) and adds them to the two cards they set aside at the beginning.
 Now, every player has their drafted deck of 9 cards ready.
-% TODO: Is 9 cards the whole deck, or each player starts with 9 cards in hand?
+
+\textbf{Note:} This variant is recommended for 3+ players.
 
 \columnbreak
 \subheader{Split Artifact and Spell Decks}\pagetarget{Split Artifact and Spell Decks}{}
 
 \textbf{Note:} Split Decks are often used in \pagelink{Tournament Mode}{Tournament Mode}.
 
-During Setup, split the Artifact deck by \pagelink{Artifact}{their level} into 3 separate decks: Minor, Major and Relic.
-Afterwards split the Spell Deck into 2 separate Decks for \pagelink{Schools of Magic}{Basic and Expert Spells}.
+During Setup, split Artifact cards by \pagelink{Artifact}{their rarity} into 3 separate decks: Minor, Major and Relic.
+Afterwards, split the Spell Deck into 2 separate Decks for \pagelink{Schools of Magic}{Basic and Expert Spells}.
 Discard the top Card of each of the five Decks to form their Discard Pile.
 
-Each time you gain an Artifact Card or a Spell Card \textbf{from Visiting a Map Location}, it depends on your visiting Hero's position on the Map to which decks you have access to, shown at the table below.
-Draw new Cards or perform the Search(X) action only from one of the available Decks.
-If several Decks are available, you can freely choose.
+  Each time you gain an Artifact Card or a Spell Card \textbf{from Visiting a Map Location}, perform Search (X) action or draw a card from one of the available Decks depending on your Hero's position on the Map, according to the the table below.
+If several Decks are available, choose one.
 
-\hommtable{12}{
-    \small
-    \begin{tabularx}{\linewidth}{>{\hsize=0.2\hsize\linewidth=\hsize}X
+\begin{table}[H]
+\hommtable{15}{
+    \centering
+    \medskip
+    \textbf{Deck availability}\\
+    \bigskip
+    \begin{tabularx}{0.95\linewidth}{>{\hsize=0.25\hsize\linewidth=\hsize}X
             >{\hsize=0.34\hsize\linewidth=\hsize}X
             >{\hsize=0.32\hsize\linewidth=\hsize}X
         }
-        \darkcell[1.2]{Hero's\\ Position} & \darkcell[1.2]{Artifact\\ Deck} & \darkcell[1.2]{Spell\\ Deck} \\
+        \darkcell[1.2]{Hero's\\ Position} & \darkcell[1.2]{Artifact\\ Decks} & \darkcell[1.2]{Spell\\ Decks} \\
         \darkcell[1.2]{Tiles I, II--III} &
         \lightcell[1.2]{Minor} &
         \lightcell[1.2]{Basic} \\
         \darkcell[1.2]{Tiles IV--V} &
-        \lightcell[1.2]{Major\\ or Minor} &
-        \lightcell[1.2]{Expert\\ or Basic} \\
-        \darkcell[1.2]{Tiles VI--VII} &
-        \lightcell[1.2]{Relic, Major or Minor} &
-        \lightcell[1.2]{Expert or Basic} \\
+        \lightcell[1.2]{Minor\\ Major} &
+        \lightcell[1.2]{Basic\\ Expert} \\
+        \darkcell[1.6]{Tiles VI--VII} &
+        \lightcell[1.6]{Minor\\ Major\\  Relic} &
+        \lightcell[1.6]{Basic\\ Expert} \\
     \end{tabularx}
 }
+\end{table}
 
 If you gain an Artifact or a Spell \textbf{outside of a Map Location} (e.g. by buying a Spell in a Mage Guild), \textbf{only your Main Hero's position} is relevant for choosing from the available Decks.
 % clarification: https://discord.com/channels/740870068178649108/897475192677355560/1201813535857057822 Or  https://discord.com/channels/740870068178649108/897475192677355560/1201802322624122930
 
+\vspace*{\fill}
 \columnbreak
 \subheader{Gold pool}
 This alternative rule for building and managing your army changes the dynamic of multiplayer clash games, improving the experience, particularly in games with an odd number of players.
@@ -99,10 +110,19 @@ When this happens, return the ``discount card'' to your hand.
 \end{multicols*}
 
 \clearpage
-\subheader{Other rule customizations}
 
-\hommtable{34}{
+\vspace*{-3.4em}
+\begin{table}[H]
+\hommtable{38}{
+  \centering
+  \textbf{Optional Rules Table}\\
+  \phantomsection\addcontentsline{toc}{subsection}{Optional Rules Table}%
   \small
+  {
+    \iftoggle{noartbackground}{}{\color{white}}
+    You may modify the rules to increase or decrease the game's difficulty.\\
+  }
+  \bigskip
   \begin{tabularx}{\linewidth}{>{\hsize=0.3\hsize\linewidth=\hsize}X
                                >{\hsize=1.667\hsize\linewidth=\hsize}X}
      \darkcell[1.5]{\iftoggle{noartbackground}{}{\color{white}}Game Difficulty Levels} & \darkcell[1.5]{Change to the default rules} \\
@@ -111,7 +131,7 @@ When this happens, return the ``discount card'' to your hand.
      \darkcell[0.8]{Increase} & \lightcell[0.8]{All Treasure and Resource dice only give 1 resource.} \\
      \darkcell[0.8]{Increase} & \lightcell[0.8]{No starting bonus.} \\
      \darkcell[0.8]{Decrease} & \lightcell[0.8]{You start the game with a Secondary Hero.} \\
-     \darkcell[0.8]{Decrease} & \lightcell[0.8]{Every Unit deal at least 1 \svg{damage-yellow} during an attack.} \\
+     \darkcell[0.8]{Decrease} & \lightcell[0.8]{Every Unit deals at least 1 \svg{damage-yellow} during an attack.} \\
      \darkcell[0.8]{Decrease} & \lightcell[0.8]{All Mines and Settlements provide double income.} \\
      \darkcell[1.2]{Decrease} & \lightcell[1.2]{You may exchange your resources at any time, the Trading Post becomes \textbf{Visitable} and draws you 1 Card from the Artifact Deck.} \\
      \darkcell[0.8]{Decrease} & \lightcell[0.8]{Extending Combat no longer costs any MP.} \\
@@ -122,5 +142,6 @@ When this happens, return the ``discount card'' to your hand.
      \darkcell[1.2]{Variant} & \lightcell[1.2]{The Cards that would normally go to your hand now go immediately to your discard pile instead.} \\
   \end{tabularx}
 }
+\end{table}
 
 \framedimage[\linewidth]{\art/devil.jpg}
