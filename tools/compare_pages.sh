@@ -11,7 +11,8 @@ help() {
 
     Mandatory Arguments:
       -l, --language <language>     Specify the language for comparison (en, de, es, fr, pl, ru, ua, cs, ...).
-      -r, --range <range>           Provide comma-separated list of pages or range of pages you want to compare.
+      -r, --range <range>           Provide comma-separated list of pages or range of pages you want to compare,
+                                    with optional target page where the range was moved to.
 
     Optional Arguments:
       -p, --printable               Compares your build against 'printable' build.
