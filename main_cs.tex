@@ -7,7 +7,6 @@
 \usepackage{fontspec}
 
 \def\sections{sections/translated/cs}
-\def\lang_header_adjustment{-8px}
 \newcommand\subsectionspacing{
   \titlespacing*{\subsection}{0em}{0.9em}{0.2em}
 }
@@ -22,49 +21,14 @@
     BoldItalicFont = *-BoldItalic
   ]
 
-\newcommand{\versionlabel}{Verze}
-\newcommand{\versionwarning}{Toto je nepublikovaná verze vyrobená z GitHub commitu}
-
-\newcommand{\intro}{
-  Jedná se o komunitní projekt, který má \href{https://github.com/Heegu-sama/Homm3BG}{GitHub repozitář}.
-  Kdokoliv může přispívat, provádět změny a opravovat chyby.
-  Pokud chcete pouze zanechat zpětnou vazbu, učiňte tak prosím v původním \href{https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project}{BoardGameGeek vlákně}.
-}
-\newcommand{\pageshorthand}{s.}
-
-\newcommand{\heegusquote}{
-  \textit{Dělám to z lásky k poznávání her a touhy porozumět jejich složitosti.}
-  \\
-  {\small — Heegu}
-}
-
-\newcommand{\qrgithub}{Naskenuj pro otevření \textbf{GitHub} repozitáře.}
-\newcommand{\qrbgg}{Naskenuj pro otevření \textbf{BoardGameGeek} vlákna.}
-
 \newcommand{\sectionheadertext}[1]{
   {
     \color{antiquewhite} \section*{\MakeUppercase{\textbf{\liberation #1}}}
   }
 }
 
-\title{\includegraphics[width=6cm]{\images/title.png}\\Revidovaná pravidla}
 \newcommand{\notefont}[0]{\liberation\selectfont}
-
-\newcommand{\expansiontext}[1]{%
-  \stringswitch{#1}{
-    % {tower}{...}
-    % {rampart}{...}
-    % {fortress}{...}
-    % {inferno}{...}
-    % {stronghold}{...}
-    % {conflux}{...}
-    % {cove}{...}
-    % {battlefield}{...}
-    % {navalbattles}{...}
-    % {stretchgoals2}{...}
-  }{#1 \mbox{expansion}}%
-}
 
 \input{metadata.tex}
 
-% TEST_SUBSTRING=zanechat zpětnou vazbu
+% TEST_SUBSTRING=Dělám to z lásky

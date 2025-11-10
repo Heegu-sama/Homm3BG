@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-08-18 23:00+0200\n"
+"POT-Creation-Date: 2025-10-13 10:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,34 +18,25 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
-#: sections/combat.tex:7 sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/difficulty.tex:7 sections/expansion_content.tex:5
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:117
-#: sections/map_elements.tex:79 sections/map_elements.tex:125
-#: sections/player_turns.tex:7 sections/resources.tex:7
-#: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:59 sections/town.tex:7 sections/trading.tex:7
-#: sections/units.tex:5 sections/units.tex:198
+#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
+#: sections/combat.tex:302 sections/credits.tex:10 sections/deckbuilding.tex:7
+#: sections/deckbuilding.tex:52 sections/deckbuilding.tex:441
+#: sections/difficulty.tex:7 sections/expansion_content.tex:491
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:85
+#: sections/map_elements.tex:133 sections/player_turns.tex:7
+#: sections/resources.tex:7 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:59 sections/town.tex:5
+#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:46
+#: sections/units.tex:203
 #, no-wrap
 msgid ""
 "{2}\n"
 "\n"
 msgstr ""
 
-#. type: multicols
-#: sections/all_map_locations.tex:53 sections/all_map_locations.tex:235
-#: sections/credits.tex:36 sections/expansion_content.tex:192
-#: sections/game_modes.tex:30 sections/map_elements.tex:189
-#: sections/scenario_end.tex:23 sections/units.tex:136
-#, no-wrap
-msgid ""
-"\\columnbreak\n"
-"\n"
-msgstr ""
-
 #. type: multicols*
-#: sections/all_map_locations.tex:62 sections/trading.tex:27
-#: sections/units.tex:216 sections/units.tex:220
+#: sections/all_map_locations.tex:62 sections/deckbuilding.tex:379
+#: sections/trading.tex:27 sections/units.tex:222 sections/units.tex:226
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -53,40 +44,29 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/credits.tex:38 sections/credits.tex:42
-#: sections/expansion_content.tex:190 sections/setup.tex:121
-#: sections/town.tex:30 sections/town.tex:36 sections/units.tex:134
-#, no-wrap
-msgid ""
-"\\vspace*{\\fill}\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/deckbuilding.tex:48 sections/player_turns.tex:58
-#: sections/units.tex:40
-#, no-wrap
-msgid ""
-"\\clearpage\n"
-"\n"
-msgstr ""
-
-#. type: multicols
-#: sections/deckbuilding.tex:62 sections/deckbuilding.tex:80
-#: sections/deckbuilding.tex:112 sections/deckbuilding.tex:260
-#: sections/deckbuilding.tex:269 sections/units.tex:66 sections/units.tex:93
+#: sections/deckbuilding.tex:317 sections/deckbuilding.tex:326
+#: sections/expansion_content.tex:79 sections/expansion_content.tex:429
+#: sections/expansion_content.tex:448 sections/units.tex:70
+#: sections/units.tex:97
 #, no-wrap
 msgid "    \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/expansion_content.tex:176 sections/map_elements.tex:166
-#: sections/map_elements.tex:175 sections/map_elements.tex:248
-#: sections/map_elements.tex:281 sections/player_turns.tex:40
-#: sections/units.tex:227
+#: sections/map_elements.tex:177 sections/map_elements.tex:186
+#: sections/map_elements.tex:260 sections/map_elements.tex:293
+#: sections/player_turns.tex:50 sections/units.tex:233
 #, no-wrap
 msgid ""
 "\\bigskip\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/player_turns.tex:58 sections/units.tex:41
+#, no-wrap
+msgid ""
+"\\clearpage\n"
 "\n"
 msgstr ""
 
@@ -110,7 +90,7 @@ msgid ""
 "Units should be always kept on their correct side when moved or inspected.\\par\n"
 "A player's Unit Deck may have any number of Units, but \\textbf{only up to 5 Units} can be selected to fight during \\pagelink{Combatsetup}{Combat Setup}.\n"
 "If a Unit is defeated in Combat, \\textbf{discard it} from your Unit Deck.\\par\n"
-"Units may be Recruited\\index{Recruiting} and Reinforced\\index{Reinforcing} by flipping the Population Token\\index{Population Token} and paying the Unit's Recruitment \\svg{recruit} or Reinforcement \\svg{reinforce} cost.\n"
+"Units of your Faction may be Recruited\\index{Recruiting} and Reinforced\\index{Reinforcing} by flipping the Population Token\\index{Population Token} and paying the Unit's Recruitment \\svg{recruit} or Reinforcement \\svg{reinforce} cost.\n"
 "When you do so, you can instantly Recruit and Reinforce \\textbf{any number} of times, provided you have enough Resources and the prerequisite Buildings to do so.\\par\n"
 "\\textbf{Recruiting} a Unit requires that your Town has a Dwelling of that Unit's Level (\\svg{bronze}\\svg{silver}\\svg{golden}).\n"
 "\\textbf{Reinforcing} requires that your Town has a Citadel in addition to a Dwelling of that Unit's Level.\\par\n"
@@ -132,7 +112,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/units.tex:38
+#: sections/units.tex:39
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -144,20 +124,17 @@ msgid ""
 "    1.32\\linewidth\n"
 "  \\fi\n"
 "}{1.2\\linewidth}]{\\art/gorgone.png}}\n"
+"\\vspace*{2em}\n"
 "\n"
 msgstr ""
 
-#. type: multicols
-#: sections/units.tex:44
-#, no-wrap
-msgid ""
-"{2}\n"
-"\\subsection*{Unit Card Anatomy}\n"
-"\n"
-msgstr ""
-
-#. type: multicols
+#. type: Plain text
 #: sections/units.tex:46
+msgid "\\subheader{Unit Card Anatomy}"
+msgstr ""
+
+#. type: multicols
+#: sections/units.tex:48
 #, no-wrap
 msgid ""
 "\\vspace{0pt}\n"
@@ -165,7 +142,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:57
+#: sections/units.tex:59
 #, no-wrap
 msgid ""
 "\\includegraphics[height=30px]{\\images/attack.png} \\textbf{Attack} – The amount of damage this Unit deals when it attacks.\\par\n"
@@ -182,17 +159,19 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:61
+#: sections/units.tex:65
 #, no-wrap
 msgid ""
-"\\vfill\n"
+"\\vspace*{\\fill}\n"
 "\\hspace{-2em}\n"
-"{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/behemoth.png}}\n"
+"{\\transparent{0.2}\\includegraphics[width=1.1\\linewidth]{\\art/behemoth.png}}\n"
+"\\vspace*{\\fill}\n"
+"\\columnbreak\n"
 "\n"
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:65
+#: sections/units.tex:69
 #, no-wrap
 msgid ""
 "\\begin{multicols*}{2}\n"
@@ -202,7 +181,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:92
+#: sections/units.tex:96
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/unit-few.png}};\n"
@@ -234,7 +213,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:117
+#: sections/units.tex:121
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/unit-pack.png}};\n"
@@ -262,7 +241,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:119
+#: sections/units.tex:123
 #, no-wrap
 msgid ""
 "\\bigbreak\n"
@@ -270,7 +249,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:132
+#: sections/units.tex:136
 #, no-wrap
 msgid ""
 "Most Units have a \\textbf{special ability}\\index{Special Ability}:\\par\n"
@@ -289,10 +268,21 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:148
+#: sections/units.tex:138
+#, no-wrap
+msgid "\\vspace*{\\fill}"
+msgstr ""
+
+#. type: Plain text
+#: sections/units.tex:153
+msgid "\\pagetarget{Unittype}{\\subheader{Unit Types}}"
+msgstr ""
+
+#. type: multicols
+#: sections/units.tex:153
 #, no-wrap
 msgid ""
-"\\subsection*{\\pagetarget{Unittype}{Unit Types}}\n"
+"{2}\n"
 "There are three types of Units:\n"
 "\\begin{itemize}\n"
 "  \\item \\textbf{Ground}\\index{Ground Units} \\svg{unit_ground} Units may move up to 3 spaces and then attack an adjacent enemy.\n"
@@ -307,7 +297,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:160
+#: sections/units.tex:165
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Neutral Units}{Neutral Units}}\n"
@@ -325,18 +315,18 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:165
+#: sections/units.tex:170
 #, no-wrap
 msgid ""
 "\\note{8}{\n"
 "  Having a \\svg{golden} Dwelling built in your Town allows you to draw an \\svg{azure} Unit Card using the basic (top) effect of a Diplomacy Ability Card.\n"
-"  This effect does not apply to Dungeon's Portal of Summoning.\n"
+"  This effect does not apply to other cases, like Dungeon's Portal of Summoning.\n"
 "}\n"
 "\n"
 msgstr ""
 
 #. type: Plain text
-#: sections/units.tex:193
+#: sections/units.tex:198
 msgid ""
 "\\hommtable{13}{ \\begin{tabularx}{\\linewidth}"
 "{>{\\hsize=0.181\\hsize\\linewidth=\\hsize}X "
@@ -361,7 +351,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/units.tex:210
+#: sections/units.tex:215
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{-11mm}]{inferno}\n"
@@ -379,15 +369,16 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/units.tex:212
+#: sections/units.tex:218
 #, no-wrap
 msgid ""
-"\\subsection*{Gameplay Example}\n"
+"\\columnbreak\n"
+"\\subheader{Gameplay Example}\n"
 "\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/units.tex:214
+#: sections/units.tex:220
 #, no-wrap
 msgid ""
 "\\textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons, Empowering \\svg{empower} the Spell by 2 with the Expert  Effect \\svg{expert} of a Power Card.}\n"
@@ -395,7 +386,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/units.tex:218
+#: sections/units.tex:224
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/alamar_empowering_magic_arrow.png}\n"
@@ -403,7 +394,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/units.tex:225
+#: sections/units.tex:231
 #, no-wrap
 msgid ""
 "\\textit{The Skeletons take 3 damage \\svg{damage} from the Spell.\n"
@@ -414,7 +405,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/units.tex:229
+#: sections/units.tex:235
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/skeletons_flipped.png}\n"

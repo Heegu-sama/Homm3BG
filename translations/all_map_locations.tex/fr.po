@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-09-19 08:22+0000\n"
+"POT-Creation-Date: 2025-11-10 09:39+0000\n"
 "PO-Revision-Date: 2024-04-11 09:25+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -18,24 +18,25 @@ msgstr ""
 
 #. type: Plain text
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/combat.tex:5 sections/components.tex:5 sections/credits.tex:6
-#: sections/deckbuilding.tex:5 sections/difficulty.tex:5
-#: sections/map_elements.tex:5 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/components.tex:5 sections/credits.tex:6 sections/deckbuilding.tex:5
+#: sections/difficulty.tex:5 sections/map_elements.tex:5
+#: sections/player_turns.tex:5 sections/resources.tex:5 sections/setup.tex:5
 #: sections/trading.tex:5
 msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
 msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
-#: sections/combat.tex:7 sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/deckbuilding.tex:146 sections/difficulty.tex:7
-#: sections/expansion_content.tex:5 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:117 sections/map_elements.tex:79
-#: sections/map_elements.tex:125 sections/player_turns.tex:7
+#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
+#: sections/combat.tex:302 sections/credits.tex:10 sections/deckbuilding.tex:7
+#: sections/deckbuilding.tex:52 sections/deckbuilding.tex:441
+#: sections/difficulty.tex:7 sections/expansion_content.tex:491
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:85
+#: sections/map_elements.tex:133 sections/player_turns.tex:7
 #: sections/resources.tex:7 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:59 sections/town.tex:7
-#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:198
+#: sections/scenario_end.tex:5 sections/setup.tex:59 sections/town.tex:5
+#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:46
+#: sections/units.tex:203
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -52,9 +53,12 @@ msgstr "\\addsection{Liste des Sites}{\\skills/earth_magic.png}"
 
 #. type: multicols*
 #: sections/all_map_locations.tex:9
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{Symbols on the Map}\n"
+#| "\n"
 msgid ""
-"\\subsection*{Symbols on the Map}\n"
+"\\subheader{Symbols on the Map}\n"
 "\n"
 msgstr ""
 "\\subsection*{Symboles du Plateau}\n"
@@ -198,12 +202,10 @@ msgstr ""
 "\\end{itemize}\n"
 "\n"
 
-#. type: multicols
+#. type: multicols*
 #: sections/all_map_locations.tex:53 sections/all_map_locations.tex:235
-#: sections/credits.tex:36 sections/deckbuilding.tex:156
-#: sections/expansion_content.tex:192 sections/game_modes.tex:30
-#: sections/map_elements.tex:189 sections/scenario_end.tex:23
-#: sections/units.tex:136
+#: sections/credits.tex:36 sections/deckbuilding.tex:59
+#: sections/game_modes.tex:30 sections/scenario_end.tex:23
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -237,8 +239,8 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:62 sections/deckbuilding.tex:370
-#: sections/trading.tex:27 sections/units.tex:216 sections/units.tex:220
+#: sections/all_map_locations.tex:62 sections/deckbuilding.tex:379
+#: sections/trading.tex:27 sections/units.tex:222 sections/units.tex:226
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -646,7 +648,7 @@ msgstr ""
 #| "\n"
 msgid ""
 "{2}\n"
-"\\subsection*{Towns}\n"
+"\\subheader{Towns}\n"
 "\\textbf{Towns} are always located in the center of a Starting (I) Tile.\n"
 "Flagging an enemy Town prevents their Secondary Heroes from spawning there and Main Heroes from moving there if defeated.\n"
 "Flagging a Town can cause \\pagelink{End}{Player Elimination}, and Scenarios typically have special rewards for Flagging them.\n"
@@ -725,7 +727,7 @@ msgstr ""
 #| "All mines have the \\svg{ongoing} symbol and a picture of the Resource they produce next to it.\n"
 #| "\n"
 msgid ""
-"\\subsection*{Mines}\\pagetarget{Mines}\n"
+"\\pagetarget{Mines}{\\subheader{Mines}}\n"
 "{\\textbf{Mines}}\\index{Mines} are Flaggable Fields which increase a specific resource's income when Flagged.\n"
 "If you are the first one to Flag a mine, it also immediately provides you with its income.\n"
 "All mines have the \\svg{ongoing} symbol and a picture of the Resource they produce next to it.\n"
@@ -798,6 +800,11 @@ msgid ""
 "Rampart, Fortress, and Inferno.}"
 msgstr ""
 
+#. type: Plain text
+#: sections/all_map_locations.tex:276
+msgid "\\pagetarget{Settlements}{\\subheader{Settlements}}"
+msgstr ""
+
 #. type: multicols
 #: sections/all_map_locations.tex:276
 #, fuzzy, no-wrap
@@ -813,7 +820,6 @@ msgstr ""
 #| "\n"
 msgid ""
 "{2}\n"
-"\\subsection*{Settlements}\\pagetarget{Settlements}{}\n"
 "\\textbf{Settlements}\\index{Settlement} act as a spawn point for Secondary Heroes, and as a place for Main Heroes to move to when defeated.\n"
 "They also prevent \\pagelink{End}{Player Elimination}.\n"
 "When you Flag a Settlement, choose one of the following options:\n"
@@ -862,8 +868,8 @@ msgstr ""
 "\\end{center}\n"
 "\n"
 
-#. type: multicols
-#: sections/all_map_locations.tex:284
+#. type: multicols*
+#: sections/all_map_locations.tex:284 sections/combat.tex:254
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -875,7 +881,7 @@ msgstr ""
 #: sections/all_map_locations.tex:288
 #, no-wrap
 msgid ""
-"\\begin{expansion}[before=\\vspace*{-11mm}]{inferno}\n"
+"\\begin{expansion}{inferno}\n"
 "  \\subsection*{Random Town}\\pagetarget{Random Town}{}\n"
 "  \\framedimage[\\linewidth]{\\map_locations/random_town.jpg}\n"
 "\n"
@@ -934,9 +940,11 @@ msgid ""
 "Faction.  }"
 msgstr ""
 
-#. type: subsection{#2}
+#. type: Plain text
 #: sections/all_map_locations.tex:324
-msgid "\\pagetarget{Revisitable Fields}{Revisitable Fields}"
+#, fuzzy
+#| msgid "\\pagetarget{Revisitable Fields}{Revisitable Fields}"
+msgid "\\pagetarget{Revisitable Fields}{\\subheader{Revisitable Fields}}"
 msgstr "\\pagetarget{Revisitable Fields}{Sites Ouverts}"
 
 #. type: figure
@@ -1229,9 +1237,11 @@ msgstr ""
 "[overlay]\n"
 "  \\node at (12, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\art/griffin.png}};"
 
-#. type: subsection{#2}
+#. type: Plain text
 #: sections/all_map_locations.tex:421
-msgid "\\pagetarget{Other Fields}{Other Fields}"
+#, fuzzy
+#| msgid "\\pagetarget{Other Fields}{Other Fields}"
+msgid "\\pagetarget{Other Fields}{\\subheader{Other Fields}}"
 msgstr "\\pagetarget{Other Fields}{Autres Sites}"
 
 #. type: figure
@@ -1821,7 +1831,7 @@ msgid ""
 "    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
 "      Take a Spell Scroll Card from its Deck and place it next to your Hero Card.\n"
 "      Draw two Spells and place them face-down at the Spell Scroll Card.\n"
-"      You can use these Spells \\protect\\pagelink{Spell Scrolls Cards}{with some restrictions}.\n"
+"      You can use these Spells \\protect\\pagelink{Spell Scroll Cards}{with some restrictions}.\n"
 "    }\n"
 "  \\end{minipage}\\hfill\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
@@ -1911,20 +1921,21 @@ msgstr ""
 "[overlay]\n"
 "  \\node at (12, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\art/griffin.png}};"
 
-#. type: subsection{#2}
+#. type: Plain text
 #: sections/all_map_locations.tex:670
-msgid "\\pagetarget{Location Token}{Location Tokens}"
+msgid "\\pagetarget{Location Token}{\\subheader{Location Tokens}}"
 msgstr ""
 
 #. type: Plain text
-#: sections/all_map_locations.tex:672
+#: sections/all_map_locations.tex:673
 msgid ""
-"The following Fields are found on Location Tokens only, not on regular Map "
-"Tiles."
+"The following Fields are found on single-hex Location Tokens only, not on "
+"regular Map Tiles.  The placement of the Location Tokens is described in "
+"\\pagelink{Discover Location Tokens}{Map Elements}."
 msgstr ""
 
 #. type: figure
-#: sections/all_map_locations.tex:695
+#: sections/all_map_locations.tex:696
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[H]\n"
@@ -1984,7 +1995,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:720
+#: sections/all_map_locations.tex:722
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[H]\n"
@@ -2058,7 +2069,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:748
+#: sections/all_map_locations.tex:751
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[H]\n"
@@ -2135,7 +2146,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: table*
-#: sections/all_map_locations.tex:817
+#: sections/all_map_locations.tex:814
 #, no-wrap
 msgid ""
 "[!hb]\n"
@@ -2155,48 +2166,42 @@ msgid ""
 "      & \\darkcell[1.2]{Reward}\n"
 "      & \\darkcell[1.2]{Extra reward for X Stacked Units} \\\\\n"
 "\n"
-"      \\darkcell[3.3]{\n"
-"        Imp Cache \\\\ \\medskip\n"
+"      \\darkcell[3.3]{Imp Cache\\\\\\medskip\n"
 "        \\squareimage{0.6\\linewidth}{\\map_locations/creature-banks/imp_cache.jpg}\n"
 "      }\n"
 "      & \\lightcellleft[3.3]{4 × Imps}\n"
 "      & \\lightcellleft[3.3]{3 \\svg{gold}}\n"
 "      & \\lightcellleft[3.3]{X \\svg{gold}} \\\\\n"
 "\n"
-"      \\darkcell[3.7]{\n"
-"        Dwarven\\\\Treasury \\\\ \\medskip\n"
+"      \\darkcell[3.7]{Dwarven\\\\Treasury\\\\\\medskip\n"
 "        \\squareimage[2.6pt]{0.6\\linewidth}{\\map_locations/creature-banks/dwarven_treasury.jpg}\n"
 "      }\n"
 "      & \\lightcellleft[3.7]{4 × Dwarves}\n"
 "      & \\lightcellleft[3.7]{7 \\svg{gold}}\n"
 "      & \\lightcellleft[3.7]{3 × X \\svg{gold}} \\\\\n"
 "\n"
-"      \\darkcell[3.7]{\n"
-"        Griffin\\\\Conservatory \\\\ \\medskip\n"
+"      \\darkcell[3.7]{Griffin\\\\Conservatory\\\\\\medskip\n"
 "        \\squareimage{0.6\\linewidth}{\\map_locations/creature-banks/griffin_conservatory.jpg}\n"
 "      }\n"
 "      & \\lightcellleft[3.7]{4 × Griffins}\n"
 "      & \\lightcellleft[3.7]{1 × Griffins}\n"
 "      & \\lightcellleft[3.7]{Griffins are Stacked, if there were at least 2 Stacked Units.} \\\\\n"
 "\n"
-"      \\darkcell[3.7]{\n"
-"        Dragon Fly\\\\Hive \\\\ \\medskip\n"
+"      \\darkcell[3.7]{Dragon Fly\\\\Hive\\\\\\medskip\n"
 "        \\squareimage{0.6\\linewidth}{\\map_locations/creature-banks/dragon_fly_hive.jpg}\n"
 "      }\n"
 "      & \\lightcellleft[3.7]{4 × Dragon Flies}\n"
 "      & \\lightcellleft[3.7]{1 × Dragon Flies}\n"
 "      & \\lightcellleft[3.7]{Dragon Flies are Stacked, if there were at least 2 Stacked Units.} \\\\\n"
 "\n"
-"      \\darkcell[3.3]{\n"
-"        Shipwreck \\\\ \\medskip\n"
+"      \\darkcell[3.3]{Shipwreck\\\\\\medskip\n"
 "        \\squareimage{0.6\\linewidth}{\\map_locations/creature-banks/shipwreck.jpg}\n"
 "      }\n"
 "      & \\lightcellleft[3.3]{4 × Wraiths}\n"
 "      & \\lightcellleft[3.3]{\\svg{morale_negative-yellow} and 5 \\svg{gold}}\n"
 "      & \\lightcellleft[3.3]{2 × X \\svg{gold} and Search~(X) the Artifact Deck.} \\\\\n"
 "\n"
-"      \\darkcell[3.3]{\n"
-"        Derelict Ship \\\\ \\medskip\n"
+"      \\darkcell[3.3]{Derelict Ship\\\\\\medskip\n"
 "        \\squareimage{0.6\\linewidth}{\\map_locations/creature-banks/derelict_ship.jpg}\n"
 "      }\n"
 "      & \\lightcellleft[3.3]{4 × Water Elementals}\n"
@@ -2208,7 +2213,7 @@ msgid ""
 msgstr ""
 
 #. type: table*
-#: sections/all_map_locations.tex:885
+#: sections/all_map_locations.tex:876
 #, no-wrap
 msgid ""
 "[!hb]\n"
@@ -2228,48 +2233,42 @@ msgid ""
 "      & \\darkcell[1.2]{Reward}\n"
 "      & \\darkcell[1.2]{Extra reward for X Stacked Units} \\\\\n"
 "\n"
-"      \\darkcell[3.4]{\n"
-"        Crypt \\\\ \\medskip\n"
+"      \\darkcell[3.4]{Crypt \\\\\\medskip\n"
 "        \\squareimage[2.6pt]{0.6\\linewidth}{\\map_locations/creature-banks/crypt.jpg}\n"
 "      }\n"
 "      & \\lightcellleft[3.4]{1 × Skeletons\\\\1 × Zombies\\\\1 × Wraiths\\\\1 × Vampires}\n"
 "      & \\lightcellleft[3.4]{6 \\svg{gold}}\n"
 "      & \\lightcellleft[3.4]{2 × X \\svg{gold}} \\\\\n"
 "\n"
-"      \\darkcell[3.4]{\n"
-"        Pyramid \\\\ \\medskip\n"
+"      \\darkcell[3.4]{Pyramid\\\\\\medskip\n"
 "        \\squareimage{0.6\\linewidth}{\\map_locations/creature-banks/pyramid.jpg}\n"
 "      }\n"
 "      & \\lightcellleft[3.4]{2 × Gold Golems\\\\2 × Diamond Golems}\n"
 "      & \\lightcellleft[3.4]{Search (5) the Spell Deck.}\n"
 "      & \\lightcellleft[3.4]{Remove 1 Spell, Ability, or Artifact Card from your \\svg{hand-yellow} or Discard Pile, then Search (5) the appropriate Deck -- up to X times.} \\\\\n"
 "\n"
-"      \\darkcell[3.4]{\n"
-"        Medusa Store \\\\ \\medskip\n"
+"      \\darkcell[3.4]{Medusa Store\\\\\\medskip\n"
 "        \\squareimage[3pt]{0.6\\linewidth}{\\map_locations/creature-banks/medusa_store.jpg}\n"
 "      }\n"
 "      & \\lightcellleft[3.4]{4 × Medusas}\n"
 "      & \\lightcellleft[3.4]{6 \\svg{gold}, 1 \\svg{valuablegreater}}\n"
 "      & \\lightcellleft[3.4]{3 × X \\svg{gold}, X \\svg{valuablegreater}} \\\\\n"
 "\n"
-"      \\darkcell[3.4]{\n"
-"        Naga Bank\\\\ \\medskip\n"
+"      \\darkcell[3.4]{Naga Bank\\\\\\medskip\n"
 "        \\squareimage[-1pt]{0.6\\linewidth}{\\map_locations/creature-banks/naga_bank.jpg}\n"
 "      }\n"
 "      & \\lightcellleft[3.4]{4 × Nagas}\n"
 "      & \\lightcellleft[3.4]{6 \\svg{gold}, 2 \\svg{valuablegreater}}\n"
 "      & \\lightcellleft[3.4]{6 × X \\svg{gold}, X \\svg{valuablegreater}} \\\\\n"
 "\n"
-"      \\darkcell[3.7]{\n"
-"        Cyclops\\\\Stockpile \\\\ \\medskip\n"
+"      \\darkcell[3.7]{Cyclops\\\\Stockpile\\\\\\medskip\n"
 "        \\squareimage[4pt]{0.6\\linewidth}{\\map_locations/creature-banks/cyclops_stockpile.jpg}\n"
 "      }\n"
 "      & \\lightcellleft[3.7]{4 × Cyclops}\n"
 "      & \\lightcellleft[3.7]{8 \\svg{building_materials}, 2 \\svg{valuablegreater}}\n"
 "      & \\lightcellleft[3.7]{2 × X \\svg{building_materials}, X \\svg{valuablegreater}} \\\\\n"
 "\n"
-"      \\darkcell[3.4]{\n"
-"        Dragon Utopia \\\\ \\medskip\n"
+"      \\darkcell[3.4]{Dragon Utopia\\\\\\medskip\n"
 "        \\squareimage{0.6\\linewidth}{\\map_locations/creature-banks/dragon_utopia.jpg}\n"
 "      }\n"
 "      & \\lightcellleft[3.4]{1 × Black Dragons\\\\1 × Gold Dragons\\\\1 × Faerie Dragons\\\\1 × Crystal Dragons}\n"

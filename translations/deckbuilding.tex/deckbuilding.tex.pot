@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-09-19 08:22+0000\n"
+"POT-Creation-Date: 2025-10-13 11:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,36 +18,35 @@ msgstr ""
 
 #. type: Plain text
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/combat.tex:5 sections/components.tex:5 sections/credits.tex:6
-#: sections/deckbuilding.tex:5 sections/difficulty.tex:5
-#: sections/map_elements.tex:5 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/setup.tex:5 sections/town.tex:5
+#: sections/components.tex:5 sections/credits.tex:6 sections/deckbuilding.tex:5
+#: sections/difficulty.tex:5 sections/map_elements.tex:5
+#: sections/player_turns.tex:5 sections/resources.tex:5 sections/setup.tex:5
 #: sections/trading.tex:5
 msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
 msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
-#: sections/combat.tex:7 sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/deckbuilding.tex:146 sections/difficulty.tex:7
-#: sections/expansion_content.tex:5 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:117 sections/map_elements.tex:79
-#: sections/map_elements.tex:125 sections/player_turns.tex:7
+#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
+#: sections/combat.tex:302 sections/credits.tex:10 sections/deckbuilding.tex:7
+#: sections/deckbuilding.tex:52 sections/deckbuilding.tex:441
+#: sections/difficulty.tex:7 sections/expansion_content.tex:491
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:85
+#: sections/map_elements.tex:133 sections/player_turns.tex:7
 #: sections/resources.tex:7 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:59 sections/town.tex:7
-#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:198
+#: sections/scenario_end.tex:5 sections/setup.tex:59 sections/town.tex:5
+#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:46
+#: sections/units.tex:203
 #, no-wrap
 msgid ""
 "{2}\n"
 "\n"
 msgstr ""
 
-#. type: multicols
+#. type: multicols*
 #: sections/all_map_locations.tex:53 sections/all_map_locations.tex:235
-#: sections/credits.tex:36 sections/deckbuilding.tex:156
-#: sections/expansion_content.tex:192 sections/game_modes.tex:30
-#: sections/map_elements.tex:189 sections/scenario_end.tex:23
-#: sections/units.tex:136
+#: sections/credits.tex:36 sections/deckbuilding.tex:59
+#: sections/game_modes.tex:30 sections/scenario_end.tex:23
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -55,11 +54,20 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:62 sections/deckbuilding.tex:370
-#: sections/trading.tex:27 sections/units.tex:216 sections/units.tex:220
+#: sections/all_map_locations.tex:62 sections/deckbuilding.tex:379
+#: sections/trading.tex:27 sections/units.tex:222 sections/units.tex:226
 #, no-wrap
 msgid ""
 "\\medskip\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/combat.tex:33 sections/combat.tex:149 sections/credits.tex:38
+#: sections/credits.tex:42 sections/deckbuilding.tex:454
+#, no-wrap
+msgid ""
+"\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
 
@@ -122,25 +130,14 @@ msgstr ""
 #, no-wrap
 msgid ""
 "\\vfill\n"
-"\\hfill{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/quicksand.png}}\n"
-"\n"
+"\\hfill{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/quicksand.png}}"
 msgstr ""
 
-#. type: multicols*
-#: sections/deckbuilding.tex:48 sections/player_turns.tex:58
-#: sections/units.tex:40
-#, no-wrap
+#. type: Plain text
+#: sections/deckbuilding.tex:52
 msgid ""
-"\\clearpage\n"
-"\n"
-msgstr ""
-
-#. type: multicols
-#: sections/deckbuilding.tex:50
-#, no-wrap
-msgid ""
-"\\subsection*{\\pagetarget{Statistic}{Statistic} and \\pagetarget{Ability}{Ability} Cards}\n"
-"\n"
+"\\pagetarget{Statistic}{}\\pagetarget{Ability}{} \\subheader{Statistic and "
+"Ability Cards}"
 msgstr ""
 
 #. type: multicols
@@ -151,195 +148,192 @@ msgid ""
 "Whenever you play a Statistic or Ability Card, you must choose which effect you are using.\n"
 "The number of \\svg{expert} Effects you can use each Round is limited by your Main Hero's \\pagelink{Level}{Level}.\n"
 "Track the number of uses you have in any suitable manner, such as by moving Black Cubes on and off your Hero Card.\\par\n"
-"\\vspace*{\\fill}\n"
-"\\columnbreak\n"
 "\n"
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:62
+#: sections/deckbuilding.tex:65
 #, no-wrap
 msgid ""
-"\\begin{expansion}[before=\\vspace*{-2em}]{inferno}\n"
-"    \\subsection*{\\pagetarget{Empowered Statistic}{Empowered} Statistic Cards}\\index{Empowered Statistic Card}\n"
-"    These Cards are more powerful versions of the normal Statistic Cards.\n"
-"    They have only one effect which is identical to the normal Statistic's Expert effect, but does not require using your \\svg{expert}.\\par\n"
-"\n"
-msgstr ""
-
-#. type: multicols
-#: sections/deckbuilding.tex:66
-#, no-wrap
-msgid ""
-"    \\medskip\n"
-"    These Cards can be gained via certain game effects, such as Visiting a \\pagelink{Star Axis}{Star Axis}.\n"
-"\\end{expansion}"
-msgstr ""
-
-#. type: multicols
-#: sections/deckbuilding.tex:71
-#, no-wrap
-msgid ""
-"{4}\n"
-"  \\footnotesize\n"
-"  \\begin{center}\n"
-"    \\begin{scriptsize}\n"
-msgstr ""
-
-#. type: multicols
-#: sections/deckbuilding.tex:72 sections/deckbuilding.tex:90
-#: sections/deckbuilding.tex:110 sections/deckbuilding.tex:127
-#, no-wrap
-msgid "        \\begin{tikzpicture}\n"
-msgstr ""
-
-#. type: multicols
-#: sections/deckbuilding.tex:87
-#, no-wrap
-msgid ""
-"            \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/knowledge.png}};\n"
-"            \\draw (0.75, 0.4) node {\\encircle{1}};\n"
-"            \\draw (-1, -0.5) node {\\encircle{2}};\n"
-"            \\draw (-1, -1.5) node {\\encircle{3}};\n"
-"        \\end{tikzpicture}\n"
-"    \\end{scriptsize}\n"
-"    \\textbf{\\textit{\\textcolor{darkcandyapplered}{Statistic Card}}}\n"
-"  \\end{center}\n"
-"  \\vspace*{\\fill}\n"
-"  \\begin{itemize}\n"
-"    \\item[\\textbf{1.}] Name\n"
-"    \\item[] \\phantom{\\ldots}\n"
-"  \\end{itemize}\n"
-"  \\columnbreak\n"
-"\n"
-msgstr ""
-
-#. type: multicols
-#: sections/deckbuilding.tex:89 sections/deckbuilding.tex:109
-#: sections/deckbuilding.tex:126
-#, no-wrap
-msgid ""
-"  \\begin{center}\n"
-"    \\begin{scriptsize}\n"
-msgstr ""
-
-#. type: multicols
-#: sections/deckbuilding.tex:107
-#, no-wrap
-msgid ""
-"            \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/necromancy_card.png}};\n"
-"            \\draw (0.75, 0.4) node {\\encircle{1}};\n"
-"            \\draw (-1, -0.5) node {\\encircle{2}};\n"
-"            \\draw (-1, -1.5) node {\\encircle{3}};\n"
-"            \\draw (1.5, -0.8) node {\\encircle{4}};\n"
-"            \\draw (1.5, -1.9) node {\\encircle{4}};\n"
-"        \\end{tikzpicture}\n"
-"    \\end{scriptsize}\n"
-"    \\textbf{\\textit{\\textcolor{darkcandyapplered}{Ability Card}}}\n"
-"  \\end{center}\n"
-"  \\vspace*{\\fill}\n"
-"  \\begin{itemize}\n"
-"    \\item[\\textbf{2.}] Basic Effect\n"
-"    \\item[] \\phantom{\\ldots}\n"
-"  \\end{itemize}\n"
-"  \\columnbreak\n"
-"\n"
-msgstr ""
-
-#. type: multicols
-#: sections/deckbuilding.tex:124
-#, no-wrap
-msgid ""
-"            \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/empowered-knowledge.png}};\n"
-"            \\draw (0.75, 1.9) node {\\encircle{1}};\n"
-"            \\draw (-1, -1.5) node {\\encircle{2}};\n"
-"        \\end{tikzpicture}\n"
-"    \\end{scriptsize}\n"
-"    \\textbf{\\textit{\\textcolor{darkcandyapplered}{Empowered Statistic Card}}}\n"
-"  \\end{center}\n"
-"  \\vspace*{\\fill}\n"
-"  \\begin{itemize}\n"
-"    \\item[\\textbf{3.}] Expert Effect\n"
-"    \\item[] \\phantom{\\ldots}\n"
-"  \\end{itemize}\n"
-"  \\columnbreak\n"
-"\n"
-msgstr ""
-
-#. type: multicols
-#: sections/deckbuilding.tex:140
-#, no-wrap
-msgid ""
-"            \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/empowered-ability.png}};\n"
-"            \\draw (0.75, 1.9) node {\\encircle{1}};\n"
-"            \\draw (-1, -1.5) node {\\encircle{2}};\n"
-"            \\draw (1.5, -1.9) node {\\encircle{4}};\n"
-"        \\end{tikzpicture}\n"
-"    \\end{scriptsize}\n"
-"    \\textbf{\\textit{\\textcolor{darkcandyapplered}{Empowered\\\\Ability Card}}}\n"
-"  \\end{center}\n"
-"  \\begin{itemize}\n"
-"    \\item[\\textbf{4.}] Necropolis-specific Card\n"
-"  \\end{itemize}\n"
-"  \\vspace*{\\fill}"
-msgstr ""
-
-#. type: tikzpicture
-#: sections/deckbuilding.tex:146
-#, no-wrap
-msgid ""
-"[remember picture, overlay]\n"
-"  \\node[rotate=-28, opacity=0.15] at ([xshift=0em, yshift=-6em]current page.center) {\\includegraphics[width=0.45\\linewidth]{\\art/frost_ring.png}};"
-msgstr ""
-
-#. type: multicols*
-#: sections/deckbuilding.tex:154
-#, no-wrap
-msgid ""
-"\\vspace*{\\fill}\n"
 "\\note{11}{\n"
 "  Certain Cards are limited to the Necropolis Faction \\svg{necro-yellow}.\n"
 "  When a non-Necropolis player draws a Necropolis Card\\index{Necropolis Card} from the Ability Deck, they may either discard it and draw a new Card as a replacement or gain it.\n"
 "  Non-Necropolis players \\textbf{cannot use} Faction Specific Cards from their hand in any way besides for effects that discard them.\n"
-"}\n"
-"\\vspace*{\\fill}\n"
+"}"
+msgstr ""
+
+#. type: Plain text
+#: sections/deckbuilding.tex:72
+msgid "\\columnratio{0.25}"
+msgstr ""
+
+#. type: paracol
+#: sections/deckbuilding.tex:72 sections/deckbuilding.tex:117
+#, no-wrap
+msgid ""
+"{2}\n"
+"  \\begin{expansion}[title=\\phantom{\\textbf{\\tiny{foo}}}, overlay={}]{}\n"
+"    \\footnotesize\n"
+"    \\begin{center}\n"
+"      \\begin{scriptsize}\n"
+msgstr ""
+
+#. type: paracol
+#: sections/deckbuilding.tex:73 sections/deckbuilding.tex:118
+#, no-wrap
+msgid "          \\begin{tikzpicture}\n"
+msgstr ""
+
+#. type: paracol
+#: sections/deckbuilding.tex:90
+#, no-wrap
+msgid ""
+"              \\draw (0, 0) node {\\includegraphics[width=3.5cm]{\\cards/knowledge.png}};\n"
+"              \\draw (0.75, 0.4) node {\\encircle{1}};\n"
+"              \\draw (-1, -0.5) node {\\encircle{2}};\n"
+"              \\draw (-1, -1.5) node {\\encircle{3}};\n"
+"          \\end{tikzpicture}\n"
+"      \\end{scriptsize}\n"
+"      \\textbf{\\textit{\\textcolor{darkcandyapplered}{Statistic Card\\\\\\phantom{Blah}}}}\n"
+"    \\end{center}\n"
+"  \\end{expansion}\n"
+"  \\switchcolumn\n"
+"  \\begin{expansion}{inferno}\n"
+"    \\hspace*{-2.3mm}\n"
+"    \\begin{minipage}[t]{0.3\\linewidth}\n"
+"      \\footnotesize\n"
+"      \\vspace*{0mm}\n"
+"      \\begin{center}\n"
+"        \\begin{scriptsize}\n"
+msgstr ""
+
+#. type: paracol
+#: sections/deckbuilding.tex:91 sections/deckbuilding.tex:138
+#, no-wrap
+msgid "            \\begin{tikzpicture}\n"
+msgstr ""
+
+#. type: paracol
+#: sections/deckbuilding.tex:106
+#, no-wrap
+msgid ""
+"                \\draw (0, 0) node {\\includegraphics[width=3.5cm]{\\cards/empowered-knowledge.png}};\n"
+"                \\draw (0.75, 1.9) node {\\encircle{1}};\n"
+"                \\draw (-1, -1.5) node {\\encircle{2}};\n"
+"            \\end{tikzpicture}\n"
+"        \\end{scriptsize}\n"
+"        \\textbf{\\textit{\\textcolor{darkcandyapplered}{Empowered\\\\Statistic Card}}}\n"
+"      \\end{center}\n"
+"    \\end{minipage}\n"
+"    \\hfill\n"
+"    \\begin{minipage}[t]{0.65\\linewidth}\n"
+"      \\vspace*{0mm}\n"
+"      \\subsection*{\\pagetarget{Empowered Statistic}{Empowered} Statistic Cards}\\index{Empowered Statistic Card}\n"
+"      These Cards are more powerful versions of the normal Statistic Cards.\n"
+"      They have only one effect which is identical to the normal Statistic's Expert effect, but does not require using your \\svg{expert}.\\par\n"
 "\n"
 msgstr ""
 
-#. type: multicols*
-#: sections/deckbuilding.tex:162
+#. type: paracol
+#: sections/deckbuilding.tex:111
 #, no-wrap
 msgid ""
-"\\vspace*{\\fill}\n"
-"\\begin{expansion}[before=\\vspace*{-11mm}]{navalbattles}\n"
-"    \\subsection*{\\pagetarget{Empowered Ability}{Empowered} Ability Cards}\\index{Empowered Statistic Card}\n"
-"    The Empowered Ability Cards work very similarly to Empowered Statistic Cards.\n"
-"    Their only effect corresponds to the Expert effect of normal Ability Cards, but without requiring you to use your \\svg{expert}.\n"
+"      \\medskip\n"
+"      These Cards can be gained via certain game effects, such as Visiting a \\pagelink{Star Axis}{Star Axis}.\n"
+"    \\end{minipage}\n"
+"  \\end{expansion}"
+msgstr ""
+
+#. type: paracol
+#: sections/deckbuilding.tex:137
+#, no-wrap
+msgid ""
+"              \\draw (0, 0) node {\\includegraphics[width=3.5cm]{\\cards/necromancy_card.png}};\n"
+"              \\draw (0.75, 0.4) node {\\encircle{1}};\n"
+"              \\draw (-1, -0.5) node {\\encircle{2}};\n"
+"              \\draw (-1, -1.5) node {\\encircle{3}};\n"
+"              \\draw (1.5, -0.8) node {\\encircle{4}};\n"
+"              \\draw (1.5, -1.9) node {\\encircle{4}};\n"
+"          \\end{tikzpicture}\n"
+"      \\end{scriptsize}\n"
+"      \\textbf{\\textit{\\textcolor{darkcandyapplered}{Ability Card\\\\\\phantom{Blah}}}}\n"
+"    \\end{center}\n"
+"  \\end{expansion}\n"
+"  \\switchcolumn\n"
+"  \\begin{expansion}{navalbattles}\n"
+"    \\hspace*{-2.3mm}\n"
+"    \\begin{minipage}[t]{0.3\\linewidth}\n"
+"      \\footnotesize\n"
+"      \\vspace*{0mm}\n"
+"      \\begin{center}\n"
+"        \\begin{scriptsize}\n"
+msgstr ""
+
+#. type: paracol
+#: sections/deckbuilding.tex:153
+#, no-wrap
+msgid ""
+"              \\draw (0, 0) node {\\includegraphics[width=3.5cm]{\\cards/empowered-ability.png}};\n"
+"              \\draw (0.75, 1.9) node {\\encircle{1}};\n"
+"              \\draw (-1, -1.5) node {\\encircle{2}};\n"
+"              \\draw (1.5, -1.9) node {\\encircle{4}};\n"
+"            \\end{tikzpicture}\n"
+"        \\end{scriptsize}\n"
+"        \\textbf{\\textit{\\textcolor{darkcandyapplered}{Empowered\\\\Ability Card}}}\n"
+"      \\end{center}\n"
+"    \\end{minipage}\n"
+"    \\hfill\n"
+"    \\begin{minipage}[t]{0.65\\linewidth}\n"
+"      \\subsection*{\\pagetarget{Empowered Ability}{Empowered} Ability Cards}\\index{Empowered Statistic Card}\n"
+"      The Empowered Ability Cards work very similarly to Empowered Statistic Cards.\n"
+"      Their only effect corresponds to the Expert effect of normal Ability Cards, but without requiring you to use your \\svg{expert}.\n"
 "\n"
 msgstr ""
 
-#. type: multicols*
-#: sections/deckbuilding.tex:168
+#. type: paracol
+#: sections/deckbuilding.tex:158
 #, no-wrap
 msgid ""
-"    \\medskip\n"
-"    These Cards can be gained by spending \\pagelink{Empowered Ability Token}{Empowered Ability Tokens}, which are only available in certain Scenarios (e.~g.~\"Island of Fire\" from the Naval Battles Mission Book).\n"
-"\\end{expansion}\n"
-"\\vspace*{\\fill}\n"
-"\\columnbreak\n"
-"\n"
+"      \\medskip\n"
+"      These Cards can be gained by spending \\pagelink{Empowered Ability Token}{Empowered Ability Tokens}, which are only available in certain Scenarios (e.~g.~``Island of Fire'' from the Naval Battles Mission Book).\n"
+"    \\end{minipage}\n"
+"  \\end{expansion}"
 msgstr ""
 
-#. type: multicols*
-#: sections/deckbuilding.tex:170
+#. type: multicols
+#: sections/deckbuilding.tex:174
 #, no-wrap
 msgid ""
-"\\subsection*{\\pagetarget{spells}{Spell Cards}}\n"
-"\n"
+"{2}\n"
+"\\begin{multicols*}{2}\n"
+"  \\footnotesize\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{1.}] Name\n"
+"    \\item[\\textbf{2.}] Basic Effect\\\\\n"
+"    \\item[\\textbf{3.}] Expert Effect\n"
+"    \\item[\\textbf{4.}] Necropolis-specific Card\n"
+"  \\end{itemize}"
+msgstr ""
+
+#. type: Plain text
+#: sections/deckbuilding.tex:174 sections/deckbuilding.tex:397
+#: sections/expansion_content.tex:113 sections/expansion_content.tex:160
+#: sections/expansion_content.tex:175 sections/resources.tex:33
+#, no-wrap
+msgid "\\columnbreak"
 msgstr ""
 
 #. type: multicols*
 #: sections/deckbuilding.tex:178
+#, no-wrap
+msgid ""
+"{2}\n"
+"\\pagetarget{spells}{\\subheader{Spell Cards}}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/deckbuilding.tex:186
 #, no-wrap
 msgid ""
 "Spell Cards\\index{Spell Card} have three possible primary effects.\n"
@@ -353,7 +347,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:209
+#: sections/deckbuilding.tex:217
 #, no-wrap
 msgid ""
 "{\n"
@@ -390,7 +384,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:213
+#: sections/deckbuilding.tex:221
 #, no-wrap
 msgid ""
 "Spells can be gained by Building the Mage Guild\\index{Mage Guild}.\n"
@@ -400,7 +394,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:215
+#: sections/deckbuilding.tex:223
 #, no-wrap
 msgid ""
 "During Combat, \\textbf{only one Spell Card} may be played by each player \\textbf{per Combat Round}.\n"
@@ -408,7 +402,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:218
+#: sections/deckbuilding.tex:226
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -417,7 +411,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:224
+#: sections/deckbuilding.tex:232
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -429,10 +423,10 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:230
+#: sections/deckbuilding.tex:238
 #, no-wrap
 msgid ""
-"\\subsubsection*{\\pagetarget{Schools of Magic}{Schools of Magic}}\n"
+"\\subsection*{\\pagetarget{Schools of Magic}{Schools of Magic}}\n"
 "All Spell Cards belong to one School of Magic\\index{Schools of Magic}: either Air, Fire, Earth or Water.\n"
 "Spells with one School symbol on them are called \\textbf{Basic Spells}\\index{Basic Spell}, while Spells with four identical symbols are called \\textbf{Expert Spells}\\index{Expert Spell}.\n"
 "\\textbf{Magic Arrow} is a Basic Spell; when casting the \\textbf{Magic Arrow}, you must select which School it belongs to.\n"
@@ -441,7 +435,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:258
+#: sections/deckbuilding.tex:266
 #, no-wrap
 msgid ""
 "\\begin{minipage}[t]{0.48\\textwidth}\n"
@@ -475,16 +469,16 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:261
+#: sections/deckbuilding.tex:269
 #, no-wrap
 msgid ""
 "\\pagebreak\n"
-"\\subsection*{\\pagetarget{Specialty}{Hero Specialty Cards}}\n"
+"\\pagetarget{Specialty}{\\subheader{Hero Specialty Cards}}\n"
 "\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:266
+#: sections/deckbuilding.tex:274
 #, no-wrap
 msgid ""
 "Hero Specialty Cards\\index{Specialty Card} are gained from \\pagelink{Level}{Level ups}.\n"
@@ -495,7 +489,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:274
+#: sections/deckbuilding.tex:282
 #, no-wrap
 msgid ""
 "{\n"
@@ -509,7 +503,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:282
+#: sections/deckbuilding.tex:290
 #, no-wrap
 msgid ""
 "{\n"
@@ -523,15 +517,16 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:284
+#: sections/deckbuilding.tex:293
 #, no-wrap
 msgid ""
-"\\subsection*{\\pagetarget{Artifact}{Artifact} Cards}\n"
+"\\columnbreak\n"
+"\\pagetarget{Artifact}{\\subheader{Artifact Cards}}\n"
 "\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:292
+#: sections/deckbuilding.tex:301
 #, no-wrap
 msgid ""
 "Artifact Cards\\index{Artifact Card} have a top and bottom effect. When you play one, you must \\textbf{choose which effect} you are using.\n"
@@ -545,15 +540,15 @@ msgid ""
 msgstr ""
 
 #. type: figure
-#: sections/deckbuilding.tex:293 sections/map_elements.tex:40
-#: sections/map_elements.tex:254 sections/player_turns.tex:125
+#: sections/deckbuilding.tex:302 sections/map_elements.tex:47
+#: sections/map_elements.tex:266 sections/player_turns.tex:126
 #: sections/setup.tex:9
 #, no-wrap
 msgid "  \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:307
+#: sections/deckbuilding.tex:316
 #, no-wrap
 msgid ""
 "    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
@@ -573,14 +568,16 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:308 sections/deckbuilding.tex:317
-#: sections/units.tex:66 sections/units.tex:93
+#: sections/deckbuilding.tex:317 sections/deckbuilding.tex:326
+#: sections/expansion_content.tex:79 sections/expansion_content.tex:429
+#: sections/expansion_content.tex:448 sections/units.tex:70
+#: sections/units.tex:97
 #, no-wrap
 msgid "    \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:316
+#: sections/deckbuilding.tex:325
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/minor_artifact.png}};\n"
@@ -594,7 +591,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:334
+#: sections/deckbuilding.tex:343
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}};\n"
@@ -606,7 +603,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:334
+#: sections/deckbuilding.tex:343
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -616,28 +613,28 @@ msgid ""
 "    \\item[\\textbf{2.}] Effect\n"
 "    \\columnbreak\n"
 "    \\item[\\textbf{3.}] Level\n"
-"    \\item[\\textbf{4.}] Fluff\n"
+"    \\item[\\textbf{4.}] Flavor text\n"
 "  \\end{itemize}"
 msgstr ""
 
 #. type: center
-#: sections/deckbuilding.tex:341
+#: sections/deckbuilding.tex:350
 msgid ""
 "{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/"
 "diplomats_ring.png}}"
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:346
+#: sections/deckbuilding.tex:355
 #, no-wrap
 msgid ""
 "{stronghold}\n"
-"\\subsection*{\\pagetarget{Spell Scroll Cards}{Spell Scroll Cards}}\n"
+"\\pagetarget{Spell Scroll Cards}{\\subheader{Spell Scroll Cards}}\n"
 "\n"
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:351
+#: sections/deckbuilding.tex:360
 #, no-wrap
 msgid ""
 "During setup shuffle 10 of the Spell Scroll Cards into the Artifact Deck.\n"
@@ -648,7 +645,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:362
+#: sections/deckbuilding.tex:371
 #, no-wrap
 msgid ""
 "{\n"
@@ -665,7 +662,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:368
+#: sections/deckbuilding.tex:377
 #, no-wrap
 msgid ""
 "\\vspace*{1em}\n"
@@ -677,7 +674,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:380
+#: sections/deckbuilding.tex:389
 #, no-wrap
 msgid ""
 "You can play Spells from a Spell Scroll like any other Spell with the following exceptions:\n"
@@ -691,13 +688,8 @@ msgid ""
 "\\end{itemize}"
 msgstr ""
 
-#. type: Plain text
-#: sections/deckbuilding.tex:388 sections/resources.tex:33
-msgid "\\columnbreak"
-msgstr ""
-
 #. type: expansion
-#: sections/deckbuilding.tex:388
+#: sections/deckbuilding.tex:397
 #, no-wrap
 msgid ""
 "{stronghold}\n"
@@ -710,22 +702,29 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:390
+#: sections/deckbuilding.tex:399
 #, no-wrap
 msgid "If the last Spell on a Spell Scroll is used or sold, place the Spell Scroll back in its Deck."
 msgstr ""
 
+#. type: center
+#: sections/deckbuilding.tex:404
+msgid ""
+"{\\transparent{0.2}\\includegraphics[width=0.6\\linewidth]{\\art/"
+"black_market.png}}"
+msgstr ""
+
 #. type: expansion
-#: sections/deckbuilding.tex:394
+#: sections/deckbuilding.tex:407
 #, no-wrap
 msgid ""
 "{rampart,cove}\n"
-"  \\subsection*{\\pagetarget{War Machines}{War Machines}}\n"
+"  \\pagetarget{War Machines}{\\subheader{War Machines}}\n"
 "\n"
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:398
+#: sections/deckbuilding.tex:411
 #, no-wrap
 msgid ""
 "  War Machines\\index{War Machines} are permanent Cards that can be bought at either a \\pagelink{Trading Post}{Trading Post} or a \\pagelink{War Machine Factory}{War Machine Factory}.\n"
@@ -735,7 +734,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:421
+#: sections/deckbuilding.tex:434
 #, no-wrap
 msgid ""
 "  {\n"
@@ -762,38 +761,38 @@ msgid ""
 "  }"
 msgstr ""
 
-#. type: subsection{#2}
-#: sections/deckbuilding.tex:426
-msgid "Searching Example"
-msgstr ""
-
-#. type: Plain text
-#: sections/deckbuilding.tex:428
-msgid ""
-"\\textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during "
-"the previous Game Round, enabling him to now use his Spell Book Token to "
-"purchase additional Spells.}"
-msgstr ""
-
-#. type: Plain text
-#: sections/deckbuilding.tex:437
-msgid ""
-"\\textit{He spends the token and pays the cost of 5 \\svg{gold} indicated on "
-"his Town Board, allowing him to \\textbf{Search (2)} the Spell Deck.}\\par "
-"\\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par "
-"\\filbreak \\textit{He now has the choice of either gaining the top Card of "
-"the Spell Card Discard Pile, or drawing the top two Cards of the Spell Deck "
-"and gaining one of them.  He is not interested in gaining the Spell Curse, "
-"which is on top of the Discard Pile, and instead decides to draw two Cards – "
-"a Magic Arrow and a Fireball.} \\includegraphics[width=\\linewidth]"
-"{\\examples/fireball_over_magic_arrow.png}\\par \\textit{He decides to keep "
-"the Fireball, placing it into his hand and discarding the Magic Arrow into "
-"the Spell Discard Pile.}"
-msgstr ""
-
 #. type: Plain text
 #: sections/deckbuilding.tex:441
+msgid "\\subheader{Searching Example}"
+msgstr ""
+
+#. type: multicols*
+#: sections/deckbuilding.tex:443
+#, no-wrap
 msgid ""
-"{\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/"
-"fire_magic.png}}"
+"\\textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during the previous Game Round, enabling him to now use his Spell Book Token to purchase additional Spells.}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/deckbuilding.tex:452
+#, no-wrap
+msgid ""
+"\\includegraphics[width=\\linewidth]{\\examples/deemer_receiving_spellbook.png}\\par\n"
+"\\textit{He spends the token and pays the cost of 5 \\svg{gold} indicated on his Town Board, allowing him to \\textbf{Search (2)} the Spell Deck.}\\par\n"
+"\\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par\n"
+"\\filbreak\n"
+"\\textit{He now has the choice of either gaining the top Card of the Spell Card Discard Pile, or drawing the top two Cards of the Spell Deck and gaining one of them.\n"
+"He is not interested in gaining the Spell Curse, which is on top of the Discard Pile, and instead decides to draw two Cards – a Magic Arrow and a Fireball.}\n"
+"\\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow.png}\\par\n"
+"\\textit{He decides to keep the Fireball, placing it into his hand and discarding the Magic Arrow into the Spell Discard Pile.}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/deckbuilding.tex:456
+#, no-wrap
+msgid ""
+"\\hfill{\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/fire_magic.png}}\n"
+"\n"
 msgstr ""

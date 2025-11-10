@@ -43,130 +43,138 @@ Each player's Deck starts with 9 Cards, built during the game's setup.
 
 \vfill
 \hfill{\transparent{0.2}\includegraphics[width=0.9\linewidth]{\art/quicksand.png}}
-
+\end{multicols}
 \clearpage
 
-\subsection*{\pagetarget{Statistic}{Statistic} and \pagetarget{Ability}{Ability} Cards}
+\pagetarget{Statistic}{}\pagetarget{Ability}{}
+\subheader{Statistic and Ability Cards}
+\begin{multicols}{2}
 
 All Statistic\index{Statistic Cards} and Ability Cards\index{Ability Card} have a \textbf{Basic Effect}\index{Basic Effect} and a stronger \textbf{Expert} \svg{expert} \textbf{Effect}\index{Expert Effect}, which is shown below the Basic Effect.
 Whenever you play a Statistic or Ability Card, you must choose which effect you are using.
 The number of \svg{expert} Effects you can use each Round is limited by your Main Hero's \pagelink{Level}{Level}.
 Track the number of uses you have in any suitable manner, such as by moving Black Cubes on and off your Hero Card.\par
-\vspace*{\fill}
+
 \columnbreak
 
-\begin{expansion}[before=\vspace*{-2em}]{inferno}
-    \subsection*{\pagetarget{Empowered Statistic}{Empowered} Statistic Cards}\index{Empowered Statistic Card}
-    These Cards are more powerful versions of the normal Statistic Cards.
-    They have only one effect which is identical to the normal Statistic's Expert effect, but does not require using your \svg{expert}.\par
-
-    \medskip
-    These Cards can be gained via certain game effects, such as Visiting a \pagelink{Star Axis}{Star Axis}.
-\end{expansion}
-\end{multicols}
-
-\begin{multicols}{4}
-  \footnotesize
-  \begin{center}
-    \begin{scriptsize}
-        \begin{tikzpicture}
-            \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/knowledge.png}};
-            \draw (0.75, 0.4) node {\encircle{1}};
-            \draw (-1, -0.5) node {\encircle{2}};
-            \draw (-1, -1.5) node {\encircle{3}};
-        \end{tikzpicture}
-    \end{scriptsize}
-    \textbf{\textit{\textcolor{darkcandyapplered}{Statistic Card}}}
-  \end{center}
-  \vspace*{\fill}
-  \begin{itemize}
-    \item[\textbf{1.}] Name
-    \item[] \phantom{\ldots}
-  \end{itemize}
-  \columnbreak
-
-  \begin{center}
-    \begin{scriptsize}
-        \begin{tikzpicture}
-            \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/necromancy_card.png}};
-            \draw (0.75, 0.4) node {\encircle{1}};
-            \draw (-1, -0.5) node {\encircle{2}};
-            \draw (-1, -1.5) node {\encircle{3}};
-            \draw (1.5, -0.8) node {\encircle{4}};
-            \draw (1.5, -1.9) node {\encircle{4}};
-        \end{tikzpicture}
-    \end{scriptsize}
-    \textbf{\textit{\textcolor{darkcandyapplered}{Ability Card}}}
-  \end{center}
-  \vspace*{\fill}
-  \begin{itemize}
-    \item[\textbf{2.}] Basic Effect
-    \item[] \phantom{\ldots}
-  \end{itemize}
-  \columnbreak
-
-  \begin{center}
-    \begin{scriptsize}
-        \begin{tikzpicture}
-            \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/empowered-knowledge.png}};
-            \draw (0.75, 1.9) node {\encircle{1}};
-            \draw (-1, -1.5) node {\encircle{2}};
-        \end{tikzpicture}
-    \end{scriptsize}
-    \textbf{\textit{\textcolor{darkcandyapplered}{Empowered Statistic Card}}}
-  \end{center}
-  \vspace*{\fill}
-  \begin{itemize}
-    \item[\textbf{3.}] Expert Effect
-    \item[] \phantom{\ldots}
-  \end{itemize}
-  \columnbreak
-
-  \begin{center}
-    \begin{scriptsize}
-        \begin{tikzpicture}
-            \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/empowered-ability.png}};
-            \draw (0.75, 1.9) node {\encircle{1}};
-            \draw (-1, -1.5) node {\encircle{2}};
-            \draw (1.5, -1.9) node {\encircle{4}};
-        \end{tikzpicture}
-    \end{scriptsize}
-    \textbf{\textit{\textcolor{darkcandyapplered}{Empowered\\Ability Card}}}
-  \end{center}
-  \begin{itemize}
-    \item[\textbf{4.}] Necropolis-specific Card
-  \end{itemize}
-  \vspace*{\fill}
-\end{multicols}
-
-\begin{tikzpicture}[remember picture, overlay]
-  \node[rotate=-28, opacity=0.15] at ([xshift=0em, yshift=-6em]current page.center) {\includegraphics[width=0.45\linewidth]{\art/frost_ring.png}};
-\end{tikzpicture}
-\begin{multicols*}{2}
-
-\vspace*{\fill}
 \note{11}{
   Certain Cards are limited to the Necropolis Faction \svg{necro-yellow}.
   When a non-Necropolis player draws a Necropolis Card\index{Necropolis Card} from the Ability Deck, they may either discard it and draw a new Card as a replacement or gain it.
   Non-Necropolis players \textbf{cannot use} Faction Specific Cards from their hand in any way besides for effects that discard them.
 }
-\vspace*{\fill}
+\end{multicols}
 
+\columnratio{0.25}
+\begin{paracol}{2}
+  \begin{expansion}[title=\phantom{\textbf{\tiny{foo}}}, overlay={}]{}
+    \footnotesize
+    \begin{center}
+      \begin{scriptsize}
+          \begin{tikzpicture}
+              \draw (0, 0) node {\includegraphics[width=3.5cm]{\cards/knowledge.png}};
+              \draw (0.75, 0.4) node {\encircle{1}};
+              \draw (-1, -0.5) node {\encircle{2}};
+              \draw (-1, -1.5) node {\encircle{3}};
+          \end{tikzpicture}
+      \end{scriptsize}
+      \textbf{\textit{\textcolor{darkcandyapplered}{Statistic Card\\\phantom{Blah}}}}
+    \end{center}
+  \end{expansion}
+  \switchcolumn
+  \begin{expansion}{inferno}
+    \hspace*{-2.3mm}
+    \begin{minipage}[t]{0.3\linewidth}
+      \footnotesize
+      \vspace*{0mm}
+      \begin{center}
+        \begin{scriptsize}
+            \begin{tikzpicture}
+                \draw (0, 0) node {\includegraphics[width=3.5cm]{\cards/empowered-knowledge.png}};
+                \draw (0.75, 1.9) node {\encircle{1}};
+                \draw (-1, -1.5) node {\encircle{2}};
+            \end{tikzpicture}
+        \end{scriptsize}
+        \textbf{\textit{\textcolor{darkcandyapplered}{Empowered\\Statistic Card}}}
+      \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.65\linewidth}
+      \vspace*{0mm}
+      \subsection*{\pagetarget{Empowered Statistic}{Empowered} Statistic Cards}\index{Empowered Statistic Card}
+      These Cards are more powerful versions of the normal Statistic Cards.
+      They have only one effect which is identical to the normal Statistic's Expert effect, but does not require using your \svg{expert}.\par
+
+      \medskip
+      These Cards can be gained via certain game effects, such as Visiting a \pagelink{Star Axis}{Star Axis}.
+    \end{minipage}
+  \end{expansion}
+\end{paracol}
+\vspace*{2em}
+\begin{paracol}{2}
+  \begin{expansion}[title=\phantom{\textbf{\tiny{foo}}}, overlay={}]{}
+    \footnotesize
+    \begin{center}
+      \begin{scriptsize}
+          \begin{tikzpicture}
+              \draw (0, 0) node {\includegraphics[width=3.5cm]{\cards/necromancy_card.png}};
+              \draw (0.75, 0.4) node {\encircle{1}};
+              \draw (-1, -0.5) node {\encircle{2}};
+              \draw (-1, -1.5) node {\encircle{3}};
+              \draw (1.5, -0.8) node {\encircle{4}};
+              \draw (1.5, -1.9) node {\encircle{4}};
+          \end{tikzpicture}
+      \end{scriptsize}
+      \textbf{\textit{\textcolor{darkcandyapplered}{Ability Card\\\phantom{Blah}}}}
+    \end{center}
+  \end{expansion}
+  \switchcolumn
+  \begin{expansion}{navalbattles}
+    \hspace*{-2.3mm}
+    \begin{minipage}[t]{0.3\linewidth}
+      \footnotesize
+      \vspace*{0mm}
+      \begin{center}
+        \begin{scriptsize}
+            \begin{tikzpicture}
+              \draw (0, 0) node {\includegraphics[width=3.5cm]{\cards/empowered-ability.png}};
+              \draw (0.75, 1.9) node {\encircle{1}};
+              \draw (-1, -1.5) node {\encircle{2}};
+              \draw (1.5, -1.9) node {\encircle{4}};
+            \end{tikzpicture}
+        \end{scriptsize}
+        \textbf{\textit{\textcolor{darkcandyapplered}{Empowered\\Ability Card}}}
+      \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.65\linewidth}
+      \subsection*{\pagetarget{Empowered Ability}{Empowered} Ability Cards}\index{Empowered Statistic Card}
+      The Empowered Ability Cards work very similarly to Empowered Statistic Cards.
+      Their only effect corresponds to the Expert effect of normal Ability Cards, but without requiring you to use your \svg{expert}.
+
+      \medskip
+      These Cards can be gained by spending \pagelink{Empowered Ability Token}{Empowered Ability Tokens}, which are only available in certain Scenarios (e.~g.~``Island of Fire'' from the Naval Battles Mission Book).
+    \end{minipage}
+  \end{expansion}
+\end{paracol}
+
+\bigskip
+\begin{multicols}{2}
+\begin{multicols*}{2}
+  \footnotesize
+  \begin{itemize}
+    \item[\textbf{1.}] Name
+    \item[\textbf{2.}] Basic Effect\\
+    \item[\textbf{3.}] Expert Effect
+    \item[\textbf{4.}] Necropolis-specific Card
+  \end{itemize}
+\end{multicols*}
 \columnbreak
+\centering
+\end{multicols}
 
-\vspace*{\fill}
-\begin{expansion}[before=\vspace*{-11mm}]{navalbattles}
-    \subsection*{\pagetarget{Empowered Ability}{Empowered} Ability Cards}\index{Empowered Statistic Card}
-    The Empowered Ability Cards work very similarly to Empowered Statistic Cards.
-    Their only effect corresponds to the Expert effect of normal Ability Cards, but without requiring you to use your \svg{expert}.
-
-    \medskip
-    These Cards can be gained by spending \pagelink{Empowered Ability Token}{Empowered Ability Tokens}, which are only available in certain Scenarios (e.~g.~"Island of Fire" from the Naval Battles Mission Book).
-\end{expansion}
-\vspace*{\fill}
-\columnbreak
-
-\subsection*{\pagetarget{spells}{Spell Cards}}
+\clearpage
+\begin{multicols*}{2}
+\pagetarget{spells}{\subheader{Spell Cards}}
 
 Spell Cards\index{Spell Card} have three possible primary effects.
 Using the topmost, basic version of the Spell usually has no additional costs.
@@ -222,7 +230,7 @@ When you use an effect which lets you cast a Spell from somewhere other than you
   \vspace*{\fill}
 \end{center}
 
-\subsubsection*{\pagetarget{Schools of Magic}{Schools of Magic}}
+\subsection*{\pagetarget{Schools of Magic}{Schools of Magic}}
 All Spell Cards belong to one School of Magic\index{Schools of Magic}: either Air, Fire, Earth or Water.
 Spells with one School symbol on them are called \textbf{Basic Spells}\index{Basic Spell}, while Spells with four identical symbols are called \textbf{Expert Spells}\index{Expert Spell}.
 \textbf{Magic Arrow} is a Basic Spell; when casting the \textbf{Magic Arrow}, you must select which School it belongs to.
@@ -257,7 +265,7 @@ By default there's no difference, but certain game effects can refer to specific
 \clearpage
 
 \pagebreak
-\subsection*{\pagetarget{Specialty}{Hero Specialty Cards}}
+\pagetarget{Specialty}{\subheader{Hero Specialty Cards}}
 
 Hero Specialty Cards\index{Specialty Card} are gained from \pagelink{Level}{Level ups}.
 Each Main Hero has a unique set of Specialty Cards.
@@ -280,7 +288,8 @@ For example, the limit of 1 Spell per Combat Round doesn't apply to Specialty Ca
     \footnotesize\textit{A Level 1 Specialty Card, belonging to Deemer the Warlock. It uses \svg{empower}, but does NOT belong to any School of Magic, despite the imagery.}
 }
 
-\subsection*{\pagetarget{Artifact}{Artifact} Cards}
+\columnbreak
+\pagetarget{Artifact}{\subheader{Artifact Cards}}
 
 Artifact Cards\index{Artifact Card} have a top and bottom effect. When you play one, you must \textbf{choose which effect} you are using.
 They are divided into 3 Levels: Minor, Major, and Relic, with different border color.
@@ -329,7 +338,7 @@ Artifacts can be \pagelink{Trading}{traded} in Alliance and Cooperative Scenario
     \item[\textbf{2.}] Effect
     \columnbreak
     \item[\textbf{3.}] Level
-    \item[\textbf{4.}] Fluff
+    \item[\textbf{4.}] Flavor text
   \end{itemize}
 \end{multicols}
 
@@ -342,7 +351,7 @@ Artifacts can be \pagelink{Trading}{traded} in Alliance and Cooperative Scenario
 \pagebreak
 
 \begin{expansion}{stronghold}
-\subsection*{\pagetarget{Spell Scroll Cards}{Spell Scroll Cards}}
+\pagetarget{Spell Scroll Cards}{\subheader{Spell Scroll Cards}}
 
 During setup shuffle 10 of the Spell Scroll Cards into the Artifact Deck.
 Set the remaining 10 Cards aside to form a Spell Scroll Deck.
@@ -388,9 +397,13 @@ You can play Spells from a Spell Scroll like any other Spell with the following 
 
 If the last Spell on a Spell Scroll is used or sold, place the Spell Scroll back in its Deck.
 \end{expansion}
-\vspace*{1em}
+
+\begin{center}
+  {\transparent{0.2}\includegraphics[width=0.6\linewidth]{\art/black_market.png}}
+\end{center}
+
 \begin{expansion}{rampart,cove}
-  \subsection*{\pagetarget{War Machines}{War Machines}}
+  \pagetarget{War Machines}{\subheader{War Machines}}
 
   War Machines\index{War Machines} are permanent Cards that can be bought at either a \pagelink{Trading Post}{Trading Post} or a \pagelink{War Machine Factory}{War Machine Factory}.
   If you buy one at the Trading Post, \textbf{you cannot use} any of the other normal functions of that Field during that Visit.
@@ -421,8 +434,10 @@ If the last Spell on a Spell Scroll is used or sold, place the Spell Scroll back
 \end{expansion}
 
 \vspace*{\fill}
+\end{multicols*}
 
-\subsection*{Searching Example}
+\subheader{Searching Example}
+\begin{multicols*}{2}
 
 \textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during the previous Game Round, enabling him to now use his Spell Book Token to purchase additional Spells.}
 

@@ -1,0 +1,57 @@
+% !TeX spellcheck = en_US
+
+\title{\includegraphics[width=6cm]{\images/title.png}\\The Rewrite}
+
+\author{Hermanni ``Heegu'' Karppela}
+\maketitle
+
+\begin{center}
+  \iftoggle{githubbuild}{
+    \getenv[\githubsha]{GITHUB_SHA}
+    This is an unreleased version built on GitHub from commit \href{\repourl}{\textlang{english}{\StrLeft{\githubsha}{7}}}.
+  }{
+    \textlang{\mainlanguagename}{Version \textlang{english}{\version}}
+  }
+
+  This is a community-driven project, which has a \href{\repourl}{GitHub repository}.
+  Everyone is welcome to contribute, make changes, and fix errors.
+  If you simply want to leave feedback, please do so in the original \href{\bggthreadurl}{BoardGameGeek thread}.
+  You can also join the community \href{\discordurl}{Discord server} to get in touch.
+
+  \textit{I’m doing this out of the love of learning games and wanting to understand their complexities.}
+  \\
+  {\small — Heegu}
+\end{center}
+
+\begin{multicols}{3}
+  \centering
+  \includegraphics[width=0.8\linewidth]{\qr/discord.png}\\
+  Scan to join the community \textbf{Discord} server.
+
+  \columnbreak
+
+  \includegraphics[width=0.8\linewidth]{\qr/github.png}\\
+  Scan to open \textbf{GitHub} repository.
+
+  \columnbreak
+
+  \includegraphics[width=0.8\linewidth]{\qr/bgg.png}\\
+  Scan to open \textbf{BoardGameGeek} thread.
+\end{multicols}
+
+\textlang{english}{\begin{tikzpicture}[remember picture, overlay]
+  \node(cover)[anchor=center, yshift=12em] at (current page.south) {
+    \includegraphics[width=1.01\paperwidth, keepaspectratio]{\art/castle_bottom.png}
+    \thispagestyle{empty}
+  };
+\end{tikzpicture}}
+
+\clearpage
+
+\tableofcontents
+
+\begin{tikzpicture}[remember picture, overlay]
+  \node(bg)[anchor=center, opacity=0.07, xshift=-3em, yshift=0em] at (current page.center) {
+    \includegraphics[width=\paperwidth, keepaspectratio]{\art/meteor_shower.png}
+  };
+\end{tikzpicture}

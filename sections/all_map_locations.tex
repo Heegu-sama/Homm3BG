@@ -5,7 +5,7 @@
 
 \begin{multicols*}{2}
 
-\subsection*{Symbols on the Map}
+\subheader{Symbols on the Map}
 
 \begingroup
   \renewcommand{\arraystretch}{1.5}
@@ -212,7 +212,7 @@ The effects of the following \textbf{Visitable} Fields are explained by the symb
 \pagebreak
 
 \begin{multicols}{2}
-\subsection*{Towns}
+\subheader{Towns}
 \textbf{Towns} are always located in the center of a Starting (I) Tile.
 Flagging an enemy Town prevents their Secondary Heroes from spawning there and Main Heroes from moving there if defeated.
 Flagging a Town can cause \pagelink{End}{Player Elimination}, and Scenarios typically have special rewards for Flagging them.
@@ -233,7 +233,7 @@ You also do not gain access to their Town Board or Faction Units, unlike in the 
 
 \columnbreak
 
-\subsection*{Mines}\pagetarget{Mines}
+\pagetarget{Mines}{\subheader{Mines}}
 {\textbf{Mines}}\index{Mines} are Flaggable Fields which increase a specific resource's income when Flagged.
 If you are the first one to Flag a mine, it also immediately provides you with its income.
 All mines have the \svg{ongoing} symbol and a picture of the Resource they produce next to it.
@@ -257,8 +257,8 @@ All mines have the \svg{ongoing} symbol and a picture of the Resource they produ
 \end{center}
 \pagebreak
 
+\pagetarget{Settlements}{\subheader{Settlements}}
 \begin{multicols}{2}
-\subsection*{Settlements}\pagetarget{Settlements}{}
 \textbf{Settlements}\index{Settlement} act as a spawn point for Secondary Heroes, and as a place for Main Heroes to move to when defeated.
 They also prevent \pagelink{End}{Player Elimination}.
 When you Flag a Settlement, choose one of the following options:
@@ -282,7 +282,7 @@ When you Flag a Settlement, choose one of the following options:
 \vspace*{\fill}
 \columnbreak
 
-\begin{expansion}[before=\vspace*{-11mm}]{inferno}
+\begin{expansion}{inferno}
   \subsection*{Random Town}\pagetarget{Random Town}{}
   \framedimage[\linewidth]{\map_locations/random_town.jpg}
 
@@ -320,7 +320,7 @@ When you Flag a Settlement, choose one of the following options:
 \end{center}
 \pagebreak
 
-\subsection*{\pagetarget{Revisitable Fields}{Revisitable Fields}}
+\pagetarget{Revisitable Fields}{\subheader{Revisitable Fields}}
 
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
@@ -417,7 +417,7 @@ When you Flag a Settlement, choose one of the following options:
   \node[opacity=0.2] at (16, 5.22) {\includegraphics[width=0.5\linewidth]{\art/pegasi.png}};
 \end{tikzpicture}
 
-\subsection*{\pagetarget{Other Fields}{Other Fields}}
+\pagetarget{Other Fields}{\subheader{Other Fields}}
 
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
@@ -630,7 +630,7 @@ When you Flag a Settlement, choose one of the following options:
     \caption{\small Category: \textbf{Visitable}\\
       Take a Spell Scroll Card from its Deck and place it next to your Hero Card.
       Draw two Spells and place them face-down at the Spell Scroll Card.
-      You can use these Spells \protect\pagelink{Spell Scrolls Cards}{with some restrictions}.
+      You can use these Spells \protect\pagelink{Spell Scroll Cards}{with some restrictions}.
     }
   \end{minipage}\hfill
   \begin{minipage}[t]{0.47\textwidth}
@@ -666,9 +666,10 @@ When you Flag a Settlement, choose one of the following options:
 
 \newpage
 
-\subsection*{\pagetarget{Location Token}{Location Tokens}}
+\pagetarget{Location Token}{\subheader{Location Tokens}}
 
-The following Fields are found on Location Tokens only, not on regular Map Tiles.
+The following Fields are found on single-hex Location Tokens only, not on regular Map Tiles.
+The placement of the Location Tokens is described in \pagelink{Discover Location Tokens}{Map Elements}.
 
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
@@ -693,6 +694,7 @@ The following Fields are found on Location Tokens only, not on regular Map Tiles
   \end{minipage}
 \end{figure}
 
+\vspace*{-1em}
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
@@ -718,6 +720,7 @@ The following Fields are found on Location Tokens only, not on regular Map Tiles
   \end{minipage}
 \end{figure}
 
+\vspace*{-1em}
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
@@ -763,48 +766,42 @@ The following Fields are found on Location Tokens only, not on regular Map Tiles
       & \darkcell[1.2]{Reward}
       & \darkcell[1.2]{Extra reward for X Stacked Units} \\
 
-      \darkcell[3.3]{
-        Imp Cache \\ \medskip
+      \darkcell[3.3]{Imp Cache\\\medskip
         \squareimage{0.6\linewidth}{\map_locations/creature-banks/imp_cache.jpg}
       }
       & \lightcellleft[3.3]{4 × Imps}
       & \lightcellleft[3.3]{3 \svg{gold}}
       & \lightcellleft[3.3]{X \svg{gold}} \\
 
-      \darkcell[3.7]{
-        Dwarven\\Treasury \\ \medskip
+      \darkcell[3.7]{Dwarven\\Treasury\\\medskip
         \squareimage[2.6pt]{0.6\linewidth}{\map_locations/creature-banks/dwarven_treasury.jpg}
       }
       & \lightcellleft[3.7]{4 × Dwarves}
       & \lightcellleft[3.7]{7 \svg{gold}}
       & \lightcellleft[3.7]{3 × X \svg{gold}} \\
 
-      \darkcell[3.7]{
-        Griffin\\Conservatory \\ \medskip
+      \darkcell[3.7]{Griffin\\Conservatory\\\medskip
         \squareimage{0.6\linewidth}{\map_locations/creature-banks/griffin_conservatory.jpg}
       }
       & \lightcellleft[3.7]{4 × Griffins}
       & \lightcellleft[3.7]{1 × Griffins}
       & \lightcellleft[3.7]{Griffins are Stacked, if there were at least 2 Stacked Units.} \\
 
-      \darkcell[3.7]{
-        Dragon Fly\\Hive \\ \medskip
+      \darkcell[3.7]{Dragon Fly\\Hive\\\medskip
         \squareimage{0.6\linewidth}{\map_locations/creature-banks/dragon_fly_hive.jpg}
       }
       & \lightcellleft[3.7]{4 × Dragon Flies}
       & \lightcellleft[3.7]{1 × Dragon Flies}
       & \lightcellleft[3.7]{Dragon Flies are Stacked, if there were at least 2 Stacked Units.} \\
 
-      \darkcell[3.3]{
-        Shipwreck \\ \medskip
+      \darkcell[3.3]{Shipwreck\\\medskip
         \squareimage{0.6\linewidth}{\map_locations/creature-banks/shipwreck.jpg}
       }
       & \lightcellleft[3.3]{4 × Wraiths}
       & \lightcellleft[3.3]{\svg{morale_negative-yellow} and 5 \svg{gold}}
       & \lightcellleft[3.3]{2 × X \svg{gold} and Search~(X) the Artifact Deck.} \\
 
-      \darkcell[3.3]{
-        Derelict Ship \\ \medskip
+      \darkcell[3.3]{Derelict Ship\\\medskip
         \squareimage{0.6\linewidth}{\map_locations/creature-banks/derelict_ship.jpg}
       }
       & \lightcellleft[3.3]{4 × Water Elementals}
@@ -832,48 +829,42 @@ The following Fields are found on Location Tokens only, not on regular Map Tiles
       & \darkcell[1.2]{Reward}
       & \darkcell[1.2]{Extra reward for X Stacked Units} \\
 
-      \darkcell[3.4]{
-        Crypt \\ \medskip
+      \darkcell[3.4]{Crypt \\\medskip
         \squareimage[2.6pt]{0.6\linewidth}{\map_locations/creature-banks/crypt.jpg}
       }
       & \lightcellleft[3.4]{1 × Skeletons\\1 × Zombies\\1 × Wraiths\\1 × Vampires}
       & \lightcellleft[3.4]{6 \svg{gold}}
       & \lightcellleft[3.4]{2 × X \svg{gold}} \\
 
-      \darkcell[3.4]{
-        Pyramid \\ \medskip
+      \darkcell[3.4]{Pyramid\\\medskip
         \squareimage{0.6\linewidth}{\map_locations/creature-banks/pyramid.jpg}
       }
       & \lightcellleft[3.4]{2 × Gold Golems\\2 × Diamond Golems}
       & \lightcellleft[3.4]{Search (5) the Spell Deck.}
       & \lightcellleft[3.4]{Remove 1 Spell, Ability, or Artifact Card from your \svg{hand-yellow} or Discard Pile, then Search (5) the appropriate Deck -- up to X times.} \\
 
-      \darkcell[3.4]{
-        Medusa Store \\ \medskip
+      \darkcell[3.4]{Medusa Store\\\medskip
         \squareimage[3pt]{0.6\linewidth}{\map_locations/creature-banks/medusa_store.jpg}
       }
       & \lightcellleft[3.4]{4 × Medusas}
       & \lightcellleft[3.4]{6 \svg{gold}, 1 \svg{valuablegreater}}
       & \lightcellleft[3.4]{3 × X \svg{gold}, X \svg{valuablegreater}} \\
 
-      \darkcell[3.4]{
-        Naga Bank\\ \medskip
+      \darkcell[3.4]{Naga Bank\\\medskip
         \squareimage[-1pt]{0.6\linewidth}{\map_locations/creature-banks/naga_bank.jpg}
       }
       & \lightcellleft[3.4]{4 × Nagas}
       & \lightcellleft[3.4]{6 \svg{gold}, 2 \svg{valuablegreater}}
       & \lightcellleft[3.4]{6 × X \svg{gold}, X \svg{valuablegreater}} \\
 
-      \darkcell[3.7]{
-        Cyclops\\Stockpile \\ \medskip
+      \darkcell[3.7]{Cyclops\\Stockpile\\\medskip
         \squareimage[4pt]{0.6\linewidth}{\map_locations/creature-banks/cyclops_stockpile.jpg}
       }
       & \lightcellleft[3.7]{4 × Cyclops}
       & \lightcellleft[3.7]{8 \svg{building_materials}, 2 \svg{valuablegreater}}
       & \lightcellleft[3.7]{2 × X \svg{building_materials}, X \svg{valuablegreater}} \\
 
-      \darkcell[3.4]{
-        Dragon Utopia \\ \medskip
+      \darkcell[3.4]{Dragon Utopia\\\medskip
         \squareimage{0.6\linewidth}{\map_locations/creature-banks/dragon_utopia.jpg}
       }
       & \lightcellleft[3.4]{1 × Black Dragons\\1 × Gold Dragons\\1 × Faerie Dragons\\1 × Crystal Dragons}
