@@ -7,18 +7,15 @@
     \smallskip
     The two modes differ in the way players build their Unit and Player Decks:\par
     \smallskip
-    In \textbf{Skirmish Mode} the players simply get pre-constructed Decks, on whose composition they have only a little influence.
-    With these Decks the players jump directly into Combat.\par
+    In \textbf{Skirmish Mode} the players simply get pre-constructed Decks and armies, on whose composition they have only a little influence.
+    With their Decks the players jump directly into Combat.\par
     \smallskip
-    In \textbf{Adventure Mode}, a card-driven Adventure Phase is played before the Combat, which replaces and simulates the discovery of the Map from regular games.
+    In \textbf{Adventure Mode}, a card-driven Adventure Phase is played before the final Combat, which replaces and simulates the discovery of the Map from regular games.
     In this phase, players use Adventure Cards to gather Resources, expand their Town, and develop their Heroes, thus deciding for themselves which Units to Recruit and which types of Cards to include in their Deck, rather than limited on pre-constructed sets.\par
     \smallskip
-\subsection*{Victory Condition}
-    To achieve a victory, one of the players must defeat all enemy Units in the final Combat.\par
-    \smallskip
-\subsection*{Exception for Morale Cards}
-    Both modes use \textbf{\pagelink{Morale Cards}{Morale Cards}} instead of Tokens with one exception, when resolving a \svg{morale_positive} effect:
-    Instead of randomly draw \textbf{one} Postive Morale Card you \textbf{Search(2)} the Positive Morale Deck instead. All other rules of Morale Cards remain untouched.\par
+\begin{center}
+    {\transparent{0.4}{\includegraphics[width=\linewidth]{\art/cannon.png}}}
+\end{center}\par
 
     \vspace*{\fill}
     \columnbreak
@@ -35,16 +32,13 @@
     \note{18}{Open Questions in Skirmish and/or Adventure Mode:
     \begin{itemize}
         \item Which else Cards should be removed from the game (beside Diplomacy and Logistics)?
-        \item Which Cards should be removed in Skirmish (cause there only Combat effects are useful)?
-        \item How to handle Cards with Permanent Effects?
-        \item How to handle Cards with Remove Effects?
+        \item Which Cards should be removed in Skirmish (cause there are only Combat effects useful)?
+        \item How to handle Cards with Permanent effects in Adventure Mode ?
+        \item How to handle Cards with a "Remove" Effect (e.~g. Expert Learning) in Adventure Mode?
         \item How to handle Cards with both a Combat and an Adventure Effect?
     \end{itemize}
     }\par
-    \smallskip
-    \begin{center}
-        {\transparent{0.4}{\includegraphics[width=0.5\linewidth]{\art/cannon.png}}}
-    \end{center}\par
+
     \vspace*{\fill}
     \end{multicols}
 \end{expansion}
@@ -52,7 +46,19 @@
 
 \newpage
 \begin{expansion}{battlefield}
-    \begin{multicols*}{2}
+    \subheader{General rules for both modes}
+    \begin{multicols}{2}
+        \subsection*{Victory Condition}
+            To achieve a victory, one of the players must defeat all enemy Units in the final Combat.\par
+
+        \smallskip
+        \subsection*{\pagetarget{Exception in battlefield combat}{Exception in Battlefield Combat}}
+            The final Combat takes place on the Battlefield Board, thus each player needs all Unit Miniatures of his chosen faction. To resolve the final Combat follow the rules for \pagelink{Battlefield Combat}{Combat on the Battlefield Board}, but with \textbf{one additional rule}: At the end of each Combat Round \textbf{regain one used \svg{expert}} up to your Hero's Limit and \textbf{draw 2 Cards from your Deck}.\par
+
+        \smallskip
+        \subsection*{\pagetarget{Exception for Morale Cards}{Exception for Morale Cards}}
+            To resolve Morale effects use \textbf{\pagelink{Morale Cards}{Morale Cards}} instead of Tokens with one exception, when resolving a \svg{morale_positive} effect:
+            Instead of randomly draw \textbf{one} Postive Morale Card you \textbf{Search(2)} the Positive Morale Deck instead. All other rules of Morale Cards remain untouched.\par
         \subsection*{Skirmish and Adventure Setup}
         \begin{enumerate}
             \item Place the Battlefield Board in the middle of the table.
@@ -68,50 +74,51 @@
             \item Put following Tokens ready near the Battlefield Board: Black Cubes, Damage Tokens, Defense/Paralysis Tokens, Obstacles and the Initiative Token.
             \item Put the Attack and Resource Dice ready.
             \item Build your starting Deck as normal.
-        \end{enumerate}
-    \columnbreak
-    \subsection*{Additional Steps only for Adventure Mode}
-    \begin{enumerate}[resume]
-        \item Put also Resource Token and Treasure Dice ready.
-        \item Each player takes the Town Board with following starting requirements:
-        \begin{itemize}
-            \item Income tracks at 10 \svg{gold}, 0 \svg{building_materials} and 0 \svg{valuablegreater}.
-            \item Starting resources: 15 \svg{gold}, 3 \svg{building_materials} and 1 \svg{valuablegreater}.
-            \item Start without Town Building or Units in your Unit Deck
+       \end{enumerate}
+       \subsection*{Additional Steps only for Adventure Mode}
+       \begin{enumerate}[resume]
+            \item Put also Resource Token and Treasure Dice ready.
+            \item Each player takes the Town Board with following starting requirements:
+            \begin{itemize}
+                \item Income tracks at 10 \svg{gold}, 0 \svg{building_materials} and 0 \svg{valuablegreater}.
+                \item Starting resources: 15 \svg{gold}, 3 \svg{building_materials} and 1 \svg{valuablegreater}.
+                \item Start without Town Building or Units in your Unit Deck
             %https://boardgamegeek.com/thread/3284421/article/44125381#44125381 (clarification1)
-        \end{itemize}
-        \item Shuffle the Adventure Card Deck and place it face down.
-        \item Place the Round Tracker and place a Black Cube at Round 1.
+            \end{itemize}
+            \item Shuffle the Adventure Card Deck and place it face down.
+            \item Place the Round Tracker and place a Black Cube at Round 1.
     \end{enumerate}\par
     \medskip
     \subsection*{Start of game}
-    After Setup, Both players roll 2 \svg{resource_die}. The one with the highest results is the first player.
+    After Setup, both players roll 2 \svg{resource_die}.
+    The one with the highest results is the first player.
     Use the Initiative Token to track the current first player.
     Set your starting Deck aside for now.
-    You only need it in the Combat Phase.
-    \end{multicols*}
-\begin{center}
-    \includegraphics[width=0.9\linewidth]{\images/battlefield_setup.png}
-\end{center}
+    You only need it in the Final Combat.
+    \end{multicols}
 \end{expansion}
+\begin{center}
+    \includegraphics[width=\linewidth]{\images/battlefield_setup.png}
+\end{center}
+
 
 \newpage
-
 \begin{expansion}{battlefield}
     \begin{multicols}{2}
-    \subsection*{\pagetarget{Skirmish Mode}{Skirmish Mode}}
+    \subheader{Skirmish Mode}
     The Skirmish Mode has no adventure phase.
-    You skip hat phase and you jump straight into Combat.\par
+    You skip hat phase, prepare your Deck and you jump straight into the final Combat.\par
     \vspace*{1em}
     \subsection*{Deck Preparation}
     Both players decide on a game length: \textbf{short, medium or large}.
-    Depending on the chosen game length both players modify their Hero's Level, their Deck (by drawing additional Cards) and their Unit Deck as shown in the Table below.\par
+    Depending on the chosen game length both players modify their Hero's Level, their Deck (by drawing additional Cards) and their Unit Deck as shown in the table below.\par
 
     \columnbreak
-    \subsection*{Combat Phase}
+    \subsection*{Starting final Combat}
     After Modifying your Deck, shuffle it and draw Cards up to your Hand Limit.
     The first player gets the Initiative Token.
-    Then follow the rules for \pagelink{Battlefield Combat}{Combat on the Battlefield Board} with one additional rule: At the end of each Combat Round \textbf{regain one used \svg{expert}} up to Your Hero's Limit and \textbf{draw 2 Cards from your Deck}.\par
+    Then follow the rules for \pagelink{Battlefield Combat}{Combat on the Battlefield Board}.
+    During the Combat keep the exception rules for \pagelink{Exception for Morale Cards}{Morale Cards} and \pagelink{Exception in battlefield combat}{the Battlefield Combat} in mind.
 
     \vspace*{\fill}
     \end{multicols}
@@ -156,8 +163,8 @@
 
 \begin{expansion}{battlefield}
     \begin{multicols}{2}
-    \subsection*{\pagetarget{Adventure Mode}{Adventure Mode}}
-    The Adventure Mode is divided into two Phases: The \textbf{Adventure Phase} and the \textbf{Combat Phase}. The latter works identically as in the Skirmish Mode.\par
+    \subheader{Adventure Mode}
+    The Adventure Mode is divided into two Phases: The \textbf{Adventure Phase} and the \textbf{Final Combat}. The latter works identically as in the Skirmish Mode.\par
     Before starting the game, both players decide for a game length by limiting the Adventure Phase's Round number:
     \begin{itemize}
         \item \textbf{Short} game: 9 Rounds.
@@ -196,13 +203,12 @@
             \item \textbf{Change Starting Player} – Pass the Initiative Token to the other player. The odd rounds are started by the first player, and the even ones by the second player.\par
         \end{enumerate}\par
         \smallskip
-    In the last Round the players don't draw Adventure Cards, but they can still resolve a saved Adventure Card. After the last round, the Adventure Phase ends and the Combat Phase starts.
+    In the last Round the players don't draw Adventure Cards, but they can still resolve a saved Adventure Card. After the last round, the Adventure Phase ends and the final Combat starts.
 
-    \subsection*{Combat Phase}
+    \subsection*{Start final Combat}
     Both players regain all used \svg{expert}.
     Then, they pick up their set-aside Deck, shuffle it, and draw Cards up to their Hand Limit (depending on their current Hero's Level).
-    They remove all \svg{paralysis} from recruited Units, take Miniatures of all of them and start the Combat on the Battlefield Board following \pagelink{Battlefield Combat}{the general rules for that}.
-    The same exceptions as in Skirmish Mode apply here as well: At the end of each combat Round each player regains one \svg{expert} and draws 2 Cards from their Deck.
+    They remove all \svg{paralysis} from recruited Units, take Miniatures of all of them and start the Combat on the Battlefield Board following \pagelink{Battlefield Combat}{their general rules}, but keeping the same \pagelink{Exception in battlefield combat}{exceptions} in mind.
     \end{multicols}
 \end{expansion}
 
@@ -272,9 +278,7 @@
             They don't go in your Deck.
             \item If you are not sure how to handle a drawn Card, be aware that there are not clear rules for every individual case and be prepared to apply house rules.
         \end{itemize}
-        \item Use the \pagelink{Morale Cards}{Morale Cards} instead of Morale Tokens in Adventure Mode with one exception:
-        When resolving a \svg{morale_positive} effect instead of randomly draw \textbf{one} Postive Morale Card you \textbf{Search(2)} the Positive Morale Deck instead.
-        All other rules remain untouched.
+        \item To resolve Morale effects use \pagelink{Morale Cards}{Morale Cards} instead of Tokens and keep the \pagelink{Exception for Morale Cards}{exception rule} in mind.
     \end{itemize}
     \end{multicols}
 \end{expansion}
