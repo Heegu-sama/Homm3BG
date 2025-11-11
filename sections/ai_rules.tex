@@ -1,11 +1,9 @@
 % !TeX spellcheck = en_US
 \addsection{AI Rules}{\spells/fortune.png}
 
-\iftoggle{printable}{\vspace{-\baselineskip}}{}
+\begin{multicols*}{2}
 
-\begin{multicols}{2}
-
-\subsection*{AI Hero Turn}
+\subheader{AI Hero Turn}
 \pagetarget{AIrules}{AI Heroes} are used in the Campaigns.
 They start in their Town, and have 3 MP, always spending them to perform the following Actions in descending priority:
 \begin{itemize}
@@ -27,9 +25,10 @@ Winning Combat against an AI Hero does not grant any rewards unless stated by th
 AI Heroes do not have a Town Board, Resources, or a Hero Card.
 Their Units are static and defined by the Scenario's setup or other rules.\par
 Any differences to the above will be described in any given Scenario's own rules.
-\vfill
+\vspace*{\fill}
+\columnbreak
 
-\subsection*{AI Decks}
+\subheader{AI Decks}
 
 \begin{multicols*}{2}
   \begin{center}
@@ -76,6 +75,7 @@ The Might Card \svg{might} is attached to the Unit until the first respective at
 The AI Spell Deck is used whenever a Magic Card \svg{magic} is drawn.
 If an AI Hero is instructed to draw a Card, they will draw and resolve \textbf{another Card} from the AI Deck.
 
+\vspace*{\fill}
 \columnbreak
 \subheader{Combat against AI}
 
@@ -119,4 +119,4 @@ Enemy Units cannot \pagelink{Defend}{Defend} unless instructed to.
     \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{\art/titan.jpg}
 \end{center}
 
-\end{multicols}
+\end{multicols*}
