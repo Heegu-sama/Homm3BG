@@ -88,6 +88,7 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
 \renewcommand\cftsecdotsep{\cftdot}
 \renewcommand\cftsubsecdotsep{\cftdot}
+\setlength{\cftbeforesecskip}{0.5em}
 
 \captionsetup[figure]{labelformat=empty}
 \captionsetup[subfigure]{labelformat=empty, singlelinecheck=off, justification=centering}
@@ -518,7 +519,7 @@
 }
 
 % Commands to be used for automation generating printable version
-\newcommand{\pagetarget}[2]{\label{#1}\hypertarget{#1}{#2}}
+\newcommand{\pagetarget}[2]{\hypertarget{#1}{#2}\label{#1}}
 \newcommand{\pagelink}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{ \textmd{(\pageshorthand\,\pageref{#1})}}{}}
 
 % Stubs for polyglossia package used for Hebrew but not other languages

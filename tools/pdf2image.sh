@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # Default values
-language="en"
 range=""
 output_dir="screenshots"
 custom_pdf=""
@@ -88,6 +87,10 @@ fi
 if [[ -z "$range" ]]; then
   echo "Error: You must specify a page range with -r/--range option."
   help
+fi
+
+if [[ -z "$language" ]]; then
+  language="en"
 fi
 
 # Create output directory if it doesn't exist
