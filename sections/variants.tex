@@ -1,0 +1,154 @@
+% !TeX spellcheck = en_US
+\addsection{Rule Variants}{\spells/clone.png}
+
+\begin{multicols}{2}
+You may modify the rules to increase or decrease difficulty, change how the game flows, or adjust its pacing.
+These are suggestions from the game developers.
+
+\bigskip
+\subheader{Chaos cards}
+Whenever you are about to discard a card, Remove that card instead.
+Then, take the top card from the corresponding Deck and place it in your discard pile.
+
+\textbf{Note:} Statistic and Specialty cards are still discarded normally.
+
+Even if you use a Knowledge card to return a Spell to your hand, the Spell is still removed, and you receive a new one from the top of the Spell Deck instead.
+
+\bigskip
+\subheader{Neutral army}
+When you use a Population token to \textbf{recruit} units, instead of \textbf{recruiting} them normally, for every Dwelling you have, draw 2 corresponding Neutral Unit cards.
+You can \textbf{recruit} any number of these units if you \svg{pay} their \svg{recruit} costs.
+Discard all units that were not recruited.
+
+\textbf{Note:} This variant is recommended only when there are no Heroes with unit-oriented Special Abilities in the game.
+
+\vspace*{\fill}
+\begin{center}
+  \transparent{0.2}\includegraphics[width=0.5\linewidth]{\art/leprechaun.png}
+\end{center}
+\vspace*{\fill}
+
+\columnbreak
+\subheader{Draft start}
+This rule allows you to modify your starting Deck by drafting its contents during the game’s setup.
+After choosing your Heroes, instead of creating their normal starting Decks, follow the steps below.
+For each chosen Hero, take their Starting Ability card from the Ability Deck and their Level 1 Specialty card, and set them aside.
+
+Shuffle the Artifact, Ability, and Spell Decks separately.
+Each player draws the top 2 cards from each of these Decks and chooses one to keep.
+Then, each player passes the remaining 5 cards to the player on their left.
+Repeat this step until all of the cards have been taken.
+
+When that happens, the players -- once again -- draw the top 2 cards from the three Decks, choose one to keep, and pass the remaining five to the next player, but this time to the one on their right.
+Repeat the step until every player has a Deck totaling 12 cards drafted this way.
+
+Now, based on the icons shown on their Hero Board, each player adds the corresponding Statistic cards to their Deck.
+At this point, a Might Hero's Deck should consist of 18 cards, and a Magic Hero's Deck of 17 cards.
+
+Each player selects 7 cards from their Deck (discarding the rest) and adds them to the two cards they set aside at the beginning.
+Now, every player has their drafted Deck of 9 cards ready.
+
+\textbf{Note:} This variant is recommended for 3+ players.
+
+\columnbreak
+\subheader{Split Artifact and Spell Decks}\pagetarget{Split Artifact and Spell Decks}{}
+
+\textbf{Note:} Split Decks are often used in \pagelink{Tournament Mode}{Tournament Mode}.
+
+During Setup, split Artifact cards by \pagelink{Artifact}{their level} into 3 separate Decks: Minor, Major and Relic.  % no-check-caps
+Afterwards, split the Spell Deck into 2 separate Decks for \pagelink{Schools of Magic}{Basic and Expert Spells}.
+Discard the top card of each of the five Decks to form their Discard Pile.
+
+Each time you gain an Artifact card or a Spell card \textbf{from Visiting a Map Location}, perform a Search (X) action or draw a card from one of the available Decks depending on your Hero's position on the Map, according to the table below.
+If several Decks are available, choose one.
+
+\begin{table}[H]
+\hommtable{15}{
+  \centering
+  \medskip
+  \textbf{Deck availability}\\
+  \bigskip
+  \begin{tabularx}{0.95\linewidth}{>{\hsize=0.25\hsize\linewidth=\hsize}X
+    >{\hsize=0.34\hsize\linewidth=\hsize}X
+    >{\hsize=0.32\hsize\linewidth=\hsize}X
+  }
+    \darkcell[1.2]{Hero's\\ Position} & \darkcell[1.2]{Artifact\\ Decks} & \darkcell[1.2]{Spell\\ Decks} \\
+    \darkcell[1.2]{Tiles I, II--III} &
+    \lightcell[1.2]{Minor} &
+    \lightcell[1.2]{Basic} \\
+    \darkcell[1.2]{Tiles IV--V} &
+    \lightcell[1.2]{Minor\\ Major} &
+    \lightcell[1.2]{Basic\\ Expert} \\
+    \darkcell[1.6]{Tiles VI--VII} &
+    \lightcell[1.6]{Minor\\ Major\\ Relic} &
+    \lightcell[1.6]{Basic\\ Expert} \\
+  \end{tabularx}
+}
+\end{table}
+
+If you gain an Artifact or a Spell \textbf{outside of a Map Location} (e.g. by buying a Spell in a Mage Guild), \textbf{only your Main Hero's position} is relevant for choosing from the available Decks.
+% clarification: https://discord.com/channels/740870068178649108/897475192677355560/1201813535857057822 Or  https://discord.com/channels/740870068178649108/897475192677355560/1201802322624122930
+
+\vspace*{\fill}
+\columnbreak
+\subheader{Gold pool}
+This alternative rule for building and managing your army changes the dynamics of multiplayer clash games, improving the experience, particularly in games with an odd number of players.
+By mitigating the impact of casualties, it gives early combatants a fair chance against players with fresh armies and denies them an easy win.
+
+Your pool of resources is now called the Unspent Pool.
+When you use the Population token to \textbf{recruit} or \textbf{reinforce}, instead of placing the \svg{gold} and \svg{valuablegreater} from your Unspent Pool back in the box, place the resources in a separate pile near your Unit Deck -- this will be your Reserved Pool.
+The resources from the Reserved Pool cannot be used.
+
+The next time you use your Population token to expand your army, you will be able to freely change your recruited units, meaning that you can not only buy new units, but also sell the ones you have.
+When you sell a unit or when it perishes, simply return its costs -- both in \svg{gold} and \svg{valuablegreater} -- from your Reserved Pool to your Unspent Pool.
+You can \textbf{recruit} and \textbf{reinforce} as many units as you can afford.
+
+Whenever your unit is flipped from the ``Pack'' side to the ``Few'' side, you regain the \svg{reinforce}.
+
+Whenever you use a card that reduces a unit's \textbf{recruitment} or \textbf{reinforcement} costs, keep it with the unit's card to remind you how much \svg{gold} and \svg{valuablegreater} you will regain when the unit perishes or when it is sold (or when it is flipped to the ``Few'' side, if you used the card to pay the \svg{reinforce}).
+When this happens, return the ``discount card'' to your hand.
+\end{multicols}
+
+{
+\transparent{0.2}
+\begin{center}
+  \includegraphics[width=0.4\linewidth]{\art/arrow.png}
+\end{center}
+\vspace*{\fill}
+}
+\clearpage
+
+\vspace*{-3.4em}
+\begin{table}[H]
+\hommtable{38}{
+  \centering
+  \textbf{Optional Rules Table}\\
+  \phantomsection\addcontentsline{toc}{subsection}{Optional Rules Table}%
+  \small
+  {
+    \iftoggle{noartbackground}{}{\color{white}}
+    You may modify the rules to increase or decrease the game's difficulty.\\
+  }
+  \bigskip
+  \begin{tabularx}{\linewidth}{>{\hsize=0.3\hsize\linewidth=\hsize}X
+                               >{\hsize=1.667\hsize\linewidth=\hsize}X}
+     \darkcell[1.5]{\iftoggle{noartbackground}{}{\color{white}}Game Difficulty Levels} & \darkcell[1.5]{Change to the default rules} \\
+     \darkcell[1.2]{Increase} & \lightcell[1.2]{Towns do not produce resources when \textbf{flagged}, but players may use the buildings of a captured Town.} \\
+     \darkcell[0.8]{Increase} & \lightcell[0.8]{You may not reroll your dice.} \\
+     \darkcell[0.8]{Increase} & \lightcell[0.8]{All Treasure and Resource dice only give 1 resource.} \\
+     \darkcell[0.8]{Increase} & \lightcell[0.8]{No starting bonus.} \\
+     \darkcell[0.8]{Decrease} & \lightcell[0.8]{You start the game with a Secondary Hero.} \\
+     \darkcell[0.8]{Decrease} & \lightcell[0.8]{Every unit deals at least 1 \svg{damage-yellow} during an attack.} \\
+     \darkcell[0.8]{Decrease} & \lightcell[0.8]{All Mines and Settlements provide double income.} \\
+     \darkcell[1.2]{Decrease} & \lightcell[1.2]{You may exchange your resources at any time, the Trading Post becomes \textbf{Visitable} and draws you 1 card from the Artifact Deck.} \\
+     \darkcell[0.8]{Decrease} & \lightcell[0.8]{Extending Combat no longer costs any MP.} \\
+     \darkcell[0.8]{Variant} & \lightcell[0.8]{The Attack Die no longer affects damage (but can still interact with abilities).} \\
+     \darkcell[0.8]{Variant} & \lightcell[0.8]{An Astrologers Proclaim card is also drawn at the start of the Resource Rounds.} \\
+     \darkcell[0.8]{Variant} & \lightcell[0.8]{Astrologers Proclaim cards are no longer drawn.} \\
+     \darkcell[0.8]{Variant} & \lightcell[0.8]{Black Cubes on all \textbf{Visitable} Fields are removed on \nth{4}, \nth{8}, and \nth{12} Rounds.} \\
+     \darkcell[1.2]{Variant} & \lightcell[1.2]{The cards that would normally go to your hand now go immediately to your discard pile instead.} \\
+  \end{tabularx}
+}
+\end{table}
+
+\framedimage[\linewidth]{\art/devil.jpg}
