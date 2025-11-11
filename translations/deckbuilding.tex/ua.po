@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-10-13 11:16+0000\n"
+"POT-Creation-Date: 2025-11-11 22:26+0000\n"
 "PO-Revision-Date: 2024-05-21 11:12+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -16,27 +16,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#. type: Plain text
+#. type: multicols
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/components.tex:5 sections/credits.tex:6 sections/deckbuilding.tex:5
-#: sections/difficulty.tex:5 sections/map_elements.tex:5
-#: sections/player_turns.tex:5 sections/resources.tex:5 sections/setup.tex:5
-#: sections/trading.tex:5
-msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
-msgstr ""
-
-#. type: multicols*
-#: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
 #: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
-#: sections/combat.tex:302 sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/deckbuilding.tex:52 sections/deckbuilding.tex:441
-#: sections/difficulty.tex:7 sections/expansion_content.tex:491
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:85
-#: sections/map_elements.tex:133 sections/player_turns.tex:7
-#: sections/resources.tex:7 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:59 sections/town.tex:5
-#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:46
-#: sections/units.tex:203
+#: sections/combat.tex:302 sections/credits.tex:8 sections/deckbuilding.tex:5
+#: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
+#: sections/difficulty.tex:5 sections/expansion_content.tex:490
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:83
+#: sections/map_elements.tex:131 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:57 sections/town.tex:5
+#: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
+#: sections/units.tex:203 sections/tournament_mode.tex:5
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -44,8 +35,8 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:53 sections/all_map_locations.tex:235
-#: sections/credits.tex:36 sections/deckbuilding.tex:59
+#: sections/all_map_locations.tex:51 sections/all_map_locations.tex:233
+#: sections/credits.tex:34 sections/deckbuilding.tex:79
 #: sections/game_modes.tex:30 sections/scenario_end.tex:23
 #, no-wrap
 msgid ""
@@ -54,20 +45,11 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:62 sections/deckbuilding.tex:379
-#: sections/trading.tex:27 sections/units.tex:222 sections/units.tex:226
+#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:399
+#: sections/trading.tex:25 sections/units.tex:222 sections/units.tex:226
 #, no-wrap
 msgid ""
 "\\medskip\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/combat.tex:33 sections/combat.tex:149 sections/credits.tex:38
-#: sections/credits.tex:42 sections/deckbuilding.tex:454
-#, no-wrap
-msgid ""
-"\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
 
@@ -79,12 +61,20 @@ msgstr "\\addsection{Колодобудування}{\\skills/wisdom.png}"
 
 #. type: multicols
 #: sections/deckbuilding.tex:12
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{\\pagetarget{Playerdecks}{Player Decks}}\n"
+#| "All players have a unique Deck which represents their Main Hero's Abilities and Equipment.\n"
+#| "Decks may contain Statistic, Ability, Spell, Artifact and the Main Hero's Specialty Cards.\n"
+#| "Each player's Deck starts with 9 Cards, built during the game's setup.\n"
+#| "\n"
 msgid ""
 "\\subsection*{\\pagetarget{Playerdecks}{Player Decks}}\n"
 "All players have a unique Deck which represents their Main Hero's Abilities and Equipment.\n"
-"Decks may contain Statistic, Ability, Spell, Artifact and the Main Hero's Specialty Cards.\n"
-"Each player's Deck starts with 9 Cards, built during the game's setup.\n"
+"Decks may contain Statistic, Ability, Spell, Artifact and the Main Hero's Specialty cards.\n"
+"Each player's Deck starts with 9 cards, built during the game's setup.\\par\n"
+"\\bigskip\n"
+"\\bigskip\n"
 "\n"
 msgstr ""
 "\\subsection*{\\pagetarget{Playerdecks}{Колода Гравця}}\n"
@@ -121,22 +111,22 @@ msgstr ""
 #| "\\end{enumerate}\n"
 #| "\n"
 msgid ""
-"\\subsection*{General Card Rules}\n"
+"\\subheader{General Card Rules}\n"
 "\\begin{enumerate}\n"
 "  \\item Cards can be played \\textbf{only on your Turn}, or in a \\pagelink{Combat}{Combat} involving your \\textbf{Main Hero}.\n"
-"  \\item After a Card is used, discard it.\n"
+"  \\item After a card is used, discard it.\n"
 "    Each player has their own separate Discard Pile\\index{Discard Pile}.\n"
-"  \\item If your Deck is empty when you need to draw a Card, \\textbf{shuffle your Discard Pile} into a new Deck to draw from.\n"
-"  \\item Whenever your Hero gains a Card for any reason, put it \\textbf{directly into your hand} unless otherwise stated.\n"
-"  \\item Whenever you are instructed to \\textbf{Search} (X)\\index{Search (X)} the Ability, Artifact, or Spell Deck, you may either look at the top (X) Cards from the specified Deck, take one of them to your hand, and discard the others, \\textbf{OR} instead of looking at the top (X) Cards, gain the top Card from that Deck's Discard Pile.\n"
+"  \\item If your Deck is empty when you need to draw a card, \\textbf{shuffle your Discard Pile} into a new Deck to draw from.\n"
+"  \\item Whenever your Hero gains a card for any reason, put it \\textbf{directly into your hand} unless otherwise stated.\n"
+"  \\item Whenever you are instructed to \\textbf{Search} (X)\\index{Search (X)} the Ability, Artifact, or Spell Deck, you may either look at the top (X) cards from the specified Deck, take one of them to your hand, and discard the others, \\textbf{OR} instead of looking at the top (X) cards, gain the top card from that Deck's Discard Pile.\n"
 "  \\item The Ability, Artifact, and Spell Decks each have their own Discard Piles, created during the setup, which help you identify these Decks.\n"
-"    If a Deck ever runs out of Cards, reshuffle it and discard its top Card to form a new Discard Pile.\n"
-"    Whenever one of these Discard Piles is empty, \\textbf{refill it} with that Deck's top Card.\n"
+"    If a Deck ever runs out of cards, reshuffle it and discard its top card to form a new Discard Pile.\n"
+"    Whenever one of these Discard Piles is empty, \\textbf{refill it} with that Deck's top card.\n"
 "  \\columnbreak\n"
 "  \\item Cards have the following \\pagetarget{Card Effects}{types of effects}:\n"
 "  \\begin{itemize}\n"
 "    \\item \\textbf{Instant} \\svg{instant} Effects are resolved immediately.\n"
-"    \\item \\textbf{Activation} \\svg{activation} Effects must be played when Activating your own Unit in Combat.\n"
+"    \\item \\textbf{Activation} \\svg{activation} Effects must be played when Activating your own unit in Combat.\n"
 "    \\item \\textbf{Map} \\svg{map} Effects cannot be used during Combat.\n"
 "    \\item \\textbf{Ongoing} \\svg{ongoing} Effects\\index{Ongoing Effects} last until they are used up or until the player who played them starts their next Turn (whichever happens first).\n"
 "      \\begin{expansion}[before skip balanced=0.3em,]{stronghold,conflux,cove}\n"
@@ -144,12 +134,12 @@ msgid ""
 "        \\node at (5.5, 0) {\\includegraphics[width=0.22\\linewidth]{\\images/time-token.png}};\n"
 "      \\end{tikzpicture}\\parbox{0.75\\hsize}{You can use Time Tokens\\index{Time Token} to track the duration of Ongoing Effects.}\n"
 "      \\end{expansion}\n"
-"    \\item \\textbf{Permanent} \\svg{permanent} Cards\\index{Permanent Cards} stay in play until discarded or replaced.\n"
-"      They are played the same way as \\svg{activation} and \\svg{map} Cards.\n"
-"      \\textbf{You may only have one permanent Card at a time}; playing another discards the first.\n"
-"      While a Permanent Card is in play, you may use either its Basic or Expert Effect, but not both simultaneously.\n"
+"    \\item \\textbf{Permanent} \\svg{permanent} cards\\index{Permanent cards} stay in play until discarded or replaced.\n"
+"      They are played the same way as \\svg{activation} and \\svg{map} cards.\n"
+"      \\textbf{You may only have one permanent card at a time}; playing another discards the first.\n"
+"      While a Permanent card is in play, you may use either its Basic or Expert Effect, but not both simultaneously.\n"
 "  \\end{itemize}\n"
-"  \\item Whenever you are instructed to \\textbf{remove a Card}, remove it completely from the game.\n"
+"  \\item Whenever you are instructed to \\textbf{remove a card}, remove it completely from the game.\n"
 "\\end{enumerate}\n"
 "\n"
 msgstr ""
@@ -192,7 +182,62 @@ msgstr ""
 "\n"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:52
+#: sections/deckbuilding.tex:51
+#, fuzzy
+#| msgid "Searching Example"
+msgid "\\subheader{Searching Example}"
+msgstr "Приклад Пошуку"
+
+#. type: multicols*
+#: sections/deckbuilding.tex:53
+#, fuzzy, no-wrap
+#| msgid "\\textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during the previous Game Round, enabling him to now use his Spell Book Token to purchase additional Spells.}"
+msgid ""
+"    \\textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during the previous Game Round, enabling him to now use his Spell Book Token to purchase additional Spells.}\n"
+"\n"
+msgstr "\\textit{Боб, який грає за Чаклуна Дімера, побудував Гільдію Магів в попередньому Ігровому Раунді, що дозволяє йому використовувати Жетон Книги Заклинань для придбання Заклинань.}"
+
+#. type: multicols*
+#: sections/deckbuilding.tex:62
+#, fuzzy, no-wrap
+#| msgid "\\textit{He spends the token and pays the cost of 5 \\svg{gold} indicated on his Town Board, allowing him to \\textbf{Search (2)} the Spell Deck.}\\par \\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par \\filbreak \\textit{He now has the choice of either gaining the top Card of the Spell Card Discard Pile, or drawing the top two Cards of the Spell Deck and gaining one of them.  He is not interested in gaining the Spell Curse, which is on top of the Discard Pile, and instead decides to draw two Cards – a Magic Arrow and a Fireball.} \\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow.png}\\par \\textit{He decides to keep the Fireball, placing it into his hand and discarding the Magic Arrow into the Spell Discard Pile.}"
+msgid ""
+"    \\includegraphics[width=\\linewidth]{\\examples/deemer_receiving_spellbook.png}\\par\n"
+"    \\textit{He spends the token and pays the cost of 5 \\svg{gold} indicated on his Town Board, allowing him to \\textbf{Search (2)} the Spell Deck.}\\par\n"
+"    \\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par\n"
+"    \\filbreak\n"
+"    \\textit{He now has the choice of either gaining the top Card of the Spell Card Discard Pile, or drawing the top two cards of the Spell Deck and gaining one of them.\n"
+"        He is not interested in gaining the Spell Curse, which is on top of the Discard Pile, and instead decides to draw two cards – a Magic Arrow and a Fireball.}\n"
+"    \\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow.png}\\par\n"
+"    \\textit{He decides to keep the Fireball, placing it into his hand and discarding the Magic Arrow into the Spell Discard Pile.}\n"
+"\n"
+msgstr "\\textit{Він використовує Жетон і платить вартість 5 \\svg{gold} вказану на його Планшеті Міста, що дозволяє йому \\textbf{Шукати (2)} в Колоді Заклинань.}\\par \\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par \\filbreak \\textit{Тепер він має вибір: або взяти верхню Карту зі Скиду Заклинань, або взяти дві верхні Карти з Колоди Заклинань і забрати одну з них. Він не зацікавлений в отриманні Заклинання Прокляття, яке лежить у Скиді, і замість цього вирішує взяти дві Карти - Чарівну Стрілу і Вогняну Кулю.} \\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow.png}\\par \\textit{Він вирішує залишити собі Вогняну Кулю, кладе її в руку, а Чарівну Стрілу скидає у Скид Заклинань.}"
+
+#. type: multicols*
+#: sections/deckbuilding.tex:64
+#, no-wrap
+msgid ""
+"    \\vspace*{\\fill}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/deckbuilding.tex:66
+#, fuzzy, no-wrap
+#| msgid ""
+#| "{\\centering\\phantom{Star Axis}\\par}\n"
+#| "\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
+#| "\n"
+msgid ""
+"    \\hfill{\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/fire_magic.png}}\n"
+"\n"
+msgstr ""
+"{\\centering\\phantom{Зоряна Вісь}\\par}\n"
+"\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
+"\n"
+
+#. type: Plain text
+#: sections/deckbuilding.tex:72
 #, fuzzy
 #| msgid ""
 #| "\\subsection*{\\pagetarget{Ability}{Ability} and \\pagetarget{Statistic}"
@@ -207,7 +252,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:57
+#: sections/deckbuilding.tex:77
 #, fuzzy, no-wrap
 #| msgid ""
 #| "All Ability\\index{Ability Card} and Statistic Cards\\index{Statistic Cards} have a \\textbf{Basic Effect}\\index{Basic Effect} and a stronger \\textbf{Expert} \\svg{expert} \\textbf{Effect}\\index{Expert Effect}, which is shown below the Basic Effect.\n"
@@ -217,10 +262,10 @@ msgstr ""
 #| "\\bigskip\n"
 #| "\n"
 msgid ""
-"All Statistic\\index{Statistic Cards} and Ability Cards\\index{Ability Card} have a \\textbf{Basic Effect}\\index{Basic Effect} and a stronger \\textbf{Expert} \\svg{expert} \\textbf{Effect}\\index{Expert Effect}, which is shown below the Basic Effect.\n"
-"Whenever you play a Statistic or Ability Card, you must choose which effect you are using.\n"
+"All Statistic\\index{Statistic cards} and Ability cards\\index{Ability card} have a \\textbf{Basic Effect}\\index{Basic Effect} and a stronger \\textbf{Expert} \\svg{expert} \\textbf{Effect}\\index{Expert Effect}, which is shown below the Basic Effect.\n"
+"Whenever you play a Statistic or Ability card, you must choose which effect you are using.\n"
 "The number of \\svg{expert} Effects you can use each Round is limited by your Main Hero's \\pagelink{Level}{Level}.\n"
-"Track the number of uses you have in any suitable manner, such as by moving Black Cubes on and off your Hero Card.\\par\n"
+"Track the number of uses you have in any suitable manner, such as by moving Black Cubes on and off your Hero Board.\\par\n"
 "\n"
 msgstr ""
 "Всі Карти Здібностей \\index{Карти Здібностей} і Характеристик\\index{Карти Характеристик} мають \\textbf{Базовий Ефект}\\index{Базовий Ефект} і сильніший \\textbf{Експертий} \\svg{expert} \\textbf{Ефект}\\index{Експертний Ефект}, вказаний під Базовим Ефектом.\n"
@@ -231,24 +276,24 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:65
+#: sections/deckbuilding.tex:85
 #, fuzzy, no-wrap
 #| msgid "\\bigbreak \\note{11}{ Certain Cards are limited to the Necropolis Faction \\svg{necro-yellow}.  When a non-Necropolis player draws a Necropolis Card\\index{Necropolis Card} from the Ability Deck, they may either discard it and draw a new Card as a replacement or gain it.  Non-Necropolis players \\textbf{cannot use} Faction Specific Cards from their hand in any way besides for effects that discard them.  }"
 msgid ""
 "\\note{11}{\n"
-"  Certain Cards are limited to the Necropolis Faction \\svg{necro-yellow}.\n"
-"  When a non-Necropolis player draws a Necropolis Card\\index{Necropolis Card} from the Ability Deck, they may either discard it and draw a new Card as a replacement or gain it.\n"
-"  Non-Necropolis players \\textbf{cannot use} Faction Specific Cards from their hand in any way besides for effects that discard them.\n"
+"  Certain cards are limited to the Necropolis Faction \\svg{necro-yellow}.\n"
+"  When a non-Necropolis player draws a Necropolis card\\index{Necropolis card} from the Ability Deck, they may either discard it and draw a new card as a replacement or gain it.\n"
+"  Non-Necropolis players \\textbf{cannot use} Faction Specific cards from their hand in any way besides for effects that discard them.\n"
 "}"
 msgstr "\\bigbreak \\note{11}{Деякі Карти доступні лише Фракції Некрополіс \\svg{necro-yellow}. Коли гравець іншої Фракції отримує Карту Некрополісу\\index{Карти Некрополісу} з Колоди Здібностей, він може або скинути її і взяти нову Карту замість неї, або взяти її в руку. Гравці, які не належать до Фракції Некрополіс \\textbf{можуть використовувати} Особливі Карти Фракцій тільки для ефектів, що їх скидають.}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:72
+#: sections/deckbuilding.tex:92
 msgid "\\columnratio{0.25}"
 msgstr ""
 
 #. type: paracol
-#: sections/deckbuilding.tex:72 sections/deckbuilding.tex:117
+#: sections/deckbuilding.tex:92 sections/deckbuilding.tex:137
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -259,13 +304,13 @@ msgid ""
 msgstr ""
 
 #. type: paracol
-#: sections/deckbuilding.tex:73 sections/deckbuilding.tex:118
+#: sections/deckbuilding.tex:93 sections/deckbuilding.tex:138
 #, no-wrap
 msgid "          \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: paracol
-#: sections/deckbuilding.tex:90
+#: sections/deckbuilding.tex:110
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/knowledge.png}};\n"
@@ -287,7 +332,7 @@ msgid ""
 "              \\draw (-1, -1.5) node {\\encircle{3}};\n"
 "          \\end{tikzpicture}\n"
 "      \\end{scriptsize}\n"
-"      \\textbf{\\textit{\\textcolor{darkcandyapplered}{Statistic Card\\\\\\phantom{Blah}}}}\n"
+"      \\textbf{\\textit{\\textcolor{darkcandyapplered}{Statistic card\\\\\\phantom{Blah}}}}\n"
 "    \\end{center}\n"
 "  \\end{expansion}\n"
 "  \\switchcolumn\n"
@@ -313,13 +358,13 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: paracol
-#: sections/deckbuilding.tex:91 sections/deckbuilding.tex:138
+#: sections/deckbuilding.tex:111 sections/deckbuilding.tex:158
 #, no-wrap
 msgid "            \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: paracol
-#: sections/deckbuilding.tex:106
+#: sections/deckbuilding.tex:126
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/knowledge.png}};\n"
@@ -340,14 +385,14 @@ msgid ""
 "                \\draw (-1, -1.5) node {\\encircle{2}};\n"
 "            \\end{tikzpicture}\n"
 "        \\end{scriptsize}\n"
-"        \\textbf{\\textit{\\textcolor{darkcandyapplered}{Empowered\\\\Statistic Card}}}\n"
+"        \\textbf{\\textit{\\textcolor{darkcandyapplered}{Empowered\\\\Statistic card}}}\n"
 "      \\end{center}\n"
 "    \\end{minipage}\n"
 "    \\hfill\n"
 "    \\begin{minipage}[t]{0.65\\linewidth}\n"
 "      \\vspace*{0mm}\n"
-"      \\subsection*{\\pagetarget{Empowered Statistic}{Empowered} Statistic Cards}\\index{Empowered Statistic Card}\n"
-"      These Cards are more powerful versions of the normal Statistic Cards.\n"
+"      \\subsection*{\\pagetarget{Empowered Statistic}{Empowered} Statistic cards}\\index{Empowered Statistic Card}\n"
+"      These cards are more powerful versions of the normal Statistic cards.\n"
 "      They have only one effect which is identical to the normal Statistic's Expert effect, but does not require using your \\svg{expert}.\\par\n"
 "\n"
 msgstr ""
@@ -365,17 +410,17 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: paracol
-#: sections/deckbuilding.tex:111
+#: sections/deckbuilding.tex:131
 #, no-wrap
 msgid ""
 "      \\medskip\n"
-"      These Cards can be gained via certain game effects, such as Visiting a \\pagelink{Star Axis}{Star Axis}.\n"
+"      These cards can be gained via certain game effects, such as Visiting a \\pagelink{Star Axis}{Star Axis}.\n"
 "    \\end{minipage}\n"
 "  \\end{expansion}"
 msgstr ""
 
 #. type: paracol
-#: sections/deckbuilding.tex:137
+#: sections/deckbuilding.tex:157
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/necromancy_card.png}};\n"
@@ -404,7 +449,7 @@ msgid ""
 "              \\draw (1.5, -1.9) node {\\encircle{4}};\n"
 "          \\end{tikzpicture}\n"
 "      \\end{scriptsize}\n"
-"      \\textbf{\\textit{\\textcolor{darkcandyapplered}{Ability Card\\\\\\phantom{Blah}}}}\n"
+"      \\textbf{\\textit{\\textcolor{darkcandyapplered}{Ability card\\\\\\phantom{Blah}}}}\n"
 "    \\end{center}\n"
 "  \\end{expansion}\n"
 "  \\switchcolumn\n"
@@ -435,7 +480,7 @@ msgstr ""
 "    \\begin{scriptsize}\n"
 
 #. type: paracol
-#: sections/deckbuilding.tex:153
+#: sections/deckbuilding.tex:173
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/knowledge.png}};\n"
@@ -457,14 +502,14 @@ msgid ""
 "              \\draw (1.5, -1.9) node {\\encircle{4}};\n"
 "            \\end{tikzpicture}\n"
 "        \\end{scriptsize}\n"
-"        \\textbf{\\textit{\\textcolor{darkcandyapplered}{Empowered\\\\Ability Card}}}\n"
+"        \\textbf{\\textit{\\textcolor{darkcandyapplered}{Empowered\\\\Ability card}}}\n"
 "      \\end{center}\n"
 "    \\end{minipage}\n"
 "    \\hfill\n"
 "    \\begin{minipage}[t]{0.65\\linewidth}\n"
-"      \\subsection*{\\pagetarget{Empowered Ability}{Empowered} Ability Cards}\\index{Empowered Statistic Card}\n"
-"      The Empowered Ability Cards work very similarly to Empowered Statistic Cards.\n"
-"      Their only effect corresponds to the Expert effect of normal Ability Cards, but without requiring you to use your \\svg{expert}.\n"
+"      \\subsection*{\\pagetarget{Empowered Ability}{Empowered} Ability cards}\\index{Empowered Statistic card}\n"
+"      The Empowered Ability cards work very similarly to Empowered Statistic cards.\n"
+"      Their only effect corresponds to the Expert effect of normal Ability cards, but without requiring you to use your \\svg{expert}.\n"
 "\n"
 msgstr ""
 "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/knowledge.png}};\n"
@@ -481,17 +526,17 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: paracol
-#: sections/deckbuilding.tex:158
+#: sections/deckbuilding.tex:178
 #, no-wrap
 msgid ""
 "      \\medskip\n"
-"      These Cards can be gained by spending \\pagelink{Empowered Ability Token}{Empowered Ability Tokens}, which are only available in certain Scenarios (e.~g.~``Island of Fire'' from the Naval Battles Mission Book).\n"
+"      These cards can be gained by spending \\pagelink{Empowered Ability Token}{Empowered Ability Tokens}, which are only available in certain Scenarios (e.~g.~``Island of Fire'' from the Naval Battles Mission Book).\n"
 "    \\end{minipage}\n"
 "  \\end{expansion}"
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:174
+#: sections/deckbuilding.tex:194
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{2}\n"
@@ -511,7 +556,7 @@ msgid ""
 "    \\item[\\textbf{1.}] Name\n"
 "    \\item[\\textbf{2.}] Basic Effect\\\\\n"
 "    \\item[\\textbf{3.}] Expert Effect\n"
-"    \\item[\\textbf{4.}] Necropolis-specific Card\n"
+"    \\item[\\textbf{4.}] Necropolis-specific card\n"
 "  \\end{itemize}"
 msgstr ""
 "{2}\n"
@@ -525,15 +570,15 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:174 sections/deckbuilding.tex:397
+#: sections/deckbuilding.tex:194 sections/deckbuilding.tex:417
 #: sections/expansion_content.tex:113 sections/expansion_content.tex:160
-#: sections/expansion_content.tex:175 sections/resources.tex:33
+#: sections/expansion_content.tex:175 sections/resources.tex:31
 #, no-wrap
 msgid "\\columnbreak"
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:178
+#: sections/deckbuilding.tex:198
 #, fuzzy, no-wrap
 #| msgid "\\pagetarget{spells}{Spell Cards}"
 msgid ""
@@ -543,22 +588,22 @@ msgid ""
 msgstr "\\pagetarget{spells}{Карти Заклинань}"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:186
+#: sections/deckbuilding.tex:206
 #, fuzzy, no-wrap
 #| msgid "Spell Cards\\index{Spell Card} have three possible primary effects.  Using the topmost, basic version of the Spell usually has no additional costs.  To access the other effects, you may \\textbf{Empower} a Spell\\index{Empowering Spells} by paying the indicated cost (3) to get a more powerful outcome (4).  You may pay this cost by playing other Cards for their Empower \\svg{empower} effect (e.g. the Spell Power Statistic) before casting the Spell.  All Spell Cards also have an alternative bottom (5) \\svg{empower} effect.  You cannot preserve the played \\svg{empower}: casting a Spell consumes all the \\svg{empower} played so far, and if you stop playing Cards, the power dissipates.  You may use a cheaper \\svg{empower} effect than what you've paid for, though."
 msgid ""
-"Spell Cards\\index{Spell Card} have three possible primary effects.\n"
+"Spell cards\\index{Spell card} have three possible primary effects.\n"
 "Using the topmost, basic version of the Spell usually has no additional costs.\n"
 "To access the other effects, you may \\textbf{Empower} a Spell\\index{Empowering Spells} by paying the indicated cost (3) to get a more powerful outcome (4).\n"
-"You may pay this cost by playing other Cards for their Empower \\svg{empower} effect (e.g. the Spell Power Statistic) before casting the Spell.\n"
-"All Spell Cards also have an alternative bottom (5) \\svg{empower} effect.\n"
-"You cannot preserve the played \\svg{empower}: casting a Spell consumes all the \\svg{empower} played so far, and if you stop playing Cards, the power dissipates.\n"
+"You may pay this cost by playing other cards for their Empower \\svg{empower} effect (e.g. the Spell Power Statistic) before casting the Spell.\n"
+"All Spell cards also have an alternative bottom (5) \\svg{empower} effect.\n"
+"You cannot preserve the played \\svg{empower}: casting a Spell consumes all the \\svg{empower} played so far, and if you stop playing cards, the power dissipates.\n"
 "You may use a cheaper \\svg{empower} effect than what you've paid for, though.\\par\n"
 "\n"
 msgstr "Карти Заклинань\\index{Карти Заклинань} мають три основні ефекти. Використання, базового ефекту Заклинання не потребує додаткових витрат.  Для отримання доступу до інших ефектів, ви можете \\textbf{Посилити} Заклинання\\index{Посилені Заклинання} сплативши вказану вартість (3) щоб отримати більш потужний результат (4). Ви можете сплатити цю вартість, розігравши інші Карти використавши їх ефект Посилення \\svg{empower} (наприклад, Характеристику Сили Заклинань) перед розіграшем Заклинання. Всі Карти Заклинань також мають альтернативний нижній (5) \\svg{empower} ефект. Ви не можете зберігати зіграні \\svg{empower}: розіграш Заклинання споживає всі \\svg{empower} зіграні досі, і якщо ви припиняєте грати Карти, сила розсіюється. Проте ви можете використати дешевший \\svg{empower} ефект, ніж той, за який ви заплатили."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:217
+#: sections/deckbuilding.tex:237
 #, fuzzy, no-wrap
 #| msgid "{ \\centering \\begin{tikzpicture} \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}}; \\draw (-1.3, 2.5) node {\\encircle{1}}; \\draw (-1.8, 0.3) node {\\encircle{2}}; \\draw (-1.1, -1) node {\\encircle{3}}; \\draw (1.1, -1) node {\\encircle{4}}; \\draw (0.8, -2.8) node {\\encircle{5}}; \\end{tikzpicture}\\\\ \\medskip \\footnotesize \\textbf{\\textit{\\textcolor{darkcandyapplered}{Spell Card}}}\\par \\noindent \\begin{minipage}[t]{0.5\\linewidth} \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt] \\item[\\textbf{1.}] Spell Name \\item[\\textbf{2.}] School of Magic \\item[\\textbf{3.}] Cost to Empower \\end{itemize} \\end{minipage} \\begin{minipage}[t]{0.4\\linewidth} \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt] \\item[\\textbf{4.}] Spell Effect \\item[\\textbf{5.}] Alternative\\\\Effect \\end{itemize} \\end{minipage} }"
 msgid ""
@@ -574,7 +619,7 @@ msgid ""
 "  \\end{tikzpicture}\\\\\n"
 "  \\medskip\n"
 "  \\footnotesize\n"
-"  \\textbf{\\textit{\\textcolor{darkcandyapplered}{Spell Card}}}\\par\n"
+"  \\textbf{\\textit{\\textcolor{darkcandyapplered}{Spell card}}}\\par\n"
 "\n"
 "  \\noindent\n"
 "  \\begin{minipage}[t]{0.5\\linewidth}\n"
@@ -596,7 +641,7 @@ msgid ""
 msgstr "{ \\centering \\begin{tikzpicture} \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}}; \\draw (-1.3, 2.5) node {\\encircle{1}}; \\draw (-1.8, 0.3) node {\\encircle{2}}; \\draw (-1.1, -1) node {\\encircle{3}}; \\draw (1.1, -1) node {\\encircle{4}}; \\draw (0.8, -2.8) node {\\encircle{5}}; \\end{tikzpicture}\\\\ \\medskip \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Карта Заклинання}}}} \\scriptsize \\begin{multicols}{2} \\begin{itemize}[itemsep=5pt] \\item[\\textbf{1.}] \\textbf{Назва Заклинання} \\item[\\textbf{2.}] \\textbf{Школа Магії} \\item[\\textbf{3.}] \\textbf{Вартість\\\\Посилення} \\item[\\textbf{4.}] \\textbf{Ефект Заклинання} \\item[\\textbf{5.}] \\textbf{Альтернативний\\\\Ефект} \\item[] \\end{itemize} \\end{multicols} }"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:221
+#: sections/deckbuilding.tex:241
 #, fuzzy, no-wrap
 #| msgid "Spells can be gained by Building the Mage Guild\\index{Mage Guild}.  Building it also enables you to use the Spell Book Token\\index{Spell Book Token} for buying additional Spells.  The Token cannot be used during the \\textbf{same Round} when the Guild is constructed. Spells can also be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgid ""
@@ -607,16 +652,16 @@ msgid ""
 msgstr "Заклинання можна отримати, Збудувавши Гільдію Магів\\index{Гільдія Магів}. Її створення також надає можливість використовувати Жетон Книги Заклинань\\index{Жетон Книги Заклинань} для купівлі додаткових Заклинань. Жетон не можна використовувати під час \\textbf{того ж Раунду} в якому була побудована Гільдія.\\par Заклинаннями можна \\pagelink{Trading}{обмінюватися} в Сценаріях з режимом Альянс та Кооператив."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:223
+#: sections/deckbuilding.tex:243
 #, fuzzy, no-wrap
 #| msgid "During Combat, \\textbf{only one Spell Card} may be played by each player \\textbf{per Combat Round}."
 msgid ""
-"During Combat, \\textbf{only one Spell Card} may be played by each player \\textbf{per Combat Round}.\n"
+"During Combat, \\textbf{only one Spell card} may be played by each player \\textbf{per Combat Round}.\n"
 "\n"
 msgstr "Під час Бою, кожен гравець може розіграти \\textbf{тільки одну Карту Заклинання} \\textbf{за Раунд Бою}."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:226
+#: sections/deckbuilding.tex:246
 #, fuzzy, no-wrap
 #| msgid "\\columnbreak When you use an effect which lets you cast a Spell from somewhere other than your hand (such as directly from the Spell Deck), place that Spell into your Discard Pile after casting it."
 msgid ""
@@ -626,7 +671,7 @@ msgid ""
 msgstr "Коли ви використовуєте ефект, який дозволяє вам розіграти Заклинання не з руки (наприклад, прямо з Колоди Заклинань), після розіграшу покладіть це Заклинання у ваш Скид."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:232
+#: sections/deckbuilding.tex:252
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{\\centering\\phantom{Star Axis}\\par}\n"
@@ -645,12 +690,12 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:238
+#: sections/deckbuilding.tex:258
 #, fuzzy, no-wrap
 #| msgid "All Spell Cards belong to one School of Magic\\index{Schools of Magic}: either Air, Fire, Earth or Water.  Spells with one School symbol on them are called \\textbf{Basic Spells}\\index{Basic Spell}, while Spells with four identical symbols are called \\textbf{Expert Spells}\\index{Expert Spell}.  \\textbf{Magic Arrow} is a Basic Spell; when casting the \\textbf{Magic Arrow}, you must select which School it belongs to.  By default there's no difference, but certain game effects can refer to specific Schools and to Basic/Expert Spells."
 msgid ""
 "\\subsection*{\\pagetarget{Schools of Magic}{Schools of Magic}}\n"
-"All Spell Cards belong to one School of Magic\\index{Schools of Magic}: either Air, Fire, Earth or Water.\n"
+"All Spell cards belong to one School of Magic\\index{Schools of Magic}: either Air, Fire, Earth or Water.\n"
 "Spells with one School symbol on them are called \\textbf{Basic Spells}\\index{Basic Spell}, while Spells with four identical symbols are called \\textbf{Expert Spells}\\index{Expert Spell}.\n"
 "\\textbf{Magic Arrow} is a Basic Spell; when casting the \\textbf{Magic Arrow}, you must select which School it belongs to.\n"
 "By default there's no difference, but certain game effects can refer to specific Schools and to Basic/Expert Spells.\n"
@@ -658,7 +703,7 @@ msgid ""
 msgstr "Всі Карти Заклинань належать до однієї Школи Магії\\index{Школи Магії}: або Повітря, Вогню, Землі чи Води. Заклинання з одним символом Школи називаються \\textbf{Базовими Заклинаннями}\\index{Базове Заклинання}, тоді як Заклинання з чотирма однаковими символами називаються \\textbf{Експертними Заклинаннями}\\index{Експертне Заклинання}. \\textbf{Чарівна Стріла} є Базовим Заклинанням; під час розіграшу \\textbf{Чарівної Стріли}, ви повинні вибрати до якої Школи вона належить. За замовчуванням немає різниці, але певні ігрові ефекти можуть посилатися на конкретні Школи та на Базові/Експертні Заклинання."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:266
+#: sections/deckbuilding.tex:286
 #, fuzzy, no-wrap
 #| msgid "\\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire.png} \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Fire}}} \\endminipage \\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_water.png} \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Water}}} \\endminipage \\hfill\\allowbreak\\bigbreak \\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_air.png} \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Air}}} \\endminipage \\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_earth.png} \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Earth}}} \\endminipage \\bigbreak"
 msgid ""
@@ -716,7 +761,7 @@ msgstr ""
 "\\bigbreak"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:269
+#: sections/deckbuilding.tex:289
 #, fuzzy, no-wrap
 #| msgid "\\pagetarget{Specialty}{Hero Specialty Cards}"
 msgid ""
@@ -726,19 +771,19 @@ msgid ""
 msgstr "\\pagetarget{Specialty}{Карти Спеціалізації Героя}"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:274
+#: sections/deckbuilding.tex:294
 #, fuzzy, no-wrap
 #| msgid "Hero Specialty Cards\\index{Specialty Card} are gained from \\pagelink{Level}{Level ups}.  Each Main Hero has a unique set of Specialty Cards.  While many of these Cards have effects which resemble Spell Cards and even make use of \\svg{empower} and Schools of Magic, Specialty Cards are their \\textbf{own unique category of Cards}.  For example, the limit of 1 Spell per Combat Round doesn't apply to Specialty Cards."
 msgid ""
-"Hero Specialty Cards\\index{Specialty Card} are gained from \\pagelink{Level}{Level ups}.\n"
-"Each Main Hero has a unique set of Specialty Cards.\n"
-"While some of these Cards have effects which resemble Spell Cards and even make use of \\svg{empower}, Specialty Cards are their \\textbf{own unique category of Cards}.\n"
-"For example, the limit of 1 Spell per Combat Round doesn't apply to Specialty Cards.\n"
+"Hero Specialty cards\\index{Specialty card} are gained from \\pagelink{Level}{Level ups}.\n"
+"Each Main Hero has a unique set of Specialty cards.\n"
+"While some of these cards have effects which resemble Spell cards and even make use of \\svg{empower}, Specialty cards are their \\textbf{own unique category of cards}.\n"
+"For example, the limit of 1 Spell per Combat Round doesn't apply to Specialty cards.\n"
 "\n"
 msgstr "Карти Спеціалізації Героя\\index{Карти Спеціалізації} отримуються під час \\pagelink{Level}{підвищення Рівня}. Кожен Головний Герой має унікальний набір Карт Спеціалізації. Хоча багато з цих Карт мають ефекти, схожі на ефекти Карт Заклинань і навіть використовують \\svg{empower} та Школи Магії, Карти Спеціалізації \\textbf{є окремою унікальною категорією Карт}. Наприклад, обмеження в 1 Заклинання за Раунд Бою не стосується Карт Спеціалізації."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:282
+#: sections/deckbuilding.tex:302
 #, fuzzy, no-wrap
 #| msgid "{ \\medskip \\centering \\includegraphics[width=0.7\\linewidth]{\\cards/specialty.png}\\\\ \\medskip \\footnotesize\\textit{A Level 4 Specialty Card, belonging to Catherine the Knight.} }"
 msgid ""
@@ -747,13 +792,13 @@ msgid ""
 "    \\centering\n"
 "    \\includegraphics[width=0.7\\linewidth]{\\cards/specialty.png}\\\\\n"
 "    \\medskip\n"
-"    \\footnotesize\\textit{A Level 4 Specialty Card, belonging to Catherine the Knight.}\n"
+"    \\footnotesize\\textit{A Level 4 Specialty card, belonging to Catherine the Knight.}\n"
 "}\n"
 "\n"
 msgstr "{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/specialty.png}\\\\ \\medskip \\footnotesize\\textit{Карта Спеціалізації 4-го рівня, що належить Лицарю Катерині.} }"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:290
+#: sections/deckbuilding.tex:310
 #, fuzzy, no-wrap
 #| msgid "{ \\medskip \\centering \\includegraphics[width=0.7\\linewidth]{\\cards/specialty.png}\\\\ \\medskip \\footnotesize\\textit{A Level 4 Specialty Card, belonging to Catherine the Knight.} }"
 msgid ""
@@ -762,13 +807,13 @@ msgid ""
 "    \\centering\n"
 "    \\includegraphics[width=0.7\\linewidth]{\\cards/specialty2.png}\\\\\n"
 "    \\medskip\n"
-"    \\footnotesize\\textit{A Level 1 Specialty Card, belonging to Deemer the Warlock. It uses \\svg{empower}, but does NOT belong to any School of Magic, despite the imagery.}\n"
+"    \\footnotesize\\textit{A Level 1 Specialty card, belonging to Deemer the Warlock. It uses \\svg{empower}, but does NOT belong to any School of Magic, despite the imagery.}\n"
 "}\n"
 "\n"
 msgstr "{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/specialty.png}\\\\ \\medskip \\footnotesize\\textit{Карта Спеціалізації 4-го рівня, що належить Лицарю Катерині.} }"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:293
+#: sections/deckbuilding.tex:313
 #, fuzzy, no-wrap
 #| msgid "\\pagetarget{Artifact}{Artifact} Cards"
 msgid ""
@@ -778,14 +823,14 @@ msgid ""
 msgstr "\\pagetarget{Artifact}{Карти Артефактів}"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:301
+#: sections/deckbuilding.tex:321
 #, fuzzy, no-wrap
 #| msgid "Artifact Cards\\index{Artifact Card} have a top and bottom effect. When you play one, you must \\textbf{choose which effect} you are using.  They are divided into 3 Levels: Minor, Major, and Relic, with different border color.  These Levels relate to the overall Power of the Card and may be referenced when resolving certain effects or during Scenario setup.  Otherwise, all Artifact Cards are normally shuffled together to form the Artifact Deck regardless of their Level.  They are gained through map exploration.\\par Artifacts can be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgid ""
-"Artifact Cards\\index{Artifact Card} have a top and bottom effect. When you play one, you must \\textbf{choose which effect} you are using.\n"
+"Artifact cards\\index{Artifact card} have a top and bottom effect. When you play one, you must \\textbf{choose which effect} you are using.\n"
 "They are divided into 3 Levels: Minor, Major, and Relic, with different border color.\n"
-"These Levels relate to the overall Power of the Card and may be referenced when resolving certain effects or during Scenario setup.\n"
-"Otherwise, all Artifact Cards are normally shuffled together to form the Artifact Deck regardless of their Level.\n"
+"These Levels relate to the overall Power of the card and may be referenced when resolving certain effects or during Scenario setup.\n"
+"Otherwise, all Artifact cards are normally shuffled together to form the Artifact Deck regardless of their Level.\n"
 "They are gained through map exploration.\\par\n"
 "Artifacts can be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios.\\par\n"
 "\\begin{multicols*}{2}\n"
@@ -793,15 +838,15 @@ msgid ""
 msgstr "Карти Артефактів\\index{Карти Артефактів} мають верхній і нижній ефект. Коли ви розігруєте таку Карту, ви повинні \\textbf{обрати ефект} який буде використано. Артефакти поділяються на 3 Рівні: Малі, Великі і Реліквії, з різними кольорами рамок. Ці рівні визначають загальну Силу Карти і можуть бути використані при вирішенні певних ефектів або під час підготовки Сценарію. Для формування Колоди Артефактів, затасуйте всі Карти Артефактів разом. Артефакти можна отримати під час дослідження Мапи.\\par Артефакти можна \\pagelink{Trading}{обмінювати} в Сценаріях з режимом Альянс та Кооператив."
 
 #. type: figure
-#: sections/deckbuilding.tex:302 sections/map_elements.tex:47
-#: sections/map_elements.tex:266 sections/player_turns.tex:126
-#: sections/setup.tex:9
+#: sections/deckbuilding.tex:322 sections/map_elements.tex:45
+#: sections/map_elements.tex:265 sections/player_turns.tex:124
+#: sections/setup.tex:7
 #, no-wrap
 msgid "  \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:316
+#: sections/deckbuilding.tex:336
 #, no-wrap
 msgid ""
 "    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
@@ -835,16 +880,16 @@ msgstr ""
 "    \\begin{scriptsize}\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:317 sections/deckbuilding.tex:326
-#: sections/expansion_content.tex:79 sections/expansion_content.tex:429
-#: sections/expansion_content.tex:448 sections/units.tex:70
+#: sections/deckbuilding.tex:337 sections/deckbuilding.tex:346
+#: sections/expansion_content.tex:79 sections/expansion_content.tex:428
+#: sections/expansion_content.tex:447 sections/units.tex:70
 #: sections/units.tex:97
 #, no-wrap
 msgid "    \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:325
+#: sections/deckbuilding.tex:345
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/minor_artifact.png}};\n"
@@ -866,7 +911,7 @@ msgstr ""
 "    \\begin{scriptsize}\n"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:343
+#: sections/deckbuilding.tex:363
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}};\n"
@@ -884,7 +929,7 @@ msgstr ""
 "  \\end{center}"
 
 #. type: multicols
-#: sections/deckbuilding.tex:343
+#: sections/deckbuilding.tex:363
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{2}\n"
@@ -918,7 +963,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: center
-#: sections/deckbuilding.tex:350
+#: sections/deckbuilding.tex:370
 #, fuzzy
 #| msgid ""
 #| "{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/"
@@ -931,7 +976,7 @@ msgstr ""
 "air_magic.png}}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:355
+#: sections/deckbuilding.tex:375
 #, fuzzy, no-wrap
 #| msgid "\\pagetarget{spells}{Spell Cards}"
 msgid ""
@@ -941,18 +986,18 @@ msgid ""
 msgstr "\\pagetarget{spells}{Карти Заклинань}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:360
+#: sections/deckbuilding.tex:380
 #, no-wrap
 msgid ""
-"During setup shuffle 10 of the Spell Scroll Cards into the Artifact Deck.\n"
-"Set the remaining 10 Cards aside to form a Spell Scroll Deck.\n"
+"During setup shuffle 10 of the Spell Scroll cards into the Artifact Deck.\n"
+"Set the remaining 10 cards aside to form a Spell Scroll Deck.\n"
 "Some locations or Scenario effects may call for them later.\n"
 "\\vspace*{1em}\n"
 "\n"
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:371
+#: sections/deckbuilding.tex:391
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}};\n"
@@ -969,7 +1014,7 @@ msgid ""
 "    \\medskip\n"
 "    \\footnotesize\n"
 "    \\begin{center}\n"
-"         \\textbf{\\textit{\\textcolor{darkcandyapplered}{Spell Scroll Card}}}\n"
+"         \\textbf{\\textit{\\textcolor{darkcandyapplered}{Spell Scroll card}}}\n"
 "    \\end{center}\n"
 "}\n"
 "\n"
@@ -982,11 +1027,11 @@ msgstr ""
 "  \\end{center}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:377
+#: sections/deckbuilding.tex:397
 #, no-wrap
 msgid ""
 "\\vspace*{1em}\n"
-"When you gain a Spell Scroll, place it next to your Hero Card, take the 2 top Cards from the Spell Deck and place them face-down on the Spell Scroll.\n"
+"When you gain a Spell Scroll, place it next to your Hero Board, take the 2 top cards from the Spell Deck and place them face-down on the Spell Scroll.\n"
 "You can look at these Spells at any time and they don't count toward your Hand \\svg{hand} Limit.\n"
 "You can only have 2 Spell Scrolls at a time.\n"
 "If you gain a third one, draw the new Spells normally and then decide whether to discard the newly gained Spell Scroll or replace one you already have (including all Spells on it).\n"
@@ -994,7 +1039,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:389
+#: sections/deckbuilding.tex:409
 #, no-wrap
 msgid ""
 "You can play Spells from a Spell Scroll like any other Spell with the following exceptions:\n"
@@ -1009,26 +1054,26 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:397
+#: sections/deckbuilding.tex:417
 #, no-wrap
 msgid ""
 "{stronghold}\n"
 "    \\begin{itemize}\n"
 "    \\item You can sell Spell Scrolls at a Trading Post for 2 \\svg{gold} per each Spell on it.\n"
 "    %Is it a new option at a Trading Post or can i combine it with other actions in a single visit?\n"
-"    \\item After using or selling those Spells, the Spell Card is \\textbf{removed}, not discarded.\n"
+"    \\item After using or selling those Spells, the Spell card is \\textbf{removed}, not discarded.\n"
 "\\end{itemize}\n"
 "\n"
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:399
+#: sections/deckbuilding.tex:419
 #, no-wrap
 msgid "If the last Spell on a Spell Scroll is used or sold, place the Spell Scroll back in its Deck."
 msgstr ""
 
 #. type: center
-#: sections/deckbuilding.tex:404
+#: sections/deckbuilding.tex:424
 #, fuzzy
 #| msgid ""
 #| "{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/"
@@ -1041,21 +1086,21 @@ msgstr ""
 "air_magic.png}}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:407
+#: sections/deckbuilding.tex:427
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{Combatexperience}{Combat Experience}}\n"
 #| "\n"
 msgid ""
 "{rampart,cove}\n"
-"  \\pagetarget{War Machines}{\\subheader{War Machines}}\n"
+"  \\pagetarget{War Machines}{\\subheader{War Machine Cards}}\n"
 "\n"
 msgstr ""
 "\\subsection*{\\pagetarget{Combatexperience}{Бойовий Досвід}}\n"
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:411
+#: sections/deckbuilding.tex:431
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{War Machines}{War Machines}}\n"
@@ -1065,7 +1110,7 @@ msgstr ""
 #| "War machines are also more expensive at the Trading Post.\n"
 #| "\n"
 msgid ""
-"  War Machines\\index{War Machines} are permanent Cards that can be bought at either a \\pagelink{Trading Post}{Trading Post} or a \\pagelink{War Machine Factory}{War Machine Factory}.\n"
+"  War Machines\\index{War Machines} are permanent cards that can be bought at either a \\pagelink{Trading Post}{Trading Post} or a \\pagelink{War Machine Factory}{War Machine Factory}.\n"
 "  If you buy one at the Trading Post, \\textbf{you cannot use} any of the other normal functions of that Field during that Visit.\n"
 "  War machines are also more expensive at the Trading Post.\n"
 "\n"
@@ -1078,7 +1123,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:434
+#: sections/deckbuilding.tex:454
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{\n"
@@ -1119,7 +1164,7 @@ msgid ""
 "    \\end{scriptsize}\n"
 "\n"
 "    \\footnotesize\n"
-"    \\textbf{\\textit{\\textcolor{darkcandyapplered}{War Machine Card}}}\n"
+"    \\textbf{\\textit{\\textcolor{darkcandyapplered}{War Machine card}}}\n"
 "    \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt]\n"
 "      \\item[\\textbf{1.}] Name\n"
 "      \\item[\\textbf{2.}] Effect\n"
@@ -1150,51 +1195,4 @@ msgstr ""
 "    \\item[\\textbf{4.}] Вартість у Торговому Посту\n"
 "  \\end{itemize}\n"
 "}\n"
-"\n"
-
-#. type: Plain text
-#: sections/deckbuilding.tex:441
-#, fuzzy
-#| msgid "Searching Example"
-msgid "\\subheader{Searching Example}"
-msgstr "Приклад Пошуку"
-
-#. type: multicols*
-#: sections/deckbuilding.tex:443
-#, fuzzy, no-wrap
-#| msgid "\\textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during the previous Game Round, enabling him to now use his Spell Book Token to purchase additional Spells.}"
-msgid ""
-"\\textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during the previous Game Round, enabling him to now use his Spell Book Token to purchase additional Spells.}\n"
-"\n"
-msgstr "\\textit{Боб, який грає за Чаклуна Дімера, побудував Гільдію Магів в попередньому Ігровому Раунді, що дозволяє йому використовувати Жетон Книги Заклинань для придбання Заклинань.}"
-
-#. type: multicols*
-#: sections/deckbuilding.tex:452
-#, fuzzy, no-wrap
-#| msgid "\\textit{He spends the token and pays the cost of 5 \\svg{gold} indicated on his Town Board, allowing him to \\textbf{Search (2)} the Spell Deck.}\\par \\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par \\filbreak \\textit{He now has the choice of either gaining the top Card of the Spell Card Discard Pile, or drawing the top two Cards of the Spell Deck and gaining one of them.  He is not interested in gaining the Spell Curse, which is on top of the Discard Pile, and instead decides to draw two Cards – a Magic Arrow and a Fireball.} \\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow.png}\\par \\textit{He decides to keep the Fireball, placing it into his hand and discarding the Magic Arrow into the Spell Discard Pile.}"
-msgid ""
-"\\includegraphics[width=\\linewidth]{\\examples/deemer_receiving_spellbook.png}\\par\n"
-"\\textit{He spends the token and pays the cost of 5 \\svg{gold} indicated on his Town Board, allowing him to \\textbf{Search (2)} the Spell Deck.}\\par\n"
-"\\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par\n"
-"\\filbreak\n"
-"\\textit{He now has the choice of either gaining the top Card of the Spell Card Discard Pile, or drawing the top two Cards of the Spell Deck and gaining one of them.\n"
-"He is not interested in gaining the Spell Curse, which is on top of the Discard Pile, and instead decides to draw two Cards – a Magic Arrow and a Fireball.}\n"
-"\\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow.png}\\par\n"
-"\\textit{He decides to keep the Fireball, placing it into his hand and discarding the Magic Arrow into the Spell Discard Pile.}\n"
-"\n"
-msgstr "\\textit{Він використовує Жетон і платить вартість 5 \\svg{gold} вказану на його Планшеті Міста, що дозволяє йому \\textbf{Шукати (2)} в Колоді Заклинань.}\\par \\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par \\filbreak \\textit{Тепер він має вибір: або взяти верхню Карту зі Скиду Заклинань, або взяти дві верхні Карти з Колоди Заклинань і забрати одну з них. Він не зацікавлений в отриманні Заклинання Прокляття, яке лежить у Скиді, і замість цього вирішує взяти дві Карти - Чарівну Стрілу і Вогняну Кулю.} \\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow.png}\\par \\textit{Він вирішує залишити собі Вогняну Кулю, кладе її в руку, а Чарівну Стрілу скидає у Скид Заклинань.}"
-
-#. type: multicols*
-#: sections/deckbuilding.tex:456
-#, fuzzy, no-wrap
-#| msgid ""
-#| "{\\centering\\phantom{Star Axis}\\par}\n"
-#| "\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
-#| "\n"
-msgid ""
-"\\hfill{\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/fire_magic.png}}\n"
-"\n"
-msgstr ""
-"{\\centering\\phantom{Зоряна Вісь}\\par}\n"
-"\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
 "\n"
