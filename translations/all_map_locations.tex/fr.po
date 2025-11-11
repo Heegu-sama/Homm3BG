@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-11-11 16:58+0000\n"
+"POT-Creation-Date: 2025-11-11 17:15+0000\n"
 "PO-Revision-Date: 2024-04-11 09:25+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#. type: multicols*
+#. type: multicols
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
 #: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
 #: sections/combat.tex:302 sections/credits.tex:8 sections/deckbuilding.tex:5
@@ -27,7 +27,7 @@ msgstr ""
 #: sections/resources.tex:5 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:57 sections/town.tex:5
 #: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
-#: sections/units.tex:203
+#: sections/units.tex:203 sections/tournament_mode.tex:5
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -1236,30 +1236,36 @@ msgid "\\pagetarget{Other Fields}{\\subheader{Other Fields}}"
 msgstr "\\pagetarget{Other Fields}{Autres Sites}"
 
 #. type: figure
-#: sections/all_map_locations.tex:440
+#: sections/all_map_locations.tex:442
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[H]\n"
 #| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
 #| "    \\vspace{0pt}\n"
 #| "    \\centering\n"
-#| "    \\textbf{Tree of Knowledge}\\par\n"
-#| "    \\framedimage[\\linewidth]{\\map_locations/tree_of_knowledge.jpg}\n"
-#| "    \\caption{\\small Category: \\textbf{Visitable}\\\\You may\n"
-#| "      \\svg{pay}\n"
-#| "       3 \\svg{valuablegreater} or\n"
-#| "       10 \\svg{gold} to gain\n"
-#| "       2 \\svg{experience}.}\n"
+#| "    \\textbf{Dragon Utopia}\\par\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/dragon_utopia.jpg}\n"
+#| "    \\caption{\\small Category: \\textbf{Flaggable}\\\\Effects depend on the Scenario.}\n"
 #| "  \\end{minipage}\\hfill\n"
 #| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
 #| "    \\vspace{0pt}\n"
 #| "    \\centering\n"
-#| "    \\textbf{Redwood Observatory}\\par\n"
-#| "    \\framedimage[\\linewidth]{\\map_locations/redwood_observatory.jpg}\n"
-#| "    \\caption{\\small Category: \\textbf{Visitable}\\\\Discover a face down Tile adjacent to this one.}\n"
+#| "    \\textbf{University}\\par\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/university.jpg}\n"
+#| "    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+#| "      \\svg{pay} 6 \\svg{gold} to \\textbf{Search (4)} the Ability Discard Pile.}\n"
 #| "  \\end{minipage}"
 msgid ""
 "[H]\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\phantom{j}\\textbf{Obelisk}\\par\n"
+"    \\framedimage[\\linewidth]{\\map_locations/obelisk.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Flaggable}\\\\\n"
+"      The Obelisk's effects depend on the Scenario.\n"
+"      When you Flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}\n"
+"  \\end{minipage}\\hfill\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
 "    \\vspace{0pt}\n"
 "    \\centering\n"
@@ -1267,40 +1273,30 @@ msgid ""
 "    \\framedimage[\\linewidth]{\\map_locations/tree_of_knowledge.jpg}\n"
 "    \\caption{\\small Category: \\textbf{Visitable}\\\\You may\n"
 "      \\svg{pay}\n"
-"       3 \\svg{valuablegreater} or\n"
-"       10 \\svg{gold} to gain\n"
-"       2 \\svg{experience}.}\n"
-"  \\end{minipage}\\hfill\n"
-"  \\begin{minipage}[t]{0.47\\textwidth}\n"
-"    \\vspace{0pt}\n"
-"    \\centering\n"
-"    \\textbf{Redwood Observatory}\\par\n"
-"    \\framedimage[\\linewidth]{\\map_locations/redwood_observatory.jpg}\n"
-"    \\caption{\\small Category: \\textbf{Visitable}\\\\Discover a Tile adjacent to this one (either a face down one, or a \\protect\\pagelink{Placing}{new one} from your supply).}\n"
+"      3 \\svg{valuablegreater} or\n"
+"      10 \\svg{gold} to gain\n"
+"      2 \\svg{experience}.}\n"
 "  \\end{minipage}"
 msgstr ""
 "[H]\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
 "    \\vspace{0pt}\n"
 "    \\centering\n"
-"    \\phantom{j}\\textbf{Arbre de Connaissance}\\par\n"
-"    \\framedimage[\\linewidth]{\\map_locations/tree_of_knowledge.jpg}\n"
-"    \\caption{\\small Catégorie : \\textbf{Explorable}\\\\Vous pouvez\n"
-"      \\svg{pay}\n"
-"       3 \\svg{valuablegreater} ou\n"
-"       10 \\svg{gold} pour\n"
-"       2 \\svg{experience}.}\n"
+"    \\phantom{j}\\textbf{Terres Désolées}\\par\n"
+"    \\framedimage[\\linewidth]{\\map_locations/dragon_utopia.jpg}\n"
+"    \\caption{\\small Catégorie : \\textbf{Revendicable}\\\\Les Effets dépendent du Scénario.}\n"
 "  \\end{minipage}\\hfill\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
 "    \\vspace{0pt}\n"
 "    \\centering\n"
-"    \\phantom{j}\\textbf{Arbre Observatoire}\\par\n"
-"    \\framedimage[\\linewidth]{\\map_locations/redwood_observatory.jpg}\n"
-"    \\caption{\\small Catégorie : \\textbf{Explorable}\\\\Révélez une Tuile face cachée adjacente à celle-ci.}\n"
+"    \\phantom{j}\\textbf{Université}\\par\n"
+"    \\framedimage[\\linewidth]{\\map_locations/university.jpg}\n"
+"    \\caption{\\small Catégorie : \\textbf{Explorable}\\\\\n"
+"      \\svg{pay} 6 \\svg{gold} pour \\textbf{Fouiller (4)} la Défausse de Compétences.}\n"
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:462
+#: sections/all_map_locations.tex:464
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[H]\n"
@@ -1331,18 +1327,18 @@ msgid ""
 "    \\phantom{j}\\textbf{\\pagetarget{Grail}{Grail}}\\par\n"
 "    \\framedimage[\\linewidth]{\\map_locations/grail.jpg}\n"
 "    \\caption{\\small Category: \\textbf{Visitable}\\\\Gain a Grail Token.\n"
-"    Only one Grail Token can exist in the game, do not gain another if this Field's Black Cube is removed or if there are multiple Grail Fields.\n"
-"    The Token's effects are described in the Scenario's description.\n"
-"    \\phantom{\\ldots\\ldots\\ldots}}\n"
+"      Only one Grail Token can exist in the game, do not gain another if this Field's Black Cube is removed or if there are multiple Grail Fields.\n"
+"      The Token's effects are described in the Scenario's description.\n"
+"      \\phantom{\\ldots\\ldots\\ldots}}\n"
 "  \\end{minipage}\\hfill\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
 "    \\vspace{0pt}\n"
 "    \\centering\n"
-"    \\phantom{j}\\textbf{Obelisk}\\par\n"
-"    \\framedimage[\\linewidth]{\\map_locations/obelisk.jpg}\n"
-"    \\caption{\\small Category: \\textbf{Flaggable}\\\\\n"
-"      The Obelisk's effects depend on the Scenario.\n"
-"      When you Flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}\n"
+"    \\textbf{\\pagetarget{Observatory}{Redwood Observatory}}\\par\n"
+"    \\framedimage[\\linewidth]{\\map_locations/redwood_observatory.jpg}\n"
+"    \\caption{\\small Category: \\textbf{Visitable}\\\\Discover a Tile adjacent to this one, either a face down one, or a \\protect\\pagelink{Placing}{new one} from your supply.\n"
+"    \\protect\\newline\n"
+"    \\protect\\pagelink{Tournament Mode}{\\textbf{Tournament Mode}}: Rotate an adjacent Tile not occupied by a Hero, but follow the \\protect\\pagelink{Placing}{standard rules} for placing Tiles.}\n"
 "  \\end{minipage}"
 msgstr ""
 "[H]\n"
@@ -1367,7 +1363,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:482
+#: sections/all_map_locations.tex:484
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1409,7 +1405,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:501
+#: sections/all_map_locations.tex:503
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[H]\n"
@@ -1465,7 +1461,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:534
+#: sections/all_map_locations.tex:536
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[H]\n"
@@ -1557,7 +1553,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:557
+#: sections/all_map_locations.tex:559
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[H]\n"
@@ -1621,7 +1617,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:596
+#: sections/all_map_locations.tex:598
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[H]\n"
@@ -1719,7 +1715,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:620
+#: sections/all_map_locations.tex:622
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[H]\n"
@@ -1788,7 +1784,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:645
+#: sections/all_map_locations.tex:647
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[H]\n"
@@ -1858,7 +1854,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:660
+#: sections/all_map_locations.tex:662
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{\\centering\\textbf{\\pagetarget{Random Town}{Random Town}\\index{Random Town}}\\par}\n"
@@ -1900,7 +1896,7 @@ msgstr ""
 "\n"
 
 #. type: tikzpicture
-#: sections/all_map_locations.tex:664
+#: sections/all_map_locations.tex:666
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[overlay]\n"
@@ -1913,12 +1909,12 @@ msgstr ""
 "  \\node at (12, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\art/griffin.png}};"
 
 #. type: Plain text
-#: sections/all_map_locations.tex:668
+#: sections/all_map_locations.tex:670
 msgid "\\pagetarget{Location Token}{\\subheader{Location Tokens}}"
 msgstr ""
 
 #. type: Plain text
-#: sections/all_map_locations.tex:671
+#: sections/all_map_locations.tex:673
 msgid ""
 "The following Fields are found on single-hex Location Tokens only, not on "
 "regular Map Tiles.  The placement of the Location Tokens is described in "
@@ -1926,7 +1922,7 @@ msgid ""
 msgstr ""
 
 #. type: figure
-#: sections/all_map_locations.tex:694
+#: sections/all_map_locations.tex:696
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[H]\n"
@@ -1986,7 +1982,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:720
+#: sections/all_map_locations.tex:722
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[H]\n"
@@ -2060,7 +2056,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:749
+#: sections/all_map_locations.tex:751
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[H]\n"
@@ -2137,7 +2133,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: table*
-#: sections/all_map_locations.tex:812
+#: sections/all_map_locations.tex:814
 #, no-wrap
 msgid ""
 "[!hb]\n"
@@ -2204,7 +2200,7 @@ msgid ""
 msgstr ""
 
 #. type: table*
-#: sections/all_map_locations.tex:874
+#: sections/all_map_locations.tex:876
 #, no-wrap
 msgid ""
 "[!hb]\n"
