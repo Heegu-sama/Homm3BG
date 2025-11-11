@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-10-13 10:03+0000\n"
+"POT-Creation-Date: 2025-11-11 16:58+0000\n"
 "PO-Revision-Date: 2024-06-03 10:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -22,26 +22,17 @@ msgstr ""
 msgid "\\addsection{AI Rules}{\\spells/fortune.png}"
 msgstr "\\addsection{Pravidla AI}{\\spells/fortune.png}"
 
-#. type: Plain text
-#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/components.tex:5 sections/credits.tex:6 sections/deckbuilding.tex:5
-#: sections/difficulty.tex:5 sections/map_elements.tex:5
-#: sections/player_turns.tex:5 sections/resources.tex:5 sections/setup.tex:5
-#: sections/trading.tex:5
-msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
-msgstr "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
-
 #. type: multicols*
-#: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
+#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
 #: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
-#: sections/combat.tex:302 sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/deckbuilding.tex:52 sections/deckbuilding.tex:441
-#: sections/difficulty.tex:7 sections/expansion_content.tex:491
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:85
-#: sections/map_elements.tex:133 sections/player_turns.tex:7
-#: sections/resources.tex:7 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:59 sections/town.tex:5
-#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:46
+#: sections/combat.tex:302 sections/credits.tex:8 sections/deckbuilding.tex:5
+#: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
+#: sections/difficulty.tex:5 sections/expansion_content.tex:490
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:83
+#: sections/map_elements.tex:131 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:57 sections/town.tex:5
+#: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
 #: sections/units.tex:203
 #, no-wrap
 msgid ""
@@ -51,11 +42,23 @@ msgstr ""
 "{2}\n"
 "\n"
 
-#. type: multicols
-#: sections/ai_rules.tex:18
-#, no-wrap
+#. type: multicols*
+#: sections/ai_rules.tex:16
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{AI Hero Turn}\n"
+#| "\\pagetarget{AIrules}{AI Heroes} are used in the Campaigns.\n"
+#| "They start in their Town, and have 3 MP, always spending them to perform the following Actions in descending priority:\n"
+#| "\\begin{itemize}\n"
+#| "  \\item If a player's Hero is on the same Tile as the AI, spend all MP to move towards them in an attempt to start Combat.\n"
+#| "  \\item If there are any Mines or Settlements the AI could Flag on the same Tile, move towards the closest one.\n"
+#| "  \\item Otherwise, move toward the player's Town.\n"
+#| "Repeat this sequence until all MPs are used up.\n"
+#| "AI Heroes take their turn after the player.\n"
+#| "\\end{itemize}\n"
+#| "\n"
 msgid ""
-"\\subsection*{AI Hero Turn}\n"
+"\\subheader{AI Hero Turn}\n"
 "\\pagetarget{AIrules}{AI Heroes} are used in the Campaigns.\n"
 "They start in their Town, and have 3 MP, always spending them to perform the following Actions in descending priority:\n"
 "\\begin{itemize}\n"
@@ -79,8 +82,8 @@ msgstr ""
 "\\end{itemize}\n"
 "\n"
 
-#. type: multicols
-#: sections/ai_rules.tex:21
+#. type: multicols*
+#: sections/ai_rules.tex:19
 #, no-wrap
 msgid ""
 "AI Heroes always \\textbf{automatically win Combat} against any Neutral Units, while simultaneously \\textbf{Flagging or Visiting all Fields} they happen to move through.\n"
@@ -91,9 +94,20 @@ msgstr ""
 "Z Polí nezískávají žádné výhody.\n"
 "\n"
 
-#. type: multicols
-#: sections/ai_rules.tex:31
-#, no-wrap
+#. type: multicols*
+#: sections/ai_rules.tex:30
+#, fuzzy, no-wrap
+#| msgid ""
+#| "AI Heroes must discover face down Map Tiles as normal by spending 1 MP before moving onto them.\n"
+#| "The player chooses that Tile's orientation.\\par\n"
+#| "AI Heroes cannot Surrender and you cannot Surrender to them;\n"
+#| "they will always fight until they run out of Units.\n"
+#| "Winning Combat against an AI Hero does not grant any rewards unless stated by the Scenario.\n"
+#| "AI Heroes do not have a Town Board, Resources, or a Hero Card.\n"
+#| "Their Units are static and defined by the Scenario's setup or other rules.\\par\n"
+#| "Any differences to the above will be described in any given Scenario's own rules.\n"
+#| "\\vfill\n"
+#| "\n"
 msgid ""
 "AI Heroes must discover face down Map Tiles as normal by spending 1 MP before moving onto them.\n"
 "The player chooses that Tile's orientation.\\par\n"
@@ -103,7 +117,8 @@ msgid ""
 "AI Heroes do not have a Town Board, Resources, or a Hero Card.\n"
 "Their Units are static and defined by the Scenario's setup or other rules.\\par\n"
 "Any differences to the above will be described in any given Scenario's own rules.\n"
-"\\vfill\n"
+"\\vspace*{\\fill}\n"
+"\\columnbreak\n"
 "\n"
 msgstr ""
 "AI Hrdinové musí Objevovat skryté Dílky Mapy jako obvykle utracením 1 BP předtím, než na ně vstoupí.\n"
@@ -117,18 +132,21 @@ msgstr ""
 "\\vfill\n"
 "\n"
 
-#. type: multicols
-#: sections/ai_rules.tex:33
-#, no-wrap
+#. type: multicols*
+#: sections/ai_rules.tex:32
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{AI Decks}\n"
+#| "\n"
 msgid ""
-"\\subsection*{AI Decks}\n"
+"\\subheader{AI Decks}\n"
 "\n"
 msgstr ""
 "\\subsection*{AI Balíčky}\n"
 "\n"
 
-#. type: multicols
-#: sections/ai_rules.tex:37
+#. type: multicols*
+#: sections/ai_rules.tex:36
 #, no-wrap
 msgid ""
 "\\begin{multicols*}{2}\n"
@@ -141,8 +159,8 @@ msgstr ""
 "    \\vspace*{-1.5em}\n"
 "    \\begin{tikzpicture}\n"
 
-#. type: multicols
-#: sections/ai_rules.tex:63
+#. type: multicols*
+#: sections/ai_rules.tex:62
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=1.3\\linewidth]{\\cards/ai.png}};\n"
@@ -194,108 +212,173 @@ msgstr ""
 "    \\item[\\textbf{7.}] Typ Karty\n"
 "  \\end{itemize}\\vspace*{\\fill}"
 
-#. type: multicols
-#: sections/ai_rules.tex:71
-#, no-wrap
+#. type: Plain text
+#: sections/ai_rules.tex:70
+#, fuzzy
+#| msgid ""
+#| "AI Heroes use two Decks during Combat: the \\textbf{AI Deck}, and the "
+#| "\\textbf{AI Spell Deck}.\n"
+#| "The AI Deck consists of three types of AI Cards: Might \\svg{might}, "
+#| "Magic \\svg{magic} and Skill \\svg{skill}.\n"
+#| "Each Campaign Scenario lists the number and types of Cards to include "
+#| "during setup.\n"
+#| "Choose these Cards \\textbf{randomly} when building the Deck.\n"
+#| "If Skill Cards are included, search for and set aside the Ability Card "
+#| "related to it.\n"
+#| "Build the \\textbf{AI Spell Deck} by separating the indicated Spells from "
+#| "the regular Spell Deck.\n"
+#| "Shuffle these Decks during setup after building them.\n"
+#| "\n"
 msgid ""
-"AI Heroes use two Decks during Combat: the \\textbf{AI Deck}, and the \\textbf{AI Spell Deck}.\n"
-"The AI Deck consists of three types of AI Cards: Might \\svg{might}, Magic \\svg{magic} and Skill \\svg{skill}.\n"
-"Each Campaign Scenario lists the number and types of Cards to include during setup.\n"
-"Choose these Cards \\textbf{randomly} when building the Deck.\n"
-"If Skill Cards are included, search for and set aside the Ability Card related to it.\n"
-"Build the \\textbf{AI Spell Deck} by separating the indicated Spells from the regular Spell Deck.\n"
-"Shuffle these Decks during setup after building them.\n"
-"\n"
+"AI Heroes use two Decks during Combat: the \\textbf{AI Deck}, and the "
+"\\textbf{AI Spell Deck}.  The AI Deck consists of three types of AI Cards: "
+"Might \\svg{might}, Magic \\svg{magic} and Skill \\svg{skill}.  Each "
+"Campaign Scenario lists the number and types of Cards to include during "
+"setup.  Choose these Cards \\textbf{randomly} when building the Deck.  If "
+"Skill Cards are included, search for and set aside the Ability Card related "
+"to it.  Build the \\textbf{AI Spell Deck} by separating the indicated Spells "
+"from the regular Spell Deck.  Shuffle these Decks during setup after "
+"building them."
 msgstr ""
-"AI Hrdinové používají během Souboje dva Balíčky: \\textbf{AI Balíček} a \\textbf{AI Balíček Kouzel}.\n"
-"AI Balíček je sestaven ze tří typů AI karet: Síla \\svg{might}, Magie \\svg{magic} a Schopnost \\svg{skill}.\n"
-"Každý scénář Kampaně uvádí počet a typy karet, které je třeba zahrnout během přípravy.\n"
+"AI Hrdinové používají během Souboje dva Balíčky: \\textbf{AI Balíček} a "
+"\\textbf{AI Balíček Kouzel}.\n"
+"AI Balíček je sestaven ze tří typů AI karet: Síla \\svg{might}, Magie "
+"\\svg{magic} a Schopnost \\svg{skill}.\n"
+"Každý scénář Kampaně uvádí počet a typy karet, které je třeba zahrnout během "
+"přípravy.\n"
 "Tyto karty vybírejte \\textbf{náhodně}.\n"
-"Pokud jsou zahrnuty Karty Schopnosti, vyhledejte a odložte odpovídající Kartu Dovednosti.\n"
-"Sestavte AI \\textbf{Balíček Kouzel} oddělením uvedených Kouzel od běžného Balíčku Kouzel.\n"
+"Pokud jsou zahrnuty Karty Schopnosti, vyhledejte a odložte odpovídající "
+"Kartu Dovednosti.\n"
+"Sestavte AI \\textbf{Balíček Kouzel} oddělením uvedených Kouzel od běžného "
+"Balíčku Kouzel.\n"
 "Připravené Balíčky zamíchejte.\n"
 "\n"
 
-#. type: multicols
-#: sections/ai_rules.tex:78
-#, no-wrap
+#. type: Plain text
+#: sections/ai_rules.tex:77
+#, fuzzy
+#| msgid ""
+#| "When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI "
+#| "Card} and follow its instructions before the Unit moves and/or attacks.\n"
+#| "If AI Deck is depleted during Combat, stop drawing from it.\n"
+#| "The effect of each AI Card depends on the game's \\pagelink{Difficulty}"
+#| "{Difficulty}.\n"
+#| "The Might Card \\svg{might} is attached to the Unit until the first "
+#| "respective attack/defense happens.\n"
+#| "The AI Spell Deck is used whenever a Magic Card \\svg{magic} is drawn.\n"
+#| "If an AI Hero is instructed to draw a Card, they will draw and resolve "
+#| "\\textbf{another Card} from the AI Deck.\n"
+#| "\n"
 msgid ""
-"When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI Card} and follow its instructions before the Unit moves and/or attacks.\n"
-"If AI Deck is depleted during Combat, stop drawing from it.\n"
-"The effect of each AI Card depends on the game's \\pagelink{Difficulty}{Difficulty}.\n"
-"The Might Card \\svg{might} is attached to the Unit until the first respective attack/defense happens.\n"
-"The AI Spell Deck is used whenever a Magic Card \\svg{magic} is drawn.\n"
-"If an AI Hero is instructed to draw a Card, they will draw and resolve \\textbf{another Card} from the AI Deck.\n"
-"\n"
+"When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI Card} "
+"and follow its instructions before the Unit moves and/or attacks.  If AI "
+"Deck is depleted during Combat, stop drawing from it.  The effect of each AI "
+"Card depends on the game's \\pagelink{Difficulty}{Difficulty}.  The Might "
+"Card \\svg{might} is attached to the Unit until the first respective attack/"
+"defense happens.  The AI Spell Deck is used whenever a Magic Card "
+"\\svg{magic} is drawn.  If an AI Hero is instructed to draw a Card, they "
+"will draw and resolve \\textbf{another Card} from the AI Deck."
 msgstr ""
-"Když AI Hrdina \\textbf{Aktivuje} Jednotku, doberte si AI Kartu\\index{AI Karta} a vyhodnoťe ji, než se Jednotka pohne a/nebo zaútočí.\n"
+"Když AI Hrdina \\textbf{Aktivuje} Jednotku, doberte si AI Kartu\\index{AI "
+"Karta} a vyhodnoťe ji, než se Jednotka pohne a/nebo zaútočí.\n"
 "Pokud je AI Balíček během Souboje vyčerpán, přestaňte z něj dobírat.\n"
 "Efekt každé AI karty závisí na \\pagelink{Difficulty}{Obtížnosti} hry.\n"
-"Karta Síly \\svg{might} je připojena k jednotce, dokud nenastane první útok/obrana.\n"
-"AI Balíček Kouzel se používá vždy, když je dobrána Karta Magie \\svg{magic}.\n"
-"Pokud je AI Hrdinovi přikázáno, aby dobral kartu, učiní tak a vyřeší \\textbf{další kartu} z AI Balíčku.\n"
+"Karta Síly \\svg{might} je připojena k jednotce, dokud nenastane první útok/"
+"obrana.\n"
+"AI Balíček Kouzel se používá vždy, když je dobrána Karta Magie "
+"\\svg{magic}.\n"
+"Pokud je AI Hrdinovi přikázáno, aby dobral kartu, učiní tak a vyřeší "
+"\\textbf{další kartu} z AI Balíčku.\n"
 "\n"
 
-#. type: multicols
+#. type: Plain text
 #: sections/ai_rules.tex:81
-#, fuzzy, no-wrap
+#, fuzzy
 #| msgid ""
 #| "\\subsection*{Combat against AI}\n"
 #| "\n"
-msgid ""
-"\\columnbreak\n"
-"\\subheader{Combat against AI}\n"
-"\n"
+msgid "\\columnbreak \\subheader{Combat against AI}"
 msgstr ""
 "\\subsection*{Souboj proti AI}\n"
 "\n"
 
-#. type: multicols
+#. type: Plain text
 #: sections/ai_rules.tex:84
-#, no-wrap
+#, fuzzy
+#| msgid ""
+#| "\\pagetarget{AI Units}{These rules} apply during Combat in \\textbf{Solo}"
+#| "\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
+#| "The rules for AI Unit placement during setup are described in "
+#| "\\pagelink{CombatAISetup}{Combat chapter}.\n"
+#| "\n"
 msgid ""
-"\\pagetarget{AI Units}{These rules} apply during Combat in \\textbf{Solo}\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
-"The rules for AI Unit placement during setup are described in \\pagelink{CombatAISetup}{Combat chapter}.\n"
-"\n"
+"\\pagetarget{AI Units}{These rules} apply during Combat in \\textbf{Solo}"
+"\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.  The rules for AI "
+"Unit placement during setup are described in \\pagelink{CombatAISetup}"
+"{Combat chapter}."
 msgstr ""
-"\\pagetarget{AI Units}{Tato pravidla} platí během Souboje ve \\textbf{Hře jednoho hráče}\\index{Hra jednoho hráče} a v \\textbf{Kooperativních} Scénářích.\n"
-"Pravidla pro umístění jednotek AI jsou popsána v kapitole \\pagelink{CombatAISetup}{Pravidla boje}\n"
+"\\pagetarget{AI Units}{Tato pravidla} platí během Souboje ve \\textbf{Hře "
+"jednoho hráče}\\index{Hra jednoho hráče} a v \\textbf{Kooperativních} "
+"Scénářích.\n"
+"Pravidla pro umístění jednotek AI jsou popsána v kapitole "
+"\\pagelink{CombatAISetup}{Pravidla boje}\n"
 "\n"
 
-#. type: multicols
+#. type: Plain text
 #: sections/ai_rules.tex:86
-#, no-wrap
+#, fuzzy
+#| msgid ""
+#| "When Neutral enemies or AI Heroes activate a Unit, they follow a set of "
+#| "automatic instructions:\\par\n"
+#| "\n"
 msgid ""
-"When Neutral enemies or AI Heroes activate a Unit, they follow a set of automatic instructions:\\par\n"
-"\n"
+"When Neutral enemies or AI Heroes activate a Unit, they follow a set of "
+"automatic instructions:"
 msgstr ""
-"Když Neutrální nepřátelé nebo AI Hrdinové aktivují jednotku, řídí se souborem automatických pokynů:\\par\n"
+"Když Neutrální nepřátelé nebo AI Hrdinové aktivují jednotku, řídí se "
+"souborem automatických pokynů:\\par\n"
 "\n"
 
-#. type: multicols
+#. type: itemize
 #: sections/ai_rules.tex:90
-#, no-wrap
+#, fuzzy
+#| msgid ""
+#| "\\begin{itemize}\n"
+#| "  \\item Enemy Ground \\svg{unit_ground} and Flying \\svg{unit_flying} "
+#| "Units prioritize attacking Units of the \\textbf{same} tier.\n"
+#| "  If this is impossible, they attack the Unit of a lower tier (in tier "
+#| "\\textbf{descending} order, down to bronze), and if that is also "
+#| "impossible, they attack the Unit of a higher tier (in tier "
+#| "\\textbf{ascending} order).\\par\n"
+#| "\n"
 msgid ""
-"\\begin{itemize}\n"
-"  \\item Enemy Ground \\svg{unit_ground} and Flying \\svg{unit_flying} Units prioritize attacking Units of the \\textbf{same} tier.\n"
-"  If this is impossible, they attack the Unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
-"\n"
+"Enemy Ground \\svg{unit_ground} and Flying \\svg{unit_flying} Units "
+"prioritize attacking Units of the \\textbf{same} tier.  If this is "
+"impossible, they attack the Unit of a lower tier (in tier "
+"\\textbf{descending} order, down to bronze), and if that is also impossible, "
+"they attack the Unit of a higher tier (in tier \\textbf{ascending} order)."
 msgstr ""
 "\\begin{itemize}\n"
-"  \\item Pozemní \\svg{unit_ground} a Létající \\svg{unit_flying} Jednotky nepřátel upřednostňují útok na Jednotky \\textbf{stejné} úrovně.\n"
-"   Pokud to není možné, útočí na Jednotku nižší úrovně (v sestupném pořadí úrovní, až po bronzovou), a pokud to také není možné, útočí na Jednotku vyšší úrovně (ve \\textbf{vzestupném}qq pořadí úrovní).\\par\n"
+"  \\item Pozemní \\svg{unit_ground} a Létající \\svg{unit_flying} Jednotky "
+"nepřátel upřednostňují útok na Jednotky \\textbf{stejné} úrovně.\n"
+"   Pokud to není možné, útočí na Jednotku nižší úrovně (v sestupném pořadí "
+"úrovní, až po bronzovou), a pokud to také není možné, útočí na Jednotku "
+"vyšší úrovně (ve \\textbf{vzestupném}qq pořadí úrovní).\\par\n"
 "\n"
 
-#. type: multicols
+#. type: itemize
 #: sections/ai_rules.tex:96
-#, no-wrap
+#, fuzzy
+#| msgid ""
+#| "  \\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority:\n"
+#| "  \\svg{golden}\n"
+#| "  - \\svg{silver}\n"
+#| "  - \\svg{bronze}\n"
+#| "  - \\svg{azure}.}\n"
+#| "\n"
 msgid ""
-"  \\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority:\n"
-"  \\svg{golden}\n"
-"  - \\svg{silver}\n"
-"  - \\svg{bronze}\n"
-"  - \\svg{azure}.}\n"
-"\n"
+"\\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority: "
+"\\svg{golden} - \\svg{silver} - \\svg{bronze} - \\svg{azure}.}"
 msgstr ""
 "  \\textit{Příklad: \\svg{golden}\\svg{unit_ground} má priority:\n"
 "  \\svg{golden}\n"
@@ -304,33 +387,55 @@ msgstr ""
 "  - \\svg{azure}.}\n"
 "\n"
 
-#. type: multicols
+#. type: itemize
 #: sections/ai_rules.tex:99
-#, no-wrap
+#, fuzzy
+#| msgid ""
+#| "  \\item Ranged \\svg{unit_ranged} Units prioritize attacking other "
+#| "Ranged \\svg{unit_ranged} Units of the same tier, then lower tier, and "
+#| "finally higher tier, using the same tier order as above.\n"
+#| "  If there are no Ranged \\svg{unit_ranged} Units for them to target, "
+#| "they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} "
+#| "Units in the same tier order.\\par\n"
+#| "\n"
 msgid ""
-"  \\item Ranged \\svg{unit_ranged} Units prioritize attacking other Ranged \\svg{unit_ranged} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
-"  If there are no Ranged \\svg{unit_ranged} Units for them to target, they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} Units in the same tier order.\\par\n"
-"\n"
+"Ranged \\svg{unit_ranged} Units prioritize attacking other Ranged "
+"\\svg{unit_ranged} Units of the same tier, then lower tier, and finally "
+"higher tier, using the same tier order as above.  If there are no Ranged "
+"\\svg{unit_ranged} Units for them to target, they prioritize Ground "
+"\\svg{unit_ground} and Flying \\svg{unit_flying} Units in the same tier "
+"order."
 msgstr ""
-"  \\item Střílející \\svg{unit_ranged} Jednotky upřednostňují útok na jiné Střílející \\svg{unit_ranged} Jednotky stejné úrovně, poté nižší úrovně, a nakonec vyšší úrovně, ve stejném pořadí úrovní jako výše.\n"
-"  Pokud nejsou k dispozici žádné Střílející \\svg{unit_ranged} Jednotky, na které by mohly útočit, upřednostňují Pozemní \\svg{unit_ground} a Létající \\svg{unit_flying} Jednotky ve stejném pořadí úrovní.\\par\n"
+"  \\item Střílející \\svg{unit_ranged} Jednotky upřednostňují útok na jiné "
+"Střílející \\svg{unit_ranged} Jednotky stejné úrovně, poté nižší úrovně, a "
+"nakonec vyšší úrovně, ve stejném pořadí úrovní jako výše.\n"
+"  Pokud nejsou k dispozici žádné Střílející \\svg{unit_ranged} Jednotky, na "
+"které by mohly útočit, upřednostňují Pozemní \\svg{unit_ground} a Létající "
+"\\svg{unit_flying} Jednotky ve stejném pořadí úrovní.\\par\n"
 "\n"
 
-#. type: multicols
+#. type: itemize
 #: sections/ai_rules.tex:110
-#, no-wrap
+#, fuzzy
+#| msgid ""
+#| "  \\textit{Example: \\svg{silver}\\svg{unit_ranged} has this priority:\n"
+#| "  \\svg{silver}\\svg{unit_ranged}\n"
+#| "  - \\svg{bronze}\\svg{unit_ranged}\n"
+#| "  - \\svg{golden}\\svg{unit_ranged}\n"
+#| "  - \\svg{azure}\\svg{unit_ranged}\n"
+#| "  - \\svg{silver}\\svg{unit_ground}\\svg{unit_flying}\n"
+#| "  - \\svg{bronze}\\svg{unit_ground}\\svg{unit_flying}\n"
+#| "  - \\svg{golden}\\svg{unit_ground}\\svg{unit_flying}\n"
+#| "  - \\svg{azure}\\svg{unit_ground}\\svg{unit_flying}.}\n"
+#| "\\end{itemize}\n"
+#| "\n"
 msgid ""
-"  \\textit{Example: \\svg{silver}\\svg{unit_ranged} has this priority:\n"
-"  \\svg{silver}\\svg{unit_ranged}\n"
-"  - \\svg{bronze}\\svg{unit_ranged}\n"
-"  - \\svg{golden}\\svg{unit_ranged}\n"
-"  - \\svg{azure}\\svg{unit_ranged}\n"
-"  - \\svg{silver}\\svg{unit_ground}\\svg{unit_flying}\n"
-"  - \\svg{bronze}\\svg{unit_ground}\\svg{unit_flying}\n"
-"  - \\svg{golden}\\svg{unit_ground}\\svg{unit_flying}\n"
-"  - \\svg{azure}\\svg{unit_ground}\\svg{unit_flying}.}\n"
-"\\end{itemize}\n"
-"\n"
+"\\textit{Example: \\svg{silver}\\svg{unit_ranged} has this priority: "
+"\\svg{silver}\\svg{unit_ranged} - \\svg{bronze}\\svg{unit_ranged} - "
+"\\svg{golden}\\svg{unit_ranged} - \\svg{azure}\\svg{unit_ranged} - "
+"\\svg{silver}\\svg{unit_ground}\\svg{unit_flying} - \\svg{bronze}"
+"\\svg{unit_ground}\\svg{unit_flying} - \\svg{golden}\\svg{unit_ground}"
+"\\svg{unit_flying} - \\svg{azure}\\svg{unit_ground}\\svg{unit_flying}.}"
 msgstr ""
 "  \\textit{Příklad: \\svg{silver}\\svg{unit_ranged} má priority:\n"
 "  \\svg{silver}\\svg{unit_ranged}\n"
@@ -344,49 +449,34 @@ msgstr ""
 "\\end{itemize}\n"
 "\n"
 
-#. type: multicols
+#. type: Plain text
 #: sections/ai_rules.tex:113
-#, no-wrap
+#, fuzzy
+#| msgid ""
+#| "In both cases, if there's more than one valid target, they attack the "
+#| "closest one.\n"
+#| "If there's ever a tie between equally valid targets, the player chooses "
+#| "which Unit is attacked.\\par\n"
+#| "\n"
 msgid ""
-"In both cases, if there's more than one valid target, they attack the closest one.\n"
-"If there's ever a tie between equally valid targets, the player chooses which Unit is attacked.\\par\n"
-"\n"
+"In both cases, if there's more than one valid target, they attack the "
+"closest one.  If there's ever a tie between equally valid targets, the "
+"player chooses which Unit is attacked."
 msgstr ""
-"V obou případech, pokud existuje více než jeden platný cíl, útočí na nejbližší.\n"
-"Pokud je kdykoliv shoda mezi platnými cíli, hráč si vybere, která Jednotka bude napadena.\\par\n"
+"V obou případech, pokud existuje více než jeden platný cíl, útočí na "
+"nejbližší.\n"
+"Pokud je kdykoliv shoda mezi platnými cíli, hráč si vybere, která Jednotka "
+"bude napadena.\\par\n"
 "\n"
 
-#. type: multicols
+#. type: Plain text
 #: sections/ai_rules.tex:115
-#, no-wrap
-msgid ""
-"Enemy Units cannot \\pagelink{Defend}{Defend} unless instructed to.\n"
-"\n"
+#, fuzzy
+#| msgid ""
+#| "Enemy Units cannot \\pagelink{Defend}{Defend} unless instructed to.\n"
+#| "\n"
+msgid "Enemy Units cannot \\pagelink{Defend}{Defend} unless instructed to."
 msgstr ""
-"Nepřátelské Jednotky se nesmí \\pagelink{Defend}{Bránit} pokud k tomu nemají instrukce.\n"
-"\n"
-
-#. type: multicols*
-#: sections/ai_rules.tex:117 sections/combat.tex:222
-#: sections/introduction.tex:89
-#, no-wrap
-msgid ""
-"\\vfill\n"
-"\n"
-msgstr ""
-"\\vfill\n"
-"\n"
-
-#. type: multicols
-#: sections/ai_rules.tex:121
-#, no-wrap
-msgid ""
-"\\begin{center}\n"
-"    \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/titan.jpg}\n"
-"\\end{center}\n"
-"\n"
-msgstr ""
-"\\begin{center}\n"
-"    \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/titan.jpg}\n"
-"\\end{center}\n"
+"Nepřátelské Jednotky se nesmí \\pagelink{Defend}{Bránit} pokud k tomu nemají "
+"instrukce.\n"
 "\n"

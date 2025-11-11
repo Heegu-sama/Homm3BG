@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-10-13 11:16+0000\n"
+"POT-Creation-Date: 2025-11-11 16:58+0000\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,16 +19,16 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
+#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
 #: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
-#: sections/combat.tex:302 sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/deckbuilding.tex:52 sections/deckbuilding.tex:441
-#: sections/difficulty.tex:7 sections/expansion_content.tex:491
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:85
-#: sections/map_elements.tex:133 sections/player_turns.tex:7
-#: sections/resources.tex:7 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:59 sections/town.tex:5
-#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:46
+#: sections/combat.tex:302 sections/credits.tex:8 sections/deckbuilding.tex:5
+#: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
+#: sections/difficulty.tex:5 sections/expansion_content.tex:490
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:83
+#: sections/map_elements.tex:131 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:57 sections/town.tex:5
+#: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
 #: sections/units.tex:203
 #, no-wrap
 msgid ""
@@ -39,17 +39,17 @@ msgstr ""
 "\n"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:174 sections/deckbuilding.tex:397
+#: sections/deckbuilding.tex:194 sections/deckbuilding.tex:417
 #: sections/expansion_content.tex:113 sections/expansion_content.tex:160
-#: sections/expansion_content.tex:175 sections/resources.tex:33
+#: sections/expansion_content.tex:175 sections/resources.tex:31
 #, no-wrap
 msgid "\\columnbreak"
 msgstr "\\columnbreak"
 
 #. type: multicols
-#: sections/deckbuilding.tex:317 sections/deckbuilding.tex:326
-#: sections/expansion_content.tex:79 sections/expansion_content.tex:429
-#: sections/expansion_content.tex:448 sections/units.tex:70
+#: sections/deckbuilding.tex:337 sections/deckbuilding.tex:346
+#: sections/expansion_content.tex:79 sections/expansion_content.tex:428
+#: sections/expansion_content.tex:447 sections/units.tex:70
 #: sections/units.tex:97
 #, no-wrap
 msgid "    \\begin{tikzpicture}\n"
@@ -201,8 +201,10 @@ msgstr ""
 
 #. type: Plain text
 #: sections/expansion_content.tex:72
-msgid "\\subheader{New Factions}"
-msgstr ""
+#, fuzzy
+#| msgid "Searching Example"
+msgid "\\subheader{Factions Expansions}"
+msgstr "Przykład Przeszukiwania"
 
 #. type: multicols
 #: sections/expansion_content.tex:72
@@ -450,7 +452,7 @@ msgstr ""
 
 #. type: Plain text
 #: sections/expansion_content.tex:210
-msgid "\\subheader{New Gameplay Mechanics and Game Modes}"
+msgid "\\subheader{Gameplay and Game Mode Expansions}"
 msgstr ""
 
 #. type: multicols*
@@ -810,22 +812,30 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:385
+#: sections/expansion_content.tex:384
 #, no-wrap
 msgid ""
-"{battlefield}\n"
-"  \\pagetarget{Battlefield Combat}{\\subheader{Battlefield in regular games}}\n"
+"[before=\\vspace*{-11mm}]{battlefield}\n"
+"  \\pagetarget{Battlefield Combat}{\\subheader{Combat on the Battlefield Board}}\n"
 "  \\begin{multicols*}{2}\n"
+"  \\textbf{Note:} The rules for \\pagelink{Battlefield Modes}{Skirmish and Adventure} are different from this, please check the official rulebook.\n"
+"\n"
+msgstr ""
+
+#. type: expansion
+#: sections/expansion_content.tex:388
+#, no-wrap
+msgid ""
+"  \\medskip\n"
 "  It is recommended to use the Battlefield Combat Board only for \\textbf{Player vs.~Player Combats}, even though it is also possible to use it in Neutral Combats.\n"
 "  Using the Battlefield Board requires using \\pagelink{Miniatures}{Miniatures} instead of Unit Cards.\n"
 "\n"
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:391
+#: sections/expansion_content.tex:393
 #, no-wrap
 msgid ""
-"  \\medskip\n"
 "  \\subsection*{Battlefield Board in Neutral\\\\Combats}\n"
 "  If you decide to use the Battlefield Board in Combats with Neutral Units, ignore the Round Limit:\n"
 "  At the end of each Combat Round you may freely decide to Retreat or to gain an additional Combat Round with no need to spend a MP \\svg{movement}.\n"
@@ -834,17 +844,15 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:423
+#: sections/expansion_content.tex:422
 #, no-wrap
 msgid ""
-"  \\medskip\n"
 "  \\subsection*{\\pagetarget{BF Obstacles}{Obstacle Tokens}}\n"
 "  On the Battlefield Board you place Obstacle Tokens, which are divided into three types:\n"
 "  Effect, Obstacle and Wall/Gate.\n"
 "  Unless otherwise stated these Tokens count and work as \\pagelink{Combatterminology}{Combat Obstacles}.\n"
 "  To place Effect Obstacles on the Battlefield Board you'll need the Card which creates the effect, such as the Fire Wall Spell: use the Tokens and put the Card beside the Battlefield as a reminder.\n"
 "  Effect Obstacles may be entered by Units, if the Card text allows it.\n"
-"  \\vspace*{1em}\n"
 "  \\begin{figure}[H]\n"
 "    \\centering\n"
 "    \\begin{subfigure}[b]{0.3\\linewidth}\n"
@@ -863,7 +871,6 @@ msgid ""
 "      \\caption{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Wall/Gate}}}}\n"
 "    \\end{subfigure}\n"
 "  \\end{figure}\n"
-"  \\vspace*{1em}\n"
 "  \\note{3}{\n"
 "    All Unit Miniatures also count as Obstacles.\n"
 "  }\n"
@@ -872,7 +879,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:428
+#: sections/expansion_content.tex:427
 #, no-wrap
 msgid ""
 "  \\subsection*{Rules Changes in Combat Setup}\n"
@@ -883,7 +890,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:439
+#: sections/expansion_content.tex:438
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=0.9\\linewidth]{\\examples/bf-deploy.png}};\n"
@@ -898,10 +905,10 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:447
+#: sections/expansion_content.tex:446
 #, no-wrap
 msgid ""
-"{battlefield}\n"
+"[before=\\vspace*{-11mm}]{battlefield}\n"
 "  \\begin{multicols*}{2}\n"
 "  \\begin{itemize}\n"
 "    \\item \\textbf{Siege with Walls and Gate} – During a Siege against a Town with a Citadel, only Walls and Gate Obstacles are placed.\n"
@@ -910,7 +917,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:464
+#: sections/expansion_content.tex:463
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=1.05\\linewidth]{\\examples/bf-deploy-wall.png}};\n"
@@ -932,7 +939,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:477
+#: sections/expansion_content.tex:476
 #, no-wrap
 msgid ""
 "    \\begin{minipage}{\\linewidth}\n"
@@ -951,7 +958,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:480
+#: sections/expansion_content.tex:479
 #, no-wrap
 msgid ""
 "    \\item \\textbf{Gate Token} – During a Siege, defending Units may enter the Gate Token \\textbf{only at the two middle hexes} where the Gate is printed.\n"
@@ -960,7 +967,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:487
+#: sections/expansion_content.tex:486
 #, no-wrap
 msgid ""
 "    \\vspace*{1em}\n"
@@ -972,7 +979,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/expansion_content.tex:493
+#: sections/expansion_content.tex:492
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{Symbols on the Map}\n"
@@ -985,7 +992,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/expansion_content.tex:497
+#: sections/expansion_content.tex:496
 #, no-wrap
 msgid ""
 "Four boxes of stretchgoal content have been released for the boardgame; they are shown at the bottom of this page.\\par\n"
@@ -995,7 +1002,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/expansion_content.tex:505
+#: sections/expansion_content.tex:504
 #, no-wrap
 msgid ""
 "The only new gameplay element from a Stretchgoal box is explained below:\\par\n"
@@ -1009,7 +1016,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/expansion_content.tex:572
+#: sections/expansion_content.tex:571
 #, no-wrap
 msgid ""
 "   \\medskip\n"
@@ -1081,7 +1088,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/expansion_content.tex:587
+#: sections/expansion_content.tex:586
 #, no-wrap
 msgid ""
 "{4}\n"
