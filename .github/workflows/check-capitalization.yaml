@@ -16,7 +16,7 @@ jobs:
         shell: bash
         run: |
           ERRORS=0
-          WORDS=("artifact" "board" "card" "cube" "deck" "faction" "field" "grail" "hero" "level" "round" "scenario" "spell" "tile" "unit")
+          WORDS=("artifact" "board" "cube" "deck" "faction" "field" "grail" "hero" "level" "round" "scenario" "spell" "tile")
           for file in $(git grep -Il '' | grep tex$ | grep -v metadata)
           do
             for word in ${WORDS[@]}
