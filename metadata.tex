@@ -536,6 +536,10 @@
   \tikz[baseline=(X.base)]
   \node (X) [draw=white, shape=circle, inner sep=0, fill=goblin, text=white, blur shadow={shadow blur steps=5}] {\strut \textbf{#1}};%
 }
+\newcommand\encirclered[1]{%
+  \tikz[baseline=(X.base)]
+  \node (X) [draw=white, shape=circle, inner sep=0, fill=darkcandyapplered, text=white, blur shadow={shadow blur steps=5}] {\strut \textbf{#1}};%
+}
 
 \newcommand{\drawbottom}{
   \iftoggle{textright2left}{
