@@ -8,22 +8,22 @@
 They start in their Town, and have 3 MP, always spending them to perform the following Actions in descending priority:
 \begin{itemize}
   \item If a player's Hero is on the same Tile as the AI, spend all MP to move towards them in an attempt to start Combat.
-  \item If there are any Mines or Settlements the AI could Flag on the same Tile, move towards the closest one.
+  \item If there are any Mines or Settlements the AI could flag on the same Tile, move towards the closest one.
   \item Otherwise, move toward the player's Town.
 Repeat this sequence until all MPs are used up.
 AI Heroes take their turn after the player.
 \end{itemize}
 
-AI Heroes always \textbf{automatically win Combat} against any Neutral Units, while simultaneously \textbf{Flagging or Visiting all Fields} they happen to move through.
+AI Heroes always \textbf{automatically win Combat} against any Neutral Units, while simultaneously \textbf{flagging or Visiting all Fields} they happen to move through.
 They gain no benefits from any Fields.
 
 AI Heroes must discover face down Map Tiles as normal by spending 1 MP before moving onto them.
 The player chooses that Tile's orientation.\par
-AI Heroes cannot Surrender and you cannot Surrender to them;
-they will always fight until they run out of Units.
+AI Heroes cannot surrender and you cannot surrender to them;
+they will always fight until they run out of units.
 Winning Combat against an AI Hero does not grant any rewards unless stated by the Scenario.
-AI Heroes do not have a Town Board, Resources, or a Hero Card.
-Their Units are static and defined by the Scenario's setup or other rules.\par
+AI Heroes do not have a Town Board, Resources, or a Hero Board.
+Their units are static and defined by the Scenario's setup or other rules.\par
 Any differences to the above will be described in any given Scenario's own rules.
 \vspace*{\fill}
 \columnbreak
@@ -43,7 +43,7 @@ Any differences to the above will be described in any given Scenario's own rules
       \draw (0.5, -1.2) node {\encircle{6}};
       \draw (-0.5, -2.5) node {\encircle{7}};
     \end{tikzpicture}\\
-    \phantom{\ldots\ldots}\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{AI Card}}}}
+    \phantom{\ldots\ldots}\footnotesize{\imagecaption{AI card}}
     \vspace*{-1em}
   \end{center}
   \vspace*{\fill}
@@ -61,32 +61,32 @@ Any differences to the above will be described in any given Scenario's own rules
 \end{multicols*}
 
 AI Heroes use two Decks during Combat: the \textbf{AI Deck}, and the \textbf{AI Spell Deck}.
-The AI Deck consists of three types of AI Cards: Might \svg{might}, Magic \svg{magic} and Skill \svg{skill}.
-Each Campaign Scenario lists the number and types of Cards to include during setup.
-Choose these Cards \textbf{randomly} when building the Deck.
-If Skill Cards are included, search for and set aside the Ability Card related to it.
+The AI Deck consists of three types of AI cards: Might \svg{might}, Magic \svg{magic} and Skill \svg{skill}.
+Each Campaign Scenario lists the number and types of cards to include during setup.
+Choose these cards \textbf{randomly} when building the Deck.
+If Skill cards are included, search for and set aside the Ability card related to it.
 Build the \textbf{AI Spell Deck} by separating the indicated Spells from the regular Spell Deck.
 Shuffle these Decks during setup after building them.
 
-When an AI Hero \textbf{Activates} a Unit, draw an AI Card\index{AI Card} and follow its instructions before the Unit moves and/or attacks.
+When an AI Hero \textbf{activates} a unit, draw an AI card\index{AI card} and follow its instructions before the unit moves and/or attacks.
 If AI Deck is depleted during Combat, stop drawing from it.
-The effect of each AI Card depends on the game's \pagelink{Difficulty}{Difficulty}.
-The Might Card \svg{might} is attached to the Unit until the first respective attack/defense happens.
-The AI Spell Deck is used whenever a Magic Card \svg{magic} is drawn.
-If an AI Hero is instructed to draw a Card, they will draw and resolve \textbf{another Card} from the AI Deck.
+The effect of each AI card depends on the game's \pagelink{Difficulty}{Difficulty}.
+The Might card \svg{might} is attached to the unit until the first respective attack/defense happens.
+The AI Spell Deck is used whenever a Magic card \svg{magic} is drawn.
+If an AI Hero is instructed to draw a card, they will draw and resolve \textbf{another card} from the AI Deck.
 
 \vspace*{\fill}
 \columnbreak
 \subheader{Combat against AI}
 
 \pagetarget{AI Units}{These rules} apply during Combat in \textbf{Solo}\index{Solo Mode} and \textbf{Cooperative} Scenarios.
-The rules for AI Unit placement during setup are described in \pagelink{CombatAISetup}{Combat chapter}.
+The rules for AI unit placement during setup are described in \pagelink{CombatAISetup}{Combat chapter}.
 
-When Neutral enemies or AI Heroes activate a Unit, they follow a set of automatic instructions:\par
+When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\par
 
 \begin{itemize}
-  \item Enemy Ground \svg{unit_ground} and Flying \svg{unit_flying} Units prioritize attacking Units of the \textbf{same} tier.
-  If this is impossible, they attack the Unit of a lower tier (in tier \textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \textbf{ascending} order).\par
+  \item Enemy Ground \svg{unit_ground} and Flying \svg{unit_flying} units prioritize attacking units of the \textbf{same} tier.
+  If this is impossible, they attack the unit of a lower tier (in tier \textbf{descending} order, down to bronze), and if that is also impossible, they attack the unit of a higher tier (in tier \textbf{ascending} order).\par
 
   \textit{Example: \svg{golden}\svg{unit_ground} has this priority:
   \svg{golden}
@@ -94,8 +94,8 @@ When Neutral enemies or AI Heroes activate a Unit, they follow a set of automati
   - \svg{bronze}
   - \svg{azure}.}
 
-  \item Ranged \svg{unit_ranged} Units prioritize attacking other Ranged \svg{unit_ranged} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.
-  If there are no Ranged \svg{unit_ranged} Units for them to target, they prioritize Ground \svg{unit_ground} and Flying \svg{unit_flying} Units in the same tier order.\par
+  \item Ranged \svg{unit_ranged} units prioritize attacking other Ranged \svg{unit_ranged} units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.
+  If there are no Ranged \svg{unit_ranged} units for them to target, they prioritize Ground \svg{unit_ground} and Flying \svg{unit_flying} units in the same tier order.\par
 
   \textit{Example: \svg{silver}\svg{unit_ranged} has this priority:
   \svg{silver}\svg{unit_ranged}
@@ -109,9 +109,9 @@ When Neutral enemies or AI Heroes activate a Unit, they follow a set of automati
 \end{itemize}
 
 In both cases, if there's more than one valid target, they attack the closest one.
-If there's ever a tie between equally valid targets, the player chooses which Unit is attacked.\par
+If there's ever a tie between equally valid targets, the player chooses which unit is attacked.\par
 
-Enemy Units cannot \pagelink{Defend}{Defend} unless instructed to.
+Enemy units cannot \pagelink{Defend}{defend} unless instructed to.
 
 \vfill
 

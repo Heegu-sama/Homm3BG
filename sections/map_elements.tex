@@ -16,7 +16,7 @@ Starting (I) Tiles are the easiest while Center (VI–VII) Tiles are the most di
 
 \subsection*{Map Tile Anatomy}\index{Map Tile}
 Each Map Tile is divided into 7 separate \textbf{Fields} that your Heroes can \textbf{Visit}.
-When your Hero moves to a Field, they must immediately Visit it, or
+When your Hero moves to a Field, they must immediately Visit it if unguarded, or
 first start a \pagelink{Combat}{Combat} against the enemies guarding it before Visiting.
 Empty Fields\index{Empty Field} do nothing when Visited.
 Solid yellow lines on a Field's edge cannot be passed through.
@@ -28,7 +28,7 @@ Solid yellow lines on a Field's edge cannot be passed through.
 
 \includegraphics[width=\linewidth]{\images/maptiles.png}
 \begin{center}
-  \textbf{\textit{\footnotesize\textcolor{darkcandyapplered}{Types of Map Tiles}}}
+  \imagecaption{\footnotesize{}Types of Map Tiles}
 \end{center}
 \begin{itemize}
   \footnotesize
@@ -61,7 +61,7 @@ Solid yellow lines on a Field's edge cannot be passed through.
 \end{center}
 
 \begin{center}
-  \textbf{\textit{\footnotesize\textcolor{darkcandyapplered}{Map Tile Anatomy}}}
+  \imagecaption{\footnotesize{}Map Tile Anatomy}
 \end{center}
 \begin{itemize}
   \footnotesize
@@ -82,15 +82,15 @@ Solid yellow lines on a Field's edge cannot be passed through.
 \begin{multicols}{2}
 
 \pagetarget{Categories}{\subsection*{Location Categories}}
-Visiting Fields provides Heroes with benefits, such as gaining Resources or Cards (see \pagelink{All Map Locations}{All Map Locations}).
+Visiting Fields provides Heroes with benefits, such as gaining Resources or cards (see \pagelink{All Map Locations}{All Map Locations}).
 There are three categories of Fields:
 \begin{itemize}
   \item \textbf{Visitable} – Once you Visit this Field, place a Black Cube on it.
     Treat it as an Empty Field as long as it has a Black Cube.
   \item \textbf{Flaggable} – These Fields can be captured by players and provide passive benefits.
     When you Visit one, place your Faction Cube on it.
-    Enemy Heroes who Visit your Flagged Fields will replace your Cube with theirs to \textbf{steal} the Field’s effects.
-    Allied Heroes treat Flagged Fields \textbf{as if they were empty}.
+    Enemy Heroes who Visit your flagged Fields will replace your Cube with theirs to \textbf{steal} the Field’s effects.
+    Allied Heroes treat flagged Fields \textbf{as if they were empty}.
   \item \textbf{Revisitable} – You can Visit this Field multiple times.
     Do not place any Cubes when you Visit it.
     You may pay 1 MP to Visit this Field again.
@@ -117,7 +117,7 @@ You may always rotate Map Tiles when placing or revealing them.
   \centering
   \includegraphics[width=\textwidth]{\images/placement.png}
   \begin{tikzpicture}[overlay]
-    \node at (5, 10) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{You cannot add this Tile here}}}}};
+    \node at (5, 10) {\footnotesize{\imagecaption{You cannot add this Tile here}}};
     \node at (1, 1.4) [anchor=west] {\footnotesize{\textbf{\textit{\textcolor{cadmiumgreen}{You can add this Tile here, because it will}}}}};
     \node at (1, 1) [anchor=west] {\footnotesize{\textbf{\textit{\textcolor{cadmiumgreen}{be adjacent to two other Tiles}}}}};
   \end{tikzpicture}
@@ -129,25 +129,25 @@ You may always rotate Map Tiles when placing or revealing them.
 
 \begin{multicols*}{2}
 
-\textit{Alice wants to capture an adjacent \pagelink{Mines}{Mine} by Flagging it with her Main Hero, Sandro the Necromancer.
-    She spends 1 MP to move onto the Mine, which begins \pagelink{Combat}{Combat} against Neutral Units, since the Field has a \pagelink{Difficulty}{Difficulty Rating} and has not been previously Flagged by any player.}\par
+\textit{Alice wants to capture an adjacent \pagelink{Mines}{Mine} by flagging it with her Main Hero, Sandro the Necromancer.
+    She spends 1 MP to move onto the Mine, which begins \pagelink{Combat}{Combat} against Neutral Units, since the Field has a \pagelink{Difficulty}{Difficulty Rating} and has not been previously flagged by any player.}\par
 
 \includegraphics[width=1.1\linewidth]{\examples/sandro_takes_mine.png}
 
 \textit{The Mine turns out to be guarded by Troglodytes, which have 3 HP \svg{health_points}.
-Alice's current hand consists of a Power Card, a Lightning Bolt, Haste, and a Town Portal.
+Alice's current hand consists of a Power card, a Lightning Bolt, Haste, and a Town Portal.
 During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it with Haste's alternative (bottom) effect, which makes the Lightning Bolt deal 3 damage \svg{damage}, killing the Troglodytes and winning the Combat.}
 
 \includegraphics[width=\linewidth]{\examples/sandro_empowering_lightning_bolt.png}
 
 \columnbreak
-\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell Card per Combat Round.}\par
+\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell card per Combat Round.}\par
 
 
-\textit{Alice now Flags the Mine by placing one of her Faction Cubes on it.
-    Flagging this particular Mine increases her Building Materials \svg{building_materials} production by 2, and she also immediately gains the Mine's production value of 2 \svg{building_materials} as she was the first player to Flag it.}\par
-\textit{Afterwards, Alice wants to go back to defend a previously Flagged Settlement by casting the Town Portal still left in her hand.
-    Her Hero is Level 2, so she can empower it with the Power Card's Expert Effect \svg{expert}, which grants her an additional Movement Point after casting it.
+\textit{Alice now flags the Mine by placing one of her Faction Cubes on it.
+    Flagging this particular Mine increases her Building Materials \svg{building_materials} production by 2, and she also immediately gains the Mine's production value of 2 \svg{building_materials} as she was the first player to flag it.}\par
+\textit{Afterwards, Alice wants to go back to defend a previously flagged Settlement by casting the Town Portal still left in her hand.
+    Her Hero is Level 2, so she can empower it with the Power card's Expert Effect \svg{expert}, which grants her an additional Movement Point after casting it.
 }
 
 \includegraphics[width=\linewidth]{\examples/sandro_empowering_town_portal.png}
@@ -168,7 +168,7 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
   Sea Map Tiles may contain both land and sea Fields.
   Movement from land to land, from sea to sea, or from sea to land works as normal.
   However, when your Hero \textbf{enters a sea Field from a land Field}, their movement for the Turn ends.
-  You may use unspent MP for other Actions (for example, to \pagelink{Timelimit}{extend Combat} against Neutral Units), but you cannot move anymore that Turn, not even with the help of Card effects.
+  You may use unspent MP for other Actions (for example, to \pagelink{Timelimit}{extend Combat} against Neutral Units), but you cannot move anymore that Turn, not even with the help of card effects.
 \end{expansion}
 
 \bigskip
@@ -186,7 +186,7 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
   \subsection*{\pagetarget{Subterranean Map Tiles}{Subterranean Map Tiles}}
   Subterranean Map Tiles have a unique backside and are placed during setup as shown in the chosen Scenario Map layout.
   They work similarly to regular Map Tiles, except that \textbf{you cannot move between a Surface and a Subterranean Tile without using a \pagelink{Subterranean Gate}{Subterranean Gate} in between} or a Town Portal Spell.
-  No other movement effects from Cards can allow you to move from one to the other.
+  No other movement effects from cards can allow you to move from one to the other.
   You also may not discover a Subterranean Map Tile while standing on a Surface Map Tile and vice versa.
   Treat both Fields of the Subterranean Gate Token \textbf{as one Field}.
   When a Hero enters a Field with a Subterranean Gate, discover the Map Tile on the other side for free (if it is still not discovered).
@@ -202,7 +202,7 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 \end{multicols}
 \begin{center}
   \vspace*{-0.5em}
-  \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Sea Map Tile}}}}
+  \footnotesize{\imagecaption{Sea Map Tile}}
 \end{center}
 
 \separator
@@ -212,10 +212,10 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
   \footnotesize
   \begin{tikzpicture}
     \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\images/elemental_tiles.png}}};
-    \draw (-2.2, 0.1) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Fire Tile}}}};
-    \draw (-2.2, -4.5) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Air Tile}}}};
-    \draw (2.2, 0.1) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Water Tile}}}};
-    \draw (2.2, -4.5) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Earth Tile}}}};
+    \draw (-2.2, 0.1) node {\imagecaption{Elemental Fire Tile}};
+    \draw (-2.2, -4.5) node {\imagecaption{Elemental Air Tile}};
+    \draw (2.2, 0.1) node {\imagecaption{Elemental Water Tile}};
+    \draw (2.2, -4.5) node {\imagecaption{Elemental Earth Tile}};
   \end{tikzpicture}
 \end{center}
 
@@ -226,11 +226,11 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
     \centering
     \begin{tikzpicture}
       \node at (0, 0) {\includegraphics[width=0.5\linewidth]{\images/map-tile-stronghold.png}};
-      \node at (0, 2.2) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Surface Map Tile}}}}};
+      \node at (0, 2.2) {\footnotesize{\imagecaption{Surface Map Tile}}};
       \node at (3.21, -1.11) {\includegraphics[width=0.5\linewidth]{\images/map-tile-sub.png}};
-      \node at (3.21, -3.41) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Map Tile}}}}};
+      \node at (3.21, -3.41) {\footnotesize{\imagecaption{Subterranean Map Tile}}};
       \node[rotate=-60] (gate) at (1.6, -0.53) {\includegraphics[width=0.33\linewidth]{\images/subter-gate-outline.png}};
-      \node at (3.21, 1.11) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Gate}}}}};
+      \node at (3.21, 1.11) {\footnotesize{\imagecaption{Subterranean Gate}}};
     \end{tikzpicture}
   \end{scriptsize}
 \end{center}
@@ -251,7 +251,7 @@ The effects of Visiting the Location Tokens are described in \pagelink{Location 
   \bigskip
   \begin{center}
     \includegraphics[width=0.42\linewidth]{\map_locations/creature_bank_token.png}\\
-    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Creature Bank Token}}}}
+    \footnotesize{\imagecaption{Creature Bank Token}}
   \end{center}
 \end{expansion}
 
@@ -271,7 +271,7 @@ The effects of Visiting the Location Tokens are described in \pagelink{Location 
     \draw (2.5, -1) node {\Huge\textbf{\textcolor{white}{$\boldsymbol{+}$1}}};
   \end{tikzpicture}
   \begin{center}
-    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Whirlpool Tokens}}}}
+    \footnotesize{\imagecaption{Whirlpool Tokens}}
   \end{center}
 \end{expansion}
 
@@ -284,7 +284,7 @@ The effects of Visiting the Location Tokens are described in \pagelink{Location 
   \bigskip
   \begin{center}
     \includegraphics[width=0.6\linewidth]{\map_locations/subterranean_gate_token.png}\\
-    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Gate Token}}}}
+    \footnotesize{\imagecaption{Subterranean Gate Token}}
   \end{center}
 \end{expansion}
 
@@ -297,7 +297,7 @@ The effects of Visiting the Location Tokens are described in \pagelink{Location 
   \bigskip
   \begin{center}
     \includegraphics[width=0.4\linewidth]{\map_locations/monolith_token.png}\\
-    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Monolith Token}}}}
+    \footnotesize{\imagecaption{Monolith Token}}
   \end{center}
 \end{expansion}
 \end{multicols}
