@@ -179,10 +179,16 @@
   \begin{multicols}{2}
   \subsection*{Resolving Adventure Cards}
   There are two different types of Adventure cards: Combats or Events.
-  \begin{multicols}{2}
+  \medskip
+  \begin{multicols*}{2}
     \footnotesize
     \begin{center}
-      \includegraphics[width=\linewidth]{\cards/adventure_event.png}
+      \begin{tikzpicture}
+        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_event.png}};
+        \draw (1.2, 1.9) node {\encircle{1}};
+        \draw (-0.2, -0.2) node {\encircle{2}};
+        \draw (-1, -1.2) node {\encircle{3}};
+      \end{tikzpicture}
       \imagecaption{Adventure-Event card}
       \begin{enumerate}
         \item[\textbf{1.}] Name
@@ -193,7 +199,14 @@
     \columnbreak
 
     \begin{center}
-      \includegraphics[width=\linewidth]{\cards/adventure_combat.png}
+      \begin{tikzpicture}
+        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_combat.png}};
+        \draw (1.2, 1.9) node {\encircle{1}};
+        \draw (-0.2, 0.2) node {\encircle{2}};
+        \draw (-1, -0.8) node {\encircle{4}};
+        \draw (1, -0.8) node {\encircle{5}};
+        \draw (0.4, -2) node {\encircle{6}};
+      \end{tikzpicture}
       \imagecaption{Adventure-Combat card}
       \begin{enumerate}
         \item[\textbf{4.}] Combat Power Levels
@@ -201,7 +214,7 @@
         \item[\textbf{6.}] Basic Reward
       \end{enumerate}
     \end{center}
-  \end{multicols}
+  \end{multicols*}
   To resolve an \textbf{Adventure-Event card} just resolve the printed effect.
   \smallskip
 
