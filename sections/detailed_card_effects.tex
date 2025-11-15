@@ -18,10 +18,10 @@ Use the specific tokens to mark the affected spaces.
         \setlength\columnsep{1em}
         \begin{wrapfigure}{r}{0.3\linewidth}
             \includegraphics[width=0.6\linewidth]{\images/clone-token.png}\vspace*{1em}
-            \includegraphics[width=\linewidth]{\images/clone-token-2.png}
+            \includegraphics[width=\linewidth]{\images/clone-token.png}
             \centering\textbf{\textit{\scriptsize\color{darkcandyapplered}Clone \mbox{Tokens}\\}}
         \end{wrapfigure}
-        When you cast the \textbf{Clone Spell}, choose an allied unit (depending on the \svg{empower} used) and an adjacent empty space on the Combat Board to that unit.
+        When you cast the \textbf{Clone Spell}, choose an allied unit (depending on the \svg{empower} used) and an empty space on the Combat Board adjacent to that unit.
         Then place the small Clone Token on the chosen unit and the bigger Token of the same color on the empty space.
         The token on the empty space represents the Clone.
         It has the same statistics and special abilities as the original unit, but its \svg{health_points} is only 1 and its \svg{defense} is 0.
@@ -33,14 +33,24 @@ Use the specific tokens to mark the affected spaces.
         \columnbreak
 
         \subsection*{\textit{Clone Example}}
-        %i would suggest to take an core game ranged unit instead of sorceresses.
-        \textit{You are playing Casmetra, a navigator.
-            One of your units in Combat is a Pack of Sorceresses whose Initiative value is 7.
-            You cast the Clone Spell on them and places the small Clone Token on the Pack of Sorceresses and the bigger one of the same color on an empty space next to them.
-            Later, you decide to cast ``Haste'' with 0 \svg{empower} on the original Sorceresses unit to increase their Initiative by 1.
-            Now, the original Sorceresses' Initiative Value is 8, but the cloned unit's Initiative remains 7.
+
+        \textit{%
+            One of your units in Combat is a Few Griffins whose Initiative value is 6.
+            You cast the Clone Spell on them and place the small Clone Token on the Griffins and the big one of the same color on an empty space next to them.
+            Later, you decide to cast ``Haste'' with 0 \svg{empower} on the original Griffins unit to increase their Initiative by 1.
+            Now, the original Griffins' Initiative Value is 7, but the cloned unit's Initiative remains 6.
         }
-        \includegraphics[width=\linewidth]{\examples/clone-example-draft.png}
+        \begin{tikzpicture}
+          \draw (0, 0) node[rotate=180] {\includegraphics[width=\linewidth]{\images/combat_board_half.jpg}};
+          \draw (-1, 1.3) node {\includegraphics[width=0.22\linewidth]{\cards/unit-few.png}};
+          \draw (-0.8, 1.2) node[circular drop shadow={shadow scale=0.9, shadow xshift=0.3ex, shadow yshift=-0.3ex, opacity=0.7,
+              fill=black, path fading={circle with fuzzy edge 15 percent},
+              every shadow}] {\includegraphics[width=0.1\linewidth]{\images/clone-token-2.png}};
+          \draw (1, 1.3) node[circular drop shadow={shadow scale=0.9, shadow xshift=0.3ex, shadow yshift=-0.3ex, opacity=0.7,
+              fill=black, path fading={circle with fuzzy edge 15 percent},
+              every shadow}] {\includegraphics[width=0.18\linewidth]{\images/clone-token-2.png}};
+          \draw (-0.4, -1.7) node {\includegraphics[width=0.28\linewidth]{\cards/haste.png}};
+        \end{tikzpicture}
     \end{multicols}
 \end{expansion}
 
