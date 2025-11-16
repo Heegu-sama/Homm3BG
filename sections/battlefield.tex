@@ -1,5 +1,5 @@
 % !TeX spellcheck = en_US
-\pagetarget{Adventure and Skirmish Modes}{\addsection[2]{Adventure and \break{}Skirmish Modes}{\spells/frenzy.png}}
+\pagetarget{Adventure and Skirmish Modes}{\addsection{Battlefield}{\spells/frenzy.png}}
 
 \begin{expansion}{battlefield}
   \begin{multicols}{2}
@@ -8,7 +8,7 @@
   The two modes differ in the way players build their unit and Player Decks:
   \smallskip
   \begin{itemize}
-    \item In \textbf{Skirmish Mode} the players simply get pre-constructed Decks and armies, on whose composition they have only a little influence.
+    \item In \textbf{Skirmish Mode} players simply get pre-constructed Decks and armies, on which composition they have little influence.
       With their Decks the players jump directly into Combat.
     \item In \textbf{Adventure Mode}, a card-driven Adventure Phase is played before the final Combat, which replaces and simulates the discovery of the Map from regular games.
       In this phase, players use Adventure cards to gather Resources, expand their Town, and develop their Heroes, thus deciding for themselves which units to recruit and which types of cards to include in their Deck, rather than limited on pre-constructed sets.
@@ -315,4 +315,111 @@
             \lightcell[2.2]{Use all of your units (\svg{bronze}, \svg{silver} and \svg{golden}) on ``Pack'' Site.} \\
         \end{tabularx}
     }
+\end{expansion}
+
+\begin{expansion}[before=\vspace*{-11mm}]{battlefield}
+  \pagetarget{Battlefield Combat}{\subheader{Combat on the Battlefield Board}}
+  \begin{multicols*}{2}
+  It is recommended to use the Battlefield Combat Board only for \textbf{Player vs.~Player Combats}, even though it is also possible to use it in Neutral Combats.
+  Using the Battlefield Board requires using \pagelink{Miniatures}{Miniatures} instead of unit cards.
+
+  \subsection*{Battlefield Board in Neutral\\Combats}
+  If you decide to use the Battlefield Board in Combats with Neutral Units, ignore the Round Limit:
+  At the end of each Combat Round you may freely decide to Retreat or to gain an additional Combat Round with no need to spend a MP \svg{movement}.
+  Be aware, however, that this may significantly extend the playtime.
+
+  \subsection*{\pagetarget{BF Obstacles}{Obstacle Tokens}}
+  On the Battlefield Board you place Obstacle Tokens, which are divided into three types:
+  Effect, Obstacle and Wall/Gate.
+  Unless otherwise stated these Tokens count and work as \pagelink{Combatterminology}{Combat Obstacles}.
+  To place Effect Obstacles on the Battlefield Board you'll need the card which creates the effect, such as the Fire Wall Spell: use the Tokens and put the Card beside the Battlefield as a reminder.
+  Effect Obstacles may be entered by Units, if the Card text allows it.
+  \begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.3\linewidth}
+      \centering
+      \includegraphics[width=0.7\linewidth]{\images/bf-obstacle-1.png}
+      \caption{\imagecaption{Effect}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.3\linewidth}
+      \centering
+      \includegraphics[width=0.9\linewidth]{\images/bf-obstacle-2.png}
+      \caption{\imagecaption{Obstacle}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.3\linewidth}
+      \centering
+      \includegraphics[width=0.9\linewidth]{\images/bf-obstacle-3.png}
+      \caption{\imagecaption{Wall/Gate}}
+    \end{subfigure}
+  \end{figure}
+  \note{3}{
+    All unit Miniatures also count as Obstacles.
+  }
+  \columnbreak
+
+  \subsection*{Rules Changes in Combat Setup}
+  \begin{itemize}
+    \item \textbf{Place obstacles} – Starting with the attacking player, both players take turns choosing and placing one Obstacle Token on the Battlefield Board until \textbf{all Obstacle Tokens (no Effects yet) are placed}.
+    No Obstacle can be adjacent to another Obstacle or to any player's deployment zone.
+
+    \begin{tikzpicture}
+      \draw (0, 0) node {\includegraphics[width=0.9\linewidth]{\examples/bf-deploy.png}};
+      \draw (2.5, 0) node[rotate=90] {\textbf{\fontfamily{ptm}\selectfont\textcolor{white}{DEPLOYMENT ZONE}}};
+    \end{tikzpicture}
+    {\footnotesize\imagecaption{Obstacles and models placed correctly are marked with the green border, and incorrectly -- with the red one.}}
+    \item \textbf{Place units} – Starting from the attacking player, the players choose a deployment zone and take turns placing their units \textbf{one by one}.
+    When the last unit is placed, the Combat begins.
+    Only in Player vs. Player Combats can the players decide to allow placing \textbf{up to 7 units} (instead of 5).
+  \end{itemize}
+  \end{multicols*}
+\end{expansion}
+
+\newpage
+\begin{expansion}[before=\vspace*{-11mm}]{battlefield}
+  \begin{multicols*}{2}
+  \begin{itemize}
+    \item \textbf{Siege with Walls and Gate} – During a Siege against a Town with a Citadel, only Walls and Gate Obstacles are placed.
+      Place no other Obstacles.
+
+    \begin{tikzpicture}
+      \draw (0, 0) node {\includegraphics[width=1.05\linewidth]{\examples/bf-deploy-wall.png}};
+      \draw (2, 0) node[rotate=90] {\textbf{\fontfamily{ptm}\selectfont\textcolor{white}{DEPLOYMENT ZONE}}};
+    \end{tikzpicture}
+    {\footnotesize\imagecaption{The red border marks incorrectly placed Obstacles.}}
+  \end{itemize}
+  \subsection*{Rules Changes during Combat}
+  \begin{itemize}
+    \item \textbf{Unit Movement} – Each unit's Movement is equal to its Initiative value: a unit of Initiative 8 can move up to 8 hexes.
+    \item \textbf{Ranged Movement}  – Ranged \svg{unit_ranged} units can either move or attack, not both.
+    \item \textbf{Combat Penalty} – Ranged \svg{unit_ranged} units suffer a Combat Penalty when attacking an adjacent unit or a unit that is \textbf{8 or more} hexes away from them.
+    \begin{center}
+      \vspace*{1em}
+      \transparent{0.2}\includegraphics[width=0.7\linewidth]{\art/land_mine.png}
+    \end{center}
+    \columnbreak
+
+    \begin{minipage}{\linewidth}
+      \setlength\intextsep{0pt}
+      \setlength\columnsep{1em}
+      \begin{wrapfigure}{r}{0.3\linewidth}
+        \includegraphics[width=\linewidth]{\images/initiative-bf.png}
+      \end{wrapfigure}
+      \item \textbf{\pagetarget{Initiative Token}{Initiative Token}} – At the start of Combat, the attacking player gains the Initiative Token.
+      Use it only to break any Initiative ties of opposing units:
+      The player with the Token activates first \textbf{one of their units of the same Initiative value}.
+      Then, the players alternate in activating all of their units of that same Initiative value one by one.
+      Once all units with that Initiative value are activated, pass the Initiative Token to the other player, who keeps it until initiative ties must be resolved again in the same way.
+    \end{minipage}
+
+    \item \textbf{Gate Token} – During a Siege, defending units may enter the Gate Token \textbf{only at the two middle hexes} where the Gate is printed.
+    Attacking the Gate Token is still possible on all four hexes.
+
+    \vspace*{1em}
+    \includegraphics[width=\linewidth]{\examples/bf-gate-token.png}
+    \textit{\footnotesize{}Example: Halberdier and Crusader (defenders) may enter the Gate Token only along the green arrows, but Minotaur and Harpies are still able to attack the Gate Token from any side.}
+    \item \textbf{In \pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish games} only:}
+      At the end of each Combat Round \textbf{regain one used \svg{expert}} up to your Hero's Limit and \textbf{draw 2 cards from your Deck}.
+  \end{itemize}
+    \vspace*{\fill}
+  \end{multicols*}
 \end{expansion}
