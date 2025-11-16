@@ -386,10 +386,18 @@
   \subsectionspacing{}
 \fi
 
-\newcommand{\subheader}[2][true]{%
-  \ifstrequal{#1}{false}{}{%
-    \phantomsection\addcontentsline{toc}{subsection}{\protect #2}%
-  }%
+% Subheaders which appear in the ToC
+% Argument one is the literal text for ToC - defaults to argument two if unspecified
+% Argument two is the text to display
+\newcommand{\subheader}[2][]{%
+  \ifstrequal{#1}{false}{}{
+    \ifstrequal{#1}{}{
+      \phantomsection\addcontentsline{toc}{subsection}{\protect #2}%
+    }{%
+      % This is useful when display text needs a linebreak
+      \phantomsection\addcontentsline{toc}{subsection}{\protect #1}%
+    }%
+  }
   \begin{center}
     \textbf{\Large\scshape #2}
     \\[0.02em]
