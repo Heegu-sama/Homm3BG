@@ -16,7 +16,7 @@ Starting (I) Tiles are the easiest while Center (VI–VII) Tiles are the most di
 
 \subsection*{Map Tile Anatomy}\index{Map Tile}
 Each Map Tile is divided into 7 separate \textbf{Fields} that your Heroes can \textbf{Visit}.
-When your Hero moves to a Field, they must immediately Visit it, or
+When your Hero moves to a Field, they must immediately Visit it if unguarded, or
 first start a \pagelink{Combat}{Combat} against the enemies guarding it before Visiting.
 Empty Fields\index{Empty Field} do nothing when Visited.
 Solid yellow lines on a Field's edge cannot be passed through.
@@ -28,7 +28,7 @@ Solid yellow lines on a Field's edge cannot be passed through.
 
 \includegraphics[width=\linewidth]{\images/maptiles.png}
 \begin{center}
-  \textbf{\textit{\footnotesize\textcolor{darkcandyapplered}{Types of Map Tiles}}}
+  \imagecaption{\footnotesize{}Types of Map Tiles}
 \end{center}
 \begin{itemize}
   \footnotesize
@@ -61,7 +61,7 @@ Solid yellow lines on a Field's edge cannot be passed through.
 \end{center}
 
 \begin{center}
-  \textbf{\textit{\footnotesize\textcolor{darkcandyapplered}{Map Tile Anatomy}}}
+  \imagecaption{\footnotesize{}Map Tile Anatomy}
 \end{center}
 \begin{itemize}
   \footnotesize
@@ -117,7 +117,7 @@ You may always rotate Map Tiles when placing or revealing them.
   \centering
   \includegraphics[width=\textwidth]{\images/placement.png}
   \begin{tikzpicture}[overlay]
-    \node at (5, 10) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{You cannot add this Tile here}}}}};
+    \node at (5, 10) {\footnotesize{\imagecaption{You cannot add this Tile here}}};
     \node at (1, 1.4) [anchor=west] {\footnotesize{\textbf{\textit{\textcolor{cadmiumgreen}{You can add this Tile here, because it will}}}}};
     \node at (1, 1) [anchor=west] {\footnotesize{\textbf{\textit{\textcolor{cadmiumgreen}{be adjacent to two other Tiles}}}}};
   \end{tikzpicture}
@@ -202,7 +202,7 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 \end{multicols}
 \begin{center}
   \vspace*{-0.5em}
-  \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Sea Map Tile}}}}
+  \footnotesize{\imagecaption{Sea Map Tile}}
 \end{center}
 
 \separator
@@ -212,10 +212,10 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
   \footnotesize
   \begin{tikzpicture}
     \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\images/elemental_tiles.png}}};
-    \draw (-2.2, 0.1) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Fire Tile}}}};
-    \draw (-2.2, -4.5) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Air Tile}}}};
-    \draw (2.2, 0.1) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Water Tile}}}};
-    \draw (2.2, -4.5) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Earth Tile}}}};
+    \draw (-2.2, 0.1) node {\imagecaption{Elemental Fire Tile}};
+    \draw (-2.2, -4.5) node {\imagecaption{Elemental Air Tile}};
+    \draw (2.2, 0.1) node {\imagecaption{Elemental Water Tile}};
+    \draw (2.2, -4.5) node {\imagecaption{Elemental Earth Tile}};
   \end{tikzpicture}
 \end{center}
 
@@ -226,11 +226,11 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
     \centering
     \begin{tikzpicture}
       \node at (0, 0) {\includegraphics[width=0.5\linewidth]{\images/map-tile-stronghold.png}};
-      \node at (0, 2.2) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Surface Map Tile}}}}};
+      \node at (0, 2.2) {\footnotesize{\imagecaption{Surface Map Tile}}};
       \node at (3.21, -1.11) {\includegraphics[width=0.5\linewidth]{\images/map-tile-sub.png}};
-      \node at (3.21, -3.41) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Map Tile}}}}};
+      \node at (3.21, -3.41) {\footnotesize{\imagecaption{Subterranean Map Tile}}};
       \node[rotate=-60] (gate) at (1.6, -0.53) {\includegraphics[width=0.33\linewidth]{\images/subter-gate-outline.png}};
-      \node at (3.21, 1.11) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Gate}}}}};
+      \node at (3.21, 1.11) {\footnotesize{\imagecaption{Subterranean Gate}}};
     \end{tikzpicture}
   \end{scriptsize}
 \end{center}
@@ -251,7 +251,7 @@ The effects of Visiting the Location Tokens are described in \pagelink{Location 
   \bigskip
   \begin{center}
     \includegraphics[width=0.42\linewidth]{\map_locations/creature_bank_token.png}\\
-    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Creature Bank Token}}}}
+    \footnotesize{\imagecaption{Creature Bank Token}}
   \end{center}
 \end{expansion}
 
@@ -271,7 +271,7 @@ The effects of Visiting the Location Tokens are described in \pagelink{Location 
     \draw (2.5, -1) node {\Huge\textbf{\textcolor{white}{$\boldsymbol{+}$1}}};
   \end{tikzpicture}
   \begin{center}
-    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Whirlpool Tokens}}}}
+    \footnotesize{\imagecaption{Whirlpool Tokens}}
   \end{center}
 \end{expansion}
 
@@ -284,7 +284,7 @@ The effects of Visiting the Location Tokens are described in \pagelink{Location 
   \bigskip
   \begin{center}
     \includegraphics[width=0.6\linewidth]{\map_locations/subterranean_gate_token.png}\\
-    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Gate Token}}}}
+    \footnotesize{\imagecaption{Subterranean Gate Token}}
   \end{center}
 \end{expansion}
 
@@ -297,7 +297,7 @@ The effects of Visiting the Location Tokens are described in \pagelink{Location 
   \bigskip
   \begin{center}
     \includegraphics[width=0.4\linewidth]{\map_locations/monolith_token.png}\\
-    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Monolith Token}}}}
+    \footnotesize{\imagecaption{Monolith Token}}
   \end{center}
 \end{expansion}
 \end{multicols}
