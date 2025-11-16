@@ -386,39 +386,6 @@
   \subsectionspacing{}
 \fi
 
-% \newfontfamily{\cmfont}{Latin Modern Roman}[
-%   SmallCapsFont = {Latin Modern Roman Caps},
-%   BoldFont = {Latin Modern Roman Bold},
-%   BoldFeatures = {SmallCapsFont = {Latin Modern Roman Caps}},
-% ]
-% \newfontfamily{\cmfont}{lmroman10}[
-%   Path = ./assets/fonts/,
-%   Extension = .otf,
-%   UprightFont = *-regular,
-%   BoldFont = *-bold,
-%   ItalicFont = *-italic,
-%   BoldItalicFont = *-bolditalic,
-%   SmallCapsFont = lmromancaps10-regular,
-% ]
-% \newfontfamily{\cmfont}{lmroman10}[
-%   Path = ./assets/fonts/,
-%   Extension = .otf,
-%   UprightFont = *-regular,
-%   BoldFont = *-bold,
-%   ItalicFont = *-italic,
-%   BoldItalicFont = *-bolditalic,
-%   SmallCapsFont = lmromancaps10-regular,
-%   FontFace = {b}{sc}{Font = lmromandemi10-regular},
-% ]
-% \newfontfamily{\cmfont}{EBGaramond12}[
-%   Path = ./assets/fonts/EBGaramond-0.016/otf/,
-%   Extension = .otf,
-%   UprightFont = *-Regular,
-%   ItalicFont = *-Italic,
-%   % SmallCapsFont = EBGaramondSC12-Regular,
-%   RawFeature={+c2sc,+scmp}
-% ]
-
 \newcommand{\subheader}[2][true]{%
   \ifstrequal{#1}{false}{}{%
     \phantomsection\addcontentsline{toc}{subsection}{\protect #2}%
