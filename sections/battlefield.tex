@@ -51,7 +51,7 @@
 
 \newpage
 \begin{expansion}{battlefield}
-  \subheader{Setup for both modes}
+  \subheader{Battlefield Setup}
   \begin{multicols}{2}
     \subsection*{Common Setup Steps \raisebox{.3\height}{{\scriptsize\encirclelegend{goblin}{C}}}}
     \begin{enumerate}
@@ -185,7 +185,7 @@
     \footnotesize
     \begin{center}
       \begin{tikzpicture}
-        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_event.png}};
+        \draw (0, 0) node[inner sep=0] {\includegraphics[width=1.1\linewidth]{\cards/adventure_event.png}};
         \draw (1.2, 1.9) node {\encircle{1}};
         \draw (-0.2, -0.2) node {\encircle{2}};
         \draw (-1, -1.2) node {\encircle{3}};
@@ -201,7 +201,7 @@
 
     \begin{center}
       \begin{tikzpicture}
-        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_combat.png}};
+        \draw (0, 0) node[inner sep=0] {\includegraphics[width=1.1\linewidth]{\cards/adventure_combat.png}};
         \draw (1.2, 1.9) node {\encircle{1}};
         \draw (-0.2, 0.2) node {\encircle{2}};
         \draw (-1, -0.8) node {\encircle{4}};
@@ -363,7 +363,7 @@
     No Obstacle can be adjacent to another Obstacle or to any player's deployment zone.
 
     \begin{tikzpicture}
-      \draw (0, 0) node {\includegraphics[width=0.9\linewidth]{\examples/bf-deploy.png}};
+      \draw (0, 0) node {\framedimage[0.9\linewidth]{\examples/bf-deploy.png}};
       \draw (2.5, 0) node[rotate=90] {\textbf{\fontfamily{ptm}\selectfont\textcolor{white}{DEPLOYMENT ZONE}}};
     \end{tikzpicture}
     {\footnotesize\imagecaption{Obstacles and models placed correctly are marked with the green border, and incorrectly -- with the red one.}}
@@ -382,7 +382,7 @@
       Place no other Obstacles.
 
     \begin{tikzpicture}
-      \draw (0, 0) node {\includegraphics[width=1.05\linewidth]{\examples/bf-deploy-wall.png}};
+      \draw (0, 0) node {\framedimage[1.05\linewidth]{\examples/bf-deploy-wall.png}};
       \draw (2, 0) node[rotate=90] {\textbf{\fontfamily{ptm}\selectfont\textcolor{white}{DEPLOYMENT ZONE}}};
     \end{tikzpicture}
     {\footnotesize\imagecaption{The red border marks incorrectly placed Obstacles.}}
@@ -415,7 +415,7 @@
     Attacking the Gate Token is still possible on all four hexes.
 
     \vspace*{1em}
-    \includegraphics[width=\linewidth]{\examples/bf-gate-token.png}
+    \framedimage[\linewidth]{\examples/bf-gate-token.png}
     \textit{\footnotesize{}Example: Halberdier and Crusader (defenders) may enter the Gate Token only along the green arrows, but Minotaur and Harpies are still able to attack the Gate Token from any side.}
     \item \textbf{In \pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish games} only:}
       At the end of each Combat Round \textbf{regain one used \svg{expert}} up to your Hero's Limit and \textbf{draw 2 cards from your Deck}.
