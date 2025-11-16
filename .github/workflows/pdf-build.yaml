@@ -7,10 +7,6 @@ on:
         required: true
         type: string
         description: 'Language code (e.g., en, pl, fr)'
-      luaengine:
-        required: true
-        type: boolean
-        description: 'Whether to use LuaLaTeX'
       build_type:
         required: true
         type: string
@@ -134,8 +130,8 @@ jobs:
         uses: xu-cheng/latex-action@v4
         if: steps.cache-pdf.outputs.cache-hit != 'true'
         with:
-          docker_image: ghcr.io/qwrtln/homm3bg:latest
-          latexmk_use_lualatex: ${{ inputs.luaengine }}
+          # docker_image: ghcr.io/qwrtln/homm3bg:latest
+          latexmk_use_lualatex: true
           latexmk_shell_escape: true
           pre_compile: export HOMM3_GITHUB_BUILD=1 HOMM3_PRINTABLE=${{ env.HOMM3_PRINTABLE }} HOMM3_NO_ART_BACKGROUND=${{ env.HOMM3_NO_ART_BACKGROUND }} HOMM3_LANG=${{ inputs.language }}
           root_file: main_${{ inputs.language }}.tex
