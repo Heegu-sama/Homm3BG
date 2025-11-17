@@ -327,17 +327,51 @@
 }
 
 % Set fonts for section headings and notes
-\newfontfamily{\liberation}{LiberationSerif}
-  [
+\newfontfamily{\liberation}[
     Path = ./assets/fonts/,
     Extension = .ttf,
     UprightFont = *-Regular,
     ItalicFont = *-Italic,
     BoldFont = *-Bold,
     BoldItalicFont = *-BoldItalic,
-  ]
+]{LiberationSerif}
+% Copied from newcomputermodern package
+\newfontfamily{\computermodernfont}[
+  SizeFeatures={%
+    {Size=-8, Font=NewCM08-Regular.otf,
+      ItalicFont=NewCM08-Italic.otf,%
+      BoldFont=NewCM10-Bold.otf,%
+      BoldItalicFont=NewCM10-BoldItalic.otf,%
+      SlantedFont=NewCM08-Regular.otf,%
+      BoldSlantedFont=NewCM10-Bold.otf,%
+      SmallCapsFeatures={Numbers=OldStyle}},
+    {Size=8, Font=NewCM08-Regular.otf,
+      ItalicFont=NewCM08-Italic.otf,%
+      BoldFont=NewCM10-Bold.otf,%
+      BoldItalicFont=NewCM10-BoldItalic.otf,%
+      SlantedFont=NewCM08-Regular.otf,%
+      BoldSlantedFont=NewCM10-Bold.otf,%
+      SmallCapsFeatures={Numbers=OldStyle}},
+    {Size= 9-, Font = NewCM10-Regular.otf,
+      ItalicFont=NewCM10-Italic.otf,%
+      BoldFont=NewCM10-Bold.otf,%
+      BoldItalicFont=NewCM10-BoldItalic.otf,%
+      SlantedFont=NewCM10-Regular.otf,%
+      BoldSlantedFont=NewCM10-Bold.otf,%
+      SmallCapsFeatures={Numbers=OldStyle}}%
+  },%
+  SmallCapsFeatures={Numbers=OldStyle},%
+  BoldSlantedFont=NewCM10-Bold.otf,%
+  SlantedFont=NewCM10-Regular.otf,%
+  BoldItalicFont=NewCM10-BoldItalic.otf,%
+  BoldFont=NewCM10-Bold.otf,%
+  ItalicFont=NewCM10-Italic.otf,%
+  SlantedFeatures={FakeSlant=0.25},%
+  BoldSlantedFeatures={FakeSlant=0.25},%
+]{NewCM10-Regular}
 
 \providecommand{\notefont}[0]{\liberation\selectfont}
+\providecommand{\subheaderfont}[0]{}
 
 \titleformat{\section}
 {\huge}
@@ -399,7 +433,7 @@
     }%
   }
   \begin{center}
-    \textbf{\Large\scshape #2}
+    \textbf{\subheaderfont\Large\scshape #2}
     \\[0.02em]
     \includegraphics[width=\linewidth,height=1em,keepaspectratio]{\layout/subsection_separator.png}
   \end{center}
@@ -429,7 +463,6 @@
 \definecolor{borderinyellow}{HTML}{B09E69}
 \definecolor{bordermidyellow}{HTML}{6f6749}
 % Create note box
-\providecommand{\notefont}[0]{\fontfamily{ptm}\selectfont}
 \newcommand{\note}[2]{
   \begin{tikzpicture}
     \iftoggle{noartbackground}{
