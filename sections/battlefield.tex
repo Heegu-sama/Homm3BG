@@ -328,10 +328,12 @@
 \begin{expansion}[before=\vspace*{-11mm}]{battlefield}
   \pagetarget{Battlefield Combat}{\subheader{Combat on the Battlefield Board}}
   \begin{multicols*}{2}
-  It is recommended to use the Battlefield Combat Board only for \textbf{Player vs.~Player Combats}, even though it is also possible to use it in Neutral Combats.
-  Using the Battlefield Board requires using \pagelink{Miniatures}{Miniatures} instead of unit cards.
+  Battlefield is compatible with regular games and \pagelink{Battlefield Modes}{Adventure with Skirmish}, though the rules vary slightly.
+  For the regular games, the attacking player gains the Initiative Token at the start of the Combat.
+  Using the Battlefield Board requires using \pagelink{Miniatures}{miniatures} instead of unit cards.
 
   \subsection*{Battlefield Board in Neutral\\Combats}
+  It is recommended to use the Battlefield Combat Board only for \textbf{Player vs.~Player Combats}, even though it is also possible to use it in Neutral Combats.
   If you decide to use the Battlefield Board in Combats with Neutral Units, ignore the Round Limit:
   At the end of each Combat Round you may freely decide to Retreat or to gain an additional Combat Round with no need to spend a MP \svg{movement}.
   Be aware, however, that this may significantly extend the playtime.
@@ -367,7 +369,7 @@
 
   \subsection*{Rules Changes in Combat Setup}
   \begin{itemize}
-    \item \textbf{Place obstacles} – Starting with the attacking player, both players take turns choosing and placing one Obstacle Token on the Battlefield Board until \textbf{all Obstacle Tokens (no Effects yet) are placed}.
+    \item \textbf{Place obstacles} -- Starting with the player with the Initiative Token, both players take turns choosing and placing one Obstacle Token on the Battlefield Board until \textbf{all Obstacle Tokens (no Effects yet) are placed}.
     No Obstacle can be adjacent to another Obstacle or to any player's deployment zone.
 
     \begin{tikzpicture}
@@ -375,9 +377,9 @@
       \draw (2.5, 0) node[rotate=90] {\textbf{\fontfamily{ptm}\selectfont\textcolor{white}{DEPLOYMENT ZONE}}};
     \end{tikzpicture}
     {\footnotesize\imagecaption{Obstacles and models placed correctly are marked with the green border, and incorrectly -- with the red one.}}
-    \item \textbf{Place units} – Starting from the attacking player, the players choose a deployment zone and take turns placing their units \textbf{one by one}.
+    \item \textbf{Place units} -- The player with the Initiative Token chooses a deployment zone and places their first unit in it, then players take turns placing their units \textbf{one by one}.
     When the last unit is placed, the Combat begins.
-    Only in Player vs. Player Combats can the players decide to allow placing \textbf{up to 7 units} (instead of 5).
+    Only in Player vs.~Player Combats can the players decide to allow placing \textbf{up to 7 units} (instead of 5).
   \end{itemize}
   \end{multicols*}
 \end{expansion}
@@ -386,7 +388,7 @@
 \begin{expansion}[before=\vspace*{-11mm}]{battlefield}
   \begin{multicols*}{2}
   \begin{itemize}
-    \item \textbf{Siege with Walls and Gate} – During a Siege against a Town with a Citadel, only Walls and Gate Obstacles are placed.
+    \item \textbf{Siege with Walls and Gate} (this normally happens only in regular games, not in \pagelinkwithcomma{Battlefield Modes}{Adventure/Skirmish}) -- During a Siege against a Town with a Citadel, only Walls and Gate Obstacles are placed.
       Place no other Obstacles.
 
     \begin{tikzpicture}
@@ -397,9 +399,9 @@
   \end{itemize}
   \subsection*{Rules Changes during Combat}
   \begin{itemize}
-    \item \textbf{Unit Movement} – Each unit's Movement is equal to its Initiative value: a unit of Initiative 8 can move up to 8 hexes.
-    \item \textbf{Ranged Movement}  – Ranged \svg{unit_ranged} units can either move or attack, not both.
-    \item \textbf{Combat Penalty} – Ranged \svg{unit_ranged} units suffer a Combat Penalty when attacking an adjacent unit or a unit that is \textbf{8 or more} hexes away from them.
+    \item \textbf{Unit Movement} -- Each unit's Movement is equal to its Initiative value: a unit of Initiative 8 can move up to 8 hexes.
+    \item \textbf{Ranged Movement} -- Ranged \svg{unit_ranged} units can either move or attack, not both.
+    \item \textbf{Combat Penalty} -- Ranged \svg{unit_ranged} units suffer a Combat Penalty when attacking an adjacent unit or a unit that is \textbf{8 or more} hexes away from them.
     \begin{center}
       \vspace*{1em}
       \transparent{0.2}\includegraphics[width=0.7\linewidth]{\art/land_mine.png}
@@ -412,11 +414,10 @@
       \begin{wrapfigure}{r}{0.3\linewidth}
         \includegraphics[width=\linewidth]{\images/initiative-bf.png}
       \end{wrapfigure}
-      \item \textbf{\pagetarget{Initiative Token}{Initiative Token}} – At the start of Combat, the attacking player gains the Initiative Token.
-      Use it only to break any Initiative ties of opposing units:
+      \item \textbf{\pagetarget{Initiative Token}{Initiative Token}} -- After the setup, use it to break any Initiative ties of opposing units.
       The player with the Token activates first \textbf{one of their units of the same Initiative value}.
       Then, the players alternate in activating all of their units of that same Initiative value one by one.
-      Once all units with that Initiative value are activated, pass the Initiative Token to the other player, who keeps it until initiative ties must be resolved again in the same way.
+      Once all units with that Initiative value are activated, pass the Initiative Token to the other player, who keeps it until an initiative ties of opposing units happens again.
     \end{minipage}
 
     \item \textbf{Gate Token} – During a Siege, defending units may enter the Gate Token \textbf{only at the two middle hexes} where the Gate is printed.
