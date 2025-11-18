@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-11-18 14:32+0000\n"
+"POT-Creation-Date: 2025-11-18 15:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 #. type: multicols
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
 #: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
-#: sections/combat.tex:302 sections/credits.tex:8 sections/deckbuilding.tex:5
+#: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
 #: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
 #: sections/difficulty.tex:5 sections/expansion_content.tex:489
 #: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:83
@@ -35,7 +35,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:282 sections/combat.tex:254
+#: sections/all_map_locations.tex:283 sections/combat.tex:255
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -130,9 +130,10 @@ msgid "\\pagetarget{Combatsetup}{\\subheader{Combat Setup}}"
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:46
+#: sections/combat.tex:47
 #, no-wrap
 msgid ""
+"\\vspace*{-2em}\n"
 "Combat is resolved on the 4×5 Combat Board, which consists of two Backlines and two Frontlines on opposite ends, and a middle row.\n"
 "It can also be resolved on one of the \\pagelink{Alternative Combat Boards}{alternative Boards}.\n"
 "Follow these steps when Combat begins against \\textbf{Neutral Units}:\n"
@@ -140,10 +141,10 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:61
+#: sections/combat.tex:62
 #, no-wrap
 msgid ""
-"\\begin{itemize}\n"
+"\\begin{itemize}[leftmargin=2.2em]\n"
 "  \\item Choose one of the Combat Board's sides as your own. Place up to 5 of your unit cards freely onto the Back and Frontlines of that side.\n"
 "  \\item Check the \\hyperlink{Difficulty Table}{\\textbf{Difficulty Table}} \\iftoggle{printable}{(on the back cover)}{} and draw the corresponding number of Neutral Unit cards from their Decks.\n"
 "  \\item The Neutral Units are placed differently depending on the Game Mode:\n"
@@ -165,10 +166,9 @@ msgstr ""
 #, no-wrap
 msgid ""
 "Unit setup when fighting \\textbf{other players}:\n"
-"\\begin{itemize}\n"
+"\\begin{itemize}[leftmargin=2.2em]\n"
 "  \\item The attacking player places up to 5 units on their chosen side of the Combat Board, followed by the defender.\n"
 "  \\item If the Combat takes place in a Town with a Citadel, the defender adds the \\pagelink{Walls}{Wall, Gate and Arrow Tower} cards after placing their units.\n"
-"  \\vspace*{-4em}\n"
 "\\end{itemize}\n"
 "\n"
 msgstr ""
@@ -255,7 +255,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "Structure of a Combat Round:\n"
-"\\begin{itemize}\n"
+"\\begin{itemize}[leftmargin=2.3em]\n"
 "  \\item Players activate their units in descending order of unit \\pagelink{Initiative}{Initiative}. \\textbf{If there's a tie}, alternate between attackers and defenders starting with an attacker.\n"
 "  \\item When a unit activates, place a Faction Cube on it to indicate it has been activated this Combat Round.\n"
 "  \\item Activated units may move and attack according to their \\pagelink{Unittype}{type}. Neutral Units controlled by an opposing player must always attack if possible.\n"
@@ -395,7 +395,7 @@ msgstr ""
 msgid ""
 "\\vspace*{\\fill}\n"
 "\\begin{center}\n"
-"  \\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/basilisk.png}\n"
+"  \\transparent{0.2}\\includegraphics[width=0.7\\linewidth]{\\art/basilisk.png}\n"
 "\\end{center}"
 msgstr ""
 
@@ -426,12 +426,13 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:220
+#: sections/combat.tex:221
 #, no-wrap
 msgid ""
 "\\textit{After all cards for the attack have been played, the Attack Die is thrown to further modify the amount of damage the attacking unit deals.\n"
 "Bob throws a +1.\n"
 "This increases the Zombies' attack from 3 to 4, which is then reduced by the Griffins' Defense of 1. Therefore, 3 damage \\svg{damage} is placed on the Griffins. Since they have a HP \\svg{health_points} of 4, they are not flipped over to their ``Few'' side.}\\par\n"
+"\\columnbreak\n"
 "\\textit{The Griffins do not have a Black Cube on them, therefore they now start a Retaliation Attack.\n"
 "The Cube would now normally be placed on them, however their Special \\svg{unit_retaliate} Ability indicates that they may retaliate any number of times so the Cube is not placed.}\\par\n"
 "\\textit{Both players are allowed to modify the Statistics of their units again during the Retaliation Attack.\n"
@@ -440,7 +441,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:222 sections/introduction.tex:89
+#: sections/combat.tex:223 sections/introduction.tex:89
 #, no-wrap
 msgid ""
 "\\vfill\n"
@@ -448,7 +449,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:224
+#: sections/combat.tex:225
 #, no-wrap
 msgid ""
 "{\\transparent{0.2}\\hspace{-1em}\\includegraphics[width=1.7\\linewidth]{\\art/minotaur.png}}\n"
@@ -456,12 +457,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/combat.tex:234
+#: sections/combat.tex:235
 msgid "\\pagetarget{Siege Combat}{\\subheader{Siege Combat}}"
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:234
+#: sections/combat.tex:235
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -472,7 +473,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:237
+#: sections/combat.tex:238
 #, no-wrap
 msgid ""
 "When you defend a Town \\textbf{without a Citadel}, resolve Combat normally on the standard Combat Board.\n"
@@ -481,7 +482,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:240
+#: sections/combat.tex:241
 #, no-wrap
 msgid ""
 "\\vspace{0.5em}\n"
@@ -490,7 +491,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:246
+#: sections/combat.tex:247
 #, no-wrap
 msgid ""
 "\\pagetarget{Walls}{\\subsection*{Defending a Town with a\\\\Citadel}}\\index{Walls and Gate}\n"
@@ -502,7 +503,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:248
+#: sections/combat.tex:249
 #, no-wrap
 msgid ""
 "Walls \\pagelink{Walls protection}{protect defending units behind them}.\n"
@@ -510,7 +511,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:251
+#: sections/combat.tex:252
 #, no-wrap
 msgid ""
 "The Wall and Gate Cards can be destroyed by any adjacent \\svg{unit_ground} or \\svg{unit_flying} unit's attack, even by your own defending units.\n"
@@ -519,7 +520,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:263
+#: sections/combat.tex:264
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -534,7 +535,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:266
+#: sections/combat.tex:267
 #, no-wrap
 msgid ""
 "In a siege against AI, the Arrow Tower follows the priority rules like a Silver \\svg{silver} unit.\n"
@@ -543,17 +544,17 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:272
+#: sections/combat.tex:273
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
 "\\begin{center}\n"
-"  \\transparent{0.2}\\includegraphics[width=0.95\\linewidth]{\\art/coin.png}\n"
+"  \\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/coin.png}\n"
 "\\end{center}"
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:276
+#: sections/combat.tex:277
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -562,7 +563,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:280
+#: sections/combat.tex:281
 #, no-wrap
 msgid ""
 "Defending units standing on their own side and \\textbf{in the same column} as a non-destroyed Wall or Gate gain protection from \\svg{unit_ranged} attacks.\n"
@@ -572,7 +573,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:284
+#: sections/combat.tex:285
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -581,7 +582,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:292
+#: sections/combat.tex:293
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -594,7 +595,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/combat.tex:298
+#: sections/combat.tex:299
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -605,7 +606,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:307
+#: sections/combat.tex:308
 #, no-wrap
 msgid ""
 "\\pagetarget{Alternative Combat Boards}{\\subheader{Alternative Combat Boards}}\n"
@@ -616,7 +617,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:312
+#: sections/combat.tex:313
 #, no-wrap
 msgid ""
 "  \\begin{center}\n"
@@ -627,7 +628,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:318
+#: sections/combat.tex:319
 #, no-wrap
 msgid ""
 "\\vspace{2em}\n"
@@ -639,7 +640,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:324
+#: sections/combat.tex:325
 #, no-wrap
 msgid ""
 "  \\begin{center}\n"
@@ -651,7 +652,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/combat.tex:328
+#: sections/combat.tex:329
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
