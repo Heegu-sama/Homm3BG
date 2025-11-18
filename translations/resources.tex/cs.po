@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-11-13 08:25+0000\n"
+"POT-Creation-Date: 2025-11-18 14:32+0000\n"
 "PO-Revision-Date: 2024-06-03 10:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
 #: sections/combat.tex:302 sections/credits.tex:8 sections/deckbuilding.tex:5
 #: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
-#: sections/difficulty.tex:5 sections/expansion_content.tex:490
+#: sections/difficulty.tex:5 sections/expansion_content.tex:489
 #: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:83
 #: sections/map_elements.tex:131 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
@@ -47,8 +47,15 @@ msgstr "\\columnbreak"
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/resources.tex:3
-msgid "\\addsection{Resources}{\\skills/estates.png}"
+#, fuzzy
+#| msgid "\\addsection{Resources}{\\skills/estates.png}"
+msgid "\\pagetarget{Resources}{\\addsection{Resources}{\\skills/estates.png}}"
 msgstr "\\addsection{Suroviny}{\\skills/estates.png}"
+
+#. type: index{#1}
+#: sections/resources.tex:3
+msgid "Resources"
+msgstr ""
 
 #. type: multicols
 #: sections/resources.tex:23
@@ -72,7 +79,7 @@ msgstr "\\addsection{Suroviny}{\\skills/estates.png}"
 #| "  \\includegraphics[width=0.8\\linewidth]{\\images/valuables.png}\n"
 #| "  \\footnotesize\\imagecaption{Valuables \\phantom{Materials}}"
 msgid ""
-"\\pagetarget{Resources}{There}\\index{Resources} are three types of Resources in the game: Gold \\svg{gold}, Building Materials \\svg{building_materials}, and Valuables \\svg{valuablegreater}.\n"
+"There are three types of Resources in the game: Gold \\svg{gold}, Building Materials \\svg{building_materials}, and Valuables \\svg{valuablegreater}.\n"
 "Resources are spent during the game to expand your \\pagelink{Town}{Town}, to recruit \\pagelink{Units}{units}, and to purchase \\pagelink{spells}{Spells}.\n"
 "You can gain Resources from the \\pagelink{Mines}{Settlements and Mines} that you have \\pagelink{Categories}{flagged}, and also by playing Cards and rolling Resource Dice \\svg{resource_die}.\n"
 "Whenever a player's Resource Production is increased or decreased, move that Resource's Cube on its production track the appropriate number of spaces.\\par\n"
