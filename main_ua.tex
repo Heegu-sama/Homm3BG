@@ -4,21 +4,15 @@
 % Language setting
 \usepackage[TU]{fontenc}
 \usepackage[ukrainian]{babel}
-\usepackage{fontspec}
-\setmainfont[
-  Path = ./assets/fonts/,
-  Extension = .ttf,
-  UprightFont = *-Regular,
-  ItalicFont = *-Italic,
-  BoldFont = *-Bold,
-  BoldItalicFont = *-BoldItalic]{LiberationSerif}
 
 \def\sections{sections/translated/ua}
 
-\newcommand{\sectionheadertext}[1]{
-  \color{antiquewhite} \section*{\MakeUppercase{\textbf{#1}}}
-}
 \newcommand{\notefont}[0]{}
+
+\AtBeginDocument{
+  \liberation
+  \selectfont
+}
 
 \input{metadata.tex}
 

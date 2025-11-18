@@ -4,21 +4,16 @@
 % Language setting
 \usepackage[TU]{fontenc}
 \usepackage[russian]{babel}
-\usepackage{fontspec}
-\setmainfont[
-  Path = ./assets/fonts/,
-  Extension = .ttf,
-  UprightFont = *-Regular,
-  ItalicFont = *-Italic,
-  BoldFont = *-Bold,
-  BoldItalicFont = *-BoldItalic]{LiberationSerif}
 
 \def\sections{sections/translated/ru}
 
-\newcommand{\sectionheadertext}[1]{
-  \color{antiquewhite} \section*{\MakeUppercase{\textbf{#1}}}
-}
 \newcommand{\notefont}[0]{}
+\newcommand{\subheaderfont}[0]{\computermodernfont\selectfont}
+
+\AtBeginDocument{
+  \liberation
+  \selectfont
+}
 
 \input{metadata.tex}
 
