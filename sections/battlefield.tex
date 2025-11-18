@@ -142,7 +142,6 @@
     After modifying your Deck, shuffle it and draw cards up to your Hand Limit.
     The first player gets the Initiative Token.
     Then follow the rules for \pagelink{Battlefield Combat}{Combat on the Battlefield Board}.
-    The 5-unit limit does not apply in Skirmish Mode.
 
     \vspace*{\fill}
   \end{multicols}
@@ -202,21 +201,21 @@
   The Adventure Phase lasts a certain number of Rounds, depending on the chosen game length.
   Follow these steps in order during each Round.\par
   \begin{enumerate}[leftmargin=1.3em]
-    \item \textbf{Move the Round Tracker} – skip this step in the first Round.
+    \item \textbf{Move the Round Tracker} -- skip this step in the first Round.
     Depending on the type of Round, resolve the following effects:
     \begin{itemize}
       \item In \textbf{Resource Rounds} both players get income normally.
-      \item In \textbf{Astrologers Rounds} – instead of drawing Astrologers Proclaim cards, players increase one of their income tracks (\svg{gold}, \svg{building_materials}, or \svg{valuablegreater}) in one of the following ways:
+      \item In \textbf{Astrologers Rounds} -- instead of drawing Astrologers Proclaim cards, players increase one of their income tracks (\svg{gold}, \svg{building_materials}, or \svg{valuablegreater}) in one of the following ways:
       \begin{itemize}
         \item Increase your preferred income track.
         \item Determine it randomly by rolling a \svg{resource_die}.
           If you do, gain the basic income of that resource immediately, which is 5 \svg{gold}, 2 \svg{building_materials}, or 1 \svg{valuablegreater}.
       \end{itemize}
     \end{itemize}
-    \item \textbf{Draw Adventure Cards} – skip this step in the last Round.
+    \item \textbf{Draw Adventure Cards} -- skip this step in the last Round.
     The starting player draws 3 Adventure cards, keeps 1, and passes the remaining 2 to the other player, who keeps 1 and discards the other.\par
     \textbf{Note:} Only the starting player may use \svg{movement} effects to discard any number of the drawn Adventure cards and draw that many cards.\par
-    \item \textbf{Player Turns} – starting with the first player, both players take their turn by performing any of the following actions in any order:
+    \item \textbf{Player Turns} -- starting with the first player, both players take their turn by performing any of the following actions in any order:
     \begin{itemize}
       \item \textbf{Resolve} the chosen Adventure card, \textbf{discard} it, or \textbf{save it} for later turns.
         If you save it, place it face down on your Hero Board.
@@ -228,7 +227,7 @@
       \item Use the effects of \pagelink{Set aside Cards}{set aside cards} once.
         Remove the card from the game after use.
     \end{itemize}\par
-    \item \textbf{Change First Player} – Pass the Initiative Token to the other player. Odd-numbered Rounds are started by the first player, and even-numbered Rounds by the second player.\par
+    \item \textbf{Change First Player} -- Pass the Initiative Token to the other player. Odd-numbered Rounds are started by the first player, and even-numbered Rounds by the second player.\par
   \end{enumerate}\par
   \smallskip
   In the last Round, players do not draw Adventure cards, but they may still resolve a saved Adventure card.
@@ -238,7 +237,6 @@
   Recover all spent \svg{expert}.
   Pick up your set-aside Deck, shuffle it, and draw cards up to your Hero's Hand \svg{hand} Limit.
   Remove all \svg{paralysis} tokens from your units, take all your Unit miniatures, and begin Combat on the Battlefield Board following the \pagelink{Battlefield Combat}{Battlefield Combat rules}.
-  The 5-unit limit does not apply in Adventure Mode.
   \end{multicols}
 \end{expansion}
 
@@ -342,8 +340,8 @@
   On the Battlefield Board you place Obstacle Tokens, which are divided into three types:
   Effect, Obstacle and Wall/Gate.
   Unless otherwise stated these Tokens count and work as \pagelink{Combatterminology}{Combat Obstacles}.
-  To place Effect Obstacles on the Battlefield Board you'll need the card which creates the effect, such as the Fire Wall Spell: use the Tokens and put the Card beside the Battlefield as a reminder.
-  Effect Obstacles may be entered by Units, if the Card text allows it.
+  To place Effect Obstacles on the Battlefield Board you'll need the card which creates the effect, such as the Fire Wall Spell: use the Tokens and put the card beside the Battlefield as a reminder.
+  Effect Obstacles may be entered by Units, if the card text allows it.
   \begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.3\linewidth}
@@ -372,14 +370,20 @@
     \item \textbf{Place obstacles} -- Starting with the player with the Initiative Token, both players take turns choosing and placing one Obstacle Token on the Battlefield Board until \textbf{all Obstacle Tokens (no Effects yet) are placed}.
     No Obstacle can be adjacent to another Obstacle or to any player's deployment zone.
 
-    \begin{tikzpicture}
-      \draw (0, 0) node {\framedimage[0.9\linewidth]{\examples/bf-deploy.png}};
-      \draw (2.5, 0) node[rotate=90] {\textbf{\fontfamily{ptm}\selectfont\textcolor{white}{DEPLOYMENT ZONE}}};
-    \end{tikzpicture}
+    {\centering
+      \begin{tikzpicture}
+        \draw (0, 0) node {\framedimage[0.7\linewidth]{\examples/bf-deploy.png}};
+        \draw (2, 0) node[rotate=90] {\textbf{\fontfamily{ptm}\selectfont\textcolor{white}{DEPLOYMENT ZONE}}};
+      \end{tikzpicture}
+    }\\
     {\footnotesize\imagecaption{Obstacles and models placed correctly are marked with the green border, and incorrectly -- with the red one.}}
-    \item \textbf{Place units} -- The player with the Initiative Token chooses a deployment zone and places their first unit in it, then players take turns placing their units \textbf{one by one}.
+    \item \textbf{Place units} -- The player with the Initiative Token chooses a deployment zone and places one of their units in it, then players take turns placing their units \textbf{one by one} each in their zone.
+    \begin{itemize}
+      \item Skirmish, Adventure -- Place all your available units.
+      \item Regular games, Neutral Combat -- Place up to 5 units.
+      \item Regular games, PvP -- The players can decide to allow placing up to 5 units or \textbf{up to 7 units}.
+    \end{itemize}
     When the last unit is placed, the Combat begins.
-    Only in Player vs.~Player Combats can the players decide to allow placing \textbf{up to 7 units} (instead of 5).
   \end{itemize}
   \end{multicols*}
 \end{expansion}
