@@ -47,7 +47,6 @@
 \usepackage{xstring}
 \usepackage{expl3}
 \usepackage{wrapfig}
-\usepackage[regular]{newcomputermodern}
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX}
 \newtcolorbox{scaledfigure}[1][]{height fill, space to=\myspace,#1}
@@ -330,15 +329,21 @@
 
 % Set fonts for section headings and notes
 \newfontfamily{\liberation}[
-    Path = ./assets/fonts/,
-    Extension = .ttf,
-    UprightFont = *-Regular,
-    ItalicFont = *-Italic,
-    BoldFont = *-Bold,
-    BoldItalicFont = *-BoldItalic,
+  Path = ./assets/fonts/Liberation/,
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic,
 ]{LiberationSerif}
 % Copied from newcomputermodern package
-\newfontfamily{\computermodernfont}[
+\newfontfamily{\newcomputermodern}[
+  Path = ./assets/fonts/newcomputermodern/,
+  Extension = .otf,
+  % UprightFont = *-Regular,
+  % ItalicFont = *-Italic,
+  % BoldFont = *-Bold,
+  % BoldItalicFont = *-BoldItalic,
   SizeFeatures={%
     {Size=-8, Font=NewCM08-Regular.otf,
       ItalicFont=NewCM08-Italic.otf,%
@@ -373,7 +378,6 @@
 ]{NewCM10-Regular}
 
 \providecommand{\notefont}[0]{\liberation\selectfont}
-\providecommand{\subheaderfont}[0]{}
 
 \titleformat{\section}
 {\huge}
@@ -435,7 +439,7 @@
     }%
   }
   \begin{center}
-    \textbf{\subheaderfont\Large\scshape #2}
+    \textbf{\newcomputermodern\Large\scshape #2}
     \\[0.02em]
     \includegraphics[width=\linewidth,height=1em,keepaspectratio]{\layout/subsection_separator.png}
   \end{center}
