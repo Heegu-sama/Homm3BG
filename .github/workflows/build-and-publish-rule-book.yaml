@@ -20,15 +20,15 @@ jobs:
           cat << 'EOF' > matrix.json
           {
             "include": [
-              { "language": "en", "display": "🇺🇸 English", "luaengine": false },
-              { "language": "pl", "display": "🇵🇱 Polski", "luaengine": false },
-              { "language": "es", "display": "🇪🇸 Español", "luaengine": false },
-              { "language": "fr", "display": "🇫🇷 Français", "luaengine": false },
-              { "language": "ru", "display": "🇷🇺 Русский", "luaengine": true },
-              { "language": "ua", "display": "🇺🇦 Українська", "luaengine": true },
-              { "language": "de", "display": "🇩🇪 Deutsch", "luaengine": false },
-              { "language": "cs", "display": "🇨🇿 Čeština", "luaengine": true },
-              { "language": "he", "display": "🇮🇱 עברית", "luaengine": true }
+              { "language": "en", "display": "🇺🇸 English"},
+              { "language": "pl", "display": "🇵🇱 Polski"},
+              { "language": "es", "display": "🇪🇸 Español"},
+              { "language": "fr", "display": "🇫🇷 Français"},
+              { "language": "ru", "display": "🇷🇺 Русский"},
+              { "language": "ua", "display": "🇺🇦 Українська"},
+              { "language": "de", "display": "🇩🇪 Deutsch"},
+              { "language": "cs", "display": "🇨🇿 Čeština"},
+              { "language": "he", "display": "🇮🇱 עברית"}
             ]
           }
           EOF
@@ -44,7 +44,6 @@ jobs:
     uses: ./.github/workflows/pdf-build.yaml
     with:
       language: ${{ matrix.language }}
-      luaengine: ${{ matrix.luaengine }}
       build_type: digital
 
   printable_build:
@@ -56,7 +55,6 @@ jobs:
     uses: ./.github/workflows/pdf-build.yaml
     with:
       language: ${{ matrix.language }}
-      luaengine: ${{ matrix.luaengine }}
       build_type: printable
       convert_to_cmyk: true
 
@@ -69,7 +67,6 @@ jobs:
     uses: ./.github/workflows/pdf-build.yaml
     with:
       language: ${{ matrix.language }}
-      luaengine: ${{ matrix.luaengine }}
       build_type: economy
 
   check_pages:
