@@ -9,14 +9,16 @@
 
 \newcommand{\notefont}[0]{}
 
-\setmainfont{LiberationSerif}[
-  Path = ./assets/fonts/LiberationSerif/,
-  Extension = .ttf,
-  UprightFont = *-Regular,
-  ItalicFont = *-Italic,
-  BoldFont = *-Bold,
-  BoldItalicFont = *-BoldItalic
-]
+\AtBeginDocument{
+  \setmainfont{LiberationSerif}[
+    Path = ./assets/fonts/LiberationSerif/,
+    Extension = .ttf,
+    UprightFont = *-Regular,
+    ItalicFont = *-Italic,
+    BoldFont = *-Bold,
+    BoldItalicFont = *-BoldItalic
+  ]
+}
 
 \input{metadata.tex}
 
