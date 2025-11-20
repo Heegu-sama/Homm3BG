@@ -81,8 +81,15 @@ while [[ $# -gt 0 ]]; do
 done
 
 case "$(uname -s)" in
-  Darwin*)    open=open;;
-  Linux*)     open=xdg-open;;
+  Darwin*)
+    open=open
+    ;;
+  Linux*)
+    open=xdg-open
+    ;;
+  MINGW*|MSYS*|CYGWIN*)
+    open=start
+    ;;
 esac
 
 if [[ -n "${SECTION_SEARCH}" ]]; then
