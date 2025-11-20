@@ -8,11 +8,16 @@
 \def\sections{sections/translated/ru}
 
 \newcommand{\notefont}[0]{}
-\newcommand{\subheaderfont}[0]{\computermodernfont\selectfont}
 
 \AtBeginDocument{
-  \liberation
-  \selectfont
+  \setmainfont{LiberationSerif}[
+    Path = ./assets/fonts/LiberationSerif/,
+    Extension = .ttf,
+    UprightFont = *-Regular,
+    ItalicFont = *-Italic,
+    BoldFont = *-Bold,
+    BoldItalicFont = *-BoldItalic
+  ]
 }
 
 \input{metadata.tex}
