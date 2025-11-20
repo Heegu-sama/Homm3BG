@@ -10,8 +10,14 @@
 \newcommand{\notefont}[0]{}
 
 \AtBeginDocument{
-  \liberation
-  \selectfont
+  \setmainfont{LiberationSerif}[
+    Path = ./assets/fonts/LiberationSerif/,
+    Extension = .ttf,
+    UprightFont = *-Regular,
+    ItalicFont = *-Italic,
+    BoldFont = *-Bold,
+    BoldItalicFont = *-BoldItalic
+  ]
 }
 
 \input{metadata.tex}
