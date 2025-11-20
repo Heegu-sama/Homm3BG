@@ -366,24 +366,21 @@
   \columnbreak
 
   \subsection*{Rules Changes in Combat Setup}
+  \vspace*{-2mm}
   \begin{itemize}
     \item \textbf{Place obstacles} -- Starting with the player with the Initiative Token, both players take turns choosing and placing one Obstacle Token on the Battlefield Board until \textbf{all Obstacle Tokens (no Effects yet) are placed}.
     No Obstacle can be adjacent to another Obstacle or to any player's deployment zone.
 
     {\centering
       \begin{tikzpicture}
-        \draw (0, 0) node {\framedimage[0.7\linewidth]{\examples/bf-deploy.png}};
+        \draw (0, 0) node {\framedimage[0.9\linewidth]{\examples/bf-deploy.png}};
         \draw (2, 0) node[rotate=90] {\textbf{\fontfamily{ptm}\selectfont\textcolor{white}{DEPLOYMENT ZONE}}};
       \end{tikzpicture}
     }\\
     {\footnotesize\imagecaption{Obstacles and models placed correctly are marked with the green border, and incorrectly -- with the red one.}}
     \item \textbf{Place units} -- The player with the Initiative Token chooses a deployment zone and places one of their units in it, then players take turns placing their units \textbf{one by one} each in their zone.
-    \begin{itemize}
-      \item Skirmish, Adventure -- Place all your available units.
-      \item Regular games, Neutral Combat -- Place up to 5 units.
-      \item Regular games, PvP -- The players can decide to allow placing up to 5 units or \textbf{up to 7 units}.
-    \end{itemize}
-    When the last unit is placed, the Combat begins.
+      For Neutral Combats, place up to 5 units, otherwise, place \textbf{up to 7 units}.
+      When the last unit is placed, the Combat begins.
   \end{itemize}
   \end{multicols*}
 \end{expansion}
