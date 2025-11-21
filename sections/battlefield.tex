@@ -374,7 +374,8 @@
     {\centering
       \begin{tikzpicture}
         \draw (0, 0) node {\framedimage[0.9\linewidth]{\examples/bf-deploy.png}};
-        \draw (2.5, 0) node[rotate=90] {\textbf{\fontfamily{ptm}\selectfont\textcolor{white}{DEPLOYMENT ZONE}}};
+        \draw (2.5, 0) node[rotate=90, fill=black, fill opacity=0.15, text opacity=1]
+          {\textbf{\liberation\large\textcolor{white}{\MakeUppercase{Deployment Zone}}}};
       \end{tikzpicture}
     }\\
     {\footnotesize\imagecaption{Obstacles and models placed correctly are marked with the green border, and incorrectly -- with the red one.}}
@@ -392,9 +393,11 @@
     \item \textbf{Siege with Walls and Gate} (this normally happens only in regular games, not in \pagelinkwithcomma{Battlefield Modes}{Adventure/Skirmish}) -- During a Siege against a Town with a Citadel, only Walls and Gate Obstacles are placed.
       Place no other Obstacles.
 
+    \hspace*{-0.5em}
     \begin{tikzpicture}
       \draw (0, 0) node {\framedimage[1.05\linewidth]{\examples/bf-deploy-wall.png}};
-      \draw (2, 0) node[rotate=90] {\textbf{\fontfamily{ptm}\selectfont\textcolor{white}{DEPLOYMENT ZONE}}};
+      \draw (2, 0) node[rotate=90, fill=black, fill opacity=0.15, text opacity=1]
+        {\textbf{\liberation\large\textcolor{white}{\MakeUppercase{Deployment Zone}}}};
     \end{tikzpicture}
     {\footnotesize\imagecaption{The red border marks incorrectly placed Obstacles.}}
   \end{itemize}
