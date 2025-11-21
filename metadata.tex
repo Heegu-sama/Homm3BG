@@ -47,6 +47,8 @@
 \usepackage{xstring}
 \usepackage{expl3}
 \usepackage{wrapfig}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
 \newtcolorbox{scaledfigure}[1][]{height fill, space to=\myspace,#1}
 \hypersetup{
   colorlinks=true,
@@ -88,6 +90,7 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
 \renewcommand\cftsecdotsep{\cftdot}
 \renewcommand\cftsubsecdotsep{\cftdot}
+\setlength{\cftbeforesecskip}{0.5em}
 
 \captionsetup[figure]{labelformat=empty}
 \captionsetup[subfigure]{labelformat=empty, singlelinecheck=off, justification=centering}
@@ -322,6 +325,31 @@
   \end{tikzpicture}%
 }
 
+\newcommand{\imagecaption}[1]{%
+  \textbf{\textit{\textcolor{darkcandyapplered}{#1}}}%
+}
+
+% Set fonts for section headings and notes
+\newfontfamily{\liberation}[
+  Path = ./assets/fonts/LiberationSerif/,
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic,
+]{LiberationSerif}
+% Sets fonts for subheaders small caps
+\newfontfamily{\newcomputermodern}[
+  Path = ./assets/fonts/newcomputermodern/,
+  Extension = .otf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic,
+]{NewCM10}
+
+\providecommand{\notefont}[0]{\liberation\selectfont}
+
 \titleformat{\section}
 {\huge}
 {\filright
@@ -330,9 +358,9 @@
 {8pt}
 {\Huge\bfseries\filcenter\uppercase}
 %Create section heading with graphics. Argument one is heading name, argument two is picture to use on the left.
-\providecommand{\sectionheadertext}[1]{
-  \fontfamily{ptm}\selectfont{
-    \iftoggle{noartbackground}{}{\color{antiquewhite}} \section*{\MakeUppercase{#1}}
+\newcommand{\sectionheadertext}[1]{
+  {
+    \iftoggle{noartbackground}{}{\color{antiquewhite}} \section*{\MakeUppercase{\textbf{\liberation #1}}}
   }
 }
 \newcommand{\addsection}[3][1]{
@@ -351,12 +379,12 @@
     \end{tikzpicture}
     }
   }
+  \phantomsection\addcontentsline{toc}{section}{\protect\mbox{#2}}
   \begin{fullwidth}[leftmargin=0.16\textwidth, outermargin=0.16\textwidth, innermargin=0.16\textwidth]
     \begin{center}
       \vspace*{\lang_header_adjustment}
       \ifthenelse{\oneliner}{}{\vspace{-13pt}}
       \sectionheadertext{#2}
-      \cleardoublepage\phantomsection\addcontentsline{toc}{section}{\protect\numberline{}\mbox{#2}}
     \end{center}
   \end{fullwidth}
   \vspace{1.75em}
@@ -368,6 +396,32 @@
 \ifdefined\subsectionspacing
   \subsectionspacing{}
 \fi
+
+% Subheaders which appear in the ToC
+% Argument one is the literal text for ToC - defaults to argument two if unspecified
+% Argument two is the text to display
+\newcommand{\subheader}[2][]{%
+  \ifstrequal{#1}{false}{}{
+    \ifstrequal{#1}{}{
+      \phantomsection\addcontentsline{toc}{subsection}{\protect #2}%
+    }{%
+      % This is useful when display text needs a linebreak
+      \phantomsection\addcontentsline{toc}{subsection}{\protect #1}%
+    }%
+  }
+  \begin{center}
+    {\newcomputermodern\Large\bfseries\addfontfeature{Letters=SmallCaps}#2}
+    \\[0.02em]
+    \includegraphics[width=\linewidth,height=1em,keepaspectratio]{\layout/subsection_separator.png}
+  \end{center}
+}
+
+\newcommand{\separator}{
+  \vspace*{\fill}
+  {\transparent{0.3}\includegraphics[width=\linewidth,height=1em,keepaspectratio]{\layout/subsection_separator.png}}
+  \vspace*{\fill}
+}
+
 
 \newcommand\picdims[4][]{%
   \setbox0=\hbox{\includegraphics[#1]{#4}}%
@@ -386,7 +440,6 @@
 \definecolor{borderinyellow}{HTML}{B09E69}
 \definecolor{bordermidyellow}{HTML}{6f6749}
 % Create note box
-\providecommand{\notefont}[0]{\fontfamily{ptm}\selectfont}
 \newcommand{\note}[2]{
   \begin{tikzpicture}
     \iftoggle{noartbackground}{
@@ -502,7 +555,7 @@
 }
 
 % Commands to be used for automation generating printable version
-\newcommand{\pagetarget}[2]{\label{#1}\hypertarget{#1}{#2}}
+\newcommand{\pagetarget}[2]{\hypertarget{#1}{#2}\label{#1}}
 \newcommand{\pagelink}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{ \textmd{(\pageshorthand\,\pageref{#1})}}{}}
 
 % Stubs for polyglossia package used for Hebrew but not other languages
@@ -556,6 +609,16 @@
     footskip=1.35cm,
   }
 }{}
+
+\makeatletter
+\renewcommand\tableofcontents{%
+  \pdfbookmark[1]{\contentsname}{toc}%
+  \subheader[false]{\contentsname}
+  \begin{multicols}{2}
+    \@starttoc{toc}%
+  \end{multicols}
+}
+\makeatother
 
 \input{structure.tex}
 

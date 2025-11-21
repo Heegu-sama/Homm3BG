@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-10-08 19:54+0000\n"
+"POT-Creation-Date: 2025-11-18 15:43+0000\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -16,56 +16,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#. type: Plain text
-#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/combat.tex:5 sections/components.tex:5 sections/credits.tex:6
-#: sections/deckbuilding.tex:5 sections/difficulty.tex:5
-#: sections/map_elements.tex:5 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/setup.tex:5 sections/trading.tex:5
-msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
-msgstr ""
-
-#. type: multicols*
-#: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
-#: sections/combat.tex:7 sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/difficulty.tex:7 sections/expansion_content.tex:481
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:117
-#: sections/map_elements.tex:79 sections/map_elements.tex:125
-#: sections/player_turns.tex:7 sections/resources.tex:7
-#: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:59 sections/town.tex:5 sections/trading.tex:7
-#: sections/units.tex:5 sections/units.tex:198
-#, no-wrap
-msgid ""
-"{2}\n"
-"\n"
-msgstr ""
-"{2}\n"
-"\n"
-
 #. type: multicols
-#: sections/all_map_locations.tex:53 sections/all_map_locations.tex:235
-#: sections/credits.tex:36 sections/deckbuilding.tex:57
-#: sections/game_modes.tex:30 sections/map_elements.tex:189
-#: sections/scenario_end.tex:23 sections/units.tex:136
+#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
+#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
+#: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
+#: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
+#: sections/difficulty.tex:5 sections/expansion_content.tex:489
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:83
+#: sections/map_elements.tex:131 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:57 sections/town.tex:5
+#: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
+#: sections/units.tex:203 sections/tournament_mode.tex:5
 #, no-wrap
 msgid ""
-"\\columnbreak\n"
+"{2}\n"
 "\n"
 msgstr ""
-
-#. type: multicols*
-#: sections/combat.tex:265 sections/map_elements.tex:154
-#, no-wrap
-msgid ""
-"\\newpage\n"
+"{2}\n"
 "\n"
-msgstr ""
 
 #. type: figure
-#: sections/deckbuilding.tex:301 sections/map_elements.tex:40
-#: sections/map_elements.tex:254 sections/player_turns.tex:125
-#: sections/setup.tex:9
+#: sections/deckbuilding.tex:322 sections/map_elements.tex:45
+#: sections/map_elements.tex:265 sections/player_turns.tex:124
+#: sections/setup.tex:7
 #, no-wrap
 msgid "  \\begin{tikzpicture}\n"
 msgstr ""
@@ -73,15 +47,26 @@ msgstr ""
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/map_elements.tex:3
-msgid "\\addsection{Map Elements}{\\skills/logistics.png}"
+#, fuzzy
+#| msgid "\\addsection{Map Elements}{\\skills/logistics.png}"
+msgid "\\pagetarget{Map}{\\addsection{Map Elements}{\\skills/logistics.png}}"
 msgstr "\\addsection{Éléments du Plateau}{\\skills/logistics.png}"
 
 #. type: multicols*
-#: sections/map_elements.tex:13
-#, no-wrap
+#: sections/map_elements.tex:11
+#, fuzzy, no-wrap
+#| msgid ""
+#| "{2}\n"
+#| "Each Scenario is built using four types of \\pagetarget{Map}{Map} Tiles.\n"
+#| "Players start on their Faction-Specific Starting (I) Tile.\n"
+#| "Other Tiles may be placed and discovered as described on the next page.\n"
+#| "During the game's setup, all face-down Tiles should be selected randomly from the pool of possible Tiles as described by the Scenario and shuffled, keeping them face-down.\\par\n"
+#| "The \\textbf{roman numeral} on each Tile describes the overall \\textbf{difficulty of Neutral Units} on that Tile, as well as the number of rewards players can expect to find on that Tile.\n"
+#| "Starting (I) Tiles are the easiest while Center (VI–VII) Tiles are the most difficult.\\par\n"
+#| "\n"
 msgid ""
 "{2}\n"
-"Each Scenario is built using four types of \\pagetarget{Map}{Map} Tiles.\n"
+"Each Scenario is built using four types of Map Tiles.\n"
 "Players start on their Faction-Specific Starting (I) Tile.\n"
 "Other Tiles may be placed and discovered as described on the next page.\n"
 "During the game's setup, all face-down Tiles should be selected randomly from the pool of possible Tiles as described by the Scenario and shuffled, keeping them face-down.\\par\n"
@@ -99,37 +84,58 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:19
-#, no-wrap
+#: sections/map_elements.tex:16
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{center}\n"
+#| "  \\includegraphics[width=\\linewidth]{\\art/dendroid.jpg}\n"
+#| "\\end{center}\n"
+#| "\n"
 msgid ""
-"\\vfill\n"
+"\\vspace*{\\fill}\n"
 "\\begin{center}\n"
-"  \\transparent{0.2}\\includegraphics[width=0.6\\linewidth]{\\art/counterstrike.png}\n"
+"  \\transparent{0.2}\\includegraphics[width=0.55\\linewidth]{\\art/earth_magic.png}\n"
 "\\end{center}\n"
-"\\vfill\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=\\linewidth]{\\art/dendroid.jpg}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:36
-#, no-wrap
+#: sections/map_elements.tex:28
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{Map Tile Anatomy\\index{Map Tile}}\n"
+#| "Each Map Tile is divided into 7 separate \\textbf{Fields} that your Heroes can \\textbf{Visit}.\n"
+#| "When your Hero moves to a Field, they must immediately Visit it, or\n"
+#| "first start a \\pagelink{Combat}{Combat} against the enemies guarding it before Visiting.\n"
+#| "Empty Fields\\index{Empty Field} do nothing when Visited.\n"
+#| "Solid yellow lines on a Field's edge cannot be passed through.\n"
+#| "\\pagelink{Difficulty}{Roman numerals} written on a Field indicate that the Field is guarded by Neutral enemies that must be fought to Visit it.\\par\n"
+#| "\\columnbreak\n"
+#| "\\includegraphics[width=\\linewidth]{\\images/maptiles.png}\n"
+#| "\\begin{itemize}\n"
+#| "  \\footnotesize\n"
+#| "  \\item[\\textbf{1.}] Starting Map Tiles: I\n"
+#| "  \\item[\\textbf{2.}] Far Map Tiles: II--III\n"
+#| "  \\item[\\textbf{3.}] Near Map Tiles: IV--V\n"
+#| "  \\item[\\textbf{4.}] Center Map Tiles: VI--VII\n"
+#| "\\end{itemize}\n"
+#| "\n"
 msgid ""
-"\\subsection*{Map Tile Anatomy\\index{Map Tile}}\n"
+"\\subsection*{Map Tile Anatomy}\\index{Map Tile}\n"
 "Each Map Tile is divided into 7 separate \\textbf{Fields} that your Heroes can \\textbf{Visit}.\n"
-"When your Hero moves to a Field, they must immediately Visit it, or\n"
+"When your Hero moves to a Field, they must immediately Visit it if unguarded, or\n"
 "first start a \\pagelink{Combat}{Combat} against the enemies guarding it before Visiting.\n"
 "Empty Fields\\index{Empty Field} do nothing when Visited.\n"
 "Solid yellow lines on a Field's edge cannot be passed through.\n"
 "\\pagelink{Difficulty}{Roman numerals} written on a Field indicate that the Field is guarded by Neutral enemies that must be fought to Visit it.\\par\n"
+"\\note{3}{\n"
+"  Blocked Field cannot be entered, but can be exited.\n"
+"}\n"
 "\\columnbreak\n"
-"\\includegraphics[width=\\linewidth]{\\images/maptiles.png}\n"
-"\\begin{itemize}\n"
-"  \\footnotesize\n"
-"  \\item[\\textbf{1.}] Starting Map Tiles: I\n"
-"  \\item[\\textbf{2.}] Far Map Tiles: II-III\n"
-"  \\item[\\textbf{3.}] Near Map Tiles: IV-V\n"
-"  \\item[\\textbf{4.}] Center Map Tiles: VI-VII\n"
-"\\end{itemize}\n"
 "\n"
 msgstr ""
 "\\subsection*{Anatomie d'une Tuile de Plateau\\index{Tuile de Plateau}}\n"
@@ -144,23 +150,48 @@ msgstr ""
 "\\begin{itemize}\n"
 "  \\footnotesize\n"
 "  \\item[\\textbf{1.}] Tuiles de Départ : I\n"
-"  \\item[\\textbf{2.}] Tuiles Lointaines : II-III\n"
-"  \\item[\\textbf{3.}] Tuiles Proches : IV-V\n"
-"  \\item[\\textbf{4.}] Tuiles Centrales : VI-VII\n"
+"  \\item[\\textbf{2.}] Tuiles Lointaines : II--III\n"
+"  \\item[\\textbf{3.}] Tuiles Proches : IV--V\n"
+"  \\item[\\textbf{4.}] Tuiles Centrales : VI--VII\n"
 "\\end{itemize}\n"
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:39
+#: sections/map_elements.tex:40
 #, no-wrap
 msgid ""
-"\\vfill\n"
+"\\includegraphics[width=\\linewidth]{\\images/maptiles.png}\n"
+"\\begin{center}\n"
+"  \\imagecaption{\\footnotesize{}Types of Map Tiles}\n"
+"\\end{center}\n"
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\item[\\textbf{1.}] Starting Map Tiles: I\n"
+"  \\item[\\textbf{2.}] Far Map Tiles: II--III\n"
+"  \\item[\\textbf{3.}] Near Map Tiles: IV--V\n"
+"  \\item[\\textbf{4.}] Center Map Tiles: VI--VII\n"
+"\\end{itemize}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/map_elements.tex:42
+#, no-wrap
+msgid ""
+"\\separator\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/map_elements.tex:44
+#, no-wrap
+msgid ""
 "\\begin{center}\n"
 "  \\begin{scriptsize}\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:57
+#: sections/map_elements.tex:62
 #, no-wrap
 msgid ""
 "    \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=0.75\\linewidth]{\\images/fields.png}}};\n"
@@ -183,9 +214,24 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:68
-#, no-wrap
+#: sections/map_elements.tex:76
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{itemize}\n"
+#| "  \\footnotesize\n"
+#| "  \\begin{multicols}{2}\n"
+#| "    \\item[\\textbf{1.}] Empty Field\n"
+#| "    \\item[\\textbf{2.}] Location\n"
+#| "    \\item[\\textbf{3.}] Artifact Symbol\n"
+#| "    \\item[\\textbf{4.}] Field Difficulty\n"
+#| "    \\item[\\textbf{5.}] Border line\n"
+#| "    \\item[\\textbf{6.}] Blocked Field\n"
+#| "    \\item[\\textbf{7.}] Tile name like \\\\{} \\texttt{F2} or \\texttt{\\#N3}\n"
+#| "  "
 msgid ""
+"\\begin{center}\n"
+"  \\imagecaption{\\footnotesize{}Map Tile Anatomy}\n"
+"\\end{center}\n"
 "\\begin{itemize}\n"
 "  \\footnotesize\n"
 "  \\begin{multicols}{2}\n"
@@ -211,43 +257,47 @@ msgstr ""
 "  "
 
 #. type: multicols*
-#: sections/map_elements.tex:70
+#: sections/map_elements.tex:79
 #, no-wrap
-msgid ""
-"\\end{itemize}\n"
-"\n"
+msgid "\\end{itemize}"
 msgstr ""
-
-#. type: multicols*
-#: sections/map_elements.tex:75
-#, no-wrap
-msgid ""
-"\\note{3}{\n"
-"  Blocked Field cannot be entered, but can be exited.\n"
-"}"
-msgstr ""
-"\\note{3}{\n"
-"  Vous ne pouvez que sortir d'une Case Bloquée, mais pas y entrer.\n"
-"}"
 
 #. type: multicols
-#: sections/map_elements.tex:94
-#, no-wrap
+#: sections/map_elements.tex:100
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{\\pagetarget{Categories}{Location Categories}}\n"
+#| "Visiting Fields provides Heroes with benefits, such as gaining Resources or Cards (see \\pagelink{All Map Locations}{All Map Locations}).\n"
+#| "There are three categories of Fields:\n"
+#| "\\begin{itemize}\n"
+#| "  \\item \\textbf{Visitable} – Once you Visit this Field, place a Black Cube on it.\n"
+#| "    Treat it as an Empty Field as long as it has a Black Cube.\n"
+#| "  \\item \\textbf{Flaggable} – These Fields can be captured by players and provide passive benefits.\n"
+#| "    When you Visit one, place your Faction Cube on it.\n"
+#| "    Enemy Heroes who Visit your Flagged Fields will replace your Cube with theirs to \\textbf{steal} the Field’s effects.\n"
+#| "    Allied Heroes treat Flagged Fields \\textbf{as if they were empty}.\n"
+#| "  \\item \\textbf{Revisitable} – You can Visit this Field multiple times.\n"
+#| "    Do not place any Cubes when you Visit it.\n"
+#| "    You may pay 1 MP to Visit this Field again.\n"
+#| "\\end{itemize}\n"
+#| "\n"
 msgid ""
-"\\subsection*{\\pagetarget{Categories}{Location Categories}}\n"
-"Visiting Fields provides Heroes with benefits, such as gaining Resources or Cards (see \\pagelink{All Map Locations}{All Map Locations}).\n"
+"\\pagetarget{Categories}{\\subsection*{Location Categories}}\n"
+"Visiting Fields provides Heroes with benefits, such as gaining Resources or cards (see \\pagelink{All Map Locations}{All Map Locations}).\n"
 "There are three categories of Fields:\n"
 "\\begin{itemize}\n"
 "  \\item \\textbf{Visitable} – Once you Visit this Field, place a Black Cube on it.\n"
 "    Treat it as an Empty Field as long as it has a Black Cube.\n"
 "  \\item \\textbf{Flaggable} – These Fields can be captured by players and provide passive benefits.\n"
 "    When you Visit one, place your Faction Cube on it.\n"
-"    Enemy Heroes who Visit your Flagged Fields will replace your Cube with theirs to \\textbf{steal} the Field’s effects.\n"
-"    Allied Heroes treat Flagged Fields \\textbf{as if they were empty}.\n"
+"    Enemy Heroes who Visit your flagged Fields will replace your Cube with theirs to \\textbf{steal} the Field’s effects.\n"
+"    Allied Heroes treat flagged Fields \\textbf{as if they were empty}.\n"
 "  \\item \\textbf{Revisitable} – You can Visit this Field multiple times.\n"
 "    Do not place any Cubes when you Visit it.\n"
 "    You may pay 1 MP to Visit this Field again.\n"
 "\\end{itemize}\n"
+"\\vspace*{\\fill}\n"
+"\\columnbreak\n"
 "\n"
 msgstr ""
 "\\subsection*{\\pagetarget{Categories}{Catégories de Sites}}\n"
@@ -267,7 +317,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:101
+#: sections/map_elements.tex:107
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{Placing}{Placing and Discovering New Tiles}}\\index{Discovering Tiles}\n"
@@ -278,7 +328,7 @@ msgstr ""
 #| "You may always rotate Map Tiles when placing or revealing them.\n"
 #| "\n"
 msgid ""
-"\\subsection*{\\pagetarget{Placing}{Placing and Discovering New Tiles}}\\index{Discovering Tiles}\n"
+"\\pagetarget{Placing}{\\subheader{Placing and Discovering New Tiles}}\\index{Discovering Tiles}\n"
 "Heroes may spend 1 MP to either reveal an adjacent face-down Tile, or to place a Far (II–III) Map Tile from their own supply of Tiles (scenario rules determine the Tiles in your own supply).\n"
 "All face-down Tiles should be kept \\textbf{hidden from all players} until they are about to be placed or revealed.\n"
 "New Tiles must be placed adjacent to the Hero who spends the MP, and connected to at least two other existing Tiles.\n"
@@ -295,7 +345,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:106
+#: sections/map_elements.tex:112
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -311,38 +361,48 @@ msgstr ""
 "\n"
 
 #. type: figure*
-#: sections/map_elements.tex:119
+#: sections/map_elements.tex:125
 #, no-wrap
 msgid ""
 "[!hb]\n"
 "  \\centering\n"
 "  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
 "  \\begin{tikzpicture}[overlay]\n"
-"    \\node at (5, 10) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{You cannot add this Tile here}}}}};\n"
-"    \\node at (5, 1.4) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{You can add this Tile here, because it will}}}}};\n"
-"    \\node at (3.9, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{be adjacent to two other Tiles}}}}};\n"
+"    \\node at (5, 10) {\\footnotesize{\\imagecaption{You cannot add this Tile here}}};\n"
+"    \\node at (1, 1.4) [anchor=west] {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{You can add this Tile here, because it will}}}}};\n"
+"    \\node at (1, 1) [anchor=west] {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{be adjacent to two other Tiles}}}}};\n"
 "  \\end{tikzpicture}"
 msgstr ""
 "[!hb]\n"
 "  \\centering\n"
 "  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
 "  \\begin{tikzpicture}[overlay]\n"
-"    \\node at (5, 10) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Vous ne pouvez pas placer de Tuile ici}}}}};\n"
-"    \\node at (5, 1.4) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{Vous pouvez placer une Tuile ici, car elle}}}}};\n"
-"    \\node at (4.5, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{sera adjacente à deux autres Tuiles}}}}};\n"
+"    \\node at (5, 10) {\\footnotesize{\\imagecaption{Vous ne pouvez pas placer de Tuile ici}}};\n"
+"    \\node at (1, 1.4) [anchor=west] {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{Vous pouvez placer une Tuile ici, car elle}}}}};\n"
+"    \\node at (1, 1) [anchor=west] {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{sera adjacente à deux autres Tuiles}}}}};\n"
 "  \\end{tikzpicture}"
 
-#. type: subsection{#2}
-#: sections/map_elements.tex:123
-msgid "Example Turn"
-msgstr "Exemple de Tour"
+#. type: Plain text
+#: sections/map_elements.tex:129
+#, fuzzy
+#| msgid ""
+#| "\\subsection*{Example Turn}\n"
+#| "\n"
+msgid "\\subheader{Example ``Flagging a guarded Mine''}"
+msgstr ""
+"\\subsection*{Exemple de Tour}\n"
+"\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:128
-#, no-wrap
+#: sections/map_elements.tex:134
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\textit{Alice wants to capture an adjacent \\pagelink{Mines}{Mine} by Flagging it with her Main Hero, Sandro the Necromancer.\n"
+#| "    She spends 1 MP to move onto the Mine, which begins \\pagelink{Combat}{Combat} against Neutral Units, since the Field has a \\pagelink{Difficulty}{Difficulty Rating} and has not been previously Flagged by any player.}\\par\n"
+#| "\n"
 msgid ""
-"\\textit{Alice wants to capture an adjacent \\pagelink{Mines}{Mine} by Flagging it with her Main Hero, Sandro the Necromancer.\n"
-"    She spends 1 MP to move onto the Mine, which begins \\pagelink{Combat}{Combat} against Neutral Units, since the Field has a \\pagelink{Difficulty}{Difficulty Rating} and has not been previously Flagged by any player.}\\par\n"
+"\\textit{Alice wants to capture an adjacent \\pagelink{Mines}{Mine} by flagging it with her Main Hero, Sandro the Necromancer.\n"
+"    She spends 1 MP to move onto the Mine, which begins \\pagelink{Combat}{Combat} against Neutral Units, since the Field has a \\pagelink{Difficulty}{Difficulty Rating} and has not been previously flagged by any player.}\\par\n"
 "\n"
 msgstr ""
 "\\textit{Alice veut capturer une \\pagelink{Mines}{Mine} adjacente en la Revendiquant avec son Héros Principal, Sandro le Nécromancien.\n"
@@ -350,7 +410,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:130
+#: sections/map_elements.tex:136
 #, no-wrap
 msgid ""
 "\\includegraphics[width=1.1\\linewidth]{\\examples/sandro_takes_mine.png}\n"
@@ -358,11 +418,16 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:134
-#, no-wrap
+#: sections/map_elements.tex:140
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\textit{The Mine turns out to be guarded by Troglodytes, which have 3 HP \\svg{health_points}.\n"
+#| "Alice's current hand consists of a Power Card, a Lightning Bolt, Haste, and a Town Portal.\n"
+#| "During the Combat, she casts the Lightning Bolt, and Empowers \\svg{empower} it with Haste's alternative (bottom) effect, which makes the Lightning Bolt deal 3 damage \\svg{damage}, killing the Troglodytes and winning the Combat.}\n"
+#| "\n"
 msgid ""
 "\\textit{The Mine turns out to be guarded by Troglodytes, which have 3 HP \\svg{health_points}.\n"
-"Alice's current hand consists of a Power Card, a Lightning Bolt, Haste, and a Town Portal.\n"
+"Alice's current hand consists of a Power card, a Lightning Bolt, Haste, and a Town Portal.\n"
 "During the Combat, she casts the Lightning Bolt, and Empowers \\svg{empower} it with Haste's alternative (bottom) effect, which makes the Lightning Bolt deal 3 damage \\svg{damage}, killing the Troglodytes and winning the Combat.}\n"
 "\n"
 msgstr ""
@@ -372,7 +437,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:136
+#: sections/map_elements.tex:142
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_lightning_bolt.png}\n"
@@ -382,11 +447,15 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:139
-#, no-wrap
+#: sections/map_elements.tex:145
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\columnbreak\n"
+#| "\\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell Card per Combat Round.}\\par\n"
+#| "\n"
 msgid ""
 "\\columnbreak\n"
-"\\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell Card per Combat Round.}\\par\n"
+"\\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell card per Combat Round.}\\par\n"
 "\n"
 msgstr ""
 "\\columnbreak\n"
@@ -394,13 +463,20 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:146
-#, no-wrap
+#: sections/map_elements.tex:152
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\textit{Alice now Flags the Mine by placing one of her Faction Cubes on it.\n"
+#| "    Flagging this particular Mine increases her Building Materials \\svg{building_materials} production by 2, and she also immediately gains the Mine's production value of 2 \\svg{building_materials} as she was the first player to Flag it.}\\par\n"
+#| "\\textit{Afterwards, Alice wants to go back to defend a previously Flagged Settlement by casting the Town Portal still left in her hand.\n"
+#| "    Her Hero is Level 2, so she can empower it with the Power Card's Expert Effect \\svg{expert}, which grants her an additional Movement Point after casting it.\n"
+#| "}\n"
+#| "\n"
 msgid ""
-"\\textit{Alice now Flags the Mine by placing one of her Faction Cubes on it.\n"
-"    Flagging this particular Mine increases her Building Materials \\svg{building_materials} production by 2, and she also immediately gains the Mine's production value of 2 \\svg{building_materials} as she was the first player to Flag it.}\\par\n"
-"\\textit{Afterwards, Alice wants to go back to defend a previously Flagged Settlement by casting the Town Portal still left in her hand.\n"
-"    Her Hero is Level 2, so she can empower it with the Power Card's Expert Effect \\svg{expert}, which grants her an additional Movement Point after casting it.\n"
+"\\textit{Alice now flags the Mine by placing one of her Faction Cubes on it.\n"
+"    Flagging this particular Mine increases her Building Materials \\svg{building_materials} production by 2, and she also immediately gains the Mine's production value of 2 \\svg{building_materials} as she was the first player to flag it.}\\par\n"
+"\\textit{Afterwards, Alice wants to go back to defend a previously flagged Settlement by casting the Town Portal still left in her hand.\n"
+"    Her Hero is Level 2, so she can empower it with the Power card's Expert Effect \\svg{expert}, which grants her an additional Movement Point after casting it.\n"
 "}\n"
 "\n"
 msgstr ""
@@ -412,7 +488,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:148
+#: sections/map_elements.tex:154
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_town_portal.png}\n"
@@ -422,7 +498,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:152
+#: sections/map_elements.tex:159
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{center}\n"
@@ -432,18 +508,23 @@ msgstr ""
 msgid ""
 "\\vfill\n"
 "\\hspace{2em}\n"
-"{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/resurrection.png}}\n"
-"\n"
+"{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/resurrection.png}}"
 msgstr ""
 "\\begin{center}\n"
 "  \\transparent{0.2}\\includegraphics[width=0.25\\linewidth]{\\art/wyvern.png}\n"
 "\\end{center}\n"
 "\n"
 
-#. type: multicols*
-#: sections/map_elements.tex:164
+#. type: Plain text
+#: sections/map_elements.tex:173
+msgid "\\subheader{Expansion Tiles}"
+msgstr ""
+
+#. type: multicols
+#: sections/map_elements.tex:173
 #, no-wrap
 msgid ""
+"{2}\n"
 "\\begin{expansion}{cove}\n"
 "  \\subsection*{\\pagetarget{Sea Map Tiles}{Sea Map Tiles}}\n"
 "  Sea Map Tiles have a unique backside and during setup are placed as shown in the chosen Scenario Map layout.\n"
@@ -451,23 +532,24 @@ msgid ""
 "  Sea Map Tiles may contain both land and sea Fields.\n"
 "  Movement from land to land, from sea to sea, or from sea to land works as normal.\n"
 "  However, when your Hero \\textbf{enters a sea Field from a land Field}, their movement for the Turn ends.\n"
-"  You may use unspent MP for other Actions (for example, to \\pagelink{Timelimit}{extend Combat} against Neutral Units), but you cannot move anymore that Turn, not even with the help of Card effects.\n"
+"  You may use unspent MP for other Actions (for example, to \\pagelink{Timelimit}{extend Combat} against Neutral Units), but you cannot move anymore that Turn, not even with the help of card effects.\n"
 "\\end{expansion}\n"
 "\n"
 msgstr ""
 
-#. type: multicols*
-#: sections/map_elements.tex:166 sections/map_elements.tex:175
-#: sections/map_elements.tex:248 sections/map_elements.tex:281
-#: sections/player_turns.tex:40 sections/units.tex:227
+#. type: multicols
+#: sections/map_elements.tex:175 sections/map_elements.tex:184
+#: sections/map_elements.tex:259 sections/map_elements.tex:292
+#: sections/player_turns.tex:48 sections/units.tex:233
+#: sections/tournament_mode.tex:67
 #, no-wrap
 msgid ""
 "\\bigskip\n"
 "\n"
 msgstr ""
 
-#. type: multicols*
-#: sections/map_elements.tex:173
+#. type: multicols
+#: sections/map_elements.tex:182
 #, no-wrap
 msgid ""
 "\\begin{expansion}{conflux}\n"
@@ -479,53 +561,59 @@ msgid ""
 "\n"
 msgstr ""
 
-#. type: multicols*
-#: sections/map_elements.tex:187
+#. type: multicols
+#: sections/map_elements.tex:197
 #, no-wrap
 msgid ""
 "\\begin{expansion}{stronghold}\n"
 "  \\subsection*{\\pagetarget{Subterranean Map Tiles}{Subterranean Map Tiles}}\n"
 "  Subterranean Map Tiles have a unique backside and are placed during setup as shown in the chosen Scenario Map layout.\n"
 "  They work similarly to regular Map Tiles, except that \\textbf{you cannot move between a Surface and a Subterranean Tile without using a \\pagelink{Subterranean Gate}{Subterranean Gate} in between} or a Town Portal Spell.\n"
-"  No other movement effects from Cards can allow you to move from one to the other.\n"
+"  No other movement effects from cards can allow you to move from one to the other.\n"
 "  You also may not discover a Subterranean Map Tile while standing on a Surface Map Tile and vice versa.\n"
 "  Treat both Fields of the Subterranean Gate Token \\textbf{as one Field}.\n"
 "  When a Hero enters a Field with a Subterranean Gate, discover the Map Tile on the other side for free (if it is still not discovered).\n"
 "  Otherwise treat a Subterranean Gate Token as an empty Field.\n"
 "  % NOTE: Discovering from one to the other should also be impossible.\n"
 "\\end{expansion}\n"
+"\\columnbreak\n"
 "\n"
 msgstr ""
 
-#. type: multicols*
-#: sections/map_elements.tex:199
+#. type: multicols
+#: sections/map_elements.tex:202
 #, no-wrap
 msgid ""
-"\\begin{multicols*}{2}\n"
-"\\hspace{-0.5em}\\includegraphics[width=1.15\\linewidth]{\\images/map-tile-cove.png}\n"
-"\\columnbreak\n"
-"\\hspace{-0.5em}\\includegraphics[width=1.15\\linewidth]{\\images/map-tile-sea.png}"
+"\\begin{multicols}{2}\n"
+"  \\hspace{-0.5em}\\includegraphics[width=1.15\\linewidth]{\\images/map-tile-cove.png}\n"
+"  \\columnbreak\n"
+"  \\hspace{-0.5em}\\includegraphics[width=1.15\\linewidth]{\\images/map-tile-sea.png}"
 msgstr ""
 
 #. type: center
-#: sections/map_elements.tex:199
-msgid "{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Sea Map Tile}}}}"
+#: sections/map_elements.tex:207
+msgid "{\\imagecaption{Sea Map Tile}}"
+msgstr ""
+
+#. type: Plain text
+#: sections/map_elements.tex:209 sections/map_elements.tex:223
+msgid "\\separator"
 msgstr ""
 
 #. type: tikzpicture
-#: sections/map_elements.tex:210
+#: sections/map_elements.tex:219
 #, no-wrap
 msgid ""
 "    \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\images/elemental_tiles.png}}};\n"
-"    \\draw (-2.2, 0.1) node {\\textbf{\\textit{\\textcolor{darkcandyapplered}{Elemental Fire Tile}}}};\n"
-"    \\draw (-2.2, -4.5) node {\\textbf{\\textit{\\textcolor{darkcandyapplered}{Elemental Air Tile}}}};\n"
-"    \\draw (2.2, 0.1) node {\\textbf{\\textit{\\textcolor{darkcandyapplered}{Elemental Water Tile}}}};\n"
-"    \\draw (2.2, -4.5) node {\\textbf{\\textit{\\textcolor{darkcandyapplered}{Elemental Earth Tile}}}};\n"
+"    \\draw (-2.2, 0.1) node {\\imagecaption{Elemental Fire Tile}};\n"
+"    \\draw (-2.2, -4.5) node {\\imagecaption{Elemental Air Tile}};\n"
+"    \\draw (2.2, 0.1) node {\\imagecaption{Elemental Water Tile}};\n"
+"    \\draw (2.2, -4.5) node {\\imagecaption{Elemental Earth Tile}};\n"
 "  "
 msgstr ""
 
 #. type: scriptsize
-#: sections/map_elements.tex:218
+#: sections/map_elements.tex:227
 #, no-wrap
 msgid ""
 "    \\centering\n"
@@ -533,24 +621,24 @@ msgid ""
 msgstr ""
 
 #. type: scriptsize
-#: sections/map_elements.tex:226
+#: sections/map_elements.tex:235
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[!hb]\n"
 #| "  \\centering\n"
 #| "  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
 #| "  \\begin{tikzpicture}[overlay]\n"
-#| "    \\node at (5, 10) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{You cannot add this Tile here}}}}};\n"
+#| "    \\node at (5, 10) {\\footnotesize{\\imagecaption{You cannot add this Tile here}}};\n"
 #| "    \\node at (5, 1.4) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{You can add this Tile here, because it will}}}}};\n"
 #| "    \\node at (3.9, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{be adjacent to two other Tiles}}}}};\n"
 #| "  \\end{tikzpicture}"
 msgid ""
 "      \\node at (0, 0) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-stronghold.png}};\n"
-"      \\node at (0, 2.2) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Surface Map Tile}}}}};\n"
+"      \\node at (0, 2.2) {\\footnotesize{\\imagecaption{Surface Map Tile}}};\n"
 "      \\node at (3.21, -1.11) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-sub.png}};\n"
-"      \\node at (3.21, -3.41) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Subterranean Map Tile}}}}};\n"
+"      \\node at (3.21, -3.41) {\\footnotesize{\\imagecaption{Subterranean Map Tile}}};\n"
 "      \\node[rotate=-60] (gate) at (1.6, -0.53) {\\includegraphics[width=0.33\\linewidth]{\\images/subter-gate-outline.png}};\n"
-"      \\node at (3.21, 1.11) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Subterranean Gate}}}}};\n"
+"      \\node at (3.21, 1.11) {\\footnotesize{\\imagecaption{Subterranean Gate}}};\n"
 "    \\end{tikzpicture}\n"
 "  "
 msgstr ""
@@ -558,25 +646,97 @@ msgstr ""
 "  \\centering\n"
 "  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
 "  \\begin{tikzpicture}[overlay]\n"
-"    \\node at (5, 10) {\\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Vous ne pouvez pas placer de Tuile ici}}}}};\n"
+"    \\node at (5, 10) {\\footnotesize{\\imagecaption{Vous ne pouvez pas placer de Tuile ici}}};\n"
 "    \\node at (5, 1.4) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{Vous pouvez placer une Tuile ici, car elle}}}}};\n"
 "    \\node at (4.5, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{sera adjacente à deux autres Tuiles}}}}};\n"
 "  \\end{tikzpicture}"
 
-#. type: multicols
-#: sections/map_elements.tex:235
-#, no-wrap
+#. type: Plain text
+#: sections/map_elements.tex:246
 msgid ""
-"{2}\n"
-"\\subsection*{\\pagetarget{Discover Location Tokens}{Placing and Discovering Location Tokens}}\n"
-"Location Tokens are added by several expansions to the game.\n"
-"They are placed either separately or on specific Fields of the Map Tile when a Hero discovers one with associated Token, and overwrite the original Location they are placed on.\n"
-"Tokens cannot be placed on other Location Tokens, Blocked Fields, or Fields containing Locations required to meet any of the Scenario's victory conditions.\n"
-"\n"
+"\\pagetarget{Discover Location Tokens}{\\subheader{Placing and Discovering "
+"Location Tokens}}"
 msgstr ""
 
 #. type: multicols
 #: sections/map_elements.tex:246
+#, no-wrap
+msgid ""
+"{2}\n"
+"Location Tokens are added by several expansions to the game.\n"
+"They are placed either separately or on specific Fields of the Map Tile when a Hero discovers one with associated Token, and overwrite the original Location they are placed on.\n"
+"Tokens cannot be placed on other Location Tokens, Blocked Fields, or Fields containing Locations required to meet any of the Scenario's victory conditions.\n"
+"The effects of Visiting the Location Tokens are described in \\pagelink{Location Token}{All Map Locations}.\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/map_elements.tex:257
+#, no-wrap
+msgid ""
+"\\begin{expansion}[before=\\vspace*{5pt}]{navalbattles}\n"
+"  \\subsection*{Creature Bank Tokens}\n"
+"  As an \\textbf{optional rule} you can decide to play with \\pagelink{Creature Banks Rules}{Creature Banks}.\n"
+"  If you do, each time you discover a Far \\mbox{(II--III)} or Near \\mbox{(IV--V)} Map Tile, you may decide to draw a Creature Bank Token corresponding to the discovered Map Tile, and -- contrary to the normal rules -- you can place it \\textbf{only on its Blocked Field}.\n"
+"  \\bigskip\n"
+"  \\begin{center}\n"
+"    \\includegraphics[width=0.42\\linewidth]{\\map_locations/creature_bank_token.png}\\\\\n"
+"    \\footnotesize{\\imagecaption{Creature Bank Token}}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/map_elements.tex:264
+#, no-wrap
+msgid ""
+"\\begin{expansion}[before=\\vspace*{6pt}]{cove}\n"
+"  \\subsection*{\\pagetarget{Whirlpool Tokens}{Whirlpool Tokens}}\n"
+"  Discovering \\pagelink{Whirlpool}{Whirlpools} follows the same rules as discovering Monoliths.\n"
+"  \\bigskip\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/map_elements.tex:277
+#, no-wrap
+msgid ""
+"    \\draw (-2.5, 0) node[inner sep=0] {\\includegraphics[width=0.4\\linewidth]{\\map_locations/whirlpool-token.png}};\n"
+"    \\draw (-2.5, -1) node {\\Huge\\textbf{\\textcolor{white}{{\\raisebox{0.3\\height}{\\Large\\textbf{--}}}1}}};\n"
+"    \\draw (0, 0) node[inner sep=0] {\\includegraphics[width=0.4\\linewidth]{\\map_locations/whirlpool-token.png}};\n"
+"    \\draw (0, -1) node {\\Huge\\textbf{\\textcolor{white}{0}}};\n"
+"    \\draw (2.5, 0) node[inner sep=0] {\\includegraphics[width=0.4\\linewidth]{\\map_locations/whirlpool-token.png}};\n"
+"    \\draw (2.5, -1) node {\\Huge\\textbf{\\textcolor{white}{{\\raisebox{0.3\\height}{\\Large$\\boldsymbol{+}$}}1}}};\n"
+"  \\end{tikzpicture}\n"
+"  \\begin{center}\n"
+"    \\footnotesize{\\imagecaption{Whirlpool Tokens}}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/map_elements.tex:290
+#, no-wrap
+msgid ""
+"\\begin{expansion}[before=\\vspace*{-11mm}]{stronghold}\n"
+"  \\pagetarget{Subterranean Gate}{\\subsection*{Subterranean Gate Tokens}}\n"
+"  Subterranean Gates are also determined by a Scenario's Map Layout and connect both a Surface Map Tile and an adjacent Subterranean Map Tile.\n"
+"  They cannot be placed outside the Map Tiles.\n"
+"  After discovering one of the corresponding Map Tiles you may choose the position of the Subterranean Gate Token as long as it connects the two indicated Map Tiles without covering forbidden Fields.\n"
+"  The Scenario Map layout only shows \\textbf{which two Tiles are connected}, not the exact Fields the Token is placed on.\n"
+"  \\medskip\n"
+"  \\begin{center}\n"
+"    \\includegraphics[width=0.58\\linewidth]{\\map_locations/subterranean_gate_token.png}\\\\\n"
+"    \\footnotesize{\\imagecaption{Subterranean Gate Token}}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/map_elements.tex:303
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{0pt}]{conflux}\n"
@@ -586,72 +746,7 @@ msgid ""
 "  \\bigskip\n"
 "  \\begin{center}\n"
 "    \\includegraphics[width=0.4\\linewidth]{\\map_locations/monolith_token.png}\\\\\n"
-"    \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Monolith Token}}}}\n"
-"  \\end{center}\n"
-"\\end{expansion}\n"
-"\n"
-msgstr ""
-
-#. type: multicols
-#: sections/map_elements.tex:253
-#, no-wrap
-msgid ""
-"\\begin{expansion}[before=\\vspace*{0pt}]{cove}\n"
-"  \\subsection*{\\pagetarget{Whirlpool Tokens}{Whirlpool Tokens}}\n"
-"  Discovering \\pagelink{Whirlpool}{Whirlpools} follows the same rules as discovering Monoliths.\n"
-"  \\bigskip\n"
-"\n"
-msgstr ""
-
-#. type: multicols
-#: sections/map_elements.tex:266
-#, no-wrap
-msgid ""
-"    \\draw (-2.5, 0) node[inner sep=0] {\\includegraphics[width=0.4\\linewidth]{\\map_locations/whirlpool-token.png}};\n"
-"    \\draw (-2.5, -1) node {\\Huge\\textbf{\\textcolor{white}{$\\boldsymbol{-}$1}}};\n"
-"    \\draw (0, 0) node[inner sep=0] {\\includegraphics[width=0.4\\linewidth]{\\map_locations/whirlpool-token.png}};\n"
-"    \\draw (0, -1) node {\\Huge\\textbf{\\textcolor{white}{0}}};\n"
-"    \\draw (2.5, 0) node[inner sep=0] {\\includegraphics[width=0.4\\linewidth]{\\map_locations/whirlpool-token.png}};\n"
-"    \\draw (2.5, -1) node {\\Huge\\textbf{\\textcolor{white}{$\\boldsymbol{+}$1}}};\n"
-"  \\end{tikzpicture}\n"
-"  \\begin{center}\n"
-"    \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Whirlpool Tokens}}}}\n"
-"  \\end{center}\n"
-"\\end{expansion}\n"
-"\n"
-msgstr ""
-
-#. type: multicols
-#: sections/map_elements.tex:279
-#, no-wrap
-msgid ""
-"\\begin{expansion}[before=\\vspace*{-11mm}]{stronghold}\n"
-"  \\subsection*{Subterranean Gate Tokens}\n"
-"  \\pagetarget{Subterranean Gate}{Subterranean Gates} are also determined by a Scenario's Map Layout and connect both a Surface Map Tile and an adjacent Subterranean Map Tile.\n"
-"  They cannot be placed outside the Map Tiles.\n"
-"  After discovering one of the corresponding Map Tiles you may choose the position of the Subterranean Gate Token as long as it connects the two indicated Map Tiles without covering forbidden Fields.\n"
-"  The Scenario Map layout only shows \\textbf{which two Tiles are connected}, not the exact Fields the Token is placed on.\n"
-"  \\bigskip\n"
-"  \\begin{center}\n"
-"    \\includegraphics[width=0.6\\linewidth]{\\map_locations/subterranean_gate_token.png}\\\\\n"
-"    \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Subterranean Gate Token}}}}\n"
-"  \\end{center}\n"
-"\\end{expansion}\n"
-"\n"
-msgstr ""
-
-#. type: multicols
-#: sections/map_elements.tex:292
-#, no-wrap
-msgid ""
-"\\begin{expansion}[before=\\vspace*{0pt}]{navalbattles}\n"
-"  \\subsection*{Creature Bank Tokens}\n"
-"  As an \\textbf{optional rule} you can decide to play with \\pagelink{Creature Banks Rules}{Creature Banks}.\n"
-"  If you do, each time you discover a Far \\mbox{(II--III)} or Near \\mbox{(IV--V)} Map Tile, you may decide to draw a Creature Bank Token corresponding to the discovered Map Tile, and -- contrary to the normal rules -- you can place it \\textbf{only on its Blocked Field}.\n"
-"  \\bigskip\n"
-"  \\begin{center}\n"
-"    \\includegraphics[width=0.42\\linewidth]{\\map_locations/creature_bank_token.png}\\\\\n"
-"    \\footnotesize{\\textbf{\\textit{\\textcolor{darkcandyapplered}{Creature Bank Token}}}}\n"
+"    \\footnotesize{\\imagecaption{Monolith Token}}\n"
 "  \\end{center}\n"
 "\\end{expansion}"
 msgstr ""

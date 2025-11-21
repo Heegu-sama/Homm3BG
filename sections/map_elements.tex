@@ -1,40 +1,45 @@
 % !TeX spellcheck = en_US
-\addsection{Map Elements}{\skills/logistics.png}
-
-\iftoggle{printable}{\vspace{-\baselineskip}}{}
+\pagetarget{Map}{\addsection{Map Elements}{\skills/logistics.png}}
 
 \begin{multicols*}{2}
-Each Scenario is built using four types of \pagetarget{Map}{Map} Tiles.
+Each Scenario is built using four types of Map Tiles.
 Players start on their Faction-Specific Starting (I) Tile.
 Other Tiles may be placed and discovered as described on the next page.
 During the game's setup, all face-down Tiles should be selected randomly from the pool of possible Tiles as described by the Scenario and shuffled, keeping them face-down.\par
 The \textbf{roman numeral} on each Tile describes the overall \textbf{difficulty of Neutral Units} on that Tile, as well as the number of rewards players can expect to find on that Tile.
 Starting (I) Tiles are the easiest while Center (VI–VII) Tiles are the most difficult.\par
 
-\vfill
+\vspace*{\fill}
 \begin{center}
-  \transparent{0.2}\includegraphics[width=0.6\linewidth]{\art/counterstrike.png}
+  \transparent{0.2}\includegraphics[width=0.55\linewidth]{\art/earth_magic.png}
 \end{center}
-\vfill
 
-\subsection*{Map Tile Anatomy\index{Map Tile}}
+\subsection*{Map Tile Anatomy}\index{Map Tile}
 Each Map Tile is divided into 7 separate \textbf{Fields} that your Heroes can \textbf{Visit}.
-When your Hero moves to a Field, they must immediately Visit it, or
+When your Hero moves to a Field, they must immediately Visit it if unguarded, or
 first start a \pagelink{Combat}{Combat} against the enemies guarding it before Visiting.
 Empty Fields\index{Empty Field} do nothing when Visited.
 Solid yellow lines on a Field's edge cannot be passed through.
 \pagelink{Difficulty}{Roman numerals} written on a Field indicate that the Field is guarded by Neutral enemies that must be fought to Visit it.\par
+\note{3}{
+  Blocked Field cannot be entered, but can be exited.
+}
 \columnbreak
+
 \includegraphics[width=\linewidth]{\images/maptiles.png}
+\begin{center}
+  \imagecaption{\footnotesize{}Types of Map Tiles}
+\end{center}
 \begin{itemize}
   \footnotesize
   \item[\textbf{1.}] Starting Map Tiles: I
-  \item[\textbf{2.}] Far Map Tiles: II-III
-  \item[\textbf{3.}] Near Map Tiles: IV-V
-  \item[\textbf{4.}] Center Map Tiles: VI-VII
+  \item[\textbf{2.}] Far Map Tiles: II--III
+  \item[\textbf{3.}] Near Map Tiles: IV--V
+  \item[\textbf{4.}] Center Map Tiles: VI--VII
 \end{itemize}
 
-\vfill
+\separator
+
 \begin{center}
   \begin{scriptsize}
   \begin{tikzpicture}
@@ -55,6 +60,9 @@ Solid yellow lines on a Field's edge cannot be passed through.
   \end{scriptsize}
 \end{center}
 
+\begin{center}
+  \imagecaption{\footnotesize{}Map Tile Anatomy}
+\end{center}
 \begin{itemize}
   \footnotesize
   \begin{multicols}{2}
@@ -67,32 +75,30 @@ Solid yellow lines on a Field's edge cannot be passed through.
     \item[\textbf{7.}] Tile name like \\{} \texttt{F2} or \texttt{\#N3}
   \end{multicols}
 \end{itemize}
-
-\note{3}{
-  Blocked Field cannot be entered, but can be exited.
-}
 \end{multicols*}
 
 \clearpage
 
 \begin{multicols}{2}
 
-\subsection*{\pagetarget{Categories}{Location Categories}}
-Visiting Fields provides Heroes with benefits, such as gaining Resources or Cards (see \pagelink{All Map Locations}{All Map Locations}).
+\pagetarget{Categories}{\subsection*{Location Categories}}
+Visiting Fields provides Heroes with benefits, such as gaining Resources or cards (see \pagelink{All Map Locations}{All Map Locations}).
 There are three categories of Fields:
 \begin{itemize}
   \item \textbf{Visitable} – Once you Visit this Field, place a Black Cube on it.
     Treat it as an Empty Field as long as it has a Black Cube.
   \item \textbf{Flaggable} – These Fields can be captured by players and provide passive benefits.
     When you Visit one, place your Faction Cube on it.
-    Enemy Heroes who Visit your Flagged Fields will replace your Cube with theirs to \textbf{steal} the Field’s effects.
-    Allied Heroes treat Flagged Fields \textbf{as if they were empty}.
+    Enemy Heroes who Visit your flagged Fields will replace your Cube with theirs to \textbf{steal} the Field’s effects.
+    Allied Heroes treat flagged Fields \textbf{as if they were empty}.
   \item \textbf{Revisitable} – You can Visit this Field multiple times.
     Do not place any Cubes when you Visit it.
     You may pay 1 MP to Visit this Field again.
 \end{itemize}
+\vspace*{\fill}
+\columnbreak
 
-\subsection*{\pagetarget{Placing}{Placing and Discovering New Tiles}}\index{Discovering Tiles}
+\pagetarget{Placing}{\subheader{Placing and Discovering New Tiles}}\index{Discovering Tiles}
 Heroes may spend 1 MP to either reveal an adjacent face-down Tile, or to place a Far (II–III) Map Tile from their own supply of Tiles (scenario rules determine the Tiles in your own supply).
 All face-down Tiles should be kept \textbf{hidden from all players} until they are about to be placed or revealed.
 New Tiles must be placed adjacent to the Hero who spends the MP, and connected to at least two other existing Tiles.
@@ -111,37 +117,37 @@ You may always rotate Map Tiles when placing or revealing them.
   \centering
   \includegraphics[width=\textwidth]{\images/placement.png}
   \begin{tikzpicture}[overlay]
-    \node at (5, 10) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{You cannot add this Tile here}}}}};
-    \node at (5, 1.4) {\footnotesize{\textbf{\textit{\textcolor{cadmiumgreen}{You can add this Tile here, because it will}}}}};
-    \node at (3.9, 1) {\footnotesize{\textbf{\textit{\textcolor{cadmiumgreen}{be adjacent to two other Tiles}}}}};
+    \node at (5, 10) {\footnotesize{\imagecaption{You cannot add this Tile here}}};
+    \node at (1, 1.4) [anchor=west] {\footnotesize{\textbf{\textit{\textcolor{cadmiumgreen}{You can add this Tile here, because it will}}}}};
+    \node at (1, 1) [anchor=west] {\footnotesize{\textbf{\textit{\textcolor{cadmiumgreen}{be adjacent to two other Tiles}}}}};
   \end{tikzpicture}
 \end{figure*}
 
 \clearpage
 
-\subsection*{Example Turn}
+\subheader{Example ``Flagging a guarded Mine''}
 
 \begin{multicols*}{2}
 
-\textit{Alice wants to capture an adjacent \pagelink{Mines}{Mine} by Flagging it with her Main Hero, Sandro the Necromancer.
-    She spends 1 MP to move onto the Mine, which begins \pagelink{Combat}{Combat} against Neutral Units, since the Field has a \pagelink{Difficulty}{Difficulty Rating} and has not been previously Flagged by any player.}\par
+\textit{Alice wants to capture an adjacent \pagelink{Mines}{Mine} by flagging it with her Main Hero, Sandro the Necromancer.
+    She spends 1 MP to move onto the Mine, which begins \pagelink{Combat}{Combat} against Neutral Units, since the Field has a \pagelink{Difficulty}{Difficulty Rating} and has not been previously flagged by any player.}\par
 
 \includegraphics[width=1.1\linewidth]{\examples/sandro_takes_mine.png}
 
 \textit{The Mine turns out to be guarded by Troglodytes, which have 3 HP \svg{health_points}.
-Alice's current hand consists of a Power Card, a Lightning Bolt, Haste, and a Town Portal.
+Alice's current hand consists of a Power card, a Lightning Bolt, Haste, and a Town Portal.
 During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it with Haste's alternative (bottom) effect, which makes the Lightning Bolt deal 3 damage \svg{damage}, killing the Troglodytes and winning the Combat.}
 
 \includegraphics[width=\linewidth]{\examples/sandro_empowering_lightning_bolt.png}
 
 \columnbreak
-\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell Card per Combat Round.}\par
+\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell card per Combat Round.}\par
 
 
-\textit{Alice now Flags the Mine by placing one of her Faction Cubes on it.
-    Flagging this particular Mine increases her Building Materials \svg{building_materials} production by 2, and she also immediately gains the Mine's production value of 2 \svg{building_materials} as she was the first player to Flag it.}\par
-\textit{Afterwards, Alice wants to go back to defend a previously Flagged Settlement by casting the Town Portal still left in her hand.
-    Her Hero is Level 2, so she can empower it with the Power Card's Expert Effect \svg{expert}, which grants her an additional Movement Point after casting it.
+\textit{Alice now flags the Mine by placing one of her Faction Cubes on it.
+    Flagging this particular Mine increases her Building Materials \svg{building_materials} production by 2, and she also immediately gains the Mine's production value of 2 \svg{building_materials} as she was the first player to flag it.}\par
+\textit{Afterwards, Alice wants to go back to defend a previously flagged Settlement by casting the Town Portal still left in her hand.
+    Her Hero is Level 2, so she can empower it with the Power card's Expert Effect \svg{expert}, which grants her an additional Movement Point after casting it.
 }
 
 \includegraphics[width=\linewidth]{\examples/sandro_empowering_town_portal.png}
@@ -149,9 +155,12 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 \vfill
 \hspace{2em}
 {\transparent{0.2}\includegraphics[width=\linewidth]{\art/resurrection.png}}
+\end{multicols*}
 
-\newpage
+\clearpage
 
+\subheader{Expansion Tiles}
+\begin{multicols}{2}
 \begin{expansion}{cove}
   \subsection*{\pagetarget{Sea Map Tiles}{Sea Map Tiles}}
   Sea Map Tiles have a unique backside and during setup are placed as shown in the chosen Scenario Map layout.
@@ -159,7 +168,7 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
   Sea Map Tiles may contain both land and sea Fields.
   Movement from land to land, from sea to sea, or from sea to land works as normal.
   However, when your Hero \textbf{enters a sea Field from a land Field}, their movement for the Turn ends.
-  You may use unspent MP for other Actions (for example, to \pagelink{Timelimit}{extend Combat} against Neutral Units), but you cannot move anymore that Turn, not even with the help of Card effects.
+  You may use unspent MP for other Actions (for example, to \pagelink{Timelimit}{extend Combat} against Neutral Units), but you cannot move anymore that Turn, not even with the help of card effects.
 \end{expansion}
 
 \bigskip
@@ -177,61 +186,109 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
   \subsection*{\pagetarget{Subterranean Map Tiles}{Subterranean Map Tiles}}
   Subterranean Map Tiles have a unique backside and are placed during setup as shown in the chosen Scenario Map layout.
   They work similarly to regular Map Tiles, except that \textbf{you cannot move between a Surface and a Subterranean Tile without using a \pagelink{Subterranean Gate}{Subterranean Gate} in between} or a Town Portal Spell.
-  No other movement effects from Cards can allow you to move from one to the other.
+  No other movement effects from cards can allow you to move from one to the other.
   You also may not discover a Subterranean Map Tile while standing on a Surface Map Tile and vice versa.
   Treat both Fields of the Subterranean Gate Token \textbf{as one Field}.
   When a Hero enters a Field with a Subterranean Gate, discover the Map Tile on the other side for free (if it is still not discovered).
   Otherwise treat a Subterranean Gate Token as an empty Field.
   % NOTE: Discovering from one to the other should also be impossible.
 \end{expansion}
-
 \columnbreak
 
-\begin{multicols*}{2}
-\hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-cove.png}
-\columnbreak
-\hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-sea.png}
-\end{multicols*}
+\begin{multicols}{2}
+  \hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-cove.png}
+  \columnbreak
+  \hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-sea.png}
+\end{multicols}
 \begin{center}
   \vspace*{-0.5em}
-  \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Sea Map Tile}}}}
+  \footnotesize{\imagecaption{Sea Map Tile}}
 \end{center}
 
-\vspace*{\fill}
+\separator
 
 \begin{center}
+  \vspace*{-3em}
   \footnotesize
   \begin{tikzpicture}
     \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\images/elemental_tiles.png}}};
-    \draw (-2.2, 0.1) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Fire Tile}}}};
-    \draw (-2.2, -4.5) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Air Tile}}}};
-    \draw (2.2, 0.1) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Water Tile}}}};
-    \draw (2.2, -4.5) node {\textbf{\textit{\textcolor{darkcandyapplered}{Elemental Earth Tile}}}};
+    \draw (-2.2, 0.1) node {\imagecaption{Elemental Fire Tile}};
+    \draw (-2.2, -4.5) node {\imagecaption{Elemental Air Tile}};
+    \draw (2.2, 0.1) node {\imagecaption{Elemental Water Tile}};
+    \draw (2.2, -4.5) node {\imagecaption{Elemental Earth Tile}};
   \end{tikzpicture}
 \end{center}
 
-\vspace*{\fill}
+\separator
 
 \begin{center}
   \begin{scriptsize}
     \centering
     \begin{tikzpicture}
       \node at (0, 0) {\includegraphics[width=0.5\linewidth]{\images/map-tile-stronghold.png}};
-      \node at (0, 2.2) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Surface Map Tile}}}}};
+      \node at (0, 2.2) {\footnotesize{\imagecaption{Surface Map Tile}}};
       \node at (3.21, -1.11) {\includegraphics[width=0.5\linewidth]{\images/map-tile-sub.png}};
-      \node at (3.21, -3.41) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Map Tile}}}}};
+      \node at (3.21, -3.41) {\footnotesize{\imagecaption{Subterranean Map Tile}}};
       \node[rotate=-60] (gate) at (1.6, -0.53) {\includegraphics[width=0.33\linewidth]{\images/subter-gate-outline.png}};
-      \node at (3.21, 1.11) {\footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Gate}}}}};
+      \node at (3.21, 1.11) {\footnotesize{\imagecaption{Subterranean Gate}}};
     \end{tikzpicture}
   \end{scriptsize}
 \end{center}
+\end{multicols}
+\clearpage
 
-\end{multicols*}
+\pagetarget{Discover Location Tokens}{\subheader{Placing and Discovering Location Tokens}}
 \begin{multicols}{2}
-\subsection*{\pagetarget{Discover Location Tokens}{Placing and Discovering Location Tokens}}
 Location Tokens are added by several expansions to the game.
 They are placed either separately or on specific Fields of the Map Tile when a Hero discovers one with associated Token, and overwrite the original Location they are placed on.
 Tokens cannot be placed on other Location Tokens, Blocked Fields, or Fields containing Locations required to meet any of the Scenario's victory conditions.
+The effects of Visiting the Location Tokens are described in \pagelink{Location Token}{All Map Locations}.
+
+\begin{expansion}[before=\vspace*{5pt}]{navalbattles}
+  \pagetarget{Creature Bank Tokens}{\subsection*{Creature Bank Tokens}}
+  As an \textbf{optional rule} you can decide to play with \pagelink{Creature Banks Rules}{Creature Banks}.
+  If you do, each time you discover a Far \mbox{(II--III)} or Near \mbox{(IV--V)} Map Tile, you may decide to draw a Creature Bank Token corresponding to the discovered Map Tile, and -- contrary to the normal rules -- you can place it \textbf{only on its Blocked Field}.
+  \bigskip
+  \begin{center}
+    \includegraphics[width=0.42\linewidth]{\map_locations/creature_bank_token.png}\\
+    \footnotesize{\imagecaption{Creature Bank Token}}
+  \end{center}
+\end{expansion}
+
+\bigskip
+
+\begin{expansion}[before=\vspace*{6pt}]{cove}
+  \subsection*{\pagetarget{Whirlpool Tokens}{Whirlpool Tokens}}
+  Discovering \pagelink{Whirlpool}{Whirlpools} follows the same rules as discovering Monoliths.
+  \bigskip
+
+  \begin{tikzpicture}
+    \draw (-2.5, 0) node[inner sep=0] {\includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}};
+    \draw (-2.5, -1) node {\Huge\textbf{\textcolor{white}{{\raisebox{0.3\height}{\Large\textbf{--}}}1}}};
+    \draw (0, 0) node[inner sep=0] {\includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}};
+    \draw (0, -1) node {\Huge\textbf{\textcolor{white}{0}}};
+    \draw (2.5, 0) node[inner sep=0] {\includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}};
+    \draw (2.5, -1) node {\Huge\textbf{\textcolor{white}{{\raisebox{0.3\height}{\Large$\boldsymbol{+}$}}1}}};
+  \end{tikzpicture}
+  \begin{center}
+    \footnotesize{\imagecaption{Whirlpool Tokens}}
+  \end{center}
+\end{expansion}
+
+\begin{expansion}[before=\vspace*{-11mm}]{stronghold}
+  \pagetarget{Subterranean Gate}{\subsection*{Subterranean Gate Tokens}}
+  Subterranean Gates are also determined by a Scenario's Map Layout and connect both a Surface Map Tile and an adjacent Subterranean Map Tile.
+  They cannot be placed outside the Map Tiles.
+  After discovering one of the corresponding Map Tiles you may choose the position of the Subterranean Gate Token as long as it connects the two indicated Map Tiles without covering forbidden Fields.
+  The Scenario Map layout only shows \textbf{which two Tiles are connected}, not the exact Fields the Token is placed on.
+  \medskip
+  \begin{center}
+    \includegraphics[width=0.58\linewidth]{\map_locations/subterranean_gate_token.png}\\
+    \footnotesize{\imagecaption{Subterranean Gate Token}}
+  \end{center}
+\end{expansion}
+
+\bigskip
 
 \begin{expansion}[before=\vspace*{0pt}]{conflux}
   \subsection*{\pagetarget{Monolith Tokens}{Monolith Tokens}}
@@ -240,53 +297,7 @@ Tokens cannot be placed on other Location Tokens, Blocked Fields, or Fields cont
   \bigskip
   \begin{center}
     \includegraphics[width=0.4\linewidth]{\map_locations/monolith_token.png}\\
-    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Monolith Token}}}}
-  \end{center}
-\end{expansion}
-
-\bigskip
-
-\begin{expansion}[before=\vspace*{0pt}]{cove}
-  \subsection*{\pagetarget{Whirlpool Tokens}{Whirlpool Tokens}}
-  Discovering \pagelink{Whirlpool}{Whirlpools} follows the same rules as discovering Monoliths.
-  \bigskip
-
-  \begin{tikzpicture}
-    \draw (-2.5, 0) node[inner sep=0] {\includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}};
-    \draw (-2.5, -1) node {\Huge\textbf{\textcolor{white}{$\boldsymbol{-}$1}}};
-    \draw (0, 0) node[inner sep=0] {\includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}};
-    \draw (0, -1) node {\Huge\textbf{\textcolor{white}{0}}};
-    \draw (2.5, 0) node[inner sep=0] {\includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}};
-    \draw (2.5, -1) node {\Huge\textbf{\textcolor{white}{$\boldsymbol{+}$1}}};
-  \end{tikzpicture}
-  \begin{center}
-    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Whirlpool Tokens}}}}
-  \end{center}
-\end{expansion}
-
-\begin{expansion}[before=\vspace*{-11mm}]{stronghold}
-  \subsection*{\pagetarget{Subterranean Gate Tokens}{Subterranean Gate Tokens}}
-  \pagetarget{Subterranean Gate}{Subterranean Gates} are also determined by a Scenario's Map Layout and connect both a Surface Map Tile and an adjacent Subterranean Map Tile.
-  They cannot be placed outside the Map Tiles.
-  After discovering one of the corresponding Map Tiles you may choose the position of the Subterranean Gate Token as long as it connects the two indicated Map Tiles without covering forbidden Fields.
-  The Scenario Map layout only shows \textbf{which two Tiles are connected}, not the exact Fields the Token is placed on.
-  \bigskip
-  \begin{center}
-    \includegraphics[width=0.6\linewidth]{\map_locations/subterranean_gate_token.png}\\
-    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Subterranean Gate Token}}}}
-  \end{center}
-\end{expansion}
-
-\bigskip
-
-\begin{expansion}[before=\vspace*{0pt}]{navalbattles}
-  \subsection*{\pagetarget{Creature Bank Tokens}{Creature Bank Tokens}}
-  As an \textbf{optional rule} you can decide to play with \pagelink{Creature Banks Rules}{Creature Banks}.
-  If you do, each time you discover a Far \mbox{(II--III)} or Near \mbox{(IV--V)} Map Tile, you may decide to draw a Creature Bank Token corresponding to the discovered Map Tile, and -- contrary to the normal rules -- you can place it \textbf{only on its Blocked Field}.
-  \bigskip
-  \begin{center}
-    \includegraphics[width=0.42\linewidth]{\map_locations/creature_bank_token.png}\\
-    \footnotesize{\textbf{\textit{\textcolor{darkcandyapplered}{Creature Bank Token}}}}
+    \footnotesize{\imagecaption{Monolith Token}}
   \end{center}
 \end{expansion}
 \end{multicols}

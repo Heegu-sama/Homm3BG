@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-08-12 20:43+0200\n"
+"POT-Creation-Date: 2025-11-18 18:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,26 +16,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: Plain text
+#. type: multicols
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/combat.tex:5 sections/components.tex:5 sections/credits.tex:6
-#: sections/deckbuilding.tex:5 sections/difficulty.tex:5
-#: sections/map_elements.tex:5 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/setup.tex:5 sections/town.tex:5
-#: sections/trading.tex:5
-msgid "\\iftoggle{printable}{\\vspace{-\\baselineskip}}{}"
-msgstr ""
-
-#. type: multicols*
-#: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
-#: sections/combat.tex:7 sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/difficulty.tex:7 sections/expansion_content.tex:5
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/heroes.tex:117
-#: sections/map_elements.tex:79 sections/map_elements.tex:125
-#: sections/player_turns.tex:7 sections/resources.tex:7
-#: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:59 sections/town.tex:7 sections/trading.tex:7
-#: sections/units.tex:5 sections/units.tex:198
+#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
+#: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
+#: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
+#: sections/difficulty.tex:5 sections/expansion_content.tex:489
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:83
+#: sections/map_elements.tex:131 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:57 sections/town.tex:5
+#: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
+#: sections/units.tex:203 sections/tournament_mode.tex:5
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -43,8 +35,8 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:35 sections/all_map_locations.tex:64
-#: sections/trading.tex:27 sections/units.tex:216 sections/units.tex:220
+#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:399
+#: sections/trading.tex:25 sections/units.tex:222 sections/units.tex:226
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -54,35 +46,40 @@ msgstr ""
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/trading.tex:3
-msgid "\\addsection{Trading}{\\skills/armorer.png}"
+msgid "\\pagetarget{Trading}{\\addsection{Trading}{\\skills/armorer.png}}"
+msgstr ""
+
+#. type: index{#1}
+#: sections/trading.tex:3
+msgid "Trading"
 msgstr ""
 
 #. type: multicols
-#: sections/trading.tex:25
+#: sections/trading.tex:23
 #, no-wrap
 msgid ""
 "The \\pagelink{Trading Post}{Trading Post Field} and other effects allow you to either:\n"
 "\\begin{itemize}\n"
-"  \\item \\pagetarget{Trading}{trade}\\index{Trading} multiple Resources with the game in accordance to the \\hyperlink{Trade Table}{table at the back cover},\n"
-"  \\item \\textbf{remove exactly one Card} from your hand at the trading post to gain 1 \\svg{gold},\n"
+"  \\item trade multiple Resources with the game in accordance to the \\hyperlink{Trade Table}{table at the back cover},\n"
+"  \\item \\textbf{remove exactly one card} from your hand at the trading post to gain 1 \\svg{gold},\n"
 "    \\note{5}{Specialty, Statistic, Starting Ability and Magic Arrows \\textbf{cannot be removed} in the Trading Post.}\\par\n"
 "  \\begin{expansion}[before skip balanced=0.4em,left=4mm]{rampart,cove}\n"
 "    \\item buy a \\pagelink{War Machines}{War Machine}.\n"
 "  \\end{expansion}\n"
 "\\end{itemize}\n"
-"In \\textbf{Alliance} and \\textbf{Cooperative} Scenarios, players are allowed to trade Resources and Cards following these rules:\n"
+"In \\textbf{Alliance} and \\textbf{Cooperative} Scenarios, players are allowed to trade Resources and cards following these rules:\n"
 "\\begin{itemize}\n"
 "  \\item In Alliance Scenarios, allies may trade Resources freely at any time on their Turns except during Combat.\n"
 "  \\columnbreak\n"
 "  \\item In Cooperative Scenarios, Resources may be given to other players when Visiting a Trading Post. This works \\textbf{in addition} to the regular effect of the Trading Post during a single Visit.\n"
-"  \\item In both Scenario types, allies may trade \\textbf{Spell} and \\textbf{Artifact} Cards in any mix if they have Heroes on adjacent Fields.\n"
-"    Only \\textbf{cards from their hands} may be traded and you must give and receive an equal amount of Cards.\n"
+"  \\item In both Scenario types, allies may trade \\textbf{Spell} and \\textbf{Artifact} cards in any mix if they have Heroes on adjacent Fields.\n"
+"    Only \\textbf{cards from their hands} may be traded and you must give and receive an equal amount of cards.\n"
 "\\end{itemize}\n"
 "\n"
 msgstr ""
 
 #. type: multicols
-#: sections/trading.tex:31
+#: sections/trading.tex:29
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -91,11 +88,9 @@ msgid ""
 "\n"
 msgstr ""
 
-#. type: scaledfigure
-#: sections/trading.tex:37
-#, no-wrap
+#. type: Plain text
+#: sections/trading.tex:36
 msgid ""
-"[blanker]\n"
-"  \\centering\n"
-"  \\includegraphics[width=\\linewidth, height=\\myspace, keepaspectratio]{\\art/gold_dragon.jpg}"
+"{ \\begin{center} \\includegraphics[width=0.99\\linewidth]{\\art/"
+"gold_dragon.jpg} \\end{center} }"
 msgstr ""

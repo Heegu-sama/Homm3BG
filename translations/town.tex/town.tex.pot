@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-09-26 22:09+0100\n"
+"POT-Creation-Date: 2025-11-18 14:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,16 +16,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. type: multicols*
-#: sections/ai_rules.tex:7 sections/all_map_locations.tex:7
-#: sections/combat.tex:7 sections/credits.tex:10 sections/deckbuilding.tex:7
-#: sections/deckbuilding.tex:146 sections/difficulty.tex:7
-#: sections/expansion_content.tex:5 sections/game_modes.tex:5
-#: sections/heroes.tex:5 sections/heroes.tex:117 sections/map_elements.tex:79
-#: sections/map_elements.tex:125 sections/player_turns.tex:7
-#: sections/resources.tex:7 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:59 sections/town.tex:5
-#: sections/trading.tex:7 sections/units.tex:5 sections/units.tex:198
+#. type: multicols
+#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
+#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
+#: sections/combat.tex:302 sections/credits.tex:8 sections/deckbuilding.tex:5
+#: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
+#: sections/difficulty.tex:5 sections/expansion_content.tex:489
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:83
+#: sections/map_elements.tex:131 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:57 sections/town.tex:5
+#: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
+#: sections/units.tex:203 sections/tournament_mode.tex:5
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -35,27 +37,32 @@ msgstr ""
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/town.tex:3
-msgid "\\addsection{Town}{\\skills/artillery.png}"
+msgid "\\pagetarget{Town}{\\addsection{Town}{\\skills/artillery.png}}"
+msgstr ""
+
+#. type: index{#1}
+#: sections/town.tex:3
+msgid "Town"
 msgstr ""
 
 #. type: multicols
 #: sections/town.tex:27
 #, no-wrap
 msgid ""
-"\\pagetarget{Town}{Each}\\index{Town} Faction has their own Town, located in the center of their Starting Tile.\n"
-"The Town is your most important location, as many Scenarios \\pagelink{End}{may end} if it's \\pagelink{Categories}{Flagged} by an enemy Hero.\\par\n"
+"Each Faction has their own Town, located in the center of their Starting Tile.\n"
+"The Town is your most important location, as many Scenarios \\pagelink{End}{may end} if it's \\pagelink{Categories}{flagged} by an enemy Hero.\\par\n"
 "The contents of your Town and overall Faction status are represented by the Town Board.\n"
 "It shows your currently built Buildings, Resource costs for future Buildings, your Resource incomes, and status of Town Action Tokens.\\par\n"
 "All Factions are able to Build the following Buildings\\index{Buildings} in their Town:\n"
 "\\begin{itemize}\n"
 "  \\item \\svg[12]{building_city_hall} \\textbf{City Hall} -- Provides Resource income or a Faction-Specific Ability.\n"
-"  \\item \\svg[12]{building-citadel} \\textbf{Citadel} -- Allows you to Reinforce Units when using the Population Token.\n"
+"  \\item \\svg[12]{building-citadel} \\textbf{Citadel} -- Allows you to reinforce units when using the Population Token.\n"
 "        Also \\pagelink{Walls}{protects your Town} when it is attacked.\n"
 "  \\item \\svg[12]{building_mage_guild} \\textbf{Mage Guild}\\index{Mage Guild} -- gains you \\pagelink{spells}{Spells}.\n"
 "  \\item \\svg[12]{building_special_tent},~\\svg[12]{building_special_gears} \\textbf{Faction Buildings} -- two Faction-Specific Buildings with unique effects.\n"
 "  \\columnbreak\n"
-"  \\item \\svg{bronze},~\\svg{silver},~\\svg{golden} \\textbf{Unit Dwellings} -- Allows you to Recruit Units.\n"
-"        Dwellings have three Levels that unlock new Units, which must be Built in the following order: \\svg{bronze} \\svg{silver} \\svg{golden}\n"
+"  \\item \\svg{bronze},~\\svg{silver},~\\svg{golden} \\textbf{Unit Dwellings} -- Allows you to recruit units of your Faction.\n"
+"        Dwellings have three Levels that unlock new units, which must be Built in the following order: \\svg{bronze} \\svg{silver} \\svg{golden}\n"
 "\\end{itemize}\n"
 "\\textbf{One Building} may be Built each Round by using the Build Token\\index{Build Token}.\n"
 "When you build a Building, pay its cost in Resources, flip the Build Token to its inactive side, and place the new Building’s Cardboard Piece into its proper slot on the Town Board.\n"
