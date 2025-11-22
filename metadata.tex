@@ -327,7 +327,7 @@
   \ifstrequal{#1}{c}{%
     \parbox{\linewidth}{\centering\imagecaption{#2}}%
   }{%
-    \textbf{\textit{\textcolor{darkcandyapplered}{#2}}}%
+    \footnotesize\textbf{\textit{\textcolor{darkcandyapplered}{#2}}}%
   }%
 }
 
@@ -567,6 +567,7 @@
 
 % Command for overlay circled text
 \definecolor{goblin}{HTML}{3b7c33}
+
 \newcommand\encirclebase[3]{%
   \begin{footnotesize}%
   \tikz[baseline=(X.base)]
