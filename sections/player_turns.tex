@@ -41,7 +41,7 @@ For every 1 MP spent, you can perform one of the following Actions:
 \begin{center}
   \includesvg[width=0.6\linewidth]{\images/movement_tokens}\\
   \medskip
-  \footnotesize\textit{An active and an inactive Movement Token.}
+  \imagecaption{An active and an inactive Movement Token.}
 \end{center}
 
 \bigskip
@@ -120,17 +120,15 @@ During setup, remove all Morale cards with the Battlefield symbol.
 Then shuffle the Positive and Negative Morale card Decks separately and place them face down near the Round Tracker.
 
 \vspace{1em}
-\begin{scriptsize}
-  \begin{tikzpicture}
-    \draw (-2, 0) node[inner sep=0] {\makebox[0.47\linewidth][c]{\includegraphics[width=0.47\linewidth]{\cards/morale-positive.png}}};
-    \draw (2.4, 0) node[inner sep=0] {\makebox[0.47\linewidth][c]{\includegraphics[width=0.47\linewidth]{\cards/morale-negative-battlefield.png}}};
-    \draw (-1.2, 2.2) node {\encircle{\phantom{.}1\phantom{.}}};
-    \draw (3.2, 2.2) node {\encircle{\phantom{.}1\phantom{.}}};
-    \draw (-3.0, -1.4) node {\encircle{\phantom{.}2\phantom{.}}};
-    \draw (1.5, -1.0) node {\encircle{\phantom{.}2\phantom{.}}};
-    \draw (2.0, -2.0) node {\encircle{\phantom{.}3\phantom{.}}};
-  \end{tikzpicture}
-\end{scriptsize}
+\begin{tikzpicture}
+  \draw (-2, 0) node[inner sep=0] {\makebox[0.47\linewidth][c]{\includegraphics[width=0.47\linewidth]{\cards/morale-positive.png}}};
+  \draw (2.4, 0) node[inner sep=0] {\makebox[0.47\linewidth][c]{\includegraphics[width=0.47\linewidth]{\cards/morale-negative-battlefield.png}}};
+  \draw (-1.2, 2.2) node {\encircle{\phantom{.}1\phantom{.}}};
+  \draw (3.2, 2.2) node {\encircle{\phantom{.}1\phantom{.}}};
+  \draw (-3.0, -1.4) node {\encircle{\phantom{.}2\phantom{.}}};
+  \draw (1.5, -1.0) node {\encircle{\phantom{.}2\phantom{.}}};
+  \draw (2.0, -2.0) node {\encircle{\phantom{.}3\phantom{.}}};
+\end{tikzpicture}
 \vspace{-1em}
 \begin{multicols*}{2}
   \centering
