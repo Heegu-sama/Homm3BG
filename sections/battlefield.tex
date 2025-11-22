@@ -158,7 +158,7 @@
         \lightcell[1.2]{Level V} &
         \lightcell[1.2]{Level VII} \\
         \darkcell[1.2]{Specialty cards} &
-        \lightcell[1.2]{Level I Specialty card} &
+        \lightcell[1.2]{Level I Specialty\\card} &
         \lightcell[1.2]{Level I and Level~IV Specialty cards} &
         \lightcell[1.2]{All Specialty cards} \\
         \darkcell[1.8]{Ability cards} &
@@ -250,6 +250,7 @@
     \footnotesize
     \begin{center}
       \begin{tikzpicture}
+        \scriptsize
         \draw (0, 0) node[inner sep=0] {\includegraphics[width=1.1\linewidth]{\cards/adventure_event.png}};
         \draw (1.2, 1.9) node {\encircle{1}};
         \draw (-0.2, -0.2) node {\encircle{2}};
@@ -266,6 +267,7 @@
 
     \begin{center}
       \begin{tikzpicture}
+        \scriptsize
         \draw (0, 0) node[inner sep=0] {\includegraphics[width=1.1\linewidth]{\cards/adventure_combat.png}};
         \draw (1.2, 1.9) node {\encircle{1}};
         \draw (-0.2, 0.2) node {\encircle{2}};
@@ -364,7 +366,9 @@
   \begin{wrapfigure}{r}{0.4\linewidth}
     \centering
     \includegraphics[width=0.8\linewidth]{\images/initiative-bf.png}
-    \caption{\imagecaption{Initiative Token}}
+    \begin{center}
+      \caption{\imagecaption[c]{Initiative\\Token}}
+    \end{center}
     \vspace{1em}
   \end{wrapfigure}
   The starting player receives the \pagetarget{Initiative Token}{\textbf{Initiative Token}}.
@@ -381,7 +385,7 @@
   \imagecaption{Obstacles and Miniatures placed correctly are marked with the green border, and incorrectly -- with the red one.}\par
   \vspace{1em}
     The player with the Initiative Token chooses a deployment zone and places one of their units in it, then players take turns placing their units \textbf{one by one} each in their zone.
-    The 5-unit limit does not apply in Battlefield modes, and players may place all available to them Faction units.
+    The 5-unit limit does not apply in Battlefield modes, and players may place all Faction units available to them.
     When the last unit is placed, the Combat begins.
   \end{multicols*}
 \end{expansion}
@@ -444,7 +448,7 @@
 
     \subsection*{Combat with Neutral Units}
     Although it is recommended to use the Battlefield Combat Board only for \textbf{Player vs.~Player Combats}, it is also possible to use it in Neutral Combats.
-    If you decide to use the Battlefield Board in Combats with Neutral Units, ignore the Round Limit: at the end of each Combat Round you may freely decide to Retreat or to gain an additional Combat Round with no need to spend a MP \svg{movement}.
+    If you decide to use the Battlefield Board in Combats with Neutral Units, ignore the Round Limit: at the end of each Combat Round you may freely decide to Retreat or to start another Combat Round with no need to spend \svg{movement}.
     Be aware, however, that this may significantly extend the playtime.
   \end{multicols*}
 \end{expansion}

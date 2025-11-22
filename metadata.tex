@@ -323,8 +323,12 @@
   \end{tikzpicture}%
 }
 
-\newcommand{\imagecaption}[1]{%
-  \textbf{\textit{\textcolor{darkcandyapplered}{#1}}}%
+\newcommand{\imagecaption}[2][]{%
+  \ifstrequal{#1}{c}{%
+    \parbox{\linewidth}{\centering\textbf{\textit{\textcolor{darkcandyapplered}{#2}}}}%
+  }{%
+    \textbf{\textit{\textcolor{darkcandyapplered}{#2}}}%
+  }%
 }
 
 % Set fonts for section headings and notes
