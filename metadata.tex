@@ -568,8 +568,10 @@
 % Command for overlay circled text
 \definecolor{goblin}{HTML}{3b7c33}
 \newcommand\encirclebase[3]{%
+  \begin{footnotesize}%
   \tikz[baseline=(X.base)]
   \node (X) [draw=white, shape=circle, minimum size=1.6em, align=center, inner sep=0, fill=#1, text=white, #2] {\strut \textbf{#3}};%
+  \end{footnotesize}%
 }
 \newcommand\encircle[1]{
   \encirclebase{goblin}{blur shadow={shadow blur steps=5}}{#1}
