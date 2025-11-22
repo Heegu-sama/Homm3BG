@@ -327,18 +327,9 @@
   \pagetarget{Battlefield Combat}{\subheader{Battlefield Combat}}
   \begin{multicols*}{2}
   Playing on the Battlefield Board requires using \pagelink{Miniatures}{Miniatures} for Combat instead of unit cards.
-  The starting player receives the \pagetarget{Initiative Token}{\textbf{Initiative Token}}, which will be used it to break any Initiative ties of opposing units.
-  \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.3\linewidth]{\images/initiative-bf.png}
-    \caption{\imagecaption{Initiative Token}}
-  \end{figure}
-  % If two or more opposing units have the same Initiative value, the player with the Token activates \textbf{one of their units first}.
-  % Then, the players alternate in activating all of their units of that same Initiative value one by one.
-  % Once all units with that Initiative value are activated, pass the Initiative Token to the other player, who keeps it until an initiative tie of opposing units happens again.
 
   \subsection*{\pagetarget{BF Obstacles}{Obstacle Tokens}}
-  You can place three token types on the Battlefield Board: Effect, Obstacle and Wall/Gate.
+  You can place three token types on the Battlefield Board: Effect, Obstacle and Wall/\allowbreak Gate.
   Unless otherwise stated, these Tokens count and work as \pagelink{Combatterminology}{Combat Obstacles}.
   To place Effect Obstacles on the Battlefield Board you'll need the card which creates the effect, such as the Fire Wall Spell: use the Tokens and put the card beside the Battlefield as a reminder.
   Effect Obstacles may be entered by units, if the card text allows it.
@@ -368,7 +359,16 @@
 
   \vspace*{-1em}
   \subsection*{Combat Setup}
-  Starting with the player with the Initiative Token, both players take turns choosing and placing one Obstacle Tokens on the Battlefield Board one-by-one until \textbf{all Obstacle Tokens (no Effects yet) are placed}.
+  The starting player receives the \pagetarget{Initiative Token}{\textbf{Initiative Token}}, which will be used to break any \pagelink{BF initiative tie}{Initiative ties} of opposing units.
+
+  \setlength\intextsep{0pt}
+  \setlength\columnsep{1em}
+  \begin{wrapfigure}{r}{0.4\linewidth}
+    \centering
+    \includegraphics[width=0.8\linewidth]{\images/initiative-bf.png}
+    \caption{\footnotesize\imagecaption{Initiative Token}}
+  \end{wrapfigure}
+  Starting with the player with the Initiative Token, both players take turns choosing and placing one Obstacle Tokens on the Battlefield Board one-by-one until \textbf{all Obstacle Tokens (except Effects) are placed}.
   No Obstacle can be adjacent to another Obstacle or to any player's deployment zone.
 
   {\centering
@@ -381,7 +381,7 @@
   {\footnotesize\imagecaption{Obstacles and Miniatures placed correctly are marked with the green border, and incorrectly -- with the red one.}}\par
   \vspace{1em}
     The player with the Initiative Token chooses a deployment zone and places one of their units in it, then players take turns placing their units \textbf{one by one} each in their zone.
-    The 5-unit limit does not apply in Battlefield modes, and players may place all 7 Faction units.
+    The 5-unit limit does not apply in Battlefield modes, and players may place all available to them Faction units.
     When the last unit is placed, the Combat begins.
   \end{multicols*}
 \end{expansion}
@@ -395,7 +395,7 @@
     \item \textbf{Ranged Movement} -- Ranged \svg{unit_ranged} units can either move or attack, not both.
     \item \textbf{Combat Penalty} -- Ranged \svg{unit_ranged} units suffer a Combat Penalty when attacking an adjacent unit or a unit that is \textbf{8 or more} hexes away from them.
 
-    \item \textbf{Initiative Tie} -- If two or more opposing units have the same Initiative value, the player with the Token activates one of their units first.
+    \item \pagetarget{BF initiative tie}{\textbf{Initiative Tie}} -- If two or more opposing units have the same Initiative value, the player with the Token activates one of their units first.
       Then, the players alternate in activating all of their units of that same Initiative value one by one.
       Once all units with that Initiative value were activated, pass the Initiative Token to the other player, who keeps it until an Initiative tie of opposing units happens again.
 
