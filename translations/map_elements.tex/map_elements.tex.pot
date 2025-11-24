@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-11-18 15:43+0000\n"
+"POT-Creation-Date: 2025-11-23 22:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,8 +22,8 @@ msgstr ""
 #: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
 #: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
 #: sections/difficulty.tex:5 sections/expansion_content.tex:489
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:83
-#: sections/map_elements.tex:131 sections/player_turns.tex:5
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:92
+#: sections/map_elements.tex:140 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:57 sections/town.tex:5
 #: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
@@ -35,8 +35,8 @@ msgid ""
 msgstr ""
 
 #. type: figure
-#: sections/deckbuilding.tex:322 sections/map_elements.tex:45
-#: sections/map_elements.tex:265 sections/player_turns.tex:124
+#: sections/deckbuilding.tex:322 sections/map_elements.tex:54
+#: sections/map_elements.tex:274 sections/player_turns.tex:124
 #: sections/setup.tex:7
 #, no-wrap
 msgid "  \\begin{tikzpicture}\n"
@@ -92,13 +92,34 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:40
+#: sections/map_elements.tex:31
 #, no-wrap
 msgid ""
-"\\includegraphics[width=\\linewidth]{\\images/maptiles.png}\n"
 "\\begin{center}\n"
+"  \\begin{footnotesize}\n"
+"  \\begin{tikzpicture}\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/map_elements.tex:41
+#, no-wrap
+msgid ""
+"    \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\images/maptiles.png}}};\n"
+"    \\draw (-3.8, 3.2) node {\\encircle{1}};\n"
+"    \\draw (0.6, 3.2) node {\\encircle{2}};\n"
+"    \\draw (-3.8, -0.7) node {\\encircle{3}};\n"
+"    \\draw (0.6, -0.7) node {\\encircle{4}};\n"
+"  \\end{tikzpicture}\n"
+"  \\end{footnotesize}\n"
 "  \\imagecaption{\\footnotesize{}Types of Map Tiles}\n"
 "\\end{center}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/map_elements.tex:49
+#, no-wrap
+msgid ""
 "\\begin{itemize}\n"
 "  \\footnotesize\n"
 "  \\item[\\textbf{1.}] Starting Map Tiles: I\n"
@@ -110,7 +131,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:42
+#: sections/map_elements.tex:51
 #, no-wrap
 msgid ""
 "\\separator\n"
@@ -118,7 +139,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:44
+#: sections/map_elements.tex:53
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -126,7 +147,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:62
+#: sections/map_elements.tex:71
 #, no-wrap
 msgid ""
 "    \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=0.75\\linewidth]{\\images/fields.png}}};\n"
@@ -149,7 +170,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:76
+#: sections/map_elements.tex:85
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -169,13 +190,13 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:79
+#: sections/map_elements.tex:88
 #, no-wrap
 msgid "\\end{itemize}"
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:100
+#: sections/map_elements.tex:109
 #, no-wrap
 msgid ""
 "\\pagetarget{Categories}{\\subsection*{Location Categories}}\n"
@@ -198,7 +219,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:107
+#: sections/map_elements.tex:116
 #, no-wrap
 msgid ""
 "\\pagetarget{Placing}{\\subheader{Placing and Discovering New Tiles}}\\index{Discovering Tiles}\n"
@@ -211,7 +232,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:112
+#: sections/map_elements.tex:121
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -222,7 +243,7 @@ msgid ""
 msgstr ""
 
 #. type: figure*
-#: sections/map_elements.tex:125
+#: sections/map_elements.tex:134
 #, no-wrap
 msgid ""
 "[!hb]\n"
@@ -236,12 +257,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/map_elements.tex:129
+#: sections/map_elements.tex:138
 msgid "\\subheader{Example ``Flagging a guarded Mine''}"
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:134
+#: sections/map_elements.tex:143
 #, no-wrap
 msgid ""
 "\\textit{Alice wants to capture an adjacent \\pagelink{Mines}{Mine} by flagging it with her Main Hero, Sandro the Necromancer.\n"
@@ -250,7 +271,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:136
+#: sections/map_elements.tex:145
 #, no-wrap
 msgid ""
 "\\includegraphics[width=1.1\\linewidth]{\\examples/sandro_takes_mine.png}\n"
@@ -258,7 +279,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:140
+#: sections/map_elements.tex:149
 #, no-wrap
 msgid ""
 "\\textit{The Mine turns out to be guarded by Troglodytes, which have 3 HP \\svg{health_points}.\n"
@@ -268,7 +289,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:142
+#: sections/map_elements.tex:151
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_lightning_bolt.png}\n"
@@ -276,7 +297,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:145
+#: sections/map_elements.tex:154
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -285,7 +306,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:152
+#: sections/map_elements.tex:161
 #, no-wrap
 msgid ""
 "\\textit{Alice now flags the Mine by placing one of her Faction Cubes on it.\n"
@@ -297,7 +318,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:154
+#: sections/map_elements.tex:163
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_town_portal.png}\n"
@@ -305,7 +326,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:159
+#: sections/map_elements.tex:168
 #, no-wrap
 msgid ""
 "\\vfill\n"
@@ -314,12 +335,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/map_elements.tex:173
+#: sections/map_elements.tex:182
 msgid "\\subheader{Expansion Tiles}"
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:173
+#: sections/map_elements.tex:182
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -336,8 +357,8 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:175 sections/map_elements.tex:184
-#: sections/map_elements.tex:259 sections/map_elements.tex:292
+#: sections/map_elements.tex:184 sections/map_elements.tex:193
+#: sections/map_elements.tex:268 sections/map_elements.tex:301
 #: sections/player_turns.tex:48 sections/units.tex:233
 #: sections/tournament_mode.tex:67
 #, no-wrap
@@ -347,7 +368,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:182
+#: sections/map_elements.tex:191
 #, no-wrap
 msgid ""
 "\\begin{expansion}{conflux}\n"
@@ -360,7 +381,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:197
+#: sections/map_elements.tex:206
 #, no-wrap
 msgid ""
 "\\begin{expansion}{stronghold}\n"
@@ -379,7 +400,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:202
+#: sections/map_elements.tex:211
 #, no-wrap
 msgid ""
 "\\begin{multicols}{2}\n"
@@ -389,17 +410,17 @@ msgid ""
 msgstr ""
 
 #. type: center
-#: sections/map_elements.tex:207
+#: sections/map_elements.tex:216
 msgid "{\\imagecaption{Sea Map Tile}}"
 msgstr ""
 
 #. type: Plain text
-#: sections/map_elements.tex:209 sections/map_elements.tex:223
+#: sections/map_elements.tex:218 sections/map_elements.tex:232
 msgid "\\separator"
 msgstr ""
 
 #. type: tikzpicture
-#: sections/map_elements.tex:219
+#: sections/map_elements.tex:228
 #, no-wrap
 msgid ""
 "    \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\images/elemental_tiles.png}}};\n"
@@ -411,7 +432,7 @@ msgid ""
 msgstr ""
 
 #. type: scriptsize
-#: sections/map_elements.tex:227
+#: sections/map_elements.tex:236
 #, no-wrap
 msgid ""
 "    \\centering\n"
@@ -419,7 +440,7 @@ msgid ""
 msgstr ""
 
 #. type: scriptsize
-#: sections/map_elements.tex:235
+#: sections/map_elements.tex:244
 #, no-wrap
 msgid ""
 "      \\node at (0, 0) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-stronghold.png}};\n"
@@ -433,14 +454,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/map_elements.tex:246
+#: sections/map_elements.tex:255
 msgid ""
 "\\pagetarget{Discover Location Tokens}{\\subheader{Placing and Discovering "
 "Location Tokens}}"
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:246
+#: sections/map_elements.tex:255
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -452,7 +473,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:257
+#: sections/map_elements.tex:266
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{5pt}]{navalbattles}\n"
@@ -469,7 +490,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:264
+#: sections/map_elements.tex:273
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{6pt}]{cove}\n"
@@ -480,7 +501,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:277
+#: sections/map_elements.tex:286
 #, no-wrap
 msgid ""
 "    \\draw (-2.5, 0) node[inner sep=0] {\\includegraphics[width=0.4\\linewidth]{\\map_locations/whirlpool-token.png}};\n"
@@ -498,7 +519,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:290
+#: sections/map_elements.tex:299
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{-11mm}]{stronghold}\n"
@@ -517,7 +538,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:303
+#: sections/map_elements.tex:312
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{0pt}]{conflux}\n"
