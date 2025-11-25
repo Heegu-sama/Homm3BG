@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-11-18 15:43+0000\n"
+"POT-Creation-Date: 2025-11-25 18:18+0000\n"
 "PO-Revision-Date: 2025-11-25 17:24+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -29,8 +29,8 @@ msgstr "\\pagetarget{AIrules}{\\addsection{Bot-Regeln}{\\spells/fortune.png}}"
 #: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
 #: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
 #: sections/difficulty.tex:5 sections/expansion_content.tex:489
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:83
-#: sections/map_elements.tex:131 sections/player_turns.tex:5
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:92
+#: sections/map_elements.tex:140 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:57 sections/town.tex:5
 #: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
@@ -208,7 +208,7 @@ msgstr ""
 "Mische diese Decks, nachdem du sie gebildet hast."
 
 #. type: Plain text
-#: sections/ai_rules.tex:77
+#: sections/ai_rules.tex:80
 msgid ""
 "When an AI Hero \\textbf{activates} a unit, draw an AI card\\index{AI card} "
 "and follow its instructions before the unit moves and/or attacks.  If AI "
@@ -217,7 +217,9 @@ msgid ""
 "card \\svg[12]{might} is attached to the unit until the first respective "
 "attack/defense happens.  The AI Spell Deck is used whenever a Magic card "
 "\\svg{magic} is drawn.  If an AI Hero is instructed to draw a card, they "
-"will draw and resolve \\textbf{another card} from the AI Deck."
+"will draw and resolve \\textbf{another card} from the AI Deck.  "
+"\\vspace*{\\fill} \\columnbreak \\pagetarget{AI Units}{\\subheader{Combat "
+"against AI}}"
 msgstr ""
 "Wenn ein Bot-Held eine Einheit \\textbf{aktiviert}, ziehe eine Bot-"
 "Karte\\index{Bot-Karte} und handle sie ab, bevor sich die Einheit bewegt "
@@ -231,15 +233,10 @@ msgstr ""
 "Das Bot-Zauberdeck wird verwendet, wenn eine Bot-Zauberkarte \\svg{magic} "
 "gezogen wird.\n"
 "Darf ein Bot-Held eine Karte ziehen, dann ziehe eine weitere Karte vom Bot-"
-"Deck und handle sie ab."
+"Deck und handle sie ab. \\pagetarget{AI Units}{\\subheader{Kämpfe gegen Bots}}"
 
 #. type: Plain text
-#: sections/ai_rules.tex:81
-msgid "\\columnbreak \\pagetarget{AI Units}{\\subheader{Combat against AI}}"
-msgstr "\\pagetarget{AI Units}{\\subheader{Kämpfe gegen Bots}}"
-
-#. type: Plain text
-#: sections/ai_rules.tex:84
+#: sections/ai_rules.tex:83
 msgid ""
 "These rules apply during Combat in \\textbf{Solo}\\index{Solo Mode} and "
 "\\textbf{Cooperative} Scenarios.  The rules for AI unit placement during "
@@ -251,7 +248,7 @@ msgstr ""
 "\\pagelink{CombatAISetup}{Kampf} beschrieben."
 
 #. type: Plain text
-#: sections/ai_rules.tex:86
+#: sections/ai_rules.tex:85
 msgid ""
 "When Neutral enemies or AI Heroes activate a unit, they follow a set of "
 "automatic instructions:"
@@ -260,7 +257,7 @@ msgstr ""
 "einer Reihe von automatischen Anweisungen:\\par"
 
 #. type: itemize
-#: sections/ai_rules.tex:90
+#: sections/ai_rules.tex:89
 msgid ""
 "Enemy Ground \\svg{unit_ground} and Flying \\svg{unit_flying} units "
 "prioritize attacking units of the \\textbf{same} tier.  If this is "
@@ -276,7 +273,7 @@ msgstr ""
 "\\textbf{aufsteigender} Rangordnung) an.\\par"
 
 #. type: itemize
-#: sections/ai_rules.tex:96
+#: sections/ai_rules.tex:95
 msgid ""
 "\\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority: "
 "\\svg{golden} - \\svg{silver} - \\svg{bronze} - \\svg{azure}.}"
@@ -289,7 +286,7 @@ msgstr ""
 "  - \\svg{azure}.}"
 
 #. type: itemize
-#: sections/ai_rules.tex:99
+#: sections/ai_rules.tex:98
 msgid ""
 "Ranged \\svg{unit_ranged} units prioritize attacking other Ranged "
 "\\svg{unit_ranged} units of the same tier, then lower tier, and finally "
@@ -306,7 +303,7 @@ msgstr ""
 "Rangordnung.\\par"
 
 #. type: itemize
-#: sections/ai_rules.tex:110
+#: sections/ai_rules.tex:109
 msgid ""
 "\\textit{Example: \\svg{silver}\\svg{unit_ranged} has this priority: "
 "\\svg{silver}\\svg{unit_ranged} - \\svg{bronze}\\svg{unit_ranged} - "
@@ -327,7 +324,7 @@ msgstr ""
 "  - \\svg{azure}\\svg{unit_ground}\\svg{unit_flying}.}"
 
 #. type: Plain text
-#: sections/ai_rules.tex:113
+#: sections/ai_rules.tex:112
 msgid ""
 "In both cases, if there's more than one valid target, they attack the "
 "closest one.  If there's ever a tie between equally valid targets, the "
@@ -339,7 +336,7 @@ msgstr ""
 "angegriffen wird.\\par"
 
 #. type: Plain text
-#: sections/ai_rules.tex:115
+#: sections/ai_rules.tex:114
 msgid "Enemy units cannot \\pagelink{Defend}{defend} unless instructed to."
 msgstr ""
 "Wenn nicht explizit aufgefordert, können feindliche Einheiten nicht "

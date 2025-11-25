@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-11-18 15:43+0000\n"
+"POT-Creation-Date: 2025-11-25 18:18+0000\n"
 "PO-Revision-Date: 2024-05-21 11:52+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -30,8 +30,8 @@ msgstr "\\addsection{Правила ШІ}{\\spells/fortune.png}"
 #: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
 #: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
 #: sections/difficulty.tex:5 sections/expansion_content.tex:489
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:83
-#: sections/map_elements.tex:131 sections/player_turns.tex:5
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:92
+#: sections/map_elements.tex:140 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
 #: sections/scenario_end.tex:5 sections/setup.tex:57 sections/town.tex:5
 #: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
@@ -280,7 +280,7 @@ msgstr ""
 "\n"
 
 #. type: Plain text
-#: sections/ai_rules.tex:77
+#: sections/ai_rules.tex:80
 #, fuzzy
 #| msgid ""
 #| "When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI "
@@ -302,7 +302,9 @@ msgid ""
 "card \\svg[12]{might} is attached to the unit until the first respective "
 "attack/defense happens.  The AI Spell Deck is used whenever a Magic card "
 "\\svg{magic} is drawn.  If an AI Hero is instructed to draw a card, they "
-"will draw and resolve \\textbf{another card} from the AI Deck."
+"will draw and resolve \\textbf{another card} from the AI Deck.  "
+"\\vspace*{\\fill} \\columnbreak \\pagetarget{AI Units}{\\subheader{Combat "
+"against AI}}"
 msgstr ""
 "Коли Герой ШІ \\textbf{Активує} Підрозділ, візьміть Карту ШІ\\index{Карта "
 "ШІ} і дотримуйтесь її інструкцій перед тим, як Підрозділ зробить хід або "
@@ -314,22 +316,11 @@ msgstr ""
 "Колода Заклинань ШІ використовується, коли з Колоди ШІ береться Карта Магії "
 "\\svg{magic}.\n"
 "Якщо Герою ШІ вказано взяти карту, він бере і розігрує \\textbf{ще одну "
-"Карту} з Колоди ШІ.\n"
-"\n"
+"Карту} з Колоди ШІ. "
+"\\vspace*{\\fill} \\columnbreak \\pagetarget{AI Units}{\\subheader{Бій проти ШІ}}"
 
 #. type: Plain text
-#: sections/ai_rules.tex:81
-#, fuzzy
-#| msgid ""
-#| "\\subsection*{Combat against AI}\n"
-#| "\n"
-msgid "\\columnbreak \\pagetarget{AI Units}{\\subheader{Combat against AI}}"
-msgstr ""
-"\\subsection*{Бій проти ШІ}\n"
-"\n"
-
-#. type: Plain text
-#: sections/ai_rules.tex:84
+#: sections/ai_rules.tex:83
 #, fuzzy
 #| msgid ""
 #| "\\pagetarget{AI Units}{These rules} apply during Combat in \\textbf{Solo}"
@@ -350,7 +341,7 @@ msgstr ""
 "\n"
 
 #. type: Plain text
-#: sections/ai_rules.tex:86
+#: sections/ai_rules.tex:85
 #, fuzzy
 #| msgid ""
 #| "When Neutral enemies or AI Heroes activate a Unit, they follow a set of "
@@ -365,7 +356,7 @@ msgstr ""
 "\n"
 
 #. type: itemize
-#: sections/ai_rules.tex:90
+#: sections/ai_rules.tex:89
 #, fuzzy
 #| msgid ""
 #| "\\begin{itemize}\n"
@@ -392,7 +383,7 @@ msgstr ""
 "\n"
 
 #. type: itemize
-#: sections/ai_rules.tex:96
+#: sections/ai_rules.tex:95
 #, fuzzy
 #| msgid ""
 #| "  \\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority:\n"
@@ -413,7 +404,7 @@ msgstr ""
 "\n"
 
 #. type: itemize
-#: sections/ai_rules.tex:99
+#: sections/ai_rules.tex:98
 #, fuzzy
 #| msgid ""
 #| "  \\item Ranged \\svg{unit_ranged} Units prioritize attacking other "
@@ -440,7 +431,7 @@ msgstr ""
 "\n"
 
 #. type: itemize
-#: sections/ai_rules.tex:110
+#: sections/ai_rules.tex:109
 msgid ""
 "\\textit{Example: \\svg{silver}\\svg{unit_ranged} has this priority: "
 "\\svg{silver}\\svg{unit_ranged} - \\svg{bronze}\\svg{unit_ranged} - "
@@ -451,7 +442,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/ai_rules.tex:113
+#: sections/ai_rules.tex:112
 #, fuzzy
 #| msgid ""
 #| "In both cases, if there's more than one valid target, they attack the "
@@ -470,7 +461,7 @@ msgstr ""
 "\n"
 
 #. type: Plain text
-#: sections/ai_rules.tex:115
+#: sections/ai_rules.tex:114
 #, fuzzy
 #| msgid ""
 #| "Enemy Units cannot \\pagelink{Defend}{Defend} unless instructed to.\n"
