@@ -170,63 +170,41 @@ Whenever a Neutral Unit is defeated from anywhere, place it into the appropriate
 
 \end{multicols}
 
-\hommtable{13}{
-  \begin{tabularx}{\linewidth}{>{\hsize=0.181\hsize\linewidth=\hsize}X
-                               >{\hsize=0.181\hsize\linewidth=\hsize}X
-                               >{\hsize=0.181\hsize\linewidth=\hsize}X
-                               >{\hsize=0.181\hsize\linewidth=\hsize}X
-                               >{\hsize=0.181\hsize\linewidth=\hsize}X
-                              }
-    & \darkcell{\raisebox{-1.3\height}{Town Building}} & \darkcell{Castle} & \darkcell{\raisebox{-1.3\height}{Dungeon}} & \darkcell{\raisebox{-1.3\height}{Necropolis}} \\
-    \darkcell[1.6]{\svg[12]{bronze} \\ Bronze units} &
-      \lightcell[1.6]{Tier 1 \\ Dwelling} &
-      \lightcell[1.6]{Halberdiers, Marksmen, Griffins} &
-      \lightcell[1.6]{Troglodytes, Harpies, Evil Eyes} &
-      \lightcell[1.6]{Skeletons, Zombies, Wraiths} \\
-    \darkcell[1.2]{\svg[12]{silver} \\ Silver units} &
-      \lightcell[1.2]{Tier 2 \\ Dwelling} &
-      \lightcell[1.2]{Crusaders, Zealots} &
-      \lightcell[1.2]{Medusas, Minotaurs} &
-      \lightcell[1.2]{Vampires,\\ Liches} \\
-    \darkcell[1.2]{\svg[12]{golden} \\ Gold units} &
-      \lightcell[1.2]{Tier 3 \\ Dwelling} &
-      \lightcell[1.2]{Champions, Archangels} &
-      \lightcell[1.2]{Manticores, Black Dragons} &
-      \lightcell[1.2]{Dread Knights, Ghost Dragons} \\
-  \end{tabularx}
-}
+\begin{multicols*}{3}
 
-\clearpage
+\begin{expansion}[title=\phantom{\textbf{\tiny{foo}}}, overlay={}]{}
+  \begin{center}
+    \includegraphics[width=0.5\linewidth]{\cards/neutral-back.png}\\
+    \imagecaption{Neutral Unit}
+  \end{center}
+\end{expansion}
+\vspace*{\fill}
 
-
-\begin{multicols*}{2}
-
-\begin{center}
-  \includegraphics[width=0.5\linewidth]{\cards/neutral-back.png}\\
-  \imagecaption{Neutral Unit}
-\end{center}
-
-\bigskip
+\columnbreak
 \begin{expansion}{navalbattles}
-  \subsection*{Creature Bank Units}
   \begin{center}
     \includegraphics[width=0.5\linewidth]{\cards/creature_bank_unit.png}\\
+    \imagecaption{Creature Bank Unit}
   \end{center}
   See \pagelink{Creature Banks Rules}{Creature Banks}.
 \end{expansion}
+\vspace*{\fill}
 
-\bigskip
+\columnbreak
 \begin{expansion}{conflux}
-  \subsection*{Summoned Elemental Units}
   \begin{center}
     \includegraphics[width=0.5\linewidth]{\cards/unit-summoned-few.png}\\
+    \imagecaption{Summoned Elemental Unit}
   \end{center}
   Summoned Elemental units don't have \svg{recruit} nor \svg{reinforce}.
   See \pagelink{Summoning}{Summoning}.
 \end{expansion}
-
 \vspace*{\fill}
 
+\end{multicols*}
+
+\begin{multicols*}{2}
+\includegraphics[width=\linewidth]{\art/black_dragon.jpg}
 \columnbreak
 \subheader[Example ``Pack and Few'']{Example\\``Pack and Few''}
 
