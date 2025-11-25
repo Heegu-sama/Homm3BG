@@ -213,6 +213,7 @@
     \item \textbf{Draw Adventure Cards} -- skip this step in the last Round.
     The starting player draws 3 Adventure cards, keeps 1, and passes the remaining 2 to the other player, who keeps 1 and discards the other.\par
     \textbf{Note:} Only the starting player may use \svg{movement} effects to discard any number of the drawn Adventure cards and draw that many cards.\par
+    \columnbreak
     \item \textbf{Player Turns} -- starting with the first player, both players take their turn by performing any of the following actions in any order:
     \begin{itemize}
       \item \textbf{Resolve} the chosen Adventure card, \textbf{discard} it, or \textbf{save it} for later turns.
@@ -324,7 +325,9 @@
 \begin{expansion}[before=\vspace*{-11mm}]{battlefield}
   \pagetarget{Battlefield Combat}{\subheader{Battlefield Combat}}
   \begin{multicols*}{2}
-  Playing on the Battlefield Board requires using \pagelink{Miniatures}{Miniatures} for Combat instead of unit cards.
+  The \textbf{final Combat} is played on the Battlefield Board.
+  Both players need Unit Miniatures of their Faction.
+  Playing on the Battlefield Board requires using Miniatures for Combat instead of unit cards.
 
   \subsection*{\pagetarget{BF Obstacles}{Obstacle Tokens}}
   You can place three token types on the Battlefield Board: Effect, Obstacle and Wall/\allowbreak Gate.
@@ -335,7 +338,7 @@
     \centering
     \begin{subfigure}[b]{0.3\linewidth}
       \centering
-      \includegraphics[width=0.8\linewidth]{\images/bf-obstacle-1.png}
+      \includegraphics[width=\linewidth]{\images/bf-obstacle-1.png}
       \caption{\imagecaption{Effect}}
     \end{subfigure}
     \begin{subfigure}[b]{0.3\linewidth}
@@ -365,8 +368,7 @@
     \caption{\imagecaption[c]{Initiative\\Token}}
     \vspace{1em}
   \end{wrapfigure}
-  The starting player receives the \pagetarget{Initiative Token}{\textbf{Initiative Token}}.
-  Starting with the player with the Initiative Token, both players take turns choosing and placing one Obstacle Tokens on the Battlefield Board one-by-one until \textbf{all Obstacle Tokens (except Effects) are placed}.
+  Starting with the player with the \pagetarget{Initiative Token}{\textbf{Initiative Token}}, both players take turns choosing and placing one Obstacle Tokens on the Battlefield Board one-by-one until \textbf{all Obstacle Tokens (except Effects) are placed}.
   No Obstacle can be adjacent to another Obstacle or to any player's deployment zone.
 
   {\centering
@@ -388,6 +390,8 @@
 \begin{expansion}[before=\vspace*{-11mm}]{battlefield}
   \begin{multicols*}{2}
   \subsection*{Battlefield Combat Rules}
+  Follow the regular \pagelink{combatround}{Combat rules} with the following changes:
+  \bigbreak
   \begin{itemize}
     \item \textbf{Unit Movement} -- Each unit's Movement is equal to its Initiative value: a unit of Initiative 8 can move up to 8 hexes.
     \item \textbf{Ranged Movement} -- Ranged \svg{unit_ranged} units can either move or attack, not both.
@@ -411,7 +415,7 @@
 \begin{expansion}[before=\vspace*{-11mm}]{battlefield}
   \subheader{Battlefield Board in regular games}
   \begin{multicols*}{2}
-    Although Battlefield is designed for \pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish modes}, it is possible to use the Battlefield Board in other game modes, albeit with slight rule modifications.
+    Although Battlefield is designed for \pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish modes}, it is possible to use the Battlefield Board in regular games with slight rule modifications.
 
     \subsection*{Changes to Combat Rules}
 
@@ -419,13 +423,13 @@
       \item The attacker receives the Initiative Token at the start of the Combat Setup.
       \item In player vs. player Combat, you may place up to 7 units.
         In Neutral Combat, the 5-unit limit still applies.
+      \item Playing on the Battlefield Board requires using \pagelink{miniatures}{Miniatures} for Combat instead of unit cards.
     \end{itemize}
 
     \subsection*{Siege with Walls and Gate}
     During a Siege against a Town with a Citadel, Walls and Gate Obstacles are placed as shown below.
-    Place no other Obstacles.
-
-    \hspace*{-0.5em}
+    Place no other Obstacles.\par
+    \bigskip
     \begin{tikzpicture}
       \draw (0, 0) node {\framedimage[\linewidth]{\examples/bf-deploy-wall.png}};
       \draw (2.5, 0) node[rotate=90, fill=black, fill opacity=0.15, text opacity=1]
@@ -441,8 +445,8 @@
     \textit{\footnotesize{}Example: Halberdier and Crusader (defenders) may enter the Gate Token only along the green arrows, but Minotaur and Harpies are still able to attack the Gate Token from any side.}
 
     \subsection*{Combat with Neutral Units}
-    Although it is recommended to use the Battlefield Combat Board only for \textbf{Player vs.~Player Combats}, it is also possible to use it in Neutral Combats.
     If you decide to use the Battlefield Board in Combats with Neutral Units, ignore the Round Limit: at the end of each Combat Round you may freely decide to Retreat or to start another Combat Round with no need to spend \svg{movement}.
     Be aware, however, that this may significantly extend the playtime.
+    It is recommended to use the Battlefield Combat Board only for \textbf{Player vs.~Player Combats}.
   \end{multicols*}
 \end{expansion}
