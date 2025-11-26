@@ -4,7 +4,7 @@
 \begin{expansion}{battlefield}
   \begin{multicols}{2}
   \subsection*{Overview}
-  The Battlefield expansion introduces the large \pagelink{BF for regular}{Battlefield Board}, which you can \textbf{optionally} use instead of Combat Board.
+  The Battlefield expansion introduces the large \pagelink{Battlefield Combat}{Battlefield Board}, which you can \textbf{optionally} use instead of Combat Board.
 
   \bigskip
   The expansion also introduces 2 similarly structured 1~vs.~1 game modes whose central idea is to engage in a tactical combat on the Battlefield Board.
@@ -91,7 +91,7 @@
       \item Set your starting Deck aside for now; you will only need it for the final Combat.
     \end{enumerate}
 
-    \subsection*{Start of the game in both modes}
+    \subsection*{Start of the game}
     Both players roll 2 \svg{resource_die}.
     The player with the highest total is the first player, and takes the Initiative Token.
 
@@ -397,7 +397,15 @@
 
   \vspace*{-1em}
   \subsection*{Combat Setup}
-  Starting with the player with the \pagetarget{Initiative Token}{\textbf{Initiative Token}}, both players take turns choosing and placing one Obstacle Tokens on the Battlefield Board one-by-one until \textbf{all Obstacle Tokens (except Effects) are placed}.
+  \setlength\intextsep{0pt}
+  \setlength\columnsep{1em}
+  \begin{wrapfigure}{r}{0.33\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{\images/initiative-bf.png}
+    \caption{\imagecaption[c]{Initiative\\Token}}
+    \vspace{1em}
+  \end{wrapfigure}
+  Starting with the player with the \pagetarget{Initiative Token}{\textbf{Initiative Token}} (in case of a \pagelink{BF for regular}{non-Adventure/Skirmish game}, that's the attacker), both players take turns choosing and placing one Obstacle Tokens on the Battlefield Board one-by-one until \textbf{all Obstacle Tokens (except Effects) are placed}.
   No Obstacle can be adjacent to another Obstacle or to any player's deployment zone.
 
   {\centering
@@ -410,7 +418,7 @@
   \imagecaption{Obstacles and Miniatures placed correctly are marked with the green border, and incorrectly -- with the red one.}\par
   \vspace{1em}
     The player with the Initiative Token chooses a deployment zone and places one of their units in it, then players take turns placing their units \textbf{one by one} each in their zone.
-    The 5-unit limit does not apply in Adventure and Skirmish, and players may place all Faction units available to them.
+    The 5-unit limit does not apply in Adventure and Skirmish modes, and players may place all Faction units available to them.
     When the last unit is placed, the Combat begins.
   \end{multicols*}
 \end{expansion}
@@ -426,19 +434,9 @@
     \item \textbf{Ranged Movement} -- Ranged \svg{unit_ranged} units can either move or attack, not both.
     \item \textbf{Combat Penalty} -- Ranged \svg{unit_ranged} units suffer a Combat Penalty when attacking an adjacent unit or a unit that is \textbf{8 or more} hexes away from them.
 
-    \begin{minipage}{\linewidth}
-    \setlength\intextsep{0pt}
-    \setlength\columnsep{1em}
-    \begin{wrapfigure}{r}{0.4\linewidth}
-      \centering
-      \includegraphics[width=0.8\linewidth]{\images/initiative-bf.png}
-      \caption{\imagecaption[c]{Initiative\\Token}}
-      \vspace{1em}
-    \end{wrapfigure}
     \item \textbf{Initiative Tie} -- If two or more opposing units have the same Initiative value, the player with the Token activates one of their units first.
       Then, the players alternate in activating all of their units of that same Initiative value one by one.
       Once all units with that Initiative value were activated, pass the Initiative Token to the other player, who keeps it until an Initiative tie of opposing units happens again.
-    \end{minipage}
 
     \item \textbf{In \pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish} only} -- At the end of each Combat Round, \textbf{regain one used \svg{expert}} up to your Hero's Limit, and \textbf{draw 2 cards from your Deck}.
   \end{itemize}
