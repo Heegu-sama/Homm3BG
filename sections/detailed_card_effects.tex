@@ -29,19 +29,20 @@ Use the specific tokens to mark the affected spaces.
     If the Clone is attacked (even without taking damage) or takes even 1 \svg{damage} from a Spell, it perishes. %clarification?
     If the original unit is removed from the Combat Board, remove its Clone as well.
     The Clone doesn't inherit any effects that have been played on the original unit.
-    \vspace*{\fill}
+    \vfill
     \columnbreak
 
     \subsection*{\textit{Clone Example}}
-
     \textit{%
       One of your units in Combat is a Few Griffins whose Initiative value is 6.
       You cast the Clone Spell on them and place the small Clone Token on the Griffins and the big one of the same color on an empty space next to them.
       Later, you decide to cast ``Haste'' with 0 \svg{empower} on the original Griffins unit to increase their Initiative by 1.
       Now, the original Griffins' Initiative Value is 7, but the cloned unit's Initiative remains 6.
     }
+    \vspace*{1em}
+    \par\noindent
     \begin{tikzpicture}
-      \draw (0, 0) node[rotate=180] {\includegraphics[width=\linewidth]{\images/combat_board_half.jpg}};
+      \draw (0, 0) node[rotate=180] {\includegraphics[width=\linewidth]{\images/combat_board_half.png}};
       \draw (-1, 1.3) node {\includegraphics[width=0.22\linewidth]{\cards/unit-few.png}};
       \draw (-0.8, 1.2) node[circular drop shadow={shadow scale=0.9, shadow xshift=0.3ex, shadow yshift=-0.3ex, opacity=0.7,
         fill=black, path fading={circle with fuzzy edge 15 percent},
@@ -49,9 +50,11 @@ Use the specific tokens to mark the affected spaces.
       \draw (1, 1.3) node[circular drop shadow={shadow scale=0.9, shadow xshift=0.3ex, shadow yshift=-0.3ex, opacity=0.7,
         fill=black, path fading={circle with fuzzy edge 15 percent},
         every shadow}] {\includegraphics[width=0.18\linewidth]{\images/clone-token-2.png}};
-      \draw (-0.4, -1.7) node {\includegraphics[width=0.28\linewidth]{\cards/haste.png}};
+      \draw (-0.4, -1.7) node {\includegraphics[width=0.22\linewidth]{\cards/haste.png}};
     \end{tikzpicture}
   \end{multicols}
+  \vspace*{-6em}
+  {\hspace{1em}\transparent{0.2}\includegraphics[width=0.5\linewidth]{\art/magic_arrow.png}\hfill}
 \end{expansion}
 
 \newpage
@@ -218,11 +221,11 @@ Use the specific tokens to mark the affected spaces.
       \includegraphics[width=0.9\linewidth]{\cards/unit-demon.png}\\
       \imagecaption{Demons}
     \end{multicols}
+  \vspace*{2.4em}
+  {\hfill\transparent{0.2}\includegraphics[width=0.9\linewidth]{\art/cerberi.png}}
+  \vspace*{2.4em}
   \end{expansion}
 
-  \vspace*{\fill}
-  {\hfill\transparent{0.2}\includegraphics[width=0.8\linewidth]{\art/gremlin.png}\hfill}
-  \vspace*{\fill}
 \end{multicols}
 
 
