@@ -12,142 +12,142 @@ Use the specific tokens to mark the affected spaces.
 \medskip
 
 \begin{expansion}{cove}
-    \begin{multicols}{2}
-        \subsection*{Clone Token}
-        \setlength\intextsep{0pt}
-        \setlength\columnsep{1em}
-        \begin{wrapfigure}{r}{0.3\linewidth}
-            \includegraphics[width=0.6\linewidth]{\images/clone-token.png}\vspace*{1em}
-            \includegraphics[width=\linewidth]{\images/clone-token.png}
-            \centering\footnotesize\imagecaption{Clone \mbox{Tokens}}
-        \end{wrapfigure}
-        When you cast the \textbf{Clone Spell}, choose an allied unit (depending on the \svg{empower} used) and an empty space on the Combat Board adjacent to that unit.
-        Then place the small Clone Token on the chosen unit and the bigger Token of the same color (blue or red) on the empty space.
-        The token on the empty space represents the Clone.
-        It has the same statistics and special abilities as the original unit, but its \svg{health_points} is only 1 and its \svg{defense} is 0.
-        Additionally, its defense and health cannot be increased by any effects from cards or other units. %what is with other statistics?
-        If the Clone is attacked (even without taking damage) or takes even 1 \svg{damage} from a Spell, it perishes. %clarification?
-        If the original unit is removed from the Combat Board, remove its Clone as well.
-        The Clone doesn't inherit any effects that have been played on the original unit.
-        \vspace*{\fill}
-        \columnbreak
+  \begin{multicols}{2}
+    \subsection*{Clone Token}
+    \setlength\intextsep{0pt}
+    \setlength\columnsep{1em}
+    \begin{wrapfigure}{r}{0.3\linewidth}
+      \includegraphics[width=0.6\linewidth]{\images/clone-token.png}\vspace*{1em}
+      \includegraphics[width=\linewidth]{\images/clone-token.png}
+      \centering\footnotesize\imagecaption{Clone \mbox{Tokens}}
+    \end{wrapfigure}
+    When you cast the \textbf{Clone Spell}, choose an allied unit (depending on the \svg{empower} used) and an empty space on the Combat Board adjacent to that unit.
+    Then place the small Clone Token on the chosen unit and the bigger Token of the same color (blue or red) on the empty space.
+    The token on the empty space represents the Clone.
+    It has the same statistics and special abilities as the original unit, but its \svg{health_points} is only 1 and its \svg{defense} is 0.
+    Additionally, its defense and health cannot be increased by any effects from cards or other units. %what is with other statistics?
+    If the Clone is attacked (even without taking damage) or takes even 1 \svg{damage} from a Spell, it perishes. %clarification?
+    If the original unit is removed from the Combat Board, remove its Clone as well.
+    The Clone doesn't inherit any effects that have been played on the original unit.
+    \vspace*{\fill}
+    \columnbreak
 
-        \subsection*{\textit{Clone Example}}
+    \subsection*{\textit{Clone Example}}
 
-        \textit{%
-            One of your units in Combat is a Few Griffins whose Initiative value is 6.
-            You cast the Clone Spell on them and place the small Clone Token on the Griffins and the big one of the same color on an empty space next to them.
-            Later, you decide to cast ``Haste'' with 0 \svg{empower} on the original Griffins unit to increase their Initiative by 1.
-            Now, the original Griffins' Initiative Value is 7, but the cloned unit's Initiative remains 6.
-        }
-        \begin{tikzpicture}
-          \draw (0, 0) node[rotate=180] {\includegraphics[width=\linewidth]{\images/combat_board_half.jpg}};
-          \draw (-1, 1.3) node {\includegraphics[width=0.22\linewidth]{\cards/unit-few.png}};
-          \draw (-0.8, 1.2) node[circular drop shadow={shadow scale=0.9, shadow xshift=0.3ex, shadow yshift=-0.3ex, opacity=0.7,
-              fill=black, path fading={circle with fuzzy edge 15 percent},
-              every shadow}] {\includegraphics[width=0.1\linewidth]{\images/clone-token-2.png}};
-          \draw (1, 1.3) node[circular drop shadow={shadow scale=0.9, shadow xshift=0.3ex, shadow yshift=-0.3ex, opacity=0.7,
-              fill=black, path fading={circle with fuzzy edge 15 percent},
-              every shadow}] {\includegraphics[width=0.18\linewidth]{\images/clone-token-2.png}};
-          \draw (-0.4, -1.7) node {\includegraphics[width=0.28\linewidth]{\cards/haste.png}};
-        \end{tikzpicture}
-    \end{multicols}
+    \textit{%
+      One of your units in Combat is a Few Griffins whose Initiative value is 6.
+      You cast the Clone Spell on them and place the small Clone Token on the Griffins and the big one of the same color on an empty space next to them.
+      Later, you decide to cast ``Haste'' with 0 \svg{empower} on the original Griffins unit to increase their Initiative by 1.
+      Now, the original Griffins' Initiative Value is 7, but the cloned unit's Initiative remains 6.
+    }
+    \begin{tikzpicture}
+      \draw (0, 0) node[rotate=180] {\includegraphics[width=\linewidth]{\images/combat_board_half.jpg}};
+      \draw (-1, 1.3) node {\includegraphics[width=0.22\linewidth]{\cards/unit-few.png}};
+      \draw (-0.8, 1.2) node[circular drop shadow={shadow scale=0.9, shadow xshift=0.3ex, shadow yshift=-0.3ex, opacity=0.7,
+        fill=black, path fading={circle with fuzzy edge 15 percent},
+        every shadow}] {\includegraphics[width=0.1\linewidth]{\images/clone-token-2.png}};
+      \draw (1, 1.3) node[circular drop shadow={shadow scale=0.9, shadow xshift=0.3ex, shadow yshift=-0.3ex, opacity=0.7,
+        fill=black, path fading={circle with fuzzy edge 15 percent},
+        every shadow}] {\includegraphics[width=0.18\linewidth]{\images/clone-token-2.png}};
+      \draw (-0.4, -1.7) node {\includegraphics[width=0.28\linewidth]{\cards/haste.png}};
+    \end{tikzpicture}
+  \end{multicols}
 \end{expansion}
 
 \newpage
 \begin{multicols}{2}
 \begin{expansion}{stronghold}
-    \subsection*{Quicksand Token}
-    Depending on the \svg{empower} used, take 2, 4 or 6 \textbf{Quicksand tokens} from the same set (blue or red).
-    Half of them must be ``empty'' and half of them must have the Quicksand symbol.
-    Shuffle the Tokens face down and place one each on chosen empty spaces on the Combat Board.
-    If there are not enough empty spaces left to place all of them, discard any leftover Tokens.
-    Once they are placed, you can always look at your Tokens.
-    When a unit enters a space with a Quicksand Token, reveal that Token.
-    If it is empty, the unit continues its Movement, but if the Token shows the Quicksand icon, the unit's movement and activation ends.
+  \subsection*{Quicksand Token}
+  Depending on the \svg{empower} used, take 2, 4 or 6 \textbf{Quicksand tokens} from the same set (blue or red).
+  Half of them must be ``empty'' and half of them must have the Quicksand symbol.
+  Shuffle the Tokens face down and place one each on chosen empty spaces on the Combat Board.
+  If there are not enough empty spaces left to place all of them, discard any leftover Tokens.
+  Once they are placed, you can always look at your Tokens.
+  When a unit enters a space with a Quicksand Token, reveal that Token.
+  If it is empty, the unit continues its Movement, but if the Token shows the Quicksand icon, the unit's movement and activation ends.
 
-    \textbf{Note:} two Quicksand tokens can occupy a single space only if the tokens are placed by different players.
-    \bigskip
-    \begin{multicols*}{2}
-        \centering
-        \footnotesize
-        \includegraphics[width=0.5\linewidth]{\images/quicksand-token.png}\\
-        \imagecaption{Quicksand Token}
+  \textbf{Note:} two Quicksand tokens can occupy a single space only if the tokens are placed by different players.
+  \bigskip
+  \begin{multicols*}{2}
+    \centering
+    \footnotesize
+    \includegraphics[width=0.5\linewidth]{\images/quicksand-token.png}\\
+    \imagecaption{Quicksand Token}
 
-        \columnbreak
-        \includegraphics[width=0.5\linewidth]{\images/quicksand-token-2.png}\\
-        \imagecaption{Empty Quicksand Token}
-    \end{multicols*}
+    \columnbreak
+    \includegraphics[width=0.5\linewidth]{\images/quicksand-token-2.png}\\
+    \imagecaption{Empty Quicksand Token}
+  \end{multicols*}
 \end{expansion}
 
 \vspace*{1em}
 \begin{expansion}{battlefield,conflux}
-    \subsection*{Firewall Token}
-    The \textbf{Fire Wall Spell} and \textbf{Luna's Specialty cards I and VI} instruct you to place the Fire Wall card onto a space on the Combat Board.
-    You can use the Firewall Tokens instead of the cards.
-    Place the Spell/Specialty card next to the Combat Board as a reminder.
-    When the card is removed or discarded, discard the token, too.
-    When using the large \pagelink{Battlefield Combat}{Battlefield Board}, you must place the Token rather than the card.
+  \subsection*{Firewall Token}
+  The \textbf{Fire Wall Spell} and \textbf{Luna's Specialty cards I and VI} instruct you to place the Fire Wall card onto a space on the Combat Board.
+  You can use the Firewall Tokens instead of the cards.
+  Place the Spell/Specialty card next to the Combat Board as a reminder.
+  When the card is removed or discarded, discard the token, too.
+  When using the large \pagelink{Battlefield Combat}{Battlefield Board}, you must place the Token rather than the card.
 
-    \medskip
-    \begin{multicols}{2}
-        \centering
-        \footnotesize
-        \includegraphics[width=0.7\linewidth]{\images/firewall-bf-token.png}
-        \imagecaption{Firewall Token\\(Spell)}
+  \medskip
+  \begin{multicols}{2}
+    \centering
+    \footnotesize
+    \includegraphics[width=0.7\linewidth]{\images/firewall-bf-token.png}
+    \imagecaption{Firewall Token\\(Spell)}
 
-        \columnbreak
-        \includegraphics[width=0.7\linewidth]{\images/firewall-vi-token.png}
-        \imagecaption{Firewall Token\\(Luna's Specialty)}
-    \end{multicols}
+    \columnbreak
+    \includegraphics[width=0.7\linewidth]{\images/firewall-vi-token.png}
+    \imagecaption{Firewall Token\\(Luna's Specialty)}
+  \end{multicols}
 \end{expansion}
 
 \columnbreak
 \begin{expansion}{stretchgoals2}
-    \subsection*{Land Mine Token}
-    Depending on the \svg{empower} used, take 2, 4 or 6 \textbf{Land Mine tokens} from the same set  (blue or red).
-    Half of them must be ``empty'' and half of them have a +2 \svg{damage} symbol.
-    Shuffle the tokens face down and place one each on chosen empty spaces on the Combat Board.
-    If there are not enough empty spaces left to place all of them, discard any leftover Tokens.
-    Once they are placed, you can always look at your Tokens.
-    When a unit enters a space with a Land Mine Token, reveal that Token.
-    If it is empty, the unit continues its movement, but if the Token shows the +2 \svg{damage} symbol, the unit takes 2 damage.
-    If it is still one the Board, it continues its activation.
+  \subsection*{Land Mine Token}
+  Depending on the \svg{empower} used, take 2, 4 or 6 \textbf{Land Mine tokens} from the same set  (blue or red).
+  Half of them must be ``empty'' and half of them have a +2 \svg{damage} symbol.
+  Shuffle the tokens face down and place one each on chosen empty spaces on the Combat Board.
+  If there are not enough empty spaces left to place all of them, discard any leftover Tokens.
+  Once they are placed, you can always look at your Tokens.
+  When a unit enters a space with a Land Mine Token, reveal that Token.
+  If it is empty, the unit continues its movement, but if the Token shows the +2 \svg{damage} symbol, the unit takes 2 damage.
+  If it is still one the Board, it continues its activation.
 
-    \textbf{Note:} two Land Mine tokens can occupy a single space only if the tokens are placed by different players.
-    \bigskip
-    \begin{multicols}{3}
-        \centering
-        \footnotesize
-        \includegraphics[width=0.9\linewidth]{\images/land-mine-token.png}
-        \imagecaption{Landmine Token\\(Backside)}
+  \textbf{Note:} two Land Mine tokens can occupy a single space only if the tokens are placed by different players.
+  \bigskip
+  \begin{multicols}{3}
+    \centering
+    \footnotesize
+    \includegraphics[width=0.9\linewidth]{\images/land-mine-token.png}
+    \imagecaption{Landmine Token\\(Backside)}
 
-        \columnbreak
-        \includegraphics[width=0.9\linewidth]{\images/land-mine-token-0.png}
-        \imagecaption{Empty Landmine Token}
+    \columnbreak
+    \includegraphics[width=0.9\linewidth]{\images/land-mine-token-0.png}
+    \imagecaption{Empty Landmine Token}
 
-        \columnbreak
-        \includegraphics[width=0.9\linewidth]{\images/land-mine-token-2.png}
-        \imagecaption{Landmine Token}
-    \end{multicols}
+    \columnbreak
+    \includegraphics[width=0.9\linewidth]{\images/land-mine-token-2.png}
+    \imagecaption{Landmine Token}
+  \end{multicols}
 \end{expansion}
 
 \vspace*{1em}
 \begin{expansion}{stretchgoals2}
-    \subsection*{Force Field Token}
-    \setlength\intextsep{0pt}
-    \setlength\columnsep{1em}
-    \begin{wrapfigure}{r}{0.2\linewidth}
-        \includegraphics[width=\linewidth]{\images/force-field-token.png}
-        \begin{center}
-          \footnotesize
-          \imagecaption{Force Field Token}\\
-          \vspace*{1em}
-        \end{center}
-    \end{wrapfigure}
-    Use the \textbf{Force Field Token} to mark the effect of the \textbf{Force Field Spell}.
-    The token represents an Obstacle, so only \svg{unit_flying} units can move through a space with this Token.
-    If you're using the normal Combat Board, place only 1 Force Field Token, but if you're using the \pagelink{Battlefield Combat}{Battlefield Board}, place 2 Tokens on two adjacent spaces (instead of one).
+  \subsection*{Force Field Token}
+  \setlength\intextsep{0pt}
+  \setlength\columnsep{1em}
+  \begin{wrapfigure}{r}{0.2\linewidth}
+    \includegraphics[width=\linewidth]{\images/force-field-token.png}
+    \begin{center}
+      \footnotesize
+      \imagecaption{Force Field Token}\\
+      \vspace*{1em}
+    \end{center}
+  \end{wrapfigure}
+  Use the \textbf{Force Field Token} to mark the effect of the \textbf{Force Field Spell}.
+  The token represents an Obstacle, so only \svg{unit_flying} units can move through a space with this Token.
+  If you're using the normal Combat Board, place only 1 Force Field Token, but if you're using the \pagelink{Battlefield Combat}{Battlefield Board}, place 2 Tokens on two adjacent spaces (instead of one).
 \end{expansion}
 \end{multicols}
 
@@ -160,43 +160,43 @@ Use the specific tokens to mark the affected spaces.
 \bigskip
 \begin{multicols}{2}
   \begin{expansion}{conflux}
-      \subsection*{Summon Elemental Units}
-      The \textbf{Summon Elemental Spells} allow you to add a Elemental unit to the Combat Board during Combat.
-      Keep the Summon unit card Deck face up near the neutral Unit Decks.
-      Depending on the \svg{empower} used, you can Summon either a non-reinforced unit (a Few) or a reinforced one (a Pack).
-      Take the corresponding unit card from the Deck of the Summoned units and place it on a chosen empty space.
-      You can decide to place the \textbf{Summon Unit Tokens} instead of the cards.
-      Using the battlefield Board you \textbf{must} place the Token.
-      Summoned units remain under your control until they perish or the Combat ends, whichever comes first.
-      A Summoned Elemental Unit is \textbf{not} added to your Unit Deck.
-      \bigskip
+    \subsection*{Summon Elemental Units}
+    The \textbf{Summon Elemental Spells} allow you to add a Elemental unit to the Combat Board during Combat.
+    Keep the Summon unit card Deck face up near the neutral Unit Decks.
+    Depending on the \svg{empower} used, you can Summon either a non-reinforced unit (a Few) or a reinforced one (a Pack).
+    Take the corresponding unit card from the Deck of the Summoned units and place it on a chosen empty space.
+    You can decide to place the \textbf{Summon Unit Tokens} instead of the cards.
+    Using the battlefield Board you \textbf{must} place the Token.
+    Summoned units remain under your control until they perish or the Combat ends, whichever comes first.
+    A Summoned Elemental Unit is \textbf{not} added to your Unit Deck.
+    \bigskip
 
-      \begin{multicols}{2}
-        \centering
-        \footnotesize
-        \includegraphics[width=0.9\linewidth]{\cards/unit-summoned-few.png}\\
-        \imagecaption{A Few Fire Elementals}
+    \begin{multicols}{2}
+      \centering
+      \footnotesize
+      \includegraphics[width=0.9\linewidth]{\cards/unit-summoned-few.png}\\
+      \imagecaption{A Few Fire Elementals}
 
-        \smallskip
-        \includegraphics[width=0.5\linewidth]{\images/summon-token-fire.png}\\
-        \imagecaption{Fire Elemental Token}
+      \smallskip
+      \includegraphics[width=0.5\linewidth]{\images/summon-token-fire.png}\\
+      \imagecaption{Fire Elemental Token}
 
-        \smallskip
-        \includegraphics[width=0.5\linewidth]{\images/summon-token-earth.png}\\
-        \imagecaption{Earth Elemental Token}
+      \smallskip
+      \includegraphics[width=0.5\linewidth]{\images/summon-token-earth.png}\\
+      \imagecaption{Earth Elemental Token}
 
-        \columnbreak
-        \includegraphics[width=0.9\linewidth]{\cards/unit-summoned-pack.png}\\
-        \imagecaption{A Pack of Fire Elementals}
+      \columnbreak
+      \includegraphics[width=0.9\linewidth]{\cards/unit-summoned-pack.png}\\
+      \imagecaption{A Pack of Fire Elementals}
 
-        \smallskip
-        \includegraphics[width=0.5\linewidth]{\images/summon-token-water.png}\\
-        \imagecaption{Water Elemental Token}
+      \smallskip
+      \includegraphics[width=0.5\linewidth]{\images/summon-token-water.png}\\
+      \imagecaption{Water Elemental Token}
 
-        \smallskip
-        \includegraphics[width=0.5\linewidth]{\images/summon-token-air.png}\\
-        \imagecaption{Air Elemental Token}
-      \end{multicols}
+      \smallskip
+      \includegraphics[width=0.5\linewidth]{\images/summon-token-air.png}\\
+      \imagecaption{Air Elemental Token}
+    \end{multicols}
   \end{expansion}
   \columnbreak
 
@@ -231,74 +231,75 @@ Use the specific tokens to mark the affected spaces.
 
 The following components or keywords belong to new unit abilities. The Tokens are usually placed on other units and influence their statistics.
 \begin{multicols}{2}
-    \begin{expansion}{cove,stretchgoals2}
-        \subsection*{Weakness Token}
-        \setlength\intextsep{0pt}
-        \setlength\columnsep{1em}
-        \begin{wrapfigure}{r}{0.2\linewidth}
-            \includegraphics[width=\linewidth]{\images/weakness-token.png}
-            \centering
-            \footnotesize
-            \imagecaption{\mbox{Weakness} Token}
-            \vspace{1em}
-        \end{wrapfigure}
-        The \textbf{Few Sorceresses unit} from the Cove Faction can use its \svg{unit_other} abilty to place a Weakness Token on any unit.
-        A \textbf{Pack Sorceresses} deal that Token automatically to their defending unit because of their \svg{unit_attack} ability.
-        A unit with this Token suffers $-1$~\svg{attack} or $-2$~\svg{attack}, as indicated by the Token's side.
-        Each unit can have only one such Token at a time.
-        If a unit would gain a second one, the player controlling it chooses which one to keep.
-    \end{expansion}
-    \vspace*{\fill}
-    {\hfill\transparent{0.2}\includegraphics[width=0.8\linewidth]{\art/vision.png}\hfill}
-    \vspace*{\fill}
-    \columnbreak
+  \begin{expansion}{cove,stretchgoals2}
+    \subsection*{Weakness Token}
+    \setlength\intextsep{0pt}
+    \setlength\columnsep{1em}
+    \begin{wrapfigure}{r}{0.2\linewidth}
+      \includegraphics[width=\linewidth]{\images/weakness-token.png}
+      \centering
+      \footnotesize
+      \imagecaption{\mbox{Weakness} Token}
+      \vspace{1em}
+    \end{wrapfigure}
+    The \textbf{Few Sorceresses unit} from the Cove Faction can use its \svg{unit_other} abilty to place a Weakness Token on any unit.
+    A \textbf{Pack Sorceresses} deal that Token automatically to their defending unit because of their \svg{unit_attack} ability.
+    A unit with this Token suffers $-1$~\svg{attack} or $-2$~\svg{attack}, as indicated by the Token's side.
+    Each unit can have only one such Token at a time.
+    If a unit would gain a second one, the player controlling it chooses which one to keep.
+    \begin{center}
+      \vspace*{2.5em}
+      {\transparent{0.2}\includegraphics[width=0.9\linewidth]{\art/weakness.png}}
+    \end{center}
+  \end{expansion}
+  \columnbreak
 
-    \begin{expansion}{stronghold,stretchgoals2}
-        \subsection*{Attack Token}
-        \setlength\intextsep{0pt}
-        \setlength\columnsep{1em}
-        \begin{wrapfigure}{r}{0.2\linewidth}
-            \includegraphics[width=\linewidth]{\images/attack-token.png}
-            \centering
-            \footnotesize
-            \imagecaption{Attack Token}
-            \vspace{1em}
-        \end{wrapfigure}
-        The \textbf{Orge unit} from the Stronghold Faction can use its \svg{unit_other} ability to place Attack Tokens on other allied unit cards.
-        Units with such a token gains an additional +1 \svg{attack} or +2 \svg{attack}, as indicated by the Tokens side.
-        Each unit can have only one such Token at a time.
-        If a unit would gain a second one, the player controlling it chooses which one to keep.
-    \end{expansion}
+  \begin{expansion}{stronghold,stretchgoals2}
+    \subsection*{Attack Token}
+    \setlength\intextsep{0pt}
+    \setlength\columnsep{1em}
+    \begin{wrapfigure}{r}{0.2\linewidth}
+      \includegraphics[width=\linewidth]{\images/attack-token.png}
+      \centering
+      \footnotesize
+      \imagecaption{Attack Token}
+      \vspace{1em}
+    \end{wrapfigure}
+    The \textbf{Orge unit} from the Stronghold Faction can use its \svg{unit_other} ability to place Attack Tokens on other allied unit cards.
+    Units with such a token gains an additional +1 \svg{attack} or +2 \svg{attack}, as indicated by the Tokens side.
+    Each unit can have only one such Token at a time.
+    If a unit would gain a second one, the player controlling it chooses which one to keep.
+  \end{expansion}
 
-    \vspace*{1em}
-    \begin{expansion}{stronghold}
-        \subsection*{Corrosion Token}
-        \setlength\intextsep{0pt}
-        \setlength\columnsep{1em}
-        \begin{wrapfigure}{r}{0.2\linewidth}
-            \includegraphics[width=\linewidth]{\images/corrosion-token.png}
-            \centering
-            \footnotesize
-            \imagecaption{\mbox{Corrosion} Token}
-            \vspace{1em}
-        \end{wrapfigure}
-        The \textbf{Behemoth unit} from the Stronghold Faction can use his \svg{unit_attack} ability to place a Corrosion Token on the defending units, which reduces their \svg{defense} by 1 to a minimum of ``0''.
-        A unit can have only one such Token at a time.
-        If a unit should gain a second Token, discard one of the Tokens. Unless removed by Spells or other effects, a Corrosion Token stays on the unit until end of combat.
-    \end{expansion}
+  \vspace*{1em}
+  \begin{expansion}{stronghold}
+    \subsection*{Corrosion Token}
+    \setlength\intextsep{0pt}
+    \setlength\columnsep{1em}
+    \begin{wrapfigure}{r}{0.2\linewidth}
+      \includegraphics[width=\linewidth]{\images/corrosion-token.png}
+      \centering
+      \footnotesize
+      \imagecaption{\mbox{Corrosion} Token}
+      \vspace{1em}
+    \end{wrapfigure}
+    The \textbf{Behemoth unit} from the Stronghold Faction can use his \svg{unit_attack} ability to place a Corrosion Token on the defending units, which reduces their \svg{defense} by 1 to a minimum of ``0''.
+    A unit can have only one such Token at a time.
+    If a unit should gain a second Token, discard one of the Tokens. Unless removed by Spells or other effects, a Corrosion Token stays on the unit until end of combat.
+  \end{expansion}
 \end{multicols}
 
+\vfill
 \subheader{Fan-Made Database}
-{
-  \columnratio{0.8}
-  \begin{paracol}{2}
-  Many cards in \textbf{Heroes of Might and Magic 3: The Board Game} have ambiguous or misleading wordings.
-  Fortunately the developers of the game have clarified a lot of card effects.
-
-    The Community creates a \textbf{Fanmade Database}: a collection of nearly all components of the game with tons of notes for a better understanding of specific rules.
-    If you have questions about specific cards, visit this website:
-    \mbox{\href{https://homm3bg.wiki/}{https://homm3bg.wiki/}}
-  \switchcolumn
+\begin{wrapfigure}{r}{0.2\textwidth}
+  \vspace{-1.5em}
   \includegraphics[width=\linewidth]{\qr/wiki-database.png}
-  \end{paracol}
-}
+\end{wrapfigure}
+
+Many cards in \textbf{Heroes of Might and Magic 3: The Board Game} have ambiguous or misleading wordings.
+Fortunately the developers of the game have clarified a lot of card effects.
+
+The Community maintains a \textbf{Fanmade Database}: a collection of nearly all components of the game with tons of notes for a better understanding of specific rules.
+If you have questions about specific cards, visit this website:
+\mbox{\href{https://homm3bg.wiki/}{https://homm3bg.wiki/}}
+\vfill
