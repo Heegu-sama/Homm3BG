@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-11-18 15:43+0000\n"
+"POT-Creation-Date: 2025-11-29 16:03+0000\n"
 "PO-Revision-Date: 2024-04-27 17:21+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -22,13 +22,12 @@ msgstr ""
 #: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
 #: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
 #: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
-#: sections/difficulty.tex:5 sections/expansion_content.tex:489
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:83
-#: sections/map_elements.tex:131 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:57 sections/town.tex:5
+#: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
+#: sections/map_elements.tex:92 sections/map_elements.tex:140
+#: sections/player_turns.tex:5 sections/resources.tex:5
+#: sections/round_structure.tex:5 sections/scenario_end.tex:5
+#: sections/setup.tex:57 sections/tournament_mode.tex:5 sections/town.tex:5
 #: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
-#: sections/units.tex:203 sections/tournament_mode.tex:5
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -38,8 +37,8 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:399
-#: sections/trading.tex:25 sections/units.tex:222 sections/units.tex:226
+#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:401
+#: sections/trading.tex:25 sections/units.tex:213 sections/units.tex:217
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -49,7 +48,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:337 sections/deckbuilding.tex:346
+#: sections/deckbuilding.tex:339 sections/deckbuilding.tex:348
 #: sections/expansion_content.tex:79 sections/expansion_content.tex:427
 #: sections/expansion_content.tex:446 sections/units.tex:70
 #: sections/units.tex:97
@@ -57,11 +56,11 @@ msgstr ""
 msgid "    \\begin{tikzpicture}\n"
 msgstr ""
 
-#. type: multicols
-#: sections/map_elements.tex:175 sections/map_elements.tex:184
-#: sections/map_elements.tex:259 sections/map_elements.tex:292
-#: sections/player_turns.tex:48 sections/units.tex:233
-#: sections/tournament_mode.tex:67
+#. type: multicols*
+#: sections/map_elements.tex:184 sections/map_elements.tex:193
+#: sections/map_elements.tex:268 sections/map_elements.tex:301
+#: sections/player_turns.tex:48 sections/tournament_mode.tex:67
+#: sections/units.tex:224
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -431,7 +430,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:136
+#: sections/units.tex:137
 #, fuzzy, no-wrap
 #| msgid ""
 #| "Most Units have a \\textbf{special ability}\\index{Special Ability}:\\par\n"
@@ -459,7 +458,8 @@ msgid ""
 "  \\item\\textbf{Retaliate} \\svg{unit_retaliate} resolves when the unit retaliates.\n"
 "  \\item In any other cases without one of the above icons, the unit's ability is used according to its text.\n"
 "    Units may also use symbols representing \\pagelink{Card Effects}{card effects}.\n"
-"\\end{itemize}\n"
+"  \\end{itemize}\n"
+"  Some complex unit abilities use keywords or require \\pagelink{unit keywords}{special components}.\n"
 "\n"
 msgstr ""
 "La plupart des Unités ont une \\textbf{Capacité Spéciale}\\index{Capacité Spéciale} :\\par\n"
@@ -477,18 +477,18 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:138
+#: sections/units.tex:139
 #, no-wrap
 msgid "\\vspace*{\\fill}"
 msgstr ""
 
 #. type: Plain text
-#: sections/units.tex:153
+#: sections/units.tex:154
 msgid "\\pagetarget{Unittype}{\\subheader{Unit Types}}"
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:153
+#: sections/units.tex:154
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{Unittype}{Unit Types}}\n"
@@ -531,7 +531,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:165
+#: sections/units.tex:166
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{Neutral Units}{Neutral Units}}\n"
@@ -574,7 +574,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:170
+#: sections/units.tex:171
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\note{8}{\n"
@@ -595,115 +595,78 @@ msgstr ""
 "}\n"
 "\n"
 
-#. type: Plain text
-#: sections/units.tex:198
-#, fuzzy
-#| msgid ""
-#| "\\hommtable{13}{ \\begin{tabularx}{\\linewidth}"
-#| "{>{\\hsize=0.181\\hsize\\linewidth=\\hsize}X "
-#| ">{\\hsize=0.181\\hsize\\linewidth=\\hsize}X "
-#| ">{\\hsize=0.181\\hsize\\linewidth=\\hsize}X "
-#| ">{\\hsize=0.181\\hsize\\linewidth=\\hsize}X "
-#| ">{\\hsize=0.181\\hsize\\linewidth=\\hsize}X } & "
-#| "\\darkcell{\\raisebox{-1.3\\height}{Town Building}} & \\darkcell{Castle} "
-#| "& \\darkcell{\\raisebox{-1.3\\height}{Dungeon}} & "
-#| "\\darkcell{\\raisebox{-1.3\\height}{Necropolis}} \\\\ \\darkcell[1.6]"
-#| "{\\svg[12]{bronze} \\\\ Bronze Units} & \\lightcell[1.6]{Tier 1 \\\\ "
-#| "Dwelling} & \\lightcell[1.6]{Halberdiers, Marksmen, Griffins} & "
-#| "\\lightcell[1.6]{Troglodytes, Harpies, Evil Eyes} & \\lightcell[1.6]"
-#| "{Skeletons, Zombies, Wraiths} \\\\ \\darkcell[1.2]{\\svg[12]{silver} \\\\ "
-#| "Silver Units} & \\lightcell[1.2]{Tier 2 \\\\ Dwelling} & \\lightcell[1.2]"
-#| "{Crusaders, Zealots} & \\lightcell[1.2]{Medusas, Minotaurs} & "
-#| "\\lightcell[1.2]{Vampires,\\\\ Liches} \\\\ \\darkcell[1.2]{\\svg[12]"
-#| "{golden} \\\\ Gold Units} & \\lightcell[1.2]{Tier 3 \\\\ Dwelling} & "
-#| "\\lightcell[1.2]{Champions, Archangels} & \\lightcell[1.2]{Manticores, "
-#| "Black Dragons} & \\lightcell[1.2]{Dread Knights, Ghost Dragons} \\\\ "
-#| "\\end{tabularx} }"
+#. type: multicols*
+#: sections/units.tex:175
+#, no-wrap
 msgid ""
-"\\hommtable{13}{ \\begin{tabularx}{\\linewidth}"
-"{>{\\hsize=0.181\\hsize\\linewidth=\\hsize}X "
-">{\\hsize=0.181\\hsize\\linewidth=\\hsize}X "
-">{\\hsize=0.181\\hsize\\linewidth=\\hsize}X "
-">{\\hsize=0.181\\hsize\\linewidth=\\hsize}X "
-">{\\hsize=0.181\\hsize\\linewidth=\\hsize}X } & "
-"\\darkcell{\\raisebox{-1.3\\height}{Town Building}} & \\darkcell{Castle} & "
-"\\darkcell{\\raisebox{-1.3\\height}{Dungeon}} & "
-"\\darkcell{\\raisebox{-1.3\\height}{Necropolis}} \\\\ \\darkcell[1.6]"
-"{\\svg[12]{bronze} \\\\ Bronze units} & \\lightcell[1.6]{Tier 1 \\\\ "
-"Dwelling} & \\lightcell[1.6]{Halberdiers, Marksmen, Griffins} & "
-"\\lightcell[1.6]{Troglodytes, Harpies, Evil Eyes} & \\lightcell[1.6]"
-"{Skeletons, Zombies, Wraiths} \\\\ \\darkcell[1.2]{\\svg[12]{silver} \\\\ "
-"Silver units} & \\lightcell[1.2]{Tier 2 \\\\ Dwelling} & \\lightcell[1.2]"
-"{Crusaders, Zealots} & \\lightcell[1.2]{Medusas, Minotaurs} & "
-"\\lightcell[1.2]{Vampires,\\\\ Liches} \\\\ \\darkcell[1.2]{\\svg[12]"
-"{golden} \\\\ Gold units} & \\lightcell[1.2]{Tier 3 \\\\ Dwelling} & "
-"\\lightcell[1.2]{Champions, Archangels} & \\lightcell[1.2]{Manticores, Black "
-"Dragons} & \\lightcell[1.2]{Dread Knights, Ghost Dragons} \\\\ "
-"\\end{tabularx} }"
+"{3}\n"
+"\n"
 msgstr ""
-"\\hommtable{13}{ \\begin{tabularx}{\\linewidth}"
-"{>{\\hsize=0.181\\hsize\\linewidth=\\hsize}X "
-">{\\hsize=0.18\\hsize\\linewidth=\\hsize}X "
-">{\\hsize=0.18\\hsize\\linewidth=\\hsize}X "
-">{\\hsize=0.18\\hsize\\linewidth=\\hsize}X "
-">{\\hsize=0.184\\hsize\\linewidth=\\hsize}X } & \\darkcell{\\phantom{g}"
-"Bâtiments\\phantom{g}}  & \\darkcell{\\phantom{g}Château\\phantom{g}} & "
-"\\darkcell{Donjon} & \\darkcell{Nécropole} \\\\ \\darkcell[1.6]{\\svg[12]"
-"{bronze} \\\\ Unités Bronze} & \\lightcell[1.6]{Demeure \\\\ de rang 1} & "
-"\\lightcell[1.6]{Hallebardiers, Arbalétriers, Griffons} & \\lightcell[1.6]"
-"{Troglodytes, Harpies, Yeux Démoniaques} & \\lightcell[1.6]{Squelettes, "
-"Zombies, Spectres} \\\\ \\darkcell[1.2]{\\svg[12]{silver} \\\\ Unités "
-"Argent} & \\lightcell[1.2]{Demeure \\\\ de rang 2} & \\lightcell[1.2]"
-"{Paladins,\\\\Zélotes} & \\lightcell[1.2]{Méduses, Minotaures} & "
-"\\lightcell[1.2]{Vampires,\\\\ Liches} \\\\ \\darkcell[1.6]{\\svg[12]"
-"{golden} \\\\ Unités Or} & \\lightcell[1.6]{Demeure \\\\ de rang 3} & "
-"\\lightcell[1.6]{Champions, Archanges} & \\lightcell[1.6]{Manticores, "
-"Dragons Noirs} & \\lightcell[1.6]{Chevaliers de l'Effroi, Dragons Fantômes} "
-"\\\\ \\end{tabularx} }"
 
 #. type: multicols*
-#: sections/units.tex:215
+#: sections/units.tex:183
 #, fuzzy, no-wrap
 #| msgid ""
-#| "\\subsection*{Summoning}\n"
-#| "Some Cards from the Inferno expansion may Summon Units\\index{Summoning} during Combat.\n"
-#| "This effect cannot Summon Units from the Neutral Units Deck.\n"
-#| "Place the summoned Unit adjacent to the summoning Unit.\n"
-#| "Summoned Units Activate in the Round they were summoned if their Initiative is lower or equal to the Initiative of the currently Activated Unit.\n"
-#| "Otherwise, treat them as if they already activated this Combat Round.\n"
-#| "After Combat, unless stated otherwise, the Summoned Units are added to your Unit Deck.\n"
+#| "\\begin{center}\n"
+#| "  \\includegraphics[width=\\linewidth]{\\art/dendroid.jpg}\n"
+#| "\\end{center}\n"
 #| "\n"
 msgid ""
-"\\begin{expansion}[before=\\vspace*{-11mm}]{inferno}\n"
-"  \\subsection*{\\pagetarget{Summoning}{Summoning}}\n"
-"  Pit Lords from the Inferno expansion may Summon units\\index{Summoning} during Combat.\n"
-"  This effect cannot Summon units from the Neutral Units Deck.\n"
-"  Place the summoned unit adjacent to the summoning unit.\n"
-"  Summoned units activate in the Round they were summoned if their Initiative is lower or equal to the Initiative of the currently activated unit.\n"
-"  Otherwise, treat them as if they already activated this Combat Round.\n"
-"  After Combat, unless stated otherwise, the Summoned units are added to your Unit Deck.\n"
+"\\begin{expansion}[title=\\phantom{\\textbf{\\tiny{foo}}}, overlay={}]{}\n"
+"  \\begin{center}\n"
+"    \\includegraphics[width=0.6\\linewidth]{\\cards/neutral-back.png}\\\\\n"
+"    \\imagecaption{Neutral Unit}\n"
+"  \\end{center}\n"
 "\\end{expansion}\n"
 "\\vspace*{\\fill}\n"
-"\\framedimage[\\linewidth]{\\art/pit_lord_cropped.jpg}\n"
 "\n"
 msgstr ""
-"\\subsection*{Invocation}\n"
-"Certaines Cartes de l'extension Hadès peuvent Invoquer des Unités\\index{Invocation} durant un Combat.\n"
-"Cet effet ne peut pas Invoquer d'Unités du Deck d'Unité Neutre.\n"
-"L'Unité est invoquée sur une case adjacente à l'Unité invocatrice.\n"
-"L'Unité Invoquée s'Active au Tour d'invocation si son Initiative est inférieure ou égale à celle de l'Unité actuellement Active.\n"
-"Sinon, considérez que son Activation est passée pour ce Tour de Combat.\n"
-"Après le Combat, sauf indication contraire, l'Unité Invoquée est ajoutée à votre Deck d'Unité.\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=\\linewidth]{\\art/dendroid.jpg}\n"
+"\\end{center}\n"
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:218
+#: sections/units.tex:193
+#, no-wrap
+msgid ""
+"\\columnbreak\n"
+"\\begin{expansion}{navalbattles}\n"
+"  \\begin{center}\n"
+"    \\includegraphics[width=0.6\\linewidth]{\\cards/creature_bank_unit.png}\\\\\n"
+"    \\imagecaption{Creature Bank Unit}\n"
+"  \\end{center}\n"
+"  See \\pagelink{Creature Banks Rules}{Creature Banks}.\n"
+"\\end{expansion}\n"
+"\\vspace*{\\fill}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/units.tex:204
+#, no-wrap
+msgid ""
+"\\columnbreak\n"
+"\\begin{expansion}{conflux}\n"
+"  \\begin{center}\n"
+"    \\includegraphics[width=0.6\\linewidth]{\\cards/unit-summoned-few.png}\\\\\n"
+"    \\imagecaption{Summoned Elemental Unit}\n"
+"  \\end{center}\n"
+"  Summoned Elemental units don't have \\svg{recruit} nor \\svg{reinforce}.\n"
+"  See \\pagelink{Summoning}{Summoning}.\n"
+"\\end{expansion}\n"
+"\\vspace*{\\fill}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/units.tex:209
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{Example Turn}\n"
 #| "\n"
 msgid ""
-"\\columnbreak\n"
+"{2}\n"
 "\\subheader[Example ``Pack and Few'']{Example\\\\``Pack and Few''}\n"
 "\n"
 msgstr ""
@@ -711,7 +674,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:220
+#: sections/units.tex:211
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons, Empowering \\svg{empower} the Spell by 2 with the Expert  Effect \\svg{expert} of a Power Card.}\n"
@@ -724,7 +687,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:224
+#: sections/units.tex:215
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/alamar_empowering_magic_arrow.png}\n"
@@ -734,7 +697,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:231
+#: sections/units.tex:222
 #, no-wrap
 msgid ""
 "\\textit{The Skeletons take 3 damage \\svg{damage} from the Spell.\n"
@@ -750,11 +713,27 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:235
+#: sections/units.tex:226
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/skeletons_flipped.png}\n"
 "\n"
 msgstr ""
 "\\includegraphics[width=\\linewidth]{translations/assets/fr/exemples/skeletons_flipped_fr.png}\n"
+"\n"
+
+#. type: multicols*
+#: sections/units.tex:230
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\vspace*{\\fill}\n"
+#| "\\hspace{-2em}\\includegraphics[width=\\linewidth]{\\art/gremlin.png}\n"
+#| "\n"
+msgid ""
+"\\vspace*{\\fill}\n"
+"\\columnbreak\n"
+"\\includegraphics[width=\\linewidth]{\\art/black_dragon.jpg}"
+msgstr ""
+"\\vspace*{\\fill}\n"
+"\\hspace{-2em}\\includegraphics[width=\\linewidth]{\\art/gremlin.png}\n"
 "\n"
