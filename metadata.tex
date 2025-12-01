@@ -175,7 +175,7 @@
   \tl_clear_new:N #2
   \seq_clear:N \l_tmpa_seq
   \clist_map_inline:Nn \l_tmpa_clist {
-    \seq_put_right:No \l_tmpa_seq {\color{##1}\MakeUppercase{\expansiontext{##1}}}
+    \seq_put_right:No \l_tmpa_seq {\color{##1}\expansionlabelfont\MakeUppercase{\expansiontext{##1}}}
   }
   \tl_set:No #2 {\seq_use:Nn \l_tmpa_seq { \\[-0.7em] }}
 }
@@ -347,6 +347,7 @@
 ]{NewCM10}
 
 \providecommand{\notefont}[0]{\liberation\selectfont}
+\providecommand{\expansionlabelfont}[0]{}
 
 \titleformat{\section}
 {\huge}
