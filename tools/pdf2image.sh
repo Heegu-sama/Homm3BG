@@ -106,7 +106,10 @@ if [[ ! -f "$source_pdf" ]]; then
 fi
 
 # Process each page or page range
-readarray -t pages < <(parse_pages "$range")
+pages=()
+while IFS= read -r line; do
+  pages+=("$line")
+done < <(parse_pages "$range")
 
 for page in "${pages[@]}"; do
   echo "Processing page $page from $source_pdf..."
