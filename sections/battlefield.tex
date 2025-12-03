@@ -48,7 +48,7 @@
 
 \newpage
 \begin{expansion}{battlefield}
-  \subheader{Skirmish and Adventure Setup}
+  \subheader{Adventure and Skirmish Setup}
   \begin{multicols}{2}
     \subsection*{Common Setup Steps \raisebox{.3\height}{\encirclelegend{goblin}{C}}}
     \begin{enumerate}[leftmargin=1.5em]
@@ -84,9 +84,9 @@
       \item Set your starting Deck aside for now; you will only need it for the final Combat.
     \end{enumerate}
 
-    \subsection*{Start of the game for both modes}
-    Both players roll 2 \svg{resource_die}.
-    The player with the highest total is the first player, and takes the Initiative Token.
+    \subsection*{Start of the game}
+    In both modes, both players roll 2~\svg{resource_die}.
+    The player with the highest total becomes the first player and takes the Initiative Token.
 
   \vspace*{\fill}
 \end{multicols}
@@ -116,65 +116,6 @@
     \draw (-1.9, 3.5) node {\encirclered{12}};
   \end{tikzpicture}
 \end{center}
-\end{expansion}
-
-\newpage
-\begin{expansion}{battlefield}
-  \pagetarget{Skirmish}{\subheader{Skirmish Mode}}
-  \begin{multicols}{2}
-    Skirmish Mode has no Adventure Phase.
-    Skip that phase, prepare your Deck, and proceed directly to the final Combat.\par
-    \vspace*{1em}
-    \subsection*{Deck Preparation}
-    Both players decide on a game length: \textbf{short, medium, or large}.
-    Depending on the chosen game length, both players modify their Hero's Level, their Deck (by drawing additional cards), and their Unit Deck as shown in the table below.\par
-
-    \vspace*{1em}
-    \columnbreak
-    \subsection*{Starting the final Combat}
-    After modifying your Deck, shuffle it and draw cards up to your Hand Limit.
-    Then follow the rules for \pagelink{Battlefield Combat}{Combat on the Battlefield Board}.
-
-    \vspace*{\fill}
-  \end{multicols}
-
-    \hommtable{26}{
-      \begin{tabularx}{0.98\linewidth}{>{\hsize=0.2\hsize\linewidth=\hsize}X
-          >{\hsize=0.25\hsize\linewidth=\hsize}X
-          >{\hsize=0.25\hsize\linewidth=\hsize}X
-          >{\hsize=0.25\hsize\linewidth=\hsize}X
-        }
-        & \darkcell{\raisebox{-1.3\height}{Short Game}} & \darkcell{Medium Game} & \darkcell{\raisebox{-1.3\height}{Large Game}} \\
-        \darkcell[1.2]{Hero Level} &
-        \lightcell[1.2]{Level III} &
-        \lightcell[1.2]{Level V} &
-        \lightcell[1.2]{Level VII} \\
-        \darkcell[1.2]{Specialty cards} &
-        \lightcell[1.2]{Level I Specialty\\card} &
-        \lightcell[1.2]{Level I and Level~IV Specialty cards} &
-        \lightcell[1.2]{All Specialty cards} \\
-        \darkcell[1.8]{Ability cards} &
-        \lightcell[1.8]{Draw 3 Ability cards and keep 2.} &
-        \lightcell[1.8]{Draw 4 Ability cards and keep 3.} &
-        \lightcell[1.8]{Draw 6 Ability cards and keep 4.} \\
-        \darkcell[1.8]{Artifact cards} &
-        \lightcell[1.8]{Draw 2 Artifact cards and keep 1.} &
-        \lightcell[1.8]{Draw 3 Artifact cards and keep 2.} &
-        \lightcell[1.8]{Draw 4 Artifact cards and keep 3.} \\
-        \darkcell[2.2]{Spell cards} &
-        \lightcell[2.2]{Draw 1 Spell card for a \svg[12]{might-yellow} Hero or 2 Spell cards for a \svg{magic-yellow} Hero.} &
-        \lightcell[2.2]{Draw 2 Spell cards for a \svg[12]{might-yellow} Hero or 4 Spell cards for a \svg{magic-yellow} Hero.} &
-        \lightcell[2.2]{Draw 3 Spell cards for a \svg[12]{might-yellow} Hero or 5 Spell cards for a \svg{magic-yellow} Hero.} \\
-        \darkcell[2.2]{Units} &
-        \lightcell[2.2]{Use all \svg{bronze} and \svg{silver} units on the ``Few'' side.} &
-        \lightcell[2.2]{Use all \svg{bronze} and \svg{silver} units on the ``Pack'' side.} &
-        \lightcell[2.2]{Use all units (\svg{bronze}, \svg{silver}, and \svg{golden}) on the ``Pack'' side.} \\
-      \end{tabularx}
-    }
-  \begin{center}
-    \vspace*{1em}
-    \transparent{0.2}\includegraphics[width=0.35\linewidth]{\art/corpse.png}
-  \end{center}
 \end{expansion}
 
 \newpage
@@ -315,6 +256,65 @@
   \end{multicols}
 \end{expansion}
 
+\newpage
+\begin{expansion}{battlefield}
+  \pagetarget{Skirmish}{\subheader{Skirmish Mode}}
+  \begin{multicols}{2}
+    Skirmish Mode has no Adventure Phase.
+    Skip that phase, prepare your Deck, and proceed directly to the final Combat.\par
+    \vspace*{1em}
+    \subsection*{Deck Preparation}
+    Both players decide on a game length: \textbf{short, medium, or large}.
+    Depending on the chosen game length, both players modify their Hero's Level, their Deck (by drawing additional cards), and their Unit Deck as shown in the table below.\par
+
+    \vspace*{1em}
+    \columnbreak
+    \subsection*{Starting the final Combat}
+    After modifying your Deck, shuffle it and draw cards up to your Hand Limit.
+    Then follow the rules for \pagelink{Battlefield Combat}{Combat on the Battlefield Board}.
+
+    \vspace*{\fill}
+  \end{multicols}
+
+    \hommtable{26}{
+      \begin{tabularx}{0.98\linewidth}{>{\hsize=0.2\hsize\linewidth=\hsize}X
+          >{\hsize=0.25\hsize\linewidth=\hsize}X
+          >{\hsize=0.25\hsize\linewidth=\hsize}X
+          >{\hsize=0.25\hsize\linewidth=\hsize}X
+        }
+        & \darkcell{Short Game} & \darkcell{Medium Game} & \darkcell{\raisebox{-1.3\height}{Large Game}} \\
+        \darkcell[1.2]{Hero Level} &
+        \lightcell[1.2]{Level III} &
+        \lightcell[1.2]{Level V} &
+        \lightcell[1.2]{Level VII} \\
+        \darkcell[1.2]{Specialty cards} &
+        \lightcell[1.2]{Level I Specialty\\card} &
+        \lightcell[1.2]{Level I and Level~IV Specialty cards} &
+        \lightcell[1.2]{All Specialty cards} \\
+        \darkcell[1.8]{Ability cards} &
+        \lightcell[1.8]{Draw 3 Ability cards and keep 2.} &
+        \lightcell[1.8]{Draw 4 Ability cards and keep 3.} &
+        \lightcell[1.8]{Draw 6 Ability cards and keep 4.} \\
+        \darkcell[1.8]{Artifact cards} &
+        \lightcell[1.8]{Draw 2 Artifact cards and keep 1.} &
+        \lightcell[1.8]{Draw 3 Artifact cards and keep 2.} &
+        \lightcell[1.8]{Draw 4 Artifact cards and keep 3.} \\
+        \darkcell[2.2]{Spell cards} &
+        \lightcell[2.2]{Draw 1 Spell card for~a~\svg[12]{might-yellow} Hero or 2 Spell cards for a \svg{magic-yellow} Hero.} &
+        \lightcell[2.2]{Draw 2 Spell cards for a \svg[12]{might-yellow} Hero or 4 Spell cards for a \svg{magic-yellow} Hero.} &
+        \lightcell[2.2]{Draw 3 Spell cards for a \svg[12]{might-yellow} Hero or 5 Spell cards for a \svg{magic-yellow} Hero.} \\
+        \darkcell[2.2]{Units} &
+        \lightcell[2.2]{Use all \svg{bronze} and \svg{silver} units on the ``Few'' side.} &
+        \lightcell[2.2]{Use all \svg{bronze} and \svg{silver} units on the ``Pack'' side.} &
+        \lightcell[2.2]{Use all units (\svg{bronze}, \svg{silver}, and \svg{golden}) on the ``Pack'' side.} \\
+      \end{tabularx}
+    }
+  \begin{center}
+    \vspace*{1em}
+    \transparent{0.2}\includegraphics[width=0.35\linewidth]{\art/corpse.png}
+  \end{center}
+\end{expansion}
+
 \begin{expansion}[before=\vspace*{-11mm}]{battlefield}
   \pagetarget{Battlefield Combat}{\subheader{Battlefield Combat}}
   \begin{multicols*}{2}
@@ -354,8 +354,9 @@
   \setlength\columnsep{1em}
   \begin{wrapfigure}{r}{0.33\linewidth}
     \centering
-    \includegraphics[width=0.9\linewidth]{\images/initiative-bf.png}
-    \caption{\imagecaption[c]{Initiative\\Token}}
+    \footnotesize
+    \includegraphics[width=0.9\linewidth]{\images/initiative-bf.png}\\
+    \caption{\imagecaption[c]{\mbox{Initiative} Token}}
     \vspace{1em}
   \end{wrapfigure}
   Starting with the player with the \pagetarget{Initiative Token}{\textbf{Initiative Token}} (in case of a \pagelink{BF for regular}{non-Adventure/Skirmish game}, that's the attacker), both players take turns choosing and placing one Obstacle Tokens on the Battlefield Board one-by-one until \textbf{all Obstacle Tokens (except Effects) are placed}.
