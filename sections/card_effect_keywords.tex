@@ -1,0 +1,316 @@
+% !TeX spellcheck = en_US
+
+\pagetarget{Card Effect Keywords}{\addsection{Card Effect Keywords}{\skills/interference.png}}
+
+Most expansions add new cards to the game. Some of these cards use keywords with more elaborate rules and require specific game components.
+This section provides the rules for these keywords.
+
+\pagetarget{spell keywords}{\subheader{Spell Card Keywords}}
+
+Some Spell cards allow you to place \textbf{Effects} or \textbf{Summoned Units} on the Combat Board.
+Use the corresponding Tokens to mark these spaces.
+\medskip
+
+\begin{expansion}{cove}
+  \begin{multicols}{2}
+    \subsection*{Clone Token}
+    \setlength\intextsep{0pt}
+    \setlength\columnsep{1em}
+    \begin{wrapfigure}{r}{0.3\linewidth}
+      \includegraphics[width=0.6\linewidth]{\images/clone-token.png}\vspace*{1em}
+      \includegraphics[width=\linewidth]{\images/clone-token.png}
+      \centering\footnotesize\imagecaption{Clone \mbox{Tokens}}
+    \end{wrapfigure}
+    When you cast the \textbf{Clone Spell}, choose an allied unit (depending on the \svg{empower} used) and an adjacent empty space on the Combat Board.
+    Place the small Clone Token on the chosen unit and the larger Token of the same color (blue or red) on the empty space.
+    The larger Token on the empty space represents the Clone.
+    The Clone has the same statistics and special abilities as the original unit, except its \svg{health_points} is 1 and its \svg{defense} is 0.
+    These values cannot be increased by any effects.  % what about other statistics?
+    The Clone perishes if it is attacked (even without taking damage) or takes any \svg{damage} from a Spell.  % clarification?
+    If the original unit is removed from the Combat Board, remove the Clone as well.
+    The Clone does not inherit effects played on the original unit.
+    \vfill
+    \columnbreak
+
+    \subsection*{\textit{Clone Example}}
+    \textit{%
+      One of Bob's units in Combat is ``Few'' Griffins with an Initiative value of 6.
+      He casts the Clone Spell on them, placing the small Clone Token on the Griffins and the larger Token of the same color on an adjacent empty space.
+      Later, he casts ``Haste'' with 0~\svg{empower} on the original Griffins, increasing their Initiative by 1.
+      The original Griffins' Initiative value is now 7, but the Clone's Initiative remains 6.
+    }
+    \vspace*{1em}
+    \par\noindent
+    \begin{tikzpicture}
+      \draw (0, 0) node[rotate=180] {\includegraphics[width=\linewidth]{\images/combat_board_half.png}};
+      \draw (-1, 1.3) node {\includegraphics[width=0.22\linewidth]{\cards/unit-few.png}};
+      \draw (-0.8, 1.2) node[circular drop shadow={shadow scale=0.8, shadow xshift=0.15ex, shadow yshift=-0.15ex, opacity=0.7,
+        fill=black, path fading={circle with fuzzy edge 10 percent},
+        every shadow}] {\includegraphics[width=0.1\linewidth]{\images/clone-token-2.png}};
+      \draw (1, 1.3) node[circular drop shadow={shadow scale=0.85, shadow xshift=0.2ex, shadow yshift=-0.2ex, opacity=0.7,
+        fill=black, path fading={circle with fuzzy edge 10 percent},
+        every shadow}] {\includegraphics[width=0.18\linewidth]{\images/clone-token-2.png}};
+      \draw (-0.4, -1.7) node {\includegraphics[width=0.22\linewidth]{\cards/haste.png}};
+    \end{tikzpicture}
+  \end{multicols}
+  \vspace*{-8em}
+  {\transparent{0.2}\includegraphics[width=0.5\linewidth]{\art/magic_arrow.png}\hfill}
+\end{expansion}
+
+\newpage
+\begin{multicols}{2}
+\begin{expansion}{stronghold}
+  \subsection*{Quicksand Token}
+  Depending on the \svg{empower} used, take 2, 4 or 6 \textbf{Quicksand Tokens} from the same set (blue or red).
+  Half of them must be ``empty'' and half must have the Quicksand symbol.
+  Shuffle the Tokens face down and place one on each chosen empty space on the Combat Board.
+  If there are not enough empty spaces to place all of them, discard any leftover Tokens.
+  Once placed, you may look at your Tokens at any time.
+  When a unit enters a space with a Quicksand Token, reveal it.
+  If it is empty, the unit continues its movement.
+  If the Token shows the Quicksand icon, the unit's movement and activation end immediately.
+
+  \textbf{Note:} Two Quicksand Tokens may occupy a single space only if they are placed by different players.
+  \bigskip
+  \begin{multicols*}{2}
+    \centering
+    \footnotesize
+    \includegraphics[width=0.5\linewidth]{\images/quicksand-token.png}\\
+    \imagecaption{Quicksand Token}
+
+    \columnbreak
+    \includegraphics[width=0.5\linewidth]{\images/quicksand-token-2.png}\\
+    \imagecaption{Empty Quicksand Token}
+  \end{multicols*}
+\end{expansion}
+
+\vspace*{1em}
+\begin{expansion}{battlefield,conflux}
+  \subsection*{Firewall Token}
+  The \textbf{Fire Wall Spell} and \textbf{Luna's Specialty cards I and VI} instruct you to place the Fire Wall card onto a space on the Combat Board.
+  You may use the Fire Wall Tokens instead of the cards.
+  Place the Spell or Specialty card next to the Combat Board as a reminder.
+  When the card is removed or discarded, discard the Token as well.
+  When using the large \pagelink{Battlefield Combat}{Battlefield Board}, you must use the Token instead of the card.
+
+  \medskip
+  \begin{multicols}{2}
+    \centering
+    \footnotesize
+    \includegraphics[width=0.7\linewidth]{\images/firewall-bf-token.png}
+    \imagecaption{Firewall Token\\(Spell)}
+
+    \columnbreak
+    \includegraphics[width=0.7\linewidth]{\images/firewall-vi-token.png}
+    \imagecaption{Firewall Token\\(Luna's Specialty)}
+  \end{multicols}
+\end{expansion}
+
+\columnbreak
+\begin{expansion}{stretchgoals2}
+  \subsection*{Land Mine Token}
+  Depending on the \svg{empower} used, take 2, 4 or 6 \textbf{Land Mine Tokens} from the same set (blue or red).
+  Half of them must be ``empty'' and half must have a +2 \svg{damage} symbol.
+  Shuffle the Tokens face down and place one on each chosen empty space on the Combat Board.
+  If there are not enough empty spaces to place all of them, discard any leftover Tokens.
+  Once placed, you may look at your Tokens at any time.
+  When a unit enters a space with a Land Mine Token, reveal that Token.
+  If it is empty, the unit continues its movement.
+  If the Token shows the +2 \svg{damage} symbol, the unit takes 2 damage.
+  If the unit is still on the Board, it continues its activation.
+
+  \textbf{Note:} Two Land Mine Tokens may occupy a single space only if they are placed by different players.
+  \bigskip
+  \begin{multicols}{3}
+    \centering
+    \footnotesize
+    \includegraphics[width=0.9\linewidth]{\images/land-mine-token.png}
+    \imagecaption{Land Mine Token\\(Backside)}
+
+    \columnbreak
+    \includegraphics[width=0.9\linewidth]{\images/land-mine-token-0.png}
+    \imagecaption{Empty Land Mine Token}
+
+    \columnbreak
+    \includegraphics[width=0.9\linewidth]{\images/land-mine-token-2.png}
+    \imagecaption{Land Mine Token}
+  \end{multicols}
+\end{expansion}
+
+\vspace*{1em}
+\begin{expansion}{stretchgoals2}
+  \subsection*{Force Field Token}
+  \setlength\intextsep{0pt}
+  \setlength\columnsep{1em}
+  \begin{wrapfigure}{r}{0.25\linewidth}
+    \includegraphics[width=\linewidth]{\images/force-field-token.png}
+    \begin{center}
+      \footnotesize
+      \imagecaption{Force Field Token}\\
+      \vspace*{1em}
+    \end{center}
+  \end{wrapfigure}
+  Use the \textbf{Force Field Token} to mark the effect of the \textbf{Force Field Spell}.
+  The Token represents an Obstacle, so only \svg{unit_flying} units can move through a space with this Token.
+  If you're using the normal Combat Board, place 1 Force Field Token.
+  If you're using the \pagelink{Battlefield Combat}{Battlefield Board}, place 2 Tokens on two adjacent spaces.
+\end{expansion}
+\end{multicols}
+
+\clearpage
+\pagetarget{Summoning}{\subheader{Summoning}\index{Summoning}}
+\begin{expansion}{inferno,conflux}
+  Summoned units activate in the Round they were summoned if their Initiative is lower than or equal to the Initiative of the currently activated unit.
+  Otherwise, treat them as if they already activated this Combat Round.
+\end{expansion}
+\bigskip
+\begin{multicols}{2}
+  \begin{expansion}{conflux}
+    \subsection*{Summon Elemental Units}
+    The \textbf{Summon Elemental Spells} allow you to add an Elemental unit to the Combat Board during Combat.
+    Keep the Summoned Unit Deck face up near the Neutral Unit Decks.
+    Depending on the \svg{empower} used, you can Summon either a non-reinforced unit (a Few) or a reinforced one (a Pack).
+    Take the corresponding unit card from the Summoned Unit Deck and place it on a chosen empty space.
+    You may place \textbf{Summon Unit Tokens} instead of the cards.
+    When using the \pagelink{Battlefield Combat}{Battlefield Board}, you must place the Token.
+    Summoned units remain under your control until they perish or Combat ends.
+    A Summoned Elemental Unit is \textbf{not} added to your Unit Deck.
+    \bigskip
+
+    \begin{multicols}{2}
+      \centering
+      \footnotesize
+      \includegraphics[width=0.9\linewidth]{\cards/unit-summoned-few.png}\\
+      \imagecaption{A Few Fire Elementals}
+
+      \smallskip
+      \includegraphics[width=0.5\linewidth]{\images/summon-token-fire.png}\\
+      \imagecaption{Fire Elemental Token}
+
+      \smallskip
+      \includegraphics[width=0.5\linewidth]{\images/summon-token-earth.png}\\
+      \imagecaption{Earth Elemental Token}
+
+      \columnbreak
+      \includegraphics[width=0.9\linewidth]{\cards/unit-summoned-pack.png}\\
+      \imagecaption{A Pack of Fire Elementals}
+
+      \smallskip
+      \includegraphics[width=0.5\linewidth]{\images/summon-token-water.png}\\
+      \imagecaption{Water Elemental Token}
+
+      \smallskip
+      \includegraphics[width=0.5\linewidth]{\images/summon-token-air.png}\\
+      \imagecaption{Air Elemental Token}
+    \end{multicols}
+  \end{expansion}
+  \columnbreak
+
+  \begin{expansion}{inferno}
+    \subsection*{Summon Demons}
+    The \textbf{Pit Lords unit} from the Inferno Faction may use their \svg{unit_other} ability to summon or reinforce the Demons unit during Combat.
+    This effect cannot summon Demons from the Neutral Unit Deck.
+    Place the summoned ``Few'' Demons adjacent to the Pit Lords.
+    If ``Few'' Demons are already in Combat, reinforce them instead.
+    After Combat, unless stated otherwise, the summoned Demons \textbf{are} added to your Unit Deck.
+    \bigskip
+
+    \begin{multicols}{2}
+      \centering
+      \footnotesize
+      \includegraphics[width=0.9\linewidth]{\cards/unit-pitlord.png}\\
+      \imagecaption{Pit Lords}
+
+      \columnbreak
+      \includegraphics[width=0.9\linewidth]{\cards/unit-demon.png}\\
+      \imagecaption{Demons}
+    \end{multicols}
+  \vspace*{2.4em}
+  {\hfill\transparent{0.2}\includegraphics[width=0.9\linewidth]{\art/cerberi.png}}
+  \vspace*{2.4em}
+  \end{expansion}
+
+\end{multicols}
+
+
+\clearpage
+\pagetarget{unit keywords}{\subheader{Unit Ability keywords}}
+
+The following components and keywords are used by certain unit abilities.
+These Tokens are typically placed on other units to modify their statistics.
+\begin{multicols}{2}
+  \begin{expansion}{cove,stretchgoals2}
+    \subsection*{Weakness Token}
+    \setlength\intextsep{0pt}
+    \setlength\columnsep{1em}
+    \begin{wrapfigure}{r}{0.25\linewidth}
+      \centering
+      \footnotesize
+      \includegraphics[width=0.8\linewidth]{\images/weakness-token.png}\\
+      \imagecaption{Weakness Token}\\
+      \vspace{1em}
+    \end{wrapfigure}
+    \textbf{``Few'' Sorceresses unit} from the Cove Faction can use their \svg{unit_other} ability to place a Weakness Token on any unit.  % enemy unit?
+    A \textbf{``Pack'' of Sorceresses} places this Token automatically on a unit attacked by them due to their \svg{unit_attack} ability.
+    A unit with this Token suffers $-1$~\svg{attack} or $-2$~\svg{attack}, as indicated by the Token's side.
+    Each unit can have only one Weakness Token at a time.
+    If a unit would gain a second one, the player controlling it chooses which one to keep.
+    \begin{center}
+      \vspace*{2.5em}
+      {\transparent{0.2}\includegraphics[width=0.9\linewidth]{\art/weakness.png}}
+      \vspace*{2em}
+    \end{center}
+  \end{expansion}
+  \columnbreak
+
+  \begin{expansion}{stronghold,stretchgoals2}
+    \subsection*{Attack Token}
+    \setlength\intextsep{0pt}
+    \setlength\columnsep{1em}
+    \begin{wrapfigure}{r}{0.2\linewidth}
+      \centering
+      \footnotesize
+      \includegraphics[width=\linewidth]{\images/attack-token.png}\\
+      \imagecaption{Attack Token}\\
+      \vspace{1em}
+    \end{wrapfigure}
+    The \textbf{Ogres unit} from the Stronghold Faction can use their \svg{unit_other} ability to place Attack Tokens on other allied unit cards.
+    Units with such a Token gain an additional +1 \svg{attack} or +2 \svg{attack}, as indicated by the Token's side.
+    Each unit can have only one Attack Token at a time.
+    If a unit would gain a second one, the player controlling it chooses which one to keep.
+  \end{expansion}
+
+  \vspace*{1em}
+  \begin{expansion}{stronghold}
+    \subsection*{Corrosion Token}
+    \setlength\intextsep{0pt}
+    \setlength\columnsep{1em}
+    \begin{wrapfigure}{r}{0.25\linewidth}
+      \centering
+      \footnotesize
+      \includegraphics[width=0.8\linewidth]{\images/corrosion-token.png}\\
+      \imagecaption{Corrosion Token}\\
+      \vspace{1em}
+    \end{wrapfigure}
+    The \textbf{Behemoths unit} from the Stronghold Faction can use their \svg{unit_attack} ability to place a Corrosion Token on a unit attacked by them.
+    It reduces the enemy's unit \svg{defense} by 1 to a minimum of 0.
+    A unit can have only one Corrosion Token at a time.
+    If a unit would gain a second Token, discard one of them.
+    Unless removed by Spells or other effects, a Corrosion Token remains on the unit until the end of Combat.
+  \end{expansion}
+\end{multicols}
+
+\vfill
+\subheader{Fan-Made Database}
+\begin{wrapfigure}{r}{0.2\textwidth}
+  \vspace{-1.5em}
+  \includegraphics[width=\linewidth]{\qr/wiki-database.png}
+\end{wrapfigure}
+
+Many cards in \textbf{Heroes of Might and Magic 3: The Board Game} have ambiguous or misleading wording.
+Fortunately, the developers have clarified many card effects.
+
+The Community maintains a \textbf{Fan-Made Database}: a collection of nearly all game components with extensive notes to clarify specific rules.
+If you have questions about specific cards, visit this website:
+\mbox{\href{https://homm3bg.wiki/}{https://homm3bg.wiki/}}
+\vfill
