@@ -187,60 +187,69 @@
 \NewDocumentEnvironment{expansion}{ O{} m +b }{
   \__expansion_color_titles:NNn \l_expcolor_tl \l_exptitles_tl {#2}
 
-  \tl_clear_new:N \l_expoverlay_tl
   \iftoggle{textright2left}{
-    \tl_set:No \l_expoverlay_tl {
-      \fill[
-        \l_expcolor_tl,
-        path~fading=west,
-        opacity=0.09
-      ]
-        ([xshift=5pt, yshift=3pt]frame.north~east) rectangle
-        ([xshift=-5pt, yshift=-3pt]frame.south~west);
-      \fill[
-        top~color=\l_expcolor_tl,
-        bottom~color=\l_expcolor_tl,
-        rounded~corners=1.5pt,
-        opacity=0.5
-      ]
-      ([xshift=8pt, yshift=3pt]frame.north~east) rectangle
-      ([xshift=5pt, yshift=-3pt]frame.south~east);
-    }
-  }{
-    \tl_set:No \l_expoverlay_tl {
-      \fill[
-        \l_expcolor_tl,
-        path~fading=east,
-        opacity=0.09
-      ]
-        ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
+    \bgroup\textlang{english}{\begin{tcolorbox}[
+      enhanced,
+      title=\bgroup\textlang{\mainlanguagename}{\textbf{\tiny\l_exptitles_tl}}\egroup,
+      opacityfill=0,
+      size=small,
+      boxrule=0pt,
+      arc=0pt,
+      oversize,
+      beforeafter~skip~balanced=0.3\baselineskip~plus~1pt,
+      halign=right,
+      halign~title=right,
+      overlay={
+        \fill[
+          \l_expcolor_tl,
+          path~fading=west,
+          opacity=0.09
+        ]
+          ([xshift=5pt, yshift=3pt]frame.north~east) rectangle
+          ([xshift=-5pt, yshift=-3pt]frame.south~west);
+        \fill[
+          top~color=\l_expcolor_tl,
+          bottom~color=\l_expcolor_tl,
+          rounded~corners=1.5pt,
+          opacity=0.5
+        ]
+        ([xshift=8pt, yshift=3pt]frame.north~east) rectangle
         ([xshift=5pt, yshift=-3pt]frame.south~east);
-      \fill[
-        top~color=\l_expcolor_tl,
-        bottom~color=\l_expcolor_tl,
-        rounded~corners=1.5pt,
-        opacity=0.5
-      ]
-      ([xshift=-8pt, yshift=3pt]frame.north~west) rectangle
-      ([xshift=-5pt, yshift=-3pt]frame.south~west);
-    }
+      },
+      #1]
+      \bgroup\textlang{\mainlanguagename}{#3}\egroup
+    \end{tcolorbox}}\egroup
+  }{
+    \begin{tcolorbox}[
+      enhanced,
+      title=\textbf{\tiny\l_exptitles_tl},
+      opacityfill=0,
+      size=small,
+      boxrule=0pt,
+      arc=0pt,
+      oversize,
+      beforeafter~skip~balanced=0.3\baselineskip~plus~1pt,
+      overlay={
+        \fill[
+          \l_expcolor_tl,
+          path~fading=east,
+          opacity=0.09
+        ]
+          ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
+          ([xshift=5pt, yshift=-3pt]frame.south~east);
+        \fill[
+          top~color=\l_expcolor_tl,
+          bottom~color=\l_expcolor_tl,
+          rounded~corners=1.5pt,
+          opacity=0.5
+        ]
+        ([xshift=-8pt, yshift=3pt]frame.north~west) rectangle
+        ([xshift=-5pt, yshift=-3pt]frame.south~west);
+      },
+      #1]
+      #3
+    \end{tcolorbox}
   }
-
-  \textlang{english}{\begin{tcolorbox}[
-    enhanced,
-    title=\textlang{\mainlanguagename}{\textbf{\tiny\l_exptitles_tl}},
-    opacityfill=0,
-    size=small,
-    boxrule=0pt,
-    arc=0pt,
-    oversize,
-    beforeafter~skip~balanced=0.3\baselineskip~plus~1pt,
-    overlay={
-      \l_expoverlay_tl
-    },
-    #1]
-    \textlang{\mainlanguagename}{#3}
-  \end{tcolorbox}}
 }{}
 
 % Helper function for the tikz square
@@ -278,11 +287,6 @@
 \newenvironment{expansionmini}[1]{\begin{expansion}[%
   size=minimal,
   beforeafter skip balanced=0pt,
-]{#1}}{\end{expansion}}
-
-\newenvironment{expansionrtl}[1]{\begin{expansion}[%
-  halign=right,
-  halign title=right,
 ]{#1}}{\end{expansion}}
 
 % https://tex.stackexchange.com/questions/675895/how-to-use-full-string-conditionals-in-latex
