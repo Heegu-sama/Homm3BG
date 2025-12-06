@@ -188,9 +188,9 @@
   \__expansion_color_titles:NNn \l_expcolor_tl \l_exptitles_tl {#2}
 
   \iftoggle{textright2left}{
-    \bgroup\textlang{english}{\begin{tcolorbox}[
+    \textlang{english}{\begin{tcolorbox}[
       enhanced,
-      title=\bgroup\textlang{\mainlanguagename}{\textbf{\tiny\l_exptitles_tl}}\egroup,
+      title=\textlang{\mainlanguagename}{\textbf{\tiny\l_exptitles_tl}},
       opacityfill=0,
       size=small,
       boxrule=0pt,
@@ -217,8 +217,8 @@
         ([xshift=5pt, yshift=-3pt]frame.south~east);
       },
       #1]
-      \bgroup\textlang{\mainlanguagename}{#3}\egroup
-    \end{tcolorbox}}\egroup
+      \textlang{\mainlanguagename}{#3}
+    \end{tcolorbox}}
   }{
     \begin{tcolorbox}[
       enhanced,
