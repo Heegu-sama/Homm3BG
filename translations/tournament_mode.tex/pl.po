@@ -56,6 +56,8 @@ msgid ""
 "\\pagetarget{Tournament Mode}{\\addsection{Tournament Mode}{\\images/homm-"
 "shield.png}}"
 msgstr ""
+"\\pagetarget{Tournament Mode}{\\addsection{Tryb Turnieju}{\\images/homm-"
+"shield.png}}"
 
 #. type: multicols
 #: sections/tournament_mode.tex:7
@@ -64,6 +66,8 @@ msgid ""
 "The 1~vs.~1 Tournament Mode features rule changes to reduce randomness, allow more tactical decisions, and give players greater control.\n"
 "\n"
 msgstr ""
+"Tryb Turnieju 1~vs.~1 wprowadza modyfikacje zasad zmniejszające czynnik losowy, a także oferujące graczom więcej możliwości taktycznych i większą kontrolę nad rozgrywką.\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:9
@@ -72,6 +76,8 @@ msgid ""
 "\\textbf{Note:} Tournament Mode is designed for the Core Game only. Rules for incorporating expansion content (e.g. \\pagelinkwithcomma{Sea Map Tiles}{Sea Map Tiles}) are not provided.\n"
 "\n"
 msgstr ""
+"\\textbf{Uwaga:} Tryb Turnieju jest zaprojektowany tylko dla zestawu podstawowego. Nie ma określinych zasad używania elementów rozszerzeń (np. \\pagelink{Sea Map Tiles}{Kafelków Mapy Morza}).\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:11
@@ -80,6 +86,8 @@ msgid ""
 "\\subsection*{Changes during Setup}\n"
 "\n"
 msgstr ""
+"\\subsection*{Zmiany w przygotowaniu gry}\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:18
@@ -93,6 +101,13 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"Przed rozpoczęciem rozgrywki:\n"
+"\\begin{itemize}\n"
+"  \\item Usuń z gry kartę Zdolności ,,Dyplomacja'' oraz kartę Artefaktu ,,Klepsydra Diabelskiej Godziny'' przed utworzeniem ich Talii.\n"
+"  \\item Obaj gracze rzucają 2 \\svg{resource_die}. Osoba z większą sumą wyników wybiera, kto będzie pierwszym, a kto drugim graczem.\n"
+"  \\item Drugi gracz rozpoczna rozgrywkę z~\\svg{morale_positive}.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:20
@@ -101,6 +116,8 @@ msgid ""
 "\\subsection*{Building the Map}\n"
 "\n"
 msgstr ""
+"\\subsection*{Tworzenie Mapy Scenariusza}\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:24
@@ -111,6 +128,10 @@ msgid ""
 "The placement decisions of all other Map Tiles assigned to the Scenario are decided by both players.\n"
 "\n"
 msgstr ""
+"Mapa w Scenariuszu Turniejowym jest tworzona przez graczy i jest całkowicie odsłonięta od początku rozgrywki.\n"
+"Scenariusz jedynie określa jak wygląda środek Mapy, oraz wymienia pozostałe Kafelki, z których będzie się składać.\n"
+"Rozmieszczenie tych Kafelków będzie zależało od decyzji obu graczy.\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:44
@@ -137,6 +158,26 @@ msgid ""
 "\\end{enumerate}\n"
 "\n"
 msgstr ""
+"\\textbf{Wszystkie Kafelki Mapy są kładzione odkryte} według poniższych zasad:\n"
+"\\begin{enumerate}\n"
+"  \\item Gracz początkwy układa Kafelki na środku według Układu Mapy Scenariusza, po czym może je dowolnie obrócić.\n"
+"\\columnbreak\n"
+"  \\item Zaczynając do drugiego gracza, obaj gracze dokładają naprzemiennie po jednym Bliskim Kafelku Mapy (jeśli są jakieś przewidziane).\n"
+"  \\begin{itemize}\n"
+"    \\item Jeżeli to możliwe, umieszczane kafelki Bliskie muszą przylegać do Kafelka Centralnego.\n"
+"    \\item W każdym scenariuszu, przynajmniej dwa Kafelki Bliskie muszą zawierać Obelisk.\n"
+"    \\item Gracze dobierają Kafelki losowo z zakrytego stosu, odkrywają wybrany Kafelek i wybierają gdzie go dołożyć.\n"
+"  \\end{itemize}\n"
+"  \\item Gdy wszystkie Kafelki Bliskie będą ułożone, pierwszy gracz umieszcza swój Kafelek Początkowy tak, aby sąsiadował z co najmniej jednym Kafelkiem Bliskim.\n"
+"    Drugi gracz umieszcza swój Kafelek Początkowy po przeciwnej stronie Mapy -- na najodległejszej pozycji (mierzonej liczbą Kafelków) względem Kafelka Początkowego pierwszego gracza.\n"
+"  \\item Następnie, zaczynając od gracza początkowego, gracze dokładają naprzemiennie po jednym Kafelku Dalekim.\n"
+"  \\begin{itemize}\n"
+"    \\item Pierwszy Kafelek Daleki dobrany przez każdego gracza musi sąsiadować z jego Kafelkiem Początkowym.\n"
+"    \\item Pozostałe Kafelki dokładane są zgodnie z \\pagelink{Placing}{normalnymi zasadami umieszczania kafelków }.\n"
+"    \\item Gracze dobierają Kafelki losowo z zakrytego stosu, odkrywają wybrany Kafelek i wybierają gdzie go dołożyć.\n"
+"  \\end{itemize}\n"
+"\\end{enumerate}\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:46
@@ -145,6 +186,8 @@ msgid ""
 "\\subsection*{Additional rules during the\\\\game}\n"
 "\n"
 msgstr ""
+"\\subsection*{Dodatkowe zasady rozgrywki}\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:55
@@ -160,6 +203,15 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"Poniższe zasady obowiązują w każdym scenariuszu turniejowym:\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{Mulligan w pierwszej rundzie:} Na początku pierwszej rundy scenariusza, każdy gracz może wtasować karty ze swojej ręki ponownie do swojej Talii M\\&M i dobrać nową rękę początkową.\n"
+"  \\item Żeton Morale pozwala na wykonanie \\textbf{nowej akcji}: Podczas każdego \\textbf{Przeszukiwania}, odrzuć wszystkie dobrane karty i Przeszukaj jeszcze raz.\n"
+"  \\item Usuwając kartę Artefaktu, za każdym razem \\textbf{odłóż ją na stos obok Twojej Talii}. Te stosy Usuniętych Artefaktów będą uwzględniane podczas obliczania ostatecznej punktacji na koniec gry\n"
+"  \\item Odwiedzając \\textbf{Obserwatorium}, wykonaj jego \\pagelink{Observatory}{efekt alternatywny}.\n"
+"  \\item \\textbf{Opcjonalnie}: Możesz użyć wariantu z \\pagelink{Split Artifact and Spell Decks}{podziałem Talii Zaklęć i Artefaktów} aby mieć więcej kontroli nad dobieranymi kartami.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:65
@@ -176,6 +228,16 @@ msgid ""
 "The player with the most VPs wins the Scenario.\n"
 "\n"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\\begin{center}\n"
+"  \\transparent{0.2}\\includegraphics[width=1.05\\linewidth]{\\art/berserk.png}\n"
+"\\end{center}\n"
+"\\vspace*{\\fill}\n"
+"\\columnbreak\n"
+"\\subheader{Podliczanie Punktów Zwycięstwa}\n"
+"W momencie osiągnięcia Limitu Rund, lub gdy któryś z graczy spełni warunek zwycięstwa danego Scenariusza, gra się kończy i obaj gracze podliczają swoje Punkty Zwycięstwa (PZ) według poniższej tabeli.\n"
+"Gracz z większą liczbą PZ wygrywa.\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:95
@@ -209,3 +271,31 @@ msgid ""
 "  }\n"
 "\\end{table}"
 msgstr ""
+"\\begin{table}[H]\n"
+"  \\hommtable{26}{\n"
+"    \\centering\n"
+"    \\medskip\n"
+"    \\textbf{Punkty Zwycięstwa na koniec gry}\\\\\n"
+"    \\bigskip\n"
+"    \\begin{tabularx}{0.95\\linewidth}{>{\\hsize=0.12\\hsize\\linewidth=\\hsize}X\n"
+"        >{\\hsize=0.8\\hsize\\linewidth=\\hsize}X\n"
+"      }\n"
+"      \\darkcell[0.8]{PZ} & \\darkcell[0.8]{Kategoria} \\\\\n"
+"      \\darkcell[1.2]{1} &\n"
+"      \\lightcell[1.2]{za każdą kontrolowaną Osadę lub Kopalnię} \\\\\n"
+"      \\darkcell[1.2]{1} &\n"
+"      \\lightcell[1.2]{za każdy budynek w Twoim Mieście} \\\\\n"
+"      \\darkcell[1.2]{1} &\n"
+"      \\lightcell[1.2]{za każde dwa Artefakty w Twojej Talii (razem z usuniętymi)} \\\\\n"
+"      \\darkcell[1.2]{1} &\n"
+"      \\lightcell[1.2]{za każdy Poziom Twojego Bohatera Głównego} \\\\\n"
+"      \\darkcell[1.2]{2} &\n"
+"      \\lightcell[1.2]{za każdego pokonanego Bohatera Pomocniczego przeciwnika} \\\\\n"
+"      \\darkcell[1.2]{4} &\n"
+"      \\lightcell[1.2]{za pokonanie Bohatera Głownego przeciwnika (jednorazowo)} \\\\\n"
+"      \\darkcell[1.2]{X} &\n"
+"      \\lightcell[1.2]{za dodatkowe cele wskazane w opisie danego scenariusza} \\\\\n"
+"      \\end{tabularx}\n"
+"  }\n"
+"\\end{table}"
+
