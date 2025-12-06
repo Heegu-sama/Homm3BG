@@ -62,6 +62,9 @@
 \usepackage[skip=6pt, indent=0pt]{parskip}
 \setstretch{1}
 
+\providecommand{\setlanguages}[0]{}
+\setlanguages
+
 \newcommand{\version}{\input{.version}}
 
 \newcommand{\expansiontext}[1]{%
@@ -223,10 +226,9 @@
     }
   }
 
-  % minipage is here for the correct text alignment in Hebrew
   \textlang{english}{\begin{tcolorbox}[
     enhanced,
-    title=\textlang{\mainlanguagename}{\begin{minipage}{\linewidth}\textbf{\tiny\l_exptitles_tl}\end{minipage}},
+    title=\textlang{\mainlanguagename}{\textbf{\tiny\l_exptitles_tl}},
     opacityfill=0,
     size=small,
     boxrule=0pt,
@@ -237,7 +239,7 @@
       \l_expoverlay_tl
     },
     #1]
-    \textlang{\mainlanguagename}{\begin{minipage}{\linewidth}#3\end{minipage}}
+    \textlang{\mainlanguagename}{#3}
   \end{tcolorbox}}
 }{}
 
@@ -276,6 +278,11 @@
 \newenvironment{expansionmini}[1]{\begin{expansion}[%
   size=minimal,
   beforeafter skip balanced=0pt,
+]{#1}}{\end{expansion}}
+
+\newenvironment{expansionrtl}[1]{\begin{expansion}[%
+  halign=right,
+  halign title=right,
 ]{#1}}{\end{expansion}}
 
 % https://tex.stackexchange.com/questions/675895/how-to-use-full-string-conditionals-in-latex
