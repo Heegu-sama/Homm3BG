@@ -145,6 +145,311 @@ This guide provides a visual overview of all components included in every expans
 
 \clearpage
 
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[c]{0.3\linewidth}
+    \includegraphics[width=\linewidth]{\images/hero.png}
+    \caption{\textbf{\pagelink{Herocard}{Hero Board}}}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[c]{0.4\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{\images/hero-minis.png}
+    \caption{\textbf{Hero Miniatures}}
+  \end{subfigure}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[c]{0.22\linewidth}
+    \centering
+    \begin{tikzpicture}
+      \node at (0, 0) {\includegraphics[width=0.7\linewidth]{\cards/astrolog-back.png}};
+      \node at (0.7, 1.2) {\includegraphics[width=0.7\linewidth]{\cards/astrolog.png}};
+    \end{tikzpicture}
+    \caption{\textbf{\pagelink{Rounds}{Astrologers Proclaim card}}}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[c]{0.22\linewidth}
+    \begin{expansionmini}{fortress}
+      \centering
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=0.8\linewidth]{\cards/event-back.png}};
+        \node at (0.7, 1.2) {\includegraphics[width=0.8\linewidth]{\cards/event.png}};
+      \end{tikzpicture}
+      \caption{\textbf{\pagelink{Events}{Event card}}}
+    \end{expansionmini}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[c]{0.22\linewidth}
+    \begin{expansionmini}{battlefield}
+      \centering
+      \vspace{0.5em}
+      \includegraphics[width=\linewidth]{\cards/adventure.png}
+      \caption{\textbf{\pagelink{Adventure Cards}{Adventure card}}}
+    \end{expansionmini}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[c]{0.23\linewidth}
+    \begin{expansionmini}{stretchgoals2}
+      \centering
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/pandora-back.png}};
+        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/pandora.png}};
+      \end{tikzpicture}
+    \caption{\textbf{\pagelink{Pandora Card}{Pandora's Box card}}}
+    \end{expansionmini}
+  \end{subfigure}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \hfill
+  \begin{subfigure}[c]{0.15\linewidth}
+    \centering
+    \includegraphics[width=0.8\linewidth]{\images/faction-cubes.png}
+    \caption{\textbf{Faction Cubes}}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[c]{0.15\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{\images/black-cubes.png}
+    \caption{\textbf{Black Cubes}}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[c]{0.12\linewidth}
+    \centering
+    \includegraphics[width=0.8\linewidth]{\images/grail.png}
+    \caption{\textbf{\pagelink{Grail}{Grail Token}}}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[c]{0.15\linewidth}
+    \begin{expansionmini}{navalbattles}
+      \centering
+      \vspace{0.5em}
+      \includegraphics[width=0.6\linewidth]{\images/crown-token.png}
+      \caption{\textbf{\pagelink{Empowered Ability Token}{Empowered Ability Token}}}
+    \end{expansionmini}
+  \end{subfigure}
+  \hfill
+  ~
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[c]{0.4\linewidth}
+    \centering
+    \includegraphics[width=0.8\linewidth]{\images/round-tracker.png}
+    \caption{\textbf{\pagelink{Rounds}{Round Tracker}}}
+  \end{subfigure}
+  \begin{subfigure}[c]{0.15\linewidth}
+    \centering
+    \includegraphics[width=0.7\linewidth]{\images/attack_die.png}
+    \caption{\textbf{\pagelink{Combatterminology}{Attack Dice}} \\\phantom{Population}}
+  \end{subfigure}
+  \begin{subfigure}[c]{0.15\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{\images/treasure_die.png}
+    \caption{\textbf{\pagelink{Treasure Die}{Treasure Dice}}}
+  \end{subfigure}
+  \begin{subfigure}[c]{0.15\linewidth}
+    \centering
+    \includegraphics[width=0.8\linewidth]{\images/resource_die.png}
+    \caption{\textbf{\pagelink{Resources}{Resource Dice}}}
+  \end{subfigure}
+\end{figure}
+
+\vspace*{-1em}
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[c]{0.9\linewidth}
+    \centering
+    \begin{tikzpicture}
+
+      % background
+      \node[opacity=0.75] at (6.7, 0.7) {\includegraphics[scale=1.2]{\images/unitmini-evileye.png}};
+      \node[opacity=0.75] at (-3.9, 1.0) {\includegraphics[scale=1.4]{\images/unitmini-dwarf.png}};
+      \node[opacity=0.75] at (-0.9, 0.66) {\includegraphics[scale=1.4]{\images/unitmini-naga.png}};
+      \node[opacity=0.75] at (3.1, 0.7) {\includegraphics[scale=1.4]{\images/unitmini-lich.png}};
+      \node[opacity=0.75] at (1, 1.1) {\includegraphics[scale=1.4]{\images/unitmini-archangel.png}};
+      \node[opacity=0.75, xscale=-1] at (-2.6, 1) {\includegraphics[scale=1.2]{\images/unitmini-troglodyte.png}};
+      % foreground
+      \node at (-3.5, 0) {\includegraphics[scale=0.9]{\images/unitmini-magicelemental.png}};
+      \node at (-1.6, -0.4) {\includegraphics[scale=0.9]{\images/unitmini-seaman.png}};
+      \node at (2, -0.1) {\includegraphics[scale=0.9]{\images/unitmini-archdevil.png}};
+      \node at (0, 0.15) {\includegraphics[scale=1.1]{\images/unitmini-cyclops.png}};
+      \node at (5.1, 0.6) {\includegraphics[scale=0.7]{\images/unitmini-haspid.png}};
+    \end{tikzpicture}
+    \caption{\textbf{\pagelink{Miniatures}{Unit Miniatures}}\\\textit{(Not included in the core game)}}
+  \end{subfigure}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[c]{0.23\linewidth}
+    \centering
+    \begin{tikzpicture}
+      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
+      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/spell.png}};
+    \end{tikzpicture}
+    \caption{\textbf{\pagelink{spells}{Spell card}}}
+  \end{subfigure}
+  \begin{subfigure}[c]{0.23\linewidth}
+    \centering
+    \begin{tikzpicture}
+      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
+      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/artifact-front.png}};
+    \end{tikzpicture}
+    \caption{\textbf{\pagelink{Artifact}{Artifact card}}}
+  \end{subfigure}
+  \begin{subfigure}[c]{0.23\linewidth}
+    \centering
+    \begin{tikzpicture}
+      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
+      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/ability-offense.png}};
+    \end{tikzpicture}
+    \caption{\textbf{\pagelink{Ability}{Ability card}}}
+  \end{subfigure}
+  \begin{subfigure}[c]{0.23\linewidth}
+    \centering
+    \begin{tikzpicture}
+      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
+      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/statistic.png}};
+    \end{tikzpicture}
+    \caption{\textbf{\pagelink{Statistic}{Statistic card}}}
+  \end{subfigure}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[c]{0.23\linewidth}
+    \centering
+    \begin{tikzpicture}
+      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
+      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/specialty.png}};
+    \end{tikzpicture}
+    \caption{\textbf{\pagelink{Specialty}{Hero Specialty card}}}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[c]{0.22\linewidth}
+    \begin{expansionmini}{stronghold}
+      \centering
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
+        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/test_spellscroll.png}};
+      \end{tikzpicture}
+      \caption{\textbf{\pagelink{Spell Scroll Cards}{Spell Scroll card}}}
+    \end{expansionmini}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[c]{0.23\linewidth}
+    \begin{expansionmini}{navalbattles}
+      \centering
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
+        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/ability-offense-empowered.png}};
+      \end{tikzpicture}
+      \caption{\textbf{\pagelink{Empowered Ability}{Empowered Ability card}}}
+    \end{expansionmini}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[c]{0.23\linewidth}
+    \begin{expansionmini}{inferno}
+      \centering
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
+        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/empowered_statistic.png}};
+      \end{tikzpicture}
+      \caption{\textbf{\pagelink{Empowered Statistic}{Empowered Statistic card}}}
+    \end{expansionmini}
+  \end{subfigure}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[c]{0.23\linewidth}
+    \centering
+    \begin{tikzpicture}
+      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/unit-pack.png}};
+      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/unit-few.png}};
+    \end{tikzpicture}
+    \caption{\textbf{\pagelink{Units}{Faction Unit card}}}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[c]{0.23\linewidth}
+    \begin{expansionmini}{conflux}
+      \centering
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/unit-summoned-pack.png}};
+        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/unit-summoned-few.png}};
+      \end{tikzpicture}
+      \caption{\textbf{\pagelink{Summoning}{Summoned Unit card}}}
+    \end{expansionmini}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[c]{0.23\linewidth}
+    \begin{expansionmini}{navalbattles}
+      \centering
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/creature-bank-back.png}};
+        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/creature-bank.png}};
+      \end{tikzpicture}
+      \caption{\textbf{\pagelink{Creature Banks Rules}{Creature Bank Unit card}}}
+    \end{expansionmini}
+  \end{subfigure}
+  ~
+  \begin{subfigure}[c]{0.23\linewidth}
+    \begin{expansionmini}{rampart,cove}
+      \centering
+      \begin{tikzpicture}
+        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
+        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/war_machine.png}};
+      \end{tikzpicture}
+      \caption{\textbf{\pagelink{War Machines}{War Machine card}}}
+    \end{expansionmini}
+  \end{subfigure}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \hfill
+  \begin{subfigure}[c]{0.23\linewidth}
+    \centering
+    \begin{tikzpicture}
+      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/neutral-back.png}};
+      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/neutral-front.png}};
+    \end{tikzpicture}
+    \caption{\textbf{\pagelink{Neutral Units}{Neutral Unit card}}}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[c]{0.23\linewidth}
+    \centering
+    \begin{tikzpicture}
+      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/arrow_tower_back.png}};
+      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/arrow_tower.png}};
+    \end{tikzpicture}
+    \caption{\textbf{\pagelink{Walls}{Arrow Tower card}}}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[c]{0.23\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{\cards/gate.png}
+    \caption{\textbf{\pagelink{Walls}{Gate, Walls cards}}}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[c]{0.23\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{\cards/aiback.png}
+    \caption{\textbf{\pagelink{AIrules}{AI card}}}
+  \end{subfigure}
+  \hfill
+  ~
+\end{figure}
+
+\clearpage
+
 \vspace*{-1em}
 \begin{figure}[H]
   \centering
@@ -354,310 +659,6 @@ This guide provides a visual overview of all components included in every expans
 \end{figure}
 \vspace*{-1em}
 
-\clearpage
-
-\begin{figure}[H]
-  \centering
-  \begin{subfigure}[c]{0.23\linewidth}
-    \centering
-    \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
-      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/spell.png}};
-    \end{tikzpicture}
-    \caption{\textbf{\pagelink{spells}{Spell card}}}
-  \end{subfigure}
-  \begin{subfigure}[c]{0.23\linewidth}
-    \centering
-    \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
-      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/artifact-front.png}};
-    \end{tikzpicture}
-    \caption{\textbf{\pagelink{Artifact}{Artifact card}}}
-  \end{subfigure}
-  \begin{subfigure}[c]{0.23\linewidth}
-    \centering
-    \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
-      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/ability-offense.png}};
-    \end{tikzpicture}
-    \caption{\textbf{\pagelink{Ability}{Ability card}}}
-  \end{subfigure}
-  \begin{subfigure}[c]{0.23\linewidth}
-    \centering
-    \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
-      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/statistic.png}};
-    \end{tikzpicture}
-    \caption{\textbf{\pagelink{Statistic}{Statistic card}}}
-  \end{subfigure}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \begin{subfigure}[c]{0.23\linewidth}
-    \centering
-    \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
-      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/specialty.png}};
-    \end{tikzpicture}
-    \caption{\textbf{\pagelink{Specialty}{Hero Specialty card}}}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[c]{0.22\linewidth}
-    \begin{expansionmini}{stronghold}
-      \centering
-      \begin{tikzpicture}
-        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
-        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/test_spellscroll.png}};
-      \end{tikzpicture}
-      \caption{\textbf{\pagelink{Spell Scroll Cards}{Spell Scroll card}}}
-    \end{expansionmini}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[c]{0.23\linewidth}
-    \begin{expansionmini}{navalbattles}
-      \centering
-      \begin{tikzpicture}
-        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
-        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/ability-offense-empowered.png}};
-      \end{tikzpicture}
-      \caption{\textbf{\pagelink{Empowered Ability}{Empowered Ability card}}}
-    \end{expansionmini}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[c]{0.23\linewidth}
-    \begin{expansionmini}{inferno}
-      \centering
-      \begin{tikzpicture}
-        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
-        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/empowered_statistic.png}};
-      \end{tikzpicture}
-      \caption{\textbf{\pagelink{Empowered Statistic}{Empowered Statistic card}}}
-    \end{expansionmini}
-  \end{subfigure}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \begin{subfigure}[c]{0.23\linewidth}
-    \centering
-    \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/unit-pack.png}};
-      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/unit-few.png}};
-    \end{tikzpicture}
-    \caption{\textbf{\pagelink{Units}{Faction Unit card}}}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[c]{0.23\linewidth}
-    \begin{expansionmini}{conflux}
-      \centering
-      \begin{tikzpicture}
-        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/unit-summoned-pack.png}};
-        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/unit-summoned-few.png}};
-      \end{tikzpicture}
-      \caption{\textbf{\pagelink{Summoning}{Summoned Unit card}}}
-    \end{expansionmini}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[c]{0.23\linewidth}
-    \begin{expansionmini}{navalbattles}
-      \centering
-      \begin{tikzpicture}
-        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/creature-bank-back.png}};
-        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/creature-bank.png}};
-      \end{tikzpicture}
-      \caption{\textbf{\pagelink{Creature Banks Rules}{Creature Bank Unit card}}}
-    \end{expansionmini}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[c]{0.23\linewidth}
-    \begin{expansionmini}{rampart,cove}
-      \centering
-      \begin{tikzpicture}
-        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/mmback.png}};
-        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/war_machine.png}};
-      \end{tikzpicture}
-      \caption{\textbf{\pagelink{War Machines}{War Machine card}}}
-    \end{expansionmini}
-  \end{subfigure}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \hfill
-  \begin{subfigure}[c]{0.23\linewidth}
-    \centering
-    \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/neutral-back.png}};
-      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/neutral-front.png}};
-    \end{tikzpicture}
-    \caption{\textbf{\pagelink{Neutral Units}{Neutral Unit card}}}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[c]{0.23\linewidth}
-    \centering
-    \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/arrow_tower_back.png}};
-      \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/arrow_tower.png}};
-    \end{tikzpicture}
-    \caption{\textbf{\pagelink{Walls}{Arrow Tower card}}}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[c]{0.23\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{\cards/gate.png}
-    \caption{\textbf{\pagelink{Walls}{Gate, Walls cards}}}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[c]{0.23\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{\cards/aiback.png}
-    \caption{\textbf{\pagelink{AIrules}{AI card}}}
-  \end{subfigure}
-  \hfill
-  ~
-\end{figure}
-
-\clearpage
-
-\begin{figure}[H]
-  \centering
-  \begin{subfigure}[c]{0.3\linewidth}
-    \includegraphics[width=\linewidth]{\images/hero.png}
-    \caption{\textbf{\pagelink{Herocard}{Hero Board}}}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[c]{0.4\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{\images/hero-minis.png}
-    \caption{\textbf{Hero Miniatures}}
-  \end{subfigure}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \begin{subfigure}[c]{0.22\linewidth}
-    \centering
-    \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.7\linewidth]{\cards/astrolog-back.png}};
-      \node at (0.7, 1.2) {\includegraphics[width=0.7\linewidth]{\cards/astrolog.png}};
-    \end{tikzpicture}
-    \caption{\textbf{\pagelink{Rounds}{Astrologers Proclaim card}}}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[c]{0.22\linewidth}
-    \begin{expansionmini}{fortress}
-      \centering
-      \begin{tikzpicture}
-        \node at (0, 0) {\includegraphics[width=0.8\linewidth]{\cards/event-back.png}};
-        \node at (0.7, 1.2) {\includegraphics[width=0.8\linewidth]{\cards/event.png}};
-      \end{tikzpicture}
-      \caption{\textbf{\pagelink{Events}{Event card}}}
-    \end{expansionmini}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[c]{0.22\linewidth}
-    \begin{expansionmini}{battlefield}
-      \centering
-      \vspace{0.5em}
-      \includegraphics[width=\linewidth]{\cards/adventure.png}
-      \caption{\textbf{\pagelink{Adventure Cards}{Adventure card}}}
-    \end{expansionmini}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[c]{0.23\linewidth}
-    \begin{expansionmini}{stretchgoals2}
-      \centering
-      \begin{tikzpicture}
-        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/pandora-back.png}};
-        \node at (1.5, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/pandora.png}};
-      \end{tikzpicture}
-    \caption{\textbf{\pagelink{Pandora Card}{Pandora's Box card}}}
-    \end{expansionmini}
-  \end{subfigure}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \hfill
-  \begin{subfigure}[c]{0.15\linewidth}
-    \centering
-    \includegraphics[width=0.8\linewidth]{\images/faction-cubes.png}
-    \caption{\textbf{Faction Cubes}}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[c]{0.15\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{\images/black-cubes.png}
-    \caption{\textbf{Black Cubes}}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[c]{0.12\linewidth}
-    \centering
-    \includegraphics[width=0.8\linewidth]{\images/grail.png}
-    \caption{\textbf{\pagelink{Grail}{Grail Token}}}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[c]{0.15\linewidth}
-    \begin{expansionmini}{navalbattles}
-      \centering
-      \vspace{0.5em}
-      \includegraphics[width=0.6\linewidth]{\images/crown-token.png}
-      \caption{\textbf{\pagelink{Empowered Ability Token}{Empowered Ability Token}}}
-    \end{expansionmini}
-  \end{subfigure}
-  \hfill
-  ~
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \begin{subfigure}[c]{0.4\linewidth}
-    \centering
-    \includegraphics[width=0.8\linewidth]{\images/round-tracker.png}
-    \caption{\textbf{\pagelink{Rounds}{Round Tracker}}}
-  \end{subfigure}
-  \begin{subfigure}[c]{0.15\linewidth}
-    \centering
-    \includegraphics[width=0.7\linewidth]{\images/attack_die.png}
-    \caption{\textbf{\pagelink{Combatterminology}{Attack Dice}} \\\phantom{Population}}
-  \end{subfigure}
-  \begin{subfigure}[c]{0.15\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{\images/treasure_die.png}
-    \caption{\textbf{\pagelink{Treasure Die}{Treasure Dice}}}
-  \end{subfigure}
-  \begin{subfigure}[c]{0.15\linewidth}
-    \centering
-    \includegraphics[width=0.8\linewidth]{\images/resource_die.png}
-    \caption{\textbf{\pagelink{Resources}{Resource Dice}}}
-  \end{subfigure}
-\end{figure}
-
-\vspace*{-1em}
-\begin{figure}[H]
-  \centering
-  \begin{subfigure}[c]{0.9\linewidth}
-    \centering
-    \begin{tikzpicture}
-
-      % background
-      \node[opacity=0.75] at (6.7, 0.7) {\includegraphics[scale=1.2]{\images/unitmini-evileye.png}};
-      \node[opacity=0.75] at (-3.9, 1.0) {\includegraphics[scale=1.4]{\images/unitmini-dwarf.png}};
-      \node[opacity=0.75] at (-0.9, 0.66) {\includegraphics[scale=1.4]{\images/unitmini-naga.png}};
-      \node[opacity=0.75] at (3.1, 0.7) {\includegraphics[scale=1.4]{\images/unitmini-lich.png}};
-      \node[opacity=0.75] at (1, 1.1) {\includegraphics[scale=1.4]{\images/unitmini-archangel.png}};
-      \node[opacity=0.75, xscale=-1] at (-2.6, 1) {\includegraphics[scale=1.2]{\images/unitmini-troglodyte.png}};
-      % foreground
-      \node at (-3.5, 0) {\includegraphics[scale=0.9]{\images/unitmini-magicelemental.png}};
-      \node at (-1.6, -0.4) {\includegraphics[scale=0.9]{\images/unitmini-seaman.png}};
-      \node at (2, -0.1) {\includegraphics[scale=0.9]{\images/unitmini-archdevil.png}};
-      \node at (0, 0.15) {\includegraphics[scale=1.1]{\images/unitmini-cyclops.png}};
-      \node at (5.1, 0.6) {\includegraphics[scale=0.7]{\images/unitmini-haspid.png}};
-    \end{tikzpicture}
-    \caption{\textbf{\pagelink{Miniatures}{Unit Miniatures}}\\\textit{(Not included in the core game)}}
-  \end{subfigure}
-\end{figure}
 
 % new content:
 % stronghold: quicksand token, time token, attack token, corrosion token, spell scroll card
