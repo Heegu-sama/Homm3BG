@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-11-29 16:03+0000\n"
+"POT-Creation-Date: 2025-12-07 21:39+0000\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -24,10 +24,10 @@ msgstr ""
 #: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
 #: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
 #: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
-#: sections/map_elements.tex:92 sections/map_elements.tex:140
+#: sections/map_elements.tex:88 sections/map_elements.tex:139
 #: sections/player_turns.tex:5 sections/resources.tex:5
 #: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:57 sections/tournament_mode.tex:5 sections/town.tex:5
+#: sections/setup.tex:55 sections/tournament_mode.tex:5 sections/town.tex:5
 #: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
 #, no-wrap
 msgid ""
@@ -35,13 +35,16 @@ msgid ""
 "\n"
 msgstr ""
 
-#. type: figure
-#: sections/deckbuilding.tex:324 sections/map_elements.tex:54
-#: sections/map_elements.tex:274 sections/player_turns.tex:124
-#: sections/setup.tex:7
-#, no-wrap
-msgid "  \\begin{tikzpicture}\n"
+#. type: multicols*
+#: sections/battlefield.tex:95 sections/map_elements.tex:30
+#: sections/map_elements.tex:51
+#, fuzzy, no-wrap
+msgid ""
+"\\begin{center}\n"
+"  \\begin{tikzpicture}\n"
 msgstr ""
+"    \\vspace*{1em}    \\begin{center}\n"
+"      \\begin{tikzpicture}\n"
 
 #.  !TeX spellcheck = en_US
 #. type: Plain text
@@ -65,7 +68,7 @@ msgid ""
 "\n"
 msgstr ""
 "{2}\n"
-"Каждый сценарий использует четыре типа фрагментов \\pagetarget{Map}{карты}.\n"
+"Каждый сценарий использует четыре типа фрагментов карты.\n"
 "Игроки начинают с уникального для фракции начального (I) фрагмента.\n"
 "В ходе подготовки к игре все фрагменты должны быть выбраны случайным образом из пула доступных фрагментов, исходя из описания сценария, перемешаны и оставлены лицом вниз.\\par\n"
 "\\textbf{Римские цифры} на каждом фрагменте описывают общую \\textbf{мощь нейтральных отрядов} и количество наград, которые игрок может получить на нём.\n"
@@ -119,22 +122,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:31
-#, fuzzy, no-wrap
-#| msgid ""
-#| "    \\bigskip\n"
-#| "    \\begin{center}\n"
-#| "      \\begin{tikzpicture}\n"
-msgid ""
-"\\begin{center}\n"
-"  \\begin{footnotesize}\n"
-"  \\begin{tikzpicture}\n"
-msgstr ""
-"    \\vspace*{1em}    \\begin{center}\n"
-"      \\begin{tikzpicture}\n"
-
-#. type: multicols*
-#: sections/map_elements.tex:41
+#: sections/map_elements.tex:39
 #, fuzzy, no-wrap
 #| msgid ""
 #| "    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
@@ -158,7 +146,6 @@ msgid ""
 "    \\draw (-3.8, -0.7) node {\\encircle{3}};\n"
 "    \\draw (0.6, -0.7) node {\\encircle{4}};\n"
 "  \\end{tikzpicture}\n"
-"  \\end{footnotesize}\n"
 "  \\imagecaption{\\footnotesize{}Types of Map Tiles}\n"
 "\\end{center}\n"
 "\n"
@@ -179,7 +166,7 @@ msgstr ""
 "    \\begin{scriptsize}\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:49
+#: sections/map_elements.tex:47
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\includegraphics[width=\\linewidth]{\\images/maptiles.png}\n"
@@ -218,7 +205,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:51
+#: sections/map_elements.tex:49
 #, no-wrap
 msgid ""
 "\\separator\n"
@@ -226,42 +213,101 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:53
-#, no-wrap
-msgid ""
-"\\begin{center}\n"
-"  \\begin{scriptsize}\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/map_elements.tex:71
-#, no-wrap
+#: sections/map_elements.tex:67
+#, fuzzy, no-wrap
+#| msgid ""
+#| "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/unit-few.png}};\n"
+#| "      \\draw (-0.6, 2) node {\\encircle{1}};\n"
+#| "      \\draw (1.5, 2.1) node {\\encircle{2}};\n"
+#| "      \\draw (-0.5, 1.4) node {\\encircle{3}};\n"
+#| "      \\draw (-1.5, 1.3) node {\\encircle{4}};\n"
+#| "      \\draw (-1.5, 0.6) node {\\encircle{5}};\n"
+#| "      \\draw (-1.5, -0.1) node {\\encircle{6}};\n"
+#| "      \\draw (-1.5, -0.8) node {\\encircle{7}};\n"
+#| "      \\draw (-0.3, -1) node {\\encircle{8}};\n"
+#| "      \\draw (1, -1) node {\\encircle{9}};\n"
+#| "      \\draw (0.6, -2) node {\\encircle{11}};\n"
+#| "    \\end{tikzpicture}\n"
+#| "    \\end{scriptsize}\n"
+#| "    \\imagecaption{Unit Card (Few)}\n"
+#| "  \\end{center}\n"
+#| "  \\begin{itemize}\n"
+#| "    \\item[\\textbf{1.}] {Name}\n"
+#| "    \\item[\\textbf{2.}] {Tier}\n"
+#| "    \\item[\\textbf{3.}] {Type}\n"
+#| "    \\item[\\textbf{4.}] {Attack}\n"
+#| "    \\item[\\textbf{5.}] {Defense}\n"
+#| "    \\item[\\textbf{6.}] {HP}\n"
+#| "  \\end{itemize}\n"
+#| "  \\columnbreak\n"
+#| "  \\begin{center}\n"
+#| "    \\begin{scriptsize}\n"
 msgid ""
 "    \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=0.75\\linewidth]{\\images/fields.png}}};\n"
-"    \\draw (0, -0.3) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
-"    \\draw (-1.9, 0) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-"    \\draw (2.3, 0) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-"    \\draw (-1.4, 1.7) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-"    \\draw (0.6, -1.9) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-"    \\draw (0.5, 1.7) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-"    \\draw (1.4, -2.2) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
-"    \\draw (1.4, 2.5) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
-"    \\draw (1.4, -1) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
-"    \\draw (-1, 0.5) node {\\encircle{\\phantom{.}5\\phantom{.}}};\n"
-"    \\draw (-1.1, -1.1) node {\\encircle{\\phantom{.}6\\phantom{.}}};\n"
-"    \\draw (-1.4, -1.7) node {\\encircle{\\phantom{.}7\\phantom{.}}};\n"
+"    \\draw (0, -0.3) node {\\encircle{1}};\n"
+"    \\draw (-1.9, 0) node {\\encircle{2}};\n"
+"    \\draw (2.3, 0) node {\\encircle{2}};\n"
+"    \\draw (-1.4, 1.7) node {\\encircle{2}};\n"
+"    \\draw (0.6, -1.9) node {\\encircle{2}};\n"
+"    \\draw (0.5, 1.7) node {\\encircle{2}};\n"
+"    \\draw (1.4, -2.2) node {\\encircle{3}};\n"
+"    \\draw (1.4, 2.5) node {\\encircle{4}};\n"
+"    \\draw (1.4, -1) node {\\encircle{4}};\n"
+"    \\draw (-1, 0.5) node {\\encircle{5}};\n"
+"    \\draw (-1.1, -1.1) node {\\encircle{6}};\n"
+"    \\draw (-1.4, -1.7) node {\\encircle{7}};\n"
 "  \\end{tikzpicture}\n"
-"  \\end{scriptsize}\n"
 "\\end{center}\n"
 "\n"
 msgstr ""
+"      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/unit-few.png}};\n"
+"      \\draw (-0.6, 2) node {\\encircle{1}};\n"
+"      \\draw (1.5, 2.1) node {\\encircle{2}};\n"
+"      \\draw (-0.5, 1.4) node {\\encircle{3}};\n"
+"      \\draw (-1.5, 1.3) node {\\encircle{4}};\n"
+"      \\draw (-1.5, 0.6) node {\\encircle{5}};\n"
+"      \\draw (-1.5, -0.1) node {\\encircle{6}};\n"
+"      \\draw (-1.5, -0.8) node {\\encircle{7}};\n"
+"      \\draw (-0.3, -1) node {\\encircle{8}};\n"
+"      \\draw (1, -1) node {\\encircle{9}};\n"
+"      \\draw (0.6, -2) node {\\encircle{11}};\n"
+"    \\end{tikzpicture}\n"
+"    \\end{scriptsize}\n"
+"    \\imagecaption{Карта отряда «few»}\n"
+"  \\end{center}\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{1.}] {Имя}\n"
+"    \\item[\\textbf{2.}] {Уровень}\n"
+"    \\item[\\textbf{3.}] {Тип}\n"
+"    \\item[\\textbf{4.}] {Атака}\n"
+"    \\item[\\textbf{5.}] {Защита}\n"
+"    \\item[\\textbf{6.}] {HP}\n"
+"  \\end{itemize}\n"
+"  \\columnbreak\n"
+"  \\begin{center}\n"
+"    \\begin{scriptsize}\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:85
-#, no-wrap
+#: sections/map_elements.tex:81
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{center}\n"
+#| "  \\imagecaption{\\footnotesize{}Map Tile Anatomy}\n"
+#| "\\end{center}\n"
+#| "\\begin{itemize}\n"
+#| "  \\footnotesize\n"
+#| "  \\begin{multicols}{2}\n"
+#| "    \\item[\\textbf{1.}] Empty Field\n"
+#| "    \\item[\\textbf{2.}] Location\n"
+#| "    \\item[\\textbf{3.}] Artifact Symbol\n"
+#| "    \\item[\\textbf{4.}] Field Difficulty\n"
+#| "    \\item[\\textbf{5.}] Border line\n"
+#| "    \\item[\\textbf{6.}] Blocked Field\n"
+#| "    \\item[\\textbf{7.}] Tile name like \\\\{} \\texttt{F2} or \\texttt{\\#N3}\n"
+#| "  "
 msgid ""
 "\\begin{center}\n"
-"  \\imagecaption{\\footnotesize{}Map Tile Anatomy}\n"
+"  \\imagecaption{Map Tile Anatomy}\n"
 "\\end{center}\n"
 "\\begin{itemize}\n"
 "  \\footnotesize\n"
@@ -291,17 +337,35 @@ msgstr ""
 "  "
 
 #. type: multicols*
-#: sections/map_elements.tex:88
+#: sections/map_elements.tex:84
 #, no-wrap
 msgid "\\end{itemize}"
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:109
-#, no-wrap
+#: sections/map_elements.tex:105
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\pagetarget{Categories}{\\subsection*{Location Categories}}\n"
+#| "Visiting Fields provides Heroes with benefits, such as gaining Resources or cards (see \\pagelink{All Map Locations}{All Map Locations}).\n"
+#| "There are three categories of Fields:\n"
+#| "\\begin{itemize}\n"
+#| "  \\item \\textbf{Visitable} – Once you Visit this Field, place a Black Cube on it.\n"
+#| "    Treat it as an Empty Field as long as it has a Black Cube.\n"
+#| "  \\item \\textbf{Flaggable} – These Fields can be captured by players and provide passive benefits.\n"
+#| "    When you Visit one, place your Faction Cube on it.\n"
+#| "    Enemy Heroes who Visit your flagged Fields will replace your Cube with theirs to \\textbf{steal} the Field’s effects.\n"
+#| "    Allied Heroes treat flagged Fields \\textbf{as if they were empty}.\n"
+#| "  \\item \\textbf{Revisitable} – You can Visit this Field multiple times.\n"
+#| "    Do not place any Cubes when you Visit it.\n"
+#| "    You may pay 1 MP to Visit this Field again.\n"
+#| "\\end{itemize}\n"
+#| "\\vspace*{\\fill}\n"
+#| "\\columnbreak\n"
+#| "\n"
 msgid ""
 "\\pagetarget{Categories}{\\subsection*{Location Categories}}\n"
-"Visiting Fields provides Heroes with benefits, such as gaining Resources or cards (see \\pagelink{All Map Locations}{All Map Locations}).\n"
+"Visiting Fields provides Heroes with benefits, such as gaining Resources or cards (see \\pagelinkwithcomma{All Map Locations}{All Map Locations}).\n"
 "There are three categories of Fields:\n"
 "\\begin{itemize}\n"
 "  \\item \\textbf{Visitable} – Once you Visit this Field, place a Black Cube on it.\n"
@@ -337,7 +401,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:116
+#: sections/map_elements.tex:112
 #, no-wrap
 msgid ""
 "\\pagetarget{Placing}{\\subheader{Placing and Discovering New Tiles}}\\index{Discovering Tiles}\n"
@@ -357,7 +421,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:121
+#: sections/map_elements.tex:117
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -373,16 +437,28 @@ msgstr ""
 "\\vspace*{-2em}\n"
 
 #. type: figure*
-#: sections/map_elements.tex:134
-#, no-wrap
+#: sections/map_elements.tex:133
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[!hb]\n"
+#| "  \\centering\n"
+#| "  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
+#| "  \\begin{tikzpicture}[overlay]\n"
+#| "    \\node at (5, 10) {\\footnotesize{\\imagecaption{You cannot add this Tile here}}};\n"
+#| "    \\node at (1, 1.4) [anchor=west] {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{You can add this Tile here, because it will}}}}};\n"
+#| "    \\node at (1, 1) [anchor=west] {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{be adjacent to two other Tiles}}}}};\n"
+#| "  \\end{tikzpicture}"
 msgid ""
 "[!hb]\n"
 "  \\centering\n"
 "  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
+"  \\footnotesize\n"
+"  \\bfseries\n"
+"  \\itshape\n"
 "  \\begin{tikzpicture}[overlay]\n"
-"    \\node at (5, 10) {\\footnotesize{\\imagecaption{You cannot add this Tile here}}};\n"
-"    \\node at (1, 1.4) [anchor=west] {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{You can add this Tile here, because it will}}}}};\n"
-"    \\node at (1, 1) [anchor=west] {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{be adjacent to two other Tiles}}}}};\n"
+"    \\node at (5, 10) {\\textcolor{darkcandyapplered}{You cannot add this Tile here}};\n"
+"    \\node at (1, 1.4) [anchor=west] {\\textcolor{cadmiumgreen}{You can add this Tile here, because it will}};\n"
+"    \\node at (1, 1) [anchor=west] {\\textcolor{cadmiumgreen}{be adjacent to two other Tiles}};\n"
 "  \\end{tikzpicture}"
 msgstr ""
 "[!hb]\n"
@@ -397,12 +473,12 @@ msgstr ""
 "  \\end{tikzpicture}"
 
 #. type: Plain text
-#: sections/map_elements.tex:138
+#: sections/map_elements.tex:137
 msgid "\\subheader{Example ``Flagging a guarded Mine''}"
 msgstr "\\subheader{Пример хода}"
 
 #. type: multicols*
-#: sections/map_elements.tex:143
+#: sections/map_elements.tex:142
 #, no-wrap
 msgid ""
 "\\textit{Alice wants to capture an adjacent \\pagelink{Mines}{Mine} by flagging it with her Main Hero, Sandro the Necromancer.\n"
@@ -414,7 +490,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:145
+#: sections/map_elements.tex:144
 #, no-wrap
 msgid ""
 "\\includegraphics[width=1.1\\linewidth]{\\examples/sandro_takes_mine.png}\n"
@@ -422,7 +498,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:149
+#: sections/map_elements.tex:148
 #, no-wrap
 msgid ""
 "\\textit{The Mine turns out to be guarded by Troglodytes, which have 3 HP \\svg{health_points}.\n"
@@ -436,7 +512,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:151
+#: sections/map_elements.tex:150
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_lightning_bolt.png}\n"
@@ -444,7 +520,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:154
+#: sections/map_elements.tex:153
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -456,13 +532,20 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:161
-#, no-wrap
+#: sections/map_elements.tex:160
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\textit{Alice now flags the Mine by placing one of her Faction Cubes on it.\n"
+#| "    Flagging this particular Mine increases her Building Materials \\svg{building_materials} production by 2, and she also immediately gains the Mine's production value of 2 \\svg{building_materials} as she was the first player to flag it.}\\par\n"
+#| "\\textit{Afterwards, Alice wants to go back to defend a previously flagged Settlement by casting the Town Portal still left in her hand.\n"
+#| "    Her Hero is Level 2, so she can empower it with the Power card's Expert Effect \\svg{expert}, which grants her an additional Movement Point after casting it.\n"
+#| "}\n"
+#| "\n"
 msgid ""
 "\\textit{Alice now flags the Mine by placing one of her Faction Cubes on it.\n"
 "    Flagging this particular Mine increases her Building Materials \\svg{building_materials} production by 2, and she also immediately gains the Mine's production value of 2 \\svg{building_materials} as she was the first player to flag it.}\\par\n"
 "\\textit{Afterwards, Alice wants to go back to defend a previously flagged Settlement by casting the Town Portal still left in her hand.\n"
-"    Her Hero is Level 2, so she can empower it with the Power card's Expert Effect \\svg{expert}, which grants her an additional Movement Point after casting it.\n"
+"    Her Hero is Level II, so she can empower it with the Power card's Expert Effect \\svg{expert}, which grants her an additional Movement Point after casting it.\n"
 "}\n"
 "\n"
 msgstr ""
@@ -474,7 +557,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:163
+#: sections/map_elements.tex:162
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_town_portal.png}\n"
@@ -482,7 +565,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:168
+#: sections/map_elements.tex:167
 #, no-wrap
 msgid ""
 "\\vfill\n"
@@ -491,12 +574,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/map_elements.tex:182
+#: sections/map_elements.tex:181
 msgid "\\subheader{Expansion Tiles}"
 msgstr "\\subheader{Фрагменты карты из дополнений}"
 
 #. type: multicols
-#: sections/map_elements.tex:182
+#: sections/map_elements.tex:181
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -513,7 +596,7 @@ msgid ""
 msgstr ""
 "{2}\n"
 "\\begin{expansion}[before=\\vspace*{-11mm}]{cove}\n"
-"  \\subsection*{Морские фрагменты карты}\n"
+"  \\subsection*{\\pagetarget{Sea Map Tiles}{Морские фрагменты карты}}\n"
 "  Имеют уникальную заднюю сторону, и в ходе подготовки раскладываются по шаблону выбранного сценария.\n"
 "  Их исследование работает по обычным правилам.\n"
 "  Поля морских фрагментов могут содержать как воду, так и сушу.\n"
@@ -524,10 +607,10 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:184 sections/map_elements.tex:193
-#: sections/map_elements.tex:268 sections/map_elements.tex:301
+#: sections/map_elements.tex:183 sections/map_elements.tex:192
+#: sections/map_elements.tex:264 sections/map_elements.tex:297
 #: sections/player_turns.tex:48 sections/tournament_mode.tex:67
-#: sections/units.tex:224
+#: sections/units.tex:219
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -535,7 +618,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:191
+#: sections/map_elements.tex:190
 #, no-wrap
 msgid ""
 "\\begin{expansion}{conflux}\n"
@@ -555,7 +638,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:206
+#: sections/map_elements.tex:205
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{expansion}[before=\\vspace*{-6pt}]{stronghold}\n"
@@ -600,7 +683,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:211
+#: sections/map_elements.tex:210
 #, no-wrap
 msgid ""
 "\\begin{multicols}{2}\n"
@@ -610,17 +693,19 @@ msgid ""
 msgstr ""
 
 #. type: center
-#: sections/map_elements.tex:216
-msgid "{\\imagecaption{Sea Map Tile}}"
+#: sections/map_elements.tex:215
+#, fuzzy
+#| msgid "{\\imagecaption{Sea Map Tile}}"
+msgid "\\imagecaption{Sea Map Tile}"
 msgstr "{\\imagecaption{Морской фрагмент карты}}"
 
 #. type: Plain text
-#: sections/map_elements.tex:218 sections/map_elements.tex:232
+#: sections/map_elements.tex:217 sections/map_elements.tex:230
 msgid "\\separator"
 msgstr ""
 
 #. type: tikzpicture
-#: sections/map_elements.tex:228
+#: sections/map_elements.tex:226
 #, no-wrap
 msgid ""
 "    \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\images/elemental_tiles.png}}};\n"
@@ -637,26 +722,26 @@ msgstr ""
 "    \\draw (2.2, -4.5) node {\\textbf{\\textit{\\textcolor{darkcandyapplered}{\\begin{minipage}{0.5\\linewidth}\\centering Фрагмент элементалей земли\\end{minipage}}}}};\n"
 "  "
 
-#. type: scriptsize
-#: sections/map_elements.tex:236
-#, no-wrap
-msgid ""
-"    \\centering\n"
-"    \\begin{tikzpicture}\n"
-msgstr ""
-
-#. type: scriptsize
-#: sections/map_elements.tex:244
-#, no-wrap
+#. type: tikzpicture
+#: sections/map_elements.tex:240
+#, fuzzy, no-wrap
+#| msgid ""
+#| "      \\node at (0, 0) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-stronghold.png}};\n"
+#| "      \\node at (0, 2.2) {\\footnotesize{\\imagecaption{Surface Map Tile}}};\n"
+#| "      \\node at (3.21, -1.11) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-sub.png}};\n"
+#| "      \\node at (3.21, -3.41) {\\footnotesize{\\imagecaption{Subterranean Map Tile}}};\n"
+#| "      \\node[rotate=-60] (gate) at (1.6, -0.53) {\\includegraphics[width=0.33\\linewidth]{\\images/subter-gate-outline.png}};\n"
+#| "      \\node at (3.21, 1.11) {\\footnotesize{\\imagecaption{Subterranean Gate}}};\n"
+#| "    \\end{tikzpicture}\n"
+#| "  "
 msgid ""
 "      \\node at (0, 0) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-stronghold.png}};\n"
-"      \\node at (0, 2.2) {\\footnotesize{\\imagecaption{Surface Map Tile}}};\n"
+"      \\node at (0, 2.2) {\\imagecaption{Surface Map Tile}};\n"
 "      \\node at (3.21, -1.11) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-sub.png}};\n"
-"      \\node at (3.21, -3.41) {\\footnotesize{\\imagecaption{Subterranean Map Tile}}};\n"
+"      \\node at (3.21, -3.41) {\\imagecaption{Subterranean Map Tile}};\n"
 "      \\node[rotate=-60] (gate) at (1.6, -0.53) {\\includegraphics[width=0.33\\linewidth]{\\images/subter-gate-outline.png}};\n"
-"      \\node at (3.21, 1.11) {\\footnotesize{\\imagecaption{Subterranean Gate}}};\n"
-"    \\end{tikzpicture}\n"
-"  "
+"      \\node at (3.21, 1.11) {\\imagecaption{Subterranean Gate}};\n"
+"    "
 msgstr ""
 "      \\node at (0, 0) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-stronghold.png}};\n"
 "      \\node at (0, 2.2) {\\footnotesize{\\imagecaption{Фрагмент поверхности}}};\n"
@@ -668,7 +753,7 @@ msgstr ""
 "  "
 
 #. type: Plain text
-#: sections/map_elements.tex:255
+#: sections/map_elements.tex:251
 msgid ""
 "\\pagetarget{Discover Location Tokens}{\\subheader{Placing and Discovering "
 "Location Tokens}}"
@@ -677,7 +762,7 @@ msgstr ""
 "жетонов локации}}"
 
 #. type: multicols
-#: sections/map_elements.tex:255
+#: sections/map_elements.tex:251
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -695,17 +780,29 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:266
-#, no-wrap
+#: sections/map_elements.tex:262
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{expansion}[before=\\vspace*{5pt}]{navalbattles}\n"
+#| "  \\subsection*{Creature Bank Tokens}\n"
+#| "  As an \\textbf{optional rule} you can decide to play with \\pagelink{Creature Banks Rules}{Creature Banks}.\n"
+#| "  If you do, each time you discover a Far \\mbox{(II--III)} or Near \\mbox{(IV--V)} Map Tile, you may decide to draw a Creature Bank Token corresponding to the discovered Map Tile, and -- contrary to the normal rules -- you can place it \\textbf{only on its Blocked Field}.\n"
+#| "  \\bigskip\n"
+#| "  \\begin{center}\n"
+#| "    \\includegraphics[width=0.42\\linewidth]{\\map_locations/creature_bank_token.png}\\\\\n"
+#| "    \\footnotesize{\\imagecaption{Creature Bank Token}}\n"
+#| "  \\end{center}\n"
+#| "\\end{expansion}\n"
+#| "\n"
 msgid ""
 "\\begin{expansion}[before=\\vspace*{5pt}]{navalbattles}\n"
 "  \\subsection*{Creature Bank Tokens}\n"
 "  As an \\textbf{optional rule} you can decide to play with \\pagelink{Creature Banks Rules}{Creature Banks}.\n"
 "  If you do, each time you discover a Far \\mbox{(II--III)} or Near \\mbox{(IV--V)} Map Tile, you may decide to draw a Creature Bank Token corresponding to the discovered Map Tile, and -- contrary to the normal rules -- you can place it \\textbf{only on its Blocked Field}.\n"
-"  \\bigskip\n"
+"  \\medskip\n"
 "  \\begin{center}\n"
-"    \\includegraphics[width=0.42\\linewidth]{\\map_locations/creature_bank_token.png}\\\\\n"
-"    \\footnotesize{\\imagecaption{Creature Bank Token}}\n"
+"    \\includegraphics[width=0.38\\linewidth]{\\map_locations/creature_bank_token.png}\\\\\n"
+"    \\imagecaption{Creature Bank Token}\n"
 "  \\end{center}\n"
 "\\end{expansion}\n"
 "\n"
@@ -723,7 +820,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:273
+#: sections/map_elements.tex:269
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{6pt}]{cove}\n"
@@ -733,13 +830,19 @@ msgid ""
 "\n"
 msgstr ""
 "\\begin{expansion}[before=\\vspace*{1pt}]{cove}\n"
-"  \\subsection*{Жетоны Водоворота}\n"
+"  \\subsection*{\\pagetarget{Whirlpool Tokens}{Жетоны Водоворота}}\n"
 "  Исследование \\pagelink{Whirlpool}{Водоворотов} следует тем же правилам, что и исследование Монолитов.\n"
 "  \\bigskip\n"
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:286
+#: sections/map_elements.tex:270
+#, no-wrap
+msgid "  \\begin{tikzpicture}\n"
+msgstr ""
+
+#. type: multicols
+#: sections/map_elements.tex:282
 #, fuzzy, no-wrap
 #| msgid ""
 #| "    \\draw (-2.5, 0) node[inner sep=0] {\\includegraphics[width=0.4\\linewidth]{\\map_locations/whirlpool-token.png}};\n"
@@ -763,7 +866,7 @@ msgid ""
 "    \\draw (2.5, -1) node {\\Huge\\textbf{\\textcolor{white}{{\\raisebox{0.3\\height}{\\Large$\\boldsymbol{+}$}}1}}};\n"
 "  \\end{tikzpicture}\n"
 "  \\begin{center}\n"
-"    \\footnotesize{\\imagecaption{Whirlpool Tokens}}\n"
+"    \\imagecaption{Whirlpool Tokens}\n"
 "  \\end{center}\n"
 "\\end{expansion}\n"
 "\n"
@@ -782,7 +885,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:299
+#: sections/map_elements.tex:295
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{expansion}[before=\\vspace*{-11mm}]{stronghold}\n"
@@ -808,7 +911,7 @@ msgid ""
 "  \\medskip\n"
 "  \\begin{center}\n"
 "    \\includegraphics[width=0.58\\linewidth]{\\map_locations/subterranean_gate_token.png}\\\\\n"
-"    \\footnotesize{\\imagecaption{Subterranean Gate Token}}\n"
+"    \\imagecaption{Subterranean Gate Token}\n"
 "  \\end{center}\n"
 "\\end{expansion}\n"
 "\n"
@@ -828,17 +931,28 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:312
-#, no-wrap
+#: sections/map_elements.tex:308
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{expansion}[before=\\vspace*{0pt}]{conflux}\n"
+#| "  \\subsection*{\\pagetarget{Monolith Tokens}{Monolith Tokens}}\n"
+#| "   The position of \\pagelink{Monolith}{Monoliths} is determined by Scenario Layout.\n"
+#| "   If you discover a Tile with one of these Tokens on it, discover the Tile normally, and then place the Token on the Field indicated by the Scenario's Map layout, or a Field of your choosing if it's not specified.\n"
+#| "  \\bigskip\n"
+#| "  \\begin{center}\n"
+#| "    \\includegraphics[width=0.4\\linewidth]{\\map_locations/monolith_token.png}\\\\\n"
+#| "    \\footnotesize{\\imagecaption{Monolith Token}}\n"
+#| "  \\end{center}\n"
+#| "\\end{expansion}"
 msgid ""
 "\\begin{expansion}[before=\\vspace*{0pt}]{conflux}\n"
 "  \\subsection*{\\pagetarget{Monolith Tokens}{Monolith Tokens}}\n"
 "   The position of \\pagelink{Monolith}{Monoliths} is determined by Scenario Layout.\n"
 "   If you discover a Tile with one of these Tokens on it, discover the Tile normally, and then place the Token on the Field indicated by the Scenario's Map layout, or a Field of your choosing if it's not specified.\n"
-"  \\bigskip\n"
+"  \\medskip\n"
 "  \\begin{center}\n"
-"    \\includegraphics[width=0.4\\linewidth]{\\map_locations/monolith_token.png}\\\\\n"
-"    \\footnotesize{\\imagecaption{Monolith Token}}\n"
+"    \\includegraphics[width=0.38\\linewidth]{\\map_locations/monolith_token.png}\\\\\n"
+"    \\imagecaption{Monolith Token}\n"
 "  \\end{center}\n"
 "\\end{expansion}"
 msgstr ""

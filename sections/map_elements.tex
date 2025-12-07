@@ -27,7 +27,6 @@ Solid yellow lines on a Field's edge cannot be passed through.
 \columnbreak
 
 \begin{center}
-  \begin{footnotesize}
   \begin{tikzpicture}
     \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\images/maptiles.png}}};
     \draw (-3.8, 3.2) node {\encircle{1}};
@@ -35,7 +34,6 @@ Solid yellow lines on a Field's edge cannot be passed through.
     \draw (-3.8, -0.7) node {\encircle{3}};
     \draw (0.6, -0.7) node {\encircle{4}};
   \end{tikzpicture}
-  \end{footnotesize}
   \imagecaption{\footnotesize{}Types of Map Tiles}
 \end{center}
 
@@ -50,27 +48,25 @@ Solid yellow lines on a Field's edge cannot be passed through.
 \separator
 
 \begin{center}
-  \begin{scriptsize}
   \begin{tikzpicture}
     \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=0.75\linewidth]{\images/fields.png}}};
-    \draw (0, -0.3) node {\encircle{\phantom{.}1\phantom{.}}};
-    \draw (-1.9, 0) node {\encircle{\phantom{.}2\phantom{.}}};
-    \draw (2.3, 0) node {\encircle{\phantom{.}2\phantom{.}}};
-    \draw (-1.4, 1.7) node {\encircle{\phantom{.}2\phantom{.}}};
-    \draw (0.6, -1.9) node {\encircle{\phantom{.}2\phantom{.}}};
-    \draw (0.5, 1.7) node {\encircle{\phantom{.}2\phantom{.}}};
-    \draw (1.4, -2.2) node {\encircle{\phantom{.}3\phantom{.}}};
-    \draw (1.4, 2.5) node {\encircle{\phantom{.}4\phantom{.}}};
-    \draw (1.4, -1) node {\encircle{\phantom{.}4\phantom{.}}};
-    \draw (-1, 0.5) node {\encircle{\phantom{.}5\phantom{.}}};
-    \draw (-1.1, -1.1) node {\encircle{\phantom{.}6\phantom{.}}};
-    \draw (-1.4, -1.7) node {\encircle{\phantom{.}7\phantom{.}}};
+    \draw (0, -0.3) node {\encircle{1}};
+    \draw (-1.9, 0) node {\encircle{2}};
+    \draw (2.3, 0) node {\encircle{2}};
+    \draw (-1.4, 1.7) node {\encircle{2}};
+    \draw (0.6, -1.9) node {\encircle{2}};
+    \draw (0.5, 1.7) node {\encircle{2}};
+    \draw (1.4, -2.2) node {\encircle{3}};
+    \draw (1.4, 2.5) node {\encircle{4}};
+    \draw (1.4, -1) node {\encircle{4}};
+    \draw (-1, 0.5) node {\encircle{5}};
+    \draw (-1.1, -1.1) node {\encircle{6}};
+    \draw (-1.4, -1.7) node {\encircle{7}};
   \end{tikzpicture}
-  \end{scriptsize}
 \end{center}
 
 \begin{center}
-  \imagecaption{\footnotesize{}Map Tile Anatomy}
+  \imagecaption{Map Tile Anatomy}
 \end{center}
 \begin{itemize}
   \footnotesize
@@ -91,7 +87,7 @@ Solid yellow lines on a Field's edge cannot be passed through.
 \begin{multicols}{2}
 
 \pagetarget{Categories}{\subsection*{Location Categories}}
-Visiting Fields provides Heroes with benefits, such as gaining Resources or cards (see \pagelink{All Map Locations}{All Map Locations}).
+Visiting Fields provides Heroes with benefits, such as gaining Resources or cards (see \pagelinkwithcomma{All Map Locations}{All Map Locations}).
 There are three categories of Fields:
 \begin{itemize}
   \item \textbf{Visitable} – Once you Visit this Field, place a Black Cube on it.
@@ -125,10 +121,13 @@ You may always rotate Map Tiles when placing or revealing them.
 \begin{figure*}[!hb]
   \centering
   \includegraphics[width=\textwidth]{\images/placement.png}
+  \footnotesize
+  \bfseries
+  \itshape
   \begin{tikzpicture}[overlay]
-    \node at (5, 10) {\footnotesize{\imagecaption{You cannot add this Tile here}}};
-    \node at (1, 1.4) [anchor=west] {\footnotesize{\textbf{\textit{\textcolor{cadmiumgreen}{You can add this Tile here, because it will}}}}};
-    \node at (1, 1) [anchor=west] {\footnotesize{\textbf{\textit{\textcolor{cadmiumgreen}{be adjacent to two other Tiles}}}}};
+    \node at (5, 10) {\textcolor{darkcandyapplered}{You cannot add this Tile here}};
+    \node at (1, 1.4) [anchor=west] {\textcolor{cadmiumgreen}{You can add this Tile here, because it will}};
+    \node at (1, 1) [anchor=west] {\textcolor{cadmiumgreen}{be adjacent to two other Tiles}};
   \end{tikzpicture}
 \end{figure*}
 
@@ -156,7 +155,7 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 \textit{Alice now flags the Mine by placing one of her Faction Cubes on it.
     Flagging this particular Mine increases her Building Materials \svg{building_materials} production by 2, and she also immediately gains the Mine's production value of 2 \svg{building_materials} as she was the first player to flag it.}\par
 \textit{Afterwards, Alice wants to go back to defend a previously flagged Settlement by casting the Town Portal still left in her hand.
-    Her Hero is Level 2, so she can empower it with the Power card's Expert Effect \svg{expert}, which grants her an additional Movement Point after casting it.
+    Her Hero is Level II, so she can empower it with the Power card's Expert Effect \svg{expert}, which grants her an additional Movement Point after casting it.
 }
 
 \includegraphics[width=\linewidth]{\examples/sandro_empowering_town_portal.png}
@@ -211,14 +210,13 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 \end{multicols}
 \begin{center}
   \vspace*{-0.5em}
-  \footnotesize{\imagecaption{Sea Map Tile}}
+  \imagecaption{Sea Map Tile}
 \end{center}
 
 \separator
 
 \begin{center}
   \vspace*{-3em}
-  \footnotesize
   \begin{tikzpicture}
     \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\images/elemental_tiles.png}}};
     \draw (-2.2, 0.1) node {\imagecaption{Elemental Fire Tile}};
@@ -231,17 +229,15 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 \separator
 
 \begin{center}
-  \begin{scriptsize}
     \centering
     \begin{tikzpicture}
       \node at (0, 0) {\includegraphics[width=0.5\linewidth]{\images/map-tile-stronghold.png}};
-      \node at (0, 2.2) {\footnotesize{\imagecaption{Surface Map Tile}}};
+      \node at (0, 2.2) {\imagecaption{Surface Map Tile}};
       \node at (3.21, -1.11) {\includegraphics[width=0.5\linewidth]{\images/map-tile-sub.png}};
-      \node at (3.21, -3.41) {\footnotesize{\imagecaption{Subterranean Map Tile}}};
+      \node at (3.21, -3.41) {\imagecaption{Subterranean Map Tile}};
       \node[rotate=-60] (gate) at (1.6, -0.53) {\includegraphics[width=0.33\linewidth]{\images/subter-gate-outline.png}};
-      \node at (3.21, 1.11) {\footnotesize{\imagecaption{Subterranean Gate}}};
+      \node at (3.21, 1.11) {\imagecaption{Subterranean Gate}};
     \end{tikzpicture}
-  \end{scriptsize}
 \end{center}
 \end{multicols}
 \clearpage
@@ -257,10 +253,10 @@ The effects of Visiting the Location Tokens are described in \pagelink{Location 
   \subsection*{Creature Bank Tokens}
   As an \textbf{optional rule} you can decide to play with \pagelink{Creature Banks Rules}{Creature Banks}.
   If you do, each time you discover a Far \mbox{(II--III)} or Near \mbox{(IV--V)} Map Tile, you may decide to draw a Creature Bank Token corresponding to the discovered Map Tile, and -- contrary to the normal rules -- you can place it \textbf{only on its Blocked Field}.
-  \bigskip
+  \medskip
   \begin{center}
-    \includegraphics[width=0.42\linewidth]{\map_locations/creature_bank_token.png}\\
-    \footnotesize{\imagecaption{Creature Bank Token}}
+    \includegraphics[width=0.38\linewidth]{\map_locations/creature_bank_token.png}\\
+    \imagecaption{Creature Bank Token}
   \end{center}
 \end{expansion}
 
@@ -280,7 +276,7 @@ The effects of Visiting the Location Tokens are described in \pagelink{Location 
     \draw (2.5, -1) node {\Huge\textbf{\textcolor{white}{{\raisebox{0.3\height}{\Large$\boldsymbol{+}$}}1}}};
   \end{tikzpicture}
   \begin{center}
-    \footnotesize{\imagecaption{Whirlpool Tokens}}
+    \imagecaption{Whirlpool Tokens}
   \end{center}
 \end{expansion}
 
@@ -293,7 +289,7 @@ The effects of Visiting the Location Tokens are described in \pagelink{Location 
   \medskip
   \begin{center}
     \includegraphics[width=0.58\linewidth]{\map_locations/subterranean_gate_token.png}\\
-    \footnotesize{\imagecaption{Subterranean Gate Token}}
+    \imagecaption{Subterranean Gate Token}
   \end{center}
 \end{expansion}
 
@@ -303,10 +299,10 @@ The effects of Visiting the Location Tokens are described in \pagelink{Location 
   \subsection*{\pagetarget{Monolith Tokens}{Monolith Tokens}}
    The position of \pagelink{Monolith}{Monoliths} is determined by Scenario Layout.
    If you discover a Tile with one of these Tokens on it, discover the Tile normally, and then place the Token on the Field indicated by the Scenario's Map layout, or a Field of your choosing if it's not specified.
-  \bigskip
+  \medskip
   \begin{center}
-    \includegraphics[width=0.4\linewidth]{\map_locations/monolith_token.png}\\
-    \footnotesize{\imagecaption{Monolith Token}}
+    \includegraphics[width=0.38\linewidth]{\map_locations/monolith_token.png}\\
+    \imagecaption{Monolith Token}
   \end{center}
 \end{expansion}
 \end{multicols}

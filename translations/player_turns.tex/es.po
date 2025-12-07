@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-11-29 16:03+0000\n"
+"POT-Creation-Date: 2025-12-07 21:39+0000\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -22,10 +22,10 @@ msgstr ""
 #: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
 #: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
 #: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
-#: sections/map_elements.tex:92 sections/map_elements.tex:140
+#: sections/map_elements.tex:88 sections/map_elements.tex:139
 #: sections/player_turns.tex:5 sections/resources.tex:5
 #: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:57 sections/tournament_mode.tex:5 sections/town.tex:5
+#: sections/setup.tex:55 sections/tournament_mode.tex:5 sections/town.tex:5
 #: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
 #, no-wrap
 msgid ""
@@ -33,19 +33,11 @@ msgid ""
 "\n"
 msgstr ""
 
-#. type: figure
-#: sections/deckbuilding.tex:324 sections/map_elements.tex:54
-#: sections/map_elements.tex:274 sections/player_turns.tex:124
-#: sections/setup.tex:7
-#, no-wrap
-msgid "  \\begin{tikzpicture}\n"
-msgstr ""
-
 #. type: multicols*
-#: sections/map_elements.tex:184 sections/map_elements.tex:193
-#: sections/map_elements.tex:268 sections/map_elements.tex:301
+#: sections/map_elements.tex:183 sections/map_elements.tex:192
+#: sections/map_elements.tex:264 sections/map_elements.tex:297
 #: sections/player_turns.tex:48 sections/tournament_mode.tex:67
-#: sections/units.tex:224
+#: sections/units.tex:219
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -183,12 +175,19 @@ msgstr ""
 
 #. type: multicols*
 #: sections/player_turns.tex:46
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{center}\n"
+#| "  \\includesvg[width=0.6\\linewidth]{\\images/movement_tokens}\\\\\n"
+#| "  \\medskip\n"
+#| "  \\footnotesize\\textit{An active and an inactive Movement Token.}\n"
+#| "\\end{center}\n"
+#| "\n"
 msgid ""
 "\\begin{center}\n"
 "  \\includesvg[width=0.6\\linewidth]{\\images/movement_tokens}\\\\\n"
 "  \\medskip\n"
-"  \\footnotesize\\textit{An active and an inactive Movement Token.}\n"
+"  \\imagecaption{An active and an inactive Movement Token.}\n"
 "\\end{center}\n"
 "\n"
 msgstr ""
@@ -319,7 +318,7 @@ msgstr ""
 msgid ""
 "\\textit{Alice, who is playing the Hero Catherine the Knight, begins her Turn.\n"
 "She has 3 cards in her hand from the previous Round, and decides to discard 2 of them before drawing cards from her Deck up to her \\mbox{Hand Limit \\svg{hand}.}\n"
-"The current limit is 5, since her Main Hero is Level 3, so she draws 4 cards after discarding (see \\pagelink{Level}{Level Effects}).}\\par\n"
+"The current limit is 5, since her Main Hero is Level III, so she draws 4 cards after discarding (see \\pagelinkwithcomma{Level}{Level Effects}).}\\par\n"
 "\\textit{She then spends her Build Token to construct the \\svg{golden} Dwelling, and then her Population Token to \\pagelink{Units}{recruit} the \\svg{golden} unit Champions.\n"
 "She can do this, as she had previously built the prerequisite lower Level Dwellings (\\svg{bronze} and \\svg{silver}) and has enough \\pagelink{Resources}{Resources} to both Build the Dwelling and to recruit the Champions.}\\par\n"
 "\\textit{Now prepared for an upcoming battle, she spends a Movement Point to move her Main Hero to an adjacent Field currently occupied by Sandro the Necromancer, an enemy Main Hero controlled by Bob.\n"
@@ -451,7 +450,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{-11mm}]{battlefield}\n"
-"\\subsection*{\\pagetarget{Morale Cards}{Morale cards in regular games}}\\index{Morale cards}\n"
+"\\subsection*{\\pagetarget{Morale Cards}{Morale cards}}\\index{Morale cards}\n"
 "\n"
 msgstr ""
 
@@ -460,21 +459,30 @@ msgstr ""
 #, no-wrap
 msgid ""
 "You can use Morale cards \\textbf{instead} of Tokens.\n"
-"During setup, remove all Morale cards with the Battlefield symbol.\n"
-"Then shuffle the Positive and Negative Morale card Decks separately and place them face down near the Round Tracker.\n"
+"During setup, remove all Morale cards with the Battlefield symbol, unless you're playing \\pagelink{Adventure and Skirmish Modes}{Adventure or Skirmish}.\n"
+"Then shuffle the Positive and Negative Morale cards separately and place them face down.\n"
 "\n"
 msgstr ""
 
 #. type: multicols*
 #: sections/player_turns.tex:123
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[H]\n"
+#| "  \\centering\n"
+#| "  \\begin{subfigure}[b]{0.27\\linewidth}\n"
+#| "    \\begin{tikzpicture}\n"
 msgid ""
 "\\vspace{1em}\n"
-"\\begin{scriptsize}\n"
+"\\begin{tikzpicture}\n"
 msgstr ""
+"[H]\n"
+"  \\centering\n"
+"  \\begin{subfigure}[b]{0.25\\linewidth}\n"
+"    \\begin{tikzpicture}\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:139
+#: sections/player_turns.tex:136
 #, fuzzy, no-wrap
 #| msgid ""
 #| "    \\draw (-2, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/empowered_statistic.png}}};\n"
@@ -503,19 +511,17 @@ msgstr ""
 #| "    \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
 #| "  \\end{itemize}"
 msgid ""
-"    \\draw (-2, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/morale-positive.png}}};\n"
-"    \\draw (2.4, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/morale-negative-battlefield.png}}};\n"
-"    \\draw (-1.2, 2.2) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
-"    \\draw (3.2, 2.2) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
-"    \\draw (-3.0, -1.4) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-"    \\draw (1.5, -1.0) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-"    \\draw (2.0, -2.0) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
-"  \\end{tikzpicture}\n"
-"\\end{scriptsize}\n"
-"\\vspace{-1em}\n"
+"  \\draw (-2, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/morale-positive.png}}};\n"
+"  \\draw (2.4, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/morale-negative-battlefield.png}}};\n"
+"  \\draw (-1.2, 2.2) node {\\encircle{1}};\n"
+"  \\draw (3.2, 2.2) node {\\encircle{1}};\n"
+"  \\draw (-3.0, -1.4) node {\\encircle{2}};\n"
+"  \\draw (1.5, -1.0) node {\\encircle{2}};\n"
+"  \\draw (2.0, -2.0) node {\\encircle{3}};\n"
+"\\end{tikzpicture}\n"
+"\\vspace*{-1em}\n"
 "\\begin{multicols*}{2}\n"
 "  \\centering\n"
-"  \\footnotesize\n"
 "  \\imagecaption{Positive Morale card}\n"
 "\n"
 msgstr ""
@@ -546,13 +552,13 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: multicols*
-#: sections/player_turns.tex:157
+#: sections/player_turns.tex:154
 #, no-wrap
 msgid "  \\imagecaption{Negative Morale card}"
 msgstr ""
 
 #. type: figure
-#: sections/player_turns.tex:157
+#: sections/player_turns.tex:154
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -566,30 +572,58 @@ msgid ""
 "  \\end{subfigure}\n"
 "  \\begin{subfigure}[t]{0.7\\linewidth}\n"
 "    \\begin{itemize}\n"
-"      \\item[\\textbf{3.}] Battlefield symbol\\\\{\\scriptsize\\textit{(Use such cards only in \\pagelink{Battlefield Modes}{Adventure and Skirmish} games)}}\n"
+"      \\item[\\textbf{3.}] Battlefield symbol\\\\{\\scriptsize\\textit{(Use such cards only in \\pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish} games)}}\n"
 "    \\end{itemize}\n"
 "  \\end{subfigure}"
 msgstr ""
 
 #. type: Plain text
-#: sections/player_turns.tex:168
+#: sections/player_turns.tex:164
 msgid ""
-"Every time you gain Positive Morale, discard a Negative Morale card (if you "
-"have any); otherwise draw 1 Positive Morale card.  You may have \\textbf{2 "
-"Positive Morale cards at a time}.  Don't draw a third card.  Every time you "
-"lose Morale, discard a Positive Morale card (if you have any); otherwise "
-"draw 1 Negative Morale card.  You may have an \\textbf{unlimited number of "
-"Negative Morale cards}.\\par Place newly gained Morale cards face up near "
-"your Hero Board.  Positive Morale cards may be used at any moment you wish.  "
-"Negative Morale cards must be used the next time when the situation "
-"indicated by the card occurs.  \\textbf{Put used cards at the bottom of "
-"their respective Decks}.  If you must draw a Morale card but the respective "
-"Morale Deck is empty, reshuffle its Discard Pile to form a new Deck."
+"Every time you \\textbf{gain} Morale, discard a Negative Morale card (if you "
+"have any); otherwise:"
+msgstr ""
+
+#. type: itemize
+#: sections/player_turns.tex:164
+msgid "sep{0mm}"
+msgstr ""
+
+#. type: itemize
+#: sections/player_turns.tex:164
+msgid ""
+"In \\pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish}: "
+"Search(2) Positive Morale card and put the unwanted card to the bottom of "
+"the Deck."
+msgstr ""
+
+#. type: itemize
+#: sections/player_turns.tex:164
+msgid "In regular games: draw 1 Positive Morale card."
 msgstr ""
 
 #. type: Plain text
-#: sections/player_turns.tex:171
+#: sections/player_turns.tex:164
 msgid ""
-"Keep in mind that in Adventure and Skirmish Mode the rules for Morale cards "
-"differ a bit -- read the official Battlefield rule book."
+"You may have \\textbf{2 Positive Morale cards at a time}.  Don't draw a "
+"third card."
+msgstr ""
+
+#. type: Plain text
+#: sections/player_turns.tex:168
+msgid ""
+"Every time you \\textbf{lose} Morale, discard a Positive Morale card (if you "
+"have any); otherwise draw 1 Negative Morale card (no Searching!).  You may "
+"have an \\textbf{unlimited number of Negative Morale cards}."
+msgstr ""
+
+#. type: Plain text
+#: sections/player_turns.tex:176
+msgid ""
+"Place newly gained Morale cards face up near your Hero Board.  Positive "
+"Morale cards may be used at any moment you wish.  Negative Morale cards must "
+"be used the next time when the situation indicated by the card occurs.  "
+"\\textbf{Put used cards at the bottom of their respective Decks}.  If you "
+"must draw a Morale card but the respective Morale Deck is empty, reshuffle "
+"its Discard Pile to form a new Deck."
 msgstr ""
