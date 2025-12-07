@@ -93,7 +93,7 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
 \renewcommand\cftsecdotsep{\cftdot}
 \renewcommand\cftsubsecdotsep{\cftdot}
-\setlength{\cftbeforesecskip}{0.3em}
+\setlength{\cftbeforesecskip}{0.1em}
 
 \captionsetup[figure]{labelformat=empty}
 \captionsetup[subfigure]{labelformat=empty, singlelinecheck=off, justification=centering}
@@ -364,8 +364,12 @@
   \end{tikzpicture}%
 }
 
-\newcommand{\imagecaption}[1]{%
-  \textbf{\textit{\textcolor{darkcandyapplered}{#1}}}%
+\newcommand{\imagecaption}[2][]{%
+  \ifstrequal{#1}{c}{%
+    \parbox{\linewidth}{\centering\imagecaption{#2}}%
+  }{%
+    {\footnotesize\textbf{\textit{\textcolor{darkcandyapplered}{#2}}}}%
+  }%
 }
 
 % Set fonts for section headings and notes
@@ -597,6 +601,7 @@
 % Commands to be used for automation generating printable version
 \newcommand{\pagetarget}[2]{\hypertarget{#1}{#2}\label{#1}}
 \newcommand{\pagelink}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{ \textmd{(\pageshorthand\,\pageref{#1})}}{}}
+\newcommand{\pagelinkwithcomma}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{, \textmd{\pageshorthand\,\pageref{#1}}}{}}
 
 % Stubs for polyglossia package used for Hebrew but not other languages
 \providecommand{\mainlanguagename}[0]{}
@@ -604,9 +609,21 @@
 
 % Command for overlay circled text
 \definecolor{goblin}{HTML}{3b7c33}
-\newcommand\encircle[1]{%
+
+\newcommand\encirclebase[3]{%
+  \begin{footnotesize}%
   \tikz[baseline=(X.base)]
-  \node (X) [draw=white, shape=circle, inner sep=0, fill=goblin, text=white, blur shadow={shadow blur steps=5}] {\strut \textbf{#1}};%
+  \node (X) [draw=white, shape=circle, minimum size=1.6em, align=center, inner sep=0, fill=#1, text=white, #2] {\strut \textbf{#3}};%
+  \end{footnotesize}%
+}
+\newcommand\encircle[1]{
+  \encirclebase{goblin}{blur shadow={shadow blur steps=5}}{#1}
+}
+\newcommand\encirclered[1]{%
+  \encirclebase{darkcandyapplered}{blur shadow={shadow blur steps=5}}{#1}
+}
+\newcommand\encirclelegend[2]{%
+  \encirclebase{#1}{blur shadow={shadow blur steps=3, shadow xshift=0.5pt, shadow yshift=-0.5pt, shadow blur radius=1pt}}{#2}
 }
 
 \newcommand{\drawbottom}{

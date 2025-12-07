@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-11-29 16:03+0000\n"
+"POT-Creation-Date: 2025-12-07 21:39+0000\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -24,10 +24,10 @@ msgstr ""
 #: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
 #: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
 #: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
-#: sections/map_elements.tex:92 sections/map_elements.tex:140
+#: sections/map_elements.tex:88 sections/map_elements.tex:139
 #: sections/player_turns.tex:5 sections/resources.tex:5
 #: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:57 sections/tournament_mode.tex:5 sections/town.tex:5
+#: sections/setup.tex:55 sections/tournament_mode.tex:5 sections/town.tex:5
 #: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
 #, no-wrap
 msgid ""
@@ -39,7 +39,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/all_map_locations.tex:51 sections/all_map_locations.tex:233
-#: sections/credits.tex:34 sections/deckbuilding.tex:79
+#: sections/credits.tex:36 sections/deckbuilding.tex:79
 #: sections/game_modes.tex:30 sections/scenario_end.tex:23
 #, no-wrap
 msgid ""
@@ -50,8 +50,8 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:401
-#: sections/trading.tex:25 sections/units.tex:213 sections/units.tex:217
+#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:383
+#: sections/trading.tex:25 sections/units.tex:208 sections/units.tex:212
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -61,10 +61,10 @@ msgstr ""
 "\n"
 
 #. type: Plain text
-#: sections/card_effect_keywords.tex:121 sections/card_effect_keywords.tex:208
-#: sections/deckbuilding.tex:194 sections/deckbuilding.tex:419
-#: sections/expansion_content.tex:113 sections/expansion_content.tex:160
-#: sections/expansion_content.tex:175 sections/resources.tex:31
+#: sections/card_effect_keywords.tex:119 sections/card_effect_keywords.tex:203
+#: sections/deckbuilding.tex:182 sections/deckbuilding.tex:401
+#: sections/expansion_content.tex:111 sections/expansion_content.tex:158
+#: sections/expansion_content.tex:173 sections/resources.tex:31
 #, no-wrap
 msgid "\\columnbreak"
 msgstr "\\columnbreak"
@@ -312,14 +312,14 @@ msgid ""
 msgstr "\\bigbreak \\note{11}{ Niektóre Karty są przeznaczone wyłącznie dla Frakcji Nekropolii \\svg{necro-yellow}.  Gdy gracz niegrający Nekropolią dobiera Kartę Nekropolii \\index{Karta!Nekropolii} z Talii Zdolności, może ją odrzucić i dobrać nową Kartę jako zamiennik, lub ją dobrać.  Gracze niegrający Nekropolią \\textbf{nie mogą używać} Kart Frakcyjnych ze swojej ręki w żaden sposób poza efektami, które je odrzucają.  }"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:92
+#: sections/deckbuilding.tex:91
 #, fuzzy
 #| msgid "\\columnbreak"
 msgid "\\columnratio{0.25}"
 msgstr "\\columnbreak"
 
 #. type: paracol
-#: sections/deckbuilding.tex:92 sections/deckbuilding.tex:137
+#: sections/deckbuilding.tex:91 sections/deckbuilding.tex:130
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{multicols*}{2}\n"
@@ -329,9 +329,8 @@ msgstr "\\columnbreak"
 msgid ""
 "{2}\n"
 "  \\begin{expansion}[title=\\phantom{\\textbf{\\tiny{foo}}}, overlay={}]{}\n"
-"    \\footnotesize\n"
 "    \\begin{center}\n"
-"      \\begin{scriptsize}\n"
+"      \\begin{tikzpicture}\n"
 msgstr ""
 "\\begin{multicols*}{2}\n"
 "  \\footnotesize\n"
@@ -339,14 +338,7 @@ msgstr ""
 "    \\begin{scriptsize}\n"
 
 #. type: paracol
-#: sections/deckbuilding.tex:93 sections/deckbuilding.tex:138
-#, fuzzy, no-wrap
-#| msgid "      \\begin{tikzpicture}\n"
-msgid "          \\begin{tikzpicture}\n"
-msgstr "      \\begin{tikzpicture}\n"
-
-#. type: paracol
-#: sections/deckbuilding.tex:110
+#: sections/deckbuilding.tex:106
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/knowledge.png}};\n"
@@ -362,12 +354,11 @@ msgstr "      \\begin{tikzpicture}\n"
 #| "    \\item[\\textbf{4.}] Faction-specific Card*\n"
 #| "  \\end{itemize}"
 msgid ""
-"              \\draw (0, 0) node {\\includegraphics[width=3.5cm]{\\cards/knowledge.png}};\n"
-"              \\draw (0.75, 0.4) node {\\encircle{1}};\n"
-"              \\draw (-1, -0.5) node {\\encircle{2}};\n"
-"              \\draw (-1, -1.5) node {\\encircle{3}};\n"
-"          \\end{tikzpicture}\n"
-"      \\end{scriptsize}\n"
+"          \\draw (0, 0) node {\\includegraphics[width=3.5cm]{\\cards/knowledge.png}};\n"
+"          \\draw (0.75, 0.4) node {\\encircle{1}};\n"
+"          \\draw (-1, -0.5) node {\\encircle{2}};\n"
+"          \\draw (-1, -1.5) node {\\encircle{3}};\n"
+"      \\end{tikzpicture}\n"
 "      \\imagecaption{Statistic card\\\\\\phantom{Blah}}\n"
 "    \\end{center}\n"
 "  \\end{expansion}\n"
@@ -375,10 +366,9 @@ msgid ""
 "  \\begin{expansion}{inferno}\n"
 "    \\hspace*{-2.3mm}\n"
 "    \\begin{minipage}[t]{0.3\\linewidth}\n"
-"      \\footnotesize\n"
 "      \\vspace*{0mm}\n"
 "      \\begin{center}\n"
-"        \\begin{scriptsize}\n"
+"        \\begin{tikzpicture}\n"
 msgstr ""
 "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{translations/assets/pl/knowledge.png}};\n"
 "      \\draw (0.75, 0.4) node {\\encircle{1}};\n"
@@ -394,14 +384,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: paracol
-#: sections/deckbuilding.tex:111 sections/deckbuilding.tex:158
-#, fuzzy, no-wrap
-#| msgid "      \\begin{tikzpicture}\n"
-msgid "            \\begin{tikzpicture}\n"
-msgstr "      \\begin{tikzpicture}\n"
-
-#. type: paracol
-#: sections/deckbuilding.tex:126
+#: sections/deckbuilding.tex:120
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/knowledge.png}};\n"
@@ -417,11 +400,10 @@ msgstr "      \\begin{tikzpicture}\n"
 #| "    \\item[\\textbf{4.}] Faction-specific Card*\n"
 #| "  \\end{itemize}"
 msgid ""
-"                \\draw (0, 0) node {\\includegraphics[width=3.5cm]{\\cards/empowered-knowledge.png}};\n"
-"                \\draw (0.75, 1.9) node {\\encircle{1}};\n"
-"                \\draw (-1, -1.5) node {\\encircle{2}};\n"
-"            \\end{tikzpicture}\n"
-"        \\end{scriptsize}\n"
+"            \\draw (0, 0) node {\\includegraphics[width=3.5cm]{\\cards/empowered-knowledge.png}};\n"
+"            \\draw (0.75, 1.9) node {\\encircle{1}};\n"
+"            \\draw (-1, -1.5) node {\\encircle{2}};\n"
+"        \\end{tikzpicture}\n"
 "        \\imagecaption{Empowered\\\\Statistic card}\n"
 "      \\end{center}\n"
 "    \\end{minipage}\n"
@@ -447,7 +429,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: paracol
-#: sections/deckbuilding.tex:131
+#: sections/deckbuilding.tex:125
 #, no-wrap
 msgid ""
 "      \\medskip\n"
@@ -457,7 +439,7 @@ msgid ""
 msgstr ""
 
 #. type: paracol
-#: sections/deckbuilding.tex:157
+#: sections/deckbuilding.tex:147
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/necromancy_card.png}};\n"
@@ -478,14 +460,13 @@ msgstr ""
 #| "  \\begin{center}\n"
 #| "    \\begin{scriptsize}\n"
 msgid ""
-"              \\draw (0, 0) node {\\includegraphics[width=3.5cm]{\\cards/necromancy_card.png}};\n"
-"              \\draw (0.75, 0.4) node {\\encircle{1}};\n"
-"              \\draw (-1, -0.5) node {\\encircle{2}};\n"
-"              \\draw (-1, -1.5) node {\\encircle{3}};\n"
-"              \\draw (1.5, -0.8) node {\\encircle{4}};\n"
-"              \\draw (1.5, -1.9) node {\\encircle{4}};\n"
-"          \\end{tikzpicture}\n"
-"      \\end{scriptsize}\n"
+"          \\draw (0, 0) node {\\includegraphics[width=3.5cm]{\\cards/necromancy_card.png}};\n"
+"          \\draw (0.75, 0.4) node {\\encircle{1}};\n"
+"          \\draw (-1, -0.5) node {\\encircle{2}};\n"
+"          \\draw (-1, -1.5) node {\\encircle{3}};\n"
+"          \\draw (1.55, -0.8) node {\\encircle{4}};\n"
+"          \\draw (1.55, -1.9) node {\\encircle{4}};\n"
+"      \\end{tikzpicture}\n"
 "      \\imagecaption{Ability card\\\\\\phantom{Blah}}\n"
 "    \\end{center}\n"
 "  \\end{expansion}\n"
@@ -493,10 +474,9 @@ msgid ""
 "  \\begin{expansion}{navalbattles}\n"
 "    \\hspace*{-2.3mm}\n"
 "    \\begin{minipage}[t]{0.3\\linewidth}\n"
-"      \\footnotesize\n"
 "      \\vspace*{0mm}\n"
 "      \\begin{center}\n"
-"        \\begin{scriptsize}\n"
+"        \\begin{tikzpicture}\n"
 msgstr ""
 "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{translations/assets/pl/necromancy_card.png}};\n"
 "      \\draw (0.75, 0.4) node {\\encircle{1}};\n"
@@ -517,7 +497,7 @@ msgstr ""
 "    \\begin{scriptsize}\n"
 
 #. type: paracol
-#: sections/deckbuilding.tex:173
+#: sections/deckbuilding.tex:161
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/knowledge.png}};\n"
@@ -533,12 +513,11 @@ msgstr ""
 #| "    \\item[\\textbf{4.}] Faction-specific Card*\n"
 #| "  \\end{itemize}"
 msgid ""
-"              \\draw (0, 0) node {\\includegraphics[width=3.5cm]{\\cards/empowered-ability.png}};\n"
-"              \\draw (0.75, 1.9) node {\\encircle{1}};\n"
-"              \\draw (-1, -1.5) node {\\encircle{2}};\n"
-"              \\draw (1.5, -1.9) node {\\encircle{4}};\n"
-"            \\end{tikzpicture}\n"
-"        \\end{scriptsize}\n"
+"          \\draw (0, 0) node {\\includegraphics[width=3.5cm]{\\cards/empowered-ability.png}};\n"
+"          \\draw (0.75, 1.9) node {\\encircle{1}};\n"
+"          \\draw (-1, -1.5) node {\\encircle{2}};\n"
+"          \\draw (1.55, -1.7) node {\\encircle{4}};\n"
+"        \\end{tikzpicture}\n"
 "        \\imagecaption{Empowered\\\\Ability card}\n"
 "      \\end{center}\n"
 "    \\end{minipage}\n"
@@ -563,7 +542,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: paracol
-#: sections/deckbuilding.tex:178
+#: sections/deckbuilding.tex:166
 #, no-wrap
 msgid ""
 "      \\medskip\n"
@@ -573,7 +552,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:194
+#: sections/deckbuilding.tex:182
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{2}\n"
@@ -607,7 +586,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:198
+#: sections/deckbuilding.tex:186
 #, fuzzy, no-wrap
 #| msgid "\\pagetarget{spells}{Spell Cards}"
 msgid ""
@@ -617,7 +596,7 @@ msgid ""
 msgstr "\\pagetarget{spells}{Karty Zaklęć}"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:206
+#: sections/deckbuilding.tex:194
 #, fuzzy, no-wrap
 #| msgid "Spell Cards\\index{Spell Card} have three possible primary effects.  Using the topmost, basic version of the Spell usually has no additional costs.  To access the other effects, you may \\textbf{Empower} a Spell\\index{Empowering Spells} by paying the indicated cost (3) to get a more powerful outcome (4).  You may pay this cost by playing other Cards for their Empower \\svg{empower} effect (e.g. the Spell Power Statistic) before casting the Spell.  All Spell Cards also have an alternative bottom (5) \\svg{empower} effect.  You cannot preserve the played \\svg{empower}: casting a Spell consumes all the \\svg{empower} played so far, and if you stop playing Cards, the power dissipates.  You may use a cheaper \\svg{empower} effect than what you've paid for, though."
 msgid ""
@@ -632,19 +611,21 @@ msgid ""
 msgstr "Karty Zaklęć\\index{Karta!Zaklęć} mają trzy możliwe Efekty Podstawowe. Użycie górnej, podstawowej wersji Zaklęcia zwykle nie ma dodatkowych kosztów. Aby użyć pozostałych efektów, możesz \\textbf{Wzmocnić} Zaklęcie\\index{Wzmacnianie Zaklęć}, płacąc określony koszt (3), aby uzyskać potężniejszy wynik (4). Możesz opłacić ten koszt zagrywając inne Karty z Efektem Wzmocnienia \\svg{empower}, zanim rzucisz to Zaklęcie. Każda Karta Zaklęcia ma również alternatywny, dolny (5) \\svg{empower} efekt. Nie możesz zachować zagranej \\svg{empower}: rzucenie Zaklęcia zużywa całą \\svg{empower}, a jeśli przestaniesz zagrywać Karty, moc rozprasza się. Możesz użyć tańszego \\svg{empower} efektu niż ten, który opłaciłeś."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:237
+#: sections/deckbuilding.tex:227
 #, fuzzy, no-wrap
 #| msgid "{ \\centering \\begin{tikzpicture} \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}}; \\draw (-1.3, 2.5) node {\\encircle{1}}; \\draw (-1.8, 0.3) node {\\encircle{2}}; \\draw (-1.1, -1) node {\\encircle{3}}; \\draw (1.1, -1) node {\\encircle{4}}; \\draw (0.8, -2.8) node {\\encircle{5}}; \\end{tikzpicture}\\\\ \\medskip \\footnotesize \\imagecaption{Spell Card}\\par \\noindent \\begin{minipage}[t]{0.5\\linewidth} \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt] \\item[\\textbf{1.}] Spell Name \\item[\\textbf{2.}] School of Magic \\item[\\textbf{3.}] Cost to Empower \\end{itemize} \\end{minipage} \\begin{minipage}[t]{0.4\\linewidth} \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt] \\item[\\textbf{4.}] Spell Effect \\item[\\textbf{5.}] Alternative\\\\Effect \\end{itemize} \\end{minipage} }"
 msgid ""
 "{\n"
 "  \\centering\n"
 "  \\begin{tikzpicture}\n"
-"    \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}};\n"
-"    \\draw (-1.3, 2.5) node {\\encircle{1}};\n"
-"    \\draw (-1.8, 0.3) node {\\encircle{2}};\n"
-"    \\draw (-1.1, -1) node {\\encircle{3}};\n"
-"    \\draw (1.1, -1) node {\\encircle{4}};\n"
-"    \\draw (0.8, -2.8) node {\\encircle{5}};\n"
+"    \\begin{scriptsize}\n"
+"      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}};\n"
+"      \\draw (-1.3, 2.5) node {\\encircle{1}};\n"
+"      \\draw (-1.8, 0.3) node {\\encircle{2}};\n"
+"      \\draw (-1.1, -1) node {\\encircle{3}};\n"
+"      \\draw (1.1, -1) node {\\encircle{4}};\n"
+"      \\draw (0.8, -2.8) node {\\encircle{5}};\n"
+"    \\end{scriptsize}\n"
 "  \\end{tikzpicture}\\\\\n"
 "  \\medskip\n"
 "  \\footnotesize\n"
@@ -670,7 +651,7 @@ msgid ""
 msgstr "{ \\centering \\begin{tikzpicture} \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{translations/assets/pl/spell.png}}; \\draw (-1.3, 2.5) node {\\encircle{1}}; \\draw (-1.8, 0.3) node {\\encircle{2}}; \\draw (-1.1, -1) node {\\encircle{3}}; \\draw (1.1, -1) node {\\encircle{4}}; \\draw (0.8, -2.8) node {\\encircle{5}}; \\end{tikzpicture}\\\\ \\footnotesize \\imagecaption{Karta Zaklęcia}\\par \\noindent \\begin{minipage}[t]{0.5\\linewidth} \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt] \\item[\\textbf{1.}] Nazwa Zaklęcia \\item[\\textbf{2.}] Szkoła Magii \\item[\\textbf{3.}] Koszt\\\\Wzmocnienia \\end{itemize} \\end{minipage} \\begin{minipage}[t]{0.4\\linewidth} \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt] \\item[\\textbf{4.}] Efekt Zaklęcia \\item[\\textbf{5.}] Efekt\\\\Alternatywny \\end{itemize} \\end{minipage} }"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:241
+#: sections/deckbuilding.tex:231
 #, fuzzy, no-wrap
 #| msgid "Spells can be gained by Building the Mage Guild\\index{Mage Guild}.  Building it also enables you to use the Spell Book Token\\index{Spell Book Token} for buying additional Spells.  The Token cannot be used during the \\textbf{same Round} when the Guild is constructed. Spells can also be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgid ""
@@ -681,7 +662,7 @@ msgid ""
 msgstr "Zaklęcia możesz zdobyć, budując Gildię Magów\\index{Gildia Magów}.  Zbudowanie jej pozwala ci używać Żetonu Księgi Zaklęć\\index{Żeton!Księgi Zaklęć}, aby kupować dodatkowe Zaklęcia. Żeton nie może być użyty podczas \\textbf{tej samej Rundy}, w której została zbudowana Gildia Magów. Zaklęcia również mogą być \\pagelink{Trading}{wymieniane} w Trybie Sojuszu oraz Kooperacji."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:243
+#: sections/deckbuilding.tex:233
 #, fuzzy, no-wrap
 #| msgid "During Combat, \\textbf{only one Spell Card} may be played by each player \\textbf{per Combat Round}."
 msgid ""
@@ -690,7 +671,7 @@ msgid ""
 msgstr "Podczas Walki każdy gracz może zagrać \\textbf{tylko jedną Kartę Zaklęcia na jedną Rundę Walki}."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:246
+#: sections/deckbuilding.tex:236
 #, fuzzy, no-wrap
 #| msgid "\\columnbreak When you use an effect which lets you cast a Spell from somewhere other than your hand (such as directly from the Spell Deck), place that Spell into your Discard Pile after casting it."
 msgid ""
@@ -700,7 +681,7 @@ msgid ""
 msgstr "\\columnbreak Gdy używasz efektu, który pozwala ci na zagranie Zaklęcia z innego miejsca niż twoja ręka (na przykład bezpośrednio z Talii Zaklęć), umieść to Zaklęcie na swoim Stosie Kart Odrzuconych po jego rzuceniu."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:248
+#: sections/deckbuilding.tex:238
 #, no-wrap
 msgid ""
 "Some complex Spell cards use keywords or require special components, see \\pagelink{spell keywords}{Card Effect Keywords}.\n"
@@ -708,7 +689,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:254
+#: sections/deckbuilding.tex:244
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{center}\n"
@@ -729,7 +710,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:260
+#: sections/deckbuilding.tex:250
 #, fuzzy, no-wrap
 #| msgid "All Spell Cards belong to one School of Magic\\index{Schools of Magic}: either Air, Fire, Earth or Water.  Spells with one School symbol on them are called \\textbf{Basic Spells}\\index{Basic Spell}, while Spells with four identical symbols are called \\textbf{Expert Spells}\\index{Expert Spell}.  \\textbf{Magic Arrow} is a Basic Spell; when casting the \\textbf{Magic Arrow}, you must select which School it belongs to.  By default there's no difference, but certain game effects can refer to specific Schools and to Basic/Expert Spells."
 msgid ""
@@ -742,9 +723,8 @@ msgid ""
 msgstr "Wszystkie Karty Zaklęć należą do jednej ze Szkół Magii\\index{Szkoły Magii}: Powietrza, Ognia, Ziemi lub Wody. Zaklęcia z jednym symbolem Szkoły są nazywane \\textbf{Zaklęciami Podstawowymi}\\index{Zaklęcie!Podstawowe}, podczas gdy Zaklęcia z czterema identycznymi symbolami są nazywane \\textbf{Zaklęciami Mistrzowskimi}\\index{Zaklęcie!Mistrzowskie}. \\textbf{Magiczna Strzała} jest Zaklęciem Podstawowym; podczas rzucania \\textbf{Magicznej Strzały} musisz wybrać, do której Szkoły należy. Domyślnie nie ma to znaczenia, ale niektóre efekty  mogą się odnosić do konkretnych Szkół oraz do Zaklęć Podstawowych lub Mistrzowskich."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:288
+#: sections/deckbuilding.tex:278
 #, fuzzy, no-wrap
-#| msgid "\\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire.png} \\imagecaption{School of Fire} \\endminipage \\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_water.png} \\imagecaption{School of Water} \\endminipage \\hfill\\allowbreak\\bigbreak \\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_air.png} \\imagecaption{School of Air} \\endminipage \\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_earth.png} \\textit{\\textbf{\\textcolor{darkcandyapplered}{School of Earth}}} \\endminipage \\bigbreak"
 msgid ""
 "\\begin{minipage}[t]{0.48\\textwidth}\n"
 "  \\centering\n"
@@ -774,10 +754,38 @@ msgid ""
 "\\end{minipage}\n"
 "\\clearpage\n"
 "\n"
-msgstr "\\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire.png} \\imagecaption{Szkoła Ognia} \\endminipage \\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_water.png} \\imagecaption{Szkoła Wody} \\endminipage \\hfill\\allowbreak\\bigbreak \\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_air.png} \\imagecaption{Szkoła Powietrza} \\endminipage \\minipage[b]{0.5\\textwidth} \\centering \\includegraphics[width=0.75\\linewidth]{\\images/school_of_earth.png} \\textit{\\textbf{\\textcolor{darkcandyapplered}{Szkoła Ziemi}}} \\endminipage \\bigbreak"
+msgstr ""
+"\\begin{minipage}[t]{0.48\\textwidth}\n"
+"  \\centering\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire.png}\n"
+"    \\imagecaption{Szkoła Ognia}\n"
+"  \\endminipage\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_water.png}\n"
+"    \\imagecaption{Szkoła Wody}\n"
+"  \\endminipage\n"
+"  \\hfill\\allowbreak%\n"
+"  \\bigbreak\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_air.png}\n"
+"    \\imagecaption{Szkoła Powietrza}\n"
+"  \\endminipage\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_earth.png}\n"
+"    \\imagecaption{Szkoła Ziemi}\n"
+"  \\endminipage\n"
+"  \\bigbreak\n"
+"\\end{minipage}\n"
+"\\clearpage\n"
+"\n"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:291
+#: sections/deckbuilding.tex:281
 #, fuzzy, no-wrap
 #| msgid "\\pagetarget{Specialty}{Hero Specialty Cards}"
 msgid ""
@@ -787,7 +795,7 @@ msgid ""
 msgstr "\\pagetarget{Specialty}{Karty Specjalności Bohatera}"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:296
+#: sections/deckbuilding.tex:286
 #, fuzzy, no-wrap
 #| msgid "Hero Specialty Cards\\index{Specialty Card} are gained from \\pagelink{Level}{Level ups}.  Each Main Hero has a unique set of Specialty Cards.  While some of these Cards have effects which resemble Spell Cards and even make use of \\svg{empower}, Specialty Cards are their \\textbf{own unique category of Cards}.  For example, the limit of 1 Spell per Combat Round doesn't apply to Specialty Cards."
 msgid ""
@@ -799,7 +807,7 @@ msgid ""
 msgstr "Karty Specjalności Bohatera\\index{Karta!Specjalności} są pozyskiwane podczas \\pagelink{Level}{zdobywania Poziomów}. Każdy Bohater Główny ma unikalny zestaw Kart Specjalności. Mimo że niektóre z tych Kart mają efekty podobne do Kart Zaklęć i nawet wykorzystują \\svg{empower} oraz Szkoły Magii, Karty Specjalności są \\textbf{unikalną kategorią kart}. Przykładowo limit jednego Zaklęcia na Rundę Walki nie dotyczy Kart Specjalności."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:304
+#: sections/deckbuilding.tex:294
 #, fuzzy, no-wrap
 #| msgid "{ \\medskip \\centering \\includegraphics[width=0.7\\linewidth]{\\cards/specialty.png}\\\\ \\medskip \\footnotesize\\textit{A Level 4 Specialty Card, belonging to Catherine the Knight.} }"
 msgid ""
@@ -808,13 +816,13 @@ msgid ""
 "    \\centering\n"
 "    \\includegraphics[width=0.7\\linewidth]{\\cards/specialty.png}\\\\\n"
 "    \\medskip\n"
-"    \\footnotesize\\textit{A Level 4 Specialty card, belonging to Catherine the Knight.}\n"
+"    \\footnotesize\\textit{A Level IV Specialty card, belonging to Catherine the Knight.}\n"
 "}\n"
 "\n"
 msgstr "{ \\medskip \\centering \\includegraphics[width=0.7\\linewidth]{translations/assets/pl/specialty.png}\\\\ \\medskip \\footnotesize\\textit{Karta Specjalności IV Poziomu, należąca do Rycerza Katarzyny.} }"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:312
+#: sections/deckbuilding.tex:302
 #, fuzzy, no-wrap
 #| msgid "{ \\medskip \\centering \\includegraphics[width=0.7\\linewidth]{\\cards/specialty2.png}\\\\ \\medskip \\footnotesize\\textit{A Level 1 Specialty Card, belonging to Deemer the Warlock. It uses \\svg{empower}, but does NOT belong to any School of Magic, despite the imagery.} }"
 msgid ""
@@ -823,13 +831,13 @@ msgid ""
 "    \\centering\n"
 "    \\includegraphics[width=0.7\\linewidth]{\\cards/specialty2.png}\\\\\n"
 "    \\medskip\n"
-"    \\footnotesize\\textit{A Level 1 Specialty card, belonging to Deemer the Warlock. It uses \\svg{empower}, but does NOT belong to any School of Magic, despite the imagery.}\n"
+"    \\footnotesize\\textit{A Level I Specialty card, belonging to Deemer the Warlock. It uses \\svg{empower}, but does NOT belong to any School of Magic, despite the imagery.}\n"
 "}\n"
 "\n"
 msgstr "{ \\medskip \\centering \\includegraphics[width=0.7\\linewidth]{translations/assets/pl/specialty2.png}\\\\ \\medskip \\footnotesize\\textit{Karta Specjalności I Poziomu, należąca do Czarnoksiężnika Deemera. Wykorzystuje \\svg{empower}, ale \\textbf{nie należy} do żadnej Szkoły Magii, pomimo grafiki.} }"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:315
+#: sections/deckbuilding.tex:305
 #, fuzzy, no-wrap
 #| msgid "\\pagetarget{Artifact}{Artifact} Cards"
 msgid ""
@@ -839,7 +847,7 @@ msgid ""
 msgstr "\\pagetarget{Artifact}{Karty Artefaktów}"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:323
+#: sections/deckbuilding.tex:313
 #, fuzzy, no-wrap
 #| msgid "Artifact Cards\\index{Artifact Card} have a top and bottom effect. When you play one, you must \\textbf{choose which effect} you are using.  They are divided into 3 Levels: Minor, Major, and Relic, with different border color.  These Levels relate to the overall Power of the Card and may be referenced when resolving certain effects or during Scenario setup.  Otherwise, all Artifact Cards are normally shuffled together to form the Artifact Deck regardless of their Level.  They are gained through map exploration.\\par Artifacts can be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgid ""
@@ -850,20 +858,27 @@ msgid ""
 "They are gained through map exploration.\\par\n"
 "Artifacts can be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios.\\par\n"
 "\\begin{multicols*}{2}\n"
-"  \\begin{scriptsize}\n"
+"  \\begin{tikzpicture}\n"
 msgstr "Karty Artefaktów\\index{Karta!Artefaktu} mają górny oraz dolny efekt. Gdy je zagrywasz, musisz \\textbf{wybrać  efekt}, którego używasz. Dzielą się one na 3 Poziomy: Słabe, Mocne oraz Relikty, różniące się kolorem ramki. Te poziomy odnoszą się do ogólnej Siły Karty, a dodatkowo mogą być wskazane podczas rozgrywania niektórych efektów lub podczas przygotowania Scenariusza. Jeżeli w Scenariuszu nie podano inaczej, wszystkie Karty Artefaktów są tasowane razem, aby stworzyć Talię Artefaktów bez względu na ich Poziom. Można je zdobywać podczas odkrywania mapy. \\par Artefakty mogą być \\pagelink{Trading}{wymieniane} w Trybie Sojuszu oraz Kooperacji."
 
-#. type: figure
-#: sections/deckbuilding.tex:324 sections/map_elements.tex:54
-#: sections/map_elements.tex:274 sections/player_turns.tex:124
-#: sections/setup.tex:7
-#, no-wrap
-msgid "  \\begin{tikzpicture}\n"
-msgstr "  \\begin{tikzpicture}\n"
-
 #. type: multicols*
-#: sections/deckbuilding.tex:338
-#, no-wrap
+#: sections/deckbuilding.tex:325
+#, fuzzy, no-wrap
+#| msgid ""
+#| "    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
+#| "    \\draw (-1.3, 2.1) node {\\encircle{1}};\n"
+#| "    \\draw (1.3, -0.9) node {\\encircle{2}};\n"
+#| "    \\draw (1.4, 2.6) node {\\encircle{3}};\n"
+#| "    \\draw (-1, -1.9) node {\\encircle{4}};\n"
+#| "  \\end{tikzpicture}\n"
+#| "  \\end{scriptsize}\n"
+#| "  \\footnotesize\n"
+#| "    \\null\\hfill\\imagecaption{Major Artifact}\n"
+#| "  \\columnbreak\n"
+#| "  \\begin{center}\n"
+#| "    \\phantom{\\ldots}\\\\\n"
+#| "    \\phantom{\\ldots}\n"
+#| "    \\begin{scriptsize}\n"
 msgid ""
 "    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
 "    \\draw (-1.3, 2.1) node {\\encircle{1}};\n"
@@ -871,14 +886,12 @@ msgid ""
 "    \\draw (1.4, 2.6) node {\\encircle{3}};\n"
 "    \\draw (-1, -1.9) node {\\encircle{4}};\n"
 "  \\end{tikzpicture}\n"
-"  \\end{scriptsize}\n"
-"  \\footnotesize\n"
 "    \\null\\hfill\\imagecaption{Major Artifact}\n"
 "  \\columnbreak\n"
 "  \\begin{center}\n"
 "    \\phantom{\\ldots}\\\\\n"
 "    \\phantom{\\ldots}\n"
-"    \\begin{scriptsize}\n"
+"    \\begin{tikzpicture}\n"
 msgstr ""
 "    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{translations/assets/pl/artifact.png}};\n"
 "    \\draw (-1.3, 2.1) node {\\encircle{1}};\n"
@@ -895,27 +908,26 @@ msgstr ""
 "    \\phantom{\\ldots}\n"
 "    \\begin{scriptsize}\n"
 
-#. type: multicols
-#: sections/deckbuilding.tex:339 sections/deckbuilding.tex:348
-#: sections/expansion_content.tex:79 sections/expansion_content.tex:427
-#: sections/expansion_content.tex:446 sections/units.tex:70
-#: sections/units.tex:97
-#, no-wrap
-msgid "    \\begin{tikzpicture}\n"
-msgstr "    \\begin{tikzpicture}\n"
-
 #. type: multicols*
-#: sections/deckbuilding.tex:347
-#, no-wrap
+#: sections/deckbuilding.tex:332
+#, fuzzy, no-wrap
+#| msgid ""
+#| "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/minor_artifact.png}};\n"
+#| "      \\draw (-0.7, 0.5) node {\\encircle{3}};\n"
+#| "    \\end{tikzpicture}\n"
+#| "    \\end{scriptsize}\\\\\n"
+#| "    \\phantom{\\ldots}\\imagecaption{Minor Artifact}\\\\\n"
+#| "    \\vspace{3em}\n"
+#| "    \\phantom{\\ldots}\n"
+#| "    \\begin{scriptsize}\n"
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/minor_artifact.png}};\n"
 "      \\draw (-0.7, 0.5) node {\\encircle{3}};\n"
-"    \\end{tikzpicture}\n"
-"    \\end{scriptsize}\\\\\n"
+"    \\end{tikzpicture}\\\\\n"
 "    \\phantom{\\ldots}\\imagecaption{Minor Artifact}\\\\\n"
 "    \\vspace{3em}\n"
 "    \\phantom{\\ldots}\n"
-"    \\begin{scriptsize}\n"
+"    \\begin{tikzpicture}\n"
 msgstr ""
 "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/minor_artifact.png}};\n"
 "      \\draw (-0.7, 0.5) node {\\encircle{3}};\n"
@@ -927,13 +939,19 @@ msgstr ""
 "    \\begin{scriptsize}\n"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:365
-#, no-wrap
+#: sections/deckbuilding.tex:348
+#, fuzzy, no-wrap
+#| msgid ""
+#| "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}};\n"
+#| "      \\draw (-0.7, 0.5) node {\\encircle{3}};\n"
+#| "    \\end{tikzpicture}\n"
+#| "    \\end{scriptsize}\\\\\n"
+#| "    \\phantom{\\ldots}\\imagecaption{Relic Artifact}\n"
+#| "  \\end{center}"
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}};\n"
 "      \\draw (-0.7, 0.5) node {\\encircle{3}};\n"
-"    \\end{tikzpicture}\n"
-"    \\end{scriptsize}\\\\\n"
+"    \\end{tikzpicture}\\\\\n"
 "    \\phantom{\\ldots}\\imagecaption{Relic Artifact}\n"
 "  \\end{center}"
 msgstr ""
@@ -945,7 +963,7 @@ msgstr ""
 "  \\end{center}"
 
 #. type: multicols
-#: sections/deckbuilding.tex:365
+#: sections/deckbuilding.tex:348
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{2}\n"
@@ -979,7 +997,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: center
-#: sections/deckbuilding.tex:372
+#: sections/deckbuilding.tex:355
 msgid ""
 "{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/"
 "diplomats_ring.png}}"
@@ -988,7 +1006,7 @@ msgstr ""
 "diplomats_ring.png}}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:377
+#: sections/deckbuilding.tex:360
 #, fuzzy, no-wrap
 #| msgid "\\pagetarget{spells}{Spell Cards}"
 msgid ""
@@ -998,7 +1016,7 @@ msgid ""
 msgstr "\\pagetarget{spells}{Karty Zaklęć}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:382
+#: sections/deckbuilding.tex:365
 #, no-wrap
 msgid ""
 "During setup shuffle 10 of the Spell Scroll cards into the Artifact Deck.\n"
@@ -1009,7 +1027,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:393
+#: sections/deckbuilding.tex:375
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}};\n"
@@ -1024,7 +1042,6 @@ msgid ""
 "    \\centering\n"
 "    \\includegraphics[width=0.7\\linewidth]{\\cards/test_spellscroll.png}\\\\\n"
 "    \\medskip\n"
-"    \\footnotesize\n"
 "    \\begin{center}\n"
 "         \\imagecaption{Spell Scroll card}\n"
 "    \\end{center}\n"
@@ -1039,7 +1056,7 @@ msgstr ""
 "  \\end{center}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:399
+#: sections/deckbuilding.tex:381
 #, no-wrap
 msgid ""
 "\\vspace*{1em}\n"
@@ -1051,7 +1068,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:411
+#: sections/deckbuilding.tex:393
 #, no-wrap
 msgid ""
 "You can play Spells from a Spell Scroll like any other Spell with the following exceptions:\n"
@@ -1066,7 +1083,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:419
+#: sections/deckbuilding.tex:401
 #, no-wrap
 msgid ""
 "{stronghold}\n"
@@ -1079,13 +1096,13 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:421
+#: sections/deckbuilding.tex:403
 #, no-wrap
 msgid "If the last Spell on a Spell Scroll is used or sold, place the Spell Scroll back in its Deck."
 msgstr ""
 
 #. type: center
-#: sections/deckbuilding.tex:426
+#: sections/deckbuilding.tex:408
 #, fuzzy
 #| msgid ""
 #| "{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/"
@@ -1098,7 +1115,7 @@ msgstr ""
 "diplomats_ring.png}}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:429
+#: sections/deckbuilding.tex:411
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{rampart,cove}\n"
@@ -1114,7 +1131,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:433
+#: sections/deckbuilding.tex:415
 #, fuzzy, no-wrap
 #| msgid ""
 #| "  War Machines\\index{War Machines} are permanent Cards that can be bought at either a \\pagelink{Trading Post}{Trading Post} or a \\pagelink{War Machine Factory}{War Machine Factory}.\n"
@@ -1133,7 +1150,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:456
+#: sections/deckbuilding.tex:436
 #, fuzzy, no-wrap
 #| msgid ""
 #| "  {\n"
@@ -1162,15 +1179,13 @@ msgid ""
 "  {\n"
 "    \\bigskip\n"
 "    \\centering\n"
-"    \\begin{scriptsize}\n"
-"      \\begin{tikzpicture}\n"
-"        \\draw (0, 0) node[inner sep=0] {\\includegraphics[width=0.8\\linewidth]{\\cards/war_machine.png}};\n"
-"        \\draw (0.8, 3.6) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
-"        \\draw (0, -2.8) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-"        \\draw (-1.2, -1.7) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
-"        \\draw (0.9, -1.7) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
-"      \\end{tikzpicture}\n"
-"    \\end{scriptsize}\n"
+"    \\begin{tikzpicture}\n"
+"      \\draw (0, 0) node[inner sep=0] {\\includegraphics[width=0.8\\linewidth]{\\cards/war_machine.png}};\n"
+"      \\draw (0.8, 3.6) node {\\encircle{1}};\n"
+"      \\draw (0, -2.8) node {\\encircle{2}};\n"
+"      \\draw (-1.2, -1.7) node {\\encircle{3}};\n"
+"      \\draw (0.9, -1.7) node {\\encircle{4}};\n"
+"    \\end{tikzpicture}\n"
 "\n"
 "    \\footnotesize\n"
 "    \\imagecaption{War Machine card}\n"

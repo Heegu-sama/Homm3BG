@@ -1,0 +1,440 @@
+% !TeX spellcheck = en_US
+\pagetarget{Adventure and Skirmish Modes}{\addsection{Battlefield}{\spells/frenzy.png}}
+
+\begin{expansion}{battlefield}
+  \begin{multicols}{2}
+  \subsection*{Overview}
+  \bigskip
+  The Battlefield Expansion introduces the large \pagelink{Battlefield Combat}{Battlefield Board} and two 1~vs.~1 game modes that focus on tactical combat on the Battlefield Board.
+  Neither of these 2 modes uses the \pagelink{Map}{Map}.
+  They differ in how players build their Unit and Player Decks:
+  \smallskip
+  \begin{itemize}
+    \item In \textbf{Adventure Mode}, players experience a card-driven Adventure Phase followed by a final Combat.
+      The Adventure Phase replaces the Map exploration from regular games.
+      During this phase, players use Adventure cards to gather Resources, expand their Town, and develop their Heroes, thereby deciding which units to recruit and which card types to include in their Deck.
+    \item In \textbf{Skirmish Mode}, players receive pre-constructed Decks and armies, with minimal control over their composition.
+      Players immediately engage in Combat.
+  \end{itemize}
+
+  You can also use the Battlefield Board instead of the Combat Board in other game modes.
+
+  \begin{center}
+    {\transparent{0.2}{\includegraphics[width=0.8\linewidth]{\art/quiet_eye_of_the_dragon.png}}}
+  \end{center}\par
+
+  \vspace*{\fill}
+  \columnbreak
+
+  \subsection*{Victory Condition}
+  Victory in Adventure and Skirmish is achieved by defeating all enemy units in the final Combat.
+
+  \subsection*{Rule Ambiguity}
+  \textbf{Note:} Both game modes were designed for the \textbf{Core Game only}.
+  As a result, the official rules do not address many interactions, particularly those involving expansion content.
+  If you wish to include expansion cards, you will need to establish house rules for unresolved interactions.
+
+  \smallskip
+  Such unanswered questions include:
+  \begin{itemize}
+    \item Which cards should be removed from the game apart from Diplomacy and Logistics?
+    \item Which cards should be removed in Skirmish Mode because they provide no Combat benefit?
+    \item How should cards with Permanent effects be handled in Adventure Mode?
+    \item How should cards with a ``Remove'' effect (e.~g.~Expert Learning) be handled in Adventure Mode?
+    \item How should cards with both Combat and non-Combat effects (e.~g.~Cape of Velocity) be handled in Adventure Mode?
+  \end{itemize}
+  \end{multicols}
+\end{expansion}
+
+\newpage
+\begin{expansion}{battlefield}
+  \subheader{Adventure and Skirmish Setup}
+  \begin{multicols}{2}
+    \subsection*{Common Setup Steps \raisebox{.3\height}{\encirclelegend{goblin}{C}}}
+    \begin{enumerate}[leftmargin=1.5em]
+      \item Place the Battlefield Board in the middle of the table.
+      \item Each player chooses a Faction and a Hero of that Faction and takes the following components:
+      \begin{itemize}
+        \item[a)] Hero Board
+        \item[b)] 3 Hero-specific Specialty cards and 1 Hero-specific Ability card
+        \item[c)] 7 unit cards and 7 unit miniatures
+        \item[d)] 20 Faction Cubes
+      \end{itemize}
+      \item Prepare the Artifact, Spell, and Ability Decks normally.
+        Remove the following Ability cards from the play: ``Diplomacy'', ``Logistics''.
+      \item Prepare the Positive and Negative \pagelink{Morale Cards}{\textbf{Morale cards}} (including all cards with the battlefield symbol).
+      \item Prepare the following Tokens near the Battlefield Board: Black Cubes, Damage Tokens, Defense/Paralysis Tokens, Obstacles, and the Initiative Token.
+      \item Prepare the Attack and Resource Dice.
+      \item Build your starting Deck as per \pagelink{Setup Starting Deck}{steps 11--13 of Setup}.
+    \end{enumerate}
+    \columnbreak
+
+    \subsection*{Additional Steps for Adventure Mode \raisebox{.3\height}{\encirclelegend{darkcandyapplered}{A}}}
+    \begin{enumerate}[leftmargin=1.5em, resume]
+      \item Prepare Resource Tokens and Treasure Dice.
+      \item Each player takes a Town Board with the following starting setup:
+      \begin{itemize}
+        \item[a)] Set income tracks to 10 \svg{gold}, 0 \svg{building_materials}, and 0 \svg{valuablegreater}.
+        \item[b)] No Town Buildings or units in the Unit Deck.  % Clarification: https://boardgamegeek.com/thread/3284421/article/44125381#44125381
+      \end{itemize}
+      \item Starting resources: 15 \svg{gold}, 3 \svg{building_materials}, and 1 \svg{valuablegreater}.
+      \item Shuffle the Adventure Deck and place it face down.
+      \item Place the Round Tracker and put a Black Cube on Round 1.
+      \item Set Hero Level to I.
+      \item Set your starting Deck aside for now; you will only need it for the final Combat.
+    \end{enumerate}
+
+    \subsection*{Start of the game}
+    In both modes, both players roll 2~\svg{resource_die}.
+    The player with the highest total becomes the first player and takes the Initiative Token.
+
+  \vspace*{\fill}
+\end{multicols}
+
+\begin{center}
+  \begin{tikzpicture}
+    \draw (0, 0) node[inner sep=0] {\makebox[\textwidth][c]{\includegraphics[width=0.9\linewidth]{\images/battlefield_setup.png}}};
+    \draw (-4, 0) node {\encircle{1}};
+    \draw (-5, -1.5) node {\encircle{2a}};
+    \draw (3.8, 2.9) node {\encircle{2a}};
+    \draw (-5.5, 1.2) node {\encircle{2c}};
+    \draw (2, 0.2) node {\encircle{2c}};
+    \draw (5.5, 1.2) node {\encircle{2c}};
+    \draw (5.3, -2) node {\encircle{3}};
+    \draw (2.9, -1.6) node {\encircle{4}};
+    \draw (-2, 2.8) node {\encircle{5}};
+    \draw (2.8, -2.5) node {\encircle{6}};
+    \draw (0, -2.5) node {\encircle{7}};
+    \draw (0, 3.4) node {\encircle{7}};
+    \draw (3.5, -3) node {\encirclered{8}};
+    \draw (-3.8, 3) node {\encirclered{8}};
+    \draw (-2, -2) node {\encirclered{9}};
+    \draw (2, 3) node {\encirclered{9}};
+    \draw (-6, -1.7) node {\encirclered{10}};
+    \draw (5, 3) node {\encirclered{10}};
+    \draw (1, -1.6) node {\encirclered{11}};
+    \draw (-1.9, 3.5) node {\encirclered{12}};
+  \end{tikzpicture}
+\end{center}
+\end{expansion}
+
+\newpage
+\begin{expansion}[before=\vspace*{-11mm}]{battlefield}
+  \pagetarget{Adventure}{\subheader{Adventure Mode}}
+  \begin{multicols}{2}
+  Adventure Mode is divided into two phases: the \textbf{Adventure Phase} and the \textbf{Final Combat}.
+  The latter works identically to Skirmish Mode.\par
+  Before starting the game, both players choose a game length by setting the number of Rounds in the Adventure Phase:
+  \begin{itemize}
+    \item \textbf{Short} game: 9 Rounds.
+    \item \textbf{Medium} game: 13 Rounds.
+    \item \textbf{Large} game: 16 Rounds.
+  \end{itemize}
+  \subsection*{Adventure Phase}
+  The Adventure Phase lasts a certain number of Rounds, depending on the chosen game length.
+  Follow these steps in order during each Round.\par
+  \begin{enumerate}[leftmargin=1.3em]
+    \item \textbf{Move the Round Tracker} -- skip this step in the first Round.
+    Depending on the type of Round, resolve the following effects:
+    \begin{itemize}
+      \item In \textbf{Resource Rounds} both players get income normally.
+      \item In \textbf{Astrologers Rounds} -- instead of drawing Astrologers Proclaim cards, players increase one of their income tracks (\svg{gold}, \svg{building_materials}, or \svg{valuablegreater}) in one of the following ways:
+      \begin{itemize}
+        \item Increase your preferred income track.
+        \item Determine it randomly by rolling a \svg{resource_die}.
+          If you do, gain the basic income of that resource immediately, which is 5 \svg{gold}, 2 \svg{building_materials}, or 1 \svg{valuablegreater}.
+      \end{itemize}
+    \end{itemize}
+    \item \textbf{Determine starting player} -- in odd-numbered Rounds, it's the player \textbf{with} the Initiative Token, in even-numbered Rounds, it's the player \textbf{without it}.
+    \item \textbf{Draw Adventure Cards} -- skip this step in the last Round.
+    The starting player draws 3 Adventure cards and takes one of them \textbf{into their hand}.
+    Afterwards, they pass the remaining 2 to the other player, who takes 1 card into their hand and discards the other.\par
+    \textbf{Note:} Before choosing the card, \textbf{the starting player} may use \svg{movement} effects from \pagelink{Adventure MM Cards}{set aside cards from your Deck} to discard any number of the drawn Adventure cards and draw that many cards.\par
+    \item \textbf{Player Turns} -- beginning with the starting player, both players take their turn by performing any of the following actions in any order:
+    \begin{itemize}
+      \item \pagelink{Adventure Cards}{\textbf{Resolve}} an Adventure card from your hand.
+        You may only resolve \textbf{one Adventure card per Round}.
+      \item Perform Town or Morale actions, or resolve your Hero's \pagelink{Level}{level ups}, in the same way as in regular games.  % no-check-caps
+      \item Use the effects of \pagelink{Adventure MM Cards}{set aside cards from your Deck}, except for \svg{movement}.
+    \end{itemize}\par
+    At the end of the turn, \textbf{discard your hand down to 1 Adventure card}.
+    If you still have a \textbf{Magic Spring} Adventure card in hand, \textbf{discard it}.
+  \end{enumerate}\par
+  \smallskip
+  In the last Round, players do not draw Adventure cards, but they may still resolve an Adventure card from their hand.
+  After the last Round, the Adventure Phase ends and the final Combat begins.
+
+  \subsection*{Starting the final Combat}
+  Recover all spent \svg{expert}.
+  Pick up your set-aside Deck, shuffle it, and draw cards up to your Hero's Hand \svg{hand} Limit.
+  Remove all \svg{paralysis} tokens from your units, take all your unit miniatures, and begin the final Combat on the Battlefield Board following the \pagelink{Battlefield Combat}{Battlefield Combat rules}.
+  \end{multicols}
+\end{expansion}
+
+\newpage
+\begin{expansion}{battlefield}
+  \begin{multicols}{2}
+  \pagetarget{Adventure Cards}{\subsection*{Resolving Adventure Cards}}
+  There are two types of Adventure cards: Combat and Event.
+  \medskip
+  \begin{multicols*}{2}
+    \footnotesize
+    \begin{center}
+      \begin{tikzpicture}
+        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_event.png}};
+        \draw (1.2, 1.9) node {\encircle{1}};
+        \draw (-0.2, -0.2) node {\encircle{2}};
+        \draw (-1, -1.2) node {\encircle{3}};
+      \end{tikzpicture}
+      \imagecaption{Adventure-Event card}
+      \begin{enumerate}
+        \item[\textbf{1.}] Name
+        \item[\textbf{2.}] Type
+        \item[\textbf{3.}] Effect
+      \end{enumerate}
+    \end{center}
+    \columnbreak
+
+    \begin{center}
+      \begin{tikzpicture}
+        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_combat.png}};
+        \draw (1.2, 1.9) node {\encircle{1}};
+        \draw (-0.2, 0.2) node {\encircle{2}};
+        \draw (-1, -0.8) node {\encircle{4}};
+        \draw (1, -0.8) node {\encircle{5}};
+        \draw (0.4, -2.2) node {\encircle{6}};
+      \end{tikzpicture}
+      \imagecaption{Adventure-Combat card}
+      \begin{enumerate}
+        \item[\textbf{4.}] Combat Power Levels
+        \item[\textbf{5.}] Battle Reward
+        \item[\textbf{6.}] Basic Reward
+      \end{enumerate}
+    \end{center}
+  \end{multicols*}
+  To resolve an \textbf{Adventure-Event card}, follow its printed effect.
+  To resolve an \textbf{Adventure-Combat card}, follow these steps:
+  \begin{enumerate}[leftmargin=1.3em]
+    \item \textbf{Declare a Combat Power Level:}\index{Combat Power}
+      Choose one of the three available Combat Power Levels.
+      You must reach at least that value to gain the full reward.
+    \item \textbf{Determine your Combat Power:}
+      Select 2 of your units and roll 1 Attack Die for each.
+      If you have fewer than 2 units, select as many as you have.
+      Sum all unit Attack values and all Attack Die results to determine your final Combat Power.
+    \item \textbf{Get the Reward:}
+      If your Combat Power is equal to or higher than your declared Combat Power Level, take both the Basic Reward and the Battle Reward.
+      Otherwise, take only the Basic Reward and place a \svg{paralysis} token on one of your units that took part in this Combat.
+      This unit is now stunned.
+      If you choose a stunned unit for a future Combat, do not add its Attack value to your Combat Power; then remove the \svg{paralysis} token from that unit.
+  \end{enumerate}
+  \columnbreak
+
+  After resolving an Adventure card, place it in \textbf{your own} pile of resolved cards.
+  For example, the Adventure-Event card ``Obelisk'' grows stronger with each Obelisk card you have played previously.\par
+
+  \pagetarget{Adventure MM Cards}{\subsection*{Managing Your Deck in Adventure Mode}}
+  \begin{itemize}
+    \item Your Deck is not available during the Adventure Phase.
+      Place all cards of your starting Deck face down near your Hero Board.
+      They will be used in the final Combat.
+    \item Each time an effect instructs you to gain new cards (usually from leveling up or resolving Adventure cards), proceed as follows:
+    \begin{itemize}
+      \item Cards that are \textbf{useful only in Combat} go directly into your Deck and remain there until the final Combat.
+        You can't use these cards during Adventure Phase.
+        Spells always go into your Deck, since their alternative effect (+1~\svg{empower}) is always useful in Combat.
+      \item Cards that \textbf{are not useful in Combat} because they provide Resources (e.g., ``Estates'') or \svg{movement}, or provide discounts (e.g., ``Legs of Legion'', ``Wisdom''), are \textbf{set aside} next to your Hero Board.
+        Each of these cards may be used \textbf{once, then removed} from the game.
+        These cards do not go into your Deck.
+      \item If you are unsure how to categorize a card, note that clear rules do not exist for every individual case, and you may need to agree on a house rule with your opponent.
+    \end{itemize}
+    \item Your \svg{expert} limit applies to the entire Adventure Phase.
+      Recover all spent \svg{expert} at the start of the final Combat.
+  \end{itemize}
+  \end{multicols}
+\end{expansion}
+
+\newpage
+\begin{expansion}{battlefield}
+  \pagetarget{Skirmish}{\subheader{Skirmish Mode}}
+  \begin{multicols}{2}
+    Skirmish Mode has no Adventure Phase.
+    Skip that phase, prepare your Deck, and proceed directly to the final Combat.\par
+    \vspace*{1em}
+    \subsection*{Deck Preparation}
+    Both players decide on a game length: \textbf{short, medium, or large}.
+    Depending on the chosen game length, both players modify their Hero's Level, their Deck (by drawing additional cards), and their Unit Deck as shown in the table below.\par
+
+    \vspace*{1em}
+    \columnbreak
+    \subsection*{Starting the final Combat}
+    After modifying your Deck, shuffle it and draw cards up to your Hand Limit.
+    Then follow the rules for \pagelink{Battlefield Combat}{Combat on the Battlefield Board}.
+
+    \vspace*{\fill}
+  \end{multicols}
+
+    \hommtable{26}{
+      \begin{tabularx}{0.98\linewidth}{>{\hsize=0.2\hsize\linewidth=\hsize}X
+          >{\hsize=0.25\hsize\linewidth=\hsize}X
+          >{\hsize=0.25\hsize\linewidth=\hsize}X
+          >{\hsize=0.25\hsize\linewidth=\hsize}X
+        }
+        & \darkcell{Short Game} & \darkcell{Medium Game} & \darkcell{\raisebox{-1.3\height}{Large Game}} \\
+        \darkcell[1.2]{Hero Level} &
+        \lightcell[1.2]{Level III} &
+        \lightcell[1.2]{Level V} &
+        \lightcell[1.2]{Level VII} \\
+        \darkcell[1.2]{Specialty cards} &
+        \lightcell[1.2]{Level I Specialty\\card} &
+        \lightcell[1.2]{Level I and Level~IV Specialty cards} &
+        \lightcell[1.2]{All Specialty cards} \\
+        \darkcell[1.8]{Ability cards} &
+        \lightcell[1.8]{Draw 3 Ability cards and keep 2.} &
+        \lightcell[1.8]{Draw 4 Ability cards and keep 3.} &
+        \lightcell[1.8]{Draw 6 Ability cards and keep 4.} \\
+        \darkcell[1.8]{Artifact cards} &
+        \lightcell[1.8]{Draw 2 Artifact cards and keep 1.} &
+        \lightcell[1.8]{Draw 3 Artifact cards and keep 2.} &
+        \lightcell[1.8]{Draw 4 Artifact cards and keep 3.} \\
+        \darkcell[2.2]{Spell cards} &
+        \lightcell[2.2]{Draw 1 Spell card for~a~\svg[12]{might-yellow} Hero or 2 Spell cards for a \svg{magic-yellow} Hero.} &
+        \lightcell[2.2]{Draw 2 Spell cards for a \svg[12]{might-yellow} Hero or 4 Spell cards for a \svg{magic-yellow} Hero.} &
+        \lightcell[2.2]{Draw 3 Spell cards for a \svg[12]{might-yellow} Hero or 5 Spell cards for a \svg{magic-yellow} Hero.} \\
+        \darkcell[2.2]{Units} &
+        \lightcell[2.2]{Use all \svg{bronze} and \svg{silver} units on the ``Few'' side.} &
+        \lightcell[2.2]{Use all \svg{bronze} and \svg{silver} units on the ``Pack'' side.} &
+        \lightcell[2.2]{Use all units (\svg{bronze}, \svg{silver}, and \svg{golden}) on the ``Pack'' side.} \\
+      \end{tabularx}
+    }
+  \begin{center}
+    \vspace*{1em}
+    \transparent{0.2}\includegraphics[width=0.35\linewidth]{\art/corpse.png}
+  \end{center}
+\end{expansion}
+
+\begin{expansion}[before=\vspace*{-11mm}]{battlefield}
+  \pagetarget{Battlefield Combat}{\subheader{Battlefield Combat}}
+  \begin{multicols*}{2}
+  Playing on the Battlefield Board requires using Miniatures for Combat instead of unit cards.
+
+  \subsection*{\pagetarget{BF Obstacles}{Obstacle Tokens}}
+  You can place three token types on the Battlefield Board: Effect, Obstacle and Wall/\allowbreak Gate.
+  Unless otherwise stated, these Tokens count and work as \pagelink{Combatterminology}{Combat Obstacles}.
+  To place Effect Obstacles on the Battlefield Board you'll need the card that creates the effect, such as the Fire Wall Spell: use the Tokens and put the card beside the Battlefield as a reminder.
+  Effect Obstacles may be entered by units, if the card text allows it.
+  \begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.3\linewidth}
+      \centering
+      \includegraphics[width=\linewidth]{\images/bf-obstacle-1.png}
+      \caption{\imagecaption{Effect}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.3\linewidth}
+      \centering
+      \includegraphics[width=0.9\linewidth]{\images/bf-obstacle-2.png}
+      \caption{\imagecaption{Obstacle}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.3\linewidth}
+      \centering
+      \includegraphics[width=0.9\linewidth]{\images/bf-obstacle-3.png}
+      \caption{\imagecaption{Wall/Gate}}
+    \end{subfigure}
+  \end{figure}
+  \vspace*{-0.5\baselineskip}
+  \note{3}{
+    All unit Miniatures also count as Obstacles.
+  }
+
+  \vspace*{-1em}
+  \subsection*{Combat Setup}
+  \setlength\intextsep{0pt}
+  \setlength\columnsep{1em}
+  \begin{wrapfigure}{r}{0.33\linewidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{\images/initiative-bf.png}\\
+    \caption{\imagecaption[c]{\mbox{Initiative} Token}}
+    \vspace{1em}
+  \end{wrapfigure}
+  Starting with the player with the \pagetarget{Initiative Token}{\textbf{Initiative Token}} (the attacker in a \pagelinkwithcomma{BF for regular}{non-Adventure/Skirmish game}), both players take turns choosing and placing Obstacle Tokens on the Battlefield Board one-by-one until \textbf{all Obstacle Tokens (except Effects) are placed}.
+  No Obstacle can be adjacent to another Obstacle or to any player's deployment zone.
+
+  {\centering
+    \begin{tikzpicture}
+      \draw (0, 0) node {\framedimage[\linewidth]{\examples/bf-deploy.png}};
+      \draw (3.2, 0) node[rotate=90, fill=black, fill opacity=0.19, text opacity=1]
+        {\textbf{\liberation\LARGE\textcolor{white}{\MakeUppercase{Deployment Zone}}}};
+    \end{tikzpicture}
+  }\\
+  \imagecaption{Obstacles and Miniatures placed correctly are marked with the green border, and incorrectly -- with the red one.}\par
+  \vspace{1em}
+    The player with the Initiative Token chooses a deployment zone and places one of their units in it, then players take turns placing their units \textbf{one by one} each in their zone.
+    The 5-unit limit does not apply in Adventure and Skirmish modes, and players may place all Faction units available to them.
+    When the last unit is placed, the Combat begins.
+  \end{multicols*}
+\end{expansion}
+
+\newpage
+\begin{expansion}[before=\vspace*{-11mm}]{battlefield}
+  \begin{multicols*}{2}
+  \subsection*{Battlefield Combat Rules}
+  Follow the regular \pagelink{combatround}{Combat rules} with the following changes:
+  \bigbreak
+  \begin{itemize}
+    \item \textbf{Unit Movement} -- Each unit's Movement is equal to its Initiative value: a unit of Initiative 8 can move up to 8 hexes.
+    \item \textbf{Ranged Movement} -- Ranged \svg{unit_ranged} units can either move or attack, not both.
+    \item \textbf{Combat Penalty} -- Ranged \svg{unit_ranged} units suffer a Combat Penalty when attacking an adjacent unit or a unit that is \textbf{8 or more} hexes away from them.
+
+    \item \textbf{Initiative Tie} -- If two or more opposing units have the same Initiative value, the player with the \textbf{Initiative Token} activates one of their units first.
+      Then, the players alternate in activating all of their units of that same Initiative value one by one.
+      Once all units with that Initiative value were activated, pass the Initiative Token to the other player, who keeps it until an Initiative tie of opposing units happens again.
+
+    \item \textbf{In \pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish} only} -- At the end of each Combat Round, \textbf{regain one used \svg{expert}} up to your Hero's Limit, and \textbf{draw 2 cards from your Deck}.
+  \end{itemize}
+
+  \vspace*{\fill}
+
+  \begin{center}
+    \includegraphics[width=1.05\linewidth]{\art/dendroid.jpg}
+  \end{center}
+  \end{multicols*}
+\end{expansion}
+
+\begin{expansion}[before=\vspace*{-11mm}]{battlefield}
+  \pagetarget{BF for regular}{\subheader{Battlefield Board in regular games}}
+  \begin{multicols*}{2}
+    Although Battlefield is designed for \pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish modes}, it is possible to use the Battlefield Board in other game modes, though with minor rule modifications.
+
+    \subsection*{Changes to Combat Rules}
+
+    \begin{itemize}
+      \item The attacker receives the Initiative Token at the start of the Combat Setup.
+      \item In player vs. player Combat, you may place up to 7 units.
+        In Neutral Combat, the 5-unit limit still applies.
+      \item Playing on the Battlefield Board requires using rules for \pagelink{Miniatures}{Miniatures}.
+    \end{itemize}
+
+    \subsection*{Siege with Walls and Gate}
+    During a Siege against a Town with a Citadel, Walls and Gate Obstacles are placed as shown below.
+    Place no other Obstacles.\par
+    \bigskip
+    \begin{tikzpicture}
+      \draw (0, 0) node {\framedimage[\linewidth]{\examples/bf-deploy-wall.png}};
+      \draw (2.5, 0) node[rotate=90, fill=black, fill opacity=0.15, text opacity=1]
+        {\textbf{\liberation\LARGE\textcolor{white}{\MakeUppercase{Deployment Zone}}}};
+    \end{tikzpicture}
+    \imagecaption{The red border marks incorrectly placed Obstacles.}
+    \columnbreak
+
+    During a Siege, defending units may enter the Gate Token \textbf{only through the two middle hexes} where the Gate is printed.
+    Attacking the Gate Token is still possible on all four hexes.\par
+    \bigskip
+    \framedimage[\linewidth]{\examples/bf-gate-token.png}
+    \textit{\footnotesize{}Example: Halberdier and Crusader (defenders) may enter the Gate Token only along the green arrows, but Minotaur and Harpies are still able to attack the Gate Token from any side.}
+
+    \subsection*{Combat with Neutral Units}
+    If you decide to use the Battlefield Board in Combats with Neutral Units, ignore the Round Limit: at the end of each Combat Round you may freely decide to Retreat or to start another Combat Round with no need to spend \svg{movement}.
+    Be aware, however, that this may significantly extend the playtime.
+    It is recommended to use the Battlefield Board only for \textbf{Player vs.~Player Combats}.
+  \end{multicols*}
+\end{expansion}
