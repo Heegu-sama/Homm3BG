@@ -246,9 +246,17 @@
 % Helper function for the tikz square
 \cs_new:Nn \__expansion_tikz_square:n {
   \begin{tikzpicture}[baseline=0]
+  \iftoggle{textright2left}{
+    \begin{scope}[transform~canvas={xshift = -2.2mm}]
+      \fill[#1] (0,0) rectangle (2.2mm,2.2mm);
+      \draw[borderinyellow,~line~width=0.9pt] (0,0) rectangle (2.2mm,2.2mm);
+      \draw[borderoutyellow,~line~width=0.7pt] (current~bounding~box.north~west) rectangle (current~bounding~box.south~east);
+    \end{scope}
+  }{
     \fill[#1] (0,0) rectangle (2.2mm,2.2mm);
     \draw[borderinyellow,~line~width=0.9pt] (0,0) rectangle (2.2mm,2.2mm);
     \draw[borderoutyellow,~line~width=0.7pt] (current~bounding~box.north~west) rectangle (current~bounding~box.south~east);
+  }
   \end{tikzpicture}
 }
 
@@ -257,7 +265,9 @@
 \NewDocumentCommand{\expansionlabel}{ m }{
   \__expansion_color_titles:NNn \l_expcolor_tl \l_exptitles_tl {#1}
 
-  \vspace{-\baselineskip}\makebox[1.0055\linewidth][r]{\textcolor{\l_expcolor_tl}{\tiny\raisebox{0.8\baselineskip}{\textbf{\l_exptitles_tl} \hspace{2pt}\raisebox{-0.14\baselineskip}{%
+  \vspace{-\baselineskip}\makebox[
+    \iftoggle{textright2left}{0.95\linewidth}{1.0055\linewidth}
+  ][r]{\textcolor{\l_expcolor_tl}{\tiny\raisebox{0.8\baselineskip}{\textbf{\l_exptitles_tl} \hspace{2pt}\raisebox{-0.14\baselineskip}{%
     \__expansion_tikz_square:n {\l_expcolor_tl}
   }}}}
 
