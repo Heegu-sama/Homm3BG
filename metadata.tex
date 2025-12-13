@@ -166,6 +166,7 @@
 
 \AtBeginEnvironment{tcolorbox}{%
   \setlist[itemize]{itemsep=0.4em, parsep=0pt, topsep=5pt}%
+  \setlist[enumerate]{itemsep=0.4em, parsep=0pt, topsep=5pt}%
 }
 \ExplSyntaxOn
 \cs_new:Nn \__expansion_color_titles:NNn {
@@ -610,20 +611,23 @@
 % Command for overlay circled text
 \definecolor{goblin}{HTML}{3b7c33}
 
-\newcommand\encirclebase[3]{%
+\newcommand\encirclebase[4]{%
   \begin{footnotesize}%
   \tikz[baseline=(X.base)]
-  \node (X) [draw=white, shape=circle, minimum size=1.6em, align=center, inner sep=0, fill=#1, text=white, #2] {\strut \textbf{#3}};%
+  \node (X) [draw=white, shape=circle, minimum size=#3, align=center, inner sep=0, fill=#1, text=white, #2] {\strut \textbf{#4}};%
   \end{footnotesize}%
 }
 \newcommand\encircle[1]{
-  \encirclebase{goblin}{blur shadow={shadow blur steps=5}}{#1}
+  \encirclebase{goblin}{blur shadow={shadow blur steps=5}}{1.6em}{#1}
 }
 \newcommand\encirclered[1]{%
-  \encirclebase{darkcandyapplered}{blur shadow={shadow blur steps=5}}{#1}
+  \encirclebase{darkcandyapplered}{blur shadow={shadow blur steps=5}}{1.6em}{#1}
 }
 \newcommand\encirclelegend[2]{%
-  \encirclebase{#1}{blur shadow={shadow blur steps=3, shadow xshift=0.5pt, shadow yshift=-0.5pt, shadow blur radius=1pt}}{#2}
+  \encirclebase{#1}{blur shadow={shadow blur steps=3, shadow xshift=0.5pt, shadow yshift=-0.5pt, shadow blur radius=1pt}}{1.6em}{#2}
+}
+\newcommand\encirclesmall[1]{
+  \encirclebase{goblin}{blur shadow={shadow blur steps=5}}{0.9em}{#1}
 }
 
 \newcommand{\drawbottom}{

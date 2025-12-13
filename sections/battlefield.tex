@@ -19,29 +19,27 @@
 
   You can also use the Battlefield Board instead of the Combat Board in other game modes.
 
-  \begin{center}
-    {\transparent{0.2}{\includegraphics[width=0.8\linewidth]{\art/quiet_eye_of_the_dragon.png}}}
-  \end{center}\par
-
-  \vspace*{\fill}
-  \columnbreak
-
   \subsection*{Victory Condition}
   Victory in Adventure and Skirmish is achieved by defeating all enemy units in the final Combat.
 
-  \subsection*{Rule Ambiguity}
+  \begin{center}
+    {\hfill\transparent{0.2}{\includegraphics[width=0.75\linewidth]{\art/land_mine.png}}}
+  \end{center}\par
+
+  \columnbreak
+
+  \pagetarget{battlefield card clarifications}{\subsection*{Rule Ambiguity}}
   \textbf{Note:} Both game modes were designed for the \textbf{Core Game only}.
   As a result, the official rules do not address many interactions, particularly those involving expansion content.
-  If you wish to include expansion cards, you will need to establish house rules for unresolved interactions.
-
-  \smallskip
-  Such unanswered questions include:
+  Although these are not official rules, the game developers have provided guidance on these cases:
   \begin{itemize}
-    \item Which cards should be removed from the game apart from Diplomacy and Logistics?
-    \item Which cards should be removed in Skirmish Mode because they provide no Combat benefit?
-    \item How should cards with Permanent effects be handled in Adventure Mode?
-    \item How should cards with a ``Remove'' effect (e.~g.~Expert Learning) be handled in Adventure Mode?
-    \item How should cards with both Combat and non-Combat effects (e.~g.~Cape of Velocity) be handled in Adventure Mode?
+    \item The official rules remove only Diplomacy and Logistics Ability cards, but common sense applies: the developers also recommend removing other Ability cards which provide no benefit in Battlefield modes, like Ballistics or Pathfinding.
+    \item In Skirmish Mode, when a card with no Combat value is drawn, both players may mutually agree to discard it and draw a replacement.
+    \item All cards in the Adventure phase are single-use.
+      Consequently, resource-generating Permanent \svg[7]{permanent} cards (e.g.,~Inexhaustible Cart of Ore) are limited to their bottom \svg{instant} effect only.
+      However, other Permanent \svg[7]{permanent} cards (Schools of Magic and War Machines) can be used in the final Combat phase only.
+    \item Cards with ``Remove'' effects (e.g.,~Expert Scholar) may be played during the Adventure phase, applying their effect to your Deck.
+    \item When a card has both Combat and non-Combat effects (e.g.,~Cape of Velocity), you decide whether to use it in the Adventure phase or reserve it for the final Combat.
   \end{itemize}
   \end{multicols}
 \end{expansion}
@@ -137,12 +135,12 @@
     \item \textbf{Move the Round Tracker} -- skip this step in the first Round.
     Depending on the type of Round, resolve the following effects:
     \begin{itemize}
-      \item In \textbf{Resource Rounds} both players get income normally.
+      \item In \textbf{Resource Rounds} both players gain income normally.
       \item In \textbf{Astrologers Rounds} -- instead of drawing Astrologers Proclaim cards, players increase one of their income tracks (\svg{gold}, \svg{building_materials}, or \svg{valuablegreater}) in one of the following ways:
       \begin{itemize}
         \item Increase your preferred income track.
         \item Determine it randomly by rolling a \svg{resource_die}.
-          If you do, gain the basic income of that resource immediately, which is 5 \svg{gold}, 2 \svg{building_materials}, or 1 \svg{valuablegreater}.
+          If you do, gain the basic income of that resource immediately, which is 5~\svg{gold}, 2~\svg{building_materials}, or 1~\svg{valuablegreater}.
       \end{itemize}
     \end{itemize}
     \item \textbf{Determine starting player} -- in odd-numbered Rounds, it's the player \textbf{with} the Initiative Token, in even-numbered Rounds, it's the player \textbf{without it}.
@@ -169,6 +167,7 @@
   Pick up your set-aside Deck, shuffle it, and draw cards up to your Hero's Hand \svg{hand} Limit.
   Remove all \svg{paralysis} tokens from your units, take all your unit miniatures, and begin the final Combat on the Battlefield Board following the \pagelink{Battlefield Combat}{Battlefield Combat rules}.
   \end{multicols}
+  \vspace*{3em}
 \end{expansion}
 
 \newpage
@@ -182,9 +181,9 @@
     \begin{center}
       \begin{tikzpicture}
         \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_event.png}};
-        \draw (1.2, 1.9) node {\encircle{1}};
-        \draw (-0.2, -0.2) node {\encircle{2}};
-        \draw (-1, -1.2) node {\encircle{3}};
+        \draw (1.2, 1.9) node {\encirclesmall{1}};
+        \draw (0.5, -0.5) node {\encirclesmall{2}};
+        \draw (-1, -1.2) node {\encirclesmall{3}};
       \end{tikzpicture}
       \imagecaption{Adventure-Event card}
       \begin{enumerate}
@@ -198,11 +197,11 @@
     \begin{center}
       \begin{tikzpicture}
         \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_combat.png}};
-        \draw (1.2, 1.9) node {\encircle{1}};
-        \draw (-0.2, 0.2) node {\encircle{2}};
-        \draw (-1, -0.8) node {\encircle{4}};
-        \draw (1, -0.8) node {\encircle{5}};
-        \draw (0.4, -2.2) node {\encircle{6}};
+        \draw (1.2, 1.9) node {\encirclesmall{1}};
+        \draw (0.5, -0.1) node {\encirclesmall{2}};
+        \draw (-1, -0.8) node {\encirclesmall{4}};
+        \draw (1, -0.8) node {\encirclesmall{5}};
+        \draw (0.4, -2.0) node {\encirclesmall{6}};
       \end{tikzpicture}
       \imagecaption{Adventure-Combat card}
       \begin{enumerate}
@@ -233,11 +232,14 @@
   After resolving an Adventure card, place it in \textbf{your own} pile of resolved cards.
   For example, the Adventure-Event card ``Obelisk'' grows stronger with each Obelisk card you have played previously.\par
 
-  \pagetarget{Adventure MM Cards}{\subsection*{Managing Your Deck in Adventure Mode}}
+  \pagetarget{Adventure MM Cards}{\subsection*{Managing Your Deck in \\Adventure Mode}}
+  Your Deck is not available during the Adventure Phase.
+  Instead, the following rules apply:
   \begin{itemize}
-    \item Your Deck is not available during the Adventure Phase.
-      Place all cards of your starting Deck face down near your Hero Board.
+    \item Place all cards of your starting Deck face down near your Hero Board.
       They will be used in the final Combat.
+    \item Your \svg{expert} limit applies to the entire Adventure Phase.
+      Recover all spent \svg{expert} at the start of the final Combat.
     \item Each time an effect instructs you to gain new cards (usually from leveling up or resolving Adventure cards), proceed as follows:
     \begin{itemize}
       \item Cards that are \textbf{useful only in Combat} go directly into your Deck and remain there until the final Combat.
@@ -246,12 +248,11 @@
       \item Cards that \textbf{are not useful in Combat} because they provide Resources (e.g., ``Estates'') or \svg{movement}, or provide discounts (e.g., ``Legs of Legion'', ``Wisdom''), are \textbf{set aside} next to your Hero Board.
         Each of these cards may be used \textbf{once, then removed} from the game.
         These cards do not go into your Deck.
-      \item If you are unsure how to categorize a card, note that clear rules do not exist for every individual case, and you may need to agree on a house rule with your opponent.
+      \item If you are unsure how to categorize a card, note that clear rules do not exist for every individual case, and you may need to follow \pagelink{battlefield card clarifications}{game developers' clarifications}, or agree on a house rule with your opponent.
     \end{itemize}
-    \item Your \svg{expert} limit applies to the entire Adventure Phase.
-      Recover all spent \svg{expert} at the start of the final Combat.
   \end{itemize}
   \end{multicols}
+  \vspace*{2em}
 \end{expansion}
 
 \newpage
@@ -372,6 +373,7 @@
     The 5-unit limit does not apply in Adventure and Skirmish modes, and players may place all Faction units available to them.
     When the last unit is placed, the Combat begins.
   \end{multicols*}
+  \vspace*{2em}
 \end{expansion}
 
 \newpage
@@ -437,4 +439,5 @@
     Be aware, however, that this may significantly extend the playtime.
     It is recommended to use the Battlefield Board only for \textbf{Player vs.~Player Combats}.
   \end{multicols*}
+  \vspace*{1em}
 \end{expansion}
