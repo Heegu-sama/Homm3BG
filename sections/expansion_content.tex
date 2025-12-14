@@ -8,14 +8,9 @@ Below you'll find an overview of all expansion content.
 
 \textbf{The following contents are added by many of the expansions:}
 \begin{multicols*}{2}
-\subsection*{New Map Locations}
-Each expansion adds new Map Locations to the game, which your Heroes can explore.
-They are explained in \pagelink{All Map Locations}{All Map Locations}.
-
 \subsection*{\pagetarget{Miniatures}{Unit Miniatures}}
 If you want to play your Combats with Miniatures, place and move them over the Combat Board instead of the cards.
 You can put Miniatures on top of the cards or keep the cards next to the Combat Board to form an initiative bar for better visualization of the order in which units activate.\par
-\vspace*{1em}
 If you play with Miniatures, there are a few rules to follow:
 \begin{itemize}
   \item If any of the following occur during Combat with Neutral Units, discard the Neutral Unit card and draw another card in its place:
@@ -28,6 +23,15 @@ If you play with Miniatures, there are a few rules to follow:
   Discard that unit card and draw another.
 \end{itemize}
 
+\vfill
+\begin{center}
+    \includegraphics[width=0.8\linewidth]{\images/tower-lineup.png}
+\end{center}
+
+\subsection*{New Map Locations}
+Each expansion adds new Map Locations to the game, which your Heroes can explore.
+They are explained in \pagelink{All Map Locations}{All Map Locations}.
+
 \subsection*{Permanent cards}
 Cards with a new type of effect which gives players permanent advantages, explained in \pagelink{Playerdecks}{Player Decks}.
 
@@ -39,12 +43,8 @@ Several new cards from various expansions come with their own Token components a
 These are all explained in the separate section \pagelink{Card Effect Keywords}{Card Effect Keywords}.
 
 \subsection*{More of the same}
-In addition to new gameplay mechanics, expansions also expand the variety of existing components: new Factions, new Scenarios, new Spells, new Heroes, new Artifacts, and new Map Locations.
+In addition to new gameplay mechanics, expansions also expand the variety of existing components: new Factions, new Scenarios, new Spells, new Heroes, and new Artifacts.
 
-\begin{center}
-    \includegraphics[width=0.75\linewidth]{\images/tower-lineup.png}
-\end{center}
-\vspace*{\fill}
 \end{multicols*}
 \pagebreak
 
@@ -227,7 +227,6 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
    Playing with Creature Banks is an \textbf{optional rule}.
    If you decide to play with Creature Banks, the following rules apply.
 
-   \bigskip
    \subsection*{Setup}
    Separate the Creature Bank Tokens into two piles (for Near and Far Map Tiles) based on the numerals on their backs.
    Shuffle each pile and place them near the Map.
@@ -238,13 +237,13 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
     \bigskip
     \begin{multicols*}{2}
       \begin{center}
-        \includegraphics[width=1.0\linewidth]{\images/creature_bank_near.png}\\
-        \vspace{-0.5em}\imagecaption{Creature Bank (Near)}\\
+        \includegraphics[width=0.9\linewidth]{\map_locations/creature-bank.png}\\
+        \imagecaption{Creature Bank (Near)}\\
         \vspace*{\fill}
-        \includegraphics[width=0.5\linewidth]{\images/stack_token.png}\\
+        \includegraphics[width=0.5\linewidth]{\images/stack-token.png}\\
         \imagecaption{Stack Token}\\
         \columnbreak
-        \includegraphics[width=\linewidth]{\cards/creature_bank_unit.png}\\
+        \includegraphics[width=\linewidth]{\cards/creature-bank-back.png}\\
         \imagecaption{Creature Bank unit card}
       \end{center}
     \end{multicols*}
@@ -304,7 +303,7 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
     \setlength\intextsep{0pt}
     \setlength\columnsep{1em}
     \begin{wrapfigure}{r}{0.2\linewidth}
-      \includegraphics[width=\linewidth]{\images/stack_token.png}
+      \includegraphics[width=\linewidth]{\images/stack-token.png}
     \end{wrapfigure}
   Each Stack Token modifies a unit's statistic in the following way: +1~\svg{attack}, +1~\svg{defense}, +1~\svg{health_points}, or +2~\svg{initiative}.
   Furthermore, each unit with a Stack Token is now a \textbf{Stacked unit}, which is similar to reinforced Faction units: when it takes damage equal to or greater than its \svg{health_points}, instead of removing the unit card from the Combat Board, discard the Stack Token from that unit and deal any leftover damage, deducting it from the new \svg{health_points}.
@@ -317,6 +316,7 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
   Whenever your Stacked unit goes to a Combat, draw a random Stack Token and place it on that unit.
   After Combat, note whether the unit is still Stacked (for future Combats), then return the Stack Token to the pile.
 \end{multicols*}
+\vspace*{1em}
 \end{expansion}
 \vfill
 \hspace*{-1.2em}\includegraphics[width=1.05\textwidth]{\art/dread_knight.jpg}
@@ -346,7 +346,7 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
 
   \subsection*{Gaining Empowered Ability\\Example}
   \textit{Bob playing as Crag Hack reaches Level II.
-    He decides to perform the Search (2) action and draws two cards from the Ability Deck.
+    He performs the Search (2) action and draws two cards from the Ability Deck.
     The cards are Offense and Wisdom.
     He chooses Offense and places the other card on the discard pile.}
 
@@ -356,23 +356,23 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
 
   \textit{Bob happens to have an Empowered Ability Token.
     He may either use it, or save the token for later.
-    He decides to use it, so he removes the ``Offense'' Ability card and take the Empowered ``Offense'' Ability card instead.}
+    He decides to use it, so he removes the ``Offense'' Ability card and discards the Empowered Ability Token to take the Empowered ``Offense'' Ability card instead.}
 
   \begin{center}
     \begin{tikzpicture}
-      \draw (-2, 0) node {\includegraphics[width=0.3\linewidth]{\cards/ability-offense.png}};
-      \draw (-3, -0.5) node[circular drop shadow={shadow scale=0.8, shadow xshift=0.3ex, shadow yshift=-0.3ex, opacity=0.7,
+      \draw (-3, 0) node {\includegraphics[width=0.45\linewidth]{\cards/ability-offense.png}};
+      \draw (-1.5, -1.9) node[circular drop shadow={shadow scale=0.85, shadow xshift=0.5ex, shadow yshift=-0.5ex, opacity=0.7,
         fill=black, path fading={circle with fuzzy edge 15 percent},
-        every shadow}]{\includegraphics[width=0.15\linewidth]{\images/crown-token.png}};
-      \draw (-3.7, -1) node[rotate=87, xscale=-1] {\includegraphics[width=0.2\linewidth]{\_assets/gimp-files/arrow-curved-red.png}};
-      \draw (2, 0) node {\includegraphics[width=0.3\linewidth]{\cards/ability-offense-empowered.png}};
-      \draw (3, 1) node[circular drop shadow={shadow scale=0.8, shadow xshift=0.3ex, shadow yshift=-0.3ex, opacity=0.5,
-        fill=black, path fading={circle with fuzzy edge 15 percent},
-        every shadow}] {\svg[25]{green_tick}};
+        every shadow}]{\includegraphics[width=0.2\linewidth]{\images/crown-token.png}};
+      \draw (1.5, 0) node {\includegraphics[width=0.45\linewidth]{\cards/ability-offense-empowered.png}};
+
+      \draw (-2.8, -3.5) node {\svg[35]{red_cross}};
+      \draw (1.6, -3.5) node {\svg[35]{green_tick}};
     \end{tikzpicture}
   \end{center}
   \vspace*{\fill}
 \end{multicols*}
+\vspace*{2em}
 \end{expansion}
 
 \newpage
@@ -438,21 +438,21 @@ They also expand the variety of existing components with additional Artifacts, S
     \includegraphics[width=0.6\linewidth]{\cards/pandora.png}
   \end{center}
 
-    \subsection*{Alternative Manticore Card}
+    \subsection*{Alternative Manticores Card}
     \setlength\intextsep{0pt}
     \setlength\columnsep{1em}
     \begin{wrapfigure}{r}{0.3\linewidth}
       \includegraphics[width=\linewidth]{\cards/alt_manticore.png}
     \end{wrapfigure}
-    A second \textbf{Manticore unit card} with slightly different statistics is included in this expansion.
-    When playing the Dungeon Faction, choose one of the two Manticore cards to use in the game.
-\end{expansion}
+    A second \textbf{Manticores unit card} with slightly different statistics is included in this expansion.
+    When playing the Dungeon Faction, choose one of the two Manticores cards to use in the game.
 
-\vspace*{\fill}
+\vspace*{1em}
 \begin{center}
   \transparent{0.2}\includegraphics[width=0.8\linewidth]{\art/blind.png}
 \end{center}
-\vspace*{\fill}
+\vspace*{3em}
+\end{expansion}
 \columnbreak
 \subheader{Fan-Made Content}
 Take a look at the \textbf{fan-made expansions and content} from the \textbf{HoMM3 BG Community}.
