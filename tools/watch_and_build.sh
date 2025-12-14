@@ -57,38 +57,13 @@ else
   TARGET="/$LANGUAGE.po"
 fi
 
-trap 'git restore po4a.cfg' EXIT
-
-rebuild() {
-  local lang=$1
-  local file=$2
-  local name=$3
-  local container=$4
-  echo "Detected changes in \"$file\""
-  if [[ "$lang" != "en" ]]; then
-    # Modify po4a.cfg temorarily to run it on the single file
-    local po4a_lines
-    local translation_entry
-    po4a_lines=$(grep -v "\[type:" po4a.cfg)
-    translation_entry=$(grep "$name" po4a.cfg)
-    echo "$po4a_lines" > po4a.cfg
-    echo "$translation_entry" >> po4a.cfg
-  fi
-  ${container} tools/build.sh "${lang}" -s "$name" --args "-silent"
-  if [[ "$lang" != "en" ]]; then
-    git restore po4a.cfg
-  fi
-}
-
-export -f rebuild
-
 for file in "$BASE_PATH"/*"$TARGET"; do
   if [[ "$LANGUAGE" == "en" ]]; then
     name=$(basename "$file" "$TARGET")
   else
     name=$(basename "$(dirname "$file")" .tex)
   fi
-  echo "$file" | entr -cp bash -c "rebuild $LANGUAGE $file $name $CONTAINER" &
+  echo "$file" | entr -cps "echo 'Detected changes in \"$file\"'; $CONTAINER tools/build.sh $LANGUAGE -s $name --args \"-silent\"" &
 done
 
 echo "Waiting for changes in ${TARGET:1} files"

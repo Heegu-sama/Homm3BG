@@ -119,9 +119,12 @@ if [[ -n "${SECTION_SEARCH}" ]]; then
   fi
 
   echo "$TARGET" > structure.tex
+  TARGET=$(echo "$TARGET" | grep -Po "[a-z_]*${SECTION_SEARCH}[a-z_]*")
 fi
 
+TEMP_DIR=$(mktemp -d)
 cleanup() {
+  rm -rf "$TEMP_DIR"
   if [[ -n "${SECTION_SEARCH}" ]]; then
     git restore structure.tex
   fi
@@ -130,14 +133,18 @@ cleanup() {
 trap cleanup EXIT
 
 if [[ ${LANGUAGE} != en ]]; then
+  PO4A_PATH="po4a.cfg"
+  if [[ -n "${SECTION_SEARCH}" ]]; then
+    # limit po4a run to a single section
+    temp_po4a_file=$(mktemp "$TEMP_DIR/po4a.XXXXXX")
+    grep -v "\[type:" "$PO4A_PATH" > "$temp_po4a_file"
+    grep "$TARGET" "$PO4A_PATH" >> "$temp_po4a_file"
+    PO4A_PATH=$temp_po4a_file
+  fi
   # limit output to specified language
-  if ! po4a --no-update po4a.cfg --target-lang "${LANGUAGE}" \
-       2> >(grep -v "unmatched end of environment\| (po4a::tex)$" >&2); then
-
+  if ! po4a --no-update "$PO4A_PATH" --target-lang "${LANGUAGE}"; then
     echo -e "---\npo4a failed for language ${LANGUAGE}, please fix the errors."
-
     find translations -name "$LANGUAGE.po" -type f -exec msgfmt -c --check-format -o /dev/null '{}' \;
-
     exit 1
   fi
 fi
