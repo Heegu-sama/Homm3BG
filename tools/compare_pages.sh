@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 cache_dir="$(pwd)/cache"
 
+source tools/.language_base.sh
 #
 # HELPER FUNCTIONS
 #
 
 help() {
   echo "
-    Usage: ./tools/compare_pages.sh -l <language> -r <range> [OPTIONS]
+    Usage: ./tools/compare_pages.sh <language> -r <range> [OPTIONS]
 
     Mandatory Arguments:
-      -l, --language <language>     Specify the language for comparison (en, de, es, fr, pl, ru, ua, cs, ...).
+    <language>                      Specify the language for comparison (en, de, es, fr, pl, ru, ua, cs, he, de). Defaults to en.
       -r, --range <range>           Provide comma-separated list of pages or range of pages you want to compare,
                                     with optional target page where the range was moved to.
 
@@ -19,21 +20,21 @@ help() {
       -s, --single-page             Combines all compared pages into a single image.
 
     Examples:
-      ./tools/compare_pages.sh -l en -r 1
-      ./tools/compare_pages.sh --language en --range 1
+      ./tools/compare_pages.sh en -r 1
+      ./tools/compare_pages.sh cs --range 1
 
-      ./tools/compare_pages.sh -l en -r 1,5-7,30 --single-page --printable
-          - This will produce files 'en-01.png, en-05.png, en-06.png, en-07.png and en-30.png'.
+      ./tools/compare_pages.sh -r 1,5-7,30 --single-page --printable
+          - This will produce files 'en-01.png, en-05.png, en-06.png, en-07.png and en-30.png', becasue default English language will be used.
           - Then because there is the '--single-page' parameter, it combines them to a single file 'en-all.png'.
           - It will use 'printable_en.pdf' from the repository as baseline because '--printable' was specified.
             It would use 'main_en.pdf' if this parameter was omitted.
 
-      ./tools/compare_pages.sh -l en -r 2,5:7,8-9:6
+      ./tools/compare_pages.sh fr -r 2,5:7,8-9:6
           This will produce the following 4 images:
-          - en-02.png with page 2 on the left and page 2 on the right,
-          - en-05.png with page 5 on the left and page 7 on the right,
-          - en-08.png with page 8 on the left and page 6 on the right,
-          - en-09.png with page 9 on the left and page 7 on the right,
+          - fr-02.png with page 2 on the left and page 2 on the right,
+          - fr-05.png with page 5 on the left and page 7 on the right,
+          - fr-08.png with page 8 on the left and page 6 on the right,
+          - fr-09.png with page 9 on the left and page 7 on the right,
             as part of the same 8-9 range which was shifted to start at 6.
   "
 
@@ -177,17 +178,12 @@ get_actual_filename() {
 # MAIN FLOW
 #
 
-language=""
 range=""
 printable=0
 single_page=0
 
 while [[ "$1" != "" ]]; do
   case $1 in
-    -l | --language )
-      shift
-      language=$1
-      ;;
     -p | --printable )
       printable=1
       ;;
@@ -205,12 +201,12 @@ while [[ "$1" != "" ]]; do
   shift
 done
 
-if [[ -z "$language" || -z "$range" ]]; then
+if [[ -z "$LANGUAGE" || -z "$range" ]]; then
   help
 fi
 
 echo "Checking if there is the base file for comparison..."
-base_file=$(ensure_base_file "$language" "$printable")
+base_file=$(ensure_base_file "$LANGUAGE" "$printable")
 
 tmp_dir="$(mktemp -d)"
 trap 'rm -rf -- "$tmp_dir"' EXIT
@@ -220,9 +216,9 @@ declare -a pages
 parse_pages "$range"
 
 for page in "${pages[@]}"; do
-  echo "Making images of ${base_file} and main_${language}.pdf for page ${page}..."
+  echo "Making images of ${base_file} and main_${LANGUAGE}.pdf for page ${page}..."
   pdftoppm "${base_file}" "${tmp_dir}/aa" -f "${page}" -l "${page}" -png &
-  pdftoppm "main_${language}.pdf" "${tmp_dir}/bb" -f "${moved[${page}]:-${page}}" -l "${moved[${page}]:-${page}}" -png &
+  pdftoppm "main_${LANGUAGE}.pdf" "${tmp_dir}/bb" -f "${moved[${page}]:-${page}}" -l "${moved[${page}]:-${page}}" -png &
 done
 
 wait
@@ -235,7 +231,7 @@ for page in "${pages[@]}"; do
   bb_file=$(get_actual_filename "$tmp_dir" "bb" "${moved[${page}]:-${page}}")
 
   if [[ -n "$aa_file" && -n "$bb_file" ]]; then
-    montage "${tmp_dir}/${aa_file}" "${tmp_dir}/${bb_file}" -tile 2x1 -geometry +0+0 "${tmp_dir}/${language}-$(printf %02d $page).png" && \
+    montage "${tmp_dir}/${aa_file}" "${tmp_dir}/${bb_file}" -tile 2x1 -geometry +0+0 "${tmp_dir}/${LANGUAGE}-$(printf %02d $page).png" && \
     rm "${tmp_dir}/${aa_file}" "${tmp_dir}/${bb_file}" &
   else
     echo "Warning: Could not find generated files for page $page"
@@ -244,12 +240,12 @@ done
 
 if [[ "$single_page" -eq 1 ]]; then
   wait
-  montage ${tmp_dir}/${language}* -tile "1x" -geometry +0+0 ${tmp_dir}/${language}-all.png
+  montage ${tmp_dir}/${LANGUAGE}* -tile "1x" -geometry +0+0 ${tmp_dir}/${LANGUAGE}-all.png
 fi
 
 wait
 
 mkdir -p screenshots
-mv ${tmp_dir}/${language}* screenshots
+mv ${tmp_dir}/${LANGUAGE}* screenshots
 
 echo "Done. Images saved to screenshots directory."
