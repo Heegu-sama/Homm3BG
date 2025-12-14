@@ -22,7 +22,7 @@ Empty Fields\index{Empty Field} do nothing when Visited.
 Solid yellow lines on a Field's edge cannot be passed through.
 \pagelink{Difficulty}{Roman numerals} written on a Field indicate that the Field is guarded by Neutral enemies that must be fought to Visit it.\par
 \note{3}{
-  Blocked Field cannot be entered, but can be exited.
+  A Blocked Field cannot be entered, but can be exited.
 }
 \columnbreak
 
@@ -50,18 +50,18 @@ Solid yellow lines on a Field's edge cannot be passed through.
 \begin{center}
   \begin{tikzpicture}
     \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=0.75\linewidth]{\images/fields.png}}};
-    \draw (0, -0.3) node {\encircle{1}};
-    \draw (-1.9, 0) node {\encircle{2}};
-    \draw (2.3, 0) node {\encircle{2}};
-    \draw (-1.4, 1.7) node {\encircle{2}};
-    \draw (0.6, -1.9) node {\encircle{2}};
-    \draw (0.5, 1.7) node {\encircle{2}};
-    \draw (1.4, -2.2) node {\encircle{3}};
-    \draw (1.4, 2.5) node {\encircle{4}};
-    \draw (1.4, -1) node {\encircle{4}};
-    \draw (-1, 0.5) node {\encircle{5}};
-    \draw (-1.1, -1.1) node {\encircle{6}};
-    \draw (-1.4, -1.7) node {\encircle{7}};
+    \draw (0, -0.3) node {\encirclesmall{1}};
+    \draw (-1.9, 0) node {\encirclesmall{2}};
+    \draw (2.3, 0) node {\encirclesmall{2}};
+    \draw (-1.4, 1.7) node {\encirclesmall{2}};
+    \draw (0.6, -1.9) node {\encirclesmall{2}};
+    \draw (0.5, 1.7) node {\encirclesmall{2}};
+    \draw (1.4, -2.2) node {\encirclesmall{3}};
+    \draw (1.4, 2.5) node {\encirclesmall{4}};
+    \draw (1.4, -1) node {\encirclesmall{4}};
+    \draw (-1, 0.5) node {\encirclesmall{5}};
+    \draw (-1.1, -1.1) node {\encirclesmall{6}};
+    \draw (-1.4, -1.7) node {\encirclesmall{7}};
   \end{tikzpicture}
 \end{center}
 
@@ -269,7 +269,7 @@ The effects of Visiting the Location Tokens are described in \pagelink{Location 
 
   \begin{tikzpicture}
     \draw (-2.5, 0) node[inner sep=0] {\includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}};
-    \draw (-2.5, -1) node {\Huge\textbf{\textcolor{white}{{\raisebox{0.3\height}{\Large\textbf{--}}}1}}};
+    \draw (-2.5, -1) node {\Huge\textbf{\textcolor{white}{{\raisebox{0.3\height}{\Huge\textbf{-}}}1}}};
     \draw (0, 0) node[inner sep=0] {\includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}};
     \draw (0, -1) node {\Huge\textbf{\textcolor{white}{0}}};
     \draw (2.5, 0) node[inner sep=0] {\includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}};
