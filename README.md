@@ -226,7 +226,7 @@ It has convenient hyperlinks that navigate you around the text.<br>
  - appends page numbers to clickable hyperlinks  👆
  - includes an index page at the end  📋
  - in stable releases, makes sure the document page count is divisible by 4  🪄
- - makes margins asymmetric for easier binding/glueing  📕
+ - makes margins asymmetric for easier binding/gluing  📕
  - uses [CMYK](https://en.wikipedia.org/wiki/CMYK_color_model) 🎨
 
 all of which to be print friendly.
@@ -279,14 +279,19 @@ All new version of the rule book and their change logs will be published here an
 To work on the document on your machine, you need the following:
 
 - [**MiKTeX**](https://miktex.org/) for Windows, [**MacTeX**](https://www.tug.org/mactex/) for MacOS, [**TeX Live**](https://www.tug.org/texlive/) for Linux (required) to build the PDF file from LaTeX files
-- [**Inkscape**](https://inkscape.org/) (required) to render glyphs in the document (while installing on Windows, make sure to tick `Add Inkscape to the System Path` option)
-- [**Perl**](https://www.perl.org/) (optional but recommended) to use the build script
+- [**Inkscape**](https://inkscape.org/) (required) to render glyphs in the document - download the `.exe` installer (not `.msi`!) and while installing on Windows, make sure to tick `Add Inkscape to the System Path` option)
+- [**Perl**](https://www.perl.org/) (optional but recommended) to use the build script - use the Strawberry distribution
 - [**TeXstudio**](https://www.texstudio.org/) (optional) to edit LaTeX files and rebuild the PDF file quickly
+- [**Poedit**](https://poedit.net/) (optional) to edit translation files conveniently
 - [**po4a**](https://po4a.org/index.php.en) (optional) to work on translating the document to other languages
+- [**delta**](https://dandavison.github.io/delta/) (optional) to find changes in already translated passages
 - [**pdftoppm**](https://linux.die.net/man/1/pdftoppm) (optional) to make screenshots of rendered PDF pages
 - [**ImageMagick**](https://imagemagick.org/index.php) (optional) to combine screenshots into convenient diffs
 - [**ghostscript**](https://www.ghostscript.com/) (optional) to optimize PDF file sizes
+- [**entr**](https://eradman.com/entrproject/) (optional) to automatically rebuild the document on file changes
+- [**Podman**](https://podman.io/getting-started/installation) (preferable) or [**Docker**](https://www.docker.com/get-started) container engine if you want to use a container without installing all of the above
 - [**GIMP**](https://www.gimp.org/) or [**Krita**](https://krita.org/) (optional) to edit some images in `assets` directory
+
 
 <details>
 <summary>Click to learn about the technicalities</summary>
@@ -301,7 +306,7 @@ To build the document in English, it's best to use the script (requires Perl, wo
 tools/build.sh
 ```
 
-To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, `de` `cs`, and `he` are supported, `en` is the default), make sure you have `po4a` (version 0.70 or higher) and use the script (works on Lin/Mac):
+To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, `de` `cs`, and `he` are supported, `en` is the default), make sure you have `po4a` (version 0.74 or higher) and use the script (works on Lin/Mac):
 
 ```bash
 tools/build.sh <LANGUAGE>
@@ -316,6 +321,25 @@ tools/build.sh fr -s ai_rules
 It will compile just the AI Rules section in French.
 
 See `tools/build.sh --help` for more details.
+
+To automatically rebuild any given section on every file change, use the script:
+
+```bash
+tools/watch_and_build.sh
+```
+
+It will watch changes in the sections/*tex files, and build them on every change.
+For instance, if you change the `sections/setup.tex` file, it will trigger `tools/build.sh -s setup` and build this section automatically.
+
+#### 📦 Container
+
+If you have [Podman](https://podman.io/getting-started/installation) or [Docker](https://www.docker.com/get-started) installed, you can use the wrapper script:
+
+```sh
+./run.sh tools/build.sh
+```
+
+It will download [our container](https://github.com/qwrtln/Homm3BG-mission-book/blob/main/tools/container/Dockerfile) and then use it to build the document.
 
 
 #### 📱 In-browser using Codespaces
@@ -332,7 +356,7 @@ If you prefer a TeX editor, use latexmk to build the document.
 For instance, to configure TeXstudio to build the document, you can use this command:
 
 ```
-latexmk -pdf -synctex=1 -interaction=nonstopmode %.tex
+latexmk -pdflua -file-line-error -halt-on-error -interaction=nonstopmode -shell-escape -recorder %.tex
 ```
 
 After setting it in options, press the `Build & View` ▶️ (F5) button on the `main_en.tex` file.
@@ -360,39 +384,25 @@ To translate a particular section:
 - Rebuild using the script:
 
    ```bash
-   tools/build.sh <LANGUAGE>
+   tools/build.sh <LANGUAGE> -s introduction
    ```
 
 - Commit and repeat!
 
-
-#### Finding fuzzy translations
-
-In case an already translated text is changed, `po4a` marks such a translation as _fuzzy_ in the `*.po` files.
-Those excerpts will be compiled just as they are in the original (English), until the translation is corrected, and the _fuzzy_ mark is removed.
-To facilitate finding them, use the script:
-
-```bash
-tools/find_fuzzy.sh <lang>
-```
-
-It will show all the fuzzy translations in the `*.po` files for the specified language.
-
 #### Resolving fuzzy translations
 
 Sometimes it is not clear, what changes in the original document rendered into fuzzy sections.
-You can use `fuzzy_diff.sh` script to visualize the first fuzzy section in a selected file.
+You can use `continuous_fuzzy_diff.sh` script to visualize the fuzzy sections in a selected file.
 For example, the command:
 
 ```bash
-tools/fuzzy_diff.sh translations/ai_rules.tex/cs.po
+tools/continuous_fuzzy_diff.sh translations/ai_rules.tex/cs.po
 ```
 
-will show the difference between the old and new version of the original language for the first fuzzy section in the Czech translation of the file ai_rules.tex.
-Once you remove the fuzzy flag, you can rerun the program to proceed to the next fuzzy section.
+will show the difference between the old and new version of the original language for the first fuzzy section in the Czech translation of the file `ai_rules.tex`.
+Once you remove the fuzzy flag and save the file, it will show you the next fuzzy section.
 In common cases there are only simple changes in the original language, such as change of formatting.
-Therefore, you don`t need to update the whole translation.
-
+Therefore, you don't need to update the whole translation.
 
 </details>
 
@@ -402,32 +412,35 @@ Therefore, you don`t need to update the whole translation.
 <summary>Click to see details</summary>
 
 It is a good practice to share screenshots of your work in pull requests.
-You can the script to make PNG images of specified page(s):
+You can use the script to make PNG images of specified page(s):
 
 ```bash
-tools/pdf2image.sh <LANGUAGE> <FIRST_PAGE> <LAST_PAGE>
+tools/pdf2image.sh <language> -r <first_page>-<last_page>
 ```
 
+Language defaults to "en" if unspecified.
 Example:
 
 ```bash
-tools/pdf2image.sh en 5 7
+tools/pdf2image.sh -r 5-7
 ```
+
+Screenshots will appear in ignored `screenshots` directory, in the form of `en-05.png`, `en-06.png`, etc.
 
 To process a single page, use:
 
 ```bash
-tools/pdf2image.sh en 5
+tools/pdf2image.sh fr -r 15
 ```
 
-Screenshots will appear in ignored `screenshots` direcotry, in the form of `en-05.png`, `en-06.png`, etc.
+This will produce a `fr-15.png` file.
 
 #### 🎭 Comparing two pages side by side
 
 If you'd like to show a single image of two instances of the same page side-by-side (before|after style), you can use the following script:
 
 ```bash
-tools/compare_pages.sh -l <language> -r <range> [OPTIONS]
+tools/compare_pages.sh <language> -r <range> [OPTIONS]
 ```
 
 The script takes local `main_<language>.pdf` that you built and which contains your changes and compares it with the latest build
@@ -436,7 +449,7 @@ of the same language in this repository (e.i. the baseline).
 Imagine you want to compare pages 1, then range from 5 to 7, and page 30 in English version. Here's how to use it:
 
 ```bash
-./tools/compare_pages.sh -l en -r 1,5-7,30
+tools/compare_pages.sh -r 1,5-7,30
 ```
 
 It will produce the following files in the `screenshots` directory: `en-01.png`, `en-05.png`, `en-06.png`, `en-07.png` and `en-30.png`.
@@ -459,10 +472,10 @@ tools/compare_pages.sh -h
 To reduce output PDF file size significantly, you can use the script utilizing `ghostscript` utility:
 
 ```bash
-tools/optimize.sh <LANGUAGE>
+tools/optimize.sh <language>
 ```
 
-It will output `main_<LANGUAGE>_optimized.pdf` file.
+It will output `main_<language>_optimized.pdf` file.
 
 As of writing, for English it produces 24 MB `main_en_optimized.pdf` file without noticeable drop in quality compared to 80 MB `main_en.pdf` built by LaTeX.
 
