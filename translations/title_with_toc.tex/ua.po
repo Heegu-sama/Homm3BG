@@ -31,14 +31,8 @@ msgstr "Правила в редакції товариства"
 
 #. type: tabular
 #: sections/title_with_toc.tex:12
-#, fuzzy
-#| msgid ""
-#| "\\textbf{Author}: Hermanni Karppela\n"
-#| "\n"
 msgid "Hermanni Karppela"
 msgstr ""
-"\\textbf{Автор ідеї}: Германі Карппела\n"
-"\n"
 
 #. type: tabular
 #: sections/title_with_toc.tex:12
@@ -70,12 +64,6 @@ msgstr ""
 
 #. type: center
 #: sections/title_with_toc.tex:25
-#, fuzzy
-#| msgid ""
-#| "This is a community-driven project, which has a \\href{\\repourl}{GitHub "
-#| "repository}.  Everyone is welcome to contribute, make changes, and fix "
-#| "errors.  If you simply want to leave feedback, please do so in the "
-#| "original \\href{\\bggthreadurl}{BoardGameGeek thread}."
 msgid ""
 "This is a community-driven project, which has a \\href{\\repourl}{GitHub "
 "repository}.  Everyone is welcome to contribute, make changes, and fix "
@@ -86,7 +74,8 @@ msgstr ""
 "Цей проект розвивається спільнотою і має власний \\href{\\repourl}"
 "{репрозиторій на GitHub}. Вітаються будь-які зміни та виправлення. Якщо ви "
 "просто хочете залишити відгук, будь ласка, робіть це в оригінальній  "
-"\\href{\\bggthreadurl}{темі на BoardGameGeek}. "
+"\\href{\\bggthreadurl}{темі на BoardGameGeek}. Ви також можете приєднатися"
+"до \\href{\\discordurl}{серверу Discord} спільноти, щоб підтримувати зв'язок з нами."
 
 #. type: center
 #: sections/title_with_toc.tex:30
@@ -104,13 +93,7 @@ msgstr ""
 
 #. type: multicols
 #: sections/title_with_toc.tex:35
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-#| "\\end{center}\n"
-#| "\\columnbreak\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "{3}\n"
 "  \\centering\n"
@@ -118,10 +101,10 @@ msgid ""
 "  Scan to join the community \\textbf{Discord} server.\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-"\\end{center}\n"
-"\\columnbreak\n"
+"{3}\n"
+"  \\centering\n"
+"  \\includegraphics[width=0.8\\linewidth]{\\qr/discord.png}\\\\\n"
+"  Відскануйте щоб приєднатися до \\textbf{Discord} сервера спільноти.\n"
 "\n"
 
 #. type: multicols
@@ -148,20 +131,16 @@ msgstr ""
 
 #. type: Plain text
 #: sections/title_with_toc.tex:53
-#, fuzzy
-#| msgid ""
-#| "{\\centering\\phantom{Star Axis}\\par}\n"
-#| "\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
-#| "\n"
 msgid ""
 "\\textlang{english}{\\begin{tikzpicture}[remember picture, overlay] "
 "\\node(cover)[anchor=center, yshift=12em] at (current page.south) "
 "{ \\includegraphics[width=1.01\\paperwidth, keepaspectratio]{\\art/"
 "castle_bottom.png} \\thispagestyle{empty} }; \\end{tikzpicture}}"
 msgstr ""
-"{\\centering\\phantom{Зоряна Вісь}\\par}\n"
-"\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
-"\n"
+"\\textlang{english}{\\begin{tikzpicture}[remember picture, overlay] "
+"\\node(cover)[anchor=center, yshift=12em] at (current page.south) "
+"{ \\includegraphics[width=1.01\\paperwidth, keepaspectratio]{\\art/"
+"castle_bottom.png} \\thispagestyle{empty} }; \\end{tikzpicture}}"
 
 #. type: tikzpicture
 #: sections/title_with_toc.tex:62
@@ -176,6 +155,7 @@ msgid ""
 "    \\includegraphics[width=\\paperwidth, keepaspectratio]{\\art/meteor_shower.png}\n"
 "  };"
 msgstr ""
-"{\\centering\\phantom{Зоряна Вісь}\\par}\n"
-"\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
-"\n"
+"[remember picture, overlay]\n"
+"  \\node(bg)[anchor=center, opacity=0.07, xshift=-3em, yshift=0em] at (current page.center) {\n"
+"    \\includegraphics[width=\\paperwidth, keepaspectratio]{\\art/meteor_shower.png}\n"
+"  };"
