@@ -3,68 +3,67 @@ name: Build release version
 on:
   workflow_dispatch:
 
-env:
-  ARTIFACT_RETENTION_DAYS: 1
-
 jobs:
-  build:
+  matrix-setup:
     runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+      version: ${{ steps.set-version.outputs.version }}
+    steps:
+      - id: set-matrix
+        run: |
+          cat << 'EOF' > matrix.json
+          {
+            "include": [
+              { "language_name": "English, "language": "en", "display": "🇺🇸 English"},
+              { "language_name": "Polski, "language": "pl", "display": "🇵🇱 Polski"},
+              { "language_name": "Espanol, "language": "es", "display": "🇪🇸 Español"},
+              { "language_name": "Francais, "language": "fr", "display": "🇫🇷 Français"},
+              { "language_name": "Ruuskiy, "language": "ru", "display": "🇷🇺 Русский"},
+              { "language_name": "Ukrainska, "language": "ua", "display": "🇺🇦 Українська"},
+              { "language_name": "Deutsch, "language": "de", "display": "🇩🇪 Deutsch"},
+              { "language_name": "Cestina, "language": "cs", "display": "🇨🇿 Čeština"},
+              { "language_name": "Ivrit, "language": "he", "display": "🇮🇱 עברית"}
+            ]
+          }
+          EOF
+          echo "matrix=$(jq -c . matrix.json)" >> $GITHUB_OUTPUT
+
+      - id: set-version
+        run: echo "version=$(cat .version | tr . _)" >> $GITHUB_OUTPUT
+
+  digital_build:
+    needs: matrix-setup
+    name: "Digital / ${{ matrix.display }}"
     strategy:
       fail-fast: false
-      matrix:
-        include:
-          - language: en
-            language_name: English
-          - language: pl
-            language_name: Polski
-          - language: es
-            language_name: Espanol
-          - language: fr
-            language_name: Francais
-          - language: ru
-            language_name: Russkiy
-          - language: ua
-            language_name: Ukrainska
-          - language: de
-            language_name: Deutsch
-          - language: cs
-            language_name: Cestina
-          - language: he
-            language_name: Ivrit
+      matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
+    uses: ./.github/workflows/pdf-build.yaml
+    with:
+      language: ${{ matrix.language }}
+      build_type: digital
+      file_name: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ needs.matrix-setup.outputs.version }}"
 
-    steps:
-      - name: Set up repository
-        uses: actions/checkout@v4
+  printable_build:
+    needs: matrix-setup
+    name: "Printable / ${{ matrix.display }}"
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
+    uses: ./.github/workflows/pdf-build.yaml
+    with:
+      language: ${{ matrix.language }}
+      build_type: printable
+      file_name: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ needs.matrix-setup.outputs.version }}_Printable"
+      convert_to_cmyk: true
 
-      - name: Generate translations for ${{ matrix.language }}
-        if: ${{ matrix.language != 'en' }}
-        uses: qwrtln/po4a-action@v1.3
-        with:
-          version: "0.74"
-          config: "po4a.cfg"
-          args: "--no-update"
-
-      - name: Set version
-        run: echo "VERSION=$(cat .version | tr . _)" >> $GITHUB_ENV
-
-      - name: "Digital / ${{ matrix.language_name }}"
-        uses: ./.github/workflows/pdf-build.yaml
-        with:
-          language: ${{ matrix.language }}
-          build_type: digital
-          file_name: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.version }}"
-
-      - name: "Printable / ${{ matrix.language_name }}"
-        uses: ./.github/workflows/pdf-build.yaml
-        with:
-          language: ${{ matrix.language }}
-          build_type: printable
-          file_name: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.version }}_Printable"
-          convert_to_cmyk: true
-
-      - name: "Economy printable / ${{ matrix.language_name }}"
-        uses: ./.github/workflows/pdf-build.yaml
-        with:
-          language: ${{ matrix.language }}
-          file_name: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.version }}_Economy_Printable"
-          build_type: economy
+  economy_build:
+    needs: matrix-setup
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
+    uses: ./.github/workflows/pdf-build.yaml
+    with:
+      language: ${{ matrix.language }}
+      file_name: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ needs.matrix-setup.outputs.version }}_Economy_Printable"
+      build_type: economy
