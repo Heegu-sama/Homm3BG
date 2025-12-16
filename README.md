@@ -7,7 +7,7 @@
   </p>
 </div>
 
-**Join us [on Discord](https://discord.gg/khV8Ckw8RD) to help with translating or just to get in touch!**
+**Join us [on Discord](https://discord.gg/Y4uM9pPWF6) to help with translating or just to get in touch!**
 
 Download your desired version of the rule book from one of the available versions below 👇
 

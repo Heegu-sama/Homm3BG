@@ -15,31 +15,22 @@ jobs:
         include:
           - language: en
             language_name: English
-            luaengine: false
           - language: pl
             language_name: Polski
-            luaengine: false
           - language: es
             language_name: Espanol
-            luaengine: false
           - language: fr
             language_name: Francais
-            luaengine: false
           - language: ru
             language_name: Russkiy
-            luaengine: true
           - language: ua
             language_name: Ukrainska
-            luaengine: true
           - language: de
             language_name: Deutsch
-            luaengine: false
           - language: cs
             language_name: Cestina
-            luaengine: true
           - language: he
             language_name: Ivrit
-            luaengine: true
 
     steps:
       - name: Set up repository
@@ -56,68 +47,24 @@ jobs:
       - name: Set version
         run: echo "VERSION=$(cat .version | tr . _)" >> $GITHUB_ENV
 
-      - name: Create artifact name
-        id: artifact_name
-        run: |
-          ARTIFACT_NAME="Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}"
-          echo "ARTIFACT_NAME=${ARTIFACT_NAME}" >> "$GITHUB_OUTPUT"
-
-      - name: Compile rule book
-        uses: xu-cheng/latex-action@v4
+      - name: "Digital / ${{ matrix.language_name }}"
+        uses: ./.github/workflows/pdf-build.yaml
         with:
-          docker_image: ghcr.io/qwrtln/homm3bg:latest
-          latexmk_use_lualatex: ${{ matrix.luaengine }}
-          latexmk_shell_escape: true
-          root_file: main_${{ matrix.language }}.tex
+          language: ${{ matrix.language }}
+          build_type: digital
+          file_name: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.version }}"
 
-      - name: Optimize PDF
-        uses: qwrtln/optimize-pdf@v1
+      - name: "Printable / ${{ matrix.language_name }}"
+        uses: ./.github/workflows/pdf-build.yaml
         with:
-          file-name: main_${{ matrix.language }}.pdf
-          quality-level: prepress
-          output-file: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}.pdf"
+          language: ${{ matrix.language }}
+          build_type: printable
+          file_name: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.version }}_Printable"
+          convert_to_cmyk: true
 
-      - name: Prepare for printable
-        run: rm *.aux
-
-      - name: Compile printable rule book
-        uses: xu-cheng/latex-action@v4
+      - name: "Economy printable / ${{ matrix.language_name }}"
+        uses: ./.github/workflows/pdf-build.yaml
         with:
-          docker_image: ghcr.io/qwrtln/homm3bg:latest
-          pre_compile: export HOMM3_PRINTABLE=1 HOMM3_LANG=${{ matrix.language }}
-          latexmk_use_lualatex: ${{ matrix.luaengine }}
-          latexmk_shell_escape: true
-          root_file: main_${{ matrix.language }}.tex
-
-      - name: Optimize PDF
-        uses: qwrtln/optimize-pdf@v1
-        with:
-          file-name: main_${{ matrix.language }}.pdf
-          quality-level: prepress
-          output-file: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Printable.pdf"
-          convert-to-cmyk: true
-
-      - name: Prepare for economy printable
-        run: rm *.aux
-
-      - name: Compile economy printable rule book without art backgrounds
-        uses: xu-cheng/latex-action@v4
-        with:
-          docker_image: ghcr.io/qwrtln/homm3bg:latest
-          pre_compile: export HOMM3_PRINTABLE=1 HOMM3_NO_ART_BACKGROUND=1 HOMM3_LANG=${{ matrix.language }}
-          latexmk_use_lualatex: ${{ matrix.luaengine }}
-          latexmk_shell_escape: true
-          root_file: main_${{ matrix.language }}.tex
-
-      - name: Optimize PDF
-        uses: qwrtln/optimize-pdf@v1
-        with:
-          file-name: main_${{ matrix.language }}.pdf
-          quality-level: prepress
-          output-file: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.VERSION }}_Economy_Printable.pdf"
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: ${{ steps.artifact_name.outputs.artifact_name }}
-          path: "Heroes3*.pdf"
-          retention-days: ${{ env.ARTIFACT_RETENTION_DAYS }}
+          language: ${{ matrix.language }}
+          file_name: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ env.version }}_Economy_Printable"
+          build_type: economy
