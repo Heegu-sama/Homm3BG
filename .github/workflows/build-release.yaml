@@ -70,3 +70,24 @@ jobs:
       language: ${{ matrix.language }}
       file_name: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ needs.matrix-setup.outputs.version }}_Economy_Printable"
       build_type: economy
+
+  upload_single_package:
+    runs-on: ubuntu-latest
+    needs: [matrix-setup, digital_build, printable_build, economy_build]
+    steps:
+      - name: Create dir
+        run: mkdir all_booklets
+
+      - name: Download compiled books
+        uses: actions/download-artifact@v4
+        with:
+          pattern: "Heroes3_*"
+          path: all_booklets
+          merge-multiple: true
+
+      - name: Upload single package
+        uses: actions/upload-artifact@v4
+        with:
+          name: "All_booklets_${{ needs.matrix-setup.outputs.version }}"
+          path: all_booklets
+          retention-days: 7
