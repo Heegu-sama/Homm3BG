@@ -10,6 +10,8 @@ jobs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
       version: ${{ steps.set-version.outputs.version }}
     steps:
+      - uses: actions/checkout@v4
+
       - id: set-matrix
         run: |
           cat << 'EOF' > matrix.json
@@ -59,6 +61,7 @@ jobs:
 
   economy_build:
     needs: matrix-setup
+    name: "Printable Economy / ${{ matrix.display }}"
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
