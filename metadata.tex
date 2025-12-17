@@ -604,6 +604,15 @@
 \newcommand{\pagelink}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{ \textmd{(\pageshorthand\,\pageref{#1})}}{}}
 \newcommand{\pagelinkwithcomma}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{, \textmd{\pageshorthand\,\pageref{#1}}}{}}
 
+\newcommand{\wikilink}[2]{{%
+    \iftoggle{printable}{%
+      \hypersetup{urlcolor=black}%
+    }{%
+      \hypersetup{urlcolor=violet}%
+    }%
+    \href{https://\wikilang.homm3bg.wiki/#1}{#2}%
+}}
+
 % Stubs for polyglossia package used for Hebrew but not other languages
 \providecommand{\mainlanguagename}[0]{}
 \providecommand{\textlang}[2]{#2}
