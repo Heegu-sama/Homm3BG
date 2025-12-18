@@ -52,4 +52,4 @@ gs -o "main_${LANGUAGE}_optimized.pdf" \
    -dCompatibilityLevel=1.5 \
    -dPDFSETTINGS=/prepress \
    -dDetectDuplicateImages=true \
-   "${CONVERSION_MODE}" "main_${LANGUAGE}.pdf"
+   ${CONVERSION_MODE} "main_${LANGUAGE}.pdf"

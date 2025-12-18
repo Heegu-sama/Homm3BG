@@ -7,7 +7,7 @@
   </p>
 </div>
 
-**Join us [on Discord](https://discord.gg/khV8Ckw8RD) to help with translating or just to get in touch!**
+**Join us [on Discord](https://discord.gg/Y4uM9pPWF6) to help with translating or just to get in touch!**
 
 Download your desired version of the rule book from one of the available versions below 👇
 
@@ -148,7 +148,7 @@ They should be free of any major issues.<br>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_English_Rules_Rewrite_12_Printable.pdf">download</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_English_Rules_Rewrite_1_3.pdf">download</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_English_Rules_Rewrite_1_3_Printable.pdf">download</a></td>
-            <td align="center"><em>coming soon</em></td>
+            <td align="center"><em><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0-rc2/Heroes3_English_Rules_Rewrite_2_0-rc2.pdf">preview</a></em></td>
         </tr>
         <tr>
             <td>🇵🇱 Polski</td>
