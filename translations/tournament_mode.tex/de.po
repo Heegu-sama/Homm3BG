@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-11-18 15:43+0000\n"
+"POT-Creation-Date: 2025-12-06 22:17+0100\n"
 "PO-Revision-Date: 2025-11-11 17:15+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -15,30 +15,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.7\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
 #: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
 #: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
 #: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
-#: sections/difficulty.tex:5 sections/expansion_content.tex:489
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:83
-#: sections/map_elements.tex:131 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:57 sections/town.tex:5
+#: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
+#: sections/map_elements.tex:88 sections/map_elements.tex:139
+#: sections/player_turns.tex:5 sections/resources.tex:5
+#: sections/round_structure.tex:5 sections/scenario_end.tex:5
+#: sections/setup.tex:55 sections/tournament_mode.tex:5 sections/town.tex:5
 #: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
-#: sections/units.tex:203 sections/tournament_mode.tex:5
 #, no-wrap
 msgid ""
 "{2}\n"
 "\n"
 msgstr ""
 
-#. type: multicols
-#: sections/map_elements.tex:175 sections/map_elements.tex:184
-#: sections/map_elements.tex:259 sections/map_elements.tex:292
-#: sections/player_turns.tex:48 sections/units.tex:233
-#: sections/tournament_mode.tex:67
+#. type: multicols*
+#: sections/map_elements.tex:183 sections/map_elements.tex:192
+#: sections/map_elements.tex:264 sections/map_elements.tex:297
+#: sections/player_turns.tex:48 sections/tournament_mode.tex:67
+#: sections/units.tex:219
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -52,6 +52,8 @@ msgid ""
 "\\pagetarget{Tournament Mode}{\\addsection{Tournament Mode}{\\images/homm-"
 "shield.png}}"
 msgstr ""
+"\\pagetarget{Tournament Mode}{\\addsection{Turniermodus}{\\images/homm-"
+"shield.png}}"
 
 #. type: multicols
 #: sections/tournament_mode.tex:7
@@ -60,14 +62,21 @@ msgid ""
 "The 1~vs.~1 Tournament Mode features rule changes to reduce randomness, allow more tactical decisions, and give players greater control.\n"
 "\n"
 msgstr ""
+"Der 1~vs.~1 Turniermodus bietet Regelanpassungen, die den Zufall im Spiel reduzieren und den Spielern taktischere Entscheidungen und mehr Kontrolle ermöglichen.\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:9
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\textbf{Note:} Tournament Mode is designed for the Core Game only. Rules for incorporating expansion content (e.g. \\pagelink{Sea Map Tiles}{Sea Map Tiles}) are not provided.\n"
+#| "\n"
 msgid ""
-"\\textbf{Note:} Tournament Mode is designed for the Core Game only. Rules for incorporating expansion content (e.g. \\pagelink{Sea Map Tiles}{Sea Map Tiles}) are not provided.\n"
+"\\textbf{Note:} Tournament Mode is designed for the Core Game only. Rules for incorporating expansion content (e.g. \\pagelinkwithcomma{Sea Map Tiles}{Sea Map Tiles}) are not provided.\n"
 "\n"
 msgstr ""
+"\\textbf{Hinweis:} Der Turniermodus ist nur für das Grundspiel entwickelt worden. Inhalte aus Erweiterungen (z. B. \\pagelink{Sea Map Tiles}{Seegebiete}) sind nicht eingebunden.\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:11
@@ -76,6 +85,8 @@ msgid ""
 "\\subsection*{Changes during Setup}\n"
 "\n"
 msgstr ""
+"\\subsection*{Änderungen im Spielaufbau}\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:18
@@ -89,6 +100,13 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"Bereite vor Spielbeginn folgendes vor:\n"
+"\\begin{itemize}\n"
+"  \\item Entferne die Fähigkeitskarte ``Diplomatie'' und die Artefaktkarte ``Sanduhr der bösen Stunde'' aus ihren Decks. Sie werden im Spiel nicht benötigt.\n"
+"  \\item Beide Spieler werfen 2 \\svg{resource_die}. Der Spieler, der die höhere Summe würfelt, darf wählen, wer Startspieler ist.\n"
+"  \\item Der Schlussspieler erhält dann zu Spielbeginn \\svg{morale_positive}.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:20
@@ -97,6 +115,8 @@ msgid ""
 "\\subsection*{Building the Map}\n"
 "\n"
 msgstr ""
+"\\subsection*{Aufbau der Abenteuerkarte}\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:24
@@ -107,6 +127,10 @@ msgid ""
 "The placement decisions of all other Map Tiles assigned to the Scenario are decided by both players.\n"
 "\n"
 msgstr ""
+"Die Abenteurkarte in Szenarien des Turniermodus wird von den Spielern gebildet und ist zu Beginn des Spiels \\textbf{vollständig aufgedeckt}.\n"
+"Das Szenario-Layout zeigt nur an, wie das Zentrum der Abenteuerkarte aussieht und welche weiteren Gebiete im Szenario benötigt werden.\n"
+"Wie diese weiteren Gebiete jedoch platziert werden, ist der Entscheidung beider Spieler überlassen.\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:44
@@ -116,14 +140,14 @@ msgid ""
 "\\begin{enumerate}\n"
 "  \\item The starting player places the Map Tiles in the center of the map, matching them to the Scenario's Map Layout, and discovers and rotates them freely.\n"
 "\\columnbreak\n"
-"  \\item Starting with the second player, both players take turns adding the Scenario's Near Map Tiles (if any) to the Map, one at a time.\n"
+"  \\item Starting with the second player, both players take turns adding the Scenario's Near Map Tiles to the Map, one at a time.\n"
 "  \\begin{itemize}\n"
 "    \\item If possible, Near Map Tiles must be placed next to a Center Map Tile.\n"
 "    \\item Every Scenario must have at least 2 Near Map Tiles with an Obelisk location on them.\n"
 "    \\item The pool of available Near Map Tiles is facedown. Players draw a random Tile, reveal it, and choose how to place it.\n"
 "  \\end{itemize}\n"
 "  \\item Once all Near Map Tiles have been placed, the first player must place their Starting Map Tile adjacent to at least one Near Map Tile.\n"
-"    The other player must place their Starting Map Tile on the opposite side of the Map - at the farthest position away from the first player's Starting Map Tile (counted in Tiles).\n"
+"    The other player must place their Starting Map Tile on the opposite side of the Map -- at the farthest position away from the first player's Starting Map Tile (counted in Tiles).\n"
 "  \\item Starting with the first player, both players take turns adding the Scenario's Far Map Tiles to the Map, one at a time.\n"
 "  \\begin{itemize}\n"
 "    \\item Every player's first Far Map Tile must be placed adjacent to their Starting Map Tile.\n"
@@ -133,6 +157,26 @@ msgid ""
 "\\end{enumerate}\n"
 "\n"
 msgstr ""
+"Folgende Regeln sind dabei aber zu beachten und \\textbf{alle Gebiete werden immer aufgedeckt platziert}:\n"
+"\\begin{enumerate}\n"
+"  \\item Der Startspieler platziert die Gebiete, die das Zentrum der Abenteuerkarte bilden, wie im Szenario-Layout angezeigt, deckt sie auf und darf sie frei ausrichten.\n"
+"\\columnbreak\n"
+"  \\item Beginnend mit dem Schlussspieler, platzieren beide Spieler abwechselnd je ein Nahes Gebiet, bis alle Nahen Gebiete platziert sind.\n"
+"  \\begin{itemize}\n"
+"    \\item Falls möglich, müssen Nahe Gebiete an Zentralgebiete angelegt werden.\n"
+"    \\item In jedem Szenario müssen mindestens zwei Nahe Gebiete mit Obelisk verwendet werden.\n"
+"    \\item Der Vorrat der Nahen Gebiete ist verdeckt. Wer am Zug ist, zieht ein verdecktes Gebiet, deckt es auf und entscheidet, wie es platziert und ausgerichtet wird.\n"
+"  \\end{itemize}\n"
+"  \\item Sobald alle Nahen Gebiete platziert wurden, platziert der Startspieler sein Startgebiet angrenzend an mindestens ein Nahes Gebiet.\n"
+"    Danach platziert der Schlussspieler sein Startgebiet auf der gegenüberliegenden Seite der Abenteuerkarte - weitestmöglich entfernt vom Startgebiet des Startspielers (gezählt in Gebieten).\n"
+"  \\item Beginnend beim Startspieler platzieren beide Spieler abwechselnd je ein Fernes Gebiet, bis alle Gebiete platziert sind.\n"
+"  \\begin{itemize}\n"
+"    \\item Das jeweils zuerst platzierte Ferne Gebiet eines Spielers muss an sein Startgebiet angrenzen.\n"
+"    \\item Die übrigen platzierten Fernen Gebiete müssen \\pagelink{Placing}{den Standardregeln des Platzierens} von Gebieten folgen.\n"
+"    \\item Der Vorrat Ferner Gebiete ist verdeckt. Wer am Zug ist, zieht ein verdecktes Gebiet, deckt es auf und entscheidet, wie es platziert und ausgerichtet wird.\n"
+"  \\end{itemize}\n"
+"\\end{enumerate}\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:46
@@ -141,6 +185,8 @@ msgid ""
 "\\subsection*{Additional rules during the\\\\game}\n"
 "\n"
 msgstr ""
+"\\subsection*{Zusätzliche Regeln während\\\\des Spiels}\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:55
@@ -156,6 +202,15 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"Folgende Regeln gelten in jedem Turniermodus-Szenario:\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{Mulligan in Runde 1:} Zu Beginn der 1. Runde darf jeder Spieler seine gezogenen Startkarten einmal zurück in sein Deck mischen und eine neue Starthand ziehen.\n"
+"  \\item Allen Spielern steht eine zusätzliche \\textbf{neue Moralaktion} zur Verfügung: Während einer \\textbf{Durchsuchen-Aktion}, wirf alle gezogenen Karten ab und führe die Aktion erneut durch.\n"
+"  \\item Falls du während des Spiels Artefaktkarten aus dem Spiel entfernst, \\textbf{verwahre sie neben deinem Deck} bis zum Spielende, da sie dann noch in eine Siegpunktwertung mit einfließen.\n"
+"  \\item Besuchst du den Ort \\textbf{Mammutbaum-Observatorium}, führe seinen \\pagelink{Observatory}{alternativen Effekt} durch.\n"
+"  \\item \\textbf{Optionale Regel}: Ihr könnt die Variante mit \\pagelink{Split Artifact and Spell Decks}{getrennten Artefakt- und Zauberdecks} verwenden, um mehr Einfluss nehmen zu können auf die Karten, die ihr zieht.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:65
@@ -172,6 +227,16 @@ msgid ""
 "The player with the most VPs wins the Scenario.\n"
 "\n"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\\begin{center}\n"
+"  \\transparent{0.2}\\includegraphics[width=1.05\\linewidth]{\\art/berserk.png}\n"
+"\\end{center}\n"
+"\\vspace*{\\fill}\n"
+"\\columnbreak\n"
+"\\subheader{Siegpunkt-Wertung}\n"
+"Wenn entweder ein Spieler die Siegbedingungen des Szenarios erfüllt hat oder die festgelegte Rundenzahl erreicht ist , endet das Spiel und beide Spieler berechnen ihre Siegpunkte (SP) gemäß der untenstehenden Tabelle.\n"
+"Der Spieler mit den meisten SP gewinnt das Szenario.\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:95
@@ -205,3 +270,30 @@ msgid ""
 "  }\n"
 "\\end{table}"
 msgstr ""
+"\\begin{table}[H]\n"
+"  \\hommtable{26}{\n"
+"    \\centering\n"
+"    \\medskip\n"
+"    \\textbf{Siegpunktberechnung}\\\\\n"
+"    \\bigskip\n"
+"    \\begin{tabularx}{0.95\\linewidth}{>{\\hsize=0.12\\hsize\\linewidth=\\hsize}X\n"
+"        >{\\hsize=0.8\\hsize\\linewidth=\\hsize}X\n"
+"      }\n"
+"      \\darkcell[0.8]{SP} & \\darkcell[0.8]{Kategorie} \\\\\n"
+"      \\darkcell[1.2]{1} &\n"
+"      \\lightcell[1.2]{für jede kontrollierte\\\\ Mine oder Siedlung} \\\\\n"
+"      \\darkcell[1.2]{1} &\n"
+"      \\lightcell[1.2]{für jedes gebaute Stadtgebäude} \\\\\n"
+"      \\darkcell[1.8]{1} &\n"
+"      \\lightcell[1.8]{für je zwei Artefaktkarten in deinem Deck (entfernte Karten zählen mit)} \\\\\n"
+"      \\darkcell[1.2]{1} &\n"
+"      \\lightcell[1.2]{für jede Erfahrungsstufe\\\\ deines Haupthelden} \\\\\n"
+"      \\darkcell[1.2]{2} &\n"
+"      \\lightcell[1.2]{für jeden besiegten\\\\ Nebenhelden} \\\\\n"
+"      \\darkcell[1.2]{4} &\n"
+"      \\lightcell[1.2]{für das Besiegen des gegnerischen Haupthelden (nur einmal)} \\\\\n"
+"      \\darkcell[1.6]{X} &\n"
+"      \\lightcell[1.6]{für zusätzliche erfüllte Ziele gemäß der spezifischen Szenarioregeln} \\\\\n"
+"      \\end{tabularx}\n"
+"  }\n"
+"\\end{table}"

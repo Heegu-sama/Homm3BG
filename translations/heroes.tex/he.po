@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-11-11 22:26+0000\n"
+"POT-Creation-Date: 2025-12-07 21:39+0000\n"
 "PO-Revision-Date: 2024-05-18 21:17+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,15 +19,14 @@ msgstr ""
 #. type: multicols
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
 #: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
-#: sections/combat.tex:302 sections/credits.tex:8 sections/deckbuilding.tex:5
+#: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
 #: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
-#: sections/difficulty.tex:5 sections/expansion_content.tex:490
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:83
-#: sections/map_elements.tex:131 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:57 sections/town.tex:5
+#: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
+#: sections/map_elements.tex:88 sections/map_elements.tex:139
+#: sections/player_turns.tex:5 sections/resources.tex:5
+#: sections/round_structure.tex:5 sections/scenario_end.tex:5
+#: sections/setup.tex:55 sections/tournament_mode.tex:5 sections/town.tex:5
 #: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
-#: sections/units.tex:203 sections/tournament_mode.tex:5
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -71,7 +70,7 @@ msgid ""
 "The Main Hero\\index{Main Hero} is represented by its chosen model, Hero Board, and your Deck.\n"
 "Each Faction's Main Hero has 3 \\svg{movement}.\n"
 "Only the Main Hero can use your Deck.\\par\n"
-"Each Main Hero starts the game at Level 1 and can advance up to Level 7 by gaining Experience.\n"
+"Each Main Hero starts the game at Level I and can advance up to Level VII by gaining Experience.\n"
 "Experience is gained from \\pagelink{Combatexperience}{winning Combat}, Visiting certain \\pagelink{All Map Locations}{Locations} and the \\pagelink{Treasure Die}{Treasure Die \\svg{treasure}}.\n"
 "Gaining 1 Experience\\index{Experience} is represented by the symbol \\svg{experience}.\n"
 "\n"
@@ -116,7 +115,7 @@ msgid ""
 "\\columnbreak\n"
 "Secondary Heroes have \\textbf{2 \\svg{movement}}; when you gain a Secondary Hero, take an additional set of 2 Movement Tokens to represent their MP.\n"
 "They do not have their own Hero Board, \\textbf{cannot gain Experience}, \\textbf{cannot play cards from your Deck during Combat}, but use \\textbf{the same units} your Main Hero does.\n"
-"If a Secondary Hero gains any cards, place them into your hand as normal (see \\pagelink{Playerdecks}{Deck-building}).\n"
+"If a Secondary Hero gains any cards, place them into your hand as normal (see \\pagelinkwithcomma{Playerdecks}{Deck-building}).\n"
 "Secondary Heroes are considered to have the same Level as the Main Hero for the purposes of resolving \\pagelink{Quick}{Quick Combat}.\\par\n"
 "If your Secondary Hero is attacked by an enemy Hero, you can choose to have that Hero be \\pagelink{Endcombat}{instantly defeated instead of fighting a Combat}.\n"
 "When a Secondary Hero is defeated, remove them from the game.\n"
@@ -162,7 +161,7 @@ msgstr ""
 "\n"
 
 #. type: Plain text
-#: sections/heroes.tex:71
+#: sections/heroes.tex:72
 #, fuzzy
 #| msgid "\\pagetarget{Herocard}{Hero Card Anatomy}"
 msgid ""
@@ -171,7 +170,7 @@ msgid ""
 msgstr "\\pagetarget{Herocard}{מבנה קלף הגיבור}"
 
 #. type: figure
-#: sections/heroes.tex:71
+#: sections/heroes.tex:72
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[h]\n"
@@ -228,7 +227,8 @@ msgid ""
 "  \\begin{minipage}[t]{0.48\\textwidth}\n"
 "    \\centering\n"
 "    \\vspace{0pt}\n"
-"    \\begin{scriptsize}\n"
+"    \\hspace*{1em}\n"
+"    \\begin{tikzpicture}\n"
 msgstr ""
 "[h]\n"
 "  \\begin{minipage}[t]{0.5\\textwidth}\n"
@@ -259,15 +259,7 @@ msgstr ""
 "    \\begin{scriptsize}\n"
 
 #. type: figure
-#: sections/heroes.tex:73
-#, no-wrap
-msgid ""
-"      \\hspace*{2em}\n"
-"      \\begin{tikzpicture}\n"
-msgstr ""
-
-#. type: figure
-#: sections/heroes.tex:108
+#: sections/heroes.tex:106
 #, fuzzy, no-wrap
 #| msgid ""
 #| "        \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=\\linewidth]{\\cards/hero.png}}};\n"
@@ -305,36 +297,35 @@ msgstr ""
 #| "    \\end{multicols}\n"
 #| "  \\end{minipage}"
 msgid ""
-"        \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=\\linewidth]{\\cards/hero.png}}};\n"
-"        \\draw (2.2, 2.5) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
-"        \\draw (0.8, 1.9) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-"        \\draw (3.5, 2.5) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
-"        \\draw (-0.1, 2.5) node {\\encircle{\\phantom{.}4\\phantom{.}}};\n"
-"        \\draw (0, 1.25) node {\\encircle{\\phantom{.}5\\phantom{.}}};\n"
-"        \\draw (1.1, 1.25) node {\\encircle{\\phantom{.}6\\phantom{.}}};\n"
-"        \\draw (2, 1.25) node {\\encircle{\\phantom{.}7\\phantom{.}}};\n"
-"        \\draw (3.25, 1.25) node {\\encircle{\\phantom{.}8\\phantom{.}}};\n"
-"        \\draw (1, -0.2) node {\\encircle{\\phantom{.}9\\phantom{.}}};\n"
-"        \\draw (3, -0.2) node {\\encircle{10}};\n"
-"        \\draw (-1.7, -1.4) node {\\encircle{11}};\n"
-"      \\end{tikzpicture}\n"
-"    \\end{scriptsize}\n"
+"      \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=\\linewidth]{\\cards/hero.png}}};\n"
+"      \\draw (2.2, 2.5) node {\\encircle{1}};\n"
+"      \\draw (0.8, 1.9) node {\\encircle{2}};\n"
+"      \\draw (3.5, 2.5) node {\\encircle{3}};\n"
+"      \\draw (-0.1, 2.5) node {\\encircle{4}};\n"
+"      \\draw (0, 1.25) node {\\encircle{5}};\n"
+"      \\draw (1.1, 1.25) node {\\encircle{6}};\n"
+"      \\draw (2, 1.25) node {\\encircle{7}};\n"
+"      \\draw (3.25, 1.25) node {\\encircle{8}};\n"
+"      \\draw (1, -0.2) node {\\encircle{9}};\n"
+"      \\draw (3, -0.2) node {\\encircle{10}};\n"
+"      \\draw (-1.7, -1.4) node {\\encircle{11}};\n"
+"    \\end{tikzpicture}\n"
 "    \\break\n"
-"    \\footnotesize{\\imagecaption{Hero Board}}\n"
+"    \\hspace*{1em}\\imagecaption{Hero Board}\n"
 "    \\scriptsize\n"
 "    \\begin{multicols}{2}\n"
-"      \\begin{itemize}\n"
-"        \\item[\\textbf{1.}] \\textbf{Name}\n"
-"        \\item[\\textbf{2.}] \\textbf{Class}\n"
-"        \\item[\\textbf{3.}] \\textbf{Type}\n"
-"        \\item[\\textbf{4.}] \\textbf{Faction Color}\n"
-"        \\item[\\textbf{5.}] \\textbf{Attack}\n"
-"        \\item[\\textbf{6.}] \\textbf{Defense}\n"
-"        \\item[\\textbf{7.}] \\textbf{Power}\n"
-"        \\item[\\textbf{8.}] \\textbf{Knowledge}\n"
-"        \\item[\\textbf{9.}] \\textbf{Starting Ability}\n"
-"        \\item[\\textbf{10.}] \\textbf{Specialty}\n"
-"        \\item[\\textbf{11.}] \\textbf{Level Tracker}\n"
+"      \\begin{itemize}[itemsep=5pt]\n"
+"        \\item[\\textbf{1.}] Name\n"
+"        \\item[\\textbf{2.}] Class\n"
+"        \\item[\\textbf{3.}] Type\n"
+"        \\item[\\textbf{4.}] Faction Color\n"
+"        \\item[\\textbf{5.}] Attack\n"
+"        \\item[\\textbf{6.}] Defense\n"
+"        \\item[\\textbf{7.}] Power\n"
+"        \\item[\\textbf{8.}] Knowledge\n"
+"        \\item[\\textbf{9.}] Starting Ability\n"
+"        \\item[\\textbf{10.}] Specialty\n"
+"        \\item[\\textbf{11.}] Level Tracker\n"
 "        \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
 "      \\end{itemize}\n"
 "    \\end{multicols}\n"
@@ -376,7 +367,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: tikzpicture
-#: sections/heroes.tex:113
+#: sections/heroes.tex:111
 #, no-wrap
 msgid ""
 "[overlay]\n"
@@ -384,12 +375,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/heroes.tex:150
+#: sections/heroes.tex:148
 msgid "\\pagetarget{Level}{\\subheader{Level Effects}}"
 msgstr ""
 
 #. type: multicols
-#: sections/heroes.tex:150
+#: sections/heroes.tex:148
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{Level}{Level Effects}}\n"
@@ -428,11 +419,11 @@ msgstr ""
 #| "\n"
 msgid ""
 "{2}\n"
-"Main Heroes always start each Scenario at Level 1\\index{Level} and may Level up by gaining Experience \\svg{experience}.\n"
+"Main Heroes always start each Scenario at Level I\\index{Level} and may Level up by gaining Experience \\svg{experience}.\n"
 "The most common sources of gaining Experience are the \\pagelink{Treasure Die}{Treasure Die \\svg{treasure}} and \\pagelink{Combatexperience}{Combat}.\n"
 "Each new Level up requires \\textbf{2 Experience}.\n"
 "When a Main Hero reaches a new Level, resolve the effects of the Level up immediately.\n"
-"Gaining Experience at Level 7 has no effect.\\par\n"
+"Gaining Experience at Level VII has no effect.\\par\n"
 "The Level Tracker on your Hero Board shows the following information:\n"
 "\\begin{itemize}\n"
 "\\item Your Main Hero's current Level and amount of Experience gained, shown by the Cube's position.\n"
@@ -445,19 +436,19 @@ msgid ""
 "\\columnbreak\n"
 "List of all effects:\n"
 "\\begin{itemize}\n"
-"\\item \\textbf{Level 1} – Your Hand Limit\\index{Hand Limit} is 4.\n"
+"\\item \\textbf{Level I} – Your Hand Limit\\index{Hand Limit} is 4.\n"
 "Add your first Specialty card to your Deck.\n"
-"\\item \\textbf{Level 2} – Search (2) the Ability Deck.\n"
+"\\item \\textbf{Level II} – Search (2) the Ability Deck.\n"
 "You may play 1 card for its Expert Effect per Round.\n"
-"\\item \\textbf{Level 3} – Your Hand Limit is 5.\n"
+"\\item \\textbf{Level III} – Your Hand Limit is 5.\n"
 "Search (2) the Ability Deck.\n"
-"\\item \\textbf{Level 4} – Gain your second Specialty card.\n"
+"\\item \\textbf{Level IV} – Gain your second Specialty card.\n"
 "You may play 2 cards for their Expert Effect per Round.\n"
-"\\item \\textbf{Level 5} – Your Hand Limit is 6.\n"
+"\\item \\textbf{Level V} – Your Hand Limit is 6.\n"
 "Search (2) the Ability Deck.\n"
-"\\item \\textbf{Level 6} – Gain your third Specialty card.\n"
+"\\item \\textbf{Level VI} – Gain your third Specialty card.\n"
 "You may play 3 cards for their Expert Effect per Round.\n"
-"\\item \\textbf{Level 7} – Your Hand Limit is 7.\n"
+"\\item \\textbf{Level VII} – Your Hand Limit is 7.\n"
 "Search (2) the Ability Deck.\n"
 "\\end{itemize}\n"
 "\n"
@@ -498,7 +489,7 @@ msgstr ""
 "\n"
 
 #. type: tikzpicture
-#: sections/heroes.tex:155
+#: sections/heroes.tex:153
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[overlay]\n"

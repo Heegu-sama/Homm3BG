@@ -1,0 +1,676 @@
+# German translations for PACKAGE package
+# Copyright (C) 2025 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2025-12-14 21:52+0000\n"
+"PO-Revision-Date: 2025-11-29 16:03+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. type: Plain text
+#: sections/card_effect_keywords.tex:4
+#, fuzzy
+#| msgid "\\addsection{Difficulty}{\\spells/berserk.png}"
+msgid ""
+"\\pagetarget{Card Effect Keywords}{\\addsection{Card Effect Keywords}"
+"{\\skills/interference.png}}"
+msgstr "\\addsection[2]{Szenario-\\break{}Schwierigkeit}{\\spells/berserk.png}"
+
+#. type: Plain text
+#: sections/card_effect_keywords.tex:7
+msgid ""
+"Most expansions add new cards to the game. Some of these cards use keywords "
+"with more elaborate rules and require specific game components.  This "
+"section provides the rules for these keywords."
+msgstr ""
+
+#. type: Plain text
+#: sections/card_effect_keywords.tex:9
+#, fuzzy
+#| msgid "\\pagetarget{spells}{Spell Cards}"
+msgid "\\pagetarget{spell keywords}{\\subheader{Spell Card Keywords}}"
+msgstr "\\pagetarget{spells}{Zauberkarten}"
+
+#. type: Plain text
+#: sections/card_effect_keywords.tex:13
+msgid ""
+"Some Spell cards allow you to place \\textbf{Effects} or \\textbf{Summoned "
+"Units} on the Combat Board.  Use the corresponding Tokens to mark these "
+"spaces."
+msgstr ""
+
+#. type: expansion
+#: sections/card_effect_keywords.tex:34
+#, no-wrap
+msgid ""
+"{cove}\n"
+"  \\begin{multicols}{2}\n"
+"    \\pagetarget{Clone Token}{\\subsection*{Clone Token}}\n"
+"    \\setlength\\intextsep{0pt}\n"
+"    \\setlength\\columnsep{1em}\n"
+"    \\begin{wrapfigure}{r}{0.3\\linewidth}\n"
+"      \\includegraphics[width=0.6\\linewidth]{\\images/clone-token.png}\\vspace*{1em}\n"
+"      \\includegraphics[width=\\linewidth]{\\images/clone-token.png}\n"
+"      \\centering\\imagecaption{Clone \\mbox{Tokens}}\n"
+"    \\end{wrapfigure}\n"
+"    When you cast the \\textbf{Clone Spell}, choose an allied unit (depending on the \\svg{empower} used) and an adjacent empty space on the Combat Board.\n"
+"    Place the small Clone Token on the chosen unit and the larger Token of the same color (blue or red) on the empty space.\n"
+"    The larger Token on the empty space represents the Clone.\n"
+"    The Clone has the same statistics and special abilities as the original unit, except its \\svg{health_points} is 1 and its \\svg{defense} is 0.\n"
+"    These values cannot be increased by any effects.  % what about other statistics?\n"
+"    The Clone perishes if it is attacked (even without taking damage) or takes any \\svg{damage} from a Spell.  % clarification?\n"
+"    If the original unit is removed from the Combat Board, remove the Clone as well.\n"
+"    The Clone does not inherit effects played on the original unit.\n"
+"    \\vfill\n"
+"    \\columnbreak\n"
+"\n"
+msgstr ""
+
+#. type: expansion
+#: sections/card_effect_keywords.tex:44
+#, no-wrap
+msgid ""
+"    \\subsection*{\\textit{Clone Example}}\n"
+"    \\textit{%\n"
+"      One of Bob's units in Combat is ``Few'' Griffins with an Initiative value of 6.\n"
+"      He casts the Clone Spell on them, placing the small Clone Token on the Griffins and the larger Token of the same color on an adjacent empty space.\n"
+"      Later, he casts ``Haste'' with 0~\\svg{empower} on the original Griffins, increasing their Initiative by 1.\n"
+"      The original Griffins' Initiative value is now 7, but the Clone's Initiative remains 6.\n"
+"    }\n"
+"    \\vspace*{1em}\n"
+"    \\par\\noindent\n"
+"    \\begin{tikzpicture}\n"
+msgstr ""
+
+#. type: expansion
+#: sections/card_effect_keywords.tex:58
+#, no-wrap
+msgid ""
+"      \\draw (0, 0) node[rotate=180] {\\includegraphics[width=\\linewidth]{\\images/combat_board_half.png}};\n"
+"      \\draw (-1, 1.3) node {\\includegraphics[width=0.22\\linewidth]{\\cards/unit-few.png}};\n"
+"      \\draw (-0.8, 1.2) node[circular drop shadow={shadow scale=0.8, shadow xshift=0.15ex, shadow yshift=-0.15ex, opacity=0.7,\n"
+"        fill=black, path fading={circle with fuzzy edge 10 percent},\n"
+"        every shadow}] {\\includegraphics[width=0.1\\linewidth]{\\images/clone-token-2.png}};\n"
+"      \\draw (1, 1.3) node[circular drop shadow={shadow scale=0.85, shadow xshift=0.2ex, shadow yshift=-0.2ex, opacity=0.7,\n"
+"        fill=black, path fading={circle with fuzzy edge 10 percent},\n"
+"        every shadow}] {\\includegraphics[width=0.18\\linewidth]{\\images/clone-token-2.png}};\n"
+"      \\draw (-0.4, -1.7) node {\\includegraphics[width=0.22\\linewidth]{\\cards/haste.png}};\n"
+"    \\end{tikzpicture}\n"
+"  \\end{multicols}\n"
+"  \\vspace*{-8em}\n"
+"  {\\transparent{0.2}\\includegraphics[width=0.5\\linewidth]{\\art/magic_arrow.png}\\hfill}"
+msgstr ""
+
+#. type: multicols
+#: sections/card_effect_keywords.tex:72
+#, no-wrap
+msgid ""
+"{2}\n"
+"\\begin{expansion}{stronghold}\n"
+"  \\pagetarget{Quicksand Token}{\\subsection*{Quicksand Token}}\n"
+"  Depending on the \\svg{empower} used, take 2, 4 or 6 \\textbf{Quicksand Tokens} from the same set (blue or red).\n"
+"  Half of them must be ``empty'' and half must have the Quicksand symbol.\n"
+"  Shuffle the Tokens face down and place one on each chosen empty space on the Combat Board.\n"
+"  If there are not enough empty spaces to place all of them, discard any leftover Tokens.\n"
+"  Once placed, you may look at your Tokens at any time.\n"
+"  When a unit enters a space with a Quicksand Token, reveal it.\n"
+"  If it is empty, the unit continues its movement.\n"
+"  If the Token shows the Quicksand icon, the unit's movement and activation end immediately.\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/card_effect_keywords.tex:79
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\begin{center}\n"
+#| "    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+#| "  \\end{center}\n"
+#| "\\end{expansion}\n"
+#| "\n"
+msgid ""
+"  \\textbf{Note:} Two Quicksand Tokens may occupy a single space only if they are placed by different players.\n"
+"  \\bigskip\n"
+"  \\begin{multicols*}{2}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.5\\linewidth]{\\images/quicksand-token.png}\\\\\n"
+"    \\imagecaption{Quicksand Token}\n"
+"\n"
+msgstr ""
+"  \\begin{center}\n"
+"    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
+
+#. type: multicols
+#: sections/card_effect_keywords.tex:85
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\begin{center}\n"
+#| "    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+#| "  \\end{center}\n"
+#| "\\end{expansion}\n"
+#| "\n"
+msgid ""
+"    \\columnbreak\n"
+"    \\includegraphics[width=0.5\\linewidth]{\\images/quicksand-token-2.png}\\\\\n"
+"    \\imagecaption{Empty Quicksand Token}\n"
+"  "
+msgstr ""
+"  \\begin{center}\n"
+"    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
+
+#. type: multicols
+#: sections/card_effect_keywords.tex:85
+#, no-wrap
+msgid ""
+"\\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/card_effect_keywords.tex:94
+#, no-wrap
+msgid ""
+"\\vspace*{1em}\n"
+"\\begin{expansion}{battlefield,conflux}\n"
+"  \\pagetarget{Firewall Token}{\\subsection*{Firewall Token}}\n"
+"  The \\textbf{Fire Wall Spell} and \\textbf{Luna's Specialty cards I and VI} instruct you to place the Fire Wall card onto a space on the Combat Board.\n"
+"  You may use the Fire Wall Tokens instead of the cards.\n"
+"  Place the Spell or Specialty card next to the Combat Board as a reminder.\n"
+"  When the card is removed or discarded, discard the Token as well.\n"
+"  When using the large \\pagelink{Battlefield Combat}{Battlefield Board}, you must use the Token instead of the card.\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/card_effect_keywords.tex:100
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\begin{center}\n"
+#| "    \\includegraphics[width=1.05\\linewidth]{\\images/battlefield-board.png}\n"
+#| "  \\end{center}\n"
+#| "\\end{expansion}\n"
+#| "\\vfill\n"
+#| "\n"
+msgid ""
+"  \\medskip\n"
+"  \\begin{multicols}{2}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.7\\linewidth]{\\images/firewall-bf-token.png}\n"
+"    \\imagecaption{Firewall Token\\\\(Spell)}\n"
+"\n"
+msgstr ""
+"  \\begin{center}\n"
+"    \\includegraphics[width=1.05\\linewidth]{\\images/battlefield-board.png}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\\vfill\n"
+"\n"
+
+#. type: multicols
+#: sections/card_effect_keywords.tex:104
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\begin{center}\n"
+#| "    \\includegraphics[width=1.05\\linewidth]{\\images/battlefield-board.png}\n"
+#| "  \\end{center}\n"
+#| "\\end{expansion}\n"
+#| "\\vfill\n"
+#| "\n"
+msgid ""
+"    \\columnbreak\n"
+"    \\includegraphics[width=0.7\\linewidth]{\\images/firewall-vi-token.png}\n"
+"    \\imagecaption{Firewall Token\\\\(Luna's Specialty)}\n"
+"  "
+msgstr ""
+"  \\begin{center}\n"
+"    \\includegraphics[width=1.05\\linewidth]{\\images/battlefield-board.png}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\\vfill\n"
+"\n"
+
+#. type: Plain text
+#: sections/card_effect_keywords.tex:119 sections/card_effect_keywords.tex:204
+#: sections/deckbuilding.tex:183 sections/deckbuilding.tex:396
+#: sections/expansion_content.tex:111 sections/expansion_content.tex:158
+#: sections/expansion_content.tex:173 sections/resources.tex:31
+#, no-wrap
+msgid "\\columnbreak"
+msgstr ""
+
+#. type: expansion
+#: sections/card_effect_keywords.tex:119
+#, no-wrap
+msgid ""
+"{stretchgoals2}\n"
+"  \\pagetarget{Land Mine Token}{\\subsection*{Land Mine Token}}\n"
+"  Depending on the \\svg{empower} used, take 2, 4 or 6 \\textbf{Land Mine Tokens} from the same set (blue or red).\n"
+"  Half of them must be ``empty'' and half must have a +2 \\svg{damage} symbol.\n"
+"  Shuffle the Tokens face down and place one on each chosen empty space on the Combat Board.\n"
+"  If there are not enough empty spaces to place all of them, discard any leftover Tokens.\n"
+"  Once placed, you may look at your Tokens at any time.\n"
+"  When a unit enters a space with a Land Mine Token, reveal that Token.\n"
+"  If it is empty, the unit continues its movement.\n"
+"  If the Token shows the +2 \\svg{damage} symbol, the unit takes 2 damage.\n"
+"  If the unit is still on the Board, it continues its activation.\n"
+"\n"
+msgstr ""
+
+#. type: expansion
+#: sections/card_effect_keywords.tex:126
+#, no-wrap
+msgid ""
+"  \\textbf{Note:} Two Land Mine Tokens may occupy a single space only if they are placed by different players.\n"
+"  \\bigskip\n"
+"  \\begin{multicols}{3}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.9\\linewidth]{\\images/land-mine-token.png}\n"
+"    \\imagecaption{Land Mine Token\\\\(Backside)}\n"
+"\n"
+msgstr ""
+
+#. type: expansion
+#: sections/card_effect_keywords.tex:130
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\begin{center}\n"
+#| "    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+#| "  \\end{center}\n"
+#| "\\end{expansion}\n"
+#| "\n"
+msgid ""
+"    \\columnbreak\n"
+"    \\includegraphics[width=0.9\\linewidth]{\\images/land-mine-token-0.png}\n"
+"    \\imagecaption{Empty Land Mine Token}\n"
+"\n"
+msgstr ""
+"  \\begin{center}\n"
+"    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
+
+#. type: expansion
+#: sections/card_effect_keywords.tex:135
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\begin{center}\n"
+#| "    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+#| "  \\end{center}\n"
+#| "\\end{expansion}\n"
+#| "\n"
+msgid ""
+"    \\columnbreak\n"
+"    \\includegraphics[width=0.9\\linewidth]{\\images/land-mine-token-2.png}\n"
+"    \\imagecaption{Land Mine Token}\n"
+"  \\end{multicols}\n"
+"\n"
+msgstr ""
+"  \\begin{center}\n"
+"    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
+
+#. type: expansion
+#: sections/card_effect_keywords.tex:154
+#, no-wrap
+msgid ""
+"  \\vspace*{1em}\n"
+"  \\pagetarget{Force Field Token}{\\subsection*{Force Field Token}}\n"
+"  \\setlength\\intextsep{0pt}\n"
+"  \\setlength\\columnsep{1em}\n"
+"  \\begin{wrapfigure}{r}{0.25\\linewidth}\n"
+"    \\includegraphics[width=\\linewidth]{\\images/force-field-token.png}\n"
+"    \\begin{center}\n"
+"      \\imagecaption{Force Field Token}\\\\\n"
+"      \\vspace*{1em}\n"
+"    \\end{center}\n"
+"  \\end{wrapfigure}\n"
+"  Use the \\textbf{Force Field Token} to mark the effect of the \\textbf{Force Field Spell}.\n"
+"  The Token represents an Obstacle, so only \\svg{unit_flying} units can move through a space with this Token.\n"
+"  If you're using the normal Combat Board, place 1 Force Field Token.\n"
+"  If you're using the \\pagelink{Battlefield Combat}{Battlefield Board}, place 2 Tokens on two adjacent spaces.\n"
+"\\begin{center}\n"
+"  {\\hspace{2em}\\transparent{0.2}\\includegraphics[width=0.5\\linewidth]{\\art/land_mine.png}}\n"
+"\\end{center}"
+msgstr ""
+
+#. type: Plain text
+#: sections/card_effect_keywords.tex:176
+msgid "\\pagetarget{Summoning}{\\subheader{Summoning}\\index{Summoning}}"
+msgstr ""
+
+#. type: expansion
+#: sections/card_effect_keywords.tex:176
+#, no-wrap
+msgid ""
+"{inferno,conflux}\n"
+"  Summoned units activate in the Round they were summoned if their Initiative is lower than or equal to the Initiative of the currently activated unit.\n"
+"  Otherwise, treat them as if they already activated this Combat Round."
+msgstr ""
+
+#. type: multicols
+#: sections/card_effect_keywords.tex:176
+#, no-wrap
+msgid ""
+"{2}\n"
+"  \\begin{expansion}{conflux}\n"
+"    \\subsection*{Summon Elemental Units}\n"
+"    The \\textbf{Summon Elemental Spells} allow you to add an Elemental unit to the Combat Board during Combat.\n"
+"    Keep the Summoned Unit Deck face up near the Neutral Unit Decks.\n"
+"    Depending on the \\svg{empower} used, you can Summon either a non-reinforced unit (a Few) or a reinforced one (a Pack).\n"
+"    Take the corresponding unit card from the Summoned Unit Deck and place it on a chosen empty space.\n"
+"    You may place \\textbf{Summon Unit Tokens} instead of the cards.\n"
+"    When using the \\pagelink{Battlefield Combat}{Battlefield Board}, you must place the Token.\n"
+"    Summoned units remain under your control until they perish or Combat ends.\n"
+"    A Summoned Elemental Unit is \\textbf{not} added to your Unit Deck.\n"
+"    \\bigskip\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/card_effect_keywords.tex:181
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\begin{center}\n"
+#| "    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+#| "  \\end{center}\n"
+#| "\\end{expansion}\n"
+#| "\n"
+msgid ""
+"    \\begin{multicols}{2}\n"
+"      \\centering\n"
+"      \\includegraphics[width=0.9\\linewidth]{\\cards/unit-summoned-few.png}\\\\\n"
+"      \\imagecaption{A Few Fire Elementals}\n"
+"\n"
+msgstr ""
+"  \\begin{center}\n"
+"    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
+
+#. type: multicols
+#: sections/card_effect_keywords.tex:185
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\begin{center}\n"
+#| "    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+#| "  \\end{center}\n"
+#| "\\end{expansion}\n"
+#| "\n"
+msgid ""
+"      \\smallskip\n"
+"      \\includegraphics[width=0.5\\linewidth]{\\images/summon-token-fire.png}\\\\\n"
+"      \\imagecaption{Fire Elemental Token}\n"
+"\n"
+msgstr ""
+"  \\begin{center}\n"
+"    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
+
+#. type: multicols
+#: sections/card_effect_keywords.tex:189
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\begin{center}\n"
+#| "    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+#| "  \\end{center}\n"
+#| "\\end{expansion}\n"
+#| "\n"
+msgid ""
+"      \\smallskip\n"
+"      \\includegraphics[width=0.5\\linewidth]{\\images/summon-token-earth.png}\\\\\n"
+"      \\imagecaption{Earth Elemental Token}\n"
+"\n"
+msgstr ""
+"  \\begin{center}\n"
+"    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
+
+#. type: multicols
+#: sections/card_effect_keywords.tex:193
+#, no-wrap
+msgid ""
+"      \\columnbreak\n"
+"      \\includegraphics[width=0.9\\linewidth]{\\cards/unit-summoned-pack.png}\\\\\n"
+"      \\imagecaption{A Pack of Fire Elementals}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/card_effect_keywords.tex:197
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\begin{center}\n"
+#| "    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+#| "  \\end{center}\n"
+#| "\\end{expansion}\n"
+#| "\n"
+msgid ""
+"      \\smallskip\n"
+"      \\includegraphics[width=0.5\\linewidth]{\\images/summon-token-water.png}\\\\\n"
+"      \\imagecaption{Water Elemental Token}\n"
+"\n"
+msgstr ""
+"  \\begin{center}\n"
+"    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
+
+#. type: multicols
+#: sections/card_effect_keywords.tex:201
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\begin{center}\n"
+#| "    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+#| "  \\end{center}\n"
+#| "\\end{expansion}\n"
+#| "\n"
+msgid ""
+"      \\smallskip\n"
+"      \\includegraphics[width=0.5\\linewidth]{\\images/summon-token-air.png}\\\\\n"
+"      \\imagecaption{Air Elemental Token}\n"
+"    "
+msgstr ""
+"  \\begin{center}\n"
+"    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
+
+#. type: expansion
+#: sections/card_effect_keywords.tex:213
+#, no-wrap
+msgid ""
+"{inferno}\n"
+"    \\subsection*{Summon Demons}\n"
+"    The \\textbf{Pit Lords unit} from the Inferno Faction may use their \\svg{unit_other} ability to summon or reinforce the Demons unit during Combat.\n"
+"    This effect cannot summon Demons from the Neutral Unit Deck.\n"
+"    Place the summoned ``Few'' Demons adjacent to the Pit Lords.\n"
+"    If ``Few'' Demons are already in Combat, reinforce them instead.\n"
+"    After Combat, unless stated otherwise, the summoned Demons \\textbf{are} added to your Unit Deck.\n"
+"    \\bigskip\n"
+"\n"
+msgstr ""
+
+#. type: expansion
+#: sections/card_effect_keywords.tex:218
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\begin{center}\n"
+#| "    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+#| "  \\end{center}\n"
+#| "\\end{expansion}\n"
+#| "\n"
+msgid ""
+"    \\begin{multicols}{2}\n"
+"      \\centering\n"
+"      \\includegraphics[width=0.9\\linewidth]{\\cards/unit-pitlord.png}\\\\\n"
+"      \\imagecaption{Pit Lords}\n"
+"\n"
+msgstr ""
+"  \\begin{center}\n"
+"    \\includegraphics[width=1.05\\linewidth]{\\images/naval_combat.png}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
+
+#. type: expansion
+#: sections/card_effect_keywords.tex:226
+#, no-wrap
+msgid ""
+"      \\columnbreak\n"
+"      \\includegraphics[width=0.9\\linewidth]{\\cards/unit-demon.png}\\\\\n"
+"      \\imagecaption{Demons}\n"
+"    \\end{multicols}\n"
+"  \\vspace*{2.4em}\n"
+"  {\\hfill\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/cerberi.png}}\n"
+"  \\vspace*{3.4em}\n"
+"  "
+msgstr ""
+
+#. type: Plain text
+#: sections/card_effect_keywords.tex:233
+#, fuzzy
+#| msgid "\\pagetarget{Other Fields}{Other Fields}"
+msgid "\\pagetarget{unit keywords}{\\subheader{Unit Ability keywords}}"
+msgstr "\\pagetarget{Other Fields}{Andere Orte}"
+
+#. type: Plain text
+#: sections/card_effect_keywords.tex:259
+msgid ""
+"The following components and keywords are used by certain unit abilities.  "
+"These Tokens are typically placed on other units to modify their statistics."
+msgstr ""
+
+#. type: multicols
+#: sections/card_effect_keywords.tex:259
+#, no-wrap
+msgid ""
+"{2}\n"
+"  \\begin{expansion}{cove,stretchgoals2}\n"
+"    \\pagetarget{Weakness Token}{\\subsection*{Weakness Token}}\n"
+"    \\setlength\\intextsep{0pt}\n"
+"    \\setlength\\columnsep{1em}\n"
+"    \\begin{wrapfigure}{r}{0.25\\linewidth}\n"
+"      \\centering\n"
+"      \\includegraphics[width=0.8\\linewidth]{\\images/weakness-token.png}\\\\\n"
+"      \\imagecaption{Weakness Token}\\\\\n"
+"      \\vspace{1em}\n"
+"    \\end{wrapfigure}\n"
+"    \\textbf{``Few'' Sorceresses unit} from the Cove Faction can use their \\svg{unit_other} ability to place a Weakness Token on any unit.  % enemy unit?\n"
+"    A \\textbf{``Pack'' of Sorceresses} places this Token automatically on a unit attacked by them due to their \\svg{unit_attack} ability.\n"
+"    A unit with this Token suffers $-1$~\\svg{attack} or $-2$~\\svg{attack}, as indicated by the Token's side.\n"
+"    Each unit can have only one Weakness Token at a time.\n"
+"    If a unit would gain a second one, the player controlling it chooses which one to keep.\n"
+"    \\begin{center}\n"
+"      \\vspace*{2.5em}\n"
+"      {\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/weakness.png}}\n"
+"      \\vspace*{2em}\n"
+"    \\end{center}\n"
+"  \\end{expansion}\n"
+"  \\columnbreak\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/card_effect_keywords.tex:275
+#, no-wrap
+msgid ""
+"  \\begin{expansion}{stronghold,stretchgoals2}\n"
+"    \\pagetarget{Attack Token}{\\subsection*{Attack Token}}\n"
+"    \\setlength\\intextsep{0pt}\n"
+"    \\setlength\\columnsep{1em}\n"
+"    \\begin{wrapfigure}{r}{0.2\\linewidth}\n"
+"      \\centering\n"
+"      \\includegraphics[width=\\linewidth]{\\images/attack-token.png}\\\\\n"
+"      \\imagecaption{Attack Token}\\\\\n"
+"      \\vspace{1em}\n"
+"    \\end{wrapfigure}\n"
+"    The \\textbf{Ogres unit} from the Stronghold Faction can use their \\svg{unit_other} ability to place Attack Tokens on other allied unit cards.\n"
+"    Units with such a Token gain an additional +1 \\svg{attack} or +2 \\svg{attack}, as indicated by the Token's side.\n"
+"    Each unit can have only one Attack Token at a time.\n"
+"    If a unit would gain a second one, the player controlling it chooses which one to keep.\n"
+"  \\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/card_effect_keywords.tex:293
+#, no-wrap
+msgid ""
+"  \\vspace*{1em}\n"
+"  \\begin{expansion}{stronghold}\n"
+"    \\pagetarget{Corrosion Token}{\\subsection*{Corrosion Token}}\n"
+"    \\setlength\\intextsep{0pt}\n"
+"    \\setlength\\columnsep{1em}\n"
+"    \\begin{wrapfigure}{r}{0.25\\linewidth}\n"
+"      \\centering\n"
+"      \\includegraphics[width=0.8\\linewidth]{\\images/corrosion-token.png}\\\\\n"
+"      \\imagecaption{Corrosion Token}\\\\\n"
+"      \\vspace{1em}\n"
+"    \\end{wrapfigure}\n"
+"    The \\textbf{Behemoths unit} from the Stronghold Faction can use their \\svg{unit_attack} ability to place a Corrosion Token on a unit attacked by them.\n"
+"    It reduces the enemy's unit \\svg{defense} by 1 to a minimum of 0.\n"
+"    A unit can have only one Corrosion Token at a time.\n"
+"    If a unit would gain a second Token, discard one of them.\n"
+"    Unless removed by Spells or other effects, a Corrosion Token remains on the unit until the end of Combat.\n"
+"  \\end{expansion}"
+msgstr ""
+
+#. type: Plain text
+#: sections/card_effect_keywords.tex:301
+#, fuzzy
+#| msgid ""
+#| "{2}\n"
+#| "\\subsection*{Unit Card Anatomy}\n"
+#| "\n"
+msgid "\\subheader{Fan-Made Wiki}"
+msgstr ""
+"{2}\n"
+"\\subsection*{Aufbau der Einheitenkarten}\n"
+"\n"
+
+#. type: wrapfigure
+#: sections/card_effect_keywords.tex:301
+msgid "{r}{0.2\\textwidth}"
+msgstr ""
+
+#. type: Plain text
+#: sections/card_effect_keywords.tex:304
+msgid ""
+"Many cards in \\textbf{Heroes of Might and Magic 3: The Board Game} have "
+"ambiguous or misleading wording.  Fortunately, the developers have clarified "
+"many card effects."
+msgstr ""
+
+#. type: Plain text
+#: sections/card_effect_keywords.tex:308
+msgid ""
+"The Community maintains a \\textbf{Fan-Made Wiki}: a collection of nearly "
+"all game components with extensive notes to clarify specific rules.  If you "
+"have questions about specific cards, visit this website: "
+"\\mbox{\\href{https://en.homm3bg.wiki/}{https://en.homm3bg.wiki/}}"
+msgstr ""

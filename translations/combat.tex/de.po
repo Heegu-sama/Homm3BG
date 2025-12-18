@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-12-09 10:58+0000\n"
-"PO-Revision-Date: 2025-11-27 22:26+0100\n"
+"POT-Creation-Date: 2025-12-16 22:21+0000\n"
+"PO-Revision-Date: 2025-09-01 21:04+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -19,16 +19,15 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:117
-#: sections/combat.tex:305 sections/credits.tex:8 sections/deckbuilding.tex:5
-#: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
-#: sections/difficulty.tex:5 sections/expansion_content.tex:489
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:92
-#: sections/map_elements.tex:140 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:57 sections/town.tex:5
+#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
+#: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
+#: sections/deckbuilding.tex:52 sections/deckbuilding.tex:73
+#: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
+#: sections/map_elements.tex:88 sections/map_elements.tex:139
+#: sections/player_turns.tex:5 sections/resources.tex:5
+#: sections/round_structure.tex:5 sections/scenario_end.tex:5
+#: sections/setup.tex:56 sections/tournament_mode.tex:5 sections/town.tex:5
 #: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
-#: sections/units.tex:203 sections/tournament_mode.tex:5
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -129,8 +128,8 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:33 sections/combat.tex:151 sections/credits.tex:36
-#: sections/credits.tex:40
+#: sections/combat.tex:33 sections/combat.tex:149 sections/credits.tex:38
+#: sections/credits.tex:42
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -237,54 +236,81 @@ msgstr ""
 "\\end{center}"
 
 #. type: Plain text
-#: sections/combat.tex:114
-#, msgid ""
-msgid ""
-"\\pagetarget{Combatterminology}{\\subheader{Combat Terminology}} "
-"{ \\begin{multicols*}{2} The following terms are used to describe effects "
-"and elements during Combat:\\par \\textbf{Attacking Player} – The player who "
-"started the Combat.\\par \\textbf{Defending Player} – The player whom Combat "
-"was started against.\\par \\textbf{Activation} – A unit activates when it is "
-"next in the Initiative order.\\par \\textbf{Adjacent Unit} – A unit is "
-"directly adjacent to another if it is one space away in a cardinal direction "
-"(nondiagonal).\\par \\textbf{Combat Round} – A full cycle of all units of "
-"each player being activated.\\par \\textbf{Combat Obstacles}\\index{Combat "
-"Obstacles}\\index{Obstacles, Combat} – Every card on the Combat Board is a "
-"Combat Obstacle.  They block the movement of all non-flying units."
-"\\smallskip\\par \\begin{tikzpicture}[overlay] \\node[opacity=0.7] at (7, 0) "
-"{\\includegraphics[width=0.2\\linewidth]{\\images/attack_die.png}}; "
-"\\end{tikzpicture}\\parbox{0.7\\hsize}{\\textbf{Attack Die}\\index{Attack "
-"Die}\\index{Dice} – A red Die whose results range from -1 to +1.  Roll the "
-"Die \\textbf{whenever a unit attacks} and add the result to the unit's "
-"Attack value.}\\par\\smallskip \\textbf{\\pagetarget{Retaliate}{Retaliation "
-"Attack}} – If a unit survives an attack by an adjacent unit, it performs an "
-"attack back at that unit.  Each unit can perform \\textbf{only 1} "
-"Retaliation Attack\\index{Retaliation Attack} per Combat Round.  Retaliation "
-"Attacks function identically to normal attacks, but they cannot cause "
-"another Retaliation Attack.  Mark units which have performed a Retaliation "
-"Attack this Round with a Black Cube.\\par \\textbf{\\pagetarget{Paralysis}"
-"{Paralysis}}\\index{Paralysis} \\svg{paralysis} – Some effects place a "
-"Paralysis Token on units.  If a unit would activate with a Paralysis Token "
-"on it, \\textbf{skip its activation} and remove the Token instead.  If the "
-"unit \\textbf{is attacked or takes any damage} while having the Paralysis "
-"Token, remove it.  The Token does not prevent units from performing "
-"Retaliation Attacks.\\par \\textbf{\\pagetarget{Defend}{Defend}} "
-"\\svg{defense} – units may choose to gain a Defense Token and end the "
-"activation instead of attacking.  When a unit with a Defense Token is "
-"attacked, make another roll with the attack Die after the initial attack "
-"roll.  If you roll a ``+1'', the defending unit gains an extra 1 Defense for "
-"this attack.  If a unit has a Defense Token at the start of its activation, "
-"discard it.  The unit cannot take another Defense Action during that "
-"activation.\\par \\begin{expansion}{conflux} \\textbf{\\pagetarget{Elemental "
-"Damage}{Elemental Damage}} – If units deal elemental damage, they attack "
-"normally, but the resulting damage works similarly to \\svg{damage} dealt by "
-"Spells and ignores the unit's \\svg{defense}.  Elemental damage does not "
-"count as damage from Spells.  \\end{expansion} \\vspace*{\\fill} "
-"\\begin{center} \\hspace*{-2em}"
-"\\transparent{0.2}\\includegraphics[width=1.5\\linewidth]{\\art/"
-"storm_elemental.png} \\end{center} \\end{multicols*} }"
+#: sections/combat.tex:106
+msgid "\\pagetarget{Combatterminology}{\\subheader{Combat Terminology}}"
 msgstr ""
-"\\begin{multicols*}{2}\\pagetarget{Combatterminology}{\\subheader{Grundbegriffe im Kampf}}\n"
+
+#. type: multicols*
+#: sections/combat.tex:106
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{\\pagetarget{Combatterminology}{Combat Terminology}}\n"
+#| "The following terms are used to describe effects and elements during Combat:\\par\n"
+#| "\\textbf{Attacking Player} – The player who started the Combat.\\par\n"
+#| "\\textbf{Defending Player} – The player whom Combat was started against.\\par\n"
+#| "\\textbf{Activation} – A Unit Activates when it is next in the Initiative order.\\par\n"
+#| "\\textbf{Adjacent Unit} – A Unit is directly adjacent to another if it is one space away in a cardinal direction (nondiagonal).\\par\n"
+#| "\\textbf{Combat Round} – A full cycle of all Units of each player being Activated.\\par\n"
+#| "\\textbf{Combat Obstacles}\\index{Combat Obstacles}\\index{Obstacles, Combat} – Every Card on the Combat Board is a Combat Obstacle.\n"
+#| "They block the movement of all non-flying Units.\\smallskip\\par\n"
+#| "\\begin{tikzpicture}[overlay]\n"
+#| "  \\node at (7, 0) {\\includegraphics[width=0.2\\linewidth]{\\images/attack_die.png}};\n"
+#| "\\end{tikzpicture}\\parbox{0.7\\hsize}{\\textbf{Attack Die}\\index{Attack Die}\\index{Dice} – A red Die whose results range from -1 to +1.\n"
+#| "Roll the Die \\textbf{whenever a Unit attacks} and\n"
+#| "add the result to the Unit's Attack value.}\\par\\smallskip\n"
+#| "\\textbf{\\pagetarget{Retaliate}{Retaliation Attack}} – If a Unit survives an attack by an adjacent Unit, it performs an attack back at that Unit.\n"
+#| "Each Unit can perform \\textbf{only 1} Retaliation Attack\\index{Retaliation Attack} per Combat Round.\n"
+#| "Retaliation Attacks function identically to normal attacks, but they cannot cause another Retaliation Attack.\n"
+#| "Mark Units which have performed a Retaliation Attack this Round with a Black Cube.\\par\n"
+#| "\\textbf{\\pagetarget{Paralysis}{Paralysis}}\\index{Paralysis} \\svg{paralysis} – Some effects place a Paralysis Token on Units.\n"
+#| "If a Unit would Activate with a Paralysis Token on it, \\textbf{skip its Activation} and remove the Token instead.\n"
+#| "If the Unit \\textbf{is attacked or takes any damage} while having the Paralysis Token, remove it.\n"
+#| "The Token does not prevent Units from performing Retaliation Attacks.\\par\n"
+#| "\\textbf{\\pagetarget{Defend}{Defend}} \\svg{defense} – Units may choose to gain a Defense Token and end the Activation instead of attacking.\n"
+#| "When a Unit with a Defense Token is attacked, make another roll with the attack Die after the initial attack roll.\n"
+#| "If you roll a ``+1'', the defending Unit gains an extra 1 Defense for this attack.\n"
+#| "If a Unit has a Defense Token at the start of its activation, discard it.\n"
+#| "The Unit cannot take another Defense Action during that activation.\\par\n"
+#| "\\begin{expansion}{conflux}\n"
+#| "  \\textbf{\\pagetarget{Elemental Damage}{Elemental Damage}} – If Units deal elemental damage, they attack normally, but the resulting damage works similarly to \\svg{damage} dealt by Spells and ignores the Unit's \\svg{defense}.\n"
+#| "  Elemental damage does not count as damage from Spells.\n"
+#| "\\end{expansion}\n"
+#| "\n"
+msgid ""
+"{2}\n"
+"The following terms are used to describe effects and elements during Combat:\\par\n"
+"\\textbf{Attacking Player} – The player who started the Combat.\\par\n"
+"\\textbf{Defending Player} – The player whom Combat was started against.\\par\n"
+"\\textbf{Activation} – A unit activates when it is next in the Initiative order.\\par\n"
+"\\textbf{Adjacent Unit} – A unit is directly adjacent to another if it is one space away in a cardinal direction (nondiagonal).\\par\n"
+"\\textbf{Combat Round} – A full cycle of all units of each player being activated.\\par\n"
+"\\textbf{Combat Obstacles}\\index{Combat Obstacles}\\index{Obstacles, Combat} – Every card on the Combat Board is a Combat Obstacle.\n"
+"They block the movement of all non-flying units.\\smallskip\\par\n"
+"\\begin{tikzpicture}[overlay]\n"
+"  \\node[opacity=0.99] at (7, 0) {\\includegraphics[width=0.2\\linewidth]{\\images/attack_die.png}};\n"
+"\\end{tikzpicture}\\parbox{0.7\\hsize}{\\textbf{Attack Die}\\index{Attack Die}\\index{Dice} – A red Die whose results range from -1 to +1.\n"
+"Roll the Die \\textbf{whenever a unit attacks} and\n"
+"add the result to the unit's Attack value.}\\par\\smallskip\n"
+"\\textbf{\\pagetarget{Retaliate}{Retaliation Attack}} – If a unit survives an attack by an adjacent unit, it performs an attack back at that unit.\n"
+"Each unit can perform \\textbf{only 1} Retaliation Attack\\index{Retaliation Attack} per Combat Round.\n"
+"Retaliation Attacks function identically to normal attacks, but they cannot cause another Retaliation Attack.\n"
+"Mark units which have performed a Retaliation Attack this Round with a Black Cube.\\par\n"
+"\\textbf{\\pagetarget{Paralysis}{Paralysis}}\\index{Paralysis} \\svg{paralysis} – Some effects place a Paralysis Token on units.\n"
+"If a unit would activate with a Paralysis Token on it, \\textbf{skip its activation} and remove the Token instead.\n"
+"If the unit \\textbf{is attacked or takes any damage} while having the Paralysis Token, remove it.\n"
+"The Token does not prevent units from performing Retaliation Attacks.\\par\n"
+"\\textbf{\\pagetarget{Defend}{Defend}} \\svg{defense} – units may choose to gain a Defense Token and end the activation instead of attacking.\n"
+"When a unit with a Defense Token is attacked, make another roll with the attack Die after the initial attack roll.\n"
+"If you roll a ``+1'', the defending unit gains an extra 1 Defense for this attack.\n"
+"If a unit has a Defense Token at the start of its activation, discard it.\n"
+"The unit cannot take another Defense Action during that activation.\\par\n"
+"\\begin{expansion}{conflux}\n"
+"  \\textbf{\\pagetarget{Elemental Damage}{Elemental Damage}} – If units deal elemental damage, they attack normally, but the resulting damage works similarly to \\svg{damage} dealt by Spells and ignores the unit's \\svg{defense}.\n"
+"  Elemental damage does not count as damage from Spells.\n"
+"\\end{expansion}\n"
+"\n"
+msgstr ""
+"\\subsection*{\\pagetarget{Combatterminology}{Grundbegriffe im Kampf}}\n"
 "Folgende Begriffe erklären Grundprinzipien im Kampf:\\par\n"
 "\\textbf{Angreifer} – Der Spieler, der den Kampf initiiert.\\par\n"
 "\\textbf{Verteidiger} – Der Spieler, gegen den ein Kampf initiiert wurde."
@@ -552,7 +578,7 @@ msgid ""
 "Winning Combat with your Main Hero usually grants them Experience\\index{Experience}.\n"
 "If either the Difficulty of the Neutral Field or the Level of a defeated enemy Main Hero was \\textbf{equal} to your Level, gain 1 \\svg{experience}.\n"
 "If they were \\textbf{higher} than your Level, gain 2 \\svg{experience}.\n"
-"Winning a Neutral Combat against a Neutral Azure \\svg{azure} Unit grants your Hero Level 7 \\textbf{immediately}.\n"
+"Winning a Neutral Combat against a Neutral Azure \\svg{azure} Unit grants your Hero Level VII \\textbf{immediately}.\n"
 "If you ever gain multiple Levels at the same time, resolve their effects in order.\n"
 "Level ups must be resolved before Visiting the Field where the Combat happened.\\par\n"
 "Secondary Heroes cannot ever gain Experience.\n"
@@ -636,7 +662,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:225 sections/introduction.tex:89
+#: sections/combat.tex:223 sections/introduction.tex:91
 #, no-wrap
 msgid ""
 "\\vfill\n"
@@ -690,7 +716,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "\\vspace{0.5em}\n"
-"\\note{3.5}{Note: you cannot surrender when defending your Faction Town.}\\par\n"
+"\\note{3.5}{\\textbf{Note:} you cannot surrender when defending your Faction Town.}\\par\n"
 "\n"
 msgstr ""
 "\\vspace{0.5em}\n"
@@ -817,7 +843,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
-"  \\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/curse.png}\n"
+"  \\transparent{0.15}\\includegraphics[width=0.7\\linewidth]{\\art/lions_shield_of_courage.png}\n"
 "\\end{center}"
 msgstr ""
 
@@ -898,7 +924,7 @@ msgid ""
 "\\begin{expansion}{battlefield}\n"
 "  As an \\textbf{optional rule}, you can use the \\textbf{Battlefield Board} for combats between players in regular games.\n"
 "  You can also use it for Neutral Combats, though this is not recommended.\n"
-"  Refer to the \\pagelink{Battlefield Combat}{expansion content section} for the rule changes regarding this Combat type.\n"
+"  Refer to the \\pagelink{Battlefield Combat}{Battlefield section} for the rule changes regarding this Combat type.\n"
 "\n"
 msgstr ""
 "\\vspace{2em}\n"
