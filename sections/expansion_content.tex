@@ -8,14 +8,9 @@ Below you'll find an overview of all expansion content.
 
 \textbf{The following contents are added by many of the expansions:}
 \begin{multicols*}{2}
-\subsection*{New Map Locations}
-Each expansion adds new Map Locations to the game, which your Heroes can explore.
-They are explained in \pagelink{All Map Locations}{All Map Locations}.
-
 \subsection*{\pagetarget{Miniatures}{Unit Miniatures}}
 If you want to play your Combats with Miniatures, place and move them over the Combat Board instead of the cards.
 You can put Miniatures on top of the cards or keep the cards next to the Combat Board to form an initiative bar for better visualization of the order in which units activate.\par
-\vspace*{1em}
 If you play with Miniatures, there are a few rules to follow:
 \begin{itemize}
   \item If any of the following occur during Combat with Neutral Units, discard the Neutral Unit card and draw another card in its place:
@@ -28,6 +23,15 @@ If you play with Miniatures, there are a few rules to follow:
   Discard that unit card and draw another.
 \end{itemize}
 
+\vfill
+\begin{center}
+    \includegraphics[width=0.8\linewidth]{\images/tower-lineup.png}
+\end{center}
+
+\subsection*{New Map Locations}
+Each expansion adds new Map Locations to the game, which your Heroes can explore.
+They are explained in \pagelink{All Map Locations}{All Map Locations}.
+
 \subsection*{Permanent cards}
 Cards with a new type of effect which gives players permanent advantages, explained in \pagelink{Playerdecks}{Player Decks}.
 
@@ -39,12 +43,8 @@ Several new cards from various expansions come with their own Token components a
 These are all explained in the separate section \pagelink{Card Effect Keywords}{Card Effect Keywords}.
 
 \subsection*{More of the same}
-In addition to new gameplay mechanics, expansions also expand the variety of existing components: new Factions, new Scenarios, new Spells, new Heroes, new Artifacts, and new Map Locations.
+In addition to new gameplay mechanics, expansions also expand the variety of existing components: new Factions, new Scenarios, new Spells, new Heroes, and new Artifacts.
 
-\begin{center}
-    \includegraphics[width=0.75\linewidth]{\images/tower-lineup.png}
-\end{center}
-\vspace*{\fill}
 \end{multicols*}
 \pagebreak
 
@@ -75,14 +75,12 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
   \begin{minipage}[h]{\linewidth}
   \vspace{0.1pt}
   \centering
-  \begin{scriptsize}
-    \begin{tikzpicture}
-    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\cards/event.png}}};
-    \draw (1, 1.8) node {\encircle{\phantom{.}1\phantom{.}}};
-    \draw (-2, 0.4) node {\encircle{\phantom{.}2\phantom{.}}};
-    \draw (2.5, -1.1) node {\encircle{\phantom{.}3\phantom{.}}};
-    \end{tikzpicture}
-  \end{scriptsize}
+  \begin{tikzpicture}
+  \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\cards/event.png}}};
+  \draw (1, 1.8) node {\encircle{1}};
+  \draw (-2, 0.4) node {\encircle{2}};
+  \draw (2.5, -1.1) node {\encircle{3}};
+  \end{tikzpicture}
   \footnotesize
   \imagecaption{Event card}
   \begin{multicols}{2}
@@ -216,7 +214,9 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
   \begin{wrapfigure}{l}{0.35\textwidth}
     \includegraphics[width=\linewidth]{\boxcovers/battlefield-box.png}
   \end{wrapfigure}
-  The heart of this expansion is a large \pagelink{Battlefield Combat}{Battlefield Combat Board}. Two new \pagelink{Battlefield Modes}{game modes} are added around the use of this Battlefield Board, the rules for which must be consulted in the official rulebooks. Furthermore, the expansion offers an alternative \pagelink{Morale}{Morale gameplay system}, which you can use instead of the Morale Tokens.
+  The heart of this expansion is a large \pagelink{Battlefield Combat}{Battlefield Board}.
+  Two new \pagelink{Adventure and Skirmish Modes}{game modes} are added around the use of this Battlefield Board.
+  Furthermore, the expansion offers an alternative \pagelink{Morale}{Morale gameplay system}, which you can use instead of the Morale Tokens.
 \end{expansion}
 \end{multicols*}
 
@@ -227,7 +227,6 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
    Playing with Creature Banks is an \textbf{optional rule}.
    If you decide to play with Creature Banks, the following rules apply.
 
-   \bigskip
    \subsection*{Setup}
    Separate the Creature Bank Tokens into two piles (for Near and Far Map Tiles) based on the numerals on their backs.
    Shuffle each pile and place them near the Map.
@@ -238,14 +237,14 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
     \bigskip
     \begin{multicols*}{2}
       \begin{center}
-        \includegraphics[width=1.0\linewidth]{\images/creature_bank_near.png}\\
-        \vspace{-0.5em}\imagecaption{\footnotesize{}Creature Bank (Near)}\\
+        \includegraphics[width=0.9\linewidth]{\map_locations/creature-bank.png}\\
+        \imagecaption{Creature Bank (Near)}\\
         \vspace*{\fill}
-        \includegraphics[width=0.5\linewidth]{\images/stack_token.png}\\
-        \imagecaption{\footnotesize{}Stack Token}\\
+        \includegraphics[width=0.5\linewidth]{\images/stack-token.png}\\
+        \imagecaption{Stack Token}\\
         \columnbreak
-        \includegraphics[width=\linewidth]{\cards/creature_bank_unit.png}\\
-        \imagecaption{\footnotesize{}Creature Bank unit card}
+        \includegraphics[width=\linewidth]{\cards/creature-bank-back.png}\\
+        \imagecaption{Creature Bank unit card}
       \end{center}
     \end{multicols*}
 
@@ -283,8 +282,8 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
         \draw (-3.1, -1.6) node {\includegraphics[width=0.15\linewidth]{\images/N.png}};
       \end{tikzpicture}
     \end{center}
-    \imagecaption{\footnotesize{}P -- player deployment zone}\\
-    \imagecaption{\footnotesize{}N -- Neutral Units deployment zone}\\
+    \imagecaption{P -- player deployment zone}\\
+    \imagecaption{N -- Neutral Units deployment zone}\\
     \bigskip
 
   Based on the Scenario's Difficulty Level, take a number of \pagelink{Stack Tokens}{Stack Tokens} and place them randomly on up to four different Creature Bank unit cards:
@@ -304,7 +303,7 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
     \setlength\intextsep{0pt}
     \setlength\columnsep{1em}
     \begin{wrapfigure}{r}{0.2\linewidth}
-      \includegraphics[width=\linewidth]{\images/stack_token.png}
+      \includegraphics[width=\linewidth]{\images/stack-token.png}
     \end{wrapfigure}
   Each Stack Token modifies a unit's statistic in the following way: +1~\svg{attack}, +1~\svg{defense}, +1~\svg{health_points}, or +2~\svg{initiative}.
   Furthermore, each unit with a Stack Token is now a \textbf{Stacked unit}, which is similar to reinforced Faction units: when it takes damage equal to or greater than its \svg{health_points}, instead of removing the unit card from the Combat Board, discard the Stack Token from that unit and deal any leftover damage, deducting it from the new \svg{health_points}.
@@ -317,6 +316,7 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
   Whenever your Stacked unit goes to a Combat, draw a random Stack Token and place it on that unit.
   After Combat, note whether the unit is still Stacked (for future Combats), then return the Stack Token to the pile.
 \end{multicols*}
+\vspace*{1em}
 \end{expansion}
 \vfill
 \hspace*{-1.2em}\includegraphics[width=1.05\textwidth]{\art/dread_knight.jpg}
@@ -345,8 +345,8 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
   \end{center}
 
   \subsection*{Gaining Empowered Ability\\Example}
-  \textit{Bob playing as Crag Hack reaches Level 2.
-    He decides to perform the Search (2) action and draws two cards from the Ability Deck.
+  \textit{Bob playing as Crag Hack reaches Level II.
+    He performs the Search (2) action and draws two cards from the Ability Deck.
     The cards are Offense and Wisdom.
     He chooses Offense and places the other card on the discard pile.}
 
@@ -356,132 +356,23 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
 
   \textit{Bob happens to have an Empowered Ability Token.
     He may either use it, or save the token for later.
-    He decides to use it, so he removes the ``Offense'' Ability card and take the Empowered ``Offense'' Ability card instead.}
+    He decides to use it, so he removes the ``Offense'' Ability card and discards the Empowered Ability Token to take the Empowered ``Offense'' Ability card instead.}
 
   \begin{center}
     \begin{tikzpicture}
-      \draw (-2, 0) node {\includegraphics[width=0.3\linewidth]{\cards/ability-offense.png}};
-      \draw (-3, -0.5) node[circular drop shadow={shadow scale=0.8, shadow xshift=0.3ex, shadow yshift=-0.3ex, opacity=0.7,
+      \draw (-3, 0) node {\includegraphics[width=0.45\linewidth]{\cards/ability-offense.png}};
+      \draw (-1.5, -1.9) node[circular drop shadow={shadow scale=0.85, shadow xshift=0.5ex, shadow yshift=-0.5ex, opacity=0.7,
         fill=black, path fading={circle with fuzzy edge 15 percent},
-        every shadow}]{\includegraphics[width=0.15\linewidth]{\images/crown-token.png}};
-      \draw (-3.7, -1) node[rotate=87, xscale=-1] {\includegraphics[width=0.2\linewidth]{\_assets/gimp-files/arrow-curved-red.png}};
-      \draw (2, 0) node {\includegraphics[width=0.3\linewidth]{\cards/ability-offense-empowered.png}};
-      \draw (3, 1) node[circular drop shadow={shadow scale=0.8, shadow xshift=0.3ex, shadow yshift=-0.3ex, opacity=0.5,
-        fill=black, path fading={circle with fuzzy edge 15 percent},
-        every shadow}] {\svg[25]{green_tick}};
+        every shadow}]{\includegraphics[width=0.2\linewidth]{\images/crown-token.png}};
+      \draw (1.5, 0) node {\includegraphics[width=0.45\linewidth]{\cards/ability-offense-empowered.png}};
+
+      \draw (-2.8, -3.5) node {\svg[35]{red_cross}};
+      \draw (1.6, -3.5) node {\svg[35]{green_tick}};
     \end{tikzpicture}
   \end{center}
   \vspace*{\fill}
 \end{multicols*}
-\end{expansion}
-
-\pagebreak
-\begin{expansion}[before=\vspace*{-11mm}]{battlefield}
-  \pagetarget{Battlefield Combat}{\subheader{Combat on the Battlefield Board}}
-  \begin{multicols*}{2}
-  \textbf{Note:} The rules for \pagelink{Battlefield Modes}{Skirmish and Adventure} are different from this, please check the official rulebook.
-
-  \medskip
-  It is recommended to use the Battlefield Combat Board only for \textbf{Player vs.~Player Combats}, even though it is also possible to use it in Neutral Combats.
-  Using the Battlefield Board requires using \pagelink{Miniatures}{Miniatures} instead of unit cards.
-
-  \subsection*{Battlefield Board in Neutral\\Combats}
-  If you decide to use the Battlefield Board in Combats with Neutral Units, ignore the Round Limit:
-  At the end of each Combat Round you may freely decide to Retreat or to gain an additional Combat Round with no need to spend a MP \svg{movement}.
-  Be aware, however, that this may significantly extend the playtime.
-
-  \subsection*{\pagetarget{BF Obstacles}{Obstacle Tokens}}
-  On the Battlefield Board you place Obstacle Tokens, which are divided into three types:
-  Effect, Obstacle and Wall/Gate.
-  Unless otherwise stated these Tokens count and work as \pagelink{Combatterminology}{Combat Obstacles}.
-  To place Effect Obstacles on the Battlefield Board you'll need the card which creates the effect, such as the Fire Wall Spell: use the Tokens and put the Card beside the Battlefield as a reminder.
-  Effect Obstacles may be entered by Units, if the Card text allows it.
-  \begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.3\linewidth}
-      \centering
-      \includegraphics[width=0.7\linewidth]{\images/bf-obstacle-1.png}
-      \caption{\imagecaption{Effect}}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.3\linewidth}
-      \centering
-      \includegraphics[width=0.9\linewidth]{\images/bf-obstacle-2.png}
-      \caption{\imagecaption{Obstacle}}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.3\linewidth}
-      \centering
-      \includegraphics[width=0.9\linewidth]{\images/bf-obstacle-3.png}
-      \caption{\imagecaption{Wall/Gate}}
-    \end{subfigure}
-  \end{figure}
-  \note{3}{
-    All unit Miniatures also count as Obstacles.
-  }
-  \columnbreak
-
-  \subsection*{Rules Changes in Combat Setup}
-  \begin{itemize}
-    \item \textbf{Place obstacles} – Starting with the attacking player, both players take turns choosing and placing one Obstacle Token on the Battlefield Board until \textbf{all Obstacle Tokens (no Effects yet) are placed}.
-    No Obstacle can be adjacent to another Obstacle or to any player's deployment zone.
-
-    \begin{tikzpicture}
-      \draw (0, 0) node {\includegraphics[width=0.9\linewidth]{\examples/bf-deploy.png}};
-      \draw (2.5, 0) node[rotate=90] {\textbf{\fontfamily{ptm}\selectfont\textcolor{white}{DEPLOYMENT ZONE}}};
-    \end{tikzpicture}
-    {\footnotesize\imagecaption{Obstacles and models placed correctly are marked with the green border, and incorrectly -- with the red one.}}
-    \item \textbf{Place units} – Starting from the attacking player, the players choose a deployment zone and take turns placing their units \textbf{one by one}.
-    When the last unit is placed, the Combat begins.
-    Only in Player vs. Player Combats can the players decide to allow placing \textbf{up to 7 units} (instead of 5).
-  \end{itemize}
-  \end{multicols*}
-\end{expansion}
-
-\newpage
-\begin{expansion}[before=\vspace*{-11mm}]{battlefield}
-  \begin{multicols*}{2}
-  \begin{itemize}
-    \item \textbf{Siege with Walls and Gate} – During a Siege against a Town with a Citadel, only Walls and Gate Obstacles are placed.
-      Place no other Obstacles.
-
-    \begin{tikzpicture}
-      \draw (0, 0) node {\includegraphics[width=1.05\linewidth]{\examples/bf-deploy-wall.png}};
-      \draw (2, 0) node[rotate=90] {\textbf{\fontfamily{ptm}\selectfont\textcolor{white}{DEPLOYMENT ZONE}}};
-    \end{tikzpicture}
-    {\footnotesize\imagecaption{The red border marks incorrectly placed Obstacles.}}
-  \end{itemize}
-  \subsection*{Rules Changes during Combat}
-  \begin{itemize}
-    \item \textbf{Unit Movement} – Each unit's Movement is equal to its Initiative value: a unit of Initiative 8 can move up to 8 hexes.
-    \item \textbf{Ranged Movement}  – Ranged \svg{unit_ranged} units can either move or attack, not both.
-    \item \textbf{Combat Penalty} – Ranged \svg{unit_ranged} units suffer a Combat Penalty when attacking an adjacent unit or a unit that is \textbf{8 or more} hexes away from them.
-    \begin{center}
-      \vspace*{1em}
-      \transparent{0.2}\includegraphics[width=0.7\linewidth]{\art/land_mine.png}
-    \end{center}
-    \columnbreak
-
-    \begin{minipage}{\linewidth}
-      \setlength\intextsep{0pt}
-      \setlength\columnsep{1em}
-      \begin{wrapfigure}{r}{0.3\linewidth}
-        \includegraphics[width=\linewidth]{\images/initiative-bf.png}
-      \end{wrapfigure}
-      \item \textbf{\pagetarget{Initiative Token}{Initiative Token}} – At the start of Combat, the attacking player gains the Initiative Token.
-      Use it only to break any Initiative ties of opposing units:
-      The player with the Token activates first \textbf{one of their units of the same Initiative value}.
-      Then, the players alternate in activating all of their units of that same Initiative value one by one.
-      Once all units with that Initiative value are activated, pass the Initiative Token to the other player, who keeps it until initiative ties must be resolved again in the same way.
-    \end{minipage}
-
-    \item \textbf{Gate Token} – During a Siege, defending units may enter the Gate Token \textbf{only at the two middle hexes} where the Gate is printed.
-    Attacking the Gate Token is still possible on all four hexes.
-
-    \vspace*{1em}
-    \includegraphics[width=\linewidth]{\examples/bf-gate-token.png}
-    \footnotesize\textit{Example: Halberdier and Crusader (defenders) may enter the Gate Token only along the green arrows, but Minotaur and Harpies are still able to attack the Gate Token from any side.}
-  \end{itemize}
-    \vspace*{\fill}
-  \end{multicols*}
+\vspace*{2em}
 \end{expansion}
 
 \newpage
@@ -493,32 +384,32 @@ They also expand the variety of existing components with additional Artifacts, S
 
 \vspace*{\fill}
 \begin{expansion}{stretchgoals2}
-  \subsection*{\pagetarget{Pandora Card}{Pandora's Box cards}}
-  Shuffle the Pandora's Box cards during setup.
-  When visiting a \pagelink{Pandora Box}{Pandora's Box}, you may draw and resolve a Pandora's Box card instead of the location's regular effect.
-  Mark the Map Field with a Black Cube regardless.
-
-  \medskip
-  \begin{center}
-    \includegraphics[width=0.6\linewidth]{\cards/pandora.png}
-  \end{center}
-
   \pagetarget{Town Card}{\subsection*{Town Cards}}
   You can use Town Cards to randomly choose which player gets which Faction.
 
   \medskip
   \begin{center}
-    \begin{multicols}{2}
-      \includegraphics[width=\linewidth]{\cards/town-card-back.png}
-
-      \includegraphics[width=\linewidth]{\cards/town-card.png}
-    \end{multicols}
+    \includegraphics[width=0.8\linewidth]{\cards/town-cards.png}
   \end{center}
+
+  Here are some recommended options how to do that:
+  \begin{itemize}
+    \item
+      Shuffle the Deck and deal 2 Town cards to each player.
+      Each player then chooses their Faction from these cards.
+      If you do not own enough Expansions, deal 1 card to each person instead.
+    \item
+      Shuffle the Deck and deal 2 Town cards to the first player.
+      The first player chooses one card and passes the other one to the next player.
+      The next player draws 1 more Town card from the Deck, selects one card from the two, and passes the other card to the next person.
+      Repeat this until every player has chosen their Faction.
+  \end{itemize}
+
+  Skip the cards with Factions from Expansions which you don't have.
 \end{expansion}
 \vspace*{\fill}
 \columnbreak
 \begin{center}
-    \footnotesize
     \includegraphics[width=0.45\linewidth]{\boxcovers/stretchgoals-factionunits.png}\\[1em]
     \imagecaption{\nth{1} crowdfunding campaign:\\ Miniatures of the core game Faction Units}
     \vspace*{\fill}
@@ -537,20 +428,31 @@ They also expand the variety of existing components with additional Artifacts, S
 
 \columnbreak
 \begin{expansion}{stretchgoals2}
-    \subsection*{Alternative Manticore Card}
+  \subsection*{\pagetarget{Pandora Card}{Pandora's Box cards}}
+  Shuffle the Pandora's Box cards during setup.
+  When visiting a \pagelink{Pandora Box}{Pandora's Box}, you may draw and resolve a Pandora's Box card instead of the location's regular effect.
+  Mark the Map Field with a Black Cube regardless.
+
+  \medskip
+  \begin{center}
+    \includegraphics[width=0.6\linewidth]{\cards/pandora.png}
+  \end{center}
+
+    \subsection*{Alternative Manticores Card}
     \setlength\intextsep{0pt}
     \setlength\columnsep{1em}
     \begin{wrapfigure}{r}{0.3\linewidth}
-        \includegraphics[width=\linewidth]{\boxcovers/stretch_goals_faction.jpg}
+      \includegraphics[width=\linewidth]{\cards/alt_manticore.png}
     \end{wrapfigure}
-    A second \textbf{Manticore unit card} with slightly different statistics is included in this expansion.
-    When playing the Dungeon Faction, choose one of the two Manticore cards to use in the game.
-\end{expansion}
+    A second \textbf{Manticores unit card} with slightly different statistics is included in this expansion.
+    When playing the Dungeon Faction, choose one of the two Manticores cards to use in the game.
 
-\vspace*{2em}
-\vspace*{\fill}
-\includegraphics[width=\linewidth]{\art/storm_elemental.jpg}
-\vspace*{\fill}
+\vspace*{1em}
+\begin{center}
+  \transparent{0.2}\includegraphics[width=0.8\linewidth]{\art/blind.png}
+\end{center}
+\vspace*{3em}
+\end{expansion}
 \columnbreak
 \subheader{Fan-Made Content}
 Take a look at the \textbf{fan-made expansions and content} from the \textbf{HoMM3 BG Community}.
