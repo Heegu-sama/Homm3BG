@@ -13,8 +13,10 @@
   BoldFont = *-Bold,
   BoldItalicFont = *-BoldItalic]{LiberationSerif}
 % Set languages
-\setmainlanguage[calendar=hebrew]{hebrew} % Set the main language to Hebrew
-\setotherlanguage{english} % Optional: if you have English text as well
+\newcommand{\setlanguages}[0]{
+  \setmainlanguage[calendar=hebrew]{hebrew} % Set the main language to Hebrew
+  \setotherlanguage{english} % Optional: if you have English text as well
+}
 
 % Command to enforce LTR for English text and numbers
 \newcommand{\LTRtext}[1]{\bgroup\foreignlanguage{english}{#1}\egroup}

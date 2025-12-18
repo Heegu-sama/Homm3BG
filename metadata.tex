@@ -62,6 +62,9 @@
 \usepackage[skip=6pt, indent=0pt]{parskip}
 \setstretch{1}
 
+\providecommand{\setlanguages}[0]{}
+\setlanguages
+
 \newcommand{\version}{\input{.version}}
 
 \newcommand{\expansiontext}[1]{%
@@ -73,7 +76,7 @@
     {stronghold}{\stronghold}
     {conflux}{\conflux}
     {cove}{\cove}
-    {battlefield}{\battelfiled}
+    {battlefield}{\battlefield}
     {navalbattles}{\navalbattles}%
     {stretchgoals2}{\stretchgoalstwo}%
   }{#1 \mbox{expansion}}%
@@ -90,7 +93,7 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
 \renewcommand\cftsecdotsep{\cftdot}
 \renewcommand\cftsubsecdotsep{\cftdot}
-\setlength{\cftbeforesecskip}{0.5em}
+\setlength{\cftbeforesecskip}{0.1em}
 
 \captionsetup[figure]{labelformat=empty}
 \captionsetup[subfigure]{labelformat=empty, singlelinecheck=off, justification=centering}
@@ -100,6 +103,7 @@
 \newtoggle{printable}
 \newtoggle{noartbackground}
 \newtoggle{githubbuild}
+\providetoggle{textright2left}
 
 \setlist[itemize,2]{leftmargin=15pt, label=$\triangleright$}
 
@@ -139,7 +143,7 @@
 \def\repourl{https://github.com/Heegu-sama/Homm3BG}
 \def\bggthreadurl{https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project}
 
-\renewcommand{\labelitemi}{\includegraphics[width=0.7em, valign=c]{\layout/listdot.png}}
+\renewcommand{\labelitemi}{\includegraphics[width=1em, valign=c]{\layout/listdot.png}}
 
 % Utility colors
 \definecolor{amber}{rgb}{1.0, 0.49, 0.0}
@@ -162,6 +166,7 @@
 
 \AtBeginEnvironment{tcolorbox}{%
   \setlist[itemize]{itemsep=0.4em, parsep=0pt, topsep=5pt}%
+  \setlist[enumerate]{itemsep=0.4em, parsep=0pt, topsep=5pt}%
 }
 \ExplSyntaxOn
 \cs_new:Nn \__expansion_color_titles:NNn {
@@ -175,24 +180,35 @@
   \tl_clear_new:N #2
   \seq_clear:N \l_tmpa_seq
   \clist_map_inline:Nn \l_tmpa_clist {
-    \seq_put_right:No \l_tmpa_seq {\color{##1}\MakeUppercase{\expansiontext{##1}}}
+    \seq_put_right:No \l_tmpa_seq {\color{##1}\expansionlabelfont\MakeUppercase{\expansiontext{##1}}}
   }
-  \tl_set:No #2 {\seq_use:Nn \l_tmpa_seq { \\[-0.7em] }}
+  \tl_set:No #2 {\seq_use:Nn \l_tmpa_seq { \\ }}
 }
 
 \NewDocumentEnvironment{expansion}{ O{} m +b }{
   \__expansion_color_titles:NNn \l_expcolor_tl \l_exptitles_tl {#2}
 
-  \begin{tcolorbox}[
-    enhanced,
-    title=\textbf{\tiny\l_exptitles_tl},
-    opacityfill=0,
-    size=small,
-    boxrule=0pt,
-    arc=0pt,
-    oversize,
-    beforeafter~skip~balanced=0.3\baselineskip~plus~1pt,
-    overlay={
+  \tl_clear_new:N \l_expoverlay_tl
+  \iftoggle{textright2left}{
+    \tl_set:No \l_expoverlay_tl {
+      \fill[
+        \l_expcolor_tl,
+        path~fading=west,
+        opacity=0.09
+      ]
+        ([xshift=-5pt-\linewidth, yshift=3pt]frame.north~east) rectangle
+        ([xshift=5pt-\linewidth, yshift=-3pt]frame.south~west);
+      \fill[
+        top~color=\l_expcolor_tl,
+        bottom~color=\l_expcolor_tl,
+        rounded~corners=1.5pt,
+        opacity=0.5
+      ]
+      ([xshift=-8pt-\linewidth, yshift=3pt]frame.north~east) rectangle
+      ([xshift=-5pt-\linewidth, yshift=-3pt]frame.south~east);
+    }
+  }{
+    \tl_set:No \l_expoverlay_tl {
       \fill[
         \l_expcolor_tl,
         path~fading=east,
@@ -208,6 +224,21 @@
       ]
       ([xshift=-8pt, yshift=3pt]frame.north~west) rectangle
       ([xshift=-5pt, yshift=-3pt]frame.south~west);
+    }
+  }
+
+  \begin{tcolorbox}[
+    enhanced,
+    before~title=\raggedright\tiny,
+    title=\textbf{\l_exptitles_tl},
+    opacityfill=0,
+    size=small,
+    boxrule=0pt,
+    arc=0pt,
+    oversize,
+    beforeafter~skip~balanced=0.3\baselineskip~plus~1pt,
+    overlay={
+      \l_expoverlay_tl
     },
     #1]
     #3
@@ -217,9 +248,17 @@
 % Helper function for the tikz square
 \cs_new:Nn \__expansion_tikz_square:n {
   \begin{tikzpicture}[baseline=0]
+  \iftoggle{textright2left}{
+    \begin{scope}[transform~canvas={xshift = -2.2mm}]
+      \fill[#1] (0,0) rectangle (2.2mm,2.2mm);
+      \draw[borderinyellow,~line~width=0.9pt] (0,0) rectangle (2.2mm,2.2mm);
+      \draw[borderoutyellow,~line~width=0.7pt] (current~bounding~box.north~west) rectangle (current~bounding~box.south~east);
+    \end{scope}
+  }{
     \fill[#1] (0,0) rectangle (2.2mm,2.2mm);
     \draw[borderinyellow,~line~width=0.9pt] (0,0) rectangle (2.2mm,2.2mm);
     \draw[borderoutyellow,~line~width=0.7pt] (current~bounding~box.north~west) rectangle (current~bounding~box.south~east);
+  }
   \end{tikzpicture}
 }
 
@@ -228,7 +267,9 @@
 \NewDocumentCommand{\expansionlabel}{ m }{
   \__expansion_color_titles:NNn \l_expcolor_tl \l_exptitles_tl {#1}
 
-  \vspace{-\baselineskip}\makebox[1.0055\linewidth][r]{\textcolor{\l_expcolor_tl}{\tiny\raisebox{0.8\baselineskip}{\textbf{\l_exptitles_tl} \hspace{2pt}\raisebox{-0.14\baselineskip}{%
+  \vspace{-\baselineskip}\makebox[
+    \iftoggle{textright2left}{0.95\linewidth}{1.0055\linewidth}
+  ][r]{\textcolor{\l_expcolor_tl}{\tiny\raisebox{0.8\baselineskip}{\textbf{\l_exptitles_tl} \hspace{2pt}\raisebox{-0.14\baselineskip}{%
     \__expansion_tikz_square:n {\l_expcolor_tl}
   }}}}
 
@@ -249,6 +290,7 @@
 \newenvironment{expansionmini}[1]{\begin{expansion}[%
   size=minimal,
   beforeafter skip balanced=0pt,
+  left=-1mm,
 ]{#1}}{\end{expansion}}
 
 % https://tex.stackexchange.com/questions/675895/how-to-use-full-string-conditionals-in-latex
@@ -323,8 +365,12 @@
   \end{tikzpicture}%
 }
 
-\newcommand{\imagecaption}[1]{%
-  \textbf{\textit{\textcolor{darkcandyapplered}{#1}}}%
+\newcommand{\imagecaption}[2][]{%
+  \ifstrequal{#1}{c}{%
+    \parbox{\linewidth}{\centering\imagecaption{#2}}%
+  }{%
+    {\footnotesize\textbf{\textit{\textcolor{darkcandyapplered}{#2}}}}%
+  }%
 }
 
 % Set fonts for section headings and notes
@@ -347,6 +393,7 @@
 ]{NewCM10}
 
 \providecommand{\notefont}[0]{\liberation\selectfont}
+\providecommand{\expansionlabelfont}[0]{}
 
 \titleformat{\section}
 {\huge}
@@ -555,6 +602,7 @@
 % Commands to be used for automation generating printable version
 \newcommand{\pagetarget}[2]{\hypertarget{#1}{#2}\label{#1}}
 \newcommand{\pagelink}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{ \textmd{(\pageshorthand\,\pageref{#1})}}{}}
+\newcommand{\pagelinkwithcomma}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{, \textmd{\pageshorthand\,\pageref{#1}}}{}}
 
 % Stubs for polyglossia package used for Hebrew but not other languages
 \providecommand{\mainlanguagename}[0]{}
@@ -562,9 +610,24 @@
 
 % Command for overlay circled text
 \definecolor{goblin}{HTML}{3b7c33}
-\newcommand\encircle[1]{%
+
+\newcommand\encirclebase[4]{%
+  \begin{footnotesize}%
   \tikz[baseline=(X.base)]
-  \node (X) [draw=white, shape=circle, inner sep=0, fill=goblin, text=white, blur shadow={shadow blur steps=5}] {\strut \textbf{#1}};%
+  \node (X) [draw=white, shape=circle, minimum size=#3, align=center, inner sep=0, fill=#1, text=white, #2] {\strut \textbf{#4}};%
+  \end{footnotesize}%
+}
+\newcommand\encircle[1]{
+  \encirclebase{goblin}{blur shadow={shadow blur steps=5}}{1.6em}{#1}
+}
+\newcommand\encirclered[1]{%
+  \encirclebase{darkcandyapplered}{blur shadow={shadow blur steps=5}}{1.6em}{#1}
+}
+\newcommand\encirclelegend[2]{%
+  \encirclebase{#1}{blur shadow={shadow blur steps=3, shadow xshift=0.5pt, shadow yshift=-0.5pt, shadow blur radius=1pt}}{1.6em}{#2}
+}
+\newcommand\encirclesmall[1]{
+  \encirclebase{goblin}{blur shadow={shadow blur steps=5}}{0.9em}{#1}
 }
 
 \newcommand{\drawbottom}{
@@ -581,7 +644,6 @@
   \fi}
 }
 
-\providetoggle{textright2left}
 % Background
 \AddToHook{shipout/background}{%
   \iftoggle{noartbackground}{}{

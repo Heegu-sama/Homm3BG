@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-11-18 15:43+0000\n"
+"POT-Creation-Date: 2025-12-11 19:43+0000\n"
 "PO-Revision-Date: 2024-04-19 11:33+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -20,14 +20,13 @@ msgstr ""
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
 #: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
 #: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
-#: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
-#: sections/difficulty.tex:5 sections/expansion_content.tex:489
-#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:83
-#: sections/map_elements.tex:131 sections/player_turns.tex:5
-#: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenario_end.tex:5 sections/setup.tex:57 sections/town.tex:5
+#: sections/deckbuilding.tex:52 sections/deckbuilding.tex:73
+#: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
+#: sections/map_elements.tex:88 sections/map_elements.tex:139
+#: sections/player_turns.tex:5 sections/resources.tex:5
+#: sections/round_structure.tex:5 sections/scenario_end.tex:5
+#: sections/setup.tex:56 sections/tournament_mode.tex:5 sections/town.tex:5
 #: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
-#: sections/units.tex:203 sections/tournament_mode.tex:5
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -35,14 +34,6 @@ msgid ""
 msgstr ""
 "{2}\n"
 "\n"
-
-#. type: figure
-#: sections/deckbuilding.tex:322 sections/map_elements.tex:45
-#: sections/map_elements.tex:265 sections/player_turns.tex:124
-#: sections/setup.tex:7
-#, no-wrap
-msgid "  \\begin{tikzpicture}\n"
-msgstr ""
 
 #.  !TeX spellcheck = en_US
 #. type: Plain text
@@ -56,16 +47,34 @@ msgstr "\\addsection{Mise en Place}{\\skills/necromancy.png}"
 msgid ""
 "[p]\n"
 "  \\centering\n"
-"  \\begin{scriptsize}\n"
+"  \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: figure
-#: sections/setup.tex:54
-#, no-wrap
+#: sections/setup.tex:53
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{multicols*}{2}\n"
+#| "  \\begin{center}\n"
+#| "    \\vspace*{-1.5em}\\includegraphics[width=1.3\\linewidth]{\\cards/ai.png}\n"
+#| "    \\phantom{\\ldots\\ldots}\\footnotesize{\\imagecaption{AI Card}}\n"
+#| "  \\end{center}\n"
+#| "  \\vspace*{\\fill}\n"
+#| "  \\columnbreak\n"
+#| "  \\scriptsize\n"
+#| "  \\begin{itemize}[itemsep=0pt]\n"
+#| "    \\item[\\textbf{1.}] Name\n"
+#| "    \\item[\\textbf{2.}] Description\n"
+#| "    \\item[\\textbf{3.}] Easy Modifier\n"
+#| "    \\item[\\textbf{4.}] Normal Modifier\n"
+#| "    \\item[\\textbf{5.}] Expert Modifier\n"
+#| "    \\item[\\textbf{6.}] Impossible\\\\Modifier\n"
+#| "    \\item[\\textbf{7.}] Card Type\n"
+#| "  \\end{itemize}\\vspace*{\\fill}"
 msgid ""
 "    \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=1.25\\linewidth]{\\images/setup.png}}};\n"
-"    \\draw (6.2, 2.9) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
-"    \\draw (-1.8, -5.5) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
+"    \\draw (6.2, 2.9) node {\\encircle{3}};\n"
+"    \\draw (-1.8, -5.5) node {\\encircle{3}};\n"
 "    \\draw (0, -4.7) node {\\encircle{4a}};\n"
 "    \\draw (4.3, 2.4) node {\\encircle{4a}};\n"
 "    \\draw (-3.1, -1.7) node {\\encircle{4b}};\n"
@@ -90,29 +99,46 @@ msgid ""
 "    \\draw (-1.2, 4.5) node {\\encircle{4k}};\n"
 "    \\draw (2.6, 2.0) node {\\encircle{4l}};\n"
 "    \\draw (7.0, -4.3) node {\\encircle{4l}};\n"
-"    \\draw (1.4, -1.3) node {\\encircle{\\phantom{.}6\\phantom{.}}};\n"
-"    \\draw (3.1, -8.1) node {\\encircle{\\phantom{.}7\\phantom{.}}};\n"
-"    \\draw (2.2, 4.4) node {\\encircle{\\phantom{.}7\\phantom{.}}};\n"
-"    \\draw (6.5, -6.9) node {\\encircle{\\phantom{.}8\\phantom{.}}};\n"
-"    \\draw (-0.5, 3.8) node {\\encircle{\\phantom{.}8\\phantom{.}}};\n"
-"    \\draw (-3.1, -4.5) node {\\encircle{\\phantom{.}9\\phantom{.}}};\n"
-"    \\draw (6.3, -3.6) node {\\encircle{\\phantom{.}9\\phantom{.}}};\n"
-"    \\draw (6.1, 1.6) node {\\encircle{\\phantom{.}9\\phantom{.}}};\n"
+"    \\draw (1.4, -1.3) node {\\encircle{6}};\n"
+"    \\draw (3.1, -8.1) node {\\encircle{7}};\n"
+"    \\draw (2.2, 4.4) node {\\encircle{7}};\n"
+"    \\draw (6.5, -6.9) node {\\encircle{8}};\n"
+"    \\draw (-0.5, 3.8) node {\\encircle{8}};\n"
+"    \\draw (-3.1, -4.5) node {\\encircle{9}};\n"
+"    \\draw (6.3, -3.6) node {\\encircle{9}};\n"
+"    \\draw (6.1, 1.6) node {\\encircle{9}};\n"
 "    \\draw (-6.6, -4.5) node {\\encircle{10}};\n"
 "    \\draw (-4, 4.5) node {\\encircle{11}};\n"
 "    \\draw (-4, -7.5) node {\\encircle{11}};\n"
 "    \\draw (-7.1, 1.5) node {\\encircle{15}};\n"
+"    \\draw (-4.1, 1.3) node {\\encircle{16}};\n"
 "    \\draw (-5.6, 5.5) node {\\encircle{18}};\n"
 "    \\draw (5.1, 5.8) node {\\encircle{19}};\n"
 "    \\draw (-4.8, -2) node {\\encircle{20}};\n"
 "    \\draw (-7.1, -1.5) node {\\encircle{21}};\n"
 "    \\draw (-9.1, -1.5) node {\\encircle{24}};\n"
-"  \\end{tikzpicture}\n"
-"  \\end{scriptsize}"
+"  \\end{tikzpicture}"
 msgstr ""
+"\\begin{multicols*}{2}\n"
+"  \\begin{center}\n"
+"    \\vspace*{-1.5em}\\includegraphics[width=1.3\\linewidth]{translations/assets/fr/cards/ai_fr.png}\n"
+"    \\phantom{\\ldots\\ldots}\\footnotesize{\\imagecaption{Carte IA}}\n"
+"  \\end{center}\n"
+"  \\vspace*{\\fill}\n"
+"  \\columnbreak\n"
+"  \\scriptsize\n"
+"  \\begin{itemize}[itemsep=0pt]\n"
+"    \\item[\\textbf{1.}] Nom\n"
+"    \\item[\\textbf{2.}] Effet\n"
+"    \\item[\\textbf{3.}] Modificateur\\\\Facile\n"
+"    \\item[\\textbf{4.}] Modificateur\\\\Normal\n"
+"    \\item[\\textbf{5.}] Modificateur\\\\Difficile\n"
+"    \\item[\\textbf{6.}] Modificateur\\\\Impossible\n"
+"    \\item[\\textbf{7.}] Type de Carte\n"
+"  \\end{itemize}\\vspace*{\\fill}"
 
 #. type: multicols*
-#: sections/setup.tex:59
+#: sections/setup.tex:58
 #, no-wrap
 msgid ""
 "This section will guide you through the process of setting up a Scenario from the Mission Book.\n"
@@ -201,7 +227,7 @@ msgid ""
 "    \\item[l)]3 × Movement Tokens\n"
 "  \\end{itemize}\n"
 "  \\item Place one of your Faction Cubes on the first space of the Level Tracker found on the Hero Board (Represented by \\svg{level1}).\n"
-"    Your Hero is now Level 1.\n"
+"    Your Hero is now Level I.\n"
 "  \\item Set up the Map Tiles and other Scenario-specific components as shown in the Mission Book.\n"
 "  \\item Place the Town Board of your chosen Faction in front of you and set the Town Building Tiles next to it.\n"
 "    Check which Buildings are already built in the Scenario you are about to play, and place the respective Building Tiles on the Town Board.\n"
@@ -212,11 +238,12 @@ msgid ""
 "    Take the starting Resources determined by the Scenario you are playing and place them next to your Town Board.\n"
 "    This is your Resource pool.\n"
 "  \\item Separate the remaining Tokens into their respective piles.\n"
+"  \\pagetarget{Setup Starting Deck}{}\n"
 "  \\item Sort the Statistic cards into four piles: Attack, Defense, Power, and Knowledge.\n"
 "    Refer to the Statistics on your \\pagelink{Herocard}{Hero Board} and take the corresponding number of cards from each pile.\n"
 "  \\item If your Main Hero is a Hero of Might \\svg[12]{might}, add 1 copy of the Magic Arrow Spell to your Deck, and if they’re a Hero of Magic \\svg{magic}, add 2 of these Spells to your Deck.\n"
 "  \\columnbreak\n"
-"  \\item Add your Hero's \\pagelink{Ability}{Ability} and Level 1 \\pagelink{Specialty}{Specialty} cards to your Starting Deck.\n"
+"  \\item Add your Hero's \\pagelink{Ability}{Ability} and Level I \\pagelink{Specialty}{Specialty} cards to your Starting Deck.\n"
 "  \\item Shuffle your Starting Deck and place it face down next to your Hero Board.\n"
 "    This Deck is your Main Hero's \\textbf{Deck of Might \\& Magic}\\index{Deck of Might \\& Magic}, and is now ready. In this rule book, this is shortened to \\textbf{your Deck}.\n"
 "  \\item Sort the Ability, Artifact, and Spell cards into 3 face down Decks (including any unused Magic Arrow Spells) and shuffle them.\n"
@@ -289,31 +316,31 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/setup.tex:144
+#: sections/setup.tex:147
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
 "If you're playing with expansions, additionally do the following:\n"
 "\\begin{enumerate}[resume]\n"
 "  \\begin{expansion}[before skip balanced=0.3em,left=7mm]{fortress}\n"
-"    \\item Shuffle the Event cards and place them face down next to the Round Tracker.\n"
+"    \\item Shuffle the \\pagelink{Events}{Event cards} and place them face down next to the Round Tracker.\n"
 "  \\end{expansion}\n"
 "  \\begin{expansion}[before skip balanced=0.8em,left=7mm]{navalbattles}\n"
 "    \\item Group Stack Tokens, Far- and Near Creature Bank Tokens into separate piles and shuffle them.\n"
-"      Place Creature Bank unit cards near Neutral Unit Decks.\n"
+"      Place \\pagelink{Creature Banks Rules}{Creature Bank unit cards} near Neutral Unit Decks.\n"
 "  \\end{expansion}\n"
 "  \\begin{expansion}[before skip balanced=0.8em,left=7mm]{conflux}\n"
-"    \\item Place Summon Elemental cards near Neutral Unit Decks.\n"
+"    \\item Place \\pagelink{Summoning}{Summoned Elemental Unit cards} face up near Neutral Unit Decks.\n"
 "  \\end{expansion}\n"
 "  \\begin{expansion}[before skip balanced=0.8em,left=7mm]{stronghold}\n"
-"    \\item Shuffle 10 Spell Scroll cards into the Artifact Deck.\n"
+"    \\item Shuffle 10 \\pagelink{Spell Scroll Cards}{Spell Scroll cards} into the Artifact Deck.\n"
 "      Place the remaining 10 in a separate pile.\n"
 "  \\end{expansion}\n"
 "  \\begin{expansion}[before skip balanced=0.8em,left=7mm]{inferno}\n"
-"    \\item Place the Empowered Statistic cards face up in a separate pile.\n"
+"    \\item Place the \\pagelink{Empowered Statistic}{Empowered Statistic cards} face up in a separate pile.\n"
 "  \\end{expansion}\n"
 "  \\begin{expansion}[before skip balanced=0.8em,left=7mm]{navalbattles}\n"
-"    \\item Place the Empowered Ability cards face up next to the Ability Deck.\n"
+"    \\item Place the \\pagelink{Empowered Ability}{Empowered Ability cards} face up next to the Ability Deck.\n"
 "  \\end{expansion}\n"
 "  \\begin{expansion}[before skip balanced=0.8em,left=7mm]{stretchgoals2}\n"
 "    \\item Shuffle \\pagelink{Pandora Card}{Pandora's Box cards}.\n"
@@ -321,12 +348,15 @@ msgid ""
 "  \\begin{expansion}[before skip balanced=0.8em,left=7mm]{battlefield}\n"
 "    \\item Shuffle \\pagelink{Morale Cards}{Morale cards}.\n"
 "  \\end{expansion}\n"
+"  \\begin{expansion}[before skip balanced=0.8em,left=7mm]{rampart}\n"
+"    \\item Place the \\pagelink{War Machines}{War Machine cards} face up in a separate pile.\n"
+"  \\end{expansion}\n"
 "\\end{enumerate}\n"
 "\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/setup.tex:149
+#: sections/setup.tex:153
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{center}\n"
@@ -336,8 +366,9 @@ msgstr ""
 msgid ""
 "\\vspace*{\\fill}\n"
 "\\begin{center}\n"
-"  \\transparent{0.2}{\\reflectbox{\\includegraphics[width=\\linewidth, keepaspectratio]{\\art/unicorn.png}}}\n"
+"  \\transparent{0.2}{\\includegraphics[width=0.9\\linewidth, keepaspectratio]{\\art/vision.png}}\n"
 "\\end{center}\n"
+"\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
 "\\begin{center}\n"
