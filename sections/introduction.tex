@@ -13,7 +13,11 @@ The continent of Antagarich is at war as several different Factions, led by thei
 \textbf{Bold text} is used to draw attention to important rules.
 \textit{Italicization} is used for gameplay examples.
 \pagelink{Heroes of Might and Magic III}{Brown colored hyperlinks} will take you to other parts of the rule book.
-\iftoggle{printable}{}{\wikilink{}{Violet hyperlinks} will take you to the wiki page about the specific card.}
+\iftoggle{printable}{%
+  Names of specific cards are printed in \wikilink{}{violet color}; you can find further information about them in the \pagelink{wiki}{wiki}.
+}{%
+  \wikilink{}{Violet hyperlinks} will take you to the \pagelink{wiki}{wiki} page about the specific card.
+}
 
 \pagelink{Expansion Content}{\textbf{Expansion Content}} from different expansions is marked with colored bars on the left margin:
 
