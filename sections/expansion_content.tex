@@ -244,25 +244,19 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
     \centering
     \includegraphics[width=0.7\linewidth]{\images/stack-token.png}\\
     \imagecaption{Stack Token}\\
-  \end{minipage}
+  \end{minipage}\\
 
   \begin{center}
     \begin{multicols*}{2}
       \includegraphics[width=\linewidth]{\cards/creature-bank-back.png}\\
       \includegraphics[width=\linewidth]{\cards/creature-bank.png}\\
     \end{multicols*}
-    \vspace*{-1em}
+    \vspace*{-0.5em}
     \imagecaption{Creature Bank unit card}
-    \vspace*{-1em}
   \end{center}
 
   \subsection*{Placing Creature Bank Tokens}
-  When you discover a Near or Far Map Tile, you may choose to draw a Creature Bank Token of the corresponding type, and place it on the Tile's Blocked Field.\par
-  \begin{center}
-    \vspace*{1em}
-    \hspace*{-2em}\transparent{0.2}\includegraphics[width=0.9\linewidth]{\art/mermaid.png}
-  \end{center}
-  \columnbreak
+  When you discover a Near or Far Map Tile, you may choose to draw a Creature Bank Token of the corresponding type, and place it on the Tile's Blocked Field.
 
   \subsection*{Visiting a Creature Bank\\Location}
   When you enter a Creature Bank Location, you must defeat the corresponding Creature Bank units defending it.
@@ -303,10 +297,13 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
   \end{itemize}
   \end{multicols*}
 \end{expansion}
+
+\clearpage
+\begin{multicols*}{2}
 \begin{expansion}[before=\vspace*{-11mm}]{navalbattles}
-  \begin{multicols*}{2}
   After Combat, return all Creature Bank units back to the Creature Bank units cards pile.
   If you win, you claim the Creature Bank's reward, as well as an additional reward for the Stacked units you defeated.
+
   \subsection*{\pagetarget{Stack Tokens}{Stack Tokens}}
     \setlength\intextsep{0pt}
     \setlength\columnsep{1em}
@@ -316,18 +313,28 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
   Each Stack Token modifies a unit's statistic in the following way: +1~\svg{attack}, +1~\svg{defense}, +1~\svg{health_points}, or +2~\svg{initiative}.
   Furthermore, each unit with a Stack Token is now a \textbf{Stacked unit}, which is similar to reinforced Faction units: when it takes damage equal to or greater than its \svg{health_points}, instead of removing the unit card from the Combat Board, discard the Stack Token from that unit and deal any leftover damage, deducting it from the new \svg{health_points}.
   Creature Bank units without a Stack Token are defeated normally.
-  \columnbreak
+
+  \begin{multicols}{4}
+    \centering
+    \includegraphics[width=\linewidth]{\images/stack-token-atk.png}
+    \includegraphics[width=\linewidth]{\images/stack-token-def.png}
+    \includegraphics[width=\linewidth]{\images/stack-token-hp.png}
+    \includegraphics[width=\linewidth]{\images/stack-token-ini.png}
+  \end{multicols}
 
   \subsection*{Gained Stacked Units}
   Some rewards allow you to gain a Stacked Creature Bank unit card.
   Track which of your units are Stacked by whatever means is comfortable, e.g.~by remembering it or by placing a Token or Cube on it.
   Whenever your Stacked unit goes to a Combat, draw a random Stack Token and place it on that unit.
   After Combat, note whether the unit is still Stacked (for future Combats), then return the Stack Token to the pile.
-\end{multicols*}
-\vspace*{1em}
+  \begin{center}
+    \vspace*{1em}
+    \hspace*{-2em}\transparent{0.2}\includegraphics[width=0.9\linewidth]{\art/mermaid.png}
+  \end{center}
 \end{expansion}
-\vfill
-\hspace*{-1.2em}\includegraphics[width=1.05\textwidth]{\art/dread_knight.jpg}
+\includegraphics[width=\linewidth]{\art/energy_elemental.jpg}
+\end{multicols*}
+%\hspace*{-1.2em}\includegraphics[width=1.05\textwidth]{\art/dread_knight.jpg}
 
 \begin{expansion}{navalbattles}
 \pagetarget{Empowered Ability Token}{\subheader{Empowered Ability Cards}}
