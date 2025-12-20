@@ -12,6 +12,11 @@ on:
         type: string
         description: 'Type of build: digital, printable, or economy'
         default: 'digital'
+      file_name:
+        required: false
+        type: string
+        description: 'File name to use for the output PDF file'
+        default: ''
       convert_to_cmyk:
         required: false
         type: boolean
@@ -59,24 +64,33 @@ jobs:
           args: "--no-update"
           language: ${{ inputs.language }}
 
+      - name: Set file name
+        run: |
+          if [[ "${{ inputs.file_name }}" != "" ]]; then
+            echo "OUTPUT_FILENAME=${{ inputs.file_name }}.pdf" >> $GITHUB_ENV
+            echo "ARTIFACT_NAME=${{ inputs.file_name }}" >> $GITHUB_ENV
+          elif [[ "${{ inputs.build_type }}" == "digital" ]]; then
+            echo "OUTPUT_FILENAME=main_${{ inputs.language }}.pdf" >> $GITHUB_ENV
+            echo "ARTIFACT_NAME=main_${{ inputs.language }}" >> $GITHUB_ENV
+          elif [[ "${{ inputs.build_type }}" == "printable" ]]; then
+            echo "OUTPUT_FILENAME=printable_${{ inputs.language }}.pdf" >> $GITHUB_ENV
+            echo "ARTIFACT_NAME=printable_${{ inputs.language }}" >> $GITHUB_ENV
+          elif [[ "${{ inputs.build_type }}" == "economy" ]]; then
+            echo "OUTPUT_FILENAME=economy_printable_${{ inputs.language }}.pdf" >> $GITHUB_ENV
+            echo "ARTIFACT_NAME=economy_printable_${{ inputs.language }}" >> $GITHUB_ENV
+          fi
+
       - name: Set build environment variables
-        id: set_env
         run: |
           if [[ "${{ inputs.build_type }}" == "digital" ]]; then
             echo "HOMM3_PRINTABLE=" >> $GITHUB_ENV
             echo "HOMM3_NO_ART_BACKGROUND=" >> $GITHUB_ENV
-            echo "OUTPUT_FILENAME=main_${{ inputs.language }}.pdf" >> $GITHUB_ENV
-            echo "ARTIFACT_NAME=main_${{ inputs.language }}" >> $GITHUB_ENV
           elif [[ "${{ inputs.build_type }}" == "printable" ]]; then
             echo "HOMM3_PRINTABLE=1" >> $GITHUB_ENV
             echo "HOMM3_NO_ART_BACKGROUND=" >> $GITHUB_ENV
-            echo "OUTPUT_FILENAME=printable_${{ inputs.language }}.pdf" >> $GITHUB_ENV
-            echo "ARTIFACT_NAME=printable_${{ inputs.language }}" >> $GITHUB_ENV
           elif [[ "${{ inputs.build_type }}" == "economy" ]]; then
             echo "HOMM3_PRINTABLE=1" >> $GITHUB_ENV
             echo "HOMM3_NO_ART_BACKGROUND=1" >> $GITHUB_ENV
-            echo "OUTPUT_FILENAME=economy_printable_${{ inputs.language }}.pdf" >> $GITHUB_ENV
-            echo "ARTIFACT_NAME=economy_printable_${{ inputs.language }}" >> $GITHUB_ENV
           fi
 
       - name: Cache built PDF
