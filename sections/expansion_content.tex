@@ -234,26 +234,21 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
   There is no need to shuffle these cards.
   Shuffle all Stack Tokens and place them near the Creature Bank unit cards.
 
-  \begin{minipage}{0.65\linewidth}
-    \centering
-    \includegraphics[width=0.6\linewidth]{\map_locations/creature-bank.png}\\
-    \imagecaption{Creature Bank (Near)}\\
-  \end{minipage}
-  \hfill
-  \begin{minipage}{0.3\linewidth}
-    \centering
-    \includegraphics[width=0.7\linewidth]{\images/stack-token.png}\\
-    \imagecaption{Stack Token}\\
-  \end{minipage}\\
-
-  \begin{center}
-    \begin{multicols*}{2}
-      \includegraphics[width=\linewidth]{\cards/creature-bank-back.png}\\
-      \includegraphics[width=\linewidth]{\cards/creature-bank.png}\\
-    \end{multicols*}
-    \vspace*{-0.5em}
-    \imagecaption{Creature Bank unit card}
-  \end{center}
+  \begin{multicols*}{2}
+    \begin{center}
+      \includegraphics[width=0.9\linewidth]{\map_locations/creature-bank.png}\\
+      \imagecaption{Creature Bank (Near)}\\
+      \vspace*{1em}
+      \includegraphics[width=0.5\linewidth]{\images/stack-token.png}\\
+      \imagecaption{Stack Token}\\
+      \columnbreak
+      \begin{tikzpicture}
+        \draw (0, 0) node {\includegraphics[width=0.7\linewidth]{\cards/creature-bank-back.png}};
+        \draw (0.75, -0.5) node {\includegraphics[width=0.7\linewidth]{\cards/creature-bank.png}};
+      \end{tikzpicture}\\
+      \imagecaption{Creature Bank unit card}
+    \end{center}
+  \end{multicols*}
 
   \subsection*{Placing Creature Bank Tokens}
   When you discover a Near or Far Map Tile, you may choose to draw a Creature Bank Token of the corresponding type, and place it on the Tile's Blocked Field.
