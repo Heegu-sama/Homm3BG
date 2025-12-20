@@ -170,7 +170,10 @@ Whenever a Neutral Unit is defeated from anywhere, place it into the appropriate
 
 \begin{expansion}[title=\phantom{\textbf{\tiny{foo}}}, overlay={}]{}
   \begin{center}
-    \includegraphics[width=0.6\linewidth]{\cards/neutral-back.png}\\
+    \begin{tikzpicture}
+      \draw (0, 0) node {\includegraphics[width=0.6\linewidth]{\cards/neutral-back.png}};
+      \draw (1.5, -0.5) node {\includegraphics[width=0.6\linewidth]{\cards/neutral-front.png}};
+    \end{tikzpicture}\\
     \imagecaption{Neutral Unit}
   \end{center}
 \end{expansion}
@@ -179,7 +182,10 @@ Whenever a Neutral Unit is defeated from anywhere, place it into the appropriate
 \columnbreak
 \begin{expansion}{navalbattles}
   \begin{center}
-    \includegraphics[width=0.6\linewidth]{\cards/creature_bank_unit.png}\\
+    \begin{tikzpicture}
+      \draw (0, 0) node {\includegraphics[width=0.6\linewidth]{\cards/creature-bank-back.png}};
+      \draw (1.5, -0.5) node {\includegraphics[width=0.6\linewidth]{\cards/creature-bank.png}};
+    \end{tikzpicture}\\
     \imagecaption{Creature Bank Unit}
   \end{center}
   See \pagelink{Creature Banks Rules}{Creature Banks}.
