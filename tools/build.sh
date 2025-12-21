@@ -113,6 +113,7 @@ if [[ ${LANGUAGE} != en ]]; then
     # limit po4a run to a single section
     temp_po4a_file=$(mktemp "$TEMP_DIR/po4a.XXXXXX")
     grep -v "\[type:" "$PO4A_PATH" > "$temp_po4a_file"
+    grep "language_metadata" "$PO4A_PATH" >> "$temp_po4a_file"
     grep "$TARGET" "$PO4A_PATH" >> "$temp_po4a_file"
     PO4A_PATH=$temp_po4a_file
   fi
