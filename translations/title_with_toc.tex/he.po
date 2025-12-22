@@ -24,6 +24,8 @@ msgid ""
 "  \\columnbreak\n"
 "\n"
 msgstr ""
+"  \\columnbreak\n"
+"\n"
 
 #. type: title{#1}
 #: sections/title_with_toc.tex:4
@@ -32,14 +34,8 @@ msgstr "שכתוב החוקים"
 
 #. type: tabular
 #: sections/title_with_toc.tex:12
-#, fuzzy
-#| msgid ""
-#| "\\textbf{Author}: Hermanni Karppela\n"
-#| "\n"
 msgid "Hermanni Karppela"
-msgstr ""
-"\\textbf{מחבר}: \\textenglish{Hermanni Karppela}\n"
-"\n"
+msgstr "\\textenglish{Hermanni Karppela}"
 
 #. type: tabular
 #: sections/title_with_toc.tex:12
@@ -71,12 +67,6 @@ msgstr ""
 
 #. type: center
 #: sections/title_with_toc.tex:25
-#, fuzzy
-#| msgid ""
-#| "This is a community-driven project, which has a \\href{\\repourl}{GitHub "
-#| "repository}.  Everyone is welcome to contribute, make changes, and fix "
-#| "errors.  If you simply want to leave feedback, please do so in the "
-#| "original \\href{\\bggthreadurl}{BoardGameGeek thread}."
 msgid ""
 "This is a community-driven project, which has a \\href{\\repourl}{GitHub "
 "repository}.  Everyone is welcome to contribute, make changes, and fix "
@@ -87,7 +77,8 @@ msgstr ""
 "זהו פרוייקט קהילתי מבוסס \\href{https://github.com/Heegu-sama/Homm3BG}"
 "{גיט}.  כל מי שרוצה מוזמן לשנות ולתקן שגיאות. הערות אפשר לכתוב "
 "\\href{https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project}"
-"{בדיון ב-\textenglish{BoardGameGeek}} "
+"{בדיון ב-\\textenglish{BoardGameGeek}}. בנוסף, ניתן להצטרף לקהילה ב "
+"\\href{\\discordurl}{שרת ה-\\textenglish{Discord}} על מנת ליצור קשר."
 
 #. type: center
 #: sections/title_with_toc.tex:30
@@ -99,16 +90,11 @@ msgstr "\\textit{אני עושה זאת מתוך אהבה ללמוד משחקי�
 #. type: center
 #: sections/title_with_toc.tex:30
 msgid "{\\small — Hermanni ``Heegu'' Karppela}"
-msgstr ""
+msgstr "{\\textenglish{\\small — Hermanni ``Heegu'' Karppela}}"
 
 #. type: multicols
 #: sections/title_with_toc.tex:35
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=\\linewidth]{\\art/earthquake.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "{3}\n"
 "  \\centering\n"
@@ -116,11 +102,10 @@ msgid ""
 "  Scan to join the community \\textbf{Discord} server.\n"
 "\n"
 msgstr ""
-"\\vfill\n"
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth]{\\art/earthquake.png}\n"
-"\\end{center}\n"
-"\\vfill\n"
+"{3}\n"
+"  \\centering\n"
+"  \\includegraphics[width=0.8\\linewidth]{\\qr/discord.png}\\\\\n"
+"  סרוק על מנת להצטרף לשרת הקהילה ב- \\textbf{\\textenglish{Discord}}.\n"
 "\n"
 
 #. type: multicols
@@ -147,34 +132,27 @@ msgstr ""
 
 #. type: Plain text
 #: sections/title_with_toc.tex:53
-#, fuzzy
-#| msgid ""
-#| "\\iftoggle{noartbackground}{}{ \\begin{tikzpicture}[remember picture, "
-#| "overlay, inner sep=10pt] \\node(cover)[anchor=center] at (current "
-#| "page.center) { \\includegraphics[height=\\paperheight, keepaspectratio]"
-#| "{\\layout/back.jpg} }; \\end{tikzpicture} }"
 msgid ""
 "\\textlang{english}{\\begin{tikzpicture}[remember picture, overlay] "
 "\\node(cover)[anchor=center, yshift=12em] at (current page.south) "
 "{ \\includegraphics[width=1.01\\paperwidth, keepaspectratio]{\\art/"
 "castle_bottom.png} \\thispagestyle{empty} }; \\end{tikzpicture}}"
 msgstr ""
-"\\iftoggle{noartbackground}{}{ \\textenglish{\\begin{tikzpicture}[remember "
-"picture, overlay, inner sep=10pt] \\node(cover)[anchor=center] at (current "
-"page.center) { \\includegraphics[height=\\paperheight, keepaspectratio]"
-"{\\layout/back.jpg} }; \\end{tikzpicture} }}"
+"\\textlang{english}{\\begin{tikzpicture}[remember picture, overlay] "
+"\\node(cover)[anchor=center, yshift=12em] at (current page.south) "
+"{ \\includegraphics[width=1.01\\paperwidth, keepaspectratio]{\\art/"
+"castle_bottom.png} \\thispagestyle{empty} }; \\end{tikzpicture}}"
 
 #. type: tikzpicture
 #: sections/title_with_toc.tex:62
-#, fuzzy, no-wrap
-#| msgid ""
-#| "[overlay]\n"
-#| "  \\node at (16, 4.5) {\\includegraphics[width=0.5\\linewidth]{\\art/pegasi.png}};"
+#, no-wrap
 msgid ""
 "[remember picture, overlay]\n"
 "  \\node(bg)[anchor=center, opacity=0.07, xshift=-3em, yshift=0em] at (current page.center) {\n"
 "    \\includegraphics[width=\\paperwidth, keepaspectratio]{\\art/meteor_shower.png}\n"
 "  };"
 msgstr ""
-"[overlay]\n"
-"  \\node at (16, 4.5) {\\reflectbox{\\includegraphics[width=0.5\\linewidth]{\\art/pegasi.png}}};"
+"[remember picture, overlay]\n"
+"  \\node(bg)[anchor=center, opacity=0.07, xshift=42em, yshift=0em] at (current page.center) {\n"
+"    \\includegraphics[width=\\paperwidth, keepaspectratio]{\\art/meteor_shower.png}\n"
+"  };"
