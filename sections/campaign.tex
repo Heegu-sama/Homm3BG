@@ -22,6 +22,8 @@ Special rules in each scenario can change the above values.
 
 Campaigns have unique bonuses that \textbf{replace} the regular starting bonus from the chosen \pagelink{Difficulty}{Difficulty}.
 
+Prepare AI Enemies: their \pagelink{AI Heroes}{units} and their \pagelink{AI Deck}{AI decks}.
+
 \subsection*{Finishing a Scenario}
 After finishing a \textbf{Solo Campaign} Scenario, reset your Hero's Experience Level to 1, and prepare the starting Deck for the next Scenario of the campaign.
 It will consist of:
@@ -51,7 +53,7 @@ You cannot have more than 4 Magic Arrow cards.
 \vspace*{\fill}
 
 \columnbreak
-\subheader{AI Heroes}
+\pagetarget{AI Heroes}{\subheader{AI Heroes}}
 AI Heroes are used in the Campaigns.
 Their units are static and are defined by the Scenario: find the indicated unit cards when you start the scenario.
 If the unit indicates unit tier (\svg{bronze}, \svg{silver}, \svg{golden}, or \svg{azure}) instead of ``Few'' or ``Pack'', that's a Neutral Unit.
@@ -128,12 +130,8 @@ If an AI card increased a unit's \svg{defense}, or triggered another card which 
 % TODO: why attack isn't mention in expansion book? is it not the case for attack?
 % our old text here: The Might card \svg[12]{might} is attached to the unit until the first respective attack/defense happens.
 
-\subsection*{AI Skill \svg{skill} cards}
-If Skill cards are included, search for and set aside the indicated card related to it (usually, an Ability).
-Whenever an AI Hero uses the skill assigned to them in the Setup, do not discard it afterwards.
-Contrary to the regular rules, the AI Hero can use the skill again, when instructed to do so by the AI deck.
-
-AI Skill cards cannot be replaced, so if setup assigns the AI Hero a card that your Hero has and you don't have another copy, remove the needed card from your Hero's deck and \textbf{Search (3)} the respective card's deck to compensate your Hero for the loss.
+\subsection*{AI Deck sharing}
+If there are multiple AI Enemy Armies in the Scenario, but the rules don't specify which Enemy an AI Deck, an AI Spell Deck, or a Skill belongs to, you should assume it is shared between them.
 
 \subsection*{AI Magic \svg{magic} cards and AI Spell Deck}
 Build the \textbf{AI Spell Deck} by separating the indicated Spells from the regular Spell Deck during setup.
@@ -148,7 +146,13 @@ This is no mistake: not all spells need to be used, some are there for the sake 
 
 If the AI Hero is assigned a Spell card that is unavailable because it's your Hero's Deck, and you don't have another copy, substitute it with a \wikilink{spells/magic_arrow}{Magic Arrow} card.
 
-\subsection*{AI Deck sharing}
-If there are multiple AI Enemy Armies in the Scenario, but the rules don't specify which Enemy an AI Deck, an AI Spell Deck, or a Skill belongs to, you should assume it is shared between them.
+\subsection*{AI Skill \svg{skill} cards}
+% TODO need rephrasing to better disambiguate the AI Skill card with the \svg{skill} symbol vs the Ability card assigned to the hero
+If Skill cards are included, search for and set aside the indicated card related to it (usually, an Ability).
+Whenever an AI Hero uses the skill assigned to them in the Setup, do not discard it afterwards.
+Contrary to the regular rules, the AI Hero can use the skill again, when instructed to do so by the AI deck.
+
+AI Skill cards cannot be replaced, so if setup assigns the AI Hero a card that your Hero has and you don't have another copy,
+remove the needed card from your Hero's deck and \textbf{Search (3)} the respective card's deck to compensate your Hero for the loss.
 
 \end{multicols*}
