@@ -675,10 +675,14 @@
   \pdfbookmark[1]{\contentsname}{toc}%
   \subheader[false]{\contentsname}
   \begin{multicols}{2}
+    \small
     \@starttoc{toc}%
   \end{multicols}
 }
 \makeatother
+
+% TODO remove this when the other PR is merged
+\providecommand{\wikilink}[2]{#2}
 
 \input{structure.tex}
 
