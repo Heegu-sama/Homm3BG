@@ -90,7 +90,7 @@ if [[ -n "${SECTION_SEARCH}" ]]; then
   if [[ $(echo "$TARGET" | wc -l) -gt 1 ]]; then
     echo "Error: Multiple sections found matching '$SECTION_SEARCH':" >&2
     echo "$TARGET" >&2
-    exit 1
+    #exit 1
   fi
 
   echo "$TARGET" > structure.tex

@@ -23,8 +23,10 @@ AI Heroes cannot surrender and you cannot surrender to them;
 they will always fight until they run out of units.
 Winning Combat against an AI Hero does not grant any rewards unless stated by the Scenario.
 AI Heroes do not have a Town Board, Resources, or a Hero Board.
-Their units are static and defined by the Scenario's setup or other rules.\par
+Their units are static and defined by the Scenario's setup or other rules: find the indicated neutral and faction unit cards when you start the scenario.\par
 Any differences to the above will be described in any given Scenario's own rules.
+
+During setup, if multiple AI Heroes use the same unit, and you do not have enough copies of its card, the AI Heroes must share it -- set everything up without that card, and add it to the AI Hero's Army the moment you trigger Combat with them.
 \vspace*{\fill}
 \columnbreak
 
@@ -63,20 +65,44 @@ Any differences to the above will be described in any given Scenario's own rules
 AI Heroes use two Decks during Combat: the \textbf{AI Deck}, and the \textbf{AI Spell Deck}.
 The AI Deck consists of three types of AI cards: Might \svg[12]{might}, Magic \svg{magic} and Skill \svg{skill}.
 Each Campaign Scenario lists the number and types of cards to include during setup.
-Choose these cards \textbf{randomly} when building the Deck.
-If Skill cards are included, search for and set aside the Ability card related to it.
-Build the \textbf{AI Spell Deck} by separating the indicated Spells from the regular Spell Deck.
-Shuffle these Decks during setup after building them.
+Choose these cards \textbf{randomly} when building the AI Deck.
+Shuffle the AI Deck before each Combat together with its discard pile.
 
 When an AI Hero \textbf{activates} a unit, draw an AI card\index{AI card} and follow its instructions before the unit moves and/or attacks.
 If AI Deck is depleted during Combat, stop drawing from it.
 The effect of each AI card depends on the game's \pagelink{Difficulty}{Difficulty}.
-The Might card \svg[12]{might} is attached to the unit until the first respective attack/defense happens.
-Same happens for other cards which increase \svg{defense}.
-The AI Spell Deck is used whenever a Magic card \svg{magic} is drawn.
 If an AI Hero is instructed to draw a card, they will draw and resolve \textbf{another card} from the AI Deck.
-\vspace*{\fill}
-\columnbreak
+
+If an AI card increased a unit's \svg{defense}, or triggered another card which increased it, the AI card stays attached to the unit until the first defense happens.
+% TODO: why attack isn't mention in expansion book? is it not the case for attack?
+% our old text here: The Might card \svg[12]{might} is attached to the unit until the first respective attack/defense happens.
+
+\subsection*{AI Skill \svg{skill} cards}
+If Skill cards are included, search for and set aside the card related to it (usually, an Ability).
+Whenever an AI Hero uses the skill assigned to them in the Setup, do not discard it afterwards.
+Contrary to the regular rules, the AI Hero can use the skill again, when instructed to do so by the AI deck.
+
+AI Skill cards cannot be replaced, so if setup assigns the AI Hero a card that your Hero has and you don't have another copy, remove the needed card from your Hero's deck and \textbf{Search (3)} the respective card's deck to compensate your Hero for the loss.
+
+\subsection*{AI Magic \svg{magic} cards}
+Build the \textbf{AI Spell Deck} by separating the indicated Spells from the regular Spell Deck during setup.
+Shuffle the AI Spell Deck before each Combat together with its discard pile.
+
+Whenever an AI Magic card \svg{magic} is drawn, draw the next spell from the the AI Spell Deck, and cast it.
+Discarded spells go to its own AI Spell Discard pile.
+If the AI Spell deck empties before Combat ends, shuffle the AI Spell discard pile to form a new Spell deck.
+
+Sometimes in the AI Spell deck, there are more Spell cards than there are Magic cards in the AI Hero's deck.
+This is no mistake: not all spells need to be used, some are there for the sake of diversity.
+
+If the AI Hero is assigned a Spell card that is unavailable because it's your Hero's Deck, and you don't have another copy, substitute it with a Magic Arrow card.
+
+\subsection*{AI Deck sharing}
+If there are multiple AI Enemy Armies in the Scenario, but the rules don't specify which Enemy an AI Deck, an AI Spell Deck, or a Skill belongs to, you should assume it is shared between them.
+
+% TODO I don't know where to put this
+If your Hero is assigned a Spell, Artifact, or Ability card that is unavailable, \textbf{Search (3)} the respective card's deck to get another card in its stead.
+
 \pagetarget{AI Units}{\subheader{Combat against AI}}
 
 These rules apply during Combat in \textbf{Solo}\index{Solo Mode} and \textbf{Cooperative} Scenarios.
@@ -112,6 +138,49 @@ In both cases, if there's more than one valid target, they attack the closest on
 If there's ever a tie between equally valid targets, the player chooses which unit is attacked.\par
 
 Enemy units cannot \pagelink{Defend}{defend} unless instructed to.
+
+\subsection*{AI Siege}
+When the Walls and Gate are mentioned in Combat preparation but no additional information on how to arrange them is given, arrange them just like a human player would:
+place the Gate in front of the \svg{unit_ground} unit with the highest \svg{initiative}.
+By default, the units do not attack the Walls -- they would rather fly over them to attack their target or move towards it through the Gate.
+If it is not possible, they take a \pagelink{Defend}{Defend} Action.
+
+The \pagelink{Walls}{Arrow Tower} is treated like a Silver \svg{silver}\svg{unit_ranged} unit.
+However, if there are multiple equally valid targets, it will attack the target closest to perishing (has the smallest difference between \svg{health_points} and current \svg{damage}).
+
+\subsection*{Casting complex spells}
+In some campaigns enemies use a number of spells whose effects are not fully compatible with the standard use of AI Magic \svg{magic} cards.
+To fully use their effects, here are extended descriptions of how AI Heroes should use each of these spells.
+Of course, the scenario can override this.
+
+% TODO remove this when the other PR is merged
+\providecommand{\wikilink}[2]{#2}
+
+\subsubsection*{Spells attacking multiple targets (like \wikilink{spells/fireball}{Fireball} and \wikilink{spells/chain_lightning}{Chain Lightning})}
+When activated, target any unit with one or two adjacent units from the player’s army, prioritizing the groups where there are more higher-tier units.
+If there is more than one valid group, attack the one difference that is between the closest to perishing (has the smallest difference between \svg{health_points} and current \svg{damage}).
+If there is still more than one valid target, then you can choose which unit is attacked.
+If there are no player units adjacent to one another, target units that are not adjacent to any of the AI units.
+If that is also not possible, do not use this spell -- instead, skip the AI \svg{magic} card that activated this effect and put it on the bottom of the Enemy AI deck, then shuffle this spell back to the Enemy Spell deck.
+
+\subsubsection*{Instant Defense spells (like \wikilink{spells/stone_skin}{Stone Skin)}}
+When activated, put this card on the side of the Combat board, then put a Defense token on the unit with the highest \svg{defense} to represent the card’s effect -- it stays there until the defense is resolved.
+If there already is a Defense token on that unit, choose another one in the order of decreasing \svg{defense}.
+In case of a tie in \svg{defense} value, give preference to the unit of the highest tier and then to the greatest value of \svg{damage}.
+
+\subsubsection*{Healing spells (like \wikilink{spells/cure}{Cure)}}
+When activated, remove the \svg{damage} from the AI unit with the greatest value of \svg{damage} tokens, starting with the highest tier available.
+If no AI unit has any \svg{damage}, put the AI \svg{magic} card that triggered the spell at the bottom of the Enemy AI deck, then shuffle this Spell card back to the Enemy Spell Deck.
+
+\subsubsection*{Single-round buffs (like \wikilink{spells/fire_shield}{Fire Shield})}
+% TODO FIFO or LIFO? do they all activate at the same time during first unit next round?
+When activated, check the tier of the unit on which you are about to cast the spell and count how many units of the same or higher tier there are on the board.
+If more than half of them have already activated this turn, do not cast the spell now -- instead, place it on the side of the Combat board and play it when the first AI unit activates in the next combat round.
+Skip drawing the AI card for that activation.
+
+\subsubsection*{Attack-weakening spells (like \wikilink{spells/weakness}{Weakness})}
+When activated, if the AI’s activated unit is about to perform an attack that will provoke a Retaliation, cast this spell on the Retaliating enemy to lower their \svg{attack}.
+If the AI’s unit causes no Retaliation, do not cast this spell -- instead, ignore the AI card that activated the spell and put it at the bottom of the Enemy AI deck, then shuffle the Spell card back to the Enemy Spell deck.
 
 {\begin{center}
     \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{\art/titan.jpg}
