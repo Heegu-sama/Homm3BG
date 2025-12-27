@@ -80,7 +80,7 @@ esac
 TEMP_DIR=$(mktemp -d)
 cleanup() {
   if [[ -n "${SECTION_SEARCH}" ]]; then
-    cp "$TEMP_STRUCTURE" structure.tex
+    cp "$TEMP_STRUCTURE" structure.tex 2> /dev/null
   fi
   rm -rf "$TEMP_DIR"
 }
