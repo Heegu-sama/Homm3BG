@@ -13,10 +13,11 @@ usage() {
   echo "Options:"
   echo "  LANGUAGE           Two-letter language code (default: en)"
   echo "  --container, -c    Run build.sh via ./run.sh container wrapper"
+  echo "  --printable, -p    Enable printable mode"
   echo "  --help, -h         Show this help message"
   echo ""
   echo "Examples:"
-  echo "  $0           # Watch English files"
+  echo "  $0 -p        # Watch English files in printable mode"
   echo "  $0 fr -c     # Watch French translations, build in container"
   echo ""
   echo "Press Ctrl-C to stop all watchers."
@@ -24,8 +25,20 @@ usage() {
 }
 
 CONTAINER=""
-[[ "$1" == "--container" || "$1" == "-c" ]] && CONTAINER="./run.sh"
+PRINTABLE=""
 
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -p|--printable)
+        PRINTABLE="--printable"
+        shift
+        ;;
+    -c|--container)
+        CONTAINER="./run.sh"
+        shift
+        ;;
+  esac
+done
 
 if [[ "$LANGUAGE" == "en" ]]; then
   BASE_PATH="sections"
@@ -41,7 +54,7 @@ for file in "$BASE_PATH"/*"$TARGET"; do
   else
     name=$(basename "$(dirname "$file")" .tex)
   fi
-  echo "$file" | entr -cps "echo 'Detected changes in \"$file\"'; $CONTAINER tools/build.sh $LANGUAGE -s $name --args \"-silent\"" &
+  echo "$file" | entr -cps "echo 'Detected changes in \"$file\"'; $CONTAINER tools/build.sh $LANGUAGE -s $name $PRINTABLE --args \"-silent\"" &
 done
 
 echo "Waiting for changes in ${TARGET:1} files"
