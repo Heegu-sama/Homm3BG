@@ -5,7 +5,7 @@
 
 \subheader{AI Hero Turn}
 AI Heroes are used in the Campaigns.
-They start in their Town, and have 3 MP, always spending them to perform the following Actions in descending priority:
+They start in their Town, take turns after the player, and have 3 MP, always spending them to perform the following Actions in descending priority:
 \begin{itemize}
   \item If a player's Hero is on the same Tile as the AI, spend all MP to move towards them in an attempt to start Combat.
   \item If there are any Mines or Settlements the AI could flag on the same Tile, move towards the closest one.
@@ -72,6 +72,7 @@ When an AI Hero \textbf{activates} a unit, draw an AI card\index{AI card} and fo
 If AI Deck is depleted during Combat, stop drawing from it.
 The effect of each AI card depends on the game's \pagelink{Difficulty}{Difficulty}.
 The Might card \svg[12]{might} is attached to the unit until the first respective attack/defense happens.
+Same happens for other cards which increase \svg{defense}.
 The AI Spell Deck is used whenever a Magic card \svg{magic} is drawn.
 If an AI Hero is instructed to draw a card, they will draw and resolve \textbf{another card} from the AI Deck.
 \vspace*{\fill}
@@ -111,8 +112,6 @@ In both cases, if there's more than one valid target, they attack the closest on
 If there's ever a tie between equally valid targets, the player chooses which unit is attacked.\par
 
 Enemy units cannot \pagelink{Defend}{defend} unless instructed to.
-
-\vfill
 
 {\begin{center}
     \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{\art/titan.jpg}
