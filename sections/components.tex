@@ -382,8 +382,8 @@ This guide provides a visual overview of all components included in every expans
     \begin{expansionmini}{conflux}
       \centering
       \begin{tikzpicture}
-        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/unit-summoned-pack.png}};
-        \node at (1, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/unit-summoned-few.png}};
+        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/unit-earth-elemental-pack.png}};
+        \node at (1, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/unit-earth-elemental-few.png}};
       \end{tikzpicture}
       \caption{\textbf{\pagelink{Summoning}{Summoned Unit card}}}
     \end{expansionmini}
@@ -484,12 +484,18 @@ This guide provides a visual overview of all components included in every expans
     \caption{\textbf{\pagelink{combatround}{Damage Token}}}
   \end{subfigure}
   ~
-  \begin{subfigure}[c]{0.15\linewidth}
+  \begin{subfigure}[c]{0.28\linewidth}
     \begin{expansionmini}{navalbattles}
       \centering
       \vspace{0.5em}
-      \includegraphics[width=0.5\linewidth]{\images/stack-token.png}
-      \caption{\textbf{\pagelink{Stack Tokens}{Stack Token}}}
+      \begin{tikzpicture}
+        \node at (-0.2, 0) {\includegraphics[width=3em]{\images/stack-token.png}};
+        \node at (0.75, 0) {\includegraphics[width=3em]{\images/stack-token-initiative.png}};
+        \node at (1.5, 0)  {\includegraphics[width=3em]{\images/stack-token-hp.png}};
+        \node at (2.25, 0) {\includegraphics[width=3em]{\images/stack-token-defense.png}};
+        \node at (3, 0)    {\includegraphics[width=3em]{\images/stack-token-attack.png}};
+      \end{tikzpicture}
+      \caption{\textbf{\pagelink{Stack Tokens}{Stack Tokens}}}
     \end{expansionmini}
   \end{subfigure}
   ~
@@ -647,7 +653,7 @@ This guide provides a visual overview of all components included in every expans
     \begin{expansionmini}{battlefield}
       \centering
       \vspace{0.5em}
-      \includegraphics[width=0.9\linewidth]{\images/initiative-bf.png}
+      \includegraphics[width=0.8\linewidth]{\images/initiative-bf.png}
       \caption{\textbf{\pagelink{Initiative Token}{Initiative Token}}}
     \end{expansionmini}
   \end{subfigure}
