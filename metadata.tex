@@ -321,6 +321,9 @@
 }
 \ExplSyntaxOff
 
+% A toggle for switching off AccSupp, which breaks SVGs in tabular environments
+\newif\ifaccsupp
+\accsupptrue
 % A handy command to render SVG glyphs
 % Argument 1 is the height in pixels (defaults to 10)
 % Argument 2 is the glyph name (matching a file)
@@ -337,6 +340,10 @@
   }{%
     \edef\svgpath{\svgs/\detokenize{#2}.svg}%
   }%
+  % Only use AccSupp if it wasn't manually switched off for enviroments where spacing is critical
+  \ifaccsupp
+    \BeginAccSupp{ActualText={<#2>},space}\EndAccSupp{}%
+  \fi
   \ifnodrop{#2}{%
     % Don't drop a selection of glyphs below the text line - they look better that way
     \includesvg[height=#1px]{\svgpath}%
