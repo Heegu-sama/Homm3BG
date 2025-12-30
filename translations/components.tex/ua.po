@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-12-16 22:21+0000\n"
+"POT-Creation-Date: 2025-12-27 19:24+0000\n"
 "PO-Revision-Date: 2024-05-11 19:09+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -779,7 +779,7 @@ msgid ""
 "      \\begin{tikzpicture}\n"
 msgstr ""
 "        \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/mmback.png}};\n"
-"        \\node at (1, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\cards/test_spellscroll.png}};\n"
+"        \\node at (1, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\cards/spell_scroll.png}};\n"
 "      \\end{tikzpicture}\n"
 "      \\caption{\\textbf{\\pagelink{Spell Scroll Cards}{Карта Сувою Заклинання}}}\n"
 "    \\end{expansionmini}\n"
@@ -866,8 +866,8 @@ msgstr ""
 #: sections/components.tex:395
 #, no-wrap
 msgid ""
-"        \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/unit-summoned-pack.png}};\n"
-"        \\node at (1, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\cards/unit-summoned-few.png}};\n"
+"        \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/unit-earth-elemental-pack.png}};\n"
+"        \\node at (1, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\cards/unit-earth-elemental-few.png}};\n"
 "      \\end{tikzpicture}\n"
 "      \\caption{\\textbf{\\pagelink{Summoning}{Summoned Unit card}}}\n"
 "    \\end{expansionmini}\n"
@@ -878,8 +878,8 @@ msgid ""
 "      \\centering\n"
 "      \\begin{tikzpicture}\n"
 msgstr ""
-"        \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/unit-summoned-pack.png}};\n"
-"        \\node at (1, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\cards/unit-summoned-few.png}};\n"
+"        \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/unit-earth-elemental-pack.png}};\n"
+"        \\node at (1, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\cards/unit-earth-elemental-few.png}};\n"
 "      \\end{tikzpicture}\n"
 "      \\caption{\\textbf{\\pagelink{Summoning}{Карта Викликаного Підрозділу}}}\n"
 "    \\end{expansionmini}\n"
@@ -1057,15 +1057,24 @@ msgstr ""
 "  \\end{subfigure}"
 
 #. type: figure
-#: sections/components.tex:511
+#: sections/components.tex:475
 #, no-wrap
 msgid ""
 "[H]\n"
 "  \\centering\n"
 "  \\begin{subfigure}[c]{0.17\\linewidth}\n"
 "    \\centering\n"
-"    \\includegraphics[width=4.5em]{\\images/paralysis-defense.png}\n"
-"    \\caption{\\textbf{\\hyperlink{Paralysis}{Paralysis}/ \\pagelink{Defend}{Defense} Token}}\n"
+"    \\begin{tikzpicture}\n"
+msgstr ""
+
+#. type: figure
+#: sections/components.tex:491
+#, no-wrap
+msgid ""
+"      \\node at (0, 0) {\\includegraphics[width=3em]{\\images/paralysis.png}};\n"
+"      \\node at (0.8, 0) {\\includegraphics[width=3em]{\\images/defense-token.png}};\n"
+"    \\end{tikzpicture}\n"
+"    \\caption{\\textbf{\\pagelink{Combatterminology}{Paralysis/ Defense Token}}}\n"
 "  \\end{subfigure}\n"
 "  \\begin{subfigure}[c]{0.1\\linewidth}\n"
 "    \\centering\n"
@@ -1073,12 +1082,40 @@ msgid ""
 "    \\caption{\\textbf{\\pagelink{combatround}{Damage Token}}}\n"
 "  \\end{subfigure}\n"
 "  ~\n"
-"  \\begin{subfigure}[c]{0.15\\linewidth}\n"
+"  \\begin{subfigure}[c]{0.28\\linewidth}\n"
 "    \\begin{expansionmini}{navalbattles}\n"
 "      \\centering\n"
 "      \\vspace{0.5em}\n"
-"      \\includegraphics[width=0.5\\linewidth]{\\images/stack-token.png}\n"
-"      \\caption{\\textbf{\\pagelink{Stack Tokens}{Stack Token}}}\n"
+"      \\begin{tikzpicture}\n"
+msgstr ""
+"      \\node at (0, 0) {\\includegraphics[width=3em]{\\images/paralysis.png}};\n"
+"      \\node at (0.8, 0) {\\includegraphics[width=3em]{\\images/defense-token.png}};\n"
+"    \\end{tikzpicture}\n"
+"    \\caption{\\textbf{\\pagelink{Combatterminology}{Жетон Паралічу/ Захисту}}}\n"
+"  \\end{subfigure}\n"
+"  \\begin{subfigure}[c]{0.1\\linewidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=3em]{\\images/damage-token.png}\n"
+"    \\caption{\\textbf{\\pagelink{combatround}{Жетони Групи}}}\n"
+"  \\end{subfigure}\n"
+"  ~\n"
+"  \\begin{subfigure}[c]{0.28\\linewidth}\n"
+"    \\begin{expansionmini}{navalbattles}\n"
+"      \\centering\n"
+"      \\vspace{0.5em}\n"
+"      \\begin{tikzpicture}\n"
+
+#. type: figure
+#: sections/components.tex:519
+#, no-wrap
+msgid ""
+"        \\node at (-0.2, 0) {\\includegraphics[width=3em]{\\images/stack-token.png}};\n"
+"        \\node at (0.75, 0) {\\includegraphics[width=3em]{\\images/stack-token-initiative.png}};\n"
+"        \\node at (1.5, 0)  {\\includegraphics[width=3em]{\\images/stack-token-hp.png}};\n"
+"        \\node at (2.25, 0) {\\includegraphics[width=3em]{\\images/stack-token-defense.png}};\n"
+"        \\node at (3, 0)    {\\includegraphics[width=3em]{\\images/stack-token-attack.png}};\n"
+"      \\end{tikzpicture}\n"
+"      \\caption{\\textbf{\\pagelink{Stack Tokens}{Stack Tokens}}}\n"
 "    \\end{expansionmini}\n"
 "  \\end{subfigure}\n"
 "  ~\n"
@@ -1100,25 +1137,13 @@ msgid ""
 "    \\end{expansionmini}\n"
 "  \\end{subfigure}"
 msgstr ""
-"[H]\n"
-"  \\centering\n"
-"  \\begin{subfigure}[c]{0.17\\linewidth}\n"
-"    \\centering\n"
-"    \\includegraphics[width=4.5em]{\\images/paralysis-defense.png}\n"
-"    \\caption{Жетон \\textbf{\\hyperlink{Paralysis}{Паралічу}/ \\pagelink{Defend}{Захисту}}}\n"
-"  \\end{subfigure}\n"
-"  \\begin{subfigure}[c]{0.1\\linewidth}\n"
-"    \\centering\n"
-"    \\includegraphics[width=3em]{\\images/damage-token.png}\n"
-"    \\caption{\\textbf{\\pagelink{combatround}{Жетон Пошкоджень}}}\n"
-"  \\end{subfigure}\n"
-"  ~\n"
-"  \\begin{subfigure}[c]{0.15\\linewidth}\n"
-"    \\begin{expansionmini}{navalbattles}\n"
-"      \\centering\n"
-"      \\vspace{0.5em}\n"
-"      \\includegraphics[width=0.5\\linewidth]{\\images/stack-token.png}\n"
-"      \\caption{\\textbf{\\pagelink{Stack Tokens}{Жетон Групи}}}\n"
+"        \\node at (-0.2, 0) {\\includegraphics[width=3em]{\\images/stack-token.png}};\n"
+"        \\node at (0.75, 0) {\\includegraphics[width=3em]{\\images/stack-token-initiative.png}};\n"
+"        \\node at (1.5, 0)  {\\includegraphics[width=3em]{\\images/stack-token-hp.png}};\n"
+"        \\node at (2.25, 0) {\\includegraphics[width=3em]{\\images/stack-token-defense.png}};\n"
+"        \\node at (3, 0)    {\\includegraphics[width=3em]{\\images/stack-token-attack.png}};\n"
+"      \\end{tikzpicture}\n"
+"      \\caption{\\textbf{\\pagelink{Stack Tokens}{Жетони Групи}}}\n"
 "    \\end{expansionmini}\n"
 "  \\end{subfigure}\n"
 "  ~\n"
@@ -1141,7 +1166,7 @@ msgstr ""
 "  \\end{subfigure}"
 
 #. type: figure
-#: sections/components.tex:519
+#: sections/components.tex:528
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1161,7 +1186,7 @@ msgstr ""
 "      \\begin{tikzpicture}\n"
 
 #. type: figure
-#: sections/components.tex:540
+#: sections/components.tex:549
 #, no-wrap
 msgid ""
 "        \\node at (0, 0) {\\includegraphics[width=0.5\\linewidth]{\\images/quicksand-token-2.png}};\n"
@@ -1189,7 +1214,7 @@ msgstr ""
 "        \\node at (0, 0) {\\includegraphics[width=0.5\\linewidth]{\\images/quicksand-token-2.png}};\n"
 "        \\node at (0.7, 0) {\\includegraphics[width=0.5\\linewidth]{\\images/quicksand-token.png}};\n"
 "      \\end{tikzpicture}\n"
-"      \\caption{\\textbf{\\pagelink{Quicksand Token}{Жетон Сипучого Піску}}}\n"
+"      \\caption{\\textbf{\\pagelink{Quicksand Token}{Жетон~Сипу- чого~Піску}}}\n"
 "    \\end{expansionmini}\n"
 "  \\end{subfigure}\n"
 "  ~\n"
@@ -1209,7 +1234,7 @@ msgstr ""
 "      \\begin{tikzpicture}\n"
 
 #. type: figure
-#: sections/components.tex:566
+#: sections/components.tex:575
 #, no-wrap
 msgid ""
 "        \\node at (0, 0) {\\includegraphics[width=0.5\\linewidth]{\\images/land-mine-token-0.png}};\n"
@@ -1251,7 +1276,7 @@ msgstr ""
 "      \\centering\n"
 "      \\vspace{0.5em}\n"
 "      \\includegraphics[width=0.5\\linewidth]{\\images/force-field-token.png}\n"
-"      \\caption{\\textbf{\\pagelink{Force Field Token}{Жетон Силового Поля}}}\n"
+"      \\caption{\\textbf{\\pagelink{Force Field Token}{Жетон~Сило- вого~Поля}}}\n"
 "    \\end{expansionmini}\n"
 "  \\end{subfigure}\n"
 "  ~\n"
@@ -1265,7 +1290,7 @@ msgstr ""
 "  \\end{subfigure}"
 
 #. type: figure
-#: sections/components.tex:575
+#: sections/components.tex:584
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1285,7 +1310,7 @@ msgstr ""
 "      \\begin{tikzpicture}\n"
 
 #. type: figure
-#: sections/components.tex:586
+#: sections/components.tex:595
 #, no-wrap
 msgid ""
 "        \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/morale-negative-back.png}};\n"
@@ -1313,7 +1338,7 @@ msgstr ""
 "      \\begin{tikzpicture}\n"
 
 #. type: figure
-#: sections/components.tex:612
+#: sections/components.tex:621
 #, no-wrap
 msgid ""
 "        \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/morale-positive-back.png}};\n"
@@ -1369,7 +1394,7 @@ msgstr ""
 "  \\hfill"
 
 #. type: figure
-#: sections/components.tex:619
+#: sections/components.tex:628
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1385,7 +1410,7 @@ msgstr ""
 "    \\begin{tikzpicture}\n"
 
 #. type: figure
-#: sections/components.tex:624
+#: sections/components.tex:633
 #, no-wrap
 msgid ""
 "      \\node at (0, 0) {\\includegraphics[width=0.5\\linewidth]{\\images/morale-negative.png}};\n"
@@ -1401,7 +1426,7 @@ msgstr ""
 "\n"
 
 #. type: figure
-#: sections/components.tex:651
+#: sections/components.tex:660
 #, no-wrap
 msgid ""
 "    \\vspace{0.5em}\n"
@@ -1426,7 +1451,7 @@ msgid ""
 "    \\begin{expansionmini}{battlefield}\n"
 "      \\centering\n"
 "      \\vspace{0.5em}\n"
-"      \\includegraphics[width=0.9\\linewidth]{\\images/initiative-bf.png}\n"
+"      \\includegraphics[width=0.8\\linewidth]{\\images/initiative-bf.png}\n"
 "      \\caption{\\textbf{\\pagelink{Initiative Token}{Initiative Token}}}\n"
 "    \\end{expansionmini}\n"
 "  \\end{subfigure}"
@@ -1436,12 +1461,12 @@ msgstr ""
 "      \\centering\n"
 "      \\vspace{0.5em}\n"
 "      \\includegraphics[width=0.4\\linewidth]{\\images/firewall-vi-token.png}\n"
-"      \\caption{\\textbf{\\pagelink{Firewall Token}{Жетон Вогняна Стіна Луни}}}\n"
+"      \\caption{\\textbf{\\pagelink{Firewall Token}{Жетон Вогняна Стіна Луни Для Поля Бою}}}\n"
 "    \\end{expansionmini}\n"
 "  \\end{subfigure}\n"
 "  ~\n"
 "  ~\n"
-"  \\begin{subfigure}[c]{\\iftoggle{printable}{0.5\\linewidth}{\\linewidth}}\n"
+"  \\begin{subfigure}[c]{0.5\\linewidth}\n"
 "    \\begin{expansion}{battlefield}\n"
 "      \\centering\n"
 "      \\includegraphics[width=\\linewidth]{\\images/battlefield-obstacles.png}\n"
@@ -1453,7 +1478,7 @@ msgstr ""
 "    \\begin{expansionmini}{battlefield}\n"
 "      \\centering\n"
 "      \\vspace{0.5em}\n"
-"      \\includegraphics[width=0.9\\linewidth]{\\images/initiative-bf.png}\n"
+"      \\includegraphics[width=0.8\\linewidth]{\\images/initiative-bf.png}\n"
 "      \\caption{\\textbf{\\pagelink{Initiative Token}{Жетон Ініціативи}}}\n"
 "    \\end{expansionmini}\n"
 "  \\end{subfigure}"
