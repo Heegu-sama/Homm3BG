@@ -338,7 +338,10 @@
   }{%
     \edef\svgpath{\svgs/\detokenize{#2}.svg}%
   }%
-  \BeginAccSupp{ActualText={<#2>},space}\EndAccSupp{}%
+  \smash{%
+    \BeginAccSupp{ActualText={<#2>},space}%
+    \EndAccSupp{}%
+  }%
   \ifnodrop{#2}{%
     % Don't drop a selection of glyphs below the text line - they look better that way
     \includesvg[height=#1px]{\svgpath}%
