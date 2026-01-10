@@ -130,7 +130,7 @@ They should be free of any major issues.<br>
             <th>Language</th>
             <th colspan=2 align="center">Version 1.2<br>(22.05.2024)</th>
             <th colspan=2 align="center">Version 1.3<br>(23.11.2024)</th>
-            <th colspan=2 align="center">Version 2.0<br>(2025)</th>
+            <th colspan=2 align="center">Version 2.0<br>(2026)</th>
         </tr>
     </thead>
     <tbody>
@@ -148,7 +148,7 @@ They should be free of any major issues.<br>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_English_Rules_Rewrite_12_Printable.pdf">download</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_English_Rules_Rewrite_1_3.pdf">download</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_English_Rules_Rewrite_1_3_Printable.pdf">download</a></td>
-            <td align="center"><em><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0-rc2/Heroes3_English_Rules_Rewrite_2_0-rc2.pdf">preview</a></em></td>
+            <td align="center"><em><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0-rc3/Heroes3_English_Rules_Rewrite_2_0-rc3.pdf">preview</a></em></td>
         </tr>
         <tr>
             <td>🇵🇱 Polski</td>
