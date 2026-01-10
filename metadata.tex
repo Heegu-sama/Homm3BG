@@ -163,7 +163,9 @@
 \definecolor{cove}{HTML}{20B2AA}       % lightseagreen
 \definecolor{battlefield}{HTML}{505050}   % dark gray
 \definecolor{navalbattles}{HTML}{2E5984}  % dark deep blue
-\definecolor{stretchgoals2}{HTML}{000000}  % TODO choose color
+\definecolor{stretchgoals2}{HTML}{000000}  % black
+
+\def\hyperlinkcolor{goldenbrown}
 
 \AtBeginEnvironment{tcolorbox}{%
   \setlist[itemize]{itemsep=0.4em, parsep=0pt, topsep=5pt}%
@@ -501,14 +503,14 @@
     \draw [borderinyellow, thick] ([xshift=+2.8pt, yshift=-2.8pt] current bounding box.north west) rectangle ([xshift=-2.8pt, yshift=2.8pt] current bounding box.south east);
     \node at (current bounding box.center) {
       \begin{varwidth}{0.85\linewidth}
-      \notefont{
+      \notefont{{
         \iftoggle{noartbackground}{}{
           \color{arylideyellow}
+          \def\hyperlinkcolor{amber}
           \hypersetup{linkcolor=amber}
         }
         #2
-        \hypersetup{linkcolor=goldenbrown}
-      }
+      }}
       \end{varwidth}
     };
     \iftoggle{noartbackground}{}{
@@ -541,6 +543,7 @@
         \bgroup
         \iftoggle{noartbackground}{}{
           \color{arylideyellow}
+          \def\hyperlinkcolor{amber}
           \hypersetup{linkcolor=amber}
         }
         \setlength{\tabcolsep}{0.3em}
@@ -611,7 +614,7 @@
 
 \newcommand{\wikilink}[2]{{%
   \hypersetup{urlcolor=.}
-  \href{https://\wikilang.homm3bg.wiki/#1}{#2\textcolor{goldenbrown}{\textbf{°}}}%
+  \href{https://\wikilang.homm3bg.wiki/#1}{#2\textcolor{\hyperlinkcolor}{\textbf{°}}}%
 }}
 
 % Stubs for polyglossia package used for Hebrew but not other languages
