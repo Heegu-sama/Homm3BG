@@ -80,21 +80,37 @@ The following terms are used to describe effects and elements during Combat:\par
 \textbf{Adjacent Unit} – A unit is directly adjacent to another if it is one space away in a cardinal direction (nondiagonal).\par
 \textbf{Combat Round} – A full cycle of all units of each player being activated.\par
 \textbf{Combat Obstacles}\index{Combat Obstacles}\index{Obstacles, Combat} – Every card on the Combat Board is a Combat Obstacle.
-They block the movement of all non-flying units.\smallskip\par
-\begin{tikzpicture}[overlay]
-  \node[opacity=0.99] at (7, 0) {\includegraphics[width=0.2\linewidth]{\images/attack_die.png}};
-\end{tikzpicture}\parbox{0.7\hsize}{\textbf{Attack Die}\index{Attack Die}\index{Dice} – A red Die whose results range from -1 to +1.
+They block the movement of all non-flying units.\par
+\setlength\columnsep{1.2em}
+\setlength\intextsep{0.8em}
+\begin{wrapfigure}{r}{0.2\linewidth}
+  \includegraphics[width=\linewidth]{\images/attack_die.png}
+\end{wrapfigure}
+\textbf{Attack Die}\index{Attack Die}\index{Dice} – A red Die whose results range from $-1$ to $+1$.
 Roll the Die \textbf{whenever a unit attacks} and
-add the result to the unit's Attack value.}\par\smallskip
+add the result to the unit's Attack value.\par
 \textbf{\pagetarget{Retaliate}{Retaliation Attack}} – If a unit survives an attack by an adjacent unit, it performs an attack back at that unit.
 Each unit can perform \textbf{only 1} Retaliation Attack\index{Retaliation Attack} per Combat Round.
 Retaliation Attacks function identically to normal attacks, but they cannot cause another Retaliation Attack.
 Mark units which have performed a Retaliation Attack this Round with a Black Cube.\par
+\setlength\columnsep{1em}
+\setlength\intextsep{0pt}
+\begin{wrapfigure}{r}{0.22\linewidth}
+  \centering
+  \includegraphics[width=4em]{\images/paralysis.png}\\
+  \imagecaption{Paralysis Token}
+\end{wrapfigure}
 \textbf{\pagetarget{Paralysis}{Paralysis}}\index{Paralysis} \svg{paralysis} – Some effects place a Paralysis Token on units.
 If a unit would activate with a Paralysis Token on it, \textbf{skip its activation} and remove the Token instead.
 If the unit \textbf{is attacked or takes any damage} while having the Paralysis Token, remove it.
 The Token does not prevent units from performing Retaliation Attacks.\par
-\textbf{\pagetarget{Defend}{Defend}} \svg{defense} – units may choose to gain a Defense Token and end the activation instead of attacking.
+\columnbreak
+\begin{wrapfigure}{r}{0.2\linewidth}
+  \centering
+  \includegraphics[width=4em]{\images/defense-token.png}\\
+  \imagecaption{Defense Token}
+\end{wrapfigure}
+\textbf{\pagetarget{Defend}{Defend}} – units may choose to gain a Defense Token and end the activation instead of attacking.
 When a unit with a Defense Token is attacked, make another roll with the attack Die after the initial attack roll.
 If you roll a ``+1'', the defending unit gains an extra 1 Defense for this attack.
 If a unit has a Defense Token at the start of its activation, discard it.
@@ -106,7 +122,7 @@ The unit cannot take another Defense Action during that activation.\par
 
 \vspace*{\fill}
 \begin{center}
-  \hspace*{-2em}\transparent{0.2}\includegraphics[width=1.5\linewidth]{\art/storm_elemental.png}
+  \hspace*{-2em}\transparent{0.2}\includegraphics[width=1.2\linewidth]{\art/storm_elemental.png}
 \end{center}
 \end{multicols*}
 
