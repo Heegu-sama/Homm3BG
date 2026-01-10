@@ -610,8 +610,9 @@
 \newcommand{\pagelinkwithcomma}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{, \textmd{\pageshorthand\,\pageref{#1}}}{}}
 
 \newcommand{\wikilink}[2]{%
-  \hypersetup{hidelinks}
+  \hypersetup{urlcolor=.}
   \href{https://\wikilang.homm3bg.wiki/#1}{#2\textcolor{goldenbrown}{\textbf{°}}}%
+  \hypersetup{urlcolor=cyan}
 }
 
 % Stubs for polyglossia package used for Hebrew but not other languages
