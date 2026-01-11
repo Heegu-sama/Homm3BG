@@ -307,7 +307,7 @@
 \ExplSyntaxOn
 % List of glyphs that don't look good when dropped below the text line
 \clist_new:N \g_nodrop_list
-\clist_map_inline:nn { movement, expert, reinforce, level1, level4, level6, unit_flying, arrow_right_gray, arrow_right } {
+\clist_map_inline:nn { movement, expert, reinforce, level1, level4, level6, unit_flying, arrow_right_gray, arrow_right, permanent } {
   \clist_put_right:Nn \g_nodrop_list { #1 }
 % Add the -yellow variants to the list automatically
   \clist_put_right:Nn \g_nodrop_list { #1-yellow }
@@ -612,10 +612,12 @@
 \newcommand{\pagelink}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{ \textmd{(\pageshorthand\,\pageref{#1})}}{}}
 \newcommand{\pagelinkwithcomma}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{, \textmd{\pageshorthand\,\pageref{#1}}}{}}
 
-\newcommand{\wikilink}[2]{{%
-  \hypersetup{urlcolor=.}
+\newcommand{\wikilink}[2]{%
+  \bgroup%
+  \hypersetup{urlcolor=.}%
   \href{https://\wikilang.homm3bg.wiki/#1}{#2\textcolor{\hyperlinkcolor}{\textbf{°}}}%
-}}
+  \egroup%
+}
 
 % Stubs for polyglossia package used for Hebrew but not other languages
 \providecommand{\mainlanguagename}[0]{}
