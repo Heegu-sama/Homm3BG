@@ -77,6 +77,15 @@ case "$(uname -s)" in
     ;;
 esac
 
+TEMP_DIR=$(mktemp -d)
+cleanup() {
+  if [[ -n "${TEMP_STRUCTURE}" ]]; then
+    cp "$TEMP_STRUCTURE" structure.tex 2> /dev/null
+  fi
+  rm -rf "$TEMP_DIR"
+}
+
+trap cleanup EXIT
 if [[ -n "${SECTION_SEARCH}" ]]; then
   TARGET=$(grep "include{" structure.tex | grep "$SECTION_SEARCH")
 
@@ -93,19 +102,11 @@ if [[ -n "${SECTION_SEARCH}" ]]; then
     #exit 1
   fi
 
+  TEMP_STRUCTURE=$(mktemp "$TEMP_DIR/structure.XXXXXX")
+  cp structure.tex "$TEMP_STRUCTURE"
   echo "$TARGET" > structure.tex
   TARGET=$(echo "$TARGET" | grep -Po "[a-z_]*${SECTION_SEARCH}[a-z_]*")
 fi
-
-TEMP_DIR=$(mktemp -d)
-cleanup() {
-  rm -rf "$TEMP_DIR"
-  if [[ -n "${SECTION_SEARCH}" ]]; then
-    git restore structure.tex
-  fi
-}
-
-trap cleanup EXIT
 
 if [[ ${LANGUAGE} != en ]]; then
   PO4A_PATH="po4a.cfg"

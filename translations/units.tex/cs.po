@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-12-14 21:52+0000\n"
+"POT-Creation-Date: 2025-12-27 19:24+0000\n"
 "PO-Revision-Date: 2024-06-03 10:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -18,8 +18,8 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
-#: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
+#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:131
+#: sections/combat.tex:319 sections/credits.tex:8 sections/deckbuilding.tex:5
 #: sections/deckbuilding.tex:52 sections/deckbuilding.tex:73
 #: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
 #: sections/map_elements.tex:88 sections/map_elements.tex:139
@@ -37,7 +37,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/all_map_locations.tex:60 sections/deckbuilding.tex:378
-#: sections/trading.tex:25 sections/units.tex:208 sections/units.tex:212
+#: sections/trading.tex:25 sections/units.tex:214 sections/units.tex:218
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -50,7 +50,7 @@ msgstr ""
 #: sections/map_elements.tex:183 sections/map_elements.tex:192
 #: sections/map_elements.tex:264 sections/map_elements.tex:297
 #: sections/player_turns.tex:48 sections/tournament_mode.tex:67
-#: sections/units.tex:219
+#: sections/units.tex:225
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -480,10 +480,10 @@ msgstr ""
 #| "  \\item\\textbf{Activation} \\svg{activation} resolves when the Unit is Activated.\n"
 #| "  \\item\\textbf{Attack} \\svg{unit_attack} resolves when the Unit attacks during its Activation.\n"
 #| "    In case of multiple attacks, resolve the effect for \\textbf{the first attack only}.\n"
-#| "  \\item\\textbf{Other} \\svg{unit_other} may be resolved instead of the Unit's normal Activation.\n"
+#| "  \\item\\textbf{Other} \\svg{unit_alternative} may be resolved instead of the Unit's normal Activation.\n"
 #| "    It replaces all movement and/or attacking.\n"
 #| "  \\item\\textbf{Passive} \\svg{unit_passive} resolves whenever its condition is met.\n"
-#| "  \\item\\textbf{Retaliate} \\svg{unit_retaliate} resolves when the Unit retaliates.\n"
+#| "  \\item\\textbf{Retaliate} \\svg{unit_retaliation} resolves when the Unit retaliates.\n"
 #| "  \\item In any other cases without one of the above icons, the Unit's ability is used according to its text.\n"
 #| "    Units may also use symbols representing \\pagelink{Card Effects}{Card Effects}.\n"
 #| "\\end{itemize}\n"
@@ -494,10 +494,10 @@ msgid ""
 "  \\item\\textbf{Activation} \\svg{activation} resolves when the unit is activated.\n"
 "  \\item\\textbf{Attack} \\svg{unit_attack} resolves when the unit attacks during its Activation.\n"
 "    In case of multiple attacks, resolve the effect for \\textbf{the first attack only}.\n"
-"  \\item\\textbf{Other} \\svg{unit_other} may be resolved instead of the unit's normal Activation.\n"
+"  \\item\\textbf{Other} \\svg{unit_alternative} may be resolved instead of the unit's normal Activation.\n"
 "    It replaces all movement and/or attacking.\n"
 "  \\item\\textbf{Passive} \\svg{unit_passive} resolves whenever its condition is met.\n"
-"  \\item\\textbf{Retaliate} \\svg{unit_retaliate} resolves when the unit retaliates.\n"
+"  \\item\\textbf{Retaliate} \\svg{unit_retaliation} resolves when the unit retaliates.\n"
 "  \\item In any other cases without one of the above icons, the unit's ability is used according to its text.\n"
 "    Units may also use symbols representing \\pagelink{Card Effects}{card effects}.\n"
 "  \\end{itemize}\n"
@@ -509,10 +509,10 @@ msgstr ""
 "  \\item\\textbf{Aktivace} \\svg{activation} se vyhodnotí, když se Jednotka Aktivuje.\n"
 "  \\item\\textbf{Útok} \\svg{unit_attack} se vyhodnotí, když Jednotka útočí během své Aktivace.\n"
 "    V případě více útoků se efekt vyhodnotí \\textbf{pouze pro první útok}.\n"
-"  \\item\\textbf{Jiná Akce} \\svg{unit_other} může být vyřešena místo normální Aktivace Jednotky.\n"
+"  \\item\\textbf{Jiná Akce} \\svg{unit_alternative} může být vyřešena místo normální Aktivace Jednotky.\n"
 "    Nahrazuje veškerý pohyb a/nebo útok.\n"
 "  \\item\\textbf{Pasivní} \\svg{unit_passive} se vyhodnotí, kdykoliv je splněna její podmínka.\n"
-"  \\item\\textbf{Odveta} \\svg{unit_retaliate} se vyhodnotí, když Jednotka oplácí útok.\n"
+"  \\item\\textbf{Odveta} \\svg{unit_retaliation} se vyhodnotí, když Jednotka oplácí útok.\n"
 "  \\item V jakýchkoliv jiných případech bez výše uvedených ikon se dovednost Jednotky používá podle jejího textu.\n"
 "    Jednotky mohou také používat symboly představující \\pagelink{Card Effects}{Efekty Karet}.\n"
 "\\end{itemize}\n"
@@ -650,7 +650,95 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/units.tex:178
+#: sections/units.tex:173
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{multicols*}{2}\n"
+#| "  \\footnotesize\n"
+#| "  \\begin{center}\n"
+#| "    \\begin{scriptsize}\n"
+msgid ""
+"\\begin{expansion}[title=\\phantom{\\textbf{\\tiny{foo}}}, overlay={}]{}\n"
+"  \\begin{center}\n"
+"    \\begin{tikzpicture}\n"
+msgstr ""
+"\\begin{multicols*}{2}\n"
+"  \\footnotesize\n"
+"  \\begin{center}\n"
+"    \\begin{scriptsize}\n"
+
+#. type: multicols*
+#: sections/units.tex:181
+#, fuzzy, no-wrap
+#| msgid ""
+#| "      \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/mmback.png}};\n"
+#| "      \\node at (1.5, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}};\n"
+#| "    \\end{tikzpicture}\n"
+#| "    \\caption{\\textbf{\\pagelink{spells}{Spell Card}}}\n"
+#| "  \\end{subfigure}"
+msgid ""
+"      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/neutral-back.png}};\n"
+"      \\draw (1.5, -0.5) node {\\includegraphics[width=0.6\\linewidth]{\\cards/neutral-front.png}};\n"
+"    \\end{tikzpicture}\\\\\n"
+"    \\imagecaption{Neutral Unit}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\\vspace*{\\fill}\n"
+"\n"
+msgstr ""
+"      \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/mmback.png}};\n"
+"      \\node at (1.5, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}};\n"
+"    \\end{tikzpicture}\n"
+"    \\caption{\\textbf{\\pagelink{spells}{Karta Kouzla}}}\n"
+"  \\end{subfigure}"
+
+#. type: multicols*
+#: sections/units.tex:185
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{multicols*}{2}\n"
+#| "  \\footnotesize\n"
+#| "  \\begin{center}\n"
+#| "    \\begin{scriptsize}\n"
+msgid ""
+"\\columnbreak\n"
+"\\begin{expansion}{navalbattles}\n"
+"  \\begin{center}\n"
+"    \\begin{tikzpicture}\n"
+msgstr ""
+"\\begin{multicols*}{2}\n"
+"  \\footnotesize\n"
+"  \\begin{center}\n"
+"    \\begin{scriptsize}\n"
+
+#. type: multicols*
+#: sections/units.tex:194
+#, fuzzy, no-wrap
+#| msgid ""
+#| "      \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/mmback.png}};\n"
+#| "      \\node at (1.5, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}};\n"
+#| "    \\end{tikzpicture}\n"
+#| "    \\caption{\\textbf{\\pagelink{spells}{Spell Card}}}\n"
+#| "  \\end{subfigure}"
+msgid ""
+"      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/creature-bank-back.png}};\n"
+"      \\draw (1.5, -0.5) node {\\includegraphics[width=0.6\\linewidth]{\\cards/creature-bank.png}};\n"
+"    \\end{tikzpicture}\\\\\n"
+"    \\imagecaption{Creature Bank Unit}\n"
+"  \\end{center}\n"
+"  See \\pagelink{Creature Banks Rules}{Creature Banks}.\n"
+"\\end{expansion}\n"
+"\\vspace*{\\fill}\n"
+"\n"
+msgstr ""
+"      \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/mmback.png}};\n"
+"      \\node at (1.5, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}};\n"
+"    \\end{tikzpicture}\n"
+"    \\caption{\\textbf{\\pagelink{spells}{Karta Kouzla}}}\n"
+"  \\end{subfigure}"
+
+#. type: multicols*
+#: sections/units.tex:205
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{center}\n"
@@ -658,11 +746,14 @@ msgstr ""
 #| "\\end{center}\n"
 #| "\n"
 msgid ""
-"\\begin{expansion}[title=\\phantom{\\textbf{\\tiny{foo}}}, overlay={}]{}\n"
+"\\columnbreak\n"
+"\\begin{expansion}{conflux}\n"
 "  \\begin{center}\n"
-"    \\includegraphics[width=0.6\\linewidth]{\\cards/neutral-back.png}\\\\\n"
-"    \\imagecaption{Neutral Unit}\n"
+"    \\includegraphics[width=0.6\\linewidth]{\\cards/unit-earth-elemental-few.png}\\\\\n"
+"    \\imagecaption{Summoned Elemental Unit}\n"
 "  \\end{center}\n"
+"  Summoned Elemental units don't have \\svg{recruit} nor \\svg{reinforce}.\n"
+"  See \\pagelink{Summoning}{Summoning}.\n"
 "\\end{expansion}\n"
 "\\vspace*{\\fill}\n"
 "\n"
@@ -673,40 +764,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:188
-#, no-wrap
-msgid ""
-"\\columnbreak\n"
-"\\begin{expansion}{navalbattles}\n"
-"  \\begin{center}\n"
-"    \\includegraphics[width=0.6\\linewidth]{\\cards/creature_bank_unit.png}\\\\\n"
-"    \\imagecaption{Creature Bank Unit}\n"
-"  \\end{center}\n"
-"  See \\pagelink{Creature Banks Rules}{Creature Banks}.\n"
-"\\end{expansion}\n"
-"\\vspace*{\\fill}\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/units.tex:199
-#, no-wrap
-msgid ""
-"\\columnbreak\n"
-"\\begin{expansion}{conflux}\n"
-"  \\begin{center}\n"
-"    \\includegraphics[width=0.6\\linewidth]{\\cards/unit-summoned-few.png}\\\\\n"
-"    \\imagecaption{Summoned Elemental Unit}\n"
-"  \\end{center}\n"
-"  Summoned Elemental units don't have \\svg{recruit} nor \\svg{reinforce}.\n"
-"  See \\pagelink{Summoning}{Summoning}.\n"
-"\\end{expansion}\n"
-"\\vspace*{\\fill}\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/units.tex:204
+#: sections/units.tex:210
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{Example Turn}\n"
@@ -720,7 +778,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:206
+#: sections/units.tex:212
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons, Empowering \\svg{empower} the Spell by 2 with the Expert  Effect \\svg{expert} of a Power Card.}\n"
@@ -733,7 +791,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:210
+#: sections/units.tex:216
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/alamar_empowering_magic_arrow.png}\n"
@@ -743,7 +801,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:217
+#: sections/units.tex:223
 #, no-wrap
 msgid ""
 "\\textit{The Skeletons take 3 damage \\svg{damage} from the Spell.\n"
@@ -759,7 +817,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:221
+#: sections/units.tex:227
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/skeletons_flipped.png}\n"
@@ -769,7 +827,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:225
+#: sections/units.tex:231
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\bigskip\n"

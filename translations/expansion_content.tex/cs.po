@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-12-14 21:52+0000\n"
+"POT-Creation-Date: 2026-01-09 16:33+0000\n"
 "PO-Revision-Date: 2024-06-03 10:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -453,8 +453,8 @@ msgid ""
 "[before=\\vspace*{-11mm}]{navalbattles}\n"
 "\\pagetarget{Creature Banks Rules}{\\subheader{Creature Banks}}\n"
 "\\begin{multicols*}{2}\n"
-"   Playing with Creature Banks is an \\textbf{optional rule}.\n"
-"   If you decide to play with Creature Banks, the following rules apply.\n"
+"  Playing with Creature Banks is an \\textbf{optional rule}.\n"
+"  If you decide to play with Creature Banks, the following rules apply.\n"
 "\n"
 msgstr ""
 
@@ -462,12 +462,12 @@ msgstr ""
 #: sections/expansion_content.tex:236
 #, no-wrap
 msgid ""
-"   \\subsection*{Setup}\n"
-"   Separate the Creature Bank Tokens into two piles (for Near and Far Map Tiles) based on the numerals on their backs.\n"
-"   Shuffle each pile and place them near the Map.\n"
-"   Place the Creature Bank unit cards face up near the Neutral Unit Decks.\n"
-"   There is no need to shuffle these cards.\n"
-"   Shuffle all Stack Tokens and place them near the Creature Bank unit cards.\n"
+"  \\subsection*{Setup}\n"
+"  Separate the Creature Bank Tokens into two piles (for Near and Far Map Tiles) based on the numerals on their backs.\n"
+"  Shuffle each pile and place them near the Map.\n"
+"  Place the Creature Bank unit cards face up near the Neutral Unit Decks.\n"
+"  There is no need to shuffle these cards.\n"
+"  Shuffle all Stack Tokens and place them near the Creature Bank unit cards.\n"
 "\n"
 msgstr ""
 
@@ -484,20 +484,20 @@ msgstr ""
 #| "    \\end{tikzpicture}\n"
 #| "  "
 msgid ""
-"    \\bigskip\n"
-"    \\begin{multicols*}{2}\n"
-"      \\begin{center}\n"
-"        \\includegraphics[width=0.9\\linewidth]{\\map_locations/creature-bank.png}\\\\\n"
-"        \\imagecaption{Creature Bank (Near)}\\\\\n"
-"        \\vspace*{\\fill}\n"
-"        \\includegraphics[width=0.5\\linewidth]{\\images/stack-token.png}\\\\\n"
-"        \\imagecaption{Stack Token}\\\\\n"
-"        \\columnbreak\n"
-"        \\includegraphics[width=\\linewidth]{\\cards/creature-bank-back.png}\\\\\n"
-"        \\imagecaption{Creature Bank unit card}\n"
-"      \\end{center}\n"
-"    \\end{multicols*}\n"
-"\n"
+"  \\bigskip\n"
+"  \\begin{minipage}[b]{0.4\\linewidth}\n"
+"    \\begin{center}\n"
+"      \\includegraphics[width=0.85\\linewidth]{\\map_locations/creature-bank.png}\\\\\n"
+"      \\imagecaption{Creature Bank (Near)}\\\\\n"
+"      \\vspace*{1em}\n"
+"      \\includegraphics[width=0.45\\linewidth]{\\images/stack-token.png}\\\\\n"
+"      \\imagecaption{Stack Token}\\\\\n"
+"    \\end{center}\n"
+"  \\end{minipage}\n"
+"  \\hfill\n"
+"  \\begin{minipage}[b]{0.55\\linewidth}\n"
+"    \\begin{center}\n"
+"      \\begin{tikzpicture}\n"
 msgstr ""
 "      \\node at (0, 0) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-stronghold.png}};\n"
 "      \\node at (0, 2.2) {\\footnotesize{\\imagecaption{Surface Map Tile}}};\n"
@@ -509,13 +509,37 @@ msgstr ""
 "  "
 
 #. type: expansion
-#: sections/expansion_content.tex:258
+#: sections/expansion_content.tex:257
+#, fuzzy, no-wrap
+#| msgid ""
+#| "      \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/mmback.png}};\n"
+#| "      \\node at (1.5, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}};\n"
+#| "    \\end{tikzpicture}\n"
+#| "    \\caption{\\textbf{\\pagelink{spells}{Spell Card}}}\n"
+#| "  \\end{subfigure}"
+msgid ""
+"        \\draw (0, 0) node {\\includegraphics[width=0.7\\linewidth]{\\cards/creature-bank-back.png}};\n"
+"        \\draw (0.75, -0.5) node {\\includegraphics[width=0.7\\linewidth]{\\cards/creature-bank.png}};\n"
+"      \\end{tikzpicture}\\\\\n"
+"      \\imagecaption{Creature Bank unit card}\n"
+"    \\end{center}\n"
+"  \\end{minipage}\n"
+"\n"
+msgstr ""
+"      \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/mmback.png}};\n"
+"      \\node at (1.5, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}};\n"
+"    \\end{tikzpicture}\n"
+"    \\caption{\\textbf{\\pagelink{spells}{Karta Kouzla}}}\n"
+"  \\end{subfigure}"
+
+#. type: expansion
+#: sections/expansion_content.tex:265
 #, no-wrap
 msgid ""
 "  \\subsection*{Placing Creature Bank Tokens}\n"
-"  When you discover a Near or Far Map Tile, you may choose to draw a Creature Bank Token of the corresponding type, and place it on the Tile's Blocked Field.\\par\n"
+"  When you discover a Near or Far Map Tile, you may choose to draw a Creature Bank Token of the corresponding type, and place it on the Tile's Blocked Field.\n"
 "  \\begin{center}\n"
-"  \\vspace*{1em}\n"
+"    \\vspace*{2em}\n"
 "    \\hspace*{-2em}\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/mermaid.png}\n"
 "  \\end{center}\n"
 "  \\columnbreak\n"
@@ -523,7 +547,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:264
+#: sections/expansion_content.tex:271
 #, no-wrap
 msgid ""
 "  \\subsection*{Visiting a Creature Bank\\\\Location}\n"
@@ -535,7 +559,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:268
+#: sections/expansion_content.tex:275
 #, no-wrap
 msgid ""
 "  \\subsection*{Combat in a Creature Bank}\n"
@@ -545,7 +569,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:271
+#: sections/expansion_content.tex:278
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\vfill\n"
@@ -561,7 +585,7 @@ msgstr ""
 "  \\begin{scriptsize}\n"
 
 #. type: expansion
-#: sections/expansion_content.tex:288
+#: sections/expansion_content.tex:295
 #, no-wrap
 msgid ""
 "        \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\images/creature_bank_combat_board.png}}};\n"
@@ -584,7 +608,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:297
+#: sections/expansion_content.tex:304
 #, no-wrap
 msgid ""
 "  Based on the Scenario's Difficulty Level, take a number of \\pagelink{Stack Tokens}{Stack Tokens} and place them randomly on up to four different Creature Bank unit cards:\n"
@@ -597,29 +621,43 @@ msgid ""
 "  \\end{multicols*}"
 msgstr ""
 
-#. type: expansion
-#: sections/expansion_content.tex:312
+#. type: multicols*
+#: sections/expansion_content.tex:311
 #, no-wrap
 msgid ""
-"[before=\\vspace*{-11mm}]{navalbattles}\n"
-"  \\begin{multicols*}{2}\n"
+"{2}\n"
+"\\begin{expansion}{navalbattles}\n"
 "  After Combat, return all Creature Bank units back to the Creature Bank units cards pile.\n"
 "  If you win, you claim the Creature Bank's reward, as well as an additional reward for the Stacked units you defeated.\n"
-"  \\subsection*{\\pagetarget{Stack Tokens}{Stack Tokens}}\n"
-"    \\setlength\\intextsep{0pt}\n"
-"    \\setlength\\columnsep{1em}\n"
-"    \\begin{wrapfigure}{r}{0.2\\linewidth}\n"
-"      \\includegraphics[width=\\linewidth]{\\images/stack-token.png}\n"
-"    \\end{wrapfigure}\n"
-"  Each Stack Token modifies a unit's statistic in the following way: +1~\\svg{attack}, +1~\\svg{defense}, +1~\\svg{health_points}, or +2~\\svg{initiative}.\n"
-"  Furthermore, each unit with a Stack Token is now a \\textbf{Stacked unit}, which is similar to reinforced Faction units: when it takes damage equal to or greater than its \\svg{health_points}, instead of removing the unit card from the Combat Board, discard the Stack Token from that unit and deal any leftover damage, deducting it from the new \\svg{health_points}.\n"
-"  Creature Bank units without a Stack Token are defeated normally.\n"
-"  \\columnbreak\n"
 "\n"
 msgstr ""
 
-#. type: expansion
-#: sections/expansion_content.tex:320
+#. type: multicols*
+#: sections/expansion_content.tex:316
+#, no-wrap
+msgid ""
+"  \\subsection*{\\pagetarget{Stack Tokens}{Stack Tokens}}\n"
+"  Each Stack Token modifies a unit's statistic in the following way: +1~\\svg{attack}, +1~\\svg{defense}, +1~\\svg{health_points}, or +2~\\svg{initiative}.\n"
+"  Furthermore, each unit with a Stack Token is now a \\textbf{Stacked unit}, which is similar to reinforced Faction units: when it takes damage equal to or greater than its \\svg{health_points}, instead of removing the unit card from the Combat Board, discard the Stack Token from that unit and deal any leftover damage, deducting it from the new \\svg{health_points}.\n"
+"  Creature Bank units without a Stack Token are defeated normally.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/expansion_content.tex:323
+#, no-wrap
+msgid ""
+"  \\begin{multicols}{4}\n"
+"    \\centering\n"
+"    \\includegraphics[width=1.2\\linewidth]{\\images/stack-token-attack.png}\n"
+"    \\includegraphics[width=1.2\\linewidth]{\\images/stack-token-defense.png}\n"
+"    \\includegraphics[width=1.2\\linewidth]{\\images/stack-token-hp.png}\n"
+"    \\includegraphics[width=1.2\\linewidth]{\\images/stack-token-initiative.png}\n"
+"  "
+msgstr ""
+
+#. type: multicols*
+#: sections/expansion_content.tex:334
 #, no-wrap
 msgid ""
 "  \\subsection*{Gained Stacked Units}\n"
@@ -627,12 +665,12 @@ msgid ""
 "  Track which of your units are Stacked by whatever means is comfortable, e.g.~by remembering it or by placing a Token or Cube on it.\n"
 "  Whenever your Stacked unit goes to a Combat, draw a random Stack Token and place it on that unit.\n"
 "  After Combat, note whether the unit is still Stacked (for future Combats), then return the Stack Token to the pile.\n"
-"\\end{multicols*}\n"
-"\\vspace*{1em}"
+"\\end{expansion}\n"
+"\\includegraphics[width=\\linewidth]{\\art/energy_elemental.jpg}"
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:328
+#: sections/expansion_content.tex:339
 #, no-wrap
 msgid ""
 "{navalbattles}\n"
@@ -643,7 +681,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:339
+#: sections/expansion_content.tex:350
 #, no-wrap
 msgid ""
 "  \\setlength\\intextsep{0pt}\n"
@@ -660,7 +698,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:341
+#: sections/expansion_content.tex:352
 #, no-wrap
 msgid ""
 "  You can gain Empowered Ability Tokens only in certain Scenarios (e.~g.~``Island of Fire'' from the Naval Battles Mission Book).\\\\\n"
@@ -668,7 +706,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:346
+#: sections/expansion_content.tex:357
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\vfill\n"
@@ -690,7 +728,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/expansion_content.tex:352
+#: sections/expansion_content.tex:363
 #, no-wrap
 msgid ""
 "  \\subsection*{Gaining Empowered Ability\\\\Example}\n"
@@ -702,7 +740,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:356
+#: sections/expansion_content.tex:367
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{center}\n"
@@ -721,7 +759,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/expansion_content.tex:360
+#: sections/expansion_content.tex:371
 #, no-wrap
 msgid ""
 "  \\textit{Bob happens to have an Empowered Ability Token.\n"
@@ -731,7 +769,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:362
+#: sections/expansion_content.tex:373
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\vfill\n"
@@ -746,7 +784,7 @@ msgstr ""
 "  \\begin{scriptsize}\n"
 
 #. type: expansion
-#: sections/expansion_content.tex:368
+#: sections/expansion_content.tex:379
 #, no-wrap
 msgid ""
 "      \\draw (-3, 0) node {\\includegraphics[width=0.45\\linewidth]{\\cards/ability-offense.png}};\n"
@@ -758,7 +796,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/expansion_content.tex:376
+#: sections/expansion_content.tex:387
 #, no-wrap
 msgid ""
 "      \\draw (-2.8, -3.5) node {\\svg[35]{red_cross}};\n"
@@ -771,7 +809,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/expansion_content.tex:384
+#: sections/expansion_content.tex:395
 #, fuzzy
 #| msgid ""
 #| "\\subsection*{Symbols on the Map}\n"
@@ -783,7 +821,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/expansion_content.tex:384
+#: sections/expansion_content.tex:395
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -794,7 +832,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/expansion_content.tex:389
+#: sections/expansion_content.tex:400
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -805,7 +843,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/expansion_content.tex:394
+#: sections/expansion_content.tex:405
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{center}\n"
@@ -825,7 +863,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/expansion_content.tex:407
+#: sections/expansion_content.tex:418
 #, no-wrap
 msgid ""
 "  Here are some recommended options how to do that:\n"
@@ -844,7 +882,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/expansion_content.tex:416
+#: sections/expansion_content.tex:427
 #, no-wrap
 msgid ""
 "  Skip the cards with Factions from Expansions which you don't have.\n"
@@ -859,7 +897,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/expansion_content.tex:420
+#: sections/expansion_content.tex:431
 #, no-wrap
 msgid ""
 "    \\includegraphics[width=0.45\\linewidth]{\\boxcovers/stretchgoals-neutral.png}\\\\[1em]\n"
@@ -869,7 +907,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/expansion_content.tex:424
+#: sections/expansion_content.tex:435
 #, no-wrap
 msgid ""
 "    \\includegraphics[width=0.45\\linewidth]{\\boxcovers/stretchgoals-chest.png}\\\\[1em]\n"
@@ -879,7 +917,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/expansion_content.tex:428
+#: sections/expansion_content.tex:439
 #, no-wrap
 msgid ""
 "    \\includegraphics[width=0.45\\linewidth]{\\boxcovers/stretchgoals-crystal.png}\\\\[1em]\n"
@@ -889,7 +927,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/expansion_content.tex:435
+#: sections/expansion_content.tex:447
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -898,31 +936,24 @@ msgid ""
 "  Shuffle the Pandora's Box cards during setup.\n"
 "  When visiting a \\pagelink{Pandora Box}{Pandora's Box}, you may draw and resolve a Pandora's Box card instead of the location's regular effect.\n"
 "  Mark the Map Field with a Black Cube regardless.\n"
+"  Pandora's Box cards have their own discard pile.\n"
 "\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/expansion_content.tex:440
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#: sections/expansion_content.tex:453
+#, no-wrap
 msgid ""
+"  \\textbf{Note:} If you draw a Pandora's Box card with a Permanent \\svg[7]{permanent} effect while having a \\pagelink{Card Effects}{Permanent card} already in play, discard your current card and put Pandora's card in its place.\n"
 "  \\medskip\n"
 "  \\begin{center}\n"
 "    \\includegraphics[width=0.6\\linewidth]{\\cards/pandora.png}\n"
 "  \\end{center}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-"\\end{center}\n"
-"\n"
 
 #. type: multicols*
-#: sections/expansion_content.tex:449
+#: sections/expansion_content.tex:462
 #, no-wrap
 msgid ""
 "    \\subsection*{Alternative Manticores Card}\n"
@@ -937,14 +968,13 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/expansion_content.tex:516
+#: sections/expansion_content.tex:528
 #, no-wrap
 msgid ""
-"\\vspace*{1em}\n"
+"\\vspace*{0.5em}\n"
 "\\begin{center}\n"
-"  \\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/blind.png}\n"
+"  \\transparent{0.2}\\includegraphics[width=0.7\\linewidth]{\\art/blind.png}\n"
 "\\end{center}\n"
-"\\vspace*{3em}\n"
 "\\end{expansion}\n"
 "\\columnbreak\n"
 "\\subheader{Fan-Made Content}\n"

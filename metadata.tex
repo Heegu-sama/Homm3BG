@@ -47,6 +47,7 @@
 \usepackage{xstring}
 \usepackage{expl3}
 \usepackage{wrapfig}
+\usepackage{accsupp}
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX}
 \newtcolorbox{scaledfigure}[1][]{height fill, space to=\myspace,#1}
@@ -336,6 +337,10 @@
     }%
   }{%
     \edef\svgpath{\svgs/\detokenize{#2}.svg}%
+  }%
+  \smash{%
+    \BeginAccSupp{ActualText={<#2>},space}%
+    \EndAccSupp{}%
   }%
   \ifnodrop{#2}{%
     % Don't drop a selection of glyphs below the text line - they look better that way

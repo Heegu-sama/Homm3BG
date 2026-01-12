@@ -224,34 +224,41 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
 \begin{expansion}[before=\vspace*{-11mm}]{navalbattles}
 \pagetarget{Creature Banks Rules}{\subheader{Creature Banks}}
 \begin{multicols*}{2}
-   Playing with Creature Banks is an \textbf{optional rule}.
-   If you decide to play with Creature Banks, the following rules apply.
+  Playing with Creature Banks is an \textbf{optional rule}.
+  If you decide to play with Creature Banks, the following rules apply.
 
-   \subsection*{Setup}
-   Separate the Creature Bank Tokens into two piles (for Near and Far Map Tiles) based on the numerals on their backs.
-   Shuffle each pile and place them near the Map.
-   Place the Creature Bank unit cards face up near the Neutral Unit Decks.
-   There is no need to shuffle these cards.
-   Shuffle all Stack Tokens and place them near the Creature Bank unit cards.
+  \subsection*{Setup}
+  Separate the Creature Bank Tokens into two piles (for Near and Far Map Tiles) based on the numerals on their backs.
+  Shuffle each pile and place them near the Map.
+  Place the Creature Bank unit cards face up near the Neutral Unit Decks.
+  There is no need to shuffle these cards.
+  Shuffle all Stack Tokens and place them near the Creature Bank unit cards.
 
-    \bigskip
-    \begin{multicols*}{2}
-      \begin{center}
-        \includegraphics[width=0.9\linewidth]{\map_locations/creature-bank.png}\\
-        \imagecaption{Creature Bank (Near)}\\
-        \vspace*{\fill}
-        \includegraphics[width=0.5\linewidth]{\images/stack-token.png}\\
-        \imagecaption{Stack Token}\\
-        \columnbreak
-        \includegraphics[width=\linewidth]{\cards/creature-bank-back.png}\\
-        \imagecaption{Creature Bank unit card}
-      \end{center}
-    \end{multicols*}
+  \bigskip
+  \begin{minipage}[b]{0.4\linewidth}
+    \begin{center}
+      \includegraphics[width=0.85\linewidth]{\map_locations/creature-bank.png}\\
+      \imagecaption{Creature Bank (Near)}\\
+      \vspace*{1em}
+      \includegraphics[width=0.45\linewidth]{\images/stack-token.png}\\
+      \imagecaption{Stack Token}\\
+    \end{center}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.55\linewidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw (0, 0) node {\includegraphics[width=0.7\linewidth]{\cards/creature-bank-back.png}};
+        \draw (0.75, -0.5) node {\includegraphics[width=0.7\linewidth]{\cards/creature-bank.png}};
+      \end{tikzpicture}\\
+      \imagecaption{Creature Bank unit card}
+    \end{center}
+  \end{minipage}
 
   \subsection*{Placing Creature Bank Tokens}
-  When you discover a Near or Far Map Tile, you may choose to draw a Creature Bank Token of the corresponding type, and place it on the Tile's Blocked Field.\par
+  When you discover a Near or Far Map Tile, you may choose to draw a Creature Bank Token of the corresponding type, and place it on the Tile's Blocked Field.
   \begin{center}
-  \vspace*{1em}
+    \vspace*{2em}
     \hspace*{-2em}\transparent{0.2}\includegraphics[width=0.9\linewidth]{\art/mermaid.png}
   \end{center}
   \columnbreak
@@ -295,31 +302,35 @@ In addition to new gameplay mechanics, expansions also expand the variety of exi
   \end{itemize}
   \end{multicols*}
 \end{expansion}
-\begin{expansion}[before=\vspace*{-11mm}]{navalbattles}
-  \begin{multicols*}{2}
+
+\clearpage
+\begin{multicols*}{2}
+\begin{expansion}{navalbattles}
   After Combat, return all Creature Bank units back to the Creature Bank units cards pile.
   If you win, you claim the Creature Bank's reward, as well as an additional reward for the Stacked units you defeated.
+
   \subsection*{\pagetarget{Stack Tokens}{Stack Tokens}}
-    \setlength\intextsep{0pt}
-    \setlength\columnsep{1em}
-    \begin{wrapfigure}{r}{0.2\linewidth}
-      \includegraphics[width=\linewidth]{\images/stack-token.png}
-    \end{wrapfigure}
   Each Stack Token modifies a unit's statistic in the following way: +1~\svg{attack}, +1~\svg{defense}, +1~\svg{health_points}, or +2~\svg{initiative}.
   Furthermore, each unit with a Stack Token is now a \textbf{Stacked unit}, which is similar to reinforced Faction units: when it takes damage equal to or greater than its \svg{health_points}, instead of removing the unit card from the Combat Board, discard the Stack Token from that unit and deal any leftover damage, deducting it from the new \svg{health_points}.
   Creature Bank units without a Stack Token are defeated normally.
-  \columnbreak
+
+  \begin{multicols}{4}
+    \centering
+    \includegraphics[width=1.2\linewidth]{\images/stack-token-attack.png}
+    \includegraphics[width=1.2\linewidth]{\images/stack-token-defense.png}
+    \includegraphics[width=1.2\linewidth]{\images/stack-token-hp.png}
+    \includegraphics[width=1.2\linewidth]{\images/stack-token-initiative.png}
+  \end{multicols}
 
   \subsection*{Gained Stacked Units}
   Some rewards allow you to gain a Stacked Creature Bank unit card.
   Track which of your units are Stacked by whatever means is comfortable, e.g.~by remembering it or by placing a Token or Cube on it.
   Whenever your Stacked unit goes to a Combat, draw a random Stack Token and place it on that unit.
   After Combat, note whether the unit is still Stacked (for future Combats), then return the Stack Token to the pile.
-\end{multicols*}
-\vspace*{1em}
 \end{expansion}
-\vfill
-\hspace*{-1.2em}\includegraphics[width=1.05\textwidth]{\art/dread_knight.jpg}
+\includegraphics[width=\linewidth]{\art/energy_elemental.jpg}
+\end{multicols*}
+%\hspace*{-1.2em}\includegraphics[width=1.05\textwidth]{\art/dread_knight.jpg}
 
 \begin{expansion}{navalbattles}
 \pagetarget{Empowered Ability Token}{\subheader{Empowered Ability Cards}}
@@ -432,7 +443,9 @@ They also expand the variety of existing components with additional Artifacts, S
   Shuffle the Pandora's Box cards during setup.
   When visiting a \pagelink{Pandora Box}{Pandora's Box}, you may draw and resolve a Pandora's Box card instead of the location's regular effect.
   Mark the Map Field with a Black Cube regardless.
+  Pandora's Box cards have their own discard pile.
 
+  \textbf{Note:} If you draw a Pandora's Box card with a Permanent \svg[7]{permanent} effect while having a \pagelink{Card Effects}{Permanent card} already in play, discard your current card and put Pandora's card in its place.
   \medskip
   \begin{center}
     \includegraphics[width=0.6\linewidth]{\cards/pandora.png}
@@ -447,11 +460,10 @@ They also expand the variety of existing components with additional Artifacts, S
     A second \textbf{Manticores unit card} with slightly different statistics is included in this expansion.
     When playing the Dungeon Faction, choose one of the two Manticores cards to use in the game.
 
-\vspace*{1em}
+\vspace*{0.5em}
 \begin{center}
-  \transparent{0.2}\includegraphics[width=0.8\linewidth]{\art/blind.png}
+  \transparent{0.2}\includegraphics[width=0.7\linewidth]{\art/blind.png}
 \end{center}
-\vspace*{3em}
 \end{expansion}
 \columnbreak
 \subheader{Fan-Made Content}
