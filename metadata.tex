@@ -417,15 +417,15 @@
 }
 \newcommand{\addsection}[3][1]{
   \def\oneliner{\equal{#1}{1}}
-  \vspace*{-5em}
-  \hspace*{-1em}
+  \vspace*{-5.81em}
+  \hspace*{-1.35em}
   \makebox[0pt][l]{
   \raisebox{-\totalheight}[0pt][7pt]{
     \begin{tikzpicture}
       \iftoggle{noartbackground}{
-        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\layout/section_heading_monochrome.png}};
+        \draw (0, 0) node[inner sep=0] {\makebox[1.015\textwidth][c]{\includegraphics[width=1.055\linewidth, height=0.24\linewidth]{\layout/section_heading_monochrome.png}}};
       }{
-        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\layout/section_heading.jpg}};
+        \draw (0, 0) node[inner sep=0] {\makebox[1.015\textwidth][c]{\includegraphics[width=1.055\linewidth, height=0.24\linewidth]{\layout/section_heading.png}}};
       }
       \draw (-6.2, 0) node {\includegraphics[width=0.125\textwidth]{#3}};
     \end{tikzpicture}
@@ -435,12 +435,16 @@
   \begin{fullwidth}[leftmargin=0.16\textwidth, outermargin=0.16\textwidth, innermargin=0.16\textwidth]
     \begin{center}
       \vspace*{\lang_header_adjustment}
-      \ifthenelse{\oneliner}{}{\vspace{-13pt}}
+      \ifthenelse{\oneliner}{\vspace{0.81em}}{\vspace{-0.27em}}
       \sectionheadertext{#2}
     \end{center}
   \end{fullwidth}
-  \vspace{1.75em}
-  \ifthenelse{\oneliner}{}{\vspace{-13pt}}
+  \ifthenelse{\oneliner}{
+    \vspace{1.75em}
+    \vspace{\lang_header_adjustment}
+  }{
+    \vspace{0.66em}
+  }
 }
 %End of create section heading.
 
