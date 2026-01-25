@@ -630,23 +630,35 @@
 % Command for overlay circled text
 \definecolor{goblin}{HTML}{3b7c33}
 
-\newcommand\encirclebase[4]{%
+
+\newcommand\encirclebase[3]{%
+  \ifdim\dimexpr#2\relax<1.6em\relax
+    \def\shadowshift{2pt}
+    \edef\shadowscale{2.2\dimexpr#2\relax}
+  \else
+    \def\shadowshift{2pt}
+    \edef\shadowscale{1.5\dimexpr#2\relax}
+  \fi
   \begin{footnotesize}%
-  \tikz[baseline=(X.base)]
-  \node (X) [draw=white, shape=circle, minimum size=#3, align=center, inner sep=0, fill=#1, text=white, #2] {\strut \textbf{#4}};%
+  \tikz[baseline=(X.base)]{
+    \node (X) [draw=white, shape=circle, fill=#1, minimum size=#2, align=center, inner sep=0, text=white] {\strut \textbf{#3}};
+    \begin{scope}[on background layer]
+      \node [inner sep=0pt, opacity=0.7] at ([xshift=\shadowshift, yshift=-\shadowshift]X.center) {\includegraphics[width=\shadowscale]{\layout/circle_drop_shadow.png}};
+    \end{scope}
+  }
   \end{footnotesize}%
 }
 \newcommand\encircle[1]{
-  \encirclebase{goblin}{blur shadow={shadow blur steps=5}}{1.6em}{#1}
+  \encirclebase{goblin}{1.6em}{#1}
 }
 \newcommand\encirclered[1]{%
-  \encirclebase{darkcandyapplered}{blur shadow={shadow blur steps=5}}{1.6em}{#1}
+  \encirclebase{darkcandyapplered}{1.6em}{#1}
 }
 \newcommand\encirclelegend[2]{%
-  \encirclebase{#1}{blur shadow={shadow blur steps=3, shadow xshift=0.5pt, shadow yshift=-0.5pt, shadow blur radius=1pt}}{1.6em}{#2}
+  \encirclebase{#1}{1.6em}{#2}
 }
 \newcommand\encirclesmall[1]{
-  \encirclebase{goblin}{blur shadow={shadow blur steps=5}}{0.9em}{#1}
+  \encirclebase{goblin}{0.9em}{#1}
 }
 
 \newcommand{\drawbottom}{
