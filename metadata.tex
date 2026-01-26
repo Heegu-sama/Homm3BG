@@ -630,20 +630,26 @@
 % Command for overlay circled text
 \definecolor{goblin}{HTML}{3b7c33}
 
-
-\newcommand\encirclebase[3]{%
-  \ifdim\dimexpr#2\relax<1.6em\relax
-    \def\shadowshift{2pt}
-    \edef\shadowscale{2.2\dimexpr#2\relax}
+\newcommand\encirclebase[4][normal]{%
+  % Set drop shadow size
+  \ifdim\dimexpr#3\relax<1.6em\relax
+    \edef\shadowscale{2.2\dimexpr#3\relax}
   \else
-    \def\shadowshift{2pt}
-    \edef\shadowscale{1.5\dimexpr#2\relax}
+    \edef\shadowscale{1.5\dimexpr#3\relax}
   \fi
+
+  % Set drop shadow offset
+  \ifthenelse{\equal{#1}{legend}}{
+    \def\shadowoffset{0.5pt}
+  }{
+    \def\shadowoffset{2pt}
+  }
+
   \begin{footnotesize}%
   \tikz[baseline=(X.base)]{
-    \node (X) [draw=white, shape=circle, fill=#1, minimum size=#2, align=center, inner sep=0, text=white] {\strut \textbf{#3}};
+    \node (X) [draw=white, shape=circle, fill=#2, minimum size=#3, align=center, inner sep=0, text=white] {\strut \textbf{#4}};
     \begin{scope}[on background layer]
-      \node [inner sep=0pt, opacity=0.7] at ([xshift=\shadowshift, yshift=-\shadowshift]X.center) {\includegraphics[width=\shadowscale]{\layout/circle_drop_shadow.png}};
+      \node [inner sep=0pt, opacity=0.7] at ([xshift=\shadowoffset, yshift=-\shadowoffset]X.center) {\includegraphics[width=\shadowscale]{\layout/circle_drop_shadow.png}};
     \end{scope}
   }
   \end{footnotesize}%
@@ -655,7 +661,7 @@
   \encirclebase{darkcandyapplered}{1.6em}{#1}
 }
 \newcommand\encirclelegend[2]{%
-  \encirclebase{#1}{1.6em}{#2}
+  \encirclebase[legend]{#1}{1.6em}{#2}
 }
 \newcommand\encirclesmall[1]{
   \encirclebase{goblin}{0.9em}{#1}
