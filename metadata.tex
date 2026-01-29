@@ -496,12 +496,12 @@
 \definecolor{borderinyellow}{HTML}{B09E69}
 \definecolor{bordermidyellow}{HTML}{6f6749}
 % Create note box
-\newcommand{\note}[2]{
+\newcommand{\note}[3][shade, blur shadow={shadow opacity=15}]{
   \begin{tikzpicture}
     \iftoggle{noartbackground}{
-      \node[inner sep=0, minimum width=\linewidth, minimum height=#1\baselineskip] at (0,0) {};
+      \node[inner sep=0, minimum width=\linewidth, minimum height=#2\baselineskip] at (0,0) {};
     }{
-      \textlang{english}{\draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/table-background.jpg}}};}
+      \textlang{english}{\draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#2\baselineskip}{\layout/table-background.jpg}}};}
     }
     \draw [borderoutyellow, very thick] (current bounding box.north west) rectangle (current bounding box.south east);
     \draw [borderinyellow, thick] ([xshift=+2.8pt, yshift=-2.8pt] current bounding box.north west) rectangle ([xshift=-2.8pt, yshift=2.8pt] current bounding box.south east);
@@ -513,14 +513,14 @@
           \def\hyperlinkcolor{amber}
           \hypersetup{linkcolor=amber}
         }
-        #2
+        #3
       }}
       \end{varwidth}
     };
     \iftoggle{noartbackground}{}{
       \begin{pgfonlayer}{background}
         \begin{scope}[blend mode=multiply]
-          \draw [shade, blur shadow={shadow opacity=15}] (current bounding box.north west) rectangle (current bounding box.south east);
+          \draw [#1] (current bounding box.north west) rectangle (current bounding box.south east);
         \end{scope}
       \end{pgfonlayer}
     }
