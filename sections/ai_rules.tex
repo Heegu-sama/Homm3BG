@@ -93,11 +93,11 @@
   \subsection*{AI Deck sharing}
   If there are multiple AI Enemy Armies in the Scenario, but the rules don't specify which Enemy an AI Deck, an AI Spell Deck, or a Skill belongs to, you should assume it is shared between them.
 
-  \subsection*{AI Magic \svg{magic} cards and AI Spell Deck}
+  \subsection*{AI Magic cards and AI Spell Deck}
   Build the \textbf{AI Spell Deck} by separating the indicated Spells from the regular Spell Deck during setup.
   Shuffle the AI Spell Deck before each Combat together with its discard pile.
 
-  Whenever an AI Magic card \svg{magic} is drawn, draw the next spell from the the AI Spell Deck, and cast it.
+  Whenever an AI Magic \svg{magic} card is drawn, draw the next spell from the the AI Spell Deck, and cast it.
   Discarded spells go to its own AI Spell Discard pile.
   If the AI Spell deck empties before Combat ends, shuffle the AI Spell discard pile to form a new Spell deck.
 
@@ -106,14 +106,14 @@
 
   If the AI Hero is assigned a Spell card that is unavailable because it's your Hero's Deck, and you don't have another copy, substitute it with a \wikilink{spells/magic_arrow}{Magic Arrow} card.
 
-  For certains spells it can be unclear how AI are supposed to use them.
+  For certains spells it can be unclear how AI is supposed to use them.
   See \pagelink{AI Complex Spells}{Casting Complex Spells} for explanations.
 
-  \subsection*{AI Skill \svg{skill} cards}
-  % TODO need rephrasing to better disambiguate the AI Skill card with the \svg{skill} symbol vs the Ability card assigned to the hero
+  \subsection*{AI Skill cards}
   If Skill cards are included, search for and set aside the indicated card related to it (usually, an Ability).
-  Whenever an AI Hero uses the skill assigned to them in the Setup, do not discard it afterwards.
+  Whenever an AI Hero uses the AI Skill \svg{skill} card, use the skill card assigned to them in the Setup, but do not discard it afterwards.
   Contrary to the regular rules, the AI Hero can use the skill again, when instructed to do so by the AI deck.
+  Discard the AI Skill \svg{skill} card as usual.
 
   AI Skill cards cannot be replaced, so if setup assigns the AI Hero a card that your Hero has and you don't have another copy,
   remove the needed card from your Hero's deck and \textbf{Search (3)} the respective card's deck to compensate your Hero for the loss.
@@ -181,30 +181,40 @@
   To fully use their effects, here are extended descriptions of how AI Heroes should use each of these spells.
   Of course, the scenario can override this.
 
-  \subsection*{Spells attacking multiple targets (like \wikilink{spells/fireball}{Fireball} and \wikilink{spells/chain_lightning}{Chain Lightning})}
+  \subsection*{Spells attacking multiple targets}
+  \textit{Examples: \wikilink{spells/fireball}{Fireball,} \wikilink{spells/chain_lightning}{Chain Lightning.}}
+
   When activated, target any unit with one or two adjacent units from the player’s army, prioritizing the groups where there are more higher-tier units.
   If there is more than one valid group, attack the one that is between the closest to perishing (has the smallest difference between \svg{health_points} and current \svg{damage}).
   If there is still more than one valid target, then you can choose which unit is attacked.
   If there are no player units adjacent to one another, target units that are not adjacent to any of the AI units.
   If that is also not possible, do not use this spell -- instead, skip the AI \svg{magic} card that activated this effect and put it on the bottom of the Enemy AI deck, then shuffle this spell back to the Enemy Spell deck.
 
-  \subsection*{Instant Defense spells (like \wikilink{spells/stone_skin}{Stone Skin})}
+  \subsection*{Instant Defense spells}
+  \textit{Example: \wikilink{spells/stone_skin}{Stone Skin.}}
+
   When activated, put this card on the side of the Combat board, then put a Defense token on the unit with the highest \svg{defense} to represent the card’s effect -- it stays there until the defense is resolved.
   If there already is a Defense token on that unit, choose another one in the order of decreasing \svg{defense}.
   In case of a tie in \svg{defense} value, give preference to the unit of the highest tier and then to the greatest value of \svg{damage}.
 
   \columnbreak
-  \subsection*{Healing spells (like \wikilink{spells/cure}{Cure})}
+  \subsection*{Healing spells}
+  \textit{Example: \wikilink{spells/cure}{Cure.}}
+
   When activated, remove the \svg{damage} from the AI unit with the greatest value of \svg{damage} tokens, starting with the highest tier available.
   If no AI unit has any \svg{damage}, put the AI \svg{magic} card that triggered the spell at the bottom of the Enemy AI deck, then shuffle this Spell card back to the Enemy Spell Deck.
 
-  \subsection*{Single-round buffs (like \wikilink{spells/fire_shield}{Fire Shield})}
+  \subsection*{Single-round buffs}
+  \textit{Example: \wikilink{spells/fire_shield}{Fire Shield.}}
+
   % TODO FIFO or LIFO? do they all activate at the same time during first unit next round?
   When activated, check the tier of the unit on which you are about to cast the spell and count how many units of the same or higher tier there are on the board.
   If more than half of them have already activated this turn, do not cast the spell now -- instead, place it on the side of the Combat board and play it when the first AI unit activates in the next combat round.
   Skip drawing the AI card for that activation.
 
-  \subsection*{Attack-weakening spells (like \wikilink{spells/weakness}{Weakness})}
+  \subsection*{Attack-weakening spells}
+  \textit{Example: \wikilink{spells/weakness}{Weakness.}}
+
   When activated, if the AI’s activated unit is about to perform an attack that will provoke a Retaliation, cast this spell on the Retaliating enemy to lower their \svg{attack}.
   If the AI’s unit causes no Retaliation, do not cast this spell -- instead, ignore the AI card that activated the spell and put it at the bottom of the Enemy AI deck, then shuffle the Spell card back to the Enemy Spell deck.
 \end{multicols*}
