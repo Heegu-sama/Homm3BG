@@ -417,15 +417,15 @@
 }
 \newcommand{\addsection}[3][1]{
   \def\oneliner{\equal{#1}{1}}
-  \vspace*{-5em}
-  \hspace*{-1em}
+  \vspace*{-5.81em}
+  \hspace*{-1.35em}
   \makebox[0pt][l]{
   \raisebox{-\totalheight}[0pt][7pt]{
     \begin{tikzpicture}
       \iftoggle{noartbackground}{
-        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\layout/section_heading_monochrome.png}};
+        \draw (0, 0) node[inner sep=0] {\makebox[1.015\textwidth][c]{\includegraphics[width=1.055\linewidth, height=0.24\linewidth]{\layout/section_heading_monochrome.png}}};
       }{
-        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\layout/section_heading.jpg}};
+        \draw (0, 0) node[inner sep=0] {\makebox[1.015\textwidth][c]{\includegraphics[width=1.055\linewidth, height=0.24\linewidth]{\layout/section_heading.png}}};
       }
       \draw (-6.2, 0) node {\includegraphics[width=0.125\textwidth]{#3}};
     \end{tikzpicture}
@@ -435,12 +435,16 @@
   \begin{fullwidth}[leftmargin=0.16\textwidth, outermargin=0.16\textwidth, innermargin=0.16\textwidth]
     \begin{center}
       \vspace*{\lang_header_adjustment}
-      \ifthenelse{\oneliner}{}{\vspace{-13pt}}
+      \ifthenelse{\oneliner}{\vspace{0.81em}}{\vspace{-0.27em}}
       \sectionheadertext{#2}
     \end{center}
   \end{fullwidth}
-  \vspace{1.75em}
-  \ifthenelse{\oneliner}{}{\vspace{-13pt}}
+  \ifthenelse{\oneliner}{
+    \vspace{1.75em}
+    \vspace{\lang_header_adjustment}
+  }{
+    \vspace{0.66em}
+  }
 }
 %End of create section heading.
 
@@ -626,23 +630,41 @@
 % Command for overlay circled text
 \definecolor{goblin}{HTML}{3b7c33}
 
-\newcommand\encirclebase[4]{%
+\newcommand\encirclebase[4][normal]{%
+  % Set drop shadow size
+  \ifdim\dimexpr#3\relax<1.6em\relax
+    \edef\shadowscale{2.2\dimexpr#3\relax}
+  \else
+    \edef\shadowscale{1.5\dimexpr#3\relax}
+  \fi
+
+  % Set drop shadow offset
+  \ifthenelse{\equal{#1}{legend}}{
+    \def\shadowoffset{0.5pt}
+  }{
+    \def\shadowoffset{2pt}
+  }
+
   \begin{footnotesize}%
-  \tikz[baseline=(X.base)]
-  \node (X) [draw=white, shape=circle, minimum size=#3, align=center, inner sep=0, fill=#1, text=white, #2] {\strut \textbf{#4}};%
+  \tikz[baseline=(X.base)]{
+    \node (X) [draw=white, shape=circle, fill=#2, minimum size=#3, align=center, inner sep=0, text=white] {\strut \textbf{#4}};
+    \begin{scope}[on background layer]
+      \node [inner sep=0pt, opacity=0.7] at ([xshift=\shadowoffset, yshift=-\shadowoffset]X.center) {\includegraphics[width=\shadowscale]{\layout/circle_drop_shadow.png}};
+    \end{scope}
+  }
   \end{footnotesize}%
 }
 \newcommand\encircle[1]{
-  \encirclebase{goblin}{blur shadow={shadow blur steps=5}}{1.6em}{#1}
+  \encirclebase{goblin}{1.6em}{#1}
 }
 \newcommand\encirclered[1]{%
-  \encirclebase{darkcandyapplered}{blur shadow={shadow blur steps=5}}{1.6em}{#1}
+  \encirclebase{darkcandyapplered}{1.6em}{#1}
 }
 \newcommand\encirclelegend[2]{%
-  \encirclebase{#1}{blur shadow={shadow blur steps=3, shadow xshift=0.5pt, shadow yshift=-0.5pt, shadow blur radius=1pt}}{1.6em}{#2}
+  \encirclebase[legend]{#1}{1.6em}{#2}
 }
 \newcommand\encirclesmall[1]{
-  \encirclebase{goblin}{blur shadow={shadow blur steps=5}}{0.9em}{#1}
+  \encirclebase{goblin}{0.9em}{#1}
 }
 
 \newcommand{\drawbottom}{
