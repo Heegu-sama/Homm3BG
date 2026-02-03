@@ -1,0 +1,44 @@
+name: Label translation PR
+
+on:
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    name: Label PR
+
+    steps:
+      - name: Set up repository
+        uses: actions/checkout@v4
+
+      - name: Label
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cat << 'EOF' > matrix.json
+            [
+              { "prefix": "[PL]", "label": "🇵🇱 Polish"},
+              { "prefix": "[ES]", "label": "🇪🇸 Spanish"},
+              { "prefix": "[FR]", "label": "🇫🇷 Frnch"},
+              { "prefix": "[RU]", "label": "🇷🇺 Russian"},
+              { "prefix": "[UA]", "label": "🇺🇦 Ukrainian"},
+              { "prefix": "[DE]", "label": "🇩🇪 German"},
+              { "prefix": "[CS]", "label": "🇨🇿 Czech"},
+              { "prefix": "[HE]", "label": "🇮🇱 Hebrew"}
+            ]
+          EOF
+          jq -c '.[]' matrix.json | while read -r item; do
+            prefix=$(jq --raw-output '.prefix' <<< "$item")
+            if [[ "${PR_TITLE^^:0:${#prefix}}" == "$prefix" ]]; then
+              label=$(jq --raw-output '.label' <<< "$item")
+              echo "Adding label: $label"
+              gh pr edit ${{ github.event.pull_request.number }} --add-label "${label}"
+              exit 0
+            fi
+          done
