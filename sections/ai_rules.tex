@@ -128,7 +128,7 @@
   These rules apply during Combat in \textbf{Solo}\index{Solo Mode} and \textbf{Cooperative} Scenarios.
   The rules for AI unit placement during setup are described in \pagelink{CombatAISetup}{Combat section}.
 
-  When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\par
+  When Neutral enemies or AI Heroes activate a unit, they follow a set of instructions:\par
 
   \begin{itemize}
     \item If it is an AI Hero, draw and resolve the next \pagelink{AI Deck}{AI card}.
@@ -185,10 +185,10 @@
   \textit{Examples: \wikilink{spells/fireball}{Fireball,} \wikilink{spells/chain_lightning}{Chain Lightning.}}
 
   When activated, target any unit with one or two adjacent units from the player's army, prioritizing the groups where there are more higher-tier units.
-  If there is more than one valid group, attack the one that is between the closest to perishing (has the smallest difference between \svg{health_points} and current \svg{damage}).
+  If there is more than one valid group, attack the one with the least health remaining (has the smallest difference between \svg{health_points} and current \svg{damage}).
   If there is still more than one valid target, you can choose which unit is attacked.
   If there are no player units adjacent to one another, target units that are not adjacent to any of the AI units.
-  If that is also not possible, do not use this spell -- instead, skip the AI \svg{magic} card that activated this effect and put it on the bottom of the Enemy AI deck, then shuffle this spell back to the Enemy Spell deck.
+  If that is also not possible, do not use this Spell -- instead, skip the AI \svg{magic} card that activated this effect and put it on the bottom of the Enemy AI deck, then shuffle this Spell back to the Enemy Spell Deck.
 
   \subsection*{Instant Defense Spells}
   \textit{Example: \wikilink{spells/stone_skin}{Stone Skin.}}
@@ -202,14 +202,14 @@
   \textit{Example: \wikilink{spells/cure}{Cure.}}
 
   When activated, remove the \svg{damage} from the AI unit with the greatest value of \svg{damage} tokens, starting with the highest tier available.
-  If no AI unit has any \svg{damage}, put the AI \svg{magic} card that triggered the spell at the bottom of the Enemy AI deck, then shuffle this Spell card back to the Enemy Spell Deck.
+  If no AI unit has any \svg{damage}, put the AI \svg{magic} card that triggered the Spell at the bottom of the Enemy AI deck, then shuffle this Spell card back to the Enemy Spell Deck.
 
   \subsection*{Single-round buffs}
   \textit{Example: \wikilink{spells/fire_shield}{Fire Shield.}}
 
   % TODO FIFO or LIFO? do they all activate at the same time during first unit next round?
-  When activated, check the tier of the unit on which you are about to cast the spell and count how many units of the same or higher tier there are on the board.
-  If more than half of them have already activated this turn, do not cast the spell now -- instead, place it on the side of the Combat board and play it when the first AI unit activates in the next combat round.
+  When activated, check the tier of the unit on which you are about to cast the Spell and count how many units of the same or higher tier there are on the board.
+  If more than half of them have already activated this turn, do not cast the Spell now -- instead, place it on the side of the Combat board and play it when the first AI unit activates in the next combat round.
   Skip drawing the AI card for that activation.
 
   \subsection*{Attack-weakening spells}
