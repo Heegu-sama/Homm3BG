@@ -1,0 +1,47 @@
+name: Label translation PR
+
+on:
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    name: Label PR
+
+    steps:
+      - name: Set up repository
+        uses: actions/checkout@v4
+
+      - name: Label
+        shell: python
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          import os
+          import subprocess
+
+          pr_title = os.environ["PR_TITLE"]
+          pr_number = os.environ["PR_NUMBER"]
+
+          language_labels = {
+              "[PL]": "🇵🇱 Polish",
+              "[ES]": "🇪🇸 Spanish",
+              "[FR]": "🇫🇷 French",
+              "[RU]": "🇷🇺 Russian",
+              "[UA]": "🇺🇦 Ukrainian",
+              "[DE]": "🇩🇪 German",
+              "[CS]": "🇨🇿 Czech",
+              "[HE]": "🇮🇱 Hebrew",
+          }
+
+          for prefix, label in language_labels.items():
+              if pr_title.upper().startswith(prefix):
+                  print(f"Adding label: {label}")
+                  subprocess.run(["gh", "pr", "edit", pr_number, "--add-label", label])
+                  break
