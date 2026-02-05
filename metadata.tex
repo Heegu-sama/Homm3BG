@@ -517,26 +517,18 @@
       }}
       \end{varwidth}
     };
-    \iftoggle{noartbackground}{}{
-      \begin{pgfonlayer}{background}
-        \begin{scope}[blend mode=multiply]
-          \draw [shade, blur shadow={shadow opacity=15}] (current bounding box.north west) rectangle (current bounding box.south east);
-        \end{scope}
-      \end{pgfonlayer}
-    }
   \end{tikzpicture}
 }
 
 % Create Heroes-styled framed canvas for a table. Accepts three arguments:
-% 1) [Optional] Drop shadow description. Use [] as the first arg to delete it.
-% 2) Height specified in verses (lines of text)
-% 3) Table contents like title and tabularx environment
-\newcommand{\hommtable}[3][shade, blur shadow={shadow opacity=15}]{
+% 1) Height specified in verses (lines of text)
+% 2) Table contents like title and tabularx environment
+\newcommand{\hommtable}[2]{
   \begin{tikzpicture}
     \iftoggle{noartbackground}{
-      \node[inner sep=0, minimum width=\linewidth, minimum height=#2\baselineskip] at (0,0) {};
+      \node[inner sep=0, minimum width=\linewidth, minimum height=#1\baselineskip] at (0,0) {};
     }{
-      \textlang{english}{\draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#2\baselineskip}{\layout/table-background.jpg}}};}
+      \textlang{english}{\draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/table-background.jpg}}};}
     }
     \draw [bordermidyellow, thick] ([xshift=+1pt, yshift=-1pt] current bounding box.north west) rectangle ([xshift=-1pt, yshift=1pt] current bounding box.south east);
     \draw [borderoutyellow, thick] (current bounding box.north west) rectangle (current bounding box.south east);
@@ -551,18 +543,11 @@
           \hypersetup{linkcolor=amber}
         }
         \setlength{\tabcolsep}{0.3em}
-        #3
+        #2
         \egroup
       }
       \end{varwidth}
     };
-    \iftoggle{noartbackground}{}{
-      \begin{pgfonlayer}{background}
-        \begin{scope}[blend mode=multiply]
-          \draw [#1] (current bounding box.north west) rectangle (current bounding box.south east);
-        \end{scope}
-      \end{pgfonlayer}
-    }
   \end{tikzpicture}
 }
 % End of Heroes-styled canvas definition.
@@ -630,23 +615,41 @@
 % Command for overlay circled text
 \definecolor{goblin}{HTML}{3b7c33}
 
-\newcommand\encirclebase[4]{%
+\newcommand\encirclebase[4][normal]{%
+  % Set drop shadow size
+  \ifdim\dimexpr#3\relax<1.6em\relax
+    \edef\shadowscale{2.2\dimexpr#3\relax}
+  \else
+    \edef\shadowscale{1.5\dimexpr#3\relax}
+  \fi
+
+  % Set drop shadow offset
+  \ifthenelse{\equal{#1}{legend}}{
+    \def\shadowoffset{0.5pt}
+  }{
+    \def\shadowoffset{2pt}
+  }
+
   \begin{footnotesize}%
-  \tikz[baseline=(X.base)]
-  \node (X) [draw=white, shape=circle, minimum size=#3, align=center, inner sep=0, fill=#1, text=white, #2] {\strut \textbf{#4}};%
+  \tikz[baseline=(X.base)]{
+    \node (X) [draw=white, shape=circle, fill=#2, minimum size=#3, align=center, inner sep=0, text=white] {\strut \textbf{#4}};
+    \begin{scope}[on background layer]
+      \node [inner sep=0pt, opacity=0.7] at ([xshift=\shadowoffset, yshift=-\shadowoffset]X.center) {\includegraphics[width=\shadowscale]{\layout/circle_drop_shadow.png}};
+    \end{scope}
+  }
   \end{footnotesize}%
 }
 \newcommand\encircle[1]{
-  \encirclebase{goblin}{blur shadow={shadow blur steps=5}}{1.6em}{#1}
+  \encirclebase{goblin}{1.6em}{#1}
 }
 \newcommand\encirclered[1]{%
-  \encirclebase{darkcandyapplered}{blur shadow={shadow blur steps=5}}{1.6em}{#1}
+  \encirclebase{darkcandyapplered}{1.6em}{#1}
 }
 \newcommand\encirclelegend[2]{%
-  \encirclebase{#1}{blur shadow={shadow blur steps=3, shadow xshift=0.5pt, shadow yshift=-0.5pt, shadow blur radius=1pt}}{1.6em}{#2}
+  \encirclebase[legend]{#1}{1.6em}{#2}
 }
 \newcommand\encirclesmall[1]{
-  \encirclebase{goblin}{blur shadow={shadow blur steps=5}}{0.9em}{#1}
+  \encirclebase{goblin}{0.9em}{#1}
 }
 
 \newcommand{\drawbottom}{
