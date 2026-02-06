@@ -94,7 +94,6 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
 \renewcommand\cftsecdotsep{\cftdot}
 \renewcommand\cftsubsecdotsep{\cftdot}
-\setlength{\cftbeforesecskip}{0.1em}
 
 \captionsetup[figure]{labelformat=empty}
 \captionsetup[subfigure]{labelformat=empty, singlelinecheck=off, justification=centering}
@@ -520,7 +519,7 @@
   \end{tikzpicture}
 }
 
-% Create Heroes-styled framed canvas for a table. Accepts three arguments:
+% Create Heroes-styled framed canvas for a table. Accepts two arguments:
 % 1) Height specified in verses (lines of text)
 % 2) Table contents like title and tabularx environment
 \newcommand{\hommtable}[2]{
@@ -699,6 +698,9 @@
   \begin{multicols}{2}
     \small
     \@starttoc{toc}%
+    \vspace*{\fill}
+    \columnbreak
+    \includegraphics[width=\linewidth]{\art/black_dragon.jpg}
   \end{multicols}
 }
 \makeatother
