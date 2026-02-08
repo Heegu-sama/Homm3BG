@@ -2,9 +2,61 @@
 \addsection{AI rules}{\spells/fortune.png}
 
 \begin{multicols}{2}
-
   AI rules apply to Enemy Heroes and all Combat encounters, including those against Neutral Units, in \textbf{Solo Campaigns} and \textbf{Cooperative} Scenarios.
 
+  \bigskip
+  \pagetarget{AI Units}{\subheader{Combat against AI}}
+  Foreword: these rules are intended to make fun challenging encounters, but still be simple enough to follow.
+  You will likely find some loopholes which make the encounter too easy, but you may make AI behave more intellegently.
+
+  The rules for AI unit placement during setup are described in \pagelink{CombatAISetup}{Combat section}.
+
+  When Neutral enemies or \pagelink{AI Heroes}{AI Heroes} activate a unit, they follow a set of instructions:\par
+
+  \begin{itemize}
+    \item If it is an AI Hero, draw and resolve the next \pagelink{AI Deck}{AI card}.
+
+    \item Enemy Ground \svg{unit_ground} and Flying \svg{unit_flying} units prioritize attacking units of the \textbf{same} tier.
+    If this is impossible, they attack the unit of a lower tier (in tier \textbf{descending} order, down to bronze), and if that is also impossible, they attack the unit of a higher tier (in tier \textbf{ascending} order).\par
+
+    \textit{Example: \svg{golden}\svg{unit_ground} has this priority:
+    \svg{golden}
+    - \svg{silver}
+    - \svg{bronze}
+    - \svg{azure}.}
+
+    \columnbreak
+    \item Ranged \svg{unit_ranged} units prioritize attacking other Ranged \svg{unit_ranged} units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.
+    If there are no Ranged \svg{unit_ranged} units for them to target, they prioritize Ground \svg{unit_ground} and Flying \svg{unit_flying} units in the same tier order.\par
+
+    \textit{Example: \svg{silver}\svg{unit_ranged} has this priority:
+    \svg{silver}\svg{unit_ranged}
+    - \svg{bronze}\svg{unit_ranged}
+    - \svg{golden}\svg{unit_ranged}
+    - \svg{azure}\svg{unit_ranged}
+    - \svg{silver}\svg{unit_ground}\svg{unit_flying}
+    - \svg{bronze}\svg{unit_ground}\svg{unit_flying}
+    - \svg{golden}\svg{unit_ground}\svg{unit_flying}
+    - \svg{azure}\svg{unit_ground}\svg{unit_flying}.}
+  \end{itemize}
+
+  In both cases, if there is more than one valid target, they attack the closest one.
+  If there is ever a tie between equally valid targets, the player chooses which unit is attacked.\par
+
+  Enemy units cannot \pagelink{Defend}{defend} unless instructed to.
+
+  \pagetarget{AI Siege}{\subsection*{AI Siege}}
+  When the Walls and Gate are mentioned in Combat preparation but no additional information on how to arrange them is given, arrange them as a human player would:
+  place the Gate in front of the \svg{unit_ground} unit with the highest \svg{initiative}.
+  By default, the units do not attack the Walls -- they would rather fly over them to attack their target or move towards it through the Gate.
+  If it is not possible, they take a \pagelink{Defend}{Defend} Action.
+
+  The \pagelink{Walls}{Arrow Tower} is treated like a Silver \svg{silver}\svg{unit_ranged} unit.
+  However, if there are multiple equally valid targets, it will attack the target with the least health remaining (the smallest difference between \svg{health_points} and current \svg{damage}).
+\end{multicols}
+
+\clearpage
+\begin{multicols}{2}
   \pagetarget{AI Heroes}{\subheader{AI Heroes}}
   AI Heroes are used in Campaigns.
   Their units are static and defined by the Scenario: locate the indicated unit cards during setup.
@@ -37,62 +89,11 @@
 \end{multicols}
 
 {\begin{center}
-    \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{\art/harpy.jpg}
+    \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{\art/gold_dragon.jpg}
 \end{center}}
 
+\clearpage
 \begin{multicols*}{2}
-  \pagetarget{AI Units}{\subheader{Combat against AI}}
-  These rules apply during Combat in \textbf{Solo}\index{Solo Mode} and \textbf{Cooperative} Scenarios.
-
-  Foreword: these rules are intended to make fun challenging encounters, but still be simple enough to follow.
-  You will likely find some loopholes which make the encounter too easy, but you may make AI behave more intellegently.
-
-  The rules for AI unit placement during setup are described in \pagelink{CombatAISetup}{Combat section}.
-
-  When Neutral enemies or AI Heroes activate a unit, they follow a set of instructions:\par
-
-  \begin{itemize}
-    \item If it is an AI Hero, draw and resolve the next \pagelink{AI Deck}{AI card}.
-
-    \item Enemy Ground \svg{unit_ground} and Flying \svg{unit_flying} units prioritize attacking units of the \textbf{same} tier.
-    If this is impossible, they attack the unit of a lower tier (in tier \textbf{descending} order, down to bronze), and if that is also impossible, they attack the unit of a higher tier (in tier \textbf{ascending} order).\par
-
-    \textit{Example: \svg{golden}\svg{unit_ground} has this priority:
-    \svg{golden}
-    - \svg{silver}
-    - \svg{bronze}
-    - \svg{azure}.}
-
-    \item Ranged \svg{unit_ranged} units prioritize attacking other Ranged \svg{unit_ranged} units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.
-    If there are no Ranged \svg{unit_ranged} units for them to target, they prioritize Ground \svg{unit_ground} and Flying \svg{unit_flying} units in the same tier order.\par
-
-    \textit{Example: \svg{silver}\svg{unit_ranged} has this priority:
-    \svg{silver}\svg{unit_ranged}
-    - \svg{bronze}\svg{unit_ranged}
-    - \svg{golden}\svg{unit_ranged}
-    - \svg{azure}\svg{unit_ranged}
-    - \svg{silver}\svg{unit_ground}\svg{unit_flying}
-    - \svg{bronze}\svg{unit_ground}\svg{unit_flying}
-    - \svg{golden}\svg{unit_ground}\svg{unit_flying}
-    - \svg{azure}\svg{unit_ground}\svg{unit_flying}.}
-  \end{itemize}
-
-  In both cases, if there is more than one valid target, they attack the closest one.
-  If there is ever a tie between equally valid targets, the player chooses which unit is attacked.\par
-
-  Enemy units cannot \pagelink{Defend}{defend} unless instructed to.
-
-  \columnbreak
-  \pagetarget{AI Siege}{\subsection*{AI Siege}}
-  When the Walls and Gate are mentioned in Combat preparation but no additional information on how to arrange them is given, arrange them as a human player would:
-  place the Gate in front of the \svg{unit_ground} unit with the highest \svg{initiative}.
-  By default, the units do not attack the Walls -- they would rather fly over them to attack their target or move towards it through the Gate.
-  If it is not possible, they take a \pagelink{Defend}{Defend} Action.
-
-  The \pagelink{Walls}{Arrow Tower} is treated like a Silver \svg{silver}\svg{unit_ranged} unit.
-  However, if there are multiple equally valid targets, it will attack the target with the least health remaining (the smallest difference between \svg{health_points} and current \svg{damage}).
-
-  \bigskip
   \pagetarget{AI Deck}{\subheader{AI Decks}}
   \begin{tikzpicture}
     \node (card) {\includegraphics[width=0.57\linewidth]{\cards/ai.png}};
@@ -178,10 +179,9 @@
 
   \subsection*{AI Deck sharing}
   If there are multiple AI Enemy Armies in the Scenario, but the rules do not specify to which Enemy an AI Deck, an AI Spell Deck, or a Skill belongs, you should assume it is shared between them.
-\end{multicols*}
 
-\pagetarget{AI Complex Spells}{\subheader{Casting complex spells}}
-\begin{multicols*}{2}
+  \bigskip
+  \pagetarget{AI Complex Spells}{\subheader{Casting complex spells}}
   In some Campaigns, enemies use Spells whose effects are not fully compatible with the standard use of AI Magic \svg{magic} cards.
   To fully use their effects, here are extended descriptions of how AI Heroes should use each of these spells.
   The Scenario can override these instructions.
@@ -202,7 +202,6 @@
   If there already is a Defense token on that unit, choose another one in the order of decreasing \svg{defense}.
   In case of a tie in \svg{defense} value, give preference to the unit of the highest tier, then to the greatest value of \svg{damage}.
 
-  \columnbreak
   \subsection*{Healing spells}
   \textit{Example: \wikilink{spells/cure}{Cure.}}
 
