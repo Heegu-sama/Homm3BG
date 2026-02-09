@@ -101,10 +101,10 @@ if [[ -n "${SECTION_SEARCH}" ]]; then
   fi
 
   # Target is ambiguous
-  if [[ $(echo "$TARGET" | wc -l) -gt 1 ]]; then
+  if [[ $(echo "$TARGET" | wc -l) -gt 1 && "$SECTION_SEARCH" != *'\|'* ]]; then
     echo "Error: Multiple sections found matching '$SECTION_SEARCH':" >&2
     echo "$TARGET" >&2
-    #exit 1
+    exit 1
   fi
 
   TEMP_STRUCTURE=$(mktemp "$TEMP_DIR/structure.XXXXXX")
