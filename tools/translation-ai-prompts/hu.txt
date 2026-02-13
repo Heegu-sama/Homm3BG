@@ -1,0 +1,188 @@
+We're translating board game rule book from English to Hungarian. The text
+is in LaTeX format, and the messages are in GNU gettext po format. Rules:
+
+1. PO formátumszabályok. A msgid és a msgstr egyaránt:
+   - Kezdődjön egy üres idézőjeles karakterlánccal: `""`
+   - Minden sor külön új sorba kerüljön
+   - Minden sor idézőjelek közé kerüljön
+   - End each quoted line with \n
+   Example:
+   msgid ""
+   "First line\n"
+   "Second line\n"
+   msgstr ""
+   "Első sor\n"
+   "Második sor\n"
+
+2. LaTeX parancsok
+   - Őrizd meg a sorok elején lévő összes szóközt
+   - Minden LaTeX parancs pontosan úgy maradjon, ahogy eredetileg szerepel
+   - `\pagetarget{...}{...}`: The first argument is not translated. For
+     example, `\pagetarget{Heroes}{Heroes}` translates to
+     `\pagetarget{Heroes}{Hősök}`.
+   - `\pagelink{...}{...}`: The first argument is not translated. For
+     example, `\pagelink{Combatexperience}{Combat}` translates to
+     `\pagelink{Combatexperience}{Harc}`.
+   - `\index{...}`: A `\index{...}` parancson belüli tartalom lefordítandó.
+   - Ne fordítsd le a LaTeX parancsneveket
+   - Ne adj hozzá és ne távolíts el sortöréseket (\n)
+   - Őrizd meg a LaTeX parancsok körüli összes szóközt
+   - Őrizd meg a sortöréseket pontosan úgy, ahogy a forrásszövegben
+     szerepelnek
+   - Változatlanul hagyandó speciális parancsok:
+     - SVG ikonok (\svg{damage-yellow})
+     - Térközparancsok (\bigskip, \hsize stb.)
+   - Táblázatoknál (például \hommtable, \tabularx):
+     - Minden méretezési paraméter maradjon változatlan (pl. {38},
+       {0.3\hsize})
+     - Őrizd meg az összes cellastílus-parancsot (\darkcell, \lightcell)
+     - Maintain table column specifications
+   Example:
+   msgid "\\darkcell[1.5]{\\color{white}Game Difficulty}"
+   msgstr "\\darkcell[1.5]{\\color{white}Játék nehézség}"
+
+3. Nagybetűhasználat
+Őrizd meg a szavak nagybetűzését az eredeti szövegnek megfelelően.
+Ha angolul "Hero" szerepel, akkor a fordításban is nagybetűvel szerepeljen ("Hős", ne "hős").
+
+4. Példa
+A következő `msgid` esetén:
+"  \\pagetarget{Heroes}{Players} always control a Main Hero and may additionally also recruit a Secondary Hero.\n"
+A kimenetnek ennek kell lennie:
+"  \\pagetarget{Heroes}{Játékosok} mindig egy Főhőst irányítanak, és emellett egy Mellékhőst is toborozhatnak.\n"
+
+5. Kimenet
+  - A kimenet legyen másolható kódblokk
+  - Csak a lefordított `msgstr` legyen a kimenet a megadott `msgid` alapján,
+    az eredeti formázás és idézőjelek megtartásával.
+  - Ha a kódblokk `msgstr ""` sorral kezdődik, hagyd ki ezt a sort
+  - A blokk tartalmazza a záró újsor karaktert is
+
+6. Konkrét szakkifejezések fordítása nagybetűsítés nélkül
+
+Factions:
+   - "castle" translates to "vár"
+   - "conflux" translates to "konflux"
+   - "cove" translates to "öböl"
+   - "dungeon" translates to "kazamata"
+   - "fortress" translates to "erőd"
+   - "inferno" translates to "inferno"
+   - "necropolis" translates to "nekropolisz"
+   - "rampart" translates to "bástya"
+   - "stronghold" translates to "fellegvár"
+   - "tower" translates to "torony"
+
+Units:
+   - "boars" translates to "vaddisznók"
+   - "champions" translates to "bajnokok"
+   - "deck of unit cards" translates to "egységkártya-pakli"
+   - "dendroids" translates to "dendroidok"
+   - "dread knights" translates to "rémlovagok"
+   - "familiars" translates to "familiárisok"
+   - "few" translates to "kevés"
+   - "griffins" translates to "griffek"
+   - "hp" translates to "életerő"
+   - "liches" translates to "lichek"
+   - "marksmen" translates to "mesterlövészek"
+   - "neutral units" translates to "semleges egységek"
+   - "pack" translates to "csapat"
+   - "recruited or reinforced" translates to "toborzott vagy megerősített"
+   - "reinforce" translates to "megerősít"
+   - "reinforced" translates to "megerősített"
+   - "summoned elementals" translates to "megidézett elementálok"
+   - "unit cards" translates to "egységkártyák"
+   - "units" translates to "egységek"
+   - "zealots" translates to "fanatikusok"
+
+Heroes:
+   - "ability" translates to "képesség"
+   - "experience" translates to "tapasztalat"
+   - "expert effects" translates to "szakértő hatások"
+   - "hero" translates to "hős"
+   - "heroes" translates to "hősök"
+   - "level tracker" translates to "szintjelző"
+   - "level" translates to "szint"
+   - "main hero" translates to "főhős"
+   - "secondary hero" translates to "mellékhős"
+   - "specialty" translates to "specialitás"
+
+Map Locations:
+   - "center field" translates to "középső mező"
+   - "central map tile" translates to "központi térképlapka"
+   - "dragon utopia" translates to "sárkány-utópia"
+   - "far map tile" translates to "távoli térképlapka"
+   - "field" translates to "mező"
+   - "locations" translates to "helyszínek"
+   - "map tile" translates to "térképlapka"
+   - "near map tile" translates to "közeli térképlapka"
+   - "random town" translates to "véletlen város"
+   - "revisitable" translates to "újralátogatható"
+   - "settlement" translates to "település"
+   - "starting (i) map tile" translates to "kezdő (i) térképlapka"
+   - "tile" translates to "lapka"
+   - "trading post" translates to "kereskedőállomás"
+   - "water wheel" translates to "vízkerék"
+
+Resources:
+   - "building materials" translates to "építőanyagok"
+   - "resource production tracker" translates to "erőforrás-termelésjelző"
+   - "resources" translates to "erőforrások"
+   - "treasure die" translates to "kincskocka"
+   - "valuables" translates to "értéktárgyak"
+
+Deck-building:
+   - "ability card" translates to "képességkártya"
+   - "deck" translates to "pakli"
+   - "decks" translates to "paklik"
+   - "discard pile" translates to "dobópakli"
+   - "discard" translates to "eldob"
+   - "hand limit" translates to "kézlimit"
+   - "player decks" translates to "játékospaklik"
+   - "search" translates to "keresés"
+   - "specialty card" translates to "specialitáskártya"
+   - "spell cards" translates to "varázslatkártyák"
+
+Spells:
+   - "haste" translates to "sietség"
+
+AI Deck:
+   - "magic card" translates to "mágiakártya"
+   - "might card" translates to "erőkártya"
+   - "skill card" translates to "készségkártya"
+   - "ai deck" translates to "AI-pakli"
+
+Town:
+   - "buildings" translates to "épületek"
+   - "dwelling" translates to "lakhely"
+   - "population token" translates to "népességjelző"
+
+Combat:
+   - "arrow tower" translates to "íjásztorony"
+   - "back line" translates to "hátsó sor"
+   - "combat board" translates to "harctábla"
+   - "combat" translates to "harc"
+   - "damage" translates to "sebzés"
+   - "front line" translates to "első sor"
+   - "winning combat" translates to "harc megnyerése"
+
+Battlefield:
+   - "adventure mode" translates to "kaland mód"
+   - "skirmish mode" translates to "összecsapás mód"
+   - "final combat" translates to "végső harc"
+   - "combat power level" translates to "harcierő-szint"
+
+Keywords:
+   - "clone token" translates to "klónjelző"
+   - "quicksand token" translates to "futóhomokjelző"
+   - "land mine token" translates to "aknajalző"
+   - "force field token" translates to "erőtérjelző"
+
+Other:
+   - "core rulebook" translates to "alapszabálykönyv"
+   - "effects" translates to "hatások"
+   - "game setup" translates to "játék előkészítése"
+   - "map setup" translates to "térkép előkészítése"
+   - "player elimination" translates to "játékos kiesése"
+   - "player setup" translates to "játékosok előkészítése"
+   - "round tracker" translates to "körjelző"
+   - "war machine" translates to "hadigép"

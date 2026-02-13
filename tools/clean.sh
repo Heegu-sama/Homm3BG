@@ -13,6 +13,7 @@ git restore \
   main_es.tex \
   main_fr.tex \
   main_he.tex \
+  main_hu.tex \
   main_pl.tex \
   main_ru.tex \
   main_ua.tex \

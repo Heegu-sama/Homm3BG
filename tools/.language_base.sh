@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 LANGUAGE="en"
-valid_languages=("en" "pl" "es" "fr" "ua" "ru" "cs" "he" "de")
+valid_languages=("en" "pl" "es" "fr" "ua" "ru" "cs" "he" "de" "hu")
 declare -A icu_locale_map=(
   ["en"]="en_US"
   ["pl"]="pl_PL"
@@ -12,6 +12,7 @@ declare -A icu_locale_map=(
   ["cs"]="cs_CZ"
   ["he"]="he_IL"
   ["de"]="de_DE"
+  ["hu"]="hu_HU"
 )
 
 # Function to check if language is valid
