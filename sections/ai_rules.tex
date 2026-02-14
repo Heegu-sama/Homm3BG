@@ -62,6 +62,7 @@
 \begin{multicols}{2}
   \pagetarget{AI Heroes}{\subheader{AI Heroes}}
   AI Heroes are used in Campaigns.
+  AI Heroes do not have a Town Board, Resources, or a Hero Board.
   Their units are static and defined by the Scenario: locate the indicated unit cards during setup.
   If the unit indicates a unit tier (\svg{bronze}, \svg{silver}, \svg{golden}, or \svg{azure}) instead of ``Few'' or ``Pack'', it is a Neutral Unit.
 
@@ -71,7 +72,6 @@
   AI Heroes cannot surrender and you cannot surrender to them;
   they will always fight until they run out of units.
   Winning Combat against an AI Hero does not grant any rewards unless stated by the Scenario.
-  AI Heroes do not have a Town Board, Resources, or a Hero Board.
 
   \columnbreak
   \subsection*{AI Hero Turns}
@@ -80,9 +80,8 @@
     \item If a player's Hero is on the same Tile as the AI, spend all MP to move towards them in an attempt to start Combat.
     \item If there are any Mines or Settlements the AI could flag on the same Tile, move towards the closest one.
     \item Otherwise, move toward the player's Town.
-  Repeat this sequence until all MPs are used up.
-  AI Heroes take their turn after the player.
   \end{itemize}
+  Repeat this sequence until all MPs are used up.
 
   AI Heroes always \textbf{automatically win Combat} against any Neutral Units, while simultaneously \textbf{flagging or visiting all Fields} they happen to move through.
   They gain no benefits from any Fields.
@@ -126,7 +125,7 @@
           \item[\textbf{6.}] Impossible\\Modifier
           \item[\textbf{7.}] Card Type:\\
             \begin{itemize}[itemsep=0.5em]
-              \item[\svg{might}] Might
+              \item[{\svg[12]{might}}] Might
               \item[\svg{magic}] Magic
               \item[\svg{skill}] Skill
             \end{itemize}
@@ -139,7 +138,7 @@
   The AI Deck consists of three types of AI cards: Might \svg[12]{might}, Magic \svg{magic}, and Skill \svg{skill}.
   Each Campaign Scenario lists the number and types of cards to include during setup.
   Choose these cards \textbf{randomly} when building the AI Deck.
-  Shuffle the AI Deck before each Combat together with its discard pile.
+  Before each Combat, shuffle the AI Deck and its discard pile together.
 
   When an AI Hero \textbf{activates} a unit, draw an AI card\index{AI card} and follow its instructions before the unit \pagelink{AI Units}{moves and/or attacks}.
   If the AI Deck is depleted during Combat, stop drawing from it.
@@ -148,7 +147,7 @@
 
   \subsection*{AI Magic cards and AI Spell Deck}
   Build the \textbf{AI Spell Deck} by separating the indicated Spells from the regular Spell Deck during setup.
-  Before each Combat, shuffle the AI Spell Deck and its Discard Pile together.
+  Before each Combat, shuffle the AI Spell Deck and its discard pile together.
 
   Whenever an AI Magic \svg{magic} card is drawn, draw the next Spell from the AI Spell Deck and cast it.
   Discarded spells go to its own AI Spell Discard Pile.
@@ -174,7 +173,7 @@
   \subsection*{AI cards timing}
   After an AI card is resolved, discard it.
 
-  Attack Might \svg{might} card says about ``unit that is about to attack'', so if the currently activated unit doesn't have a valid target to attack, the Attack will apply to the next unit who is able to attack.
+  The \wikilink{ai\#ai-cards}{Attack} Might \svg[12]{might} card says about ``unit that is about to attack'', so if the currently activated unit doesn't have a valid target to attack, the Attack will apply to the next unit who is able to attack.
   By that time the AI army might already have several AI cards waiting for him.
   Similar thing would happen with other AI cards which aren't useful at the moment of drawing them.
 
@@ -208,7 +207,7 @@
   \subsection*{Healing spells}
   \textit{Example: \wikilink{spells/cure}{Cure.}}
 
-  When activated, remove the \svg{damage} from the AI unit with the greatest value of \svg{damage} tokens, starting with the highest tier available.
+  When activated, remove the \svg{damage} from the AI unit with the greatest value of \svg{damage} taken, starting with the highest tier available.
   If no AI unit has any \svg{damage}, put the AI \svg{magic} card that triggered the Spell at the bottom of the AI Deck, then shuffle this Spell card back to the AI Spell Deck.
 
   \subsection*{Single-round buffs}
