@@ -12,6 +12,7 @@
 ]{geometry}
 
 % Useful packages
+\usepackage{afterpage}
 \usepackage[export]{adjustbox}
 \usepackage{amsmath}
 \usepackage{array}
@@ -241,6 +242,7 @@
     }
   }
 
+  \IfBooleanT{#1}{\global\toggletrue{bottomforeground}}
   \begin{tcolorbox}[
     enhanced,
     before~title=\raggedright\tiny,
@@ -257,6 +259,7 @@
     #2]
     #4
   \end{tcolorbox}
+  \IfBooleanT{#1}{\afterpage{\global\togglefalse{bottomforeground}}}
 }{}
 
 % Helper function for the tikz square
@@ -678,15 +681,25 @@
 }
 
 % Background
+\newtoggle{bottomforeground}
+\togglefalse{bottomforeground}
+
 \AddToHook{shipout/background}{%
   \iftoggle{noartbackground}{}{
     \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}
   }
+  \iftoggle{bottomforeground}{}{
+    \iftoggle{printable}{
+      \drawbottom
+    }{\put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}}
+  }
 }
 \AddToHook{shipout/foreground}{%
-  \iftoggle{printable}{
-    \drawbottom
-  }{\put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}}
+  \iftoggle{bottomforeground}{
+    \iftoggle{printable}{
+      \drawbottom
+    }{\put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}}
+  }{}
 }
 
 \makeindex[columns=3, title=,]
