@@ -194,9 +194,13 @@
   \iftoggle{textright2left}{
     \tl_set:No \l_expoverlay_tl {
       \IfBooleanTF{#1}{
-        \shade[right~color=\l_expcolor_tl, left~color=\l_expcolor_tl!0, opacity=0.09]
-          ([xshift=-5pt-\linewidth, yshift=3pt]frame.north~east) rectangle
-          ([xshift=5pt-\linewidth, yshift=-\paperheight]frame.south~west);
+        \begin{scope}
+          \clip ([xshift=-5pt-\linewidth, yshift=3pt]frame.north~east) rectangle
+                ([xshift=5pt-\linewidth, yshift=-\paperheight]frame.south~west);
+          \fill[\l_expcolor_tl, path~fading=west, opacity=0.09]
+            ([xshift=-5pt-\linewidth, yshift=\paperheight]frame.north~east) rectangle
+            ([xshift=5pt-\linewidth, yshift=-\paperheight]frame.south~west);
+        \end{scope}
       }{
         \fill[\l_expcolor_tl, path~fading=west, opacity=0.09]
           ([xshift=-5pt-\linewidth, yshift=3pt]frame.north~east) rectangle
@@ -214,9 +218,13 @@
   }{
     \tl_set:No \l_expoverlay_tl {
       \IfBooleanTF{#1}{
-        \shade[left~color=\l_expcolor_tl, right~color=\l_expcolor_tl!0, opacity=0.09]
-          ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
-          ([xshift=5pt, yshift=-\paperheight]frame.south~east);
+        \begin{scope}
+          \clip ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
+                ([xshift=5pt, yshift=-\paperheight]frame.south~east);
+          \fill[\l_expcolor_tl, path~fading=east, opacity=0.09]
+            ([xshift=-5pt, yshift=\paperheight]frame.north~west) rectangle
+            ([xshift=5pt, yshift=-\paperheight]frame.south~east);
+        \end{scope}
       }{
         \fill[\l_expcolor_tl, path~fading=east, opacity=0.09]
           ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
