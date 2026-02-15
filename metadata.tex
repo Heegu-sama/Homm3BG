@@ -193,13 +193,15 @@
   \tl_clear_new:N \l_expoverlay_tl
   \iftoggle{textright2left}{
     \tl_set:No \l_expoverlay_tl {
-      \fill[
-        \l_expcolor_tl,
-        path~fading=west,
-        opacity=0.09
-      ]
-        ([xshift=-5pt-\linewidth, yshift=3pt]frame.north~east) rectangle
-        \IfBooleanTF{#1}{([xshift=5pt-\linewidth, yshift=-\paperheight]frame.south~west)}{([xshift=5pt-\linewidth, yshift=-3pt]frame.south~west)};
+      \IfBooleanTF{#1}{
+        \shade[right~color=\l_expcolor_tl, left~color=\l_expcolor_tl!0, opacity=0.09]
+          ([xshift=-5pt-\linewidth, yshift=3pt]frame.north~east) rectangle
+          ([xshift=5pt-\linewidth, yshift=-\paperheight]frame.south~west);
+      }{
+        \fill[\l_expcolor_tl, path~fading=west, opacity=0.09]
+          ([xshift=-5pt-\linewidth, yshift=3pt]frame.north~east) rectangle
+          ([xshift=5pt-\linewidth, yshift=-3pt]frame.south~west);
+      }
       \fill[
         top~color=\l_expcolor_tl,
         bottom~color=\l_expcolor_tl,
@@ -211,13 +213,15 @@
     }
   }{
     \tl_set:No \l_expoverlay_tl {
-      \fill[
-        \l_expcolor_tl,
-        path~fading=east,
-        opacity=0.09
-      ]
-        ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
-        \IfBooleanTF{#1}{([xshift=5pt, yshift=-\paperheight]frame.south~east)}{([xshift=5pt, yshift=-3pt]frame.south~east)};
+      \IfBooleanTF{#1}{
+        \shade[left~color=\l_expcolor_tl, right~color=\l_expcolor_tl!0, opacity=0.09]
+          ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
+          ([xshift=5pt, yshift=-\paperheight]frame.south~east);
+      }{
+        \fill[\l_expcolor_tl, path~fading=east, opacity=0.09]
+          ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
+          ([xshift=5pt, yshift=-3pt]frame.south~east);
+      }
       \fill[
         top~color=\l_expcolor_tl,
         bottom~color=\l_expcolor_tl,
