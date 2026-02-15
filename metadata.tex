@@ -339,8 +339,18 @@
   }{%
     \edef\svgpath{\svgs/\detokenize{#2}.svg}%
   }%
+  % Compute a clean glyph name for copying: strip "-yellow" or "-mono" suffix
+  \IfEndWith{#2}{-yellow}{%
+    \StrGobbleRight{#2}{7}[\svgcleanname]%
+  }{%
+    \IfEndWith{#2}{-mono}{%
+      \StrGobbleRight{#2}{5}[\svgcleanname]%
+    }{%
+      \def\svgcleanname{#2}%
+    }%
+  }%
   \smash{%
-    \BeginAccSupp{ActualText={<#2>},space}%
+    \BeginAccSupp{ActualText={:\svgcleanname:},space}%
     \EndAccSupp{}%
   }%
   \ifnodrop{#2}{%
