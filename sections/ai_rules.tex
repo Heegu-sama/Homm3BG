@@ -1,121 +1,226 @@
 % !TeX spellcheck = en_US
-\pagetarget{AIrules}{\addsection{AI Rules}{\spells/fortune.png}}
+\addsection{AI rules}{\skills/armorer.png}
 
 \begin{multicols*}{2}
+  AI rules apply to Enemy Heroes and all Combat encounters, including those against Neutral Units, in \textbf{Solo Campaigns} and \textbf{Cooperative} Scenarios.
 
-\subheader{AI Hero Turn}
-AI Heroes are used in the Campaigns.
-They start in their Town, and have 3 MP, always spending them to perform the following Actions in descending priority:
-\begin{itemize}
-  \item If a player's Hero is on the same Tile as the AI, spend all MP to move towards them in an attempt to start Combat.
-  \item If there are any Mines or Settlements the AI could flag on the same Tile, move towards the closest one.
-  \item Otherwise, move toward the player's Town.
-Repeat this sequence until all MPs are used up.
-AI Heroes take their turn after the player.
-\end{itemize}
+  \bigskip
+  \pagetarget{AI Units}{\subheader{Combat against AI}}
+  Foreword: these rules are intended to make fun challenging encounters, but still be simple enough to follow.
+  You will likely find some loopholes which make the encounter too easy, but you may make AI behave more intellegently.
 
-AI Heroes always \textbf{automatically win Combat} against any Neutral Units, while simultaneously \textbf{flagging or Visiting all Fields} they happen to move through.
-They gain no benefits from any Fields.
+  The rules for AI unit placement during setup are described in \pagelink{CombatAISetup}{Combat section}.
 
-AI Heroes must discover face down Map Tiles as normal by spending 1 MP before moving onto them.
-The player chooses that Tile's orientation.\par
-AI Heroes cannot surrender and you cannot surrender to them;
-they will always fight until they run out of units.
-Winning Combat against an AI Hero does not grant any rewards unless stated by the Scenario.
-AI Heroes do not have a Town Board, Resources, or a Hero Board.
-Their units are static and defined by the Scenario's setup or other rules.\par
-Any differences to the above will be described in any given Scenario's own rules.
+  When Neutral enemies or \pagelink{AI Heroes}{AI Heroes} activate a unit, they follow a set of instructions:\par
+
+  \begin{itemize}
+    \item If it is an AI Hero, draw and resolve the next \pagelink{AI Deck}{AI card}.
+
+    \item Enemy Ground \svg{unit_ground} and Flying \svg{unit_flying} units prioritize attacking units of the \textbf{same} tier.
+    If this is impossible, they attack the unit of a lower tier (in tier \textbf{descending} order, down to bronze), and if that is also impossible, they attack the unit of a higher tier (in tier \textbf{ascending} order).\par
+
+    \textit{Example: \svg{golden}\svg{unit_ground} has this priority:
+    \svg{golden}
+    - \svg{silver}
+    - \svg{bronze}
+    - \svg{azure}.}
+
+    \item Ranged \svg{unit_ranged} units prioritize attacking other Ranged \svg{unit_ranged} units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.
+    If there are no Ranged \svg{unit_ranged} units for them to target, they prioritize Ground \svg{unit_ground} and Flying \svg{unit_flying} units in the same tier order.\par
+
+    \textit{Example: \svg{silver}\svg{unit_ranged} has this priority:
+    \svg{silver}\svg{unit_ranged}
+    - \svg{bronze}\svg{unit_ranged}
+    - \svg{golden}\svg{unit_ranged}
+    - \svg{azure}\svg{unit_ranged}
+    - \svg{silver}\svg{unit_ground}\svg{unit_flying}
+    - \svg{bronze}\svg{unit_ground}\svg{unit_flying}
+    - \svg{golden}\svg{unit_ground}\svg{unit_flying}
+    - \svg{azure}\svg{unit_ground}\svg{unit_flying}.}
+  \end{itemize}
+
+  In both cases, if there is more than one valid target, they attack the closest one.
+  If there is ever a tie between equally valid targets, the player chooses which unit is attacked.\par
+
+  Enemy units cannot \pagelink{Defend}{defend} unless instructed to.
+
+  \pagetarget{AI Siege}{\subsection*{AI Siege}}
+  When the Walls and Gate are mentioned in Combat preparation but no additional information on how to arrange them is given, arrange them as a human player would:
+  place the Gate in front of the \svg{unit_ground} unit with the highest \svg{initiative}.
+  By default, the units do not attack the Walls -- they would rather fly over them to attack their target or move towards it through the Gate.
+  If it is not possible, they take a \pagelink{Defend}{Defend} Action.
+
+  The \pagelink{Walls}{Arrow Tower} is treated like a Silver \svg{silver}\svg{unit_ranged} unit.
+  However, if it has multiple equally valid targets to attack, it will attack the one with the least health remaining (the smallest difference between \svg{health_points} and current \svg{damage}).
+
 \vspace*{\fill}
-\columnbreak
-
-\subheader{AI Decks}
-
-\begin{multicols*}{2}
-  \begin{center}
-    \vspace*{-1.5em}
-    \begin{tikzpicture}
-      \draw (0, 0) node {\includegraphics[width=1.3\linewidth]{\cards/ai.png}};
-      \draw (-0.7, 2.5) node {\encircle{1}};
-      \draw (1.5, 1.2) node {\encircle{2}};
-      \draw (-1.5, 0) node {\encircle{3}};
-      \draw (0.5, 0) node {\encircle{4}};
-      \draw (-1.5, -1.2) node {\encircle{5}};
-      \draw (0.5, -1.2) node {\encircle{6}};
-      \draw (-0.5, -2.5) node {\encircle{7}};
-    \end{tikzpicture}\\
-    \phantom{\ldots\ldots}\imagecaption{AI card}
-    \vspace*{-1em}
-  \end{center}
-  \vspace*{\fill}
-  \columnbreak
-  \scriptsize
-  \begin{itemize}[itemsep=0pt]
-    \item[\textbf{1.}] Name
-    \item[\textbf{2.}] Description
-    \item[\textbf{3.}] Easy Modifier
-    \item[\textbf{4.}] Normal Modifier
-    \item[\textbf{5.}] Expert Modifier
-    \item[\textbf{6.}] Impossible\\Modifier
-    \item[\textbf{7.}] Card Type
-  \end{itemize}\vspace*{\fill}
+{\transparent{0.2}{\includegraphics[width=\linewidth,keepaspectratio]{\art/thunder_helmet.png}}}
+\vspace*{\fill}
 \end{multicols*}
 
-AI Heroes use two Decks during Combat: the \textbf{AI Deck}, and the \textbf{AI Spell Deck}.
-The AI Deck consists of three types of AI cards: Might \svg[12]{might}, Magic \svg{magic} and Skill \svg{skill}.
-Each Campaign Scenario lists the number and types of cards to include during setup.
-Choose these cards \textbf{randomly} when building the Deck.
-If Skill cards are included, search for and set aside the Ability card related to it.
-Build the \textbf{AI Spell Deck} by separating the indicated Spells from the regular Spell Deck.
-Shuffle these Decks during setup after building them.
+\clearpage
+\begin{multicols}{2}
+  \pagetarget{AI Heroes}{\subheader{AI Heroes}}
+  AI Heroes are used in Campaigns.
+  AI Heroes do not have a Town Board, Resources, or a Hero Board.
+  Their units are static and defined by the Scenario: locate the indicated unit cards during setup.
+  If the unit indicates a unit tier (\svg{bronze}, \svg{silver}, \svg{golden}, or \svg{azure}) instead of ``Few'' or ``Pack'', it is a Neutral Unit.
 
-When an AI Hero \textbf{activates} a unit, draw an AI card\index{AI card} and follow its instructions before the unit moves and/or attacks.
-If AI Deck is depleted during Combat, stop drawing from it.
-The effect of each AI card depends on the game's \pagelink{Difficulty}{Difficulty}.
-The Might card \svg[12]{might} is attached to the unit until the first respective attack/defense happens.
-The AI Spell Deck is used whenever a Magic card \svg{magic} is drawn.
-If an AI Hero is instructed to draw a card, they will draw and resolve \textbf{another card} from the AI Deck.
-\vspace*{\fill}
-\columnbreak
-\pagetarget{AI Units}{\subheader{Combat against AI}}
+  During setup, if multiple AI Heroes use the same unit and you do not have enough copies of its card, the AI Heroes must share it:
+  set up everything without that card, then add it to the AI Hero's Army when you initiate Combat with them.
 
-These rules apply during Combat in \textbf{Solo}\index{Solo Mode} and \textbf{Cooperative} Scenarios.
-The rules for AI unit placement during setup are described in \pagelink{CombatAISetup}{Combat section}.
+  AI Heroes cannot surrender and you cannot surrender to them;
+  they will always fight until they run out of units.
+  Winning Combat against an AI Hero does not grant any rewards unless stated by the Scenario.
 
-When Neutral enemies or AI Heroes activate a unit, they follow a set of automatic instructions:\par
+  \columnbreak
+  \subsection*{AI Hero Turns}
+  Unless specified otherwise, AI Heroes start in their Town, take turns after the player, and have 3 MP, always spending them to perform the following actions in descending priority:
+  \begin{itemize}
+    \item If a player's Hero is on the same Tile as the AI, spend all MP to move towards them in an attempt to start Combat.
+    \item If there are any Mines or Settlements the AI could flag on the same Tile, move towards the closest one.
+    \item Otherwise, move toward the player's Town.
+  \end{itemize}
+  Repeat this sequence until all MPs are used up.
 
-\begin{itemize}
-  \item Enemy Ground \svg{unit_ground} and Flying \svg{unit_flying} units prioritize attacking units of the \textbf{same} tier.
-  If this is impossible, they attack the unit of a lower tier (in tier \textbf{descending} order, down to bronze), and if that is also impossible, they attack the unit of a higher tier (in tier \textbf{ascending} order).\par
+  AI Heroes always \textbf{automatically win Combat} against any Neutral Units, while simultaneously \textbf{flagging or visiting all Fields} they happen to move through.
+  They gain no benefits from any Fields.
 
-  \textit{Example: \svg{golden}\svg{unit_ground} has this priority:
-  \svg{golden}
-  - \svg{silver}
-  - \svg{bronze}
-  - \svg{azure}.}
-
-  \item Ranged \svg{unit_ranged} units prioritize attacking other Ranged \svg{unit_ranged} units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.
-  If there are no Ranged \svg{unit_ranged} units for them to target, they prioritize Ground \svg{unit_ground} and Flying \svg{unit_flying} units in the same tier order.\par
-
-  \textit{Example: \svg{silver}\svg{unit_ranged} has this priority:
-  \svg{silver}\svg{unit_ranged}
-  - \svg{bronze}\svg{unit_ranged}
-  - \svg{golden}\svg{unit_ranged}
-  - \svg{azure}\svg{unit_ranged}
-  - \svg{silver}\svg{unit_ground}\svg{unit_flying}
-  - \svg{bronze}\svg{unit_ground}\svg{unit_flying}
-  - \svg{golden}\svg{unit_ground}\svg{unit_flying}
-  - \svg{azure}\svg{unit_ground}\svg{unit_flying}.}
-\end{itemize}
-
-In both cases, if there's more than one valid target, they attack the closest one.
-If there's ever a tie between equally valid targets, the player chooses which unit is attacked.\par
-
-Enemy units cannot \pagelink{Defend}{defend} unless instructed to.
-
-\vfill
+  AI Heroes must discover face down Map Tiles as normal by spending 1 MP before moving onto them.
+  The player chooses that Tile's orientation.
+\end{multicols}
 
 {\begin{center}
-    \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{\art/titan.jpg}
+    \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{\art/sharpshooter.jpg}
 \end{center}}
 
+\clearpage
+\begin{multicols*}{2}
+  \pagetarget{AI Deck}{\subheader{AI Decks}}
+  \begin{tikzpicture}
+    \node (card) {\includegraphics[width=0.57\linewidth]{\cards/ai.png}};
+    \begin{scope}[
+      shift={(card.south west)},
+      x={($(card.east) - (card.west)$)},
+      y={($(card.north) - (card.south)$)},
+      ]
+      \draw (0.4, 0.85) node {\encircle{1}};
+      \draw (0.8, 0.7) node {\encircle{2}};
+      \draw (0.15, 0.5) node {\encircle{3}};
+      \draw (0.55, 0.5) node {\encircle{4}};
+      \draw (0.15, 0.3) node {\encircle{5}};
+      \draw (0.55, 0.3) node {\encircle{6}};
+      \draw (0.4, 0.1) node {\encircle{7}};
+    \end{scope}
+    \node [below=0pt of card.south] {\imagecaption{AI card}};
+    \node [right=-1em of card.east] {
+      \begin{minipage}[t]{0.43\linewidth}
+        \scriptsize
+        \begin{itemize}[itemsep=0.8em]
+          \item[\textbf{1.}] Name
+          \item[\textbf{2.}] Description
+          \item[\textbf{3.}] Easy Modifier
+          \item[\textbf{4.}] Normal Modifier
+          \item[\textbf{5.}] Expert Modifier
+          \item[\textbf{6.}] Impossible\\Modifier
+          \item[\textbf{7.}] Card Type:\\
+            \begin{itemize}[itemsep=0.5em]
+              \item[{\svg[12]{might}}] Might
+              \item[\svg{magic}] Magic
+              \item[\svg{skill}] Skill
+            \end{itemize}
+        \end{itemize}
+      \end{minipage}
+    };
+  \end{tikzpicture}
+
+  AI Heroes use two Decks during Combat: the \textbf{AI Deck} and the \textbf{AI Spell Deck}.
+  The AI Deck consists of three types of AI cards: Might \svg[12]{might}, Magic \svg{magic}, and Skill \svg{skill}.
+  Each Campaign Scenario lists the number and types of cards to include during setup.
+  Choose these cards \textbf{randomly} when building the AI Deck.
+  Before each Combat, shuffle the AI Deck and its discard pile together.
+
+  When an AI Hero \textbf{activates} a unit, draw an AI card\index{AI card} and follow its instructions before the unit \pagelink{AI Units}{moves and/or attacks}.
+  If the AI Deck is depleted during Combat, stop drawing from it.
+  The effect of each AI card depends on the game's \pagelink{Difficulty}{Difficulty}.
+  If an AI Hero is instructed to draw a card, they will draw and resolve \textbf{another card} from the AI Deck.
+
+  \subsection*{AI Magic cards and AI Spell Deck}
+  Build the \textbf{AI Spell Deck} by separating the indicated Spells from the regular Spell Deck during setup.
+  Before each Combat, shuffle the AI Spell Deck and its discard pile together.
+
+  Whenever an AI Magic \svg{magic} card is drawn, draw the next Spell from the AI Spell Deck and cast it.
+  Discarded spells go to its own AI Spell Discard Pile.
+  If the AI Spell Deck empties before Combat ends, shuffle the AI Spell Discard Pile to form a new Spell Deck.
+
+  The AI Spell Deck may contain more Spell cards than there are Magic cards in the AI Hero's Deck.
+  This is intentional: not all Spells will be used during Combat.
+  Some are included for the sake of variety.
+
+  If the AI Hero is assigned a Spell card that is unavailable because it is in your Hero's Deck, and you do not have another copy, substitute it with a \wikilink{spells/magic_arrow}{Magic Arrow} card.
+
+  For certains Spells it can be unclear how the AI is supposed to cast them.
+  See \pagelink{AI Complex Spells}{Casting Complex Spells} for explanations.
+
+  \subsection*{AI Skill cards}
+  If Skill cards are included, search for and set aside the indicated card related to it (usually, an Ability).
+  Whenever an AI Hero uses the AI Skill \svg{skill} card, use the Skill card assigned to them in the Setup, but do not discard it afterwards.
+  Contrary to the regular rules, the AI Hero can use the skill again, when instructed to do so by the AI deck.
+  Discard the AI Skill \svg{skill} card as usual.
+
+  AI Skill cards cannot be replaced, so if Scenario rules assign the AI Hero a card that your Hero has and you do not have another copy, remove that card from your Deck and \textbf{Search (3)} the respective card's Deck to compensate your Hero for the loss.
+
+  \subsection*{AI cards timing}
+  After an AI card is resolved, discard it.
+
+  The \wikilink{ai\#ai-cards}{Attack} Might \svg[12]{might} card says about ``unit that is about to attack'', so if the currently activated unit doesn't have a valid target to attack, the Attack will apply to the next unit who is able to attack.
+  By that time the AI army might already have several AI cards waiting for him.
+  Similar thing would happen with other AI cards which aren't useful at the moment of drawing them.
+
+  If an AI card increased a unit's \svg{defense}, or triggered another card which increased it, the AI card stays attached to the unit until the first defense happens.
+
+  \subsection*{AI Deck sharing}
+  If there are multiple AI Enemy Armies in the Scenario, but the rules do not specify to which Enemy an AI Deck, an AI Spell Deck, or a Skill belongs, you should assume it is shared between them.
+
+  \bigskip
+  \pagetarget{AI Complex Spells}{\subheader{Casting complex spells}}
+  In some Campaigns, enemies use Spells whose effects are not fully compatible with the standard use of AI Magic \svg{magic} cards.
+  To fully use their effects, here are extended descriptions of how AI Heroes should use each of these spells.
+  Scenarios can override these instructions.
+
+  \subsection*{Spells attacking multiple targets}
+  \textit{Examples: \wikilink{spells/fireball}{Fireball,} \wikilink{spells/chain_lightning}{Chain Lightning.}}
+
+  When activated, target any unit with one or two adjacent units from the player's army, prioritizing the groups where there are more higher-tier units.
+  If there is more than one valid group, attack the one with the least health remaining (has the smallest difference between \svg{health_points} and current \svg{damage}).
+  If there is still more than one valid target, you can choose which unit is attacked.
+  If there are no player units adjacent to one another, target units that are not adjacent to any of the AI units.
+  If that is also not possible, do not use this Spell -- instead, skip the AI \svg{magic} card that activated this effect and put it on the bottom of the AI deck, then shuffle this Spell back to the AI Spell Deck.
+
+  \subsection*{Instant Defense Spells}
+  \textit{Example: \wikilink{spells/stone_skin}{Stone Skin.}}
+
+  When activated, put this card on the side of the Combat Board, then put a Defense Token on the unit with the highest \svg{defense} to represent the card's effect -- it stays there until the Defense is resolved.
+  If that unit already has a Defense Token, place it on the unit with the next highest \svg{defense} instead.
+  In case of a tie in \svg{defense} value, give preference to the unit of the highest tier, then to the greatest value of \svg{damage}.
+
+  \subsection*{Healing spells}
+  \textit{Example: \wikilink{spells/cure}{Cure.}}
+
+  When activated, remove the \svg{damage} from the AI unit with the greatest value of \svg{damage} taken, starting with the highest tier available.
+  If no AI unit has any \svg{damage}, put the AI \svg{magic} card that triggered the Spell at the bottom of the AI Deck, then shuffle this Spell card back to the AI Spell Deck.
+
+  \subsection*{Single-round buffs}
+  \textit{Example: \wikilink{spells/fire_shield}{Fire Shield.}}
+
+  When activated, check the tier of the unit on which you are about to cast the Spell and count how many units of the same or higher tier there are on the board.
+  If more than half of those units have already activated this Round, do not cast the Spell -- instead, set it aside and cast it when the first AI unit activates next Round.
+  Skip drawing the AI card for that activation.
+  Multiple delayed Spells may accumulate and be cast during the same activation.
+
+  \subsection*{Attack-weakening spells}
+  \textit{Example: \wikilink{spells/weakness}{Weakness.}}
+
+  When activated, if the AI's activated unit is about to perform an attack that will provoke a Retaliation, cast this spell on the Retaliating enemy to lower their \svg{attack}.
+  If the AI's unit causes no Retaliation, do not cast this spell -- instead, ignore the AI \svg{magic} card that activated the spell and put it at the bottom of the AI deck, then shuffle the Spell card back to the AI Spell deck.
 \end{multicols*}

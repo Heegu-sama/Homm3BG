@@ -98,7 +98,7 @@
 
 \captionsetup[figure]{labelformat=empty}
 \captionsetup[subfigure]{labelformat=empty, singlelinecheck=off, justification=centering}
-\usetikzlibrary{shadows, shadows.blur, calc, backgrounds}
+\usetikzlibrary{shadows, shadows.blur, calc, backgrounds, positioning}
 
 \setlength{\columnsep}{1cm}
 \newtoggle{printable}
@@ -733,6 +733,7 @@
   \pdfbookmark[1]{\contentsname}{toc}%
   \subheader[false]{\contentsname}
   \begin{multicols}{2}
+    \small
     \@starttoc{toc}%
     \vspace*{\fill}
     \columnbreak
