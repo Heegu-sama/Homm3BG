@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-01-11 20:30+0000\n"
+"POT-Creation-Date: 2026-02-17 21:14+0000\n"
 "PO-Revision-Date: 2024-06-03 10:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: sections/combat.tex:319 sections/credits.tex:8 sections/deckbuilding.tex:5
 #: sections/deckbuilding.tex:52 sections/deckbuilding.tex:73
 #: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
-#: sections/map_elements.tex:88 sections/map_elements.tex:139
+#: sections/map_elements.tex:89 sections/map_elements.tex:140
 #: sections/player_turns.tex:5 sections/resources.tex:5
 #: sections/round_structure.tex:5 sections/scenario_end.tex:5
 #: sections/setup.tex:56 sections/tournament_mode.tex:5 sections/town.tex:5
@@ -49,7 +49,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/all_map_locations.tex:60 sections/deckbuilding.tex:378
-#: sections/trading.tex:25 sections/units.tex:214 sections/units.tex:218
+#: sections/units.tex:216 sections/units.tex:220
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -60,7 +60,7 @@ msgstr ""
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:119 sections/card_effect_keywords.tex:204
-#: sections/deckbuilding.tex:183 sections/deckbuilding.tex:396
+#: sections/deckbuilding.tex:183 sections/deckbuilding.tex:395
 #: sections/expansion_content.tex:111 sections/expansion_content.tex:158
 #: sections/expansion_content.tex:173 sections/resources.tex:31
 #, no-wrap
@@ -595,7 +595,7 @@ msgid ""
 "Spell cards\\index{Spell card} have three possible primary effects.\n"
 "Using the topmost, basic version of the Spell usually has no additional costs.\n"
 "To access the other effects, you may \\textbf{Empower} a Spell\\index{Empowering Spells} by paying the indicated cost (3) to get a more powerful outcome (4).\n"
-"You may pay this cost by playing other cards for their Empower \\svg{empower} effect (e.g. the Spell Power Statistic) before casting the Spell.\n"
+"You may pay this cost by playing other cards for their Empower \\svg{empower} effect (e.g. the \\wikilink{statistics/power}{Power} Statistic card) before casting the Spell.\n"
 "All Spell cards also have an alternative bottom (5) \\svg{empower} effect.\n"
 "You cannot preserve the played \\svg{empower}: casting a Spell consumes all the \\svg{empower} played so far, and if you stop playing cards, the power dissipates.\n"
 "You may use a cheaper \\svg{empower} effect than what you've paid for, though.\\par\n"
@@ -1178,28 +1178,27 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:388
+#: sections/deckbuilding.tex:386
 #, no-wrap
 msgid ""
 "You can play Spells from a Spell Scroll like any other Spell with the following exceptions:\n"
 "\\begin{itemize}\n"
 "    \\item They don't count towards your Spell Limit.\n"
 "    You can also play a Spell from your hand during this Combat Round.\n"
-"    \\item You can only use the Spell's lowest Power \\svg{empower} effect.\n"
-"    You can't Empower the Spell with \\svg{empower} from any source.\n"
-"    % What, if the lowest Power is 1? Can it be still played or not?\n"
-"    \\item They can't be used to increase the \\svg{empower} of another Spell.\n"
+"    \\item You may use the Spell's \\textbf{lowest Power} \\svg{empower} \\textbf{effect}, without needing to pay its cost (e.g. in case of \\wikilink{spells/implosion}{Implosion} the cost is 1).\n"
+"      You can't Empower the Spell with \\svg{empower} from any source.\n"
 "\\end{itemize}"
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:396
+#: sections/deckbuilding.tex:395
 #, no-wrap
 msgid ""
 "{stronghold}\n"
 "    \\begin{itemize}\n"
-"    \\item You can sell Spell Scrolls at a Trading Post for 2 \\svg{gold} per each Spell on it.\n"
-"    %Is it a new option at a Trading Post or can i combine it with other actions in a single visit?\n"
+"    \\item They can't be used to increase the \\svg{empower} of another Spell.\n"
+"    \\item You can \\pagelink{selling Spell Scrolls}{sell Spell Scrolls} at a Trading Post for 2 \\svg{gold} per each Spell on it.\n"
+"      This works in addition to other effect of visiting the Trading Post.\n"
 "    \\item After using or selling those Spells, the Spell card is \\textbf{removed}, not discarded.\n"
 "\\end{itemize}\n"
 "\n"
@@ -1208,24 +1207,13 @@ msgstr ""
 #. type: expansion
 #: sections/deckbuilding.tex:398
 #, no-wrap
-msgid "If the last Spell on a Spell Scroll is used or sold, place the Spell Scroll back in its Deck."
-msgstr ""
-
-#. type: center
-#: sections/deckbuilding.tex:403
-#, fuzzy
-#| msgid ""
-#| "{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/"
-#| "air_magic.png}}"
 msgid ""
-"{\\transparent{0.2}\\includegraphics[width=0.6\\linewidth]{\\art/"
-"black_market.png}}"
+"If the last Spell on a Spell Scroll is used or sold, place the Spell Scroll back in its Deck.\n"
+"\\vspace*{0.4em}"
 msgstr ""
-"{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/"
-"air_magic.png}}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:406
+#: sections/deckbuilding.tex:404
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{Combatexperience}{Combat Experience}}\n"
@@ -1239,7 +1227,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:410
+#: sections/deckbuilding.tex:408
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{War Machines}{War Machines}}\n"
@@ -1262,7 +1250,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:431
+#: sections/deckbuilding.tex:429
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{\n"
