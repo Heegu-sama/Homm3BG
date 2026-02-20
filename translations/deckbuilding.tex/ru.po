@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-02-01 21:32+0300\n"
+"POT-Creation-Date: 2026-02-20 00:47+0000\n"
 "PO-Revision-Date: 2025-01-05 11:55+0000\n"
 "Last-Translator: Alexey Sokolov <alexey@asokolov.org>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -20,20 +20,56 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 24.08.3\n"
 
-#.  !TeX spellcheck = en_US
-#. type: Plain text
-#: sections/deckbuilding.tex:3
-msgid "\\addsection{Deck-building}{\\skills/wisdom.png}"
-msgstr "\\addsection{Сбор колоды}{\\skills/wisdom.png}"
-
 #. type: multicols
-#: sections/deckbuilding.tex:5 sections/deckbuilding.tex:52
-#: sections/deckbuilding.tex:73
+#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
+#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:131
+#: sections/combat.tex:319 sections/credits.tex:8 sections/deckbuilding.tex:5
+#: sections/deckbuilding.tex:52 sections/deckbuilding.tex:73
+#: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
+#: sections/map_elements.tex:89 sections/map_elements.tex:140
+#: sections/player_turns.tex:5 sections/resources.tex:5
+#: sections/round_structure.tex:5 sections/scenario_end.tex:5
+#: sections/setup.tex:56 sections/tournament_mode.tex:5 sections/town.tex:5
+#: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
 #, no-wrap
 msgid ""
 "{2}\n"
 "\n"
 msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:51 sections/all_map_locations.tex:233
+#: sections/credits.tex:36 sections/deckbuilding.tex:80
+#: sections/game_modes.tex:30 sections/scenario_end.tex:23
+#, no-wrap
+msgid ""
+"\\columnbreak\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:378
+#: sections/units.tex:216 sections/units.tex:220
+#, no-wrap
+msgid ""
+"\\medskip\n"
+"\n"
+msgstr ""
+
+#. type: Plain text
+#: sections/card_effect_keywords.tex:119 sections/card_effect_keywords.tex:204
+#: sections/deckbuilding.tex:183 sections/deckbuilding.tex:395
+#: sections/expansion_content.tex:111 sections/expansion_content.tex:158
+#: sections/expansion_content.tex:173 sections/resources.tex:31
+#, no-wrap
+msgid "\\columnbreak"
+msgstr ""
+
+#.  !TeX spellcheck = en_US
+#. type: Plain text
+#: sections/deckbuilding.tex:3
+msgid "\\addsection{Deck-building}{\\skills/wisdom.png}"
+msgstr "\\addsection{Сбор колоды}{\\skills/wisdom.png}"
 
 #. type: multicols
 #: sections/deckbuilding.tex:12
@@ -214,14 +250,6 @@ msgstr ""
 "Количество доступных использований \\svg{expert} эффектов за раунд ограничено \\pagelink{Level}{уровнем} вашего героя.\n"
 "Отслеживайте количество использований любым подходящим способом, например, помещая чёрные кубики на доску героя.\\par\n"
 "\n"
-
-#. type: multicols
-#: sections/deckbuilding.tex:80
-#, no-wrap
-msgid ""
-"\\columnbreak\n"
-"\n"
-msgstr ""
 
 #. type: multicols
 #: sections/deckbuilding.tex:86
@@ -450,12 +478,6 @@ msgstr ""
 "    \\item[\\textbf{4.}] Особая карта Некрополиса\n"
 "  \\end{itemize}"
 
-#. type: Plain text
-#: sections/deckbuilding.tex:183 sections/deckbuilding.tex:396
-#, no-wrap
-msgid "\\columnbreak"
-msgstr ""
-
 #. type: multicols*
 #: sections/deckbuilding.tex:187
 #, no-wrap
@@ -475,7 +497,7 @@ msgid ""
 "Spell cards\\index{Spell card} have three possible primary effects.\n"
 "Using the topmost, basic version of the Spell usually has no additional costs.\n"
 "To access the other effects, you may \\textbf{Empower} a Spell\\index{Empowering Spells} by paying the indicated cost (3) to get a more powerful outcome (4).\n"
-"You may pay this cost by playing other cards for their Empower \\svg{empower} effect (e.g. the Spell Power Statistic) before casting the Spell.\n"
+"You may pay this cost by playing other cards for their Empower \\svg{empower} effect (e.g. the \\wikilink{statistics/power}{Power} Statistic card) before casting the Spell.\n"
 "All Spell cards also have an alternative bottom (5) \\svg{empower} effect.\n"
 "You cannot preserve the played \\svg{empower}: casting a Spell consumes all the \\svg{empower} played so far, and if you stop playing cards, the power dissipates.\n"
 "You may use a cheaper \\svg{empower} effect than what you've paid for, though.\\par\n"
@@ -684,10 +706,11 @@ msgid ""
 msgstr ""
 "Карты специальности героя\\index{Специальность героя} зарабатываются при "
 "\\pagelink{Level}{повышении уровня}. Каждый основной герой имеет уникальный "
-"набор карт специальности. Хотя многие из этих карт имеют эффекты, схожие с картами заклинаний и даже "
-"тоже могут использовать \\svg{empower}, карты специальности представляют "
-"собой \\textbf{уникальную категорию карт}. Например, ограничение в 1 заклинание "
-"за раунд сражения не применимо к картам специальности."
+"набор карт специальности. Хотя многие из этих карт имеют эффекты, схожие с "
+"картами заклинаний и даже тоже могут использовать \\svg{empower}, карты "
+"специальности представляют собой \\textbf{уникальную категорию карт}. "
+"Например, ограничение в 1 заклинание за раунд сражения не применимо к картам "
+"специальности."
 
 #. type: Plain text
 #: sections/deckbuilding.tex:289
@@ -697,8 +720,8 @@ msgid ""
 "card, belonging to Catherine the Knight.} }"
 msgstr ""
 "{ \\medskip \\centering \\includegraphics[width=0.65\\linewidth]{\\cards/"
-"specialty.png}\\\\ \\medskip \\footnotesize\\textit{Карта специальности IV уровня "
-"рыцаря Катерины.} }"
+"specialty.png}\\\\ \\medskip \\footnotesize\\textit{Карта специальности IV "
+"уровня рыцаря Катерины.} }"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:297
@@ -710,8 +733,8 @@ msgid ""
 msgstr ""
 "{ \\medskip \\centering \\includegraphics[width=0.65\\linewidth]{\\cards/"
 "specialty2.png}\\\\ \\medskip \\footnotesize\\textit{Карта специальности I "
-"уровня чернокнижника Димера. Она использует \\svg{empower}, но \\textbf{не принадлежит} ни одной "
-"из Школ магии, несмотря на изображение.} }"
+"уровня чернокнижника Димера. Она использует \\svg{empower}, но \\textbf{не "
+"принадлежит} ни одной из Школ магии, несмотря на изображение.} }"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:300
@@ -920,25 +943,15 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:378
-#, no-wrap
-msgid ""
-"\\medskip\n"
-"\n"
-msgstr ""
-
-#. type: expansion
-#: sections/deckbuilding.tex:388
+#: sections/deckbuilding.tex:386
 #, no-wrap
 msgid ""
 "You can play Spells from a Spell Scroll like any other Spell with the following exceptions:\n"
 "\\begin{itemize}\n"
 "    \\item They don't count towards your Spell Limit.\n"
 "    You can also play a Spell from your hand during this Combat Round.\n"
-"    \\item You can only use the Spell's lowest Power \\svg{empower} effect.\n"
-"    You can't Empower the Spell with \\svg{empower} from any source.\n"
-"    % What, if the lowest Power is 1? Can it be still played or not?\n"
-"    \\item They can't be used to increase the \\svg{empower} of another Spell.\n"
+"    \\item You may use the Spell's \\textbf{lowest Power} \\svg{empower} \\textbf{effect}, without needing to pay its cost (e.g. in case of \\wikilink{spells/implosion}{Implosion} the cost is 1).\n"
+"      You can't Empower the Spell with \\svg{empower} from any source.\n"
 "\\end{itemize}"
 msgstr ""
 "Карты из свитка можно использовать с рядом исключений:\n"
@@ -952,13 +965,14 @@ msgstr ""
 "\\end{itemize}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:396
+#: sections/deckbuilding.tex:395
 #, no-wrap
 msgid ""
 "{stronghold}\n"
 "    \\begin{itemize}\n"
-"    \\item You can sell Spell Scrolls at a Trading Post for 2 \\svg{gold} per each Spell on it.\n"
-"    %Is it a new option at a Trading Post or can i combine it with other actions in a single visit?\n"
+"    \\item They can't be used to increase the \\svg{empower} of another Spell.\n"
+"    \\item You can \\pagelink{selling Spell Scrolls}{sell Spell Scrolls} at a Trading Post for 2 \\svg{gold} per each Spell on it.\n"
+"      This works in addition to other effect of visiting the Trading Post.\n"
 "    \\item After using or selling those Spells, the Spell card is \\textbf{removed}, not discarded.\n"
 "\\end{itemize}\n"
 "\n"
@@ -973,20 +987,16 @@ msgstr ""
 
 #. type: expansion
 #: sections/deckbuilding.tex:398
-#, no-wrap
-msgid "If the last Spell on a Spell Scroll is used or sold, place the Spell Scroll back in its Deck."
+#, fuzzy, no-wrap
+#| msgid "If the last Spell on a Spell Scroll is used or sold, place the Spell Scroll back in its Deck."
+msgid ""
+"If the last Spell on a Spell Scroll is used or sold, place the Spell Scroll back in its Deck.\n"
+"\\vspace*{0.4em}"
 msgstr "Если последнее заклинание из свитка было использовано или продано, поместите этот свиток в колоду свитков."
 
-#. type: center
-#: sections/deckbuilding.tex:403
-msgid ""
-"{\\transparent{0.2}\\includegraphics[width=0.6\\linewidth]{\\art/"
-"black_market.png}}"
-msgstr "\\empty"
-
 #. type: expansion
-#: sections/deckbuilding.tex:406
-#, no-wrap
+#: sections/deckbuilding.tex:404
+#, fuzzy, no-wrap
 msgid ""
 "{rampart,cove}\n"
 "  \\pagetarget{War Machines}{\\subheader{War Machine Cards}}\n"
@@ -997,8 +1007,8 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:410
-#, no-wrap
+#: sections/deckbuilding.tex:408
+#, fuzzy, no-wrap
 msgid ""
 "  War Machines\\index{War Machines} are permanent cards that can be bought at either a \\pagelink{Trading Post}{Trading Post} or a \\pagelink{War Machine Factory}{War Machine Factory}.\n"
 "  If you buy one at the Trading Post, \\textbf{you cannot use} any of the other normal functions of that Field during that Visit.\n"
@@ -1011,8 +1021,8 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:431
-#, no-wrap
+#: sections/deckbuilding.tex:429
+#, fuzzy, no-wrap
 msgid ""
 "  {\n"
 "    \\bigskip\n"
