@@ -12,6 +12,7 @@
 ]{geometry}
 
 % Useful packages
+\usepackage{afterpage}
 \usepackage[export]{adjustbox}
 \usepackage{amsmath}
 \usepackage{array}
@@ -37,7 +38,7 @@
 \usepackage{tabularx}
 \usepackage[subfigure]{tocloft}
 \usepackage{tikz}
-\usepackage{titlesec}
+\usepackage[raggedright]{titlesec}
 \usepackage{transparent}
 \usepackage{verbatim}
 \usepackage{varwidth}
@@ -94,7 +95,6 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
 \renewcommand\cftsecdotsep{\cftdot}
 \renewcommand\cftsubsecdotsep{\cftdot}
-\setlength{\cftbeforesecskip}{0.1em}
 
 \captionsetup[figure]{labelformat=empty}
 \captionsetup[subfigure]{labelformat=empty, singlelinecheck=off, justification=centering}
@@ -188,19 +188,25 @@
   \tl_set:No #2 {\seq_use:Nn \l_tmpa_seq { \\ }}
 }
 
-\NewDocumentEnvironment{expansion}{ O{} m +b }{
-  \__expansion_color_titles:NNn \l_expcolor_tl \l_exptitles_tl {#2}
+\NewDocumentEnvironment{expansion}{ s O{} m +b }{
+  \__expansion_color_titles:NNn \l_expcolor_tl \l_exptitles_tl {#3}
 
   \tl_clear_new:N \l_expoverlay_tl
   \iftoggle{textright2left}{
     \tl_set:No \l_expoverlay_tl {
-      \fill[
-        \l_expcolor_tl,
-        path~fading=west,
-        opacity=0.09
-      ]
-        ([xshift=-5pt-\linewidth, yshift=3pt]frame.north~east) rectangle
-        ([xshift=5pt-\linewidth, yshift=-3pt]frame.south~west);
+      \IfBooleanTF{#1}{
+        \begin{scope}
+          \clip ([xshift=-5pt-\linewidth, yshift=3pt]frame.north~east) rectangle
+                ([xshift=5pt-\linewidth, yshift=-\paperheight]frame.south~west);
+          \fill[\l_expcolor_tl, path~fading=west, opacity=0.09]
+            ([xshift=-5pt-\linewidth, yshift=\paperheight]frame.north~east) rectangle
+            ([xshift=5pt-\linewidth, yshift=-\paperheight]frame.south~west);
+        \end{scope}
+      }{
+        \fill[\l_expcolor_tl, path~fading=west, opacity=0.09]
+          ([xshift=-5pt-\linewidth, yshift=3pt]frame.north~east) rectangle
+          ([xshift=5pt-\linewidth, yshift=-3pt]frame.south~west);
+      }
       \fill[
         top~color=\l_expcolor_tl,
         bottom~color=\l_expcolor_tl,
@@ -208,17 +214,23 @@
         opacity=0.5
       ]
       ([xshift=-8pt-\linewidth, yshift=3pt]frame.north~east) rectangle
-      ([xshift=-5pt-\linewidth, yshift=-3pt]frame.south~east);
+      \IfBooleanTF{#1}{([xshift=-5pt-\linewidth, yshift=-\paperheight]frame.south~east)}{([xshift=-5pt-\linewidth, yshift=-3pt]frame.south~east)};
     }
   }{
     \tl_set:No \l_expoverlay_tl {
-      \fill[
-        \l_expcolor_tl,
-        path~fading=east,
-        opacity=0.09
-      ]
-        ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
-        ([xshift=5pt, yshift=-3pt]frame.south~east);
+      \IfBooleanTF{#1}{
+        \begin{scope}
+          \clip ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
+                ([xshift=5pt, yshift=-\paperheight]frame.south~east);
+          \fill[\l_expcolor_tl, path~fading=east, opacity=0.09]
+            ([xshift=-5pt, yshift=\paperheight]frame.north~west) rectangle
+            ([xshift=5pt, yshift=-\paperheight]frame.south~east);
+        \end{scope}
+      }{
+        \fill[\l_expcolor_tl, path~fading=east, opacity=0.09]
+          ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
+          ([xshift=5pt, yshift=-3pt]frame.south~east);
+      }
       \fill[
         top~color=\l_expcolor_tl,
         bottom~color=\l_expcolor_tl,
@@ -226,10 +238,11 @@
         opacity=0.5
       ]
       ([xshift=-8pt, yshift=3pt]frame.north~west) rectangle
-      ([xshift=-5pt, yshift=-3pt]frame.south~west);
+      \IfBooleanTF{#1}{([xshift=-5pt, yshift=-\paperheight]frame.south~west)}{([xshift=-5pt, yshift=-3pt]frame.south~west)};
     }
   }
 
+  \IfBooleanT{#1}{\global\toggletrue{bottomforeground}}
   \begin{tcolorbox}[
     enhanced,
     before~title=\raggedright\tiny,
@@ -243,9 +256,10 @@
     overlay={
       \l_expoverlay_tl
     },
-    #1]
-    #3
+    #2]
+    #4
   \end{tcolorbox}
+  \IfBooleanT{#1}{\afterpage{\global\togglefalse{bottomforeground}}}
 }{}
 
 % Helper function for the tikz square
@@ -340,8 +354,18 @@
   }{%
     \edef\svgpath{\svgs/\detokenize{#2}.svg}%
   }%
+  % Compute a clean glyph name for copying: strip "-yellow" or "-mono" suffix
+  \IfEndWith{#2}{-yellow}{%
+    \StrGobbleRight{#2}{7}[\svgcleanname]%
+  }{%
+    \IfEndWith{#2}{-mono}{%
+      \StrGobbleRight{#2}{5}[\svgcleanname]%
+    }{%
+      \def\svgcleanname{#2}%
+    }%
+  }%
   \smash{%
-    \BeginAccSupp{ActualText={<#2>},space}%
+    \BeginAccSupp{ActualText={:\svgcleanname:},space}%
     \EndAccSupp{}%
   }%
   \ifnodrop{#2}{%
@@ -520,7 +544,7 @@
   \end{tikzpicture}
 }
 
-% Create Heroes-styled framed canvas for a table. Accepts three arguments:
+% Create Heroes-styled framed canvas for a table. Accepts two arguments:
 % 1) Height specified in verses (lines of text)
 % 2) Table contents like title and tabularx environment
 \newcommand{\hommtable}[2]{
@@ -667,13 +691,25 @@
 }
 
 % Background
+\newtoggle{bottomforeground}
+\togglefalse{bottomforeground}
+
 \AddToHook{shipout/background}{%
   \iftoggle{noartbackground}{}{
     \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}
   }
-  \iftoggle{printable}{
-    \drawbottom
-  }{\put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}}
+  \iftoggle{bottomforeground}{}{
+    \iftoggle{printable}{
+      \drawbottom
+    }{\put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}}
+  }
+}
+\AddToHook{shipout/foreground}{%
+  \iftoggle{bottomforeground}{
+    \iftoggle{printable}{
+      \drawbottom
+    }{\put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}}
+  }{}
 }
 
 \makeindex[columns=3, title=,]
@@ -698,6 +734,9 @@
   \subheader[false]{\contentsname}
   \begin{multicols}{2}
     \@starttoc{toc}%
+    \vspace*{\fill}
+    \columnbreak
+    \includegraphics[width=\linewidth]{\art/black_dragon.jpg}
   \end{multicols}
 }
 \makeatother
