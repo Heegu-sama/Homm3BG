@@ -53,9 +53,35 @@
 
 \clearpage
 
+\AddToHookNext{shipout/background}{%
+  \iftoggle{noartbackground}{}{
+    \put (\iftoggle{printable}{0.05\paperwidth}{0.03\paperwidth},-0.75\paperheight){\transparent{0.15}{\includegraphics[width=0.9\paperwidth]{\art/minotaur_crusader_skeleton.png}}}%
+  }%
+  \iftoggle{printable}{
+    \drawbottom
+  }{\put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}}
+}
+\vspace*{\fill}
+The continent of Antagarich is at war as several different Factions, led by their Heroes, battle for supremacy.
+Choose your Faction and Hero and banish your unruly enemies from these lands!
+
+% Source: https://heroes.thelazy.net/index.php/Restoration_of_Erathia_Manual_Page_84
+\textbf{Castle}: Human armies rallied under the banners of Clerics and Knights, bolstered by the might of Griffins and protected by Angels.
+
+% Source: https://heroes.thelazy.net/index.php/Restoration_of_Erathia_Manual_Page_88
+\textbf{Dungeon}: Subterranean forces led by Warlocks and Overlords, wielding dark magic and bending fearsome creatures to their will.
+
+% Source: https://heroes.thelazy.net/index.php/Restoration_of_Erathia_Manual_Page_100
+\textbf{Necropolis}: Legions of the undead, commanded by Necromancers and Death Knights, who sap the strength of the living to fuel their own.
+
+\vspace*{10em}
+
+\clearpage
+
 \begin{tikzpicture}[remember picture, overlay]
   \node(bg)[anchor=center, opacity=0.07, xshift=-3em, yshift=0em] at (current page.center) {
     \includegraphics[width=\paperwidth, keepaspectratio]{\art/meteor_shower.png}
   };
 \end{tikzpicture}
+\vspace*{-1.72em}
 \tableofcontents
