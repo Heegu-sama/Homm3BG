@@ -55,7 +55,7 @@
 
 \AddToHookNext{shipout/background}{%
   \iftoggle{noartbackground}{}{
-    \put (0.03\paperwidth,-0.75\paperheight){\transparent{0.15}{\includegraphics[width=0.9\paperwidth]{\art/minotaur_crusader_skeleton.png}}}%
+    \put (\iftoggle{printable}{0.05\paperwidth}{0.03\paperwidth},-0.75\paperheight){\transparent{0.15}{\includegraphics[width=0.9\paperwidth]{\art/minotaur_crusader_skeleton.png}}}%
   }%
   \iftoggle{printable}{
     \drawbottom
