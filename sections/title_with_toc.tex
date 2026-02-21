@@ -55,38 +55,33 @@
 
 \AddToHookNext{shipout/background}{%
   \iftoggle{noartbackground}{}{
-    \put (0in,-\paperheight){\transparent{0.07}{\includegraphics[width=\paperwidth]{\art/minotaur_with_crusader.png}}}%
+    \put (0.03\paperwidth,-0.75\paperheight){\transparent{0.15}{\includegraphics[width=0.9\paperwidth]{\art/minotaur_crusader_skeleton.png}}}%
   }%
   \iftoggle{printable}{
     \drawbottom
   }{\put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}}
 }
+\vspace*{\fill}
 The continent of Antagarich is at war as several different Factions, led by their Heroes, battle for supremacy.
 Choose your Faction and Hero and banish your unruly enemies from these lands!
 
 % Source: https://heroes.thelazy.net/index.php/Restoration_of_Erathia_Manual_Page_84
-Castles are home to the Cleric and Knight hero classes.
-Castle armies are primarily composed of human men-at-arms, though these towns have also formed an alliance with the griffins and are under the protection of angels.
-With two types of ranged attack units and two flying unit types available, Castle-based armies are well equipped to quickly engage and defeat their enemies.
+\textbf{Castle}: Human armies rallied under the banners of Clerics and Knights, bolstered by the might of Griffins and protected by Angels.
 
 % Source: https://heroes.thelazy.net/index.php/Restoration_of_Erathia_Manual_Page_88
-Dungeons towns are built by Warlock and Overlord hero types to act as bases from which to wage campaigns of conquest for wealth and power.
-Similarly minded creatures are attracted as allies.
-Other Dungeon creatures are in thrall to their masters.
-Dungeon armies are possessed of a variety of long range attacks, have effective damage dealing troops, and have the ability to greatly disrupt the strategies of their enemies.
+\textbf{Dungeon}: Subterranean forces commanded by Warlocks and Overlords, wielding dark magic and bending fearsome creatures to their will.
 
 % Source: https://heroes.thelazy.net/index.php/Restoration_of_Erathia_Manual_Page_100
-Necropolis towns are overrun and ruled by undead creatures.
-They are the natural bases for the Necromancer and Death Knight hero types.
-Necropolis armies have many units with abilities to weaken their opponents.
-This quickly gives them an edge over equal or even more powerful enemy armies.
+\textbf{Necropolis}: Legions of the undead, marshalled by Necromancers and Death Knights, who sap the strength of the living to fuel their own.
+
+\vspace*{10em}
 
 \clearpage
-\tableofcontents
 
 \begin{tikzpicture}[remember picture, overlay]
   \node(bg)[anchor=center, opacity=0.07, xshift=-3em, yshift=0em] at (current page.center) {
     \includegraphics[width=\paperwidth, keepaspectratio]{\art/meteor_shower.png}
   };
 \end{tikzpicture}
+\vspace*{-3em}
 \tableofcontents
