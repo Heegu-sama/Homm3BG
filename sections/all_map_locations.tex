@@ -673,6 +673,9 @@ When you flag a Settlement, choose one of the following options:
 The following Fields are found on single-hex Location Tokens only, not on regular Map Tiles.
 The placement of the Location Tokens is described in \pagelink{Discover Location Tokens}{Map Elements}.
 
+\textbf{Note:} Skip the move if you would be stepping onto allied hero and have not enough MP to move off it immediately.
+If you ended up on a Tile which is still face down, discover that Tile.
+
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
@@ -696,7 +699,7 @@ The placement of the Location Tokens is described in \pagelink{Discover Location
   \end{minipage}
 \end{figure}
 
-\vspace*{-1em}
+\vspace*{-1.5em}
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
@@ -717,12 +720,11 @@ The placement of the Location Tokens is described in \pagelink{Discover Location
     \caption{{\raggedright \small Category: \textbf{Revisitable}}\\
       Connects a surface and a \protect\pagelink{Subterranean Map Tiles}{Subterranean Map Tile}.
       Treat both sides of the Gate as a single Field.
-      Discover the connected Tile, if it wasn't discovered already.
     }
   \end{minipage}
 \end{figure}
 
-\vspace*{-1em}
+\vspace*{-1.5em}
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
@@ -732,8 +734,7 @@ The placement of the Location Tokens is described in \pagelink{Discover Location
     \expansionlabel{cove}
     \caption{{\raggedright \small Category: \textbf{Revisitable}}\\
       Move your Hero to another Whirlpool Token.
-      If there are multiple valid targets, roll an Attack Die to determine where your Hero goes.
-      Reroll any Die which shows the number of the Whirlpool your Hero is standing on.
+      If there are 3 Whirlpools, roll an Attack Die to determine where your Hero goes, and reroll any Die which shows the number of the Whirlpool your Hero is moving from.
       After each Whirlpool travel, lose 1 unit from your unit Deck.
     }
   \end{minipage}\hfill
