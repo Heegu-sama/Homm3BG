@@ -19,12 +19,12 @@ msgstr ""
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:4
-#, fuzzy
-#| msgid "\\addsection{Difficulty}{\\spells/berserk.png}"
 msgid ""
 "\\pagetarget{Card Effect Keywords}{\\addsection{Card Effect Keywords}"
 "{\\skills/interference.png}}"
-msgstr "\\addsection{Poziom Trudności}{\\spells/berserk.png}"
+msgstr ""
+"\\pagetarget{Card Effect Keywords}{\\addsection[2]{Słowa Kluczowe \\mbox{Efektów Kart}}"
+"{\\skills/interference.png}}"
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:7
@@ -33,13 +33,14 @@ msgid ""
 "with more elaborate rules and require specific game components.  This "
 "section provides the rules for these keywords."
 msgstr ""
+"Większość dodatków wprowadza do gry nowe karty. Niektóre z tych kart używają słów kluczowych "
+"z~bardziej rozbudowanymi zasadami i~wymagają określonych komponentów gry.  Ta "
+"sekcja zawiera zasady dla tych słów kluczowych."
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:9
-#, fuzzy
-#| msgid "\\pagetarget{spells}{Spell Cards}"
 msgid "\\pagetarget{spell keywords}{\\subheader{Spell Card Keywords}}"
-msgstr "\\pagetarget{spells}{Karty Zaklęć}"
+msgstr "\\pagetarget{spell keywords}{\\subheader{Słowa Kluczowe Zaklęć}}"
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:13
@@ -48,6 +49,8 @@ msgid ""
 "Units} on the Combat Board.  Use the corresponding Tokens to mark these "
 "spaces."
 msgstr ""
+"Dzięki niektóre Zaklęciom możesz umieścić \\textbf{Efekty} lub \\textbf{Przyzywane "
+"Jednostki} na Planszy Walki.  Do oznaczenia odpowiednich pól użyj specjalnych żetonów."
 
 #. type: expansion
 #: sections/card_effect_keywords.tex:32
@@ -73,6 +76,25 @@ msgid ""
 "    \\columnbreak\n"
 "\n"
 msgstr ""
+"{cove}\n"
+"  \\begin{multicols}{2}\n"
+"    \\pagetarget{Clone Token}{\\subsection*{Żeton Klonowania}}\n"
+"    \\setlength\\intextsep{0pt}\n"
+"    \\setlength\\columnsep{1em}\n"
+"    \\begin{wrapfigure}{r}{0.3\\linewidth}\n"
+"      \\includegraphics[width=0.6\\linewidth]{\\images/clone-token.png}\\vspace*{1em}\n"
+"      \\includegraphics[width=\\linewidth]{\\images/clone-token.png}\n"
+"      \\centering\\imagecaption{Żetony \\mbox{Klonu}}\n"
+"    \\end{wrapfigure}\n"
+"    Gdy rzucasz Zaklęcie \\wikilink{spells/clone}{\\textbf{Klonu},} wybierz sojuszniczą jednostkę (zależnie od użytego \\svg{empower}) oraz sąsiadujące puste pole na Planszy Walki.\n"
+"    Umieść mały Żeton Klonu na wybranej jednostce, a większy Żeton tego samego koloru (niebieski lub czerwony) na pustym polu.\n"
+"    Większy Żeton na pustym polu symbolizuje Klona.\n"
+"    Klon funkcjonuje identycznie jak oryginalna jednostka, kopiując wszystko, co jest napisane na jej karcie, lecz bez uwzględnienia innych efektów zagranych na oryginalną jednostkę.\n"
+"    Jeśli Klon otrzyma co najmniej 1 \\svg{damage} z jakiegokolwiek źródła lub zostanie zaatakowany (nawet jeśli atak zadaje 0 \\svg{damage}), zadaj mu tyle obrażeń, aby jego \\svg{health_points} wynosiły 0.\n"
+"    Klon jest usuwany z Planszy Walki, gdy jego oryginalna jednostka zostanie z niej usunięta.\n"
+"    \\vfill\n"
+"    \\columnbreak\n"
+"\n"
 
 #. type: expansion
 #: sections/card_effect_keywords.tex:42
@@ -89,6 +111,16 @@ msgid ""
 "    \\par\\noindent\n"
 "    \\begin{tikzpicture}\n"
 msgstr ""
+"    \\subsection*{\\textit{Przykład Klonowania}}\n"
+"    \\textit{%\n"
+"      Jedną z jednostek Boba w Walce jest ,,Garstka'' Gryfów z~Inicjatywą równą 6.\n"
+"      Rzuca na nie Zaklęcie Klonu, umieszczając mały Żeton Klonu na Gryfach, a większy Żeton tego samego koloru na sąsiadującym, pustym polu.\n"
+"      Później rzuca ,,Przyspieszenie'' z 0~\\svg{empower} na oryginalne Gryfy, zwiększając ich Inicjatywę o 1.\n"
+"      Inicjatywa oryginalnych Gryfów wynosi teraz 7, ale Inicjatywa Klonu pozostaje równa 6.\n"
+"    }\n"
+"    \\vspace*{1em}\n"
+"    \\par\\noindent\n"
+"    \\begin{tikzpicture}\n"
 
 #. type: expansion
 #: sections/card_effect_keywords.tex:56
@@ -108,6 +140,19 @@ msgid ""
 "  \\vspace*{-8em}\n"
 "  {\\transparent{0.2}\\includegraphics[width=0.5\\linewidth]{\\art/magic_arrow.png}\\hfill}"
 msgstr ""
+"      \\draw (0, 0) node[rotate=180] {\\includegraphics[width=\\linewidth]{\\images/combat_board_half.png}};\n"
+"      \\draw (-1, 1.3) node {\\includegraphics[width=0.22\\linewidth]{\\cards/unit-few.png}};\n"
+"      \\draw (-0.8, 1.2) node[circular drop shadow={shadow scale=0.8, shadow xshift=0.15ex, shadow yshift=-0.15ex, opacity=0.7,\n"
+"        fill=black, path fading={circle with fuzzy edge 10 percent},\n"
+"        every shadow}] {\\includegraphics[width=0.1\\linewidth]{\\images/clone-token-2.png}};\n"
+"      \\draw (1, 1.3) node[circular drop shadow={shadow scale=0.85, shadow xshift=0.2ex, shadow yshift=-0.2ex, opacity=0.7,\n"
+"        fill=black, path fading={circle with fuzzy edge 10 percent},\n"
+"        every shadow}] {\\includegraphics[width=0.18\\linewidth]{\\images/clone-token-2.png}};\n"
+"      \\draw (-0.4, -1.7) node {\\includegraphics[width=0.22\\linewidth]{\\cards/haste.png}};\n"
+"    \\end{tikzpicture}\n"
+"  \\end{multicols}\n"
+"  \\vspace*{-6.5em}\n"
+"  {\\transparent{0.2}\\includegraphics[width=0.45\\linewidth]{\\art/magic_arrow.png}\\hfill}"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:70
@@ -126,15 +171,22 @@ msgid ""
 "  If the Token shows the Quicksand icon, the unit's movement and activation end immediately.\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\begin{expansion}{stronghold}\n"
+"  \\pagetarget{Quicksand Token}{\\subsection*{Żeton Ruchomych Piasków}}\n"
+"  Rzucając zaklęcie \\wikilink{spells/quicksand}{\\textbf{Ruchomych Piasków},} w zależności od użytego \\svg{empower}, weź 2, 4 lub 6 \\textbf{Żetonów Ruchomych Piasków} w tym samym kolorze (niebieskim lub czerwonym).\n"
+"  Połowa z nich musi być ,,pusta'', a połowa musi mieć symbol Ruchomych Piasków.\n"
+"  Potasuj Żetony zakryte i umieść po jednym na każdym wybranym pustym polu na Planszy Walki.\n"
+"  Jeśli nie ma wystarczająco pustych pól, odrzuć nadmiarowe Żetony.\n"
+"  Po umieszczeniu możesz w dowolnym momencie podglądać swoje Żetony.\n"
+"  Gdy jednostka wchodzi na pole z Żetonem Ruchomych Piasków, odkryj go.\n"
+"  Jeśli jest pusty, jednostka kontynuuje ruch.\n"
+"  Jeśli Żeton pokazuje ikonę Ruchomych Piasków, ruch i aktywacja jednostki natychmiast się kończą.\n"
+"\n"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:77
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  \\textbf{Note:} Two Quicksand Tokens may occupy a single space only if they are placed by different players.\n"
 "  \\bigskip\n"
@@ -144,29 +196,27 @@ msgid ""
 "    \\imagecaption{Quicksand Token}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-"\\end{center}\n"
+"  \\textbf{Uwaga:} Dwa Żetony Ruchomych Piasków mogą zajmować jedno pole tylko wtedy, gdy zostały umieszczone przez różnych graczy.\n"
+"  \\bigskip\n"
+"  \\begin{multicols*}{2}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.5\\linewidth]{\\images/quicksand-token.png}\\\\\n"
+"    \\imagecaption{Żeton Ruchomych Piasków}\n"
 "\n"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:83
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\columnbreak\n"
 "    \\includegraphics[width=0.5\\linewidth]{\\images/quicksand-token-2.png}\\\\\n"
 "    \\imagecaption{Empty Quicksand Token}\n"
 "  "
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-"\\end{center}\n"
-"\n"
+"    \\columnbreak\n"
+"    \\includegraphics[width=0.5\\linewidth]{\\images/quicksand-token-2.png}\\\\\n"
+"    \\imagecaption{Pusty Żeton \\mbox{\\hspace{-0.3em}Ruchomych Piasków}}\n"
+"  "
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:83
