@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-12-07 23:28+0000\n"
+"POT-Creation-Date: 2026-02-28 00:30+0000\n"
 "PO-Revision-Date: 2024-04-27 19:35+0200\n"
 "Last-Translator: basile <sugranesb@gmail.com>\n"
 "Language-Team: French <sugranesb@gmail.com>\n"
@@ -22,31 +22,247 @@ msgstr ""
 #. type: Plain text
 #: sections/ai_rules.tex:3
 #, fuzzy
-#| msgid "\\addsection{AI Rules}{\\spells/fortune.png}"
-msgid "\\pagetarget{AIrules}{\\addsection{AI Rules}{\\spells/fortune.png}}"
-msgstr "\\addsection{Règles IA}{\\spells/fortune.png}"
+#| msgid "\\addsection{Heroes}{\\skills/sorcery.png}"
+msgid "\\addsection{AI rules}{\\skills/armorer.png}"
+msgstr "\\addsection{Héros}{\\skills/sorcery.png}"
 
-#. type: multicols
-#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
-#: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
-#: sections/deckbuilding.tex:52 sections/deckbuilding.tex:73
-#: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
-#: sections/map_elements.tex:88 sections/map_elements.tex:139
-#: sections/player_turns.tex:5 sections/resources.tex:5
-#: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:55 sections/tournament_mode.tex:5 sections/town.tex:5
-#: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
+#. type: multicols*
+#: sections/ai_rules.tex:6
 #, no-wrap
 msgid ""
 "{2}\n"
+"  AI rules apply to Enemy Heroes and all Combat encounters, including those against Neutral Units, in \\textbf{Solo Campaigns} and \\textbf{Cooperative} Scenarios.\n"
 "\n"
 msgstr ""
-"{2}\n"
+
+#. type: multicols*
+#: sections/ai_rules.tex:11
+#, no-wrap
+msgid ""
+"  \\bigskip\n"
+"  \\pagetarget{AI Units}{\\subheader{Combat against AI}}\n"
+"  Foreword: these rules are intended to make fun challenging encounters, but still be simple enough to follow.\n"
+"  You will likely find some loopholes which make the encounter too easy, but you may make AI behave more intellegently.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:13
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\pagetarget{AI Units}{These rules} apply during Combat in \\textbf{Solo}\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
+#| "When Neutral enemies or AI Heroes activate a Unit, they follow a set of automatic instructions:\\par\n"
+#| "\n"
+msgid ""
+"  The rules for AI unit placement during setup are described in \\pagelink{CombatAISetup}{Combat section}.\n"
+"\n"
+msgstr ""
+"\\pagetarget{AI Units}{Ces règles} s'appliquent durant un Combat en Scénario \\textbf{Solo}\\index{Mode Solo} et \\textbf{Coopératif}.\n"
+"Quand un ennemi Neutre ou un Héros IA active une Unité, il suit une série d'instructions automatiques.\\par\n"
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:16
+#: sections/ai_rules.tex:15
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\pagetarget{AI Units}{These rules} apply during Combat in \\textbf{Solo}\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
+#| "When Neutral enemies or AI Heroes activate a Unit, they follow a set of automatic instructions:\\par\n"
+#| "\n"
+msgid ""
+"  When Neutral enemies or \\pagelink{AI Heroes}{AI Heroes} activate a unit, they follow a set of instructions:\\par\n"
+"\n"
+msgstr ""
+"\\pagetarget{AI Units}{Ces règles} s'appliquent durant un Combat en Scénario \\textbf{Solo}\\index{Mode Solo} et \\textbf{Coopératif}.\n"
+"Quand un ennemi Neutre ou un Héros IA active une Unité, il suit une série d'instructions automatiques.\\par\n"
+"\n"
+
+#. type: multicols*
+#: sections/ai_rules.tex:18
+#, no-wrap
+msgid ""
+"  \\begin{itemize}\n"
+"    \\item If it is an AI Hero, draw and resolve the next \\pagelink{AI Deck}{AI card}.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:21
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{itemize}\n"
+#| "  \\item Enemy Ground \\svg{unit_ground} and Flying \\svg{unit_flying} Units prioritize attacking Units of the \\textbf{same} tier.\n"
+#| "  If this is impossible, they attack the Unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
+#| "\n"
+msgid ""
+"    \\item Enemy Ground \\svg{unit_ground} and Flying \\svg{unit_flying} units prioritize attacking units of the \\textbf{same} tier.\n"
+"    If this is impossible, they attack the unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
+"\n"
+msgstr ""
+"\\begin{itemize}\n"
+"  \\item Les Unités ennemies au Sol \\svg{unit_ground} et Volantes \\svg{unit_flying} attaquent en priorité une Unité de même rang.\n"
+"  Si c'est impossible, ils attaquent l'Unité de rang plus faible (en ordre \\textbf{décroissant}, jusqu'à bronze), si impossible aussi, ils attaquent l'Unité de plus haut rang (en ordre \\textbf{croissant}).\\par\n"
+"\n"
+
+#. type: multicols*
+#: sections/ai_rules.tex:27
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority:\n"
+#| "  \\svg{golden}\n"
+#| "  - \\svg{silver}\n"
+#| "  - \\svg{bronze}\n"
+#| "  - \\svg{azure}.}\n"
+#| "\n"
+msgid ""
+"    \\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority:\n"
+"    \\svg{golden}\n"
+"    - \\svg{silver}\n"
+"    - \\svg{bronze}\n"
+"    - \\svg{azure}.}\n"
+"\n"
+msgstr ""
+"  \\textit{Exemple: \\svg{golden}\\svg{unit_ground} a cette priorité :\n"
+"  - \\svg{golden}\n"
+"  - \\svg{silver}\n"
+"  - \\svg{bronze}\n"
+"  - \\svg{azure}.}\n"
+"\n"
+
+#. type: multicols*
+#: sections/ai_rules.tex:30
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\item Ranged \\svg{unit_ranged} Units prioritize attacking other Ranged \\svg{unit_ranged} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
+#| "  If there are no Ranged \\svg{unit_ranged} Units for them to target, they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} Units in the same tier order.\\par\n"
+#| "\n"
+msgid ""
+"    \\item Ranged \\svg{unit_ranged} units prioritize attacking other Ranged \\svg{unit_ranged} units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
+"    If there are no Ranged \\svg{unit_ranged} units for them to target, they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} units in the same tier order.\\par\n"
+"\n"
+msgstr ""
+"  \\item Les Unités à Distance \\svg{unit_ranged} attaquent en priorité les autres Unités à Distance \\svg{unit_ranged} de même Rang, puis de Rang plus faible, et ensuite de Rang plus fort, comme plus haut.\n"
+"  S'il n'y a pas d'Unité à Distance \\svg{unit_ranged} à cibler, la priorité devient les Unités au Sol \\svg{unit_ground} et Volantes \\svg{unit_flying} avec la même priorité de Rang.\\par\n"
+"\n"
+
+#. type: multicols*
+#: sections/ai_rules.tex:41
+#, no-wrap
+msgid ""
+"    \\textit{Example: \\svg{silver}\\svg{unit_ranged} has this priority:\n"
+"    \\svg{silver}\\svg{unit_ranged}\n"
+"    - \\svg{bronze}\\svg{unit_ranged}\n"
+"    - \\svg{golden}\\svg{unit_ranged}\n"
+"    - \\svg{azure}\\svg{unit_ranged}\n"
+"    - \\svg{silver}\\svg{unit_ground}\\svg{unit_flying}\n"
+"    - \\svg{bronze}\\svg{unit_ground}\\svg{unit_flying}\n"
+"    - \\svg{golden}\\svg{unit_ground}\\svg{unit_flying}\n"
+"    - \\svg{azure}\\svg{unit_ground}\\svg{unit_flying}.}\n"
+"  \\end{itemize}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:44
+#, fuzzy, no-wrap
+#| msgid ""
+#| "In both cases, if there's more than one valid target, they attack the closest one.\n"
+#| "If there's ever a tie between equally valid targets, the player chooses which Unit is attacked.\\par\n"
+#| "\n"
+msgid ""
+"  In both cases, if there is more than one valid target, they attack the closest one.\n"
+"  If there is ever a tie between equally valid targets, the player chooses which unit is attacked.\\par\n"
+"\n"
+msgstr ""
+"Dans les deux cas, si il y a plus d'une cible valide, ils attaquent la plus proche.\n"
+"En cas d'égalité entre cibles valides, le Joueur choisit quelle Unité est attaquée.\\par\n"
+"\n"
+
+#. type: multicols*
+#: sections/ai_rules.tex:46
+#, fuzzy, no-wrap
+#| msgid ""
+#| "Enemy Units cannot \\pagelink{Defend}{Defend} unless instructed to.\n"
+#| "\n"
+msgid ""
+"  Enemy units cannot \\pagelink{Defend}{defend} unless instructed to.\n"
+"\n"
+msgstr ""
+"Les Unités ennemies ne peuvent pas \\pagelink{Defend}{Défendre} à moins d’en recevoir l’instruction.\n"
+"\n"
+
+#. type: multicols*
+#: sections/ai_rules.tex:52
+#, no-wrap
+msgid ""
+"  \\pagetarget{AI Siege}{\\subsection*{AI Siege}}\n"
+"  When the Walls and Gate are mentioned in Combat preparation but no additional information on how to arrange them is given, arrange them as a human player would:\n"
+"  place the Gate in front of the \\svg{unit_ground} unit with the highest \\svg{initiative}.\n"
+"  By default, the units do not attack the Walls -- they would rather fly over them to attack their target or move towards it through the Gate.\n"
+"  If it is not possible, they take a \\pagelink{Defend}{Defend} Action.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:55
+#, no-wrap
+msgid ""
+"  The \\pagelink{Walls}{Arrow Tower} is treated like a Silver \\svg{silver}\\svg{unit_ranged} unit.\n"
+"  However, if it has multiple equally valid targets to attack, it will attack the one with the least health remaining (the smallest difference between \\svg{health_points} and current \\svg{damage}).\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:60
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{center}\n"
+#| "  \\includegraphics[width=\\linewidth]{\\art/dendroid.jpg}\n"
+#| "\\end{center}\n"
+#| "\n"
+msgid ""
+"\\vspace*{\\fill}\n"
+"{\\transparent{0.2}{\\includegraphics[width=\\linewidth,keepaspectratio]{\\art/thunder_helmet.png}}}\n"
+"\\vspace*{\\fill}"
+msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=\\linewidth]{\\art/dendroid.jpg}\n"
+"\\end{center}\n"
+"\n"
+
+#. type: multicols
+#: sections/ai_rules.tex:68
+#, no-wrap
+msgid ""
+"{2}\n"
+"  \\pagetarget{AI Heroes}{\\subheader{AI Heroes}}\n"
+"  AI Heroes are used in Campaigns.\n"
+"  AI Heroes do not have a Town Board, Resources, or a Hero Board.\n"
+"  Their units are static and defined by the Scenario: locate the indicated unit cards during setup.\n"
+"  If the unit indicates a unit tier (\\svg{bronze}, \\svg{silver}, \\svg{golden}, or \\svg{azure}) instead of ``Few'' or ``Pack'', it is a Neutral Unit.\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:71
+#, no-wrap
+msgid ""
+"  During setup, if multiple AI Heroes use the same unit and you do not have enough copies of its card, the AI Heroes must share it:\n"
+"  set up everything without that card, then add it to the AI Hero's Army when you initiate Combat with them.\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:75
+#, no-wrap
+msgid ""
+"  AI Heroes cannot surrender and you cannot surrender to them;\n"
+"  they will always fight until they run out of units.\n"
+"  Winning Combat against an AI Hero does not grant any rewards unless stated by the Scenario.\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/ai_rules.tex:85
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{AI Hero Turn}\n"
@@ -61,16 +277,15 @@ msgstr ""
 #| "\\end{itemize}\n"
 #| "\n"
 msgid ""
-"\\subheader{AI Hero Turn}\n"
-"AI Heroes are used in the Campaigns.\n"
-"They start in their Town, and have 3 MP, always spending them to perform the following Actions in descending priority:\n"
-"\\begin{itemize}\n"
-"  \\item If a player's Hero is on the same Tile as the AI, spend all MP to move towards them in an attempt to start Combat.\n"
-"  \\item If there are any Mines or Settlements the AI could flag on the same Tile, move towards the closest one.\n"
-"  \\item Otherwise, move toward the player's Town.\n"
-"Repeat this sequence until all MPs are used up.\n"
-"AI Heroes take their turn after the player.\n"
-"\\end{itemize}\n"
+"  \\columnbreak\n"
+"  \\subsection*{AI Hero Turns}\n"
+"  Unless specified otherwise, AI Heroes start in their Town, take turns after the player, and have 3 MP, always spending them to perform the following actions in descending priority:\n"
+"  \\begin{itemize}\n"
+"    \\item If a player's Hero is on the same Tile as the AI, spend all MP to move towards them in an attempt to start Combat.\n"
+"    \\item If there are any Mines or Settlements the AI could flag on the same Tile, move towards the closest one.\n"
+"    \\item Otherwise, move toward the player's Town.\n"
+"  \\end{itemize}\n"
+"  Repeat this sequence until all MPs are used up.\n"
 "\n"
 msgstr ""
 "\\subsection*{Tour du Héros IA}\n"
@@ -85,84 +300,58 @@ msgstr ""
 "\\end{itemize}\n"
 "\n"
 
-#. type: multicols*
-#: sections/ai_rules.tex:19
+#. type: multicols
+#: sections/ai_rules.tex:88
 #, fuzzy, no-wrap
 #| msgid ""
 #| "AI Heroes always \\textbf{automatically win Combat} against any Neutral Units, while simultaneously \\textbf{Flagging or Visiting all Fields} they happen to move through.\n"
 #| "They gain no benefits from any Fields.\n"
 #| "\n"
 msgid ""
-"AI Heroes always \\textbf{automatically win Combat} against any Neutral Units, while simultaneously \\textbf{flagging or Visiting all Fields} they happen to move through.\n"
-"They gain no benefits from any Fields.\n"
+"  AI Heroes always \\textbf{automatically win Combat} against any Neutral Units, while simultaneously \\textbf{flagging or visiting all Fields} they happen to move through.\n"
+"  They gain no benefits from any Fields.\n"
 "\n"
 msgstr ""
 "Un Héros IA \\textbf{gagne automatiquement un Combat} contre les Unités Neutres, tout en \\textbf{Revendiquant ou en Explorant toute Case} qu'il traverse.\n"
 "Il ne bénéficie d'aucun bonus, peu importe la Case.\n"
 "\n"
 
-#. type: multicols*
-#: sections/ai_rules.tex:30
-#, fuzzy, no-wrap
-#| msgid ""
-#| "AI Heroes must discover face down Map Tiles as normal by spending 1 MP before moving onto them.\n"
-#| "The player chooses that Tile's orientation.\\par\n"
-#| "AI Heroes cannot Surrender and you cannot Surrender to them;\n"
-#| "they will always fight until they run out of Units.\n"
-#| "Winning Combat against an AI Hero does not grant any rewards unless stated by the Scenario.\n"
-#| "AI Heroes do not have a Town Board, Resources, or a Hero Card.\n"
-#| "Their Units are static and defined by the Scenario's setup or other rules.\\par\n"
-#| "Any differences to the above will be described in any given Scenario's own rules.\n"
-#| "\\vfill\n"
-#| "\n"
-msgid ""
-"AI Heroes must discover face down Map Tiles as normal by spending 1 MP before moving onto them.\n"
-"The player chooses that Tile's orientation.\\par\n"
-"AI Heroes cannot surrender and you cannot surrender to them;\n"
-"they will always fight until they run out of units.\n"
-"Winning Combat against an AI Hero does not grant any rewards unless stated by the Scenario.\n"
-"AI Heroes do not have a Town Board, Resources, or a Hero Board.\n"
-"Their units are static and defined by the Scenario's setup or other rules.\\par\n"
-"Any differences to the above will be described in any given Scenario's own rules.\n"
-"\\vspace*{\\fill}\n"
-"\\columnbreak\n"
-"\n"
-msgstr ""
-"Le Héros IA doit révéler une Tuile face cachée en dépensant 1 PM avant de s'y déplacer.\n"
-"Le joueur choisit l'orientation de la Tuile.\\par\n"
-"L'IA ne peut pas se Rendre et vous ne pouvez pas vous Rendre face à l'IA ;\n"
-"l'IA combat toujours jusqu'à ne plus avoir d'Unité.\n"
-"Gagner un Combat contre l'IA ne donne aucune récompense sauf indication du Scénario.\n"
-"L'IA n'a pas de Plateau de Ville, de Fiche de Héros ou de Ressources.\n"
-"Ses Unités sont définies par la mise en place du Scénario ou d'autres règles et ne changent pas.\\par\n"
-"Toute différence avec ces règles seront décrites dans les règles spécifiques du Scénario.\n"
-"\n"
-
-#. type: multicols*
-#: sections/ai_rules.tex:32
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\subsection*{AI Decks}\n"
-#| "\n"
-msgid ""
-"\\subheader{AI Decks}\n"
-"\n"
-msgstr ""
-"\\subsection*{Decks IA}\n"
-"\n"
-
-#. type: multicols*
-#: sections/ai_rules.tex:36
+#. type: multicols
+#: sections/ai_rules.tex:91
 #, no-wrap
 msgid ""
-"\\begin{multicols*}{2}\n"
-"  \\begin{center}\n"
-"    \\vspace*{-1.5em}\n"
-"    \\begin{tikzpicture}\n"
+"  AI Heroes must discover face down Map Tiles as normal by spending 1 MP before moving onto them.\n"
+"  The player chooses that Tile's orientation."
+msgstr ""
+
+#. type: Plain text
+#: sections/ai_rules.tex:97
+#, fuzzy
+#| msgid ""
+#| "\\begin{center}\n"
+#| "  \\includegraphics[width=\\linewidth]{\\art/dendroid.jpg}\n"
+#| "\\end{center}\n"
+#| "\n"
+msgid ""
+"{\\begin{center} \\vfill \\includegraphics[width=\\linewidth]{\\art/"
+"gold_dragon.jpg} \\end{center}}"
+msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=\\linewidth]{\\art/dendroid.jpg}\n"
+"\\end{center}\n"
+"\n"
+
+#. type: multicols*
+#: sections/ai_rules.tex:101
+#, no-wrap
+msgid ""
+"{2}\n"
+"  \\pagetarget{AI Deck}{\\subheader{AI Decks}}\n"
+"  \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:62
+#: sections/ai_rules.tex:137
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{multicols*}{2}\n"
@@ -183,30 +372,42 @@ msgstr ""
 #| "    \\item[\\textbf{7.}] Card Type\n"
 #| "  \\end{itemize}\\vspace*{\\fill}"
 msgid ""
-"      \\draw (0, 0) node {\\includegraphics[width=1.3\\linewidth]{\\cards/ai.png}};\n"
-"      \\draw (-0.7, 2.5) node {\\encircle{1}};\n"
-"      \\draw (1.5, 1.2) node {\\encircle{2}};\n"
-"      \\draw (-1.5, 0) node {\\encircle{3}};\n"
-"      \\draw (0.5, 0) node {\\encircle{4}};\n"
-"      \\draw (-1.5, -1.2) node {\\encircle{5}};\n"
-"      \\draw (0.5, -1.2) node {\\encircle{6}};\n"
-"      \\draw (-0.5, -2.5) node {\\encircle{7}};\n"
-"    \\end{tikzpicture}\\\\\n"
-"    \\phantom{\\ldots\\ldots}\\imagecaption{AI card}\n"
-"    \\vspace*{-1em}\n"
-"  \\end{center}\n"
-"  \\vspace*{\\fill}\n"
-"  \\columnbreak\n"
-"  \\scriptsize\n"
-"  \\begin{itemize}[itemsep=0pt]\n"
-"    \\item[\\textbf{1.}] Name\n"
-"    \\item[\\textbf{2.}] Description\n"
-"    \\item[\\textbf{3.}] Easy Modifier\n"
-"    \\item[\\textbf{4.}] Normal Modifier\n"
-"    \\item[\\textbf{5.}] Expert Modifier\n"
-"    \\item[\\textbf{6.}] Impossible\\\\Modifier\n"
-"    \\item[\\textbf{7.}] Card Type\n"
-"  \\end{itemize}\\vspace*{\\fill}"
+"    \\node (card) {\\includegraphics[width=0.57\\linewidth]{\\cards/ai.png}};\n"
+"    \\begin{scope}[\n"
+"      shift={(card.south west)},\n"
+"      x={($(card.east) - (card.west)$)},\n"
+"      y={($(card.north) - (card.south)$)},\n"
+"      ]\n"
+"      \\draw (0.4, 0.85) node {\\encircle{1}};\n"
+"      \\draw (0.8, 0.7) node {\\encircle{2}};\n"
+"      \\draw (0.15, 0.5) node {\\encircle{3}};\n"
+"      \\draw (0.55, 0.5) node {\\encircle{4}};\n"
+"      \\draw (0.15, 0.3) node {\\encircle{5}};\n"
+"      \\draw (0.55, 0.3) node {\\encircle{6}};\n"
+"      \\draw (0.4, 0.1) node {\\encircle{7}};\n"
+"    \\end{scope}\n"
+"    \\node [below=0pt of card.south] {\\imagecaption{AI card}};\n"
+"    \\node [right=-1em of card.east] {\n"
+"      \\begin{minipage}[t]{0.43\\linewidth}\n"
+"        \\scriptsize\n"
+"        \\begin{itemize}[itemsep=0.8em]\n"
+"          \\item[\\textbf{1.}] Name\n"
+"          \\item[\\textbf{2.}] Description\n"
+"          \\item[\\textbf{3.}] Easy Modifier\n"
+"          \\item[\\textbf{4.}] Normal Modifier\n"
+"          \\item[\\textbf{5.}] Expert Modifier\n"
+"          \\item[\\textbf{6.}] Impossible\\\\Modifier\n"
+"          \\item[\\textbf{7.}] Card Type:\\\\\n"
+"            \\begin{itemize}[itemsep=0.5em]\n"
+"              \\item[{\\svg[12]{might}}] Might\n"
+"              \\item[\\svg{magic}] Magic\n"
+"              \\item[\\svg{skill}] Skill\n"
+"            \\end{itemize}\n"
+"        \\end{itemize}\n"
+"      \\end{minipage}\n"
+"    };\n"
+"  \\end{tikzpicture}\n"
+"\n"
 msgstr ""
 "\\begin{multicols*}{2}\n"
 "  \\begin{center}\n"
@@ -226,263 +427,266 @@ msgstr ""
 "    \\item[\\textbf{7.}] Type de Carte\n"
 "  \\end{itemize}\\vspace*{\\fill}"
 
-#. type: Plain text
-#: sections/ai_rules.tex:70
-#, fuzzy
+#. type: multicols*
+#: sections/ai_rules.tex:143
+#, fuzzy, no-wrap
 #| msgid ""
-#| "AI Heroes use two Decks during Combat: the \\textbf{AI Deck}, and the "
-#| "\\textbf{AI Spell Deck}.\n"
-#| "The AI Deck consists of three types of AI Cards: Might \\svg[12]{might}, "
-#| "Magic \\svg{magic} and Skill \\svg{skill}.\n"
-#| "Each Campaign Scenario lists the number and types of Cards to include "
-#| "during setup.\n"
+#| "AI Heroes use two Decks during Combat: the \\textbf{AI Deck}, and the \\textbf{AI Spell Deck}.\n"
+#| "The AI Deck consists of three types of AI Cards: Might \\svg[12]{might}, Magic \\svg{magic} and Skill \\svg{skill}.\n"
+#| "Each Campaign Scenario lists the number and types of Cards to include during setup.\n"
 #| "Choose these Cards \\textbf{randomly} when building the Deck.\n"
-#| "If Skill Cards are included, search for and set aside the Ability Card "
-#| "related to it.\n"
-#| "Build the \\textbf{AI Spell Deck} by separating the indicated Spells from "
-#| "the regular Spell Deck.\n"
+#| "If Skill Cards are included, search for and set aside the Ability Card related to it.\n"
+#| "Build the \\textbf{AI Spell Deck} by separating the indicated Spells from the regular Spell Deck.\n"
 #| "Shuffle these Decks during setup after building them.\n"
 #| "\n"
 msgid ""
-"AI Heroes use two Decks during Combat: the \\textbf{AI Deck}, and the "
-"\\textbf{AI Spell Deck}.  The AI Deck consists of three types of AI cards: "
-"Might \\svg[12]{might}, Magic \\svg{magic} and Skill \\svg{skill}.  Each "
-"Campaign Scenario lists the number and types of cards to include during "
-"setup.  Choose these cards \\textbf{randomly} when building the Deck.  If "
-"Skill cards are included, search for and set aside the Ability card related "
-"to it.  Build the \\textbf{AI Spell Deck} by separating the indicated Spells "
-"from the regular Spell Deck.  Shuffle these Decks during setup after "
-"building them."
+"  AI Heroes use two Decks during Combat: the \\textbf{AI Deck} and the \\textbf{AI Spell Deck}.\n"
+"  The AI Deck consists of three types of AI cards: Might \\svg[12]{might}, Magic \\svg{magic}, and Skill \\svg{skill}.\n"
+"  Each Campaign Scenario lists the number and types of cards to include during setup.\n"
+"  Choose these cards \\textbf{randomly} when building the AI Deck.\n"
+"  Before each Combat, shuffle the AI Deck and its discard pile together.\n"
+"\n"
 msgstr ""
-"Les Héros IA utilisent deux Decks durant le Combat : le \\textbf{Deck IA} et "
-"le \\textbf{Deck de Sort}.\n"
-"Le Deck IA est construit avec trois types de cartes IA : Guerrier \\svg[12]"
-"{might}, Magie \\svg{magic} et Capacité \\svg{skill}.\n"
-"Chaque Scénario de Campagne liste le nombre de chaque type de cartes "
-"incluses dans le Deck IA.\n"
-"Les Cartes Guerrier \\svg[12]{might} et Capacité \\svg{skill} ont deux "
-"variantes. Choisissez ces cartes \\textbf{aléatoirement} lors de la "
-"construction du Deck.\n"
-"Si une Carte Capacité est incluse, mettez de côté la Carte de Compétence "
-"correspondante.\n"
-"Créez le \\textbf{Deck de Sort IA} en séparant les Sorts indiqués de la Pile "
-"de Sort classique.\n"
+"Les Héros IA utilisent deux Decks durant le Combat : le \\textbf{Deck IA} et le \\textbf{Deck de Sort}.\n"
+"Le Deck IA est construit avec trois types de cartes IA : Guerrier \\svg[12]{might}, Magie \\svg{magic} et Capacité \\svg{skill}.\n"
+"Chaque Scénario de Campagne liste le nombre de chaque type de cartes incluses dans le Deck IA.\n"
+"Les Cartes Guerrier \\svg[12]{might} et Capacité \\svg{skill} ont deux variantes. Choisissez ces cartes \\textbf{aléatoirement} lors de la construction du Deck.\n"
+"Si une Carte Capacité est incluse, mettez de côté la Carte de Compétence correspondante.\n"
+"Créez le \\textbf{Deck de Sort IA} en séparant les Sorts indiqués de la Pile de Sort classique.\n"
 "Mélangez séparément ces Decks lors de la mise en place après leur création.\n"
 "\n"
 
-#. type: Plain text
-#: sections/ai_rules.tex:80
-#, fuzzy
+#. type: multicols*
+#: sections/ai_rules.tex:148
+#, fuzzy, no-wrap
 #| msgid ""
-#| "When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI "
-#| "Card} and follow its instructions before the Unit moves and/or attacks.\n"
+#| "When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI Card} and follow its instructions before the Unit moves and/or attacks.\n"
 #| "If AI Deck is depleted during Combat, stop drawing from it.\n"
-#| "The effect of each AI Card depends on the game's \\pagelink{Difficulty}"
-#| "{Difficulty}.\n"
-#| "The Might Card \\svg[12]{might} is attached to the Unit until the first "
-#| "respective attack/defense happens.\n"
+#| "The effect of each AI Card depends on the game's \\pagelink{Difficulty}{Difficulty}.\n"
+#| "The Might Card \\svg[12]{might} is attached to the Unit until the first respective attack/defense happens.\n"
 #| "The AI Spell Deck is used whenever a Magic Card \\svg{magic} is drawn.\n"
-#| "If an AI Hero is instructed to draw a Card, they will draw and resolve "
-#| "\\textbf{another Card} from the AI Deck.\n"
+#| "If an AI Hero is instructed to draw a Card, they will draw and resolve \\textbf{another Card} from the AI Deck.\n"
 #| "\n"
 msgid ""
-"When an AI Hero \\textbf{activates} a unit, draw an AI card\\index{AI card} "
-"and follow its instructions before the unit moves and/or attacks.  If AI "
-"Deck is depleted during Combat, stop drawing from it.  The effect of each AI "
-"card depends on the game's \\pagelink{Difficulty}{Difficulty}.  The Might "
-"card \\svg[12]{might} is attached to the unit until the first respective "
-"attack/defense happens.  The AI Spell Deck is used whenever a Magic card "
-"\\svg{magic} is drawn.  If an AI Hero is instructed to draw a card, they "
-"will draw and resolve \\textbf{another card} from the AI Deck.  "
-"\\vspace*{\\fill} \\columnbreak \\pagetarget{AI Units}{\\subheader{Combat "
-"against AI}}"
+"  When an AI Hero \\textbf{activates} a unit, draw an AI card\\index{AI card} and follow its instructions before the unit \\pagelink{AI Units}{moves and/or attacks}.\n"
+"  If the AI Deck is depleted during Combat, stop drawing from it.\n"
+"  The effect of each AI card depends on the game's \\pagelink{Difficulty}{Difficulty}.\n"
+"  If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
+"\n"
 msgstr ""
-"Quand le Héros IA \\textbf{Active} une Unité, piochez une Carte "
-"IA\\index{Carte IA} et suivez les instructions avant de déplacer l'Unité et/"
-"ou d'Attaquer.\n"
+"Quand le Héros IA \\textbf{Active} une Unité, piochez une Carte IA\\index{Carte IA} et suivez les instructions avant de déplacer l'Unité et/ou d'Attaquer.\n"
 "Si le Deck IA se vide lors du Combat, ne piochez plus de celui-ci.\n"
-"Les effets des cartes IA dépendent de la \\pagelink{Difficulty}{Difficulté} "
-"de la partie.\n"
-"Les Cartes Guerrier \\svg[12]{might} sont associées à l'Unité jusqu'à la "
-"première Attaque/Défense.\n"
-"Le Deck de Sort IA est utilisé à chaque pioche d'une Carte Magie "
-"\\svg{magic}.\n"
-"Si le Héros IA doit piocher une Carte, il devra piocher et résoudre une "
-"\\textbf{autre Carte} du Deck IA.\n"
-"\\vspace*{\\fill} \\columnbreak \\pagetarget{AI Units}{\\subheader{Combat "
-"contre l'IA}}"
+"Les effets des cartes IA dépendent de la \\pagelink{Difficulty}{Difficulté} de la partie.\n"
+"Les Cartes Guerrier \\svg[12]{might} sont associées à l'Unité jusqu'à la première Attaque/Défense.\n"
+"Le Deck de Sort IA est utilisé à chaque pioche d'une Carte Magie \\svg{magic}.\n"
+"Si le Héros IA doit piocher une Carte, il devra piocher et résoudre une \\textbf{autre Carte} du Deck IA.\n"
+"\\vspace*{\\fill} \\columnbreak \\pagetarget{AI Units}{\\subheader{Combat contre l'IA}}"
 
-#. type: Plain text
-#: sections/ai_rules.tex:83
-#, fuzzy
-#| msgid ""
-#| "\\pagetarget{AI Units}{These rules} apply during Combat in \\textbf{Solo}"
-#| "\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
-#| "When Neutral enemies or AI Heroes activate a Unit, they follow a set of "
-#| "automatic instructions:\\par\n"
-#| "\n"
+#. type: multicols*
+#: sections/ai_rules.tex:152
+#, no-wrap
 msgid ""
-"These rules apply during Combat in \\textbf{Solo}\\index{Solo Mode} and "
-"\\textbf{Cooperative} Scenarios.  The rules for AI unit placement during "
-"setup are described in \\pagelink{CombatAISetup}{Combat section}."
-msgstr ""
-"\\pagetarget{AI Units}{Ces règles} s'appliquent durant un Combat en Scénario "
-"\\textbf{Solo}\\index{Mode Solo} et \\textbf{Coopératif}.\n"
-"Quand un ennemi Neutre ou un Héros IA active une Unité, il suit une série "
-"d'instructions automatiques.\\par\n"
+"  \\subsection*{AI Magic cards and AI Spell Deck}\n"
+"  During setup find the Spells indicated in the Scenario and build the \\textbf{AI Spell Deck}.\n"
+"  Before each Combat, shuffle the AI Spell Deck and its discard pile together.\n"
 "\n"
+msgstr ""
 
-#. type: Plain text
-#: sections/ai_rules.tex:85
-#, fuzzy
-#| msgid ""
-#| "\\pagetarget{AI Units}{These rules} apply during Combat in \\textbf{Solo}"
-#| "\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
-#| "When Neutral enemies or AI Heroes activate a Unit, they follow a set of "
-#| "automatic instructions:\\par\n"
-#| "\n"
+#. type: multicols*
+#: sections/ai_rules.tex:156
+#, no-wrap
 msgid ""
-"When Neutral enemies or AI Heroes activate a unit, they follow a set of "
-"automatic instructions:"
-msgstr ""
-"\\pagetarget{AI Units}{Ces règles} s'appliquent durant un Combat en Scénario "
-"\\textbf{Solo}\\index{Mode Solo} et \\textbf{Coopératif}.\n"
-"Quand un ennemi Neutre ou un Héros IA active une Unité, il suit une série "
-"d'instructions automatiques.\\par\n"
+"  Whenever an AI Magic \\svg{magic} card is drawn, draw the next Spell from the AI Spell Deck and cast it.\n"
+"  Discarded Spells go to its own AI Spell Discard Pile.\n"
+"  If the AI Spell Deck empties before Combat ends, shuffle the AI Spell Discard Pile to form a new Spell Deck.\n"
 "\n"
+msgstr ""
 
-#. type: itemize
-#: sections/ai_rules.tex:89
-#, fuzzy
-#| msgid ""
-#| "\\begin{itemize}\n"
-#| "  \\item Enemy Ground \\svg{unit_ground} and Flying \\svg{unit_flying} "
-#| "Units prioritize attacking Units of the \\textbf{same} tier.\n"
-#| "  If this is impossible, they attack the Unit of a lower tier (in tier "
-#| "\\textbf{descending} order, down to bronze), and if that is also "
-#| "impossible, they attack the Unit of a higher tier (in tier "
-#| "\\textbf{ascending} order).\\par\n"
-#| "\n"
+#. type: multicols*
+#: sections/ai_rules.tex:160
+#, no-wrap
 msgid ""
-"Enemy Ground \\svg{unit_ground} and Flying \\svg{unit_flying} units "
-"prioritize attacking units of the \\textbf{same} tier.  If this is "
-"impossible, they attack the unit of a lower tier (in tier "
-"\\textbf{descending} order, down to bronze), and if that is also impossible, "
-"they attack the unit of a higher tier (in tier \\textbf{ascending} order)."
-msgstr ""
-"\\begin{itemize}\n"
-"  \\item Les Unités ennemies au Sol \\svg{unit_ground} et Volantes "
-"\\svg{unit_flying} attaquent en priorité une Unité de même rang.\n"
-"  Si c'est impossible, ils attaquent l'Unité de rang plus faible (en ordre "
-"\\textbf{décroissant}, jusqu'à bronze), si impossible aussi, ils attaquent "
-"l'Unité de plus haut rang (en ordre \\textbf{croissant}).\\par\n"
+"  The AI Spell Deck may contain more Spell cards than there are Magic cards in the AI Hero's Deck.\n"
+"  This is intentional: not all Spells will be used during Combat.\n"
+"  Some are included for the sake of variety.\n"
 "\n"
+msgstr ""
 
-#. type: itemize
-#: sections/ai_rules.tex:95
-#, fuzzy
-#| msgid ""
-#| "  \\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority:\n"
-#| "  \\svg{golden}\n"
-#| "  - \\svg{silver}\n"
-#| "  - \\svg{bronze}\n"
-#| "  - \\svg{azure}.}\n"
-#| "\n"
+#. type: multicols*
+#: sections/ai_rules.tex:162
+#, no-wrap
 msgid ""
-"\\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority: "
-"\\svg{golden} - \\svg{silver} - \\svg{bronze} - \\svg{azure}.}"
-msgstr ""
-"  \\textit{Exemple: \\svg{golden}\\svg{unit_ground} a cette priorité :\n"
-"  - \\svg{golden}\n"
-"  - \\svg{silver}\n"
-"  - \\svg{bronze}\n"
-"  - \\svg{azure}.}\n"
+"  If the AI Hero is assigned a Spell card that is unavailable because it is in your Hero's Deck, and you do not have another copy, substitute it with a \\wikilink{spells/magic_arrow}{Magic Arrow} card.\n"
 "\n"
+msgstr ""
 
-#. type: itemize
-#: sections/ai_rules.tex:98
-#, fuzzy
-#| msgid ""
-#| "  \\item Ranged \\svg{unit_ranged} Units prioritize attacking other "
-#| "Ranged \\svg{unit_ranged} Units of the same tier, then lower tier, and "
-#| "finally higher tier, using the same tier order as above.\n"
-#| "  If there are no Ranged \\svg{unit_ranged} Units for them to target, "
-#| "they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} "
-#| "Units in the same tier order.\\par\n"
-#| "\n"
+#. type: multicols*
+#: sections/ai_rules.tex:165
+#, no-wrap
 msgid ""
-"Ranged \\svg{unit_ranged} units prioritize attacking other Ranged "
-"\\svg{unit_ranged} units of the same tier, then lower tier, and finally "
-"higher tier, using the same tier order as above.  If there are no Ranged "
-"\\svg{unit_ranged} units for them to target, they prioritize Ground "
-"\\svg{unit_ground} and Flying \\svg{unit_flying} units in the same tier "
-"order."
-msgstr ""
-"  \\item Les Unités à Distance \\svg{unit_ranged} attaquent en priorité les "
-"autres Unités à Distance \\svg{unit_ranged} de même Rang, puis de Rang plus "
-"faible, et ensuite de Rang plus fort, comme plus haut.\n"
-"  S'il n'y a pas d'Unité à Distance \\svg{unit_ranged} à cibler, la priorité "
-"devient les Unités au Sol \\svg{unit_ground} et Volantes \\svg{unit_flying} "
-"avec la même priorité de Rang.\\par\n"
+"  For certains Spells it can be unclear how the AI is supposed to cast them.\n"
+"  See \\pagelink{AI Complex Spells}{Casting Complex Spells} for explanations.\n"
 "\n"
+msgstr ""
 
-#. type: itemize
-#: sections/ai_rules.tex:109
+#. type: multicols*
+#: sections/ai_rules.tex:171
+#, no-wrap
 msgid ""
-"\\textit{Example: \\svg{silver}\\svg{unit_ranged} has this priority: "
-"\\svg{silver}\\svg{unit_ranged} - \\svg{bronze}\\svg{unit_ranged} - "
-"\\svg{golden}\\svg{unit_ranged} - \\svg{azure}\\svg{unit_ranged} - "
-"\\svg{silver}\\svg{unit_ground}\\svg{unit_flying} - \\svg{bronze}"
-"\\svg{unit_ground}\\svg{unit_flying} - \\svg{golden}\\svg{unit_ground}"
-"\\svg{unit_flying} - \\svg{azure}\\svg{unit_ground}\\svg{unit_flying}.}"
+"  \\subsection*{AI Skill cards}\n"
+"  If Skill cards are included, search for and set aside the indicated card related to it (usually, an Ability).\n"
+"  Whenever an AI Hero uses the AI Skill \\svg{skill} card, use the Skill card assigned to them in the Setup, but do not discard it afterwards.\n"
+"  Contrary to the regular rules, the AI Hero can use the skill again, when instructed to do so by the AI Deck.\n"
+"  Discard the AI Skill \\svg{skill} card as usual.\n"
+"\n"
 msgstr ""
 
-#. type: Plain text
-#: sections/ai_rules.tex:112
-#, fuzzy
-#| msgid ""
-#| "In both cases, if there's more than one valid target, they attack the "
-#| "closest one.\n"
-#| "If there's ever a tie between equally valid targets, the player chooses "
-#| "which Unit is attacked.\\par\n"
-#| "\n"
+#. type: multicols*
+#: sections/ai_rules.tex:173
+#, no-wrap
 msgid ""
-"In both cases, if there's more than one valid target, they attack the "
-"closest one.  If there's ever a tie between equally valid targets, the "
-"player chooses which unit is attacked."
-msgstr ""
-"Dans les deux cas, si il y a plus d'une cible valide, ils attaquent la plus "
-"proche.\n"
-"En cas d'égalité entre cibles valides, le Joueur choisit quelle Unité est "
-"attaquée.\\par\n"
+"  AI Skill cards cannot be replaced, so if Scenario rules assign the AI Hero a card that your Hero has and you do not have another copy, remove that card from your Deck and \\textbf{Search (3)} the respective card's Deck to compensate your Hero for the loss.\n"
 "\n"
-
-#. type: Plain text
-#: sections/ai_rules.tex:114
-#, fuzzy
-#| msgid ""
-#| "Enemy Units cannot \\pagelink{Defend}{Defend} unless instructed to.\n"
-#| "\n"
-msgid "Enemy units cannot \\pagelink{Defend}{defend} unless instructed to."
 msgstr ""
-"Les Unités ennemies ne peuvent pas \\pagelink{Defend}{Défendre} à moins d’en "
-"recevoir l’instruction.\n"
-"\n"
 
-#. type: Plain text
-#: sections/ai_rules.tex:120
-#, fuzzy
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=\\linewidth]{\\art/dendroid.jpg}\n"
-#| "\\end{center}\n"
-#| "\n"
+#. type: multicols*
+#: sections/ai_rules.tex:176
+#, no-wrap
 msgid ""
-"{\\begin{center} "
-"\\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]"
-"{\\art/titan.jpg} \\end{center}}"
-msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth]{\\art/dendroid.jpg}\n"
-"\\end{center}\n"
+"  \\subsection*{AI cards timing}\n"
+"  After an AI card is resolved, discard it.\n"
 "\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:180
+#, no-wrap
+msgid ""
+"  The \\wikilink{ai\\#ai-cards}{Attack} Might \\svg[12]{might} card says about ``unit that is about to attack'', so if the currently activated unit doesn't have a valid target to attack, the Attack will apply to the next unit who is able to attack.\n"
+"  Note that multiple unresolved cards can stack over successive activations.\n"
+"  The same applies to any AI card which is not useful at the moment of drawing it.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:182
+#, no-wrap
+msgid ""
+"  If an AI card increased a unit's \\svg{defense}, or triggered another card which increased it, the AI card stays attached to the unit until the first defense happens.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:185
+#, no-wrap
+msgid ""
+"  \\subsection*{AI Deck sharing}\n"
+"  If there are multiple AI Enemy Armies in the Scenario, but the rules do not specify to which Enemy an AI Deck, an AI Spell Deck, or a Skill belongs, you should assume it is shared between them.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:191
+#, no-wrap
+msgid ""
+"  \\bigskip\n"
+"  \\pagetarget{AI Complex Spells}{\\subheader{Casting complex Spells}}\n"
+"  In some Campaigns, enemies use Spells whose effects are not fully compatible with the standard use of AI Magic \\svg{magic} cards.\n"
+"  To fully use their effects, here are extended descriptions of how AI Heroes should use each of these Spells.\n"
+"  Scenarios can override these instructions.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:194
+#, no-wrap
+msgid ""
+"  \\subsection*{Spells attacking multiple targets}\n"
+"  \\textit{Examples: \\wikilink{spells/fireball}{Fireball,} \\wikilink{spells/chain_lightning}{Chain Lightning.}}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:200
+#, no-wrap
+msgid ""
+"  When drawn, target any unit with one or two adjacent units from the player's army, prioritizing the groups where there are more higher-tier units.\n"
+"  If there is more than one valid group, attack the one with the least health remaining (has the smallest difference between \\svg{health_points} and current \\svg{damage}).\n"
+"  If there is still more than one valid target, you can choose which unit is attacked.\n"
+"  If there are no player units adjacent to one another, target units that are not adjacent to any of the AI units.\n"
+"  If that is also not possible, do not use this Spell -- instead, skip the AI \\svg{magic} card that activated this effect and put it on the bottom of the AI Deck, then shuffle this Spell back to the AI Spell Deck.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:203
+#, no-wrap
+msgid ""
+"  \\subsection*{Instant Defense Spells}\n"
+"  \\textit{Example: \\wikilink{spells/stone_skin}{Stone Skin.}}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:207
+#, no-wrap
+msgid ""
+"  When drawn, put this card on the side of the Combat Board, then put a Defense Token on the unit with the highest \\svg{defense} to represent the card's effect -- it stays there until the Defense is resolved.\n"
+"  If that unit already has a Defense Token, place it on the unit with the next highest \\svg{defense} instead.\n"
+"  In case of a tie in \\svg{defense} value, give preference to the unit of the highest tier, then to the greatest value of \\svg{damage}.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:210
+#, no-wrap
+msgid ""
+"  \\subsection*{Healing Spells}\n"
+"  \\textit{Example: \\wikilink{spells/cure}{Cure.}}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:213
+#, no-wrap
+msgid ""
+"  When drawn, remove the \\svg{damage} from the AI unit with the greatest value of \\svg{damage} taken, starting with the highest tier available.\n"
+"  If no AI unit has any \\svg{damage}, put the AI \\svg{magic} card that triggered the Spell at the bottom of the AI Deck, then shuffle this Spell card back to the AI Spell Deck.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:216
+#, no-wrap
+msgid ""
+"  \\subsection*{Single-round buffs}\n"
+"  \\textit{Example: \\wikilink{spells/fire_shield}{Fire Shield.}}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:220
+#, no-wrap
+msgid ""
+"  When drawn, check the tier of the unit on which you are about to cast the Spell and count how many units of the same or higher tier there are on the Board.\n"
+"  If more than half of those units have already activated this Round, do not cast the Spell; instead, set it aside and cast it when the first AI unit activates next Round; skip drawing the AI card for that activation.\n"
+"  Multiple delayed Spells may accumulate and be cast during the same activation.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:223
+#, no-wrap
+msgid ""
+"  \\subsection*{Attack-weakening Spells}\n"
+"  \\textit{Example: \\wikilink{spells/weakness}{Weakness.}}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:226
+#, no-wrap
+msgid ""
+"  When drawn, if the AI's activated unit is about to perform an attack that will provoke a Retaliation, cast this Spell on the Retaliating enemy to lower their \\svg{attack}.\n"
+"  If the AI's unit causes no Retaliation, do not cast this Spell; instead, ignore the AI \\svg{magic} card that activated the Spell and put it at the bottom of the AI Deck, then shuffle the Spell card back to the AI Spell Deck."
+msgstr ""
