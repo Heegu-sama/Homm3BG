@@ -680,6 +680,18 @@
   \encirclebase{goblin}{0.9em}{#1}
 }
 
+\ExplSyntaxOn
+\NewDocumentEnvironment{relcoords}{ m +b }{
+  \begin{scope}[
+    shift={(#1.south~west)},
+    x={($(#1.east)~-~(#1.west)$)},
+    y={($(#1.north)~-~(#1.south)$)}
+  ]
+    #2
+  \end{scope}
+}{}
+\ExplSyntaxOff
+
 \newcommand{\drawbottom}{
   \iftoggle{textright2left}{
     \ifodd\value{page}
