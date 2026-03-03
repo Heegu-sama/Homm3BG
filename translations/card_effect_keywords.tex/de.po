@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2026-01-12 21:10+0000\n"
-"PO-Revision-Date: 2025-12-20 11:22+0100\n"
+"POT-Creation-Date: 2026-02-26 22:11+0000\n"
+"PO-Revision-Date: 2026-02-07 15:01+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -55,7 +55,7 @@ msgstr ""
 "um die Felder zu markieren."
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:34
+#: sections/card_effect_keywords.tex:32
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{cove}\n"
@@ -68,7 +68,7 @@ msgstr ""
 #| "      \\includegraphics[width=\\linewidth]{\\images/clone-token.png}\n"
 #| "      \\centering\\imagecaption{Clone \\mbox{Tokens}}\n"
 #| "    \\end{wrapfigure}\n"
-#| "    When you cast the \\textbf{Clone Spell}, choose an allied unit (depending on the \\svg{empower} used) and an adjacent empty space on the Combat Board.\n"
+#| "    When you cast the \\wikilink{spells/clone}{\\textbf{Clone Spell},} choose an allied unit (depending on the \\svg{empower} used) and an adjacent empty space on the Combat Board.\n"
 #| "    Place the small Clone Token on the chosen unit and the larger Token of the same color (blue or red) on the empty space.\n"
 #| "    The larger Token on the empty space represents the Clone.\n"
 #| "    The Clone has the same statistics and special abilities as the original unit, except its \\svg{health_points} is 1 and its \\svg{defense} is 0.\n"
@@ -93,18 +93,16 @@ msgid ""
 "    When you cast the \\wikilink{spells/clone}{\\textbf{Clone Spell},} choose an allied unit (depending on the \\svg{empower} used) and an adjacent empty space on the Combat Board.\n"
 "    Place the small Clone Token on the chosen unit and the larger Token of the same color (blue or red) on the empty space.\n"
 "    The larger Token on the empty space represents the Clone.\n"
-"    The Clone has the same statistics and special abilities as the original unit, except its \\svg{health_points} is 1 and its \\svg{defense} is 0.\n"
-"    These values cannot be increased by any effects.  % what about other statistics?\n"
-"    The Clone perishes if it is attacked (even without taking damage) or takes any \\svg{damage} from a Spell.  % clarification?\n"
-"    If the original unit is removed from the Combat Board, remove the Clone as well.\n"
-"    The Clone does not inherit effects played on the original unit.\n"
+"    The Clone functions identically to the original unit, copying everything printed on its card, but excluding any other effects played on the original unit.\n"
+"    If the Clone takes at least 1 \\svg{damage} from any source, or is attacked (even if that attack inflicts 0 \\svg{damage}), inflict enough damage to set its \\svg{health_points} to 0.\n"
+"    A Clone is removed from the Combat Board if its original unit is removed from the Combat Board.\n"
 "    \\vfill\n"
 "    \\columnbreak\n"
 "\n"
 msgstr ""
 "{cove}\n"
 "  \\begin{multicols}{2}\n"
-"    \\subsection*{Klon-Marker}\n"
+"    \\pagetarget{Clone Token}{\\subsection*{Klon-Marker}}\n"
 "    \\setlength\\intextsep{0pt}\n"
 "    \\setlength\\columnsep{1em}\n"
 "    \\begin{wrapfigure}{r}{0.3\\linewidth}\n"
@@ -112,7 +110,7 @@ msgstr ""
 "      \\includegraphics[width=\\linewidth]{\\images/clone-token.png}\n"
 "      \\centering\\footnotesize\\imagecaption{Klon-\\mbox{Marker}}\n"
 "    \\end{wrapfigure}\n"
-"    Spielst du den Zauber \\textbf{Klonen}, wähle eine verbündete Einheit (abhängig der verwendeten \\svg{empower}) und ein an sie angrenzendes Feld auf dem Kampfspielplan.\n"
+"    Spielst du den Zauber \\wikilink{spells/clone}{\\textbf{Klonen},} wähle eine verbündete Einheit (abhängig der verwendeten \\svg{empower}) und ein an sie angrenzendes Feld auf dem Kampfspielplan.\n"
 "    Platziere den kleinen Klon-Marker auf der gewählten Einheit und den großen gleichfarbigen (blau oder rot) Marker auf dem leeren Feld.\n"
 "    Der große Marker repräsentiert die geklonte Einheit.\n"
 "    Der Klon besitzt dieselbe Werte und Fähigkeiten wie die originale Einheit, außer, dass sie nur 1 \\svg{health_points} und 0 \\svg{defense} besitzt.\n"
@@ -125,7 +123,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:44
+#: sections/card_effect_keywords.tex:42
 #, no-wrap
 msgid ""
 "    \\subsection*{\\textit{Clone Example}}\n"
@@ -141,7 +139,7 @@ msgid ""
 msgstr ""
 "    \\subsection*{\\textit{Beispiel Klonen}}\n"
 "    \\textit{%\n"
-"      Eine von Bobs Einheiten sind ``Wenige'' Greife mit einer Initiative von 6.\n"
+"      Eine von Bobs Einheiten sind Wenige Greife mit einer Initiative von 6.\n"
 "      Bob spielt den Zauber Klonen auf die Greife und platziert den kleinen Klon-Marker auf den Greifen und den großen, gleichfarbigen Klon-Marker auf einem angrenzenden Feld.\n"
 "      Später im Kampf zaubert Bob ``Eile'' mit 0~\\svg{empower} auf seine originalen Greife, um deren Initiative um 1 zu erhöhen.\n"
 "      Damit haben sie eine Initiative von 7, während die des Klons weiterhin 6 beträgt.\n"
@@ -151,7 +149,7 @@ msgstr ""
 "    \\begin{tikzpicture}\n"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:58
+#: sections/card_effect_keywords.tex:56
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node[rotate=180] {\\includegraphics[width=\\linewidth]{\\images/combat_board_half.png}};\n"
@@ -184,21 +182,8 @@ msgstr ""
 "  \\vspace*{-1em}"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:72
-#, fuzzy, no-wrap
-#| msgid ""
-#| "{2}\n"
-#| "\\begin{expansion}{stronghold}\n"
-#| "  \\pagetarget{Quicksand Token}{\\subsection*{Quicksand Token}}\n"
-#| "  Depending on the \\svg{empower} used, take 2, 4 or 6 \\textbf{Quicksand Tokens} from the same set (blue or red).\n"
-#| "  Half of them must be ``empty'' and half must have the Quicksand symbol.\n"
-#| "  Shuffle the Tokens face down and place one on each chosen empty space on the Combat Board.\n"
-#| "  If there are not enough empty spaces to place all of them, discard any leftover Tokens.\n"
-#| "  Once placed, you may look at your Tokens at any time.\n"
-#| "  When a unit enters a space with a Quicksand Token, reveal it.\n"
-#| "  If it is empty, the unit continues its movement.\n"
-#| "  If the Token shows the Quicksand icon, the unit's movement and activation end immediately.\n"
-#| "\n"
+#: sections/card_effect_keywords.tex:70
+#, no-wrap
 msgid ""
 "{2}\n"
 "\\begin{expansion}{stronghold}\n"
@@ -215,8 +200,8 @@ msgid ""
 msgstr ""
 "{2}\n"
 "\\begin{expansion}{stronghold}\n"
-"  \\subsection*{Treibsand-Marker}\n"
-"  Abhängig der gewählten Zauberkraft \\svg{empower}, nimm 2, 4 oder 6 \\textbf{Treibsand-Marker} desselben Farbsets (blau oder rot).\n"
+"  \\pagetarget{Quicksand Token}{\\subsection*{Treibsand-Marker}}\n"
+"  Beim Spielen des Zaubers \\wikilink{spells/quicksand}{\\textbf{Treibsand}} nimm abhängig der gewählten Zauberkraft \\svg{empower} 2, 4 oder 6 \\textbf{Treibsand-Marker} desselben Farbsets (blau oder rot).\n"
 "  Die Hälfte der Marker muss ``leer'' sein, die andere Hälfte zeigt das Treibsand-Symbol.\n"
 "  Mische alle Marker und verteile sie verdeckt auf leere Felder des Kampfspielplans.\n"
 "  Sind nicht genügend leere Felder vorhanden, wirf übrige Treibsand-Marker ab.\n"
@@ -227,7 +212,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:79
+#: sections/card_effect_keywords.tex:77
 #, no-wrap
 msgid ""
 "  \\textbf{Note:} Two Quicksand Tokens may occupy a single space only if they are placed by different players.\n"
@@ -247,7 +232,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:85
+#: sections/card_effect_keywords.tex:83
 #, no-wrap
 msgid ""
 "    \\columnbreak\n"
@@ -261,7 +246,7 @@ msgstr ""
 "  "
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:85
+#: sections/card_effect_keywords.tex:83
 #, no-wrap
 msgid ""
 "\\end{expansion}\n"
@@ -269,18 +254,8 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:94
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\vspace*{1em}\n"
-#| "\\begin{expansion}{battlefield,conflux}\n"
-#| "  \\pagetarget{Firewall Token}{\\subsection*{Firewall Token}}\n"
-#| "  The \\textbf{Fire Wall Spell} and \\textbf{Luna's Specialty cards I and VI} instruct you to place the Fire Wall card onto a space on the Combat Board.\n"
-#| "  You may use the Fire Wall Tokens instead of the cards.\n"
-#| "  Place the Spell or Specialty card next to the Combat Board as a reminder.\n"
-#| "  When the card is removed or discarded, discard the Token as well.\n"
-#| "  When using the large \\pagelink{Battlefield Combat}{Battlefield Board}, you must use the Token instead of the card.\n"
-#| "\n"
+#: sections/card_effect_keywords.tex:92
+#, no-wrap
 msgid ""
 "\\vspace*{1em}\n"
 "\\begin{expansion}{battlefield,conflux}\n"
@@ -294,8 +269,8 @@ msgid ""
 msgstr ""
 "\\vspace*{1em}\n"
 "\\begin{expansion}{battlefield,conflux}\n"
-"  \\subsection*{Feuerwand-Marker}\n"
-"  Der Zauber \\textbf{Feuerwand} und \\textbf{Luna's Sonderfähigkeiten I und VI} erlauben dir Feuerwand-Marker auf dem Kampfspielplan zu platzieren.\n"
+"  \\pagetarget{Firewall Token}{\\subsection*{Feuerwand-Marker}}\n"
+"  Der Zauber \\wikilink{spells/fire_wall}{\\textbf{Feuerwand}}und \\wikilink{heroes/luna\\#specialty}{\\textbf{Luna's Sonderfähigkeiten I und VI}} erlauben dir Feuerwand-Marker auf dem Kampfspielplan zu platzieren.\n"
 "  Du kannst diese Marker anstelle der Karten platzieren.\n"
 "  Lege die entsprechende Karte dann als Erinnerung neben den Kampfspielplan.\n"
 "  Wenn die Karte entfernt wird, entferne auch den Marker.\n"
@@ -303,7 +278,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:100
+#: sections/card_effect_keywords.tex:98
 #, no-wrap
 msgid ""
 "  \\medskip\n"
@@ -321,7 +296,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:104
+#: sections/card_effect_keywords.tex:102
 #, no-wrap
 msgid ""
 "    \\columnbreak\n"
@@ -335,8 +310,8 @@ msgstr ""
 "  "
 
 #. type: Plain text
-#: sections/card_effect_keywords.tex:119 sections/card_effect_keywords.tex:204
-#: sections/deckbuilding.tex:183 sections/deckbuilding.tex:396
+#: sections/card_effect_keywords.tex:117 sections/card_effect_keywords.tex:202
+#: sections/deckbuilding.tex:183 sections/deckbuilding.tex:395
 #: sections/expansion_content.tex:111 sections/expansion_content.tex:158
 #: sections/expansion_content.tex:173 sections/resources.tex:31
 #, no-wrap
@@ -344,7 +319,7 @@ msgid "\\columnbreak"
 msgstr ""
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:119
+#: sections/card_effect_keywords.tex:117
 #, no-wrap
 msgid ""
 "{stretchgoals2}\n"
@@ -361,8 +336,8 @@ msgid ""
 "\n"
 msgstr ""
 "{stretchgoals2}\n"
-"  \\subsection*{Landminen-Marker}\n"
-"  Abhängig der gewählten Zauberkraft \\svg{empower}, nimm 2, 4 oder 6 \\textbf{Landminen-Marker}.\n"
+"  \\pagetarget{Land Mine Token}{\\subsection*{Landminen-Marker}}\n"
+"  Beim Spielen des Zaubers \\wikilink{spells/land_mine}{\\textbf{Landmine}} nimm abhängig der gewählten Zauberkraft \\svg{empower} 2, 4 oder 6 \\textbf{Landminen-Marker}.\n"
 "  Die Hälfte der Marker muss ``leer'' sein, die andere Hälfte zeigt das 2\\svg{damage}-Symbol.\n"
 "  Mische die Marker und verteile sie verdeckt auf leere Felder des Kampfspielplans.\n"
 "  Sind nicht genügend leere Felder vorhanden, wirf übrige Landminen-Marker ab.\n"
@@ -374,7 +349,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:126
+#: sections/card_effect_keywords.tex:124
 #, no-wrap
 msgid ""
 "  \\textbf{Note:} Two Land Mine Tokens may occupy a single space only if they are placed by different players.\n"
@@ -395,7 +370,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:130
+#: sections/card_effect_keywords.tex:128
 #, no-wrap
 msgid ""
 "    \\columnbreak\n"
@@ -409,7 +384,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:135
+#: sections/card_effect_keywords.tex:133
 #, no-wrap
 msgid ""
 "    \\columnbreak\n"
@@ -424,27 +399,8 @@ msgstr ""
 "  \\end{multicols}\n"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:154
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  \\vspace*{1em}\n"
-#| "  \\pagetarget{Force Field Token}{\\subsection*{Force Field Token}}\n"
-#| "  \\setlength\\intextsep{0pt}\n"
-#| "  \\setlength\\columnsep{1em}\n"
-#| "  \\begin{wrapfigure}{r}{0.25\\linewidth}\n"
-#| "    \\includegraphics[width=\\linewidth]{\\images/force-field-token.png}\n"
-#| "    \\begin{center}\n"
-#| "      \\imagecaption{Force Field Token}\\\\\n"
-#| "      \\vspace*{1em}\n"
-#| "    \\end{center}\n"
-#| "  \\end{wrapfigure}\n"
-#| "  Use the \\textbf{Force Field Token} to mark the effect of the \\textbf{Force Field Spell}.\n"
-#| "  The Token represents an Obstacle, so only \\svg{unit_flying} units can move through a space with this Token.\n"
-#| "  If you're using the normal Combat Board, place 1 Force Field Token.\n"
-#| "  If you're using the \\pagelink{Battlefield Combat}{Battlefield Board}, place 2 Tokens on two adjacent spaces.\n"
-#| "\\begin{center}\n"
-#| "  {\\hspace{2em}\\transparent{0.2}\\includegraphics[width=0.5\\linewidth]{\\art/land_mine.png}}\n"
-#| "\\end{center}"
+#: sections/card_effect_keywords.tex:152
+#, no-wrap
 msgid ""
 "  \\vspace*{1em}\n"
 "  \\pagetarget{Force Field Token}{\\subsection*{Force Field Token}}\n"
@@ -477,22 +433,22 @@ msgstr ""
 "      \\vspace*{1em}\n"
 "    \\end{center}\n"
 "  \\end{wrapfigure}\n"
-"  Nutze den \\textbf{Kraftfeld-Marker} um den Effekt des \\textbf{Zaubers Kraftfeld} zu markieren.\n"
+"  Nutze den \\textbf{Kraftfeld-Marker} um den Effekt des \\wikilink{spells/force_field}{\\textbf{Zaubers Kraftfeld}} zu markieren.\n"
 "  Der Marker gilt als Hindernis. Nur \\svg{unit_flying}-Einheiten können sich über ein Feld mit diesem Marker hinwegbewegen.\n"
 "  Platziere auf dem normalen Kampfspielplan 1 Kraftfeld-Marker,\n"
 "  auf dem \\pagelink{Battlefield Combat}{Schlachtfeldplan} jedoch 2 Marker auf benachbarten Feldern.\n"
 "  \\vspace*{1em}\n"
 "\\begin{center}\n"
-"  {\\hspace{2em}\\transparent{0.2}\\includegraphics[width=0.5\\linewidth]{\\art/land_mine.png}}\n"
+"  {\\hspace{2em}\\transparent{0.2}\\includegraphics[width=0.45\\linewidth]{\\art/land_mine.png}}\n"
 "\\end{center}"
 
 #. type: Plain text
-#: sections/card_effect_keywords.tex:176
+#: sections/card_effect_keywords.tex:174
 msgid "\\pagetarget{Summoning}{\\subheader{Summoning}\\index{Summoning}}"
 msgstr "\\pagetarget{Summoning}{\\subheader{Beschwörungen}\\index{Beschwören}}"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:176
+#: sections/card_effect_keywords.tex:174
 #, no-wrap
 msgid ""
 "{inferno,conflux}\n"
@@ -504,7 +460,7 @@ msgstr ""
 "  Anderenfalls behandle sie so, als wären sie diese Kampfrunde schon aktiviert worden."
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:176
+#: sections/card_effect_keywords.tex:174
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -535,7 +491,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:181
+#: sections/card_effect_keywords.tex:179
 #, no-wrap
 msgid ""
 "    \\begin{multicols}{2}\n"
@@ -551,45 +507,35 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:185
-#, fuzzy, no-wrap
-#| msgid ""
-#| "      \\smallskip\n"
-#| "      \\includegraphics[width=0.5\\linewidth]{\\images/summon-token-fire.png}\\\\\n"
-#| "      \\imagecaption{Fire Elemental Token}\n"
-#| "\n"
+#: sections/card_effect_keywords.tex:183
+#, no-wrap
 msgid ""
 "      \\bigskip\n"
 "      \\includegraphics[width=0.5\\linewidth]{\\images/summon-token-fire.png}\\\\\n"
 "      \\imagecaption{Fire Elemental Token}\n"
 "\n"
 msgstr ""
-"      \\smallskip\n"
+"      \\bigskip\n"
 "      \\includegraphics[width=0.5\\linewidth]{\\images/summon-token-fire.png}\\\\\n"
 "      \\imagecaption{Feuerelementar-Marker}\n"
 "\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:189
-#, fuzzy, no-wrap
-#| msgid ""
-#| "      \\smallskip\n"
-#| "      \\includegraphics[width=0.5\\linewidth]{\\images/summon-token-earth.png}\\\\\n"
-#| "      \\imagecaption{Earth Elemental Token}\n"
-#| "\n"
+#: sections/card_effect_keywords.tex:187
+#, no-wrap
 msgid ""
 "      \\bigskip\n"
 "      \\includegraphics[width=0.5\\linewidth]{\\images/summon-token-earth.png}\\\\\n"
 "      \\imagecaption{Earth Elemental Token}\n"
 "\n"
 msgstr ""
-"      \\smallskip\n"
+"      \\bigskip\n"
 "      \\includegraphics[width=0.5\\linewidth]{\\images/summon-token-earth.png}\\\\\n"
 "      \\imagecaption{Erdelementar-Marker}\n"
 "\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:193
+#: sections/card_effect_keywords.tex:191
 #, no-wrap
 msgid ""
 "      \\columnbreak\n"
@@ -603,7 +549,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:197
+#: sections/card_effect_keywords.tex:195
 #, no-wrap
 msgid ""
 "      \\smallskip\n"
@@ -617,7 +563,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:201
+#: sections/card_effect_keywords.tex:199
 #, no-wrap
 msgid ""
 "      \\smallskip\n"
@@ -631,18 +577,8 @@ msgstr ""
 "    "
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:213
-#, fuzzy, no-wrap
-#| msgid ""
-#| "{inferno}\n"
-#| "    \\subsection*{Summon Demons}\n"
-#| "    The \\textbf{Pit Lords unit} from the Inferno Faction may use their \\svg{unit_alternative} ability to summon or reinforce the Demons unit during Combat.\n"
-#| "    This effect cannot summon Demons from the Neutral Unit Deck.\n"
-#| "    Place the summoned ``Few'' Demons adjacent to the Pit Lords.\n"
-#| "    If ``Few'' Demons are already in Combat, reinforce them instead.\n"
-#| "    After Combat, unless stated otherwise, the summoned Demons \\textbf{are} added to your Unit Deck.\n"
-#| "    \\bigskip\n"
-#| "\n"
+#: sections/card_effect_keywords.tex:211
+#, no-wrap
 msgid ""
 "{inferno}\n"
 "    \\subsection*{Summon Demons}\n"
@@ -656,16 +592,16 @@ msgid ""
 msgstr ""
 "{inferno}\n"
 "    \\subsection*{Dämonen beschwören}\n"
-"    Das Rudel \\textbf{Grottenteufel} der Inferno-Fraktion dürfen ihre \\svg{unit_alternative}-Fähigkeit nutzen, um Dämonen zu beschwören oder zu verstärken.\n"
+"    Das \\textbf{\\wikilink{units/pit_lords/\\#pack}{Rudel Grottenlords}} der Inferno-Fraktion dürfen ihre \\svg{unit_alternative}-Fähigkeit nutzen, um \\wikilink{units/demons}{Dämonen} zu beschwören oder zu verstärken.\n"
 "    Auf diese Weise können keine neutralen Dämonen beschworen werden.\n"
-"    Platziere die beschworenen ``wenigen'' Dämonen angrenzend an die Grottenteufel.\n"
-"    Falls ``wenige'' Dämonen bereits im Kampf sind, verstärke diese stattdessen.\n"
+"    Platziere die beschworenen Wenigen Dämonen angrenzend an die Grottenteufel.\n"
+"    Falls Wenige Dämonen bereits im Kampf sind, verstärke diese stattdessen.\n"
 "    Nach dem Kampf werden die beschworenen Dämonen deinem Einheitendeck \\textbf{hinzugefügt}.\n"
 "    \\bigskip\n"
 "\n"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:218
+#: sections/card_effect_keywords.tex:216
 #, no-wrap
 msgid ""
 "    \\begin{multicols}{2}\n"
@@ -681,7 +617,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:226
+#: sections/card_effect_keywords.tex:224
 #, no-wrap
 msgid ""
 "      \\columnbreak\n"
@@ -703,13 +639,13 @@ msgstr ""
 "  "
 
 #. type: Plain text
-#: sections/card_effect_keywords.tex:233
+#: sections/card_effect_keywords.tex:231
 msgid "\\pagetarget{unit keywords}{\\subheader{Unit Ability keywords}}"
 msgstr ""
 "\\pagetarget{unit keywords}{\\subheader{Schlüsselwörter auf Einheitenkarten}}"
 
 #. type: Plain text
-#: sections/card_effect_keywords.tex:259
+#: sections/card_effect_keywords.tex:257
 msgid ""
 "The following components and keywords are used by certain unit abilities.  "
 "These Tokens are typically placed on other units to modify their statistics."
@@ -719,33 +655,8 @@ msgstr ""
 "ändert so deren Werte."
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:259
-#, fuzzy, no-wrap
-#| msgid ""
-#| "{2}\n"
-#| "  \\begin{expansion}{cove,stretchgoals2}\n"
-#| "    \\pagetarget{Weakness Token}{\\subsection*{Weakness Token}}\n"
-#| "    \\setlength\\intextsep{0pt}\n"
-#| "    \\setlength\\columnsep{1em}\n"
-#| "    \\begin{wrapfigure}{r}{0.25\\linewidth}\n"
-#| "      \\centering\n"
-#| "      \\includegraphics[width=0.8\\linewidth]{\\images/weakness-token.png}\\\\\n"
-#| "      \\imagecaption{Weakness Token}\\\\\n"
-#| "      \\vspace{1em}\n"
-#| "    \\end{wrapfigure}\n"
-#| "    \\textbf{``Few'' Sorceresses unit} from the Cove Faction can use their \\svg{unit_alternative} ability to place a Weakness Token on any unit.  % enemy unit?\n"
-#| "    A \\textbf{``Pack'' of Sorceresses} places this Token automatically on a unit attacked by them due to their \\svg{unit_attack} ability.\n"
-#| "    A unit with this Token suffers $-1$~\\svg{attack} or $-2$~\\svg{attack}, as indicated by the Token's side.\n"
-#| "    Each unit can have only one Weakness Token at a time.\n"
-#| "    If a unit would gain a second one, the player controlling it chooses which one to keep.\n"
-#| "    \\begin{center}\n"
-#| "      \\vspace*{2.5em}\n"
-#| "      {\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/weakness.png}}\n"
-#| "      \\vspace*{2em}\n"
-#| "    \\end{center}\n"
-#| "  \\end{expansion}\n"
-#| "  \\columnbreak\n"
-#| "\n"
+#: sections/card_effect_keywords.tex:257
+#, no-wrap
 msgid ""
 "{2}\n"
 "  \\begin{expansion}{cove,stretchgoals2}\n"
@@ -774,7 +685,7 @@ msgid ""
 msgstr ""
 "{2}\n"
 "  \\begin{expansion}{cove,stretchgoals2}\n"
-"    \\subsection*{Schwäche-Marker}\n"
+"    \\pagetarget{Weakness Token}{\\subsection*{Schwäche-Marker}}\n"
 "    \\setlength\\intextsep{0pt}\n"
 "    \\setlength\\columnsep{1em}\n"
 "    \\begin{wrapfigure}{r}{0.25\\linewidth}\n"
@@ -784,8 +695,8 @@ msgstr ""
 "      \\imagecaption{Schwäche-Marker}\\\\\n"
 "      \\vspace{1em}\n"
 "    \\end{wrapfigure}\n"
-"    \\textbf{``Wenige'' Zauberinnen} der Bucht-Fraktion können ihre \\svg{unit_alternative}-Fähigkeit nutzen, um Schwäche-Marker auf beliebigen Einheiten zu platzieren.  % enemy unit?\n"
-"    Ein \\textbf{``Rudel'' Zauberinnen} platziert den Marker automatisch auf der von ihnen angegriffenen Einheit durch ihre \\svg{unit_attack}-Fähigkeit.\n"
+"     \\textbf{\\wikilink{units/sorceresses/\\#few}{Wenige Zauberinnen}} der Bucht-Fraktion können ihre \\svg{unit_alternative}-Fähigkeit nutzen, um Schwäche-Marker auf beliebigen Einheiten zu platzieren.  % enemy unit?\n"
+"    Ein \\wikilink{units/sorceresses/\\#pack}{\\textbf{Rudel Zauberinnen}} platziert den Marker automatisch auf der von ihnen angegriffenen Einheit durch ihre \\svg{unit_attack}-Fähigkeit.\n"
 "    Eine Einheit mit diesem Marker erleidet je nach Marker $-1$~\\svg{attack} oder $-2$~\\svg{attack}.\n"
 "    Jede Einheit kann nur einen Schwäche-Marker zeitgleich haben.\n"
 "    Erhält sie einen zweiten, entscheidet der Spieler, der die Einheit kontrolliert, welcher Marker abgeworfen wird.\n"
@@ -799,25 +710,8 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:275
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  \\begin{expansion}{stronghold,stretchgoals2}\n"
-#| "    \\pagetarget{Attack Token}{\\subsection*{Attack Token}}\n"
-#| "    \\setlength\\intextsep{0pt}\n"
-#| "    \\setlength\\columnsep{1em}\n"
-#| "    \\begin{wrapfigure}{r}{0.2\\linewidth}\n"
-#| "      \\centering\n"
-#| "      \\includegraphics[width=\\linewidth]{\\images/attack-token.png}\\\\\n"
-#| "      \\imagecaption{Attack Token}\\\\\n"
-#| "      \\vspace{1em}\n"
-#| "    \\end{wrapfigure}\n"
-#| "    The \\textbf{Ogres unit} from the Stronghold Faction can use their \\svg{unit_alternative} ability to place Attack Tokens on other allied unit cards.\n"
-#| "    Units with such a Token gain an additional +1 \\svg{attack} or +2 \\svg{attack}, as indicated by the Token's side.\n"
-#| "    Each unit can have only one Attack Token at a time.\n"
-#| "    If a unit would gain a second one, the player controlling it chooses which one to keep.\n"
-#| "  \\end{expansion}\n"
-#| "\n"
+#: sections/card_effect_keywords.tex:273
+#, no-wrap
 msgid ""
 "  \\begin{expansion}{stronghold,stretchgoals2}\n"
 "    \\pagetarget{Attack Token}{\\subsection*{Attack Token}}\n"
@@ -837,7 +731,7 @@ msgid ""
 "\n"
 msgstr ""
 "  \\begin{expansion}{stronghold,stretchgoals2}\n"
-"    \\subsection*{Angriffs-Marker}\n"
+"    \\pagetarget{Attack Token}{\\subsection*{Angriffs-Marker}}\n"
 "    \\setlength\\intextsep{0pt}\n"
 "    \\setlength\\columnsep{1em}\n"
 "    \\begin{wrapfigure}{r}{0.2\\linewidth}\n"
@@ -847,7 +741,7 @@ msgstr ""
 "      \\imagecaption{Angriffs-Marker}\\\\\n"
 "      \\vspace{1em}\n"
 "    \\end{wrapfigure}\n"
-"    Die \\textbf{Oger Einheit} der Burg-Fraktion kann ihre \\svg{unit_alternative}-Fähigkeit nutzen, um Angriffs-Marker auf anderen verbündeten Einheiten zu platzieren.\n"
+"    Die \\textbf{\\wikilink{units/ogres}{Oger}} der Burg-Fraktion können ihre \\svg{unit_alternative}-Fähigkeit nutzen, um Angriffs-Marker auf anderen verbündeten Einheiten zu platzieren.\n"
 "    Einheiten mit so einem Marker erhalten je nach Marker +1 \\svg{attack} oder +2 \\svg{attack}.\n"
 "    Jede Einheit kann nur einen Angriffs-Marker zeitgleich haben.\n"
 "    Erhält sie einen zweiten, entscheidet der Spieler, der die Einheit kontrolliert, welcher Marker abgeworfen wird.\n"
@@ -855,26 +749,8 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:293
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  \\vspace*{1em}\n"
-#| "  \\begin{expansion}{stronghold}\n"
-#| "    \\pagetarget{Corrosion Token}{\\subsection*{Corrosion Token}}\n"
-#| "    \\setlength\\intextsep{0pt}\n"
-#| "    \\setlength\\columnsep{1em}\n"
-#| "    \\begin{wrapfigure}{r}{0.25\\linewidth}\n"
-#| "      \\centering\n"
-#| "      \\includegraphics[width=0.8\\linewidth]{\\images/corrosion-token.png}\\\\\n"
-#| "      \\imagecaption{Corrosion Token}\\\\\n"
-#| "      \\vspace{1em}\n"
-#| "    \\end{wrapfigure}\n"
-#| "    The \\textbf{Behemoths unit} from the Stronghold Faction can use their \\svg{unit_attack} ability to place a Corrosion Token on a unit attacked by them.\n"
-#| "    It reduces the enemy's unit \\svg{defense} by 1 to a minimum of 0.\n"
-#| "    A unit can have only one Corrosion Token at a time.\n"
-#| "    If a unit would gain a second Token, discard one of them.\n"
-#| "    Unless removed by Spells or other effects, a Corrosion Token remains on the unit until the end of Combat.\n"
-#| "  \\end{expansion}"
+#: sections/card_effect_keywords.tex:291
+#, no-wrap
 msgid ""
 "  \\vspace*{1em}\n"
 "  \\begin{expansion}{stronghold}\n"
@@ -896,7 +772,7 @@ msgid ""
 msgstr ""
 " \\vspace*{1em}\n"
 "  \\begin{expansion}{stronghold}\n"
-"    \\subsection*{Korrosions-Marker}\n"
+"    \\pagetarget{Corrosion Token}{\\subsection*{Korrosions-Marker}}\n"
 "    \\setlength\\intextsep{0pt}\n"
 "    \\setlength\\columnsep{1em}\n"
 "    \\begin{wrapfigure}{r}{0.25\\linewidth}\n"
@@ -906,7 +782,7 @@ msgstr ""
 "      \\imagecaption{Korrosions-Marker}\\\\\n"
 "      \\vspace{1em}\n"
 "    \\end{wrapfigure}\n"
-"    Die \\textbf{Behemoths-Einheit} der Burg Fraktion kann ihre \\svg{unit_attack}-Fähigkeit nutzen, um einen Korrosions-Marker auf die von ihr angegriffene Einheit zu legen.\n"
+"    Die \\textbf{\\wikilink{units/behemoths}{Behemoths}} der Burg-Fraktion können ihre \\svg{unit_attack}-Fähigkeit nutzen, um einen Korrosions-Marker auf die von ihr angegriffene Einheit zu legen.\n"
 "    Dieser reduziert deren \\svg{defense} um 1 bis zu einem Minimum 0.\n"
 "    Eine Einheit kann nur einen dieser Marker zeitgleich haben.\n"
 "    Erhält sie einen zweiten, wird der erste abgeworfen.\n"
@@ -914,19 +790,17 @@ msgstr ""
 "  \\vspace*{1em}  \\end{expansion}"
 
 #. type: Plain text
-#: sections/card_effect_keywords.tex:301
-#, fuzzy
-#| msgid "\\subheader{Fan-Made Wiki}"
+#: sections/card_effect_keywords.tex:299
 msgid "\\pagetarget{wiki}{\\subheader{Fan-Made Wiki}}"
-msgstr "\\subheader{Fanmade Wiki}"
+msgstr "\\pagetarget{wiki}{\\subheader{Fanmade Wiki}}"
 
 #. type: wrapfigure
-#: sections/card_effect_keywords.tex:301
+#: sections/card_effect_keywords.tex:299
 msgid "{r}{0.2\\textwidth}"
 msgstr ""
 
 #. type: Plain text
-#: sections/card_effect_keywords.tex:304
+#: sections/card_effect_keywords.tex:302
 msgid ""
 "Many cards in \\textbf{Heroes of Might and Magic 3: The Board Game} have "
 "ambiguous or misleading wording.  Fortunately, the developers have clarified "
@@ -937,7 +811,7 @@ msgstr ""
 "die Entwickler viele Karteneffekte richtig gestellt."
 
 #. type: Plain text
-#: sections/card_effect_keywords.tex:308
+#: sections/card_effect_keywords.tex:306
 msgid ""
 "The Community maintains a \\textbf{Fan-Made Wiki}: a collection of nearly "
 "all game components with extensive notes to clarify specific rules.  If you "
