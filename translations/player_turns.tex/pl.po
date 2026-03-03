@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-12-07 21:39+0000\n"
+"POT-Creation-Date: 2026-03-03 21:04+0000\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,16 +19,17 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
-#: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
-#: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
+#: sections/all_map_locations.tex:5 sections/combat.tex:5
+#: sections/combat.tex:42 sections/combat.tex:131 sections/combat.tex:318
+#: sections/credits.tex:8 sections/deckbuilding.tex:5
+#: sections/deckbuilding.tex:52 sections/deckbuilding.tex:73
 #: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
-#: sections/map_elements.tex:88 sections/map_elements.tex:139
+#: sections/map_elements.tex:93 sections/map_elements.tex:144
 #: sections/player_turns.tex:5 sections/resources.tex:5
 #: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:55 sections/tournament_mode.tex:5 sections/town.tex:5
-#: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
+#: sections/setup.tex:58 sections/solo_campaigns.tex:5
+#: sections/tournament_mode.tex:5 sections/town.tex:5 sections/trading.tex:5
+#: sections/units.tex:5 sections/units.tex:46
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -38,10 +39,10 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:183 sections/map_elements.tex:192
-#: sections/map_elements.tex:264 sections/map_elements.tex:297
+#: sections/map_elements.tex:188 sections/map_elements.tex:197
+#: sections/map_elements.tex:269 sections/map_elements.tex:302
 #: sections/player_turns.tex:48 sections/tournament_mode.tex:67
-#: sections/units.tex:219
+#: sections/units.tex:231
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -387,58 +388,128 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:123
-#, no-wrap
+#: sections/player_turns.tex:125
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[p]\n"
+#| "  \\centering\n"
+#| "  \\begin{tikzpicture}\n"
 msgid ""
 "\\vspace{1em}\n"
-"\\begin{tikzpicture}\n"
+"\\begin{multicols}{2}\n"
+"  \\centering\n"
+"  \\begin{tikzpicture}\n"
 msgstr ""
-"\\vspace{1em}\n"
-"\\begin{tikzpicture}\n"
+"[p]\n"
+"  \\centering\n"
+"  \\begin{tikzpicture}\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:136
-#, no-wrap
+#: sections/player_turns.tex:133
+#, fuzzy, no-wrap
+#| msgid ""
+#| "    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
+#| "    \\draw (-1.3, 2.1) node {\\encircle{1}};\n"
+#| "    \\draw (1.3, -0.9) node {\\encircle{2}};\n"
+#| "    \\draw (1.4, 2.6) node {\\encircle{3}};\n"
+#| "    \\draw (-1, -1.9) node {\\encircle{4}};\n"
+#| "  \\end{tikzpicture}\n"
+#| "  \\end{scriptsize}\n"
+#| "  \\footnotesize\n"
+#| "    \\null\\hfill\\imagecaption{Major Artifact}\n"
+#| "  \\columnbreak\n"
+#| "  \\begin{center}\n"
+#| "    \\phantom{\\ldots}\\\\\n"
+#| "    \\phantom{\\ldots}\n"
+#| "    \\begin{scriptsize}\n"
 msgid ""
-"  \\draw (-2, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/morale-positive.png}}};\n"
-"  \\draw (2.4, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/morale-negative-battlefield.png}}};\n"
-"  \\draw (-1.2, 2.2) node {\\encircle{1}};\n"
-"  \\draw (3.2, 2.2) node {\\encircle{1}};\n"
-"  \\draw (-3.0, -1.4) node {\\encircle{2}};\n"
-"  \\draw (1.5, -1.0) node {\\encircle{2}};\n"
-"  \\draw (2.0, -2.0) node {\\encircle{3}};\n"
-"\\end{tikzpicture}\n"
-"\\vspace*{-1em}\n"
-"\\begin{multicols*}{2}\n"
-"  \\centering\n"
+"    \\node (card) {\\includegraphics[width=\\linewidth]{\\cards/morale-positive.png}};\n"
+"    \\begin{relcoords}{card}\n"
+"      \\draw (0.6, 0.9) node {\\encircle{1}};\n"
+"      \\draw (0.25, 0.25) node {\\encircle{2}};\n"
+"    \\end{relcoords}\n"
+"  \\end{tikzpicture}\n"
 "  \\imagecaption{Positive Morale card}\n"
-"\n"
+"  \\begin{tikzpicture}\n"
 msgstr ""
-"  \\draw (-2, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/morale-positive.png}}};\n"
-"  \\draw (2.4, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/morale-negative-battlefield.png}}};\n"
-"  \\draw (-1.2, 2.2) node {\\encircle{1}};\n"
-"  \\draw (3.2, 2.2) node {\\encircle{1}};\n"
-"  \\draw (-3.0, -1.4) node {\\encircle{2}};\n"
-"  \\draw (1.5, -1.0) node {\\encircle{2}};\n"
-"  \\draw (2.0, -2.0) node {\\encircle{3}};\n"
-"\\end{tikzpicture}\n"
-"\\vspace*{-1em}\n"
-"\\begin{multicols*}{2}\n"
-"  \\centering\n"
-"  \\imagecaption{Karta Wysokiego Morale}\n"
-"\n"
+"    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{translations/assets/pl/artifact.png}};\n"
+"    \\draw (-1.3, 2.1) node {\\encircle{1}};\n"
+"    \\draw (1.3, -0.9) node {\\encircle{2}};\n"
+"    \\draw (1.4, 2.6) node {\\encircle{3}};\n"
+"    \\draw (-1, -1.9) node {\\encircle{4}};\n"
+"  \\end{tikzpicture}\n"
+"  \\end{scriptsize}\n"
+"  \\footnotesize\n"
+"    \\null\\hfill\\imagecaption{Mocny Artefakt}\n"
+"  \\columnbreak\n"
+"  \\begin{center}\n"
+"    \\phantom{\\ldots}\\\\\n"
+"    \\phantom{\\ldots}\n"
+"    \\begin{scriptsize}\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:154
-#, no-wrap
-msgid "  \\imagecaption{Negative Morale card}"
-msgstr "  \\imagecaption{Karta Niskiego Morale}"
-
-#. type: figure
-#: sections/player_turns.tex:154
-#, no-wrap
+#: sections/player_turns.tex:142
+#, fuzzy, no-wrap
+#| msgid ""
+#| "    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
+#| "    \\draw (-1.3, 2.1) node {\\encircle{1}};\n"
+#| "    \\draw (1.3, -0.9) node {\\encircle{2}};\n"
+#| "    \\draw (1.4, 2.6) node {\\encircle{3}};\n"
+#| "    \\draw (-1, -1.9) node {\\encircle{4}};\n"
+#| "  \\end{tikzpicture}\n"
+#| "  \\end{scriptsize}\n"
+#| "  \\footnotesize\n"
+#| "    \\null\\hfill\\imagecaption{Major Artifact}\n"
+#| "  \\columnbreak\n"
+#| "  \\begin{center}\n"
+#| "    \\phantom{\\ldots}\\\\\n"
+#| "    \\phantom{\\ldots}\n"
+#| "    \\begin{scriptsize}\n"
 msgid ""
-"[H]\n"
+"    \\node (card) {\\includegraphics[width=\\linewidth]{\\cards/morale-negative-battlefield.png}};\n"
+"    \\begin{relcoords}{card}\n"
+"      \\draw (0.6, 0.9) node {\\encircle{1}};\n"
+"      \\draw (0.25, 0.3) node {\\encircle{2}};\n"
+"      \\draw (0.4, 0.1) node {\\encircle{3}};\n"
+"    \\end{relcoords}\n"
+"  \\end{tikzpicture}\n"
+"  \\imagecaption{Negative Morale card}"
+msgstr ""
+"    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{translations/assets/pl/artifact.png}};\n"
+"    \\draw (-1.3, 2.1) node {\\encircle{1}};\n"
+"    \\draw (1.3, -0.9) node {\\encircle{2}};\n"
+"    \\draw (1.4, 2.6) node {\\encircle{3}};\n"
+"    \\draw (-1, -1.9) node {\\encircle{4}};\n"
+"  \\end{tikzpicture}\n"
+"  \\end{scriptsize}\n"
+"  \\footnotesize\n"
+"    \\null\\hfill\\imagecaption{Mocny Artefakt}\n"
+"  \\columnbreak\n"
+"  \\begin{center}\n"
+"    \\phantom{\\ldots}\\\\\n"
+"    \\phantom{\\ldots}\n"
+"    \\begin{scriptsize}\n"
+
+#. type: multicols*
+#: sections/player_turns.tex:158
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[H]\n"
+#| "  \\centering\n"
+#| "  \\footnotesize\n"
+#| "  \\begin{subfigure}[t]{0.27\\linewidth}\n"
+#| "    \\begin{itemize}\n"
+#| "      \\item[\\textbf{1.}] Name\n"
+#| "      \\item[\\textbf{2.}] Effect\n"
+#| "    \\end{itemize}\n"
+#| "  \\end{subfigure}\n"
+#| "  \\begin{subfigure}[t]{0.7\\linewidth}\n"
+#| "    \\begin{itemize}\n"
+#| "      \\item[\\textbf{3.}] Battlefield symbol\\\\{\\scriptsize\\textit{(Use such cards only in \\pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish} games)}}\n"
+#| "    \\end{itemize}\n"
+#| "  \\end{subfigure}"
+msgid ""
+"\\begin{figure}[H]\n"
 "  \\centering\n"
 "  \\footnotesize\n"
 "  \\begin{subfigure}[t]{0.27\\linewidth}\n"
@@ -451,7 +522,9 @@ msgid ""
 "    \\begin{itemize}\n"
 "      \\item[\\textbf{3.}] Battlefield symbol\\\\{\\scriptsize\\textit{(Use such cards only in \\pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish} games)}}\n"
 "    \\end{itemize}\n"
-"  \\end{subfigure}"
+"  \\end{subfigure}\n"
+"\\end{figure}\n"
+"\n"
 msgstr ""
 "[H]\n"
 "  \\centering\n"
@@ -468,69 +541,43 @@ msgstr ""
 "    \\end{itemize}\n"
 "  \\end{subfigure}"
 
-#. type: Plain text
-#: sections/player_turns.tex:164
-msgid ""
-"Every time you \\textbf{gain} Morale, discard a Negative Morale card (if you "
-"have any); otherwise:"
-msgstr ""
-"Za każdym razem, kiedy \\textbf{zyskujesz} Morale, odrzuć kartę Niskiego "
-"Morale (jeżeli jakąś masz); w przeciwnym razie:"
-
-#. type: itemize
-#: sections/player_turns.tex:164
-msgid "sep{0mm}"
-msgstr "sep{0mm}"
-
-#. type: itemize
-#: sections/player_turns.tex:164
-msgid ""
-"In \\pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish}: "
-"Search(2) Positive Morale card and put the unwanted card to the bottom of "
-"the Deck."
-msgstr ""
-"Grając Tryb \\pagelink{Adventure and Skirmish Modes}{Przygody lub "
-"Pojedynku}: Przeszukaj(2) Talię Wysokiego Morale i~odłóż niechcianą kartę na "
-"spód tej Talii."
-
-#. type: itemize
-#: sections/player_turns.tex:164
-msgid "In regular games: draw 1 Positive Morale card."
-msgstr "W przypadku standardowej rozgrywki: dobierz 1 Kartę Wysokiego Morale."
-
-#. type: Plain text
-#: sections/player_turns.tex:164
-msgid ""
-"You may have \\textbf{2 Positive Morale cards at a time}.  Don't draw a "
-"third card."
-msgstr ""
-"Możesz mieć \\textbf{do 2 kart Wysokiego Morale naraz}. Nie dobieraj "
-"trzeciej karty."
-
-#. type: Plain text
+#. type: multicols*
 #: sections/player_turns.tex:168
+#, no-wrap
 msgid ""
-"Every time you \\textbf{lose} Morale, discard a Positive Morale card (if you "
-"have any); otherwise draw 1 Negative Morale card (no Searching!).  You may "
-"have an \\textbf{unlimited number of Negative Morale cards}."
+"\\vspace*{-1em}\n"
+"Every time you \\textbf{gain} Morale, discard a Negative Morale card (if you have any); otherwise:\n"
+"\\begin{itemize}\n"
+"  \\setlength\\itemsep{0mm}\n"
+"  \\item In \\pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish}: Search(2) Positive Morale card and put the unwanted card to the bottom of the Deck.\n"
+"  \\item In regular games: draw 1 Positive Morale card.\n"
+"\\end{itemize}\n"
+"You may have \\textbf{2 Positive Morale cards at a time}.\n"
+"Don't draw a third card.\n"
+"\n"
 msgstr ""
-"Za każdym razem, kiedy \\textbf{tracisz} Morale, odrzuć kartę Wysokiego "
-"Morale (jeżeli jakąś masz); w przeciwnym razie dobierz kartę Niskiego Morale "
-"(bez Przeszukania!). \\textbf{Nie ma limitu liczby kart Niskiego Morale}."
 
-#. type: Plain text
-#: sections/player_turns.tex:176
+#. type: multicols*
+#: sections/player_turns.tex:172
+#, fuzzy, no-wrap
+#| msgid "Every time you \\textbf{lose} Morale, discard a Positive Morale card (if you have any); otherwise draw 1 Negative Morale card (no Searching!).  You may have an \\textbf{unlimited number of Negative Morale cards}."
 msgid ""
-"Place newly gained Morale cards face up near your Hero Board.  Positive "
-"Morale cards may be used at any moment you wish.  Negative Morale cards must "
-"be used the next time when the situation indicated by the card occurs.  "
-"\\textbf{Put used cards at the bottom of their respective Decks}.  If you "
-"must draw a Morale card but the respective Morale Deck is empty, reshuffle "
-"its Discard Pile to form a new Deck."
-msgstr ""
-"Otrzymane karty Morale połóż odkryte obok twojej Planszetki Bohatera.  Karty "
-"Wysokiego Morale możesz rozpatrzyć w dowolnym momencie.  Karty Niskiego "
-"Morale rozpatrz, jak tylko nastąpi sytuacja wskazana w opisie. "
-"\\textbf{Rozpatrzone karty odkładaj na spody ich talii}.  Jeżeli masz dobrać "
-"kartę z pustej Talii Morale, przetasuj odpowiedni stos kart odrzuconych, aby "
-"utworzyć nową Talię."
+"\\smallskip\n"
+"Every time you \\textbf{lose} Morale, discard a Positive Morale card (if you have any); otherwise draw 1 Negative Morale card (no Searching!).\n"
+"You may have an \\textbf{unlimited number of Negative Morale cards}.\n"
+"\n"
+msgstr "Za każdym razem, kiedy \\textbf{tracisz} Morale, odrzuć kartę Wysokiego Morale (jeżeli jakąś masz); w przeciwnym razie dobierz kartę Niskiego Morale (bez Przeszukania!). \\textbf{Nie ma limitu liczby kart Niskiego Morale}."
+
+#. type: multicols*
+#: sections/player_turns.tex:180
+#, fuzzy, no-wrap
+#| msgid "Place newly gained Morale cards face up near your Hero Board.  Positive Morale cards may be used at any moment you wish.  Negative Morale cards must be used the next time when the situation indicated by the card occurs.  \\textbf{Put used cards at the bottom of their respective Decks}.  If you must draw a Morale card but the respective Morale Deck is empty, reshuffle its Discard Pile to form a new Deck."
+msgid ""
+"\\smallskip\n"
+"Place newly gained Morale cards face up near your Hero Board.\n"
+"Positive Morale cards may be used at any moment you wish.\n"
+"Negative Morale cards must be used the next time when the situation indicated by the card occurs.\n"
+"\\textbf{Put used cards at the bottom of their respective Decks}.\n"
+"If you must draw a Morale card but the respective Morale Deck is empty, reshuffle its Discard Pile to form a new Deck.\n"
+"\\end{expansion}"
+msgstr "Otrzymane karty Morale połóż odkryte obok twojej Planszetki Bohatera.  Karty Wysokiego Morale możesz rozpatrzyć w dowolnym momencie.  Karty Niskiego Morale rozpatrz, jak tylko nastąpi sytuacja wskazana w opisie. \\textbf{Rozpatrzone karty odkładaj na spody ich talii}.  Jeżeli masz dobrać kartę z pustej Talii Morale, przetasuj odpowiedni stos kart odrzuconych, aby utworzyć nową Talię."

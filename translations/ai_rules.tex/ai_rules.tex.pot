@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-02-28 00:30+0000\n"
+"POT-Creation-Date: 2026-03-03 21:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -243,15 +243,11 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:137
+#: sections/ai_rules.tex:133
 #, no-wrap
 msgid ""
 "    \\node (card) {\\includegraphics[width=0.57\\linewidth]{\\cards/ai.png}};\n"
-"    \\begin{scope}[\n"
-"      shift={(card.south west)},\n"
-"      x={($(card.east) - (card.west)$)},\n"
-"      y={($(card.north) - (card.south)$)},\n"
-"      ]\n"
+"    \\begin{relcoords}{card}\n"
 "      \\draw (0.4, 0.85) node {\\encircle{1}};\n"
 "      \\draw (0.8, 0.7) node {\\encircle{2}};\n"
 "      \\draw (0.15, 0.5) node {\\encircle{3}};\n"
@@ -259,7 +255,7 @@ msgid ""
 "      \\draw (0.15, 0.3) node {\\encircle{5}};\n"
 "      \\draw (0.55, 0.3) node {\\encircle{6}};\n"
 "      \\draw (0.4, 0.1) node {\\encircle{7}};\n"
-"    \\end{scope}\n"
+"    \\end{relcoords}\n"
 "    \\node [below=0pt of card.south] {\\imagecaption{AI card}};\n"
 "    \\node [right=-1em of card.east] {\n"
 "      \\begin{minipage}[t]{0.43\\linewidth}\n"
@@ -285,7 +281,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:143
+#: sections/ai_rules.tex:139
 #, no-wrap
 msgid ""
 "  AI Heroes use two Decks during Combat: the \\textbf{AI Deck} and the \\textbf{AI Spell Deck}.\n"
@@ -297,7 +293,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:148
+#: sections/ai_rules.tex:144
 #, no-wrap
 msgid ""
 "  When an AI Hero \\textbf{activates} a unit, draw an AI card\\index{AI card} and follow its instructions before the unit \\pagelink{AI Units}{moves and/or attacks}.\n"
@@ -308,7 +304,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:152
+#: sections/ai_rules.tex:148
 #, no-wrap
 msgid ""
 "  \\subsection*{AI Magic cards and AI Spell Deck}\n"
@@ -318,7 +314,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:156
+#: sections/ai_rules.tex:152
 #, no-wrap
 msgid ""
 "  Whenever an AI Magic \\svg{magic} card is drawn, draw the next Spell from the AI Spell Deck and cast it.\n"
@@ -328,7 +324,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:160
+#: sections/ai_rules.tex:156
 #, no-wrap
 msgid ""
 "  The AI Spell Deck may contain more Spell cards than there are Magic cards in the AI Hero's Deck.\n"
@@ -338,7 +334,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:162
+#: sections/ai_rules.tex:158
 #, no-wrap
 msgid ""
 "  If the AI Hero is assigned a Spell card that is unavailable because it is in your Hero's Deck, and you do not have another copy, substitute it with a \\wikilink{spells/magic_arrow}{Magic Arrow} card.\n"
@@ -346,7 +342,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:165
+#: sections/ai_rules.tex:161
 #, no-wrap
 msgid ""
 "  For certains Spells it can be unclear how the AI is supposed to cast them.\n"
@@ -355,7 +351,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:171
+#: sections/ai_rules.tex:167
 #, no-wrap
 msgid ""
 "  \\subsection*{AI Skill cards}\n"
@@ -367,7 +363,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:173
+#: sections/ai_rules.tex:169
 #, no-wrap
 msgid ""
 "  AI Skill cards cannot be replaced, so if Scenario rules assign the AI Hero a card that your Hero has and you do not have another copy, remove that card from your Deck and \\textbf{Search (3)} the respective card's Deck to compensate your Hero for the loss.\n"
@@ -375,7 +371,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:176
+#: sections/ai_rules.tex:172
 #, no-wrap
 msgid ""
 "  \\subsection*{AI cards timing}\n"
@@ -384,7 +380,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:180
+#: sections/ai_rules.tex:176
 #, no-wrap
 msgid ""
 "  The \\wikilink{ai\\#ai-cards}{Attack} Might \\svg[12]{might} card says about ``unit that is about to attack'', so if the currently activated unit doesn't have a valid target to attack, the Attack will apply to the next unit who is able to attack.\n"
@@ -394,7 +390,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:182
+#: sections/ai_rules.tex:178
 #, no-wrap
 msgid ""
 "  If an AI card increased a unit's \\svg{defense}, or triggered another card which increased it, the AI card stays attached to the unit until the first defense happens.\n"
@@ -402,7 +398,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:185
+#: sections/ai_rules.tex:181
 #, no-wrap
 msgid ""
 "  \\subsection*{AI Deck sharing}\n"
@@ -411,7 +407,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:191
+#: sections/ai_rules.tex:187
 #, no-wrap
 msgid ""
 "  \\bigskip\n"
@@ -423,7 +419,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:194
+#: sections/ai_rules.tex:190
 #, no-wrap
 msgid ""
 "  \\subsection*{Spells attacking multiple targets}\n"
@@ -432,7 +428,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:200
+#: sections/ai_rules.tex:196
 #, no-wrap
 msgid ""
 "  When drawn, target any unit with one or two adjacent units from the player's army, prioritizing the groups where there are more higher-tier units.\n"
@@ -444,7 +440,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:203
+#: sections/ai_rules.tex:199
 #, no-wrap
 msgid ""
 "  \\subsection*{Instant Defense Spells}\n"
@@ -453,7 +449,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:207
+#: sections/ai_rules.tex:203
 #, no-wrap
 msgid ""
 "  When drawn, put this card on the side of the Combat Board, then put a Defense Token on the unit with the highest \\svg{defense} to represent the card's effect -- it stays there until the Defense is resolved.\n"
@@ -463,7 +459,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:210
+#: sections/ai_rules.tex:206
 #, no-wrap
 msgid ""
 "  \\subsection*{Healing Spells}\n"
@@ -472,7 +468,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:213
+#: sections/ai_rules.tex:209
 #, no-wrap
 msgid ""
 "  When drawn, remove the \\svg{damage} from the AI unit with the greatest value of \\svg{damage} taken, starting with the highest tier available.\n"
@@ -481,7 +477,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:216
+#: sections/ai_rules.tex:212
 #, no-wrap
 msgid ""
 "  \\subsection*{Single-round buffs}\n"
@@ -490,7 +486,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:220
+#: sections/ai_rules.tex:216
 #, no-wrap
 msgid ""
 "  When drawn, check the tier of the unit on which you are about to cast the Spell and count how many units of the same or higher tier there are on the Board.\n"
@@ -500,7 +496,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:223
+#: sections/ai_rules.tex:219
 #, no-wrap
 msgid ""
 "  \\subsection*{Attack-weakening Spells}\n"
@@ -509,7 +505,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:226
+#: sections/ai_rules.tex:222
 #, no-wrap
 msgid ""
 "  When drawn, if the AI's activated unit is about to perform an attack that will provoke a Retaliation, cast this Spell on the Retaliating enemy to lower their \\svg{attack}.\n"

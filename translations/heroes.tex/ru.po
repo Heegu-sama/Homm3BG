@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-01-11 20:30+0000\n"
+"POT-Creation-Date: 2026-03-03 21:04+0000\n"
 "PO-Revision-Date: 2024-07-02 12:14+0300\n"
 "Last-Translator: Alexey Sokolov <alexey@asokolov.org>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -21,16 +21,17 @@ msgstr ""
 "X-Generator: Poedit 3.4.4\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:131
-#: sections/combat.tex:319 sections/credits.tex:8 sections/deckbuilding.tex:5
+#: sections/all_map_locations.tex:5 sections/combat.tex:5
+#: sections/combat.tex:42 sections/combat.tex:131 sections/combat.tex:318
+#: sections/credits.tex:8 sections/deckbuilding.tex:5
 #: sections/deckbuilding.tex:52 sections/deckbuilding.tex:73
 #: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
-#: sections/map_elements.tex:88 sections/map_elements.tex:139
+#: sections/map_elements.tex:93 sections/map_elements.tex:144
 #: sections/player_turns.tex:5 sections/resources.tex:5
 #: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:56 sections/tournament_mode.tex:5 sections/town.tex:5
-#: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
+#: sections/setup.tex:58 sections/solo_campaigns.tex:5
+#: sections/tournament_mode.tex:5 sections/town.tex:5 sections/trading.tex:5
+#: sections/units.tex:5 sections/units.tex:46
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -198,21 +199,57 @@ msgstr ""
 "    \\begin{tikzpicture}\n"
 
 #. type: figure
-#: sections/heroes.tex:106
-#, no-wrap
+#: sections/heroes.tex:108
+#, fuzzy, no-wrap
+#| msgid ""
+#| "      \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=\\linewidth]{\\cards/hero.png}}};\n"
+#| "      \\draw (2.2, 2.5) node {\\encircle{1}};\n"
+#| "      \\draw (0.8, 1.9) node {\\encircle{2}};\n"
+#| "      \\draw (3.5, 2.5) node {\\encircle{3}};\n"
+#| "      \\draw (-0.1, 2.5) node {\\encircle{4}};\n"
+#| "      \\draw (0, 1.25) node {\\encircle{5}};\n"
+#| "      \\draw (1.1, 1.25) node {\\encircle{6}};\n"
+#| "      \\draw (2, 1.25) node {\\encircle{7}};\n"
+#| "      \\draw (3.25, 1.25) node {\\encircle{8}};\n"
+#| "      \\draw (1, -0.2) node {\\encircle{9}};\n"
+#| "      \\draw (3, -0.2) node {\\encircle{10}};\n"
+#| "      \\draw (-1.7, -1.4) node {\\encircle{11}};\n"
+#| "    \\end{tikzpicture}\n"
+#| "    \\break\n"
+#| "    \\hspace*{1em}\\imagecaption{Hero Board}\n"
+#| "    \\scriptsize\n"
+#| "    \\begin{multicols}{2}\n"
+#| "      \\begin{itemize}[itemsep=5pt]\n"
+#| "        \\item[\\textbf{1.}] Name\n"
+#| "        \\item[\\textbf{2.}] Class\n"
+#| "        \\item[\\textbf{3.}] Type\n"
+#| "        \\item[\\textbf{4.}] Faction Color\n"
+#| "        \\item[\\textbf{5.}] Attack\n"
+#| "        \\item[\\textbf{6.}] Defense\n"
+#| "        \\item[\\textbf{7.}] Power\n"
+#| "        \\item[\\textbf{8.}] Knowledge\n"
+#| "        \\item[\\textbf{9.}] Starting Ability\n"
+#| "        \\item[\\textbf{10.}] Specialty\n"
+#| "        \\item[\\textbf{11.}] Level Tracker\n"
+#| "        \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
+#| "      \\end{itemize}\n"
+#| "    \\end{multicols}\n"
+#| "  \\end{minipage}"
 msgid ""
-"      \\draw (0, 0) node[inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=\\linewidth]{\\cards/hero.png}}};\n"
-"      \\draw (2.2, 2.5) node {\\encircle{1}};\n"
-"      \\draw (0.8, 1.9) node {\\encircle{2}};\n"
-"      \\draw (3.5, 2.5) node {\\encircle{3}};\n"
-"      \\draw (-0.1, 2.5) node {\\encircle{4}};\n"
-"      \\draw (0, 1.25) node {\\encircle{5}};\n"
-"      \\draw (1.1, 1.25) node {\\encircle{6}};\n"
-"      \\draw (2, 1.25) node {\\encircle{7}};\n"
-"      \\draw (3.25, 1.25) node {\\encircle{8}};\n"
-"      \\draw (1, -0.2) node {\\encircle{9}};\n"
-"      \\draw (3, -0.2) node {\\encircle{10}};\n"
-"      \\draw (-1.7, -1.4) node {\\encircle{11}};\n"
+"      \\node (board) [inner sep=0] {\\makebox[\\textwidth][c]{\\includegraphics[width=\\linewidth]{\\cards/hero.png}}};\n"
+"      \\begin{relcoords}{board}\n"
+"        \\draw (0.72, 0.92) node {\\encircle{1}};\n"
+"        \\draw (0.6, 0.85) node {\\encircle{2}};\n"
+"        \\draw (0.92, 0.92) node {\\encircle{3}};\n"
+"        \\draw (0.5, 0.9) node {\\encircle{4}};\n"
+"        \\draw (0.46, 0.7) node {\\encircle{5}};\n"
+"        \\draw (0.6, 0.7) node {\\encircle{6}};\n"
+"        \\draw (0.74, 0.7) node {\\encircle{7}};\n"
+"        \\draw (0.88, 0.7) node {\\encircle{8}};\n"
+"        \\draw (0.55, 0.5) node {\\encircle{9}};\n"
+"        \\draw (0.85, 0.5) node {\\encircle{10}};\n"
+"        \\draw (0.28, 0.25) node {\\encircle{11}};\n"
+"      \\end{relcoords}\n"
 "    \\end{tikzpicture}\n"
 "    \\break\n"
 "    \\hspace*{1em}\\imagecaption{Hero Board}\n"
@@ -270,7 +307,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: tikzpicture
-#: sections/heroes.tex:111
+#: sections/heroes.tex:113
 #, no-wrap
 msgid ""
 "[overlay]\n"
@@ -278,12 +315,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/heroes.tex:148
+#: sections/heroes.tex:150
 msgid "\\pagetarget{Level}{\\subheader{Level Effects}}"
 msgstr "\\pagetarget{Level}{\\subheader{Эффекты уровней}}"
 
 #. type: multicols
-#: sections/heroes.tex:148
+#: sections/heroes.tex:150
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -357,7 +394,7 @@ msgstr ""
 "\n"
 
 #. type: tikzpicture
-#: sections/heroes.tex:153
+#: sections/heroes.tex:155
 #, no-wrap
 msgid ""
 "[overlay]\n"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-02-28 00:30+0000\n"
+"POT-Creation-Date: 2026-03-03 21:04+0000\n"
 "PO-Revision-Date: 2024-05-21 11:12+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -22,11 +22,12 @@ msgstr ""
 #: sections/credits.tex:8 sections/deckbuilding.tex:5
 #: sections/deckbuilding.tex:52 sections/deckbuilding.tex:73
 #: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
-#: sections/map_elements.tex:89 sections/map_elements.tex:140
+#: sections/map_elements.tex:93 sections/map_elements.tex:144
 #: sections/player_turns.tex:5 sections/resources.tex:5
 #: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:56 sections/tournament_mode.tex:5 sections/town.tex:5
-#: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
+#: sections/setup.tex:58 sections/solo_campaigns.tex:5
+#: sections/tournament_mode.tex:5 sections/town.tex:5 sections/trading.tex:5
+#: sections/units.tex:5 sections/units.tex:46
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -46,8 +47,8 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:378
-#: sections/units.tex:216 sections/units.tex:220
+#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:382
+#: sections/units.tex:220 sections/units.tex:224
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -56,7 +57,7 @@ msgstr ""
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:117 sections/card_effect_keywords.tex:202
-#: sections/deckbuilding.tex:183 sections/deckbuilding.tex:395
+#: sections/deckbuilding.tex:191 sections/deckbuilding.tex:399
 #: sections/expansion_content.tex:111 sections/expansion_content.tex:158
 #: sections/expansion_content.tex:173 sections/resources.tex:31
 #, no-wrap
@@ -304,7 +305,7 @@ msgid "\\columnratio{0.25}"
 msgstr ""
 
 #. type: paracol
-#: sections/deckbuilding.tex:92 sections/deckbuilding.tex:131
+#: sections/deckbuilding.tex:92 sections/deckbuilding.tex:135
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{center}\n"
@@ -325,7 +326,7 @@ msgstr ""
 "\n"
 
 #. type: paracol
-#: sections/deckbuilding.tex:107
+#: sections/deckbuilding.tex:109
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/knowledge.png}};\n"
@@ -341,10 +342,12 @@ msgstr ""
 #| "    \\item[\\textbf{4.}] Faction-specific Card*\n"
 #| "  \\end{itemize}"
 msgid ""
-"          \\draw (0, 0) node {\\includegraphics[width=3.5cm]{\\cards/knowledge.png}};\n"
-"          \\draw (0.75, 0.4) node {\\encircle{1}};\n"
-"          \\draw (-1, -0.5) node {\\encircle{2}};\n"
-"          \\draw (-1, -1.5) node {\\encircle{3}};\n"
+"        \\node (card) {\\includegraphics[width=3.5cm]{\\cards/knowledge.png}};\n"
+"        \\begin{relcoords}{card}\n"
+"          \\draw (0.65, 0.6) node {\\encircle{1}};\n"
+"          \\draw (0.28, 0.4) node {\\encircle{2}};\n"
+"          \\draw (0.28, 0.2) node {\\encircle{3}};\n"
+"        \\end{relcoords}\n"
 "      \\end{tikzpicture}\n"
 "      \\imagecaption{Statistic card\\\\\\phantom{Blah}}\n"
 "    \\end{center}\n"
@@ -371,7 +374,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: paracol
-#: sections/deckbuilding.tex:121
+#: sections/deckbuilding.tex:125
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/knowledge.png}};\n"
@@ -387,9 +390,11 @@ msgstr ""
 #| "    \\item[\\textbf{4.}] Faction-specific Card*\n"
 #| "  \\end{itemize}"
 msgid ""
-"            \\draw (0, 0) node {\\includegraphics[width=3.5cm]{\\cards/empowered-knowledge.png}};\n"
-"            \\draw (0.75, 1.9) node {\\encircle{1}};\n"
-"            \\draw (-1, -1.5) node {\\encircle{2}};\n"
+"          \\node (card) {\\includegraphics[width=3.5cm]{\\cards/empowered-knowledge.png}};\n"
+"          \\begin{relcoords}{card}\n"
+"            \\draw (0.65, 0.8) node {\\encircle{1}};\n"
+"            \\draw (0.28, 0.25) node {\\encircle{2}};\n"
+"          \\end{relcoords}\n"
 "        \\end{tikzpicture}\n"
 "        \\imagecaption{Empowered\\\\Statistic card}\n"
 "      \\end{center}\n"
@@ -416,7 +421,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: paracol
-#: sections/deckbuilding.tex:126
+#: sections/deckbuilding.tex:130
 #, no-wrap
 msgid ""
 "      \\medskip\n"
@@ -426,7 +431,7 @@ msgid ""
 msgstr ""
 
 #. type: paracol
-#: sections/deckbuilding.tex:148
+#: sections/deckbuilding.tex:154
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/necromancy_card.png}};\n"
@@ -447,12 +452,14 @@ msgstr ""
 #| "  \\begin{center}\n"
 #| "    \\begin{scriptsize}\n"
 msgid ""
-"          \\draw (0, 0) node {\\includegraphics[width=3.5cm]{\\cards/necromancy_card.png}};\n"
-"          \\draw (0.75, 0.4) node {\\encircle{1}};\n"
-"          \\draw (-1, -0.5) node {\\encircle{2}};\n"
-"          \\draw (-1, -1.5) node {\\encircle{3}};\n"
-"          \\draw (1.55, -0.8) node {\\encircle{4}};\n"
-"          \\draw (1.55, -1.9) node {\\encircle{4}};\n"
+"        \\node (card) {\\includegraphics[width=3.5cm]{\\cards/necromancy_card.png}};\n"
+"        \\begin{relcoords}{card}\n"
+"          \\draw (0.65, 0.6) node {\\encircle{1}};\n"
+"          \\draw (0.28, 0.4) node {\\encircle{2}};\n"
+"          \\draw (0.28, 0.2) node {\\encircle{3}};\n"
+"          \\draw (0.9, 0.1) node {\\encircle{4}};\n"
+"          \\draw (0.9, 0.3) node {\\encircle{4}};\n"
+"        \\end{relcoords}\n"
 "      \\end{tikzpicture}\n"
 "      \\imagecaption{Ability card\\\\\\phantom{Blah}}\n"
 "    \\end{center}\n"
@@ -484,7 +491,7 @@ msgstr ""
 "    \\begin{scriptsize}\n"
 
 #. type: paracol
-#: sections/deckbuilding.tex:162
+#: sections/deckbuilding.tex:170
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/knowledge.png}};\n"
@@ -500,10 +507,12 @@ msgstr ""
 #| "    \\item[\\textbf{4.}] Faction-specific Card*\n"
 #| "  \\end{itemize}"
 msgid ""
-"          \\draw (0, 0) node {\\includegraphics[width=3.5cm]{\\cards/empowered-ability.png}};\n"
-"          \\draw (0.75, 1.9) node {\\encircle{1}};\n"
-"          \\draw (-1, -1.5) node {\\encircle{2}};\n"
-"          \\draw (1.55, -1.7) node {\\encircle{4}};\n"
+"          \\node (card) {\\includegraphics[width=3.5cm]{\\cards/empowered-ability.png}};\n"
+"          \\begin{relcoords}{card}\n"
+"            \\draw (0.65, 0.8) node {\\encircle{1}};\n"
+"            \\draw (0.28, 0.25) node {\\encircle{2}};\n"
+"            \\draw (0.9, 0.1) node {\\encircle{4}};\n"
+"          \\end{relcoords}\n"
 "        \\end{tikzpicture}\n"
 "        \\imagecaption{Empowered\\\\Ability card}\n"
 "      \\end{center}\n"
@@ -529,7 +538,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: paracol
-#: sections/deckbuilding.tex:167
+#: sections/deckbuilding.tex:175
 #, no-wrap
 msgid ""
 "      \\medskip\n"
@@ -539,7 +548,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:183
+#: sections/deckbuilding.tex:191
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{2}\n"
@@ -573,7 +582,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:187
+#: sections/deckbuilding.tex:195
 #, fuzzy, no-wrap
 #| msgid "\\pagetarget{spells}{Spell Cards}"
 msgid ""
@@ -583,7 +592,7 @@ msgid ""
 msgstr "\\pagetarget{spells}{Карти Заклинань}"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:195
+#: sections/deckbuilding.tex:203
 #, fuzzy, no-wrap
 #| msgid "Spell Cards\\index{Spell Card} have three possible primary effects.  Using the topmost, basic version of the Spell usually has no additional costs.  To access the other effects, you may \\textbf{Empower} a Spell\\index{Empowering Spells} by paying the indicated cost (3) to get a more powerful outcome (4).  You may pay this cost by playing other Cards for their Empower \\svg{empower} effect (e.g. the Spell Power Statistic) before casting the Spell.  All Spell Cards also have an alternative bottom (5) \\svg{empower} effect.  You cannot preserve the played \\svg{empower}: casting a Spell consumes all the \\svg{empower} played so far, and if you stop playing Cards, the power dissipates.  You may use a cheaper \\svg{empower} effect than what you've paid for, though."
 msgid ""
@@ -598,7 +607,7 @@ msgid ""
 msgstr "Карти Заклинань\\index{Карти Заклинань} мають три основні ефекти. Використання, базового ефекту Заклинання не потребує додаткових витрат.  Для отримання доступу до інших ефектів, ви можете \\textbf{Посилити} Заклинання\\index{Посилені Заклинання} сплативши вказану вартість (3) щоб отримати більш потужний результат (4). Ви можете сплатити цю вартість, розігравши інші Карти використавши їх ефект Посилення \\svg{empower} (наприклад, Характеристику Сили Заклинань) перед розіграшем Заклинання. Всі Карти Заклинань також мають альтернативний нижній (5) \\svg{empower} ефект. Ви не можете зберігати зіграні \\svg{empower}: розіграш Заклинання споживає всі \\svg{empower} зіграні досі, і якщо ви припиняєте грати Карти, сила розсіюється. Проте ви можете використати дешевший \\svg{empower} ефект, ніж той, за який ви заплатили."
 
 #. type: multicols*
-#: sections/deckbuilding.tex:198
+#: sections/deckbuilding.tex:206
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -607,13 +616,13 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:199
+#: sections/deckbuilding.tex:207
 #, no-wrap
 msgid "    \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/deckbuilding.tex:210
+#: sections/deckbuilding.tex:220
 #, fuzzy, no-wrap
 #| msgid ""
 #| "    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
@@ -631,12 +640,14 @@ msgstr ""
 #| "    \\phantom{\\ldots}\n"
 #| "    \\begin{scriptsize}\n"
 msgid ""
-"      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}};\n"
-"      \\draw (-1.3, 2.5) node {\\encircle{1}};\n"
-"      \\draw (-1.8, 0.3) node {\\encircle{2}};\n"
-"      \\draw (-1.1, -1) node {\\encircle{3}};\n"
-"      \\draw (1.1, -1) node {\\encircle{4}};\n"
-"      \\draw (0.8, -2.8) node {\\encircle{5}};\n"
+"      \\node (card) {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}};\n"
+"      \\begin{relcoords}{card}\n"
+"        \\draw (0.25, 0.85) node {\\encircle{1}};\n"
+"        \\draw (0.2, 0.6) node {\\encircle{2}};\n"
+"        \\draw (0.32, 0.35) node {\\encircle{3}};\n"
+"        \\draw (0.66, 0.35) node {\\encircle{4}};\n"
+"        \\draw (0.62, 0.1) node {\\encircle{5}};\n"
+"      \\end{relcoords}\n"
 "    \\end{tikzpicture}\n"
 "  \\end{scriptsize}\\\\\n"
 "  \\imagecaption{Spell card}\\\\\n"
@@ -659,7 +670,7 @@ msgstr ""
 "    \\begin{scriptsize}\n"
 
 #. type: multicols*
-#: sections/deckbuilding.tex:222
+#: sections/deckbuilding.tex:232
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{2}\n"
@@ -694,7 +705,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:226
+#: sections/deckbuilding.tex:236
 #, fuzzy
 #| msgid ""
 #| "Spells can be gained by Building the Mage Guild\\index{Mage Guild}.  "
@@ -717,7 +728,7 @@ msgstr ""
 "{обмінюватися} в Сценаріях з режимом Альянс та Кооператив."
 
 #. type: Plain text
-#: sections/deckbuilding.tex:228
+#: sections/deckbuilding.tex:238
 #, fuzzy
 #| msgid ""
 #| "During Combat, \\textbf{only one Spell Card} may be played by each player "
@@ -730,7 +741,7 @@ msgstr ""
 "Заклинання} \\textbf{за Раунд Бою}."
 
 #. type: Plain text
-#: sections/deckbuilding.tex:231
+#: sections/deckbuilding.tex:241
 #, fuzzy
 #| msgid ""
 #| "\\columnbreak When you use an effect which lets you cast a Spell from "
@@ -746,14 +757,14 @@ msgstr ""
 "Заклинання у ваш Скид."
 
 #. type: Plain text
-#: sections/deckbuilding.tex:233
+#: sections/deckbuilding.tex:243
 msgid ""
 "Some complex Spell cards use keywords or require special components, see "
 "\\pagelink{spell keywords}{Card Effect Keywords}."
 msgstr ""
 
 #. type: center
-#: sections/deckbuilding.tex:239
+#: sections/deckbuilding.tex:249
 #, fuzzy
 #| msgid ""
 #| "{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/"
@@ -766,12 +777,12 @@ msgstr ""
 "air_magic.png}}"
 
 #. type: subsection{#2}
-#: sections/deckbuilding.tex:245
+#: sections/deckbuilding.tex:255
 msgid "\\pagetarget{Schools of Magic}{Schools of Magic}"
 msgstr ""
 
 #. type: Plain text
-#: sections/deckbuilding.tex:245
+#: sections/deckbuilding.tex:255
 #, fuzzy
 #| msgid ""
 #| "All Spell Cards belong to one School of Magic\\index{Schools of Magic}: "
@@ -803,7 +814,7 @@ msgstr ""
 "Експертні Заклинання."
 
 #. type: minipage
-#: sections/deckbuilding.tex:273
+#: sections/deckbuilding.tex:283
 #, fuzzy
 msgid ""
 "\\minipage[b]{0.5\\textwidth} \\centering "
@@ -842,14 +853,14 @@ msgstr ""
 "\\bigbreak"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:276
+#: sections/deckbuilding.tex:286
 #, fuzzy
 #| msgid "\\pagetarget{Specialty}{Hero Specialty Cards}"
 msgid "\\pagetarget{Specialty}{\\subheader{Hero Specialty Cards}}"
 msgstr "\\pagetarget{Specialty}{Карти Спеціалізації Героя}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:281
+#: sections/deckbuilding.tex:291
 #, fuzzy
 #| msgid ""
 #| "Hero Specialty Cards\\index{Specialty Card} are gained from "
@@ -876,7 +887,7 @@ msgstr ""
 "Спеціалізації."
 
 #. type: Plain text
-#: sections/deckbuilding.tex:289
+#: sections/deckbuilding.tex:299
 #, fuzzy
 #| msgid ""
 #| "{ \\medskip \\centering \\includegraphics[width=0.7\\linewidth]{\\cards/"
@@ -892,7 +903,7 @@ msgstr ""
 "належить Лицарю Катерині.} }"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:297
+#: sections/deckbuilding.tex:307
 #, fuzzy
 #| msgid ""
 #| "{ \\medskip \\centering \\includegraphics[width=0.7\\linewidth]{\\cards/"
@@ -909,14 +920,14 @@ msgstr ""
 "належить Лицарю Катерині.} }"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:300
+#: sections/deckbuilding.tex:310
 #, fuzzy
 #| msgid "\\pagetarget{Artifact}{Artifact} Cards"
 msgid "\\columnbreak \\pagetarget{Artifact}{\\subheader{Artifact Cards}}"
 msgstr "\\pagetarget{Artifact}{Карти Артефактів}"
 
 #. type: Plain text
-#: sections/deckbuilding.tex:308
+#: sections/deckbuilding.tex:317
 #, fuzzy
 #| msgid ""
 #| "Artifact Cards\\index{Artifact Card} have a top and bottom effect. When "
@@ -949,117 +960,32 @@ msgstr ""
 "можна \\pagelink{Trading}{обмінювати} в Сценаріях з режимом Альянс та "
 "Кооператив."
 
-#. type: multicols*
-#: sections/deckbuilding.tex:308
+#. type: tikzpicture
+#: sections/deckbuilding.tex:336
 #, no-wrap
 msgid ""
-"{2}\n"
-"  \\begin{tikzpicture}\n"
+"  \\node (major) {\\includegraphics[width=0.6\\linewidth]{\\cards/artifact.png}};\n"
+"  \\begin{relcoords}{major}\n"
+"    \\draw (0.2, 0.8) node {\\encircle{1}};\n"
+"    \\draw (0.7, 0.4) node {\\encircle{2}};\n"
+"    \\draw (0.9, 0.9) node {\\encircle{3}};\n"
+"    \\draw (0.25, 0.2) node {\\encircle{4}};\n"
+"  \\end{relcoords}\n"
+"  \\node [below=0pt of major.south] {\\imagecaption{Major Artifact}};\n"
+"  \\node (relic) [right=0.05\\linewidth of major.south east, anchor=south west] {\\includegraphics[width=0.3\\linewidth]{\\cards/relic_artifact.png}};\n"
+"  \\begin{relcoords}{relic}\n"
+"    \\draw (0.5, 0.7) node {\\encircle{3}};\n"
+"    \\node [below=0pt of relic.south] {\\imagecaption{Relic Artifact}};\n"
+"  \\end{relcoords}\n"
+"  \\node (minor) [above=4em of relic.north] {\\includegraphics[width=0.3\\linewidth]{\\cards/minor_artifact.png}};\n"
+"  \\begin{relcoords}{minor}\n"
+"    \\draw (0.5, 0.7) node {\\encircle{3}};\n"
+"    \\node [below=0pt of minor.south] {\\imagecaption{Minor Artifact}};\n"
+"  \\end{relcoords}"
 msgstr ""
-
-#. type: multicols*
-#: sections/deckbuilding.tex:320
-#, fuzzy, no-wrap
-#| msgid ""
-#| "    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
-#| "    \\draw (-1.3, 2.1) node {\\encircle{1}};\n"
-#| "    \\draw (1.3, -0.9) node {\\encircle{2}};\n"
-#| "    \\draw (1.4, 2.6) node {\\encircle{3}};\n"
-#| "    \\draw (-1, -1.9) node {\\encircle{4}};\n"
-#| "  \\end{tikzpicture}\n"
-#| "  \\end{scriptsize}\n"
-#| "  \\footnotesize\n"
-#| "    \\null\\hfill\\imagecaption{Major Artifact}\n"
-#| "  \\columnbreak\n"
-#| "  \\begin{center}\n"
-#| "    \\phantom{\\ldots}\\\\\n"
-#| "    \\phantom{\\ldots}\n"
-#| "    \\begin{scriptsize}\n"
-msgid ""
-"    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
-"    \\draw (-1.3, 2.1) node {\\encircle{1}};\n"
-"    \\draw (1.3, -0.9) node {\\encircle{2}};\n"
-"    \\draw (1.4, 2.6) node {\\encircle{3}};\n"
-"    \\draw (-1, -1.9) node {\\encircle{4}};\n"
-"  \\end{tikzpicture}\n"
-"    \\null\\hfill\\imagecaption{Major Artifact}\n"
-"  \\columnbreak\n"
-"  \\begin{center}\n"
-"    \\phantom{\\ldots}\\\\\n"
-"    \\phantom{\\ldots}\n"
-"    \\begin{tikzpicture}\n"
-msgstr ""
-"    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
-"    \\draw (-1.3, 2.1) node {\\encircle{1}};\n"
-"    \\draw (1.3, -0.9) node {\\encircle{2}};\n"
-"    \\draw (1.4, 2.6) node {\\encircle{3}};\n"
-"    \\draw (-1, -1.9) node {\\encircle{4}};\n"
-"  \\end{tikzpicture}\n"
-"  \\end{scriptsize}\n"
-"  \\footnotesize\n"
-"    \\null\\hfill\\imagecaption{Великий Артефакт}\n"
-"  \\columnbreak\n"
-"  \\begin{center}\n"
-"    \\phantom{\\ldots}\\\\\n"
-"    \\phantom{\\ldots}\n"
-"    \\begin{scriptsize}\n"
-
-#. type: multicols*
-#: sections/deckbuilding.tex:327
-#, fuzzy, no-wrap
-#| msgid ""
-#| "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/minor_artifact.png}};\n"
-#| "      \\draw (-0.7, 0.5) node {\\encircle{3}};\n"
-#| "    \\end{tikzpicture}\n"
-#| "    \\end{scriptsize}\\\\\n"
-#| "    \\phantom{\\ldots}\\imagecaption{Minor Artifact}\\\\\n"
-#| "    \\vspace{3em}\n"
-#| "    \\phantom{\\ldots}\n"
-#| "    \\begin{scriptsize}\n"
-msgid ""
-"      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/minor_artifact.png}};\n"
-"      \\draw (-0.7, 0.5) node {\\encircle{3}};\n"
-"    \\end{tikzpicture}\\\\\n"
-"    \\phantom{\\ldots}\\imagecaption{Minor Artifact}\\\\\n"
-"    \\vspace{3em}\n"
-"    \\phantom{\\ldots}\n"
-"    \\begin{tikzpicture}\n"
-msgstr ""
-"      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/minor_artifact.png}};\n"
-"      \\draw (-0.7, 0.5) node {\\encircle{3}};\n"
-"    \\end{tikzpicture}\n"
-"    \\end{scriptsize}\\\\\n"
-"    \\phantom{\\ldots}\\imagecaption{Малий Артефакт}\\\\\n"
-"    \\vspace{3em}\n"
-"    \\phantom{\\ldots}\n"
-"    \\begin{scriptsize}\n"
-
-#. type: multicols*
-#: sections/deckbuilding.tex:343
-#, fuzzy, no-wrap
-#| msgid ""
-#| "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}};\n"
-#| "      \\draw (-0.7, 0.5) node {\\encircle{3}};\n"
-#| "    \\end{tikzpicture}\n"
-#| "    \\end{scriptsize}\\\\\n"
-#| "    \\phantom{\\ldots}\\imagecaption{Relic Artifact}\n"
-#| "  \\end{center}"
-msgid ""
-"      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}};\n"
-"      \\draw (-0.7, 0.5) node {\\encircle{3}};\n"
-"    \\end{tikzpicture}\\\\\n"
-"    \\phantom{\\ldots}\\imagecaption{Relic Artifact}\n"
-"  \\end{center}"
-msgstr ""
-"      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}};\n"
-"      \\draw (-0.7, 0.5) node {\\encircle{3}};\n"
-"    \\end{tikzpicture}\n"
-"    \\end{scriptsize}\\\\\n"
-"    \\phantom{\\ldots}\\imagecaption{Реліквія}\n"
-"  \\end{center}"
 
 #. type: multicols
-#: sections/deckbuilding.tex:343
+#: sections/deckbuilding.tex:348
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{2}\n"
@@ -1093,7 +1019,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: center
-#: sections/deckbuilding.tex:350
+#: sections/deckbuilding.tex:354
 #, fuzzy
 #| msgid ""
 #| "{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/"
@@ -1106,7 +1032,7 @@ msgstr ""
 "air_magic.png}}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:355
+#: sections/deckbuilding.tex:359
 #, fuzzy, no-wrap
 #| msgid "\\pagetarget{spells}{Spell Cards}"
 msgid ""
@@ -1116,7 +1042,7 @@ msgid ""
 msgstr "\\pagetarget{spells}{Карти Заклинань}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:360
+#: sections/deckbuilding.tex:364
 #, no-wrap
 msgid ""
 "During setup shuffle 10 of the Spell Scroll cards into the Artifact Deck.\n"
@@ -1127,7 +1053,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:370
+#: sections/deckbuilding.tex:374
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}};\n"
@@ -1156,7 +1082,7 @@ msgstr ""
 "  \\end{center}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:376
+#: sections/deckbuilding.tex:380
 #, no-wrap
 msgid ""
 "\\vspace*{1em}\n"
@@ -1168,7 +1094,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:386
+#: sections/deckbuilding.tex:390
 #, no-wrap
 msgid ""
 "You can play Spells from a Spell Scroll like any other Spell with the following exceptions:\n"
@@ -1181,7 +1107,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:395
+#: sections/deckbuilding.tex:399
 #, no-wrap
 msgid ""
 "{stronghold}\n"
@@ -1195,7 +1121,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:397
+#: sections/deckbuilding.tex:401
 #, no-wrap
 msgid ""
 "If the last Spell on a Spell Scroll is used or sold, place the Spell Scroll back in its Deck.\n"
@@ -1203,7 +1129,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:400
+#: sections/deckbuilding.tex:404
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -1211,7 +1137,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:405
+#: sections/deckbuilding.tex:409
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{Combatexperience}{Combat Experience}}\n"
@@ -1225,7 +1151,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:409
+#: sections/deckbuilding.tex:413
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{War Machines}{War Machines}}\n"
@@ -1248,7 +1174,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:430
+#: sections/deckbuilding.tex:436
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{\n"
@@ -1279,11 +1205,13 @@ msgid ""
 "    \\bigskip\n"
 "    \\centering\n"
 "    \\begin{tikzpicture}\n"
-"      \\draw (0, 0) node[inner sep=0] {\\includegraphics[width=0.8\\linewidth]{\\cards/war_machine.png}};\n"
-"      \\draw (0.8, 3.6) node {\\encircle{1}};\n"
-"      \\draw (0, -2.8) node {\\encircle{2}};\n"
-"      \\draw (-1.2, -1.7) node {\\encircle{3}};\n"
-"      \\draw (0.9, -1.7) node {\\encircle{4}};\n"
+"      \\node (card) [inner sep=0] {\\includegraphics[width=0.8\\linewidth]{\\cards/war_machine.png}};\n"
+"      \\begin{relcoords}{card}\n"
+"        \\draw (0.6, 0.92) node {\\encircle{1}};\n"
+"        \\draw (0.5, 0.15) node {\\encircle{2}};\n"
+"        \\draw (0.3, 0.3) node {\\encircle{3}};\n"
+"        \\draw (0.7, 0.3) node {\\encircle{4}};\n"
+"      \\end{relcoords}\n"
 "    \\end{tikzpicture}\n"
 "\n"
 "    \\footnotesize\n"
