@@ -179,10 +179,12 @@
     \footnotesize
     \begin{center}
       \begin{tikzpicture}
-        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_event.png}};
-        \draw (1.2, 1.9) node {\encirclesmall{1}};
-        \draw (0.5, -0.5) node {\encirclesmall{2}};
-        \draw (-1, -1.2) node {\encirclesmall{3}};
+        \node (card) [inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_event.png}};
+        \begin{relcoords}{card}
+          \draw (0.7, 0.85) node {\encirclesmall{1}};
+          \draw (0.6, 0.4) node {\encirclesmall{2}};
+          \draw (0.2, 0.2) node {\encirclesmall{3}};
+        \end{relcoords}
       \end{tikzpicture}
       \imagecaption{Adventure-Event card}
       \begin{enumerate}
@@ -195,12 +197,14 @@
 
     \begin{center}
       \begin{tikzpicture}
-        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_combat.png}};
-        \draw (1.2, 1.9) node {\encirclesmall{1}};
-        \draw (0.5, -0.1) node {\encirclesmall{2}};
-        \draw (-1, -0.8) node {\encirclesmall{4}};
-        \draw (1, -0.8) node {\encirclesmall{5}};
-        \draw (0.4, -2.0) node {\encirclesmall{6}};
+        \node (card) [inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_combat.png}};
+        \begin{relcoords}{card}
+          \draw (0.7, 0.85) node {\encirclesmall{1}};
+          \draw (0.62, 0.5) node {\encirclesmall{2}};
+          \draw (0.2, 0.34) node {\encirclesmall{4}};
+          \draw (0.8, 0.34) node {\encirclesmall{5}};
+          \draw (0.6, 0.08) node {\encirclesmall{6}};
+        \end{relcoords}
       \end{tikzpicture}
       \imagecaption{Adventure-Combat card}
       \begin{enumerate}
