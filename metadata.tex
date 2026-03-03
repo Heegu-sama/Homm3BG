@@ -629,10 +629,22 @@
 \newcommand{\pagelink}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{ \textmd{(\pageshorthand\,\pageref{#1})}}{}}
 \newcommand{\pagelinkwithcomma}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{, \textmd{\pageshorthand\,\pageref{#1}}}{}}
 
+\newcommand{\wikichar}[1]{%
+  \directlua{
+    local s = "\luaescapestring{\detokenize{#1}}"
+    local last = s:sub(-1)
+    if last == "." then
+      tex.print("\\kern-0.15em")
+    elseif last == "," then
+      tex.print("\\kern-0.1em")
+    end
+  }%
+  \textcolor{\hyperlinkcolor}{\textbf{°}}%
+}
 \newcommand{\wikilink}[2]{%
   \bgroup%
   \hypersetup{urlcolor=.}%
-  \href{https://\wikilang.homm3bg.wiki/#1}{#2\textcolor{\hyperlinkcolor}{\textbf{°}}}%
+  \href{https://\wikilang.homm3bg.wiki/#1}{#2\wikichar{#2}}%
   \egroup%
 }
 
