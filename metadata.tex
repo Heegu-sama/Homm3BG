@@ -691,6 +691,14 @@
   \end{scope}
 }{}
 \ExplSyntaxOff
+% Enable this temporarily inside relcoords when placing encircles
+\newcommand\gridhelper[0]{
+  \draw[step=0.1,black,very thin] (0,0) grid (1,1);
+  \foreach \i in {0,0.1,...,1} {
+    \draw [very thin,black] (\i,0) -- (\i,1)  node [below] at (\i,0) {$\StrLeft{\i}{3}$};
+    \draw [very thin,black] (0,\i) -- (1,\i) node [left] at (0,\i) {$\StrLeft{\i}{3}$};
+  }
+}
 
 \newcommand{\drawbottom}{
   \iftoggle{textright2left}{
