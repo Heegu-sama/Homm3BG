@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-03-03 21:04+0000\n"
+"POT-Creation-Date: 2026-03-05 21:56+0000\n"
 "PO-Revision-Date: 2025-01-05 11:55+0000\n"
 "Last-Translator: Alexey Sokolov <alexey@asokolov.org>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -29,7 +29,7 @@ msgstr ""
 #: sections/map_elements.tex:93 sections/map_elements.tex:144
 #: sections/player_turns.tex:5 sections/resources.tex:5
 #: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:58 sections/solo_campaigns.tex:5
+#: sections/setup.tex:71 sections/solo_campaigns.tex:5
 #: sections/tournament_mode.tex:5 sections/town.tex:5 sections/trading.tex:5
 #: sections/units.tex:5 sections/units.tex:46
 #, no-wrap
@@ -148,6 +148,7 @@ msgstr ""
 "    \\item Эффекты \\textbf{карты} \\svg{map} не могут использоваться во время сражения.\n"
 "    \\item \\textbf{Продолжительные} \\svg{ongoing} эффекты длятся до момента их использования или пока применивший их игрок не начнет следующий ход.\n"
 "      \\begin{expansion}[before skip balanced=0.3em,]{stronghold,conflux,cove}\n"
+"      \\pagetarget{Time Token}{}\n"
 "      \\begin{tikzpicture}[overlay]\n"
 "        \\node at (5.5, 0) {\\includegraphics[width=0.22\\linewidth]{\\images/time-token.png}};\n"
 "      \\end{tikzpicture}\\parbox{0.75\\hsize}{Вы можете использовать временны́е жетоны\\index{Временны́е жетоны} для учёта длительности продолжительных эффектов.}\n"
@@ -444,7 +445,8 @@ msgstr ""
 "            \\draw (0.65, 0.8) node {\\encircle{1}};\n"
 "            \\draw (0.28, 0.25) node {\\encircle{2}};\n"
 "            \\draw (0.9, 0.1) node {\\encircle{4}};\n"
-"          \\end{relcoords}\n""        \\end{tikzpicture}\n"
+"          \\end{relcoords}\n"
+"        \\end{tikzpicture}\n"
 "        \\imagecaption{Карта усиленного навыка}\n"
 "      \\end{center}\n"
 "    \\end{minipage}\n"
@@ -493,7 +495,7 @@ msgstr ""
 "    \\item[\\textbf{4.}] Особая карта Некрополиса\n"
 "  \\end{itemize}"
 
-#. type: multicols*
+#. type: multicols
 #: sections/deckbuilding.tex:195
 #, no-wrap
 msgid ""
@@ -505,7 +507,7 @@ msgstr ""
 "\\pagetarget{spells}{\\subheader{Карты заклинаний}}\n"
 "\n"
 
-#. type: multicols*
+#. type: multicols
 #: sections/deckbuilding.tex:203
 #, no-wrap
 msgid ""
@@ -527,7 +529,7 @@ msgstr ""
 "Однако, вы вправе выбрать более дешёвый эффект \\svg{empower}, чем тот, за который заплатили.\\par\n"
 "\n"
 
-#. type: multicols*
+#. type: multicols
 #: sections/deckbuilding.tex:206
 #, no-wrap
 msgid ""
@@ -538,13 +540,13 @@ msgstr ""
 "\\begin{center}\n"
 "  \\begin{scriptsize}\n"
 
-#. type: multicols*
+#. type: multicols
 #: sections/deckbuilding.tex:207
 #, no-wrap
 msgid "    \\begin{tikzpicture}\n"
 msgstr ""
 
-#. type: multicols*
+#. type: multicols
 #: sections/deckbuilding.tex:220
 #, no-wrap
 msgid ""
@@ -576,7 +578,7 @@ msgstr ""
 "\\end{center}\n"
 "\n"
 
-#. type: multicols*
+#. type: multicols
 #: sections/deckbuilding.tex:232
 #, no-wrap
 msgid ""
@@ -602,192 +604,248 @@ msgstr ""
 "    \\item[\\textbf{5.}] Альтернативный эффект\n"
 "  \\end{itemize}"
 
-#. type: Plain text
+#. type: multicols
 #: sections/deckbuilding.tex:236
+#, no-wrap
 msgid ""
-"Spells can be gained by Building the Mage Guild\\index{Mage Guild}.  "
-"Building it also enables you to use the Spell Book Token\\index{Spell Book "
-"Token} for buying additional Spells.  The Token cannot be used during the "
-"\\textbf{same Round} when the Guild is constructed. Spells can also be "
-"\\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios."
+"Spells can be gained by Building the Mage Guild\\index{Mage Guild}.\n"
+"Building it also enables you to use the Spell Book Token\\index{Spell Book Token} for buying additional Spells.\n"
+"The Token cannot be used during the \\textbf{same Round} when the Guild is constructed. Spells can also be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios.\n"
+"\n"
 msgstr ""
 "Заклинания можно получить, построив Гильдию магов\\index{Гильдия магов}.\n"
-"Её строительство также даёт возможность использовать жетон книги "
-"магии\\index{Книга магии, жетон} для покупки дополнительных заклинаний. "
-"Жетон не может быть использован в \\textbf{том же раунде}, в котором была "
-"построена Гильдия. Заклинаниями можно \\pagelink{Trading}{торговать} в "
-"режимах Альянса и Кооператива."
+"Её строительство также даёт возможность использовать жетон книги магии\\index{Книга магии, жетон} для покупки дополнительных заклинаний. Жетон не может быть использован в \\textbf{том же раунде}, в котором была построена Гильдия. Заклинаниями можно \\pagelink{Trading}{торговать} в режимах Альянса и Кооператива.\n"
+"\n"
 
-#. type: Plain text
+#. type: multicols
 #: sections/deckbuilding.tex:238
+#, no-wrap
 msgid ""
-"During Combat, each player may play \\textbf{only one Spell card per Combat "
-"Round}."
+"During Combat, each player may play \\textbf{only one Spell card per Combat Round}.\n"
+"\n"
 msgstr ""
-"В сражении каждый игрок может сыграть \\textbf{только одну карту заклинаний "
-"за раунд}."
+"В сражении каждый игрок может сыграть \\textbf{только одну карту заклинаний за раунд}.\n"
+"\n"
 
-#. type: Plain text
+#. type: multicols
 #: sections/deckbuilding.tex:241
+#, no-wrap
 msgid ""
-"\\columnbreak When you use an effect which lets you cast a Spell from "
-"somewhere other than your hand (such as directly from the Spell Deck), place "
-"that Spell into your Discard Pile after casting it."
+"\\columnbreak\n"
+"When you use an effect which lets you cast a Spell from somewhere other than your hand (such as directly from the Spell Deck), place that Spell into your Discard Pile after casting it.\n"
+"\n"
 msgstr ""
-"\\columnbreak Если вы используете эффект, разрешающий использовать "
-"заклинание не из руки (например, непосредственно из колоды заклинаний), "
-"поместите эту карту в ваш сброс после применения."
+"\\columnbreak Если вы используете эффект, разрешающий использовать заклинание не из руки (например, непосредственно из колоды заклинаний), поместите эту карту в ваш сброс после применения.\n"
+"\n"
 
-#. type: Plain text
+#. type: multicols
 #: sections/deckbuilding.tex:243
+#, no-wrap
 msgid ""
-"Some complex Spell cards use keywords or require special components, see "
-"\\pagelink{spell keywords}{Card Effect Keywords}."
+"Some complex Spell cards use keywords or require special components, see \\pagelink{spell keywords}{Card Effect Keywords}.\n"
+"\n"
 msgstr ""
-"Некоторые карты заклинаний используют ключевые слова или требуют специальных "
-"компонентов, см. \\pagelink{spell keywords}{Ключевые слова карт}."
+"Некоторые карты заклинаний используют ключевые слова или требуют специальных компонентов, см. \\pagelink{spell keywords}{Ключевые слова карт}.\n"
+"\n"
 
-#. type: center
+#. type: multicols
 #: sections/deckbuilding.tex:249
+#, no-wrap
 msgid ""
-"{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/"
-"air_magic.png}}"
+"\\begin{center}\n"
+"  \\vspace*{\\fill}\n"
+"  {\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/air_magic.png}}\n"
+"  \\vspace*{\\fill}\n"
+"\\end{center}\n"
+"\n"
 msgstr ""
-"\\vspace*{2mm}\n"
-"{\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/"
-"air_magic.png}}"
+"\\begin{center}\n"
+"  \\vspace*{\\fill}\n"
+"  {\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/air_magic.png}}\n"
+"  \\vspace*{\\fill}\n"
+"\\end{center}\n"
+"\n"
 
-#. type: subsection{#2}
+#. type: multicols
 #: sections/deckbuilding.tex:255
-msgid "\\pagetarget{Schools of Magic}{Schools of Magic}"
-msgstr "\\pagetarget{Schools of Magic}{Школы магии}"
-
-#. type: Plain text
-#: sections/deckbuilding.tex:255
+#, no-wrap
 msgid ""
-"All Spell cards belong to one School of Magic\\index{Schools of Magic}: "
-"either Air, Fire, Earth or Water.  Spells with one School symbol on them are "
-"called \\textbf{Basic Spells}\\index{Basic Spell}, while Spells with four "
-"identical symbols are called \\textbf{Expert Spells}\\index{Expert Spell}.  "
-"\\textbf{\\wikilink{spells/magic_arrow}{Magic Arrow}} is a Basic Spell; when "
-"casting the \\textbf{Magic Arrow}, you must select which School it belongs "
-"to.  By default there's no difference, but certain game effects can refer to "
-"specific Schools and to Basic/Expert Spells."
+"\\subsection*{\\pagetarget{Schools of Magic}{Schools of Magic}}\n"
+"All Spell cards belong to one School of Magic\\index{Schools of Magic}: either Air, Fire, Earth or Water.\n"
+"Spells with one School symbol on them are called \\textbf{Basic Spells}\\index{Basic Spell}, while Spells with four identical symbols are called \\textbf{Expert Spells}\\index{Expert Spell}.\n"
+"\\textbf{\\wikilink{spells/magic_arrow}{Magic Arrow}} is a Basic Spell; when casting the \\textbf{Magic Arrow}, you must select which School it belongs to.\n"
+"By default there's no difference, but certain game effects can refer to specific Schools and to Basic/Expert Spells.\n"
+"\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Schools of Magic}{Школы магии}}\n"
 "Все заклинания принадлежат к одной из Школ: Воздуха, Огня, Земли или Воды.\n"
-"Заклинания с одним символом Школы называются \\textbf{базовыми}"
-"\\index{Заклинания!базовые}\\index{Базовые заклинания}, с четырьмя "
-"одинаковыми — \\textbf{экспертными}\\index{Заклинания!экспертные}"
-"\\index{Экспертные заклинания}. \\textbf{\\wikilink{spells/magic_arrow}"
-"{Волшебная стрела}} — базовое заклинание; каждый раз при её вызове выберите "
-"для этого вызова одну из Школ. По умолчанию разницы нет, но некоторые "
-"игровые эффекты влияют на определённую Школу и зависят от того, базовое "
-"заклинание или экспертное."
+"Заклинания с одним символом Школы называются \\textbf{базовыми}\\index{Заклинания!базовые}\\index{Базовые заклинания}, с четырьмя одинаковыми — \\textbf{экспертными}\\index{Заклинания!экспертные}\\index{Экспертные заклинания}. \\textbf{\\wikilink{spells/magic_arrow}{Волшебная стрела}} — базовое заклинание; каждый раз при её вызове выберите для этого вызова одну из Школ. По умолчанию разницы нет, но некоторые игровые эффекты влияют на определённую Школу и зависят от того, базовое заклинание или экспертное.\n"
+"\n"
 
-#. type: minipage
+#. type: multicols
 #: sections/deckbuilding.tex:283
+#, no-wrap
 msgid ""
-"\\minipage[b]{0.5\\textwidth} \\centering "
-"\\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire.png} "
-"\\imagecaption{School of Fire} \\endminipage \\minipage[b]{0.5\\textwidth} "
-"\\centering \\includegraphics[width=0.75\\linewidth]{\\images/"
-"school_of_water.png} \\imagecaption{School of Water} \\endminipage "
-"\\hfill\\allowbreak\\bigbreak \\minipage[b]{0.5\\textwidth} \\centering "
-"\\includegraphics[width=0.75\\linewidth]{\\images/school_of_air.png} "
-"\\imagecaption{School of Air} \\endminipage \\minipage[b]{0.5\\textwidth} "
-"\\centering \\includegraphics[width=0.75\\linewidth]{\\images/"
-"school_of_earth.png} \\imagecaption{School of Earth} \\endminipage \\bigbreak"
+"\\begin{minipage}[t]{0.48\\textwidth}\n"
+"  \\centering\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire.png}\n"
+"    \\imagecaption{School of Fire}\n"
+"  \\endminipage\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_water.png}\n"
+"    \\imagecaption{School of Water}\n"
+"  \\endminipage\n"
+"  \\hfill\\allowbreak%\n"
+"  \\bigbreak\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_air.png}\n"
+"    \\imagecaption{School of Air}\n"
+"  \\endminipage\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_earth.png}\n"
+"    \\imagecaption{School of Earth}\n"
+"  \\endminipage\n"
+"  \\bigbreak\n"
+"\\end{minipage}\n"
+"\\clearpage\n"
+"\n"
 msgstr ""
-"\\minipage[b]{0.5\\textwidth} \\centering "
-"\\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire.png} "
-"\\imagecaption{Школа Огня} \\endminipage \\minipage[b]{0.5\\textwidth} "
-"\\centering \\includegraphics[width=0.75\\linewidth]{\\images/"
-"school_of_water.png} \\imagecaption{Школа Воды} \\endminipage "
-"\\hfill\\allowbreak\\bigbreak \\minipage[b]{0.5\\textwidth} \\centering "
-"\\includegraphics[width=0.75\\linewidth]{\\images/school_of_air.png} "
-"\\imagecaption{Школа Воздуха} \\endminipage \\minipage[b]{0.5\\textwidth} "
-"\\centering \\includegraphics[width=0.75\\linewidth]{\\images/"
-"school_of_earth.png} \\imagecaption{Школа Земли} \\endminipage \\bigbreak"
+"\\begin{minipage}[t]{0.48\\textwidth}\n"
+"  \\centering\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire.png}\n"
+"    \\imagecaption{Школа Огня}\n"
+"  \\endminipage\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_water.png}\n"
+"    \\imagecaption{Школа Воды}\n"
+"  \\endminipage\n"
+"  \\hfill\\allowbreak%\n"
+"  \\bigbreak\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_air.png}\n"
+"    \\imagecaption{Школа Воздуха}\n"
+"  \\endminipage\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_earth.png}\n"
+"    \\imagecaption{Школа Земли}\n"
+"  \\endminipage\n"
+"  \\bigbreak\n"
+"\\end{minipage}\n"
+"\\clearpage\n"
+"\n"
 
-#. type: Plain text
+#. type: multicols
 #: sections/deckbuilding.tex:286
-msgid "\\pagetarget{Specialty}{\\subheader{Hero Specialty Cards}}"
-msgstr "\\pagetarget{Specialty}{\\subheader{Карты специальности героя}}"
+#, no-wrap
+msgid ""
+"\\pagebreak\n"
+"\\pagetarget{Specialty}{\\subheader{Hero Specialty Cards}}\n"
+"\n"
+msgstr ""
+"\\pagebreak\n"
+"\\pagetarget{Specialty}{\\subheader{Карты специальности героя}}\n"
+"\n"
 
-#. type: Plain text
+#. type: multicols
 #: sections/deckbuilding.tex:291
+#, no-wrap
 msgid ""
-"Hero Specialty cards\\index{Specialty card} are gained from \\pagelink{Level}"
-"{Level ups}.  Each Main Hero has a unique set of Specialty cards.  While "
-"some of these cards have effects which resemble Spell cards and even make "
-"use of \\svg{empower}, Specialty cards are their \\textbf{own unique "
-"category of cards}.  For example, the limit of 1 Spell per Combat Round "
-"doesn't apply to Specialty cards."
+"Hero Specialty cards\\index{Specialty card} are gained from \\pagelink{Level}{Level ups}.\n"
+"Each Main Hero has a unique set of Specialty cards.\n"
+"While some of these cards have effects which resemble Spell cards and even make use of \\svg{empower}, Specialty cards are their \\textbf{own unique category of cards}.\n"
+"For example, the limit of 1 Spell per Combat Round doesn't apply to Specialty cards.\n"
+"\n"
 msgstr ""
-"Карты специальности героя\\index{Специальность героя} зарабатываются при "
-"\\pagelink{Level}{повышении уровня}. Каждый основной герой имеет уникальный "
-"набор карт специальности. Хотя многие из этих карт имеют эффекты, схожие с "
-"картами заклинаний и даже тоже могут использовать \\svg{empower}, карты "
-"специальности представляют собой \\textbf{уникальную категорию карт}. "
-"Например, ограничение в 1 заклинание за раунд сражения не применимо к картам "
-"специальности."
+"Карты специальности героя\\index{Специальность героя} зарабатываются при \\pagelink{Level}{повышении уровня}. Каждый основной герой имеет уникальный набор карт специальности. Хотя многие из этих карт имеют эффекты, схожие с картами заклинаний и даже тоже могут использовать \\svg{empower}, карты специальности представляют собой \\textbf{уникальную категорию карт}. Например, ограничение в 1 заклинание за раунд сражения не применимо к картам специальности.\n"
+"\n"
 
-#. type: Plain text
+#. type: multicols
 #: sections/deckbuilding.tex:299
+#, no-wrap
 msgid ""
-"{ \\medskip \\centering \\includegraphics[width=0.7\\linewidth]{\\cards/"
-"specialty.png}\\\\ \\medskip \\footnotesize\\textit{A Level IV Specialty "
-"card, belonging to Catherine the Knight.} }"
+"{\n"
+"    \\medskip\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.7\\linewidth]{\\cards/specialty.png}\\\\\n"
+"    \\medskip\n"
+"    \\footnotesize\\textit{A Level IV Specialty card, belonging to Catherine the Knight.}\n"
+"}\n"
+"\n"
 msgstr ""
-"{ \\medskip \\centering \\includegraphics[width=0.65\\linewidth]{\\cards/"
-"specialty.png}\\\\ \\medskip \\footnotesize\\textit{Карта специальности IV "
-"уровня рыцаря Катерины.} }"
+"{\n"
+"    \\medskip\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.65\\linewidth]{\\cards/specialty.png}\\\\\n"
+"    \\medskip\n"
+"    \\footnotesize\\textit{Карта специальности IV уровня рыцаря Катерины.}\n"
+"}\n"
+"\n"
 
-#. type: Plain text
+#. type: multicols
 #: sections/deckbuilding.tex:307
+#, no-wrap
 msgid ""
-"{ \\medskip \\centering \\includegraphics[width=0.7\\linewidth]{\\cards/"
-"specialty2.png}\\\\ \\medskip \\footnotesize\\textit{A Level I Specialty "
-"card, belonging to Deemer the Warlock. It uses \\svg{empower}, but does NOT "
-"belong to any School of Magic, despite the imagery.} }"
+"{\n"
+"    \\medskip\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.7\\linewidth]{\\cards/specialty2.png}\\\\\n"
+"    \\medskip\n"
+"    \\footnotesize\\textit{A Level I Specialty card, belonging to Deemer the Warlock. It uses \\svg{empower}, but does NOT belong to any School of Magic, despite the imagery.}\n"
+"}\n"
+"\n"
 msgstr ""
-"{ \\medskip \\centering \\includegraphics[width=0.65\\linewidth]{\\cards/"
-"specialty2.png}\\\\ \\medskip \\footnotesize\\textit{Карта специальности I "
-"уровня чернокнижника Димера. Она использует \\svg{empower}, но \\textbf{не "
-"принадлежит} ни одной из Школ магии, несмотря на изображение.} }"
+"{\n"
+"    \\medskip\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.65\\linewidth]{\\cards/specialty2.png}\\\\\n"
+"    \\medskip\n"
+"    \\footnotesize\\textit{Карта специальности I уровня чернокнижника Димера. Она использует \\svg{empower}, но \\textbf{не принадлежит} ни одной из Школ магии, несмотря на изображение.}\n"
+"}\n"
+"\n"
 
-#. type: Plain text
+#. type: multicols
 #: sections/deckbuilding.tex:310
-msgid "\\columnbreak \\pagetarget{Artifact}{\\subheader{Artifact Cards}}"
-msgstr "\\columnbreak \\pagetarget{Artifact}{\\subheader{Карты артефактов}}"
-
-#. type: Plain text
-#: sections/deckbuilding.tex:317
+#, no-wrap
 msgid ""
-"Artifact cards\\index{Artifact card} have a top and bottom effect. When you "
-"play one, you must \\textbf{choose which effect} you are using.  They are "
-"divided into 3 Levels: Minor, Major, and Relic, with different border "
-"color.  These Levels relate to the overall Power of the card and may be "
-"referenced when resolving certain effects or during Scenario setup.  "
-"Otherwise, all Artifact cards are normally shuffled together to form the "
-"Artifact Deck regardless of their Level.  They are gained through map "
-"exploration.\\par Artifacts can be \\pagelink{Trading}{traded} in Alliance "
-"and Cooperative Scenarios."
+"\\columnbreak\n"
+"\\pagetarget{Artifact}{\\subheader{Artifact Cards}}\n"
+"\n"
 msgstr ""
-"Карты артефактов\\index{Артефакты} имеют верхний и нижний эффекты. Когда вы "
-"применяете такую карту, вы должны \\textbf{выбрать} используемый эффект.\n"
-"Артефакты имеют 3 уровня: малый, великий и реликвия, отличающиеся цветом "
-"края карты.\n"
-"Эти уровни определяют общую мощь карты и могут быть использованы при "
-"разрешении определённых эффектов или при подготовке сценария.\n"
-"Все карты артефактов перемешиваются  между собой для формирования колоды "
-"артефактов без учёта их уровня.\n"
-"Артефакты можно получить в ходе исследования карты.\\par\n"
-"Артефактами можно \\pagelink{Trading}{торговать} в режимах Альянса или "
-"Кооператива."
+"\\columnbreak \\pagetarget{Artifact}{\\subheader{Карты артефактов}}\n"
+"\n"
 
-#. type: tikzpicture
-#: sections/deckbuilding.tex:336
+#. type: multicols
+#: sections/deckbuilding.tex:317
+#, no-wrap
+msgid ""
+"Artifact cards\\index{Artifact card} have a top and bottom effect. When you play one, you must \\textbf{choose which effect} you are using.\n"
+"They are divided into 3 Levels: Minor, Major, and Relic, with different border color.\n"
+"These Levels relate to the overall Power of the card and may be referenced when resolving certain effects or during Scenario setup.\n"
+"Otherwise, all Artifact cards are normally shuffled together to form the Artifact Deck regardless of their Level.\n"
+"They are gained through map exploration.\\par\n"
+"Artifacts can be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios.\\par\n"
+"\\begin{tikzpicture}\n"
+msgstr ""
+"Карты артефактов\\index{Артефакты} имеют верхний и нижний эффекты. Когда вы применяете такую карту, вы должны \\textbf{выбрать} используемый эффект.\n"
+"Артефакты имеют 3 уровня: малый, великий и реликвия, отличающиеся цветом края карты.\n"
+"Эти уровни определяют общую мощь карты и могут быть использованы при разрешении определённых эффектов или при подготовке сценария.\n"
+"Все карты артефактов перемешиваются  между собой для формирования колоды артефактов без учёта их уровня.\n"
+"Артефакты можно получить в ходе исследования карты.\\par\n"
+"Артефактами можно \\pagelink{Trading}{торговать} в режимах Альянса или Кооператива.\\par\n"
+"  \\begin{tikzpicture}\n"
+
+#. type: multicols
+#: sections/deckbuilding.tex:337
 #, no-wrap
 msgid ""
 "  \\node (major) {\\includegraphics[width=0.6\\linewidth]{\\cards/artifact.png}};\n"
@@ -807,7 +865,9 @@ msgid ""
 "  \\begin{relcoords}{minor}\n"
 "    \\draw (0.5, 0.7) node {\\encircle{3}};\n"
 "    \\node [below=0pt of minor.south] {\\imagecaption{Minor Artifact}};\n"
-"  \\end{relcoords}"
+"  \\end{relcoords}\n"
+"\\end{tikzpicture}\n"
+"\n"
 msgstr ""
 "  \\node (major) {\\includegraphics[width=0.6\\linewidth]{\\cards/artifact.png}};\n"
 "  \\begin{relcoords}{major}\n"
@@ -827,12 +887,14 @@ msgstr ""
 "    \\draw (0.5, 0.7) node {\\encircle{3}};\n"
 "    \\node [below=0pt of minor.south] {\\imagecaption{Малый артефакт}};\n"
 "  \\end{relcoords}"
+"\\end{tikzpicture}\n"
+"\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:348
+#: sections/deckbuilding.tex:347
 #, no-wrap
 msgid ""
-"{2}\n"
+"\\begin{multicols}{2}\n"
 "  \\footnotesize\n"
 "  \\begin{itemize}\n"
 "    \\item[\\textbf{1.}] Name\n"
@@ -842,7 +904,7 @@ msgid ""
 "    \\item[\\textbf{4.}] Flavor text\n"
 "  \\end{itemize}"
 msgstr ""
-"{2}\n"
+"\\begin{multicols}{2}\n"
 "  \\footnotesize\n"
 "  \\begin{itemize}\n"
 "    \\item[\\textbf{1.}] Название\n"
@@ -979,7 +1041,9 @@ msgstr ""
 msgid ""
 "If the last Spell on a Spell Scroll is used or sold, place the Spell Scroll back in its Deck.\n"
 "\n"
-msgstr "Если последнее заклинание из свитка было использовано или продано, поместите этот свиток в колоду свитков.\n\n"
+msgstr ""
+"Если последнее заклинание из свитка было использовано или продано, поместите этот свиток в колоду свитков.\n"
+"\n"
 
 #. type: expansion
 #: sections/deckbuilding.tex:404
@@ -988,6 +1052,8 @@ msgid ""
 "\\medskip\n"
 "Spell Scrolls are not part of your Deck, therefore they are not carried over between Scenarios in a Campaign."
 msgstr ""
+"\\smallskip\n"
+"Свитки заклинаний --- не часть колоды, поэтому они не переносятся между сценариями в кампании."
 
 #. type: expansion
 #: sections/deckbuilding.tex:409
@@ -1057,8 +1123,7 @@ msgstr ""
 "\n"
 "    \\footnotesize\n"
 "    \\imagecaption{Карта боевой машины}\n"
-"    \\smallskip"
-"    \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt]\n"
+"    \\smallskip    \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt]\n"
 "      \\item[\\textbf{1.}] Название\n"
 "      \\item[\\textbf{2.}] Эффект\n"
 "      \\item[\\textbf{3.}] Цена на фабрике боевых машин\n"
