@@ -662,7 +662,7 @@
   \tikz[baseline=(X.base)]{
     \node (X) [draw=white, shape=circle, fill=#2, minimum size=#3, align=center, inner sep=0, text=white] {\strut \textbf{#4}};
     \begin{scope}[on background layer]
-      \node [inner sep=0pt, opacity=0.7] at ([xshift=\shadowoffset, yshift=-\shadowoffset]X.center) {\includegraphics[width=\shadowscale]{\layout/circle_drop_shadow.png}};
+      \node [inner sep=0pt, opacity=0.7, anchor=center] at ([xshift=\shadowoffset, yshift=-\shadowoffset]X.center) {\includegraphics[width=\shadowscale]{\layout/circle_drop_shadow.png}};
     \end{scope}
   }
   \end{footnotesize}%
