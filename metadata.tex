@@ -102,7 +102,7 @@
 
 \captionsetup[figure]{labelformat=empty}
 \captionsetup[subfigure]{labelformat=empty, singlelinecheck=off, justification=centering}
-\usetikzlibrary{shadows, shadows.blur, calc, backgrounds}
+\usetikzlibrary{shadows, shadows.blur, calc, backgrounds, positioning, babel}
 
 \setlength{\columnsep}{1cm}
 \newtoggle{printable}
@@ -632,9 +632,12 @@
 \newcommand{\wikilink}[2]{%
   \bgroup%
   \hypersetup{urlcolor=.}%
-  \href{https://\wikilang.homm3bg.wiki/#1}{#2\textcolor{\hyperlinkcolor}{\textbf{°}}}%
+  \href{https://\wikilang.homm3bg.wiki/#1}{#2\wikichar{#2}}%
   \egroup%
+  \wikicheckaliaskern
 }
+% Commands for applying localized kerning for wikilink character °
+\newcommand\wikicheckaliaskern{\futurelet\wikinexttoken\wikiapplykern}
 
 % Stubs for polyglossia package used for Hebrew but not other languages
 \providecommand{\mainlanguagename}[0]{}
@@ -737,6 +740,7 @@
   \pdfbookmark[1]{\contentsname}{toc}%
   \subheader[false]{\contentsname}
   \begin{multicols}{2}
+    \small
     \@starttoc{toc}%
     \vspace*{\fill}
     \columnbreak
