@@ -70,18 +70,20 @@ They can be recruited again with another use of the Population Token.\par
     \vspace{0pt}
     \hspace*{1em}
     \begin{tikzpicture}
-      \draw (0, 0) node[inner sep=0] {\makebox[\textwidth][c]{\includegraphics[width=\linewidth]{\cards/hero.png}}};
-      \draw (2.2, 2.5) node {\encircle{1}};
-      \draw (0.8, 1.9) node {\encircle{2}};
-      \draw (3.5, 2.5) node {\encircle{3}};
-      \draw (-0.1, 2.5) node {\encircle{4}};
-      \draw (0, 1.25) node {\encircle{5}};
-      \draw (1.1, 1.25) node {\encircle{6}};
-      \draw (2, 1.25) node {\encircle{7}};
-      \draw (3.25, 1.25) node {\encircle{8}};
-      \draw (1, -0.2) node {\encircle{9}};
-      \draw (3, -0.2) node {\encircle{10}};
-      \draw (-1.7, -1.4) node {\encircle{11}};
+      \node (board) [inner sep=0] {\makebox[\textwidth][c]{\includegraphics[width=\linewidth]{\cards/hero.png}}};
+      \begin{relcoords}{board}
+        \draw (0.72, 0.92) node {\encircle{1}};
+        \draw (0.6, 0.85) node {\encircle{2}};
+        \draw (0.92, 0.92) node {\encircle{3}};
+        \draw (0.5, 0.9) node {\encircle{4}};
+        \draw (0.46, 0.7) node {\encircle{5}};
+        \draw (0.6, 0.7) node {\encircle{6}};
+        \draw (0.74, 0.7) node {\encircle{7}};
+        \draw (0.88, 0.7) node {\encircle{8}};
+        \draw (0.55, 0.5) node {\encircle{9}};
+        \draw (0.85, 0.5) node {\encircle{10}};
+        \draw (0.28, 0.25) node {\encircle{11}};
+      \end{relcoords}
     \end{tikzpicture}
     \break
     \hspace*{1em}\imagecaption{Hero Board}

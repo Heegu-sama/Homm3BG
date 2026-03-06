@@ -100,11 +100,7 @@
   \pagetarget{AI Deck}{\subheader{AI Decks}}
   \begin{tikzpicture}
     \node (card) {\includegraphics[width=0.57\linewidth]{\cards/ai.png}};
-    \begin{scope}[
-      shift={(card.south west)},
-      x={($(card.east) - (card.west)$)},
-      y={($(card.north) - (card.south)$)},
-      ]
+    \begin{relcoords}{card}
       \draw (0.4, 0.85) node {\encircle{1}};
       \draw (0.8, 0.7) node {\encircle{2}};
       \draw (0.15, 0.5) node {\encircle{3}};
@@ -112,7 +108,7 @@
       \draw (0.15, 0.3) node {\encircle{5}};
       \draw (0.55, 0.3) node {\encircle{6}};
       \draw (0.4, 0.1) node {\encircle{7}};
-    \end{scope}
+    \end{relcoords}
     \node [below=0pt of card.south] {\imagecaption{AI card}};
     \node [right=-1em of card.east] {
       \begin{minipage}[t]{0.43\linewidth}

@@ -89,27 +89,29 @@
 
 \begin{center}
   \begin{tikzpicture}
-    \draw (0, 0) node[inner sep=0] {\makebox[\textwidth][c]{\includegraphics[width=0.9\linewidth]{\images/battlefield_setup.png}}};
-    \draw (-4, 0) node {\encircle{1}};
-    \draw (-5, -1.5) node {\encircle{2a}};
-    \draw (3.8, 2.9) node {\encircle{2a}};
-    \draw (-5.5, 1.2) node {\encircle{2c}};
-    \draw (2, 0.2) node {\encircle{2c}};
-    \draw (5.5, 1.2) node {\encircle{2c}};
-    \draw (5.3, -2) node {\encircle{3}};
-    \draw (2.9, -1.6) node {\encircle{4}};
-    \draw (-2, 2.8) node {\encircle{5}};
-    \draw (2.8, -2.5) node {\encircle{6}};
-    \draw (0, -2.5) node {\encircle{7}};
-    \draw (0, 3.4) node {\encircle{7}};
-    \draw (3.5, -3) node {\encirclered{8}};
-    \draw (-3.8, 3) node {\encirclered{8}};
-    \draw (-2, -2) node {\encirclered{9}};
-    \draw (2, 3) node {\encirclered{9}};
-    \draw (-6, -1.7) node {\encirclered{10}};
-    \draw (5, 3) node {\encirclered{10}};
-    \draw (1, -1.6) node {\encirclered{11}};
-    \draw (-1.9, 3.5) node {\encirclered{12}};
+    \node (battlefield) [inner sep=0] {\makebox[\textwidth][c]{\includegraphics[width=0.9\linewidth]{\images/battlefield_setup.png}}};
+    \begin{relcoords}{battlefield}
+      \draw (0.28, 0.5) node {\encircle{1}};
+      \draw (0.2, 0.28) node {\encircle{2a}};
+      \draw (0.7, 0.88) node {\encircle{2a}};
+      \draw (0.15, 0.6) node {\encircle{2c}};
+      \draw (0.6, 0.5) node {\encircle{2c}};
+      \draw (0.82, 0.6) node {\encircle{2c}};
+      \draw (0.8, 0.28) node {\encircle{3}};
+      \draw (0.65, 0.29) node {\encircle{4}};
+      \draw (0.37, 0.84) node {\encircle{5}};
+      \draw (0.66, 0.2) node {\encircle{6}};
+      \draw (0.5, 0.15) node {\encircle{7}};
+      \draw (0.5, 0.9) node {\encircle{7}};
+      \draw (0.69, 0.15) node {\encirclered{8}};
+      \draw (0.28, 0.85) node {\encirclered{8}};
+      \draw (0.37, 0.27) node {\encirclered{9}};
+      \draw (0.6, 0.86) node {\encirclered{9}};
+      \draw (0.15, 0.29) node {\encirclered{10}};
+      \draw (0.8, 0.87) node {\encirclered{10}};
+      \draw (0.55, 0.28) node {\encirclered{11}};
+      \draw (0.38, 0.91) node {\encirclered{12}};
+    \end{relcoords}
   \end{tikzpicture}
 \end{center}
 \end{expansion}
@@ -177,10 +179,12 @@
     \footnotesize
     \begin{center}
       \begin{tikzpicture}
-        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_event.png}};
-        \draw (1.2, 1.9) node {\encirclesmall{1}};
-        \draw (0.5, -0.5) node {\encirclesmall{2}};
-        \draw (-1, -1.2) node {\encirclesmall{3}};
+        \node (card) [inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_event.png}};
+        \begin{relcoords}{card}
+          \draw (0.7, 0.85) node {\encirclesmall{1}};
+          \draw (0.6, 0.4) node {\encirclesmall{2}};
+          \draw (0.2, 0.2) node {\encirclesmall{3}};
+        \end{relcoords}
       \end{tikzpicture}
       \imagecaption{Adventure-Event card}
       \begin{enumerate}
@@ -193,12 +197,14 @@
 
     \begin{center}
       \begin{tikzpicture}
-        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_combat.png}};
-        \draw (1.2, 1.9) node {\encirclesmall{1}};
-        \draw (0.5, -0.1) node {\encirclesmall{2}};
-        \draw (-1, -0.8) node {\encirclesmall{4}};
-        \draw (1, -0.8) node {\encirclesmall{5}};
-        \draw (0.4, -2.0) node {\encirclesmall{6}};
+        \node (card) [inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_combat.png}};
+        \begin{relcoords}{card}
+          \draw (0.7, 0.85) node {\encirclesmall{1}};
+          \draw (0.62, 0.5) node {\encirclesmall{2}};
+          \draw (0.2, 0.34) node {\encirclesmall{4}};
+          \draw (0.8, 0.34) node {\encirclesmall{5}};
+          \draw (0.6, 0.08) node {\encirclesmall{6}};
+        \end{relcoords}
       \end{tikzpicture}
       \imagecaption{Adventure-Combat card}
       \begin{enumerate}

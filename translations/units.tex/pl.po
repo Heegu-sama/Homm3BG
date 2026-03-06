@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-02-06 02:35+0000\n"
+"POT-Creation-Date: 2026-03-03 21:04+0000\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,16 +19,17 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:131
-#: sections/combat.tex:319 sections/credits.tex:8 sections/deckbuilding.tex:5
+#: sections/all_map_locations.tex:5 sections/combat.tex:5
+#: sections/combat.tex:42 sections/combat.tex:131 sections/combat.tex:318
+#: sections/credits.tex:8 sections/deckbuilding.tex:5
 #: sections/deckbuilding.tex:52 sections/deckbuilding.tex:73
 #: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
-#: sections/map_elements.tex:89 sections/map_elements.tex:140
+#: sections/map_elements.tex:93 sections/map_elements.tex:144
 #: sections/player_turns.tex:5 sections/resources.tex:5
 #: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:56 sections/tournament_mode.tex:5 sections/town.tex:5
-#: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
+#: sections/setup.tex:58 sections/solo_campaigns.tex:5
+#: sections/tournament_mode.tex:5 sections/town.tex:5 sections/trading.tex:5
+#: sections/units.tex:5 sections/units.tex:46
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -38,8 +39,8 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:378
-#: sections/trading.tex:25 sections/units.tex:216 sections/units.tex:220
+#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:382
+#: sections/units.tex:220 sections/units.tex:224
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -49,10 +50,10 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:184 sections/map_elements.tex:193
-#: sections/map_elements.tex:265 sections/map_elements.tex:298
+#: sections/map_elements.tex:188 sections/map_elements.tex:197
+#: sections/map_elements.tex:269 sections/map_elements.tex:302
 #: sections/player_turns.tex:48 sections/tournament_mode.tex:67
-#: sections/units.tex:227
+#: sections/units.tex:231
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -246,20 +247,22 @@ msgstr ""
 "    \\begin{tikzpicture}\n"
 
 #. type: multicols
-#: sections/units.tex:96
+#: sections/units.tex:98
 #, no-wrap
 msgid ""
-"      \\draw (-1, 0) node {\\includegraphics[width=\\linewidth]{\\cards/unit-few.png}};\n"
-"      \\draw (-1.7, 1.9) node {\\encirclesmall{1}};\n"
-"      \\draw (0.4, 1.5) node {\\encirclesmall{2}};\n"
-"      \\draw (-1.5, 1.3) node {\\encirclesmall{3}};\n"
-"      \\draw (-2.6, 1.2) node {\\encirclesmall{4}};\n"
-"      \\draw (-2.6, 0.5) node {\\encirclesmall{5}};\n"
-"      \\draw (-2.6, -0.1) node {\\encirclesmall{6}};\n"
-"      \\draw (-2.6, -0.7) node {\\encirclesmall{7}};\n"
-"      \\draw (-1.3, -0.9) node {\\encirclesmall{8}};\n"
-"      \\draw (0, -0.9) node {\\encirclesmall{9}};\n"
-"      \\draw (-0.3, -1.9) node {\\encircle{11}};\n"
+"      \\node (card) {\\includegraphics[width=\\linewidth]{\\cards/unit-few.png}};\n"
+"      \\begin{relcoords}{card}\n"
+"        \\draw (0.5, 0.8) node {\\encirclesmall{1}};\n"
+"        \\draw (0.85, 0.8) node {\\encirclesmall{2}};\n"
+"        \\draw (0.35, 0.75) node {\\encirclesmall{3}};\n"
+"        \\draw (0.05, 0.75) node {\\encirclesmall{4}};\n"
+"        \\draw (0.05, 0.62) node {\\encirclesmall{5}};\n"
+"        \\draw (0.05, 0.48) node {\\encirclesmall{6}};\n"
+"        \\draw (0.05, 0.34) node {\\encirclesmall{7}};\n"
+"        \\draw (0.35, 0.3) node {\\encirclesmall{8}};\n"
+"        \\draw (0.7, 0.3) node {\\encirclesmall{9}};\n"
+"        \\draw (0.6, 0.1) node {\\encircle{11}};\n"
+"      \\end{relcoords}\n"
 "    \\end{tikzpicture}\n"
 "    \\imagecaption{Unit card (Few)}\n"
 "  \\end{center}\n"
@@ -276,17 +279,19 @@ msgid ""
 "    \\hspace*{-1.8em}\n"
 "    \\begin{tikzpicture}\n"
 msgstr ""
-"      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{translations/assets/pl/unit_few.png}};\n"
-"      \\draw (-0.6, 2) node {\\encirclesmall{1}};\n"
-"      \\draw (1.4, 2.0) node {\\encirclesmall{2}};\n"
-"      \\draw (-0.5, 1.4) node {\\encirclesmall{3}};\n"
-"      \\draw (-1.5, 1.3) node {\\encirclesmall{4}};\n"
-"      \\draw (-1.5, 0.6) node {\\encirclesmall{5}};\n"
-"      \\draw (-1.5, -0.1) node {\\encirclesmall{6}};\n"
-"      \\draw (-1.5, -0.8) node {\\encirclesmall{7}};\n"
-"      \\draw (-0.3, -1) node {\\encirclesmall{8}};\n"
-"      \\draw (1, -1) node {\\encirclesmall{9}};\n"
-"      \\draw (0.6, -2) node {\\encircle{11}};\n"
+"      \\node (card) {\\includegraphics[width=\\linewidth]{\\cards/unit-few.png}};\n"
+"      \\begin{relcoords}{card}\n"
+"        \\draw (0.5, 0.8) node {\\encirclesmall{1}};\n"
+"        \\draw (0.85, 0.8) node {\\encirclesmall{2}};\n"
+"        \\draw (0.35, 0.75) node {\\encirclesmall{3}};\n"
+"        \\draw (0.05, 0.75) node {\\encirclesmall{4}};\n"
+"        \\draw (0.05, 0.62) node {\\encirclesmall{5}};\n"
+"        \\draw (0.05, 0.48) node {\\encirclesmall{6}};\n"
+"        \\draw (0.05, 0.34) node {\\encirclesmall{7}};\n"
+"        \\draw (0.35, 0.3) node {\\encirclesmall{8}};\n"
+"        \\draw (0.7, 0.3) node {\\encirclesmall{9}};\n"
+"        \\draw (0.6, 0.1) node {\\encircle{11}};\n"
+"      \\end{relcoords}\n"
 "    \\end{tikzpicture}\n"
 "    \\imagecaption{Karta Jednostki (Garstka)}\n"
 "  \\end{center}\n"
@@ -304,19 +309,21 @@ msgstr ""
 "    \\begin{tikzpicture}\n"
 
 #. type: multicols
-#: sections/units.tex:118
+#: sections/units.tex:122
 #, no-wrap
 msgid ""
-"      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/unit-pack.png}};\n"
-"      \\draw (-0.7, 1.9) node {\\encirclesmall{1}};\n"
-"      \\draw (1.4, 1.5) node {\\encirclesmall{2}};\n"
-"      \\draw (-0.5, 1.3) node {\\encirclesmall{3}};\n"
-"      \\draw (-1.6, 1.2) node {\\encirclesmall{4}};\n"
-"      \\draw (-1.6, 0.5) node {\\encirclesmall{5}};\n"
-"      \\draw (-1.6, -0.2) node {\\encirclesmall{6}};\n"
-"      \\draw (-1.6, -0.9) node {\\encirclesmall{7}};\n"
-"      \\draw (0.2, -1.1) node {\\encircle{10}};\n"
-"      \\draw (0.5, -2.1) node {\\encircle{11}};\n"
+"      \\node (card) {\\includegraphics[width=\\linewidth]{\\cards/unit-pack.png}};\n"
+"      \\begin{relcoords}{card}\n"
+"        \\draw (0.5, 0.8) node {\\encirclesmall{1}};\n"
+"        \\draw (0.85, 0.8) node {\\encirclesmall{2}};\n"
+"        \\draw (0.35, 0.75) node {\\encirclesmall{3}};\n"
+"        \\draw (0.05, 0.75) node {\\encirclesmall{4}};\n"
+"        \\draw (0.05, 0.62) node {\\encirclesmall{5}};\n"
+"        \\draw (0.05, 0.48) node {\\encirclesmall{6}};\n"
+"        \\draw (0.05, 0.34) node {\\encirclesmall{7}};\n"
+"        \\draw (0.6, 0.3) node {\\encircle{10}};\n"
+"        \\draw (0.6, 0.1) node {\\encircle{11}};\n"
+"      \\end{relcoords}\n"
 "    \\end{tikzpicture}\n"
 "    \\imagecaption{Unit card (Pack)}\n"
 "  \\end{center}\n"
@@ -328,16 +335,18 @@ msgid ""
 "    \\item[\\textbf{11.}]{Special Ability}\n"
 "  \\end{itemize}"
 msgstr ""
-"      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{translations/assets/pl/unit_pack.png}};\n"
-"      \\draw (-0.6, 2) node {\\encirclesmall{1}};\n"
-"      \\draw (1.4, 2.0) node {\\encirclesmall{2}};\n"
-"      \\draw (-0.5, 1.4) node {\\encirclesmall{3}};\n"
-"      \\draw (-1.5, 1.3) node {\\encirclesmall{4}};\n"
-"      \\draw (-1.5, 0.6) node {\\encirclesmall{5}};\n"
-"      \\draw (-1.5, -0.1) node {\\encirclesmall{6}};\n"
-"      \\draw (-1.5, -0.8) node {\\encirclesmall{7}};\n"
-"      \\draw (0.3, -1) node {\\encircle{10}};\n"
-"      \\draw (0.6, -2) node {\\encircle{11}};\n"
+"      \\node (card) {\\includegraphics[width=\\linewidth]{\\cards/unit-pack.png}};\n"
+"      \\begin{relcoords}{card}\n"
+"        \\draw (0.5, 0.8) node {\\encirclesmall{1}};\n"
+"        \\draw (0.85, 0.8) node {\\encirclesmall{2}};\n"
+"        \\draw (0.35, 0.75) node {\\encirclesmall{3}};\n"
+"        \\draw (0.05, 0.75) node {\\encirclesmall{4}};\n"
+"        \\draw (0.05, 0.62) node {\\encirclesmall{5}};\n"
+"        \\draw (0.05, 0.48) node {\\encirclesmall{6}};\n"
+"        \\draw (0.05, 0.34) node {\\encirclesmall{7}};\n"
+"        \\draw (0.6, 0.3) node {\\encircle{10}};\n"
+"        \\draw (0.6, 0.1) node {\\encircle{11}};\n"
+"      \\end{relcoords}\n"
 "    \\end{tikzpicture}\n"
 "    \\imagecaption{Karta Jednostki (Grupa)}\n"
 "  \\end{center}\n"
@@ -350,7 +359,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: multicols
-#: sections/units.tex:120
+#: sections/units.tex:124
 #, no-wrap
 msgid ""
 "\\bigbreak\n"
@@ -360,7 +369,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:134
+#: sections/units.tex:138
 #, no-wrap
 msgid ""
 "Most units have a \\textbf{special ability}\\index{Special Ability}:\\par\n"
@@ -394,18 +403,18 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:136
+#: sections/units.tex:140
 #, no-wrap
 msgid "\\vspace*{\\fill}"
 msgstr "\\vspace*{\\fill}"
 
 #. type: Plain text
-#: sections/units.tex:151
+#: sections/units.tex:155
 msgid "\\pagetarget{Unittype}{\\subheader{Unit Types}}"
 msgstr "\\pagetarget{Unittype}{\\subheader{Typy jednostek}}"
 
 #. type: multicols
-#: sections/units.tex:151
+#: sections/units.tex:155
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -435,7 +444,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:163
+#: sections/units.tex:167
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Neutral Units}{Neutral Units}}\n"
@@ -465,7 +474,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:168
+#: sections/units.tex:172
 #, no-wrap
 msgid ""
 "\\note{8}{\n"
@@ -482,7 +491,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:172
+#: sections/units.tex:176
 #, no-wrap
 msgid ""
 "{3}\n"
@@ -492,7 +501,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:175
+#: sections/units.tex:179
 #, no-wrap
 msgid ""
 "\\begin{expansion}[title=\\phantom{\\textbf{\\tiny{foo}}}, overlay={}]{}\n"
@@ -504,7 +513,7 @@ msgstr ""
 "    \\begin{tikzpicture}\n"
 
 #. type: multicols*
-#: sections/units.tex:183
+#: sections/units.tex:187
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/neutral-back.png}};\n"
@@ -526,7 +535,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:187
+#: sections/units.tex:191
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -540,7 +549,7 @@ msgstr ""
 "    \\begin{tikzpicture}\n"
 
 #. type: multicols*
-#: sections/units.tex:196
+#: sections/units.tex:200
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/creature-bank-back.png}};\n"
@@ -564,7 +573,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:207
+#: sections/units.tex:211
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -592,7 +601,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:212
+#: sections/units.tex:216
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -604,7 +613,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:214
+#: sections/units.tex:218
 #, no-wrap
 msgid ""
 "\\textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons, Empowering \\svg{empower} the Spell by 2 with the Expert  Effect \\svg{expert} of a Power card.}\n"
@@ -614,7 +623,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:218
+#: sections/units.tex:222
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/alamar_empowering_magic_arrow.png}\n"
@@ -624,7 +633,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:225
+#: sections/units.tex:229
 #, no-wrap
 msgid ""
 "\\textit{The Skeletons take 3 damage \\svg{damage} from the Spell.\n"
@@ -640,7 +649,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:229
+#: sections/units.tex:233
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/skeletons_flipped.png}\n"
@@ -650,7 +659,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:233
+#: sections/units.tex:237
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"

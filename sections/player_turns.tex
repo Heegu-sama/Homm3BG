@@ -120,22 +120,26 @@ During setup, remove all Morale cards with the Battlefield symbol, unless you're
 Then shuffle the Positive and Negative Morale cards separately and place them face down.
 
 \vspace{1em}
-\begin{tikzpicture}
-  \draw (-2, 0) node[inner sep=0] {\makebox[0.47\linewidth][c]{\includegraphics[width=0.47\linewidth]{\cards/morale-positive.png}}};
-  \draw (2.4, 0) node[inner sep=0] {\makebox[0.47\linewidth][c]{\includegraphics[width=0.47\linewidth]{\cards/morale-negative-battlefield.png}}};
-  \draw (-1.2, 2.2) node {\encircle{1}};
-  \draw (3.2, 2.2) node {\encircle{1}};
-  \draw (-3.0, -1.4) node {\encircle{2}};
-  \draw (1.5, -1.0) node {\encircle{2}};
-  \draw (2.0, -2.0) node {\encircle{3}};
-\end{tikzpicture}
-\vspace*{-1em}
-\begin{multicols*}{2}
+\begin{multicols}{2}
   \centering
+  \begin{tikzpicture}
+    \node (card) {\includegraphics[width=\linewidth]{\cards/morale-positive.png}};
+    \begin{relcoords}{card}
+      \draw (0.6, 0.9) node {\encircle{1}};
+      \draw (0.25, 0.25) node {\encircle{2}};
+    \end{relcoords}
+  \end{tikzpicture}
   \imagecaption{Positive Morale card}
-
+  \begin{tikzpicture}
+    \node (card) {\includegraphics[width=\linewidth]{\cards/morale-negative-battlefield.png}};
+    \begin{relcoords}{card}
+      \draw (0.6, 0.9) node {\encircle{1}};
+      \draw (0.25, 0.3) node {\encircle{2}};
+      \draw (0.4, 0.1) node {\encircle{3}};
+    \end{relcoords}
+  \end{tikzpicture}
   \imagecaption{Negative Morale card}
-\end{multicols*}
+\end{multicols}
 \begin{figure}[H]
   \centering
   \footnotesize
