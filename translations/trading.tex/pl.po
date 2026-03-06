@@ -40,15 +40,13 @@ msgstr ""
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/trading.tex:3
-#, fuzzy
-#| msgid "\\addsection{Trading}{\\skills/armorer.png}"
 msgid "\\pagetarget{Trading}{\\addsection{Trading}{\\art/ammo_cart.png}}"
-msgstr "\\addsection{Handel}{\\skills/armorer.png}"
+msgstr "\\pagetarget{Trading}{\\addsection{Handel}{\\art/ammo_cart.png}}"
 
 #. type: index{#1}
 #: sections/trading.tex:3
 msgid "Trading"
-msgstr ""
+msgstr "Handel"
 
 #. type: multicols
 #: sections/trading.tex:16
@@ -66,6 +64,18 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{Akcje Punktu Handlowego}\n"
+"Odwiedzając \\pagelink{Trading Post}{Punkt Handlowy}, możesz:\n"
+"\\begin{itemize}\n"
+"  \\item handlować zasobami z bankiem według \\hyperlink{Trade Table}{tabeli cen na tylnej okładce}, albo\n"
+"  \\begin{expansion}[before skip balanced=0.4em,left=4mm]{rampart,cove}\n"
+"    \\item kupić \\pagelink{War Machines}{Machiny Wojenne}, albo\n"
+"  \\end{expansion}\n"
+"  \\item \\textbf{usunąć jedną kartę} z ręki, zyskując 1~\\svg{gold}.\n"
+"\n"
+"    \\note{5}{W Punkcie Handlowym \\textbf{nie możesz usuwać} kart Specjalności, Statystyk, Zdolności Początkowej ani \\wikilink{spells/magic_arrow}{Zaklęcia ,,Magiczna Strzała''}.}\\par\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/trading.tex:26
@@ -82,6 +92,17 @@ msgid ""
 "\\columnbreak\n"
 "\n"
 msgstr ""
+"Ponadto gracze mogą wykonywać następujące darmowe akcje dowolną liczbę razy podczas tej samej wizyty:\n"
+"\\begin{itemize}\n"
+"  \\item W \\textbf{Trybie Kooperacyjnym} przekazywać Zasoby innym graczom.\n"
+"  \\begin{expansion}[before skip balanced=0.4em,left=4mm]{stronghold}\n"
+"    \\item Sprzedać Zaklęcia z \\pagelink{Spell Scroll Cards}{Pergaminu z Zaklęciami}, \\pagetarget{selling Spell Scrolls}{zyskując 2~\\svg{gold} za każde}.\n"
+"      Sprzedane Zaklęcia usuń z gry.\n"
+"  \\end{expansion}\n"
+"\\end{itemize}\n"
+"\\vspace*{\\fill}\n"
+"\\columnbreak\n"
+"\n"
 
 #. type: multicols
 #: sections/trading.tex:36
@@ -98,16 +119,20 @@ msgid ""
 "\\medskip\n"
 "\n"
 msgstr ""
+"\\subsection*{Inne akcje Handlu}\n"
+"Niektóre tryby gry i efekty również pozwalają na handel:\n"
+"\\begin{itemize}\n"
+"  \\item W \\textbf{Trybie Sojuszu} sojusznicy mogą dowolnie handlować Zasobami podczas swoich Tur, ale nie w trakcie Walki.\n"
+"  \\item W \\textbf{Trybie Sojuszu i Kooperacji} sojusznicy mogą handlować kartami \\textbf{Zaklęć} i \\textbf{Artefaktów} w dowolnej kombinacji, jeśli ich bohaterowie znajdują się na sąsiadujących polach.\n"
+"    Jedynie \\textbf{karty na ręce} podlegają handlowi, a liczba wymienianych kart musi być równa.\n"
+"  \\item Gdy inne efekty w grze pozwalają na \\textbf{handel Zasobami} (np., \\wikilink{events/marketplace}{Wydarzenie Targowiska}), posłuż się \\hyperlink{Trade Table}{tabelą cen}.\n"
+"\\end{itemize}\n"
+"\\medskip\n"
+"\n"
 
 #. type: multicols
 #: sections/trading.tex:40
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\vfill\n"
-#| "\\begin{center}\n"
-#| "  \\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/town_portal.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\begin{center}\n"
 "  {\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/black_market.png}}\n"
@@ -116,6 +141,6 @@ msgid ""
 msgstr ""
 "\\vfill\n"
 "\\begin{center}\n"
-"  \\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/town_portal.png}\n"
+"  {\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/black_market.png}}\n"
 "\\end{center}\n"
 "\n"
