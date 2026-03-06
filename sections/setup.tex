@@ -57,11 +57,11 @@
       \draw (0.93, 0.5) node {\encirclered{30}};
       \draw (0.93, 0.42) node {\encirclered{32}};
     \end{relcoords}
-    \node [below=0pt of game.south, opacity=0.7] {
+    \node (bar) [below=3pt of game.south, opacity=0.7] {
       \centering
       \includegraphics[width=\linewidth,height=1em,keepaspectratio]{\layout/subsection_separator.png}
     };
-    \node [below=10pt of game.south] {
+    \node [below=0pt of bar.south] {
       \centering
       \begin{minipage}{0.3\linewidth}
         \raisebox{.2\height}{\encirclelegend{goblin}{C}} Core game\\
