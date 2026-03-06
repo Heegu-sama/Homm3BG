@@ -110,7 +110,7 @@ if [[ -n "${SECTION_SEARCH}" ]]; then
   TEMP_STRUCTURE=$(mktemp "$TEMP_DIR/structure.XXXXXX")
   cp structure.tex "$TEMP_STRUCTURE"
   echo "$TARGET" > structure.tex
-  TARGET=$(echo "$TARGET" | grep -Po "[a-z_]*${SECTION_SEARCH}[a-z_]*")
+  TARGET=$(echo "$TARGET" | sed -E 's@\\include\{\\sections/@@; s@\.tex\}@@')
 fi
 
 if [[ ${LANGUAGE} != en ]]; then
