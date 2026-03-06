@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-03-05 23:38+0000\n"
+"POT-Creation-Date: 2026-03-06 22:19+0000\n"
 "PO-Revision-Date: 2024-04-15 17:20+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -25,7 +25,7 @@ msgstr ""
 #: sections/map_elements.tex:93 sections/map_elements.tex:144
 #: sections/player_turns.tex:5 sections/resources.tex:5
 #: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:71 sections/solo_campaigns.tex:5
+#: sections/setup.tex:75 sections/solo_campaigns.tex:5
 #: sections/tournament_mode.tex:5 sections/town.tex:5 sections/trading.tex:5
 #: sections/units.tex:5 sections/units.tex:46
 #, no-wrap
@@ -41,7 +41,7 @@ msgid "\\addsection{Setup}{\\skills/necromancy.png}"
 msgstr "\\addsection{Preparación}{\\skills/necromancy.png}"
 
 #. type: figure
-#: sections/setup.tex:69
+#: sections/setup.tex:73
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{multicols*}{2}\n"
@@ -118,11 +118,15 @@ msgid ""
 "      \\draw (0.93, 0.5) node {\\encirclered{30}};\n"
 "      \\draw (0.93, 0.42) node {\\encirclered{32}};\n"
 "    \\end{relcoords}\n"
-"    \\node [below=0pt of game.south] {\n"
+"    \\node (bar) [below=3pt of game.south, opacity=0.7] {\n"
+"      \\centering\n"
+"      \\includegraphics[width=\\linewidth,height=1em,keepaspectratio]{\\layout/subsection_separator.png}\n"
+"    };\n"
+"    \\node [below=0pt of bar.south] {\n"
 "      \\centering\n"
 "      \\begin{minipage}{0.3\\linewidth}\n"
-"        \\encirclelegend{goblin}{~} Core game\n"
-"        \\encirclelegend{darkcandyapplered}{~} Various expansions\n"
+"        \\raisebox{.2\\height}{\\encirclelegend{goblin}{C}} Core game\\\\\n"
+"        \\raisebox{.2\\height}{\\encirclelegend{darkcandyapplered}{E}} Expansions\n"
 "      \\end{minipage}\n"
 "    };\n"
 "  \\end{tikzpicture}}"
@@ -146,7 +150,7 @@ msgstr ""
 "  \\end{itemize}\\vspace*{\\fill}"
 
 #. type: multicols*
-#: sections/setup.tex:73
+#: sections/setup.tex:77
 #, no-wrap
 msgid ""
 "This section will guide you through the process of setting up a Scenario from the Mission Book.\n"
@@ -156,7 +160,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/setup.tex:128
+#: sections/setup.tex:132
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{enumerate}\n"
@@ -324,7 +328,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/setup.tex:162
+#: sections/setup.tex:166
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -364,7 +368,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/setup.tex:168
+#: sections/setup.tex:172
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\bigskip\n"
