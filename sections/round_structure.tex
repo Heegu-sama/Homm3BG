@@ -19,7 +19,7 @@ Then, depending on the current Round number, players either gain Resources or re
     \end{itemize}
     \begin{expansion}{fortress}
       \begin{itemize}
-          \item Players draw next \pagelink{Events}{Event}.
+          \item Players draw next Event, see to the right.
       \end{itemize}
     \end{expansion}
   \item Even-numbered Rounds are \textbf{Astrologers' Rounds}.
@@ -30,21 +30,42 @@ After the start of the Round, players take Turns in a clockwise order as describ
 After all players have played their Turn, move the Black Cube on the Round Tracker one space forward and perform the start of Round again.
 Keep playing new Rounds until any of the Scenario's ending conditions have been met.
 
-\note{6}{
-  In the Alliance game, teams take turns alternately.
-  At the start of your team's first turn of the Round, choose who goes first and last in that Round.
-}
 
-\begin{center}
-  \vfill
-  {\transparent{0.2}\includegraphics[width=0.7\linewidth]{\art/astrologers.png}}
-  \vfill
+\begin{expansion}[before skip balanced=0.4em]{fortress}
+\subsection*{\pagetarget{Events}{Events}}
+  Event cards\index{Event cards} may be used in games with more than one player.
+  Shuffle the Event Deck during setup.
+  At the start of each Resource Round (except the first Round), draw and read the next Event card after receiving Resources.
+  The first Event is drawn by the starting player.
+  \textbf{Change the player who draws the Event in a clockwise order} every time a new Event is drawn.
+  Resolve any effects in clockwise order starting with the player who drew the card.
+  Any cards which were revealed as a part of resolving an Event should be shuffled back into their respective Decks afterwards.
+
   \medskip
+
+  \begin{minipage}[h]{\linewidth}
+  \vspace{0.1pt}
   \centering
-  \includegraphics[width=\linewidth]{\cards/astrolog.png}\\
-  \medskip
-  \imagecaption{Astrologers Proclaim card}
-  \vfill
-\end{center}
+  \begin{tikzpicture}
+  \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\cards/event.png}}};
+  \draw (1, 1.8) node {\encircle{1}};
+  \draw (-2, 0.4) node {\encircle{2}};
+  \draw (2.5, -1.1) node {\encircle{3}};
+  \end{tikzpicture}
+  \footnotesize
+  \imagecaption{Event card}
+  \begin{multicols}{2}
+    \begin{itemize}
+    \item[\textbf{1.}] Name
+    \item[\textbf{2.}] Flavor text
+    \item[\textbf{3.}] Effect
+    \item[\textbf{\phantom{.}}] \phantom{.}
+    \end{itemize}
+  \end{multicols}
+  \end{minipage}
+\end{expansion}
 
+\subsection*{Alliance Games}
+In the Alliance game, teams take turns alternately.
+At the start of your team's first turn of the Round, choose who goes first and last in that Round.
 \end{multicols*}
