@@ -475,7 +475,7 @@
 % Argument one is the literal text for ToC - defaults to argument two if unspecified
 % Argument two is the text to display
 \newcommand{\subheader}[2][]{%
-  \ifstrequal{#1}{false}{}{
+  \ifstrequal{#1}{notoc}{}{
     \ifstrequal{#1}{}{
       \phantomsection\addcontentsline{toc}{subsection}{\protect #2}%
     }{%
@@ -748,13 +748,11 @@
 \makeatletter
 \renewcommand\tableofcontents{%
   \pdfbookmark[1]{\contentsname}{toc}%
-  \subheader[false]{\contentsname}
+  \subheader[notoc]{\contentsname}
+  \vspace*{-0.5em}
   \begin{multicols}{2}
     \small
     \@starttoc{toc}%
-    \vspace*{\fill}
-    \columnbreak
-    \includegraphics[width=\linewidth]{\art/black_dragon.jpg}
   \end{multicols}
 }
 \makeatother
