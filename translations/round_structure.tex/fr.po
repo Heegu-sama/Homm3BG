@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-12-07 21:39+0000\n"
+"POT-Creation-Date: 2026-03-20 16:42+0000\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,16 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
-#: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
-#: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
-#: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
-#: sections/map_elements.tex:88 sections/map_elements.tex:139
-#: sections/player_turns.tex:5 sections/resources.tex:5
-#: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:55 sections/tournament_mode.tex:5 sections/town.tex:5
-#: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
+#: sections/all_map_locations.tex:5 sections/combat.tex:5
+#: sections/combat.tex:42 sections/combat.tex:131 sections/credits.tex:8
+#: sections/deckbuilding.tex:5 sections/deckbuilding.tex:52
+#: sections/deckbuilding.tex:73 sections/difficulty.tex:5
+#: sections/game_modes.tex:5 sections/heroes.tex:5 sections/map_elements.tex:93
+#: sections/map_elements.tex:144 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenario_end.tex:5 sections/setup.tex:75
+#: sections/solo_campaigns.tex:5 sections/tournament_mode.tex:5
+#: sections/town.tex:5 sections/trading.tex:5 sections/units.tex:5
+#: sections/units.tex:46
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -46,7 +47,7 @@ msgid ""
 msgstr "\\addsection{Séquence de Jeu}{\\spells/forgetfulness.png}"
 
 #. type: multicols*
-#: sections/round_structure.tex:32
+#: sections/round_structure.tex:40
 #, fuzzy, no-wrap
 #| msgid ""
 #| "The game is structured into \\pagetarget{Rounds}{Rounds}, during which each player will take their own Turn in a clockwise order starting with the starting player.\n"
@@ -85,18 +86,26 @@ msgid ""
 "    \\begin{itemize}\n"
 "      \\item All players gain income from the \\pagelink{Mines}{Buildings, Settlements, and Mines} they control.\n"
 "    \\end{itemize}\n"
-"    \\begin{expansion}{fortress}\n"
+"    \\begin{expansion}[before skip balanced=0.4em]{fortress}\n"
 "      \\begin{itemize}\n"
-"          \\item Players draw next \\pagelink{Events}{Event}.\n"
+"          \\item Players draw next Event, see to the right.\n"
 "      \\end{itemize}\n"
 "    \\end{expansion}\n"
 "  \\item Even-numbered Rounds are \\textbf{Astrologers' Rounds}.\n"
 "    Draw an Astrologers Proclaim card\\index{Astrologers Proclaim Card} and resolve its effects.\n"
 "  \\item If the Scenario has timed Events marked on the Round Tracker that have now been reached, resolve them.\n"
 "\\end{itemize}\n"
-"After the start of the Round, players take Turns in a clockwise order as described in the next section.\n"
-"After all players have played their Turn, move the Black Cube on the Round Tracker one space forward and perform the start of Round again.\n"
-"Keep playing new Rounds until any of the Scenario's ending conditions have been met.\n"
+"  \\vspace*{\\fill}\n"
+"\\columnbreak\n"
+"\\begin{expansion}[before=\\vspace*{-11mm}]{fortress}\n"
+"\\subsection*{\\pagetarget{Events}{Events}}\n"
+"  Event cards\\index{Event cards} may be used in multiplayer games only.\n"
+"  Shuffle the Event Deck during setup.\n"
+"  At the start of each Resource Round, draw and read the next Event card after receiving Resources.\n"
+"  The starting player draws first.\n"
+"  \\textbf{Change the player who draws the Event clockwise} every time a new Event is drawn.\n"
+"  Resolve any effects in clockwise order starting with the drawer.\n"
+"  Cards revealed as a part of resolving an Event are shuffled back into their respective Decks.\n"
 "\n"
 msgstr ""
 "Le jeu est divisé en \\pagetarget{Rounds}{Manches} où les joueurs jouent leur Tour dans le sens horaire à partir du premier joueur. Durant son Tour, un joueur déplacera son Héros sur le Plateau, construira de nouveaux Bâtiments dans sa \\pagelink{Town}{Ville}, et Recrutera des \\pagelink{Units}{Unités} afin de remplir les conditions de victoire du Scénario.\\par\n"
@@ -120,11 +129,187 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/round_structure.tex:37
+#: sections/round_structure.tex:42
 #, no-wrap
 msgid ""
+"  \\medskip\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/round_structure.tex:46
+#, no-wrap
+msgid ""
+"  \\begin{minipage}[h]{\\linewidth}\n"
+"  \\vspace{0.1pt}\n"
+"  \\centering\n"
+"  \\begin{tikzpicture}\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/round_structure.tex:63
+#, fuzzy, no-wrap
+#| msgid ""
+#| "      \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\cards/event.png}}};\n"
+#| "      \\draw (1, 1.8) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
+#| "      \\draw (-2, 0.4) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+#| "      \\draw (2.5, -1.1) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
+#| "    \\end{tikzpicture}\n"
+#| "  \\end{scriptsize}\n"
+#| "  \\footnotesize{\\imagecaption{Event Card}}\n"
+#| "  \\scriptsize\n"
+#| "  \\begin{multicols}{2}\n"
+#| "    \\begin{itemize}\n"
+#| "      \\item[\\textbf{1.}] \\textbf{Name}\n"
+#| "      \\item[\\textbf{2.}] \\textbf{Fluff}\n"
+#| "      \\item[\\textbf{3.}] \\textbf{Effect}\n"
+#| "      \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
+#| "    \\end{itemize}\n"
+#| "  "
+msgid ""
+"    \\node (card) [inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\cards/event.png}}};\n"
+"    \\begin{relcoords}{card}\n"
+"      \\draw (0.6, 0.81) node {\\encircle{1}};\n"
+"      \\draw (0.9, 0.61) node {\\encircle{2}};\n"
+"      \\draw (0.88, 0.26) node {\\encircle{3}};\n"
+"    \\end{relcoords}\n"
+"  \\end{tikzpicture}\n"
+"  \\medskip\n"
+"  \\footnotesize\n"
+"  \\imagecaption{Event card}\n"
+"  \\end{minipage}\n"
+"\\end{expansion}\n"
+"\\bigskip\n"
+"\\begin{minipage}[h]{\\linewidth}\n"
+"\\vspace{0.1pt}\n"
+"\\centering\n"
+"\\begin{tikzpicture}\n"
+msgstr ""
+"      \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{translations/assets/fr/cards/event_fr.png}}};\n"
+"      \\draw (1, 1.8) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
+"      \\draw (-2, 0.4) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"      \\draw (2.5, -1.1) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
+"    \\end{tikzpicture}\n"
+"  \\end{scriptsize}\n"
+"  \\footnotesize{\\imagecaption{Carte Évènement}}\n"
+"  \\scriptsize\n"
+"  \\begin{multicols}{2}\n"
+"    \\begin{itemize}\n"
+"      \\item[\\textbf{1.}] \\textbf{Nom}\n"
+"      \\item[\\textbf{2.}] \\textbf{Texte Narratif}\n"
+"      \\item[\\textbf{3.}] \\textbf{Effet}\n"
+"      \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
+"    \\end{itemize}\n"
+"  "
+
+#. type: multicols*
+#: sections/round_structure.tex:81
+#, fuzzy, no-wrap
+#| msgid ""
+#| "      \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\cards/event.png}}};\n"
+#| "      \\draw (1, 1.8) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
+#| "      \\draw (-2, 0.4) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+#| "      \\draw (2.5, -1.1) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
+#| "    \\end{tikzpicture}\n"
+#| "  \\end{scriptsize}\n"
+#| "  \\footnotesize{\\imagecaption{Event Card}}\n"
+#| "  \\scriptsize\n"
+#| "  \\begin{multicols}{2}\n"
+#| "    \\begin{itemize}\n"
+#| "      \\item[\\textbf{1.}] \\textbf{Name}\n"
+#| "      \\item[\\textbf{2.}] \\textbf{Fluff}\n"
+#| "      \\item[\\textbf{3.}] \\textbf{Effect}\n"
+#| "      \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
+#| "    \\end{itemize}\n"
+#| "  "
+msgid ""
+"  \\node (card) [inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\cards/astrolog.png}}};\n"
+"  \\begin{relcoords}{card}\n"
+"    \\draw (0.82, 0.78) node {\\encircle{1}};\n"
+"    \\draw (0.88, 0.2) node {\\encircle{2}};\n"
+"    \\draw (0.85, 0.48) node {\\encircle{3}};\n"
+"  \\end{relcoords}\n"
+"\\end{tikzpicture}\n"
+"\\medskip\n"
+"\\footnotesize\n"
+"\\imagecaption{Astrologers Proclaim card}\n"
+"\\begin{multicols}{2}\n"
+"  \\begin{itemize}\n"
+"  \\item[\\textbf{1.}] Name\n"
+"  \\item[\\textbf{2.}] Flavor text\n"
+"  \\item[\\textbf{3.}] Effect\n"
+"  \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
+"  \\end{itemize}"
+msgstr ""
+"      \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{translations/assets/fr/cards/event_fr.png}}};\n"
+"      \\draw (1, 1.8) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
+"      \\draw (-2, 0.4) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
+"      \\draw (2.5, -1.1) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
+"    \\end{tikzpicture}\n"
+"  \\end{scriptsize}\n"
+"  \\footnotesize{\\imagecaption{Carte Évènement}}\n"
+"  \\scriptsize\n"
+"  \\begin{multicols}{2}\n"
+"    \\begin{itemize}\n"
+"      \\item[\\textbf{1.}] \\textbf{Nom}\n"
+"      \\item[\\textbf{2.}] \\textbf{Texte Narratif}\n"
+"      \\item[\\textbf{3.}] \\textbf{Effet}\n"
+"      \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
+"    \\end{itemize}\n"
+"  "
+
+#. type: multicols*
+#: sections/round_structure.tex:85
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\vspace*{\\fill}\n"
+#| "\\columnbreak\n"
+#| "\n"
+msgid ""
+"\\end{minipage}\n"
+"\\vspace*{\\fill}\n"
+"\\columnbreak\n"
+"\n"
+msgstr ""
+"\\vspace*{\\fill}\n"
+"\\columnbreak\n"
+"\n"
+
+#. type: multicols*
+#: sections/round_structure.tex:87
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{Building the Map}\n"
+#| "\n"
+msgid ""
+"\\subsection*{Turn Order}\n"
+"\n"
+msgstr ""
+"\\subsection*{Composition du Plateau}\n"
+"\n"
+
+#. type: multicols*
+#: sections/round_structure.tex:91
+#, no-wrap
+msgid ""
+"After the start of the Round, players take Turns in a clockwise order as described in the next section.\n"
+"After all players have played their Turn, move the Black Cube on the Round Tracker one space forward and perform the start of Round again.\n"
+"Keep playing new Rounds until any of the Scenario's ending conditions have been met.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/round_structure.tex:96
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\note{6}{\n"
+#| "  In the Alliance game, teams take turns alternately.\n"
+#| "  At the start of your team's first turn of the Round, choose who goes first and last in that Round.\n"
+#| "}\n"
+#| "\n"
+msgid ""
 "\\note{6}{\n"
-"  In the Alliance game, teams take turns alternately.\n"
+"  In the \\textbf{Alliance game}, teams take turns alternately.\n"
 "  At the start of your team's first turn of the Round, choose who goes first and last in that Round.\n"
 "}\n"
 "\n"
@@ -136,28 +321,134 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/round_structure.tex:49
+#: sections/round_structure.tex:98
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{Example Turn}\n"
+#| "\n"
+msgid ""
+"\\subsection*{Example Round}\n"
+"\n"
+msgstr ""
+"\\subsection*{Exemple de Tour}\n"
+"\n"
+
+#. type: multicols*
+#: sections/round_structure.tex:103
+#, no-wrap
+msgid ""
+"\\textit{Alice is playing as the Tower Faction against Bob playing as the Dungeon Faction.\n"
+"Alice is the starting player.\n"
+"They are about to start the \\nth{5} Round.\n"
+"}\\par\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/round_structure.tex:107
+#, no-wrap
+msgid ""
+"\\textit{Before anything else, both players flip their Build, Population, and Spell Book Tokens back to their active side.\n"
+"All Movement Tokens are flipped back to their active, green~\\svg[12]{movement_token_green} sides.\n"
+"Both players also regain the use of their Expert Effects \\svg{expert}.}\\par\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/round_structure.tex:110
+#, no-wrap
+msgid ""
+"\\textit{Round 5 is an odd-numbered Round, and not the first, so it is a \\textbf{Resource Round}.\n"
+"Both players collect income from their Buildings, Mines, and Settlements.}\\par\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/round_structure.tex:117
+#, no-wrap
+msgid ""
+"\\textit{Since both Alice and Bob have City Halls built, they resolve their ``At the beginning of each Resource Round'' effects.\n"
+"The \\wikilink{/towns/tower/\\#fully-built}{Tower City Hall} allows Alice to either gain 4~\\svg{gold} or draw a card from her Deck.\n"
+"She chooses the latter.\n"
+"The \\wikilink{/towns/dungeon/\\#fully-built}{Dungeon City Hall} gives Bob the option to gain extra 5~\\svg{gold} or 1~\\svg{valuables}.\n"
+"Bob chooses the former.\n"
+"}\\par\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/round_structure.tex:122
+#, no-wrap
+msgid ""
+"\\begin{expansion}{fortress}\n"
+"\\textit{Since this is a Resource Round, an Event card should now be drawn from the Event Deck.\n"
+"  The drawing responsibility rotates clockwise after each Event: Alice, as the starting player, drew the first Event back in Round 3.}\\par\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/round_structure.tex:126
+#, no-wrap
+msgid ""
+"\\end{expansion}\n"
+"\\begin{expansion}{fortress}\n"
+"\\textit{It is therefore Bob's turn to draw. He takes the top card from the Event Deck, reads it aloud, and places it face-up so both players can see: it is \\textbf{Artifact Merchant} (see the Event card on the previous page).}\\par\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/round_structure.tex:138
+#, no-wrap
+msgid ""
+"\\vspace*{0.5em}\n"
+"\\textit{Bob draws 5 cards from the top of the Artifact Deck, revealing them to both players.\n"
+"Among them there is a Major Artifact -- the \\wikilink{artifacts/head_of_legion}{Head of Legion.}\n"
+"Bob goes first, as the player who drew the Event.\n"
+"  He immediately purchases the Head of Legion, pays 5~\\svg{gold} (putting the gold from the City Hall to good use) and adds it to his Deck.\n"
+"He passes the remaining cards to Alice.\n"
+"Alice had also wanted the Head of Legion, but it is already gone.\n"
+"She is not interested in the remaining cards, therefore she passes.\n"
+"Since the cards have now returned to the player who drew them, the Event ends.\n"
+"The remaining Artifacts are shuffled back into the Artifact Deck.}\\par\n"
+"\\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/round_structure.tex:143
+#, no-wrap
+msgid ""
+"\\vspace*{0.5em}\n"
+"\\textit{Round 5 also has a timed Event marked on the Round Tracker: Scenario specifies that all Heroes gain +1~\\svg{movement} this Round.\n"
+"Bob controls only his Main Hero, so only one extra MP is added, increasing their \\svg{movement} from 3 to 4.\n"
+"Because Alice controls both a Main Hero and a Secondary Hero, \\textbf{both} of them benefit -- their movement goes to 4 and 3, respectively.}\\par\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/round_structure.tex:145
+#, no-wrap
+msgid ""
+"\\textit{As a starting player, Alice now starts her Turn.}\\par\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/round_structure.tex:151
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{center}\n"
-#| "  \\transparent{0.2}\\includegraphics[width=1.05\\linewidth]{\\art/wyvern.png}\n"
+#| "  \\includegraphics[width=\\linewidth]{\\art/dendroid.jpg}\n"
 #| "\\end{center}\n"
 #| "\n"
 msgid ""
+"\\vfill\n"
 "\\begin{center}\n"
-"  \\vfill\n"
-"  {\\transparent{0.2}\\includegraphics[width=0.7\\linewidth]{\\art/astrologers.png}}\n"
-"  \\vfill\n"
-"  \\medskip\n"
-"  \\centering\n"
-"  \\includegraphics[width=\\linewidth]{\\cards/astrolog.png}\\\\\n"
-"  \\medskip\n"
-"  \\imagecaption{Astrologers Proclaim card}\n"
-"  \\vfill\n"
+"  \\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/quiet_eye_of_the_dragon.png}\n"
 "\\end{center}\n"
-"\n"
+"\\vfill"
 msgstr ""
 "\\begin{center}\n"
-"  \\transparent{0.2}\\includegraphics[width=0.25\\linewidth]{\\art/wyvern.png}\n"
+"  \\includegraphics[width=\\linewidth]{\\art/dendroid.jpg}\n"
 "\\end{center}\n"
 "\n"
