@@ -36,85 +36,48 @@ They can be recruited again with another use of the Population Token.\par
 {\transparent{0.2}\includegraphics[width=\linewidth]{\art/teleport.png}}
 \vspace*{\fill}
 
-\end{multicols*}
-
 \clearpage
 
-\pagetarget{Herocard}{\subheader{Hero Board Anatomy}}\index{Hero Board}\index{Hero Card}
-\bigbreak
-\begin{figure}[h]
-  \begin{minipage}[t]{0.5\textwidth}
-    \vspace{0pt}
-    \begin{enumerate}[itemsep=5pt]
-      \item \textbf{Name} – The Hero's name.
-        Used for identification.
-        Has no gameplay effect.
-      \item \textbf{Class} – The Hero's class.
-        Has no gameplay effect.
-      \item \textbf{Type} – The Hero's type (Might \svg[12]{might} or Magic \svg{magic}).
-        Determines the amount of \wikilink{spells/magic_arrow}{Magic Arrow} Spells in your Starting Deck (1 or 2 respectively).
-      \item \textbf{Faction Color} – Reminder for the color of the Faction's Cubes and miniatures.
-      \item \textbf{Attack} – Number of \wikilink{statistics/attack}{Attack} cards in your Starting Deck.
-      \item \textbf{Defense} – Number of \wikilink{statistics/defense}{Defense} cards in your Starting Deck.
-      \item \textbf{Power} – Number of \wikilink{statistics/power}{Power} cards in your Starting Deck.
-      \item \textbf{Knowledge} – Number of \wikilink{statistics/knowledge}{Knowledge} cards in your Starting Deck.
-      \item \textbf{Starting Ability} – Reminder for the unique Ability card the Hero starts with.
-      \item \textbf{Hero Specialty} – Reminder for the Specialty cards the Hero adds to their Deck at the start of the game and after specific Level ups.
-        Each Hero has three Specialty cards.
-      \item \textbf{Level Tracker} – Whenever a Main Hero gains 1 or more Experience \svg{experience}, move the Cube that number of steps on this track.
-        When the Cube reaches the next slot on the upper row, the Hero gains a Level.
-    \end{enumerate}
-  \end{minipage}\hfill
-  \begin{minipage}[t]{0.48\textwidth}
-    \centering
-    \vspace{0pt}
-    \hspace*{1em}
-    \begin{tikzpicture}
-      \node (board) [inner sep=0] {\makebox[\textwidth][c]{\includegraphics[width=\linewidth]{\cards/hero.png}}};
-      \begin{relcoords}{board}
-        \draw (0.72, 0.92) node {\encircle{1}};
-        \draw (0.6, 0.85) node {\encircle{2}};
-        \draw (0.92, 0.92) node {\encircle{3}};
-        \draw (0.5, 0.9) node {\encircle{4}};
-        \draw (0.46, 0.7) node {\encircle{5}};
-        \draw (0.6, 0.7) node {\encircle{6}};
-        \draw (0.74, 0.7) node {\encircle{7}};
-        \draw (0.88, 0.7) node {\encircle{8}};
-        \draw (0.55, 0.5) node {\encircle{9}};
-        \draw (0.85, 0.5) node {\encircle{10}};
-        \draw (0.28, 0.25) node {\encircle{11}};
-      \end{relcoords}
-    \end{tikzpicture}
-    \break
-    \hspace*{1em}\imagecaption{Hero Board}
-    \scriptsize
-    \begin{multicols}{2}
-      \begin{itemize}[itemsep=5pt]
-        \item[\textbf{1.}] Name
-        \item[\textbf{2.}] Class
-        \item[\textbf{3.}] Type
-        \item[\textbf{4.}] Faction Color
-        \item[\textbf{5.}] Attack
-        \item[\textbf{6.}] Defense
-        \item[\textbf{7.}] Power
-        \item[\textbf{8.}] Knowledge
-        \item[\textbf{9.}] Starting Ability
-        \item[\textbf{10.}] Specialty
-        \item[\textbf{11.}] Level Tracker
-        \item[\textbf{\phantom{.}}] \phantom{.}
-      \end{itemize}
-    \end{multicols}
-  \end{minipage}
-\end{figure}
-
-\begin{tikzpicture}[overlay]
-  \node[opacity=0.2, rotate=20] at (12, -0.5) {\includegraphics[width=0.6\linewidth]{\art/griffin.png}};
+  \pagetarget{Herocard}{\subheader[notoc]{Hero Board Anatomy}}\index{Hero Board}\index{Hero Card}
+\hspace*{0.3em}\begin{tikzpicture}
+  \node (board) [inner sep=0] {\includegraphics[width=\linewidth]{\cards/hero.png}};
+  \begin{relcoords}{board}
+    \draw (0.72, 0.92) node {\encircle{1}};
+    \draw (0.6, 0.85) node {\encircle{2}};
+    \draw (0.92, 0.92) node {\encircle{3}};
+    \draw (0.5, 0.9) node {\encircle{4}};
+    \draw (0.46, 0.7) node {\encircle{5}};
+    \draw (0.6, 0.7) node {\encircle{6}};
+    \draw (0.74, 0.7) node {\encircle{7}};
+    \draw (0.88, 0.7) node {\encircle{8}};
+    \draw (0.55, 0.5) node {\encircle{9}};
+    \draw (0.85, 0.5) node {\encircle{10}};
+    \draw (0.28, 0.25) node {\encircle{11}};
+  \end{relcoords}
 \end{tikzpicture}
+\begin{enumerate}[itemsep=0pt, leftmargin=1.5em]
+  \item \textbf{Name} – The Hero's name.
+    Used for identification.
+    Has no gameplay effect.
+  \item \textbf{Class} – The Hero's class.
+    Has no gameplay effect.
+  \item \textbf{Type} – The Hero's type (Might \svg[12]{might} or Magic \svg{magic}).
+    Determines the amount of \wikilink{spells/magic_arrow}{Magic Arrow} Spells in your Starting Deck (1 or 2 respectively).
+  \item \textbf{Faction Color} – Reminder for the color of the Faction's Cubes and miniatures.
+  \item \textbf{Attack} – Number of \wikilink{statistics/attack}{Attack} cards in your Starting Deck.
+  \item \textbf{Defense} – Number of \wikilink{statistics/defense}{Defense} cards in your Starting Deck.
+  \item \textbf{Power} – Number of \wikilink{statistics/power}{Power} cards in your Starting Deck.
+  \item \textbf{Knowledge} – Number of \wikilink{statistics/knowledge}{Knowledge} cards in your Starting Deck.
+  \item \textbf{Starting Ability} – Reminder for the unique Ability card the Hero starts with.
+  \item \textbf{Hero Specialty} – Reminder for the Specialty cards the Hero adds to their Deck at the start of the game and after specific Level ups.
+    Each Hero has three Specialty cards.
+  \item \textbf{Level Tracker} – Whenever a Main Hero gains 1 or more Experience \svg{experience}, move the Cube that number of steps on this track.
+    When the Cube reaches the next slot on the upper row, the Hero gains a Level.
+\end{enumerate}
 
-\clearpage
+\columnbreak
 
 \pagetarget{Level}{\subheader{Level Effects}}
-\begin{multicols}{2}
 Main Heroes always start each Scenario at Level I\index{Level} and may Level up by gaining Experience \svg{experience}.
 The most common sources of gaining Experience are the \pagelink{Treasure Die}{Treasure Die \svg{treasure}} and \pagelink{Combatexperience}{Combat}.
 Each new Level up requires \textbf{2 Experience}.
@@ -128,8 +91,6 @@ The Level Tracker on your Hero Board shows the following information:
 \item At which Levels your Main Hero must \pagelink{Playerdecks}{Search} for a new \pagelink{Ability}{Ability card} or gain a \pagelink{Specialty}{Specialty card}.
 Level numbers written in gold on the Level Tracker (\svg{level1}, \svg{level4} and \svg{level6}) give you a Specialty card, while silver Levels (\textbf{II}, \textbf{III}, \textbf{V}, \textbf{VII}) give you an Ability card.
 \end{itemize}
-\vfill\null
-\columnbreak
 List of all effects:
 \begin{itemize}
 \item \textbf{Level I} – Your Hand Limit\index{Hand Limit} is 4.
@@ -147,9 +108,4 @@ You may play 3 cards for their Expert Effect per Round.
 \item \textbf{Level VII} – Your Hand Limit is 7.
 Search (2) the Ability Deck.
 \end{itemize}
-
-\end{multicols}
-
-\begin{tikzpicture}[overlay]
-  \node[opacity=0.2] at (9, -3) {\includegraphics[width=0.6\linewidth]{\art/cavalryman.png}};
-\end{tikzpicture}
+\end{multicols*}
