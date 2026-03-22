@@ -190,6 +190,60 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
 \end{multicols}
 
 \clearpage
+
+\begin{expansion}*{navalbattles}
+\begin{multicols*}{2}
+  \pagetarget{Empowered Ability Token}{\subsection*{Empowered Ability Tokens}}
+  \setlength\intextsep{0pt}
+  \setlength\columnsep{1em}
+  \begin{wrapfigure}{r}{0.2\linewidth}
+    \includegraphics[width=\linewidth]{\images/crown-token.png}
+  \end{wrapfigure}
+  Empowered Ability cards improve your Hero's Ability cards.
+  You can gain them by spending Empowered Ability Tokens.
+  You can use one of these Tokens at the moment you gain a new Ability card, regardless of how you obtain it.
+  If you use such a Token, discard it, remove the just-gained normal Ability card from the game, and gain the corresponding Empowered Ability card in its stead.
+  There's only 1 copy of each Empowered Ability card, so if one player takes a particular Empowered Ability card, they prevent other players from obtaining it.
+  If an Empowered Ability card isn't available, you can't spend the Empowered Ability Token and must keep it for later turns.
+
+  You can gain Empowered Ability Tokens only in certain Scenarios (e.~g.~``Island of Fire'' from the Naval Battles Mission Book).\\
+
+  \vspace*{5em}
+  \begin{center}
+    \transparent{0.2}\includegraphics[width=\linewidth]{\art/scholar.png}
+  \end{center}
+
+  \subsection*{Gaining Empowered Ability\\Example}
+  \textit{Bob playing as Crag Hack reaches Level II.
+    He performs the Search (2) action and draws two cards from the Ability Deck.
+    The cards are Offense and Wisdom.
+    He chooses Offense and places the other card on the discard pile.}
+
+  \begin{center}
+    \includegraphics[width=0.8\linewidth]{\examples/offense_over_wisdom.png}
+  \end{center}
+
+  \textit{Bob happens to have an Empowered Ability Token.
+    He may either use it, or save the token for later.
+    He decides to use it, so he removes the ``Offense'' Ability card and discards the Empowered Ability Token to take the Empowered ``Offense'' Ability card instead.}
+
+  \begin{center}
+    \begin{tikzpicture}
+      \draw (-3, 0) node {\includegraphics[width=0.45\linewidth]{\cards/ability-offense.png}};
+      \draw (-1.5, -1.9) node[circular drop shadow={shadow scale=0.85, shadow xshift=0.5ex, shadow yshift=-0.5ex, opacity=0.7,
+        fill=black, path fading={circle with fuzzy edge 15 percent},
+        every shadow}]{\includegraphics[width=0.2\linewidth]{\images/crown-token.png}};
+      \draw (1.5, 0) node {\includegraphics[width=0.45\linewidth]{\cards/ability-offense-empowered.png}};
+
+      \draw (-2.8, -3.5) node {\svg[35]{red_cross}};
+      \draw (1.6, -3.5) node {\svg[35]{green_tick}};
+    \end{tikzpicture}
+  \end{center}
+  \vspace*{\fill}
+\end{multicols*}
+\end{expansion}
+
+\newpage
 \begin{multicols}{2}
 \pagetarget{spells}{\subheader{Spell Cards}}
 
@@ -436,55 +490,3 @@ Spell Scrolls are not part of your Deck, therefore they are not carried over bet
 \end{expansion}
 
 \end{multicols}
-
-\begin{expansion}*{navalbattles}
-\begin{multicols*}{2}
-  \pagetarget{Empowered Ability Token}{\subsection*{Empowered Ability Tokens}}
-  \setlength\intextsep{0pt}
-  \setlength\columnsep{1em}
-  \begin{wrapfigure}{r}{0.2\linewidth}
-    \includegraphics[width=\linewidth]{\images/crown-token.png}
-  \end{wrapfigure}
-  Empowered Ability cards improve your Hero's Ability cards.
-  You can gain them by spending Empowered Ability Tokens.
-  You can use one of these Tokens at the moment you gain a new Ability card, regardless of how you obtain it.
-  If you use such a Token, discard it, remove the just-gained normal Ability card from the game, and gain the corresponding Empowered Ability card in its stead.
-  There's only 1 copy of each Empowered Ability card, so if one player takes a particular Empowered Ability card, they prevent other players from obtaining it.
-  If an Empowered Ability card isn't available, you can't spend the Empowered Ability Token and must keep it for later turns.
-
-  You can gain Empowered Ability Tokens only in certain Scenarios (e.~g.~``Island of Fire'' from the Naval Battles Mission Book).\\
-
-  \vspace*{5em}
-  \begin{center}
-    \transparent{0.2}\includegraphics[width=\linewidth]{\art/scholar.png}
-  \end{center}
-
-  \subsection*{Gaining Empowered Ability\\Example}
-  \textit{Bob playing as Crag Hack reaches Level II.
-    He performs the Search (2) action and draws two cards from the Ability Deck.
-    The cards are Offense and Wisdom.
-    He chooses Offense and places the other card on the discard pile.}
-
-  \begin{center}
-    \includegraphics[width=0.8\linewidth]{\examples/offense_over_wisdom.png}
-  \end{center}
-
-  \textit{Bob happens to have an Empowered Ability Token.
-    He may either use it, or save the token for later.
-    He decides to use it, so he removes the ``Offense'' Ability card and discards the Empowered Ability Token to take the Empowered ``Offense'' Ability card instead.}
-
-  \begin{center}
-    \begin{tikzpicture}
-      \draw (-3, 0) node {\includegraphics[width=0.45\linewidth]{\cards/ability-offense.png}};
-      \draw (-1.5, -1.9) node[circular drop shadow={shadow scale=0.85, shadow xshift=0.5ex, shadow yshift=-0.5ex, opacity=0.7,
-        fill=black, path fading={circle with fuzzy edge 15 percent},
-        every shadow}]{\includegraphics[width=0.2\linewidth]{\images/crown-token.png}};
-      \draw (1.5, 0) node {\includegraphics[width=0.45\linewidth]{\cards/ability-offense-empowered.png}};
-
-      \draw (-2.8, -3.5) node {\svg[35]{red_cross}};
-      \draw (1.6, -3.5) node {\svg[35]{green_tick}};
-    \end{tikzpicture}
-  \end{center}
-  \vspace*{\fill}
-\end{multicols*}
-\end{expansion}
