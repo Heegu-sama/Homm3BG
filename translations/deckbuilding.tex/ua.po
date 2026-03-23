@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-03-21 21:07+0000\n"
+"POT-Creation-Date: 2026-03-23 22:01+0000\n"
 "PO-Revision-Date: 2024-05-21 11:12+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -45,7 +45,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:382
+#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:436
 #: sections/units.tex:220 sections/units.tex:224
 #, no-wrap
 msgid ""
@@ -55,7 +55,7 @@ msgstr ""
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:117 sections/card_effect_keywords.tex:202
-#: sections/deckbuilding.tex:191 sections/deckbuilding.tex:399
+#: sections/deckbuilding.tex:191 sections/deckbuilding.tex:453
 #: sections/resources.tex:31
 #, no-wrap
 msgid "\\columnbreak"
@@ -578,8 +578,130 @@ msgstr ""
 "    \\item[\\textbf{4.}] Художній текст\n"
 "  \\end{itemize}"
 
+#. type: expansion
+#: sections/deckbuilding.tex:208
+#, no-wrap
+msgid ""
+"*{navalbattles}\n"
+"\\begin{multicols*}{2}\n"
+"  \\pagetarget{Empowered Ability Token}{\\subsection*{Empowered Ability Tokens}}\n"
+"  \\setlength\\intextsep{0pt}\n"
+"  \\setlength\\columnsep{1em}\n"
+"  \\begin{wrapfigure}{r}{0.2\\linewidth}\n"
+"    \\includegraphics[width=\\linewidth]{\\images/crown-token.png}\n"
+"  \\end{wrapfigure}\n"
+"  Empowered Ability cards improve your Hero's Ability cards.\n"
+"  You can gain them by spending Empowered Ability Tokens.\n"
+"  You can use one of these Tokens at the moment you gain a new Ability card, regardless of how you obtain it.\n"
+"  If you use such a Token, discard it, remove the just-gained normal Ability card from the game, and gain the corresponding Empowered Ability card in its stead.\n"
+"  There's only 1 copy of each Empowered Ability card, so if one player takes a particular Empowered Ability card, they prevent other players from obtaining it.\n"
+"  If an Empowered Ability card isn't available, you can't spend the Empowered Ability Token and must keep it for later turns.\n"
+"\n"
+msgstr ""
+
+#. type: expansion
+#: sections/deckbuilding.tex:210
+#, no-wrap
+msgid ""
+"  You can gain Empowered Ability Tokens only in certain Scenarios (e.~g.~``Island of Fire'' from the Naval Battles Mission Book).\\\\\n"
+"\n"
+msgstr ""
+
+#. type: expansion
+#: sections/deckbuilding.tex:215
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\vspace*{\\fill}\n"
+#| "\\hspace{-2em}{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/gremlin.png}}\n"
+#| "\n"
+msgid ""
+"  \\vspace*{5em}\n"
+"  \\begin{center}\n"
+"    \\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/scholar.png}\n"
+"  \\end{center}\n"
+"\n"
+msgstr ""
+"\\vspace*{\\fill}\n"
+"\\hspace{-2em}{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/gremlin.png}}\n"
+"\n"
+
+#. type: expansion
+#: sections/deckbuilding.tex:221
+#, no-wrap
+msgid ""
+"  \\subsection*{Gaining Empowered Ability\\\\Example}\n"
+"  \\textit{Bob playing as Crag Hack reaches Level II.\n"
+"    He performs the Search (2) action and draws two cards from the Ability Deck.\n"
+"    The cards are Offense and Wisdom.\n"
+"    He chooses Offense and places the other card on the discard pile.}\n"
+"\n"
+msgstr ""
+
+#. type: expansion
+#: sections/deckbuilding.tex:225
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{center}\n"
+#| "  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
+#| "\\end{center}\n"
+#| "\\columnbreak\n"
+#| "\n"
+msgid ""
+"  \\begin{center}\n"
+"    \\includegraphics[width=0.8\\linewidth]{\\examples/offense_over_wisdom.png}\n"
+"  \\end{center}\n"
+"\n"
+msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
+"\\end{center}\n"
+"\\columnbreak\n"
+"\n"
+
+#. type: expansion
+#: sections/deckbuilding.tex:229
+#, no-wrap
+msgid ""
+"  \\textit{Bob happens to have an Empowered Ability Token.\n"
+"    He may either use it, or save the token for later.\n"
+"    He decides to use it, so he removes the ``Offense'' Ability card and discards the Empowered Ability Token to take the Empowered ``Offense'' Ability card instead.}\n"
+"\n"
+msgstr ""
+
+#. type: expansion
+#: sections/deckbuilding.tex:231
+#, no-wrap
+msgid ""
+"  \\begin{center}\n"
+"    \\begin{tikzpicture}\n"
+msgstr ""
+
+#. type: expansion
+#: sections/deckbuilding.tex:237
+#, no-wrap
+msgid ""
+"      \\draw (-3, 0) node {\\includegraphics[width=0.45\\linewidth]{\\cards/ability-offense.png}};\n"
+"      \\draw (-1.5, -1.9) node[circular drop shadow={shadow scale=0.85, shadow xshift=0.5ex, shadow yshift=-0.5ex, opacity=0.7,\n"
+"        fill=black, path fading={circle with fuzzy edge 15 percent},\n"
+"        every shadow}]{\\includegraphics[width=0.2\\linewidth]{\\images/crown-token.png}};\n"
+"      \\draw (1.5, 0) node {\\includegraphics[width=0.45\\linewidth]{\\cards/ability-offense-empowered.png}};\n"
+"\n"
+msgstr ""
+
+#. type: expansion
+#: sections/deckbuilding.tex:244
+#, no-wrap
+msgid ""
+"      \\draw (-2.8, -3.5) node {\\svg[35]{red_cross}};\n"
+"      \\draw (1.6, -3.5) node {\\svg[35]{green_tick}};\n"
+"    \\end{tikzpicture}\n"
+"  \\end{center}\n"
+"  \\vspace*{\\fill}\n"
+"\\end{multicols*}"
+msgstr ""
+
 #. type: multicols
-#: sections/deckbuilding.tex:195
+#: sections/deckbuilding.tex:249
 #, fuzzy, no-wrap
 #| msgid "\\pagetarget{spells}{Spell Cards}"
 msgid ""
@@ -589,7 +711,7 @@ msgid ""
 msgstr "\\pagetarget{spells}{Карти Заклинань}"
 
 #. type: multicols
-#: sections/deckbuilding.tex:203
+#: sections/deckbuilding.tex:257
 #, fuzzy, no-wrap
 #| msgid "Spell Cards\\index{Spell Card} have three possible primary effects.  Using the topmost, basic version of the Spell usually has no additional costs.  To access the other effects, you may \\textbf{Empower} a Spell\\index{Empowering Spells} by paying the indicated cost (3) to get a more powerful outcome (4).  You may pay this cost by playing other Cards for their Empower \\svg{empower} effect (e.g. the Spell Power Statistic) before casting the Spell.  All Spell Cards also have an alternative bottom (5) \\svg{empower} effect.  You cannot preserve the played \\svg{empower}: casting a Spell consumes all the \\svg{empower} played so far, and if you stop playing Cards, the power dissipates.  You may use a cheaper \\svg{empower} effect than what you've paid for, though."
 msgid ""
@@ -604,7 +726,7 @@ msgid ""
 msgstr "Карти Заклинань\\index{Карти Заклинань} мають три основні ефекти. Використання, базового ефекту Заклинання не потребує додаткових витрат.  Для отримання доступу до інших ефектів, ви можете \\textbf{Посилити} Заклинання\\index{Посилені Заклинання} сплативши вказану вартість (3) щоб отримати більш потужний результат (4). Ви можете сплатити цю вартість, розігравши інші Карти використавши їх ефект Посилення \\svg{empower} (наприклад, Характеристику Сили Заклинань) перед розіграшем Заклинання. Всі Карти Заклинань також мають альтернативний нижній (5) \\svg{empower} ефект. Ви не можете зберігати зіграні \\svg{empower}: розіграш Заклинання споживає всі \\svg{empower} зіграні досі, і якщо ви припиняєте грати Карти, сила розсіюється. Проте ви можете використати дешевший \\svg{empower} ефект, ніж той, за який ви заплатили."
 
 #. type: multicols
-#: sections/deckbuilding.tex:206
+#: sections/deckbuilding.tex:260
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -613,13 +735,13 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:207
+#: sections/deckbuilding.tex:261
 #, no-wrap
 msgid "    \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:220
+#: sections/deckbuilding.tex:274
 #, fuzzy, no-wrap
 #| msgid ""
 #| "    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
@@ -667,7 +789,7 @@ msgstr ""
 "    \\begin{scriptsize}\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:232
+#: sections/deckbuilding.tex:286
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{2}\n"
@@ -702,7 +824,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: multicols
-#: sections/deckbuilding.tex:236
+#: sections/deckbuilding.tex:290
 #, fuzzy, no-wrap
 #| msgid "Spells can be gained by Building the Mage Guild\\index{Mage Guild}.  Building it also enables you to use the Spell Book Token\\index{Spell Book Token} for buying additional Spells.  The Token cannot be used during the \\textbf{same Round} when the Guild is constructed. Spells can also be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgid ""
@@ -713,7 +835,7 @@ msgid ""
 msgstr "Заклинання можна отримати, Збудувавши Гільдію Магів\\index{Гільдія Магів}. Її створення також надає можливість використовувати Жетон Книги Заклинань\\index{Жетон Книги Заклинань} для купівлі додаткових Заклинань. Жетон не можна використовувати під час \\textbf{того ж Раунду} в якому була побудована Гільдія.\\par Заклинаннями можна \\pagelink{Trading}{обмінюватися} в Сценаріях з режимом Альянс та Кооператив."
 
 #. type: multicols
-#: sections/deckbuilding.tex:238
+#: sections/deckbuilding.tex:292
 #, fuzzy, no-wrap
 #| msgid "During Combat, \\textbf{only one Spell Card} may be played by each player \\textbf{per Combat Round}."
 msgid ""
@@ -722,7 +844,7 @@ msgid ""
 msgstr "Під час Бою, кожен гравець може розіграти \\textbf{тільки одну Карту Заклинання} \\textbf{за Раунд Бою}."
 
 #. type: multicols
-#: sections/deckbuilding.tex:241
+#: sections/deckbuilding.tex:295
 #, fuzzy, no-wrap
 #| msgid "\\columnbreak When you use an effect which lets you cast a Spell from somewhere other than your hand (such as directly from the Spell Deck), place that Spell into your Discard Pile after casting it."
 msgid ""
@@ -732,7 +854,7 @@ msgid ""
 msgstr "Коли ви використовуєте ефект, який дозволяє вам розіграти Заклинання не з руки (наприклад, прямо з Колоди Заклинань), після розіграшу покладіть це Заклинання у ваш Скид."
 
 #. type: multicols
-#: sections/deckbuilding.tex:243
+#: sections/deckbuilding.tex:297
 #, no-wrap
 msgid ""
 "Some complex Spell cards use keywords or require special components, see \\pagelink{spell keywords}{Card Effect Keywords}.\n"
@@ -740,7 +862,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:249
+#: sections/deckbuilding.tex:303
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\vspace*{\\fill}\n"
@@ -759,7 +881,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:255
+#: sections/deckbuilding.tex:309
 #, fuzzy, no-wrap
 #| msgid "All Spell Cards belong to one School of Magic\\index{Schools of Magic}: either Air, Fire, Earth or Water.  Spells with one School symbol on them are called \\textbf{Basic Spells}\\index{Basic Spell}, while Spells with four identical symbols are called \\textbf{Expert Spells}\\index{Expert Spell}.  \\textbf{Magic Arrow} is a Basic Spell; when casting the \\textbf{Magic Arrow}, you must select which School it belongs to.  By default there's no difference, but certain game effects can refer to specific Schools and to Basic/Expert Spells."
 msgid ""
@@ -772,7 +894,7 @@ msgid ""
 msgstr "Всі Карти Заклинань належать до однієї Школи Магії\\index{Школи Магії}: або Повітря, Вогню, Землі чи Води. Заклинання з одним символом Школи називаються \\textbf{Базовими Заклинаннями}\\index{Базове Заклинання}, тоді як Заклинання з чотирма однаковими символами називаються \\textbf{Експертними Заклинаннями}\\index{Експертне Заклинання}. \\textbf{Чарівна Стріла} є Базовим Заклинанням; під час розіграшу \\textbf{Чарівної Стріли}, ви повинні вибрати до якої Школи вона належить. За замовчуванням немає різниці, але певні ігрові ефекти можуть посилатися на конкретні Школи та на Базові/Експертні Заклинання."
 
 #. type: multicols
-#: sections/deckbuilding.tex:283
+#: sections/deckbuilding.tex:337
 #, fuzzy, no-wrap
 msgid ""
 "\\begin{minipage}[t]{0.48\\textwidth}\n"
@@ -829,7 +951,7 @@ msgstr ""
 "\\bigbreak"
 
 #. type: multicols
-#: sections/deckbuilding.tex:286
+#: sections/deckbuilding.tex:340
 #, fuzzy, no-wrap
 #| msgid "\\pagetarget{Specialty}{Hero Specialty Cards}"
 msgid ""
@@ -839,7 +961,7 @@ msgid ""
 msgstr "\\pagetarget{Specialty}{Карти Спеціалізації Героя}"
 
 #. type: multicols
-#: sections/deckbuilding.tex:291
+#: sections/deckbuilding.tex:345
 #, fuzzy, no-wrap
 #| msgid "Hero Specialty Cards\\index{Specialty Card} are gained from \\pagelink{Level}{Level ups}.  Each Main Hero has a unique set of Specialty Cards.  While many of these Cards have effects which resemble Spell Cards and even make use of \\svg{empower} and Schools of Magic, Specialty Cards are their \\textbf{own unique category of Cards}.  For example, the limit of 1 Spell per Combat Round doesn't apply to Specialty Cards."
 msgid ""
@@ -851,7 +973,7 @@ msgid ""
 msgstr "Карти Спеціалізації Героя\\index{Карти Спеціалізації} отримуються під час \\pagelink{Level}{підвищення Рівня}. Кожен Головний Герой має унікальний набір Карт Спеціалізації. Хоча багато з цих Карт мають ефекти, схожі на ефекти Карт Заклинань і навіть використовують \\svg{empower} та Школи Магії, Карти Спеціалізації \\textbf{є окремою унікальною категорією Карт}. Наприклад, обмеження в 1 Заклинання за Раунд Бою не стосується Карт Спеціалізації."
 
 #. type: multicols
-#: sections/deckbuilding.tex:299
+#: sections/deckbuilding.tex:353
 #, fuzzy, no-wrap
 #| msgid "{ \\medskip \\centering \\includegraphics[width=0.7\\linewidth]{\\cards/specialty.png}\\\\ \\medskip \\footnotesize\\textit{A Level 4 Specialty Card, belonging to Catherine the Knight.} }"
 msgid ""
@@ -866,7 +988,7 @@ msgid ""
 msgstr "{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/specialty.png}\\\\ \\medskip \\footnotesize\\textit{Карта Спеціалізації 4-го рівня, що належить Лицарю Катерині.} }"
 
 #. type: multicols
-#: sections/deckbuilding.tex:307
+#: sections/deckbuilding.tex:361
 #, fuzzy, no-wrap
 #| msgid "{ \\medskip \\centering \\includegraphics[width=0.7\\linewidth]{\\cards/specialty.png}\\\\ \\medskip \\footnotesize\\textit{A Level 4 Specialty Card, belonging to Catherine the Knight.} }"
 msgid ""
@@ -881,7 +1003,7 @@ msgid ""
 msgstr "{ \\centering \\includegraphics[width=0.6\\linewidth]{\\cards/specialty.png}\\\\ \\medskip \\footnotesize\\textit{Карта Спеціалізації 4-го рівня, що належить Лицарю Катерині.} }"
 
 #. type: multicols
-#: sections/deckbuilding.tex:310
+#: sections/deckbuilding.tex:364
 #, fuzzy, no-wrap
 #| msgid "\\pagetarget{Artifact}{Artifact} Cards"
 msgid ""
@@ -891,7 +1013,7 @@ msgid ""
 msgstr "\\pagetarget{Artifact}{Карти Артефактів}"
 
 #. type: multicols
-#: sections/deckbuilding.tex:317
+#: sections/deckbuilding.tex:371
 #, fuzzy, no-wrap
 #| msgid "Artifact Cards\\index{Artifact Card} have a top and bottom effect. When you play one, you must \\textbf{choose which effect} you are using.  They are divided into 3 Levels: Minor, Major, and Relic, with different border color.  These Levels relate to the overall Power of the Card and may be referenced when resolving certain effects or during Scenario setup.  Otherwise, all Artifact Cards are normally shuffled together to form the Artifact Deck regardless of their Level.  They are gained through map exploration.\\par Artifacts can be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios."
 msgid ""
@@ -905,7 +1027,7 @@ msgid ""
 msgstr "Карти Артефактів\\index{Карти Артефактів} мають верхній і нижній ефект. Коли ви розігруєте таку Карту, ви повинні \\textbf{обрати ефект} який буде використано. Артефакти поділяються на 3 Рівні: Малі, Великі і Реліквії, з різними кольорами рамок. Ці рівні визначають загальну Силу Карти і можуть бути використані при вирішенні певних ефектів або під час підготовки Сценарію. Для формування Колоди Артефактів, затасуйте всі Карти Артефактів разом. Артефакти можна отримати під час дослідження Мапи.\\par Артефакти можна \\pagelink{Trading}{обмінювати} в Сценаріях з режимом Альянс та Кооператив."
 
 #. type: multicols
-#: sections/deckbuilding.tex:337
+#: sections/deckbuilding.tex:391
 #, no-wrap
 msgid ""
 "  \\node (major) {\\includegraphics[width=0.6\\linewidth]{\\cards/artifact.png}};\n"
@@ -931,7 +1053,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:347
+#: sections/deckbuilding.tex:401
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{2}\n"
@@ -965,7 +1087,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: center
-#: sections/deckbuilding.tex:354
+#: sections/deckbuilding.tex:408
 #, fuzzy
 #| msgid ""
 #| "{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/"
@@ -978,7 +1100,7 @@ msgstr ""
 "air_magic.png}}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:359
+#: sections/deckbuilding.tex:413
 #, fuzzy, no-wrap
 #| msgid "\\pagetarget{spells}{Spell Cards}"
 msgid ""
@@ -988,7 +1110,7 @@ msgid ""
 msgstr "\\pagetarget{spells}{Карти Заклинань}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:364
+#: sections/deckbuilding.tex:418
 #, no-wrap
 msgid ""
 "During setup shuffle 10 of the Spell Scroll cards into the Artifact Deck.\n"
@@ -999,7 +1121,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:374
+#: sections/deckbuilding.tex:428
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/relic_artifact.png}};\n"
@@ -1028,7 +1150,7 @@ msgstr ""
 "  \\end{center}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:380
+#: sections/deckbuilding.tex:434
 #, no-wrap
 msgid ""
 "\\vspace*{1em}\n"
@@ -1040,7 +1162,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:390
+#: sections/deckbuilding.tex:444
 #, no-wrap
 msgid ""
 "You can play Spells from a Spell Scroll like any other Spell with the following exceptions:\n"
@@ -1053,7 +1175,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:399
+#: sections/deckbuilding.tex:453
 #, no-wrap
 msgid ""
 "{stronghold}\n"
@@ -1067,7 +1189,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:401
+#: sections/deckbuilding.tex:455
 #, no-wrap
 msgid ""
 "If the last Spell on a Spell Scroll is used or sold, place the Spell Scroll back in its Deck.\n"
@@ -1075,7 +1197,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:404
+#: sections/deckbuilding.tex:458
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -1083,7 +1205,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:409
+#: sections/deckbuilding.tex:463
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{Combatexperience}{Combat Experience}}\n"
@@ -1097,7 +1219,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:413
+#: sections/deckbuilding.tex:467
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{War Machines}{War Machines}}\n"
@@ -1120,7 +1242,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:436
+#: sections/deckbuilding.tex:490
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{\n"
@@ -1193,125 +1315,3 @@ msgstr ""
 "  \\end{itemize}\n"
 "}\n"
 "\n"
-
-#. type: expansion
-#: sections/deckbuilding.tex:454
-#, no-wrap
-msgid ""
-"*{navalbattles}\n"
-"\\pagetarget{Empowered Ability Token}{\\subheader[notoc]{Empowered Ability Tokens}}\n"
-"\\begin{multicols*}{2}\n"
-"  \\setlength\\intextsep{0pt}\n"
-"  \\setlength\\columnsep{1em}\n"
-"  \\begin{wrapfigure}{r}{0.2\\linewidth}\n"
-"    \\includegraphics[width=\\linewidth]{\\images/crown-token.png}\n"
-"  \\end{wrapfigure}\n"
-"  Empowered Ability cards improve your Hero's Ability cards.\n"
-"  You can gain them by spending Empowered Ability Tokens.\n"
-"  You can use one of these Tokens at the moment you gain a new Ability card, regardless of how you obtain it.\n"
-"  If you use such a Token, discard it, remove the just-gained normal Ability card from the game, and gain the corresponding Empowered Ability card in its stead.\n"
-"  There's only 1 copy of each Empowered Ability card, so if one player takes a particular Empowered Ability card, they prevent other players from obtaining it.\n"
-"  If an Empowered Ability card isn't available, you can't spend the Empowered Ability Token and must keep it for later turns.\n"
-"\n"
-msgstr ""
-
-#. type: expansion
-#: sections/deckbuilding.tex:456
-#, no-wrap
-msgid ""
-"  You can gain Empowered Ability Tokens only in certain Scenarios (e.~g.~``Island of Fire'' from the Naval Battles Mission Book).\\\\\n"
-"\n"
-msgstr ""
-
-#. type: expansion
-#: sections/deckbuilding.tex:461
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\vspace*{\\fill}\n"
-#| "\\hspace{-2em}{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/gremlin.png}}\n"
-#| "\n"
-msgid ""
-"  \\vspace*{5em}\n"
-"  \\begin{center}\n"
-"    \\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/scholar.png}\n"
-"  \\end{center}\n"
-"\n"
-msgstr ""
-"\\vspace*{\\fill}\n"
-"\\hspace{-2em}{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/gremlin.png}}\n"
-"\n"
-
-#. type: expansion
-#: sections/deckbuilding.tex:467
-#, no-wrap
-msgid ""
-"  \\subsection*{Gaining Empowered Ability\\\\Example}\n"
-"  \\textit{Bob playing as Crag Hack reaches Level II.\n"
-"    He performs the Search (2) action and draws two cards from the Ability Deck.\n"
-"    The cards are Offense and Wisdom.\n"
-"    He chooses Offense and places the other card on the discard pile.}\n"
-"\n"
-msgstr ""
-
-#. type: expansion
-#: sections/deckbuilding.tex:471
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-#| "\\end{center}\n"
-#| "\\columnbreak\n"
-#| "\n"
-msgid ""
-"  \\begin{center}\n"
-"    \\includegraphics[width=0.8\\linewidth]{\\examples/offense_over_wisdom.png}\n"
-"  \\end{center}\n"
-"\n"
-msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-"\\end{center}\n"
-"\\columnbreak\n"
-"\n"
-
-#. type: expansion
-#: sections/deckbuilding.tex:475
-#, no-wrap
-msgid ""
-"  \\textit{Bob happens to have an Empowered Ability Token.\n"
-"    He may either use it, or save the token for later.\n"
-"    He decides to use it, so he removes the ``Offense'' Ability card and discards the Empowered Ability Token to take the Empowered ``Offense'' Ability card instead.}\n"
-"\n"
-msgstr ""
-
-#. type: expansion
-#: sections/deckbuilding.tex:477
-#, no-wrap
-msgid ""
-"  \\begin{center}\n"
-"    \\begin{tikzpicture}\n"
-msgstr ""
-
-#. type: expansion
-#: sections/deckbuilding.tex:483
-#, no-wrap
-msgid ""
-"      \\draw (-3, 0) node {\\includegraphics[width=0.45\\linewidth]{\\cards/ability-offense.png}};\n"
-"      \\draw (-1.5, -1.9) node[circular drop shadow={shadow scale=0.85, shadow xshift=0.5ex, shadow yshift=-0.5ex, opacity=0.7,\n"
-"        fill=black, path fading={circle with fuzzy edge 15 percent},\n"
-"        every shadow}]{\\includegraphics[width=0.2\\linewidth]{\\images/crown-token.png}};\n"
-"      \\draw (1.5, 0) node {\\includegraphics[width=0.45\\linewidth]{\\cards/ability-offense-empowered.png}};\n"
-"\n"
-msgstr ""
-
-#. type: expansion
-#: sections/deckbuilding.tex:490
-#, no-wrap
-msgid ""
-"      \\draw (-2.8, -3.5) node {\\svg[35]{red_cross}};\n"
-"      \\draw (1.6, -3.5) node {\\svg[35]{green_tick}};\n"
-"    \\end{tikzpicture}\n"
-"  \\end{center}\n"
-"  \\vspace*{\\fill}\n"
-"\\end{multicols*}"
-msgstr ""
