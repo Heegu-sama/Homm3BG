@@ -39,12 +39,12 @@ jobs:
 
     steps:
       - name: Set up repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Cache po4a entries [${{ inputs.language }}]
         if: inputs.language != 'en' && github.event_name == 'pull_request'
         id: cache-po4a
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: |
             sections/translated/${{ inputs.language }}/*.tex
@@ -94,7 +94,7 @@ jobs:
           fi
 
       - name: Cache built PDF
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         if: github.event_name == 'pull_request'
         id: cache-pdf
         with:
@@ -111,7 +111,7 @@ jobs:
 
       - name: Cache Inkscape artifacts
         if: steps.cache-pdf.outputs.cache-hit != 'true'
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: |
             ./svg-inkscape
@@ -121,7 +121,7 @@ jobs:
             inkscape-
 
       - name: Cache LaTeX packages and build
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         if: steps.cache-pdf.outputs.cache-hit != 'true'
         with:
           path: |
@@ -184,7 +184,7 @@ jobs:
           echo "number_of_pages=${NUMBER_OF_PAGES}" > $GITHUB_OUTPUT
 
       - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ env.ARTIFACT_NAME }}
           path: ${{ env.OUTPUT_FILENAME }}
