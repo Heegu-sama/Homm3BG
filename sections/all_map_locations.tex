@@ -115,23 +115,14 @@ The effects of the following \textbf{Visitable} Fields are explained by the symb
 
   \bigskip
 
-  \locationtitle{Grave}
-  \framedimage[\linewidth]{\map_locations/grave.jpg}\\
-  \expansionlabelnocap{cove}
-
-  \bigskip
-
   \vspace*{-2pt}
   \locationtitle{Windmill}
   \framedimage[\linewidth]{\map_locations/windmill.jpg}
   {\small Due to a misprint, the Windmill on the Tile \texttt{\#N3} has a \textbf{?}. It should be ``\textbf{+}1 \svg{valuables}''.}
 
-
   \vspace*{\fill}
-
-  \begin{tikzpicture}[remember picture, overlay]
-    \node[opacity=0.2] at ([xshift=12em, yshift=10em]current page.south) {\includegraphics[width=0.7\linewidth]{\art/morale_high.png}};
-  \end{tikzpicture}
+  {\transparent{0.2}\includegraphics[width=\linewidth]{\art/morale_high.png}}
+  \vspace*{\fill}
 }
 
 \pagebreak
@@ -661,6 +652,20 @@ When you flag a Settlement, choose one of the following options:
     }
   \end{minipage}\hfill
 \end{figure}
+
+\begin{figure}[H]
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \locationtitle{Grave}
+    \framedimage[\linewidth]{\map_locations/grave.jpg}
+    \expansionlabel{cove}
+    \caption{\small Category: \textbf{Visitable}\\
+      Gain Negative morale, 3 \svg{gold}, and \textbf{Search (1)} \svg{artifact}.
+    }
+  \end{minipage}\hfill
+\end{figure}
+
 
 \begin{tikzpicture}[remember picture, overlay]
   \node[opacity=0.15] at ([xshift=13em, yshift=24.9em]current page.south) {\includegraphics[width=0.8\linewidth, trim=0 200pt 0 0, clip]{\art/cyclops.png}};
