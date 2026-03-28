@@ -519,28 +519,17 @@ When you flag a Settlement, choose one of the following options:
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \locationtitle{University}
-    \framedimage[\linewidth]{\map_locations/university.jpg}
-    \expansionlabel{tower}
+    \locationtitle{Faerie Ring}
+    \framedimage[\linewidth]{\map_locations/faerie_ring.jpg}
+    \expansionlabel{conflux}
     \caption{\small Category: \textbf{Visitable}\\
-      \svg{pay} 6 \svg{gold} to \textbf{Search (4)} the Ability Discard Pile.}
+      Remove one card from your hand, then Search (2) the card's Deck.
+      You cannot remove Statistics, Starting Ability, or Specialty cards.}
   \end{minipage}
 \end{figure}
 
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \locationtitle{Elemental Conflux}
-    \framedimage[\linewidth]{\map_locations/elemental_conflux.jpg}
-    \expansionlabel{conflux}
-    \caption{\small Category: \textbf{Visitable}\\
-      For every Dwelling you have, draw from the corresponding Neutral Unit Decks until you find one ``Elementals'' unit from each (reshuffle if you run out of units before finding one).
-      You can recruit one of those Elementals if you \svg{pay} its recruitment cost.
-      Shuffle the remaining units back into their respective Decks.
-    }
-  \end{minipage}\hfill
-    \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \captionsetup{singlelinecheck=off}
     \centering
@@ -557,6 +546,18 @@ When you flag a Settlement, choose one of the following options:
         \item[\textbf{\textminus{}1}] -- Draw 2 cards from the Spell Deck, gain one of them and discard the other.
         \end{itemize}
        }
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \locationtitle{Elemental Conflux}
+    \framedimage[\linewidth]{\map_locations/elemental_conflux.jpg}
+    \expansionlabel{conflux}
+    \caption{\small Category: \textbf{Visitable}\\
+      For every Dwelling you have, draw from the corresponding Neutral Unit Decks until you find one ``Elementals'' unit from each (reshuffle if you run out of units before finding one).
+      You can recruit one of those Elementals if you \svg{pay} its recruitment cost.
+      Shuffle the remaining units back into their respective Decks.
+    }
   \end{minipage}
 \end{figure}
 
@@ -564,22 +565,73 @@ When you flag a Settlement, choose one of the following options:
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \locationtitle{Faerie Ring}
-    \framedimage[\linewidth]{\map_locations/faerie_ring.jpg}
-    \expansionlabel{conflux}
+    \locationtitle{University}
+    \framedimage[\linewidth]{\map_locations/university.jpg}
+    \expansionlabel{tower}
     \caption{\small Category: \textbf{Visitable}\\
-      Remove one card from your hand, then Search (2) the card's Deck.
-      You cannot remove Statistics, Starting Ability, or Specialty cards.}
+      \svg{pay} 6 \svg{gold} to \textbf{Search (4)} the Ability Discard Pile.}
   \end{minipage}\hfill
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \pagetarget{Star Axis}{\locationtitle{Star Axis}}
-    \framedimage[\linewidth]{\map_locations/star_axis.jpg}
-    \expansionlabel{inferno}
-    \caption{\small Category: \textbf{Flaggable}\\
-      You may remove one of your Statistic cards from your hand and replace it with an \protect\pagelink{Empowered Statistic}{\textbf{Empowered}} one of the same type.
-      When you flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}
+    \locationtitle{Market of Time}
+    \framedimage[\linewidth]{\map_locations/market_of_time.jpg}
+    \expansionlabel{tower}
+    \caption{\small Category: \textbf{Visitable}\\
+      Remove one card from your hand.
+      Then \textbf{Search (2)} the Ability, Spell, or Artifact Deck.
+    }
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \locationtitle{Hill Fort}
+    \framedimage[\linewidth]{\map_locations/hill_fort.jpg}
+    \expansionlabel{tower}
+    \caption{\small Category: \textbf{Visitable}\\
+      You may immediately reinforce one of your \svg{bronze} or \svg{silver} units.
+      The reinforcement cost is reduced by 3 \svg{gold} to a minimum of 0.}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \locationtitle{Prison}
+    \framedimage[\linewidth]{\map_locations/prison.jpg}
+    \expansionlabel{tower}
+    \caption{\small Category: \textbf{Visitable}\\
+      Gain a Secondary Hero.
+      Place their model on this Field.
+      If you already have a Secondary Hero, gain 3 \svg{gold} instead.}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \locationtitle{Spell Scroll}
+    \framedimage[\linewidth]{\map_locations/spell_scroll.jpg}
+    \expansionlabel{stronghold}
+    \caption{\small Category: \textbf{Visitable}\\
+      Take a Spell Scroll card from its Deck and place it next to your Hero Board.
+      Draw two Spells and place them face-down at the Spell Scroll card.
+      You can use these Spells \protect\pagelink{Spell Scroll Cards}{with some restrictions}.
+    }
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.47\textwidth}
+    \vspace{0pt}
+    \centering
+    \locationtitle{Cyclops Stockpile}
+    \framedimage[\linewidth]{\map_locations/cyclops_stockpile.jpg}
+    \expansionlabel{stronghold}
+    \caption{\small Category: \textbf{Visitable}\\
+      When preparing the Neutral Army guarding this location, instead of drawing 1 \svg{azure} unit, find 2 \svg{golden} \protect\wikilink{units/cyclopes}{Cyclopes} and add them to the Neutral Army (look for them first in the \svg{golden} discard pile, and then in the \svg{golden} Neutral Unit Deck).
+      If you win the Combat, roll and resolve 4 \svg{resource_die}.
+      Any additional effects depend on the Scenario.
+    }
   \end{minipage}
 \end{figure}
 
@@ -626,70 +678,31 @@ When you flag a Settlement, choose one of the following options:
   \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \locationtitle{Hill Fort}
-    \framedimage[\linewidth]{\map_locations/hill_fort.jpg}
-    \expansionlabel{tower}
-    \caption{\small Category: \textbf{Visitable}\\
-      You may immediately reinforce one of your \svg{bronze} or \svg{silver} units.
-      The reinforcement cost is reduced by 3 \svg{gold} to a minimum of 0.}
+    \pagetarget{Star Axis}{\locationtitle{Star Axis}}
+    \framedimage[\linewidth]{\map_locations/star_axis.jpg}
+    \expansionlabel{inferno}
+    \caption{\small Category: \textbf{Flaggable}\\
+      You may remove one of your Statistic cards from your hand and replace it with an \protect\pagelink{Empowered Statistic}{\textbf{Empowered}} one of the same type.
+      When you flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}
   \end{minipage}\hfill
-  \begin{minipage}[t]{0.47\textwidth}
+    \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
-    \locationtitle{Prison}
-    \framedimage[\linewidth]{\map_locations/prison.jpg}
-    \expansionlabel{tower}
+    \locationtitle{Grave}
+    \framedimage[\linewidth]{\map_locations/grave.jpg}
+    \expansionlabel{cove}
     \caption{\small Category: \textbf{Visitable}\\
-      Gain a Secondary Hero.
-      Place their model on this Field.
-      If you already have a Secondary Hero, gain 3 \svg{gold} instead.}
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[H]
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \locationtitle{Spell Scroll}
-    \framedimage[\linewidth]{\map_locations/spell_scroll.jpg}
-    \expansionlabel{stronghold}
-    \caption{\small Category: \textbf{Visitable}\\
-      Take a Spell Scroll card from its Deck and place it next to your Hero Board.
-      Draw two Spells and place them face-down at the Spell Scroll card.
-      You can use these Spells \protect\pagelink{Spell Scroll Cards}{with some restrictions}.
-    }
-  \end{minipage}\hfill
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \locationtitle{Market of Time}
-    \framedimage[\linewidth]{\map_locations/market_of_time.jpg}
-    \expansionlabel{tower}
-    \caption{\small Category: \textbf{Visitable}\\
-      Remove one card from your hand.
-      Then \textbf{Search (2)} the Ability, Spell, or Artifact Deck.
+      Gain \svg{morale_negative}, 3 \svg{gold}, and \textbf{Search (1)} \svg{artifact}.
     }
   \end{minipage}
 \end{figure}
 
-\begin{figure}[H]
-  \begin{minipage}[t]{0.47\textwidth}
-    \vspace{0pt}
-    \centering
-    \locationtitle{Cyclops Stockpile}
-    \framedimage[\linewidth]{\map_locations/cyclops_stockpile.jpg}
-    \expansionlabel{stronghold}
-    \caption{\small Category: \textbf{Visitable}\\
-      When preparing the Neutral Army guarding this location, instead of drawing 1 \svg{azure} unit, find 2 \svg{golden} \protect\wikilink{units/cyclopes}{Cyclopes} and add them to the Neutral Army (look for them first in the \svg{golden} discard pile, and then in the \svg{golden} Neutral Unit Deck).
-      If you win the Combat, roll and resolve 4 \svg{resource_die}.
-      Any additional effects depend on the Scenario.
-    }
-  \end{minipage}\hfill
-\end{figure}
+\textlang{english}{\begin{tikzpicture}[remember picture, overlay]
+  \node(cover)[anchor=center, yshift=12em, opacity=0.07] at (current page.south) {
+    \includegraphics[width=1.01\paperwidth, keepaspectratio]{\art/cove_background.png}
+  };
 
-\begin{tikzpicture}[remember picture, overlay]
-  \node[opacity=0.15] at ([xshift=13em, yshift=24.9em]current page.south) {\includegraphics[width=0.8\linewidth, trim=0 200pt 0 0, clip]{\art/cyclops.png}};
-\end{tikzpicture}
+\end{tikzpicture}}
 
 \newpage
 
