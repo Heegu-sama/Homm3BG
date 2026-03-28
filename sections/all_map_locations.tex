@@ -78,68 +78,95 @@ The effects of the following \textbf{Visitable} \pagetarget{All Map Locations}{f
 
 The effects of the following \textbf{Visitable} Fields are explained by the symbols on the previous page:
 
-\begin{multicols*}{2}
-{\centering
+\bigskip
 
+\noindent
+\begin{minipage}[t]{0.47\textwidth}
+  \vspace{0pt}
+  \centering
   \locationtitle{Fountain of Youth}
-  \framedimage[\linewidth]{\map_locations/fountain_of_youth.jpg}\\
-
-  \bigskip
-
-  \locationtitle{Warrior's Tomb}
-  \framedimage[\linewidth]{\map_locations/warriors_tomb.jpg}\\
-
-  \bigskip
-
-  \locationtitle{Mystical Garden}
-  \framedimage[\linewidth]{\map_locations/mystical_garden.jpg}\\
-
-  \bigskip
-
-  \locationtitle{Learning Stone}
-  \framedimage[\linewidth]{\map_locations/learning_stone.jpg}\\
-
-  \bigskip
-
-  \locationtitle{Shrine of Magic Gesture/Incantation}
-  \framedimage[\linewidth]{\map_locations/shrine_of_magic_whatever.jpg}\\
-  \filbreak
-
+  \framedimage[\textwidth]{\map_locations/fountain_of_youth.jpg}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.47\textwidth}
+  \vspace{0pt}
+  \centering
   \locationtitle{Water Wheel}
-  \framedimage[\linewidth]{\map_locations/water_wheel.jpg}\\
+  \framedimage[\textwidth]{\map_locations/water_wheel.jpg}
+\end{minipage}
 
-  \bigskip
+\bigskip
 
+\noindent
+\begin{minipage}[t]{0.47\textwidth}
+  \vspace{0pt}
+  \centering
+  \locationtitle{Warrior's Tomb}
+  \framedimage[\textwidth]{\map_locations/warriors_tomb.jpg}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.47\textwidth}
+  \vspace{0pt}
+  \centering
   \locationtitle{Temple}
-  \framedimage[\linewidth]{\map_locations/temple.jpg}\\
+  \framedimage[\textwidth]{\map_locations/temple.jpg}
+\end{minipage}
 
-  \bigskip
+\bigskip
 
-  \locationtitle{Grave}
-  \framedimage[\linewidth]{\map_locations/grave.jpg}\\
-  \expansionlabelnocap{cove}
+\noindent
+\begin{minipage}[t]{0.47\textwidth}
+  \vspace{0pt}
+  \centering
+  \locationtitle{Mystical Garden}
+  \framedimage[\textwidth]{\map_locations/mystical_garden.jpg}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.47\textwidth}
+  \vspace{0pt}
+  \centering
+  \locationtitle{Learning Stone}
+  \framedimage[\textwidth]{\map_locations/learning_stone.jpg}
+\end{minipage}
 
-  \bigskip
+\bigskip
 
-  \vspace*{-2pt}
+\noindent
+\begin{minipage}[t]{0.47\textwidth}
+  \vspace{0pt}
+  \centering
+  \locationtitle{Pandora's Box (land)}
+  \framedimage[\textwidth]{\map_locations/pandoras_box.jpg}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.47\textwidth}
+  \vspace{0pt}
+  \centering
+  \locationtitle{Pandora's Box (water)}
+  \framedimage[\textwidth]{\map_locations/pandoras_box_water.jpg}
+  \expansionlabel{cove}
+\end{minipage}
+
+\bigskip
+
+\noindent
+\begin{minipage}[t]{0.47\textwidth}
+  \vspace{0pt}
+  \centering
+  \locationtitle{Shrine of Magic Gesture/Incantation}
+  \framedimage[\textwidth]{\map_locations/shrine_of_magic_whatever.jpg}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.47\textwidth}
+  \vspace{0pt}
+  \centering
   \locationtitle{Windmill}
-  \framedimage[\linewidth]{\map_locations/windmill.jpg}
-  {\small Due to a misprint, the Windmill on the Tile \texttt{\#N3} has a \textbf{?}. It should be ``\textbf{+}1 \svg{valuables}''.}
-
-
-  \vspace*{\fill}
-
-  \begin{tikzpicture}[remember picture, overlay]
-    \node[opacity=0.2] at ([xshift=12em, yshift=10em]current page.south) {\includegraphics[width=0.7\linewidth]{\art/morale_high.png}};
-  \end{tikzpicture}
-}
+  \framedimage[\textwidth]{\map_locations/windmill.jpg}
+  {\small Due to a misprint, the Windmill on the Tile \texttt{\#N3} has a \textbf{?}. It should be ``\textbf{+}1~\svg{valuables}''.}
+\end{minipage}
 
 \pagebreak
 
+\begin{multicols*}{2}
 {\centering
 
-  \pagetarget{Pandora Box}{\locationtitle{Pandora's Box}}
-  \framedimage[\linewidth]{\map_locations/pandoras_boxes.jpg}\\
+  \locationtitle{Flotsam}
+  \framedimage[\linewidth]{\map_locations/flotsam.jpg}\\
   \expansionlabelnocap{cove}
 
   \bigskip
@@ -172,12 +199,6 @@ The effects of the following \textbf{Visitable} Fields are explained by the symb
   \vspace*{\fill}
   \columnbreak
 
-  \locationtitle{Flotsam}
-  \framedimage[\linewidth]{\map_locations/flotsam.jpg}\\
-  \expansionlabelnocap{cove}
-
-  \bigskip
-
   \locationtitle{Sea Barrel}
   \framedimage[\linewidth]{\map_locations/sea_barrel.jpg}\\
   \expansionlabelnocap{cove}
@@ -203,6 +224,10 @@ The effects of the following \textbf{Visitable} Fields are explained by the symb
   \bigskip
 
   \vspace*{\fill}
+
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[opacity=0.2] at ([xshift=12em, yshift=12em]current page.south) {\includegraphics[width=0.9\linewidth]{\art/morale_high.png}};
+  \end{tikzpicture}
 }
 
 \end{multicols*}
