@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-03-21 21:07+0000\n"
+"POT-Creation-Date: 2026-03-29 12:19+0000\n"
 "PO-Revision-Date: 2026-03-03 16:28+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,34 +17,52 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.7\n"
 
-#. type: multicols
+#. type: multicols*
 #: sections/all_map_locations.tex:5 sections/combat.tex:5
-#: sections/combat.tex:42 sections/combat.tex:131 sections/credits.tex:8
-#: sections/deckbuilding.tex:5 sections/deckbuilding.tex:52
-#: sections/deckbuilding.tex:73 sections/heroes.tex:5
-#: sections/map_elements.tex:93 sections/map_elements.tex:142
-#: sections/player_turns.tex:5 sections/resources.tex:5
-#: sections/round_structure.tex:5 sections/scenarios.tex:5
-#: sections/setup.tex:75 sections/solo_campaigns.tex:5
+#: sections/combat.tex:41 sections/combat.tex:132 sections/credits.tex:8
+#: sections/deckbuilding.tex:5 sections/deckbuilding.tex:73
+#: sections/heroes.tex:5 sections/map_elements.tex:93
+#: sections/map_elements.tex:142 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenarios.tex:5 sections/setup.tex:5 sections/solo_campaigns.tex:5
 #: sections/tournament_mode.tex:5 sections/town.tex:5 sections/trading.tex:5
-#: sections/units.tex:5 sections/units.tex:46
+#: sections/units.tex:5 sections/units.tex:42 sections/units.tex:222
 #, no-wrap
 msgid ""
 "{2}\n"
 "\n"
 msgstr ""
 
+#. type: multicols
+#: sections/all_map_locations.tex:51 sections/all_map_locations.tex:258
+#: sections/credits.tex:36 sections/deckbuilding.tex:80 sections/heroes.tex:79
+#: sections/units.tex:72
+#, no-wrap
+msgid ""
+"\\columnbreak\n"
+"\n"
+msgstr ""
+
 #. type: multicols*
-#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:382
-#: sections/units.tex:220 sections/units.tex:224
+#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:435
+#: sections/units.tex:230 sections/units.tex:234
 #, no-wrap
 msgid ""
 "\\medskip\n"
 "\n"
 msgstr ""
 
+#. type: multicols
+#: sections/combat.tex:33 sections/combat.tex:166 sections/credits.tex:38
+#: sections/credits.tex:42 sections/units.tex:57
+#, no-wrap
+msgid ""
+"\\vspace*{\\fill}\n"
+"\n"
+msgstr ""
+
 #. type: multicols*
-#: sections/heroes.tex:40 sections/player_turns.tex:56 sections/units.tex:41
+#: sections/heroes.tex:40 sections/player_turns.tex:56 sections/units.tex:37
 #, no-wrap
 msgid ""
 "\\clearpage\n"
@@ -55,7 +73,7 @@ msgstr ""
 #: sections/map_elements.tex:188 sections/map_elements.tex:197
 #: sections/map_elements.tex:269 sections/map_elements.tex:302
 #: sections/player_turns.tex:48 sections/tournament_mode.tex:67
-#: sections/units.tex:231
+#: sections/units.tex:241
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -132,29 +150,34 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:39
-#, no-wrap
+#: sections/units.tex:35
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{tikzpicture}[remember picture, overlay]\n"
+#| "  \\node[opacity=0.15] at ([xshift=11em, yshift=14.5em]current page.south) {\\includegraphics[width=1.2\\linewidth]{\\art/tome_of_fire_magic.png}};\n"
+#| "\\end{tikzpicture}\n"
+#| "\n"
 msgid ""
 "\\vspace*{\\fill}\n"
-"\\iftoggle{printable}{}{\\hspace{1em}}\n"
-"{\\transparent{0.2}\\includegraphics[width=\\iftoggle{printable}{\n"
-"  \\ifodd\\value{page}\n"
-"    1.2\\linewidth\n"
-"  \\else\n"
-"    1.32\\linewidth\n"
-"  \\fi\n"
-"}{1.2\\linewidth}]{\\art/gorgone.png}}\n"
-"\\vspace*{2em}\n"
+"\\begin{tikzpicture}[remember picture, overlay]\n"
+"  \\node[opacity=0.2, xscale=-1, anchor=west, xshift=-11.55em, yshift=-13em] at (current page.east) {\n"
+"    \\includegraphics[width=0.66\\paperwidth]{\\art/cavalryman.png}\n"
+"  };\n"
+"\\end{tikzpicture}\n"
 "\n"
 msgstr ""
+"\\begin{tikzpicture}[remember picture, overlay]\n"
+"  \\node[opacity=0.15] at ([xshift=11em, yshift=14.5em]current page.south) {\\includegraphics[width=1.2\\linewidth]{\\art/tome_of_fire_magic.png}};\n"
+"\\end{tikzpicture}\n"
+"\n"
 
 #. type: Plain text
-#: sections/units.tex:46
+#: sections/units.tex:42
 msgid "\\subheader{Unit Card Anatomy}"
 msgstr "\\subheader{Aufbau der Einheitenkarten}"
 
 #. type: multicols
-#: sections/units.tex:48
+#: sections/units.tex:44
 #, no-wrap
 msgid ""
 "\\vspace{0pt}\n"
@@ -162,7 +185,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/units.tex:59
+#: sections/units.tex:55
 #, no-wrap
 msgid ""
 "\\includegraphics[height=30px]{\\images/attack.png} \\textbf{Attack} – The amount of damage this unit deals when it attacks.\\par\n"
@@ -190,24 +213,28 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:65
-#, no-wrap
-msgid ""
-"\\vspace*{\\fill}\n"
-"\\hspace{-2em}\n"
-"{\\transparent{0.2}\\includegraphics[width=1.1\\linewidth]{\\art/behemoth.png}}\n"
-"\\vspace*{\\fill}\n"
-"\\columnbreak\n"
-"\n"
-msgstr ""
-"\\vspace*{\\fill}\n"
-"\\hspace{-2em}\n"
-"{\\transparent{0.2}\\includegraphics[width=1.1\\linewidth]{\\art/behemoth.png}}\n"
-
-#. type: multicols
 #: sections/units.tex:70
 #, no-wrap
 msgid ""
+"\\begin{tikzpicture}[remember picture, overlay]\n"
+"  \\iftoggle{printable}{\n"
+"    \\node[opacity=0.2, xscale=-1, anchor=east, xshift=22em, yshift=-13em] at (current page.west) {\n"
+"      \\includegraphics[width=0.66\\paperwidth]{\\art/cavalryman.png}\n"
+"    };\n"
+"  }{\n"
+"    \\node[opacity=0.2, xscale=-1, anchor=east, xshift=1em, yshift=-17em] at (current page.west) {\n"
+"      \\includegraphics[width=1.2\\linewidth]{\\art/gorgone.png}\n"
+"    };\n"
+"\n"
+"  }\n"
+"\\end{tikzpicture}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/units.tex:77
+#, no-wrap
+msgid ""
 "\\begin{multicols*}{2}\n"
 "  \\footnotesize\n"
 "  \\begin{center}\n"
@@ -221,7 +248,7 @@ msgstr ""
 "    \\begin{tikzpicture}\n"
 
 #. type: multicols
-#: sections/units.tex:98
+#: sections/units.tex:105
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (-1, 0) node {\\includegraphics[width=\\linewidth]{\\cards/unit-few.png}};\n"
@@ -308,7 +335,7 @@ msgstr ""
 "    \\begin{tikzpicture}\n"
 
 #. type: multicols
-#: sections/units.tex:122
+#: sections/units.tex:129
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=\\linewidth]{\\cards/unit-pack.png}};\n"
@@ -377,7 +404,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: multicols
-#: sections/units.tex:124
+#: sections/units.tex:131
 #, no-wrap
 msgid ""
 "\\bigbreak\n"
@@ -387,7 +414,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:138
+#: sections/units.tex:145
 #, no-wrap
 msgid ""
 "Most units have a \\textbf{special ability}\\index{Special Ability}:\\par\n"
@@ -420,19 +447,19 @@ msgstr ""
 "  Einige komplexe Einheitenfähigkeiten nutzen Schlüsselwörter oder erfordern \\pagelink{unit keywords}{bestimmte Spielmaterialien}.\n"
 "\n"
 
-#. type: multicols
-#: sections/units.tex:140
+#. type: multicols*
+#: sections/units.tex:147 sections/units.tex:245
 #, no-wrap
 msgid "\\vspace*{\\fill}"
 msgstr ""
 
 #. type: Plain text
-#: sections/units.tex:155
+#: sections/units.tex:162
 msgid "\\pagetarget{Unittype}{\\subheader{Unit Types}}"
 msgstr "\\pagetarget{Unittype}{\\subheader{Einheitentypen}}"
 
 #. type: multicols
-#: sections/units.tex:155
+#: sections/units.tex:162
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -462,7 +489,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:167
+#: sections/units.tex:174
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{Neutral Units}{Neutral Units}}\n"
@@ -505,7 +532,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/units.tex:172
+#: sections/units.tex:179
 #, no-wrap
 msgid ""
 "\\note{8}{\n"
@@ -521,7 +548,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:176
+#: sections/units.tex:183
 #, no-wrap
 msgid ""
 "{3}\n"
@@ -529,7 +556,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/units.tex:179
+#: sections/units.tex:186
 #, no-wrap
 msgid ""
 "\\begin{expansion}[title=\\phantom{\\textbf{\\tiny{foo}}}, overlay={}]{}\n"
@@ -538,7 +565,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/units.tex:187
+#: sections/units.tex:194
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/neutral-back.png}};\n"
@@ -560,7 +587,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:191
+#: sections/units.tex:198
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -570,7 +597,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/units.tex:200
+#: sections/units.tex:207
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/creature-bank-back.png}};\n"
@@ -593,7 +620,7 @@ msgstr ""
 "\\columnbreak\n"
 
 #. type: multicols*
-#: sections/units.tex:211
+#: sections/units.tex:218
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -619,14 +646,29 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:216
+#: sections/units.tex:224
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\bigskip\n"
+#| "\\vspace*{\\fill}\n"
+#| "\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
+#| "\\vspace*{\\fill}\n"
+#| "\n"
+msgid ""
+"\\includegraphics[width=\\linewidth]{\\art/titan.jpg}\n"
+"\n"
+msgstr ""
+"\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
+"\n"
+
+#. type: multicols*
+#: sections/units.tex:226
 #, fuzzy, no-wrap
 #| msgid ""
 #| "{2}\n"
 #| "\\subheader[Example ``Pack and Few'']{Example\\\\``Pack and Few''}\n"
 #| "\n"
 msgid ""
-"{2}\n"
 "\\subsection*{Example ``Pack and Few''}\n"
 "\n"
 msgstr ""
@@ -635,7 +677,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:218
+#: sections/units.tex:228
 #, no-wrap
 msgid ""
 "\\textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons, Empowering \\svg{empower} the Spell by 2 with the Expert  Effect \\svg{expert} of a Power card.}\n"
@@ -645,7 +687,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:222
+#: sections/units.tex:232
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/alamar_empowering_magic_arrow.png}\n"
@@ -653,7 +695,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/units.tex:229
+#: sections/units.tex:239
 #, no-wrap
 msgid ""
 "\\textit{The Skeletons take 3 damage \\svg{damage} from the Spell.\n"
@@ -669,18 +711,9 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/units.tex:233
+#: sections/units.tex:243
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/skeletons_flipped.png}\n"
 "\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/units.tex:237
-#, no-wrap
-msgid ""
-"\\vspace*{\\fill}\n"
-"\\columnbreak\n"
-"\\includegraphics[width=\\linewidth]{\\art/titan.jpg}"
 msgstr ""
