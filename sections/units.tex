@@ -28,7 +28,7 @@ When you do so, you can instantly recruit and reinforce \textbf{any number} of t
 
 \vspace*{\fill}
 \begin{tikzpicture}[remember picture, overlay]
-  \node[opacity=0.2, xscale=-1, anchor=west, xshift=-12em, yshift=-13em] at (current page.east) {
+  \node[opacity=0.2, xscale=-1, anchor=west, xshift=-12em+5mm, yshift=-13em] at (current page.east) {
     \includegraphics[width=0.66\paperwidth]{\art/cavalryman.png}
   };
 \end{tikzpicture}
@@ -57,7 +57,7 @@ Units with a higher Initiative activate first.
 
 \begin{tikzpicture}[remember picture, overlay]
   \iftoggle{printable}{
-    \node[opacity=0.2, xscale=-1, anchor=east, xshift=22em, yshift=-13em] at (current page.west) {
+    \node[opacity=0.2, xscale=-1, anchor=east, xshift=22em-5mm, yshift=-13em] at (current page.west) {
       \includegraphics[width=0.66\paperwidth]{\art/cavalryman.png}
     };
   }{
