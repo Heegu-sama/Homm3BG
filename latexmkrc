@@ -17,11 +17,5 @@ if ($toggles) {
 
 if ($ENV{HOMM3_PRINTABLE}) {
   my $locale = $ENV{ICU_LOCALE} // 'en_US';
-  open(my $fh, '>', 'index_style_generated.ist') or die $!;
-  open(my $base, '<', 'index_style.ist') or die $!;
-  print $fh $_ while <$base>;
-  print $fh "\nicu_locale \"$locale\"\n";
-  close $fh;
-
-  $makeindex = 'upmendex -s index_style_generated.ist -o %D %S';
+  $makeindex = "bash -c 'upmendex -s <(cat index_style.ist; echo icu_locale \\\"$locale\\\") -o %D %S'";
 }
