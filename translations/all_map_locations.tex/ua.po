@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-03-21 21:07+0000\n"
+"POT-Creation-Date: 2026-03-29 12:19+0000\n"
 "PO-Revision-Date: 2024-05-21 12:12+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -22,17 +22,16 @@ msgstr ""
 msgid "\\addsection{All Map Locations}{\\skills/earth_magic.png}"
 msgstr "\\addsection{Локації на Мапі}{\\skills/earth_magic.png}"
 
-#. type: multicols
+#. type: multicols*
 #: sections/all_map_locations.tex:5 sections/combat.tex:5
-#: sections/combat.tex:42 sections/combat.tex:131 sections/credits.tex:8
-#: sections/deckbuilding.tex:5 sections/deckbuilding.tex:52
-#: sections/deckbuilding.tex:73 sections/heroes.tex:5
-#: sections/map_elements.tex:93 sections/map_elements.tex:142
-#: sections/player_turns.tex:5 sections/resources.tex:5
-#: sections/round_structure.tex:5 sections/scenarios.tex:5
-#: sections/setup.tex:75 sections/solo_campaigns.tex:5
+#: sections/combat.tex:41 sections/combat.tex:132 sections/credits.tex:8
+#: sections/deckbuilding.tex:5 sections/deckbuilding.tex:73
+#: sections/heroes.tex:5 sections/map_elements.tex:93
+#: sections/map_elements.tex:142 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenarios.tex:5 sections/setup.tex:5 sections/solo_campaigns.tex:5
 #: sections/tournament_mode.tex:5 sections/town.tex:5 sections/trading.tex:5
-#: sections/units.tex:5 sections/units.tex:46
+#: sections/units.tex:5 sections/units.tex:42 sections/units.tex:222
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -147,9 +146,10 @@ msgstr ""
 "\\end{itemize}\n"
 "\n"
 
-#. type: multicols*
-#: sections/all_map_locations.tex:51 sections/all_map_locations.tex:233
+#. type: multicols
+#: sections/all_map_locations.tex:51 sections/all_map_locations.tex:258
 #: sections/credits.tex:36 sections/deckbuilding.tex:80 sections/heroes.tex:79
+#: sections/units.tex:72
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -185,8 +185,8 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:382
-#: sections/units.tex:220 sections/units.tex:224
+#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:435
+#: sections/units.tex:230 sections/units.tex:234
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -238,142 +238,188 @@ msgstr ""
 "Ефекти наведених нижче \\textbf{Одноразових} Полів пояснюються піктограмами "
 "на попередній сторінці:"
 
+#. type: Plain text
+#: sections/all_map_locations.tex:96 sections/all_map_locations.tex:112
+#: sections/all_map_locations.tex:128 sections/all_map_locations.tex:145
+#: sections/all_map_locations.tex:162
+msgid "\\noindent"
+msgstr ""
+
+#. type: minipage
+#: sections/all_map_locations.tex:96
+msgid ""
+"\\locationtitle{Fountain of Youth} \\framedimage[\\textwidth]"
+"{\\map_locations/fountain_of_youth.jpg}"
+msgstr ""
+
+#. type: minipage
+#: sections/all_map_locations.tex:96
+#, fuzzy
+#| msgid "\\framedimage[\\linewidth]{\\map_locations/expansion_towns.png}"
+msgid ""
+"\\locationtitle{Water Wheel} \\framedimage[\\textwidth]{\\map_locations/"
+"water_wheel.jpg}"
+msgstr "\\framedimage[\\linewidth]{\\map_locations/expansion_towns.png}"
+
+#. type: minipage
+#: sections/all_map_locations.tex:112
+#, fuzzy
+#| msgid "\\framedimage[\\linewidth]{\\map_locations/expansion_towns.png}"
+msgid ""
+"\\locationtitle{Warrior's Tomb} \\framedimage[\\textwidth]{\\map_locations/"
+"warriors_tomb.jpg}"
+msgstr "\\framedimage[\\linewidth]{\\map_locations/expansion_towns.png}"
+
+#. type: minipage
+#: sections/all_map_locations.tex:112
+#, fuzzy
+#| msgid "\\framedimage[\\linewidth]{\\map_locations/expansion_towns.png}"
+msgid ""
+"\\locationtitle{Temple} \\framedimage[\\textwidth]{\\map_locations/"
+"temple.jpg}"
+msgstr "\\framedimage[\\linewidth]{\\map_locations/expansion_towns.png}"
+
+#. type: minipage
+#: sections/all_map_locations.tex:128
+msgid ""
+"\\locationtitle{Mystical Garden} \\framedimage[\\textwidth]{\\map_locations/"
+"mystical_garden.jpg}"
+msgstr ""
+
+#. type: minipage
+#: sections/all_map_locations.tex:128
+#, fuzzy
+#| msgid "\\framedimage[\\linewidth]{\\map_locations/expansion_towns.png}"
+msgid ""
+"\\locationtitle{Learning Stone} \\framedimage[\\textwidth]{\\map_locations/"
+"learning_stone.jpg}"
+msgstr "\\framedimage[\\linewidth]{\\map_locations/expansion_towns.png}"
+
+#. type: minipage
+#: sections/all_map_locations.tex:145
+#, fuzzy
+#| msgid "\\framedimage[\\linewidth]{\\map_locations/expansion_towns.png}"
+msgid ""
+"\\locationtitle{Pandora's Box (land)} \\framedimage[\\textwidth]"
+"{\\map_locations/pandoras_box.jpg}"
+msgstr "\\framedimage[\\linewidth]{\\map_locations/expansion_towns.png}"
+
+#. type: minipage
+#: sections/all_map_locations.tex:145
+#, fuzzy
+#| msgid ""
+#| "\\vspace{0pt}\n"
+#| "\\centering\n"
+#| "\\locationtitle{Mine: Sawmill}\n"
+#| "\\framedimage[\\linewidth]{\\map_locations/sawmill.jpg}\n"
+#| "\\expansionlabel{rampart}\n"
+#| "\n"
+msgid ""
+"\\locationtitle{Pandora's Box (sea)} \\framedimage[\\textwidth]"
+"{\\map_locations/pandoras_box_water.jpg} \\expansionlabel{cove}"
+msgstr ""
+"\\vspace{0pt}\n"
+"\\centering\n"
+"\\locationtitle{Шахта: Лісопильня}\n"
+"\\framedimage[\\linewidth]{\\map_locations/sawmill.jpg}\n"
+"\\expansionlabel{rampart}\n"
+"\n"
+
+#. type: minipage
+#: sections/all_map_locations.tex:162
+msgid ""
+"\\locationtitle{Shrine of Magic Gesture/Incantation} "
+"\\framedimage[\\textwidth]{\\map_locations/shrine_of_magic_whatever.jpg}"
+msgstr ""
+
+#. type: minipage
+#: sections/all_map_locations.tex:162
+msgid ""
+"\\locationtitle{Windmill} \\framedimage[\\textwidth]{\\map_locations/"
+"windmill.jpg} {\\small Due to a misprint, the Windmill on the Tile "
+"\\texttt{\\#N3} has a \\textbf{?}. It should be ``\\textbf{+}"
+"1~\\svg{valuables}''.}"
+msgstr ""
+
 #. type: multicols*
-#: sections/all_map_locations.tex:136
-#, no-wrap
+#: sections/all_map_locations.tex:232
+#, fuzzy, no-wrap
+#| msgid ""
+#| "{\\centering\n"
+#| "\n"
+#| "  \\pagetarget{Pandora Box}{\\locationtitle{Pandora's Box}}\n"
+#| "  \\framedimage[\\linewidth]{\\map_locations/pandoras_boxes.jpg}\\\\\n"
+#| "  \\expansionlabelnocap{cove}\n"
+#| "\n"
+#| "  \\bigskip\n"
+#| "\n"
+#| "  \\centering\n"
+#| "  \\locationtitle{Mermaid}\n"
+#| "  \\framedimage[\\linewidth]{\\map_locations/mermaid.jpg}\\\\\n"
+#| "  \\expansionlabelnocap{cove}\n"
+#| "\n"
+#| "  \\bigskip\n"
+#| "\n"
+#| "  \\locationtitle{Derelict Ship}\n"
+#| "  \\framedimage[\\linewidth]{\\map_locations/derelict_ship.jpg}\\\\\n"
+#| "  \\expansionlabelnocap{cove}\n"
+#| "\n"
+#| "  \\bigskip\n"
+#| "\n"
+#| "  \\locationtitle{Temple of the Sea}\n"
+#| "  \\framedimage[\\linewidth]{\\map_locations/temple_of_the_sea.jpg}\\\\\n"
+#| "  \\expansionlabelnocap{cove}\n"
+#| "\n"
+#| "  \\bigskip\n"
+#| "\n"
+#| "  \\locationtitle{Shrine of Magic Gesture/Incantation}\n"
+#| "  \\framedimage[\\linewidth]{\\map_locations/shrine_of_magic_whatever_water.jpg}\\\\\n"
+#| "  \\expansionlabelnocap{cove}\n"
+#| "\n"
+#| "  \\bigskip\n"
+#| "\n"
+#| "  \\vspace*{\\fill}\n"
+#| "  \\columnbreak\n"
+#| "\n"
+#| "  \\locationtitle{Flotsam}\n"
+#| "  \\framedimage[\\linewidth]{\\map_locations/flotsam.jpg}\\\\\n"
+#| "  \\expansionlabelnocap{cove}\n"
+#| "\n"
+#| "  \\bigskip\n"
+#| "\n"
+#| "  \\locationtitle{Sea Barrel}\n"
+#| "  \\framedimage[\\linewidth]{\\map_locations/sea_barrel.jpg}\\\\\n"
+#| "  \\expansionlabelnocap{cove}\n"
+#| "\n"
+#| "  \\bigskip\n"
+#| "\n"
+#| "  \\locationtitle{Shipwreck}\n"
+#| "  \\framedimage[\\linewidth]{\\map_locations/shipwreck.jpg}\\\\\n"
+#| "  \\expansionlabelnocap{cove}\n"
+#| "\n"
+#| "  \\bigskip\n"
+#| "\n"
+#| "  \\locationtitle{Buoy}\n"
+#| "  \\framedimage[\\linewidth]{\\map_locations/buoy.jpg}\\\\\n"
+#| "  \\expansionlabelnocap{cove}\n"
+#| "\n"
+#| "  \\bigskip\n"
+#| "\n"
+#| "  \\locationtitle{Shipwreck Survivor}\n"
+#| "  \\framedimage[\\linewidth]{\\map_locations/shipwreck_survivor.jpg}\\\\\n"
+#| "  \\expansionlabelnocap{cove}\n"
+#| "\n"
+#| "  \\bigskip\n"
+#| "\n"
+#| "  \\vspace*{\\fill}\n"
+#| "}\n"
+#| "\n"
 msgid ""
 "{2}\n"
 "{\\centering\n"
 "\n"
-"  \\locationtitle{Fountain of Youth}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/fountain_of_youth.jpg}\\\\\n"
-"\n"
-"  \\bigskip\n"
-"\n"
-"  \\locationtitle{Warrior's Tomb}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/warriors_tomb.jpg}\\\\\n"
-"\n"
-"  \\bigskip\n"
-"\n"
-"  \\locationtitle{Mystical Garden}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/mystical_garden.jpg}\\\\\n"
-"\n"
-"  \\bigskip\n"
-"\n"
-"  \\locationtitle{Learning Stone}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/learning_stone.jpg}\\\\\n"
-"\n"
-"  \\bigskip\n"
-"\n"
-"  \\locationtitle{Shrine of Magic Gesture/Incantation}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/shrine_of_magic_whatever.jpg}\\\\\n"
-"  \\filbreak\n"
-"\n"
-"  \\locationtitle{Water Wheel}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/water_wheel.jpg}\\\\\n"
-"\n"
-"  \\bigskip\n"
-"\n"
-"  \\locationtitle{Temple}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/temple.jpg}\\\\\n"
-"\n"
-"  \\bigskip\n"
-"\n"
-"  \\locationtitle{Grave}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/grave.jpg}\\\\\n"
-"  \\expansionlabelnocap{cove}\n"
-"\n"
-"  \\bigskip\n"
-"\n"
-"  \\vspace*{-2pt}\n"
-"  \\locationtitle{Windmill}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/windmill.jpg}\n"
-"  {\\small Due to a misprint, the Windmill on the Tile \\texttt{\\#N3} has a \\textbf{?}. It should be ``\\textbf{+}1 \\svg{valuables}''.}\n"
-"\n"
-"\n"
-"  \\vspace*{\\fill}\n"
-"\n"
-"  \\begin{tikzpicture}[remember picture, overlay]\n"
-"    \\node[opacity=0.2] at ([xshift=12em, yshift=10em]current page.south) {\\includegraphics[width=0.7\\linewidth]{\\art/morale_high.png}};\n"
-"  \\end{tikzpicture}\n"
-"}\n"
-"\n"
-msgstr ""
-"{2}\n"
-"{\\centering\n"
-"\n"
-"  \\locationtitle{Фонтан Молодості}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/fountain_of_youth.jpg}\\\\\n"
-"\n"
-"  \\bigskip\n"
-"\n"
-"  \\locationtitle{Могила Воїна}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/warriors_tomb.jpg}\\\\\n"
-"\n"
-"  \\bigskip\n"
-"\n"
-"  \\locationtitle{Містичний Сад}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/mystical_garden.jpg}\\\\\n"
-"\n"
-"  \\bigskip\n"
-"\n"
-"  \\locationtitle{Камінь Знань}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/learning_stone.jpg}\\\\\n"
-"\n"
-"  \\bigskip\n"
-"\n"
-"  \\locationtitle{Святиня Магічного Жесту/Замовляння}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/shrine_of_magic_whatever.jpg}\\\\\n"
-"  \\filbreak\n"
-"\n"
-"  \\locationtitle{Водяне Колесо}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/water_wheel.jpg}\\\\\n"
-"\n"
-"  \\bigskip\n"
-"\n"
-"  \\locationtitle{Храм}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/temple.jpg}\\\\\n"
-"\n"
-"  \\bigskip\n"
-"\n"
-"  \\locationtitle{Могила}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/grave.jpg}\\\\\n"
-"  \\expansionlabelnocap{cove}\n"
-"\n"
-"  \\bigskip\n"
-"\n"
-"  \\vspace*{-2pt}\n"
-"  \\locationtitle{Вітряк}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/windmill.jpg}\n"
-"  {\\small Через одруківку, Вітряк на Плитці \\texttt{\\#N3} має \\textbf{?}. Він повинен мати ``\\textbf{+}1 \\svg{valuables}''.}\n"
-"\n"
-"\n"
-"  \\vspace*{\\fill}\n"
-"\n"
-"  \\begin{tikzpicture}[remember picture, overlay]\n"
-"    \\node[opacity=0.2] at ([xshift=12em, yshift=10em]current page.south) {\\includegraphics[width=0.7\\linewidth]{\\art/morale_high.png}};\n"
-"  \\end{tikzpicture}\n"
-"}\n"
-"\n"
-
-#. type: multicols*
-#: sections/all_map_locations.tex:138
-#, no-wrap
-msgid ""
-"\\pagebreak\n"
-"\n"
-msgstr ""
-"\\pagebreak\n"
-"\n"
-
-#. type: multicols*
-#: sections/all_map_locations.tex:207
-#, no-wrap
-msgid ""
-"{\\centering\n"
-"\n"
-"  \\pagetarget{Pandora Box}{\\locationtitle{Pandora's Box}}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/pandoras_boxes.jpg}\\\\\n"
+"  \\locationtitle{Flotsam}\n"
+"  \\framedimage[\\linewidth]{\\map_locations/flotsam.jpg}\\\\\n"
 "  \\expansionlabelnocap{cove}\n"
 "\n"
 "  \\bigskip\n"
@@ -406,26 +452,20 @@ msgid ""
 "  \\vspace*{\\fill}\n"
 "  \\columnbreak\n"
 "\n"
-"  \\locationtitle{Flotsam}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/flotsam.jpg}\\\\\n"
-"  \\expansionlabelnocap{cove}\n"
-"\n"
-"  \\bigskip\n"
-"\n"
 "  \\locationtitle{Sea Barrel}\n"
 "  \\framedimage[\\linewidth]{\\map_locations/sea_barrel.jpg}\\\\\n"
 "  \\expansionlabelnocap{cove}\n"
 "\n"
 "  \\bigskip\n"
 "\n"
-"  \\locationtitle{Shipwreck}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/shipwreck.jpg}\\\\\n"
+"  \\locationtitle{Buoy}\n"
+"  \\framedimage[\\linewidth]{\\map_locations/buoy.jpg}\\\\\n"
 "  \\expansionlabelnocap{cove}\n"
 "\n"
 "  \\bigskip\n"
 "\n"
-"  \\locationtitle{Buoy}\n"
-"  \\framedimage[\\linewidth]{\\map_locations/buoy.jpg}\\\\\n"
+"  \\locationtitle{Shipwreck}\n"
+"  \\framedimage[\\linewidth]{\\map_locations/shipwreck.jpg}\\\\\n"
 "  \\expansionlabelnocap{cove}\n"
 "\n"
 "  \\bigskip\n"
@@ -437,6 +477,10 @@ msgid ""
 "  \\bigskip\n"
 "\n"
 "  \\vspace*{\\fill}\n"
+"\n"
+"  \\begin{tikzpicture}[remember picture, overlay]\n"
+"    \\node[opacity=0.2] at ([xshift=12em, yshift=12em]current page.south) {\\includegraphics[width=0.8\\linewidth]{\\art/morale_high.png}};\n"
+"  \\end{tikzpicture}\n"
 "}\n"
 "\n"
 msgstr ""
@@ -511,7 +555,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:221
+#: sections/all_map_locations.tex:246
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -537,7 +581,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:225
+#: sections/all_map_locations.tex:250
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -551,7 +595,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:227
+#: sections/all_map_locations.tex:252
 #, no-wrap
 msgid ""
 "  \\vspace{1.8em}\n"
@@ -561,7 +605,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:231
+#: sections/all_map_locations.tex:256
 #, no-wrap
 msgid ""
 "  \\framedimage[\\linewidth]{\\map_locations/crystal-mine.jpg}\n"
@@ -575,7 +619,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:238
+#: sections/all_map_locations.tex:263
 #, no-wrap
 msgid ""
 "\\pagetarget{Mines}{\\subheader{Mines}}\n"
@@ -591,7 +635,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:244
+#: sections/all_map_locations.tex:269
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -609,7 +653,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:249
+#: sections/all_map_locations.tex:274
 #, no-wrap
 msgid ""
 "  \\vspace*{\\fill}\n"
@@ -623,12 +667,12 @@ msgstr ""
 "\\end{center}"
 
 #. type: center
-#: sections/all_map_locations.tex:257
+#: sections/all_map_locations.tex:282
 msgid "\\framedimage[\\linewidth]{\\map_locations/expansion_towns.png}"
 msgstr "\\framedimage[\\linewidth]{\\map_locations/expansion_towns.png}"
 
 #. type: center
-#: sections/all_map_locations.tex:257
+#: sections/all_map_locations.tex:282
 msgid ""
 "\\textit{Towns from expansions:\\\\Conflux, Stronghold, Cove, Tower, "
 "Rampart, Fortress, and Inferno.}"
@@ -637,12 +681,12 @@ msgstr ""
 "Фортеця і Інферно.}"
 
 #. type: Plain text
-#: sections/all_map_locations.tex:274
+#: sections/all_map_locations.tex:299
 msgid "\\pagetarget{Settlements}{\\subheader{Settlements}}"
 msgstr "\\pagetarget{Settlements}{\\subheader{Поселення}}"
 
 #. type: multicols
-#: sections/all_map_locations.tex:274
+#: sections/all_map_locations.tex:299
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -680,7 +724,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:280
+#: sections/all_map_locations.tex:305
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -698,7 +742,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:283 sections/combat.tex:270
+#: sections/all_map_locations.tex:308 sections/combat.tex:271
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -710,7 +754,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:287
+#: sections/all_map_locations.tex:312
 #, no-wrap
 msgid ""
 "\\begin{expansion}{inferno}\n"
@@ -724,7 +768,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:297
+#: sections/all_map_locations.tex:322
 #, no-wrap
 msgid ""
 "  \\medskip\n"
@@ -750,7 +794,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:306
+#: sections/all_map_locations.tex:331
 #, no-wrap
 msgid ""
 "  The Random Town is defended by units from that Faction:\n"
@@ -774,7 +818,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:310
+#: sections/all_map_locations.tex:335
 #, no-wrap
 msgid ""
 "  Flagging the Random Town increases \\svg{gold} production by 10, which is also gained immediately if you are the first to flag it.\n"
@@ -788,12 +832,12 @@ msgstr ""
 "\n"
 
 #. type: center
-#: sections/all_map_locations.tex:321
+#: sections/all_map_locations.tex:346
 msgid "\\framedimage[\\linewidth]{\\map_locations/settlements-expansions.png}"
 msgstr "\\framedimage[\\linewidth]{\\map_locations/settlements-expansions.png}"
 
 #. type: center
-#: sections/all_map_locations.tex:321
+#: sections/all_map_locations.tex:346
 msgid ""
 "\\textit{Settlements from expansions.\\\\ Each is styled after a different "
 "Faction.  }"
@@ -801,12 +845,12 @@ msgstr ""
 "\\textit{Поселення із доповнень.\\\\ Кожне стилізоване під окрему Фракцію.  }"
 
 #. type: Plain text
-#: sections/all_map_locations.tex:323
+#: sections/all_map_locations.tex:348
 msgid "\\pagetarget{Revisitable Fields}{\\subheader{Revisitable Fields}}"
 msgstr "\\pagetarget{Revisitable Fields}{\\subheader{Багаторазові Поля}}"
 
 #. type: figure
-#: sections/all_map_locations.tex:346
+#: sections/all_map_locations.tex:371
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -854,7 +898,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:366
+#: sections/all_map_locations.tex:391
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -896,7 +940,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:398
+#: sections/all_map_locations.tex:423
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -962,7 +1006,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:414
+#: sections/all_map_locations.tex:439
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -996,7 +1040,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: tikzpicture
-#: sections/all_map_locations.tex:418
+#: sections/all_map_locations.tex:443
 #, no-wrap
 msgid ""
 "[overlay]\n"
@@ -1006,12 +1050,12 @@ msgstr ""
 "  \\node[opacity=0.2] at (16, 5.22) {\\includegraphics[width=0.5\\linewidth]{\\art/pegasi.png}};"
 
 #. type: Plain text
-#: sections/all_map_locations.tex:420
+#: sections/all_map_locations.tex:445
 msgid "\\pagetarget{Other Fields}{\\subheader{Other Fields}}"
 msgstr "\\pagetarget{Other Fields}{\\subheader{Інші Поля}}"
 
 #. type: figure
-#: sections/all_map_locations.tex:443
+#: sections/all_map_locations.tex:468
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1059,7 +1103,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:465
+#: sections/all_map_locations.tex:490
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1105,7 +1149,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:485
+#: sections/all_map_locations.tex:510
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1147,8 +1191,26 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:504
-#, no-wrap
+#: sections/all_map_locations.tex:530
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[H]\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\locationtitle{Dragon Utopia}\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/dragon_utopia.jpg}\n"
+#| "    \\caption{\\small Category: \\textbf{Flaggable}\\\\Effects depend on the Scenario.}\n"
+#| "  \\end{minipage}\\hfill\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\locationtitle{University}\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/university.jpg}\n"
+#| "    \\expansionlabel{tower}\n"
+#| "    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+#| "      \\svg{pay} 6 \\svg{gold} to \\textbf{Search (4)} the Ability Discard Pile.}\n"
+#| "  \\end{minipage}"
 msgid ""
 "[H]\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
@@ -1161,11 +1223,12 @@ msgid ""
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
 "    \\vspace{0pt}\n"
 "    \\centering\n"
-"    \\locationtitle{University}\n"
-"    \\framedimage[\\linewidth]{\\map_locations/university.jpg}\n"
-"    \\expansionlabel{tower}\n"
+"    \\locationtitle{Faerie Ring}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/faerie_ring.jpg}\n"
+"    \\expansionlabel{conflux}\n"
 "    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
-"      \\svg{pay} 6 \\svg{gold} to \\textbf{Search (4)} the Ability Discard Pile.}\n"
+"      Remove one card from your hand, then Search (2) the card's Deck.\n"
+"      You cannot remove Statistics, Starting Ability, or Specialty cards.}\n"
 "  \\end{minipage}"
 msgstr ""
 "[H]\n"
@@ -1187,23 +1250,49 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:537
-#, no-wrap
+#: sections/all_map_locations.tex:563
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[H]\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\locationtitle{Sea Chest}\n"
+#| "    \\captionsetup{singlelinecheck=off}\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/sea_chest.jpg}\n"
+#| "    \\expansionlabel{cove}\n"
+#| "    \\caption[sea chest]{\\small Category: \\textbf{Visitable}\\\\\n"
+#| "      Roll 1 Attack Die.\n"
+#| "      Depending on the result, do the following:\n"
+#| "      \\begin{itemize}\n"
+#| "        \\setlength\\itemsep{-0.2em}\n"
+#| "        \\item[\\textbf{+1}] -- Search (1) \\svg{artifact}.\n"
+#| "        \\item[\\textbf{0}] -- Gain 5 \\svg{gold}.\n"
+#| "        \\item[\\textbf{\\textminus{}1}] -- Gain nothing.\n"
+#| "      \\end{itemize}\n"
+#| "    }\n"
+#| "  \\end{minipage}\\hfill\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\locationtitle{Jetsam}\n"
+#| "    \\captionsetup{singlelinecheck=off}\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/jetsam.jpg}\n"
+#| "    \\expansionlabel{cove}\n"
+#| "    \\caption[jetsam]{\\small Category: \\textbf{Visitable}\\\\\n"
+#| "      Roll 1 Attack Die.\n"
+#| "      Depending on the result, do the following:\n"
+#| "      \\begin{itemize}\n"
+#| "        \\setlength\\itemsep{-0.2em}\n"
+#| "        \\item[\\textbf{+1}] -- Roll and resolve 2 \\svg{resource_die}.\n"
+#| "        \\item[\\textbf{0}] -- Roll and resolve 1 \\svg{resource_die}.\n"
+#| "        \\item[\\textbf{\\textminus{}1}] -- Gain nothing.\n"
+#| "      \\end{itemize}\n"
+#| "    }\n"
+#| "  \\end{minipage}"
 msgid ""
 "[H]\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
-"    \\vspace{0pt}\n"
-"    \\centering\n"
-"    \\locationtitle{Elemental Conflux}\n"
-"    \\framedimage[\\linewidth]{\\map_locations/elemental_conflux.jpg}\n"
-"    \\expansionlabel{conflux}\n"
-"    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
-"      For every Dwelling you have, draw from the corresponding Neutral Unit Decks until you find one ``Elementals'' unit from each (reshuffle if you run out of units before finding one).\n"
-"      You can recruit one of those Elementals if you \\svg{pay} its recruitment cost.\n"
-"      Shuffle the remaining units back into their respective Decks.\n"
-"    }\n"
-"  \\end{minipage}\\hfill\n"
-"    \\begin{minipage}[t]{0.47\\textwidth}\n"
 "    \\vspace{0pt}\n"
 "    \\captionsetup{singlelinecheck=off}\n"
 "    \\centering\n"
@@ -1220,90 +1309,266 @@ msgid ""
 "        \\item[\\textbf{\\textminus{}1}] -- Draw 2 cards from the Spell Deck, gain one of them and discard the other.\n"
 "        \\end{itemize}\n"
 "       }\n"
+"  \\end{minipage}\\hfill\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\locationtitle{Elemental Conflux}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/elemental_conflux.jpg}\n"
+"    \\expansionlabel{conflux}\n"
+"    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+"      For every Dwelling you have, draw from the corresponding Neutral Unit Decks until you find one ``Elementals'' unit from each (reshuffle if you run out of units before finding one).\n"
+"      You can recruit one of those Elementals if you \\svg{pay} its recruitment cost.\n"
+"      Shuffle the remaining units back into their respective Decks.\n"
+"    }\n"
 "  \\end{minipage}"
 msgstr ""
 "[H]\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
 "    \\vspace{0pt}\n"
 "    \\centering\n"
-"    \\locationtitle{Злиття Елементалей}\n"
-"    \\framedimage[\\linewidth]{\\map_locations/elemental_conflux.jpg}\n"
-"    \\expansionlabel{conflux}\n"
-"    \\caption{\\small Категорія: \\textbf{Одноразові}\\\\\n"
-"      За кожне Житло яке у вас побудовано, підбирайте карти з відповідної Колоді Нейтральних Підрозділів поки не знайдете один підрозділ ``Елементалей'' (перетасуйте її, якщо карти закінчилися до завершення пошуку).\n"
-"      Ви можете найняти одиного з Елементалей, якщо \\svg{pay} його вартість найму.\n"
-"      Втасуйте карти, що лишилися, назад у відповідну Колоду.\n"
-"    }\n"
-"  \\end{minipage}\\hfill\n"
-"    \\begin{minipage}[t]{0.47\\textwidth}\n"
-"    \\vspace{0pt}\n"
+"    \\locationtitle{Морська Скриня}\n"
 "    \\captionsetup{singlelinecheck=off}\n"
-"    \\centering\n"
-"    \\locationtitle{Вчений}\n"
-"    \\framedimage[\\linewidth]{\\map_locations/scholar.jpg}\n"
-"    \\expansionlabel{fortress}\n"
-"    \\caption[scholar they]{\\small Категорія: \\textbf{Одноразові}\\\\\n"
+"    \\framedimage[\\linewidth]{\\map_locations/sea_chest.jpg}\n"
+"    \\expansionlabel{cove}\n"
+"    \\caption[sea chest]{\\small Категорія: \\textbf{Одноразові}\\\\\n"
 "      Киньте 1 Кубик Атаки.\n"
-"      В залежності від результату, зробіть наступне:\n"
+"      Залежно від результату, зробіть наступне:\n"
 "      \\begin{itemize}\n"
 "        \\setlength\\itemsep{-0.2em}\n"
-"        \\item[ \\textbf{+1}] -- Отримайте карту Характеристик на ваш вибір або видаліть карту Характеристик з вашої руки.\n"
-"        \\item[\\textbf{0}] -- Візьміть 2 карти з Колоди Здібностей, ви отримуєте одну з них і скидаєте іншу.\n"
-"        \\item[\\textbf{\\textminus{}1}] -- Візьміть 2 карти з Колоди Заклинань, ви отримуєте одну з них і скидаєте іншу.\n"
-"        \\end{itemize}\n"
-"       }\n"
+"        \\item[\\textbf{+1}] -- Шукайте (1) \\svg{artifact}.\n"
+"        \\item[\\textbf{0}] -- Отримайте 5 \\svg{gold}.\n"
+"        \\item[\\textbf{\\textminus{}1}] -- Не робіть нічого.\n"
+"      \\end{itemize}\n"
+"    }\n"
+"  \\end{minipage}\\hfill\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\locationtitle{Загублений вантаж}\n"
+"    \\captionsetup{singlelinecheck=off}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/jetsam.jpg}\n"
+"    \\expansionlabel{cove}\n"
+"    \\caption[jetsam]{\\small Категорія: \\textbf{Одноразові}\\\\\n"
+"      Киньте 1 Кубик Атаки.\n"
+"      Залежно від результату, зробіть наступне:\n"
+"      \\begin{itemize}\n"
+"        \\setlength\\itemsep{-0.2em}\n"
+"        \\item[\\textbf{+1}] -- Киньте 2 \\svg{resource_die}, отримайте нагороду з обох.\n"
+"        \\item[\\textbf{0}] -- Киньте 1 \\svg{resource_die}, отримайте нагороду.\n"
+"        \\item[\\textbf{\\textminus{}1}] -- Не робіть нічого.\n"
+"      \\end{itemize}\n"
+"    }\n"
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:560
+#: sections/all_map_locations.tex:586
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[H]\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\locationtitle{Spell Scroll}\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/spell_scroll.jpg}\n"
+#| "    \\expansionlabel{stronghold}\n"
+#| "    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+#| "      Take a Spell Scroll card from its Deck and place it next to your Hero Board.\n"
+#| "      Draw two Spells and place them face-down at the Spell Scroll card.\n"
+#| "      You can use these Spells \\protect\\pagelink{Spell Scroll Cards}{with some restrictions}.\n"
+#| "    }\n"
+#| "  \\end{minipage}\\hfill\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\locationtitle{Market of Time}\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/market_of_time.jpg}\n"
+#| "    \\expansionlabel{tower}\n"
+#| "    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+#| "      Remove one card from your hand.\n"
+#| "      Then \\textbf{Search (2)} the Ability, Spell, or Artifact Deck.\n"
+#| "    }\n"
+#| "  \\end{minipage}"
+msgid ""
+"[H]\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\locationtitle{University}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/university.jpg}\n"
+"    \\expansionlabel{tower}\n"
+"    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+"      \\svg{pay} 6 \\svg{gold} to \\textbf{Search (4)} the Ability Discard Pile.}\n"
+"  \\end{minipage}\\hfill\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\locationtitle{Market of Time}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/market_of_time.jpg}\n"
+"    \\expansionlabel{tower}\n"
+"    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+"      Remove one card from your hand.\n"
+"      Then \\textbf{Search (2)} the Ability, Spell, or Artifact Deck.\n"
+"    }\n"
+"  \\end{minipage}"
+msgstr ""
+"[H]\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\locationtitle{Сувій Заклинання}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/spell_scroll.jpg}\n"
+"    \\expansionlabel{stronghold}\n"
+"    \\caption{\\small Категорія: \\textbf{Одноразові}\\\\\n"
+"      Візьміть карту Сувою Заклинання з Колоди і помістіть біля Планшета вашого Героя.\n"
+"      Візьміть два Заклинання і помістіть їх долілиць на карту Сувою Заклинання.\n"
+"      Можете використовувати ці Заклинання \\protect\\pagelink{Spell Scroll Cards}{з деякими обмеженнями}.\n"
+"    }\n"
+"  \\end{minipage}\\hfill\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\locationtitle{Ринок Часу}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/market_of_time.jpg}\n"
+"    \\expansionlabel{tower}\n"
+"    \\caption{\\small Категорія: \\textbf{Одноразові}\\\\\n"
+"      Видаліть карту з вашої руки.\n"
+"      Далі \\textbf{Шукайте (2)} в Колоді Здібностей, Заклинань чи Артефактів.\n"
+"    }\n"
+"  \\end{minipage}"
+
+#. type: figure
+#: sections/all_map_locations.tex:610
 #, no-wrap
 msgid ""
 "[H]\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
 "    \\vspace{0pt}\n"
 "    \\centering\n"
-"    \\locationtitle{Faerie Ring}\n"
-"    \\framedimage[\\linewidth]{\\map_locations/faerie_ring.jpg}\n"
-"    \\expansionlabel{conflux}\n"
+"    \\locationtitle{Hill Fort}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/hill_fort.jpg}\n"
+"    \\expansionlabel{tower}\n"
 "    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
-"      Remove one card from your hand, then Search (2) the card's Deck.\n"
-"      You cannot remove Statistics, Starting Ability, or Specialty cards.}\n"
+"      You may immediately reinforce one of your \\svg{bronze} or \\svg{silver} units.\n"
+"      The reinforcement cost is reduced by 3 \\svg{gold} to a minimum of 0.}\n"
 "  \\end{minipage}\\hfill\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
 "    \\vspace{0pt}\n"
 "    \\centering\n"
-"    \\pagetarget{Star Axis}{\\locationtitle{Star Axis}}\n"
-"    \\framedimage[\\linewidth]{\\map_locations/star_axis.jpg}\n"
-"    \\expansionlabel{inferno}\n"
-"    \\caption{\\small Category: \\textbf{Flaggable}\\\\\n"
-"      You may remove one of your Statistic cards from your hand and replace it with an \\protect\\pagelink{Empowered Statistic}{\\textbf{Empowered}} one of the same type.\n"
-"      When you flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}\n"
+"    \\locationtitle{Prison}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/prison.jpg}\n"
+"    \\expansionlabel{tower}\n"
+"    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+"      Gain a Secondary Hero.\n"
+"      Place their model on this Field.\n"
+"      If you already have a Secondary Hero, gain 3 \\svg{gold} instead.}\n"
 "  \\end{minipage}"
 msgstr ""
 "[H]\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
 "    \\vspace{0pt}\n"
 "    \\centering\n"
-"    \\locationtitle{Коло Фей}\n"
-"    \\framedimage[\\linewidth]{\\map_locations/faerie_ring.jpg}\n"
-"    \\expansionlabel{conflux}\n"
+"    \\locationtitle{Фортеця на Пагорбі}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/hill_fort.jpg}\n"
+"    \\expansionlabel{tower}\n"
 "    \\caption{\\small Категорія: \\textbf{Одноразові}\\\\\n"
-"      Видаліть одну карту з руки, далі Шукайте (2) у відповідній Колоді.\n"
-"      Ви не можете видалити карти Характеристик, Початкової Здібності чи Спеціалізації.}\n"
+"      Ви можете підкріпити один з ваших \\svg{bronze} або \\svg{silver} підрозділів.\n"
+"      Вартість підкріплення зменшена на 3 \\svg{gold} до мінімальної - 0.}\n"
 "  \\end{minipage}\\hfill\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
 "    \\vspace{0pt}\n"
 "    \\centering\n"
-"    \\pagetarget{Star Axis}{\\locationtitle{Зоряна Вісь}}\n"
-"    \\framedimage[\\linewidth]{\\map_locations/star_axis.jpg}\n"
-"    \\expansionlabel{inferno}\n"
-"    \\caption{\\small Категорія: \\textbf{Захоплюється}\\\\\n"
-"      Ви можете видалити одну з ваших карт Характеристик з руки і замінити її \\protect\\pagelink{Empowered Statistic}{\\textbf{Підсиленою}} того ж типу.\n"
-"      Захоплюючи це поле, не видаляйте Кубики ворожих Фракцій; кілька гравців можуть мати Кубик Фракції на цьому Полі.}\n"
+"    \\locationtitle{В'язниця}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/prison.jpg}\n"
+"    \\expansionlabel{tower}\n"
+"    \\caption{\\small Категорія: \\textbf{Одноразові}\\\\\n"
+"      Отримуєте Другорядного Героя.\n"
+"      Помістіть його фігурку на це Поле.\n"
+"      Якщо ви вже маєте Другорядного Героя, отримайте 3 \\svg{gold} натомість.}\n"
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:599
+#: sections/all_map_locations.tex:637
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[H]\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\locationtitle{Spell Scroll}\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/spell_scroll.jpg}\n"
+#| "    \\expansionlabel{stronghold}\n"
+#| "    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+#| "      Take a Spell Scroll card from its Deck and place it next to your Hero Board.\n"
+#| "      Draw two Spells and place them face-down at the Spell Scroll card.\n"
+#| "      You can use these Spells \\protect\\pagelink{Spell Scroll Cards}{with some restrictions}.\n"
+#| "    }\n"
+#| "  \\end{minipage}\\hfill\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\locationtitle{Market of Time}\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/market_of_time.jpg}\n"
+#| "    \\expansionlabel{tower}\n"
+#| "    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+#| "      Remove one card from your hand.\n"
+#| "      Then \\textbf{Search (2)} the Ability, Spell, or Artifact Deck.\n"
+#| "    }\n"
+#| "  \\end{minipage}"
+msgid ""
+"[H]\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\locationtitle{Spell Scroll}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/spell_scroll.jpg}\n"
+"    \\expansionlabel{stronghold}\n"
+"    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+"      Take a Spell Scroll card from its Deck and place it next to your Hero Board.\n"
+"      Draw two Spells and place them face-down at the Spell Scroll card.\n"
+"      You can use these Spells \\protect\\pagelink{Spell Scroll Cards}{with some restrictions}.\n"
+"    }\n"
+"  \\end{minipage}\\hfill\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\locationtitle{Cyclops Stockpile}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/cyclops_stockpile.jpg}\n"
+"    \\expansionlabel{stronghold}\n"
+"    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+"      When preparing the Neutral Army guarding this location, instead of drawing 1 \\svg{azure} unit, find 2 \\svg{golden} \\protect\\wikilink{units/cyclopes}{Cyclopes} and add them to the Neutral Army (look for them first in the \\svg{golden} discard pile, and then in the \\svg{golden} Neutral Unit Deck).\n"
+"      If you win the Combat, roll and resolve 4 \\svg{resource_die}.\n"
+"      Any additional effects depend on the Scenario.\n"
+"    }\n"
+"  \\end{minipage}"
+msgstr ""
+"[H]\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\locationtitle{Сувій Заклинання}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/spell_scroll.jpg}\n"
+"    \\expansionlabel{stronghold}\n"
+"    \\caption{\\small Категорія: \\textbf{Одноразові}\\\\\n"
+"      Візьміть карту Сувою Заклинання з Колоди і помістіть біля Планшета вашого Героя.\n"
+"      Візьміть два Заклинання і помістіть їх долілиць на карту Сувою Заклинання.\n"
+"      Можете використовувати ці Заклинання \\protect\\pagelink{Spell Scroll Cards}{з деякими обмеженнями}.\n"
+"    }\n"
+"  \\end{minipage}\\hfill\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\vspace{0pt}\n"
+"    \\centering\n"
+"    \\locationtitle{Ринок Часу}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/market_of_time.jpg}\n"
+"    \\expansionlabel{tower}\n"
+"    \\caption{\\small Категорія: \\textbf{Одноразові}\\\\\n"
+"      Видаліть карту з вашої руки.\n"
+"      Далі \\textbf{Шукайте (2)} в Колоді Здібностей, Заклинань чи Артефактів.\n"
+"    }\n"
+"  \\end{minipage}"
+
+#. type: figure
+#: sections/all_map_locations.tex:676
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1383,81 +1648,50 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:623
-#, no-wrap
+#: sections/all_map_locations.tex:699
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[H]\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\locationtitle{Obelisk}\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/obelisk.jpg}\n"
+#| "    \\caption{\\small Category: \\textbf{Flaggable}\\\\\n"
+#| "      The Obelisk's effects depend on the Scenario.\n"
+#| "      When you flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}\n"
+#| "  \\end{minipage}\\hfill\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\locationtitle{Tree of Knowledge}\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/tree_of_knowledge.jpg}\n"
+#| "    \\caption{\\small Category: \\textbf{Visitable}\\\\You may\n"
+#| "      \\svg{pay}\n"
+#| "      3 \\svg{valuables} or\n"
+#| "      10 \\svg{gold} to gain\n"
+#| "      2 \\svg{experience}.}\n"
+#| "  \\end{minipage}"
 msgid ""
 "[H]\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
 "    \\vspace{0pt}\n"
 "    \\centering\n"
-"    \\locationtitle{Hill Fort}\n"
-"    \\framedimage[\\linewidth]{\\map_locations/hill_fort.jpg}\n"
-"    \\expansionlabel{tower}\n"
-"    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
-"      You may immediately reinforce one of your \\svg{bronze} or \\svg{silver} units.\n"
-"      The reinforcement cost is reduced by 3 \\svg{gold} to a minimum of 0.}\n"
+"    \\pagetarget{Star Axis}{\\locationtitle{Star Axis}}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/star_axis.jpg}\n"
+"    \\expansionlabel{inferno}\n"
+"    \\caption{\\small Category: \\textbf{Flaggable}\\\\\n"
+"      You may remove one of your Statistic cards from your hand and replace it with an \\protect\\pagelink{Empowered Statistic}{\\textbf{Empowered}} one of the same type.\n"
+"      When you flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}\n"
 "  \\end{minipage}\\hfill\n"
-"  \\begin{minipage}[t]{0.47\\textwidth}\n"
+"    \\begin{minipage}[t]{0.47\\textwidth}\n"
 "    \\vspace{0pt}\n"
 "    \\centering\n"
-"    \\locationtitle{Prison}\n"
-"    \\framedimage[\\linewidth]{\\map_locations/prison.jpg}\n"
-"    \\expansionlabel{tower}\n"
+"    \\locationtitle{Grave}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/grave.jpg}\n"
+"    \\expansionlabel{cove}\n"
 "    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
-"      Gain a Secondary Hero.\n"
-"      Place their model on this Field.\n"
-"      If you already have a Secondary Hero, gain 3 \\svg{gold} instead.}\n"
-"  \\end{minipage}"
-msgstr ""
-"[H]\n"
-"  \\begin{minipage}[t]{0.47\\textwidth}\n"
-"    \\vspace{0pt}\n"
-"    \\centering\n"
-"    \\locationtitle{Фортеця на Пагорбі}\n"
-"    \\framedimage[\\linewidth]{\\map_locations/hill_fort.jpg}\n"
-"    \\expansionlabel{tower}\n"
-"    \\caption{\\small Категорія: \\textbf{Одноразові}\\\\\n"
-"      Ви можете підкріпити один з ваших \\svg{bronze} або \\svg{silver} підрозділів.\n"
-"      Вартість підкріплення зменшена на 3 \\svg{gold} до мінімальної - 0.}\n"
-"  \\end{minipage}\\hfill\n"
-"  \\begin{minipage}[t]{0.47\\textwidth}\n"
-"    \\vspace{0pt}\n"
-"    \\centering\n"
-"    \\locationtitle{В'язниця}\n"
-"    \\framedimage[\\linewidth]{\\map_locations/prison.jpg}\n"
-"    \\expansionlabel{tower}\n"
-"    \\caption{\\small Категорія: \\textbf{Одноразові}\\\\\n"
-"      Отримуєте Другорядного Героя.\n"
-"      Помістіть його фігурку на це Поле.\n"
-"      Якщо ви вже маєте Другорядного Героя, отримайте 3 \\svg{gold} натомість.}\n"
-"  \\end{minipage}"
-
-#. type: figure
-#: sections/all_map_locations.tex:649
-#, no-wrap
-msgid ""
-"[H]\n"
-"  \\begin{minipage}[t]{0.47\\textwidth}\n"
-"    \\vspace{0pt}\n"
-"    \\centering\n"
-"    \\locationtitle{Spell Scroll}\n"
-"    \\framedimage[\\linewidth]{\\map_locations/spell_scroll.jpg}\n"
-"    \\expansionlabel{stronghold}\n"
-"    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
-"      Take a Spell Scroll card from its Deck and place it next to your Hero Board.\n"
-"      Draw two Spells and place them face-down at the Spell Scroll card.\n"
-"      You can use these Spells \\protect\\pagelink{Spell Scroll Cards}{with some restrictions}.\n"
-"    }\n"
-"  \\end{minipage}\\hfill\n"
-"  \\begin{minipage}[t]{0.47\\textwidth}\n"
-"    \\vspace{0pt}\n"
-"    \\centering\n"
-"    \\locationtitle{Market of Time}\n"
-"    \\framedimage[\\linewidth]{\\map_locations/market_of_time.jpg}\n"
-"    \\expansionlabel{tower}\n"
-"    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
-"      Remove one card from your hand.\n"
-"      Then \\textbf{Search (2)} the Ability, Spell, or Artifact Deck.\n"
+"      Gain \\svg{morale_negative}, 3 \\svg{gold}, and \\textbf{Search (1)} \\svg{artifact}.\n"
 "    }\n"
 "  \\end{minipage}"
 msgstr ""
@@ -1465,76 +1699,50 @@ msgstr ""
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
 "    \\vspace{0pt}\n"
 "    \\centering\n"
-"    \\locationtitle{Сувій Заклинання}\n"
-"    \\framedimage[\\linewidth]{\\map_locations/spell_scroll.jpg}\n"
-"    \\expansionlabel{stronghold}\n"
-"    \\caption{\\small Категорія: \\textbf{Одноразові}\\\\\n"
-"      Візьміть карту Сувою Заклинання з Колоди і помістіть біля Планшета вашого Героя.\n"
-"      Візьміть два Заклинання і помістіть їх долілиць на карту Сувою Заклинання.\n"
-"      Можете використовувати ці Заклинання \\protect\\pagelink{Spell Scroll Cards}{з деякими обмеженнями}.\n"
-"    }\n"
+"    \\locationtitle{Обеліск}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/obelisk.jpg}\n"
+"    \\caption{\\small Категорія: \\textbf{Захоплюється}\\\\\n"
+"      Ефект обеліску залежить від Сценарію.\n"
+"      Після захоплення цього Поля, не видаляйте Кубики ворожих Фракцій; кілька гравців можуть мати Кубики Фракції на цьому Полі.}\n"
 "  \\end{minipage}\\hfill\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
 "    \\vspace{0pt}\n"
 "    \\centering\n"
-"    \\locationtitle{Ринок Часу}\n"
-"    \\framedimage[\\linewidth]{\\map_locations/market_of_time.jpg}\n"
-"    \\expansionlabel{tower}\n"
-"    \\caption{\\small Категорія: \\textbf{Одноразові}\\\\\n"
-"      Видаліть карту з вашої руки.\n"
-"      Далі \\textbf{Шукайте (2)} в Колоді Здібностей, Заклинань чи Артефактів.\n"
-"    }\n"
+"    \\locationtitle{Дерево Знань}\n"
+"    \\framedimage[\\linewidth]{\\map_locations/tree_of_knowledge.jpg}\n"
+"    \\caption{\\small Категорія: \\textbf{Одноразові}\\\\Ви можете\n"
+"      \\svg{pay}\n"
+"      3 \\svg{valuables} або\n"
+"      10 \\svg{gold} щоб отримати\n"
+"      2 \\svg{experience}.}\n"
 "  \\end{minipage}"
-
-#. type: figure
-#: sections/all_map_locations.tex:664
-#, no-wrap
-msgid ""
-"[H]\n"
-"  \\begin{minipage}[t]{0.47\\textwidth}\n"
-"    \\vspace{0pt}\n"
-"    \\centering\n"
-"    \\locationtitle{Cyclops Stockpile}\n"
-"    \\framedimage[\\linewidth]{\\map_locations/cyclops_stockpile.jpg}\n"
-"    \\expansionlabel{stronghold}\n"
-"    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
-"      When preparing the Neutral Army guarding this location, instead of drawing 1 \\svg{azure} unit, find 2 \\svg{golden} \\protect\\wikilink{units/cyclopes}{Cyclopes} and add them to the Neutral Army (look for them first in the \\svg{golden} discard pile, and then in the \\svg{golden} Neutral Unit Deck).\n"
-"      If you win the Combat, roll and resolve 4 \\svg{resource_die}.\n"
-"      Any additional effects depend on the Scenario.\n"
-"    }\n"
-"  \\end{minipage}\\hfill"
-msgstr ""
-"[H]\n"
-"  \\begin{minipage}[t]{0.47\\textwidth}\n"
-"    \\vspace{0pt}\n"
-"    \\centering\n"
-"    \\locationtitle{Склади Циклопів}\n"
-"    \\framedimage[\\linewidth]{\\map_locations/cyclops_stockpile.jpg}\n"
-"    \\expansionlabel{stronghold}\n"
-"    \\caption{\\small Категорія: \\textbf{Одноразові}\\\\\n"
-"      На етапі підготовки Нейтральної Армії захисників цього Поля, замість 1 \\svg{azure} підрозділу, знайдіть 2 \\svg{golden} \\protect\\wikilink{units/cyclopes}{Циклопів} і додайте їх до Нейтральної Армії (шукайте їх спершу в \\svg{golden} стопці скиду, а потім в \\svg{golden} Колоді Нейтральної Армії).\n"
-"      Якщо ви перемогли в Битві, підкиньте 4 \\svg{resource_die} й отримайте бонус з кожного.\n"
-"      Будь-які додаткові ефекти залежать від Сценарію.\n"
-"    }\n"
-"  \\end{minipage}\\hfill"
-
-#. type: tikzpicture
-#: sections/all_map_locations.tex:668
-#, no-wrap
-msgid ""
-"[remember picture, overlay]\n"
-"  \\node[opacity=0.15] at ([xshift=13em, yshift=24.9em]current page.south) {\\includegraphics[width=0.8\\linewidth, trim=0 200pt 0 0, clip]{\\art/cyclops.png}};"
-msgstr ""
-"[remember picture, overlay]\n"
-"  \\node[opacity=0.15] at ([xshift=13em, yshift=24.9em]current page.south) {\\includegraphics[width=0.8\\linewidth, trim=0 200pt 0 0, clip]{\\art/cyclops.png}};"
 
 #. type: Plain text
-#: sections/all_map_locations.tex:672
+#: sections/all_map_locations.tex:706
+#, fuzzy
+#| msgid ""
+#| "\\textlang{english}{\\begin{tikzpicture}[remember picture, overlay] "
+#| "\\node(cover)[anchor=center, yshift=12em] at (current page.south) "
+#| "{ \\includegraphics[width=1.01\\paperwidth, keepaspectratio]{\\art/"
+#| "castle_bottom.png} \\thispagestyle{empty} }; \\end{tikzpicture}}"
+msgid ""
+"\\textlang{english}{\\begin{tikzpicture}[remember picture, overlay] "
+"\\node(cover)[anchor=center, yshift=12em, opacity=0.1] at (current "
+"page.south) { \\includegraphics[width=1.01\\paperwidth, keepaspectratio]"
+"{\\art/cove_background.png} }; \\end{tikzpicture}}"
+msgstr ""
+"\\textlang{english}{\\begin{tikzpicture}[remember picture, overlay] "
+"\\node(cover)[anchor=center, yshift=12em] at (current page.south) "
+"{ \\includegraphics[width=1.01\\paperwidth, keepaspectratio]{\\art/"
+"castle_bottom.png} \\thispagestyle{empty} }; \\end{tikzpicture}}"
+
+#. type: Plain text
+#: sections/all_map_locations.tex:710
 msgid "\\pagetarget{Location Token}{\\subheader{Location Tokens}}"
 msgstr "\\pagetarget{Location Token}{\\subheader{Жетони Локацій}}"
 
 #. type: Plain text
-#: sections/all_map_locations.tex:675
+#: sections/all_map_locations.tex:713
 msgid ""
 "The following Fields are found on single-hex Location Tokens only, not on "
 "regular Map Tiles.  The placement of the Location Tokens is described in "
@@ -1545,7 +1753,7 @@ msgstr ""
 "\\pagelink{Discover Location Tokens}{Елементах Мапи}."
 
 #. type: figure
-#: sections/all_map_locations.tex:698
+#: sections/all_map_locations.tex:736
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1593,7 +1801,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:724
+#: sections/all_map_locations.tex:762
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1645,7 +1853,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:753
+#: sections/all_map_locations.tex:791
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1703,7 +1911,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: table*
-#: sections/all_map_locations.tex:816
+#: sections/all_map_locations.tex:854
 #, no-wrap
 msgid ""
 "[!hb]\n"
@@ -1831,7 +2039,7 @@ msgstr ""
 "  \\expansionlabel{navalbattles}"
 
 #. type: table*
-#: sections/all_map_locations.tex:878
+#: sections/all_map_locations.tex:916
 #, no-wrap
 msgid ""
 "[!hb]\n"
