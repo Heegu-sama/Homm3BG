@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-03-29 12:19+0000\n"
+"POT-Creation-Date: 2026-03-29 16:58+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,8 +23,8 @@ msgstr ""
 #: sections/heroes.tex:5 sections/map_elements.tex:93
 #: sections/map_elements.tex:142 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenarios.tex:5 sections/setup.tex:5 sections/solo_campaigns.tex:5
-#: sections/tournament_mode.tex:5 sections/town.tex:5 sections/trading.tex:5
+#: sections/scenarios.tex:5 sections/setup.tex:5 sections/solo_campaigns.tex:7
+#: sections/tournament_mode.tex:6 sections/town.tex:5 sections/trading.tex:5
 #: sections/units.tex:5 sections/units.tex:42 sections/units.tex:222
 #, no-wrap
 msgid ""
@@ -176,7 +176,7 @@ msgid ""
 "Unit setup when fighting \\textbf{other players}:\n"
 "\\begin{itemize}[leftmargin=2.2em]\n"
 "  \\item The attacking player places up to 5 units on their chosen side of the Combat Board, followed by the defender.\n"
-"  \\item If the Combat takes place in a Town with a Citadel, the defender adds the \\pagelink{Walls}{Wall, Gate and Arrow Tower} cards after placing their units.\n"
+"  \\item If the Combat takes place in a Town with a Citadel\\index{Citadel}, the defender adds the \\pagelink{Walls}{Wall, Gate and Arrow Tower} cards after placing their units.\n"
 "\\end{itemize}\n"
 "\n"
 msgstr ""
@@ -228,13 +228,13 @@ msgid ""
 "  \\includegraphics[width=4em]{\\images/defense-token.png}\\\\\n"
 "  \\imagecaption{Defense Token}\n"
 "\\end{wrapfigure}\n"
-"\\textbf{\\pagetarget{Defend}{Defend}} – units may choose to gain a Defense Token and end the activation instead of attacking.\n"
+"\\textbf{\\pagetarget{Defend}{Defend}}\\index{Defend Action} – units may choose to gain a Defense Token and end the activation instead of attacking.\n"
 "When a unit with a Defense Token is attacked, make another roll with the attack Die after the initial attack roll.\n"
 "If you roll a ``+1'', the defending unit gains an extra 1 Defense for this attack.\n"
 "If a unit has a Defense Token at the start of its activation, discard it.\n"
 "The unit cannot take another Defense Action during that activation.\\par\n"
 "\\begin{expansion}{conflux}\n"
-"  \\textbf{\\pagetarget{Elemental Damage}{Elemental Damage}} – If units deal elemental damage, they attack normally, but the resulting damage works similarly to \\svg{damage} dealt by Spells and ignores the unit's \\svg{defense}.\n"
+"  \\textbf{\\pagetarget{Elemental Damage}{Elemental Damage}}\\index{Elemental Damage} – If units deal elemental damage, they attack normally, but the resulting damage works similarly to \\svg{damage} dealt by Spells and ignores the unit's \\svg{defense}.\n"
 "  Elemental damage does not count as damage from Spells.\n"
 "\\end{expansion}\n"
 "\n"
@@ -259,7 +259,7 @@ msgstr ""
 #: sections/combat.tex:136
 #, no-wrap
 msgid ""
-"Combat is divided into Rounds, during which all of the units participating in that Combat \\textbf{activate once} in Initiative order.\n"
+"Combat is divided into Rounds, during which all of the units participating in that Combat \\textbf{activate once}\\index{Activation!Combat} in Initiative order.\n"
 "After each unit has activated, a new Combat Round begins.\n"
 "Combat lasts until all units on one side are eliminated, a player has to \\textbf{Retreat}\\index{Retreat} when fighting Neutral Units, or a player \\textbf{surrenders} to another player.\n"
 "\n"
@@ -278,7 +278,7 @@ msgid ""
 "  In Neutral Combat, the Neutral enemy units cannot defend, even when controlled by another player.\n"
 "  \\item Before a unit attacks, both players may \\pagelink{CombatCards}{play cards}. Cards are resolved in the order in which players decide to play them.\n"
 "  \\item After a unit's attack has been declared and all cards have been played, roll the Attack Die.\n"
-"    Modify the attacking unit's attack by the Die's result, then reduce it by the defending unit's Defense, and finally deal the rest as \\pagelink{HP}{damage} to the defending unit.\n"
+"    Modify the attacking unit's attack by the Die's result, then reduce it by the defending unit's Defense, and finally deal the rest as \\pagelink{HP}{damage}\\index{Damage} to the defending unit.\n"
 "  \\item If the defending unit was adjacent to the attacker, it \\pagelink{Retaliate}{retaliates} if it hasn't done so this Round.\n"
 "  \\item Keep activating units until they've all been activated once.\n"
 "After the last unit's activation, the Combat Round ends.\n"
@@ -355,7 +355,7 @@ msgid ""
 "Combat against another player's Hero has two possible outcomes:\n"
 "\\begin{itemize}\n"
 " \\item \\textbf{Victory/Defeat:} If all units on one side are defeated, the side with any surviving units is the winner, the other side is defeated.\n"
-" \\item \\textbf{Surrender:} Instead of activating one of their units, a Hero can decide to surrender to the other player's Hero by paying them 10 \\svg{gold} to prevent their army from being defeated. In this case, Combat ends immediately without having a winning or defeated Hero.\n"
+" \\item \\textbf{Surrender:}\\index{Surrender} Instead of activating one of their units, a Hero can decide to surrender to the other player's Hero by paying them 10 \\svg{gold} to prevent their army from being defeated. In this case, Combat ends immediately without having a winning or defeated Hero.\n"
 "\\end{itemize}\n"
 "\n"
 msgstr ""
@@ -478,6 +478,11 @@ msgstr ""
 msgid "\\pagetarget{Siege Combat}{\\subheader{Siege Combat}}"
 msgstr ""
 
+#. type: index{#1}
+#: sections/combat.tex:251
+msgid "Siege Combat"
+msgstr ""
+
 #. type: multicols*
 #: sections/combat.tex:251
 #, no-wrap
@@ -493,7 +498,7 @@ msgstr ""
 #: sections/combat.tex:254
 #, no-wrap
 msgid ""
-"When you defend a Town \\textbf{without a Citadel}, resolve Combat normally on the standard Combat Board.\n"
+"When you defend a Town \\textbf{without a Citadel}\\index{Citadel}, resolve Combat normally on the standard Combat Board.\n"
 "Defending a Settlement follows the same rules as defending a Town without a Citadel.\n"
 "\n"
 msgstr ""
