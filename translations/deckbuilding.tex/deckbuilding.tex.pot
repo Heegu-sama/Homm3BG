@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-03-29 12:19+0000\n"
+"POT-Creation-Date: 2026-03-29 14:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,8 +23,8 @@ msgstr ""
 #: sections/heroes.tex:5 sections/map_elements.tex:93
 #: sections/map_elements.tex:142 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenarios.tex:5 sections/setup.tex:5 sections/solo_campaigns.tex:5
-#: sections/tournament_mode.tex:5 sections/town.tex:5 sections/trading.tex:5
+#: sections/scenarios.tex:5 sections/setup.tex:5 sections/solo_campaigns.tex:7
+#: sections/tournament_mode.tex:6 sections/town.tex:5 sections/trading.tex:5
 #: sections/units.tex:5 sections/units.tex:42 sections/units.tex:222
 #, no-wrap
 msgid ""
@@ -43,7 +43,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:435
+#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:436
 #: sections/units.tex:230 sections/units.tex:234
 #, no-wrap
 msgid ""
@@ -52,7 +52,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/battlefield.tex:399 sections/deckbuilding.tex:65
+#: sections/battlefield.tex:402 sections/deckbuilding.tex:65
 #, no-wrap
 msgid ""
 "  \\vspace*{\\fill}\n"
@@ -60,8 +60,8 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/card_effect_keywords.tex:117 sections/card_effect_keywords.tex:202
-#: sections/deckbuilding.tex:191 sections/deckbuilding.tex:452
+#: sections/card_effect_keywords.tex:121 sections/card_effect_keywords.tex:207
+#: sections/deckbuilding.tex:191 sections/deckbuilding.tex:453
 #: sections/resources.tex:31
 #, no-wrap
 msgid "\\columnbreak"
@@ -104,9 +104,9 @@ msgid ""
 "  \\columnbreak\n"
 "  \\item Cards have the following \\pagetarget{Card Effects}{types of effects}:\n"
 "  \\begin{itemize}\n"
-"    \\item \\textbf{Instant} \\svg{instant} Effects are resolved immediately.\n"
-"    \\item \\textbf{Activation} \\svg{activation} Effects must be played when Activating your own unit in Combat.\n"
-"    \\item \\textbf{Map} \\svg{map} Effects cannot be used during Combat.\n"
+"    \\item \\textbf{Instant} \\svg{instant} Effects\\index{Instant Effects} are resolved immediately.\n"
+"    \\item \\textbf{Activation} \\svg{activation} Effects\\index{Activation!Effects} must be played when Activating your own unit in Combat.\n"
+"    \\item \\textbf{Map} \\svg{map} Effects\\index{Map Effects} cannot be used during Combat.\n"
 "    \\item \\textbf{Ongoing} \\svg{ongoing} Effects\\index{Ongoing Effects} last until they are used up or until the player who played them starts their next Turn (whichever happens first).\n"
 "      \\begin{expansion}[before skip balanced=0.3em,]{stronghold,conflux,cove}\n"
 "      \\pagetarget{Time Token}{}\n"
@@ -183,7 +183,7 @@ msgstr ""
 #: sections/deckbuilding.tex:78
 #, no-wrap
 msgid ""
-"All Statistic\\index{Statistic cards} and Ability cards\\index{Ability card} have a \\textbf{Basic Effect}\\index{Basic Effect} and a stronger \\textbf{Expert} \\svg{expert} \\textbf{Effect}\\index{Expert Effect}, which is shown below the Basic Effect.\n"
+"All Statistic\\index{Statistic cards} and Ability cards\\index{Ability cards} have a \\textbf{Basic Effect}\\index{Basic Effect} and a stronger \\textbf{Expert} \\svg{expert} \\textbf{Effect}\\index{Expert Effect}, which is shown below the Basic Effect.\n"
 "Whenever you play a Statistic or Ability card, you must choose which effect you are using.\n"
 "The number of \\svg{expert} Effects you can use each Round is limited by your Main Hero's \\pagelink{Level}{Level}.\n"
 "Track the number of uses you have in any suitable manner, such as by moving Black Cubes on and off your Hero Board.\\par\n"
@@ -255,7 +255,7 @@ msgid ""
 "    \\hfill\n"
 "    \\begin{minipage}[t]{0.65\\linewidth}\n"
 "      \\vspace*{0mm}\n"
-"      \\subsection*{\\pagetarget{Empowered Statistic}{Empowered} Statistic cards}\\index{Empowered Statistic Card}\n"
+"      \\subsection*{\\pagetarget{Empowered Statistic}{Empowered} Statistic cards}\\index{Empowered Statistic cards}\n"
 "      These cards are more powerful versions of the normal Statistic cards.\n"
 "      They have only one effect which is identical to the normal Statistic's Expert effect, but does not require using your \\svg{expert}.\\par\n"
 "\n"
@@ -312,7 +312,7 @@ msgid ""
 "    \\end{minipage}\n"
 "    \\hfill\n"
 "    \\begin{minipage}[t]{0.65\\linewidth}\n"
-"      \\subsection*{\\pagetarget{Empowered Ability}{Empowered} Ability cards}\\index{Empowered Statistic card}\n"
+"      \\subsection*{\\pagetarget{Empowered Ability}{Empowered} Ability cards}\\index{Empowered Ability cards}\n"
 "      The Empowered Ability cards work very similarly to Empowered Statistic cards.\n"
 "      Their only effect corresponds to the Expert effect of normal Ability cards, but without requiring you to use your \\svg{expert}.\n"
 "\n"
@@ -349,7 +349,7 @@ msgstr ""
 msgid ""
 "*{navalbattles}\n"
 "\\begin{multicols*}{2}\n"
-"  \\pagetarget{Empowered Ability Token}{\\subsection*{Empowered Ability Tokens}}\n"
+"  \\pagetarget{Empowered Ability Token}{\\subsection*{Empowered Ability Tokens}}\\index{Empowered Ability}\n"
 "  \\setlength\\intextsep{0pt}\n"
 "  \\setlength\\columnsep{1em}\n"
 "  \\begin{wrapfigure}{r}{0.2\\linewidth}\n"
@@ -459,7 +459,7 @@ msgstr ""
 #: sections/deckbuilding.tex:256
 #, no-wrap
 msgid ""
-"Spell cards\\index{Spell card} have three possible primary effects.\n"
+"Spell cards\\index{Spell cards} have three possible primary effects.\n"
 "Using the topmost, basic version of the Spell usually has no additional costs.\n"
 "To access the other effects, you may \\textbf{Empower} a Spell\\index{Empowering Spells} by paying the indicated cost (3) to get a more powerful outcome (4).\n"
 "You may pay this cost by playing other cards for their Empower \\svg{empower} effect (e.g. the \\wikilink{statistics/power}{Power} Statistic card) before casting the Spell.\n"
@@ -613,19 +613,20 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:339
+#: sections/deckbuilding.tex:340
 #, no-wrap
 msgid ""
 "\\pagebreak\n"
 "\\pagetarget{Specialty}{\\subheader{Hero Specialty Cards}}\n"
+"\\index{Hero Specialty card}\n"
 "\n"
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:344
+#: sections/deckbuilding.tex:345
 #, no-wrap
 msgid ""
-"Hero Specialty cards\\index{Specialty card} are gained from \\pagelink{Level}{Level ups}.\n"
+"Hero Specialty cards\\index{Specialty cards} are gained from \\pagelink{Level}{Level ups}.\n"
 "Each Main Hero has a unique set of Specialty cards.\n"
 "While some of these cards have effects which resemble Spell cards and even make use of \\svg{empower}, Specialty cards are their \\textbf{own unique category of cards}.\n"
 "For example, the limit of 1 Spell per Combat Round doesn't apply to Specialty cards.\n"
@@ -633,7 +634,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:352
+#: sections/deckbuilding.tex:353
 #, no-wrap
 msgid ""
 "{\n"
@@ -647,7 +648,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:360
+#: sections/deckbuilding.tex:361
 #, no-wrap
 msgid ""
 "{\n"
@@ -661,7 +662,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:363
+#: sections/deckbuilding.tex:364
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -670,10 +671,10 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:370
+#: sections/deckbuilding.tex:371
 #, no-wrap
 msgid ""
-"Artifact cards\\index{Artifact card} have a top and bottom effect. When you play one, you must \\textbf{choose which effect} you are using.\n"
+"Artifact cards\\index{Artifact cards} have a top and bottom effect. When you play one, you must \\textbf{choose which effect} you are using.\n"
 "They are divided into 3 Levels: Minor, Major, and Relic, with different border color.\n"
 "These Levels relate to the overall Power of the card and may be referenced when resolving certain effects or during Scenario setup.\n"
 "Otherwise, all Artifact cards are normally shuffled together to form the Artifact Deck regardless of their Level.\n"
@@ -683,7 +684,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:390
+#: sections/deckbuilding.tex:391
 #, no-wrap
 msgid ""
 "  \\node (major) {\\includegraphics[width=0.6\\linewidth]{\\cards/artifact.png}};\n"
@@ -709,7 +710,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:400
+#: sections/deckbuilding.tex:401
 #, no-wrap
 msgid ""
 "\\begin{multicols}{2}\n"
@@ -724,23 +725,23 @@ msgid ""
 msgstr ""
 
 #. type: center
-#: sections/deckbuilding.tex:407
+#: sections/deckbuilding.tex:408
 msgid ""
 "{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/"
 "diplomats_ring.png}}"
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:412
+#: sections/deckbuilding.tex:413
 #, no-wrap
 msgid ""
 "{stronghold}\n"
-"\\pagetarget{Spell Scroll Cards}{\\subheader{Spell Scroll Cards}}\n"
+"\\pagetarget{Spell Scroll Cards}{\\subheader{Spell Scroll Cards}}\\index{Spell Scroll cards}\n"
 "\n"
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:417
+#: sections/deckbuilding.tex:418
 #, no-wrap
 msgid ""
 "During setup shuffle 10 of the Spell Scroll cards into the Artifact Deck.\n"
@@ -751,7 +752,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:427
+#: sections/deckbuilding.tex:428
 #, no-wrap
 msgid ""
 "{\n"
@@ -767,7 +768,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:433
+#: sections/deckbuilding.tex:434
 #, no-wrap
 msgid ""
 "\\vspace*{1em}\n"
@@ -779,7 +780,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:443
+#: sections/deckbuilding.tex:444
 #, no-wrap
 msgid ""
 "You can play Spells from a Spell Scroll like any other Spell with the following exceptions:\n"
@@ -792,7 +793,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:452
+#: sections/deckbuilding.tex:453
 #, no-wrap
 msgid ""
 "{stronghold}\n"
@@ -806,7 +807,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:454
+#: sections/deckbuilding.tex:455
 #, no-wrap
 msgid ""
 "If the last Spell on a Spell Scroll is used or sold, place the Spell Scroll back in its Deck.\n"
@@ -814,7 +815,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:457
+#: sections/deckbuilding.tex:458
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -822,7 +823,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:462
+#: sections/deckbuilding.tex:463
 #, no-wrap
 msgid ""
 "{rampart,cove}\n"
@@ -831,17 +832,17 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:466
+#: sections/deckbuilding.tex:467
 #, no-wrap
 msgid ""
-"  War Machines\\index{War Machines} are permanent cards that can be bought at either a \\pagelink{Trading Post}{Trading Post} or a \\pagelink{War Machine Factory}{War Machine Factory}.\n"
+"  War Machines\\index{War Machine cards} are permanent cards that can be bought at either a \\pagelink{Trading Post}{Trading Post} or a \\pagelink{War Machine Factory}{War Machine Factory}.\n"
 "  If you buy one at the Trading Post, \\textbf{you cannot use} any of the other normal functions of that Field during that visit.\n"
 "  War machines are also more expensive at the Trading Post.\n"
 "\n"
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:490
+#: sections/deckbuilding.tex:491
 #, no-wrap
 msgid ""
 "  {\n"

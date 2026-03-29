@@ -16,7 +16,7 @@ If a unit is defeated in Combat, \textbf{discard it} from your Unit Deck.\par
 Units of your Faction may be recruited\index{Recruiting} and reinforced\index{Reinforcing} by flipping the Population Token\index{Population Token} and paying the unit's recruitment \svg{recruit} or reinforcement \svg{reinforce} cost.
 When you do so, you can instantly recruit and reinforce \textbf{any number} of times, provided you have enough Resources and the prerequisite Buildings to do so.\par
 \textbf{Recruiting} a unit requires that your Town has a Dwelling of that unit's Level (\svg{bronze}\svg{silver}\svg{golden}).
-\textbf{Reinforcing} requires that your Town has a Citadel in addition to a Dwelling of that unit's Level.\par
+\textbf{Reinforcing} requires that your Town has a Citadel\index{Citadel} in addition to a Dwelling of that unit's Level.\par
 
 \note{13}{
   Any effects which instruct you to reinforce \textbf{do not} require spending your Population Token nor owning a Citadel or any Dwellings.\par
@@ -42,15 +42,15 @@ When you do so, you can instantly recruit and reinforce \textbf{any number} of t
 
 \vspace{0pt}
 
-\includegraphics[height=30px]{\images/attack.png} \textbf{Attack} – The amount of damage this unit deals when it attacks.\par
-\includegraphics[height=30px]{\images/defense.png} \textbf{Defense} - The amount by which this unit reduces oncoming Attack damage.
+\includegraphics[height=30px]{\images/attack.png} \textbf{Attack}\index{Attack!Unit} – The amount of damage this unit deals when it attacks.\par
+\includegraphics[height=30px]{\images/defense.png} \textbf{Defense}\index{Defense!Unit} - The amount by which this unit reduces oncoming Attack damage.
 Does not apply to damage received from Spells or other non-attack effects.\par
-\includegraphics[height=30px]{\images/hp.png} \textbf{\pagetarget{HP}{HP}} - The amount of damage required to defeat the unit.
+\includegraphics[height=30px]{\images/hp.png} \textbf{\pagetarget{HP}{HP}}\index{Hit Points (HP)} - The amount of damage required to defeat the unit.
 ``Few'' units are discarded from Combat and their owner's Unit Deck when defeated.
 ``Pack'' units are turned back to ``Few'' units, with any excess damage placed on their ``Few'' side.
 Units retain their ``Few'' or ``Pack'' status between Combats.
 All damage is healed from all units at the end of Combat.\par
-\includegraphics[height=30px]{\images/initiative.png}{\pagetarget{Initiative}{\textbf{Initiative}}} - Determines when the unit activates during Combat.
+\includegraphics[height=30px]{\images/initiative.png}{\pagetarget{Initiative}{\textbf{Initiative}}}\index{Initiative} - Determines when the unit activates during Combat.
 Units with a higher Initiative activate first.
 
 \vspace*{\fill}
@@ -89,7 +89,7 @@ Units with a higher Initiative activate first.
         \draw (0.6, 0.1) node {\encircle{11}};
       \end{relcoords}
     \end{tikzpicture}
-    \imagecaption{Unit card (Few)}
+    \imagecaption{Unit card (Few)}\index{Few}
   \end{center}
   \begin{itemize}
     \item[\textbf{1.}] {Name}
@@ -116,7 +116,7 @@ Units with a higher Initiative activate first.
         \draw (0.6, 0.1) node {\encircle{11}};
       \end{relcoords}
     \end{tikzpicture}
-    \imagecaption{Unit card (Pack)}
+    \imagecaption{Unit card (Pack)}\index{Pack}
   \end{center}
   \begin{itemize}
     \item[\textbf{7.}] {Initiative}
@@ -129,9 +129,9 @@ Units with a higher Initiative activate first.
 
 \bigbreak
 
-Most units have a \textbf{special ability}\index{Special Ability}:\par
+Most units have a \textbf{special ability:}\index{Special Unit Ability}\par
 \begin{itemize}[wide]
-  \item\textbf{Activation} \svg{activation} resolves when the unit is activated.
+  \item\textbf{Activation} \svg{activation}\index{Activation!Effects}\index{Activation!Unit} resolves when the unit is activated.
   \item\textbf{Attack} \svg{unit_attack} resolves when the unit attacks during its Activation.
     In case of multiple attacks, resolve the effect for \textbf{the first attack only}.
   \item\textbf{Other} \svg{unit_alternative} may be resolved instead of the unit's normal Activation.

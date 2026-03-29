@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-03-29 12:19+0000\n"
+"POT-Creation-Date: 2026-03-29 14:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,8 +23,8 @@ msgstr ""
 #: sections/heroes.tex:5 sections/map_elements.tex:93
 #: sections/map_elements.tex:142 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenarios.tex:5 sections/setup.tex:5 sections/solo_campaigns.tex:5
-#: sections/tournament_mode.tex:5 sections/town.tex:5 sections/trading.tex:5
+#: sections/scenarios.tex:5 sections/setup.tex:5 sections/solo_campaigns.tex:7
+#: sections/tournament_mode.tex:6 sections/town.tex:5 sections/trading.tex:5
 #: sections/units.tex:5 sections/units.tex:42 sections/units.tex:222
 #, no-wrap
 msgid ""
@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/battlefield.tex:91 sections/map_elements.tex:54
+#: sections/battlefield.tex:94 sections/map_elements.tex:54
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -333,17 +333,18 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/map_elements.tex:186
+#: sections/map_elements.tex:187
 msgid "\\subheader{Expansion Tiles}"
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:186
+#: sections/map_elements.tex:187
 #, no-wrap
 msgid ""
 "{2}\n"
 "\\begin{expansion}{cove}\n"
 "  \\subsection*{\\pagetarget{Sea Map Tiles}{Sea Map Tiles}}\n"
+"  \\index{Sea Map Tile}\n"
 "  Sea Map Tiles have a unique backside and during setup are placed as shown in the chosen Scenario Map layout.\n"
 "  Discovering them works as with regular Tiles.\n"
 "  Sea Map Tiles may contain both land and sea Fields.\n"
@@ -355,9 +356,9 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:188 sections/map_elements.tex:197
-#: sections/map_elements.tex:269 sections/map_elements.tex:302
-#: sections/player_turns.tex:48 sections/tournament_mode.tex:67
+#: sections/map_elements.tex:189 sections/map_elements.tex:199
+#: sections/map_elements.tex:272 sections/map_elements.tex:305
+#: sections/player_turns.tex:48 sections/tournament_mode.tex:69
 #: sections/units.tex:241
 #, no-wrap
 msgid ""
@@ -366,11 +367,12 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:195
+#: sections/map_elements.tex:197
 #, no-wrap
 msgid ""
 "\\begin{expansion}{conflux}\n"
 "  \\subsection*{\\pagetarget{Elemental Map Tiles}{Elemental Map Tiles}}\n"
+"  \\index{Elemental Map Tile}\n"
 "  Each of the Elemental Map Tiles is associated with one \\pagelink{Schools of Magic}{School of Magic}.\n"
 "  When your Main Hero stands on such a Tile, all cast Spells from that School of Magic have their \\svg{empower} increased by 1.\n"
 "  % Clarification about main Hero is needed.\n"
@@ -379,11 +381,12 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:210
+#: sections/map_elements.tex:213
 #, no-wrap
 msgid ""
 "\\begin{expansion}{stronghold}\n"
 "  \\subsection*{\\pagetarget{Subterranean Map Tiles}{Subterranean Map Tiles}}\n"
+"  \\index{Subterranean Map Tile}\n"
 "  Subterranean Map Tiles have a unique backside and are placed during setup as shown in the chosen Scenario Map layout.\n"
 "  They work similarly to regular Map Tiles, except that \\textbf{you cannot move between a Surface and a Subterranean Tile without using a \\pagelink{Subterranean Gate}{Subterranean Gate} in between} or a Town Portal Spell.\n"
 "  No other movement effects from cards can allow you to move from one to the other.\n"
@@ -398,7 +401,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:215
+#: sections/map_elements.tex:218
 #, no-wrap
 msgid ""
 "\\begin{multicols}{2}\n"
@@ -408,17 +411,17 @@ msgid ""
 msgstr ""
 
 #. type: center
-#: sections/map_elements.tex:220
+#: sections/map_elements.tex:223
 msgid "\\imagecaption{Sea Map Tile}"
 msgstr ""
 
 #. type: Plain text
-#: sections/map_elements.tex:222 sections/map_elements.tex:235
+#: sections/map_elements.tex:225 sections/map_elements.tex:238
 msgid "\\separator"
 msgstr ""
 
 #. type: tikzpicture
-#: sections/map_elements.tex:231
+#: sections/map_elements.tex:234
 #, no-wrap
 msgid ""
 "    \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\images/elemental_tiles.png}}};\n"
@@ -430,7 +433,7 @@ msgid ""
 msgstr ""
 
 #. type: tikzpicture
-#: sections/map_elements.tex:245
+#: sections/map_elements.tex:248
 #, no-wrap
 msgid ""
 "      \\node at (0, 0) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-stronghold.png}};\n"
@@ -443,14 +446,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/map_elements.tex:256
+#: sections/map_elements.tex:259
 msgid ""
 "\\pagetarget{Discover Location Tokens}{\\subheader{Placing and Discovering "
 "Location Tokens}}"
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:256
+#: sections/map_elements.tex:259
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -462,7 +465,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:267
+#: sections/map_elements.tex:270
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{5pt}]{navalbattles}\n"
@@ -479,24 +482,24 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:274
+#: sections/map_elements.tex:277
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{6pt}]{cove}\n"
-"  \\subsection*{\\pagetarget{Whirlpool Tokens}{Whirlpool Tokens}}\n"
+"  \\subsection*{\\pagetarget{Whirlpool Tokens}{Whirlpool Tokens}}\\index{Whirlpool}\n"
 "  Discovering \\pagelink{Whirlpool}{Whirlpools} follows the same rules as discovering Monoliths.\n"
 "  \\bigskip\n"
 "\n"
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:275
+#: sections/map_elements.tex:278
 #, no-wrap
 msgid "  \\begin{tikzpicture}\n"
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:287
+#: sections/map_elements.tex:290
 #, no-wrap
 msgid ""
 "    \\draw (-2.5, 0) node[inner sep=0] {\\includegraphics[width=0.4\\linewidth]{\\map_locations/whirlpool-token.png}};\n"
@@ -514,11 +517,11 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:300
+#: sections/map_elements.tex:303
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{-11mm}]{stronghold}\n"
-"  \\pagetarget{Subterranean Gate}{\\subsection*{Subterranean Gate Tokens}}\n"
+"  \\pagetarget{Subterranean Gate}{\\subsection*{Subterranean Gate Tokens}}\\index{Subterranean Gate}\n"
 "  Subterranean Gates are also determined by a Scenario's Map Layout and connect both a Surface Map Tile and an adjacent Subterranean Map Tile.\n"
 "  They cannot be placed outside the Map Tiles.\n"
 "  After discovering one of the corresponding Map Tiles you may choose the position of the Subterranean Gate Token as long as it connects the two indicated Map Tiles without covering forbidden Fields.\n"
@@ -533,11 +536,11 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:313
+#: sections/map_elements.tex:316
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{0pt}]{conflux}\n"
-"  \\subsection*{\\pagetarget{Monolith Tokens}{Monolith Tokens}}\n"
+"  \\subsection*{\\pagetarget{Monolith Tokens}{Monolith Tokens}}\\index{Monolith}\n"
 "   The position of \\pagelink{Monolith}{Monoliths} is determined by Scenario Layout.\n"
 "   If you discover a Tile with one of these Tokens on it, discover the Tile normally, and then place the Token on the Field indicated by the Scenario's Map layout, or a Field of your choosing if it's not specified.\n"
 "  \\medskip\n"
