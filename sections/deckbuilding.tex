@@ -47,23 +47,23 @@ Each player's Deck starts with 9 cards, built during the game's setup.\par
 \end{multicols}
 \clearpage
 
-\subheader{Searching Example}
 \begin{multicols*}{2}
+  \subsection*{Searching Example}
 
-    \textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during the previous Game Round, enabling him to now use his Spell Book Token to purchase additional Spells.}
+  \textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during the previous Game Round, enabling him to now use his Spell Book Token to purchase additional Spells.}
 
-    \includegraphics[width=\linewidth]{\examples/deemer_receiving_spellbook.png}\par
-    \textit{He spends the token and pays the cost of 5 \svg{gold} indicated on his Town Board, allowing him to \textbf{Search (2)} the Spell Deck.}\par
-    \includegraphics[width=\linewidth]{\examples/deemer_spell_cost.png}\par
-    \filbreak
-    \textit{He now has the choice of either gaining the top Card of the Spell Card Discard Pile, or drawing the top two cards of the Spell Deck and gaining one of them.
-        He is not interested in gaining the Spell Curse, which is on top of the Discard Pile, and instead decides to draw two cards – a Magic Arrow and a Fireball.}
-    \includegraphics[width=\linewidth]{\examples/fireball_over_magic_arrow.png}\par
-    \textit{He decides to keep the Fireball, placing it into his hand and discarding the Magic Arrow into the Spell Discard Pile.}
+  \includegraphics[width=\linewidth]{\examples/deemer_receiving_spellbook.png}\par
+  \textit{He spends the token and pays the cost of 5 \svg{gold} indicated on his Town Board, allowing him to \textbf{Search (2)} the Spell Deck.}\par
+  \includegraphics[width=\linewidth]{\examples/deemer_spell_cost.png}\par
+  \filbreak
+  \textit{He now has the choice of either gaining the top Card of the Spell Card Discard Pile, or drawing the top two cards of the Spell Deck and gaining one of them.
+      He is not interested in gaining the Spell Curse, which is on top of the Discard Pile, and instead decides to draw two cards – a Magic Arrow and a Fireball.}
+  \includegraphics[width=\linewidth]{\examples/fireball_over_magic_arrow.png}\par
+  \textit{He decides to keep the Fireball, placing it into his hand and discarding the Magic Arrow into the Spell Discard Pile.}
 
-    \vspace*{\fill}
+  \vspace*{\fill}
 
-    \hfill{\transparent{0.2}\includegraphics[width=0.8\linewidth]{\art/fire_magic.png}}
+  \hfill{\transparent{0.2}\includegraphics[width=0.8\linewidth]{\art/fire_magic.png}}
 
 \end{multicols*}
 
@@ -230,9 +230,8 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
   \begin{center}
     \begin{tikzpicture}
       \draw (-3, 0) node {\includegraphics[width=0.45\linewidth]{\cards/ability-offense.png}};
-      \draw (-1.5, -1.9) node[circular drop shadow={shadow scale=0.85, shadow xshift=0.5ex, shadow yshift=-0.5ex, opacity=0.7,
-        fill=black, path fading={circle with fuzzy edge 15 percent},
-        every shadow}]{\includegraphics[width=0.2\linewidth]{\images/crown-token.png}};
+      \draw (-1.45, -1.95) node[opacity=0.9] {\includegraphics[width=0.23\linewidth]{\images/token-drop-shadow.png}};
+      \draw (-1.5, -1.9) node {\includegraphics[width=0.2\linewidth]{\images/crown-token.png}};
       \draw (1.5, 0) node {\includegraphics[width=0.45\linewidth]{\cards/ability-offense-empowered.png}};
 
       \draw (-2.8, -3.5) node {\svg[35]{red_cross}};
@@ -470,7 +469,7 @@ Spell Scrolls are not part of your Deck, therefore they are not carried over bet
     \bigskip
     \centering
     \begin{tikzpicture}
-      \node (card) [inner sep=0] {\includegraphics[width=0.8\linewidth]{\cards/war_machine.png}};
+      \node (card) [inner sep=0] {\includegraphics[width=0.7\linewidth]{\cards/war_machine.png}};
       \begin{relcoords}{card}
         \draw (0.6, 0.92) node {\encircle{1}};
         \draw (0.5, 0.15) node {\encircle{2}};
@@ -479,6 +478,7 @@ Spell Scrolls are not part of your Deck, therefore they are not carried over bet
       \end{relcoords}
     \end{tikzpicture}
 
+    \medskip
     \footnotesize
     \imagecaption{War Machine card}
     \begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt]
