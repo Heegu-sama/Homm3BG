@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-03-29 14:51+0100\n"
+"POT-Creation-Date: 2026-03-29 16:58+0200\n"
 "PO-Revision-Date: 2024-07-02 12:34+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -26,8 +26,8 @@ msgstr ""
 #: sections/heroes.tex:5 sections/map_elements.tex:93
 #: sections/map_elements.tex:142 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenarios.tex:5 sections/setup.tex:5 sections/solo_campaigns.tex:5
-#: sections/tournament_mode.tex:5 sections/town.tex:5 sections/trading.tex:5
+#: sections/scenarios.tex:5 sections/setup.tex:5 sections/solo_campaigns.tex:7
+#: sections/tournament_mode.tex:6 sections/town.tex:5 sections/trading.tex:5
 #: sections/units.tex:5 sections/units.tex:42 sections/units.tex:222
 #, no-wrap
 msgid ""
@@ -46,7 +46,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:435
+#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:436
 #: sections/units.tex:230 sections/units.tex:234
 #, no-wrap
 msgid ""
@@ -72,9 +72,9 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:188 sections/map_elements.tex:197
-#: sections/map_elements.tex:269 sections/map_elements.tex:302
-#: sections/player_turns.tex:48 sections/tournament_mode.tex:67
+#: sections/map_elements.tex:189 sections/map_elements.tex:199
+#: sections/map_elements.tex:272 sections/map_elements.tex:305
+#: sections/player_turns.tex:48 sections/tournament_mode.tex:69
 #: sections/units.tex:241
 #, no-wrap
 msgid ""
@@ -128,7 +128,7 @@ msgid ""
 "Units of your Faction may be recruited\\index{Recruiting} and reinforced\\index{Reinforcing} by flipping the Population Token\\index{Population Token} and paying the unit's recruitment \\svg{recruit} or reinforcement \\svg{reinforce} cost.\n"
 "When you do so, you can instantly recruit and reinforce \\textbf{any number} of times, provided you have enough Resources and the prerequisite Buildings to do so.\\par\n"
 "\\textbf{Recruiting} a unit requires that your Town has a Dwelling of that unit's Level (\\svg{bronze}\\svg{silver}\\svg{golden}).\n"
-"\\textbf{Reinforcing} requires that your Town has a Citadel in addition to a Dwelling of that unit's Level.\\par\n"
+"\\textbf{Reinforcing} requires that your Town has a Citadel\\index{Citadel} in addition to a Dwelling of that unit's Level.\\par\n"
 "\n"
 msgstr ""
 "\\pagetarget{Units}{В}\\index{Отряды} дополнение к герою и его колоде, игроки также имеют \\textbf{колоду с картами отрядов}, представляющую войска, направляемые их героем.\n"
@@ -228,15 +228,15 @@ msgstr ""
 #| "Units with a higher Initiative Activate first.\n"
 #| "\n"
 msgid ""
-"\\includegraphics[height=30px]{\\images/attack.png} \\textbf{Attack} – The amount of damage this unit deals when it attacks.\\par\n"
-"\\includegraphics[height=30px]{\\images/defense.png} \\textbf{Defense} - The amount by which this unit reduces oncoming Attack damage.\n"
+"\\includegraphics[height=30px]{\\images/attack.png} \\textbf{Attack}\\index{Attack!Unit} – The amount of damage this unit deals when it attacks.\\par\n"
+"\\includegraphics[height=30px]{\\images/defense.png} \\textbf{Defense}\\index{Defense!Unit} - The amount by which this unit reduces oncoming Attack damage.\n"
 "Does not apply to damage received from Spells or other non-attack effects.\\par\n"
-"\\includegraphics[height=30px]{\\images/hp.png} \\textbf{\\pagetarget{HP}{HP}} - The amount of damage required to defeat the unit.\n"
+"\\includegraphics[height=30px]{\\images/hp.png} \\textbf{\\pagetarget{HP}{HP}}\\index{Hit Points (HP)} - The amount of damage required to defeat the unit.\n"
 "``Few'' units are discarded from Combat and their owner's Unit Deck when defeated.\n"
 "``Pack'' units are turned back to ``Few'' units, with any excess damage placed on their ``Few'' side.\n"
 "Units retain their ``Few'' or ``Pack'' status between Combats.\n"
 "All damage is healed from all units at the end of Combat.\\par\n"
-"\\includegraphics[height=30px]{\\images/initiative.png}{\\pagetarget{Initiative}{\\textbf{Initiative}}} - Determines when the unit activates during Combat.\n"
+"\\includegraphics[height=30px]{\\images/initiative.png}{\\pagetarget{Initiative}{\\textbf{Initiative}}}\\index{Initiative} - Determines when the unit activates during Combat.\n"
 "Units with a higher Initiative activate first.\n"
 "\n"
 msgstr ""
@@ -333,7 +333,7 @@ msgid ""
 "        \\draw (0.6, 0.1) node {\\encircle{11}};\n"
 "      \\end{relcoords}\n"
 "    \\end{tikzpicture}\n"
-"    \\imagecaption{Unit card (Few)}\n"
+"    \\imagecaption{Unit card (Few)}\\index{Few}\n"
 "  \\end{center}\n"
 "  \\begin{itemize}\n"
 "    \\item[\\textbf{1.}] {Name}\n"
@@ -415,7 +415,7 @@ msgid ""
 "        \\draw (0.6, 0.1) node {\\encircle{11}};\n"
 "      \\end{relcoords}\n"
 "    \\end{tikzpicture}\n"
-"    \\imagecaption{Unit card (Pack)}\n"
+"    \\imagecaption{Unit card (Pack)}\\index{Pack}\n"
 "  \\end{center}\n"
 "  \\begin{itemize}\n"
 "    \\item[\\textbf{7.}] {Initiative}\n"
@@ -474,9 +474,9 @@ msgstr ""
 #| "\\end{itemize}\n"
 #| "\n"
 msgid ""
-"Most units have a \\textbf{special ability}\\index{Special Ability}:\\par\n"
+"Most units have a \\textbf{special ability:}\\index{Special Unit Ability}\\par\n"
 "\\begin{itemize}[wide]\n"
-"  \\item\\textbf{Activation} \\svg{activation} resolves when the unit is activated.\n"
+"  \\item\\textbf{Activation} \\svg{activation}\\index{Activation!Effects}\\index{Activation!Unit} resolves when the unit is activated.\n"
 "  \\item\\textbf{Attack} \\svg{unit_attack} resolves when the unit attacks during its Activation.\n"
 "    In case of multiple attacks, resolve the effect for \\textbf{the first attack only}.\n"
 "  \\item\\textbf{Other} \\svg{unit_alternative} may be resolved instead of the unit's normal Activation.\n"
@@ -724,7 +724,7 @@ msgid ""
 "\\columnbreak\n"
 "\\begin{expansion}{conflux}\n"
 "  \\begin{center}\n"
-"    \\includegraphics[width=0.6\\linewidth]{\\cards/unit-air-elemental-few.png}\\\\\n"
+"    \\includegraphics[width=0.6\\linewidth]{\\cards/unit-earth-elemental-few.png}\\\\\n"
 "    \\imagecaption{Summoned Elemental Unit}\n"
 "  \\end{center}\n"
 "  Summoned Elemental units don't have \\svg{recruit} nor \\svg{reinforce}.\n"
