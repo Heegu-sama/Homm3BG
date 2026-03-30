@@ -32,13 +32,17 @@ The player is considered to have beaten the Neutral Units by default and gains n
 \vspace*{\fill}
 
 \begin{center}
-  % \vspace*{-1em}
   \includegraphics[width=\linewidth]{\art/rogue.jpg}
 \end{center}
 \end{multicols*}
 
 \pagetarget{Combatsetup}{\subheader{Combat Setup}}
 \begin{multicols*}{2}
+
+\begin{center}
+  \includegraphics[width=\linewidth]{\art/elf.jpg}
+\end{center}
+\columnbreak
 
 \vspace*{-2em}
 Combat is resolved on the 4×5 Combat Board, which consists of two Backlines and two Frontlines on opposite ends, and a middle row.
@@ -63,12 +67,9 @@ Check the \pagelink{AI Units}{\textbf{Combat against AI}} section for detailed i
 Unit setup when fighting \textbf{other players}:
 \begin{itemize}[leftmargin=2.2em]
   \item The attacking player places up to 5 units on their chosen side of the Combat Board, followed by the defender.
-  \item If the Combat takes place in a Town with a Citadel, the defender adds the \pagelink{Walls}{Wall, Gate and Arrow Tower} cards after placing their units.
+  \item If the Combat takes place in a Town with a Citadel\index{Citadel}, the defender adds the \pagelink{Walls}{Wall, Gate and Arrow Tower} cards after placing their units.
 \end{itemize}
 
-\begin{center}
-  \includegraphics[width=\linewidth]{\art/elf.jpg}
-\end{center}
 \end{multicols*}
 
 \pagetarget{Combatterminology}{\subheader{Combat Terminology}}
@@ -110,13 +111,13 @@ The Token does not prevent units from performing Retaliation Attacks.\par
   \includegraphics[width=4em]{\images/defense-token.png}\\
   \imagecaption{Defense Token}
 \end{wrapfigure}
-\textbf{\pagetarget{Defend}{Defend}} – units may choose to gain a Defense Token and end the activation instead of attacking.
+\textbf{\pagetarget{Defend}{Defend}}\index{Defend Action} – units may choose to gain a Defense Token and end the activation instead of attacking.
 When a unit with a Defense Token is attacked, make another roll with the attack Die after the initial attack roll.
 If you roll a ``+1'', the defending unit gains an extra 1 Defense for this attack.
 If a unit has a Defense Token at the start of its activation, discard it.
 The unit cannot take another Defense Action during that activation.\par
 \begin{expansion}{conflux}
-  \textbf{\pagetarget{Elemental Damage}{Elemental Damage}} – If units deal elemental damage, they attack normally, but the resulting damage works similarly to \svg{damage} dealt by Spells and ignores the unit's \svg{defense}.
+  \textbf{\pagetarget{Elemental Damage}{Elemental Damage}}\index{Elemental Damage} – If units deal elemental damage, they attack normally, but the resulting damage works similarly to \svg{damage} dealt by Spells and ignores the unit's \svg{defense}.
   Elemental damage does not count as damage from Spells.
 \end{expansion}
 
@@ -129,7 +130,7 @@ The unit cannot take another Defense Action during that activation.\par
 \pagetarget{combatround}{\subheader{Combat Round Structure}}
 \begin{multicols*}{2}
 
-Combat is divided into Rounds, during which all of the units participating in that Combat \textbf{activate once} in Initiative order.
+Combat is divided into Rounds, during which all of the units participating in that Combat \textbf{activate once}\index{Activation!Combat} in Initiative order.
 After each unit has activated, a new Combat Round begins.
 Combat lasts until all units on one side are eliminated, a player has to \textbf{Retreat}\index{Retreat} when fighting Neutral Units, or a player \textbf{surrenders} to another player.
 
@@ -142,7 +143,7 @@ Structure of a Combat Round:
   In Neutral Combat, the Neutral enemy units cannot defend, even when controlled by another player.
   \item Before a unit attacks, both players may \pagelink{CombatCards}{play cards}. Cards are resolved in the order in which players decide to play them.
   \item After a unit's attack has been declared and all cards have been played, roll the Attack Die.
-    Modify the attacking unit's attack by the Die's result, then reduce it by the defending unit's Defense, and finally deal the rest as \pagelink{HP}{damage} to the defending unit.
+    Modify the attacking unit's attack by the Die's result, then reduce it by the defending unit's Defense, and finally deal the rest as \pagelink{HP}{damage}\index{Damage} to the defending unit.
   \item If the defending unit was adjacent to the attacker, it \pagelink{Retaliate}{retaliates} if it hasn't done so this Round.
   \item Keep activating units until they've all been activated once.
 After the last unit's activation, the Combat Round ends.
@@ -184,7 +185,7 @@ Combat against Neutrals has three possible outcomes:
 Combat against another player's Hero has two possible outcomes:
 \begin{itemize}
  \item \textbf{Victory/Defeat:} If all units on one side are defeated, the side with any surviving units is the winner, the other side is defeated.
- \item \textbf{Surrender:} Instead of activating one of their units, a Hero can decide to surrender to the other player's Hero by paying them 10 \svg{gold} to prevent their army from being defeated. In this case, Combat ends immediately without having a winning or defeated Hero.
+ \item \textbf{Surrender:}\index{Surrender} Instead of activating one of their units, a Hero can decide to surrender to the other player's Hero by paying them 10 \svg{gold} to prevent their army from being defeated. In this case, Combat ends immediately without having a winning or defeated Hero.
 \end{itemize}
 
 When Combat ends, all damage is healed from all surviving units. Move any player-owned units back to their unit Deck and discard any leftover enemy Neutral Units. Depending on the type and result of the Combat, players must resolve the following consequences for themselves:
@@ -242,13 +243,13 @@ The previously played Attack and Defense cards no longer have any effect.}
 
 \clearpage
 
-\pagetarget{Siege Combat}{\subheader{Siege Combat}}
+\pagetarget{Siege Combat}{\subheader{Siege Combat}}\index{Siege Combat}
 \begin{multicols*}{2}
 When an enemy Hero attacks your Town or Settlement and your Hero is not present on that Field, you may immediately \textbf{pay 8 \svg{gold} to defend with only your units}.
 You cannot use your Deck during this Combat, as your Main Hero is not present.
 Paying this Gold represents the cost of transporting the army there.
 
-When you defend a Town \textbf{without a Citadel}, resolve Combat normally on the standard Combat Board.
+When you defend a Town \textbf{without a Citadel}\index{Citadel}, resolve Combat normally on the standard Combat Board.
 Defending a Settlement follows the same rules as defending a Town without a Citadel.
 
 \vspace{0.5em}
