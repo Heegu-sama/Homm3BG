@@ -24,9 +24,9 @@ Each player's Deck starts with 9 cards, built during the game's setup.\par
   \columnbreak
   \item Cards have the following \pagetarget{Card Effects}{types of effects}:
   \begin{itemize}
-    \item \textbf{Instant} \svg{instant} Effects are resolved immediately.
-    \item \textbf{Activation} \svg{activation} Effects must be played when Activating your own unit in Combat.
-    \item \textbf{Map} \svg{map} Effects cannot be used during Combat.
+    \item \textbf{Instant} \svg{instant} Effects\index{Instant Effects} are resolved immediately.
+    \item \textbf{Activation} \svg{activation} Effects\index{Activation!Effects} must be played when Activating your own unit in Combat.
+    \item \textbf{Map} \svg{map} Effects\index{Map Effects} cannot be used during Combat.
     \item \textbf{Ongoing} \svg{ongoing} Effects\index{Ongoing Effects} last until they are used up or until the player who played them starts their next Turn (whichever happens first).
       \begin{expansion}[before skip balanced=0.3em,]{stronghold,conflux,cove}
       \pagetarget{Time Token}{}
@@ -47,23 +47,23 @@ Each player's Deck starts with 9 cards, built during the game's setup.\par
 \end{multicols}
 \clearpage
 
-\subheader{Searching Example}
 \begin{multicols*}{2}
+  \subsection*{Searching Example}
 
-    \textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during the previous Game Round, enabling him to now use his Spell Book Token to purchase additional Spells.}
+  \textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during the previous Game Round, enabling him to now use his Spell Book Token to purchase additional Spells.}
 
-    \includegraphics[width=\linewidth]{\examples/deemer_receiving_spellbook.png}\par
-    \textit{He spends the token and pays the cost of 5 \svg{gold} indicated on his Town Board, allowing him to \textbf{Search (2)} the Spell Deck.}\par
-    \includegraphics[width=\linewidth]{\examples/deemer_spell_cost.png}\par
-    \filbreak
-    \textit{He now has the choice of either gaining the top Card of the Spell Card Discard Pile, or drawing the top two cards of the Spell Deck and gaining one of them.
-        He is not interested in gaining the Spell Curse, which is on top of the Discard Pile, and instead decides to draw two cards – a Magic Arrow and a Fireball.}
-    \includegraphics[width=\linewidth]{\examples/fireball_over_magic_arrow.png}\par
-    \textit{He decides to keep the Fireball, placing it into his hand and discarding the Magic Arrow into the Spell Discard Pile.}
+  \includegraphics[width=\linewidth]{\examples/deemer_receiving_spellbook.png}\par
+  \textit{He spends the token and pays the cost of 5 \svg{gold} indicated on his Town Board, allowing him to \textbf{Search (2)} the Spell Deck.}\par
+  \includegraphics[width=\linewidth]{\examples/deemer_spell_cost.png}\par
+  \filbreak
+  \textit{He now has the choice of either gaining the top Card of the Spell Card Discard Pile, or drawing the top two cards of the Spell Deck and gaining one of them.
+      He is not interested in gaining the Spell Curse, which is on top of the Discard Pile, and instead decides to draw two cards – a Magic Arrow and a Fireball.}
+  \includegraphics[width=\linewidth]{\examples/fireball_over_magic_arrow.png}\par
+  \textit{He decides to keep the Fireball, placing it into his hand and discarding the Magic Arrow into the Spell Discard Pile.}
 
-    \vspace*{\fill}
+  \vspace*{\fill}
 
-    \hfill{\transparent{0.2}\includegraphics[width=0.8\linewidth]{\art/fire_magic.png}}
+  \hfill{\transparent{0.2}\includegraphics[width=0.8\linewidth]{\art/fire_magic.png}}
 
 \end{multicols*}
 
@@ -71,7 +71,7 @@ Each player's Deck starts with 9 cards, built during the game's setup.\par
 \subheader{Statistic and Ability Cards}
 \begin{multicols}{2}
 
-All Statistic\index{Statistic cards} and Ability cards\index{Ability card} have a \textbf{Basic Effect}\index{Basic Effect} and a stronger \textbf{Expert} \svg{expert} \textbf{Effect}\index{Expert Effect}, which is shown below the Basic Effect.
+All Statistic\index{Statistic cards} and Ability cards\index{Ability cards} have a \textbf{Basic Effect}\index{Basic Effect} and a stronger \textbf{Expert} \svg{expert} \textbf{Effect}\index{Expert Effect}, which is shown below the Basic Effect.
 Whenever you play a Statistic or Ability card, you must choose which effect you are using.
 The number of \svg{expert} Effects you can use each Round is limited by your Main Hero's \pagelink{Level}{Level}.
 Track the number of uses you have in any suitable manner, such as by moving Black Cubes on and off your Hero Board.\par
@@ -119,12 +119,12 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
     \hfill
     \begin{minipage}[t]{0.65\linewidth}
       \vspace*{0mm}
-      \subsection*{\pagetarget{Empowered Statistic}{Empowered} Statistic cards}\index{Empowered Statistic Card}
+      \subsection*{\pagetarget{Empowered Statistic}{Empowered} Statistic cards}\index{Empowered Statistic cards}
       These cards are more powerful versions of the normal Statistic cards.
       They have only one effect which is identical to the normal Statistic's Expert effect, but does not require using your \svg{expert}.\par
 
       \medskip
-      These cards can be gained via certain game effects, such as Visiting a \pagelink{Star Axis}{Star Axis}.
+      These cards can be gained via certain game effects, such as visiting a \pagelink{Star Axis}{Star Axis}.
     \end{minipage}
   \end{expansion}
 \end{paracol}
@@ -164,7 +164,7 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.65\linewidth}
-      \subsection*{\pagetarget{Empowered Ability}{Empowered} Ability cards}\index{Empowered Statistic card}
+      \subsection*{\pagetarget{Empowered Ability}{Empowered} Ability cards}\index{Empowered Ability cards}
       The Empowered Ability cards work very similarly to Empowered Statistic cards.
       Their only effect corresponds to the Expert effect of normal Ability cards, but without requiring you to use your \svg{expert}.
 
@@ -190,10 +190,63 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
 \end{multicols}
 
 \clearpage
+
+\begin{expansion}*{navalbattles}
+\begin{multicols*}{2}
+  \pagetarget{Empowered Ability Token}{\subsection*{Empowered Ability Tokens}}\index{Empowered Ability}
+  \setlength\intextsep{0pt}
+  \setlength\columnsep{1em}
+  \begin{wrapfigure}{r}{0.2\linewidth}
+    \includegraphics[width=\linewidth]{\images/crown-token.png}
+  \end{wrapfigure}
+  Empowered Ability cards improve your Hero's Ability cards.
+  You can gain them by spending Empowered Ability Tokens.
+  You can use one of these Tokens at the moment you gain a new Ability card, regardless of how you obtain it.
+  If you use such a Token, discard it, remove the just-gained normal Ability card from the game, and gain the corresponding Empowered Ability card in its stead.
+  There's only 1 copy of each Empowered Ability card, so if one player takes a particular Empowered Ability card, they prevent other players from obtaining it.
+  If an Empowered Ability card isn't available, you can't spend the Empowered Ability Token and must keep it for later turns.
+
+  You can gain Empowered Ability Tokens only in certain Scenarios (e.~g.~``Island of Fire'' from the Naval Battles Mission Book).\\
+
+  \vspace*{5em}
+  \begin{center}
+    \transparent{0.2}\includegraphics[width=\linewidth]{\art/scholar.png}
+  \end{center}
+
+  \subsection*{Gaining Empowered Ability\\Example}
+  \textit{Bob playing as Crag Hack reaches Level II.
+    He performs the Search (2) action and draws two cards from the Ability Deck.
+    The cards are Offense and Wisdom.
+    He chooses Offense and places the other card on the discard pile.}
+
+  \begin{center}
+    \includegraphics[width=0.8\linewidth]{\examples/offense_over_wisdom.png}
+  \end{center}
+
+  \textit{Bob happens to have an Empowered Ability Token.
+    He may either use it, or save the token for later.
+    He decides to use it, so he removes the ``Offense'' Ability card and discards the Empowered Ability Token to take the Empowered ``Offense'' Ability card instead.}
+
+  \begin{center}
+    \begin{tikzpicture}
+      \draw (-3, 0) node {\includegraphics[width=0.45\linewidth]{\cards/ability-offense.png}};
+      \draw (-1.45, -1.95) node[opacity=0.9] {\includegraphics[width=0.23\linewidth]{\images/token-drop-shadow.png}};
+      \draw (-1.5, -1.9) node {\includegraphics[width=0.2\linewidth]{\images/crown-token.png}};
+      \draw (1.5, 0) node {\includegraphics[width=0.45\linewidth]{\cards/ability-offense-empowered.png}};
+
+      \draw (-2.8, -3.5) node {\svg[35]{red_cross}};
+      \draw (1.6, -3.5) node {\svg[35]{green_tick}};
+    \end{tikzpicture}
+  \end{center}
+  \vspace*{\fill}
+\end{multicols*}
+\end{expansion}
+
+\newpage
 \begin{multicols}{2}
 \pagetarget{spells}{\subheader{Spell Cards}}
 
-Spell cards\index{Spell card} have three possible primary effects.
+Spell cards\index{Spell cards} have three possible primary effects.
 Using the topmost, basic version of the Spell usually has no additional costs.
 To access the other effects, you may \textbf{Empower} a Spell\index{Empowering Spells} by paying the indicated cost (3) to get a more powerful outcome (4).
 You may pay this cost by playing other cards for their Empower \svg{empower} effect (e.g. the \wikilink{statistics/power}{Power} Statistic card) before casting the Spell.
@@ -283,8 +336,9 @@ By default there's no difference, but certain game effects can refer to specific
 
 \pagebreak
 \pagetarget{Specialty}{\subheader{Hero Specialty Cards}}
+\index{Hero Specialty card}
 
-Hero Specialty cards\index{Specialty card} are gained from \pagelink{Level}{Level ups}.
+Hero Specialty cards\index{Specialty cards} are gained from \pagelink{Level}{Level ups}.
 Each Main Hero has a unique set of Specialty cards.
 While some of these cards have effects which resemble Spell cards and even make use of \svg{empower}, Specialty cards are their \textbf{own unique category of cards}.
 For example, the limit of 1 Spell per Combat Round doesn't apply to Specialty cards.
@@ -308,7 +362,7 @@ For example, the limit of 1 Spell per Combat Round doesn't apply to Specialty ca
 \columnbreak
 \pagetarget{Artifact}{\subheader{Artifact Cards}}
 
-Artifact cards\index{Artifact card} have a top and bottom effect. When you play one, you must \textbf{choose which effect} you are using.
+Artifact cards\index{Artifact cards} have a top and bottom effect. When you play one, you must \textbf{choose which effect} you are using.
 They are divided into 3 Levels: Minor, Major, and Relic, with different border color.
 These Levels relate to the overall Power of the card and may be referenced when resolving certain effects or during Scenario setup.
 Otherwise, all Artifact cards are normally shuffled together to form the Artifact Deck regardless of their Level.
@@ -355,7 +409,7 @@ Artifacts can be \pagelink{Trading}{traded} in Alliance and Cooperative Scenario
 \pagebreak
 
 \begin{expansion}{stronghold}
-\pagetarget{Spell Scroll Cards}{\subheader{Spell Scroll Cards}}
+\pagetarget{Spell Scroll Cards}{\subheader{Spell Scroll Cards}}\index{Spell Scroll cards}
 
 During setup shuffle 10 of the Spell Scroll cards into the Artifact Deck.
 Set the remaining 10 cards aside to form a Spell Scroll Deck.
@@ -407,15 +461,15 @@ Spell Scrolls are not part of your Deck, therefore they are not carried over bet
 \begin{expansion}{rampart,cove}
   \pagetarget{War Machines}{\subheader{War Machine Cards}}
 
-  War Machines\index{War Machines} are permanent cards that can be bought at either a \pagelink{Trading Post}{Trading Post} or a \pagelink{War Machine Factory}{War Machine Factory}.
-  If you buy one at the Trading Post, \textbf{you cannot use} any of the other normal functions of that Field during that Visit.
+  War Machines\index{War Machine cards} are permanent cards that can be bought at either a \pagelink{Trading Post}{Trading Post} or a \pagelink{War Machine Factory}{War Machine Factory}.
+  If you buy one at the Trading Post, \textbf{you cannot use} any of the other normal functions of that Field during that visit.
   War machines are also more expensive at the Trading Post.
 
   {
     \bigskip
     \centering
     \begin{tikzpicture}
-      \node (card) [inner sep=0] {\includegraphics[width=0.8\linewidth]{\cards/war_machine.png}};
+      \node (card) [inner sep=0] {\includegraphics[width=0.7\linewidth]{\cards/war_machine.png}};
       \begin{relcoords}{card}
         \draw (0.6, 0.92) node {\encircle{1}};
         \draw (0.5, 0.15) node {\encircle{2}};
@@ -424,6 +478,7 @@ Spell Scrolls are not part of your Deck, therefore they are not carried over bet
       \end{relcoords}
     \end{tikzpicture}
 
+    \medskip
     \footnotesize
     \imagecaption{War Machine card}
     \begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt]
@@ -436,55 +491,3 @@ Spell Scrolls are not part of your Deck, therefore they are not carried over bet
 \end{expansion}
 
 \end{multicols}
-
-\begin{expansion}*{navalbattles}
-\pagetarget{Empowered Ability Token}{\subheader{Empowered Abilities}}
-\begin{multicols*}{2}
-  \setlength\intextsep{0pt}
-  \setlength\columnsep{1em}
-  \begin{wrapfigure}{r}{0.2\linewidth}
-    \includegraphics[width=\linewidth]{\images/crown-token.png}
-  \end{wrapfigure}
-  These cards improve your Hero's Ability cards.
-  You can gain them by spending \textbf{Empowered Ability Tokens}.
-  You can use one of these Tokens at the moment you gain a new Ability card, regardless of how you obtain it.
-  If you use such a Token, discard it, remove the just-gained normal Ability card from the game, and gain the corresponding Empowered Ability card in its stead.
-  There's only 1 copy of each Empowered Ability card, so if one player takes a particular Empowered Ability card, they prevent other players from obtaining it.
-  If an Empowered Ability card isn't available, you can't spend the Empowered Ability Token and must keep it for later turns.
-
-  You can gain Empowered Ability Tokens only in certain Scenarios (e.~g.~``Island of Fire'' from the Naval Battles Mission Book).\\
-
-  \vspace*{5em}
-  \begin{center}
-    \transparent{0.2}\includegraphics[width=\linewidth]{\art/scholar.png}
-  \end{center}
-
-  \subsection*{Gaining Empowered Ability\\Example}
-  \textit{Bob playing as Crag Hack reaches Level II.
-    He performs the Search (2) action and draws two cards from the Ability Deck.
-    The cards are Offense and Wisdom.
-    He chooses Offense and places the other card on the discard pile.}
-
-  \begin{center}
-    \includegraphics[width=0.8\linewidth]{\examples/offense_over_wisdom.png}
-  \end{center}
-
-  \textit{Bob happens to have an Empowered Ability Token.
-    He may either use it, or save the token for later.
-    He decides to use it, so he removes the ``Offense'' Ability card and discards the Empowered Ability Token to take the Empowered ``Offense'' Ability card instead.}
-
-  \begin{center}
-    \begin{tikzpicture}
-      \draw (-3, 0) node {\includegraphics[width=0.45\linewidth]{\cards/ability-offense.png}};
-      \draw (-1.5, -1.9) node[circular drop shadow={shadow scale=0.85, shadow xshift=0.5ex, shadow yshift=-0.5ex, opacity=0.7,
-        fill=black, path fading={circle with fuzzy edge 15 percent},
-        every shadow}]{\includegraphics[width=0.2\linewidth]{\images/crown-token.png}};
-      \draw (1.5, 0) node {\includegraphics[width=0.45\linewidth]{\cards/ability-offense-empowered.png}};
-
-      \draw (-2.8, -3.5) node {\svg[35]{red_cross}};
-      \draw (1.6, -3.5) node {\svg[35]{green_tick}};
-    \end{tikzpicture}
-  \end{center}
-  \vspace*{\fill}
-\end{multicols*}
-\end{expansion}

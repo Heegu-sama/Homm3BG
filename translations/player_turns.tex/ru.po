@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-03-03 21:04+0000\n"
+"POT-Creation-Date: 2026-03-29 14:25+0000\n"
 "PO-Revision-Date: 2025-04-14 06:49+0100\n"
 "Last-Translator: Alexey Sokolov <alexey@asokolov.org>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -20,18 +20,16 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 24.12.3\n"
 
-#. type: multicols
+#. type: multicols*
 #: sections/all_map_locations.tex:5 sections/combat.tex:5
-#: sections/combat.tex:42 sections/combat.tex:131 sections/combat.tex:318
-#: sections/credits.tex:8 sections/deckbuilding.tex:5
-#: sections/deckbuilding.tex:52 sections/deckbuilding.tex:73
-#: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
-#: sections/map_elements.tex:93 sections/map_elements.tex:144
-#: sections/player_turns.tex:5 sections/resources.tex:5
-#: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:58 sections/solo_campaigns.tex:5
-#: sections/tournament_mode.tex:5 sections/town.tex:5 sections/trading.tex:5
-#: sections/units.tex:5 sections/units.tex:46
+#: sections/combat.tex:41 sections/combat.tex:132 sections/credits.tex:8
+#: sections/deckbuilding.tex:5 sections/deckbuilding.tex:73
+#: sections/heroes.tex:5 sections/map_elements.tex:93
+#: sections/map_elements.tex:142 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenarios.tex:5 sections/setup.tex:5 sections/solo_campaigns.tex:7
+#: sections/tournament_mode.tex:6 sections/town.tex:5 sections/trading.tex:5
+#: sections/units.tex:5 sections/units.tex:42 sections/units.tex:222
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -39,10 +37,18 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:188 sections/map_elements.tex:197
-#: sections/map_elements.tex:269 sections/map_elements.tex:302
-#: sections/player_turns.tex:48 sections/tournament_mode.tex:67
-#: sections/units.tex:231
+#: sections/heroes.tex:40 sections/player_turns.tex:56 sections/units.tex:37
+#, no-wrap
+msgid ""
+"\\clearpage\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/map_elements.tex:189 sections/map_elements.tex:199
+#: sections/map_elements.tex:272 sections/map_elements.tex:305
+#: sections/player_turns.tex:48 sections/tournament_mode.tex:69
+#: sections/units.tex:241
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -164,13 +170,20 @@ msgstr ""
 
 #. type: multicols*
 #: sections/player_turns.tex:54
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "Mark the amount of MP you have used by flipping your Movement Tokens over to their brown, inactive side.\n"
+#| "If a player has both a Main and a \\pagelink{Secondary}{Secondary Hero}, track their MPs separately.\n"
+#| "Heroes can spend MP in any order.\\par\n"
+#| "Allied Heroes can move through each other but cannot stop their movement in the same Field.\n"
+#| "When you move through a Field with an allied Hero, do not \\pagelink{Categories}{Visit} the Field that the allied Hero is standing on.\\par\n"
+#| "\n"
 msgid ""
 "Mark the amount of MP you have used by flipping your Movement Tokens over to their brown, inactive side.\n"
 "If a player has both a Main and a \\pagelink{Secondary}{Secondary Hero}, track their MPs separately.\n"
 "Heroes can spend MP in any order.\\par\n"
 "Allied Heroes can move through each other but cannot stop their movement in the same Field.\n"
-"When you move through a Field with an allied Hero, do not \\pagelink{Categories}{Visit} the Field that the allied Hero is standing on.\\par\n"
+"When you move through a Field with an allied Hero, do not \\pagelink{Categories}{visit} the Field that the allied Hero is standing on.\\par\n"
 "\n"
 msgstr ""
 "Отметьте использованные ОП, перевернув жетоны передвижения коричневой стороной вверх.\n"
@@ -179,14 +192,6 @@ msgstr ""
 "Союзники могут пересекать поле с другим героем в процессе движения, но не могут остановиться на нём.\n"
 "Когда вы пересекаете поле с союзником, то независимо от типа этого поля это не будет считаться \\pagelink{Categories}{посещением}.\\par\n"
 "\n"
-
-#. type: multicols*
-#: sections/player_turns.tex:56 sections/units.tex:41
-#, no-wrap
-msgid ""
-"\\clearpage\n"
-"\n"
-msgstr ""
 
 #. type: multicols*
 #: sections/player_turns.tex:69
@@ -275,10 +280,27 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/player_turns.tex:103
-#, no-wrap
+#: sections/player_turns.tex:104
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\pagetarget{Morale}{\\subheader{Morale Actions}}\\index{Morale Actions}\n"
+#| "Players can gain or lose Morale through various game effects.\n"
+#| "When you gain Morale, take a Positive Morale Token\\index{Positive Morale} \\svg{morale_positive}.\n"
+#| "You may only have one such Token.\n"
+#| "If you are about to gain a second Token, you may immediately spend the first one before gaining the second.\n"
+#| "A Positive Morale Token may be spent to perform any of the following Actions at any time:\n"
+#| "\\begin{itemize}\n"
+#| "  \\item Draw a card from your Deck.\n"
+#| "  \\item Discard any number of cards, then draw that many cards.\n"
+#| "  \\item Reroll any Die you have thrown.\n"
+#| "\\end{itemize}\n"
+#| "If you lose Morale, discard a Positive Morale Token \\svg{morale_positive} if you have one, otherwise gain a Negative Morale\\index{Negative Morale} Token \\svg{morale_negative}.\n"
+#| "Inversely, gaining Positive Morale while you have a Negative Morale Token discards the Token.\n"
+#| "If you would gain a second Negative Morale Token, you must instead \\textbf{discard your hand of cards} the next time you end your Turn.\\par\n"
+#| "\n"
 msgid ""
-"\\pagetarget{Morale}{\\subheader{Morale Actions}}\\index{Morale Actions}\n"
+"\\pagetarget{Morale}{\\subheader{Morale Actions}}\n"
+"\\index{Morale}\n"
 "Players can gain or lose Morale through various game effects.\n"
 "When you gain Morale, take a Positive Morale Token\\index{Positive Morale} \\svg{morale_positive}.\n"
 "You may only have one such Token.\n"
@@ -311,7 +333,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:109
+#: sections/player_turns.tex:110
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -328,7 +350,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:114
+#: sections/player_turns.tex:115
 #, no-wrap
 msgid ""
 "\\note{5}{The Necropolis \\svg{necro-yellow} Faction ignores any Morale effects.\n"
@@ -343,11 +365,15 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:117
-#, no-wrap
+#: sections/player_turns.tex:118
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{expansion}[before=\\vspace*{-11mm}]{battlefield}\n"
+#| "\\subsection*{\\pagetarget{Morale Cards}{Morale cards}}\\index{Morale cards}\n"
+#| "\n"
 msgid ""
 "\\begin{expansion}[before=\\vspace*{-11mm}]{battlefield}\n"
-"\\subsection*{\\pagetarget{Morale Cards}{Morale cards}}\\index{Morale cards}\n"
+"\\subsection*{\\pagetarget{Morale Cards}{Morale cards}}\n"
 "\n"
 msgstr ""
 "\\begin{expansion}[before=\\vspace*{-3mm}]{battlefield}\n"
@@ -355,7 +381,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:121
+#: sections/player_turns.tex:122
 #, no-wrap
 msgid ""
 "You can use Morale cards \\textbf{instead} of Tokens.\n"
@@ -371,7 +397,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:125
+#: sections/player_turns.tex:126
 #, no-wrap
 msgid ""
 "\\vspace{1em}\n"
@@ -381,7 +407,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/player_turns.tex:133
+#: sections/player_turns.tex:134
 #, no-wrap
 msgid ""
 "    \\node (card) {\\includegraphics[width=\\linewidth]{\\cards/morale-positive.png}};\n"
@@ -403,7 +429,7 @@ msgstr ""
 "  \\begin{tikzpicture}\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:142
+#: sections/player_turns.tex:143
 #, no-wrap
 msgid ""
 "    \\node (card) {\\includegraphics[width=\\linewidth]{\\cards/morale-negative-battlefield.png}};\n"
@@ -425,7 +451,7 @@ msgstr ""
 "  \\imagecaption{Отрицательная мораль}"
 
 #. type: multicols*
-#: sections/player_turns.tex:158
+#: sections/player_turns.tex:159
 #, no-wrap
 msgid ""
 "\\begin{figure}[H]\n"
@@ -462,7 +488,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:168
+#: sections/player_turns.tex:169
 #, no-wrap
 msgid ""
 "\\vspace*{-1em}\n"
@@ -487,7 +513,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:172
+#: sections/player_turns.tex:173
 #, no-wrap
 msgid ""
 "\\smallskip\n"
@@ -499,7 +525,7 @@ msgstr ""
 "Каждый раз, когда вы \\textbf{теряете} мораль, сбросьте карту положительной морали (при наличии); иначе возьмите 1 карту отрицательной морали (не ищите!). Вы можете иметь \\textbf{неограниченное количество карт отрицательной морали}.\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:180
+#: sections/player_turns.tex:181
 #, no-wrap
 msgid ""
 "\\smallskip\n"
