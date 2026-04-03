@@ -135,7 +135,10 @@ When this happens, return the ``discount card'' to your hand.
   \bigskip
   \begin{minipage}[b]{0.4\linewidth}
     \begin{center}
-      \includegraphics[width=0.85\linewidth]{\map_locations/creature-bank.png}\\
+      \begin{tikzpicture}
+        \draw (1.0, 0) node {\includegraphics[width=0.6\linewidth]{\map_locations/creature_bank_back.png}};
+        \draw (-0.4, 0) node {\includegraphics[width=0.6\linewidth]{\map_locations/creature_bank_token.png}};
+      \end{tikzpicture}\\
       \imagecaption{Creature Bank (Near)}\\
       \vspace*{1em}
       \includegraphics[width=0.45\linewidth]{\images/stack-token.png}\\
