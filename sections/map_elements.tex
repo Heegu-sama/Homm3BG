@@ -242,7 +242,8 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
       \node (subter) at ($(surface) + (0.8333\tilesize, -0.2887\tilesize)$)  %  ΔX=5/6, ΔY=-1/(2*sqrt(3))
         {\includegraphics[width=\tilesize]{\images/map-tile-sub.png}};
       \node [below=0pt of subter.south] {\imagecaption{Subterranean Map Tile}};
-      \node [opacity=0.75] at ($(surface)!0.5!(subter)$) {\includegraphics[width=1.5\tilesize]{\images/subterranean_gate_highlight.png}};
+      \node [opacity=0.85] at ($(surface)!0.5!(subter)$) {\includegraphics[width=1.35\tilesize]{\images/subterranean_gate_drop_shadow.png}};
+      \node [opacity=0.85] at ($(surface)!0.5!(subter)$) {\includegraphics[width=1.2\tilesize]{\images/subterranean_gate_highlight.png}};
       \node at ($(surface)!0.5!(subter)$) (gate) {\includegraphics[width=0.5\tilesize]{\map_locations/subterranean_gate_token.png}};
       \node at ($(gate.north)+(45pt, 5pt)$) {\imagecaption{Subterranean Gate}};
     \end{tikzpicture}
