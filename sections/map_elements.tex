@@ -211,15 +211,11 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 \end{expansion}
 \columnbreak
 
-\begin{multicols}{2}
-  \hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-cove.png}
-  \columnbreak
-  \hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-sea.png}
-\end{multicols}
-\begin{center}
-  \vspace*{-0.5em}
-  \imagecaption{Sea Map Tile}
-\end{center}
+\makebox[\linewidth][c]{\begin{tikzpicture}
+  \node (front) {\includegraphics[width=0.5\linewidth]{\images/map-tile-cove.png}};
+  \node (back) [right=0pt of front.east] {\includegraphics[width=0.5\linewidth]{\images/map-tile-sea.png}};
+  \node [below=0pt of {$(front.south)!0.5!(back.south)$}] {\imagecaption{Sea Map Tile}};
+\end{tikzpicture}}
 
 \separator
 
@@ -239,12 +235,16 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 \begin{center}
     \centering
     \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.5\linewidth]{\images/map-tile-stronghold.png}};
-      \node at (0, 2.2) {\imagecaption{Surface Map Tile}};
-      \node at (3.21, -1.07) {\includegraphics[width=0.5\linewidth]{\images/map-tile-sub.png}};
-      \node at (3.21, -3.43) {\imagecaption{Subterranean Map Tile}};
-      \node[rotate=-60] (gate) at (1.6, -0.56) {\includegraphics[width=0.33\linewidth]{\images/subter-gate-outline.png}};
-      \node at (3.21, 1.11) {\imagecaption{Subterranean Gate}};
+      \newlength{\tilesize}
+      \setlength{\tilesize}{0.5\linewidth}
+      \node (surface) {\includegraphics[width=\tilesize]{\images/map-tile-stronghold.png}};
+      \node [above=0pt of surface.north] {\imagecaption{Surface Map Tile}};
+      \node (subter) at ($(surface) + (0.8333\tilesize, -0.2887\tilesize)$)  %  ΔX=5/6, ΔY=-1/(2*sqrt(3))
+        {\includegraphics[width=\tilesize]{\images/map-tile-sub.png}};
+      \node [below=0pt of subter.south] {\imagecaption{Subterranean Map Tile}};
+      \node [opacity=0.75] at ($(surface)!0.5!(subter)$) {\includegraphics[width=1.5\tilesize]{\images/subterranean_gate_highlight.png}};
+      \node at ($(surface)!0.5!(subter)$) (gate) {\includegraphics[width=0.5\tilesize]{\map_locations/subterranean_gate_token.png}};
+      \node at ($(gate.north)+(45pt, 5pt)$) {\imagecaption{Subterranean Gate}};
     \end{tikzpicture}
 \end{center}
 \end{multicols}
