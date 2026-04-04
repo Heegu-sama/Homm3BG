@@ -16,6 +16,6 @@ if ($toggles) {
 }
 
 if ($ENV{HOMM3_PRINTABLE}) {
-  my $lang = $ENV{HOMM3_LANG};
-  $makeindex = "bash -c 'upmendex -s <(cat index_style.ist; echo icu_locale \"$lang\") -o %D %S'";
+  my $locale = $ENV{ICU_LOCALE} // 'en_US';
+  $makeindex = "bash -c 'upmendex -s <(cat index_style.ist; echo icu_locale \\\"$locale\\\") -o %D %S'";
 }
