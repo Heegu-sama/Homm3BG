@@ -223,16 +223,16 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 
 \separator
 
-\begin{center}
-  \vspace*{-3em}
-  \begin{tikzpicture}
-    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=1.1\linewidth]{\images/elemental_tiles.png}}};
-    \draw (-2.3, 0.1) node {\imagecaption{Elemental Fire Tile}};
-    \draw (2.3, 0.1) node {\imagecaption{Elemental Water Tile}};
-    \draw (-2.3, -4.7) node {\imagecaption{Elemental Air Tile}};
-    \draw (2.3, -4.7) node {\imagecaption{Elemental Earth Tile}};
-  \end{tikzpicture}
-\end{center}
+\makebox[\linewidth][c]{\begin{tikzpicture}
+  \node (fire) {\includegraphics[width=0.5\linewidth]{\images/elemental_tile_fire.png}};
+  \node [below=0pt of fire.south] {\imagecaption{Elemental Fire Tile}};
+  \node (water) [right=0pt of fire.east] {\includegraphics[width=0.5\linewidth]{\images/elemental_tile_water.png}};
+  \node [below=0pt of water.south] {\imagecaption{Elemental Water Tile}};
+  \node (air) [below=2em of fire.south] {\includegraphics[width=0.5\linewidth]{\images/elemental_tile_air.png}};
+  \node [below=0pt of air.south] {\imagecaption{Elemental Air Tile}};
+  \node (earth) [right=0pt of air.east] {\includegraphics[width=0.5\linewidth]{\images/elemental_tile_earth.png}};
+  \node [below=0pt of earth.south] {\imagecaption{Elemental Earth Tile}};
+\end{tikzpicture}}
 
 \separator
 
