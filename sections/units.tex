@@ -16,7 +16,7 @@ If a unit is defeated in Combat, \textbf{discard it} from your Unit Deck.\par
 Units of your Faction may be recruited\index{Recruiting} and reinforced\index{Reinforcing} by flipping the Population Token\index{Population Token} and paying the unit's recruitment \svg{recruit} or reinforcement \svg{reinforce} cost.
 When you do so, you can instantly recruit and reinforce \textbf{any number} of times, provided you have enough Resources and the prerequisite Buildings to do so.\par
 \textbf{Recruiting} a unit requires that your Town has a Dwelling of that unit's Level (\svg{bronze}\svg{silver}\svg{golden}).
-\textbf{Reinforcing} requires that your Town has a Citadel in addition to a Dwelling of that unit's Level.\par
+\textbf{Reinforcing} requires that your Town has a Citadel\index{Citadel} in addition to a Dwelling of that unit's Level.\par
 
 \note{13}{
   Any effects which instruct you to reinforce \textbf{do not} require spending your Population Token nor owning a Citadel or any Dwellings.\par
@@ -27,15 +27,11 @@ When you do so, you can instantly recruit and reinforce \textbf{any number} of t
 }
 
 \vspace*{\fill}
-\iftoggle{printable}{}{\hspace{1em}}
-{\transparent{0.2}\includegraphics[width=\iftoggle{printable}{
-  \ifodd\value{page}
-    1.2\linewidth
-  \else
-    1.32\linewidth
-  \fi
-}{1.2\linewidth}]{\art/gorgone.png}}
-\vspace*{2em}
+\begin{tikzpicture}[remember picture, overlay]
+  \node[opacity=0.2, xscale=-1, anchor=west, xshift=-11.55em, yshift=-13em] at (current page.east) {
+    \includegraphics[width=0.66\paperwidth]{\art/cavalryman.png}
+  };
+\end{tikzpicture}
 
 \clearpage
 
@@ -46,21 +42,32 @@ When you do so, you can instantly recruit and reinforce \textbf{any number} of t
 
 \vspace{0pt}
 
-\includegraphics[height=30px]{\images/attack.png} \textbf{Attack} – The amount of damage this unit deals when it attacks.\par
-\includegraphics[height=30px]{\images/defense.png} \textbf{Defense} - The amount by which this unit reduces oncoming Attack damage.
+\includegraphics[height=30px]{\images/attack.png} \textbf{Attack}\index{Attack!Unit} – The amount of damage this unit deals when it attacks.\par
+\includegraphics[height=30px]{\images/defense.png} \textbf{Defense}\index{Defense!Unit} - The amount by which this unit reduces oncoming Attack damage.
 Does not apply to damage received from Spells or other non-attack effects.\par
-\includegraphics[height=30px]{\images/hp.png} \textbf{\pagetarget{HP}{HP}} - The amount of damage required to defeat the unit.
+\includegraphics[height=30px]{\images/hp.png} \textbf{\pagetarget{HP}{HP}}\index{Hit Points (HP)} - The amount of damage required to defeat the unit.
 ``Few'' units are discarded from Combat and their owner's Unit Deck when defeated.
 ``Pack'' units are turned back to ``Few'' units, with any excess damage placed on their ``Few'' side.
 Units retain their ``Few'' or ``Pack'' status between Combats.
 All damage is healed from all units at the end of Combat.\par
-\includegraphics[height=30px]{\images/initiative.png}{\pagetarget{Initiative}{\textbf{Initiative}}} - Determines when the unit activates during Combat.
+\includegraphics[height=30px]{\images/initiative.png}{\pagetarget{Initiative}{\textbf{Initiative}}}\index{Initiative} - Determines when the unit activates during Combat.
 Units with a higher Initiative activate first.
 
 \vspace*{\fill}
-\hspace{-2em}
-{\transparent{0.2}\includegraphics[width=1.1\linewidth]{\art/behemoth.png}}
-\vspace*{\fill}
+
+\begin{tikzpicture}[remember picture, overlay]
+  \iftoggle{printable}{
+    \node[opacity=0.2, xscale=-1, anchor=east, xshift=22em, yshift=-13em] at (current page.west) {
+      \includegraphics[width=0.66\paperwidth]{\art/cavalryman.png}
+    };
+  }{
+    \node[opacity=0.2, xscale=-1, anchor=east, xshift=1em, yshift=-17em] at (current page.west) {
+      \includegraphics[width=1.2\linewidth]{\art/gorgone.png}
+    };
+
+  }
+\end{tikzpicture}
+
 \columnbreak
 
 \begin{multicols*}{2}
@@ -68,19 +75,21 @@ Units with a higher Initiative activate first.
   \begin{center}
     \hspace*{-1.6em}
     \begin{tikzpicture}
-      \draw (-1, 0) node {\includegraphics[width=\linewidth]{\cards/unit-few.png}};
-      \draw (-1.7, 1.9) node {\encirclesmall{1}};
-      \draw (0.4, 1.5) node {\encirclesmall{2}};
-      \draw (-1.5, 1.3) node {\encirclesmall{3}};
-      \draw (-2.6, 1.2) node {\encirclesmall{4}};
-      \draw (-2.6, 0.5) node {\encirclesmall{5}};
-      \draw (-2.6, -0.1) node {\encirclesmall{6}};
-      \draw (-2.6, -0.7) node {\encirclesmall{7}};
-      \draw (-1.3, -0.9) node {\encirclesmall{8}};
-      \draw (0, -0.9) node {\encirclesmall{9}};
-      \draw (-0.3, -1.9) node {\encircle{11}};
+      \node (card) {\includegraphics[width=\linewidth]{\cards/unit-few.png}};
+      \begin{relcoords}{card}
+        \draw (0.5, 0.8) node {\encirclesmall{1}};
+        \draw (0.85, 0.8) node {\encirclesmall{2}};
+        \draw (0.35, 0.75) node {\encirclesmall{3}};
+        \draw (0.05, 0.75) node {\encirclesmall{4}};
+        \draw (0.05, 0.62) node {\encirclesmall{5}};
+        \draw (0.05, 0.48) node {\encirclesmall{6}};
+        \draw (0.05, 0.34) node {\encirclesmall{7}};
+        \draw (0.35, 0.3) node {\encirclesmall{8}};
+        \draw (0.7, 0.3) node {\encirclesmall{9}};
+        \draw (0.6, 0.1) node {\encircle{11}};
+      \end{relcoords}
     \end{tikzpicture}
-    \imagecaption{Unit card (Few)}
+    \imagecaption{Unit card (Few)}\index{Few}
   \end{center}
   \begin{itemize}
     \item[\textbf{1.}] {Name}
@@ -94,18 +103,20 @@ Units with a higher Initiative activate first.
   \begin{center}
     \hspace*{-1.8em}
     \begin{tikzpicture}
-      \draw (0, 0) node {\includegraphics[width=\linewidth]{\cards/unit-pack.png}};
-      \draw (-0.7, 1.9) node {\encirclesmall{1}};
-      \draw (1.4, 1.5) node {\encirclesmall{2}};
-      \draw (-0.5, 1.3) node {\encirclesmall{3}};
-      \draw (-1.6, 1.2) node {\encirclesmall{4}};
-      \draw (-1.6, 0.5) node {\encirclesmall{5}};
-      \draw (-1.6, -0.2) node {\encirclesmall{6}};
-      \draw (-1.6, -0.9) node {\encirclesmall{7}};
-      \draw (0.2, -1.1) node {\encircle{10}};
-      \draw (0.5, -2.1) node {\encircle{11}};
+      \node (card) {\includegraphics[width=\linewidth]{\cards/unit-pack.png}};
+      \begin{relcoords}{card}
+        \draw (0.5, 0.8) node {\encirclesmall{1}};
+        \draw (0.85, 0.8) node {\encirclesmall{2}};
+        \draw (0.35, 0.75) node {\encirclesmall{3}};
+        \draw (0.05, 0.75) node {\encirclesmall{4}};
+        \draw (0.05, 0.62) node {\encirclesmall{5}};
+        \draw (0.05, 0.48) node {\encirclesmall{6}};
+        \draw (0.05, 0.34) node {\encirclesmall{7}};
+        \draw (0.6, 0.3) node {\encircle{10}};
+        \draw (0.6, 0.1) node {\encircle{11}};
+      \end{relcoords}
     \end{tikzpicture}
-    \imagecaption{Unit card (Pack)}
+    \imagecaption{Unit card (Pack)}\index{Pack}
   \end{center}
   \begin{itemize}
     \item[\textbf{7.}] {Initiative}
@@ -118,9 +129,9 @@ Units with a higher Initiative activate first.
 
 \bigbreak
 
-Most units have a \textbf{special ability}\index{Special Ability}:\par
+Most units have a \textbf{special ability:}\index{Special Unit Ability}\par
 \begin{itemize}[wide]
-  \item\textbf{Activation} \svg{activation} resolves when the unit is activated.
+  \item\textbf{Activation} \svg{activation}\index{Activation!Effects}\index{Activation!Unit} resolves when the unit is activated.
   \item\textbf{Attack} \svg{unit_attack} resolves when the unit attacks during its Activation.
     In case of multiple attacks, resolve the effect for \textbf{the first attack only}.
   \item\textbf{Other} \svg{unit_alternative} may be resolved instead of the unit's normal Activation.
@@ -151,12 +162,12 @@ Walls and Gates may also \pagelink{Walls}{reduce} the damage from  \svg{unit_ran
 
 \subsection*{\pagetarget{Neutral Units}{Neutral Units}}
 Neutral Units\index{Neutral Units} guard the various locations on the Game Map.
-Starting and winning Combat against them is necessary to Visit most Locations.
+Starting and winning Combat against them is necessary to visit most Locations.
 Neutral Units are spread into four different tiers, each with their own Deck.
 In addition to \svg{bronze}, \svg{silver} and \svg{golden}, there are also Azure \svg{azure} Neutral Units which are the strongest in the game.\par
 Each of these Decks should always be kept separate from each other and shuffled during setup.
 If a Neutral Unit Deck ever runs out of cards, reshuffle the discard into a new Deck.
-When a Combat against Neutral Units starts, draw \pagelink{Difficulty}{the appropriate number} of units from each tier to take part in that Combat.\par
+When a Combat against Neutral Units starts, draw the appropriate number of units from each tier (see the \hyperlink{Difficulty Table}{table} on the back cover) to take part in that Combat.\par
 It is possible for players to gain Neutral Units to their Unit Deck through various effects, such as Scenario-Specific Rules or the \wikilink{abilities/diplomacy}{Diplomacy} Ability card.
 \textbf{Neutral Units cannot be reinforced}, as they are single sided.
 Whenever a Neutral Unit is defeated from anywhere, place it into the appropriate Neutral Discard Pile.\par
@@ -197,7 +208,7 @@ Whenever a Neutral Unit is defeated from anywhere, place it into the appropriate
 \columnbreak
 \begin{expansion}{conflux}
   \begin{center}
-    \includegraphics[width=0.6\linewidth]{\cards/unit-earth-elemental-few.png}\\
+    \includegraphics[width=0.6\linewidth]{\cards/unit-air-elemental-few.png}\\
     \imagecaption{Summoned Elemental Unit}
   \end{center}
   Summoned Elemental units don't have \svg{recruit} nor \svg{reinforce}.
@@ -208,7 +219,10 @@ Whenever a Neutral Unit is defeated from anywhere, place it into the appropriate
 \end{multicols*}
 
 \begin{multicols*}{2}
-\subheader[Example ``Pack and Few'']{Example\\``Pack and Few''}
+
+\includegraphics[width=\linewidth]{\art/titan.jpg}
+
+\subsection*{Example ``Pack and Few''}
 
 \textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons, Empowering \svg{empower} the Spell by 2 with the Expert  Effect \svg{expert} of a Power card.}
 
@@ -228,6 +242,4 @@ Whenever a Neutral Unit is defeated from anywhere, place it into the appropriate
 \includegraphics[width=\linewidth]{\examples/skeletons_flipped.png}
 
 \vspace*{\fill}
-\columnbreak
-\includegraphics[width=\linewidth]{\art/titan.jpg}
 \end{multicols*}

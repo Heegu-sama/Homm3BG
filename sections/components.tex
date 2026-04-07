@@ -46,7 +46,10 @@ This guide provides a visual overview of all components included in every expans
     \begin{expansionmini}{navalbattles}
       \vspace{3mm}
       \centering
-      \includegraphics[width=0.8\linewidth]{\map_locations/creature-bank.png}
+      \begin{tikzpicture}
+        \draw (1.0, 0) node {\includegraphics[width=0.55\linewidth]{\map_locations/creature_bank_back.png}};
+        \draw (-0.3, 0) node {\includegraphics[width=0.55\linewidth]{\map_locations/creature_bank_token.png}};
+      \end{tikzpicture}\\
       \caption{\textbf{\pagelink{Creature Bank Tokens}{Creature Bank Token}}}
     \end{expansionmini}
   \end{subfigure}
@@ -232,6 +235,13 @@ This guide provides a visual overview of all components included in every expans
     \end{expansionmini}
   \end{subfigure}
   \hfill
+  \begin{subfigure}[c]{0.2\linewidth}
+    \begin{expansionmini}{stretchgoals2}
+      \centering
+      \includegraphics[width=0.9\linewidth]{\images/expert_effect_markers.png}
+      \caption{\textbf{\pagelink{Expert Effect Markers}{Expert Effect Markers}}}
+    \end{expansionmini}
+  \end{subfigure}
   ~
 \end{figure}
 
@@ -382,8 +392,8 @@ This guide provides a visual overview of all components included in every expans
     \begin{expansionmini}{conflux}
       \centering
       \begin{tikzpicture}
-        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/unit-earth-elemental-pack.png}};
-        \node at (1, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/unit-earth-elemental-few.png}};
+        \node at (0, 0) {\includegraphics[width=0.6\linewidth]{\cards/unit-air-elemental-pack.png}};
+        \node at (1, 0.1) {\includegraphics[width=0.6\linewidth]{\cards/unit-air-elemental-few.png}};
       \end{tikzpicture}
       \caption{\textbf{\pagelink{Summoning}{Summoned Unit card}}}
     \end{expansionmini}
@@ -442,7 +452,7 @@ This guide provides a visual overview of all components included in every expans
   \begin{subfigure}[c]{0.23\linewidth}
     \centering
     \includegraphics[width=\linewidth]{\cards/aiback.png}
-    \caption{\textbf{\pagelink{AIrules}{AI card}}}
+    \caption{\textbf{\pagelink{AI Deck}{AI card}}}
   \end{subfigure}
   \hfill
   ~
@@ -636,7 +646,7 @@ This guide provides a visual overview of all components included in every expans
       \centering
       \vspace{0.5em}
       \includegraphics[width=0.4\linewidth]{\images/firewall-vi-token.png}
-      \caption{\textbf{\pagelink{Firewall Token}{Luna's Firewall Token for Battlefield}}}
+      \caption{\textbf{\pagelink{Fire Wall Token}{Luna's Fire Wall Token for Battlefield}}}
     \end{expansionmini}
   \end{subfigure}
   ~

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-12-14 21:52+0000\n"
+"POT-Creation-Date: 2026-03-29 12:19+0000\n"
 "PO-Revision-Date: 2025-10-02 22:25+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -18,7 +18,8 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. type: multicols
-#: sections/battlefield.tex:30 sections/title_with_toc.tex:37
+#: sections/battlefield.tex:30 sections/expansion_content.tex:177
+#: sections/expansion_content.tex:189 sections/title_with_toc.tex:37
 #: sections/title_with_toc.tex:42
 #, no-wrap
 msgid ""
@@ -33,25 +34,23 @@ msgstr "Правила в редакции сообщества"
 
 #. type: tabular
 #: sections/title_with_toc.tex:12
-#, fuzzy
-#| msgid "Hermanni ``Heegu'' Karppela"
 msgid "Hermanni Karppela"
-msgstr "Германни «Heegu» Карппела"
+msgstr "Германни Карппела"
 
 #. type: tabular
 #: sections/title_with_toc.tex:12
 msgid "Johannes Wolff"
-msgstr ""
+msgstr "Йоханнес Вольф"
 
 #. type: tabular
 #: sections/title_with_toc.tex:12
 msgid "Andrzej Wiącek"
-msgstr ""
+msgstr "Анджей Вёнцек"
 
 #. type: tabular
 #: sections/title_with_toc.tex:12
 msgid "Alexey Sokolov"
-msgstr ""
+msgstr "Алексей Соколов"
 
 #. type: center
 #: sections/title_with_toc.tex:20
@@ -68,12 +67,6 @@ msgstr ""
 
 #. type: center
 #: sections/title_with_toc.tex:25
-#, fuzzy
-#| msgid ""
-#| "This is a community-driven project, which has a \\href{\\repourl}{GitHub "
-#| "repository}.  Everyone is welcome to contribute, make changes, and fix "
-#| "errors.  If you simply want to leave feedback, please do so in the "
-#| "original \\href{\\bggthreadurl}{BoardGameGeek thread}."
 msgid ""
 "This is a community-driven project, which has a \\href{\\repourl}{GitHub "
 "repository}.  Everyone is welcome to contribute, make changes, and fix "
@@ -84,7 +77,8 @@ msgstr ""
 "Эта книга поддерживается сообществом в \\href{\\repourl}{репозитории на "
 "GitHub}. Вы можете внести свой вклад в разработку, внести изменения или "
 "исправить ошибки. Если вы хотите просто оставить отзыв, сделайте это в "
-"\\href{\\bggthreadurl}{оригинальной ветке BoardGameGeek}. "
+"\\href{\\bggthreadurl}{оригинальной ветке BoardGameGeek}. Вы также можете  "
+"присоединиться к \\href{\\discordurl}{серверу Discord}."
 
 #. type: center
 #: sections/title_with_toc.tex:30
@@ -97,17 +91,11 @@ msgstr ""
 #. type: center
 #: sections/title_with_toc.tex:30
 msgid "{\\small — Hermanni ``Heegu'' Karppela}"
-msgstr ""
+msgstr "{\\small — Hermanni <<Heegu>> Karppela}"
 
 #. type: multicols
 #: sections/title_with_toc.tex:35
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\bigskip\n"
-#| "\\vspace*{\\fill}\n"
-#| "\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
-#| "\\vspace*{\\fill}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "{3}\n"
 "  \\centering\n"
@@ -115,24 +103,23 @@ msgid ""
 "  Scan to join the community \\textbf{Discord} server.\n"
 "\n"
 msgstr ""
-"\\bigskip\n"
-"\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
-"\\vspace*{-3em}\n"
+"{3}\n"
+"  \\centering\n"
+"  \\includegraphics[width=0.8\\linewidth]{\\qr/discord.png}\\\\\n"
+"  Отсканируйте для в ступления в сообщество \\textbf{Discord}.\n"
 "\n"
 
 #. type: multicols
 #: sections/title_with_toc.tex:40
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  \\includegraphics[width=0.8\\linewidth]{\\qr/bgg.png}\\\\\n"
-#| "  Scan to open \\textbf{BoardGameGeek} thread."
+#, no-wrap
 msgid ""
 "  \\includegraphics[width=0.8\\linewidth]{\\qr/github.png}\\\\\n"
 "  Scan to open \\textbf{GitHub} repository.\n"
 "\n"
 msgstr ""
-"  \\includegraphics[width=0.8\\linewidth]{\\qr/bgg.png}\\\\\n"
-"  Отсканируйте для перехода в ветку \\textbf{BoardGameGeek}."
+"  \\includegraphics[width=0.8\\linewidth]{\\qr/github.png}\\\\\n"
+"  Отсканируйте для перехода в репозиторий \\textbf{GitHub}.\n"
+"\n"
 
 #. type: multicols
 #: sections/title_with_toc.tex:45
@@ -154,20 +141,55 @@ msgid ""
 msgstr ""
 
 #. type: tikzpicture
-#: sections/title_with_toc.tex:62
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\transparent{0.2}\\includegraphics[width=1.05\\linewidth]{\\art/wyvern.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#: sections/title_with_toc.tex:63
+#, no-wrap
 msgid ""
 "[remember picture, overlay]\n"
 "  \\node(bg)[anchor=center, opacity=0.07, xshift=-3em, yshift=0em] at (current page.center) {\n"
 "    \\includegraphics[width=\\paperwidth, keepaspectratio]{\\art/meteor_shower.png}\n"
 "  };"
 msgstr ""
-"\\begin{center}\n"
-"  \\transparent{0.2}\\includegraphics[width=0.25\\linewidth]{\\art/wyvern.png}\n"
-"\\end{center}\n"
-"\n"
+
+#. type: Plain text
+#: sections/title_with_toc.tex:77
+msgid ""
+"\\AddToHookNext{shipout/background}{\\iftoggle{noartbackground}{}{ \\put "
+"(\\iftoggle{printable}{0.005\\paperwidth}"
+"{0.03\\paperwidth},-0.75\\paperheight){\\transparent{0.15}"
+"{\\includegraphics[width=0.9\\paperwidth]{\\art/"
+"minotaur_crusader_skeleton.png}}}}\\iftoggle{printable}{ \\drawbottom }"
+"{\\put (0in,-\\paperheight)"
+"{\\includegraphics[width=\\paperwidth,height=0.05\\paperheight]{\\layout/"
+"bottom.png}}} } \\vspace*{\\fill} The continent of Antagarich is at war as "
+"several different Factions, led by their Heroes, battle for supremacy.  "
+"Choose your Faction and Hero and banish your unruly enemies from these lands!"
+msgstr ""
+
+#.  Source: https://heroes.thelazy.net/index.php/Restoration_of_Erathia_Manual_Page_84
+#. type: Plain text
+#: sections/title_with_toc.tex:80
+msgid ""
+"\\textbf{Castle:} Human armies rallied under the banners of Clerics and "
+"Knights, bolstered by the might of Griffins and protected by Angels."
+msgstr ""
+
+#.  Source: https://heroes.thelazy.net/index.php/Restoration_of_Erathia_Manual_Page_88
+#. type: Plain text
+#: sections/title_with_toc.tex:83
+msgid ""
+"\\textbf{Dungeon:} Subterranean forces led by Warlocks and Overlords, "
+"wielding dark magic and bending fearsome creatures to their will."
+msgstr ""
+
+#.  Source: https://heroes.thelazy.net/index.php/Restoration_of_Erathia_Manual_Page_100
+#. type: Plain text
+#: sections/title_with_toc.tex:86
+msgid ""
+"\\textbf{Necropolis:} Legions of the undead, commanded by Necromancers and "
+"Death Knights, who sap the strength of the living to fuel their own."
+msgstr ""
+
+#. type: Plain text
+#: sections/title_with_toc.tex:88
+msgid "More Factions, Heroes, and their armies await in the expansions."
+msgstr ""

@@ -1,7 +1,10 @@
 % !TeX spellcheck = en_US
 \pagetarget{Adventure and Skirmish Modes}{\addsection{Battlefield}{\spells/frenzy.png}}
+\index{Battlefield}
+\index{Adventure mode}
+\index{Skirmish mode}
 
-\begin{expansion}{battlefield}
+\begin{expansion}*{battlefield}
   \begin{multicols}{2}
   \subsection*{Overview}
   \bigskip
@@ -45,7 +48,7 @@
 \end{expansion}
 
 \newpage
-\begin{expansion}{battlefield}
+\begin{expansion}*{battlefield}
   \subheader{Adventure and Skirmish Setup}
   \begin{multicols}{2}
     \subsection*{Common Setup Steps \hspace*{-1.6em}\raisebox{.2\height}{\encirclelegend{goblin}{C}}}
@@ -63,7 +66,7 @@
       \item Prepare the Positive and Negative \pagelink{Morale Cards}{\textbf{Morale cards}} (including all cards with the battlefield symbol).
       \item Prepare the following Tokens near the Battlefield Board: Black Cubes, Damage Tokens, Defense/Paralysis Tokens, Obstacles, and the Initiative Token.
       \item Prepare the Attack and Resource Dice.
-      \item Build your starting Deck as per \pagelink{Setup Starting Deck}{steps 11--13 of Setup}.
+      \item Build your starting Deck as per \pagelink{SetupStartingDeck}{steps \ref*{SetupStartingDeck}--\ref*{SetupStartingDeckEnd} of Setup}.
     \end{enumerate}
     \columnbreak
 
@@ -85,39 +88,39 @@
     \subsection*{Start of the game}
     In both modes, both players roll 2~\svg{resource_die}.
     The player with the highest total becomes the first player and takes the Initiative Token.
-
-  \vspace*{\fill}
 \end{multicols}
 
 \begin{center}
   \begin{tikzpicture}
-    \draw (0, 0) node[inner sep=0] {\makebox[\textwidth][c]{\includegraphics[width=0.9\linewidth]{\images/battlefield_setup.png}}};
-    \draw (-4, 0) node {\encircle{1}};
-    \draw (-5, -1.5) node {\encircle{2a}};
-    \draw (3.8, 2.9) node {\encircle{2a}};
-    \draw (-5.5, 1.2) node {\encircle{2c}};
-    \draw (2, 0.2) node {\encircle{2c}};
-    \draw (5.5, 1.2) node {\encircle{2c}};
-    \draw (5.3, -2) node {\encircle{3}};
-    \draw (2.9, -1.6) node {\encircle{4}};
-    \draw (-2, 2.8) node {\encircle{5}};
-    \draw (2.8, -2.5) node {\encircle{6}};
-    \draw (0, -2.5) node {\encircle{7}};
-    \draw (0, 3.4) node {\encircle{7}};
-    \draw (3.5, -3) node {\encirclered{8}};
-    \draw (-3.8, 3) node {\encirclered{8}};
-    \draw (-2, -2) node {\encirclered{9}};
-    \draw (2, 3) node {\encirclered{9}};
-    \draw (-6, -1.7) node {\encirclered{10}};
-    \draw (5, 3) node {\encirclered{10}};
-    \draw (1, -1.6) node {\encirclered{11}};
-    \draw (-1.9, 3.5) node {\encirclered{12}};
+    \node (battlefield) [inner sep=0] {\makebox[\textwidth][c]{\includegraphics[width=0.9\linewidth]{\images/battlefield_setup.png}}};
+    \begin{relcoords}{battlefield}
+      \draw (0.28, 0.5) node {\encircle{1}};
+      \draw (0.2, 0.28) node {\encircle{2a}};
+      \draw (0.7, 0.88) node {\encircle{2a}};
+      \draw (0.15, 0.6) node {\encircle{2c}};
+      \draw (0.6, 0.5) node {\encircle{2c}};
+      \draw (0.82, 0.6) node {\encircle{2c}};
+      \draw (0.8, 0.28) node {\encircle{3}};
+      \draw (0.65, 0.29) node {\encircle{4}};
+      \draw (0.37, 0.84) node {\encircle{5}};
+      \draw (0.66, 0.2) node {\encircle{6}};
+      \draw (0.5, 0.15) node {\encircle{7}};
+      \draw (0.5, 0.9) node {\encircle{7}};
+      \draw (0.69, 0.15) node {\encirclered{8}};
+      \draw (0.28, 0.85) node {\encirclered{8}};
+      \draw (0.37, 0.27) node {\encirclered{9}};
+      \draw (0.6, 0.86) node {\encirclered{9}};
+      \draw (0.15, 0.29) node {\encirclered{10}};
+      \draw (0.8, 0.87) node {\encirclered{10}};
+      \draw (0.55, 0.28) node {\encirclered{11}};
+      \draw (0.38, 0.91) node {\encirclered{12}};
+    \end{relcoords}
   \end{tikzpicture}
 \end{center}
 \end{expansion}
 
 \newpage
-\begin{expansion}[before=\vspace*{-11mm}]{battlefield}
+\begin{expansion}*[before=\vspace*{-11mm}]{battlefield}
   \pagetarget{Adventure}{\subheader{Adventure Mode}}
   \begin{multicols}{2}
   Adventure Mode is divided into two phases: the \textbf{Adventure Phase} and the \textbf{Final Combat}.
@@ -165,13 +168,12 @@
   \subsection*{Starting the final Combat}
   Recover all spent \svg{expert}.
   Pick up your set-aside Deck, shuffle it, and draw cards up to your Hero's Hand \svg{hand} Limit.
-  Remove all \svg{paralysis} tokens from your units, take all your unit miniatures, and begin the final Combat on the Battlefield Board following the \pagelink{Battlefield Combat}{Battlefield Combat rules}.
+  Remove all \svg{paralysis} tokens from your units, take all your unit Miniatures, and begin the final Combat on the Battlefield Board following the \pagelink{Battlefield Combat}{Battlefield Combat rules}.
   \end{multicols}
-  \vspace*{3em}
 \end{expansion}
 
 \newpage
-\begin{expansion}{battlefield}
+\begin{expansion}*{battlefield}
   \begin{multicols}{2}
   \pagetarget{Adventure Cards}{\subsection*{Resolving Adventure Cards}}
   There are two types of Adventure cards: Combat and Event.
@@ -180,12 +182,14 @@
     \footnotesize
     \begin{center}
       \begin{tikzpicture}
-        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_event.png}};
-        \draw (1.2, 1.9) node {\encirclesmall{1}};
-        \draw (0.5, -0.5) node {\encirclesmall{2}};
-        \draw (-1, -1.2) node {\encirclesmall{3}};
+        \node (card) [inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_event.png}};
+        \begin{relcoords}{card}
+          \draw (0.7, 0.85) node {\encirclesmall{1}};
+          \draw (0.6, 0.4) node {\encirclesmall{2}};
+          \draw (0.2, 0.2) node {\encirclesmall{3}};
+        \end{relcoords}
       \end{tikzpicture}
-      \imagecaption{Adventure-Event card}
+      \imagecaption{Adventure-Event card}\index{Event cards (Adventure)}
       \begin{enumerate}
         \item[\textbf{1.}] Name
         \item[\textbf{2.}] Type
@@ -196,14 +200,16 @@
 
     \begin{center}
       \begin{tikzpicture}
-        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_combat.png}};
-        \draw (1.2, 1.9) node {\encirclesmall{1}};
-        \draw (0.5, -0.1) node {\encirclesmall{2}};
-        \draw (-1, -0.8) node {\encirclesmall{4}};
-        \draw (1, -0.8) node {\encirclesmall{5}};
-        \draw (0.4, -2.0) node {\encirclesmall{6}};
+        \node (card) [inner sep=0] {\includegraphics[width=\linewidth]{\cards/adventure_combat.png}};
+        \begin{relcoords}{card}
+          \draw (0.7, 0.85) node {\encirclesmall{1}};
+          \draw (0.62, 0.5) node {\encirclesmall{2}};
+          \draw (0.2, 0.34) node {\encirclesmall{4}};
+          \draw (0.8, 0.34) node {\encirclesmall{5}};
+          \draw (0.6, 0.08) node {\encirclesmall{6}};
+        \end{relcoords}
       \end{tikzpicture}
-      \imagecaption{Adventure-Combat card}
+      \imagecaption{Adventure-Combat card}\index{Combat cards (Adventure)}
       \begin{enumerate}
         \item[\textbf{4.}] Combat Power Levels
         \item[\textbf{5.}] Battle Reward
@@ -214,7 +220,7 @@
   To resolve an \textbf{Adventure-Event card}, follow its printed effect.
   To resolve an \textbf{Adventure-Combat card}, follow these steps:
   \begin{enumerate}[leftmargin=1.3em]
-    \item \textbf{Declare a Combat Power Level:}\index{Combat Power}
+    \item \textbf{Declare a Combat Power Level:}\index{Combat Power (Adventure)}
       Choose one of the three available Combat Power Levels.
       You must reach at least that value to gain the full reward.
     \item \textbf{Determine your Combat Power:}
@@ -252,11 +258,10 @@
     \end{itemize}
   \end{itemize}
   \end{multicols}
-  \vspace*{2em}
 \end{expansion}
 
 \newpage
-\begin{expansion}{battlefield}
+\begin{expansion}*{battlefield}
   \pagetarget{Skirmish}{\subheader{Skirmish Mode}}
   \begin{multicols}{2}
     Skirmish Mode has no Adventure Phase.
@@ -314,7 +319,7 @@
   \end{center}
 \end{expansion}
 
-\begin{expansion}[before=\vspace*{-11mm}]{battlefield}
+\begin{expansion}*[before=\vspace*{-11mm}]{battlefield}
   \pagetarget{Battlefield Combat}{\subheader{Battlefield Combat}}
   \begin{multicols*}{2}
   Playing on the Battlefield Board requires using Miniatures for Combat instead of unit cards.
@@ -357,7 +362,7 @@
     \caption{\imagecaption[c]{\mbox{Initiative} Token}}
     \vspace{1em}
   \end{wrapfigure}
-  Starting with the player with the \pagetarget{Initiative Token}{\textbf{Initiative Token}} (the attacker in a \pagelinkwithcomma{BF for regular}{non-Adventure/Skirmish game}), both players take turns choosing and placing Obstacle Tokens on the Battlefield Board one-by-one until \textbf{all Obstacle Tokens (except Effects) are placed}.
+  Starting with the player with the \pagetarget{Initiative Token}{\textbf{Initiative Token}}\index{Initiative Token} (the attacker in a \pagelinkwithcomma{BF for regular}{non-Adventure/Skirmish game}), both players take turns choosing and placing Obstacle Tokens on the Battlefield Board one-by-one until \textbf{all Obstacle Tokens (except Effects) are placed}.
   No Obstacle can be adjacent to another Obstacle or to any player's deployment zone.
 
   {\centering
@@ -373,11 +378,10 @@
     The 5-unit limit does not apply in Adventure and Skirmish modes, and players may place all Faction units available to them.
     When the last unit is placed, the Combat begins.
   \end{multicols*}
-  \vspace*{2em}
 \end{expansion}
 
 \newpage
-\begin{expansion}[before=\vspace*{-11mm}]{battlefield}
+\begin{expansion}*[before=\vspace*{-11mm}]{battlefield}
   \begin{multicols*}{2}
   \subsection*{Battlefield Combat Rules}
   Follow the regular \pagelink{combatround}{Combat rules} with the following changes:
@@ -402,7 +406,7 @@
   \end{multicols*}
 \end{expansion}
 
-\begin{expansion}[before=\vspace*{-11mm}]{battlefield}
+\begin{expansion}*[before=\vspace*{-11mm}]{battlefield}
   \pagetarget{BF for regular}{\subheader{Battlefield Board in regular games}}
   \begin{multicols*}{2}
     Although Battlefield is designed for \pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish modes}, it is possible to use the Battlefield Board in other game modes, though with minor rule modifications.
@@ -417,7 +421,7 @@
     \end{itemize}
 
     \subsection*{Siege with Walls and Gate}
-    During a Siege against a Town with a Citadel, Walls and Gate Obstacles are placed as shown below.
+    During a Siege against a Town with a Citadel\index{Citadel}, Walls and Gate Obstacles are placed as shown below.
     Place no other Obstacles.\par
     \bigskip
     \begin{tikzpicture}
@@ -432,12 +436,11 @@
     Attacking the Gate Token is still possible on all four hexes.\par
     \bigskip
     \framedimage[\linewidth]{\examples/bf-gate-token.png}
-    \textit{\footnotesize{}Example: Halberdier and Crusader (defenders) may enter the Gate Token only along the green arrows, but Minotaur and Harpies are still able to attack the Gate Token from any side.}
+    \textit{\footnotesize{}Example: Halberdier and Crusader (defenders) may enter the Gate Token only along the green arrows, but Minotaur and Harpy are still able to attack the Gate Token from any side.}
 
     \subsection*{Combat with Neutral Units}
     If you decide to use the Battlefield Board in Combats with Neutral Units, ignore the Round Limit: at the end of each Combat Round you may freely decide to Retreat or to start another Combat Round with no need to spend \svg{movement}.
     Be aware, however, that this may significantly extend the playtime.
     It is recommended to use the Battlefield Board only for \textbf{Player vs.~Player Combats}.
   \end{multicols*}
-  \vspace*{1em}
 \end{expansion}

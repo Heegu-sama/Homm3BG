@@ -81,7 +81,7 @@ jobs:
       matrix: ${{ fromJson(needs.matrix-setup.outputs.check-pages-matrix) }}
     steps:
       - name: Download digital PDF
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: main_${{ matrix.language }}
 
@@ -96,7 +96,7 @@ jobs:
           fi
 
       - name: Download printable PDF
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: printable_${{ matrix.language }}
 
@@ -122,7 +122,7 @@ jobs:
         run: mkdir ${{ matrix.language }}
 
       - name: Download compiled books
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           pattern: "*_${{ matrix.language }}"
           path: ${{ matrix.language }}

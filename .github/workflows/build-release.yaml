@@ -10,7 +10,7 @@ jobs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
       version: ${{ steps.set-version.outputs.version }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - id: set-matrix
         run: |
@@ -21,7 +21,7 @@ jobs:
               { "language_name": "Polski", "language": "pl", "display": "🇵🇱 Polski"},
               { "language_name": "Espanol", "language": "es", "display": "🇪🇸 Español"},
               { "language_name": "Francais", "language": "fr", "display": "🇫🇷 Français"},
-              { "language_name": "Ruuskiy", "language": "ru", "display": "🇷🇺 Русский"},
+              { "language_name": "Russkiy", "language": "ru", "display": "🇷🇺 Русский"},
               { "language_name": "Ukrainska", "language": "ua", "display": "🇺🇦 Українська"},
               { "language_name": "Deutsch", "language": "de", "display": "🇩🇪 Deutsch"},
               { "language_name": "Cestina", "language": "cs", "display": "🇨🇿 Čeština"},
@@ -79,14 +79,14 @@ jobs:
         run: mkdir all_booklets
 
       - name: Download compiled books
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           pattern: "Heroes3_*"
           path: all_booklets
           merge-multiple: true
 
       - name: Upload single package
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: "All_booklets_${{ needs.matrix-setup.outputs.version }}"
           path: all_booklets

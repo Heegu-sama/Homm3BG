@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-01-12 21:10+0000\n"
+"POT-Creation-Date: 2026-03-30 23:32+0100\n"
 "PO-Revision-Date: 2025-11-29 16:03+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,12 +19,12 @@ msgstr ""
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:4
-#, fuzzy
-#| msgid "\\addsection{Difficulty}{\\spells/berserk.png}"
 msgid ""
 "\\pagetarget{Card Effect Keywords}{\\addsection{Card Effect Keywords}"
 "{\\skills/interference.png}}"
-msgstr "\\addsection{Poziom Trudności}{\\spells/berserk.png}"
+msgstr ""
+"\\pagetarget{Card Effect Keywords}{\\addsection[2]{Słowa Kluczowe "
+"\\mbox{Efektów Kart}}{\\skills/interference.png}}"
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:7
@@ -33,13 +33,14 @@ msgid ""
 "with more elaborate rules and require specific game components.  This "
 "section provides the rules for these keywords."
 msgstr ""
+"Większość dodatków wprowadza do gry nowe karty. Niektóre z tych kart używają "
+"słów kluczowych z~bardziej rozbudowanymi zasadami i~wymagają określonych "
+"komponentów gry.  Ten rozdział zawiera zasady dla tych słów kluczowych."
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:9
-#, fuzzy
-#| msgid "\\pagetarget{spells}{Spell Cards}"
 msgid "\\pagetarget{spell keywords}{\\subheader{Spell Card Keywords}}"
-msgstr "\\pagetarget{spells}{Karty Zaklęć}"
+msgstr "\\pagetarget{spell keywords}{\\subheader{Słowa Kluczowe Zaklęć}}"
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:13
@@ -48,14 +49,18 @@ msgid ""
 "Units} on the Combat Board.  Use the corresponding Tokens to mark these "
 "spaces."
 msgstr ""
+"Dzięki niektórym Zaklęciom możesz umieścić \\textbf{Efekty} lub "
+"\\textbf{Przyzywane Jednostki} na Planszy Walki.  Do oznaczenia odpowiednich "
+"pól użyj specjalnych żetonów."
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:34
+#: sections/card_effect_keywords.tex:33
 #, no-wrap
 msgid ""
 "{cove}\n"
 "  \\begin{multicols}{2}\n"
 "    \\pagetarget{Clone Token}{\\subsection*{Clone Token}}\n"
+"    \\index{Clone}\n"
 "    \\setlength\\intextsep{0pt}\n"
 "    \\setlength\\columnsep{1em}\n"
 "    \\begin{wrapfigure}{r}{0.3\\linewidth}\n"
@@ -66,21 +71,39 @@ msgid ""
 "    When you cast the \\wikilink{spells/clone}{\\textbf{Clone Spell},} choose an allied unit (depending on the \\svg{empower} used) and an adjacent empty space on the Combat Board.\n"
 "    Place the small Clone Token on the chosen unit and the larger Token of the same color (blue or red) on the empty space.\n"
 "    The larger Token on the empty space represents the Clone.\n"
-"    The Clone has the same statistics and special abilities as the original unit, except its \\svg{health_points} is 1 and its \\svg{defense} is 0.\n"
-"    These values cannot be increased by any effects.  % what about other statistics?\n"
-"    The Clone perishes if it is attacked (even without taking damage) or takes any \\svg{damage} from a Spell.  % clarification?\n"
-"    If the original unit is removed from the Combat Board, remove the Clone as well.\n"
-"    The Clone does not inherit effects played on the original unit.\n"
+"    The Clone functions identically to the original unit, copying everything printed on its card, but excluding any other effects played on the original unit.\n"
+"    If the Clone takes at least 1 \\svg{damage} from any source, or is attacked (even if that attack inflicts 0 \\svg{damage}), inflict enough damage to set its \\svg{health_points} to 0.\n"
+"    A Clone is removed from the Combat Board if its original unit is removed from the Combat Board.\n"
 "    \\vfill\n"
 "    \\columnbreak\n"
 "\n"
 msgstr ""
+"{cove}\n"
+"  \\begin{multicols}{2}\n"
+"    \\pagetarget{Clone Token}{\\subsection*{Żeton Klonowania}}\n"
+"    \\index{Klonowanie}\n"
+"    \\setlength\\intextsep{0pt}\n"
+"    \\setlength\\columnsep{1em}\n"
+"    \\begin{wrapfigure}{r}{0.3\\linewidth}\n"
+"      \\includegraphics[width=0.6\\linewidth]{\\images/clone-token.png}\\vspace*{1em}\n"
+"      \\includegraphics[width=\\linewidth]{\\images/clone-token.png}\n"
+"      \\centering\\imagecaption{Żetony \\mbox{Klonowania}}\n"
+"    \\end{wrapfigure}\n"
+"    Gdy rzucasz Zaklęcie \\wikilink{spells/clone}{\\textbf{Klonowania}}, wybierz sojuszniczą jednostkę (w zależności od użytego \\svg{empower}) oraz sąsiadujące puste pole na Planszy Walki.\n"
+"    Umieść mały Żeton Klonowania na wybranej jednostce, a większy Żeton tego samego koloru (niebieski lub czerwony) na pustym polu.\n"
+"    Większy Żeton na pustym polu symbolizuje Klona.\n"
+"    Klon funkcjonuje identycznie jak oryginalna jednostka, kopiując wszystko, co jest napisane na jej karcie, lecz bez uwzględnienia innych efektów zagranych na oryginalną jednostkę.\n"
+"    Jeśli Klon otrzyma co najmniej 1 \\svg{damage} z jakiegokolwiek źródła lub zostanie zaatakowany (nawet jeśli atak zadaje 0 \\svg{damage}), zadaj mu tyle obrażeń, aby jego \\svg{health_points} wynosiły 0.\n"
+"    Klon jest usuwany z Planszy Walki, gdy jego oryginalna jednostka zostanie z niej usunięta.\n"
+"    \\vfill\n"
+"    \\columnbreak\n"
+"\n"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:44
+#: sections/card_effect_keywords.tex:43
 #, no-wrap
 msgid ""
-"    \\subsection*{\\textit{Clone Example}}\n"
+"    \\subsection*{Clone Example}\n"
 "    \\textit{%\n"
 "      One of Bob's units in Combat is ``Few'' Griffins with an Initiative value of 6.\n"
 "      He casts the Clone Spell on them, placing the small Clone Token on the Griffins and the larger Token of the same color on an adjacent empty space.\n"
@@ -91,9 +114,19 @@ msgid ""
 "    \\par\\noindent\n"
 "    \\begin{tikzpicture}\n"
 msgstr ""
+"    \\subsection*{Przykład Klonowania}\n"
+"    \\textit{%\n"
+"      Jedną z jednostek Boba w Walce jest ,,Garstka'' Gryfów z~Inicjatywą równą 6.\n"
+"      Rzuca na nie Zaklęcie Klonu, umieszczając mały Żeton Klonu na Gryfach, a większy Żeton tego samego koloru na sąsiadującym, pustym polu.\n"
+"      Później rzuca ,,Przyspieszenie'' z 0~\\svg{empower} na oryginalne Gryfy, zwiększając ich Inicjatywę o 1.\n"
+"      Inicjatywa oryginalnych Gryfów wynosi teraz 7, ale Inicjatywa Klonu pozostaje równa 6.\n"
+"    }\n"
+"    \\vspace*{1em}\n"
+"    \\par\\noindent\n"
+"    \\begin{tikzpicture}\n"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:58
+#: sections/card_effect_keywords.tex:57
 #, no-wrap
 msgid ""
 "      \\draw (0, 0) node[rotate=180] {\\includegraphics[width=\\linewidth]{\\images/combat_board_half.png}};\n"
@@ -110,6 +143,19 @@ msgid ""
 "  \\vspace*{-8em}\n"
 "  {\\transparent{0.2}\\includegraphics[width=0.5\\linewidth]{\\art/magic_arrow.png}\\hfill}"
 msgstr ""
+"      \\draw (0, 0) node[rotate=180] {\\includegraphics[width=\\linewidth]{\\images/combat_board_half.png}};\n"
+"      \\draw (-1, 1.3) node {\\includegraphics[width=0.22\\linewidth]{\\cards/unit-few.png}};\n"
+"      \\draw (-0.8, 1.2) node[circular drop shadow={shadow scale=0.8, shadow xshift=0.15ex, shadow yshift=-0.15ex, opacity=0.7,\n"
+"        fill=black, path fading={circle with fuzzy edge 10 percent},\n"
+"        every shadow}] {\\includegraphics[width=0.1\\linewidth]{\\images/clone-token-2.png}};\n"
+"      \\draw (1, 1.3) node[circular drop shadow={shadow scale=0.85, shadow xshift=0.2ex, shadow yshift=-0.2ex, opacity=0.7,\n"
+"        fill=black, path fading={circle with fuzzy edge 10 percent},\n"
+"        every shadow}] {\\includegraphics[width=0.18\\linewidth]{\\images/clone-token-2.png}};\n"
+"      \\draw (-0.4, -1.7) node {\\includegraphics[width=0.22\\linewidth]{\\cards/haste.png}};\n"
+"    \\end{tikzpicture}\n"
+"  \\end{multicols}\n"
+"  \\vspace*{-6.5em}\n"
+"  {\\transparent{0.2}\\includegraphics[width=0.45\\linewidth]{\\art/magic_arrow.png}\\hfill}"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:72
@@ -118,6 +164,7 @@ msgid ""
 "{2}\n"
 "\\begin{expansion}{stronghold}\n"
 "  \\pagetarget{Quicksand Token}{\\subsection*{Quicksand Token}}\n"
+"  \\index{Quicksand}\n"
 "  While casting the \\wikilink{spells/quicksand}{\\textbf{Quicksand Spell},} depending on the \\svg{empower} used, take 2, 4 or 6 \\textbf{Quicksand Tokens} from the same set (blue or red).\n"
 "  Half of them must be ``empty'' and half must have the Quicksand symbol.\n"
 "  Shuffle the Tokens face down and place one on each chosen empty space on the Combat Board.\n"
@@ -128,15 +175,23 @@ msgid ""
 "  If the Token shows the Quicksand icon, the unit's movement and activation end immediately.\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\begin{expansion}{stronghold}\n"
+"  \\pagetarget{Quicksand Token}{\\subsection*{Żeton Ruchomych Piasków}}\n"
+"  \\index{Ruchome Piaski}\n"
+"  Rzucając Zaklęcie \\wikilink{spells/quicksand}{\\textbf{Ruchomych Piasków}}, w zależności od użytego \\svg{empower}, weź 2, 4 lub 6 \\textbf{Żetonów Ruchomych Piasków} w tym samym kolorze (niebieskim lub czerwonym).\n"
+"  Połowa z nich musi być ,,pusta'', a połowa musi mieć symbol Ruchomych Piasków.\n"
+"  Potasuj Żetony i umieść zakryte po jednym na wybranych pustych polach Planszy Walki.\n"
+"  Jeśli nie ma wystarczającej liczby pustych pól, odrzuć nadmiarowe Żetony.\n"
+"  Po umieszczeniu możesz w dowolnym momencie podglądać swoje Żetony.\n"
+"  Gdy jednostka wchodzi na pole z Żetonem Ruchomych Piasków, odkryj go.\n"
+"  Jeśli jest pusty, jednostka kontynuuje ruch.\n"
+"  Jeśli Żeton pokazuje ikonę Ruchomych Piasków, ruch i aktywacja jednostki natychmiast się kończą.\n"
+"\n"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:79
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  \\textbf{Note:} Two Quicksand Tokens may occupy a single space only if they are placed by different players.\n"
 "  \\bigskip\n"
@@ -146,29 +201,27 @@ msgid ""
 "    \\imagecaption{Quicksand Token}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-"\\end{center}\n"
+"  \\textbf{Uwaga:} Dwa Żetony Ruchomych Piasków mogą zajmować jedno pole tylko wtedy, gdy zostały umieszczone przez różnych graczy.\n"
+"  \\bigskip\n"
+"  \\begin{multicols*}{2}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.5\\linewidth]{\\images/quicksand-token.png}\\\\\n"
+"    \\imagecaption{Żeton Ruchomych Piasków}\n"
 "\n"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:85
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\columnbreak\n"
 "    \\includegraphics[width=0.5\\linewidth]{\\images/quicksand-token-2.png}\\\\\n"
 "    \\imagecaption{Empty Quicksand Token}\n"
 "  "
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-"\\end{center}\n"
-"\n"
+"    \\columnbreak\n"
+"    \\includegraphics[width=0.5\\linewidth]{\\images/quicksand-token-2.png}\\\\\n"
+"    \\imagecaption{Pusty Żeton \\mbox{\\hspace{-0.3em}Ruchomych Piasków}}\n"
+"  "
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:85
@@ -177,14 +230,17 @@ msgid ""
 "\\end{expansion}\n"
 "\n"
 msgstr ""
+"\\end{expansion}\n"
+"\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:94
+#: sections/card_effect_keywords.tex:95
 #, no-wrap
 msgid ""
 "\\vspace*{1em}\n"
 "\\begin{expansion}{battlefield,conflux}\n"
-"  \\pagetarget{Firewall Token}{\\subsection*{Firewall Token}}\n"
+"  \\pagetarget{Fire Wall Token}{\\subsection*{Fire Wall Token}}\n"
+"  \\index{Fire Wall}\n"
 "  The \\wikilink{spells/fire_wall}{\\textbf{Fire Wall Spell}} and \\wikilink{heroes/luna\\#specialty}{\\textbf{Luna's Specialty cards I and VI}} instruct you to place the Fire Wall card onto a space on the Combat Board.\n"
 "  You may use the Fire Wall Tokens instead of the cards.\n"
 "  Place the Spell or Specialty card next to the Combat Board as a reminder.\n"
@@ -192,62 +248,64 @@ msgid ""
 "  When using the large \\pagelink{Battlefield Combat}{Battlefield Board}, you must use the Token instead of the card.\n"
 "\n"
 msgstr ""
+"\\vspace*{1em}\n"
+"\\begin{expansion}{battlefield,conflux}\n"
+"  \\pagetarget{Fire Wall Token}{\\subsection*{Żeton Ściany Ognia}}\n"
+"  \\index{Ściana Ognia}\n"
+"  Zaklęcie \\wikilink{spells/fire_wall}{\\textbf{Ściana Ognia}} oraz \\wikilink{heroes/luna\\#specialty}{\\textbf{karty Specjalności I i VI Luny}} pozwalają umieścić kartę Ściany Ognia na Planszy Walki.\n"
+"  Zamiast kart, możesz użyć Żetonów Ściany Ognia.\n"
+"  Połóż kartę Zaklęcia lub Specjalności obok Planszy Walki jako przypomnienie.\n"
+"  Gdy karta zostanie usunięta lub odrzucona, odrzuć również Żeton.\n"
+"  Korzystając z \\pagelink{Battlefield Combat}{Pola Bitwy}, musisz użyć Żetonu zamiast karty.\n"
+"\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:100
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#: sections/card_effect_keywords.tex:101
+#, no-wrap
 msgid ""
 "  \\medskip\n"
 "  \\begin{multicols}{2}\n"
 "    \\centering\n"
 "    \\includegraphics[width=0.7\\linewidth]{\\images/firewall-bf-token.png}\n"
-"    \\imagecaption{Firewall Token\\\\(Spell)}\n"
+"    \\imagecaption{Fire~Wall~Token\\\\(Spell)}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-"\\end{center}\n"
+"  \\medskip\n"
+"  \\begin{multicols}{2}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.7\\linewidth]{\\images/firewall-bf-token.png}\n"
+"    \\imagecaption{Ściana Ognia\\\\(Zaklęcie)}\n"
 "\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:104
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#: sections/card_effect_keywords.tex:105
+#, no-wrap
 msgid ""
 "    \\columnbreak\n"
 "    \\includegraphics[width=0.7\\linewidth]{\\images/firewall-vi-token.png}\n"
-"    \\imagecaption{Firewall Token\\\\(Luna's Specialty)}\n"
+"    \\imagecaption{Fire~Wall~Token\\\\(Luna's Specialty)}\n"
 "  "
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-"\\end{center}\n"
-"\n"
+"    \\columnbreak\n"
+"    \\includegraphics[width=0.7\\linewidth]{\\images/firewall-vi-token.png}\n"
+"    \\imagecaption{Ściana Ognia\\\\(Specjalność Luny)}\n"
+"  "
 
 #. type: Plain text
-#: sections/card_effect_keywords.tex:119 sections/card_effect_keywords.tex:204
-#: sections/deckbuilding.tex:183 sections/deckbuilding.tex:396
-#: sections/expansion_content.tex:111 sections/expansion_content.tex:158
-#: sections/expansion_content.tex:173 sections/resources.tex:31
+#: sections/card_effect_keywords.tex:121 sections/card_effect_keywords.tex:207
+#: sections/deckbuilding.tex:191 sections/deckbuilding.tex:453
+#: sections/resources.tex:31
 #, no-wrap
 msgid "\\columnbreak"
 msgstr "\\columnbreak"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:119
+#: sections/card_effect_keywords.tex:121
 #, no-wrap
 msgid ""
 "{stretchgoals2}\n"
 "  \\pagetarget{Land Mine Token}{\\subsection*{Land Mine Token}}\n"
+"  \\index{Land Mine}\n"
 "  While casting the \\wikilink{spells/land_mine}{\\textbf{Land Mine Spell},} depending on the \\svg{empower} used, take 2, 4 or 6 \\textbf{Land Mine Tokens}.\n"
 "  Half of them must be ``empty'' and half must have a 2~\\svg{damage} symbol.\n"
 "  Shuffle the Tokens face down and place one on each chosen empty space on the Combat Board.\n"
@@ -259,9 +317,22 @@ msgid ""
 "  If the unit is still on the Board, it continues its activation.\n"
 "\n"
 msgstr ""
+"{stretchgoals2}\n"
+"  \\pagetarget{Land Mine Token}{\\subsection*{Żeton Pola Minowego}}\n"
+"  \\index{Pole Minowe}\n"
+"  Rzucając Zaklęcie \\wikilink{spells/land_mine}{\\textbf{Pola Minowego}}, w zależności od użytego \\svg{empower}, weź 2, 4 lub 6 \\textbf{Żetonów Pola Minowego}.\n"
+"  Połowa z nich musi być ,,pusta'', a połowa musi mieć symbol 2~\\svg{damage}.\n"
+"  Potasuj Żetony i umieść zakryte po jednym na wybranych pustych polach Planszy Walki.\n"
+"  Jeśli nie ma wystarczającej liczby pustych pól, odrzuć nadmiarowe Żetony.\n"
+"  Po umieszczeniu możesz w dowolnym momencie podglądać swoje Żetony.\n"
+"  Gdy jednostka wchodzi na pole z Żetonem Pola Minowego, odkryj go.\n"
+"  Jeśli jest pusty, jednostka kontynuuje ruch.\n"
+"  Jeśli Żeton pokazuje symbol 2~\\svg{damage}, jednostka otrzymuje 2 obrażenia.\n"
+"  Jeśli jednostka nadal znajduje się na Planszy Walki, kontynuuje swoją aktywację.\n"
+"\n"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:126
+#: sections/card_effect_keywords.tex:128
 #, no-wrap
 msgid ""
 "  \\textbf{Note:} Two Land Mine Tokens may occupy a single space only if they are placed by different players.\n"
@@ -272,34 +343,31 @@ msgid ""
 "    \\imagecaption{Land Mine Token\\\\(Backside)}\n"
 "\n"
 msgstr ""
+"  \\textbf{Uwaga:} Dwa Żetony Pola Minowego mogą zajmować jedno pole tylko wtedy, gdy zostały umieszczone przez różnych graczy.\n"
+"  \\bigskip\n"
+"  \\begin{multicols}{3}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.9\\linewidth]{\\images/land-mine-token.png}\n"
+"    \\imagecaption{Żeton Pola Minowego (Rewers)}\n"
+"\n"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:130
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#: sections/card_effect_keywords.tex:132
+#, no-wrap
 msgid ""
 "    \\columnbreak\n"
 "    \\includegraphics[width=0.9\\linewidth]{\\images/land-mine-token-0.png}\n"
 "    \\imagecaption{Empty Land Mine Token}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-"\\end{center}\n"
+"    \\columnbreak\n"
+"    \\includegraphics[width=0.9\\linewidth]{\\images/land-mine-token-0.png}\n"
+"    \\imagecaption{Pusty Żeton Pola Minowego}\n"
 "\n"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:135
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#: sections/card_effect_keywords.tex:137
+#, no-wrap
 msgid ""
 "    \\columnbreak\n"
 "    \\includegraphics[width=0.9\\linewidth]{\\images/land-mine-token-2.png}\n"
@@ -307,17 +375,19 @@ msgid ""
 "  \\end{multicols}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-"\\end{center}\n"
+"    \\columnbreak\n"
+"    \\includegraphics[width=0.9\\linewidth]{\\images/land-mine-token-2.png}\n"
+"    \\imagecaption{Żeton Pola Minowego}\n"
+"  \\end{multicols}\n"
 "\n"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:154
+#: sections/card_effect_keywords.tex:157
 #, no-wrap
 msgid ""
 "  \\vspace*{1em}\n"
 "  \\pagetarget{Force Field Token}{\\subsection*{Force Field Token}}\n"
+"  \\index{Force Field}\n"
 "  \\setlength\\intextsep{0pt}\n"
 "  \\setlength\\columnsep{1em}\n"
 "  \\begin{wrapfigure}{r}{0.25\\linewidth}\n"
@@ -335,25 +405,45 @@ msgid ""
 "  {\\hspace{2em}\\transparent{0.2}\\includegraphics[width=0.5\\linewidth]{\\art/land_mine.png}}\n"
 "\\end{center}"
 msgstr ""
+"  \\vspace*{1em}\n"
+"  \\pagetarget{Force Field Token}{\\subsection*{Żeton Pola Mocy}}\n"
+"  \\index{Pole Mocy}\n"
+"  \\setlength\\intextsep{0pt}\n"
+"  \\setlength\\columnsep{1em}\n"
+"  \\begin{wrapfigure}{r}{0.25\\linewidth}\n"
+"    \\includegraphics[width=\\linewidth]{\\images/force-field-token.png}\n"
+"    \\begin{center}\n"
+"      \\imagecaption{Żeton Pola Mocy}\\\\\n"
+"      \\vspace*{1em}\n"
+"    \\end{center}\n"
+"  \\end{wrapfigure}\n"
+"  Użyj \\textbf{Żetonu Pola Mocy}, aby oznaczyć efekt Zaklęcia \\wikilink{spells/force_field}{\\textbf{Pola Mocy}}.\n"
+"  Żeton oznacza Przeszkodę, więc tylko jednostki \\svg{unit_flying} mogą przemieszczać się przez pole z tym Żetonem.\n"
+"  Jeśli korzystasz ze zwykłej Planszy Walki, umieść 1 Żeton Pola Mocy.\n"
+"  Jeśli korzystasz z \\pagelink{Battlefield Combat}{Pola Bitwy}, umieść 2 Żetony na dwóch sąsiednich polach.\n"
+"\\begin{center}\n"
+"  {\\hspace{2em}\\transparent{0.2}\\includegraphics[width=0.5\\linewidth]{\\art/land_mine.png}}\n"
+"\\end{center}"
 
 #. type: Plain text
-#: sections/card_effect_keywords.tex:176
-#, fuzzy
-#| msgid "\\pagetarget{Settlements}{\\subheader{Settlements}}"
+#: sections/card_effect_keywords.tex:179
 msgid "\\pagetarget{Summoning}{\\subheader{Summoning}\\index{Summoning}}"
-msgstr "\\pagetarget{Settlements}{\\subheader{Osady}}"
+msgstr "\\pagetarget{Summoning}{\\subheader{Przyzywanie}\\index{Przyzywanie}}"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:176
+#: sections/card_effect_keywords.tex:179
 #, no-wrap
 msgid ""
 "{inferno,conflux}\n"
 "  Summoned units activate in the Round they were summoned if their Initiative is lower than or equal to the Initiative of the currently activated unit.\n"
 "  Otherwise, treat them as if they already activated this Combat Round."
 msgstr ""
+"{inferno,conflux}\n"
+"  Przyzywane jednostki aktywują się w Rundzie, w której zostały przyzwane, o ile ich Inicjatywa jest mniejsza lub równa Inicjatywie aktualnie aktywowanej jednostki.\n"
+"  W przeciwnym razie pomiń ich aktywację w tej Rundzie Walki."
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:176
+#: sections/card_effect_keywords.tex:179
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -370,124 +460,119 @@ msgid ""
 "    \\bigskip\n"
 "\n"
 msgstr ""
+"{2}\n"
+"  \\begin{expansion}{conflux}\n"
+"    \\subsection*{Przyzywanie Żywiołaków}\n"
+"    \\textbf{Zaklęcia Przyzywania Żywiołaków} pozwalają dodać jednostkę Żywiołaka do Planszy Walki podczas Walki.\n"
+"    Talię Jednostek Przyzywanych umieść odkrytą w pobliżu Talii Jednostek Neutralnych.\n"
+"    W zależności od użytego \\svg{empower}, możesz przyzwać jednostkę niewzmocnioną (Garstka) lub wzmocnioną (Grupa).\n"
+"    Weź odpowiednią kartę jednostki z Talii Jednostek Przyzywanych i umieść ją na wybranym pustym polu.\n"
+"    Zamiast kart, możesz umieścić \\textbf{Żetony Jednostek Przyzywanych}.\n"
+"    Korzystając z \\pagelink{Battlefield Combat}{Pola Bitwy}, musisz umieścić Żeton.\n"
+"    Jednostki Przyzwane pozostają pod twoją kontrolą, dopóki nie zginą lub Walka się nie zakończy.\n"
+"    Przyzwany Żywiołak \\textbf{nie jest dodawany} do twojej Talii Jednostek.\n"
+"    \\bigskip\n"
+"\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:181
+#: sections/card_effect_keywords.tex:184
 #, fuzzy, no-wrap
 #| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-#| "\\end{center}\n"
+#| "    \\begin{multicols}{2}\n"
+#| "      \\centering\n"
+#| "      \\includegraphics[width=0.9\\linewidth]{\\cards/unit-earth-elemental-few.png}\\\\\n"
+#| "      \\imagecaption{A Few Earth Elementals}\n"
 #| "\n"
 msgid ""
 "    \\begin{multicols}{2}\n"
 "      \\centering\n"
-"      \\includegraphics[width=0.9\\linewidth]{\\cards/unit-earth-elemental-few.png}\\\\\n"
-"      \\imagecaption{A Few Earth Elementals}\n"
+"      \\includegraphics[width=0.9\\linewidth]{\\cards/unit-air-elemental-few.png}\\\\\n"
+"      \\imagecaption{A Few Air Elementals}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-"\\end{center}\n"
+"    \\begin{multicols}{2}\n"
+"      \\centering\n"
+"      \\includegraphics[width=0.85\\linewidth]{\\cards/unit-earth-elemental-few.png}\\\\\n"
+"      \\imagecaption{,,Garstka'' Żywiołaków Ziemi}\n"
 "\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:185
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#: sections/card_effect_keywords.tex:188
+#, no-wrap
 msgid ""
 "      \\bigskip\n"
 "      \\includegraphics[width=0.5\\linewidth]{\\images/summon-token-fire.png}\\\\\n"
 "      \\imagecaption{Fire Elemental Token}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-"\\end{center}\n"
+"      \\bigskip\n"
+"      \\includegraphics[width=0.45\\linewidth]{\\images/summon-token-fire.png}\\\\\n"
+"      \\imagecaption{Żeton Żywiołaka Ognia}\n"
 "\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:189
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#: sections/card_effect_keywords.tex:192
+#, no-wrap
 msgid ""
 "      \\bigskip\n"
 "      \\includegraphics[width=0.5\\linewidth]{\\images/summon-token-earth.png}\\\\\n"
 "      \\imagecaption{Earth Elemental Token}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-"\\end{center}\n"
+"      \\bigskip\n"
+"      \\includegraphics[width=0.45\\linewidth]{\\images/summon-token-earth.png}\\\\\n"
+"      \\imagecaption{Żeton Żywiołaka Ziemi}\n"
 "\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:193
+#: sections/card_effect_keywords.tex:196
 #, fuzzy, no-wrap
 #| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-#| "\\end{center}\n"
+#| "      \\columnbreak\n"
+#| "      \\includegraphics[width=0.9\\linewidth]{\\cards/unit-earth-elemental-pack.png}\\\\\n"
+#| "      \\imagecaption{A Pack of Earth Elementals}\n"
 #| "\n"
 msgid ""
 "      \\columnbreak\n"
-"      \\includegraphics[width=0.9\\linewidth]{\\cards/unit-earth-elemental-pack.png}\\\\\n"
-"      \\imagecaption{A Pack of Earth Elementals}\n"
+"      \\includegraphics[width=0.9\\linewidth]{\\cards/unit-air-elemental-pack.png}\\\\\n"
+"      \\imagecaption{A Pack of Air Elementals}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-"\\end{center}\n"
+"      \\columnbreak\n"
+"      \\includegraphics[width=0.85\\linewidth]{\\cards/unit-earth-elemental-pack.png}\\\\\n"
+"      \\imagecaption{,,Grupa'' Żywiołaków Ziemi}\n"
 "\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:197
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#: sections/card_effect_keywords.tex:200
+#, no-wrap
 msgid ""
 "      \\smallskip\n"
 "      \\includegraphics[width=0.5\\linewidth]{\\images/summon-token-water.png}\\\\\n"
 "      \\imagecaption{Water Elemental Token}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-"\\end{center}\n"
+"      \\smallskip\n"
+"      \\includegraphics[width=0.45\\linewidth]{\\images/summon-token-water.png}\\\\\n"
+"      \\imagecaption{Żeton Żywiołaka Wody}\n"
 "\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:201
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#: sections/card_effect_keywords.tex:204
+#, no-wrap
 msgid ""
 "      \\smallskip\n"
 "      \\includegraphics[width=0.5\\linewidth]{\\images/summon-token-air.png}\\\\\n"
 "      \\imagecaption{Air Elemental Token}\n"
 "    "
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-"\\end{center}\n"
-"\n"
+"      \\smallskip\n"
+"      \\includegraphics[width=0.5\\linewidth]{\\images/summon-token-air.png}\\\\\n"
+"      \\imagecaption{Żeton Żywiołaka Powietrza}\n"
+"    "
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:213
+#: sections/card_effect_keywords.tex:216
 #, no-wrap
 msgid ""
 "{inferno}\n"
@@ -500,15 +585,19 @@ msgid ""
 "    \\bigskip\n"
 "\n"
 msgstr ""
+"{inferno}\n"
+"    \\subsection*{Przyzywanie Demonów}\n"
+"    Jednostka \\textbf{\\wikilink{units/pit_lords/\\#pack}{,,Grupy'' Czarcich Lordów}} z frakcji Inferno może użyć swojej zdolności \\svg{unit_alternative}, aby przyzwać lub wzmocnić jednostkę \\wikilink{units/demons}{Demonów} podczas Walki.\n"
+"    Ten efekt nie pozwala przyzwać Demonów z Talii Jednostek Neutralnych.\n"
+"    Umieść przyzwaną ,,Garstkę'' Demonów obok Czarcich Lordów.\n"
+"    Jeśli ,,Garstka'' Demonów już uczestniczy w Walce, zamiast tego wzmocnij ją.\n"
+"    Po Walce, o ile nie napisano inaczej, przyzwane Demony \\textbf{są dodawane} do twojej Talii Jednostek.\n"
+"    \\bigskip\n"
+"\n"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:218
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#: sections/card_effect_keywords.tex:221
+#, no-wrap
 msgid ""
 "    \\begin{multicols}{2}\n"
 "      \\centering\n"
@@ -516,13 +605,14 @@ msgid ""
 "      \\imagecaption{Pit Lords}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=0.7\\linewidth]{\\art/ammo_cart.png}\n"
-"\\end{center}\n"
+"    \\begin{multicols}{2}\n"
+"      \\centering\n"
+"      \\includegraphics[width=0.9\\linewidth]{\\cards/unit-pitlord.png}\\\\\n"
+"      \\imagecaption{Czarcie Lordy}\n"
 "\n"
 
 #. type: expansion
-#: sections/card_effect_keywords.tex:226
+#: sections/card_effect_keywords.tex:229
 #, no-wrap
 msgid ""
 "      \\columnbreak\n"
@@ -534,28 +624,39 @@ msgid ""
 "  \\vspace*{3.4em}\n"
 "  "
 msgstr ""
+"      \\columnbreak\n"
+"      \\includegraphics[width=0.9\\linewidth]{\\cards/unit-demon.png}\\\\\n"
+"      \\imagecaption{Demony}\n"
+"    \\end{multicols}\n"
+"  \\vspace*{2.4em}\n"
+"  {\\hfill\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/cerberi.png}}\n"
+"  \\vspace*{3.4em}\n"
+"  "
 
 #. type: Plain text
-#: sections/card_effect_keywords.tex:233
-#, fuzzy
-#| msgid "\\pagetarget{Other Fields}{\\subheader{Other Fields}}"
+#: sections/card_effect_keywords.tex:236
 msgid "\\pagetarget{unit keywords}{\\subheader{Unit Ability keywords}}"
-msgstr "\\pagetarget{Other Fields}{\\subheader{Pozostałe Pola}}"
+msgstr ""
+"\\pagetarget{unit keywords}{\\subheader{Słowa Kluczowe Zdolności Jednostek}}"
 
 #. type: Plain text
-#: sections/card_effect_keywords.tex:259
+#: sections/card_effect_keywords.tex:263
 msgid ""
 "The following components and keywords are used by certain unit abilities.  "
 "These Tokens are typically placed on other units to modify their statistics."
 msgstr ""
+"Poniższe komponenty i słowa kluczowe są wykorzystywane przez zdolności "
+"niektórych jednostek.  Żetony te są zazwyczaj umieszczane na innych "
+"jednostkach, aby modyfikować ich statystyki."
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:259
+#: sections/card_effect_keywords.tex:263
 #, no-wrap
 msgid ""
 "{2}\n"
 "  \\begin{expansion}{cove,stretchgoals2}\n"
 "    \\pagetarget{Weakness Token}{\\subsection*{Weakness Token}}\n"
+"    \\index{Weakness Token}\n"
 "    \\setlength\\intextsep{0pt}\n"
 "    \\setlength\\columnsep{1em}\n"
 "    \\begin{wrapfigure}{r}{0.25\\linewidth}\n"
@@ -578,13 +679,39 @@ msgid ""
 "  \\columnbreak\n"
 "\n"
 msgstr ""
+"{2}\n"
+"  \\begin{expansion}{cove,stretchgoals2}\n"
+"    \\pagetarget{Weakness Token}{\\subsection*{Żeton Osłabienia}}\n"
+"    \\index{Żeton!Osłabienia}\n"
+"    \\setlength\\intextsep{0pt}\n"
+"    \\setlength\\columnsep{1em}\n"
+"    \\begin{wrapfigure}{r}{0.25\\linewidth}\n"
+"      \\centering\n"
+"      \\includegraphics[width=0.8\\linewidth]{\\images/weakness-token.png}\\\\\n"
+"      \\imagecaption{Żeton Osłabienia}\\\\\n"
+"      \\vspace{1em}\n"
+"    \\end{wrapfigure}\n"
+"    Jednostka \\textbf{\\wikilink{units/sorceresses/\\#few}{,,Garstki'' Czarodziejek}} z frakcji Przystani może użyć swojej zdolności \\svg{unit_alternative}, aby umieścić Żeton Osłabienia na dowolnej jednostce.  % enemy unit?\n"
+"    \\wikilink{units/sorceresses/\\#pack}{\\textbf{,,Grupa'' Czarodziejek}} umieszcza ten Żeton automatycznie na jednostce zaatakowanej przez nie dzięki ich zdolności \\svg{unit_attack}.\n"
+"    Jednostka z tym Żetonem otrzymuje $-1$~\\svg{attack} lub $-2$~\\svg{attack}, w zależności od strony Żetonu.\n"
+"    Każda jednostka może mieć tylko jeden Żeton Osłabienia naraz.\n"
+"    Jeśli jednostka miałaby otrzymać drugi, gracz ją kontrolujący wybiera, który z nich zatrzymać.\n"
+"    \\begin{center}\n"
+"      \\vspace*{2.5em}\n"
+"      {\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/weakness.png}}\n"
+"      \\vspace*{2em}\n"
+"    \\end{center}\n"
+"  \\end{expansion}\n"
+"  \\columnbreak\n"
+"\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:275
+#: sections/card_effect_keywords.tex:280
 #, no-wrap
 msgid ""
 "  \\begin{expansion}{stronghold,stretchgoals2}\n"
 "    \\pagetarget{Attack Token}{\\subsection*{Attack Token}}\n"
+"    \\index{Attack Token}\n"
 "    \\setlength\\intextsep{0pt}\n"
 "    \\setlength\\columnsep{1em}\n"
 "    \\begin{wrapfigure}{r}{0.2\\linewidth}\n"
@@ -600,14 +727,32 @@ msgid ""
 "  \\end{expansion}\n"
 "\n"
 msgstr ""
+"  \\begin{expansion}{stronghold,stretchgoals2}\n"
+"    \\pagetarget{Attack Token}{\\subsection*{Żeton Ataku}}\n"
+"    \\index{Żeton!Ataku}\n"
+"    \\setlength\\intextsep{0pt}\n"
+"    \\setlength\\columnsep{1em}\n"
+"    \\begin{wrapfigure}{r}{0.2\\linewidth}\n"
+"      \\centering\n"
+"      \\includegraphics[width=\\linewidth]{\\images/attack-token.png}\\\\\n"
+"      \\imagecaption{Żeton Ataku}\\\\\n"
+"      \\vspace{1em}\n"
+"    \\end{wrapfigure}\n"
+"    Jednostka \\textbf{\\wikilink{units/ogres}{Ogrów}} z frakcji Twierdzy może użyć swojej zdolności \\svg{unit_alternative}, aby umieścić Żetony Ataku na kartach innych przyjaznych jednostek.\n"
+"    Jednostki z takim Żetonem zyskują dodatkowe 1~\\svg{attack} lub 2~\\svg{attack}, w zależności od strony Żetonu.\n"
+"    Każda jednostka może mieć tylko jeden Żeton Ataku naraz.\n"
+"    Jeśli jednostka miałaby otrzymać drugi, gracz ją kontrolujący wybiera, który z nich zatrzymać.\n"
+"  \\end{expansion}\n"
+"\n"
 
 #. type: multicols
-#: sections/card_effect_keywords.tex:293
+#: sections/card_effect_keywords.tex:299
 #, no-wrap
 msgid ""
 "  \\vspace*{1em}\n"
 "  \\begin{expansion}{stronghold}\n"
 "    \\pagetarget{Corrosion Token}{\\subsection*{Corrosion Token}}\n"
+"    \\index{Corrosion Token}\n"
 "    \\setlength\\intextsep{0pt}\n"
 "    \\setlength\\columnsep{1em}\n"
 "    \\begin{wrapfigure}{r}{0.25\\linewidth}\n"
@@ -623,38 +768,55 @@ msgid ""
 "    Unless removed by Spells or other effects, a Corrosion Token remains on the unit until the end of Combat.\n"
 "  \\end{expansion}"
 msgstr ""
+"  \\vspace*{1em}\n"
+"  \\begin{expansion}{stronghold}\n"
+"    \\pagetarget{Corrosion Token}{\\subsection*{Żeton Korozji}}\n"
+"    \\index{Żeton!Korozji}\n"
+"    \\setlength\\intextsep{0pt}\n"
+"    \\setlength\\columnsep{1em}\n"
+"    \\begin{wrapfigure}{r}{0.25\\linewidth}\n"
+"      \\centering\n"
+"      \\includegraphics[width=0.8\\linewidth]{\\images/corrosion-token.png}\\\\\n"
+"      \\imagecaption{Żeton Korozji}\\\\\n"
+"      \\vspace{1em}\n"
+"    \\end{wrapfigure}\n"
+"    Jednostka \\textbf{\\wikilink{units/behemoths}{Behemotów}} z frakcji Twierdzy może użyć swojej zdolności \\svg{unit_attack}, aby umieścić Żeton Korozji na zaatakowanej przez nią jednostce.\n"
+"    Zmniejsza on \\svg{defense} wrogiej jednostki o 1, do minimum 0.\n"
+"    Jednostka może mieć tylko jeden Żeton Korozji naraz.\n"
+"    Jeśli jednostka miałaby otrzymać drugi Żeton, odrzuć jeden z nich.\n"
+"    Żeton Korozji pozostaje na jednostce do końca Walki, o ile nie zostanie usunięty przez Zaklęcia lub inne efekty.\n"
+"  \\end{expansion}"
 
 #. type: Plain text
-#: sections/card_effect_keywords.tex:301
-#, fuzzy
-#| msgid ""
-#| "{2}\n"
-#| "\\subsection*{Unit Card Anatomy}\n"
-#| "\n"
+#: sections/card_effect_keywords.tex:307
 msgid "\\pagetarget{wiki}{\\subheader{Fan-Made Wiki}}"
-msgstr ""
-"{2}\n"
-"\\subsection*{Karty Jednostek}\n"
-"\n"
+msgstr "\\pagetarget{wiki}{\\subheader{Fanowska Wiki}}"
 
 #. type: wrapfigure
-#: sections/card_effect_keywords.tex:301
+#: sections/card_effect_keywords.tex:307
 msgid "{r}{0.2\\textwidth}"
-msgstr ""
+msgstr "{r}{0.2\\textwidth}"
 
 #. type: Plain text
-#: sections/card_effect_keywords.tex:304
+#: sections/card_effect_keywords.tex:310
 msgid ""
 "Many cards in \\textbf{Heroes of Might and Magic 3: The Board Game} have "
 "ambiguous or misleading wording.  Fortunately, the developers have clarified "
 "many card effects."
 msgstr ""
+"Wiele kart w \\textbf{Heroes of Might and Magic 3: The Board Game} ma "
+"niejednoznaczne lub mylące sformułowania.  Na szczęście twórcy wyjaśnili "
+"wiele z nich."
 
 #. type: Plain text
-#: sections/card_effect_keywords.tex:308
+#: sections/card_effect_keywords.tex:314
 msgid ""
 "The Community maintains a \\textbf{Fan-Made Wiki}: a collection of nearly "
 "all game components with extensive notes to clarify specific rules.  If you "
 "have questions about specific cards, visit this website: "
 "\\mbox{\\href{https://en.homm3bg.wiki/}{https://en.homm3bg.wiki/}}"
 msgstr ""
+"Społeczność utrzymuje \\textbf{Fanowską Wiki}: zbiór niemal wszystkich "
+"komponentów gry z notatkami wyjaśniającymi konkretne zasady.  Jeśli masz "
+"pytania dotyczące określonych kart, odwiedź stronę: \\mbox{\\href{https://"
+"pl.homm3bg.wiki/}{https://pl.homm3bg.wiki/}}"
