@@ -21,10 +21,8 @@ msgstr ""
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/ai_rules.tex:3
-#, fuzzy
-#| msgid "\\addsection{Heroes}{\\skills/sorcery.png}"
 msgid "\\addsection{AI rules}{\\skills/armorer.png}"
-msgstr "\\addsection{Bohaterowie}{\\skills/sorcery.png}"
+msgstr "\\addsection{Zasady AI}{\\skills/armorer.png}"
 
 #. type: multicols*
 #: sections/ai_rules.tex:6
@@ -48,30 +46,22 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:13
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\pagetarget{AI Units}{These rules} apply during Combat in \\textbf{Solo}\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
-#| "The rules for AI Unit placement during setup are described in \\pagelink{CombatAISetup}{Combat chapter}.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  The rules for AI unit placement during setup are described in \\pagelink{CombatAISetup}{Combat section}.\n"
 "\n"
 msgstr ""
-"\\pagetarget{AI Units}{Niniejsze zasady} obowiązują podczas Walki w trybach \\textbf{Solo}\\index{Tryb Solo} oraz \\textbf{Kooperacyjnym}.\n"
-"Zasady rozmieszczania Jednostek AI podczas przygotowania są opisane w rozdziale \\pagelink{CombatAISetup}{Walka}.\n"
+"  Zasady rozmieszczania jednostek AI podczas przygotowania są opisane w rozdziale \\pagelink{CombatAISetup}{Walka}.\n"
 "\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:15
-#, fuzzy, no-wrap
-#| msgid ""
-#| "When Neutral enemies or AI Heroes activate a Unit, they follow a set of automatic instructions:\\par\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  When Neutral enemies or \\pagelink{AI Heroes}{AI Heroes} activate a unit, they follow a set of instructions:\\par\n"
 "\n"
 msgstr ""
-"Gdy Neutralni wrogowie lub Bohaterowie AI aktywują Jednostkę, wykonują polecenia:\\par\n"
+"  Gdy Neutralni wrogowie lub \\pagelink{AI Heroes}{Bohaterowie AI} aktywują jednostkę, wykonują polecenia:\\par\n"
 "\n"
 
 #. type: multicols*
@@ -85,32 +75,20 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:21
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{itemize}\n"
-#| "  \\item Enemy Ground \\svg{unit_ground} and Flying \\svg{unit_flying} Units prioritize attacking Units of the \\textbf{same} tier.\n"
-#| "  If this is impossible, they attack the Unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\item Enemy Ground \\svg{unit_ground} and Flying \\svg{unit_flying} units prioritize attacking units of the \\textbf{same} tier.\n"
 "    If this is impossible, they attack the unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
 "\n"
 msgstr ""
 "\\begin{itemize}\n"
-"  \\item Wrogie Jednostki Naziemne \\svg{unit_ground} oraz Latające \\svg{unit_flying} atakują w pierwszej kolejności Jednostki \\textbf{tego samego} poziomu.\n"
-"  Jeśli jest to niemożliwe, atakują Jednostkę niższego poziomu (w \\textbf{malejącej} kolejności aż do brązowego), a jeśli i to jest niemożliwe, Jednostkę wyższego poziomu (w \\textbf{rosnącej} kolejności poziomów).\\par\n"
+"    \\item Wrogie jednostki Naziemne \\svg{unit_ground} oraz Latające \\svg{unit_flying} atakują w pierwszej kolejności jednostki \\textbf{tego samego} poziomu.\n"
+"    Jeśli jest to niemożliwe, atakują jednostkę niższego poziomu (w \\textbf{malejącej} kolejności aż do brązowego), a jeśli i to jest niemożliwe, jednostkę wyższego poziomu (w \\textbf{rosnącej} kolejności poziomów).\\par\n"
 "\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:27
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  \\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority:\n"
-#| "  \\svg{golden}\n"
-#| "  - \\svg{silver}\n"
-#| "  - \\svg{bronze}\n"
-#| "  - \\svg{azure}.}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority:\n"
 "    \\svg{golden}\n"
@@ -119,44 +97,28 @@ msgid ""
 "    - \\svg{azure}.}\n"
 "\n"
 msgstr ""
-"  \\textit{Przykład: \\svg{golden}\\svg{unit_ground} atakuje kolejno:\n"
-"  \\svg{golden}\n"
-"  - \\svg{silver}\n"
-"  - \\svg{bronze}\n"
-"  - \\svg{azure}.}\n"
+"    \\textit{Przykład: \\svg{golden}\\svg{unit_ground} atakuje kolejno:\n"
+"    \\svg{golden}\n"
+"    - \\svg{silver}\n"
+"    - \\svg{bronze}\n"
+"    - \\svg{azure}.}\n"
 "\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:30
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  \\item Ranged \\svg{unit_ranged} Units prioritize attacking other Ranged \\svg{unit_ranged} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
-#| "  If there are no Ranged \\svg{unit_ranged} Units for them to target, they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} Units in the same tier order.\\par\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\item Ranged \\svg{unit_ranged} units prioritize attacking other Ranged \\svg{unit_ranged} units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
 "    If there are no Ranged \\svg{unit_ranged} units for them to target, they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} units in the same tier order.\\par\n"
 "\n"
 msgstr ""
-"  \\item Jednostki Strzelające \\svg{unit_ranged} atakują najpierw inne Jednostki Strzelające \\svg{unit_ranged} tego samego poziomu, potem niższego poziomu, a na końcu wyższego w takiej samej kolejności, jak opisano wyżej.\n"
-"  Jeśli nie ma Jednostek Strzelających, które mogłyby być celem Ataku, najpierw atakują Jednostki Naziemne \\svg{unit_ground} oraz Latające \\svg{unit_flying} w tej samej kolejności poziomów.\\par\n"
-"  \n"
+"    \\item jednostki Strzelające \\svg{unit_ranged} atakują najpierw inne jednostki Strzelające \\svg{unit_ranged} tego samego poziomu, potem niższego poziomu, a na końcu wyższego w takiej samej kolejności, jak opisano wyżej.\n"
+"    Jeśli nie ma jednostek Strzelających, które mogłyby być celem Ataku, najpierw atakują jednostki Naziemne \\svg{unit_ground} oraz Latające \\svg{unit_flying} w tej samej kolejności poziomów.\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:41
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  \\textit{Example: \\svg{silver}\\svg{unit_ranged} has this priority:\n"
-#| "  \\svg{silver}\\svg{unit_ranged}\n"
-#| "  - \\svg{bronze}\\svg{unit_ranged}\n"
-#| "  - \\svg{golden}\\svg{unit_ranged}\n"
-#| "  - \\svg{azure}\\svg{unit_ranged}\n"
-#| "  - \\svg{silver}\\svg{unit_ground}\\svg{unit_flying}\n"
-#| "  - \\svg{bronze}\\svg{unit_ground}\\svg{unit_flying}\n"
-#| "  - \\svg{golden}\\svg{unit_ground}\\svg{unit_flying}\n"
-#| "  - \\svg{azure}\\svg{unit_ground}\\svg{unit_flying}.}\n"
-#| "\\end{itemize}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\textit{Example: \\svg{silver}\\svg{unit_ranged} has this priority:\n"
 "    \\svg{silver}\\svg{unit_ranged}\n"
@@ -170,45 +132,38 @@ msgid ""
 "  \\end{itemize}\n"
 "\n"
 msgstr ""
-"  \\textit{Przykład: \\svg{silver}\\svg{unit_ranged} atakuje kolejno:\n"
-"  \\svg{silver}\\svg{unit_ranged}\n"
-"  - \\svg{bronze}\\svg{unit_ranged}\n"
-"  - \\svg{golden}\\svg{unit_ranged}\n"
-"  - \\svg{azure}\\svg{unit_ranged}\n"
-"  - \\svg{silver}\\svg{unit_ground}\\svg{unit_flying}\n"
-"  - \\svg{bronze}\\svg{unit_ground}\\svg{unit_flying}\n"
-"  - \\svg{golden}\\svg{unit_ground}\\svg{unit_flying}\n"
-"  - \\svg{azure}\\svg{unit_ground}\\svg{unit_flying}.}\n"
-"\\end{itemize}\n"
+"    \\textit{Przykład: \\svg{silver}\\svg{unit_ranged} atakuje kolejno:\n"
+"    \\svg{silver}\\svg{unit_ranged}\n"
+"    - \\svg{bronze}\\svg{unit_ranged}\n"
+"    - \\svg{golden}\\svg{unit_ranged}\n"
+"    - \\svg{azure}\\svg{unit_ranged}\n"
+"    - \\svg{silver}\\svg{unit_ground}\\svg{unit_flying}\n"
+"    - \\svg{bronze}\\svg{unit_ground}\\svg{unit_flying}\n"
+"    - \\svg{golden}\\svg{unit_ground}\\svg{unit_flying}\n"
+"    - \\svg{azure}\\svg{unit_ground}\\svg{unit_flying}.}\n"
+"  \\end{itemize}\n"
 "\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:44
-#, fuzzy, no-wrap
-#| msgid ""
-#| "In both cases, if there's more than one valid target, they attack the closest one.\n"
-#| "If there's ever a tie between equally valid targets, the player chooses which Unit is attacked.\\par\n"
-#| "\n"
+#,  no-wrap
 msgid ""
 "  In both cases, if there is more than one valid target, they attack the closest one.\n"
 "  If there is ever a tie between equally valid targets, the player chooses which unit is attacked.\\par\n"
 "\n"
 msgstr ""
-"W obu przypadkach, jeśli jest więcej niż jeden możliwy cel, atakują najbliższy.\n"
-"Jeśli wystąpi remis pomiędzy równorzędnymi celami, Gracz wybiera, która Jednostka jest atakowana.\\par\n"
+"  W obu przypadkach, jeśli jest więcej niż jeden możliwy cel, atakują najbliższy.\n"
+"  Jeśli wystąpi remis pomiędzy równorzędnymi celami, Gracz wybiera, która jednostka jest atakowana.\\par\n"
 "\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:46
-#, fuzzy, no-wrap
-#| msgid ""
-#| "Enemy Units cannot \\pagelink{Defend}{Defend} unless instructed to.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  Enemy units cannot \\pagelink{Defend}{defend} unless instructed to.\n"
 "\n"
 msgstr ""
-"Wrogie Jednostki nie mogą \\pagelink{Defend}{się bronić}, chyba że otrzymają takie polecenie.\n"
+"  Wrogie jednostki nie mogą \\pagelink{Defend}{się bronić}, chyba że otrzymają takie polecenie.\n"
 "\\vfill\n"
 
 #. type: multicols*
