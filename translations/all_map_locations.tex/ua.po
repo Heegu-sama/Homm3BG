@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-04-07 17:47+0100\n"
+"POT-Creation-Date: 2026-04-09 18:58+0100\n"
 "PO-Revision-Date: 2024-05-21 12:12+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -1467,7 +1467,29 @@ msgstr ""
 
 #. type: figure
 #: sections/all_map_locations.tex:701
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[H]\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\pagetarget{Star Axis}{\\locationtitle{Star Axis}}\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/star_axis.jpg}\n"
+#| "    \\expansionlabel{inferno}\n"
+#| "    \\caption{\\small Category: \\textbf{Flaggable}\\\\\n"
+#| "      You may remove one of your Statistic cards from your hand and replace it with an \\protect\\pagelink{Empowered Statistic}{\\textbf{Empowered}} one of the same type.\n"
+#| "      When you flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}\n"
+#| "  \\end{minipage}\\hfill\n"
+#| "    \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\locationtitle{Grave}\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/grave.jpg}\n"
+#| "    \\expansionlabel{cove}\n"
+#| "    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+#| "      Gain \\svg{morale_negative}, 3 \\svg{gold}, and \\textbf{Search (1)} \\svg{artifact}.\n"
+#| "    }\n"
+#| "  \\end{minipage}"
 msgid ""
 "[H]\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
@@ -1480,7 +1502,7 @@ msgid ""
 "      You may remove one of your Statistic cards from your hand and replace it with an \\protect\\pagelink{Empowered Statistic}{\\textbf{Empowered}} one of the same type.\n"
 "      When you flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}\n"
 "  \\end{minipage}\\hfill\n"
-"    \\begin{minipage}[t]{0.47\\textwidth}\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
 "    \\vspace{0pt}\n"
 "    \\centering\n"
 "    \\locationtitle{Grave}\n"
@@ -1514,42 +1536,36 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: Plain text
-#: sections/all_map_locations.tex:708
-#, fuzzy
-#| msgid ""
-#| "\\textlang{english}{\\begin{tikzpicture}[remember picture, overlay] "
-#| "\\node(cover)[anchor=center, yshift=12em] at (current page.south) "
-#| "{ \\includegraphics[width=1.01\\paperwidth, keepaspectratio]{\\art/"
-#| "castle_bottom.png} \\thispagestyle{empty} }; \\end{tikzpicture}}"
+#: sections/all_map_locations.tex:714
 msgid ""
-"\\textlang{english}{\\begin{tikzpicture}[remember picture, overlay] "
-"\\node(cover)[anchor=center, yshift=12em, opacity=0.1] at (current "
-"page.south) { \\includegraphics[width=1.01\\paperwidth, keepaspectratio]"
-"{\\art/cove_background.png} }; \\end{tikzpicture}}"
+"\\pagetarget{Location Token}{\\subheader{Location Tokens}} "
+"\\makebox[\\linewidth][c]{\\begin{tikzpicture} \\node (subgate) "
+"{\\includegraphics[width=0.27\\linewidth]{\\map_locations/"
+"subterranean_gate_token.png}}; \\node (whirl) [right=1em of subgate.south "
+"east, anchor=south west] {\\includegraphics[width=0.18\\linewidth]"
+"{\\map_locations/whirlpool.png}}; \\node (mono) [right=1em of whirl.east] "
+"{\\includegraphics[width=0.18\\linewidth]{\\map_locations/"
+"monolith_token.png}}; \\node (bank) [right=1em of mono.east] "
+"{\\includegraphics[width=0.18\\linewidth]{\\map_locations/"
+"creature_bank_token.png}}; \\node [right=-3em of subgate.north east, "
+"anchor=north west]{\\begin{minipage}{0.75\\linewidth} \\vspace*{1em} The "
+"following Fields are found only on Location Tokens from various Expansions, "
+"not on regular Map Tiles.  The placement of the Location Tokens is described "
+"in \\pagelink{Discover Location Tokens}{Map Elements}.  \\end{minipage}}; "
+"\\end{tikzpicture}}"
 msgstr ""
-"\\textlang{english}{\\begin{tikzpicture}[remember picture, overlay] "
-"\\node(cover)[anchor=center, yshift=12em] at (current page.south) "
-"{ \\includegraphics[width=1.01\\paperwidth, keepaspectratio]{\\art/"
-"castle_bottom.png} \\thispagestyle{empty} }; \\end{tikzpicture}}"
 
 #. type: Plain text
-#: sections/all_map_locations.tex:712
-msgid "\\pagetarget{Location Token}{\\subheader{Location Tokens}}"
-msgstr "\\pagetarget{Location Token}{\\subheader{Жетони Локацій}}"
-
-#. type: Plain text
-#: sections/all_map_locations.tex:715
+#: sections/all_map_locations.tex:719
 msgid ""
-"The following Fields are found on single-hex Location Tokens only, not on "
-"regular Map Tiles.  The placement of the Location Tokens is described in "
-"\\pagelink{Discover Location Tokens}{Map Elements}."
+"\\textbf{Note:} For the following Fields, skip the movement if you would be "
+"stepping onto an allied Hero and do not have enough MP to move off it "
+"immediately.  If the Field's effect placed your Hero on a Token on a still "
+"face-down Tile, discover that Tile."
 msgstr ""
-"Наступні Поля знаходяться лише на одно-гексових Жетонах Локацій, не на "
-"звичайних Плитках Мапи.  Правила розміщення Жетонів Локацій описані в "
-"\\pagelink{Discover Location Tokens}{Елементах Мапи}."
 
 #. type: figure
-#: sections/all_map_locations.tex:738
+#: sections/all_map_locations.tex:742
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1597,8 +1613,32 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:764
-#, no-wrap
+#: sections/all_map_locations.tex:767
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[H]\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\locationtitle{One-Way Exit Monolith}\n"
+#| "    \\framedimage[\\textwidth]{\\map_locations/one-way_monolith_exit.jpg}\n"
+#| "    \\expansionlabel{conflux}\n"
+#| "    \\caption{\\raggedright \\small Category: \\textbf{Revisitable}\\\\\n"
+#| "      \\raggedright Treat it as an empty Field.\n"
+#| "    }\n"
+#| "  \\end{minipage}\\hfill\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\locationtitle{Subterranean Gate}\\index{Subterranean Gate}\n"
+#| "    \\framedimage[\\textwidth]{\\map_locations/subterranean_gate.jpg}\n"
+#| "    \\expansionlabel{stronghold}\n"
+#| "    \\caption{{\\raggedright \\small Category: \\textbf{Revisitable}}\\\\\n"
+#| "      Connects a surface and a \\protect\\pagelink{Subterranean Map Tiles}{Subterranean Map Tile}.\n"
+#| "      Treat both sides of the Gate as a single Field.\n"
+#| "      Discover the connected Tile, if it wasn't discovered already.\n"
+#| "    }\n"
+#| "  \\end{minipage}"
 msgid ""
 "[H]\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
@@ -1620,7 +1660,6 @@ msgid ""
 "    \\caption{{\\raggedright \\small Category: \\textbf{Revisitable}}\\\\\n"
 "      Connects a surface and a \\protect\\pagelink{Subterranean Map Tiles}{Subterranean Map Tile}.\n"
 "      Treat both sides of the Gate as a single Field.\n"
-"      Discover the connected Tile, if it wasn't discovered already.\n"
 "    }\n"
 "  \\end{minipage}"
 msgstr ""
@@ -1649,8 +1688,35 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:793
-#, no-wrap
+#: sections/all_map_locations.tex:795
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[H]\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\pagetarget{Whirlpool}{\\locationtitle{Whirlpool}}\\index{Whirlpool}\n"
+#| "    \\framedimage[\\textwidth]{\\map_locations/whirlpool.jpg}\n"
+#| "    \\expansionlabel{cove}\n"
+#| "    \\caption{{\\raggedright \\small Category: \\textbf{Revisitable}}\\\\\n"
+#| "      Move your Hero to another Whirlpool Token.\n"
+#| "      If there are multiple valid targets, roll an Attack Die to determine where your Hero goes.\n"
+#| "      Reroll any Die which shows the number of the Whirlpool your Hero is standing on.\n"
+#| "      After each Whirlpool travel, lose 1 unit from your unit Deck.\n"
+#| "    }\n"
+#| "  \\end{minipage}\\hfill\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\locationtitle{Creature Bank}\n"
+#| "    \\framedimage[\\textwidth]{\\map_locations/creature_bank.jpg}\n"
+#| "    \\expansionlabel{navalbattles}\n"
+#| "    \\caption{{\\raggedright \\small Category: \\textbf{Visitable}}\\\\\n"
+#| "      Start a \\protect\\pagelink{Creature Banks Rules}{Creature Bank Combat} against the specified units (see the list on the next page).\n"
+#| "      If you win, receive the reward and a bonus depending on the number of Stacked units.\n"
+#| "      Creature Banks count as \\textbf{land Fields} (even if designed as sea locations) and are NOT treated as other Fields of the same name.\n"
+#| "    }\n"
+#| "  \\end{minipage}"
 msgid ""
 "[H]\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
@@ -1661,8 +1727,7 @@ msgid ""
 "    \\expansionlabel{cove}\n"
 "    \\caption{{\\raggedright \\small Category: \\textbf{Revisitable}}\\\\\n"
 "      Move your Hero to another Whirlpool Token.\n"
-"      If there are multiple valid targets, roll an Attack Die to determine where your Hero goes.\n"
-"      Reroll any Die which shows the number of the Whirlpool your Hero is standing on.\n"
+"      If there are 3 Whirlpools, roll an Attack Die to determine where your Hero goes, and reroll any Die that shows the number of the Whirlpool your Hero is moving from.\n"
 "      After each Whirlpool travel, lose 1 unit from your unit Deck.\n"
 "    }\n"
 "  \\end{minipage}\\hfill\n"
@@ -1707,7 +1772,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: table*
-#: sections/all_map_locations.tex:856
+#: sections/all_map_locations.tex:858
 #, no-wrap
 msgid ""
 "[!hb]\n"
@@ -1835,7 +1900,7 @@ msgstr ""
 "  \\expansionlabel{navalbattles}"
 
 #. type: table*
-#: sections/all_map_locations.tex:918
+#: sections/all_map_locations.tex:920
 #, no-wrap
 msgid ""
 "[!hb]\n"
