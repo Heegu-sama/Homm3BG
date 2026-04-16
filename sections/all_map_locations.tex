@@ -687,7 +687,7 @@ When you flag a Settlement, choose one of the following options:
       You may remove one of your Statistic cards from your hand and replace it with an \protect\pagelink{Empowered Statistic}{\textbf{Empowered}} one of the same type.
       When you flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}
   \end{minipage}\hfill
-    \begin{minipage}[t]{0.47\textwidth}
+  \begin{minipage}[t]{0.47\textwidth}
     \vspace{0pt}
     \centering
     \locationtitle{Grave}
@@ -699,19 +699,23 @@ When you flag a Settlement, choose one of the following options:
   \end{minipage}
 \end{figure}
 
-\textlang{english}{\begin{tikzpicture}[remember picture, overlay]
-  \node(cover)[anchor=center, yshift=12em, opacity=0.1] at (current page.south) {
-    \includegraphics[width=1.01\paperwidth, keepaspectratio]{\art/cove_background.png}
-  };
-
+\pagetarget{Location Token}{\subheader{Location Tokens}}
+\makebox[\linewidth][c]{\begin{tikzpicture}
+  \node (subgate) {\includegraphics[width=0.27\linewidth]{\map_locations/subterranean_gate_token.png}};
+  \node (whirl) [right=1em of subgate.south east, anchor=south west] {\includegraphics[width=0.18\linewidth]{\map_locations/whirlpool.png}};
+  \node (mono) [right=1em of whirl.east] {\includegraphics[width=0.18\linewidth]{\map_locations/monolith_token.png}};
+  \node (bank) [right=1em of mono.east] {\includegraphics[width=0.18\linewidth]{\map_locations/creature_bank_token.png}};
+  \node [right=-3em of subgate.north east, anchor=north west]{\begin{minipage}{0.75\linewidth}
+      \vspace*{1em}
+    The following Fields are found only on Location Tokens from various Expansions, not on regular Map Tiles.
+    The placement of the Location Tokens is described in \pagelink{Discover Location Tokens}{Map Elements}.
+  \end{minipage}};
 \end{tikzpicture}}
 
 \newpage
 
-\pagetarget{Location Token}{\subheader{Location Tokens}}
-
-The following Fields are found on single-hex Location Tokens only, not on regular Map Tiles.
-The placement of the Location Tokens is described in \pagelink{Discover Location Tokens}{Map Elements}.
+\textbf{Note:} For the following Fields, skip the movement if you would be stepping onto an allied Hero and do not have enough MP to move off it immediately.
+If the Field's effect placed your Hero on a Token on a still face-down Tile, discover that Tile.
 
 \begin{figure}[H]
   \begin{minipage}[t]{0.47\textwidth}
@@ -757,7 +761,6 @@ The placement of the Location Tokens is described in \pagelink{Discover Location
     \caption{{\raggedright \small Category: \textbf{Revisitable}}\\
       Connects a surface and a \protect\pagelink{Subterranean Map Tiles}{Subterranean Map Tile}.
       Treat both sides of the Gate as a single Field.
-      Discover the connected Tile, if it wasn't discovered already.
     }
   \end{minipage}
 \end{figure}
@@ -772,8 +775,7 @@ The placement of the Location Tokens is described in \pagelink{Discover Location
     \expansionlabel{cove}
     \caption{{\raggedright \small Category: \textbf{Revisitable}}\\
       Move your Hero to another Whirlpool Token.
-      If there are multiple valid targets, roll an Attack Die to determine where your Hero goes.
-      Reroll any Die which shows the number of the Whirlpool your Hero is standing on.
+      If there are 3 Whirlpools, roll an Attack Die to determine where your Hero goes, and reroll any Die that shows the number of the Whirlpool your Hero is moving from.
       After each Whirlpool travel, lose 1 unit from your unit Deck.
     }
   \end{minipage}\hfill
