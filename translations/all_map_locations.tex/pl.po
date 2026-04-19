@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-04-07 17:47+0100\n"
+"POT-Creation-Date: 2026-04-17 07:56+0000\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -688,9 +688,15 @@ msgstr ""
 
 #. type: multicols
 #: sections/all_map_locations.tex:314
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{expansion}{inferno}\n"
+#| "  \\pagetarget{Random Town}{\\subsection*{Random Town}}\n"
+#| "  \\index{Random Town}\n"
+#| "  \\framedimage[\\linewidth]{\\map_locations/random_town.jpg}\n"
+#| "\n"
 msgid ""
-"\\begin{expansion}{inferno}\n"
+"\\begin{expansion}[before=\\vspace*{-11mm}]{inferno,stretchgoals2}\n"
 "  \\pagetarget{Random Town}{\\subsection*{Random Town}}\n"
 "  \\index{Random Town}\n"
 "  \\framedimage[\\linewidth]{\\map_locations/random_town.jpg}\n"
@@ -704,7 +710,18 @@ msgstr ""
 
 #. type: multicols
 #: sections/all_map_locations.tex:324
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\medskip\n"
+#| "  When revealed, choose a Faction not in play. Either:\n"
+#| "  \\begin{itemize}\n"
+#| "    \\item All players roll 2 \\svg{resource_die}.\n"
+#| "      The highest roller chooses, OR\n"
+#| "    \\begin{expansion}[left=5mm]{stretchgoals2}\n"
+#| "    \\item Draw a random unused \\pagelink{Town Card}{Town Card}.\n"
+#| "    \\end{expansion}\n"
+#| "  \\end{itemize}\n"
+#| "\n"
 msgid ""
 "  \\medskip\n"
 "  When revealed, choose a Faction not in play. Either:\n"
@@ -712,7 +729,7 @@ msgid ""
 "    \\item All players roll 2 \\svg{resource_die}.\n"
 "      The highest roller chooses, OR\n"
 "    \\begin{expansion}[left=5mm]{stretchgoals2}\n"
-"    \\item Draw a random unused \\pagelink{Town Card}{Town Card}.\n"
+"    \\item Draw a random \\pagelink{Town Card}{Town Card}.\n"
 "    \\end{expansion}\n"
 "  \\end{itemize}\n"
 "\n"
@@ -729,8 +746,18 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:333
-#, no-wrap
+#: sections/all_map_locations.tex:334
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  The Random Town is defended by units from that Faction:\n"
+#| "  \\begin{itemize}\n"
+#| "    \\item a ``Pack'' of \\svg{bronze} units, chosen by the player who controls the defense during this Combat,\n"
+#| "    \\item two ``Packs'' of \\svg{silver} units,\n"
+#| "    \\item two ``Fews'' of \\svg{golden} units.\n"
+#| "  \\end{itemize}\n"
+#| "  Add \\pagelink{Walls}{Walls and the Gate} for this Combat, but not the Arrow Tower.\n"
+#| "  \\medskip\n"
+#| "\n"
 msgid ""
 "  The Random Town is defended by units from that Faction:\n"
 "  \\begin{itemize}\n"
@@ -739,7 +766,8 @@ msgid ""
 "    \\item two ``Fews'' of \\svg{golden} units.\n"
 "  \\end{itemize}\n"
 "  Add \\pagelink{Walls}{Walls and the Gate} for this Combat, but not the Arrow Tower.\n"
-"  \\medskip\n"
+"  Flagging the Random Town increases \\svg{gold} production by 10, which is also gained immediately if you are the first to flag it.\n"
+"  While you have the Random Town flagged, treat it as a Settlement.\n"
 "\n"
 msgstr ""
 "  Losowe Miasto jest bronione przez jednostki z tej Frakcji:\n"
@@ -753,26 +781,22 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/all_map_locations.tex:337
+#: sections/all_map_locations.tex:338
 #, no-wrap
 msgid ""
-"  Flagging the Random Town increases \\svg{gold} production by 10, which is also gained immediately if you are the first to flag it.\n"
-"  While you have the Random Town flagged, treat it as a Settlement.\n"
+"  \\medskip\n"
+"  \\textbf{Note:} Tiles with the Random Town can be used only if there is at least one unused Faction in the game.\n"
 "\\end{expansion}\n"
 "\n"
 msgstr ""
-"  Oflagowanie Losowego Miasta zwiększa produkcję \\svg{gold} o 10, które również otrzymujesz natychmiast, jeśli jako pierwszy je oflagowałeś.\n"
-"  Gdy masz oflagowane Losowe Miasto, traktuj je jak Osadę.\n"
-"\\end{expansion}\n"
-"\n"
 
 #. type: center
-#: sections/all_map_locations.tex:348
+#: sections/all_map_locations.tex:349
 msgid "\\framedimage[\\linewidth]{\\map_locations/settlements-expansions.png}"
 msgstr "\\framedimage[\\linewidth]{\\map_locations/settlements-expansions.png}"
 
 #. type: center
-#: sections/all_map_locations.tex:348
+#: sections/all_map_locations.tex:349
 msgid ""
 "\\textit{Settlements from expansions.\\\\ Each is styled after a different "
 "Faction.  }"
@@ -780,12 +804,12 @@ msgstr ""
 "\\textit{Osady z rozszerzeń.\\\\ Każda jest wzorowana na innej Frakcji.  }"
 
 #. type: Plain text
-#: sections/all_map_locations.tex:350
+#: sections/all_map_locations.tex:351
 msgid "\\pagetarget{Revisitable Fields}{\\subheader{Revisitable Fields}}"
 msgstr "\\pagetarget{Revisitable Fields}{\\subheader{Pola Wielorazowe}}"
 
 #. type: figure
-#: sections/all_map_locations.tex:373
+#: sections/all_map_locations.tex:374
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -833,7 +857,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:393
+#: sections/all_map_locations.tex:394
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -875,7 +899,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:425
+#: sections/all_map_locations.tex:426
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -941,7 +965,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:441
+#: sections/all_map_locations.tex:442
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -974,7 +998,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: tikzpicture
-#: sections/all_map_locations.tex:445
+#: sections/all_map_locations.tex:446
 #, no-wrap
 msgid ""
 "[overlay]\n"
@@ -984,12 +1008,12 @@ msgstr ""
 "  \\node[opacity=0.2] at (16, 5.22) {\\includegraphics[width=0.5\\linewidth]{\\art/pegasi.png}};"
 
 #. type: Plain text
-#: sections/all_map_locations.tex:447
+#: sections/all_map_locations.tex:448
 msgid "\\pagetarget{Other Fields}{\\subheader{Other Fields}}"
 msgstr "\\pagetarget{Other Fields}{\\subheader{Pozostałe Pola}}"
 
 #. type: figure
-#: sections/all_map_locations.tex:470
+#: sections/all_map_locations.tex:471
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1037,7 +1061,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:492
+#: sections/all_map_locations.tex:493
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1083,7 +1107,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:512
+#: sections/all_map_locations.tex:513
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1125,7 +1149,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:532
+#: sections/all_map_locations.tex:533
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1167,7 +1191,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:565
+#: sections/all_map_locations.tex:566
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1235,7 +1259,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:588
+#: sections/all_map_locations.tex:589
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1282,7 +1306,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:612
+#: sections/all_map_locations.tex:613
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1331,7 +1355,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:639
+#: sections/all_map_locations.tex:640
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1385,7 +1409,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:678
+#: sections/all_map_locations.tex:679
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1465,8 +1489,30 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:701
-#, no-wrap
+#: sections/all_map_locations.tex:702
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[H]\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\pagetarget{Star Axis}{\\locationtitle{Star Axis}}\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/star_axis.jpg}\n"
+#| "    \\expansionlabel{inferno}\n"
+#| "    \\caption{\\small Category: \\textbf{Flaggable}\\\\\n"
+#| "      You may remove one of your Statistic cards from your hand and replace it with an \\protect\\pagelink{Empowered Statistic}{\\textbf{Empowered}} one of the same type.\n"
+#| "      When you flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}\n"
+#| "  \\end{minipage}\\hfill\n"
+#| "    \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\locationtitle{Grave}\n"
+#| "    \\framedimage[\\linewidth]{\\map_locations/grave.jpg}\n"
+#| "    \\expansionlabel{cove}\n"
+#| "    \\caption{\\small Category: \\textbf{Visitable}\\\\\n"
+#| "      Gain \\svg{morale_negative}, 3 \\svg{gold}, and \\textbf{Search (1)} \\svg{artifact}.\n"
+#| "    }\n"
+#| "  \\end{minipage}"
 msgid ""
 "[H]\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
@@ -1479,7 +1525,7 @@ msgid ""
 "      You may remove one of your Statistic cards from your hand and replace it with an \\protect\\pagelink{Empowered Statistic}{\\textbf{Empowered}} one of the same type.\n"
 "      When you flag this Field, do not remove any enemy Faction Cubes; multiple players may have a Faction Cube on this Field.}\n"
 "  \\end{minipage}\\hfill\n"
-"    \\begin{minipage}[t]{0.47\\textwidth}\n"
+"  \\begin{minipage}[t]{0.47\\textwidth}\n"
 "    \\vspace{0pt}\n"
 "    \\centering\n"
 "    \\locationtitle{Grave}\n"
@@ -1510,38 +1556,36 @@ msgstr ""
 "  \\end{minipage}\\hfill"
 
 #. type: Plain text
-#: sections/all_map_locations.tex:708
-msgid ""
-"\\textlang{english}{\\begin{tikzpicture}[remember picture, overlay] "
-"\\node(cover)[anchor=center, yshift=12em, opacity=0.1] at (current "
-"page.south) { \\includegraphics[width=1.01\\paperwidth, keepaspectratio]"
-"{\\art/cove_background.png} }; \\end{tikzpicture}}"
-msgstr ""
-"\\textlang{english}{\\begin{tikzpicture}[remember picture, overlay] "
-"\\node(cover)[anchor=center, yshift=12em, opacity=0.1] at (current "
-"page.south) { \\includegraphics[width=1.01\\paperwidth, keepaspectratio]"
-"{\\art/cove_background.png} }; \\end{tikzpicture}}"
-
-#. type: Plain text
-#: sections/all_map_locations.tex:712
-msgid "\\pagetarget{Location Token}{\\subheader{Location Tokens}}"
-msgstr ""
-"\\pagetarget{Location Token}{\\subheader{Żetony Lokacji}} \\vspace{-1.5mm}"
-
-#. type: Plain text
 #: sections/all_map_locations.tex:715
 msgid ""
-"The following Fields are found on single-hex Location Tokens only, not on "
-"regular Map Tiles.  The placement of the Location Tokens is described in "
-"\\pagelink{Discover Location Tokens}{Map Elements}."
+"\\pagetarget{Location Token}{\\subheader{Location Tokens}} "
+"\\makebox[\\linewidth][c]{\\begin{tikzpicture} \\node (subgate) "
+"{\\includegraphics[width=0.27\\linewidth]{\\map_locations/"
+"subterranean_gate_token.png}}; \\node (whirl) [right=1em of subgate.south "
+"east, anchor=south west] {\\includegraphics[width=0.18\\linewidth]"
+"{\\map_locations/whirlpool.png}}; \\node (mono) [right=1em of whirl.east] "
+"{\\includegraphics[width=0.18\\linewidth]{\\map_locations/"
+"monolith_token.png}}; \\node (bank) [right=1em of mono.east] "
+"{\\includegraphics[width=0.18\\linewidth]{\\map_locations/"
+"creature_bank_token.png}}; \\node [right=-3em of subgate.north east, "
+"anchor=north west]{\\begin{minipage}{0.75\\linewidth} \\vspace*{1em} The "
+"following Fields are found only on Location Tokens from various Expansions, "
+"not on regular Map Tiles.  The placement of the Location Tokens is described "
+"in \\pagelink{Discover Location Tokens}{Map Elements}.  \\end{minipage}}; "
+"\\end{tikzpicture}}"
 msgstr ""
-"Niniejsze Pola znajdują się wyłącznie na Żetonach Lokacji będących "
-"pojedynczymi heksami, nie na zwykłych Kafelkach Mapy.  Umieszczanie ich "
-"opisano w rozdziale \\pagelink{Discover Location Tokens}{Elementy Mapy}. "
-"\\vspace{-0.5mm}"
+
+#. type: Plain text
+#: sections/all_map_locations.tex:720
+msgid ""
+"\\textbf{Note:} For the following Fields, skip the movement if you would be "
+"stepping onto an allied Hero and do not have enough MP to move off it "
+"immediately.  If the Field's effect placed your Hero on a Token on a still "
+"face-down Tile, discover that Tile."
+msgstr ""
 
 #. type: figure
-#: sections/all_map_locations.tex:738
+#: sections/all_map_locations.tex:743
 #, no-wrap
 msgid ""
 "[H]\n"
@@ -1589,8 +1633,32 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:764
-#, no-wrap
+#: sections/all_map_locations.tex:768
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[H]\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\locationtitle{One-Way Exit Monolith}\n"
+#| "    \\framedimage[\\textwidth]{\\map_locations/one-way_monolith_exit.jpg}\n"
+#| "    \\expansionlabel{conflux}\n"
+#| "    \\caption{\\raggedright \\small Category: \\textbf{Revisitable}\\\\\n"
+#| "      \\raggedright Treat it as an empty Field.\n"
+#| "    }\n"
+#| "  \\end{minipage}\\hfill\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\locationtitle{Subterranean Gate}\\index{Subterranean Gate}\n"
+#| "    \\framedimage[\\textwidth]{\\map_locations/subterranean_gate.jpg}\n"
+#| "    \\expansionlabel{stronghold}\n"
+#| "    \\caption{{\\raggedright \\small Category: \\textbf{Revisitable}}\\\\\n"
+#| "      Connects a surface and a \\protect\\pagelink{Subterranean Map Tiles}{Subterranean Map Tile}.\n"
+#| "      Treat both sides of the Gate as a single Field.\n"
+#| "      Discover the connected Tile, if it wasn't discovered already.\n"
+#| "    }\n"
+#| "  \\end{minipage}"
 msgid ""
 "[H]\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
@@ -1612,7 +1680,6 @@ msgid ""
 "    \\caption{{\\raggedright \\small Category: \\textbf{Revisitable}}\\\\\n"
 "      Connects a surface and a \\protect\\pagelink{Subterranean Map Tiles}{Subterranean Map Tile}.\n"
 "      Treat both sides of the Gate as a single Field.\n"
-"      Discover the connected Tile, if it wasn't discovered already.\n"
 "    }\n"
 "  \\end{minipage}"
 msgstr ""
@@ -1641,8 +1708,35 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: figure
-#: sections/all_map_locations.tex:793
-#, no-wrap
+#: sections/all_map_locations.tex:796
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[H]\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\pagetarget{Whirlpool}{\\locationtitle{Whirlpool}}\\index{Whirlpool}\n"
+#| "    \\framedimage[\\textwidth]{\\map_locations/whirlpool.jpg}\n"
+#| "    \\expansionlabel{cove}\n"
+#| "    \\caption{{\\raggedright \\small Category: \\textbf{Revisitable}}\\\\\n"
+#| "      Move your Hero to another Whirlpool Token.\n"
+#| "      If there are multiple valid targets, roll an Attack Die to determine where your Hero goes.\n"
+#| "      Reroll any Die which shows the number of the Whirlpool your Hero is standing on.\n"
+#| "      After each Whirlpool travel, lose 1 unit from your unit Deck.\n"
+#| "    }\n"
+#| "  \\end{minipage}\\hfill\n"
+#| "  \\begin{minipage}[t]{0.47\\textwidth}\n"
+#| "    \\vspace{0pt}\n"
+#| "    \\centering\n"
+#| "    \\locationtitle{Creature Bank}\n"
+#| "    \\framedimage[\\textwidth]{\\map_locations/creature_bank.jpg}\n"
+#| "    \\expansionlabel{navalbattles}\n"
+#| "    \\caption{{\\raggedright \\small Category: \\textbf{Visitable}}\\\\\n"
+#| "      Start a \\protect\\pagelink{Creature Banks Rules}{Creature Bank Combat} against the specified units (see the list on the next page).\n"
+#| "      If you win, receive the reward and a bonus depending on the number of Stacked units.\n"
+#| "      Creature Banks count as \\textbf{land Fields} (even if designed as sea locations) and are NOT treated as other Fields of the same name.\n"
+#| "    }\n"
+#| "  \\end{minipage}"
 msgid ""
 "[H]\n"
 "  \\begin{minipage}[t]{0.47\\textwidth}\n"
@@ -1653,8 +1747,7 @@ msgid ""
 "    \\expansionlabel{cove}\n"
 "    \\caption{{\\raggedright \\small Category: \\textbf{Revisitable}}\\\\\n"
 "      Move your Hero to another Whirlpool Token.\n"
-"      If there are multiple valid targets, roll an Attack Die to determine where your Hero goes.\n"
-"      Reroll any Die which shows the number of the Whirlpool your Hero is standing on.\n"
+"      If there are 3 Whirlpools, roll an Attack Die to determine where your Hero goes, and reroll any Die that shows the number of the Whirlpool your Hero is moving from.\n"
 "      After each Whirlpool travel, lose 1 unit from your unit Deck.\n"
 "    }\n"
 "  \\end{minipage}\\hfill\n"
@@ -1699,7 +1792,7 @@ msgstr ""
 "  \\end{minipage}"
 
 #. type: table*
-#: sections/all_map_locations.tex:856
+#: sections/all_map_locations.tex:859
 #, no-wrap
 msgid ""
 "[!hb]\n"
@@ -1827,7 +1920,7 @@ msgstr ""
 "  \\expansionlabel{navalbattles}"
 
 #. type: table*
-#: sections/all_map_locations.tex:918
+#: sections/all_map_locations.tex:921
 #, no-wrap
 msgid ""
 "[!hb]\n"
