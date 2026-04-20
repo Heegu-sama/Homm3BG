@@ -172,8 +172,9 @@ When this happens, return the ``discount card'' to your hand.
 
   \subsection*{Combat in a Creature Bank}
   When you start Combat at a Creature Bank, place up to 5 of your units in the player deployment zone.
-  Depending on the Creature Bank you are visiting, take the corresponding units from the Creature Bank unit cards and place them randomly in the Neutral unit deployment zone. Creature Bank Unit cards don't have a tier (\svg{bronze}, \svg{silver}, \svg{golden}, \svg{azure}), therefore all effects that interact with tiers do not work for them (e.g. the Spell \wikilink{spells/berserk}{Berserk}).
+  Depending on the Creature Bank you are visiting, take the corresponding units from the Creature Bank unit cards and place them randomly in the Neutral unit deployment zone.
 
+    \bigskip
     \begin{center}
       \begin{tikzpicture}
         \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\images/creature_bank_combat_board.png}}};
@@ -191,6 +192,7 @@ When this happens, return the ``discount card'' to your hand.
     \end{center}
     \imagecaption{P -- player deployment zone}\\
     \imagecaption{N -- Neutral Units deployment zone}\\
+    \bigskip
 
   Based on the Scenario's Difficulty Level, take a number of \pagelink{Stack Tokens}{Stack Tokens} and place them randomly on up to four different Creature Bank unit cards:
   \begin{itemize}
@@ -207,6 +209,9 @@ When this happens, return the ``discount card'' to your hand.
   \begin{expansion}{navalbattles}
   After Combat, return all Creature Bank units back to the Creature Bank units cards pile.
   If you win, you claim the Creature Bank's reward, as well as an additional reward for the Stacked units you defeated.
+
+  \subsection*{Creature Bank Units}
+  Creature Bank Unit cards don't have a tier (\svg{bronze}, \svg{silver}, \svg{golden}, \svg{azure}), therefore all effects that interact with tiers do not work for them (e.g. the \wikilink{spells/berserk}{Berserk Spell}).
 
   \subsection*{\pagetarget{Stack Tokens}{Stack Tokens}}\index{Stacked Units}
   Each Stack Token modifies a unit's statistic in the following way: +1~\svg{attack}, +1~\svg{defense}, +1~\svg{health_points}, or +2~\svg{initiative}.
