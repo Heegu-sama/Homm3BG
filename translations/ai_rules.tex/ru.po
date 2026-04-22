@@ -99,7 +99,14 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:32
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority:\n"
+#| "  \\svg{golden}\n"
+#| "  - \\svg{silver}\n"
+#| "  - \\svg{bronze}\n"
+#| "  - \\svg{azure}.}\n"
+#| "\n"
 msgid ""
 "    \\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority:\n"
 "    \\svg{golden}\n"
@@ -108,11 +115,22 @@ msgid ""
 "    - \\svg{azure}\n"
 "    - Creature Bank Units.}\n"
 "\n"
+msgstr ""
+"  \\textit{Пример: \\svg{golden}\\svg{unit_ground} имеет приоритет:\n"
+"  \\svg{golden}\n"
+"  – \\svg{silver}\n"
+"  – \\svg{bronze}\n"
+"  – \\svg{azure}.}\n"
+"\n"
 msgstr "\\textit{Пример: \\svg{golden}\\svg{unit_ground} имеет приоритет: \\svg{golden} - \\svg{silver} - \\svg{bronze} - \\svg{azure} - отряды сокровищницы.}\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:35
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\item Ranged \\svg{unit_ranged} Units prioritize attacking other Ranged \\svg{unit_ranged} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
+#| "  If there are no Ranged \\svg{unit_ranged} Units for them to target, they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} Units in the same tier order.\\par\n"
+#| "\n"
 msgid ""
 "    \\item Ranged \\svg{unit_ranged} units prioritize attacking other Ranged \\svg{unit_ranged} units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
 "    If there are no Ranged \\svg{unit_ranged} units for them to target, they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} units in the same tier order.\\par\n"
@@ -123,7 +141,19 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:48
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\textit{Example: \\svg{silver}\\svg{unit_ranged} has this priority:\n"
+#| "  \\svg{silver}\\svg{unit_ranged}\n"
+#| "  - \\svg{bronze}\\svg{unit_ranged}\n"
+#| "  - \\svg{golden}\\svg{unit_ranged}\n"
+#| "  - \\svg{azure}\\svg{unit_ranged}\n"
+#| "  - \\svg{silver}\\svg{unit_ground}\\svg{unit_flying}\n"
+#| "  - \\svg{bronze}\\svg{unit_ground}\\svg{unit_flying}\n"
+#| "  - \\svg{golden}\\svg{unit_ground}\\svg{unit_flying}\n"
+#| "  - \\svg{azure}\\svg{unit_ground}\\svg{unit_flying}.}\n"
+#| "\\end{itemize}\n"
+#| "\n"
 msgid ""
 "    \\textit{Example: \\svg{silver}\\svg{unit_ranged} has this priority:\n"
 "    \\svg{silver}\\svg{unit_ranged}\n"
@@ -155,7 +185,11 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:51
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "In both cases, if there's more than one valid target, they attack the closest one.\n"
+#| "If there's ever a tie between equally valid targets, the player chooses which Unit is attacked.\\par\n"
+#| "\n"
 msgid ""
 "  In both cases, if there is more than one valid target, they attack the closest one.\n"
 "  If there is ever a tie between equally valid targets, the player chooses which unit is attacked.\\par\n"
@@ -179,7 +213,10 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:60
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "Enemy Units cannot \\pagelink{Defend}{Defend} unless instructed to.\n"
+#| "\n"
 msgid ""
 "  Enemy units cannot \\pagelink{Defend}{defend} unless instructed to.\n"
 "\n"
@@ -201,13 +238,18 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:70
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\vspace{1em}\n"
+#| "\\note{9}{In a siege against AI, the Arrow Tower follows the priority-rules like a Silver \\svg{silver} Unit. But if there are many valid targets, it cannot attack the nearest one, so it will attack the one that is closest to perishing (the smallest difference between \\svg{health_points-yellow} and current \\svg{damage-yellow}).}\n"
+#| "\n"
 msgid ""
 "  The \\pagelink{Walls}{Arrow Tower} is treated like a Silver \\svg{silver}\\svg{unit_ranged} unit.\n"
 "  However, if it has multiple equally valid targets to attack, it will attack the one with the least health remaining (the smallest difference between \\svg{health_points} and current~\\svg{damage})."
 msgstr ""
-"В осаде против ИИ стрелковая башня трактуется как отряд \\svg{silver}\\svg{unit_ranged}.\n"
-"Однако, если для неё имеется несколько равнозначных целей, атакуется отряд, наиболее близкий к поражению (имеющий наименьшую разницу между \\svg{health_points} и текущим \\svg{damage})."
+"\\vspace{1em}\n"
+"\\note{9}{В осаде против ИИ стрелковая башня следует приоритету \\svg{silver} отряда. Однако, если имеется несколько целей одного уровня, она не может атаковать ближайшую. В таком случае атакуется отряд, наиболее близкий к поражению (имеющий наименьшую разницу между \\svg{health_points-yellow} и текущим \\svg{damage-yellow}).}\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:78
@@ -243,7 +285,19 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_rules.tex:95
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\subsection*{AI Hero Turn}\n"
+#| "\\pagetarget{AIrules}{AI Heroes} are used in the Campaigns.\n"
+#| "They start in their Town, and have 3 MP, always spending them to perform the following Actions in descending priority:\n"
+#| "\\begin{itemize}\n"
+#| "  \\item If a player's Hero is on the same Tile as the AI, spend all MP to move towards them in an attempt to start Combat.\n"
+#| "  \\item If there are any Mines or Settlements the AI could Flag on the same Tile, move towards the closest one.\n"
+#| "  \\item Otherwise, move toward the player's Town.\n"
+#| "Repeat this sequence until all MPs are used up.\n"
+#| "AI Heroes take their turn after the player.\n"
+#| "\\end{itemize}\n"
+#| "\n"
 msgid ""
 "  \\columnbreak\n"
 "  \\subsection*{AI Hero Turns}\n"
@@ -269,7 +323,11 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_rules.tex:98
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "AI Heroes always \\textbf{automatically win Combat} against any Neutral Units, while simultaneously \\textbf{Flagging or Visiting all Fields} they happen to move through.\n"
+#| "They gain no benefits from any Fields.\n"
+#| "\n"
 msgid ""
 "  AI Heroes always \\textbf{automatically win Combat} against any Neutral Units, while simultaneously \\textbf{flagging or visiting all Fields} they happen to move through.\n"
 "  They gain no benefits from any Fields.\n"
@@ -288,6 +346,12 @@ msgstr ""
 
 #. type: Plain text
 #: sections/ai_rules.tex:107
+#, fuzzy
+#| msgid ""
+#| "\\begin{center}\n"
+#| "    \\includegraphics[width=0.75\\linewidth]{\\images/tower-lineup.png}\n"
+#| "\\end{center}\n"
+#| "\\vspace*{\\fill}"
 msgid ""
 "{\\begin{center} \\vfill \\includegraphics[width=\\linewidth]{\\art/"
 "gold_dragon.jpg} \\end{center}}"
@@ -304,7 +368,32 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:143
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "      \\draw (0, 0) node {\\includegraphics[width=1.3\\linewidth]{\\cards/ai.png}};\n"
+#| "      \\draw (-0.7, 2.5) node {\\encircle{1}};\n"
+#| "      \\draw (1.5, 1.2) node {\\encircle{2}};\n"
+#| "      \\draw (-1.5, 0) node {\\encircle{3}};\n"
+#| "      \\draw (0.5, 0) node {\\encircle{4}};\n"
+#| "      \\draw (-1.5, -1.2) node {\\encircle{5}};\n"
+#| "      \\draw (0.5, -1.2) node {\\encircle{6}};\n"
+#| "      \\draw (-0.5, -2.5) node {\\encircle{7}};\n"
+#| "    \\end{tikzpicture}\\\\\n"
+#| "    \\phantom{\\ldots\\ldots}\\footnotesize{\\imagecaption{AI Card}}\n"
+#| "    \\vspace*{-1em}\n"
+#| "  \\end{center}\n"
+#| "  \\vspace*{\\fill}\n"
+#| "  \\columnbreak\n"
+#| "  \\scriptsize\n"
+#| "  \\begin{itemize}[itemsep=0pt]\n"
+#| "    \\item[\\textbf{1.}] Name\n"
+#| "    \\item[\\textbf{2.}] Description\n"
+#| "    \\item[\\textbf{3.}] Easy Modifier\n"
+#| "    \\item[\\textbf{4.}] Normal Modifier\n"
+#| "    \\item[\\textbf{5.}] Expert Modifier\n"
+#| "    \\item[\\textbf{6.}] Impossible\\\\Modifier\n"
+#| "    \\item[\\textbf{7.}] Card Type\n"
+#| "  \\end{itemize}\\vspace*{\\fill}"
 msgid ""
 "    \\node (card) {\\includegraphics[width=0.57\\linewidth]{\\cards/ai.png}};\n"
 "    \\begin{relcoords}{card}\n"
@@ -374,7 +463,16 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:149
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "AI Heroes use two Decks during Combat: the \\textbf{AI Deck}, and the \\textbf{AI Spell Deck}.\n"
+#| "The AI Deck consists of three types of AI Cards: Might \\svg[12]{might}, Magic \\svg{magic} and Skill \\svg{skill}.\n"
+#| "Each Campaign Scenario lists the number and types of Cards to include during setup.\n"
+#| "Choose these Cards \\textbf{randomly} when building the Deck.\n"
+#| "If Skill Cards are included, search for and set aside the Ability Card related to it.\n"
+#| "Build the \\textbf{AI Spell Deck} by separating the indicated Spells from the regular Spell Deck.\n"
+#| "Shuffle these Decks during setup after building them.\n"
+#| "\n"
 msgid ""
 "  AI Heroes use two Decks during Combat: the \\textbf{AI Deck} and the \\textbf{AI Spell Deck}.\n"
 "  The AI Deck consists of three types of AI cards: Might \\svg[12]{might}, Magic \\svg{magic}, and Skill \\svg{skill}.\n"
@@ -392,7 +490,15 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:154
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI Card} and follow its instructions before the Unit moves and/or attacks.\n"
+#| "If AI Deck is depleted during Combat, stop drawing from it.\n"
+#| "The effect of each AI Card depends on the game's \\pagelink{Difficulty}{Difficulty}.\n"
+#| "The Might Card \\svg[12]{might} is attached to the Unit until the first respective attack/defense happens.\n"
+#| "The AI Spell Deck is used whenever a Magic Card \\svg{magic} is drawn.\n"
+#| "If an AI Hero is instructed to draw a Card, they will draw and resolve \\textbf{another Card} from the AI Deck.\n"
+#| "\n"
 msgid ""
 "  When an AI Hero \\textbf{activates} a unit, draw an AI card\\index{AI card} and follow its instructions before the unit \\pagelink{AI Units}{moves and/or attacks}.\n"
 "  If the AI Deck is depleted during Combat, stop drawing from it.\n"
