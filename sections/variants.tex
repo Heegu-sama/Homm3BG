@@ -164,7 +164,7 @@ When this happens, return the ``discount card'' to your hand.
   \end{center}
   \columnbreak
 
-  \subsection*{visiting a Creature Bank Location}
+  \subsection*{Visiting a Creature Bank Location}
   When you enter a Creature Bank Location, you must defeat the corresponding Creature Bank units defending it.
   If you win, resolve the Field's effect and mark it with a Black Cube.
   Because these Fields don't have any Difficulty Level, Quick Combat never happens, there is no Round limit, no need to spend MP to extend Combat, and you don't gain any \svg{experience}.
@@ -210,6 +210,12 @@ When this happens, return the ``discount card'' to your hand.
   After Combat, return all Creature Bank units back to the Creature Bank units cards pile.
   If you win, you claim the Creature Bank's reward, as well as an additional reward for the Stacked units you defeated.
 
+  \subsection*{Creature Bank Units}
+  Creature Bank Unit cards do not have a tier (\svg{bronze}\svg{silver}\svg{golden}\svg{azure}).
+  As a result, any effects that depend on tiers (e.g., \wikilink{spells/berserk}{Berserk Spell}) do not apply to them.
+  In addition, they follow special rules for \pagelink{AI Units}{AI targeting}.
+
+
   \subsection*{\pagetarget{Stack Tokens}{Stack Tokens}}\index{Stacked Units}
   Each Stack Token modifies a unit's statistic in the following way: +1~\svg{attack}, +1~\svg{defense}, +1~\svg{health_points}, or +2~\svg{initiative}.
   Furthermore, each unit with a Stack Token is now a \textbf{Stacked unit}, which is similar to reinforced Faction units: when it takes damage equal to or greater than its \svg{health_points}, instead of removing the unit card from the Combat Board, discard the Stack Token from that unit and deal any leftover damage, deducting it from the new \svg{health_points}.
@@ -228,11 +234,6 @@ When this happens, return the ``discount card'' to your hand.
   Track which of your units are Stacked by whatever means is comfortable, e.g.~by remembering it or by placing a Token or Cube on it.
   Whenever your Stacked unit goes to a Combat, draw a random Stack Token and place it on that unit.
   After Combat, note whether the unit is still Stacked (for future Combats), then return the Stack Token to the pile.
-
-  \begin{center}
-    \transparent{0.2}\includegraphics[width=\iftoggle{printable}{0.9}{0.8}\linewidth]{\art/frost_ring.png}
-  \end{center}
-
   \end{expansion}
 
   \columnbreak
