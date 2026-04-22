@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-03-29 12:19+0000\n"
+"POT-Creation-Date: 2026-04-22 09:05+0100\n"
 "PO-Revision-Date: 2024-04-21 09:09+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -102,7 +102,17 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:27
+#: sections/ai_rules.tex:25
+#, no-wrap
+msgid ""
+"    \\begin{expansion}{navalbattles}\n"
+"      If your army includes \\pagelink{Creature Banks Rules}{Creature Bank Units}, enemy units prioritize attacking all other units first, and Creature Bank Units last.\n"
+"    \\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:32
 #, fuzzy, no-wrap
 #| msgid ""
 #| "  \\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority:\n"
@@ -116,7 +126,8 @@ msgid ""
 "    \\svg{golden}\n"
 "    - \\svg{silver}\n"
 "    - \\svg{bronze}\n"
-"    - \\svg{azure}.}\n"
+"    - \\svg{azure}\n"
+"    - Creature Bank Units.}\n"
 "\n"
 msgstr ""
 "  \\textit{Пример: \\svg{golden}\\svg{unit_ground} имеет приоритет:\n"
@@ -127,7 +138,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:30
+#: sections/ai_rules.tex:35
 #, fuzzy, no-wrap
 #| msgid ""
 #| "  \\item Ranged \\svg{unit_ranged} Units prioritize attacking other Ranged \\svg{unit_ranged} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
@@ -143,7 +154,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:41
+#: sections/ai_rules.tex:48
 #, fuzzy, no-wrap
 #| msgid ""
 #| "  \\textit{Example: \\svg{silver}\\svg{unit_ranged} has this priority:\n"
@@ -163,10 +174,12 @@ msgid ""
 "    - \\svg{bronze}\\svg{unit_ranged}\n"
 "    - \\svg{golden}\\svg{unit_ranged}\n"
 "    - \\svg{azure}\\svg{unit_ranged}\n"
+"    - Creature Bank Units\\,\\svg{unit_ranged}\n"
 "    - \\svg{silver}\\svg{unit_ground}\\svg{unit_flying}\n"
 "    - \\svg{bronze}\\svg{unit_ground}\\svg{unit_flying}\n"
 "    - \\svg{golden}\\svg{unit_ground}\\svg{unit_flying}\n"
-"    - \\svg{azure}\\svg{unit_ground}\\svg{unit_flying}.}\n"
+"    - \\svg{azure}\\svg{unit_ground}\\svg{unit_flying}\n"
+"    - Creature Bank Units\\,\\svg{unit_ground}\\svg{unit_flying}.}\n"
 "  \\end{itemize}\n"
 "\n"
 msgstr ""
@@ -183,7 +196,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:44
+#: sections/ai_rules.tex:51
 #, fuzzy, no-wrap
 #| msgid ""
 #| "In both cases, if there's more than one valid target, they attack the closest one.\n"
@@ -199,7 +212,20 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:46
+#: sections/ai_rules.tex:58
+#, no-wrap
+msgid ""
+"  \\begin{expansion}{navalbattles}\n"
+"    \\pagelink{Creature Banks Rules}{Creature Bank Units} do not have a tier.\n"
+"    Therefore, they ignore the tier order in the lists above and instead attack the nearest valid target.\n"
+"    % TODO maybe use this, depending on what Robert replies? Therefore, they ignore the tier-based priority list above and instead attack the nearest valid target.\n"
+"    % https://boardgamegeek.com/thread/3689848/creature-banks-vs-spells\n"
+"  \\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/ai_rules.tex:60
 #, fuzzy, no-wrap
 #| msgid ""
 #| "Enemy Units cannot \\pagelink{Defend}{Defend} unless instructed to.\n"
@@ -212,7 +238,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:52
+#: sections/ai_rules.tex:66
 #, no-wrap
 msgid ""
 "  \\pagetarget{AI Siege}{\\subsection*{AI Siege}}\n"
@@ -224,7 +250,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:55
+#: sections/ai_rules.tex:70
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\vspace{1em}\n"
@@ -232,37 +258,14 @@ msgstr ""
 #| "\n"
 msgid ""
 "  The \\pagelink{Walls}{Arrow Tower} is treated like a Silver \\svg{silver}\\svg{unit_ranged} unit.\n"
-"  However, if it has multiple equally valid targets to attack, it will attack the one with the least health remaining (the smallest difference between \\svg{health_points} and current \\svg{damage}).\n"
-"\n"
+"  However, if it has multiple equally valid targets to attack, it will attack the one with the least health remaining (the smallest difference between \\svg{health_points} and current~\\svg{damage})."
 msgstr ""
 "\\vspace{1em}\n"
 "\\note{9}{В осаде против ИИ стрелковая башня следует приоритету \\svg{silver} отряда. Однако, если имеется несколько целей одного уровня, она не может атаковать ближайшую. В таком случае атакуется отряд, наиболее близкий к поражению (имеющий наименьшую разницу между \\svg{health_points-yellow} и текущим \\svg{damage-yellow}).}\n"
 "\n"
 
-#. type: multicols*
-#: sections/ai_rules.tex:60
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\vspace*{\\fill}\n"
-#| "\\begin{center}\n"
-#| "  \\transparent{0.2}{\\includegraphics[width=0.9\\linewidth, keepaspectratio]{\\art/vision.png}}\n"
-#| "\\end{center}\n"
-#| "\\vspace*{\\fill}\n"
-#| "\n"
-msgid ""
-"\\vspace*{\\fill}\n"
-"{\\transparent{0.2}{\\includegraphics[width=\\linewidth,keepaspectratio]{\\art/thunder_helmet.png}}}\n"
-"\\vspace*{\\fill}"
-msgstr ""
-"\\vspace*{\\fill}\n"
-"\\begin{center}\n"
-"  \\transparent{0.2}{\\includegraphics[width=0.8\\linewidth, keepaspectratio]{\\art/vision.png}}\n"
-"\\end{center}\n"
-"\\vspace*{\\fill}\n"
-"\n"
-
 #. type: multicols
-#: sections/ai_rules.tex:68
+#: sections/ai_rules.tex:78
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -275,7 +278,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/ai_rules.tex:71
+#: sections/ai_rules.tex:81
 #, no-wrap
 msgid ""
 "  During setup, if multiple AI Heroes use the same unit and you do not have enough copies of its card, the AI Heroes must share it:\n"
@@ -284,7 +287,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/ai_rules.tex:75
+#: sections/ai_rules.tex:85
 #, no-wrap
 msgid ""
 "  AI Heroes cannot surrender and you cannot surrender to them;\n"
@@ -294,7 +297,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/ai_rules.tex:85
+#: sections/ai_rules.tex:95
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{AI Hero Turn}\n"
@@ -333,7 +336,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:88
+#: sections/ai_rules.tex:98
 #, fuzzy, no-wrap
 #| msgid ""
 #| "AI Heroes always \\textbf{automatically win Combat} against any Neutral Units, while simultaneously \\textbf{Flagging or Visiting all Fields} they happen to move through.\n"
@@ -346,7 +349,7 @@ msgid ""
 msgstr "Герои ИИ всегда \\textbf{автоматически выигрывают сражения} против любых нейтральных отрядов, одновременно \\textbf{захватывая или посещая все поля}, через которые они передвигаются, но не получают бонусов от этих полей.\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:91
+#: sections/ai_rules.tex:101
 #, no-wrap
 msgid ""
 "  AI Heroes must discover face down Map Tiles as normal by spending 1 MP before moving onto them.\n"
@@ -354,7 +357,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/ai_rules.tex:97
+#: sections/ai_rules.tex:107
 #, fuzzy
 #| msgid ""
 #| "\\begin{center}\n"
@@ -372,7 +375,7 @@ msgstr ""
 "\\vspace*{\\fill}"
 
 #. type: multicols*
-#: sections/ai_rules.tex:101
+#: sections/ai_rules.tex:111
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -381,7 +384,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:133
+#: sections/ai_rules.tex:143
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\draw (0, 0) node {\\includegraphics[width=1.3\\linewidth]{\\cards/ai.png}};\n"
@@ -467,7 +470,7 @@ msgstr ""
 "  \\end{itemize}\\vspace*{\\fill}"
 
 #. type: multicols*
-#: sections/ai_rules.tex:139
+#: sections/ai_rules.tex:149
 #, fuzzy, no-wrap
 #| msgid ""
 #| "AI Heroes use two Decks during Combat: the \\textbf{AI Deck}, and the \\textbf{AI Spell Deck}.\n"
@@ -496,7 +499,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:144
+#: sections/ai_rules.tex:154
 #, fuzzy, no-wrap
 #| msgid ""
 #| "When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI Card} and follow its instructions before the Unit moves and/or attacks.\n"
@@ -521,7 +524,7 @@ msgstr ""
 "Если герой ИИ должен взять карту, он берёт \\textbf{следующую карту} из колоды ИИ. \\vspace*{\\fill} \\columnbreak \\pagetarget{AI Units}{\\subheader{Сражение против ИИ}}"
 
 #. type: multicols*
-#: sections/ai_rules.tex:148
+#: sections/ai_rules.tex:158
 #, no-wrap
 msgid ""
 "  \\subsection*{AI Magic cards and AI Spell Deck}\n"
@@ -531,7 +534,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:152
+#: sections/ai_rules.tex:162
 #, no-wrap
 msgid ""
 "  Whenever an AI Magic \\svg{magic} card is drawn, draw the next Spell from the AI Spell Deck and cast it.\n"
@@ -541,7 +544,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:156
+#: sections/ai_rules.tex:166
 #, no-wrap
 msgid ""
 "  The AI Spell Deck may contain more Spell cards than there are Magic cards in the AI Hero's Deck.\n"
@@ -551,7 +554,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:158
+#: sections/ai_rules.tex:168
 #, no-wrap
 msgid ""
 "  If the AI Hero is assigned a Spell card that is unavailable because it is in your Hero's Deck, and you do not have another copy, substitute it with a \\wikilink{spells/magic_arrow}{Magic Arrow} card.\n"
@@ -559,7 +562,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:161
+#: sections/ai_rules.tex:171
 #, no-wrap
 msgid ""
 "  For certains Spells it can be unclear how the AI is supposed to cast them.\n"
@@ -568,7 +571,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:167
+#: sections/ai_rules.tex:177
 #, no-wrap
 msgid ""
 "  \\subsection*{AI Skill cards}\n"
@@ -580,7 +583,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:169
+#: sections/ai_rules.tex:179
 #, no-wrap
 msgid ""
 "  AI Skill cards cannot be replaced, so if Scenario rules assign the AI Hero a card that your Hero has and you do not have another copy, remove that card from your Deck and \\textbf{Search (3)} the respective card's Deck to compensate your Hero for the loss.\n"
@@ -588,7 +591,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:172
+#: sections/ai_rules.tex:182
 #, no-wrap
 msgid ""
 "  \\subsection*{AI cards timing}\n"
@@ -597,7 +600,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:176
+#: sections/ai_rules.tex:186
 #, no-wrap
 msgid ""
 "  The \\wikilink{ai\\#ai-cards}{Attack} Might \\svg[12]{might} card says about ``unit that is about to attack'', so if the currently activated unit doesn't have a valid target to attack, the Attack will apply to the next unit who is able to attack.\n"
@@ -607,7 +610,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:178
+#: sections/ai_rules.tex:188
 #, no-wrap
 msgid ""
 "  If an AI card increased a unit's \\svg{defense}, or triggered another card which increased it, the AI card stays attached to the unit until the first defense happens.\n"
@@ -615,7 +618,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:181
+#: sections/ai_rules.tex:191
 #, no-wrap
 msgid ""
 "  \\subsection*{AI Deck sharing}\n"
@@ -624,7 +627,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:188
+#: sections/ai_rules.tex:198
 #, no-wrap
 msgid ""
 "  \\bigskip\n"
@@ -637,7 +640,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:191
+#: sections/ai_rules.tex:201
 #, no-wrap
 msgid ""
 "  \\subsection*{Spells attacking multiple targets}\n"
@@ -646,7 +649,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:197
+#: sections/ai_rules.tex:207
 #, no-wrap
 msgid ""
 "  When drawn, target any unit with one or two adjacent units from the player's army, prioritizing the groups where there are more higher-tier units.\n"
@@ -658,7 +661,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:200
+#: sections/ai_rules.tex:210
 #, no-wrap
 msgid ""
 "  \\subsection*{Instant Defense Spells}\n"
@@ -667,7 +670,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:204
+#: sections/ai_rules.tex:214
 #, no-wrap
 msgid ""
 "  When drawn, put this card on the side of the Combat Board, then put a Defense Token on the unit with the highest \\svg{defense} to represent the card's effect -- it stays there until the Defense is resolved.\n"
@@ -677,7 +680,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:207
+#: sections/ai_rules.tex:217
 #, no-wrap
 msgid ""
 "  \\subsection*{Healing Spells}\n"
@@ -686,7 +689,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:210
+#: sections/ai_rules.tex:220
 #, no-wrap
 msgid ""
 "  When drawn, remove the \\svg{damage} from the AI unit with the greatest value of \\svg{damage} taken, starting with the highest tier available.\n"
@@ -695,7 +698,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:213
+#: sections/ai_rules.tex:223
 #, no-wrap
 msgid ""
 "  \\subsection*{Single-round buffs}\n"
@@ -704,7 +707,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:217
+#: sections/ai_rules.tex:227
 #, no-wrap
 msgid ""
 "  When drawn, check the tier of the unit on which you are about to cast the Spell and count how many units of the same or higher tier there are on the Board.\n"
@@ -714,7 +717,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:220
+#: sections/ai_rules.tex:230
 #, no-wrap
 msgid ""
 "  \\subsection*{Attack-weakening Spells}\n"
@@ -723,7 +726,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/ai_rules.tex:223
+#: sections/ai_rules.tex:233
 #, no-wrap
 msgid ""
 "  When drawn, if the AI's activated unit is about to perform an attack that will provoke a Retaliation, cast this Spell on the Retaliating enemy to lower their \\svg{attack}.\n"
