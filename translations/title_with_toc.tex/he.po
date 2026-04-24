@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-02-22 17:45+0000\n"
+"POT-Creation-Date: 2026-03-29 12:19+0000\n"
 "PO-Revision-Date: 2025-10-02 22:25+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,7 +17,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. type: multicols
-#: sections/battlefield.tex:30 sections/title_with_toc.tex:37
+#: sections/battlefield.tex:30 sections/expansion_content.tex:177
+#: sections/expansion_content.tex:189 sections/title_with_toc.tex:37
 #: sections/title_with_toc.tex:42
 #, no-wrap
 msgid ""
@@ -143,11 +144,25 @@ msgstr ""
 "{ \\includegraphics[width=1.01\\paperwidth, keepaspectratio]{\\art/"
 "castle_bottom.png} \\thispagestyle{empty} }; \\end{tikzpicture}}"
 
+#. type: tikzpicture
+#: sections/title_with_toc.tex:63
+#, no-wrap
+msgid ""
+"[remember picture, overlay]\n"
+"  \\node(bg)[anchor=center, opacity=0.07, xshift=-3em, yshift=0em] at (current page.center) {\n"
+"    \\includegraphics[width=\\paperwidth, keepaspectratio]{\\art/meteor_shower.png}\n"
+"  };"
+msgstr ""
+"[remember picture, overlay]\n"
+"  \\node(bg)[anchor=center, opacity=0.07, xshift=42em, yshift=0em] at (current page.center) {\n"
+"    \\includegraphics[width=\\paperwidth, keepaspectratio]{\\art/meteor_shower.png}\n"
+"  };"
+
 #. type: Plain text
-#: sections/title_with_toc.tex:67
+#: sections/title_with_toc.tex:77
 msgid ""
 "\\AddToHookNext{shipout/background}{\\iftoggle{noartbackground}{}{ \\put "
-"(\\iftoggle{printable}{0.05\\paperwidth}"
+"(\\iftoggle{printable}{0.005\\paperwidth}"
 "{0.03\\paperwidth},-0.75\\paperheight){\\transparent{0.15}"
 "{\\includegraphics[width=0.9\\paperwidth]{\\art/"
 "minotaur_crusader_skeleton.png}}}}\\iftoggle{printable}{ \\drawbottom }"
@@ -160,7 +175,7 @@ msgstr ""
 
 #.  Source: https://heroes.thelazy.net/index.php/Restoration_of_Erathia_Manual_Page_84
 #. type: Plain text
-#: sections/title_with_toc.tex:70
+#: sections/title_with_toc.tex:80
 msgid ""
 "\\textbf{Castle:} Human armies rallied under the banners of Clerics and "
 "Knights, bolstered by the might of Griffins and protected by Angels."
@@ -168,7 +183,7 @@ msgstr ""
 
 #.  Source: https://heroes.thelazy.net/index.php/Restoration_of_Erathia_Manual_Page_88
 #. type: Plain text
-#: sections/title_with_toc.tex:73
+#: sections/title_with_toc.tex:83
 msgid ""
 "\\textbf{Dungeon:} Subterranean forces led by Warlocks and Overlords, "
 "wielding dark magic and bending fearsome creatures to their will."
@@ -176,27 +191,13 @@ msgstr ""
 
 #.  Source: https://heroes.thelazy.net/index.php/Restoration_of_Erathia_Manual_Page_100
 #. type: Plain text
-#: sections/title_with_toc.tex:76
+#: sections/title_with_toc.tex:86
 msgid ""
 "\\textbf{Necropolis:} Legions of the undead, commanded by Necromancers and "
 "Death Knights, who sap the strength of the living to fuel their own."
 msgstr ""
 
 #. type: Plain text
-#: sections/title_with_toc.tex:78
+#: sections/title_with_toc.tex:88
 msgid "More Factions, Heroes, and their armies await in the expansions."
 msgstr ""
-
-#. type: tikzpicture
-#: sections/title_with_toc.tex:89
-#, no-wrap
-msgid ""
-"[remember picture, overlay]\n"
-"  \\node(bg)[anchor=center, opacity=0.07, xshift=-3em, yshift=0em] at (current page.center) {\n"
-"    \\includegraphics[width=\\paperwidth, keepaspectratio]{\\art/meteor_shower.png}\n"
-"  };"
-msgstr ""
-"[remember picture, overlay]\n"
-"  \\node(bg)[anchor=center, opacity=0.07, xshift=42em, yshift=0em] at (current page.center) {\n"
-"    \\includegraphics[width=\\paperwidth, keepaspectratio]{\\art/meteor_shower.png}\n"
-"  };"

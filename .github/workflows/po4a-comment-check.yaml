@@ -22,7 +22,7 @@ jobs:
         id: comment-branch
 
       - name: Set up repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ steps.comment-branch.outputs.head_ref }}
 

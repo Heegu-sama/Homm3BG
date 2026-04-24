@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-03-02 21:15+0000\n"
+"POT-Creation-Date: 2026-04-07 18:13+0100\n"
 "PO-Revision-Date: 2026-03-02 21:15+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -16,18 +16,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. type: multicols
+#. type: multicols*
 #: sections/all_map_locations.tex:5 sections/combat.tex:5
-#: sections/combat.tex:42 sections/combat.tex:131 sections/combat.tex:318
-#: sections/credits.tex:8 sections/deckbuilding.tex:5
-#: sections/deckbuilding.tex:52 sections/deckbuilding.tex:73
-#: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
-#: sections/map_elements.tex:89 sections/map_elements.tex:140
-#: sections/player_turns.tex:5 sections/resources.tex:5
-#: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:56 sections/solo_campaigns.tex:5
-#: sections/tournament_mode.tex:5 sections/town.tex:5 sections/trading.tex:5
-#: sections/units.tex:5 sections/units.tex:46
+#: sections/combat.tex:41 sections/combat.tex:132 sections/credits.tex:8
+#: sections/deckbuilding.tex:5 sections/deckbuilding.tex:73
+#: sections/heroes.tex:5 sections/map_elements.tex:93
+#: sections/map_elements.tex:142 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenarios.tex:5 sections/setup.tex:5 sections/solo_campaigns.tex:7
+#: sections/tournament_mode.tex:6 sections/town.tex:5 sections/trading.tex:5
+#: sections/units.tex:5 sections/units.tex:42 sections/units.tex:222
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -38,7 +36,7 @@ msgstr ""
 
 #.  !TeX spellcheck = en_US
 #. type: Plain text
-#: sections/solo_campaigns.tex:3
+#: sections/solo_campaigns.tex:5
 #, fuzzy
 #| msgid "\\pagetarget{Town}{\\addsection{Town}{\\skills/artillery.png}}"
 msgid ""
@@ -47,8 +45,18 @@ msgid ""
 msgstr ""
 "\\pagetarget{Town}{\\addsection{\\texthebrew{הטירה}}{\\skills/artillery.png}}"
 
+#. type: index{#1}
+#: sections/solo_campaigns.tex:5
+msgid "Campaign"
+msgstr ""
+
+#. type: index{#1}
+#: sections/solo_campaigns.tex:5
+msgid "Solo Mode"
+msgstr ""
+
 #. type: multicols*
-#: sections/solo_campaigns.tex:7
+#: sections/solo_campaigns.tex:9
 #, no-wrap
 msgid ""
 "A Campaign is a series of Scenarios designed for solo play.\n"
@@ -56,7 +64,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/solo_campaigns.tex:11
+#: sections/solo_campaigns.tex:13
 #, no-wrap
 msgid ""
 "\\subsection*{Starting a Scenario}\n"
@@ -66,7 +74,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/solo_campaigns.tex:13
+#: sections/solo_campaigns.tex:15
 #, no-wrap
 msgid ""
 "Prepare AI Enemies: their \\pagelink{AI Heroes}{units} and their \\pagelink{AI Deck}{AI Decks}.\n"
@@ -74,16 +82,16 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/solo_campaigns.tex:16
+#: sections/solo_campaigns.tex:18
 #, no-wrap
 msgid ""
 "\\subsection*{Using different Heroes}\n"
-"Although each campaign has its own recommended Hero for whom it is balanced and who is also the main character of the story, you are free to play with any other Hero of the same Faction.\n"
+"Although each campaign has its own recommended Hero for whom it is balanced and who is also the protagonist of the story, you are free to play with any other Hero of the same Faction.\n"
 "\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/solo_campaigns.tex:23
+#: sections/solo_campaigns.tex:25
 #, no-wrap
 msgid ""
 "If you choose to change your Hero between the Scenarios or when you repeat the Scenario with a different Hero,\n"
@@ -91,12 +99,12 @@ msgid ""
 "If the previous Hero had \\pagelink{Empowered Statistic}{Empowered Statistics cards},\n"
 "you can remove Statistic cards of the same type from the new Hero’s Deck, and replace them with Empowered Statistic cards of the corresponding type.\n"
 "You can replace any card in the ``5 other non-Specialty cards'' group with new Hero’s starting Ability card (if you don't already have a copy of that Ability) and \\wikilink{spells/magic_arrow}{Magic Arrow(s).}\n"
-"You cannot have more than 4 \\wikilink{spells/magic_arrow}{Magic Arrow} cards, even if the old Hero had 5 of them.\n"
+"You cannot have more than 4 \\wikilink{spells/magic_arrow}{Magic Arrow} cards, even if the previous Hero had 5 of them.\n"
 "\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/solo_campaigns.tex:26
+#: sections/solo_campaigns.tex:28
 #, no-wrap
 msgid ""
 "\\subsection*{Combat}\n"
@@ -105,7 +113,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/solo_campaigns.tex:36
+#: sections/solo_campaigns.tex:38
 #, no-wrap
 msgid ""
 "\\subsection*{Finishing a Scenario}\n"
@@ -116,12 +124,12 @@ msgid ""
 "  \\item Level I \\pagelink{Specialty}{Specialty} card,\n"
 "  \\item 5 other non-Specialty cards of your choice from your Deck.\n"
 "\\end{itemize}\n"
-"Skip \\pagelink{Setup Starting Deck}{steps 11--13 of Setup} for the next Scenario of the Campaign.\n"
+"Skip \\pagelink{SetupStartingDeck}{steps \\ref*{SetupStartingDeck}--\\ref*{SetupStartingDeckEnd} of Setup} for the next Scenario of the Campaign.\n"
 "\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/solo_campaigns.tex:39
+#: sections/solo_campaigns.tex:41
 #, no-wrap
 msgid ""
 "Note down the list of cards in your starting Deck.\n"
@@ -130,7 +138,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/solo_campaigns.tex:42
+#: sections/solo_campaigns.tex:44
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -139,7 +147,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/solo_campaigns.tex:48
+#: sections/solo_campaigns.tex:50
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{center}\n"

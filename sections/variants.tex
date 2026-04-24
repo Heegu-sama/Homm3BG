@@ -52,6 +52,7 @@ Now, every player has their drafted Deck of 9 cards ready.
 
 \columnbreak
 \pagetarget{Split Artifact and Spell Decks}{\subheader{Split Artifact and Spell Decks}}
+\index{Split Decks}
 
 \textbf{Note:} Split Decks are often used in \pagelink{Tournament Mode}{Tournament Mode}.
 
@@ -59,7 +60,7 @@ During Setup, split Artifact cards by \pagelink{Artifact}{their level} into 3 se
 Afterwards, split the Spell Deck into 2 separate Decks for \pagelink{Schools of Magic}{Basic and Expert Spells}.
 Discard the top card of each of the five Decks to form their Discard Pile.
 
-Each time you gain an Artifact card or a Spell card \textbf{from Visiting a Map Location}, perform a Search (X) action or draw a card from one of the available Decks depending on your Hero's position on the Map, according to the table below.
+Each time you gain an Artifact card or a Spell card \textbf{from visiting a Map Location}, perform a Search (X) action or draw a card from one of the available Decks depending on your Hero's position on the Map, according to the table below.
 If several Decks are available, choose one.
 
 \begin{table}[H]
@@ -116,7 +117,147 @@ When this happens, return the ``discount card'' to your hand.
 \end{center}
 \vspace*{\fill}
 }
+
+\pagebreak
+\begin{expansion}*[before=\vspace*{-11mm}]{navalbattles}
+\pagetarget{Creature Banks Rules}{\subheader{Creature Banks}}\index{Creature Banks}
+\begin{multicols*}{2}
+  Playing with Creature Banks is an \textbf{optional rule}.
+  If you decide to play with Creature Banks, the following rules apply.
+
+  \subsection*{Setup}
+  Separate the Creature Bank Tokens into two piles (for Near and Far Map Tiles) based on the numerals on their backs.
+  Shuffle each pile and place them near the Map.
+  Place the Creature Bank unit cards face up near the Neutral Unit Decks.
+  There is no need to shuffle these cards.
+  Shuffle all Stack Tokens and place them near the Creature Bank unit cards.
+
+  \bigskip
+  \begin{minipage}[b]{0.4\linewidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw (1.0, 0) node {\includegraphics[width=0.6\linewidth]{\map_locations/creature_bank_back.png}};
+        \draw (-0.4, 0) node {\includegraphics[width=0.6\linewidth]{\map_locations/creature_bank_token.png}};
+      \end{tikzpicture}\\
+      \imagecaption{Creature Bank (Near)}\\
+      \vspace*{1em}
+      \includegraphics[width=0.45\linewidth]{\images/stack-token.png}\\
+      \imagecaption{Stack Token}\\
+    \end{center}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.55\linewidth}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw (0, 0) node {\includegraphics[width=0.7\linewidth]{\cards/creature-bank-back.png}};
+        \draw (0.75, -0.5) node {\includegraphics[width=0.7\linewidth]{\cards/creature-bank.png}};
+      \end{tikzpicture}\\
+      \imagecaption{Creature Bank unit card}
+    \end{center}
+  \end{minipage}
+
+  \subsection*{Placing Creature Bank Tokens}
+  When you discover a Near or Far Map Tile, you may choose to draw a Creature Bank Token of the corresponding type, and place it on the Tile's Blocked Field.
+  \begin{center}
+    \vspace*{2em}
+    \hspace*{-2em}\transparent{0.2}\includegraphics[width=0.9\linewidth]{\art/mermaid.png}
+  \end{center}
+  \columnbreak
+
+  \subsection*{Visiting a Creature Bank Location}
+  When you enter a Creature Bank Location, you must defeat the corresponding Creature Bank units defending it.
+  If you win, resolve the Field's effect and mark it with a Black Cube.
+  Because these Fields don't have any Difficulty Level, Quick Combat never happens, there is no Round limit, no need to spend MP to extend Combat, and you don't gain any \svg{experience}.
+  The defending units and all effects of all Creature Bank Locations are listed in \pagelink{Creature Bank List}{All Map Locations}.
+
+  \subsection*{Combat in a Creature Bank}
+  When you start Combat at a Creature Bank, place up to 5 of your units in the player deployment zone.
+  Depending on the Creature Bank you are visiting, take the corresponding units from the Creature Bank unit cards and place them randomly in the Neutral unit deployment zone.
+
+    \bigskip
+    \begin{center}
+      \begin{tikzpicture}
+        \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\images/creature_bank_combat_board.png}}};
+        \draw (-1.5, 0.6) node {\includegraphics[width=0.15\linewidth]{\images/P.png}};
+        \draw (-1.5, -0.5) node {\includegraphics[width=0.15\linewidth]{\images/P.png}};
+        \draw (0, 0.6) node {\includegraphics[width=0.15\linewidth]{\images/P.png}};
+        \draw (0, -0.5) node {\includegraphics[width=0.15\linewidth]{\images/P.png}};
+        \draw (1.5, 0.6) node {\includegraphics[width=0.15\linewidth]{\images/P.png}};
+        \draw (1.5, -0.5) node {\includegraphics[width=0.15\linewidth]{\images/P.png}};
+        \draw (2.9, 1.7) node {\includegraphics[width=0.15\linewidth]{\images/N.png}};
+        \draw (2.9, -1.6) node {\includegraphics[width=0.15\linewidth]{\images/N.png}};
+        \draw (-3.1, 1.7) node {\includegraphics[width=0.15\linewidth]{\images/N.png}};
+        \draw (-3.1, -1.6) node {\includegraphics[width=0.15\linewidth]{\images/N.png}};
+      \end{tikzpicture}
+    \end{center}
+    \imagecaption{P -- player deployment zone}\\
+    \imagecaption{N -- Neutral Units deployment zone}\\
+    \bigskip
+
+  Based on the Scenario's Difficulty Level, take a number of \pagelink{Stack Tokens}{Stack Tokens} and place them randomly on up to four different Creature Bank unit cards:
+  \begin{itemize}
+    \item \textbf{Easy}: 1 token
+    \item \textbf{Normal}: 2 tokens
+    \item \textbf{Hard}: 3 tokens
+    \item \textbf{Impossible}: 4 tokens
+  \end{itemize}
+  \end{multicols*}
+\end{expansion}
+
 \clearpage
+\begin{multicols*}{2}
+  \begin{expansion}{navalbattles}
+  After Combat, return all Creature Bank units back to the Creature Bank units cards pile.
+  If you win, you claim the Creature Bank's reward, as well as an additional reward for the Stacked units you defeated.
+
+  \subsection*{Creature Bank Units}
+  Creature Bank Unit cards do not have a tier (\svg{bronze}\svg{silver}\svg{golden}\svg{azure}).
+  As a result, any effects that depend on tiers (e.g., \wikilink{spells/berserk}{Berserk Spell}) do not apply to them.
+  In addition, they follow special rules for \pagelink{AI Units}{AI targeting}.
+
+
+  \subsection*{\pagetarget{Stack Tokens}{Stack Tokens}}\index{Stacked Units}
+  Each Stack Token modifies a unit's statistic in the following way: +1~\svg{attack}, +1~\svg{defense}, +1~\svg{health_points}, or +2~\svg{initiative}.
+  Furthermore, each unit with a Stack Token is now a \textbf{Stacked unit}, which is similar to reinforced Faction units: when it takes damage equal to or greater than its \svg{health_points}, instead of removing the unit card from the Combat Board, discard the Stack Token from that unit and deal any leftover damage, deducting it from the new \svg{health_points}.
+  Creature Bank units without a Stack Token are defeated normally.
+
+  \begin{multicols}{4}
+    \centering
+    \includegraphics[width=1.2\linewidth]{\images/stack-token-attack.png}
+    \includegraphics[width=1.2\linewidth]{\images/stack-token-defense.png}
+    \includegraphics[width=1.2\linewidth]{\images/stack-token-hp.png}
+    \includegraphics[width=1.2\linewidth]{\images/stack-token-initiative.png}
+  \end{multicols}
+
+  \subsection*{Gained Stacked Units}
+  Some rewards allow you to gain a Stacked Creature Bank unit card.
+  Track which of your units are Stacked by whatever means is comfortable, e.g.~by remembering it or by placing a Token or Cube on it.
+  Whenever your Stacked unit goes to a Combat, draw a random Stack Token and place it on that unit.
+  After Combat, note whether the unit is still Stacked (for future Combats), then return the Stack Token to the pile.
+  \end{expansion}
+
+  \columnbreak
+  \pagetarget{Alternative Combat Boards}{\subheader{Alternative Combat Boards}}
+  \begin{expansion}{navalbattles}\index{Naval Battle}
+  As an \textbf{optional rule}, you can use the \textbf{Naval Battle Board} for combats at sea locations.
+  This Board removes the two middle spaces, requiring Ground \svg{unit_ground} units to navigate around them while Flying \svg{unit_flying} units can move over them but cannot end their movement there.
+
+  \begin{center}
+    \includegraphics[width=1.05\linewidth]{\images/naval_combat.png}
+  \end{center}
+  \end{expansion}
+
+  \vspace{2em}
+  \begin{expansion}{battlefield}
+  As an \textbf{optional rule}, you can use the \textbf{Battlefield Board} for combats between players in regular games.
+  You can also use it for Neutral Combats, though this is not recommended.
+  Refer to the \pagelink{Battlefield Combat}{Battlefield section} for the rule changes regarding this Combat type.
+
+  \begin{center}
+    \includegraphics[width=1.05\linewidth]{\images/battlefield-board.png}
+  \end{center}
+  \end{expansion}
+\end{multicols*}
 
 \vspace*{-3.4em}
 \begin{table}[H]

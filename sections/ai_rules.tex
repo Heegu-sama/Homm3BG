@@ -19,11 +19,16 @@
     \item Enemy Ground \svg{unit_ground} and Flying \svg{unit_flying} units prioritize attacking units of the \textbf{same} tier.
     If this is impossible, they attack the unit of a lower tier (in tier \textbf{descending} order, down to bronze), and if that is also impossible, they attack the unit of a higher tier (in tier \textbf{ascending} order).\par
 
+    \begin{expansion}{navalbattles}
+      If your army includes \pagelink{Creature Banks Rules}{Creature Bank Units}, enemy units prioritize attacking all other units first, and Creature Bank Units last.
+    \end{expansion}
+
     \textit{Example: \svg{golden}\svg{unit_ground} has this priority:
     \svg{golden}
     - \svg{silver}
     - \svg{bronze}
-    - \svg{azure}.}
+    - \svg{azure}
+    - Creature Bank Units.}
 
     \item Ranged \svg{unit_ranged} units prioritize attacking other Ranged \svg{unit_ranged} units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.
     If there are no Ranged \svg{unit_ranged} units for them to target, they prioritize Ground \svg{unit_ground} and Flying \svg{unit_flying} units in the same tier order.\par
@@ -33,14 +38,23 @@
     - \svg{bronze}\svg{unit_ranged}
     - \svg{golden}\svg{unit_ranged}
     - \svg{azure}\svg{unit_ranged}
+    - Creature Bank Units\,\svg{unit_ranged}
     - \svg{silver}\svg{unit_ground}\svg{unit_flying}
     - \svg{bronze}\svg{unit_ground}\svg{unit_flying}
     - \svg{golden}\svg{unit_ground}\svg{unit_flying}
-    - \svg{azure}\svg{unit_ground}\svg{unit_flying}.}
+    - \svg{azure}\svg{unit_ground}\svg{unit_flying}
+    - Creature Bank Units\,\svg{unit_ground}\svg{unit_flying}.}
   \end{itemize}
 
   In both cases, if there is more than one valid target, they attack the closest one.
   If there is ever a tie between equally valid targets, the player chooses which unit is attacked.\par
+
+  \begin{expansion}{navalbattles}
+    \pagelink{Creature Banks Rules}{Creature Bank Units} do not have a tier.
+    Therefore, they ignore the tier order in the lists above and instead attack the nearest valid target.
+    % TODO maybe use this, depending on what Robert replies? Therefore, they ignore the tier-based priority list above and instead attack the nearest valid target.
+    % https://boardgamegeek.com/thread/3689848/creature-banks-vs-spells
+  \end{expansion}
 
   Enemy units cannot \pagelink{Defend}{defend} unless instructed to.
 
@@ -51,11 +65,7 @@
   If it is not possible, they take a \pagelink{Defend}{Defend} Action.
 
   The \pagelink{Walls}{Arrow Tower} is treated like a Silver \svg{silver}\svg{unit_ranged} unit.
-  However, if it has multiple equally valid targets to attack, it will attack the one with the least health remaining (the smallest difference between \svg{health_points} and current \svg{damage}).
-
-\vspace*{\fill}
-{\transparent{0.2}{\includegraphics[width=\linewidth,keepaspectratio]{\art/thunder_helmet.png}}}
-\vspace*{\fill}
+  However, if it has multiple equally valid targets to attack, it will attack the one with the least health remaining (the smallest difference between \svg{health_points} and current~\svg{damage}).
 \end{multicols*}
 
 \clearpage
@@ -100,11 +110,7 @@
   \pagetarget{AI Deck}{\subheader{AI Decks}}
   \begin{tikzpicture}
     \node (card) {\includegraphics[width=0.57\linewidth]{\cards/ai.png}};
-    \begin{scope}[
-      shift={(card.south west)},
-      x={($(card.east) - (card.west)$)},
-      y={($(card.north) - (card.south)$)},
-      ]
+    \begin{relcoords}{card}
       \draw (0.4, 0.85) node {\encircle{1}};
       \draw (0.8, 0.7) node {\encircle{2}};
       \draw (0.15, 0.5) node {\encircle{3}};
@@ -112,7 +118,7 @@
       \draw (0.15, 0.3) node {\encircle{5}};
       \draw (0.55, 0.3) node {\encircle{6}};
       \draw (0.4, 0.1) node {\encircle{7}};
-    \end{scope}
+    \end{relcoords}
     \node [below=0pt of card.south] {\imagecaption{AI card}};
     \node [right=-1em of card.east] {
       \begin{minipage}[t]{0.43\linewidth}
@@ -183,6 +189,7 @@
   \subsection*{AI Deck sharing}
   If there are multiple AI Enemy Armies in the Scenario, but the rules do not specify to which Enemy an AI Deck, an AI Spell Deck, or a Skill belongs, you should assume it is shared between them.
 
+  \bigskip
   \bigskip
   \pagetarget{AI Complex Spells}{\subheader{Casting complex Spells}}
   In some Campaigns, enemies use Spells whose effects are not fully compatible with the standard use of AI Magic \svg{magic} cards.

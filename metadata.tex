@@ -114,18 +114,8 @@
 
 % Control addition of certain pages in the printable version.
 % Useful to make the printable version have correct number of pages.
-\newtoggle{printable_quote_separate_page}
 \newtoggle{printable_notes_page}
-\togglefalse{printable_quote_separate_page}
-\toggletrue{printable_notes_page}
-
-\AtBeginDocument{
-  \iftoggle{printable}{}{
-    % If printable was disabled, automatically disable related flags.
-    \togglefalse{printable_quote_separate_page}
-    \togglefalse{printable_notes_page}
-  }
-}
+\togglefalse{printable_notes_page}
 
 % Variables
 \def\_assets{assets}
@@ -158,16 +148,16 @@
 \definecolor{darkcandyapplered}{rgb}{0.64, 0.0, 0.0}
 \definecolor{goldenbrown}{rgb}{0.6, 0.4, 0.08}
 % Expansion colors
-\definecolor{tower}{HTML}{909090}      % gray
-\definecolor{rampart}{HTML}{228B22}    % forestgreen
-\definecolor{fortress}{HTML}{556B2F}   % darkolivegreen
-\definecolor{inferno}{HTML}{B22222}    % firebrick
-\definecolor{stronghold}{HTML}{A67C52} % tan
-\definecolor{conflux}{HTML}{C158C1}    % orchid
-\definecolor{cove}{HTML}{20B2AA}       % lightseagreen
-\definecolor{battlefield}{HTML}{505050}   % dark gray
-\definecolor{navalbattles}{HTML}{2E5984}  % dark deep blue
-\definecolor{stretchgoals2}{HTML}{000000}  % black
+\definecolor{tower}        {cmyk}{0.00, 0.00, 0.00, 0.45}  % gray
+\definecolor{rampart}      {cmyk}{0.75, 0.00, 0.75, 0.45}  % forestgreen
+\definecolor{fortress}     {cmyk}{0.20, 0.00, 0.55, 0.61}  % darkolivegreen
+\definecolor{inferno}      {cmyk}{0.00, 0.80, 0.80, 0.30}  % firebrick
+\definecolor{stronghold}   {cmyk}{0.00, 0.25, 0.51, 0.39}  % tan
+\definecolor{conflux}      {cmyk}{0.00, 0.54, 0.00, 0.23}  % orchid
+\definecolor{cove}         {cmyk}{0.95, 0.00, 0.00, 0.17}  % lightseagreen
+\definecolor{battlefield}  {cmyk}{0.00, 0.00, 0.00, 0.70}  % dark gray
+\definecolor{navalbattles} {cmyk}{0.89, 0.39, 0.00, 0.10}  % dark deep blue
+\definecolor{stretchgoals2}{cmyk}{0.40, 0.20, 0.20, 1.00}  % rich black
 
 \def\hyperlinkcolor{goldenbrown}
 
@@ -485,7 +475,7 @@
 % Argument one is the literal text for ToC - defaults to argument two if unspecified
 % Argument two is the text to display
 \newcommand{\subheader}[2][]{%
-  \ifstrequal{#1}{false}{}{
+  \ifstrequal{#1}{notoc}{}{
     \ifstrequal{#1}{}{
       \phantomsection\addcontentsline{toc}{subsection}{\protect #2}%
     }{%
@@ -632,9 +622,12 @@
 \newcommand{\wikilink}[2]{%
   \bgroup%
   \hypersetup{urlcolor=.}%
-  \href{https://\wikilang.homm3bg.wiki/#1}{#2\textcolor{\hyperlinkcolor}{\textbf{°}}}%
+  \href{https://\wikilang.homm3bg.wiki/#1}{#2\wikichar{#2}}%
   \egroup%
+  \wikicheckaliaskern
 }
+% Commands for applying localized kerning for wikilink character °
+\newcommand\wikicheckaliaskern{\futurelet\wikinexttoken\wikiapplykern}
 
 % Stubs for polyglossia package used for Hebrew but not other languages
 \providecommand{\mainlanguagename}[0]{}
@@ -662,7 +655,7 @@
   \tikz[baseline=(X.base)]{
     \node (X) [draw=white, shape=circle, fill=#2, minimum size=#3, align=center, inner sep=0, text=white] {\strut \textbf{#4}};
     \begin{scope}[on background layer]
-      \node [inner sep=0pt, opacity=0.7] at ([xshift=\shadowoffset, yshift=-\shadowoffset]X.center) {\includegraphics[width=\shadowscale]{\layout/circle_drop_shadow.png}};
+      \node [inner sep=0pt, opacity=0.7, anchor=center] at ([xshift=\shadowoffset, yshift=-\shadowoffset]X.center) {\includegraphics[width=\shadowscale]{\layout/circle_drop_shadow.png}};
     \end{scope}
   }
   \end{footnotesize}%
@@ -678,6 +671,26 @@
 }
 \newcommand\encirclesmall[1]{
   \encirclebase{goblin}{0.9em}{#1}
+}
+
+\ExplSyntaxOn
+\NewDocumentEnvironment{relcoords}{ m +b }{
+  \begin{scope}[
+    shift={(#1.south~west)},
+    x={($(#1.east)~-~(#1.west)$)},
+    y={($(#1.north)~-~(#1.south)$)}
+  ]
+    #2
+  \end{scope}
+}{}
+\ExplSyntaxOff
+% Enable this temporarily inside relcoords when placing encircles
+\newcommand\gridhelper[0]{
+  \draw[step=0.1,black,very thin] (0,0) grid (1,1);
+  \foreach \i in {0,0.1,...,1} {
+    \draw [very thin,black] (\i,0) -- (\i,1)  node [below] at (\i,0) {$\StrLeft{\i}{3}$};
+    \draw [very thin,black] (0,\i) -- (1,\i) node [left] at (0,\i) {$\StrLeft{\i}{3}$};
+  }
 }
 
 \newcommand{\drawbottom}{
@@ -735,13 +748,11 @@
 \makeatletter
 \renewcommand\tableofcontents{%
   \pdfbookmark[1]{\contentsname}{toc}%
-  \subheader[false]{\contentsname}
+  \subheader[notoc]{\contentsname}
+  \vspace*{-0.5em}
   \begin{multicols}{2}
     \small
     \@starttoc{toc}%
-    \vspace*{\fill}
-    \columnbreak
-    \includegraphics[width=\linewidth]{\art/black_dragon.jpg}
   \end{multicols}
 }
 \makeatother
