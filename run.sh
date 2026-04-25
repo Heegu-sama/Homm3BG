@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-IMAGE="homm3bg:newest"
+IMAGE="ghcr.io/qwrtln/homm3bg:latest"
 
 # Help message
 show_help() {
