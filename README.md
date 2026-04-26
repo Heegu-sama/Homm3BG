@@ -130,7 +130,7 @@ They should be free of any major issues.<br>
             <th>Language</th>
             <th colspan=2 align="center">Version 1.2<br>(22.05.2024)</th>
             <th colspan=2 align="center">Version 1.3<br>(23.11.2024)</th>
-            <th colspan=2 align="center">Version 2.0<br>(2026)</th>
+            <th colspan=2 align="center">Version 2.0<br>(26.04.2026)</th>
         </tr>
     </thead>
     <tbody>
@@ -141,6 +141,7 @@ They should be free of any major issues.<br>
             <td align="center">🖥️<br>Digital</td>
             <td align="center">🖨️<br>Printable</td>
             <td align="center">🖥️<br>Digital</td>
+            <td align="center">🖨️<br>Printable</td>
         </tr>
         <tr>
             <td>🇬🇧 English</td>
@@ -148,7 +149,8 @@ They should be free of any major issues.<br>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_English_Rules_Rewrite_12_Printable.pdf">download</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_English_Rules_Rewrite_1_3.pdf">download</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_English_Rules_Rewrite_1_3_Printable.pdf">download</a></td>
-            <td align="center"><em><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0-rc4/Heroes3_English_Rules_Rewrite_2_0-rc4.pdf">preview</a></em></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0-rc5/Heroes3_English_Rules_Rewrite_2_0-rc5.pdf">download</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0-rc5/Heroes3_English_Rules_Rewrite_2_0-rc5_Printable.pdf">download</a></td>
         </tr>
         <tr>
             <td>🇵🇱 Polski</td>
@@ -156,6 +158,7 @@ They should be free of any major issues.<br>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Polski_Rules_Rewrite_12_Printable.pdf">pobierz</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Polski_Rules_Rewrite_1_3.pdf">pobierz</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Polski_Rules_Rewrite_1_3_Printable.pdf">pobierz</a></td>
+            <td align="center">—</td>
             <td align="center">—</td>
         </tr>
         <tr>
@@ -165,6 +168,7 @@ They should be free of any major issues.<br>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Espanol_Rules_Rewrite_1_3.pdf">descargar</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Espanol_Rules_Rewrite_1_3_Printable.pdf">descargar</a></td>
             <td align="center">—</td>
+            <td align="center">—</td>
         </tr>
         <tr>
             <td>🇫🇷 Français</td>
@@ -172,6 +176,7 @@ They should be free of any major issues.<br>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Francais_Rules_Rewrite_12_Printable.pdf">télécharger</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Francais_Rules_Rewrite_1_3.pdf">télécharger</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Francais_Rules_Rewrite_1_3_Printable.pdf">télécharger</a></td>
+            <td align="center">—</td>
             <td align="center">—</td>
         </tr>
         <tr>
@@ -181,6 +186,7 @@ They should be free of any major issues.<br>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Russkiy_Rules_Rewrite_1_3.pdf">скачать</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Russkiy_Rules_Rewrite_1_3_Printable.pdf">скачать</a></td>
             <td align="center">—</td>
+            <td align="center">—</td>
         </tr>
         <tr>
             <td>🇺🇦 Українська</td>
@@ -189,9 +195,11 @@ They should be free of any major issues.<br>
             <td align="center">—</td>
             <td align="center">—</td>
             <td align="center">—</td>
+            <td align="center">—</td>
         </tr>
         <tr>
             <td>🇩🇪 Deutsch</td>
+            <td align="center">—</td>
             <td align="center">—</td>
             <td align="center">—</td>
             <td align="center">—</td>
@@ -205,6 +213,7 @@ They should be free of any major issues.<br>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Cestina_Rules_Rewrite_1_3.pdf">stáhnout</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Cestina_Rules_Rewrite_1_3_Printable.pdf">stáhnout</a></td>
             <td align="center">—</td>
+            <td align="center">—</td>
         </tr>
         <tr>
             <td>🇮🇱 עברית</td>
@@ -212,6 +221,7 @@ They should be free of any major issues.<br>
             <td align="center">—</td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Ivrit_Rules_Rewrite_1_3.pdf">הורדה</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Ivrit_Rules_Rewrite_1_3_Printable.pdf">הורדה</a></td>
+            <td align="center">—</td>
             <td align="center">—</td>
         </tr>
     </tbody>
