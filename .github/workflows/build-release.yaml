@@ -37,6 +37,7 @@ jobs:
   digital_build:
     needs: matrix-setup
     name: "Digital / ${{ matrix.display }}"
+    if: ${{ matrix.language != "he" }}
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
@@ -49,6 +50,7 @@ jobs:
   printable_build:
     needs: matrix-setup
     name: "Printable / ${{ matrix.display }}"
+    if: ${{ matrix.language != "he" }}
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
@@ -62,6 +64,7 @@ jobs:
   economy_build:
     needs: matrix-setup
     name: "Printable Economy / ${{ matrix.display }}"
+    if: ${{ matrix.language != "he" }}
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
