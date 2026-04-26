@@ -17,8 +17,6 @@ jobs:
     steps:
       - id: set-matrix
         run: |
-          # TODO: Add Hebrew to the list after fixing expansion enviroment in metadata.tex
-          # { "language": "he", "display": "🇮🇱 עברית"}
           cat << 'EOF' > matrix.json
           {
             "include": [
