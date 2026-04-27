@@ -1,0 +1,544 @@
+# Hungarian translations for PACKAGE package
+# Copyright (C) 2026 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2026-03-01 20:30+0000\n"
+"PO-Revision-Date: 2026-03-01 20:30+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:4
+msgid ""
+"We're translating board game rule book from English to [...].  The text is "
+"in LaTeX format, and the messages are in GNU gettext po format.  Rules:"
+msgstr ""
+"We're translating board game rule book from English to Hungarian. The text "
+"is in LaTeX format, and the messages are in GNU gettext po format. Rules:"
+
+#. type: Bullet: '1. '
+#: tools/translation-ai-prompts/prompt.txt:17
+msgid "PO Format Rules. Both msgid and msgstr should:"
+msgstr "PO formátumszabályok. A msgid és a msgstr egyaránt:"
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:17
+msgid "Start with an empty quoted string: `\"\"`"
+msgstr "Kezdődjön egy üres idézőjeles karakterlánccal: `\"\"`"
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:17
+msgid "Have each line on a new line"
+msgstr "Minden sor külön új sorba kerüljön"
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:17
+msgid "Have each line surrounded by quotes"
+msgstr "Minden sor idézőjelek közé kerüljön"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:17
+#, no-wrap
+msgid ""
+"   - End each quoted line with \\n\n"
+"   Example:\n"
+"   msgid \"\"\n"
+"   \"First line\\n\"\n"
+"   \"Second line\\n\"\n"
+"   msgstr \"\"\n"
+"   \"[...]\\n\"\n"
+"   \"[...]\\n\"\n"
+msgstr ""
+"   - End each quoted line with \\n\n"
+"   Example:\n"
+"   msgid \"\"\n"
+"   \"First line\\n\"\n"
+"   \"Second line\\n\"\n"
+"   msgstr \"\"\n"
+"   \"Első sor\\n\"\n"
+"   \"Második sor\\n\"\n"
+
+#. type: Bullet: '2. '
+#: tools/translation-ai-prompts/prompt.txt:38
+msgid "LaTeX Commands"
+msgstr "LaTeX parancsok"
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:38
+msgid "Preserve all whitespace at the start of lines"
+msgstr "Őrizd meg a sorok elején lévő összes szóközt"
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:38
+msgid "Keep all LaTeX commands exactly as they appear"
+msgstr "Minden LaTeX parancs pontosan úgy maradjon, ahogy eredetileg szerepel"
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:38
+msgid ""
+"`\\pagetarget{...}{...}`: The first argument is not translated. For example, "
+"`\\pagetarget{Heroes}{Heroes}` translates to `\\pagetarget{Heroes}{[...]}`."
+msgstr ""
+"`\\pagetarget{...}{...}`: The first argument is not translated. For example, "
+"`\\pagetarget{Heroes}{Heroes}` translates to `\\pagetarget{Heroes}{Hősök}`."
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:38
+msgid ""
+"`\\pagelink{...}{...}`: The first argument is not translated. For example, "
+"`\\pagelink{Combatexperience}{Combat}` translates to "
+"`\\pagelink{Combatexperience}{[...]}`."
+msgstr ""
+"`\\pagelink{...}{...}`: The first argument is not translated. For example, "
+"`\\pagelink{Combatexperience}{Combat}` translates to "
+"`\\pagelink{Combatexperience}{Harc}`."
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:38
+msgid ""
+"`\\index{...}`: The content within the `\\index{...}` command is translated."
+msgstr ""
+"`\\index{...}`: A `\\index{...}` parancson belüli tartalom lefordítandó."
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:38
+msgid "Do not translate LaTeX command names"
+msgstr "Ne fordítsd le a LaTeX parancsneveket"
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:38
+msgid "Do not add or remove line breaks (\\n)"
+msgstr "Ne adj hozzá és ne távolíts el sortöréseket (\\n)"
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:38
+msgid "Maintain all whitespace around LaTeX commands"
+msgstr "Őrizd meg a LaTeX parancsok körüli összes szóközt"
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:38
+msgid "Maintain line breaks exactly as they appear in the source text"
+msgstr ""
+"Őrizd meg a sortöréseket pontosan úgy, ahogy a forrásszövegben szerepelnek"
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:38
+msgid "Special commands to keep unchanged:"
+msgstr "Változatlanul hagyandó speciális parancsok:"
+
+#. type: Bullet: '     - '
+#: tools/translation-ai-prompts/prompt.txt:38
+msgid "SVG icons (\\svg{damage-yellow})"
+msgstr "SVG ikonok (\\svg{damage-yellow})"
+
+#. type: Bullet: '     - '
+#: tools/translation-ai-prompts/prompt.txt:38
+msgid "Spacing commands (\\bigskip, \\hsize, etc.)"
+msgstr "Térközparancsok (\\bigskip, \\hsize stb.)"
+
+#. type: Bullet: '   - '
+#: tools/translation-ai-prompts/prompt.txt:38
+msgid "For tables (like \\hommtable, \\tabularx):"
+msgstr "Táblázatoknál (például \\hommtable, \\tabularx):"
+
+#. type: Bullet: '     - '
+#: tools/translation-ai-prompts/prompt.txt:38
+msgid "Keep all sizing parameters unchanged (e.g., {38}, {0.3\\hsize})"
+msgstr ""
+"Minden méretezési paraméter maradjon változatlan (pl. {38}, {0.3\\hsize})"
+
+#. type: Bullet: '     - '
+#: tools/translation-ai-prompts/prompt.txt:38
+msgid "Preserve all cell styling commands (\\darkcell, \\lightcell)"
+msgstr "Őrizd meg az összes cellastílus-parancsot (\\darkcell, \\lightcell)"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:38
+#, no-wrap
+msgid ""
+"     - Maintain table column specifications\n"
+"   Example:\n"
+"   msgid \"\\\\darkcell[1.5]{\\\\color{white}Game Difficulty}\"\n"
+"   msgstr \"\\\\darkcell[1.5]{\\\\color{white}[...]}\"\n"
+msgstr ""
+"     - Maintain table column specifications\n"
+"   Example:\n"
+"   msgid \"\\\\darkcell[1.5]{\\\\color{white}Game Difficulty}\"\n"
+"   msgstr \"\\\\darkcell[1.5]{\\\\color{white}Játék nehézség}\"\n"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:42
+#, no-wrap
+msgid ""
+"3. Capitalization\n"
+"Maintain the capitalization of the words as in the original text.\n"
+"If in English there is \"Hero\", the translation should also be capitalized.\n"
+msgstr ""
+"3. Nagybetűhasználat\n"
+"Őrizd meg a szavak nagybetűzését az eredeti szövegnek megfelelően.\n"
+"Ha angolul \"Hero\" szerepel, akkor a fordításban is nagybetűvel szerepeljen (\"Hős\", ne \"hős\").\n"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:48
+#, no-wrap
+msgid ""
+"4. Example\n"
+"Given the following `msgid`:\n"
+"\"  \\\\pagetarget{Heroes}{Players} always control a Main Hero and may additionally also recruit a Secondary Hero.\\n\"\n"
+"The output should be:\n"
+"\"  \\\\pagetarget{Heroes}{[...]} [...]\\n\"\n"
+msgstr ""
+"4. Példa\n"
+"A következő `msgid` esetén:\n"
+"\"  \\\\pagetarget{Heroes}{Players} always control a Main Hero and may additionally also recruit a Secondary Hero.\\n\"\n"
+"A kimenetnek ennek kell lennie:\n"
+"\"  \\\\pagetarget{Heroes}{Játékosok} mindig egy Főhőst irányítanak, és emellett egy Mellékhőst is toborozhatnak.\\n\"\n"
+
+#. type: Bullet: '5. '
+#: tools/translation-ai-prompts/prompt.txt:54
+msgid "Output"
+msgstr "Kimenet"
+
+#. type: Bullet: '  - '
+#: tools/translation-ai-prompts/prompt.txt:54
+msgid "Output a copyable code block"
+msgstr "A kimenet legyen másolható kódblokk"
+
+#. type: Bullet: '  - '
+#: tools/translation-ai-prompts/prompt.txt:54
+msgid ""
+"Output just the translated `msgstr` given the `msgid`, maintaining the "
+"original formatting and quotes."
+msgstr ""
+"Csak a lefordított `msgstr` legyen a kimenet a megadott `msgid` alapján, az "
+"eredeti formázás és idézőjelek megtartásával."
+
+#. type: Bullet: '  - '
+#: tools/translation-ai-prompts/prompt.txt:54
+msgid "If the code block starts with a line `msgstr \"\"`, omit this line"
+msgstr "Ha a kódblokk `msgstr \"\"` sorral kezdődik, hagyd ki ezt a sort"
+
+#. type: Bullet: '  - '
+#: tools/translation-ai-prompts/prompt.txt:54
+msgid "The block should include the final newline"
+msgstr "A blokk tartalmazza a záró újsor karaktert is"
+
+#. type: Bullet: '6. '
+#: tools/translation-ai-prompts/prompt.txt:56
+msgid "Specific term translations without capitalization"
+msgstr "Konkrét szakkifejezések fordítása nagybetűsítés nélkül"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:68
+#, no-wrap
+msgid ""
+"Factions:\n"
+"   - \"castle\" translates to \"[...]\"\n"
+"   - \"conflux\" translates to \"[...]\"\n"
+"   - \"cove\" translates to \"[...]\"\n"
+"   - \"dungeon\" translates to \"[...]\"\n"
+"   - \"fortress\" translates to \"[...]\"\n"
+"   - \"inferno\" translates to \"[...]\"\n"
+"   - \"necropolis\" translates to \"[...]\"\n"
+"   - \"rampart\" translates to \"[...]\"\n"
+"   - \"stronghold\" translates to \"[...]\"\n"
+"   - \"tower\" translates to \"[...]\"\n"
+msgstr ""
+"Factions:\n"
+"   - \"castle\" translates to \"vár\"\n"
+"   - \"conflux\" translates to \"konflux\"\n"
+"   - \"cove\" translates to \"öböl\"\n"
+"   - \"dungeon\" translates to \"kazamata\"\n"
+"   - \"fortress\" translates to \"erőd\"\n"
+"   - \"inferno\" translates to \"inferno\"\n"
+"   - \"necropolis\" translates to \"nekropolisz\"\n"
+"   - \"rampart\" translates to \"bástya\"\n"
+"   - \"stronghold\" translates to \"fellegvár\"\n"
+"   - \"tower\" translates to \"torony\"\n"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:90
+#, no-wrap
+msgid ""
+"Units:\n"
+"   - \"boars\" translates to \"[...]\"\n"
+"   - \"champions\" translates to \"[...]\"\n"
+"   - \"deck of unit cards\" translates to \"[...]\"\n"
+"   - \"dendroids\" translates to \"[...]\"\n"
+"   - \"dread knights\" translates to \"[...]\"\n"
+"   - \"familiars\" translates to \"[...]\"\n"
+"   - \"few\" translates to \"[...]\"\n"
+"   - \"griffins\" translates to \"[...]\"\n"
+"   - \"hp\" translates to \"[...]\"\n"
+"   - \"liches\" translates to \"[...]\"\n"
+"   - \"marksmen\" translates to \"[...]\"\n"
+"   - \"neutral units\" translates to \"[...]\"\n"
+"   - \"pack\" translates to \"[...]\"\n"
+"   - \"recruited or reinforced\" translates to \"[...]\"\n"
+"   - \"reinforce\" translates to \"[...]\"\n"
+"   - \"reinforced\" translates to \"[...]\"\n"
+"   - \"summoned elementals\" translates to \"[...]\"\n"
+"   - \"unit cards\" translates to \"[...]\"\n"
+"   - \"units\" translates to \"[...]\"\n"
+"   - \"zealots\" translates to \"[...]\"\n"
+msgstr ""
+"Units:\n"
+"   - \"boars\" translates to \"vaddisznók\"\n"
+"   - \"champions\" translates to \"bajnokok\"\n"
+"   - \"deck of unit cards\" translates to \"egységkártya-pakli\"\n"
+"   - \"dendroids\" translates to \"dendroidok\"\n"
+"   - \"dread knights\" translates to \"rémlovagok\"\n"
+"   - \"familiars\" translates to \"familiárisok\"\n"
+"   - \"few\" translates to \"kevés\"\n"
+"   - \"griffins\" translates to \"griffek\"\n"
+"   - \"hp\" translates to \"életerő\"\n"
+"   - \"liches\" translates to \"lichek\"\n"
+"   - \"marksmen\" translates to \"mesterlövészek\"\n"
+"   - \"neutral units\" translates to \"semleges egységek\"\n"
+"   - \"pack\" translates to \"csapat\"\n"
+"   - \"recruited or reinforced\" translates to \"toborzott vagy megerősített\"\n"
+"   - \"reinforce\" translates to \"megerősít\"\n"
+"   - \"reinforced\" translates to \"megerősített\"\n"
+"   - \"summoned elementals\" translates to \"megidézett elementálok\"\n"
+"   - \"unit cards\" translates to \"egységkártyák\"\n"
+"   - \"units\" translates to \"egységek\"\n"
+"   - \"zealots\" translates to \"fanatikusok\"\n"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:102
+#, no-wrap
+msgid ""
+"Heroes:\n"
+"   - \"ability\" translates to \"[...]\"\n"
+"   - \"experience\" translates to \"[...]\"\n"
+"   - \"expert effects\" translates to \"[...]\"\n"
+"   - \"hero\" translates to \"[...]\"\n"
+"   - \"heroes\" translates to \"[...]\"\n"
+"   - \"level tracker\" translates to \"[...]\"\n"
+"   - \"level\" translates to \"[...]\"\n"
+"   - \"main hero\" translates to \"[...]\"\n"
+"   - \"secondary hero\" translates to \"[...]\"\n"
+"   - \"specialty\" translates to \"[...]\"\n"
+msgstr ""
+"Heroes:\n"
+"   - \"ability\" translates to \"képesség\"\n"
+"   - \"experience\" translates to \"tapasztalat\"\n"
+"   - \"expert effects\" translates to \"szakértő hatások\"\n"
+"   - \"hero\" translates to \"hős\"\n"
+"   - \"heroes\" translates to \"hősök\"\n"
+"   - \"level tracker\" translates to \"szintjelző\"\n"
+"   - \"level\" translates to \"szint\"\n"
+"   - \"main hero\" translates to \"főhős\"\n"
+"   - \"secondary hero\" translates to \"mellékhős\"\n"
+"   - \"specialty\" translates to \"specialitás\"\n"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:119
+#, no-wrap
+msgid ""
+"Map Locations:\n"
+"   - \"center field\" translates to \"[...]\"\n"
+"   - \"central map tile\" translates to \"[...]\"\n"
+"   - \"dragon utopia\" translates to \"[...]\"\n"
+"   - \"far map tile\" translates to \"[...]\"\n"
+"   - \"field\" translates to \"[...]\"\n"
+"   - \"locations\" translates to \"[...]\"\n"
+"   - \"map tile\" translates to \"[...]\"\n"
+"   - \"near map tile\" translates to \"[...]\"\n"
+"   - \"random town\" translates to \"[...]\"\n"
+"   - \"revisitable\" translates to \"[...]\"\n"
+"   - \"settlement\" translates to \"[...]\"\n"
+"   - \"starting (i) map tile\" translates to \"[...]\"\n"
+"   - \"tile\" translates to \"[...]\"\n"
+"   - \"trading post\" translates to \"[...]\"\n"
+"   - \"water wheel\" translates to \"[...]\"\n"
+msgstr ""
+"Map Locations:\n"
+"   - \"center field\" translates to \"középső mező\"\n"
+"   - \"central map tile\" translates to \"központi térképlapka\"\n"
+"   - \"dragon utopia\" translates to \"sárkány-utópia\"\n"
+"   - \"far map tile\" translates to \"távoli térképlapka\"\n"
+"   - \"field\" translates to \"mező\"\n"
+"   - \"locations\" translates to \"helyszínek\"\n"
+"   - \"map tile\" translates to \"térképlapka\"\n"
+"   - \"near map tile\" translates to \"közeli térképlapka\"\n"
+"   - \"random town\" translates to \"véletlen város\"\n"
+"   - \"revisitable\" translates to \"újralátogatható\"\n"
+"   - \"settlement\" translates to \"település\"\n"
+"   - \"starting (i) map tile\" translates to \"kezdő (i) térképlapka\"\n"
+"   - \"tile\" translates to \"lapka\"\n"
+"   - \"trading post\" translates to \"kereskedőállomás\"\n"
+"   - \"water wheel\" translates to \"vízkerék\"\n"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:126
+#, no-wrap
+msgid ""
+"Resources:\n"
+"   - \"building materials\" translates to \"[...]\"\n"
+"   - \"resource production tracker\" translates to \"[...]\"\n"
+"   - \"resources\" translates to \"[...]\"\n"
+"   - \"treasure die\" translates to \"[...]\"\n"
+"   - \"valuables\" translates to \"[...]\"\n"
+msgstr ""
+"Resources:\n"
+"   - \"building materials\" translates to \"építőanyagok\"\n"
+"   - \"resource production tracker\" translates to \"erőforrás-termelésjelző\"\n"
+"   - \"resources\" translates to \"erőforrások\"\n"
+"   - \"treasure die\" translates to \"kincskocka\"\n"
+"   - \"valuables\" translates to \"értéktárgyak\"\n"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:138
+#, no-wrap
+msgid ""
+"Deck-building:\n"
+"   - \"ability card\" translates to \"[...]\"\n"
+"   - \"deck\" translates to \"[...]\"\n"
+"   - \"decks\" translates to \"[...]\"\n"
+"   - \"discard pile\" translates to \"[...]\"\n"
+"   - \"discard\" translates to \"[...]\"\n"
+"   - \"hand limit\" translates to \"[...]\"\n"
+"   - \"player decks\" translates to \"[...]\"\n"
+"   - \"search\" translates to \"[...]\"\n"
+"   - \"specialty card\" translates to \"[...]\"\n"
+"   - \"spell cards\" translates to \"[...]\"\n"
+msgstr ""
+"Deck-building:\n"
+"   - \"ability card\" translates to \"képességkártya\"\n"
+"   - \"deck\" translates to \"pakli\"\n"
+"   - \"decks\" translates to \"paklik\"\n"
+"   - \"discard pile\" translates to \"dobópakli\"\n"
+"   - \"discard\" translates to \"eldob\"\n"
+"   - \"hand limit\" translates to \"kézlimit\"\n"
+"   - \"player decks\" translates to \"játékospaklik\"\n"
+"   - \"search\" translates to \"keresés\"\n"
+"   - \"specialty card\" translates to \"specialitáskártya\"\n"
+"   - \"spell cards\" translates to \"varázslatkártyák\"\n"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:141
+#, no-wrap
+msgid ""
+"Spells:\n"
+"   - \"haste\" translates to \"[...]\"\n"
+msgstr ""
+"Spells:\n"
+"   - \"haste\" translates to \"sietség\"\n"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:147
+#, no-wrap
+msgid ""
+"AI Deck:\n"
+"   - \"magic card\" translates to \"[...]\"\n"
+"   - \"might card\" translates to \"[...]\"\n"
+"   - \"skill card\" translates to \"[...]\"\n"
+"   - \"ai deck\" translates to \"[...]\"\n"
+msgstr ""
+"AI Deck:\n"
+"   - \"magic card\" translates to \"mágiakártya\"\n"
+"   - \"might card\" translates to \"erőkártya\"\n"
+"   - \"skill card\" translates to \"készségkártya\"\n"
+"   - \"ai deck\" translates to \"AI-pakli\"\n"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:152
+#, no-wrap
+msgid ""
+"Town:\n"
+"   - \"buildings\" translates to \"[...]\"\n"
+"   - \"dwelling\" translates to \"[...]\"\n"
+"   - \"population token\" translates to \"[...]\"\n"
+msgstr ""
+"Town:\n"
+"   - \"buildings\" translates to \"épületek\"\n"
+"   - \"dwelling\" translates to \"lakhely\"\n"
+"   - \"population token\" translates to \"népességjelző\"\n"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:161
+#, no-wrap
+msgid ""
+"Combat:\n"
+"   - \"arrow tower\" translates to \"[...]\"\n"
+"   - \"back line\" translates to \"[...]\"\n"
+"   - \"combat board\" translates to \"[...]\"\n"
+"   - \"combat\" translates to \"[...]\"\n"
+"   - \"damage\" translates to \"[...]\"\n"
+"   - \"front line\" translates to \"[...]\"\n"
+"   - \"winning combat\" translates to \"[...]\"\n"
+msgstr ""
+"Combat:\n"
+"   - \"arrow tower\" translates to \"íjásztorony\"\n"
+"   - \"back line\" translates to \"hátsó sor\"\n"
+"   - \"combat board\" translates to \"harctábla\"\n"
+"   - \"combat\" translates to \"harc\"\n"
+"   - \"damage\" translates to \"sebzés\"\n"
+"   - \"front line\" translates to \"első sor\"\n"
+"   - \"winning combat\" translates to \"harc megnyerése\"\n"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:167
+#, no-wrap
+msgid ""
+"Battlefield:\n"
+"   - \"adventure mode\" translates to \"[...]\"\n"
+"   - \"skirmish mode\" translates to \"[...]\"\n"
+"   - \"final combat\" translates to \"[...]\"\n"
+"   - \"combat power level\" translates to \"[...]\"\n"
+msgstr ""
+"Battlefield:\n"
+"   - \"adventure mode\" translates to \"kaland mód\"\n"
+"   - \"skirmish mode\" translates to \"csetepaté mód\"\n"
+"   - \"final combat\" translates to \"végső harc\"\n"
+"   - \"combat power level\" translates to \"harcierő-szint\"\n"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:173
+#, no-wrap
+msgid ""
+"Keywords:\n"
+"   - \"clone token\" translates to \"[...]\"\n"
+"   - \"quicksand token\" translates to \"[...]\"\n"
+"   - \"land mine token\" translates to \"[...]\"\n"
+"   - \"force field token\" translates to \"[...]\"\n"
+msgstr ""
+"Keywords:\n"
+"   - \"clone token\" translates to \"klónjelző\"\n"
+"   - \"quicksand token\" translates to \"futóhomokjelző\"\n"
+"   - \"land mine token\" translates to \"aknajalző\"\n"
+"   - \"force field token\" translates to \"erőtérjelző\"\n"
+
+#. type: Plain text
+#: tools/translation-ai-prompts/prompt.txt:182
+#, no-wrap
+msgid ""
+"Other:\n"
+"   - \"core rulebook\" translates to \"[...]\"\n"
+"   - \"effects\" translates to \"[...]\"\n"
+"   - \"game setup\" translates to \"[...]\"\n"
+"   - \"map setup\" translates to \"[...]\"\n"
+"   - \"player elimination\" translates to \"[...]\"\n"
+"   - \"player setup\" translates to \"[...]\"\n"
+"   - \"round tracker\" translates to \"[...]\"\n"
+"   - \"war machine\" translates to \"[...]\"\n"
+msgstr ""
+"Other:\n"
+"   - \"core rulebook\" translates to \"alapszabálykönyv\"\n"
+"   - \"effects\" translates to \"hatások\"\n"
+"   - \"game setup\" translates to \"játék előkészítése\"\n"
+"   - \"map setup\" translates to \"térkép előkészítése\"\n"
+"   - \"player elimination\" translates to \"játékos kiesése\"\n"
+"   - \"player setup\" translates to \"játékosok előkészítése\"\n"
+"   - \"round tracker\" translates to \"körjelző\"\n"
+"   - \"war machine\" translates to \"hadigép\"\n"

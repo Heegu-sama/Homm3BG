@@ -621,8 +621,8 @@
 
 % Commands to be used for automation generating printable version
 \newcommand{\pagetarget}[2]{\hypertarget{#1}{#2}\label{#1}}
-\newcommand{\pagelink}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{ \textmd{(\pageshorthand\,\pageref{#1})}}{}}
-\newcommand{\pagelinkwithcomma}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{, \textmd{\pageshorthand\,\pageref{#1}}}{}}
+\newcommand{\pagelink}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{ \textmd{(\pageformat{\pageref{#1}})}}{}}
+\newcommand{\pagelinkwithcomma}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{, \textmd{\pageformat{\pageref{#1}}}}{}}
 
 \newcommand{\wikilink}[2]{%
   \bgroup%
