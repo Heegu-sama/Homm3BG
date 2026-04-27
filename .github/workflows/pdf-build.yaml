@@ -26,6 +26,11 @@ on:
         type: number
         default: 1
         description: 'Number of days to retain artifacts'
+      github_build:
+        required: false
+        type: number
+        default: 1
+        description: 'Whether to replace document version with GitHub SHA'
     outputs:
       number_of_pages:
         value: ${{ jobs.build.outputs.number_of_pages }}
@@ -146,7 +151,7 @@ jobs:
         with:
           latexmk_use_lualatex: true
           latexmk_shell_escape: true
-          pre_compile: export HOMM3_GITHUB_BUILD=1 HOMM3_PRINTABLE=${{ env.HOMM3_PRINTABLE }} HOMM3_NO_ART_BACKGROUND=${{ env.HOMM3_NO_ART_BACKGROUND }} HOMM3_LANG=${{ inputs.language }}
+          pre_compile: export HOMM3_GITHUB_BUILD=${{ inputs.github_buld }} HOMM3_PRINTABLE=${{ env.HOMM3_PRINTABLE }} HOMM3_NO_ART_BACKGROUND=${{ env.HOMM3_NO_ART_BACKGROUND }} HOMM3_LANG=${{ inputs.language }}
           root_file: main_${{ inputs.language }}.tex
           extra_system_packages: "inkscape"
 
