@@ -45,6 +45,7 @@ jobs:
       language: ${{ matrix.language }}
       build_type: digital
       file_name: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ needs.matrix-setup.outputs.version }}"
+      github_build: 0
 
   printable_build:
     needs: matrix-setup
@@ -58,6 +59,7 @@ jobs:
       build_type: printable
       file_name: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ needs.matrix-setup.outputs.version }}_Printable"
       convert_to_cmyk: true
+      github_build: 0
 
   economy_build:
     needs: matrix-setup
@@ -70,6 +72,7 @@ jobs:
       language: ${{ matrix.language }}
       file_name: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ needs.matrix-setup.outputs.version }}_Economy_Printable"
       build_type: economy
+      github_build: 0
 
   upload_single_package:
     runs-on: ubuntu-latest
