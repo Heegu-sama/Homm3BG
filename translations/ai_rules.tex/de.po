@@ -31,7 +31,7 @@ msgid ""
 "\n"
 msgstr ""
 "{2}\n"
-"  Bot-Regeln gelten für gegnerische Helden und Einheiten, die nicht von irgendeinem Spieler kontrolliert werden. Sie werden typischerweise in \\textbf{Solo-Kampagnen} und \\textbf{kooperativen Szenarien} verwendet. \n"
+"  Bot-Regeln gelten für gegnerische Helden und Einheiten, die nicht von irgendeinem Spieler kontrolliert werden. Sie werden typischerweise in \\textbf{Kampagnen} und \\textbf{kooperativen Szenarien} verwendet. \n"
 "\n"
 
 #. type: multicols*
@@ -578,11 +578,11 @@ msgid ""
 "  The same applies to any AI card which is not useful at the moment of drawing it.\n"
 "\n"
 msgstr ""
-"  The \\wikilink{ai\\#ai-cards}{Attack} Might \\svg[12]{might} card says about ``unit that is about to attack'', so if the currently activated unit doesn't have a valid target to attack, the Attack will apply to the next unit who is able to attack.\n"
-"  Note that multiple unresolved cards can stack over successive activations.\n"
-"  The same applies to any AI card which is not useful at the moment of drawing it.\n"
+"  Die Machtkarte \\svg[12]{might} \\wikilink{ai\\#ai-cards}{Angriff} bezieht sich auf eine Einheit, die gerade im Begriff ist anzugreifen. Falls also die aktuell aktivierte Einheit nicht angreifen kann, wird der Angriff auf die nächste Einheit, die in der Lage ist anzugreifen, angewendet.\n"
+"  Beachte, dass sich mehrere nicht aufgelöste Karteneffekte über mehrere Aktivierungen aufsparen können.\n"
+"  Dasselbe gilt für Bot-Karten, die im Moment des Ziehens nicht nützlich sind.\n"
 "\n"
-"Bot-Machtkarten \\svg[12]{might} werden an die Einheit angehängt, bis der/ die erste entsprechende Angriff/ Verteidigung erfolgt ist.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:188
@@ -591,6 +591,8 @@ msgid ""
 "  If an AI card increased a unit's \\svg{defense}, or triggered another card which increased it, the AI card stays attached to the unit until the first defense happens.\n"
 "\n"
 msgstr ""
+"  Erhöht eine Bot-Karte (oder ein anderer Effekt) die \\svg{defense} einer Einheit, dann bleibt die Bot-Karte der Einheit zugeordnet, bis sie erstmals verteidigt hat.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:191
@@ -600,6 +602,9 @@ msgid ""
 "  If there are multiple AI Enemy Armies in the Scenario, but the rules do not specify to which Enemy an AI Deck, an AI Spell Deck, or a Skill belongs, you should assume it is shared between them.\n"
 "\n"
 msgstr ""
+"  \\subsection*{Gemeinsame Nutzung von Bot-Decks}\n"
+"  Gibt es mehrere Bot-Armeen, aber das Szenario spezifiziert nicht, welche davon das Bot-Deck, das Bot-Zauberdeck oder eine Fertigkeit verwendet, werden diese gemeinsam von den Armeen genutzt.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:198
@@ -613,6 +618,13 @@ msgid ""
 "  Scenarios can override these instructions.\n"
 "\n"
 msgstr ""
+"  \\bigskip\n"
+"  \\bigskip\n"
+"  \\pagetarget{AI Complex Spells}{\\subheader{Abhandeln komplexer Zauber}}\n"
+"  In einigen Kampagnen nutzen Gegner Zauber, deren Effekte nicht mit den Standardregeln von Bot-Magiekarten \\svg{magic} kompatibel sind.\n"
+"  Um diese Effekte vollständig abzuhandeln, sind zusätzliche Erklärungen nötig, wie Bot-Helden diese Zauber ausspielen.\n"
+"  Szenarioregeln können diese Instruktionen überschreiben.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:201
@@ -622,6 +634,9 @@ msgid ""
 "  \\textit{Examples: \\wikilink{spells/fireball}{Fireball,} \\wikilink{spells/chain_lightning}{Chain Lightning.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{Zauber gegen mehrere Ziele}\n"
+"  \\textit{Beispiele: \\wikilink{spells/fireball}{Feuerball} oder \\wikilink{spells/chain_lightning}{Blitzstrahl-Salve}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:207
@@ -634,6 +649,12 @@ msgid ""
 "  If that is also not possible, do not use this Spell -- instead, skip the AI \\svg{magic} card that activated this effect and put it on the bottom of the AI Deck, then shuffle this Spell back to the AI Spell Deck.\n"
 "\n"
 msgstr ""
+"  Wähle mit diesen Zaubern Einheiten mit ein oder zwei benachbarten Einheitenaus der Armee des Spielers. Priorisiere Gruppen mit Einheiten höherer Stufen.\n"
+"  Gibt es mehrere gültige Gruppen, wähle diejenige mit den wenigstens verbliebenen Lebenspunkten (kleinste Differenz zwischen \\svg{health_points} und aktuellem \\svg{damage}).\n"
+"  Gibt es immer noch mehrere Gruppen, kannst du die Gruppe wählen.\n"
+"  Gibt es keine einander angrenzenden Einheiten des Spieler, wähle Einheiten, die nicht angrenzend zu Bot-Einheiten stehen.\n"
+"  Gibt es solche auch nicht, nutze den Zauber nicht: Lege diese Bot-Karte \\svg{magic} stattdessen unter das Bot-Deck und mische diesen Zauber dann zurück in das Bot-Zauberdeck.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:210
@@ -643,6 +664,9 @@ msgid ""
 "  \\textit{Example: \\wikilink{spells/stone_skin}{Stone Skin.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{Soforteffekt-Zauber für Verteidigung}\n"
+"  \\textit{Beispiel: \\wikilink{spells/stone_skin}{Steinhaut}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:214
@@ -653,6 +677,10 @@ msgid ""
 "  In case of a tie in \\svg{defense} value, give preference to the unit of the highest tier, then to the greatest value of \\svg{damage}.\n"
 "\n"
 msgstr ""
+"  Lege solche Karten neben den Kampfspielplan. Lege dann Verteidigungsmarker auf die Bot-Einheit mit der höchsten \\svg{defense}. Für sie gilt der Karteneffekt -- er bleibt dort, bis der Effekt genutzt wurde.\n"
+"  Hat diese Einheit bereits einen Verteidigungsmarker, wähle stattdessen die Einheit mit der nächstniedrigen \\svg{defense}.\n"
+"  Bei Gleichständen der \\svg{defense} priorisiere zuerst die höchste Stufe, danach den größten aktuellen \\svg{damage}.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:217
@@ -662,6 +690,9 @@ msgid ""
 "  \\textit{Example: \\wikilink{spells/cure}{Cure.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{Heil-Zauber}\n"
+"  \\textit{Beispiel: \\wikilink{spells/cure}{Heilung}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:220
@@ -671,6 +702,9 @@ msgid ""
 "  If no AI unit has any \\svg{damage}, put the AI \\svg{magic} card that triggered the Spell at the bottom of the AI Deck, then shuffle this Spell card back to the AI Spell Deck.\n"
 "\n"
 msgstr ""
+"  Entferne den \\svg{damage} von der Bot-Einheit mit dem größten aktuell erlittenen \\svg{damage}. Priorisiere Einheiten höherer Stufen.\n"
+"  Hat keine Bot-Einheit \\svg{damage} erlitten, nutze den Zauber nicht. Lege diese Bot-Karte \\svg{magic} unter das Bot-Deck und mische diesen Zauber zurück in das Bot-Zauberdeck.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:223
@@ -680,6 +714,9 @@ msgid ""
 "  \\textit{Example: \\wikilink{spells/fire_shield}{Fire Shield.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{Zauber, die eine Kampfrunde dauern}\n"
+"  \\textit{Beispiel: \\wikilink{spells/fire_shield}{Feuerschild}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:227
@@ -690,6 +727,10 @@ msgid ""
 "  Multiple delayed Spells may accumulate and be cast during the same activation.\n"
 "\n"
 msgstr ""
+"  Prüfe zunächst die Stufe der Einheit, auf die gezaubert werden soll und zähle, wie viele Einheiten gleicher und höherer Stufe noch auf dem Kampfspielplan befinden.\n"
+"  Falls mehr als die Hälfte dieser Einheiten bereits aktiviert wurde, spiele den Zauber noch nicht jetzt, sondern erst, sobald die erste Bot-Einheit in der nächsten Kampfrunde aktiviert wird. Lege den Zauber bis dahin zur Seite und überspringe in jener Aktivierung das Ziehen einer neuen Bot-Karte.\n"
+"  Mehrere verzögerte Zauber können sich ansammeln und während derselben Aktivierung gespielt werden.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:230
@@ -699,6 +740,9 @@ msgid ""
 "  \\textit{Example: \\wikilink{spells/weakness}{Weakness.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{Zauber, die Angriffe schwächen}\n"
+"  \\textit{Beispiel: \\wikilink{spells/weakness}{Schwäche}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:233
@@ -707,3 +751,5 @@ msgid ""
 "  When drawn, if the AI's activated unit is about to perform an attack that will provoke a Retaliation, cast this Spell on the Retaliating enemy to lower their \\svg{attack}.\n"
 "  If the AI's unit causes no Retaliation, do not cast this Spell; instead, ignore the AI \\svg{magic} card that activated the Spell and put it at the bottom of the AI Deck, then shuffle the Spell card back to the AI Spell Deck."
 msgstr ""
+"  Wenn in der aktuellen Aktivierung eine Bot-Einheit angreift und einen Vergeltungsangriff provoziert, spiele diesen Zauber auf die vergeltende Einheit, um ihr \\svg{attack} zu reduzieren.\n"
+"  Provoziert die Bot-Einheit keinen Vergeltungsangriff, nutze den Zauber nicht. Lege diese Bot-Karte \\svg{magic} unter das Bot-Deck und mische diesen Zauber zurück in das Bot-Zauberdeck."
