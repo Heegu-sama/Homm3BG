@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
 "POT-Creation-Date: 2026-04-07 18:13+0100\n"
-"PO-Revision-Date: 2026-03-02 21:15+0000\n"
+"PO-Revision-Date: 2026-05-01 19:47+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -15,6 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.7\n"
 
 #. type: multicols*
 #: sections/all_map_locations.tex:5 sections/combat.tex:5
@@ -35,22 +36,22 @@ msgstr ""
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/solo_campaigns.tex:5
-#, fuzzy
-#| msgid "\\pagetarget{Town}{\\addsection{Town}{\\skills/artillery.png}}"
 msgid ""
 "\\pagetarget{Campaign}{\\addsection{Solo Campaigns}{\\spells/"
 "town_portal.png}}"
-msgstr "\\pagetarget{Town}{\\addsection{Städte}{\\skills/artillery.png}}"
+msgstr ""
+"\\pagetarget{Campaign}{\\addsection{Kampagnenmodus}{\\spells/"
+"town_portal.png}}"
 
 #. type: index{#1}
 #: sections/solo_campaigns.tex:5
 msgid "Campaign"
-msgstr ""
+msgstr "Kampagne"
 
 #. type: index{#1}
 #: sections/solo_campaigns.tex:5
 msgid "Solo Mode"
-msgstr ""
+msgstr "Solo-Modus"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:9
@@ -58,7 +59,7 @@ msgstr ""
 msgid ""
 "A Campaign is a series of Scenarios designed for solo play.\n"
 "\n"
-msgstr ""
+msgstr "Eine Kampagne ist eine Serie von Szenarien, üblicherweise für Einzelspieler.\n"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:13
@@ -69,6 +70,10 @@ msgid ""
 "Campaigns have unique bonuses that \\textbf{replace} the regular starting bonus from the chosen \\pagelink{Difficulty}{Difficulty}.\n"
 "\n"
 msgstr ""
+"\\subsection*{Ein Szenario beginnen}\n"
+"Zu Beginn jedes Kampagnen-Szenarios (wenn nicht anders angegeben), setze dein Starteinkommen auf den Einkommensleisten auf 10~\\svg{gold}, 0~\\svg{building_materials}, 0~\\svg{valuables}  fest.\n"
+"Außerdem haben Kampagnenszenarien einzigartige Startboni, welche die \\pagelink{Difficulty}{regulären Startboni} \\textbf{ersetzen}.\n"
+"\n"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:15
@@ -77,6 +82,8 @@ msgid ""
 "Prepare AI Enemies: their \\pagelink{AI Heroes}{units} and their \\pagelink{AI Deck}{AI Decks}.\n"
 "\n"
 msgstr ""
+"Bereite die \\pagelink{AI Heroes}{Bot-Einheiten} und ihre \\pagelink{AI Deck}{Bot-Decks} vor.\n"
+"\n"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:18
@@ -86,6 +93,9 @@ msgid ""
 "Although each campaign has its own recommended Hero for whom it is balanced and who is also the protagonist of the story, you are free to play with any other Hero of the same Faction.\n"
 "\n"
 msgstr ""
+"\\subsection*{Verwendung verschiedener Helden}\n"
+"Obwohl jede Kampagne in der Regel für einen bestimmten Helden kreiert wurde, welcher auch Protagonist der Geschichte ist, kannst du frei entscheiden, auch mit einem anderen Helden derselben Fraktion weiter zu spielen.\n"
+"\n"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:25
@@ -99,6 +109,13 @@ msgid ""
 "You cannot have more than 4 \\wikilink{spells/magic_arrow}{Magic Arrow} cards, even if the previous Hero had 5 of them.\n"
 "\n"
 msgstr ""
+"Willst du deinen Helden zwischen zwei Szenarien wechseln oder ein Szenario mit einem anderen Helden wiederholen,\n"
+"ersetze alle Statistikkarten und die Sonderfähigkeit Stufe 1 des alten Helden mit denen des neuen Helden.\n"
+"Falls der vorherige Held \\pagelink{Empowered Statistic}{verstärkte Statistikkarten} besaß,\n"
+"kannst du eine gewöhnliche Statistik des gleichen Typs auch beim neuen Helden entfernen, um die verstärkte Statistik zu behalten.\n"
+"Du kannst von den ``5 Karten (außer Sonderfähigkeiten)'' irgendwelche Karten gegen die Startfähigkeit deines neuen Helden (sofern du sie nicht ohnehin schon hast) oder gegen \\wikilink{spells/magic_arrow}{Magische Pfeile} ersetzen.\n"
+"Du kannst nicht mehr als 4 \\wikilink{spells/magic_arrow}{Magische Pfeile} besitzen, auch wenn dein vorheriger Held 5 besaß..\n"
+"\n"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:28
@@ -108,6 +125,9 @@ msgid ""
 "See \\pagelink{AI Units}{Combat against AI} section.\n"
 "\n"
 msgstr ""
+"\\subsection*{Kampf}\n"
+"Kampfregeln sind im Kapitel \\pagelink{AI Units}{Kämpfe gegen Bots} beschrieben.\n"
+"\n"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:38
@@ -124,6 +144,16 @@ msgid ""
 "Skip \\pagelink{SetupStartingDeck}{steps \\ref*{SetupStartingDeck}--\\ref*{SetupStartingDeckEnd} of Setup} for the next Scenario of the Campaign.\n"
 "\n"
 msgstr ""
+"\\subsection*{Ein Szenario beenden}\n"
+"Nach dem Beenden eines \\textbf{Kampagnen-Szenarios} setze deine Heldenstufe auf I zurück und bereite dein Startdeck für das nächste Szenario wie folgt vor.\n"
+"Es soll enthalten:\n"
+"\\begin{itemize}\n"
+"  \\item alle \\pagelink{Statistic}{Statistikkarten} deines Decks,\n"
+"  \\item die \\pagelink{Specialty}{Sonderfähigkeit Stufe 1} deines Helden,\n"
+"  \\item 5 weitere Karten deiner Wahl aus deinem aktuellen Deck (außer Sonderfähigkeiten).\n"
+"\\end{itemize}\n"
+"Überspringe die \\pagelink{SetupStartingDeck}{Schritte \\ref*{SetupStartingDeck}--\\ref*{SetupStartingDeckEnd} beim Spielaufbau} des nächsten Kampagnen-Szenarios.\n"
+"\n"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:41
@@ -133,6 +163,9 @@ msgid ""
 "If you lose the Scenario, reset the Deck to the same list.\n"
 "\n"
 msgstr ""
+"Notiere dir die Karten in deinem Startdeck.\n"
+"Wenn du das Szenario verlierst, kannst du das Startdeck wieder auf den Anfangsstand zurücksetzen.\n"
+"\n"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:44
@@ -142,16 +175,13 @@ msgid ""
 "\\note{6}{If your Hero is at some point given a Spell, Artifact, or Ability card that is unavailable, \\textbf{Search (3)} the respective card's Deck to get another card in its stead.}\n"
 "\n"
 msgstr ""
+"\\bigskip\n"
+"\\note{6}{Falls dein Held zu irgendeinem Zeitpunkt einen Zauber, ein Artefakt oder eine Fähigkeit erhält, die nicht verfügbar ist, durchsuche (3) das Deck der jeweiligen Karte und erhalte so eine Ersatzkarte.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:50
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\vfill\n"
-#| "\\begin{center}\n"
-#| "  \\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/town_portal.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\begin{center}\n"
 "  \\vfill\n"
@@ -159,8 +189,8 @@ msgid ""
 "  \\vfill\n"
 "\\end{center}"
 msgstr ""
-"\\vfill\n"
 "\\begin{center}\n"
-"  \\transparent{0.2}\\includegraphics[width=0.7\\linewidth]{\\art/town_portal.png}\n"
-"\\end{center}\n"
-"\n"
+"  \\vfill\n"
+"  {\\transparent{0.15}{\\includegraphics[width=0.6\\linewidth]{\\art/orb_of_silt.png}}}\n"
+"  \\vfill\n"
+"\\end{center}"
