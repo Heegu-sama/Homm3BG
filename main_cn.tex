@@ -1,0 +1,37 @@
+% !TeX spellcheck = en_US
+\documentclass[12pt]{article}
+
+% Language setting
+\usepackage[TU]{fontenc}
+\usepackage[english]{babel}
+\usepackage{fontspec}
+
+\def\sections{sections/translated/cn}
+
+\newcommand{\notefont}[0]{}
+\newcommand{\expansionlabelfont}[0]{}
+
+\directlua{
+  luaotfload.add_fallback(
+    "cjkfallback",
+    {
+      "[./assets/fonts/NotoSerifCJKsc/NotoSerifCJKsc-Regular.otf]:mode=node"
+    }
+  )
+}
+
+\AtBeginDocument{%
+  \setmainfont{LiberationSerif}[
+    Path = ./assets/fonts/LiberationSerif/,
+    Extension = .ttf,
+    UprightFont = *-Regular,
+    ItalicFont = *-Italic,
+    BoldFont = *-Bold,
+    BoldItalicFont = *-BoldItalic,
+    RawFeature={fallback=cjkfallback}
+  ]%
+}
+
+\input{metadata.tex}
+
+% TEST_SUBSTRING=我做这件事
