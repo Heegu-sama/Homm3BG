@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-04-02 20:08+0000\n"
+"POT-Creation-Date: 2026-04-22 08:58+0100\n"
 "PO-Revision-Date: 2025-11-11 17:15+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -324,7 +324,28 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/variants.tex:148
+#: sections/variants.tex:138
+#, fuzzy, no-wrap
+#| msgid ""
+#| "[H]\n"
+#| "  \\centering\n"
+#| "  \\begin{subfigure}[t]{0.23\\linewidth}\n"
+#| "    \\centering\n"
+#| "    \\begin{tikzpicture}\n"
+msgid ""
+"  \\bigskip\n"
+"  \\begin{minipage}[b]{0.4\\linewidth}\n"
+"    \\begin{center}\n"
+"      \\begin{tikzpicture}\n"
+msgstr ""
+"[H]\n"
+"  \\centering\n"
+"  \\begin{subfigure}[t]{0.23\\linewidth}\n"
+"    \\centering\n"
+"    \\begin{tikzpicture}\n"
+
+#. type: expansion
+#: sections/variants.tex:151
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\node at (0, 0) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-stronghold.png}};\n"
@@ -336,10 +357,9 @@ msgstr ""
 #| "    \\end{tikzpicture}\n"
 #| "  "
 msgid ""
-"  \\bigskip\n"
-"  \\begin{minipage}[b]{0.4\\linewidth}\n"
-"    \\begin{center}\n"
-"      \\includegraphics[width=0.85\\linewidth]{\\map_locations/creature-bank.png}\\\\\n"
+"        \\draw (1.0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\map_locations/creature_bank_back.png}};\n"
+"        \\draw (-0.4, 0) node {\\includegraphics[width=0.6\\linewidth]{\\map_locations/creature_bank_token.png}};\n"
+"      \\end{tikzpicture}\\\\\n"
 "      \\imagecaption{Creature Bank (Near)}\\\\\n"
 "      \\vspace*{1em}\n"
 "      \\includegraphics[width=0.45\\linewidth]{\\images/stack-token.png}\\\\\n"
@@ -361,7 +381,7 @@ msgstr ""
 "  "
 
 #. type: expansion
-#: sections/variants.tex:155
+#: sections/variants.tex:158
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/mmback.png}};\n"
@@ -385,7 +405,7 @@ msgstr ""
 "  \\end{subfigure}"
 
 #. type: expansion
-#: sections/variants.tex:163
+#: sections/variants.tex:166
 #, no-wrap
 msgid ""
 "  \\subsection*{Placing Creature Bank Tokens}\n"
@@ -399,7 +419,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/variants.tex:169
+#: sections/variants.tex:172
 #, no-wrap
 msgid ""
 "  \\subsection*{Visiting a Creature Bank Location}\n"
@@ -411,7 +431,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/variants.tex:173
+#: sections/variants.tex:176
 #, no-wrap
 msgid ""
 "  \\subsection*{Combat in a Creature Bank}\n"
@@ -421,7 +441,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/variants.tex:176
+#: sections/variants.tex:179
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\vfill\n"
@@ -437,7 +457,7 @@ msgstr ""
 "  \\begin{scriptsize}\n"
 
 #. type: expansion
-#: sections/variants.tex:193
+#: sections/variants.tex:196
 #, no-wrap
 msgid ""
 "        \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\images/creature_bank_combat_board.png}}};\n"
@@ -460,7 +480,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/variants.tex:202
+#: sections/variants.tex:205
 #, no-wrap
 msgid ""
 "  Based on the Scenario's Difficulty Level, take a number of \\pagelink{Stack Tokens}{Stack Tokens} and place them randomly on up to four different Creature Bank unit cards:\n"
@@ -474,7 +494,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/variants.tex:209
+#: sections/variants.tex:212
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -485,7 +505,18 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/variants.tex:214
+#: sections/variants.tex:217
+#, no-wrap
+msgid ""
+"  \\subsection*{Creature Bank Units}\n"
+"  Creature Bank Unit cards do not have a tier (\\svg{bronze}\\svg{silver}\\svg{golden}\\svg{azure}).\n"
+"  As a result, any effects that depend on tiers (e.g., \\wikilink{spells/berserk}{Berserk Spell}) do not apply to them.\n"
+"  In addition, they follow special rules for \\pagelink{AI Units}{AI targeting}.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/variants.tex:223
 #, no-wrap
 msgid ""
 "  \\subsection*{\\pagetarget{Stack Tokens}{Stack Tokens}}\\index{Stacked Units}\n"
@@ -496,7 +527,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/variants.tex:221
+#: sections/variants.tex:230
 #, no-wrap
 msgid ""
 "  \\begin{multicols}{4}\n"
@@ -509,7 +540,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/variants.tex:228
+#: sections/variants.tex:238
 #, no-wrap
 msgid ""
 "  \\subsection*{Gained Stacked Units}\n"
@@ -517,40 +548,12 @@ msgid ""
 "  Track which of your units are Stacked by whatever means is comfortable, e.g.~by remembering it or by placing a Token or Cube on it.\n"
 "  Whenever your Stacked unit goes to a Combat, draw a random Stack Token and place it on that unit.\n"
 "  After Combat, note whether the unit is still Stacked (for future Combats), then return the Stack Token to the pile.\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/variants.tex:232
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\vfill\n"
-#| "\\begin{center}\n"
-#| "  \\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/town_portal.png}\n"
-#| "\\end{center}\n"
-#| "\n"
-msgid ""
-"  \\begin{center}\n"
-"    \\transparent{0.2}\\includegraphics[width=\\iftoggle{printable}{0.9}{0.8}\\linewidth]{\\art/frost_ring.png}\n"
-"  \\end{center}\n"
-"\n"
-msgstr ""
-"\\vfill\n"
-"\\begin{center}\n"
-"  \\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/town_portal.png}\n"
-"\\end{center}\n"
-"\n"
-
-#. type: multicols*
-#: sections/variants.tex:234
-#, no-wrap
-msgid ""
 "  \\end{expansion}\n"
 "\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/variants.tex:240
+#: sections/variants.tex:244
 #, no-wrap
 msgid ""
 "  \\columnbreak\n"
@@ -562,7 +565,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/variants.tex:245
+#: sections/variants.tex:249
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{center}\n"
@@ -582,7 +585,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/variants.tex:251
+#: sections/variants.tex:255
 #, no-wrap
 msgid ""
 "  \\vspace{2em}\n"
@@ -594,7 +597,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/variants.tex:257
+#: sections/variants.tex:261
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{center}\n"
@@ -613,43 +616,104 @@ msgstr ""
 "\n"
 
 #. type: table
-#: sections/variants.tex:290
-#, fuzzy, no-wrap
-#| msgid "\\hommtable{38}{ \\centering \\textbf{Optional Rules Table}\\\\ \\small { \\iftoggle{noartbackground}{}{\\color{white}} You may modify the rules to increase or decrease the game's difficulty.\\\\ } \\bigskip \\begin{tabularx}{\\linewidth}{>{\\hsize=0.3\\hsize\\linewidth=\\hsize}X >{\\hsize=1.667\\hsize\\linewidth=\\hsize}X} \\darkcell[1.5]{\\iftoggle{noartbackground}{}{\\color{white}}Game Difficulty Levels} & \\darkcell[1.5]{Change to the default rules} \\\\ \\darkcell[1.2]{Increase} & \\lightcell[1.2]{Towns do not produce resources when \\textbf{Flagged}, but players may use the buildings of a captured Town.} \\\\ \\darkcell[0.8]{Increase} & \\lightcell[0.8]{You may not reroll your dice.} \\\\ \\darkcell[0.8]{Increase} & \\lightcell[0.8]{All Treasure and Resource dice only give 1 resource.} \\\\ \\darkcell[0.8]{Increase} & \\lightcell[0.8]{No starting bonus.} \\\\ \\darkcell[0.8]{Decrease} & \\lightcell[0.8]{You start the game with a Secondary Hero.} \\\\ \\darkcell[0.8]{Decrease} & \\lightcell[0.8]{Every Unit deal at least 1 \\svg{damage-yellow} during an attack.} \\\\ \\darkcell[0.8]{Decrease} & \\lightcell[0.8]{All Mines and Settlements provide double income.} \\\\ \\darkcell[1.2]{Decrease} & \\lightcell[1.2]{You may exchange your resources at any time, the Trading Post becomes \\textbf{Visitable} and draws you 1 Card from the Artifact Deck.} \\\\ \\darkcell[0.8]{Decrease} & \\lightcell[0.8]{Extending Combat no longer costs any MP.} \\\\ \\darkcell[0.8]{Variant} & \\lightcell[0.8]{The Attack Die no longer affects damage (but can still interact with abilities).} \\\\ \\darkcell[0.8]{Variant} & \\lightcell[0.8]{An Astrologers Proclaim Card is also drawn at the start of the Resource Rounds.} \\\\ \\darkcell[0.8]{Variant} & \\lightcell[0.8]{Astrologers Proclaim Cards are no longer drawn.} \\\\ \\darkcell[0.8]{Variant} & \\lightcell[0.8]{Black Cubes on all \\textbf{Visitable} Fields are removed on \\nth{4}, \\nth{8}, and \\nth{12} Rounds.} \\\\ \\darkcell[1.2]{Variant} & \\lightcell[1.2]{The Cards that would normally go to your hand now go immediately to your discard pile instead.} \\\\ \\end{tabularx} }"
+#: sections/variants.tex:294
+#, fuzzy
+#| msgid ""
+#| "\\hommtable{38}{ \\centering \\textbf{Optional Rules Table}\\\\ \\small "
+#| "{ \\iftoggle{noartbackground}{}{\\color{white}} You may modify the rules "
+#| "to increase or decrease the game's difficulty.\\\\ } \\bigskip "
+#| "\\begin{tabularx}{\\linewidth}{>{\\hsize=0.3\\hsize\\linewidth=\\hsize}X "
+#| ">{\\hsize=1.667\\hsize\\linewidth=\\hsize}X} \\darkcell[1.5]"
+#| "{\\iftoggle{noartbackground}{}{\\color{white}}Game Difficulty Levels} & "
+#| "\\darkcell[1.5]{Change to the default rules} \\\\ \\darkcell[1.2]"
+#| "{Increase} & \\lightcell[1.2]{Towns do not produce resources when "
+#| "\\textbf{Flagged}, but players may use the buildings of a captured Town.} "
+#| "\\\\ \\darkcell[0.8]{Increase} & \\lightcell[0.8]{You may not reroll your "
+#| "dice.} \\\\ \\darkcell[0.8]{Increase} & \\lightcell[0.8]{All Treasure and "
+#| "Resource dice only give 1 resource.} \\\\ \\darkcell[0.8]{Increase} & "
+#| "\\lightcell[0.8]{No starting bonus.} \\\\ \\darkcell[0.8]{Decrease} & "
+#| "\\lightcell[0.8]{You start the game with a Secondary Hero.} \\\\ "
+#| "\\darkcell[0.8]{Decrease} & \\lightcell[0.8]{Every Unit deal at least 1 "
+#| "\\svg{damage-yellow} during an attack.} \\\\ \\darkcell[0.8]{Decrease} & "
+#| "\\lightcell[0.8]{All Mines and Settlements provide double income.} \\\\ "
+#| "\\darkcell[1.2]{Decrease} & \\lightcell[1.2]{You may exchange your "
+#| "resources at any time, the Trading Post becomes \\textbf{Visitable} and "
+#| "draws you 1 Card from the Artifact Deck.} \\\\ \\darkcell[0.8]{Decrease} "
+#| "& \\lightcell[0.8]{Extending Combat no longer costs any MP.} \\\\ "
+#| "\\darkcell[0.8]{Variant} & \\lightcell[0.8]{The Attack Die no longer "
+#| "affects damage (but can still interact with abilities).} \\\\ "
+#| "\\darkcell[0.8]{Variant} & \\lightcell[0.8]{An Astrologers Proclaim Card "
+#| "is also drawn at the start of the Resource Rounds.} \\\\ \\darkcell[0.8]"
+#| "{Variant} & \\lightcell[0.8]{Astrologers Proclaim Cards are no longer "
+#| "drawn.} \\\\ \\darkcell[0.8]{Variant} & \\lightcell[0.8]{Black Cubes on "
+#| "all \\textbf{Visitable} Fields are removed on \\nth{4}, \\nth{8}, and "
+#| "\\nth{12} Rounds.} \\\\ \\darkcell[1.2]{Variant} & \\lightcell[1.2]{The "
+#| "Cards that would normally go to your hand now go immediately to your "
+#| "discard pile instead.} \\\\ \\end{tabularx} }"
 msgid ""
-"[H]\n"
-"\\hommtable{38}{\n"
-"  \\centering\n"
-"  \\textbf{Optional Rules Table}\\\\\n"
-"  \\phantomsection\\addcontentsline{toc}{subsection}{Optional Rules Table}%\n"
-"  \\small\n"
-"  {\n"
-"    \\iftoggle{noartbackground}{}{\\color{white}}\n"
-"    You may modify the rules to increase or decrease the game's difficulty.\\\\\n"
-"  }\n"
-"  \\bigskip\n"
-"  \\begin{tabularx}{\\linewidth}{>{\\hsize=0.3\\hsize\\linewidth=\\hsize}X\n"
-"                               >{\\hsize=1.667\\hsize\\linewidth=\\hsize}X}\n"
-"     \\darkcell[1.5]{\\iftoggle{noartbackground}{}{\\color{white}}Game Difficulty Levels} & \\darkcell[1.5]{Change to the default rules} \\\\\n"
-"     \\darkcell[1.2]{Increase} & \\lightcell[1.2]{Towns do not produce resources when \\textbf{flagged}, but players may use the buildings of a captured Town.} \\\\\n"
-"     \\darkcell[0.8]{Increase} & \\lightcell[0.8]{You may not reroll your dice.} \\\\\n"
-"     \\darkcell[0.8]{Increase} & \\lightcell[0.8]{All Treasure and Resource dice only give 1 resource.} \\\\\n"
-"     \\darkcell[0.8]{Increase} & \\lightcell[0.8]{No starting bonus.} \\\\\n"
-"     \\darkcell[0.8]{Decrease} & \\lightcell[0.8]{You start the game with a Secondary Hero.} \\\\\n"
-"     \\darkcell[0.8]{Decrease} & \\lightcell[0.8]{Every unit deals at least 1 \\svg{damage-yellow} during an attack.} \\\\\n"
-"     \\darkcell[0.8]{Decrease} & \\lightcell[0.8]{All Mines and Settlements provide double income.} \\\\\n"
-"     \\darkcell[1.2]{Decrease} & \\lightcell[1.2]{You may exchange your resources at any time, the Trading Post becomes \\textbf{Visitable} and draws you 1 card from the Artifact Deck.} \\\\\n"
-"     \\darkcell[0.8]{Decrease} & \\lightcell[0.8]{Extending Combat no longer costs any MP.} \\\\\n"
-"     \\darkcell[0.8]{Variant} & \\lightcell[0.8]{The Attack Die no longer affects damage (but can still interact with abilities).} \\\\\n"
-"     \\darkcell[0.8]{Variant} & \\lightcell[0.8]{An Astrologers Proclaim card is also drawn at the start of the Resource Rounds.} \\\\\n"
-"     \\darkcell[0.8]{Variant} & \\lightcell[0.8]{Astrologers Proclaim cards are no longer drawn.} \\\\\n"
-"     \\darkcell[0.8]{Variant} & \\lightcell[0.8]{Black Cubes on all \\textbf{Visitable} Fields are removed on \\nth{4}, \\nth{8}, and \\nth{12} Rounds.} \\\\\n"
-"     \\darkcell[1.2]{Variant} & \\lightcell[1.2]{The cards that would normally go to your hand now go immediately to your discard pile instead.} \\\\\n"
-"  \\end{tabularx}\n"
-"}"
-msgstr "\\hommtable{38}{ \\centering \\textbf{Tabulka Volitelných Pravidel}\\\\ \\small { \\iftoggle{noartbackground}{}{\\color{white}} Můžete upravit pravidla pro zvýšení nebo snížení obtížnosti hry.\\\\ } \\bigskip \\begin{tabularx}{\\linewidth}{>{\\hsize=0.3\\hsize\\linewidth=\\hsize}X >{\\hsize=1.667\\hsize\\linewidth=\\hsize}X} \\darkcell[1.5]{\\iftoggle{noartbackground}{}{\\color{white}}Obtížnost\\\\Hry} & \\darkcell[1.5]{Změna výchozích pravidel} \\\\ \\darkcell[1.2]{Zvýšení} & \\lightcell[1.2]{Města neprodukují suroviny při \\textbf{Obsazení}, ale hráči mohou využívat budovy dobytého Města.} \\\\ \\darkcell[0.8]{Zvýšení} & \\lightcell[0.8]{Nemůžete znovu hodit kostkami.} \\\\ \\darkcell[0.8]{Zvýšení} & \\lightcell[0.8]{Všechny kostky Pokladů a Surovin poskytují pouze 1 surovinu.} \\\\ \\darkcell[0.8]{Zvýšení} & \\lightcell[0.8]{Žádný počáteční bonus.} \\\\ \\darkcell[0.8]{Snížení} & \\lightcell[0.8]{Začínáte hru se Sekundárním Hrdinou.} \\\\ \\darkcell[0.8]{Snížení} & \\lightcell[0.8]{Každá jednotka způsobí při útoku alespoň 1 \\svg{damage-yellow}.} \\\\ \\darkcell[0.8]{Snížení} & \\lightcell[0.8]{Všechny Doly a Osady poskytují dvojnásobný příjem.} \\\\ \\darkcell[1.2]{Snížení} & \\lightcell[1.2]{Můžete kdykoliv směňovat své suroviny; Tržiště se stává \\textbf{Navštívitelné} a dobíráte 1 kartu z Balíčku Artefaktů.} \\\\ \\darkcell[0.8]{Snížení} & \\lightcell[0.8]{Prodloužení Souboje již nestojí žádné BP.} \\\\ \\darkcell[0.8]{Varianta} & \\lightcell[0.8]{Kostka Útoku již neovlivňuje poškození (ale dovednosti stále ano).} \\\\ \\darkcell[0.8]{Varianta} & \\lightcell[0.8]{Karta Hvězdářská Vyhláška je také otáčena na začátku kol Surovin.} \\\\ \\darkcell[0.8]{Varianta} & \\lightcell[0.8]{Karty Hvězdářských Vyhlášek již nejsou otáčeny.} \\\\ \\darkcell[1.2]{Varianta} & \\lightcell[1.2]{Černé Kostičky na všech \\textbf{Navštívitelných} polích jsou odstraněny ve 4., 8. a 12. kole.} \\\\ \\darkcell[1.2]{Varianta} & \\lightcell[1.2]{Karty, které by normálně šly do vaší ruky, jdou místo toho okamžitě do vaší Odhazovací Hromádky.} \\\\ \\end{tabularx} }"
+"[H] \\hommtable{38}{ \\centering \\textbf{Optional Rules Table}\\\\ "
+"\\phantomsection\\addcontentsline{toc}{subsection}{Optional Rules Table}"
+"\\small { \\iftoggle{noartbackground}{}{\\color{white}} You may modify the "
+"rules to increase or decrease the game's difficulty.\\\\ } \\bigskip "
+"\\begin{tabularx}{\\linewidth}{>{\\hsize=0.3\\hsize\\linewidth=\\hsize}X "
+">{\\hsize=1.667\\hsize\\linewidth=\\hsize}X} \\darkcell[1.5]"
+"{\\iftoggle{noartbackground}{}{\\color{white}}Game Difficulty Levels} & "
+"\\darkcell[1.5]{Change to the default rules} \\\\ \\darkcell[1.2]{Increase} "
+"& \\lightcell[1.2]{Towns do not produce resources when \\textbf{flagged}, "
+"but players may use the buildings of a captured Town.} \\\\ \\darkcell[0.8]"
+"{Increase} & \\lightcell[0.8]{You may not reroll your dice.} \\\\ "
+"\\darkcell[0.8]{Increase} & \\lightcell[0.8]{All Treasure and Resource dice "
+"only give 1 resource.} \\\\ \\darkcell[0.8]{Increase} & \\lightcell[0.8]{No "
+"starting bonus.} \\\\ \\darkcell[0.8]{Decrease} & \\lightcell[0.8]{You start "
+"the game with a Secondary Hero.} \\\\ \\darkcell[0.8]{Decrease} & "
+"\\lightcell[0.8]{Every unit deals at least 1 \\svg{damage-yellow} during an "
+"attack.} \\\\ \\darkcell[0.8]{Decrease} & \\lightcell[0.8]{All Mines and "
+"Settlements provide double income.} \\\\ \\darkcell[1.2]{Decrease} & "
+"\\lightcell[1.2]{You may exchange your resources at any time, the Trading "
+"Post becomes \\textbf{Visitable} and draws you 1 card from the Artifact "
+"Deck.} \\\\ \\darkcell[0.8]{Decrease} & \\lightcell[0.8]{Extending Combat no "
+"longer costs any MP.} \\\\ \\darkcell[0.8]{Variant} & \\lightcell[0.8]{The "
+"Attack Die no longer affects damage (but can still interact with "
+"abilities).} \\\\ \\darkcell[0.8]{Variant} & \\lightcell[0.8]{An Astrologers "
+"Proclaim card is also drawn at the start of the Resource Rounds.} \\\\ "
+"\\darkcell[0.8]{Variant} & \\lightcell[0.8]{Astrologers Proclaim cards are "
+"no longer drawn.} \\\\ \\darkcell[0.8]{Variant} & \\lightcell[0.8]{Black "
+"Cubes on all \\textbf{Visitable} Fields are removed on \\nth{4}, \\nth{8}, "
+"and \\nth{12} Rounds.} \\\\ \\darkcell[1.2]{Variant} & \\lightcell[1.2]{The "
+"cards that would normally go to your hand now go immediately to your discard "
+"pile instead.} \\\\ \\end{tabularx} }"
+msgstr ""
+"\\hommtable{38}{ \\centering \\textbf{Tabulka Volitelných Pravidel}\\\\ "
+"\\small { \\iftoggle{noartbackground}{}{\\color{white}} Můžete upravit "
+"pravidla pro zvýšení nebo snížení obtížnosti hry.\\\\ } \\bigskip "
+"\\begin{tabularx}{\\linewidth}{>{\\hsize=0.3\\hsize\\linewidth=\\hsize}X "
+">{\\hsize=1.667\\hsize\\linewidth=\\hsize}X} \\darkcell[1.5]"
+"{\\iftoggle{noartbackground}{}{\\color{white}}Obtížnost\\\\Hry} & "
+"\\darkcell[1.5]{Změna výchozích pravidel} \\\\ \\darkcell[1.2]{Zvýšení} & "
+"\\lightcell[1.2]{Města neprodukují suroviny při \\textbf{Obsazení}, ale "
+"hráči mohou využívat budovy dobytého Města.} \\\\ \\darkcell[0.8]{Zvýšení} & "
+"\\lightcell[0.8]{Nemůžete znovu hodit kostkami.} \\\\ \\darkcell[0.8]"
+"{Zvýšení} & \\lightcell[0.8]{Všechny kostky Pokladů a Surovin poskytují "
+"pouze 1 surovinu.} \\\\ \\darkcell[0.8]{Zvýšení} & \\lightcell[0.8]{Žádný "
+"počáteční bonus.} \\\\ \\darkcell[0.8]{Snížení} & \\lightcell[0.8]{Začínáte "
+"hru se Sekundárním Hrdinou.} \\\\ \\darkcell[0.8]{Snížení} & \\lightcell[0.8]"
+"{Každá jednotka způsobí při útoku alespoň 1 \\svg{damage-yellow}.} \\\\ "
+"\\darkcell[0.8]{Snížení} & \\lightcell[0.8]{Všechny Doly a Osady poskytují "
+"dvojnásobný příjem.} \\\\ \\darkcell[1.2]{Snížení} & \\lightcell[1.2]{Můžete "
+"kdykoliv směňovat své suroviny; Tržiště se stává \\textbf{Navštívitelné} a "
+"dobíráte 1 kartu z Balíčku Artefaktů.} \\\\ \\darkcell[0.8]{Snížení} & "
+"\\lightcell[0.8]{Prodloužení Souboje již nestojí žádné BP.} \\\\ "
+"\\darkcell[0.8]{Varianta} & \\lightcell[0.8]{Kostka Útoku již neovlivňuje "
+"poškození (ale dovednosti stále ano).} \\\\ \\darkcell[0.8]{Varianta} & "
+"\\lightcell[0.8]{Karta Hvězdářská Vyhláška je také otáčena na začátku kol "
+"Surovin.} \\\\ \\darkcell[0.8]{Varianta} & \\lightcell[0.8]{Karty "
+"Hvězdářských Vyhlášek již nejsou otáčeny.} \\\\ \\darkcell[1.2]{Varianta} & "
+"\\lightcell[1.2]{Černé Kostičky na všech \\textbf{Navštívitelných} polích "
+"jsou odstraněny ve 4., 8. a 12. kole.} \\\\ \\darkcell[1.2]{Varianta} & "
+"\\lightcell[1.2]{Karty, které by normálně šly do vaší ruky, jdou místo toho "
+"okamžitě do vaší Odhazovací Hromádky.} \\\\ \\end{tabularx} }"
 
 #. type: Plain text
-#: sections/variants.tex:291
+#: sections/variants.tex:295
 msgid "\\framedimage[\\linewidth]{\\art/devil.jpg}"
 msgstr "\\framedimage[\\linewidth]{\\art/devil.jpg}"

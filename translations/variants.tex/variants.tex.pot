@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-04-02 20:08+0000\n"
+"POT-Creation-Date: 2026-04-22 08:58+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -306,13 +306,22 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/variants.tex:148
+#: sections/variants.tex:138
 #, no-wrap
 msgid ""
 "  \\bigskip\n"
 "  \\begin{minipage}[b]{0.4\\linewidth}\n"
 "    \\begin{center}\n"
-"      \\includegraphics[width=0.85\\linewidth]{\\map_locations/creature-bank.png}\\\\\n"
+"      \\begin{tikzpicture}\n"
+msgstr ""
+
+#. type: expansion
+#: sections/variants.tex:151
+#, no-wrap
+msgid ""
+"        \\draw (1.0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\map_locations/creature_bank_back.png}};\n"
+"        \\draw (-0.4, 0) node {\\includegraphics[width=0.6\\linewidth]{\\map_locations/creature_bank_token.png}};\n"
+"      \\end{tikzpicture}\\\\\n"
 "      \\imagecaption{Creature Bank (Near)}\\\\\n"
 "      \\vspace*{1em}\n"
 "      \\includegraphics[width=0.45\\linewidth]{\\images/stack-token.png}\\\\\n"
@@ -326,7 +335,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/variants.tex:155
+#: sections/variants.tex:158
 #, no-wrap
 msgid ""
 "        \\draw (0, 0) node {\\includegraphics[width=0.7\\linewidth]{\\cards/creature-bank-back.png}};\n"
@@ -339,7 +348,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/variants.tex:163
+#: sections/variants.tex:166
 #, no-wrap
 msgid ""
 "  \\subsection*{Placing Creature Bank Tokens}\n"
@@ -353,7 +362,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/variants.tex:169
+#: sections/variants.tex:172
 #, no-wrap
 msgid ""
 "  \\subsection*{Visiting a Creature Bank Location}\n"
@@ -365,7 +374,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/variants.tex:173
+#: sections/variants.tex:176
 #, no-wrap
 msgid ""
 "  \\subsection*{Combat in a Creature Bank}\n"
@@ -375,7 +384,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/variants.tex:176
+#: sections/variants.tex:179
 #, no-wrap
 msgid ""
 "    \\bigskip\n"
@@ -384,7 +393,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/variants.tex:193
+#: sections/variants.tex:196
 #, no-wrap
 msgid ""
 "        \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\images/creature_bank_combat_board.png}}};\n"
@@ -407,7 +416,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/variants.tex:202
+#: sections/variants.tex:205
 #, no-wrap
 msgid ""
 "  Based on the Scenario's Difficulty Level, take a number of \\pagelink{Stack Tokens}{Stack Tokens} and place them randomly on up to four different Creature Bank unit cards:\n"
@@ -421,7 +430,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/variants.tex:209
+#: sections/variants.tex:212
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -432,7 +441,18 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/variants.tex:214
+#: sections/variants.tex:217
+#, no-wrap
+msgid ""
+"  \\subsection*{Creature Bank Units}\n"
+"  Creature Bank Unit cards do not have a tier (\\svg{bronze}\\svg{silver}\\svg{golden}\\svg{azure}).\n"
+"  As a result, any effects that depend on tiers (e.g., \\wikilink{spells/berserk}{Berserk Spell}) do not apply to them.\n"
+"  In addition, they follow special rules for \\pagelink{AI Units}{AI targeting}.\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/variants.tex:223
 #, no-wrap
 msgid ""
 "  \\subsection*{\\pagetarget{Stack Tokens}{Stack Tokens}}\\index{Stacked Units}\n"
@@ -443,7 +463,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/variants.tex:221
+#: sections/variants.tex:230
 #, no-wrap
 msgid ""
 "  \\begin{multicols}{4}\n"
@@ -456,7 +476,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/variants.tex:228
+#: sections/variants.tex:238
 #, no-wrap
 msgid ""
 "  \\subsection*{Gained Stacked Units}\n"
@@ -464,29 +484,12 @@ msgid ""
 "  Track which of your units are Stacked by whatever means is comfortable, e.g.~by remembering it or by placing a Token or Cube on it.\n"
 "  Whenever your Stacked unit goes to a Combat, draw a random Stack Token and place it on that unit.\n"
 "  After Combat, note whether the unit is still Stacked (for future Combats), then return the Stack Token to the pile.\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/variants.tex:232
-#, no-wrap
-msgid ""
-"  \\begin{center}\n"
-"    \\transparent{0.2}\\includegraphics[width=\\iftoggle{printable}{0.9}{0.8}\\linewidth]{\\art/frost_ring.png}\n"
-"  \\end{center}\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/variants.tex:234
-#, no-wrap
-msgid ""
 "  \\end{expansion}\n"
 "\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/variants.tex:240
+#: sections/variants.tex:244
 #, no-wrap
 msgid ""
 "  \\columnbreak\n"
@@ -498,7 +501,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/variants.tex:245
+#: sections/variants.tex:249
 #, no-wrap
 msgid ""
 "  \\begin{center}\n"
@@ -509,7 +512,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/variants.tex:251
+#: sections/variants.tex:255
 #, no-wrap
 msgid ""
 "  \\vspace{2em}\n"
@@ -521,7 +524,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/variants.tex:257
+#: sections/variants.tex:261
 #, no-wrap
 msgid ""
 "  \\begin{center}\n"
@@ -531,8 +534,7 @@ msgid ""
 msgstr ""
 
 #. type: table
-#: sections/variants.tex:290
-#, no-wrap
+#: sections/variants.tex:294
 msgid ""
 "[H]\n"
 "\\hommtable{38}{\n"
@@ -567,6 +569,6 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/variants.tex:291
+#: sections/variants.tex:295
 msgid "\\framedimage[\\linewidth]{\\art/devil.jpg}"
 msgstr ""
