@@ -269,8 +269,7 @@ This repository serves both as a means to preserve the work, but also for others
 Please discuss any and all factual errors, bad language or other errors you've found.
 You can do this by opening issues/PRs with suggestions, writing in the BGG thread, or joining us [on Discord](https://discord.gg/Y4uM9pPWF6).
 
-You can help translate this project using [Weblate](https://weblate.org/en/).
-Click the image to get started:
+Translation progress reported by [Weblate](https://weblate.org/en/).
 
 <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
 <picture>
@@ -375,8 +374,6 @@ After setting it in options, press the `Build & View` ▶️ (F5) button on the 
 
 <details>
 <summary>Click to see details</summary>
-
-**We have a guide on [using AI for translations](tools/translation-ai-prompts/README.md).**
 
 Make sure you have [`po4a`](https://github.com/mquinson/po4a) installed.
 
