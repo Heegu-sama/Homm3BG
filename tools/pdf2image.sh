@@ -76,6 +76,12 @@ while [[ "$1" != "" ]]; do
   shift
 done
 
+# Validate arguments
+if [[ -n "$LANGUAGE" && -n "$custom_pdf" ]]; then
+  echo "Error: <language> and -f/--file options are mutually exclusive."
+  help
+fi
+
 if [[ -z "$range" ]]; then
   echo "Error: You must specify a page range with -r/--range option."
   help
