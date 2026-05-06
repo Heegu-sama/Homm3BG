@@ -5,6 +5,13 @@
 - Em dash: `—`
 - Quotation marks: `,,word''`
 - Names of buildings, factions, heroes, abilities, spells, creatures, and artifacts are capitalized
+- Contrary to the original, the second argument of the `\wikilink{...}{...}` command, when it ends with punctuation, this punctuation should go outside.
+  For instance:
+  ```po
+  msgid "When casting the \\wikilink{spells/quicksand}{\\textbf{Quicksand Spell},} depending on the \\svg{empower} used..."
+  msgstr "Rzucając Zaklęcie \\wikilink{spells/quicksand}{\\textbf{Ruchomych Piasków}}, w zależności od użytego \\svg{empower}..."
+
+  ```
 
 ## Factions
 
@@ -31,20 +38,20 @@
 | dendroids | enty |
 | dread knights | rycerze grozy |
 | familiars | chowańce |
-| few | kilka |
+| few | garstka |
 | griffins | gryfy |
-| hp | pż |
+| hp | pz |
 | liches | lisze |
-| marksmen | łucznicy |
-| neutral units | neutralne jednostki |
-| pack | stado |
-| recruited or reinforced | zwerbowane lub wzmocnione |
-| reinforce | wzmocnij |
+| marksmen | kusznicy |
+| neutral units | jednostki neutralne |
+| pack | grupa |
+| recruited or reinforced | zrekrutowane lub wzmocnione |
+| reinforce | wzmocnić |
 | reinforced | wzmocnione |
-| summoned elementals | przywołane żywioły |
+| summoned elementals | przyzywane żywiołaki |
 | unit cards | karty jednostek |
 | units | jednostki |
-| zealots | zeloci |
+| zealots | kapłani |
 
 ## Heroes
 
@@ -52,10 +59,10 @@
 |---|---|
 | ability | zdolność |
 | experience | doświadczenie |
-| expert effects | efekty eksperta |
+| expert effects | efekty mistrzowskie |
 | hero | bohater |
 | heroes | bohaterowie |
-| level tracker | śledzenie poziomu |
+| level tracker | tor poziomów |
 | level | poziom |
 | main hero | bohater główny |
 | secondary hero | bohater pomocniczy |
@@ -65,19 +72,19 @@
 
 | English | Polish |
 |---|---|
-| center field | centralne pole |
-| central map tile | centralna płytka mapy |
-| dragon utopia | utopia smoków |
-| far map tile | daleka płytka mapy |
+| center field | środkowe pole |
+| central map tile | centralny kafelek mapy |
+| dragon utopia | smocza utopia |
+| far map tile | daleki kafelek mapy |
 | field | pole |
 | locations | lokacje |
-| map tile | płytka mapy |
-| near map tile | bliska płytka mapy |
+| map tile | kafelek mapy |
+| near map tile | bliski kafelek mapy |
 | random town | losowe miasto |
-| revisitable | powtarzalne |
+| revisitable | wielorazowe |
 | settlement | osada |
-| starting (i) map tile | startowa płytka mapy (i) |
-| tile | płytka |
+| starting (i) map tile | początkowy kafelek mapy (i) |
+| tile | kafelek |
 | trading post | punkt handlowy |
 | water wheel | młyn wodny |
 
@@ -85,8 +92,8 @@
 
 | English | Polish |
 |---|---|
-| building materials | materiały budowlane |
-| resource production tracker | śledzenie produkcji zasobów |
+| building materials | budulce |
+| resource production tracker | tor przychodu |
 | resources | zasoby |
 | treasure die | kość skarbów |
 | valuables | kosztowności |
@@ -133,12 +140,12 @@
 
 | English | Polish |
 |---|---|
-| arrow tower | wieża strzelnicza |
-| back line | tylna linia |
+| arrow tower | wieża łucznicza |
+| back line | druga linia |
 | combat board | plansza walki |
 | combat | walka |
 | damage | obrażenia |
-| front line | przednia linia |
+| front line | pierwsza linia |
 | winning combat | wygranie walki |
 
 ## Battlefield
@@ -147,16 +154,16 @@
 |---|---|
 | adventure mode | tryb przygody |
 | skirmish mode | tryb potyczki |
-| final combat | ostateczna walka |
-| combat power level | poziom siły bojowej |
+| final combat | finałowa walka |
+| combat power level | siła bojowa |
 
 ## Keywords
 
 | English | Polish |
 |---|---|
-| clone token | żeton klona |
-| force field token | żeton pola siłowego |
-| land mine token | żeton miny lądowej |
+| clone token | żeton klonowania |
+| force field token | żeton pola mocy |
+| land mine token | żeton pola minowego |
 | quicksand token | żeton ruchomych piasków |
 
 ## Other
@@ -169,5 +176,5 @@
 | map setup | przygotowanie mapy |
 | player elimination | eliminacja gracza |
 | player setup | przygotowanie gracza |
-| round tracker | śledzenie rund |
+| round tracker | tor rund |
 | war machine | machina wojenna |
