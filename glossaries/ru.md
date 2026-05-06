@@ -13,40 +13,40 @@
 
 | English | Russian |
 |---|---|
-| castle | ... |
-| conflux | ... |
-| cove | ... |
-| dungeon | ... |
-| fortress | ... |
-| inferno | ... |
-| necropolis | ... |
-| rampart | ... |
-| stronghold | ... |
-| tower | ... |
+| castle | Замок |
+| conflux | Сопряжение |
+| cove | Причал |
+| dungeon | Темница |
+| fortress | Крепость |
+| inferno | Инферно |
+| necropolis | Некрополис |
+| rampart | Оплот |
+| stronghold | Цитадель |
+| tower | Башня |
 
 ## Units
 
 | English | Russian |
 |---|---|
 | boars | ... |
-| champions | ... |
-| deck of unit cards | ... |
+| champions | Чемпионы |
+| deck of unit cards | колода с картами отрядов |
 | dendroids | ... |
 | dread knights | ... |
 | familiars | ... |
 | few | «few» |
-| griffins | ... |
+| griffins | Грифоны |
 | hp | HP |
 | liches | ... |
 | marksmen | ... |
-| neutral units | ... |
+| neutral units | нейтральные отряды |
 | pack | «pack» |
 | recruited or reinforced | ... |
-| reinforce | ... |
+| reinforce | улучшить |
 | reinforced | ... |
 | summoned elementals | ... |
-| unit cards | ... |
-| units | ... |
+| unit cards | карты отрядов |
+| units | отряды |
 | zealots | ... |
 
 ## Heroes
@@ -54,14 +54,14 @@
 | English | Russian |
 |---|---|
 | ability | навык |
-| experience | ... |
-| expert effects | ... |
-| hero | ... |
-| heroes | ... |
-| level tracker | ... |
-| level | ... |
-| main hero | ... |
-| secondary hero | ... |
+| experience | опыт |
+| expert effects | экспертный эффект |
+| hero | герой |
+| heroes | герои |
+| level tracker | трекер уровня |
+| level | уровень |
+| main hero | основной герой |
+| secondary hero | вторичный герой |
 | specialty | ... |
 
 ## Map Locations
@@ -70,78 +70,78 @@
 |---|---|
 | center field | ... |
 | central map tile | ... |
-| dragon utopia | ... |
-| far map tile | ... |
-| field | ... |
-| locations | ... |
-| map tile | ... |
-| near map tile | ... |
-| random town | ... |
-| revisitable | ... |
-| settlement | ... |
-| starting (i) map tile | ... |
-| tile | ... |
-| trading post | ... |
+| dragon utopia | Утопия драконов |
+| far map tile | дальний фрагмент карты |
+| field | поле |
+| locations | локации |
+| map tile | фрагмент карты |
+| near map tile | ближний фрагмент карты |
+| random town | случайный город |
+| revisitable | многоразовые |
+| settlement | посёлок |
+| starting (i) map tile | стартовый (I) фрагмент карты |
+| tile | фрагмент |
+| trading post | рынок |
 | water wheel | ... |
 
 ## Resources
 
 | English | Russian |
 |---|---|
-| building materials | ... |
-| resource production tracker | ... |
-| resources | ... |
-| treasure die | ... |
-| valuables | ... |
+| building materials | строительные материалы |
+| resource production tracker | трекер добычи ресурсов |
+| resources | ресурсы |
+| treasure die | кубик сокровищ |
+| valuables | драгоценности |
 
 ## Deck-building
 
 | English | Russian |
 |---|---|
 | ability card | карта навыка |
-| deck | ... |
-| decks | ... |
-| discard pile | ... |
-| discard | ... |
-| hand limit | ... |
-| player decks | ... |
-| search | ... |
+| deck | колода |
+| decks | колоды |
+| discard pile | сброс |
+| discard | сброс |
+| hand limit | лимит руки |
+| player decks | колода игрока |
+| search | поиск |
 | specialty card | ... |
-| spell cards | ... |
+| spell cards | карты заклинаний |
 
 ## Spells
 
 | English | Russian |
 |---|---|
-| haste | ... |
+| haste | Ускорение |
 
 ## AI Deck
 
 | English | Russian |
 |---|---|
-| ai deck | ... |
-| magic card | ... |
-| might card | ... |
-| skill card | ... |
+| ai deck | колода ИИ |
+| magic card | карта магии |
+| might card | карта силы |
+| skill card | карта умений |
 
 ## Town
 
 | English | Russian |
 |---|---|
 | buildings | ... |
-| dwelling | ... |
-| population token | ... |
+| dwelling | Жилище |
+| population token | жетон популяции |
 
 ## Combat
 
 | English | Russian |
 |---|---|
-| arrow tower | ... |
-| back line | ... |
-| combat board | ... |
-| combat | ... |
-| damage | ... |
-| front line | ... |
+| arrow tower | стрелковая башня |
+| back line | тыл |
+| combat board | доска сражений |
+| combat | сражение |
+| damage | урон |
+| front line | передовая линия |
 | winning combat | ... |
 
 ## Battlefield
@@ -166,11 +166,11 @@
 
 | English | Russian |
 |---|---|
-| core rulebook | ... |
-| effects | ... |
-| game setup | ... |
+| core rulebook | книга правил |
+| effects | эффекты |
+| game setup | подготовка к игре |
 | map setup | ... |
-| player elimination | ... |
+| player elimination | выбывание игрока |
 | player setup | ... |
-| round tracker | ... |
-| war machine | ... |
+| round tracker | трекер раундов |
+| war machine | боевые машины |

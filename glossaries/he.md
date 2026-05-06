@@ -41,23 +41,23 @@
 | reinforced | ... |
 | summoned elementals | ... |
 | unit cards | ... |
-| units | ... |
+| units | יחידות |
 | zealots | ... |
 
 ## Heroes
 
 | English | Hebrew |
 |---|---|
-| ability | ... |
+| ability | יכולות |
 | experience | ... |
 | expert effects | ... |
-| hero | ... |
-| heroes | ... |
+| hero | גיבור |
+| heroes | גיבורים |
 | level tracker | ... |
-| level | ... |
-| main hero | ... |
-| secondary hero | ... |
-| specialty | ... |
+| level | רמה |
+| main hero | גיבור ראשי |
+| secondary hero | גיבור משני |
+| specialty | מומחיות |
 
 ## Map Locations
 
@@ -76,24 +76,24 @@
 | settlement | ... |
 | starting (i) map tile | ... |
 | tile | ... |
-| trading post | ... |
+| trading post | מסחר |
 | water wheel | ... |
 
 ## Resources
 
 | English | Hebrew |
 |---|---|
-| building materials | ... |
-| resource production tracker | ... |
-| resources | ... |
+| building materials | אבנים |
+| resource production tracker | לוח למעקב אחר ייצור המשאבים |
+| resources | משאבים |
 | treasure die | ... |
-| valuables | ... |
+| valuables | קריסטלים |
 
 ## Deck-building
 
 | English | Hebrew |
 |---|---|
-| ability card | ... |
+| ability card | קלפי יכולות |
 | deck | ... |
 | decks | ... |
 | discard pile | ... |
@@ -101,20 +101,20 @@
 | hand limit | ... |
 | player decks | ... |
 | search | ... |
-| specialty card | ... |
-| spell cards | ... |
+| specialty card | קלפי המומחיות |
+| spell cards | קלפי קסם |
 
 ## Spells
 
 | English | Hebrew |
 |---|---|
-| haste | ... |
+| haste | מהירות |
 
 ## AI Deck
 
 | English | Hebrew |
 |---|---|
-| ai deck | ... |
+| ai deck | חוקים ל-IA |
 | magic card | ... |
 | might card | ... |
 | skill card | ... |
@@ -125,27 +125,27 @@
 |---|---|
 | buildings | ... |
 | dwelling | ... |
-| population token | ... |
+| population token | אסימון האוכלוסייה |
 
 ## Combat
 
 | English | Hebrew |
 |---|---|
 | arrow tower | ... |
-| back line | ... |
-| combat board | ... |
-| combat | ... |
-| damage | ... |
-| front line | ... |
+| back line | קו עורף |
+| combat board | לוח הקרבות |
+| combat | קרב |
+| damage | נזק |
+| front line | קו חזית |
 | winning combat | ... |
 
 ## Battlefield
 
 | English | Hebrew |
 |---|---|
-| adventure mode | ... |
+| adventure mode | מצב הרפתקה |
 | skirmish mode | ... |
-| final combat | ... |
+| final combat | קרב סופי |
 | combat power level | ... |
 
 ## Keywords
@@ -161,11 +161,11 @@
 
 | English | Hebrew |
 |---|---|
-| core rulebook | ... |
+| core rulebook | ספר חוקים |
 | effects | ... |
-| game setup | ... |
+| game setup | הכנת המשחק |
 | map setup | ... |
 | player elimination | ... |
 | player setup | ... |
-| round tracker | ... |
-| war machine | ... |
+| round tracker | לוח מעקב הסבבים |
+| war machine | מכונת מלחמה |

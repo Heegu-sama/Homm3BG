@@ -8,16 +8,16 @@
 
 | English | French |
 |---|---|
-| castle | ... |
-| conflux | ... |
-| cove | ... |
-| dungeon | ... |
-| fortress | ... |
-| inferno | ... |
-| necropolis | ... |
-| rampart | ... |
-| stronghold | ... |
-| tower | ... |
+| castle | Château |
+| conflux | Conflux |
+| cove | Crique |
+| dungeon | Donjon |
+| fortress | Forteresse |
+| inferno | Hadès |
+| necropolis | Nécropole |
+| rampart | Rempart |
+| stronghold | Bastion |
+| tower | Tour |
 
 ## Units
 
@@ -41,23 +41,23 @@
 | reinforced | ... |
 | summoned elementals | ... |
 | unit cards | ... |
-| units | ... |
+| units | Unités |
 | zealots | ... |
 
 ## Heroes
 
 | English | French |
 |---|---|
-| ability | ... |
+| ability | Compétence |
 | experience | ... |
 | expert effects | ... |
-| hero | ... |
-| heroes | ... |
+| hero | Héros |
+| heroes | Héros |
 | level tracker | ... |
-| level | ... |
-| main hero | ... |
+| level | Niveau |
+| main hero | Héros Principal |
 | secondary hero | ... |
-| specialty | ... |
+| specialty | Spécialisation |
 
 ## Map Locations
 
@@ -68,7 +68,7 @@
 | dragon utopia | ... |
 | far map tile | ... |
 | field | ... |
-| locations | ... |
+| locations | Sites |
 | map tile | ... |
 | near map tile | ... |
 | random town | ... |
@@ -76,33 +76,33 @@
 | settlement | ... |
 | starting (i) map tile | ... |
 | tile | ... |
-| trading post | ... |
+| trading post | Échange |
 | water wheel | ... |
 
 ## Resources
 
 | English | French |
 |---|---|
-| building materials | ... |
-| resource production tracker | ... |
-| resources | ... |
+| building materials | Matériaux |
+| resource production tracker | Suivi des Revenus |
+| resources | Ressources |
 | treasure die | ... |
-| valuables | ... |
+| valuables | Richesses |
 
 ## Deck-building
 
 | English | French |
 |---|---|
-| ability card | ... |
+| ability card | Carte de Compétence |
 | deck | ... |
 | decks | ... |
-| discard pile | ... |
-| discard | ... |
+| discard pile | Défausse |
+| discard | défausser |
 | hand limit | ... |
 | player decks | ... |
 | search | ... |
-| specialty card | ... |
-| spell cards | ... |
+| specialty card | Carte de Spécialisation |
+| spell cards | Cartes de Sort |
 
 ## Spells
 
@@ -125,7 +125,7 @@
 |---|---|
 | buildings | ... |
 | dwelling | ... |
-| population token | ... |
+| population token | Jeton Population |
 
 ## Combat
 
@@ -134,8 +134,8 @@
 | arrow tower | ... |
 | back line | ... |
 | combat board | ... |
-| combat | ... |
-| damage | ... |
+| combat | Combat |
+| damage | dégâts |
 | front line | ... |
 | winning combat | ... |
 
@@ -163,7 +163,7 @@
 |---|---|
 | core rulebook | ... |
 | effects | ... |
-| game setup | ... |
+| game setup | Préparation |
 | map setup | ... |
 | player elimination | ... |
 | player setup | ... |

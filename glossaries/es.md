@@ -11,10 +11,10 @@
 | castle | ... |
 | conflux | ... |
 | cove | ... |
-| dungeon | ... |
+| dungeon | Mazmorra |
 | fortress | ... |
-| inferno | ... |
-| necropolis | ... |
+| inferno | Infierno |
+| necropolis | Necrópolis |
 | rampart | ... |
 | stronghold | ... |
 | tower | ... |
@@ -25,23 +25,23 @@
 |---|---|
 | boars | ... |
 | champions | ... |
-| deck of unit cards | ... |
+| deck of unit cards | Mazo de Cartas de Unidad |
 | dendroids | ... |
 | dread knights | ... |
 | familiars | ... |
 | few | ... |
-| griffins | ... |
+| griffins | Grifos |
 | hp | ... |
 | liches | ... |
 | marksmen | ... |
-| neutral units | ... |
-| pack | ... |
+| neutral units | Unidades Neutrales |
+| pack | manada |
 | recruited or reinforced | ... |
 | reinforce | ... |
 | reinforced | ... |
 | summoned elementals | ... |
-| unit cards | ... |
-| units | ... |
+| unit cards | Cartas de Unidad |
+| units | Unidades |
 | zealots | ... |
 
 ## Heroes
@@ -49,14 +49,14 @@
 | English | Spanish |
 |---|---|
 | ability | ... |
-| experience | ... |
+| experience | Experiencia |
 | expert effects | ... |
-| hero | ... |
-| heroes | ... |
+| hero | Héroe |
+| heroes | Héroes |
 | level tracker | ... |
-| level | ... |
-| main hero | ... |
-| secondary hero | ... |
+| level | Nivel |
+| main hero | Héroe Principal |
+| secondary hero | Héroe Secundario |
 | specialty | ... |
 
 ## Map Locations
@@ -65,17 +65,17 @@
 |---|---|
 | center field | ... |
 | central map tile | ... |
-| dragon utopia | ... |
+| dragon utopia | Utopía del Dragón |
 | far map tile | ... |
-| field | ... |
+| field | Casilla |
 | locations | ... |
-| map tile | ... |
+| map tile | Loseta |
 | near map tile | ... |
 | random town | ... |
-| revisitable | ... |
-| settlement | ... |
-| starting (i) map tile | ... |
-| tile | ... |
+| revisitable | Casillas Revisitables |
+| settlement | Asentamiento |
+| starting (i) map tile | Loseta Inicial (I) |
+| tile | Loseta |
 | trading post | ... |
 | water wheel | ... |
 
@@ -83,26 +83,26 @@
 
 | English | Spanish |
 |---|---|
-| building materials | ... |
-| resource production tracker | ... |
-| resources | ... |
-| treasure die | ... |
-| valuables | ... |
+| building materials | Materiales de Construcción |
+| resource production tracker | Seguimiento de la Producción de Recursos |
+| resources | Recursos |
+| treasure die | Dado del Tesoro |
+| valuables | Objetos de Valor |
 
 ## Deck-building
 
 | English | Spanish |
 |---|---|
-| ability card | ... |
-| deck | ... |
+| ability card | Carta de Habilidad |
+| deck | Mazo |
 | decks | ... |
-| discard pile | ... |
-| discard | ... |
-| hand limit | ... |
-| player decks | ... |
-| search | ... |
-| specialty card | ... |
-| spell cards | ... |
+| discard pile | Pila de Descartes |
+| discard | descartar |
+| hand limit | límite de mano |
+| player decks | Mazo del Jugador |
+| search | Buscar |
+| specialty card | Carta de Especialidad |
+| spell cards | Cartas de Hechizos |
 
 ## Spells
 
@@ -114,29 +114,29 @@
 
 | English | Spanish |
 |---|---|
-| ai deck | ... |
-| magic card | ... |
-| might card | ... |
-| skill card | ... |
+| ai deck | Mazo IA |
+| magic card | Carta Magia |
+| might card | Carta Fuerza |
+| skill card | Carta de Habilidad |
 
 ## Town
 
 | English | Spanish |
 |---|---|
 | buildings | ... |
-| dwelling | ... |
-| population token | ... |
+| dwelling | Vivienda |
+| population token | Ficha de Población |
 
 ## Combat
 
 | English | Spanish |
 |---|---|
-| arrow tower | ... |
-| back line | ... |
-| combat board | ... |
-| combat | ... |
-| damage | ... |
-| front line | ... |
+| arrow tower | Torre de Arqueros |
+| back line | Retaguardia |
+| combat board | Tablero de Combate |
+| combat | Combate |
+| damage | daño |
+| front line | Frente |
 | winning combat | ... |
 
 ## Battlefield
@@ -163,9 +163,9 @@
 |---|---|
 | core rulebook | ... |
 | effects | ... |
-| game setup | ... |
+| game setup | Preparación |
 | map setup | ... |
-| player elimination | ... |
+| player elimination | eliminación de jugadores |
 | player setup | ... |
 | round tracker | ... |
-| war machine | ... |
+| war machine | Máquinas de Guerra |

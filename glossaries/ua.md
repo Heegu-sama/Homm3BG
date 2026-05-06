@@ -8,56 +8,56 @@
 
 | English | Ukrainian |
 |---|---|
-| castle | ... |
-| conflux | ... |
-| cove | ... |
-| dungeon | ... |
-| fortress | ... |
-| inferno | ... |
-| necropolis | ... |
-| rampart | ... |
-| stronghold | ... |
-| tower | ... |
+| castle | Замок |
+| conflux | Злиття |
+| cove | Пристань |
+| dungeon | Підземелля |
+| fortress | Фортеця |
+| inferno | Інферно |
+| necropolis | Некрополіс |
+| rampart | Оплот |
+| stronghold | Цитадель |
+| tower | Вежа |
 
 ## Units
 
 | English | Ukrainian |
 |---|---|
 | boars | ... |
-| champions | ... |
-| deck of unit cards | ... |
+| champions | Чемпіони |
+| deck of unit cards | Колода Підрозділів |
 | dendroids | ... |
 | dread knights | ... |
 | familiars | ... |
 | few | ... |
-| griffins | ... |
-| hp | ... |
+| griffins | Грифони |
+| hp | ОЗ |
 | liches | ... |
 | marksmen | ... |
-| neutral units | ... |
+| neutral units | Нейтральні Підрозділи |
 | pack | ... |
 | recruited or reinforced | ... |
 | reinforce | ... |
 | reinforced | ... |
 | summoned elementals | ... |
-| unit cards | ... |
-| units | ... |
+| unit cards | Карти Підрозділів |
+| units | Підрозділи |
 | zealots | ... |
 
 ## Heroes
 
 | English | Ukrainian |
 |---|---|
-| ability | ... |
-| experience | ... |
+| ability | Здібність |
+| experience | Досвід |
 | expert effects | ... |
-| hero | ... |
-| heroes | ... |
-| level tracker | ... |
-| level | ... |
-| main hero | ... |
-| secondary hero | ... |
-| specialty | ... |
+| hero | Герой |
+| heroes | Герої |
+| level tracker | Трек Рівня |
+| level | Рівень |
+| main hero | Головний Герой |
+| secondary hero | Другорядний Герой |
+| specialty | Спеціалізація |
 
 ## Map Locations
 
@@ -65,78 +65,78 @@
 |---|---|
 | center field | ... |
 | central map tile | ... |
-| dragon utopia | ... |
-| far map tile | ... |
-| field | ... |
-| locations | ... |
-| map tile | ... |
-| near map tile | ... |
-| random town | ... |
-| revisitable | ... |
-| settlement | ... |
-| starting (i) map tile | ... |
-| tile | ... |
-| trading post | ... |
-| water wheel | ... |
+| dragon utopia | Утопія Драконів |
+| far map tile | Далека Плитка Мапи |
+| field | Поле |
+| locations | Локації |
+| map tile | Плитка Мапи |
+| near map tile | Близька Плитка Мапи |
+| random town | Випадкове Місто |
+| revisitable | Багаторазові |
+| settlement | Поселення |
+| starting (i) map tile | Стартова (I) Плитка |
+| tile | Плитка |
+| trading post | Торговий Пост |
+| water wheel | Водяне Колесо |
 
 ## Resources
 
 | English | Ukrainian |
 |---|---|
-| building materials | ... |
-| resource production tracker | ... |
-| resources | ... |
-| treasure die | ... |
+| building materials | Будівельні Матеріали |
+| resource production tracker | Трек Виробництва Ресурсів |
+| resources | Ресурси |
+| treasure die | Кістка Скарбів |
 | valuables | ... |
 
 ## Deck-building
 
 | English | Ukrainian |
 |---|---|
-| ability card | ... |
-| deck | ... |
-| decks | ... |
-| discard pile | ... |
-| discard | ... |
-| hand limit | ... |
-| player decks | ... |
+| ability card | Карта Здібності |
+| deck | Колода |
+| decks | Колоди |
+| discard pile | Стопка Скиду |
+| discard | Скинути |
+| hand limit | Ліміт Руки |
+| player decks | Колода Гравця |
 | search | ... |
-| specialty card | ... |
-| spell cards | ... |
+| specialty card | Карта Спеціалізації |
+| spell cards | Карти Заклинань |
 
 ## Spells
 
 | English | Ukrainian |
 |---|---|
-| haste | ... |
+| haste | Прискорення |
 
 ## AI Deck
 
 | English | Ukrainian |
 |---|---|
-| ai deck | ... |
-| magic card | ... |
-| might card | ... |
-| skill card | ... |
+| ai deck | Колода ШІ |
+| magic card | Карта Магії |
+| might card | Карта Меча |
+| skill card | Карта Здібності |
 
 ## Town
 
 | English | Ukrainian |
 |---|---|
 | buildings | ... |
-| dwelling | ... |
-| population token | ... |
+| dwelling | Житло |
+| population token | Жетон Населення |
 
 ## Combat
 
 | English | Ukrainian |
 |---|---|
 | arrow tower | ... |
-| back line | ... |
-| combat board | ... |
-| combat | ... |
-| damage | ... |
-| front line | ... |
+| back line | Тилова Лінія |
+| combat board | Бойове Поле |
+| combat | Бій |
+| damage | Рани |
+| front line | Передова Лінія |
 | winning combat | ... |
 
 ## Battlefield
@@ -161,11 +161,11 @@
 
 | English | Ukrainian |
 |---|---|
-| core rulebook | ... |
-| effects | ... |
-| game setup | ... |
+| core rulebook | книга правил |
+| effects | Ефекти |
+| game setup | Підготовка до Гри |
 | map setup | ... |
-| player elimination | ... |
+| player elimination | Вибування Гравця |
 | player setup | ... |
 | round tracker | ... |
-| war machine | ... |
+| war machine | Бойові Машини |

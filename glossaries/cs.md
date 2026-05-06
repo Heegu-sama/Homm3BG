@@ -14,8 +14,8 @@
 | dungeon | ... |
 | fortress | ... |
 | inferno | ... |
-| necropolis | ... |
-| rampart | ... |
+| necropolis | Nekropolis |
+| rampart | Bašta |
 | stronghold | ... |
 | tower | ... |
 
@@ -24,24 +24,24 @@
 | English | Czech |
 |---|---|
 | boars | ... |
-| champions | ... |
-| deck of unit cards | ... |
+| champions | Šampioni |
+| deck of unit cards | Balíček Karet Jednotek |
 | dendroids | ... |
 | dread knights | ... |
 | familiars | ... |
 | few | ... |
-| griffins | ... |
+| griffins | Grifiny |
 | hp | ... |
 | liches | ... |
 | marksmen | ... |
-| neutral units | ... |
-| pack | ... |
+| neutral units | Neutrální Jednotky |
+| pack | tlupa |
 | recruited or reinforced | ... |
 | reinforce | ... |
 | reinforced | ... |
 | summoned elementals | ... |
-| unit cards | ... |
-| units | ... |
+| unit cards | Karty Jednotek |
+| units | Jednotky |
 | zealots | ... |
 
 ## Heroes
@@ -49,14 +49,14 @@
 | English | Czech |
 |---|---|
 | ability | ... |
-| experience | ... |
+| experience | Zkušenost |
 | expert effects | ... |
-| hero | ... |
-| heroes | ... |
+| hero | Hrdina |
+| heroes | Hrdinové |
 | level tracker | ... |
-| level | ... |
-| main hero | ... |
-| secondary hero | ... |
+| level | Úroveň |
+| main hero | Hlavní Hrdina |
+| secondary hero | Sekundární Hrdina |
 | specialty | ... |
 
 ## Map Locations
@@ -65,29 +65,29 @@
 |---|---|
 | center field | ... |
 | central map tile | ... |
-| dragon utopia | ... |
+| dragon utopia | Dračí Utopie |
 | far map tile | ... |
 | field | ... |
 | locations | ... |
-| map tile | ... |
+| map tile | Dílek |
 | near map tile | ... |
 | random town | ... |
-| revisitable | ... |
-| settlement | ... |
-| starting (i) map tile | ... |
-| tile | ... |
-| trading post | ... |
+| revisitable | Opakovaně Navštívitelná Pole |
+| settlement | Osada |
+| starting (i) map tile | Startovní (I) Dílek |
+| tile | Dílek |
+| trading post | Tržiště |
 | water wheel | ... |
 
 ## Resources
 
 | English | Czech |
 |---|---|
-| building materials | ... |
-| resource production tracker | ... |
-| resources | ... |
-| treasure die | ... |
-| valuables | ... |
+| building materials | Stavební Materiály |
+| resource production tracker | Počítadlo Produkce Surovin |
+| resources | Suroviny |
+| treasure die | Kostka Surovin |
+| valuables | Cennosti |
 
 ## Deck-building
 
@@ -96,54 +96,54 @@
 | ability card | ... |
 | deck | ... |
 | decks | ... |
-| discard pile | ... |
+| discard pile | Odhazovací Hromádka |
 | discard | ... |
-| hand limit | ... |
-| player decks | ... |
-| search | ... |
+| hand limit | Limit Karet na ruce |
+| player decks | Hráčské Balíčky |
+| search | Hledat |
 | specialty card | ... |
-| spell cards | ... |
+| spell cards | Karty Kouzel |
 
 ## Spells
 
 | English | Czech |
 |---|---|
-| haste | ... |
+| haste | Zrychlení |
 
 ## AI Deck
 
 | English | Czech |
 |---|---|
-| ai deck | ... |
-| magic card | ... |
-| might card | ... |
-| skill card | ... |
+| ai deck | AI Balíček |
+| magic card | Karta Magie |
+| might card | Karta Síly |
+| skill card | Karta Schopnosti |
 
 ## Town
 
 | English | Czech |
 |---|---|
 | buildings | ... |
-| dwelling | ... |
-| population token | ... |
+| dwelling | Obydlí |
+| population token | Žeton Populace |
 
 ## Combat
 
 | English | Czech |
 |---|---|
 | arrow tower | ... |
-| back line | ... |
-| combat board | ... |
-| combat | ... |
+| back line | Zadní linie |
+| combat board | Deska Bojiště |
+| combat | Souboj |
 | damage | ... |
-| front line | ... |
+| front line | Přední linie |
 | winning combat | ... |
 
 ## Battlefield
 
 | English | Czech |
 |---|---|
-| adventure mode | ... |
+| adventure mode | Výprava |
 | skirmish mode | ... |
 | final combat | ... |
 | combat power level | ... |
@@ -163,9 +163,9 @@
 |---|---|
 | core rulebook | ... |
 | effects | ... |
-| game setup | ... |
+| game setup | Příprava hry |
 | map setup | ... |
 | player elimination | ... |
 | player setup | ... |
-| round tracker | ... |
-| war machine | ... |
+| round tracker | Počítadlo Kol |
+| war machine | Válečné Stroje |

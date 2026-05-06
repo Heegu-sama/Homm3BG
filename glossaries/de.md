@@ -8,16 +8,16 @@
 
 | English | German |
 |---|---|
-| castle | ... |
-| conflux | ... |
-| cove | ... |
-| dungeon | ... |
-| fortress | ... |
-| inferno | ... |
-| necropolis | ... |
-| rampart | ... |
-| stronghold | ... |
-| tower | ... |
+| castle | Schloss |
+| conflux | Conflux |
+| cove | Bucht |
+| dungeon | Dungeon |
+| fortress | Festung |
+| inferno | Inferno |
+| necropolis | Nekropolis |
+| rampart | Schutzwall |
+| stronghold | Burg |
+| tower | Turm |
 
 ## Units
 
@@ -25,38 +25,38 @@
 |---|---|
 | boars | ... |
 | champions | ... |
-| deck of unit cards | ... |
+| deck of unit cards | Einheitendeck |
 | dendroids | ... |
 | dread knights | ... |
 | familiars | ... |
-| few | ... |
-| griffins | ... |
-| hp | ... |
+| few | Wenige |
+| griffins | Greife |
+| hp | LP |
 | liches | ... |
 | marksmen | ... |
-| neutral units | ... |
-| pack | ... |
+| neutral units | neutrale Einheiten |
+| pack | Rudel |
 | recruited or reinforced | ... |
-| reinforce | ... |
+| reinforce | verstärken |
 | reinforced | ... |
 | summoned elementals | ... |
-| unit cards | ... |
-| units | ... |
+| unit cards | Einheitenkarten |
+| units | Einheiten |
 | zealots | ... |
 
 ## Heroes
 
 | English | German |
 |---|---|
-| ability | ... |
-| experience | ... |
+| ability | Fähigkeit |
+| experience | Erfahrung |
 | expert effects | ... |
-| hero | ... |
-| heroes | ... |
-| level tracker | ... |
-| level | ... |
-| main hero | ... |
-| secondary hero | ... |
+| hero | Held |
+| heroes | Helden |
+| level tracker | Stufenleiste |
+| level | Stufe |
+| main hero | Hauptheld |
+| secondary hero | Nebenheld |
 | specialty | ... |
 
 ## Map Locations
@@ -65,59 +65,59 @@
 |---|---|
 | center field | ... |
 | central map tile | ... |
-| dragon utopia | ... |
-| far map tile | ... |
-| field | ... |
-| locations | ... |
-| map tile | ... |
-| near map tile | ... |
-| random town | ... |
-| revisitable | ... |
-| settlement | ... |
-| starting (i) map tile | ... |
-| tile | ... |
-| trading post | ... |
+| dragon utopia | Drachen Utopia |
+| far map tile | fernes Gebiet |
+| field | Feld |
+| locations | Orte |
+| map tile | Gebiet |
+| near map tile | nahes Gebiet |
+| random town | Zufällige Stadt |
+| revisitable | besuchbare |
+| settlement | Siedlung |
+| starting (i) map tile | Startgebiet (I) |
+| tile | Gebiet |
+| trading post | Handelsposten |
 | water wheel | ... |
 
 ## Resources
 
 | English | German |
 |---|---|
-| building materials | ... |
-| resource production tracker | ... |
-| resources | ... |
-| treasure die | ... |
-| valuables | ... |
+| building materials | Baumaterialien |
+| resource production tracker | Einkommensleiste |
+| resources | Ressourcen |
+| treasure die | Schatzwürfel |
+| valuables | Minerale |
 
 ## Deck-building
 
 | English | German |
 |---|---|
-| ability card | ... |
-| deck | ... |
-| decks | ... |
-| discard pile | ... |
-| discard | ... |
-| hand limit | ... |
-| player decks | ... |
-| search | ... |
+| ability card | Fähigkeitskarte |
+| deck | Deck |
+| decks | Decks |
+| discard pile | Ablagestapel |
+| discard | abwerfen |
+| hand limit | Handkartenlimit |
+| player decks | Spielerdecks |
+| search | Durchsuche |
 | specialty card | ... |
-| spell cards | ... |
+| spell cards | Zauberkarten |
 
 ## Spells
 
 | English | German |
 |---|---|
-| haste | ... |
+| haste | Eile |
 
 ## AI Deck
 
 | English | German |
 |---|---|
-| ai deck | ... |
-| magic card | ... |
-| might card | ... |
-| skill card | ... |
+| ai deck | Bot-Deck |
+| magic card | Magie-Karte |
+| might card | Machtkarte |
+| skill card | Fertigkeitskarte |
 
 ## Town
 
@@ -125,47 +125,47 @@
 |---|---|
 | buildings | ... |
 | dwelling | ... |
-| population token | ... |
+| population token | Bevölkerungsmarker |
 
 ## Combat
 
 | English | German |
 |---|---|
 | arrow tower | ... |
-| back line | ... |
-| combat board | ... |
-| combat | ... |
-| damage | ... |
-| front line | ... |
+| back line | hintere Kampfreihe |
+| combat board | Kampf-Spielplan |
+| combat | Kampf |
+| damage | Schaden |
+| front line | vordere Kampfreihe |
 | winning combat | ... |
 
 ## Battlefield
 
 | English | German |
 |---|---|
-| adventure mode | ... |
-| skirmish mode | ... |
-| final combat | ... |
+| adventure mode | Abenteuermodus |
+| skirmish mode | Gefechtsmodus |
+| final combat | finaler Kampf |
 | combat power level | ... |
 
 ## Keywords
 
 | English | German |
 |---|---|
-| clone token | ... |
-| force field token | ... |
-| land mine token | ... |
-| quicksand token | ... |
+| clone token | Klon-Marker |
+| force field token | Kraftfeld-Marker |
+| land mine token | Landminen-Marker |
+| quicksand token | Treibsand-Marker |
 
 ## Other
 
 | English | German |
 |---|---|
-| core rulebook | ... |
+| core rulebook | Regelbuch |
 | effects | ... |
-| game setup | ... |
-| map setup | ... |
-| player elimination | ... |
+| game setup | Spielaufbau |
+| map setup | Aufbau der Abenteuerkarte |
+| player elimination | Spielereliminierung |
 | player setup | ... |
-| round tracker | ... |
-| war machine | ... |
+| round tracker | Rundenanzeiger |
+| war machine | Kriegsmaschine |
