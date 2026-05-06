@@ -19,6 +19,12 @@
     }
   )
   luaotfload.add_fallback(
+    "cjkfallbackbold",
+    {
+      "[./assets/fonts/NotoSerifCJKsc/NotoSerifCJKsc-Bold.otf]:mode=node"
+    }
+  )
+  luaotfload.add_fallback(
     "cjkfallbackitalic",
     {
       "[./assets/fonts/NotoSerifCJKsc/NotoSerifCJKsc-Regular.otf]:mode=node;slant=0.2"
@@ -30,18 +36,18 @@
   Path = ./assets/fonts/NotoSerifCJKsc/,
   Extension = .otf,
   UprightFont = *-Regular,
-  BoldFont = *-Regular,
+  BoldFont = *-Bold,
   ItalicFont = *-Regular,
-  BoldItalicFont = *-Regular
+  BoldItalicFont = *-Bold
 ]{NotoSerifCJKsc}
 
 \newfontfamily{\cjkserif}[
   Path = ./assets/fonts/NotoSerifCJKsc/,
   Extension = .otf,
   UprightFont = *-Regular,
-  BoldFont = *-Regular,
+  BoldFont = *-Bold,
   ItalicFont = *-Regular,
-  BoldItalicFont = *-Regular
+  BoldItalicFont = *-Bold
 ]{NotoSerifCJKsc}
 
 \newcommand{\subheaderfont}[0]{\cjkserif}
@@ -55,8 +61,9 @@
     BoldFont = *-Bold,
     BoldItalicFont = *-BoldItalic,
     RawFeature={fallback=cjkfallback},
+    BoldFeatures={RawFeature={fallback=cjkfallbackbold}},
     ItalicFeatures={RawFeature={fallback=cjkfallbackitalic}},
-    BoldItalicFeatures={RawFeature={fallback=cjkfallbackitalic}}
+    BoldItalicFeatures={RawFeature={fallback=cjkfallbackbold}}
   ]%
 }
 
