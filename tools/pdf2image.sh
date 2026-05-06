@@ -9,14 +9,14 @@ custom_pdf=""
 
 help() {
   echo "
-    Usage: $(basename "$0") <language> -r <range> [OPTIONS]
+    Usage: $(basename "$0") [language] -r <range> [OPTIONS]
 
     Mandatory Arguments:
       -r, --range <range>           Provide comma-separated list of pages or range of pages.
                                     Examples: 1,3,5 or 1-5 or 1,3-5,7
 
     Optional Arguments:
-      <language>     Specify the language for PDF (en, pl, es, fr, ru, ua, cs, de, he).
+      <language>     Specify the language for PDF (${valid_languages[*]}).
                                     Defaults to 'en' if not specified.
       -f, --file <path>             Use a custom PDF file at the specified path.
 
@@ -75,12 +75,6 @@ while [[ "$1" != "" ]]; do
   esac
   shift
 done
-
-# Validate arguments
-if [[ -n "$LANGUAGE" && -n "$custom_pdf" ]]; then
-  echo "Error: <language> and -f/--file options are mutually exclusive."
-  help
-fi
 
 if [[ -z "$range" ]]; then
   echo "Error: You must specify a page range with -r/--range option."

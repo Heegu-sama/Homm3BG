@@ -2,12 +2,13 @@
 
 set -e
 
-LANGUAGE=$1
+source tools/.language_base.sh
 
 VERSION=$(cat .version)
 FILE_VERSION=$(echo "${VERSION}" | tr . _)
 
 declare -A languages=(
+  ["cn"]="ZhongWen"
   ["en"]="English"
   ["pl"]="Polski"
   ["es"]="Espanol"
@@ -18,6 +19,11 @@ declare -A languages=(
   ["he"]="Ivrit"
   ["de"]="Deutsch"
 )
+
+if [[ -z "${languages[$LANGUAGE]}" ]]; then
+  echo "Error: Missing release filename label for language '$LANGUAGE'." >&2
+  exit 1
+fi
 
 echo "Building release ${VERSION} for ${languages[$LANGUAGE]}..."
 
