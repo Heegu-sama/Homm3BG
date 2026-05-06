@@ -1,15 +1,30 @@
-You are helping translate the Heroes of Might & Magic 3 board game rulebook from English into another language. The source text is in LaTeX format, and all messages use GNU gettext PO format.
+You are translating the Heroes of Might & Magic 3 board game rulebook from English into another language.
+The source text is in LaTeX format, and all messages use GNU gettext PO format.
 
 The target language is specified by the argument: $ARGUMENTS
 
-Start by reading the glossary for that language:
-<read_file>
-<path>glossaries/$ARGUMENTS.md</path>
-</read_file>
+## Setup
 
-If the file does not exist, tell the user that no glossary exists for "$ARGUMENTS" yet and list the available files in the `glossaries/` directory.
+1. Read the glossary for the target language from `glossaries/$ARGUMENTS.md`.
+If it does not exist, tell the user and list available files in `glossaries/`.
+2. Find all PO files for the target language: `find translations -name "$ARGUMENTS.po"`.
 
-Once you have read the glossary, confirm the target language and that you are ready. Then wait for the user to paste `msgid` blocks. For each one, reply with only the translated `msgstr` — do not repeat the `msgid` or add any commentary.
+## Translation loop
+
+For each PO file (work through them in alphabetical order by directory name):
+
+1. Read the file.
+2. Find every entry where `msgstr` is empty — that is, entries matching:
+   ```
+   msgstr ""
+   ```
+   where the line immediately following is either another `msgid` block, a comment (`#`), or end of file (i.e.
+no translated content follows).
+   Skip the file header entry (the first `msgid ""`/`msgstr ""` block with PO metadata).
+3. For each untranslated entry, produce the translated `msgstr` following the rules below, then write it back into the file using the Edit tool.
+4. After finishing a file, tell the user which file was completed and how many strings were translated.
+
+If a file has no untranslated entries, skip it silently and move to the next.
 
 ---
 
@@ -29,6 +44,12 @@ msgid ""
 msgstr ""
 "Translated first line\n"
 "Translated second line\n"
+```
+
+Single-line `msgid` (no `""`):
+```
+msgid "\\addsection{Introduction}{\\spells/magic_arrow.png}"
+msgstr "\\addsection{Wprowadzenie}{\\spells/magic_arrow.png}"
 ```
 
 ## LaTeX Rules
@@ -54,8 +75,12 @@ msgstr "\\darkcell[1.5]{\\color{white}<translated text>}"
 
 ## Layout
 
-This is a fixed-layout document. Translations that are significantly more verbose will overflow the layout. When multiple valid translations exist for a phrase, prefer the more concise one. Do not paraphrase or expand on the source text.
+This is a fixed-layout document.
+Translations that are significantly more verbose will overflow the layout.
+Localize naturally — use idiomatic phrasing in the target language, not word-for-word calques from English.
+When multiple natural translations exist for a phrase, prefer the more concise one to avoid layout overflow.
 
 ## Capitalization
 
-Mirror the capitalization of the English source. If the English has "Hero" (capitalized), the translation must also be capitalized, unless stated otherwise in language glossary.
+Mirror the capitalization of the English source, unless stated otherwise in the glossary.
+If the English has "Hero" (capitalized), the translation must also be capitalized, unless stated otherwise in the language glossary.
