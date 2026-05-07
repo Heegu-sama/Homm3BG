@@ -8,16 +8,16 @@ VERSION=$(cat .version)
 FILE_VERSION=$(echo "${VERSION}" | tr . _)
 
 declare -A languages=(
-  ["cn"]="Zhongwen"
   ["en"]="English"
-  ["pl"]="Polski"
-  ["es"]="Espanol"
-  ["fr"]="Francais"
-  ["ua"]="Ukrainska"
-  ["cs"]="Cestina"
-  ["ru"]="Russkiy"
-  ["he"]="Ivrit"
-  ["de"]="Deutsch"
+  ["pl"]="Polish"
+  ["es"]="Spanish"
+  ["fr"]="French"
+  ["ua"]="Ukrainian"
+  ["cs"]="Czech"
+  ["ru"]="Russian"
+  ["he"]="Hebrew"
+  ["de"]="German"
+  ["cn"]="Chinese"
 )
 
 echo "Building release ${VERSION} for ${languages[$LANGUAGE]}..."
