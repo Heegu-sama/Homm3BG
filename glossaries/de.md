@@ -9,7 +9,7 @@
 | English | German |
 |---|---|
 | castle | Schloss |
-| conflux | Conflux |
+| conflux | Konflux |
 | cove | Bucht |
 | dungeon | Dungeon |
 | fortress | Festung |
@@ -117,7 +117,7 @@
 | English | German |
 |---|---|
 | ai deck | Bot-Deck |
-| magic card | Magie-Karte |
+| magic card | Magiekarte |
 | might card | Machtkarte |
 | skill card | Fertigkeitskarte |
 
@@ -135,7 +135,7 @@
 |---|---|
 | arrow tower | ... |
 | back line | hintere Kampfreihe |
-| combat board | Kampf-Spielplan |
+| combat board | Kampfspielplan |
 | combat | Kampf |
 | damage | Schaden |
 | front line | vordere Kampfreihe |
@@ -169,5 +169,5 @@
 | map setup | Aufbau der Abenteuerkarte |
 | player elimination | Spielereliminierung |
 | player setup | ... |
-| round tracker | Rundenanzeiger |
+| round tracker | Rundenleiste |
 | war machine | Kriegsmaschine |
