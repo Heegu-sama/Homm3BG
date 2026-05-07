@@ -15,12 +15,12 @@ Starting (I) Tiles are the easiest while Center (VI–VII) Tiles are the most di
 \end{center}
 
 \subsection*{Map Tile Anatomy}\index{Map Tile}
-Each Map Tile is divided into 7 separate \textbf{Fields} that your Heroes can \textbf{Visit}.
-When your Hero moves to a Field, they must immediately Visit it if unguarded, or
-first start a \pagelink{Combat}{Combat} against the enemies guarding it before Visiting.
-Empty Fields\index{Empty Field} do nothing when Visited.
+Each Map Tile is divided into 7 separate \textbf{Fields} that your Heroes can \textbf{visit}.
+When your Hero moves to a Field, they must immediately visit it if unguarded, or
+first start a \pagelink{Combat}{Combat} against the enemies guarding it before visiting.
+Empty Fields\index{Empty Field} do nothing when visited.
 Solid yellow lines on a Field's edge cannot be passed through.
-\pagelink{Difficulty}{Roman numerals} written on a Field indicate that the Field is guarded by Neutral enemies that must be fought to Visit it.\par
+Roman numerals written on a Field indicate that the Field is guarded by Neutral Units that must be fought to visit it, see the \hyperlink{Difficulty Table}{table} on the back cover.\par
 \note{3}{
   A Blocked Field cannot be entered, but can be exited.
 }
@@ -29,11 +29,13 @@ Solid yellow lines on a Field's edge cannot be passed through.
 \begin{center}
   \hspace*{-1.5em}
   \begin{tikzpicture}
-    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\images/maptiles.png}}};
-    \draw (-3.9, 3.1) node {\encircle{1}};
-    \draw (0.5, 3.1) node {\encircle{2}};
-    \draw (-3.9, -0.8) node {\encircle{3}};
-    \draw (0.5, -0.8) node {\encircle{4}};
+    \node (tiles) [inner sep=0] {\includegraphics[width=0.9\linewidth]{\images/maptiles.png}};
+    \begin{relcoords}{tiles}
+      \draw (0,    0.9) node {\encircle{1}};
+      \draw (0.55, 0.9) node {\encircle{2}};
+      \draw (0,    0.4) node {\encircle{3}};
+      \draw (0.55, 0.4) node {\encircle{4}};
+    \end{relcoords}
   \end{tikzpicture}
   \imagecaption{\footnotesize{}Types of Map Tiles}
 \end{center}
@@ -50,19 +52,21 @@ Solid yellow lines on a Field's edge cannot be passed through.
 
 \begin{center}
   \begin{tikzpicture}
-    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=0.75\linewidth]{\images/fields.png}}};
-    \draw (0, -0.3) node {\encirclesmall{1}};
-    \draw (-1.9, 0) node {\encirclesmall{2}};
-    \draw (2.3, 0) node {\encirclesmall{2}};
-    \draw (-1.4, 1.7) node {\encirclesmall{2}};
-    \draw (0.6, -1.9) node {\encirclesmall{2}};
-    \draw (0.5, 1.7) node {\encirclesmall{2}};
-    \draw (1.4, -2.2) node {\encirclesmall{3}};
-    \draw (1.4, 2.5) node {\encirclesmall{4}};
-    \draw (1.4, -1) node {\encirclesmall{4}};
-    \draw (-1, 0.5) node {\encirclesmall{5}};
-    \draw (-1.1, -1.1) node {\encirclesmall{6}};
-    \draw (-1.4, -1.7) node {\encirclesmall{7}};
+    \node (tile) [inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=0.75\linewidth]{\images/fields.png}}};
+    \begin{relcoords}{tile}
+      \draw (0.5, 0.5) node {\encirclesmall{1}};
+      \draw (0.25, 0.5) node {\encirclesmall{2}};
+      \draw (0.8, 0.5) node {\encirclesmall{2}};
+      \draw (0.3, 0.8) node {\encirclesmall{2}};
+      \draw (0.57, 0.2) node {\encirclesmall{2}};
+      \draw (0.57, 0.8) node {\encirclesmall{2}};
+      \draw (0.65, 0.12) node {\encirclesmall{3}};
+      \draw (0.65, 0.9) node {\encirclesmall{4}};
+      \draw (0.65, 0.35) node {\encirclesmall{4}};
+      \draw (0.4, 0.6) node {\encirclesmall{5}};
+      \draw (0.35, 0.3) node {\encirclesmall{6}};
+      \draw (0.31, 0.16) node {\encirclesmall{7}};
+    \end{relcoords}
   \end{tikzpicture}
 \end{center}
 
@@ -91,15 +95,15 @@ Solid yellow lines on a Field's edge cannot be passed through.
 Visiting Fields provides Heroes with benefits, such as gaining Resources or cards (see \pagelinkwithcomma{All Map Locations}{All Map Locations}).
 There are three categories of Fields:
 \begin{itemize}
-  \item \textbf{Visitable} – Once you Visit this Field, place a Black Cube on it.
+  \item \textbf{Visitable} – Once you visit this Field, place a Black Cube on it.
     Treat it as an Empty Field as long as it has a Black Cube.
   \item \textbf{Flaggable} – These Fields can be captured by players and provide passive benefits.
-    When you Visit one, place your Faction Cube on it.
-    Enemy Heroes who Visit your flagged Fields will replace your Cube with theirs to \textbf{steal} the Field’s effects.
+    When you visit one, place your Faction Cube on it.
+    Enemy Heroes who visit your flagged Fields will replace your Cube with theirs to \textbf{steal} the Field’s effects.
     Allied Heroes treat flagged Fields \textbf{as if they were empty}.
-  \item \textbf{Revisitable} – You can Visit this Field multiple times.
-    Do not place any Cubes when you Visit it.
-    You may pay 1 MP to Visit this Field again.
+  \item \textbf{Revisitable} – You can visit this Field multiple times.
+    Do not place any Cubes when you visit it.
+    You may pay 1 MP to visit this Field again.
 \end{itemize}
 \vspace*{\fill}
 \columnbreak
@@ -113,7 +117,7 @@ You may always rotate Map Tiles when placing or revealing them.
 
 \medskip
 \note{6}{
-  When you Visit a Visitable Field, \textbf{you must} place a Black Cube on that Field even if you cannot or choose not to use that Field's effects.
+  When you visit a Visitable Field, \textbf{you must} place a Black Cube on that Field even if you cannot or choose not to use that Field's effects.
 }
 
 \end{multicols}
@@ -134,9 +138,9 @@ You may always rotate Map Tiles when placing or revealing them.
 
 \clearpage
 
-\subheader{Example ``Flagging a guarded Mine''}
-
 \begin{multicols*}{2}
+
+\subsection*{Example ``Flagging a guarded Mine''}
 
 \textit{Alice wants to capture an adjacent \pagelink{Mines}{Mine} by flagging it with her Main Hero, Sandro the Necromancer.
     She spends 1 MP to move onto the Mine, which begins \pagelink{Combat}{Combat} against Neutral Units, since the Field has a \pagelink{Difficulty}{Difficulty Rating} and has not been previously flagged by any player.}\par
@@ -172,7 +176,8 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 \begin{multicols}{2}
 \begin{expansion}{cove}
   \subsection*{\pagetarget{Sea Map Tiles}{Sea Map Tiles}}
-  Sea Map Tiles have a unique backside and during setup are placed as shown in the chosen Scenario Map layout.
+  \index{Sea Map Tile}
+  Sea Map Tiles have a unique backside and during setup are placed as shown in the Scenario Map Layout.
   Discovering them works as with regular Tiles.
   Sea Map Tiles may contain both land and sea Fields.
   Movement from land to land, from sea to sea, or from sea to land works as normal.
@@ -184,6 +189,7 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 
 \begin{expansion}{conflux}
   \subsection*{\pagetarget{Elemental Map Tiles}{Elemental Map Tiles}}
+  \index{Elemental Map Tile}
   Each of the Elemental Map Tiles is associated with one \pagelink{Schools of Magic}{School of Magic}.
   When your Main Hero stands on such a Tile, all cast Spells from that School of Magic have their \svg{empower} increased by 1.
   % Clarification about main Hero is needed.
@@ -193,7 +199,8 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 
 \begin{expansion}{stronghold}
   \subsection*{\pagetarget{Subterranean Map Tiles}{Subterranean Map Tiles}}
-  Subterranean Map Tiles have a unique backside and are placed during setup as shown in the chosen Scenario Map layout.
+  \index{Subterranean Map Tile}
+  Subterranean Map Tiles have a unique backside and are placed during setup as shown in the Scenario Map Layout.
   They work similarly to regular Map Tiles, except that \textbf{you cannot move between a Surface and a Subterranean Tile without using a \pagelink{Subterranean Gate}{Subterranean Gate} in between} or a Town Portal Spell.
   No other movement effects from cards can allow you to move from one to the other.
   You also may not discover a Subterranean Map Tile while standing on a Surface Map Tile and vice versa.
@@ -204,40 +211,41 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 \end{expansion}
 \columnbreak
 
-\begin{multicols}{2}
-  \hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-cove.png}
-  \columnbreak
-  \hspace{-0.5em}\includegraphics[width=1.15\linewidth]{\images/map-tile-sea.png}
-\end{multicols}
-\begin{center}
-  \vspace*{-0.5em}
-  \imagecaption{Sea Map Tile}
-\end{center}
+\makebox[\linewidth][c]{\begin{tikzpicture}
+  \node (front) {\includegraphics[width=0.5\linewidth]{\images/map-tile-cove.png}};
+  \node (back) [right=0pt of front.east] {\includegraphics[width=0.5\linewidth]{\images/map-tile-sea.png}};
+  \node [below=0pt of {$(front.south)!0.5!(back.south)$}] {\imagecaption{Sea Map Tile}};
+\end{tikzpicture}}
 
 \separator
 
-\begin{center}
-  \vspace*{-3em}
-  \begin{tikzpicture}
-    \draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{\images/elemental_tiles.png}}};
-    \draw (-2.2, 0.1) node {\imagecaption{Elemental Fire Tile}};
-    \draw (-2.2, -4.5) node {\imagecaption{Elemental Air Tile}};
-    \draw (2.2, 0.1) node {\imagecaption{Elemental Water Tile}};
-    \draw (2.2, -4.5) node {\imagecaption{Elemental Earth Tile}};
-  \end{tikzpicture}
-\end{center}
+\makebox[\linewidth][c]{\begin{tikzpicture}
+  \node (fire) {\includegraphics[width=0.5\linewidth]{\images/elemental_tile_fire.png}};
+  \node [below=0pt of fire.south] {\imagecaption{Elemental Fire Tile}};
+  \node (water) [right=0pt of fire.east] {\includegraphics[width=0.5\linewidth]{\images/elemental_tile_water.png}};
+  \node [below=0pt of water.south] {\imagecaption{Elemental Water Tile}};
+  \node (air) [below=2em of fire.south] {\includegraphics[width=0.5\linewidth]{\images/elemental_tile_air.png}};
+  \node [below=0pt of air.south] {\imagecaption{Elemental Air Tile}};
+  \node (earth) [right=0pt of air.east] {\includegraphics[width=0.5\linewidth]{\images/elemental_tile_earth.png}};
+  \node [below=0pt of earth.south] {\imagecaption{Elemental Earth Tile}};
+\end{tikzpicture}}
 
 \separator
 
 \begin{center}
     \centering
     \begin{tikzpicture}
-      \node at (0, 0) {\includegraphics[width=0.5\linewidth]{\images/map-tile-stronghold.png}};
-      \node at (0, 2.2) {\imagecaption{Surface Map Tile}};
-      \node at (3.21, -1.11) {\includegraphics[width=0.5\linewidth]{\images/map-tile-sub.png}};
-      \node at (3.21, -3.41) {\imagecaption{Subterranean Map Tile}};
-      \node[rotate=-60] (gate) at (1.6, -0.53) {\includegraphics[width=0.33\linewidth]{\images/subter-gate-outline.png}};
-      \node at (3.21, 1.11) {\imagecaption{Subterranean Gate}};
+      \newlength{\tilesize}
+      \setlength{\tilesize}{0.5\linewidth}
+      \node (surface) {\includegraphics[width=\tilesize]{\images/map-tile-stronghold.png}};
+      \node [above=0pt of surface.north] {\imagecaption{Surface Map Tile}};
+      \node (subter) at ($(surface) + (0.8333\tilesize, -0.2887\tilesize)$)  %  ΔX=5/6, ΔY=-1/(2*sqrt(3))
+        {\includegraphics[width=\tilesize]{\images/map-tile-sub.png}};
+      \node [below=0pt of subter.south] {\imagecaption{Subterranean Map Tile}};
+      \node [opacity=0.85] at ($(surface)!0.5!(subter)$) {\includegraphics[width=1.35\tilesize]{\images/subterranean_gate_drop_shadow.png}};
+      \node [opacity=0.85] at ($(surface)!0.5!(subter)$) {\includegraphics[width=1.2\tilesize]{\images/subterranean_gate_highlight.png}};
+      \node at ($(surface)!0.5!(subter)$) (gate) {\includegraphics[width=0.5\tilesize]{\map_locations/subterranean_gate_token.png}};
+      \node at ($(gate.north)+(45pt, 5pt)$) {\imagecaption{Subterranean Gate}};
     \end{tikzpicture}
 \end{center}
 \end{multicols}
@@ -248,62 +256,64 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 Location Tokens are added by several expansions to the game.
 They are placed either separately or on specific Fields of the Map Tile when a Hero discovers one with associated Token, and overwrite the original Location they are placed on.
 Tokens cannot be placed on other Location Tokens, Blocked Fields, or Fields containing Locations required to meet any of the Scenario's victory conditions.
-The effects of Visiting the Location Tokens are described in \pagelink{Location Token}{All Map Locations}.
+The effects of visiting the Location Tokens are described in \pagelink{Location Token}{All Map Locations}.
 
-\begin{expansion}[before=\vspace*{5pt}]{navalbattles}
-  \pagetarget{Creature Bank Tokens}{\subsection*{Creature Bank Tokens}}
-  As an \textbf{optional rule} you can decide to play with \pagelink{Creature Banks Rules}{Creature Banks}.
-  If you do, each time you discover a Far \mbox{(II--III)} or Near \mbox{(IV--V)} Map Tile, you may decide to draw a Creature Bank Token corresponding to the discovered Map Tile, and -- contrary to the normal rules -- you can place it \textbf{only on its Blocked Field}.
-  \medskip
-  \begin{center}
-    \includegraphics[width=0.38\linewidth]{\map_locations/creature_bank_token.png}\\
-    \imagecaption{Creature Bank Token}
-  \end{center}
-\end{expansion}
-
-\bigskip
-
-\begin{expansion}[before=\vspace*{6pt}]{cove}
-  \subsection*{\pagetarget{Whirlpool Tokens}{Whirlpool Tokens}}
-  Discovering \pagelink{Whirlpool}{Whirlpools} follows the same rules as discovering Monoliths.
-  \bigskip
-
-  \begin{tikzpicture}
-    \draw (-2.5, 0) node[inner sep=0] {\includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}};
-    \draw (-2.5, -1) node {\Huge\textbf{\textcolor{white}{{\raisebox{0.3\height}{\Huge\textbf{-}}}1}}};
-    \draw (0, 0) node[inner sep=0] {\includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}};
-    \draw (0, -1) node {\Huge\textbf{\textcolor{white}{0}}};
-    \draw (2.5, 0) node[inner sep=0] {\includegraphics[width=0.4\linewidth]{\map_locations/whirlpool-token.png}};
-    \draw (2.5, -1) node {\Huge\textbf{\textcolor{white}{{\raisebox{0.3\height}{\Large$\boldsymbol{+}$}}1}}};
-  \end{tikzpicture}
-  \begin{center}
-    \imagecaption{Whirlpool Tokens}
-  \end{center}
-\end{expansion}
-
-\begin{expansion}[before=\vspace*{-11mm}]{stronghold}
-  \pagetarget{Subterranean Gate}{\subsection*{Subterranean Gate Tokens}}
-  Subterranean Gates are also determined by a Scenario's Map Layout and connect both a Surface Map Tile and an adjacent Subterranean Map Tile.
-  They cannot be placed outside the Map Tiles.
-  After discovering one of the corresponding Map Tiles you may choose the position of the Subterranean Gate Token as long as it connects the two indicated Map Tiles without covering forbidden Fields.
-  The Scenario Map layout only shows \textbf{which two Tiles are connected}, not the exact Fields the Token is placed on.
-  \medskip
-  \begin{center}
-    \includegraphics[width=0.58\linewidth]{\map_locations/subterranean_gate_token.png}\\
-    \imagecaption{Subterranean Gate Token}
-  \end{center}
-\end{expansion}
 
 \bigskip
 
 \begin{expansion}[before=\vspace*{0pt}]{conflux}
-  \subsection*{\pagetarget{Monolith Tokens}{Monolith Tokens}}
-   The position of \pagelink{Monolith}{Monoliths} is determined by Scenario Layout.
-   If you discover a Tile with one of these Tokens on it, discover the Tile normally, and then place the Token on the Field indicated by the Scenario's Map layout, or a Field of your choosing if it's not specified.
-  \medskip
+  \subsection*{\pagetarget{Monolith Tokens}{Monolith Tokens}}\index{Monolith}
+  \setlength\intextsep{3pt}
+  \setlength\columnsep{0.5em}
+  \begin{wrapfigure}{l}{0.38\linewidth}
+    \includegraphics[width=\linewidth]{\map_locations/monolith_token.png}
+  \end{wrapfigure}
+   The position of \pagelink{Monolith}{Monoliths} is determined by the Scenario Map Layout.
+   If you discover a Tile with one of these Tokens on it, discover the Tile normally, and then place the Token on the Field indicated by the Scenario Map Layout, or a Field of your choosing if it's not specified.
+\end{expansion}
+
+\begin{expansion}[before=\vspace*{6pt}]{cove}
+  \subsection*{\pagetarget{Whirlpool Tokens}{Whirlpool Tokens}}\index{Whirlpool}
+  Discovering \pagelink{Whirlpool}{Whirlpools} follows the same rules as discovering Monoliths.
+  \bigskip
   \begin{center}
-    \includegraphics[width=0.38\linewidth]{\map_locations/monolith_token.png}\\
-    \imagecaption{Monolith Token}
+    \begin{tikzpicture}
+      \draw (0, 2.75) node[inner sep=0] {\includegraphics[width=0.38\linewidth]{\map_locations/whirlpool_0.png}};
+      \draw (-1.6, 0) node[inner sep=0] {\includegraphics[width=0.38\linewidth]{\map_locations/whirlpool_minus_1.png}};
+      \draw (1.6, 0) node[inner sep=0] {\includegraphics[width=0.38\linewidth]{\map_locations/whirlpool_plus_1.png}};
+    \end{tikzpicture}
   \end{center}
 \end{expansion}
+
+\begin{expansion}[before=\vspace*{-11mm}]{stronghold}
+  \pagetarget{Subterranean Gate}{\subsection*{Subterranean Gate Tokens}}\index{Subterranean Gate}
+  Subterranean Gates are also determined by the Scenario Map Layout and connect both a Surface Map Tile and an adjacent Subterranean Map Tile.
+  They cannot be placed outside the Map Tiles.
+  After discovering one of the corresponding Map Tiles you may choose the position of the Subterranean Gate Token as long as it connects the two indicated Map Tiles without covering forbidden Fields.
+  \setlength\intextsep{5pt}
+  \begin{wrapfigure}{l}{0.3\linewidth}
+    \includegraphics[width=1.8\linewidth]{\map_locations/subterranean_gate_token.png}
+  \end{wrapfigure}
+  The Scenario Map Layout only shows \textbf{which two Tiles are connected}, not the exact Fields the Token is placed on.
+  \vspace{8em}
+\end{expansion}
+
+\bigskip
+
+\begin{expansion}[before=\vspace*{5pt}]{navalbattles}
+  \pagetarget{Creature Bank Tokens}{\subsection*{Creature Bank Tokens}}
+  \setlength\intextsep{3pt}
+  \setlength\columnsep{0.5em}
+  \begin{wrapfigure}{l}{0.38\linewidth}
+    \includegraphics[width=\linewidth]{\map_locations/creature_bank_token.png}
+  \end{wrapfigure}
+  As an \textbf{optional rule} you can decide to play with \pagelink{Creature Banks Rules}{Creature Banks}.
+  If you do, each time you discover a Far \mbox{(II--III)} or Near \mbox{(IV--V)} Map Tile, you may decide to draw a Creature Bank Token corresponding to the discovered Map Tile, and -- contrary to the normal rules -- you can place it \textbf{only on its Blocked Field}.
+\end{expansion}
 \end{multicols}
+
+\begin{tikzpicture}[overlay]
+  \node(bg)[anchor=center, opacity=0.15, xshift=8em, yshift=-22em] at (current page.center) {
+    \includegraphics[width=0.5\paperwidth, keepaspectratio]{\art/cove_part.png}
+  };
+\end{tikzpicture}

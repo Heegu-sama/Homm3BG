@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-01-11 20:30+0000\n"
+"POT-Creation-Date: 2026-03-04 23:22+0000\n"
 "PO-Revision-Date: 2025-10-03 15:36+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -88,6 +88,30 @@ msgstr "Stretch Goals 2"
 
 #.  Language of wiki URLs
 #. type: newcommand{#4}
-#: sections/language_metadata.tex:23
+#: sections/language_metadata.tex:24
 msgid "en"
 msgstr "pl"
+
+#.  Wikilink character ° command with custom kerning for characters appearing before it
+#. type: newcommand{#4}
+#: sections/language_metadata.tex:36
+msgid ""
+"\\directlua{ local s = \"\\luaescapestring{\\detokenize{#1}}\" local last = "
+"s:sub(-1)  if last == \".\" or last == \",\" then tex.print(\"\\"
+"\\kern-0.1em\")  end }"
+msgstr "\\empty"
+
+#. type: textcolor{#2}
+#: sections/language_metadata.tex:36
+msgid "\\textbf{°}"
+msgstr "\\textbf{°}"
+
+#.  Kerning for characters after the wikilink character °
+#. type: newcommand{#4}
+#: sections/language_metadata.tex:41
+msgid "\\ifx\\wikinexttoken)\\kern-0.08em\\fi"
+msgstr ""
+"\\ifx\\wikinexttoken)\\kern-0.08em\n"
+"\\else\\ifx\\wikinexttoken,\\kern-0.1em\n"
+"\\else\\ifx\\wikinexttoken.\\kern-0.1em\n"
+"\\fi\\fi\\fi"

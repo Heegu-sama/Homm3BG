@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Set up repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Label
         shell: python
@@ -38,6 +38,7 @@ jobs:
               "[DE]": "🇩🇪 German",
               "[CS]": "🇨🇿 Czech",
               "[HE]": "🇮🇱 Hebrew",
+              "[CN]": "🇨🇳 Chinese",
           }
 
           for prefix, label in language_labels.items():

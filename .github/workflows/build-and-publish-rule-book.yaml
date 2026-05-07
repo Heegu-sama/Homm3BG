@@ -28,7 +28,8 @@ jobs:
               { "language": "ua", "display": "🇺🇦 Українська"},
               { "language": "de", "display": "🇩🇪 Deutsch"},
               { "language": "cs", "display": "🇨🇿 Čeština"},
-              { "language": "he", "display": "🇮🇱 עברית"}
+              { "language": "he", "display": "🇮🇱 עברית"},
+              { "language": "cn", "display": "🇨🇳 中文"}
             ]
           }
           EOF
@@ -72,7 +73,7 @@ jobs:
   check_pages:
     needs: [matrix-setup, digital_build, printable_build]
     name: "Page count check / ${{ matrix.display }}"
-    if: ${{ github.event_name == 'pull_request' }}
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     container:
       image: minidocks/poppler
@@ -81,7 +82,7 @@ jobs:
       matrix: ${{ fromJson(needs.matrix-setup.outputs.check-pages-matrix) }}
     steps:
       - name: Download digital PDF
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: main_${{ matrix.language }}
 
@@ -96,7 +97,7 @@ jobs:
           fi
 
       - name: Download printable PDF
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: printable_${{ matrix.language }}
 
@@ -122,7 +123,7 @@ jobs:
         run: mkdir ${{ matrix.language }}
 
       - name: Download compiled books
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           pattern: "*_${{ matrix.language }}"
           path: ${{ matrix.language }}

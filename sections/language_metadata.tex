@@ -21,3 +21,21 @@
 
 % Language of wiki URLs
 \newcommand{\wikilang}{en}
+
+% Wikilink character ° command with custom kerning for characters appearing before it
+\newcommand{\wikichar}[1]{%
+  \directlua{
+    local s = "\luaescapestring{\detokenize{#1}}"
+    local last = s:sub(-1)
+    if last == "." or last == "," then
+      tex.print("\\kern-0.1em")
+    end
+  }%
+  \textcolor{\hyperlinkcolor}{\textbf{°}}%
+}
+
+% Kerning for characters after the wikilink character °
+\newcommand{\wikiapplykern}{%
+  \ifx\wikinexttoken)\kern-0.08em%
+  \fi%
+}

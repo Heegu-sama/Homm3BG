@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-02-16 23:00+0000\n"
+"POT-Creation-Date: 2026-03-29 14:25+0000\n"
 "PO-Revision-Date: 2024-06-03 10:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -16,14 +16,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. type: Plain text
-#: sections/card_effect_keywords.tex:119 sections/card_effect_keywords.tex:204
-#: sections/deckbuilding.tex:183 sections/deckbuilding.tex:396
-#: sections/expansion_content.tex:111 sections/expansion_content.tex:158
-#: sections/expansion_content.tex:173 sections/resources.tex:31
+#. type: multicols
+#: sections/battlefield.tex:33 sections/expansion_content.tex:178
+#: sections/expansion_content.tex:190 sections/title_with_toc.tex:37
+#: sections/title_with_toc.tex:42
 #, no-wrap
-msgid "\\columnbreak"
+msgid ""
+"  \\columnbreak\n"
+"\n"
 msgstr ""
+"  \\columnbreak\n"
+"\n"
 
 #.  !TeX spellcheck = en_US
 #. type: Plain text
@@ -42,16 +45,17 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/expansion_content.tex:25
+#: sections/expansion_content.tex:26
 msgid "\\textbf{The following contents are added by many of the expansions:}"
 msgstr ""
 
 #. type: multicols*
-#: sections/expansion_content.tex:25
+#: sections/expansion_content.tex:26
 #, no-wrap
 msgid ""
 "{2}\n"
 "\\subsection*{\\pagetarget{Miniatures}{Unit Miniatures}}\n"
+"\\index{Miniatures}\n"
 "If you want to play your Combats with Miniatures, place and move them over the Combat Board instead of the cards.\n"
 "You can put Miniatures on top of the cards or keep the cards next to the Combat Board to form an initiative bar for better visualization of the order in which units activate.\\par\n"
 "If you play with Miniatures, there are a few rules to follow:\n"
@@ -69,7 +73,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/expansion_content.tex:30
+#: sections/expansion_content.tex:31
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{center}\n"
@@ -90,7 +94,7 @@ msgstr ""
 "\\vspace*{\\fill}"
 
 #. type: multicols*
-#: sections/expansion_content.tex:34
+#: sections/expansion_content.tex:35
 #, no-wrap
 msgid ""
 "\\subsection*{New Map Locations}\n"
@@ -100,7 +104,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/expansion_content.tex:37
+#: sections/expansion_content.tex:38
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{Permanent Cards}\n"
@@ -116,7 +120,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/expansion_content.tex:40
+#: sections/expansion_content.tex:41
 #, no-wrap
 msgid ""
 "\\subsection*{Schools of Magic}\n"
@@ -125,7 +129,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/expansion_content.tex:44
+#: sections/expansion_content.tex:45
 #, no-wrap
 msgid ""
 "\\subsection*{Unique card effects with their own components}\n"
@@ -135,7 +139,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/expansion_content.tex:47
+#: sections/expansion_content.tex:48
 #, no-wrap
 msgid ""
 "\\subsection*{More of the same}\n"
@@ -144,28 +148,86 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/expansion_content.tex:72
+#: sections/expansion_content.tex:64
 #, fuzzy
 #| msgid "Searching Example"
-msgid "\\subheader{Factions Expansions}"
+msgid "\\subheader{Faction Expansions}"
 msgstr "דוגמה לחיפוש"
 
 #. type: multicols
-#: sections/expansion_content.tex:72
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\subsection*{\\pagetarget{Events}{Events}}\n"
-#| "Added by the Fortress expansion.\n"
-#| "Event Cards\\index{Event Cards} may be used in games with more than one player.\n"
-#| "Shuffle the Event Deck during setup.\n"
-#| "At the start of each Resource Round (except the first Round), draw and read the next Event Card after receiving Resources.\n"
-#| "The first Event is drawn by the starting player.\n"
-#| "\\textbf{Change the player who draws the Event in a clockwise order} every time a new Event is drawn.\n"
-#| "Resolve any effects in clockwise order starting with the player who drew the Card.\n"
-#| "Any Cards which were revealed as a part of resolving an Event should be shuffled back into their respective Decks afterwards.\n"
-#| "\n"
+#: sections/expansion_content.tex:64
+#, no-wrap
 msgid ""
 "{2}\n"
+"\\begin{expansion}[title=]{inferno}\n"
+"  \\subsection*{\\color{inferno}Inferno Expansion}\n"
+"  \\setlength\\intextsep{0pt}\n"
+"  \\setlength\\columnsep{0.8em}\n"
+"  \\begin{wrapfigure}{l}{0.35\\textwidth}\n"
+"    \\includegraphics[width=\\linewidth]{\\boxcovers/inferno-box.png}\n"
+"  \\end{wrapfigure}\n"
+"  Contains the \\textbf{Inferno Faction}: Demonic and fire-associated units under the command of Heretics and Demoniacs.\\par\n"
+"  New gameplay mechanics: a new unit Ability to \\pagelink{Summoning}{Summon Demons} in combat; \\pagelink{Empowered Statistic}{Empowered Statistic cards} to make your Hero's Statistic cards more powerful, and the \\pagelink{Random Town}{Random Town} Map Location with unique combat rules.\n"
+"\\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/expansion_content.tex:75
+#, no-wrap
+msgid ""
+"\\begin{expansion}[title=]{cove}\n"
+"  \\subsection*{\\color{cove}Cove Expansion}\n"
+"  \\setlength\\intextsep{0pt}\n"
+"  \\setlength\\columnsep{0.8em}\n"
+"  \\begin{wrapfigure}{l}{0.35\\textwidth}\n"
+"    \\includegraphics[width=\\linewidth]{\\boxcovers/cove-box.png}\n"
+"  \\end{wrapfigure}\n"
+"  Contains the \\textbf{Cove Faction}: Pirate units and Sea monsters under the command of Captains and Navigators.\\par\n"
+"  New gameplay mechanics: \\pagelink{Sea Map Tiles}{Sea Map Tiles} with many new Sea Locations to discover; \\pagelink{Whirlpool Tokens}{Whirlpools} to travel quickly between distant Sea Tiles… but \\pagelink{Whirlpool}{at a cost}; and the \\wikilink{/war_machines/cannon}{Cannon,} a new \\pagelink{War Machines}{War Machine}.\n"
+"\\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/expansion_content.tex:86
+#, no-wrap
+msgid ""
+"\\begin{expansion}[title=]{conflux}\n"
+"  \\subsection*{\\color{conflux}Conflux Expansion}\n"
+"  \\setlength\\intextsep{0pt}\n"
+"  \\setlength\\columnsep{0.8em}\n"
+"  \\begin{wrapfigure}{l}{0.35\\textwidth}\n"
+"    \\includegraphics[width=\\linewidth]{\\boxcovers/conflux-box.png}\n"
+"  \\end{wrapfigure}\n"
+"  Contains the \\textbf{Conflux Faction}: Magical Creatures of all elements under the command of Elementalists and Planeswalkers.\\par\n"
+"  New gameplay mechanics: \\pagelink{Elemental Map Tiles}{Elemental Map Tiles} aligned with Schools of Magic; magical \\pagelink{Monolith Tokens}{Monoliths}, which allow your Heroes to traverse long distances on the Map; a new \\pagelink{Elemental Damage}{type of damage} which ignores Defense; and a unique Spell effect to \\pagelink{Summoning}{Summon Elemental units}, which support you in combat.  % TODO: fix link\n"
+"\\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/expansion_content.tex:97
+#, no-wrap
+msgid ""
+"\\begin{expansion}[title=]{rampart}\n"
+"  \\subsection*{\\color{rampart}Rampart Expansion}\n"
+"  \\setlength\\intextsep{0pt}\n"
+"  \\setlength\\columnsep{0.8em}\n"
+"  \\begin{wrapfigure}{l}{0.35\\textwidth}\n"
+"    \\includegraphics[width=\\linewidth]{\\boxcovers/rampart-box.png}\n"
+"  \\end{wrapfigure}\n"
+"  Contains the \\textbf{Rampart Faction}: Nature-oriented units under the lead of Druids and Rangers.\\par\n"
+"  New gameplay mechanics: Various \\pagelink{War Machines}{War Machines}, which support you with permanent effects in combat.\n"
+"\\end{expansion}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/expansion_content.tex:109
+#, no-wrap
+msgid ""
+"\\vspace*{0.5em}\n"
 "\\begin{expansion}[title=]{fortress}\n"
 "  \\subsection*{\\color{fortress}Fortress Expansion}\n"
 "  \\setlength\\intextsep{0pt}\n"
@@ -174,161 +236,17 @@ msgid ""
 "      \\includegraphics[width=\\linewidth]{\\boxcovers/fortress-box.png}\n"
 "  \\end{wrapfigure}\n"
 "  Contains the \\textbf{Fortress Faction}: Poisonous swamp beasts under the command of Witches and Beastmasters.\\par\n"
-"  \\medskip\n"
-"  New gameplay mechanics: The new storytelling card type described below.\n"
-"  \\medskip\n"
-"  \\subsection*{\\pagetarget{Events}{Events}}\n"
-"  Event cards\\index{Event cards} may be used in games with more than one player.\n"
-"  Shuffle the Event Deck during setup.\n"
-"  At the start of each Resource Round (except the first Round), draw and read the next Event card after receiving Resources.\n"
-"  The first Event is drawn by the starting player.\n"
-"  \\textbf{Change the player who draws the Event in a clockwise order} every time a new Event is drawn.\n"
-"  Resolve any effects in clockwise order starting with the player who drew the card.\n"
-"  Any cards which were revealed as a part of resolving an Event should be shuffled back into their respective Decks afterwards.\n"
-"\n"
-msgstr ""
-"\\subsection*{\\pagetarget{Events}{אירועים}}\n"
-"נוספו בהרחבה \\textenglish{Fortress}.\n"
-"ניתן להשתמש בקלפי אירועים\\index{קלפי אירוע} במשחקים עם יותר משחקן אחד.\n"
-"ערבבו את חפיסת האירועים במהלך הכנת המשחק.\n"
-"בתחילת כל סבב משאבים (למעט הסיבוב הראשון), לאחר שקיבלתם את המשאבים, עליכם לשלוף לקרוא את קלף האירועים הבא.\n"
-"השחקן הפותח שולף את קלף האירועים הראשון.\n"
-"\\textbf{בפעמים הבאות השחקנים ישלפו את קלפי האירועים בהתאם לסיבוב השעון}.\n"
-"הפעילו את ההשפעות של האירוע לפי סיבוב השעון, כאשר השחקן ששלף את קלף האירועים פועל ראשון.\n"
-"לאחר שהאירוע הסתיים, יש לערבב חזרה לתוך החפיסות הרלוונטיות כל קלף שהתגלה במהלך האירוע.\n"
-"\n"
-
-#. type: multicols
-#: sections/expansion_content.tex:74
-#, no-wrap
-msgid ""
-"  \\medskip\n"
+"  New gameplay mechanics: the storytelling \\pagelink{Events}{Event card}.\n"
+"\\end{expansion}\n"
 "\n"
 msgstr ""
 
 #. type: multicols
-#: sections/expansion_content.tex:78
+#: sections/expansion_content.tex:122
 #, no-wrap
 msgid ""
-"  \\begin{minipage}[h]{\\linewidth}\n"
-"  \\vspace{0.1pt}\n"
-"  \\centering\n"
-"  \\begin{tikzpicture}\n"
-msgstr ""
-
-#. type: multicols
-#: sections/expansion_content.tex:93
-#, fuzzy, no-wrap
-#| msgid ""
-#| "      \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\cards/event.png}}};\n"
-#| "      \\draw (1, 1.8) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
-#| "      \\draw (-2, 0.4) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-#| "      \\draw (2.5, -1.1) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
-#| "    \\end{tikzpicture}\n"
-#| "  \\end{scriptsize}\n"
-#| "  \\footnotesize{\\imagecaption{Event Card}}\n"
-#| "  \\scriptsize\n"
-#| "  \\begin{multicols}{2}\n"
-#| "    \\begin{itemize}\n"
-#| "      \\item[\\textbf{1.}] \\textbf{Name}\n"
-#| "      \\item[\\textbf{2.}] \\textbf{Fluff}\n"
-#| "      \\item[\\textbf{3.}] \\textbf{Effect}\n"
-#| "      \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
-#| "    \\end{itemize}\n"
-#| "  "
-msgid ""
-"  \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\cards/event.png}}};\n"
-"  \\draw (1, 1.8) node {\\encircle{1}};\n"
-"  \\draw (-2, 0.4) node {\\encircle{2}};\n"
-"  \\draw (2.5, -1.1) node {\\encircle{3}};\n"
-"  \\end{tikzpicture}\n"
-"  \\footnotesize\n"
-"  \\imagecaption{Event card}\n"
-"  \\begin{multicols}{2}\n"
-"    \\begin{itemize}\n"
-"    \\item[\\textbf{1.}] Name\n"
-"    \\item[\\textbf{2.}] Flavor text\n"
-"    \\item[\\textbf{3.}] Effect\n"
-"    \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
-"    \\end{itemize}\n"
-"  "
-msgstr ""
-"      \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\cards/event.png}}};\n"
-"      \\draw (1, 1.8) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
-"      \\draw (-2, 0.4) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-"      \\draw (2.5, -1.1) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
-"    \\end{tikzpicture}\n"
-"  \\end{scriptsize}\n"
-"  \\footnotesize{\\imagecaption{קלף אירועים}}\n"
-"  \\scriptsize\n"
-"  \\begin{multicols}{2}\n"
-"    \\begin{itemize}\n"
-"      \\item[\\textbf{1.}] \\textbf{שם}\n"
-"      \\item[\\textbf{2.}] \\textbf{סיפור רקע}\n"
-"      \\item[\\textbf{3.}] \\textbf{השפעה}\n"
-"      \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
-"    \\end{itemize}\n"
-"  "
-
-#. type: expansion
-#: sections/expansion_content.tex:111
-#, no-wrap
-msgid ""
-"[title=]{rampart}\n"
-"  \\subsection*{\\color{rampart}Rampart Expansion}\n"
-"  \\setlength\\intextsep{0pt}\n"
-"  \\setlength\\columnsep{0.8em}\n"
-"  \\begin{wrapfigure}{l}{0.35\\textwidth}\n"
-"    \\includegraphics[width=\\linewidth]{\\boxcovers/rampart-box.png}\n"
-"  \\end{wrapfigure}\n"
-"  Contains the \\textbf{Rampart Faction}: Nature-oriented units under the lead of Druids and Rangers.\\par\n"
-"  \\medskip\n"
-"  New gameplay mechanics:\\par\n"
-"  \\smallskip\n"
-"  Various \\pagelink{War Machines}{War Machines}, which support you with permanent effects in combat."
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:126
-#, no-wrap
-msgid ""
-"[title=]{inferno}\n"
-"  \\subsection*{\\color{inferno}Inferno Expansion}\n"
-"  \\setlength\\intextsep{0pt}\n"
-"  \\setlength\\columnsep{0.8em}\n"
-"  \\begin{wrapfigure}{l}{0.35\\textwidth}\n"
-"    \\includegraphics[width=\\linewidth]{\\boxcovers/inferno-box.png}\n"
-"  \\end{wrapfigure}\n"
-"  Contains the \\textbf{Inferno Faction}: Demonic and fire-associated units under the command of Heretics and Demoniacs.\\par\n"
-"  \\medskip\n"
-"  New gameplay mechanics:\\par\n"
-"  \\smallskip\n"
-"  A new unit Ability to \\pagelink{Summoning}{Summon Demons} in combat; \\pagelink{Empowered Statistic}{Empowered Statistic cards} to make your Hero's Statistic cards more powerful, and the \\pagelink{Random Town}{Random Town} Map Location with unique combat rules."
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:142
-#, no-wrap
-msgid ""
-"[title=]{conflux}\n"
-"  \\subsection*{\\color{conflux}Conflux Expansion}\n"
-"  \\setlength\\intextsep{0pt}\n"
-"  \\setlength\\columnsep{0.8em}\n"
-"  \\begin{wrapfigure}{l}{0.35\\textwidth}\n"
-"    \\includegraphics[width=\\linewidth]{\\boxcovers/conflux-box.png}\n"
-"  \\end{wrapfigure}\n"
-"  Contains the \\textbf{Conflux Faction}: Magical Creatures of all elements under the command of Elementalists and Planeswalkers.\\par\n"
-"  \\medskip\n"
-"  New gameplay mechanics:\\par\n"
-"  \\smallskip\n"
-"  \\pagelink{Elemental Map Tiles}{Elemental Map Tiles} aligned with Schools of Magic; magical \\pagelink{Monolith Tokens}{Monoliths}, which allow your Heroes to traverse long distances on the Map; a new \\pagelink{Elemental Damage}{type of damage} which ignores Defense; and a unique Spell effect to \\pagelink{Summoning}{Summon Elemental units}, which support you in combat.  % TODO: fix link"
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:158
-#, no-wrap
-msgid ""
-"[title=]{stronghold}\n"
+"\\vspace*{0.5em}\n"
+"\\begin{expansion}[title=]{stronghold}\n"
 "  \\subsection*{\\color{stronghold}Stronghold Expansion}\n"
 "  \\setlength\\intextsep{0pt}\n"
 "  \\setlength\\columnsep{0.8em}\n"
@@ -336,61 +254,38 @@ msgid ""
 "    \\includegraphics[width=\\linewidth]{\\boxcovers/stronghold-box.png}\n"
 "  \\end{wrapfigure}\n"
 "  Contains the \\textbf{Stronghold Faction}: Wild and orkish units under command of Barbarians and Battle Mages.\\par\n"
-"  \\medskip\n"
-"  New gameplay mechanics:\\par\n"
-"  \\smallskip\n"
-"  \\pagelink{Subterranean Map Tiles}{Subterranean Map Tiles}, which open a new world to explore, and mystical \\pagelink{Spell Scroll Cards}{Spell Scrolls},\n"
-"  which allow your Heroes to cast additional Spells even if they are not as familiar with magic."
+"  New gameplay mechanics: \\pagelink{Subterranean Map Tiles}{Subterranean Map Tiles}, which open a new world to explore, and mystical \\pagelink{Spell Scroll Cards}{Spell Scrolls},\n"
+"  which allow your Heroes to cast additional Spells even if they are not as familiar with magic.\n"
+"\\end{expansion}\n"
+"\n"
 msgstr ""
 
-#. type: expansion
-#: sections/expansion_content.tex:173
+#. type: multicols
+#: sections/expansion_content.tex:134
 #, no-wrap
 msgid ""
-"[title=]{tower}\n"
+"\\vspace*{0.5em}\n"
+"\\begin{expansion}[title=]{tower}\n"
 "  \\subsection*{\\color{tower}Tower Expansion}\n"
 "  \\setlength\\intextsep{0pt}\n"
 "  \\setlength\\columnsep{0.8em}\n"
 "  \\begin{wrapfigure}{l}{0.35\\textwidth}\n"
 "    \\includegraphics[width=\\linewidth]{\\boxcovers/tower-box.png}\n"
 "  \\end{wrapfigure}\n"
-"  Contains the \\textbf{Tower Faction}: Magic-oriented units under the lead of Wizards and Alchemists.\\par\n"
-"  \\medskip\n"
-"  This expansion doesn't introduce any new gameplay mechanics, but it expands many existing components, e.g.~it adds more \\textbf{Heroes of other Factions}."
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:187
-#, no-wrap
-msgid ""
-"[title=]{cove}\n"
-"  \\subsection*{\\color{cove}Cove Expansion}\n"
-"  \\setlength\\intextsep{0pt}\n"
-"  \\setlength\\columnsep{0.8em}\n"
-"  \\begin{wrapfigure}{l}{0.35\\textwidth}\n"
-"    \\includegraphics[width=\\linewidth]{\\boxcovers/cove-box.png}\n"
-"  \\end{wrapfigure}\n"
-"  Contains the \\textbf{Cove Faction}: Pirate units and Sea monsters under the command of Captains and Navigators.\\par\n"
-"  \\medskip\n"
-"  New gameplay mechanics:\\par\n"
-"  \\smallskip\n"
-"  \\pagelink{Sea Map Tiles}{Sea Map Tiles} with many new Sea Locations to discover; \\pagelink{Whirlpool Tokens}{Whirlpools} to travel quickly between distant Sea Tiles… but \\pagelink{Whirlpool}{at a cost}; and the \\wikilink{/war_machines/cannon}{Cannon,} a new \\pagelink{War Machines}{War Machine}."
-msgstr ""
-
-#. type: center
-#: sections/expansion_content.tex:191
-msgid "\\transparent{0.2}"
+"  Contains the \\textbf{Tower Faction}: Magic-oriented units under the lead of Wizards and Alchemists.\n"
+"  This expansion doesn't introduce any new gameplay mechanics, but it expands many existing components, e.g.~it adds more \\textbf{Heroes of other Factions}.\n"
+"\\end{expansion}"
 msgstr ""
 
 #. type: Plain text
-#: sections/expansion_content.tex:208
+#: sections/expansion_content.tex:151
 msgid ""
 "\\subheader[Gameplay and Game Mode\\\\Expansions]{Gameplay and Game Mode "
 "Expansions}"
 msgstr ""
 
-#. type: multicols*
-#: sections/expansion_content.tex:208
+#. type: multicols
+#: sections/expansion_content.tex:151
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -404,13 +299,13 @@ msgid ""
 "  This expansion offers three new gameplay mechanics:\n"
 "  The \\pagelink{Alternative Combat Boards}{Naval Battle Board} lets your Heroes fight Combat on ships, which is more challenging than on the normal Combat Board.\n"
 "  The new \\pagelink{Creature Banks Rules}{Creature Banks} Map Locations add challenging combats and \\pagelink{Stack Tokens}{Stacked units}.\n"
-"  The \\pagelink{Empowered Ability Token}{empowered Ability cards} is a new reward.\n"
+"  The \\pagelink{Empowered Ability Token}{empowered Ability Tokens and Cards} make your Hero more powerful.\n"
 "\\end{expansion}\n"
 "\n"
 msgstr ""
 
-#. type: multicols*
-#: sections/expansion_content.tex:222
+#. type: multicols
+#: sections/expansion_content.tex:165
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -424,393 +319,86 @@ msgid ""
 "  The heart of this expansion is a large \\pagelink{Battlefield Combat}{Battlefield Board}.\n"
 "  Two new \\pagelink{Adventure and Skirmish Modes}{game modes} are added around the use of this Battlefield Board.\n"
 "  Furthermore, the expansion offers an alternative \\pagelink{Morale}{Morale gameplay system}, which you can use instead of the Morale Tokens.\n"
-"\\end{expansion}"
+"\\end{expansion}\n"
+"\\vspace*{\\fill}"
 msgstr ""
 
-#. type: expansion
-#: sections/expansion_content.tex:229
-#, no-wrap
-msgid ""
-"*[before=\\vspace*{-11mm}]{navalbattles}\n"
-"\\pagetarget{Creature Banks Rules}{\\subheader{Creature Banks}}\n"
-"\\begin{multicols*}{2}\n"
-"  Playing with Creature Banks is an \\textbf{optional rule}.\n"
-"  If you decide to play with Creature Banks, the following rules apply.\n"
-"\n"
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:236
-#, no-wrap
-msgid ""
-"  \\subsection*{Setup}\n"
-"  Separate the Creature Bank Tokens into two piles (for Near and Far Map Tiles) based on the numerals on their backs.\n"
-"  Shuffle each pile and place them near the Map.\n"
-"  Place the Creature Bank unit cards face up near the Neutral Unit Decks.\n"
-"  There is no need to shuffle these cards.\n"
-"  Shuffle all Stack Tokens and place them near the Creature Bank unit cards.\n"
-"\n"
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:250
-#, fuzzy, no-wrap
-#| msgid ""
-#| "[!hb]\n"
-#| "  \\centering\n"
-#| "  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
-#| "  \\begin{tikzpicture}[overlay]\n"
-#| "    \\node at (5, 10) {\\footnotesize{\\imagecaption{You cannot add this Tile here}}};\n"
-#| "    \\node at (5, 1.4) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{You can add this Tile here, because it will}}}}};\n"
-#| "    \\node at (3.9, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{be adjacent to two other Tiles}}}}};\n"
-#| "  \\end{tikzpicture}"
-msgid ""
-"  \\bigskip\n"
-"  \\begin{minipage}[b]{0.4\\linewidth}\n"
-"    \\begin{center}\n"
-"      \\includegraphics[width=0.85\\linewidth]{\\map_locations/creature-bank.png}\\\\\n"
-"      \\imagecaption{Creature Bank (Near)}\\\\\n"
-"      \\vspace*{1em}\n"
-"      \\includegraphics[width=0.45\\linewidth]{\\images/stack-token.png}\\\\\n"
-"      \\imagecaption{Stack Token}\\\\\n"
-"    \\end{center}\n"
-"  \\end{minipage}\n"
-"  \\hfill\n"
-"  \\begin{minipage}[b]{0.55\\linewidth}\n"
-"    \\begin{center}\n"
-"      \\begin{tikzpicture}\n"
-msgstr ""
-"[!hb]\n"
-"  \\centering\n"
-"  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
-"  \\begin{tikzpicture}[overlay]\n"
-"    \\begin{scope}[xscale=-1]\\node at (5, 10) {\\footnotesize{\\imagecaption{אינך רשאי להוסיף את האריח כאן}}};\n"
-"    \\node at (5, 1.4) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{אתה רשאי להוסיף את האריח כאן מכיוון}}}}};\n"
-"    \\node at (5.15, 1) {\\footnotesize{\\textbf{\\textit{\\textcolor{cadmiumgreen}{שהוא יהיה סמוך לשני אריחים אחרים}}}}};\n"
-"  \\end{scope}\\end{tikzpicture}"
-
-#. type: expansion
-#: sections/expansion_content.tex:257
-#, fuzzy, no-wrap
-#| msgid ""
-#| "      \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/mmback.png}};\n"
-#| "      \\node at (1.5, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}};\n"
-#| "    \\end{tikzpicture}\n"
-#| "    \\caption{\\textbf{\\pagelink{spells}{Spell Card}}}\n"
-#| "  \\end{subfigure}"
-msgid ""
-"        \\draw (0, 0) node {\\includegraphics[width=0.7\\linewidth]{\\cards/creature-bank-back.png}};\n"
-"        \\draw (0.75, -0.5) node {\\includegraphics[width=0.7\\linewidth]{\\cards/creature-bank.png}};\n"
-"      \\end{tikzpicture}\\\\\n"
-"      \\imagecaption{Creature Bank unit card}\n"
-"    \\end{center}\n"
-"  \\end{minipage}\n"
-"\n"
-msgstr ""
-"      \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/mmback.png}};\n"
-"      \\node at (1.5, 0.1) {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}};\n"
-"    \\end{tikzpicture}\n"
-"    \\caption{\\textbf{\\pagelink{spells}{קלפי קסמים}}}\n"
-"  \\end{subfigure}"
-
-#. type: expansion
-#: sections/expansion_content.tex:265
-#, no-wrap
-msgid ""
-"  \\subsection*{Placing Creature Bank Tokens}\n"
-"  When you discover a Near or Far Map Tile, you may choose to draw a Creature Bank Token of the corresponding type, and place it on the Tile's Blocked Field.\n"
-"  \\begin{center}\n"
-"    \\vspace*{2em}\n"
-"    \\hspace*{-2em}\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/mermaid.png}\n"
-"  \\end{center}\n"
-"  \\columnbreak\n"
-"\n"
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:271
-#, no-wrap
-msgid ""
-"  \\subsection*{Visiting a Creature Bank Location}\n"
-"  When you enter a Creature Bank Location, you must defeat the corresponding Creature Bank units defending it.\n"
-"  If you win, resolve the Field's effect and mark it with a Black Cube.\n"
-"  Because these Fields don't have any Difficulty Level, Quick Combat never happens, there is no Round limit, no need to spend MP to extend Combat, and you don't gain any \\svg{experience}.\n"
-"  The defending units and all effects of all Creature Bank Locations are listed in \\pagelink{Creature Bank List}{All Map Locations}.\n"
-"\n"
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:275
-#, no-wrap
-msgid ""
-"  \\subsection*{Combat in a Creature Bank}\n"
-"  When you start Combat at a Creature Bank, place up to 5 of your units in the player deployment zone.\n"
-"  Depending on the Creature Bank you are visiting, take the corresponding units from the Creature Bank unit cards and place them randomly in the Neutral unit deployment zone.\n"
-"\n"
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:278
-#, no-wrap
-msgid ""
-"    \\bigskip\n"
-"    \\begin{center}\n"
-"      \\begin{tikzpicture}\n"
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:295
-#, no-wrap
-msgid ""
-"        \\draw (0, 0) node[inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=\\linewidth]{\\images/creature_bank_combat_board.png}}};\n"
-"        \\draw (-1.5, 0.6) node {\\includegraphics[width=0.15\\linewidth]{\\images/P.png}};\n"
-"        \\draw (-1.5, -0.5) node {\\includegraphics[width=0.15\\linewidth]{\\images/P.png}};\n"
-"        \\draw (0, 0.6) node {\\includegraphics[width=0.15\\linewidth]{\\images/P.png}};\n"
-"        \\draw (0, -0.5) node {\\includegraphics[width=0.15\\linewidth]{\\images/P.png}};\n"
-"        \\draw (1.5, 0.6) node {\\includegraphics[width=0.15\\linewidth]{\\images/P.png}};\n"
-"        \\draw (1.5, -0.5) node {\\includegraphics[width=0.15\\linewidth]{\\images/P.png}};\n"
-"        \\draw (2.9, 1.7) node {\\includegraphics[width=0.15\\linewidth]{\\images/N.png}};\n"
-"        \\draw (2.9, -1.6) node {\\includegraphics[width=0.15\\linewidth]{\\images/N.png}};\n"
-"        \\draw (-3.1, 1.7) node {\\includegraphics[width=0.15\\linewidth]{\\images/N.png}};\n"
-"        \\draw (-3.1, -1.6) node {\\includegraphics[width=0.15\\linewidth]{\\images/N.png}};\n"
-"      \\end{tikzpicture}\n"
-"    \\end{center}\n"
-"    \\imagecaption{P -- player deployment zone}\\\\\n"
-"    \\imagecaption{N -- Neutral Units deployment zone}\\\\\n"
-"    \\bigskip\n"
-"\n"
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:304
-#, no-wrap
-msgid ""
-"  Based on the Scenario's Difficulty Level, take a number of \\pagelink{Stack Tokens}{Stack Tokens} and place them randomly on up to four different Creature Bank unit cards:\n"
-"  \\begin{itemize}\n"
-"    \\item \\textbf{Easy}: 1 token\n"
-"    \\item \\textbf{Normal}: 2 tokens\n"
-"    \\item \\textbf{Hard}: 3 tokens\n"
-"    \\item \\textbf{Impossible}: 4 tokens\n"
-"  \\end{itemize}\n"
-"  \\end{multicols*}"
-msgstr ""
-
-#. type: multicols*
-#: sections/expansion_content.tex:311
-#, no-wrap
-msgid ""
-"{2}\n"
-"  \\begin{expansion}{navalbattles}\n"
-"  After Combat, return all Creature Bank units back to the Creature Bank units cards pile.\n"
-"  If you win, you claim the Creature Bank's reward, as well as an additional reward for the Stacked units you defeated.\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/expansion_content.tex:316
-#, no-wrap
-msgid ""
-"  \\subsection*{\\pagetarget{Stack Tokens}{Stack Tokens}}\n"
-"  Each Stack Token modifies a unit's statistic in the following way: +1~\\svg{attack}, +1~\\svg{defense}, +1~\\svg{health_points}, or +2~\\svg{initiative}.\n"
-"  Furthermore, each unit with a Stack Token is now a \\textbf{Stacked unit}, which is similar to reinforced Faction units: when it takes damage equal to or greater than its \\svg{health_points}, instead of removing the unit card from the Combat Board, discard the Stack Token from that unit and deal any leftover damage, deducting it from the new \\svg{health_points}.\n"
-"  Creature Bank units without a Stack Token are defeated normally.\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/expansion_content.tex:323
-#, no-wrap
-msgid ""
-"  \\begin{multicols}{4}\n"
-"    \\centering\n"
-"    \\includegraphics[width=1.2\\linewidth]{\\images/stack-token-attack.png}\n"
-"    \\includegraphics[width=1.2\\linewidth]{\\images/stack-token-defense.png}\n"
-"    \\includegraphics[width=1.2\\linewidth]{\\images/stack-token-hp.png}\n"
-"    \\includegraphics[width=1.2\\linewidth]{\\images/stack-token-initiative.png}\n"
-"  "
-msgstr ""
-
-#. type: multicols*
-#: sections/expansion_content.tex:333
-#, no-wrap
-msgid ""
-"  \\subsection*{Gained Stacked Units}\n"
-"  Some rewards allow you to gain a Stacked Creature Bank unit card.\n"
-"  Track which of your units are Stacked by whatever means is comfortable, e.g.~by remembering it or by placing a Token or Cube on it.\n"
-"  Whenever your Stacked unit goes to a Combat, draw a random Stack Token and place it on that unit.\n"
-"  After Combat, note whether the unit is still Stacked (for future Combats), then return the Stack Token to the pile.\n"
-"  \\end{expansion}\n"
-"  \\includegraphics[width=\\linewidth]{\\art/energy_elemental.jpg}"
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:338
-#, no-wrap
-msgid ""
-"*{navalbattles}\n"
-"\\pagetarget{Empowered Ability Token}{\\subheader{Empowered Ability Cards}}\n"
-"\\begin{multicols*}{2}\n"
-"  This new type of card improves your Hero's Ability cards and is explained in \\pagelink{Empowered Ability}{Deck-building}.\n"
-"\n"
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:349
-#, no-wrap
-msgid ""
-"  \\setlength\\intextsep{0pt}\n"
-"  \\setlength\\columnsep{1em}\n"
-"  \\begin{wrapfigure}{r}{0.2\\linewidth}\n"
-"    \\includegraphics[width=\\linewidth]{\\images/crown-token.png}\n"
-"  \\end{wrapfigure}\n"
-"  You can gain those cards by spending \\textbf{Empowered Ability Tokens}.\n"
-"  You can use one of these Tokens at the moment you gain a new Ability card, regardless of how you obtain it.\n"
-"  If you use such a Token, discard it, remove the just-gained normal Ability card from the game, and gain the corresponding Empowered Ability card in its stead.\n"
-"  There's only 1 copy of each Empowered Ability card, so if one player takes a particular Empowered Ability card, they prevent other players from obtaining it.\n"
-"  If an Empowered Ability card isn't available, you can't spend the Empowered Ability Token and must keep it for later turns.\n"
-"\n"
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:351
-#, no-wrap
-msgid ""
-"  You can gain Empowered Ability Tokens only in certain Scenarios (e.~g.~``Island of Fire'' from the Naval Battles Mission Book).\\\\\n"
-"\n"
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:356
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=\\linewidth]{\\art/earthquake.png}\n"
-#| "\\end{center}\n"
-#| "\n"
-msgid ""
-"  \\vspace*{5em}\n"
-"  \\begin{center}\n"
-"    \\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/scholar.png}\n"
-"  \\end{center}\n"
-"\n"
-msgstr ""
-"\\vfill\n"
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth]{\\art/earthquake.png}\n"
-"\\end{center}\n"
-"\\vfill\n"
-"\n"
-
-#. type: expansion
-#: sections/expansion_content.tex:362
-#, no-wrap
-msgid ""
-"  \\subsection*{Gaining Empowered Ability\\\\Example}\n"
-"  \\textit{Bob playing as Crag Hack reaches Level II.\n"
-"    He performs the Search (2) action and draws two cards from the Ability Deck.\n"
-"    The cards are Offense and Wisdom.\n"
-"    He chooses Offense and places the other card on the discard pile.}\n"
-"\n"
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:366
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=\\linewidth]{\\art/earthquake.png}\n"
-#| "\\end{center}\n"
-#| "\n"
-msgid ""
-"  \\begin{center}\n"
-"    \\includegraphics[width=0.8\\linewidth]{\\examples/offense_over_wisdom.png}\n"
-"  \\end{center}\n"
-"\n"
-msgstr ""
-"\\vfill\n"
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth]{\\art/earthquake.png}\n"
-"\\end{center}\n"
-"\\vfill\n"
-"\n"
-
-#. type: expansion
-#: sections/expansion_content.tex:370
-#, no-wrap
-msgid ""
-"  \\textit{Bob happens to have an Empowered Ability Token.\n"
-"    He may either use it, or save the token for later.\n"
-"    He decides to use it, so he removes the ``Offense'' Ability card and discards the Empowered Ability Token to take the Empowered ``Offense'' Ability card instead.}\n"
-"\n"
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:372
-#, no-wrap
-msgid ""
-"  \\begin{center}\n"
-"    \\begin{tikzpicture}\n"
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:378
-#, no-wrap
-msgid ""
-"      \\draw (-3, 0) node {\\includegraphics[width=0.45\\linewidth]{\\cards/ability-offense.png}};\n"
-"      \\draw (-1.5, -1.9) node[circular drop shadow={shadow scale=0.85, shadow xshift=0.5ex, shadow yshift=-0.5ex, opacity=0.7,\n"
-"        fill=black, path fading={circle with fuzzy edge 15 percent},\n"
-"        every shadow}]{\\includegraphics[width=0.2\\linewidth]{\\images/crown-token.png}};\n"
-"      \\draw (1.5, 0) node {\\includegraphics[width=0.45\\linewidth]{\\cards/ability-offense-empowered.png}};\n"
-"\n"
-msgstr ""
-
-#. type: expansion
-#: sections/expansion_content.tex:385
-#, no-wrap
-msgid ""
-"      \\draw (-2.8, -3.5) node {\\svg[35]{red_cross}};\n"
-"      \\draw (1.6, -3.5) node {\\svg[35]{green_tick}};\n"
-"    \\end{tikzpicture}\n"
-"  \\end{center}\n"
-"  \\vspace*{\\fill}\n"
-"\\end{multicols*}"
-msgstr ""
-
+#.  no-check-caps
 #. type: Plain text
-#: sections/expansion_content.tex:393
-#, fuzzy
-#| msgid ""
-#| "\\subsection*{Symbols on the Map}\n"
-#| "\n"
-msgid "\\subheader{Stretch Goal Content}"
+#: sections/expansion_content.tex:171
+msgid ""
+"\\subheader{Stretch Goal Content} Four boxes of stretch goal content have "
+"been released for the board game.  These expansions primarily contain "
+"aesthetic components, such as miniatures of Neutral Units, and Map "
+"Locations.  They also expand the variety of existing components with "
+"additional Artifacts, Spells, and new Hero Boards for all Factions."
 msgstr ""
-"\\subsection*{סימנים על המפה}\n"
-"\n"
 
-#. type: multicols*
-#: sections/expansion_content.tex:393
+#. type: multicols
+#: sections/expansion_content.tex:176
 #, no-wrap
 msgid ""
 "{2}\n"
-"Four boxes of stretch goal content have been released for the board game.\\par  % no-check-caps\n"
-"These expansions primarily contain aesthetic components, such as miniatures of Neutral Units, and Map Locations.\n"
-"They also expand the variety of existing components with additional Artifacts, Spells, and new Hero Boards for all Factions.\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=0.45\\linewidth]{\\boxcovers/stretchgoals-factionunits.png}\\\\[1em]\n"
+"  \\imagecaption{\\nth{1} crowdfunding campaign:\\\\ Miniatures of the core game Faction Units}\n"
 "\n"
 msgstr ""
 
-#. type: multicols*
-#: sections/expansion_content.tex:398
+#. type: multicols
+#: sections/expansion_content.tex:182
 #, no-wrap
 msgid ""
-"\\vspace*{\\fill}\n"
-"\\begin{expansion}{stretchgoals2}\n"
-"  \\pagetarget{Town Card}{\\subsection*{Town Cards}}\n"
+"  \\includegraphics[width=0.45\\linewidth]{\\boxcovers/stretchgoals-neutral.png}\\\\[1em]\n"
+"  \\imagecaption{\\nth{1} crowdfunding campaign:\\\\ Miniatures of Towns, Neutral Units, and other components}\n"
+"\\end{center}\n"
+"\n"
+msgstr ""
+
+#. type: multicols
+#: sections/expansion_content.tex:188
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{center}\n"
+#| "  \\includegraphics[width=\\linewidth]{\\art/earthquake.png}\n"
+#| "\\end{center}\n"
+#| "\n"
+msgid ""
+"{2}\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=0.45\\linewidth]{\\boxcovers/stretchgoals2-crystal.png}\\\\[1em]\n"
+"  \\imagecaption{\\nth{2} crowdfunding campaign:\\\\ Miniatures}\n"
+"\n"
+msgstr ""
+"\\vfill\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=\\linewidth]{\\art/earthquake.png}\n"
+"\\end{center}\n"
+"\\vfill\n"
+"\n"
+
+#. type: multicols
+#: sections/expansion_content.tex:194
+#, no-wrap
+msgid ""
+"  \\includegraphics[width=0.45\\linewidth]{\\boxcovers/stretchgoals2-regular.png}\\\\[1em]\n"
+"  \\imagecaption{\\nth{2} crowdfunding campaign:\\\\ gameplay components and Miniatures}\n"
+"\\end{center}"
+msgstr ""
+
+#. type: expansion
+#: sections/expansion_content.tex:201
+#, no-wrap
+msgid ""
+"*{stretchgoals2}\n"
+"  \\begin{multicols*}{2}\n"
+"  \\pagetarget{Town Card}{\\subsection*{Town Cards}}\\index{Town cards}\n"
 "  You can use Town Cards to randomly choose which player gets which Faction.\n"
 "\n"
 msgstr ""
 
-#. type: multicols*
-#: sections/expansion_content.tex:403
+#. type: expansion
+#: sections/expansion_content.tex:206
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\begin{center}\n"
@@ -831,8 +419,8 @@ msgstr ""
 "\\vfill\n"
 "\n"
 
-#. type: multicols*
-#: sections/expansion_content.tex:416
+#. type: expansion
+#: sections/expansion_content.tex:219
 #, no-wrap
 msgid ""
 "  Here are some recommended options how to do that:\n"
@@ -850,58 +438,29 @@ msgid ""
 "\n"
 msgstr ""
 
-#. type: multicols*
-#: sections/expansion_content.tex:425
+#. type: expansion
+#: sections/expansion_content.tex:221
 #, no-wrap
 msgid ""
 "  Skip the cards with Factions from Expansions which you don't have.\n"
-"\\end{expansion}\n"
-"\\vspace*{\\fill}\n"
-"\\columnbreak\n"
-"\\begin{center}\n"
-"    \\includegraphics[width=0.45\\linewidth]{\\boxcovers/stretchgoals-factionunits.png}\\\\[1em]\n"
-"    \\imagecaption{\\nth{1} crowdfunding campaign:\\\\ Miniatures of the core game Faction Units}\n"
-"    \\vspace*{\\fill}\n"
 "\n"
 msgstr ""
 
-#. type: multicols*
-#: sections/expansion_content.tex:429
+#. type: expansion
+#: sections/expansion_content.tex:237
 #, no-wrap
 msgid ""
-"    \\includegraphics[width=0.45\\linewidth]{\\boxcovers/stretchgoals-neutral.png}\\\\[1em]\n"
-"    \\imagecaption{\\nth{1} crowdfunding campaign:\\\\ Miniatures of Towns, Neutral Units, and other components}\n"
-"    \\vspace*{\\fill}\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/expansion_content.tex:433
-#, no-wrap
-msgid ""
-"    \\includegraphics[width=0.45\\linewidth]{\\boxcovers/stretchgoals2-crystal.png}\\\\[1em]\n"
-"    \\imagecaption{\\nth{2} crowdfunding campaign:\\\\ Miniatures}\n"
-"    \\vspace*{\\fill}\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/expansion_content.tex:437
-#, no-wrap
-msgid ""
-"    \\includegraphics[width=0.45\\linewidth]{\\boxcovers/stretchgoals2-regular.png}\\\\[1em]\n"
-"    \\imagecaption{\\nth{2} crowdfunding campaign:\\\\ gameplay components and Miniatures}\n"
-"\\end{center}\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/expansion_content.tex:445
-#, no-wrap
-msgid ""
-"\\columnbreak\n"
-"\\begin{expansion}{stretchgoals2}\n"
+"  \\subsection*{Alternative Manticores Card}\n"
+"  \\setlength\\intextsep{0pt}\n"
+"  \\setlength\\columnsep{1em}\n"
+"  \\begin{wrapfigure}{r}{0.3\\linewidth}\n"
+"    \\includegraphics[width=\\linewidth]{\\cards/alt_manticore.png}\n"
+"  \\end{wrapfigure}\n"
+"  A second \\textbf{\\wikilink{units/manticores}{Manticores}} unit card with slightly different statistics is included in this expansion.\n"
+"  When playing the Dungeon Faction, choose one of the two Manticores cards to use in the game.\n"
+"  \\columnbreak\n"
 "  \\subsection*{\\pagetarget{Pandora Card}{Pandora's Box cards}}\n"
+"  \\index{Pandora's Box cards}\n"
 "  Shuffle the Pandora's Box cards during setup.\n"
 "  When visiting a \\pagelink{Pandora Box}{Pandora's Box}, you may draw and resolve a Pandora's Box card instead of the location's regular effect.\n"
 "  Mark the Map Field with a Black Cube regardless.\n"
@@ -909,8 +468,8 @@ msgid ""
 "\n"
 msgstr ""
 
-#. type: multicols*
-#: sections/expansion_content.tex:451
+#. type: expansion
+#: sections/expansion_content.tex:243
 #, no-wrap
 msgid ""
 "  \\textbf{Note:} If you draw a Pandora's Box card with a Permanent \\svg[7]{permanent} effect while having a \\pagelink{Card Effects}{Permanent card} already in play, discard your current card and put Pandora's card in its place.\n"
@@ -921,88 +480,24 @@ msgid ""
 "\n"
 msgstr ""
 
-#. type: multicols*
-#: sections/expansion_content.tex:460
-#, no-wrap
-msgid ""
-"    \\subsection*{Alternative Manticores Card}\n"
-"    \\setlength\\intextsep{0pt}\n"
-"    \\setlength\\columnsep{1em}\n"
-"    \\begin{wrapfigure}{r}{0.3\\linewidth}\n"
-"      \\includegraphics[width=\\linewidth]{\\cards/alt_manticore.png}\n"
-"    \\end{wrapfigure}\n"
-"    A second \\textbf{\\wikilink{units/manticores}{Manticores}} unit card with slightly different statistics is included in this expansion.\n"
-"    When playing the Dungeon Faction, choose one of the two Manticores cards to use in the game.\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/expansion_content.tex:526
-#, no-wrap
+#. type: expansion
+#: sections/expansion_content.tex:249
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{center}\n"
+#| "  \\includegraphics[width=\\linewidth]{\\art/earthquake.png}\n"
+#| "\\end{center}\n"
+#| "\n"
 msgid ""
 "\\vspace*{0.5em}\n"
 "\\begin{center}\n"
-"  \\transparent{0.2}\\includegraphics[width=0.7\\linewidth]{\\art/blind.png}\n"
+"  \\hspace*{-1em}\\transparent{0.2}\\includegraphics[width=1.1\\linewidth]{\\art/earthquake.png}\n"
 "\\end{center}\n"
-"\\end{expansion}\n"
-"\\columnbreak\n"
-"\\subheader{Fan-Made Content}\n"
-"Take a look at the \\textbf{fan-made expansions and content} from the \\textbf{HoMM3 BG Community}.\n"
-"  \\begin{itemize}\n"
-"    \\begin{minipage}{5cm}\n"
-"      \\item The \\textbf{Fan-Made Mission Book} contains many well-playtested Scenarios with unique rules for even more spice in your games:\n"
-"      \\mbox{\\footnotesize \\href{https://github.com/qwrtln/Homm3BG-mission-book}{github.com/qwrtln/Homm3BG-mission-book}}\n"
-"    \\end{minipage}\n"
-"    \\hfill\n"
-"    \\begin{minipage}{2cm}\n"
-"        \\begin{center}\n"
-"            \\includegraphics[width=\\linewidth]{\\qr/mission-book.png}\n"
-"            \\scriptsize \\phantom{Link to \\textbf{Github}}\n"
-"        \\end{center}\n"
-"    \\end{minipage}\\par\n"
-"    \\smallskip\n"
-"    \\begin{minipage}{5cm}\n"
-"      \\item The \\textbf{Fan-Made Factory Expansion} introduces the missing Faction.\n"
-"      Print it yourself and learn a new Faction to master:\\\\\n"
-"      \\footnotesize \\href{https://github.com/piotrbruzda/Homm3BG-FactoryRulebook}{github.com/piotrbruzda\\\\/Homm3BG-FactoryRulebook}\n"
-"    \\end{minipage}\n"
-"    \\hfill\n"
-"    \\begin{minipage}{2cm}\n"
-"        \\begin{center}\n"
-"            \\vspace*{-1em}\n"
-"            \\includegraphics[width=\\linewidth]{\\qr/factory.png}\n"
-"            \\scriptsize \\phantom{Link to \\textbf{Github}}\n"
-"        \\end{center}\n"
-"    \\end{minipage}\\par\n"
-"    \\smallskip\n"
-"  \\end{itemize}\n"
-"  \\begin{center}\n"
-"    \\vspace*{-0.5em}\n"
-"    \\hfill\\includegraphics[width=0.85\\linewidth]{\\images/mission-book-with-factory.png}\n"
-"  \\end{center}\n"
-"  \\begin{itemize}\n"
-"    \\begin{minipage}{5cm}\n"
-"        \\item Bring your creative ideas to life by building your own Scenarios with the help of the \\textbf{Scenario Map Editor}:\n"
-"        {\\footnotesize \\href{https://zedero.github.io/homm3boardgame/}{zedero.github.io/homm3boardgame}}\n"
-"    \\end{minipage}\n"
-"    \\hfill\n"
-"    \\begin{minipage}{2cm}\n"
-"        \\begin{center}\n"
-"            \\includegraphics[width=\\linewidth]{\\qr/map-editor.png}\n"
-"            \\scriptsize \\phantom{Link to the \\textbf{App}}\n"
-"        \\end{center}\n"
-"    \\end{minipage}\\par\n"
-"    \\smallskip\n"
-"    \\begin{minipage}{5cm}\n"
-"    \\item Generate your own custom Heroes and their unique Specialties with the \\textbf{Hero Creator} and let them make history:\n"
-"      \\mbox{\\footnotesize \\href{https://k-adam.github.io/Homm3_hero_creator}{k-adam.github.io/Homm3\\textunderscore{}hero\\textunderscore{}creator}}\n"
-"    \\end{minipage}\n"
-"    \\hfill\n"
-"    \\begin{minipage}{2cm}\n"
-"        \\begin{center}\n"
-"            \\includegraphics[width=\\linewidth]{\\qr/hero-creator.png}\n"
-"            \\scriptsize \\phantom{Link to the \\textbf{App}}\n"
-"        \\end{center}\n"
-"    \\end{minipage}\\par\n"
-"  \\end{itemize}"
+"\\end{multicols*}"
 msgstr ""
+"\\vfill\n"
+"\\begin{center}\n"
+"  \\includegraphics[width=\\linewidth]{\\art/earthquake.png}\n"
+"\\end{center}\n"
+"\\vfill\n"
+"\n"
