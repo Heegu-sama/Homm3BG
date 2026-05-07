@@ -56,6 +56,7 @@
 | level tracker | ... |
 | level | Úroveň |
 | main hero | Hlavní Hrdina |
+| movement points | ... |
 | secondary hero | Sekundární Hrdina |
 | specialty | ... |
 
@@ -103,6 +104,7 @@
 | search | Hledat |
 | specialty card | ... |
 | spell cards | Karty Kouzel |
+| statistic card | ... |
 
 ## Spells
 

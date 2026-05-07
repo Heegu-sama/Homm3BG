@@ -2,12 +2,13 @@
 
 ## Style notes
 
-- Em dash: `—`
-- En dash: `–`
-- Quotation marks: `«word»`
-- Names of buildings, factions, heroes, abilities, spells, creatures, and artifacts are capitalized
-- Names of all expansions remain in English
-- Stress marks for disambiguation: а́ е́ и́ о́ у́ ы́ э́ ю́ я́
+- длинное тире `---`
+- короткое тире `--`
+- кавычки `«»`
+- Stress marks for disambiguation: а́ ́е́ и́ о́ у́ ы́ э́ ю́ я́
+- название всех дополнений оставляем на английском, упоминание фракции на русском
+- названия построек, фракций, героев, навыков, заклинаний, существ и артефактов - с Заглавной
+- буллеты оформляем TBD
 
 ## Factions
 
@@ -61,6 +62,7 @@
 | level tracker | трекер уровня |
 | level | уровень |
 | main hero | основной герой |
+| movement points | ОП (очки передвижения) |
 | secondary hero | вторичный герой |
 | specialty | ... |
 
@@ -108,6 +110,7 @@
 | search | поиск |
 | specialty card | ... |
 | spell cards | карты заклинаний |
+| statistic card | карта характеристик |
 
 ## Spells
 

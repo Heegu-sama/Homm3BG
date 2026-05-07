@@ -56,6 +56,7 @@
 | level tracker | Трек Рівня |
 | level | Рівень |
 | main hero | Головний Герой |
+| movement points | ... |
 | secondary hero | Другорядний Герой |
 | specialty | Спеціалізація |
 
@@ -103,6 +104,7 @@
 | search | ... |
 | specialty card | Карта Спеціалізації |
 | spell cards | Карти Заклинань |
+| statistic card | ... |
 
 ## Spells
 

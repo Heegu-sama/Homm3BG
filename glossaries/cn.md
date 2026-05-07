@@ -1,4 +1,4 @@
-# Hebrew (he)
+# Chinese (cn)
 
 ## Style notes
 
@@ -6,7 +6,7 @@
 
 ## Factions
 
-| English | Hebrew |
+| English | Chinese |
 |---|---|
 | castle | ... |
 | conflux | ... |
@@ -21,7 +21,7 @@
 
 ## Units
 
-| English | Hebrew |
+| English | Chinese |
 |---|---|
 | boars | ... |
 | champions | ... |
@@ -41,28 +41,28 @@
 | reinforced | ... |
 | summoned elementals | ... |
 | unit cards | ... |
-| units | יחידות |
+| units | ... |
 | zealots | ... |
 
 ## Heroes
 
-| English | Hebrew |
+| English | Chinese |
 |---|---|
-| ability | יכולות |
+| ability | ... |
 | experience | ... |
 | expert effects | ... |
-| hero | גיבור |
-| heroes | גיבורים |
+| hero | ... |
+| heroes | ... |
 | level tracker | ... |
-| level | רמה |
-| main hero | גיבור ראשי |
+| level | ... |
+| main hero | ... |
 | movement points | ... |
-| secondary hero | גיבור משני |
-| specialty | מומחיות |
+| secondary hero | ... |
+| specialty | ... |
 
 ## Map Locations
 
-| English | Hebrew |
+| English | Chinese |
 |---|---|
 | center field | ... |
 | central map tile | ... |
@@ -77,24 +77,24 @@
 | settlement | ... |
 | starting (i) map tile | ... |
 | tile | ... |
-| trading post | מסחר |
+| trading post | ... |
 | water wheel | ... |
 
 ## Resources
 
-| English | Hebrew |
+| English | Chinese |
 |---|---|
-| building materials | אבנים |
-| resource production tracker | לוח למעקב אחר ייצור המשאבים |
-| resources | משאבים |
+| building materials | ... |
+| resource production tracker | ... |
+| resources | ... |
 | treasure die | ... |
-| valuables | קריסטלים |
+| valuables | ... |
 
 ## Deck-building
 
-| English | Hebrew |
+| English | Chinese |
 |---|---|
-| ability card | קלפי יכולות |
+| ability card | ... |
 | deck | ... |
 | decks | ... |
 | discard pile | ... |
@@ -102,57 +102,57 @@
 | hand limit | ... |
 | player decks | ... |
 | search | ... |
-| specialty card | קלפי המומחיות |
-| spell cards | קלפי קסם |
+| specialty card | ... |
+| spell cards | ... |
 | statistic card | ... |
 
 ## Spells
 
-| English | Hebrew |
+| English | Chinese |
 |---|---|
-| haste | מהירות |
+| haste | ... |
 
 ## AI Deck
 
-| English | Hebrew |
+| English | Chinese |
 |---|---|
-| ai deck | חוקים ל-IA |
+| ai deck | ... |
 | magic card | ... |
 | might card | ... |
 | skill card | ... |
 
 ## Town
 
-| English | Hebrew |
+| English | Chinese |
 |---|---|
 | buildings | ... |
 | dwelling | ... |
-| population token | אסימון האוכלוסייה |
+| population token | ... |
 
 ## Combat
 
-| English | Hebrew |
+| English | Chinese |
 |---|---|
 | arrow tower | ... |
-| back line | קו עורף |
-| combat board | לוח הקרבות |
-| combat | קרב |
-| damage | נזק |
-| front line | קו חזית |
+| back line | ... |
+| combat board | ... |
+| combat | ... |
+| damage | ... |
+| front line | ... |
 | winning combat | ... |
 
 ## Battlefield
 
-| English | Hebrew |
+| English | Chinese |
 |---|---|
-| adventure mode | מצב הרפתקה |
+| adventure mode | ... |
 | skirmish mode | ... |
-| final combat | קרב סופי |
+| final combat | ... |
 | combat power level | ... |
 
 ## Keywords
 
-| English | Hebrew |
+| English | Chinese |
 |---|---|
 | clone token | ... |
 | force field token | ... |
@@ -161,13 +161,13 @@
 
 ## Other
 
-| English | Hebrew |
+| English | Chinese |
 |---|---|
-| core rulebook | ספר חוקים |
+| core rulebook | ... |
 | effects | ... |
-| game setup | הכנת המשחק |
+| game setup | ... |
 | map setup | ... |
 | player elimination | ... |
 | player setup | ... |
-| round tracker | לוח מעקב הסבבים |
-| war machine | מכונת מלחמה |
+| round tracker | ... |
+| war machine | ... |

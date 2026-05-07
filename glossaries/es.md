@@ -56,6 +56,7 @@
 | level tracker | ... |
 | level | Nivel |
 | main hero | Héroe Principal |
+| movement points | ... |
 | secondary hero | Héroe Secundario |
 | specialty | ... |
 
@@ -103,6 +104,7 @@
 | search | Buscar |
 | specialty card | Carta de Especialidad |
 | spell cards | Cartas de Hechizos |
+| statistic card | ... |
 
 ## Spells
 

@@ -56,6 +56,7 @@
 | level tracker | Stufenleiste |
 | level | Stufe |
 | main hero | Hauptheld |
+| movement points | ... |
 | secondary hero | Nebenheld |
 | specialty | ... |
 
@@ -103,6 +104,7 @@
 | search | Durchsuche |
 | specialty card | ... |
 | spell cards | Zauberkarten |
+| statistic card | ... |
 
 ## Spells
 

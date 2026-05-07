@@ -65,6 +65,7 @@
 | level tracker | tor poziomów |
 | level | poziom |
 | main hero | bohater główny |
+| movement points | PR (punkty ruchu) |
 | secondary hero | bohater pomocniczy |
 | specialty | specjalność |
 
@@ -112,6 +113,7 @@
 | search | przeszukaj |
 | specialty card | karta specjalności |
 | spell cards | karty zaklęć |
+| statistic card | karta statystyk |
 
 ## Spells
 
