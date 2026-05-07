@@ -7,9 +7,12 @@
 \usepackage{fontspec}
 
 \def\sections{sections/translated/cn}
+\PassOptionsToPackage{lang=english}{doclicense}
 
 \newcommand{\notefont}[0]{}
 \newcommand{\expansionlabelfont}[0]{}
+\newcommand{\cnignorefontfeature}[1]{}
+\newcommand{\subheaderfont}[0]{\let\addfontfeature\cnignorefontfeature}
 
 \directlua{
   luaotfload.add_fallback(
@@ -41,31 +44,29 @@
   BoldItalicFont = *-Bold
 ]{NotoSerifCJKsc}
 
-\newfontfamily{\cjkserif}[
-  Path = ./assets/fonts/NotoSerifCJKsc/,
-  Extension = .otf,
+\babelfont{rm}[
+  Path = ./assets/fonts/LiberationSerif/,
+  Extension = .ttf,
   UprightFont = *-Regular,
+  ItalicFont = *-Italic,
   BoldFont = *-Bold,
-  ItalicFont = *-Regular,
-  BoldItalicFont = *-Bold
-]{NotoSerifCJKsc}
+  BoldItalicFont = *-BoldItalic,
+  RawFeature={fallback=cjkfallback},
+  BoldFeatures={RawFeature={fallback=cjkfallbackbold}},
+  ItalicFeatures={RawFeature={fallback=cjkfallbackitalic}},
+  BoldItalicFeatures={RawFeature={fallback=cjkfallbackbold}}
+]{LiberationSerif}
 
-\newcommand{\subheaderfont}[0]{\cjkserif}
+\babelfont{sf}[
+  RawFeature={fallback=cjkfallback},
+  BoldFeatures={RawFeature={fallback=cjkfallbackbold}},
+  ItalicFeatures={RawFeature={fallback=cjkfallbackitalic}},
+  BoldItalicFeatures={RawFeature={fallback=cjkfallbackbold}}
+]{Latin Modern Sans}
 
-\AtBeginDocument{%
-  \setmainfont{LiberationSerif}[
-    Path = ./assets/fonts/LiberationSerif/,
-    Extension = .ttf,
-    UprightFont = *-Regular,
-    ItalicFont = *-Italic,
-    BoldFont = *-Bold,
-    BoldItalicFont = *-BoldItalic,
-    RawFeature={fallback=cjkfallback},
-    BoldFeatures={RawFeature={fallback=cjkfallbackbold}},
-    ItalicFeatures={RawFeature={fallback=cjkfallbackitalic}},
-    BoldItalicFeatures={RawFeature={fallback=cjkfallbackbold}}
-  ]%
-}
+\babelfont{tt}[
+  RawFeature={fallback=cjkfallback}
+]{Latin Modern Mono}
 
 \input{metadata.tex}
 
