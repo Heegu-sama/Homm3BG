@@ -2,172 +2,172 @@
 
 ## Style notes
 
-- ...
+- Round翻译为轮或者轮次，Turn翻译为回合，不可混淆
 
 ## Factions
 
 | English | Chinese |
 |---|---|
-| castle | ... |
-| conflux | ... |
-| cove | ... |
-| dungeon | ... |
-| fortress | ... |
-| inferno | ... |
-| necropolis | ... |
-| rampart | ... |
-| stronghold | ... |
-| tower | ... |
+| castle | 城堡 |
+| conflux | 元素城 |
+| cove | 港口 |
+| dungeon | 地下城 |
+| fortress | 要塞 |
+| inferno | 地狱 |
+| necropolis | 墓园 |
+| rampart | 壁垒 |
+| stronghold | 据点 |
+| tower | 塔楼 |
 
 ## Units
 
 | English | Chinese |
 |---|---|
-| boars | ... |
-| champions | ... |
-| deck of unit cards | ... |
-| dendroids | ... |
-| dread knights | ... |
-| familiars | ... |
-| few | ... |
-| griffins | ... |
-| hp | ... |
-| liches | ... |
-| marksmen | ... |
-| neutral units | ... |
-| pack | ... |
-| recruited or reinforced | ... |
-| reinforce | ... |
-| reinforced | ... |
-| summoned elementals | ... |
-| unit cards | ... |
-| units | ... |
-| zealots | ... |
+| boars | 野猪 |
+| champions | 骑兵 |
+| deck of unit cards | 单位牌堆 |
+| dendroids | 枯木卫士 |
+| dread knights | 死亡骑士 |
+| familiars | 怪物 |
+| few | 少量 |
+| griffins | 狮鹫 |
+| hp | 生命值 |
+| liches | 尸巫 |
+| marksmen | 神射手 |
+| neutral units | 中立单位 |
+| pack | 一群 |
+| recruited or reinforced | 被招募或增援 |
+| reinforce | 增援 |
+| reinforced | 已增援 |
+| summoned elementals | 召唤元素 |
+| unit cards | 单位牌 |
+| units | 单位 |
+| zealots | 祭司 |
 
 ## Heroes
 
 | English | Chinese |
 |---|---|
-| ability | ... |
-| experience | ... |
-| expert effects | ... |
-| hero | ... |
-| heroes | ... |
-| level tracker | ... |
-| level | ... |
-| main hero | ... |
-| movement points | ... |
-| secondary hero | ... |
-| specialty | ... |
+| ability | 能力 |
+| experience | 经验 |
+| expert effects | 专家效果 |
+| hero | 英雄 |
+| heroes | 英雄 |
+| level tracker | 等级轨道 |
+| level | 等级 |
+| main hero | 主英雄 |
+| movement points | 移动点 |
+| secondary hero | 副英雄 |
+| specialty | 特长 |
 
 ## Map Locations
 
 | English | Chinese |
 |---|---|
-| center field | ... |
-| central map tile | ... |
-| dragon utopia | ... |
-| far map tile | ... |
-| field | ... |
-| locations | ... |
-| map tile | ... |
-| near map tile | ... |
-| random town | ... |
-| revisitable | ... |
-| settlement | ... |
-| starting (i) map tile | ... |
-| tile | ... |
-| trading post | ... |
-| water wheel | ... |
+| center field | 中央格 |
+| central map tile | 中央地图板块 |
+| dragon utopia | 龙之国 |
+| far map tile | 远端地图板块 |
+| field | 格 |
+| locations | 地点 |
+| map tile | 地图板块 |
+| near map tile | 近端地图板块 |
+| random town | 随机城镇 |
+| revisitable | 可重复访问 |
+| settlement | 定居点 |
+| starting (i) map tile | 起始（I）地图板块 |
+| tile | 板块 |
+| trading post | 贸易站 |
+| water wheel | 水车 |
 
 ## Resources
 
 | English | Chinese |
 |---|---|
-| building materials | ... |
-| resource production tracker | ... |
-| resources | ... |
-| treasure die | ... |
-| valuables | ... |
+| building materials | 建筑材料 |
+| resource production tracker | 资源生产轨道 |
+| resources | 资源 |
+| treasure die | 宝物骰 |
+| valuables | 贵重物品 |
 
 ## Deck-building
 
 | English | Chinese |
 |---|---|
-| ability card | ... |
-| deck | ... |
-| decks | ... |
-| discard pile | ... |
-| discard | ... |
-| hand limit | ... |
-| player decks | ... |
-| search | ... |
-| specialty card | ... |
-| spell cards | ... |
-| statistic card | ... |
+| ability card | 能力牌 |
+| deck | 牌堆 |
+| decks | 牌堆 |
+| discard pile | 弃牌堆 |
+| discard | 弃置 |
+| hand limit | 手牌上限 |
+| player decks | 玩家牌堆 |
+| search | 搜寻 |
+| specialty card | 特长牌 |
+| spell cards | 法术牌 |
+| statistic card | 属性牌 |
 
 ## Spells
 
 | English | Chinese |
 |---|---|
-| haste | ... |
+| haste | 加速术 |
 
 ## AI Deck
 
 | English | Chinese |
 |---|---|
-| ai deck | ... |
-| magic card | ... |
-| might card | ... |
-| skill card | ... |
+| ai deck | AI牌堆 |
+| magic card | 魔法牌 |
+| might card | 力量牌 |
+| skill card | 技能牌 |
 
 ## Town
 
 | English | Chinese |
 |---|---|
-| buildings | ... |
-| dwelling | ... |
-| population token | ... |
+| buildings | 建筑 |
+| dwelling | 兵营 |
+| population token | 人口标记 |
 
 ## Combat
 
 | English | Chinese |
 |---|---|
-| arrow tower | ... |
-| back line | ... |
-| combat board | ... |
-| combat | ... |
-| damage | ... |
-| front line | ... |
-| winning combat | ... |
+| arrow tower | 箭塔 |
+| back line | 后排 |
+| combat board | 战斗板 |
+| combat | 战斗 |
+| damage | 伤害 |
+| front line | 前排 |
+| winning combat | 赢得战斗 |
 
 ## Battlefield
 
 | English | Chinese |
 |---|---|
-| adventure mode | ... |
-| skirmish mode | ... |
-| final combat | ... |
-| combat power level | ... |
+| adventure mode | 冒险模式 |
+| skirmish mode | 遭遇战模式 |
+| final combat | 最终战斗 |
+| combat power level | 战力等级 |
 
 ## Keywords
 
 | English | Chinese |
 |---|---|
-| clone token | ... |
-| force field token | ... |
-| land mine token | ... |
-| quicksand token | ... |
+| clone token | 克隆标记 |
+| force field token | 力场标记 |
+| land mine token | 地雷标记 |
+| quicksand token | 流沙标记 |
 
 ## Other
 
 | English | Chinese |
 |---|---|
-| core rulebook | ... |
-| effects | ... |
-| game setup | ... |
-| map setup | ... |
-| player elimination | ... |
-| player setup | ... |
-| round tracker | ... |
-| war machine | ... |
+| core rulebook | 核心规则书 |
+| effects | 效果 |
+| game setup | 游戏准备 |
+| map setup | 地图准备 |
+| player elimination | 玩家淘汰 |
+| player setup | 玩家准备 |
+| round tracker | 轮次轨道 |
+| war machine | 战争机器 |

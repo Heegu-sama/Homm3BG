@@ -17,6 +17,7 @@ declare -A languages=(
   ["ru"]="Russian"
   ["he"]="Hebrew"
   ["de"]="German"
+  ["cn"]="Chinese"
 )
 
 echo "Building release ${VERSION} for ${languages[$LANGUAGE]}..."
