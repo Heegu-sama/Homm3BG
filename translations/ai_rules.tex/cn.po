@@ -19,7 +19,7 @@ msgstr ""
 #. type: Plain text
 #: sections/ai_rules.tex:3
 msgid "\\addsection{AI rules}{\\skills/armorer.png}"
-msgstr ""
+msgstr "\\addsection{AI规则}{\\skills/armorer.png}"
 
 #. type: multicols*
 #: sections/ai_rules.tex:6
@@ -29,6 +29,9 @@ msgid ""
 "  AI rules apply to Enemy Heroes and all Combat encounters, including those against Neutral Units, in \\textbf{Solo Campaigns} and \\textbf{Cooperative} Scenarios.\n"
 "\n"
 msgstr ""
+"{2}\n"
+"  在\\textbf{单人战役}和\\textbf{合作}剧本中，AI规则适用于敌方英雄以及所有战斗遭遇，包括与中立单位的战斗。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:11
@@ -40,6 +43,11 @@ msgid ""
 "  You will likely find some loopholes which make the encounter too easy, but you may make AI behave more intellegently.\n"
 "\n"
 msgstr ""
+"  \\bigskip\n"
+"  \\pagetarget{AI Units}{\\subheader{对抗AI的战斗}}\n"
+"  前言：这些规则旨在创造有趣且有挑战性的遭遇，同时仍保持足够简单，便于执行。\n"
+"  你可能会发现一些让遭遇变得过于简单的漏洞；你可以让AI表现得更聪明。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:13
@@ -48,6 +56,8 @@ msgid ""
 "  The rules for AI unit placement during setup are described in \\pagelink{CombatAISetup}{Combat section}.\n"
 "\n"
 msgstr ""
+"  准备阶段中AI单位的放置规则见\\pagelink{CombatAISetup}{战斗章节}。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:15
@@ -56,6 +66,8 @@ msgid ""
 "  When Neutral enemies or \\pagelink{AI Heroes}{AI Heroes} activate a unit, they follow a set of instructions:\\par\n"
 "\n"
 msgstr ""
+"  当中立敌人或\\pagelink{AI Heroes}{AI英雄}激活一个单位时，按以下指令执行：\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:18
@@ -65,6 +77,9 @@ msgid ""
 "    \\item If it is an AI Hero, draw and resolve the next \\pagelink{AI Deck}{AI card}.\n"
 "\n"
 msgstr ""
+"  \\begin{itemize}\n"
+"    \\item 如果它是AI英雄，抽取并结算下一张\\pagelink{AI Deck}{AI牌}。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:21
@@ -74,6 +89,9 @@ msgid ""
 "    If this is impossible, they attack the unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
 "\n"
 msgstr ""
+"    \\item 敌方地面\\svg{unit_ground}和飞行\\svg{unit_flying}单位优先攻击\\textbf{相同}阶级的单位。\n"
+"    如果无法这样做，则攻击较低阶级的单位（按阶级\\textbf{降序}，直到青铜）；如果仍然无法攻击，则攻击较高阶级的单位（按阶级\\textbf{升序}）。\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:25
@@ -84,6 +102,10 @@ msgid ""
 "    \\end{expansion}\n"
 "\n"
 msgstr ""
+"    \\begin{expansion}{navalbattles}\n"
+"      如果你的军队包含\\pagelink{Creature Banks Rules}{生物宝屋单位}，敌方单位会优先攻击所有其他单位，最后才攻击生物宝屋单位。\n"
+"    \\end{expansion}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:32
@@ -97,6 +119,13 @@ msgid ""
 "    - Creature Bank Units.}\n"
 "\n"
 msgstr ""
+"    \\textit{示例：\\svg{golden}\\svg{unit_ground}的优先级如下：\n"
+"    \\svg{golden}\n"
+"    - \\svg{silver}\n"
+"    - \\svg{bronze}\n"
+"    - \\svg{azure}\n"
+"    - 生物宝屋单位。}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:35
@@ -106,6 +135,9 @@ msgid ""
 "    If there are no Ranged \\svg{unit_ranged} units for them to target, they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} units in the same tier order.\\par\n"
 "\n"
 msgstr ""
+"    \\item 远程\\svg{unit_ranged}单位优先攻击相同阶级的其他远程\\svg{unit_ranged}单位，然后攻击较低阶级，最后攻击较高阶级；阶级顺序同上。\n"
+"    如果没有远程\\svg{unit_ranged}单位可作为目标，则按相同阶级顺序优先攻击地面\\svg{unit_ground}和飞行\\svg{unit_flying}单位。\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:48
@@ -125,6 +157,19 @@ msgid ""
 "  \\end{itemize}\n"
 "\n"
 msgstr ""
+"    \\textit{示例：\\svg{silver}\\svg{unit_ranged}的优先级如下：\n"
+"    \\svg{silver}\\svg{unit_ranged}\n"
+"    - \\svg{bronze}\\svg{unit_ranged}\n"
+"    - \\svg{golden}\\svg{unit_ranged}\n"
+"    - \\svg{azure}\\svg{unit_ranged}\n"
+"    - 生物宝屋单位\\,\\svg{unit_ranged}\n"
+"    - \\svg{silver}\\svg{unit_ground}\\svg{unit_flying}\n"
+"    - \\svg{bronze}\\svg{unit_ground}\\svg{unit_flying}\n"
+"    - \\svg{golden}\\svg{unit_ground}\\svg{unit_flying}\n"
+"    - \\svg{azure}\\svg{unit_ground}\\svg{unit_flying}\n"
+"    - 生物宝屋单位\\,\\svg{unit_ground}\\svg{unit_flying}。}\n"
+"  \\end{itemize}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:51
@@ -134,6 +179,9 @@ msgid ""
 "  If there is ever a tie between equally valid targets, the player chooses which unit is attacked.\\par\n"
 "\n"
 msgstr ""
+"  在上述两种情况下，如果有多个有效目标，它们会攻击最近的目标。\n"
+"  如果多个目标同样有效且出现平局，由玩家选择被攻击的单位。\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:58
@@ -147,6 +195,13 @@ msgid ""
 "  \\end{expansion}\n"
 "\n"
 msgstr ""
+"  \\begin{expansion}{navalbattles}\n"
+"    \\pagelink{Creature Banks Rules}{生物宝屋单位}没有阶级。\n"
+"    因此，它们忽略上方列表中的阶级顺序，改为攻击最近的有效目标。\n"
+"    % TODO maybe use this, depending on what Robert replies? Therefore, they ignore the tier-based priority list above and instead attack the nearest valid target.\n"
+"    % https://boardgamegeek.com/thread/3689848/creature-banks-vs-spells\n"
+"  \\end{expansion}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:60
@@ -155,6 +210,8 @@ msgid ""
 "  Enemy units cannot \\pagelink{Defend}{defend} unless instructed to.\n"
 "\n"
 msgstr ""
+"  除非指令要求，否则敌方单位不能\\pagelink{Defend}{防御}。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:66
@@ -167,6 +224,12 @@ msgid ""
 "  If it is not possible, they take a \\pagelink{Defend}{Defend} Action.\n"
 "\n"
 msgstr ""
+"  \\pagetarget{AI Siege}{\\subsection*{AI攻城}}\n"
+"  如果战斗准备中提到城墙和城门，但没有给出额外的布置说明，则像人类玩家一样布置它们：\n"
+"  将城门放在\\svg{initiative}最高的\\svg{unit_ground}单位前方。\n"
+"  默认情况下，单位不会攻击城墙——它们更倾向于飞越城墙攻击目标，或穿过城门向目标移动。\n"
+"  如果无法这样做，它们执行一次\\pagelink{Defend}{防御}行动。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:70
@@ -175,6 +238,8 @@ msgid ""
 "  The \\pagelink{Walls}{Arrow Tower} is treated like a Silver \\svg{silver}\\svg{unit_ranged} unit.\n"
 "  However, if it has multiple equally valid targets to attack, it will attack the one with the least health remaining (the smallest difference between \\svg{health_points} and current~\\svg{damage})."
 msgstr ""
+"  \\pagelink{Walls}{箭塔}视为一个白银\\svg{silver}\\svg{unit_ranged}单位。\n"
+"  但是，如果它有多个同样有效的攻击目标，它会攻击剩余生命最少的目标（\\svg{health_points}与当前~\\svg{damage}之间差值最小者）。"
 
 #. type: multicols
 #: sections/ai_rules.tex:78
@@ -188,6 +253,13 @@ msgid ""
 "  If the unit indicates a unit tier (\\svg{bronze}, \\svg{silver}, \\svg{golden}, or \\svg{azure}) instead of ``Few'' or ``Pack'', it is a Neutral Unit.\n"
 "\n"
 msgstr ""
+"{2}\n"
+"  \\pagetarget{AI Heroes}{\\subheader{AI英雄}}\n"
+"  AI英雄用于战役。\n"
+"  AI英雄没有城镇面板、资源或英雄面板。\n"
+"  它们的单位是固定的，并由剧本定义：在准备阶段找出指定的单位牌。\n"
+"  如果单位标示的是单位阶级（\\svg{bronze}、\\svg{silver}、\\svg{golden}或\\svg{azure}），而不是“少量”或“一群”，则它是中立单位。\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:81
@@ -197,6 +269,9 @@ msgid ""
 "  set up everything without that card, then add it to the AI Hero's Army when you initiate Combat with them.\n"
 "\n"
 msgstr ""
+"  在准备阶段，如果多个AI英雄使用同一种单位，而你没有足够数量的该单位牌，则这些AI英雄必须共用它：\n"
+"  先在没有该牌的情况下完成所有准备，然后在你与相应AI英雄开始战斗时，将该牌加入该AI英雄的军队。\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:85
@@ -207,6 +282,10 @@ msgid ""
 "  Winning Combat against an AI Hero does not grant any rewards unless stated by the Scenario.\n"
 "\n"
 msgstr ""
+"  AI英雄不能投降，你也不能向它们投降；\n"
+"  它们总会战斗到单位全部耗尽。\n"
+"  除非剧本另有说明，赢得与AI英雄的战斗不会给予任何奖励。\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:95
@@ -223,6 +302,16 @@ msgid ""
 "  Repeat this sequence until all MPs are used up.\n"
 "\n"
 msgstr ""
+"  \\columnbreak\n"
+"  \\subsection*{AI英雄回合}\n"
+"  除非另有说明，AI英雄从其城镇开始，在玩家之后行动，并拥有3点移动力，且总是按以下优先级从高到低花费移动力行动：\n"
+"  \\begin{itemize}\n"
+"    \\item 如果玩家的英雄与AI位于同一板块，花费所有移动力向其移动，试图开始战斗。\n"
+"    \\item 如果同一板块上有AI可以占领的任何矿场或定居点，向最近的一个移动。\n"
+"    \\item 否则，向玩家的城镇移动。\n"
+"  \\end{itemize}\n"
+"  重复此流程，直到所有移动力用完。\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:98
@@ -232,6 +321,9 @@ msgid ""
 "  They gain no benefits from any Fields.\n"
 "\n"
 msgstr ""
+"  AI英雄总是\\textbf{自动赢得}与任何中立单位的战斗，同时\\textbf{占领或访问其移动经过的所有格}。\n"
+"  它们不会从任何格获得收益。\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:101
@@ -240,6 +332,8 @@ msgid ""
 "  AI Heroes must discover face down Map Tiles as normal by spending 1 MP before moving onto them.\n"
 "  The player chooses that Tile's orientation."
 msgstr ""
+"  AI英雄在移动到面朝下的地图板块前，必须照常花费1点移动力探索该板块。\n"
+"  由玩家选择该板块的方向。"
 
 #. type: Plain text
 #: sections/ai_rules.tex:107
@@ -247,6 +341,8 @@ msgid ""
 "{\\begin{center} \\vfill \\includegraphics[width=\\linewidth]{\\art/"
 "gold_dragon.jpg} \\end{center}}"
 msgstr ""
+"{\\begin{center} \\vfill \\includegraphics[width=\\linewidth]{\\art/"
+"gold_dragon.jpg} \\end{center}}"
 
 #. type: multicols*
 #: sections/ai_rules.tex:111
@@ -256,6 +352,9 @@ msgid ""
 "  \\pagetarget{AI Deck}{\\subheader{AI Decks}}\n"
 "  \\begin{tikzpicture}\n"
 msgstr ""
+"{2}\n"
+"  \\pagetarget{AI Deck}{\\subheader{AI牌堆}}\n"
+"  \\begin{tikzpicture}\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:143
@@ -294,6 +393,38 @@ msgid ""
 "  \\end{tikzpicture}\n"
 "\n"
 msgstr ""
+"    \\node (card) {\\includegraphics[width=0.57\\linewidth]{\\cards/ai.png}};\n"
+"    \\begin{relcoords}{card}\n"
+"      \\draw (0.4, 0.85) node {\\encircle{1}};\n"
+"      \\draw (0.8, 0.7) node {\\encircle{2}};\n"
+"      \\draw (0.15, 0.5) node {\\encircle{3}};\n"
+"      \\draw (0.55, 0.5) node {\\encircle{4}};\n"
+"      \\draw (0.15, 0.3) node {\\encircle{5}};\n"
+"      \\draw (0.55, 0.3) node {\\encircle{6}};\n"
+"      \\draw (0.4, 0.1) node {\\encircle{7}};\n"
+"    \\end{relcoords}\n"
+"    \\node [below=0pt of card.south] {\\imagecaption{AI牌}};\n"
+"    \\node [right=-1em of card.east] {\n"
+"      \\begin{minipage}[t]{0.43\\linewidth}\n"
+"        \\scriptsize\n"
+"        \\begin{itemize}[itemsep=0.8em]\n"
+"          \\item[\\textbf{1.}] 名称\n"
+"          \\item[\\textbf{2.}] 描述\n"
+"          \\item[\\textbf{3.}] 简单修正\n"
+"          \\item[\\textbf{4.}] 普通修正\n"
+"          \\item[\\textbf{5.}] 专家修正\n"
+"          \\item[\\textbf{6.}] 不可能\\\\修正\n"
+"          \\item[\\textbf{7.}] 卡牌类型：\\\\\n"
+"            \\begin{itemize}[itemsep=0.5em]\n"
+"              \\item[{\\svg[12]{might}}] 力量\n"
+"              \\item[\\svg{magic}] 魔法\n"
+"              \\item[\\svg{skill}] 技能\n"
+"            \\end{itemize}\n"
+"        \\end{itemize}\n"
+"      \\end{minipage}\n"
+"    };\n"
+"  \\end{tikzpicture}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:149
@@ -306,6 +437,12 @@ msgid ""
 "  Before each Combat, shuffle the AI Deck and its discard pile together.\n"
 "\n"
 msgstr ""
+"  AI英雄在战斗中使用两个牌堆：\\textbf{AI牌堆}和\\textbf{AI法术牌堆}。\n"
+"  AI牌堆由三类AI牌组成：力量\\svg[12]{might}、魔法\\svg{magic}和技能\\svg{skill}。\n"
+"  每个战役剧本都会列出准备阶段应加入的卡牌数量和类型。\n"
+"  构建AI牌堆时，\\textbf{随机}选择这些卡牌。\n"
+"  每次战斗前，将AI牌堆及其弃牌堆一起洗混。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:154
@@ -317,6 +454,11 @@ msgid ""
 "  If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
 "\n"
 msgstr ""
+"  当AI英雄\\textbf{激活}一个单位时，抽取一张AI牌\\index{AI牌}，并在该单位\\pagelink{AI Units}{移动和/或攻击}前执行其指令。\n"
+"  如果AI牌堆在战斗中耗尽，则停止从中抽牌。\n"
+"  每张AI牌的效果取决于游戏的\\pagelink{Difficulty}{难度}。\n"
+"  如果AI英雄被指示抽一张牌，它会从AI牌堆抽取并结算\\textbf{另一张牌}。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:158
@@ -327,6 +469,10 @@ msgid ""
 "  Before each Combat, shuffle the AI Spell Deck and its discard pile together.\n"
 "\n"
 msgstr ""
+"  \\subsection*{AI魔法牌和AI法术牌堆}\n"
+"  准备阶段，找出剧本指定的法术，并组成\\textbf{AI法术牌堆}。\n"
+"  每次战斗前，将AI法术牌堆及其弃牌堆一起洗混。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:162
@@ -337,6 +483,10 @@ msgid ""
 "  If the AI Spell Deck empties before Combat ends, shuffle the AI Spell Discard Pile to form a new Spell Deck.\n"
 "\n"
 msgstr ""
+"  每当抽到AI魔法\\svg{magic}牌时，从AI法术牌堆抽取下一张法术并施放。\n"
+"  弃置的法术进入其专属的AI法术弃牌堆。\n"
+"  如果AI法术牌堆在战斗结束前耗尽，洗混AI法术弃牌堆，组成新的法术牌堆。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:166
@@ -347,6 +497,10 @@ msgid ""
 "  Some are included for the sake of variety.\n"
 "\n"
 msgstr ""
+"  AI法术牌堆中的法术牌数量可能多于AI英雄牌堆中的魔法牌数量。\n"
+"  这是有意设计：并非所有法术都会在战斗中使用。\n"
+"  其中一些只是为了增加变化。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:168
@@ -355,6 +509,8 @@ msgid ""
 "  If the AI Hero is assigned a Spell card that is unavailable because it is in your Hero's Deck, and you do not have another copy, substitute it with a \\wikilink{spells/magic_arrow}{Magic Arrow} card.\n"
 "\n"
 msgstr ""
+"  如果AI英雄被分配到一张法术牌，而该牌因在你的英雄牌堆中而不可用，并且你没有另一张副本，则用一张\\wikilink{spells/magic_arrow}{魔法箭}牌替代。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:171
@@ -364,6 +520,9 @@ msgid ""
 "  See \\pagelink{AI Complex Spells}{Casting Complex Spells} for explanations.\n"
 "\n"
 msgstr ""
+"  对于某些法术，AI应如何施放可能并不明确。\n"
+"  说明见\\pagelink{AI Complex Spells}{施放复杂法术}。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:177
@@ -376,6 +535,12 @@ msgid ""
 "  Discard the AI Skill \\svg{skill} card as usual.\n"
 "\n"
 msgstr ""
+"  \\subsection*{AI技能牌}\n"
+"  如果包含技能牌，找出并放置一旁与之相关的指定卡牌（通常是一张能力牌）。\n"
+"  每当AI英雄使用AI技能\\svg{skill}牌时，使用准备阶段分配给它的技能牌，但之后不要弃置该技能牌。\n"
+"  与常规规则不同，当AI牌堆指示AI英雄再次使用该技能时，它可以再次使用。\n"
+"  照常弃置AI技能\\svg{skill}牌。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:179
@@ -384,6 +549,8 @@ msgid ""
 "  AI Skill cards cannot be replaced, so if Scenario rules assign the AI Hero a card that your Hero has and you do not have another copy, remove that card from your Deck and \\textbf{Search (3)} the respective card's Deck to compensate your Hero for the loss.\n"
 "\n"
 msgstr ""
+"  AI技能牌不能被替换；因此，如果剧本规则分配给AI英雄的卡牌正由你的英雄拥有，且你没有另一张副本，则从你的牌堆中移除该牌，并在对应卡牌的牌堆中\\textbf{搜寻（3）}，以补偿你的英雄损失。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:182
@@ -393,6 +560,9 @@ msgid ""
 "  After an AI card is resolved, discard it.\n"
 "\n"
 msgstr ""
+"  \\subsection*{AI牌时机}\n"
+"  一张AI牌结算后，将其弃置。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:186
@@ -403,6 +573,10 @@ msgid ""
 "  The same applies to any AI card which is not useful at the moment of drawing it.\n"
 "\n"
 msgstr ""
+"  \\wikilink{ai\\#ai-cards}{攻击}力量\\svg[12]{might}牌提到“即将攻击的单位”；因此，如果当前激活的单位没有有效攻击目标，则该攻击效果会应用于下一个能够攻击的单位。\n"
+"  注意，多张未结算的牌可以在连续激活中叠加。\n"
+"  任何在抽到当下没有用途的AI牌也适用同样规则。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:188
@@ -411,6 +585,8 @@ msgid ""
 "  If an AI card increased a unit's \\svg{defense}, or triggered another card which increased it, the AI card stays attached to the unit until the first defense happens.\n"
 "\n"
 msgstr ""
+"  如果一张AI牌提高了某单位的\\svg{defense}，或触发了另一张提高其\\svg{defense}的牌，该AI牌会附着在该单位上，直到第一次防御发生。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:191
@@ -420,6 +596,9 @@ msgid ""
 "  If there are multiple AI Enemy Armies in the Scenario, but the rules do not specify to which Enemy an AI Deck, an AI Spell Deck, or a Skill belongs, you should assume it is shared between them.\n"
 "\n"
 msgstr ""
+"  \\subsection*{AI牌堆共用}\n"
+"  如果剧本中有多支AI敌方军队，但规则没有具体说明某个AI牌堆、AI法术牌堆或技能属于哪个敌人，则应视为它们共用这些内容。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:198
@@ -433,6 +612,13 @@ msgid ""
 "  Scenarios can override these instructions.\n"
 "\n"
 msgstr ""
+"  \\bigskip\n"
+"  \\bigskip\n"
+"  \\pagetarget{AI Complex Spells}{\\subheader{施放复杂法术}}\n"
+"  在某些战役中，敌人会使用一些效果无法完全套用AI魔法\\svg{magic}牌标准用法的法术。\n"
+"  为了完整使用这些效果，以下补充说明AI英雄应如何使用各个法术。\n"
+"  剧本可以覆盖这些指令。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:201
@@ -442,6 +628,9 @@ msgid ""
 "  \\textit{Examples: \\wikilink{spells/fireball}{Fireball,} \\wikilink{spells/chain_lightning}{Chain Lightning.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{攻击多个目标的法术}\n"
+"  \\textit{示例：\\wikilink{spells/fireball}{火球术、}\\wikilink{spells/chain_lightning}{连锁闪电。}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:207
@@ -454,6 +643,12 @@ msgid ""
 "  If that is also not possible, do not use this Spell -- instead, skip the AI \\svg{magic} card that activated this effect and put it on the bottom of the AI Deck, then shuffle this Spell back to the AI Spell Deck.\n"
 "\n"
 msgstr ""
+"  抽到时，以玩家军队中任一带有一到两个相邻单位的单位为目标，优先选择包含更多高阶级单位的群组。\n"
+"  如果有多个有效群组，攻击剩余生命最少的群组（\\svg{health_points}与当前\\svg{damage}之间差值最小者）。\n"
+"  如果仍有多个有效目标，你可以选择攻击哪个单位。\n"
+"  如果玩家单位之间没有彼此相邻的单位，则以不与任何AI单位相邻的单位为目标。\n"
+"  如果这也不可能，则不使用此法术——改为跳过触发该效果的AI\\svg{magic}牌，并将其放到AI牌堆底部，然后将此法术洗回AI法术牌堆。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:210
@@ -463,6 +658,9 @@ msgid ""
 "  \\textit{Example: \\wikilink{spells/stone_skin}{Stone Skin.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{即时防御法术}\n"
+"  \\textit{示例：\\wikilink{spells/stone_skin}{护体石肤。}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:214
@@ -473,6 +671,10 @@ msgid ""
 "  In case of a tie in \\svg{defense} value, give preference to the unit of the highest tier, then to the greatest value of \\svg{damage}.\n"
 "\n"
 msgstr ""
+"  抽到时，将此牌放在战斗板旁，然后在\\svg{defense}最高的单位上放置一个防御标记，以表示该牌效果——它会保留在那里，直到防御被结算。\n"
+"  如果该单位已经有防御标记，则改放在\\svg{defense}次高的单位上。\n"
+"  如果\\svg{defense}数值相同，优先选择阶级最高的单位，其次选择\\svg{damage}数值最大的单位。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:217
@@ -482,6 +684,9 @@ msgid ""
 "  \\textit{Example: \\wikilink{spells/cure}{Cure.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{治疗法术}\n"
+"  \\textit{示例：\\wikilink{spells/cure}{疗伤术。}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:220
@@ -491,6 +696,9 @@ msgid ""
 "  If no AI unit has any \\svg{damage}, put the AI \\svg{magic} card that triggered the Spell at the bottom of the AI Deck, then shuffle this Spell card back to the AI Spell Deck.\n"
 "\n"
 msgstr ""
+"  抽到时，从已承受\\svg{damage}数值最大的AI单位上移除\\svg{damage}，从可选单位中阶级最高者开始。\n"
+"  如果没有AI单位带有任何\\svg{damage}，将触发该法术的AI\\svg{magic}牌放到AI牌堆底部，然后将此法术牌洗回AI法术牌堆。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:223
@@ -500,6 +708,9 @@ msgid ""
 "  \\textit{Example: \\wikilink{spells/fire_shield}{Fire Shield.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{单轮增益}\n"
+"  \\textit{示例：\\wikilink{spells/fire_shield}{烈火神盾。}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:227
@@ -510,6 +721,10 @@ msgid ""
 "  Multiple delayed Spells may accumulate and be cast during the same activation.\n"
 "\n"
 msgstr ""
+"  抽到时，检查你即将对其施放法术的单位阶级，并计算战斗板上有多少同阶级或更高阶级的单位。\n"
+"  如果这些单位中超过半数已经在本轮激活过，则不要施放该法术；改为将其放置一旁，并在下一轮第一个AI单位激活时施放；该次激活跳过抽取AI牌。\n"
+"  多个延迟法术可以累积，并在同一次激活中施放。\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:230
@@ -519,6 +734,9 @@ msgid ""
 "  \\textit{Example: \\wikilink{spells/weakness}{Weakness.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{削弱攻击的法术}\n"
+"  \\textit{示例：\\wikilink{spells/weakness}{虚弱无力。}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:233
@@ -527,3 +745,5 @@ msgid ""
 "  When drawn, if the AI's activated unit is about to perform an attack that will provoke a Retaliation, cast this Spell on the Retaliating enemy to lower their \\svg{attack}.\n"
 "  If the AI's unit causes no Retaliation, do not cast this Spell; instead, ignore the AI \\svg{magic} card that activated the Spell and put it at the bottom of the AI Deck, then shuffle the Spell card back to the AI Spell Deck."
 msgstr ""
+"  抽到时，如果AI已激活的单位将进行一次会引发反击的攻击，则对将要反击的敌人施放此法术，以降低其\\svg{attack}。\n"
+"  如果AI的单位不会引发反击，则不施放此法术；改为忽略触发该法术的AI\\svg{magic}牌，并将其放到AI牌堆底部，然后将法术牌洗回AI法术牌堆。"
