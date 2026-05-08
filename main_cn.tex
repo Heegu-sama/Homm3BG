@@ -1,0 +1,80 @@
+% !TeX spellcheck = en_US
+\documentclass[12pt]{article}
+
+% Language setting
+\usepackage[TU]{fontenc}
+\usepackage[chinese, provide=*]{babel}
+\usepackage{fontspec}
+
+\def\sections{sections/translated/cn}
+\PassOptionsToPackage{lang=english}{doclicense}
+
+\newcommand{\notefont}[0]{}
+\newcommand{\expansionlabelfont}[0]{}
+\newcommand{\cnignorefontfeature}[1]{}
+\newcommand{\subheaderfont}[0]{\let\addfontfeature\cnignorefontfeature}
+
+\directlua{
+  luaotfload.add_fallback(
+    "cjkfallback",
+    {
+      "[./assets/fonts/NotoSerifCJKsc/NotoSerifCJKsc-Regular.otf]:mode=node"
+    }
+  )
+  luaotfload.add_fallback(
+    "cjkfallbackbold",
+    {
+      "[./assets/fonts/NotoSerifCJKsc/NotoSerifCJKsc-Bold.otf]:mode=node"
+    }
+  )
+  luaotfload.add_fallback(
+    "cjkfallbackitalic",
+    {
+      "[./assets/fonts/NotoSerifCJKsc/NotoSerifCJKsc-Regular.otf]:mode=node;slant=0.2"
+    }
+  )
+}
+
+\babelfont[chinese]{rm}[
+  Path = ./assets/fonts/NotoSerifCJKsc/,
+  Extension = .otf,
+  UprightFont = *-Regular,
+  BoldFont = *-Bold,
+  ItalicFont = *-Regular,
+  BoldItalicFont = *-Bold
+]{NotoSerifCJKsc}
+
+\babelfont{rm}[
+  Path = ./assets/fonts/LiberationSerif/,
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic,
+  RawFeature={fallback=cjkfallback},
+  BoldFeatures={RawFeature={fallback=cjkfallbackbold}},
+  ItalicFeatures={RawFeature={fallback=cjkfallbackitalic}},
+  BoldItalicFeatures={RawFeature={fallback=cjkfallbackbold}}
+]{LiberationSerif}
+
+\babelfont{sf}[
+  RawFeature={fallback=cjkfallback},
+  BoldFeatures={RawFeature={fallback=cjkfallbackbold}},
+  ItalicFeatures={RawFeature={fallback=cjkfallbackitalic}},
+  BoldItalicFeatures={RawFeature={fallback=cjkfallbackbold}}
+]{Latin Modern Sans}
+
+\babelfont{tt}[
+  RawFeature={fallback=cjkfallback}
+]{Latin Modern Mono}
+
+\defaultfontfeatures[LiberationSerif]{
+  RawFeature={fallback=cjkfallback},
+  BoldFeatures={RawFeature={fallback=cjkfallbackbold}},
+  ItalicFeatures={RawFeature={fallback=cjkfallbackitalic}},
+  BoldItalicFeatures={RawFeature={fallback=cjkfallbackbold}}
+}
+
+\input{metadata.tex}
+
+% TEST_SUBSTRING=我做这件事
