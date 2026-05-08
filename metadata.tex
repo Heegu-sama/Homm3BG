@@ -422,6 +422,7 @@
   BoldItalicFont = *-BoldItalic,
 ]{NewCM10}
 
+\providecommand{\subheaderfont}[0]{\newcomputermodern}
 \providecommand{\notefont}[0]{\liberation\selectfont}
 \providecommand{\expansionlabelfont}[0]{}
 
@@ -489,7 +490,7 @@
     }%
   }
   \begin{center}
-    {\newcomputermodern\Large\bfseries\addfontfeature{Letters=SmallCaps}#2}
+    {\subheaderfont\Large\bfseries\addfontfeature{Letters=SmallCaps}#2}
     \\[0.02em]
     \includegraphics[width=\linewidth,height=1em,keepaspectratio]{\layout/subsection_separator.png}
   \end{center}
