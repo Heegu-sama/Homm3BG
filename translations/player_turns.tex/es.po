@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2025-12-07 21:39+0000\n"
+"POT-Creation-Date: 2026-03-29 14:25+0000\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -16,17 +16,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. type: multicols
-#: sections/ai_rules.tex:5 sections/all_map_locations.tex:5
-#: sections/combat.tex:5 sections/combat.tex:42 sections/combat.tex:115
-#: sections/combat.tex:303 sections/credits.tex:8 sections/deckbuilding.tex:5
-#: sections/deckbuilding.tex:51 sections/deckbuilding.tex:72
-#: sections/difficulty.tex:5 sections/game_modes.tex:5 sections/heroes.tex:5
-#: sections/map_elements.tex:88 sections/map_elements.tex:139
-#: sections/player_turns.tex:5 sections/resources.tex:5
-#: sections/round_structure.tex:5 sections/scenario_end.tex:5
-#: sections/setup.tex:55 sections/tournament_mode.tex:5 sections/town.tex:5
-#: sections/trading.tex:5 sections/units.tex:5 sections/units.tex:46
+#. type: multicols*
+#: sections/all_map_locations.tex:5 sections/combat.tex:5
+#: sections/combat.tex:41 sections/combat.tex:132 sections/credits.tex:8
+#: sections/deckbuilding.tex:5 sections/deckbuilding.tex:73
+#: sections/heroes.tex:5 sections/map_elements.tex:93
+#: sections/map_elements.tex:142 sections/player_turns.tex:5
+#: sections/resources.tex:5 sections/round_structure.tex:5
+#: sections/scenarios.tex:5 sections/setup.tex:5 sections/solo_campaigns.tex:7
+#: sections/tournament_mode.tex:6 sections/town.tex:5 sections/trading.tex:5
+#: sections/units.tex:5 sections/units.tex:42 sections/units.tex:222
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -34,10 +33,18 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/map_elements.tex:183 sections/map_elements.tex:192
-#: sections/map_elements.tex:264 sections/map_elements.tex:297
-#: sections/player_turns.tex:48 sections/tournament_mode.tex:67
-#: sections/units.tex:219
+#: sections/heroes.tex:40 sections/player_turns.tex:56 sections/units.tex:37
+#, no-wrap
+msgid ""
+"\\clearpage\n"
+"\n"
+msgstr ""
+
+#. type: multicols*
+#: sections/map_elements.tex:189 sections/map_elements.tex:199
+#: sections/map_elements.tex:272 sections/map_elements.tex:305
+#: sections/player_turns.tex:48 sections/tournament_mode.tex:69
+#: sections/units.tex:241
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -200,13 +207,20 @@ msgstr ""
 
 #. type: multicols*
 #: sections/player_turns.tex:54
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "Mark the amount of MP you have used by flipping your Movement Tokens over to their brown, inactive side.\n"
+#| "If a player has both a Main and a \\pagelink{Secondary}{Secondary Hero}, track their MPs separately.\n"
+#| "Heroes can spend MP in any order.\\par\n"
+#| "Allied Heroes can move through each other but cannot stop their movement in the same Field.\n"
+#| "When you move through a Field with an allied Hero, do not \\pagelink{Categories}{Visit} the Field that the allied Hero is standing on.\\par\n"
+#| "\n"
 msgid ""
 "Mark the amount of MP you have used by flipping your Movement Tokens over to their brown, inactive side.\n"
 "If a player has both a Main and a \\pagelink{Secondary}{Secondary Hero}, track their MPs separately.\n"
 "Heroes can spend MP in any order.\\par\n"
 "Allied Heroes can move through each other but cannot stop their movement in the same Field.\n"
-"When you move through a Field with an allied Hero, do not \\pagelink{Categories}{Visit} the Field that the allied Hero is standing on.\\par\n"
+"When you move through a Field with an allied Hero, do not \\pagelink{Categories}{visit} the Field that the allied Hero is standing on.\\par\n"
 "\n"
 msgstr ""
 "Marca la cantidad de PM que has usado volteando tus Fichas de Movimiento a su lado marrón inactivo.\n"
@@ -215,14 +229,6 @@ msgstr ""
 "Los Héroes Aliados pueden moverse unos a través de otros pero no pueden detener su movimiento en la misma Casilla.\n"
 "Cuando te mueves a través de una Casilla con un Héroe aliado, no \\pagelink{Categories}{Resuelvas} la Casilla donde se encuentra el Héroe aliado.\\par\n"
 "\n"
-
-#. type: multicols*
-#: sections/player_turns.tex:56 sections/units.tex:41
-#, no-wrap
-msgid ""
-"\\clearpage\n"
-"\n"
-msgstr ""
 
 #. type: multicols*
 #: sections/player_turns.tex:69
@@ -353,7 +359,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:103
+#: sections/player_turns.tex:104
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\subsection*{\\pagetarget{Morale}{Morale} Actions}\\index{Morale Actions}\n"
@@ -373,7 +379,8 @@ msgstr ""
 #| "If you would gain a second Negative Morale Token, you must instead \\textbf{discard your hand of Cards} the next time you end your Turn.\\par\n"
 #| "\n"
 msgid ""
-"\\pagetarget{Morale}{\\subheader{Morale Actions}}\\index{Morale Actions}\n"
+"\\pagetarget{Morale}{\\subheader{Morale Actions}}\n"
+"\\index{Morale}\n"
 "Players can gain or lose Morale through various game effects.\n"
 "When you gain Morale, take a Positive Morale Token\\index{Positive Morale} \\svg{morale_positive}.\n"
 "You may only have one such Token.\n"
@@ -406,7 +413,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:109
+#: sections/player_turns.tex:110
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\bigskip\n"
@@ -426,7 +433,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:114
+#: sections/player_turns.tex:115
 #, fuzzy, no-wrap
 #| msgid ""
 #| "\\note{5}{The Necropolis \\svg{necro-yellow} Faction ignores any Morale effects.\n"
@@ -446,16 +453,16 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:117
+#: sections/player_turns.tex:118
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{-11mm}]{battlefield}\n"
-"\\subsection*{\\pagetarget{Morale Cards}{Morale cards}}\\index{Morale cards}\n"
+"\\subsection*{\\pagetarget{Morale Cards}{Morale cards}}\n"
 "\n"
 msgstr ""
 
 #. type: multicols*
-#: sections/player_turns.tex:121
+#: sections/player_turns.tex:122
 #, no-wrap
 msgid ""
 "You can use Morale cards \\textbf{instead} of Tokens.\n"
@@ -465,7 +472,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/player_turns.tex:123
+#: sections/player_turns.tex:126
 #, fuzzy, no-wrap
 #| msgid ""
 #| "[H]\n"
@@ -474,7 +481,9 @@ msgstr ""
 #| "    \\begin{tikzpicture}\n"
 msgid ""
 "\\vspace{1em}\n"
-"\\begin{tikzpicture}\n"
+"\\begin{multicols}{2}\n"
+"  \\centering\n"
+"  \\begin{tikzpicture}\n"
 msgstr ""
 "[H]\n"
 "  \\centering\n"
@@ -482,86 +491,96 @@ msgstr ""
 "    \\begin{tikzpicture}\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:136
+#: sections/player_turns.tex:134
 #, fuzzy, no-wrap
 #| msgid ""
-#| "    \\draw (-2, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/empowered_statistic.png}}};\n"
-#| "    \\draw (2.4, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/statistic.png}}};\n"
-#| "    \\draw (-1.2, 1.9) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
-#| "    \\draw (3.2, 0.3) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
-#| "    \\draw (-2.7, -1.4) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-#| "    \\draw (1.7, -0.6) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-#| "    \\draw (1.7, -1.7) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
+#| "    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
+#| "    \\draw (-1.3, 2.1) node {\\encircle{1}};\n"
+#| "    \\draw (1.3, -0.9) node {\\encircle{2}};\n"
+#| "    \\draw (1.4, 2.6) node {\\encircle{3}};\n"
+#| "    \\draw (-1, -1.9) node {\\encircle{4}};\n"
 #| "  \\end{tikzpicture}\n"
-#| "\\end{scriptsize}\n"
-#| "\\vspace{-2em}\n"
-#| "\\begin{multicols}{2}\n"
-#| "  \\centering\n"
-#| "  \\footnotesize{\\imagecaption{Empowered Statistic Card}}\n"
-#| "  \\scriptsize\n"
-#| "  \\begin{itemize}\n"
-#| "    \\item[\\textbf{1.}] \\textbf{Name}\n"
-#| "    \\item[\\textbf{2.}] \\textbf{Basic Effect}\n"
-#| "  \\end{itemize}\n"
+#| "  \\end{scriptsize}\n"
+#| "  \\footnotesize\n"
+#| "    \\null\\hfill\\imagecaption{Major Artifact}\n"
 #| "  \\columnbreak\n"
-#| "  \\footnotesize{\\imagecaption{Statistic Card \\phantom{Empowered}}}\n"
-#| "  \\scriptsize\n"
-#| "  \\begin{itemize}\n"
-#| "    \\item[\\textbf{3.}] \\textbf{Expert Effect}\n"
-#| "    \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
-#| "  \\end{itemize}"
+#| "  \\begin{center}\n"
+#| "    \\phantom{\\ldots}\\\\\n"
+#| "    \\phantom{\\ldots}\n"
+#| "    \\begin{scriptsize}\n"
 msgid ""
-"  \\draw (-2, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/morale-positive.png}}};\n"
-"  \\draw (2.4, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/morale-negative-battlefield.png}}};\n"
-"  \\draw (-1.2, 2.2) node {\\encircle{1}};\n"
-"  \\draw (3.2, 2.2) node {\\encircle{1}};\n"
-"  \\draw (-3.0, -1.4) node {\\encircle{2}};\n"
-"  \\draw (1.5, -1.0) node {\\encircle{2}};\n"
-"  \\draw (2.0, -2.0) node {\\encircle{3}};\n"
-"\\end{tikzpicture}\n"
-"\\vspace*{-1em}\n"
-"\\begin{multicols*}{2}\n"
-"  \\centering\n"
-"  \\imagecaption{Positive Morale card}\n"
-"\n"
-msgstr ""
-"    \\draw (-2, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/empowered_statistic.png}}};\n"
-"    \\draw (2.4, 0) node[inner sep=0] {\\makebox[0.47\\linewidth][c]{\\includegraphics[width=0.47\\linewidth]{\\cards/statistic.png}}};\n"
-"    \\draw (-1.2, 1.9) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
-"    \\draw (3.2, 0.3) node {\\encircle{\\phantom{.}1\\phantom{.}}};\n"
-"    \\draw (-2.7, -1.4) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-"    \\draw (1.7, -0.6) node {\\encircle{\\phantom{.}2\\phantom{.}}};\n"
-"    \\draw (1.7, -1.7) node {\\encircle{\\phantom{.}3\\phantom{.}}};\n"
+"    \\node (card) {\\includegraphics[width=\\linewidth]{\\cards/morale-positive.png}};\n"
+"    \\begin{relcoords}{card}\n"
+"      \\draw (0.6, 0.9) node {\\encircle{1}};\n"
+"      \\draw (0.25, 0.25) node {\\encircle{2}};\n"
+"    \\end{relcoords}\n"
 "  \\end{tikzpicture}\n"
-"\\end{scriptsize}\n"
-"\\vspace{-2em}\n"
-"\\begin{multicols}{2}\n"
-"  \\centering\n"
-"  \\footnotesize{\\imagecaption{Carta de Característica Potenciada}}\n"
-"  \\scriptsize\n"
-"  \\begin{itemize}\n"
-"    \\item[\\textbf{1.}] \\textbf{Nombre}\n"
-"    \\item[\\textbf{2.}] \\textbf{Efecto Básico}\n"
-"  \\end{itemize}\n"
+"  \\imagecaption{Positive Morale card}\n"
+"  \\begin{tikzpicture}\n"
+msgstr ""
+"    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
+"    \\draw (-1.3, 2.1) node {\\encircle{1}};\n"
+"    \\draw (1.3, -0.9) node {\\encircle{2}};\n"
+"    \\draw (1.4, 2.6) node {\\encircle{3}};\n"
+"    \\draw (-1, -1.9) node {\\encircle{4}};\n"
+"  \\end{tikzpicture}\n"
+"  \\end{scriptsize}\n"
+"  \\footnotesize\n"
+"    \\null\\hfill\\imagecaption{Artefacto Mayor}\n"
 "  \\columnbreak\n"
-"  \\footnotesize{\\imagecaption{Carta de Característica \\phantom{Potenciada}}}\n"
-"  \\scriptsize\n"
-"  \\begin{itemize}\n"
-"    \\item[\\textbf{3.}] \\textbf{Efecto Potenciado}\n"
-"    \\item[\\textbf{\\phantom{.}}] \\phantom{.}\n"
-"  \\end{itemize}"
+"  \\begin{center}\n"
+"    \\phantom{\\ldots}\\\\\n"
+"    \\phantom{\\ldots}\n"
+"    \\begin{scriptsize}\n"
 
 #. type: multicols*
-#: sections/player_turns.tex:154
-#, no-wrap
-msgid "  \\imagecaption{Negative Morale card}"
+#: sections/player_turns.tex:143
+#, fuzzy, no-wrap
+#| msgid ""
+#| "    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
+#| "    \\draw (-1.3, 2.1) node {\\encircle{1}};\n"
+#| "    \\draw (1.3, -0.9) node {\\encircle{2}};\n"
+#| "    \\draw (1.4, 2.6) node {\\encircle{3}};\n"
+#| "    \\draw (-1, -1.9) node {\\encircle{4}};\n"
+#| "  \\end{tikzpicture}\n"
+#| "  \\end{scriptsize}\n"
+#| "  \\footnotesize\n"
+#| "    \\null\\hfill\\imagecaption{Major Artifact}\n"
+#| "  \\columnbreak\n"
+#| "  \\begin{center}\n"
+#| "    \\phantom{\\ldots}\\\\\n"
+#| "    \\phantom{\\ldots}\n"
+#| "    \\begin{scriptsize}\n"
+msgid ""
+"    \\node (card) {\\includegraphics[width=\\linewidth]{\\cards/morale-negative-battlefield.png}};\n"
+"    \\begin{relcoords}{card}\n"
+"      \\draw (0.6, 0.9) node {\\encircle{1}};\n"
+"      \\draw (0.25, 0.3) node {\\encircle{2}};\n"
+"      \\draw (0.4, 0.1) node {\\encircle{3}};\n"
+"    \\end{relcoords}\n"
+"  \\end{tikzpicture}\n"
+"  \\imagecaption{Negative Morale card}"
 msgstr ""
+"    \\draw (0, 0) node {\\includegraphics[width=1.2\\linewidth]{\\cards/artifact.png}};\n"
+"    \\draw (-1.3, 2.1) node {\\encircle{1}};\n"
+"    \\draw (1.3, -0.9) node {\\encircle{2}};\n"
+"    \\draw (1.4, 2.6) node {\\encircle{3}};\n"
+"    \\draw (-1, -1.9) node {\\encircle{4}};\n"
+"  \\end{tikzpicture}\n"
+"  \\end{scriptsize}\n"
+"  \\footnotesize\n"
+"    \\null\\hfill\\imagecaption{Artefacto Mayor}\n"
+"  \\columnbreak\n"
+"  \\begin{center}\n"
+"    \\phantom{\\ldots}\\\\\n"
+"    \\phantom{\\ldots}\n"
+"    \\begin{scriptsize}\n"
 
-#. type: figure
-#: sections/player_turns.tex:154
+#. type: multicols*
+#: sections/player_turns.tex:159
 #, no-wrap
 msgid ""
-"[H]\n"
+"\\begin{figure}[H]\n"
 "  \\centering\n"
 "  \\footnotesize\n"
 "  \\begin{subfigure}[t]{0.27\\linewidth}\n"
@@ -574,56 +593,46 @@ msgid ""
 "    \\begin{itemize}\n"
 "      \\item[\\textbf{3.}] Battlefield symbol\\\\{\\scriptsize\\textit{(Use such cards only in \\pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish} games)}}\n"
 "    \\end{itemize}\n"
-"  \\end{subfigure}"
+"  \\end{subfigure}\n"
+"\\end{figure}\n"
+"\n"
 msgstr ""
 
-#. type: Plain text
-#: sections/player_turns.tex:164
+#. type: multicols*
+#: sections/player_turns.tex:169
+#, no-wrap
 msgid ""
-"Every time you \\textbf{gain} Morale, discard a Negative Morale card (if you "
-"have any); otherwise:"
+"\\vspace*{-1em}\n"
+"Every time you \\textbf{gain} Morale, discard a Negative Morale card (if you have any); otherwise:\n"
+"\\begin{itemize}\n"
+"  \\setlength\\itemsep{0mm}\n"
+"  \\item In \\pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish}: Search(2) Positive Morale card and put the unwanted card to the bottom of the Deck.\n"
+"  \\item In regular games: draw 1 Positive Morale card.\n"
+"\\end{itemize}\n"
+"You may have \\textbf{2 Positive Morale cards at a time}.\n"
+"Don't draw a third card.\n"
+"\n"
 msgstr ""
 
-#. type: itemize
-#: sections/player_turns.tex:164
-msgid "sep{0mm}"
-msgstr ""
-
-#. type: itemize
-#: sections/player_turns.tex:164
+#. type: multicols*
+#: sections/player_turns.tex:173
+#, no-wrap
 msgid ""
-"In \\pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish}: "
-"Search(2) Positive Morale card and put the unwanted card to the bottom of "
-"the Deck."
+"\\smallskip\n"
+"Every time you \\textbf{lose} Morale, discard a Positive Morale card (if you have any); otherwise draw 1 Negative Morale card (no Searching!).\n"
+"You may have an \\textbf{unlimited number of Negative Morale cards}.\n"
+"\n"
 msgstr ""
 
-#. type: itemize
-#: sections/player_turns.tex:164
-msgid "In regular games: draw 1 Positive Morale card."
-msgstr ""
-
-#. type: Plain text
-#: sections/player_turns.tex:164
+#. type: multicols*
+#: sections/player_turns.tex:181
+#, no-wrap
 msgid ""
-"You may have \\textbf{2 Positive Morale cards at a time}.  Don't draw a "
-"third card."
-msgstr ""
-
-#. type: Plain text
-#: sections/player_turns.tex:168
-msgid ""
-"Every time you \\textbf{lose} Morale, discard a Positive Morale card (if you "
-"have any); otherwise draw 1 Negative Morale card (no Searching!).  You may "
-"have an \\textbf{unlimited number of Negative Morale cards}."
-msgstr ""
-
-#. type: Plain text
-#: sections/player_turns.tex:176
-msgid ""
-"Place newly gained Morale cards face up near your Hero Board.  Positive "
-"Morale cards may be used at any moment you wish.  Negative Morale cards must "
-"be used the next time when the situation indicated by the card occurs.  "
-"\\textbf{Put used cards at the bottom of their respective Decks}.  If you "
-"must draw a Morale card but the respective Morale Deck is empty, reshuffle "
-"its Discard Pile to form a new Deck."
+"\\smallskip\n"
+"Place newly gained Morale cards face up near your Hero Board.\n"
+"Positive Morale cards may be used at any moment you wish.\n"
+"Negative Morale cards must be used the next time when the situation indicated by the card occurs.\n"
+"\\textbf{Put used cards at the bottom of their respective Decks}.\n"
+"If you must draw a Morale card but the respective Morale Deck is empty, reshuffle its Discard Pile to form a new Deck.\n"
+"\\end{expansion}"
 msgstr ""

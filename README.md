@@ -115,6 +115,16 @@ You can expect things to break, like having incorrect layout or not all the text
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/he/printable_he.pdf">הורדה</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/he/economy_printable_he.pdf">הורדה</a></td>
         </tr>
+        <tr>
+            <td>🇨🇳 中文<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/cn/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cn/main_cn.pdf">下载</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cn/printable_cn.pdf">下载</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cn/economy_printable_cn.pdf">下载</a></td>
+        </tr>
     </tbody>
 </table>
 
@@ -130,7 +140,7 @@ They should be free of any major issues.<br>
             <th>Language</th>
             <th colspan=2 align="center">Version 1.2<br>(22.05.2024)</th>
             <th colspan=2 align="center">Version 1.3<br>(23.11.2024)</th>
-            <th colspan=2 align="center">Version 2.0<br>(2025)</th>
+            <th colspan=2 align="center">Version 2.0<br>(26.04.2026)</th>
         </tr>
     </thead>
     <tbody>
@@ -141,6 +151,7 @@ They should be free of any major issues.<br>
             <td align="center">🖥️<br>Digital</td>
             <td align="center">🖨️<br>Printable</td>
             <td align="center">🖥️<br>Digital</td>
+            <td align="center">🖨️<br>Printable</td>
         </tr>
         <tr>
             <td>🇬🇧 English</td>
@@ -148,7 +159,8 @@ They should be free of any major issues.<br>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_English_Rules_Rewrite_12_Printable.pdf">download</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_English_Rules_Rewrite_1_3.pdf">download</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_English_Rules_Rewrite_1_3_Printable.pdf">download</a></td>
-            <td align="center"><em><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0-rc2/Heroes3_English_Rules_Rewrite_2_0-rc2.pdf">preview</a></em></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0-rc5/Heroes3_English_Rules_Rewrite_2_0-rc5.pdf">download</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0-rc5/Heroes3_English_Rules_Rewrite_2_0-rc5_Printable.pdf">download</a></td>
         </tr>
         <tr>
             <td>🇵🇱 Polski</td>
@@ -156,6 +168,7 @@ They should be free of any major issues.<br>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Polski_Rules_Rewrite_12_Printable.pdf">pobierz</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Polski_Rules_Rewrite_1_3.pdf">pobierz</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Polski_Rules_Rewrite_1_3_Printable.pdf">pobierz</a></td>
+            <td align="center">—</td>
             <td align="center">—</td>
         </tr>
         <tr>
@@ -165,6 +178,7 @@ They should be free of any major issues.<br>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Espanol_Rules_Rewrite_1_3.pdf">descargar</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Espanol_Rules_Rewrite_1_3_Printable.pdf">descargar</a></td>
             <td align="center">—</td>
+            <td align="center">—</td>
         </tr>
         <tr>
             <td>🇫🇷 Français</td>
@@ -172,6 +186,7 @@ They should be free of any major issues.<br>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Francais_Rules_Rewrite_12_Printable.pdf">télécharger</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Francais_Rules_Rewrite_1_3.pdf">télécharger</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Francais_Rules_Rewrite_1_3_Printable.pdf">télécharger</a></td>
+            <td align="center">—</td>
             <td align="center">—</td>
         </tr>
         <tr>
@@ -181,6 +196,7 @@ They should be free of any major issues.<br>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Russkiy_Rules_Rewrite_1_3.pdf">скачать</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Russkiy_Rules_Rewrite_1_3_Printable.pdf">скачать</a></td>
             <td align="center">—</td>
+            <td align="center">—</td>
         </tr>
         <tr>
             <td>🇺🇦 Українська</td>
@@ -189,9 +205,11 @@ They should be free of any major issues.<br>
             <td align="center">—</td>
             <td align="center">—</td>
             <td align="center">—</td>
+            <td align="center">—</td>
         </tr>
         <tr>
             <td>🇩🇪 Deutsch</td>
+            <td align="center">—</td>
             <td align="center">—</td>
             <td align="center">—</td>
             <td align="center">—</td>
@@ -205,6 +223,7 @@ They should be free of any major issues.<br>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Cestina_Rules_Rewrite_1_3.pdf">stáhnout</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Cestina_Rules_Rewrite_1_3_Printable.pdf">stáhnout</a></td>
             <td align="center">—</td>
+            <td align="center">—</td>
         </tr>
         <tr>
             <td>🇮🇱 עברית</td>
@@ -212,6 +231,16 @@ They should be free of any major issues.<br>
             <td align="center">—</td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Ivrit_Rules_Rewrite_1_3.pdf">הורדה</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Ivrit_Rules_Rewrite_1_3_Printable.pdf">הורדה</a></td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+        </tr>
+        <tr>
+            <td>🇨🇳 中文</td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+            <td align="center">—</td>
             <td align="center">—</td>
         </tr>
     </tbody>
@@ -259,8 +288,7 @@ This repository serves both as a means to preserve the work, but also for others
 Please discuss any and all factual errors, bad language or other errors you've found.
 You can do this by opening issues/PRs with suggestions, writing in the BGG thread, or joining us [on Discord](https://discord.gg/Y4uM9pPWF6).
 
-You can help translate this project using [Weblate](https://weblate.org/en/).
-Click the image to get started:
+Translation progress reported by [Weblate](https://weblate.org/en/).
 
 <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
 <picture>
@@ -306,7 +334,7 @@ To build the document in English, it's best to use the script (requires Perl, wo
 tools/build.sh
 ```
 
-To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, `de` `cs`, and `he` are supported, `en` is the default), make sure you have `po4a` (version 0.74 or higher) and use the script (works on Lin/Mac):
+To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, `de`, `cs`, `he`, and `cn` are supported, `en` is the default), make sure you have `po4a` (version 0.74 or higher) and use the script (works on Lin/Mac):
 
 ```bash
 tools/build.sh <LANGUAGE>
@@ -365,8 +393,6 @@ After setting it in options, press the `Build & View` ▶️ (F5) button on the 
 
 <details>
 <summary>Click to see details</summary>
-
-**We have a guide on [using AI for translations](tools/translation-ai-prompts/README.md).**
 
 Make sure you have [`po4a`](https://github.com/mquinson/po4a) installed.
 
@@ -502,7 +528,8 @@ Their respective XCF files reside in [`assets/gimp-files`](https://github.com/He
 ## 🛡️ Other Community Projects
 
 - [Fan-Made Mission Book](https://github.com/qwrtln/Homm3BG-mission-book)
-- [Board Game Cards Databse](https://github.com/Mirzipan/Homm3_BG_Database)
+- [Game Wiki](https://github.com/Mirzipan/Homm3_BG_Database)
 - [Factory Rule Book](https://github.com/piotrbruzda/Homm3BG-FactoryRulebook)
 - [Scenario Map Editor](https://github.com/zedero/HoMM3Boardgame)
 - [Hero Creator](https://github.com/K-Adam/Homm3_hero_creator)
+- [Music Companion PWA](https://github.com/ExeVirus/h3omm_bgm)

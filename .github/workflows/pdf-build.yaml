@@ -26,6 +26,11 @@ on:
         type: number
         default: 1
         description: 'Number of days to retain artifacts'
+      github_build:
+        required: false
+        type: number
+        default: 1
+        description: 'Whether to replace document version with GitHub SHA'
     outputs:
       number_of_pages:
         value: ${{ jobs.build.outputs.number_of_pages }}
@@ -39,12 +44,12 @@ jobs:
 
     steps:
       - name: Set up repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Cache po4a entries [${{ inputs.language }}]
         if: inputs.language != 'en' && github.event_name == 'pull_request'
         id: cache-po4a
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: |
             sections/translated/${{ inputs.language }}/*.tex
@@ -94,7 +99,7 @@ jobs:
           fi
 
       - name: Cache built PDF
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         if: github.event_name == 'pull_request'
         id: cache-pdf
         with:
@@ -111,7 +116,7 @@ jobs:
 
       - name: Cache Inkscape artifacts
         if: steps.cache-pdf.outputs.cache-hit != 'true'
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: |
             ./svg-inkscape
@@ -121,7 +126,7 @@ jobs:
             inkscape-
 
       - name: Cache LaTeX packages and build
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         if: steps.cache-pdf.outputs.cache-hit != 'true'
         with:
           path: |
@@ -144,11 +149,11 @@ jobs:
         uses: xu-cheng/latex-action@v4
         if: steps.cache-pdf.outputs.cache-hit != 'true'
         with:
-          docker_image: ghcr.io/qwrtln/homm3bg:latest
           latexmk_use_lualatex: true
           latexmk_shell_escape: true
-          pre_compile: export HOMM3_GITHUB_BUILD=1 HOMM3_PRINTABLE=${{ env.HOMM3_PRINTABLE }} HOMM3_NO_ART_BACKGROUND=${{ env.HOMM3_NO_ART_BACKGROUND }} HOMM3_LANG=${{ inputs.language }}
+          pre_compile: export HOMM3_GITHUB_BUILD=${{ inputs.github_build }} HOMM3_PRINTABLE=${{ env.HOMM3_PRINTABLE }} HOMM3_NO_ART_BACKGROUND=${{ env.HOMM3_NO_ART_BACKGROUND }} HOMM3_LANG=${{ inputs.language }}
           root_file: main_${{ inputs.language }}.tex
+          extra_system_packages: "inkscape"
 
       - name: Find test string
         id: test
@@ -184,7 +189,7 @@ jobs:
           echo "number_of_pages=${NUMBER_OF_PAGES}" > $GITHUB_OUTPUT
 
       - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ env.ARTIFACT_NAME }}
           path: ${{ env.OUTPUT_FILENAME }}

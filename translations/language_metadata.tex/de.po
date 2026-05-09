@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-12-07 22:12+0000\n"
-"PO-Revision-Date: 2025-10-03 15:36+0000\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2026-03-04 23:22+0000\n"
+"PO-Revision-Date: 2026-02-07 15:09+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -15,6 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.7\n"
 
 #.  Additional spacing under the section header (if required)
 #. type: Plain text
@@ -36,53 +37,77 @@ msgstr ""
 
 #.  Text to be used for expansion bars
 #. type: newcommand{#4}
-#: sections/language_metadata.tex:20
+#: sections/language_metadata.tex:21
 msgid "Tower Expansion"
 msgstr "Turm-Erweiterung"
 
 #. type: newcommand{#4}
-#: sections/language_metadata.tex:20
+#: sections/language_metadata.tex:21
 msgid "Rampart Expansion"
 msgstr "Schutzwall-Erweiterung"
 
 #. type: newcommand{#4}
-#: sections/language_metadata.tex:20
+#: sections/language_metadata.tex:21
 msgid "Fortress Expansion"
 msgstr "Festung-Erweiterung"
 
 #. type: newcommand{#4}
-#: sections/language_metadata.tex:20
+#: sections/language_metadata.tex:21
 msgid "Inferno Expansion"
 msgstr "Inferno-Erweiterung"
 
 #. type: newcommand{#4}
-#: sections/language_metadata.tex:20
+#: sections/language_metadata.tex:21
 msgid "Stronghold Expansion"
 msgstr "Burg-Erweiterung"
 
 #. type: newcommand{#4}
-#: sections/language_metadata.tex:20
+#: sections/language_metadata.tex:21
 msgid "Conflux Expansion"
 msgstr "Konflux-Erweiterung"
 
 #. type: newcommand{#4}
-#: sections/language_metadata.tex:20
+#: sections/language_metadata.tex:21
 msgid "Cove Expansion"
 msgstr "Bucht-Erweiterung"
 
 #. type: newcommand{#4}
-#: sections/language_metadata.tex:20
+#: sections/language_metadata.tex:21
 msgid "Battlefield Expansion"
 msgstr "Schlachtfeld-Erweiterung"
 
 #. type: newcommand{#4}
-#: sections/language_metadata.tex:20
-#, fuzzy
-#| msgid "Naval Battles Expansion"
+#: sections/language_metadata.tex:21
 msgid "Naval Battles \\mbox{Expansion}"
-msgstr "Seeschlacht-Erweiterung"
+msgstr "Seeschlacht-\\mbox{Erweiterung}"
 
 #. type: newcommand{#4}
-#: sections/language_metadata.tex:20
+#: sections/language_metadata.tex:21
 msgid "Stretch Goals 2 Expansion"
 msgstr "Stretchgoal-Inhalte"
+
+#.  Language of wiki URLs
+#. type: newcommand{#4}
+#: sections/language_metadata.tex:24
+msgid "en"
+msgstr ""
+
+#.  Wikilink character ° command with custom kerning for characters appearing before it
+#. type: newcommand{#4}
+#: sections/language_metadata.tex:36
+msgid ""
+"\\directlua{ local s = \"\\luaescapestring{\\detokenize{#1}}\" local last = "
+"s:sub(-1)  if last == \".\" or last == \",\" then tex.print(\"\\"
+"\\kern-0.1em\")  end }"
+msgstr ""
+
+#. type: textcolor{#2}
+#: sections/language_metadata.tex:36
+msgid "\\textbf{°}"
+msgstr ""
+
+#.  Kerning for characters after the wikilink character °
+#. type: newcommand{#4}
+#: sections/language_metadata.tex:41
+msgid "\\ifx\\wikinexttoken)\\kern-0.08em\\fi"
+msgstr ""

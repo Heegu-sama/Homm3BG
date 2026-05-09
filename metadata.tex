@@ -12,6 +12,7 @@
 ]{geometry}
 
 % Useful packages
+\usepackage{afterpage}
 \usepackage[export]{adjustbox}
 \usepackage{amsmath}
 \usepackage{array}
@@ -37,7 +38,7 @@
 \usepackage{tabularx}
 \usepackage[subfigure]{tocloft}
 \usepackage{tikz}
-\usepackage{titlesec}
+\usepackage[raggedright]{titlesec}
 \usepackage{transparent}
 \usepackage{verbatim}
 \usepackage{varwidth}
@@ -48,6 +49,11 @@
 \usepackage{expl3}
 \usepackage{wrapfig}
 \usepackage{accsupp}
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={4.0}
+]{doclicense}
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX}
 \newtcolorbox{scaledfigure}[1][]{height fill, space to=\myspace,#1}
@@ -59,6 +65,10 @@
   pdftitle={Heroes of Might \& Magic III Rule Book},
   pdfpagemode=UseNone,
 }
+
+% Disable American-style double spcaes between sentences
+\frenchspacing
+
 % Set the default spacing between paragraphs. Remove indentation.
 \usepackage[skip=6pt, indent=0pt]{parskip}
 \setstretch{1}
@@ -94,11 +104,10 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
 \renewcommand\cftsecdotsep{\cftdot}
 \renewcommand\cftsubsecdotsep{\cftdot}
-\setlength{\cftbeforesecskip}{0.1em}
 
 \captionsetup[figure]{labelformat=empty}
 \captionsetup[subfigure]{labelformat=empty, singlelinecheck=off, justification=centering}
-\usetikzlibrary{shadows, shadows.blur, calc, backgrounds}
+\usetikzlibrary{shadows, shadows.blur, calc, backgrounds, positioning, babel}
 
 \setlength{\columnsep}{1cm}
 \newtoggle{printable}
@@ -110,18 +119,8 @@
 
 % Control addition of certain pages in the printable version.
 % Useful to make the printable version have correct number of pages.
-\newtoggle{printable_quote_separate_page}
 \newtoggle{printable_notes_page}
-\togglefalse{printable_quote_separate_page}
-\toggletrue{printable_notes_page}
-
-\AtBeginDocument{
-  \iftoggle{printable}{}{
-    % If printable was disabled, automatically disable related flags.
-    \togglefalse{printable_quote_separate_page}
-    \togglefalse{printable_notes_page}
-  }
-}
+\togglefalse{printable_notes_page}
 
 % Variables
 \def\_assets{assets}
@@ -154,16 +153,18 @@
 \definecolor{darkcandyapplered}{rgb}{0.64, 0.0, 0.0}
 \definecolor{goldenbrown}{rgb}{0.6, 0.4, 0.08}
 % Expansion colors
-\definecolor{tower}{HTML}{909090}      % gray
-\definecolor{rampart}{HTML}{228B22}    % forestgreen
-\definecolor{fortress}{HTML}{556B2F}   % darkolivegreen
-\definecolor{inferno}{HTML}{B22222}    % firebrick
-\definecolor{stronghold}{HTML}{A67C52} % tan
-\definecolor{conflux}{HTML}{C158C1}    % orchid
-\definecolor{cove}{HTML}{20B2AA}       % lightseagreen
-\definecolor{battlefield}{HTML}{505050}   % dark gray
-\definecolor{navalbattles}{HTML}{2E5984}  % dark deep blue
-\definecolor{stretchgoals2}{HTML}{000000}  % TODO choose color
+\definecolor{tower}        {cmyk}{0.00, 0.00, 0.00, 0.45}  % gray
+\definecolor{rampart}      {cmyk}{0.75, 0.00, 0.75, 0.45}  % forestgreen
+\definecolor{fortress}     {cmyk}{0.20, 0.00, 0.55, 0.61}  % darkolivegreen
+\definecolor{inferno}      {cmyk}{0.00, 0.80, 0.80, 0.30}  % firebrick
+\definecolor{stronghold}   {cmyk}{0.00, 0.25, 0.51, 0.39}  % tan
+\definecolor{conflux}      {cmyk}{0.00, 0.54, 0.00, 0.23}  % orchid
+\definecolor{cove}         {cmyk}{0.95, 0.00, 0.00, 0.17}  % lightseagreen
+\definecolor{battlefield}  {cmyk}{0.00, 0.00, 0.00, 0.70}  % dark gray
+\definecolor{navalbattles} {cmyk}{0.89, 0.39, 0.00, 0.10}  % dark deep blue
+\definecolor{stretchgoals2}{cmyk}{0.40, 0.20, 0.20, 1.00}  % rich black
+
+\def\hyperlinkcolor{goldenbrown}
 
 \AtBeginEnvironment{tcolorbox}{%
   \setlist[itemize]{itemsep=0.4em, parsep=0pt, topsep=5pt}%
@@ -186,19 +187,25 @@
   \tl_set:No #2 {\seq_use:Nn \l_tmpa_seq { \\ }}
 }
 
-\NewDocumentEnvironment{expansion}{ O{} m +b }{
-  \__expansion_color_titles:NNn \l_expcolor_tl \l_exptitles_tl {#2}
+\NewDocumentEnvironment{expansion}{ s O{} m +b }{
+  \__expansion_color_titles:NNn \l_expcolor_tl \l_exptitles_tl {#3}
 
   \tl_clear_new:N \l_expoverlay_tl
   \iftoggle{textright2left}{
     \tl_set:No \l_expoverlay_tl {
-      \fill[
-        \l_expcolor_tl,
-        path~fading=west,
-        opacity=0.09
-      ]
-        ([xshift=-5pt-\linewidth, yshift=3pt]frame.north~east) rectangle
-        ([xshift=5pt-\linewidth, yshift=-3pt]frame.south~west);
+      \IfBooleanTF{#1}{
+        \begin{scope}
+          \clip ([xshift=-5pt-\linewidth, yshift=3pt]frame.north~east) rectangle
+                ([xshift=5pt-\linewidth, yshift=-\paperheight]frame.south~west);
+          \fill[\l_expcolor_tl, path~fading=west, opacity=0.09]
+            ([xshift=-5pt-\linewidth, yshift=\paperheight]frame.north~east) rectangle
+            ([xshift=5pt-\linewidth, yshift=-\paperheight]frame.south~west);
+        \end{scope}
+      }{
+        \fill[\l_expcolor_tl, path~fading=west, opacity=0.09]
+          ([xshift=-5pt-\linewidth, yshift=3pt]frame.north~east) rectangle
+          ([xshift=5pt-\linewidth, yshift=-3pt]frame.south~west);
+      }
       \fill[
         top~color=\l_expcolor_tl,
         bottom~color=\l_expcolor_tl,
@@ -206,17 +213,23 @@
         opacity=0.5
       ]
       ([xshift=-8pt-\linewidth, yshift=3pt]frame.north~east) rectangle
-      ([xshift=-5pt-\linewidth, yshift=-3pt]frame.south~east);
+      \IfBooleanTF{#1}{([xshift=-5pt-\linewidth, yshift=-\paperheight]frame.south~east)}{([xshift=-5pt-\linewidth, yshift=-3pt]frame.south~east)};
     }
   }{
     \tl_set:No \l_expoverlay_tl {
-      \fill[
-        \l_expcolor_tl,
-        path~fading=east,
-        opacity=0.09
-      ]
-        ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
-        ([xshift=5pt, yshift=-3pt]frame.south~east);
+      \IfBooleanTF{#1}{
+        \begin{scope}
+          \clip ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
+                ([xshift=5pt, yshift=-\paperheight]frame.south~east);
+          \fill[\l_expcolor_tl, path~fading=east, opacity=0.09]
+            ([xshift=-5pt, yshift=\paperheight]frame.north~west) rectangle
+            ([xshift=5pt, yshift=-\paperheight]frame.south~east);
+        \end{scope}
+      }{
+        \fill[\l_expcolor_tl, path~fading=east, opacity=0.09]
+          ([xshift=-5pt, yshift=3pt]frame.north~west) rectangle
+          ([xshift=5pt, yshift=-3pt]frame.south~east);
+      }
       \fill[
         top~color=\l_expcolor_tl,
         bottom~color=\l_expcolor_tl,
@@ -224,10 +237,11 @@
         opacity=0.5
       ]
       ([xshift=-8pt, yshift=3pt]frame.north~west) rectangle
-      ([xshift=-5pt, yshift=-3pt]frame.south~west);
+      \IfBooleanTF{#1}{([xshift=-5pt, yshift=-\paperheight]frame.south~west)}{([xshift=-5pt, yshift=-3pt]frame.south~west)};
     }
   }
 
+  \IfBooleanT{#1}{\global\toggletrue{bottomforeground}}
   \begin{tcolorbox}[
     enhanced,
     before~title=\raggedright\tiny,
@@ -241,9 +255,10 @@
     overlay={
       \l_expoverlay_tl
     },
-    #1]
-    #3
+    #2]
+    #4
   \end{tcolorbox}
+  \IfBooleanT{#1}{\afterpage{\global\togglefalse{bottomforeground}}}
 }{}
 
 % Helper function for the tikz square
@@ -305,7 +320,7 @@
 \ExplSyntaxOn
 % List of glyphs that don't look good when dropped below the text line
 \clist_new:N \g_nodrop_list
-\clist_map_inline:nn { movement, expert, reinforce, level1, level4, level6, unit_flying, arrow_right_gray, arrow_right } {
+\clist_map_inline:nn { movement, expert, reinforce, level1, level4, level6, unit_flying, arrow_right_gray, arrow_right, permanent } {
   \clist_put_right:Nn \g_nodrop_list { #1 }
 % Add the -yellow variants to the list automatically
   \clist_put_right:Nn \g_nodrop_list { #1-yellow }
@@ -338,7 +353,20 @@
   }{%
     \edef\svgpath{\svgs/\detokenize{#2}.svg}%
   }%
-  \BeginAccSupp{ActualText={<#2>},space}\EndAccSupp{}%
+  % Compute a clean glyph name for copying: strip "-yellow" or "-mono" suffix
+  \IfEndWith{#2}{-yellow}{%
+    \StrGobbleRight{#2}{7}[\svgcleanname]%
+  }{%
+    \IfEndWith{#2}{-mono}{%
+      \StrGobbleRight{#2}{5}[\svgcleanname]%
+    }{%
+      \def\svgcleanname{#2}%
+    }%
+  }%
+  \smash{%
+    \BeginAccSupp{ActualText={:\svgcleanname:},space}%
+    \EndAccSupp{}%
+  }%
   \ifnodrop{#2}{%
     % Don't drop a selection of glyphs below the text line - they look better that way
     \includesvg[height=#1px]{\svgpath}%
@@ -394,6 +422,7 @@
   BoldItalicFont = *-BoldItalic,
 ]{NewCM10}
 
+\providecommand{\subheaderfont}[0]{\newcomputermodern}
 \providecommand{\notefont}[0]{\liberation\selectfont}
 \providecommand{\expansionlabelfont}[0]{}
 
@@ -412,15 +441,15 @@
 }
 \newcommand{\addsection}[3][1]{
   \def\oneliner{\equal{#1}{1}}
-  \vspace*{-5em}
-  \hspace*{-1em}
+  \vspace*{-5.81em}
+  \hspace*{-1.35em}
   \makebox[0pt][l]{
   \raisebox{-\totalheight}[0pt][7pt]{
     \begin{tikzpicture}
       \iftoggle{noartbackground}{
-        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\layout/section_heading_monochrome.png}};
+        \draw (0, 0) node[inner sep=0] {\makebox[1.015\textwidth][c]{\includegraphics[width=1.055\linewidth, height=0.24\linewidth]{\layout/section_heading_monochrome.png}}};
       }{
-        \draw (0, 0) node[inner sep=0] {\includegraphics[width=\linewidth, height=0.2\linewidth]{\layout/section_heading.jpg}};
+        \draw (0, 0) node[inner sep=0] {\makebox[1.015\textwidth][c]{\includegraphics[width=1.055\linewidth, height=0.24\linewidth]{\layout/section_heading.png}}};
       }
       \draw (-6.2, 0) node {\includegraphics[width=0.125\textwidth]{#3}};
     \end{tikzpicture}
@@ -430,12 +459,16 @@
   \begin{fullwidth}[leftmargin=0.16\textwidth, outermargin=0.16\textwidth, innermargin=0.16\textwidth]
     \begin{center}
       \vspace*{\lang_header_adjustment}
-      \ifthenelse{\oneliner}{}{\vspace{-13pt}}
+      \ifthenelse{\oneliner}{\vspace{0.81em}}{\vspace{-0.27em}}
       \sectionheadertext{#2}
     \end{center}
   \end{fullwidth}
-  \vspace{1.75em}
-  \ifthenelse{\oneliner}{}{\vspace{-13pt}}
+  \ifthenelse{\oneliner}{
+    \vspace{1.75em}
+    \vspace{\lang_header_adjustment}
+  }{
+    \vspace{0.66em}
+  }
 }
 %End of create section heading.
 
@@ -448,7 +481,7 @@
 % Argument one is the literal text for ToC - defaults to argument two if unspecified
 % Argument two is the text to display
 \newcommand{\subheader}[2][]{%
-  \ifstrequal{#1}{false}{}{
+  \ifstrequal{#1}{notoc}{}{
     \ifstrequal{#1}{}{
       \phantomsection\addcontentsline{toc}{subsection}{\protect #2}%
     }{%
@@ -457,7 +490,7 @@
     }%
   }
   \begin{center}
-    {\newcomputermodern\Large\bfseries\addfontfeature{Letters=SmallCaps}#2}
+    {\subheaderfont\Large\bfseries\addfontfeature{Letters=SmallCaps}#2}
     \\[0.02em]
     \includegraphics[width=\linewidth,height=1em,keepaspectratio]{\layout/subsection_separator.png}
   \end{center}
@@ -498,36 +531,28 @@
     \draw [borderinyellow, thick] ([xshift=+2.8pt, yshift=-2.8pt] current bounding box.north west) rectangle ([xshift=-2.8pt, yshift=2.8pt] current bounding box.south east);
     \node at (current bounding box.center) {
       \begin{varwidth}{0.85\linewidth}
-      \notefont{
+      \notefont{{
         \iftoggle{noartbackground}{}{
           \color{arylideyellow}
+          \def\hyperlinkcolor{amber}
           \hypersetup{linkcolor=amber}
         }
         #2
-        \hypersetup{linkcolor=goldenbrown}
-      }
+      }}
       \end{varwidth}
     };
-    \iftoggle{noartbackground}{}{
-      \begin{pgfonlayer}{background}
-        \begin{scope}[blend mode=multiply]
-          \draw [shade, blur shadow={shadow opacity=15}] (current bounding box.north west) rectangle (current bounding box.south east);
-        \end{scope}
-      \end{pgfonlayer}
-    }
   \end{tikzpicture}
 }
 
-% Create Heroes-styled framed canvas for a table. Accepts three arguments:
-% 1) [Optional] Drop shadow description. Use [] as the first arg to delete it.
-% 2) Height specified in verses (lines of text)
-% 3) Table contents like title and tabularx environment
-\newcommand{\hommtable}[3][shade, blur shadow={shadow opacity=15}]{
+% Create Heroes-styled framed canvas for a table. Accepts two arguments:
+% 1) Height specified in verses (lines of text)
+% 2) Table contents like title and tabularx environment
+\newcommand{\hommtable}[2]{
   \begin{tikzpicture}
     \iftoggle{noartbackground}{
-      \node[inner sep=0, minimum width=\linewidth, minimum height=#2\baselineskip] at (0,0) {};
+      \node[inner sep=0, minimum width=\linewidth, minimum height=#1\baselineskip] at (0,0) {};
     }{
-      \textlang{english}{\draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#2\baselineskip}{\layout/table-background.jpg}}};}
+      \textlang{english}{\draw (0, 0) node[inner sep=0] {\makebox[\linewidth][c]{\picdims[width=\linewidth]{\linewidth}{#1\baselineskip}{\layout/table-background.jpg}}};}
     }
     \draw [bordermidyellow, thick] ([xshift=+1pt, yshift=-1pt] current bounding box.north west) rectangle ([xshift=-1pt, yshift=1pt] current bounding box.south east);
     \draw [borderoutyellow, thick] (current bounding box.north west) rectangle (current bounding box.south east);
@@ -538,21 +563,15 @@
         \bgroup
         \iftoggle{noartbackground}{}{
           \color{arylideyellow}
+          \def\hyperlinkcolor{amber}
           \hypersetup{linkcolor=amber}
         }
         \setlength{\tabcolsep}{0.3em}
-        #3
+        #2
         \egroup
       }
       \end{varwidth}
     };
-    \iftoggle{noartbackground}{}{
-      \begin{pgfonlayer}{background}
-        \begin{scope}[blend mode=multiply]
-          \draw [#1] (current bounding box.north west) rectangle (current bounding box.south east);
-        \end{scope}
-      \end{pgfonlayer}
-    }
   \end{tikzpicture}
 }
 % End of Heroes-styled canvas definition.
@@ -606,6 +625,16 @@
 \newcommand{\pagelink}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{ \textmd{(\pageshorthand\,\pageref{#1})}}{}}
 \newcommand{\pagelinkwithcomma}[2]{\hyperlink{#1}{#2}\iftoggle{printable}{, \textmd{\pageshorthand\,\pageref{#1}}}{}}
 
+\newcommand{\wikilink}[2]{%
+  \bgroup%
+  \hypersetup{urlcolor=.}%
+  \href{https://\wikilang.homm3bg.wiki/#1}{#2\wikichar{#2}}%
+  \egroup%
+  \wikicheckaliaskern
+}
+% Commands for applying localized kerning for wikilink character °
+\newcommand\wikicheckaliaskern{\futurelet\wikinexttoken\wikiapplykern}
+
 % Stubs for polyglossia package used for Hebrew but not other languages
 \providecommand{\mainlanguagename}[0]{}
 \providecommand{\textlang}[2]{#2}
@@ -613,23 +642,61 @@
 % Command for overlay circled text
 \definecolor{goblin}{HTML}{3b7c33}
 
-\newcommand\encirclebase[4]{%
+\newcommand\encirclebase[4][normal]{%
+  % Set drop shadow size
+  \ifdim\dimexpr#3\relax<1.6em\relax
+    \edef\shadowscale{2.2\dimexpr#3\relax}
+  \else
+    \edef\shadowscale{1.5\dimexpr#3\relax}
+  \fi
+
+  % Set drop shadow offset
+  \ifthenelse{\equal{#1}{legend}}{
+    \def\shadowoffset{0.5pt}
+  }{
+    \def\shadowoffset{2pt}
+  }
+
   \begin{footnotesize}%
-  \tikz[baseline=(X.base)]
-  \node (X) [draw=white, shape=circle, minimum size=#3, align=center, inner sep=0, fill=#1, text=white, #2] {\strut \textbf{#4}};%
+  \tikz[baseline=(X.base)]{
+    \node (X) [draw=white, shape=circle, fill=#2, minimum size=#3, align=center, inner sep=0, text=white] {\strut \textbf{#4}};
+    \begin{scope}[on background layer]
+      \node [inner sep=0pt, opacity=0.7, anchor=center] at ([xshift=\shadowoffset, yshift=-\shadowoffset]X.center) {\includegraphics[width=\shadowscale]{\layout/circle_drop_shadow.png}};
+    \end{scope}
+  }
   \end{footnotesize}%
 }
 \newcommand\encircle[1]{
-  \encirclebase{goblin}{blur shadow={shadow blur steps=5}}{1.6em}{#1}
+  \encirclebase{goblin}{1.6em}{#1}
 }
 \newcommand\encirclered[1]{%
-  \encirclebase{darkcandyapplered}{blur shadow={shadow blur steps=5}}{1.6em}{#1}
+  \encirclebase{darkcandyapplered}{1.6em}{#1}
 }
 \newcommand\encirclelegend[2]{%
-  \encirclebase{#1}{blur shadow={shadow blur steps=3, shadow xshift=0.5pt, shadow yshift=-0.5pt, shadow blur radius=1pt}}{1.6em}{#2}
+  \encirclebase[legend]{#1}{1.6em}{#2}
 }
 \newcommand\encirclesmall[1]{
-  \encirclebase{goblin}{blur shadow={shadow blur steps=5}}{0.9em}{#1}
+  \encirclebase{goblin}{0.9em}{#1}
+}
+
+\ExplSyntaxOn
+\NewDocumentEnvironment{relcoords}{ m +b }{
+  \begin{scope}[
+    shift={(#1.south~west)},
+    x={($(#1.east)~-~(#1.west)$)},
+    y={($(#1.north)~-~(#1.south)$)}
+  ]
+    #2
+  \end{scope}
+}{}
+\ExplSyntaxOff
+% Enable this temporarily inside relcoords when placing encircles
+\newcommand\gridhelper[0]{
+  \draw[step=0.1,black,very thin] (0,0) grid (1,1);
+  \foreach \i in {0,0.1,...,1} {
+    \draw [very thin,black] (\i,0) -- (\i,1)  node [below] at (\i,0) {$\StrLeft{\i}{3}$};
+    \draw [very thin,black] (0,\i) -- (1,\i) node [left] at (0,\i) {$\StrLeft{\i}{3}$};
+  }
 }
 
 \newcommand{\drawbottom}{
@@ -647,13 +714,25 @@
 }
 
 % Background
+\newtoggle{bottomforeground}
+\togglefalse{bottomforeground}
+
 \AddToHook{shipout/background}{%
   \iftoggle{noartbackground}{}{
     \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{\layout/tausta.png}}
   }
-  \iftoggle{printable}{
-    \drawbottom
-  }{\put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}}
+  \iftoggle{bottomforeground}{}{
+    \iftoggle{printable}{
+      \drawbottom
+    }{\put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}}
+  }
+}
+\AddToHook{shipout/foreground}{%
+  \iftoggle{bottomforeground}{
+    \iftoggle{printable}{
+      \drawbottom
+    }{\put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=0.05\paperheight]{\layout/bottom.png}}}
+  }{}
 }
 
 \makeindex[columns=3, title=,]
@@ -675,8 +754,10 @@
 \makeatletter
 \renewcommand\tableofcontents{%
   \pdfbookmark[1]{\contentsname}{toc}%
-  \subheader[false]{\contentsname}
+  \subheader[notoc]{\contentsname}
+  \vspace*{-0.5em}
   \begin{multicols}{2}
+    \small
     \@starttoc{toc}%
   \end{multicols}
 }
