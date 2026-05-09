@@ -19,7 +19,7 @@ msgstr ""
 #. type: Plain text
 #: sections/language_metadata.tex:3
 msgid "\\def\\lang_header_adjustment{0px}"
-msgstr ""
+msgstr "\\def\\lang_header_adjustment{0px}"
 
 #.  Page shorthand
 #. type: newcommand{#4}
@@ -31,7 +31,7 @@ msgstr "页"
 #. type: newcommand{#4}
 #: sections/language_metadata.tex:9
 msgid "\\phantom{j}\\textbf{#1}\\phantom{j}\\\\"
-msgstr ""
+msgstr "\\phantom{j}\\textbf{#1}\\phantom{j}\\\\"
 
 #.  Text to be used for expansion bars
 #. type: newcommand{#4}
@@ -88,7 +88,7 @@ msgstr "解锁目标2扩展"
 #. type: newcommand{#4}
 #: sections/language_metadata.tex:24
 msgid "en"
-msgstr ""
+msgstr "en"
 
 #.  Wikilink character ° command with custom kerning for characters appearing before it
 #. type: newcommand{#4}
@@ -98,14 +98,17 @@ msgid ""
 "s:sub(-1)  if last == \".\" or last == \",\" then tex.print(\"\\"
 "\\kern-0.1em\")  end }"
 msgstr ""
+"\\directlua{ local s = \"\\luaescapestring{\\detokenize{#1}}\" local last = "
+"s:sub(-1)  if last == \".\" or last == \",\" then tex.print(\"\\"
+"\\kern-0.1em\")  end }"
 
 #. type: textcolor{#2}
 #: sections/language_metadata.tex:36
 msgid "\\textbf{°}"
-msgstr ""
+msgstr "\\textbf{°}"
 
 #.  Kerning for characters after the wikilink character °
 #. type: newcommand{#4}
 #: sections/language_metadata.tex:41
 msgid "\\ifx\\wikinexttoken)\\kern-0.08em\\fi"
-msgstr ""
+msgstr "\\ifx\\wikinexttoken)\\kern-0.08em\\fi"
