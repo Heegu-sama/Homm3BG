@@ -135,7 +135,7 @@
 | English | Polish |
 |---|---|
 | buildings | budynki |
-| dwelling | siedziba |
+| dwelling | siedlisko |
 | population token | żeton populacji |
 
 ## Combat
