@@ -2,7 +2,7 @@
 # /// script
 # requires-python = ">=3.12"
 # ///
-"""Translate untranslated entries in a .po file using Claude CLI or Codex CLI.
+"""Translate untranslated and fuzzy entries in a .po file using Claude CLI or Codex CLI.
 
 Usage:
     tools/agent_translate_po/run.py [--agent claude|codex] [--render-prompt] <path/to/lang.po>
@@ -10,6 +10,10 @@ Usage:
 The language is inferred from the .po filename (e.g., cn.po -> cn). The system
 prompt is rendered by concatenating tools/agent_translate_po/prompts.md, the
 translation rules, and glossaries/<lang>.md.
+
+Untranslated entries are processed first; fuzzy entries follow. For fuzzy entries
+the agent receives the old source, the existing translation, and the new source,
+and is asked to update only the changed part.
 """
 
 import argparse
@@ -124,6 +128,18 @@ def get_msgid_block(entry_text: str) -> str:
     return m.group(1).rstrip("\n") if m else ""
 
 
+def get_msgstr_block(entry_text: str) -> str:
+    """Return the raw msgstr lines without trailing newline."""
+    m = re.search(r'^(msgstr (?:"[^"]*"\n?)+)', entry_text, re.MULTILINE)
+    return m.group(1).rstrip("\n") if m else ""
+
+
+def get_prev_msgid_block(entry_text: str) -> str:
+    """Return the previous-source block from #| comment lines as a plain msgid block."""
+    lines = [line[3:] for line in entry_text.split("\n") if line.startswith("#| ")]
+    return "\n".join(lines).rstrip("\n") if lines else ""
+
+
 def build_msgstr(llm_text: str) -> str:
     """Convert LLM response to a properly formatted msgstr block."""
     m = re.search(r"```(?:po)?\n(.*?)\n?```", llm_text, re.DOTALL)
@@ -152,16 +168,38 @@ def build_msgstr(llm_text: str) -> str:
     return f"msgstr {content}"
 
 
-def translate_via_claude(system_prompt: str, entry_text: str, cwd: str, lang: str = "") -> str:
-    """Translate using the claude CLI."""
+def build_new_prompt(system_prompt: str, entry_text: str, lang: str) -> str:
+    """Build the agent prompt for a fresh untranslated entry."""
     msgid_block = get_msgid_block(entry_text)
     lang_clause = f" into {lang}" if lang else ""
-    prompt = (
+    return (
         system_prompt
         + f"\n\nTranslate the following PO entry{lang_clause}. Return only the translated msgstr block, "
         + "with no explanation or markdown fence:\n"
         + f"```po\n{msgid_block}\n```"
     )
+
+
+def build_fuzzy_prompt(system_prompt: str, entry_text: str, lang: str) -> str:
+    """Build the agent prompt for a fuzzy (source-changed) entry."""
+    prev_msgid_block = get_prev_msgid_block(entry_text)
+    current_msgstr_block = get_msgstr_block(entry_text)
+    msgid_block = get_msgid_block(entry_text)
+    lang_clause = f" {lang}" if lang else ""
+    return (
+        system_prompt
+        + f"\n\nThe English source text has changed. Update the existing{lang_clause} translation "
+        + "to match the new source, changing only the outdated part and keeping the rest as close "
+        + "to the original translation as possible. "
+        + "Return only the updated msgstr block, with no explanation or markdown fence.\n\n"
+        + f"Old source:\n```po\n{prev_msgid_block}\n```\n\n"
+        + f"Existing translation:\n```po\n{current_msgstr_block}\n```\n\n"
+        + f"New source:\n```po\n{msgid_block}\n```"
+    )
+
+
+def call_claude(prompt: str, cwd: str) -> str:
+    """Call the claude CLI and return the translated msgstr block."""
     result = subprocess.run(
         ["claude", "-p", prompt],
         capture_output=True,
@@ -174,16 +212,8 @@ def translate_via_claude(system_prompt: str, entry_text: str, cwd: str, lang: st
     return build_msgstr(result.stdout)
 
 
-def translate_via_codex(system_prompt: str, entry_text: str, cwd: str, lang: str = "") -> str:
-    """Translate using the codex CLI."""
-    msgid_block = get_msgid_block(entry_text)
-    lang_clause = f" into {lang}" if lang else ""
-    prompt = (
-        system_prompt
-        + f"\n\nTranslate the following PO entry{lang_clause}. Return only the translated msgstr block, "
-        + "with no explanation or markdown fence:\n"
-        + f"```po\n{msgid_block}\n```"
-    )
+def call_codex(prompt: str, cwd: str) -> str:
+    """Call the codex CLI and return the translated msgstr block."""
     with tempfile.NamedTemporaryFile(mode="r", encoding="utf-8") as output:
         result = subprocess.run(
             [
@@ -216,9 +246,33 @@ def patch_entry(entry_text: str, msgstr_block: str) -> str:
     )
 
 
+def patch_fuzzy_entry(entry_text: str, msgstr_block: str) -> str:
+    """Replace msgstr with the updated translation, strip the fuzzy flag and #| lines."""
+    # Remove all #| previous-source comment lines
+    result = re.sub(r"^#\|[^\n]*\n", "", entry_text, flags=re.MULTILINE)
+
+    # Remove "fuzzy" from the #, flags line; drop the line entirely if no flags remain
+    def remove_fuzzy_flag(m: re.Match) -> str:
+        flags = [f.strip() for f in m.group(1).split(",") if f.strip() != "fuzzy"]
+        return f'#, {", ".join(flags)}\n' if flags else ""
+
+    result = re.sub(r"^#, (.+)\n", remove_fuzzy_flag, result, flags=re.MULTILINE)
+
+    # Replace the existing (non-empty) msgstr block with the updated translation
+    replacement = msgstr_block.rstrip("\n")
+    result = re.sub(
+        r'^msgstr (?:"[^"]*"\n?)+',
+        lambda _: replacement + "\n",
+        result,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    return result
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Translate untranslated entries in a .po file."
+        description="Translate untranslated and fuzzy entries in a .po file."
     )
     parser.add_argument(
         "--agent",
@@ -263,6 +317,7 @@ def main() -> None:
         sys.exit(1)
 
     translated = 0
+    defuzzied = 0
 
     print(
         f"Translating: {po_file}  "
@@ -275,30 +330,38 @@ def main() -> None:
 
         entries = split_entries(content)
 
-        target = next(
-            ((s, e, t) for s, e, t in entries if is_untranslated(t)),
-            None,
-        )
+        # Prefer untranslated entries; fall back to fuzzy
+        target = next(((s, e, t) for s, e, t in entries if is_untranslated(t)), None)
+        fuzzy_mode = False
+        if target is None:
+            target = next(((s, e, t) for s, e, t in entries if is_fuzzy(t)), None)
+            fuzzy_mode = target is not None
 
         if target is None:
-            fuzzy = sum(1 for _, _, t in entries if is_fuzzy(t))
-            print(f"Done. Translated {translated} entries this run.")
-            if fuzzy:
-                print(f"{fuzzy} fuzzy entries remain - review manually.")
+            print(f"Done. Translated {translated} new, updated {defuzzied} fuzzy entries.")
             break
 
         start, end, entry_text = target
         msgid_val = get_po_value(entry_text, "msgid")
         preview = msgid_val[:80].replace("\n", "->")
         ellipsis = "..." if len(msgid_val) > 80 else ""
-        print(f"[{translated + 1}] {preview}{ellipsis}")
+        label = f"[fuzzy {defuzzied + 1}]" if fuzzy_mode else f"[{translated + 1}]"
+        print(f"{label} {preview}{ellipsis}")
+
+        if fuzzy_mode:
+            prompt = build_fuzzy_prompt(system_prompt, entry_text, lang_name)
+        else:
+            prompt = build_new_prompt(system_prompt, entry_text, lang_name)
 
         if args.agent == "codex":
-            msgstr_block = translate_via_codex(system_prompt, entry_text, repo_root, lang_name)
+            msgstr_block = call_codex(prompt, repo_root)
         else:
-            msgstr_block = translate_via_claude(system_prompt, entry_text, repo_root, lang_name)
+            msgstr_block = call_claude(prompt, repo_root)
 
-        new_entry = patch_entry(entry_text, msgstr_block)
+        if fuzzy_mode:
+            new_entry = patch_fuzzy_entry(entry_text, msgstr_block)
+        else:
+            new_entry = patch_entry(entry_text, msgstr_block)
 
         if new_entry == entry_text:
             print("  WARNING: patch produced no change - stopping to avoid a loop.")
@@ -309,7 +372,11 @@ def main() -> None:
         with open(po_file, "w", encoding="utf-8") as f:
             f.write(new_content)
 
-        translated += 1
+        if fuzzy_mode:
+            defuzzied += 1
+        else:
+            translated += 1
+
         result_preview = get_po_value(new_entry, "msgstr")[:80].replace("\n", "->")
         print(f"    -> {result_preview}")
 
