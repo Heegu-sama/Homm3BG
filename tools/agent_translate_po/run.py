@@ -188,9 +188,10 @@ def build_fuzzy_prompt(system_prompt: str, entry_text: str, lang: str) -> str:
     lang_clause = f" {lang}" if lang else ""
     return (
         system_prompt
-        + f"\n\nThe English source text has changed. Update the existing{lang_clause} translation "
-        + "to match the new source, changing only the outdated part and keeping the rest as close "
-        + "to the original translation as possible. "
+        + f"\n\nThe English source text has changed. Update the existing {lang_clause} translation "
+        + "to match the new source, changing only the outdated part and keeping the rest "
+        + "(especially specific formatting for the target language) as close "
+        + "to the original translation entry as possible. "
         + "Return only the updated msgstr block, with no explanation or markdown fence.\n\n"
         + f"Old source:\n```po\n{prev_msgid_block}\n```\n\n"
         + f"Existing translation:\n```po\n{current_msgstr_block}\n```\n\n"
