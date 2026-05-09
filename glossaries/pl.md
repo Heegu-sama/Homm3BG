@@ -146,7 +146,7 @@
 |---|---|
 | buildings | budynki |
 | citadel | ... |
-| dwelling | siedziba |
+| dwelling | siedlisko |
 | population token | żeton populacji |
 
 ## Combat

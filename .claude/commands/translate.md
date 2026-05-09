@@ -50,6 +50,10 @@ For each PO file (work through them in alphabetical order by directory name):
 
 ### What to check in review mode
 
+**Language and grammar** — the `msgstr` must read as fluent, idiomatic prose in the target language: correct grammar, natural word order, proper inflection and agreement, and no calques or awkward literal renderings of English phrasing.
+The register should match professional technical writing appropriate for a board game rulebook: clear, precise, and consistent, avoiding colloquialisms and ambiguity.
+Be rutally critical with this one.
+
 **Glossary compliance** — every term in the glossary must be translated exactly as specified: correct form, correct capitalization, no synonyms, no untranslated terms.
 
 **Capitalization** — mirror the capitalization of the English `msgid` unless the glossary says otherwise.
