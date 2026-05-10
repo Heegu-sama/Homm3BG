@@ -33,6 +33,12 @@
       "[./assets/fonts/NotoSerifCJKsc/NotoSerifCJKsc-Regular.otf]:mode=node;slant=0.2"
     }
   )
+  luaotfload.add_fallback(
+    "cjkfallbackbolditalic",
+    {
+      "[./assets/fonts/NotoSerifCJKsc/NotoSerifCJKsc-Bold.otf]:mode=node;slant=0.2"
+    }
+  )
 }
 
 \babelfont[chinese]{rm}[
@@ -54,14 +60,14 @@
   RawFeature={fallback=cjkfallback},
   BoldFeatures={RawFeature={fallback=cjkfallbackbold}},
   ItalicFeatures={RawFeature={fallback=cjkfallbackitalic}},
-  BoldItalicFeatures={RawFeature={fallback=cjkfallbackbold}}
+  BoldItalicFeatures={RawFeature={fallback=cjkfallbackbolditalic}}
 ]{LiberationSerif}
 
 \babelfont{sf}[
   RawFeature={fallback=cjkfallback},
   BoldFeatures={RawFeature={fallback=cjkfallbackbold}},
   ItalicFeatures={RawFeature={fallback=cjkfallbackitalic}},
-  BoldItalicFeatures={RawFeature={fallback=cjkfallbackbold}}
+  BoldItalicFeatures={RawFeature={fallback=cjkfallbackbolditalic}}
 ]{Latin Modern Sans}
 
 \babelfont{tt}[
@@ -72,7 +78,11 @@
   RawFeature={fallback=cjkfallback},
   BoldFeatures={RawFeature={fallback=cjkfallbackbold}},
   ItalicFeatures={RawFeature={fallback=cjkfallbackitalic}},
-  BoldItalicFeatures={RawFeature={fallback=cjkfallbackbold}}
+  BoldItalicFeatures={RawFeature={fallback=cjkfallbackbolditalic}}
+}
+
+\newcommand\subsectionspacing{
+  \titlespacing*{\subsection}{0em}{0.9em}{0.2em}
 }
 
 \input{metadata.tex}
