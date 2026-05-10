@@ -66,6 +66,8 @@
 | level | poziom |
 | main hero | bohater główny |
 | movement points | PR (punkty ruchu) |
+| MP | ... |
+| power | ... |
 | secondary hero | bohater pomocniczy |
 | specialty | specjalność |
 
@@ -75,16 +77,21 @@
 |---|---|
 | center field | środkowe pole |
 | central map tile | centralny kafelek mapy |
+| creature bank | ... |
 | dragon utopia | smocza utopia |
 | far map tile | daleki kafelek mapy |
 | field | pole |
 | locations | lokacje |
 | map tile | kafelek mapy |
+| mines | ... |
+| monolith | ... |
 | near map tile | bliski kafelek mapy |
+| obelisk | ... |
 | random town | losowe miasto |
 | revisitable | wielorazowe |
 | settlement | osada |
 | starting (i) map tile | początkowy kafelek mapy (i) |
+| subterranean gate | ... |
 | tile | kafelek |
 | trading post | punkt handlowy |
 | water wheel | młyn wodny |
@@ -94,6 +101,7 @@
 | English | Polish |
 |---|---|
 | building materials | budulce |
+| gold | ... |
 | resource production tracker | tor przychodu |
 | resources | zasoby |
 | treasure die | kość skarbów |
@@ -120,6 +128,8 @@
 | English | Polish |
 |---|---|
 | haste | przyspieszenie |
+| magic arrow | ... |
+| school | ... |
 
 ## AI Deck
 
@@ -135,6 +145,7 @@
 | English | Polish |
 |---|---|
 | buildings | budynki |
+| citadel | ... |
 | dwelling | siedlisko |
 | population token | żeton populacji |
 
@@ -148,6 +159,9 @@
 | combat | walka |
 | damage | obrażenia |
 | front line | pierwsza linia |
+| initiative | ... |
+| negative morale | ... |
+| positive morale | ... |
 | winning combat | wygranie walki |
 
 ## Battlefield
@@ -155,9 +169,14 @@
 | English | Polish |
 |---|---|
 | adventure mode | tryb przygody |
-| skirmish mode | tryb potyczki |
-| final combat | finałowa walka |
+| alliance | ... |
+| campaign | ... |
+| clash | ... |
 | combat power level | siła bojowa |
+| cooperative | ... |
+| final combat | finałowa walka |
+| scenario | ... |
+| skirmish mode | tryb potyczki |
 
 ## Keywords
 
@@ -172,11 +191,16 @@
 
 | English | Polish |
 |---|---|
+| artifact | ... |
 | core rulebook | podstawowa księga zasad |
 | effects | efekty |
+| faction | ... |
 | game setup | przygotowanie gry |
 | map setup | przygotowanie mapy |
 | player elimination | eliminacja gracza |
 | player setup | przygotowanie gracza |
+| relic | ... |
+| round | ... |
 | round tracker | tor rund |
+| turn | ... |
 | war machine | machina wojenna |

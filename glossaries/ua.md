@@ -57,6 +57,8 @@
 | level | Рівень |
 | main hero | Головний Герой |
 | movement points | ... |
+| MP | ... |
+| power | ... |
 | secondary hero | Другорядний Герой |
 | specialty | Спеціалізація |
 
@@ -66,16 +68,21 @@
 |---|---|
 | center field | ... |
 | central map tile | ... |
+| creature bank | ... |
 | dragon utopia | Утопія Драконів |
 | far map tile | Далека Плитка Мапи |
 | field | Поле |
 | locations | Локації |
 | map tile | Плитка Мапи |
+| mines | ... |
+| monolith | ... |
 | near map tile | Близька Плитка Мапи |
+| obelisk | ... |
 | random town | Випадкове Місто |
 | revisitable | Багаторазові |
 | settlement | Поселення |
 | starting (i) map tile | Стартова (I) Плитка |
+| subterranean gate | ... |
 | tile | Плитка |
 | trading post | Торговий Пост |
 | water wheel | Водяне Колесо |
@@ -85,6 +92,7 @@
 | English | Ukrainian |
 |---|---|
 | building materials | Будівельні Матеріали |
+| gold | ... |
 | resource production tracker | Трек Виробництва Ресурсів |
 | resources | Ресурси |
 | treasure die | Кістка Скарбів |
@@ -111,6 +119,8 @@
 | English | Ukrainian |
 |---|---|
 | haste | Прискорення |
+| magic arrow | ... |
+| school | ... |
 
 ## AI Deck
 
@@ -126,6 +136,7 @@
 | English | Ukrainian |
 |---|---|
 | buildings | ... |
+| citadel | ... |
 | dwelling | Житло |
 | population token | Жетон Населення |
 
@@ -139,6 +150,9 @@
 | combat | Бій |
 | damage | Рани |
 | front line | Передова Лінія |
+| initiative | ... |
+| negative morale | ... |
+| positive morale | ... |
 | winning combat | ... |
 
 ## Battlefield
@@ -146,9 +160,14 @@
 | English | Ukrainian |
 |---|---|
 | adventure mode | ... |
-| skirmish mode | ... |
-| final combat | ... |
+| alliance | ... |
+| campaign | ... |
+| clash | ... |
 | combat power level | ... |
+| cooperative | ... |
+| final combat | ... |
+| scenario | ... |
+| skirmish mode | ... |
 
 ## Keywords
 
@@ -163,11 +182,16 @@
 
 | English | Ukrainian |
 |---|---|
+| artifact | ... |
 | core rulebook | книга правил |
 | effects | Ефекти |
+| faction | ... |
 | game setup | Підготовка до Гри |
 | map setup | ... |
 | player elimination | Вибування Гравця |
 | player setup | ... |
+| relic | ... |
+| round | ... |
 | round tracker | ... |
+| turn | ... |
 | war machine | Бойові Машини |
