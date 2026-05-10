@@ -72,13 +72,13 @@ msgstr ""
 #: sections/resources.tex:31
 #, no-wrap
 msgid "\\columnbreak"
-msgstr ""
+msgstr "\\columnbreak"
 
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/deckbuilding.tex:3
 msgid "\\addsection{Deck-building}{\\skills/wisdom.png}"
-msgstr ""
+msgstr "\\addsection{牌库构筑}{\\skills/wisdom.png}"
 
 #. type: multicols
 #: sections/deckbuilding.tex:12
@@ -92,6 +92,13 @@ msgid ""
 "\\bigskip\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Playerdecks}{玩家牌堆}}\n"
+"所有玩家都有一个独特的牌堆，代表其主英雄的能力和装备。\n"
+"牌堆中可以包含属性牌、能力牌、法术牌、神器牌以及主英雄的特长牌。\n"
+"每位玩家的牌堆在游戏准备期间构建完成，起始有9张牌。\\par\n"
+"\\bigskip\n"
+"\\bigskip\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:44
@@ -130,6 +137,38 @@ msgid ""
 "\\end{enumerate}\n"
 "\n"
 msgstr ""
+"\\subheader{卡牌通用规则}\n"
+"\\begin{enumerate}\n"
+"  \\item 卡牌\\textbf{只能在你的回合中}使用，或在涉及你的\\textbf{主英雄}的\\pagelink{Combat}{战斗}中使用。\n"
+"  \\item 卡牌使用后，将其弃置。\n"
+"    每位玩家都有各自独立的弃牌堆\\index{弃牌堆}。\n"
+"  \\item 如果当你需要抽一张牌时你的牌堆为空，\\textbf{将你的弃牌堆洗混}形成一个新的牌堆以供抽牌。\n"
+"  \\item 每当你的英雄因任何原因获得一张牌时，除非另有说明，将其\\textbf{直接置入你的手牌}。\n"
+"  \\item 每当你被指示\\textbf{搜寻}（X）\\index{搜寻（X）}能力、神器或法术牌堆时，你可以查看指定牌堆顶部的（X）张牌，将其中一张置入你的手牌，并弃置其余牌，\\textbf{或者}不查看顶部的（X）张牌，改为获得该牌堆弃牌堆顶部的一张牌。\n"
+"  \\item 能力、神器和法术牌堆各自都有在准备期间建立的弃牌堆，这能帮助你区分这些牌堆。\n"
+"    如果任一牌堆的牌用尽，将其重新洗混，并弃置其顶部的一张牌以形成一个新的弃牌堆。\n"
+"    每当这些弃牌堆之一为空时，\\textbf{补充它}，将该牌堆顶部的一张牌放入其中。\n"
+"  \\columnbreak\n"
+"  \\item 卡牌具有以下\\pagetarget{Card Effects}{效果类型}：\n"
+"  \\begin{itemize}\n"
+"    \\item \\textbf{即时} \\svg{instant} 效果\\index{即时效果}会立即结算。\n"
+"    \\item \\textbf{激活} \\svg{activation} 效果\\index{激活效果}必须在战斗中激活你自己的单位时打出。\n"
+"    \\item \\textbf{地图} \\svg{map} 效果\\index{地图效果}不能在战斗期间使用。\n"
+"    \\item \\textbf{持续} \\svg{ongoing} 效果\\index{持续效果}会持续直到其被用尽，或直到打出它们的玩家开始其下一回合时为止（以先发生者为准）。\n"
+"      \\begin{expansion}[before skip balanced=0.3em,]{stronghold,conflux,cove}\n"
+"      \\pagetarget{Time Token}{}\n"
+"      \\begin{tikzpicture}[overlay]\n"
+"        \\node at (5.5, 0) {\\includegraphics[width=0.22\\linewidth]{\\images/time-token.png}};\n"
+"      \\end{tikzpicture}\\parbox{0.75\\hsize}{你可以使用时间标记\\index{时间标记}来追踪持续效果的持续时间。}\n"
+"      \\end{expansion}\n"
+"    \\item \\textbf{永久} \\svg[7]{permanent} 卡牌\\index{永久卡牌}会留在场上，直到被弃置或替换。\n"
+"      它们的打出方式与 \\svg{activation} 和 \\svg{map} 卡牌相同。\n"
+"      \\textbf{你同时只能拥有一张永久卡牌}；打出另一张会弃置第一张。\n"
+"      当一张永久卡牌在场时，你可以使用其基础效果或专家效果之一，但不能同时使用两者。\n"
+"  \\end{itemize}\n"
+"  \\item 每当你被指示\\textbf{移除一张牌}时，将其彻底移出游戏。\n"
+"\\end{enumerate}\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:47
@@ -138,6 +177,8 @@ msgid ""
 "\\vfill\n"
 "\\hfill{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/quicksand.png}}"
 msgstr ""
+"\\vfill\n"
+"\\hfill{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/quicksand.png}}"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:52
@@ -147,6 +188,9 @@ msgid ""
 "  \\subsection*{Searching Example}\n"
 "\n"
 msgstr ""
+"{2}\n"
+"  \\subsection*{搜寻示例}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:54
@@ -155,6 +199,8 @@ msgid ""
 "  \\textit{Bob, playing as Deemer the Warlock, has built a Mage Guild during the previous Game Round, enabling him to now use his Spell Book Token to purchase additional Spells.}\n"
 "\n"
 msgstr ""
+"  \\textit{鲍勃，扮演术士迪默，在前一个游戏轮次中建造了一座法师公会，因此他现在可以使用他的法术书标记来购买额外的法术。}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:63
@@ -170,6 +216,15 @@ msgid ""
 "  \\textit{He decides to keep the Fireball, placing it into his hand and discarding the Magic Arrow into the Spell Discard Pile.}\n"
 "\n"
 msgstr ""
+"  \\includegraphics[width=\\linewidth]{\\examples/deemer_receiving_spellbook.png}\\par\n"
+"  \\textit{他花费该标记，并支付其城镇板上标示的 5 \\svg{gold} 费用，从而可以\\textbf{搜寻（2）}法术牌堆。}\\par\n"
+"  \\includegraphics[width=\\linewidth]{\\examples/deemer_spell_cost.png}\\par\n"
+"  \\filbreak\n"
+"  \\textit{现在，他可以选择获得法术牌弃牌堆顶的一张牌，或者抽取法术牌堆顶的两张牌并获得其中一张。\n"
+"      他对获得弃牌堆顶的诅咒法术不感兴趣，因此决定抽两张牌：魔法箭和火球术。}\n"
+"  \\includegraphics[width=\\linewidth]{\\examples/fireball_over_magic_arrow.png}\\par\n"
+"  \\textit{他决定保留火球术，将其置入手牌，并将魔法箭弃置到法术牌弃牌堆。}\n"
+"\n"
 
 #. type: multicols*
 #: sections/deckbuilding.tex:67
@@ -178,6 +233,8 @@ msgid ""
 "  \\hfill{\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/fire_magic.png}}\n"
 "\n"
 msgstr ""
+"  \\hfill{\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/fire_magic.png}}\n"
+"\n"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:73
@@ -185,6 +242,7 @@ msgid ""
 "\\pagetarget{Statistic}{}\\pagetarget{Ability}{} \\subheader{Statistic and "
 "Ability Cards}"
 msgstr ""
+"\\pagetarget{Statistic}{}\\pagetarget{Ability}{} \\subheader{属性牌和能力牌}"
 
 #. type: multicols
 #: sections/deckbuilding.tex:78
@@ -196,6 +254,11 @@ msgid ""
 "Track the number of uses you have in any suitable manner, such as by moving Black Cubes on and off your Hero Board.\\par\n"
 "\n"
 msgstr ""
+"所有属性牌\\index{属性牌}和能力牌\\index{能力牌}都具有一个\\textbf{基础效果}\\index{基础效果}，以及一个更强的\\textbf{专家} \\svg{expert} \\textbf{效果}\\index{专家效果}，其显示在基础效果下方。\n"
+"每当你打出一张属性牌或能力牌时，你必须选择你要使用哪个效果。\n"
+"你每轮可使用的\\svg{expert}效果数量受你的主英雄\\pagelink{Level}{等级}限制。\n"
+"以任何合适的方式记录你拥有的使用次数，例如在你的英雄面板上移入或移出黑色方块。\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:86
@@ -207,11 +270,16 @@ msgid ""
 "  Non-Necropolis players \\textbf{cannot use} Faction Specific cards from their hand in any way besides for effects that discard them.\n"
 "}"
 msgstr ""
+"\\note{11}{\n"
+"  \\wikilink{abilities/necromancy}{死灵术牌}仅限墓园阵营 \\svg{necro-yellow} 使用。\n"
+"  当非墓园玩家从能力牌堆中抽到一张墓园牌\\index{墓园牌}时，该玩家可以选择将其弃置并抽一张新牌替代，或获得这张牌。\n"
+"  非墓园玩家\\textbf{不能使用}手中的阵营专属牌，只能使用其他效果来弃置它们，除此之外不能使用。\n"
+"}"
 
 #. type: Plain text
 #: sections/deckbuilding.tex:92
 msgid "\\columnratio{0.25}"
-msgstr ""
+msgstr "\\columnratio{0.25}"
 
 #. type: paracol
 #: sections/deckbuilding.tex:92 sections/deckbuilding.tex:135
@@ -222,6 +290,10 @@ msgid ""
 "    \\begin{center}\n"
 "      \\begin{tikzpicture}\n"
 msgstr ""
+"{2}\n"
+"  \\begin{expansion}[title=\\phantom{\\textbf{\\tiny{foo}}}, overlay={}]{}\n"
+"    \\begin{center}\n"
+"      \\begin{tikzpicture}\n"
 
 #. type: paracol
 #: sections/deckbuilding.tex:109
@@ -245,6 +317,23 @@ msgid ""
 "      \\begin{center}\n"
 "        \\begin{tikzpicture}\n"
 msgstr ""
+"        \\node (card) {\\includegraphics[width=3.5cm]{\\cards/knowledge.png}};\n"
+"        \\begin{relcoords}{card}\n"
+"          \\draw (0.65, 0.6) node {\\encircle{1}};\n"
+"          \\draw (0.28, 0.4) node {\\encircle{2}};\n"
+"          \\draw (0.28, 0.2) node {\\encircle{3}};\n"
+"        \\end{relcoords}\n"
+"      \\end{tikzpicture}\n"
+"      \\imagecaption{属性牌\\\\\\phantom{Blah}}\n"
+"    \\end{center}\n"
+"  \\end{expansion}\n"
+"  \\switchcolumn\n"
+"  \\begin{expansion}{inferno}\n"
+"    \\hspace*{-2.3mm}\n"
+"    \\begin{minipage}[t]{0.3\\linewidth}\n"
+"      \\vspace*{0mm}\n"
+"      \\begin{center}\n"
+"        \\begin{tikzpicture}\n"
 
 #. type: paracol
 #: sections/deckbuilding.tex:125
@@ -267,6 +356,22 @@ msgid ""
 "      They have only one effect which is identical to the normal Statistic's Expert effect, but does not require using your \\svg{expert}.\\par\n"
 "\n"
 msgstr ""
+"          \\node (card) {\\includegraphics[width=3.5cm]{\\cards/empowered-knowledge.png}};\n"
+"          \\begin{relcoords}{card}\n"
+"            \\draw (0.65, 0.8) node {\\encircle{1}};\n"
+"            \\draw (0.28, 0.25) node {\\encircle{2}};\n"
+"          \\end{relcoords}\n"
+"        \\end{tikzpicture}\n"
+"        \\imagecaption{强化\\\\属性牌}\n"
+"      \\end{center}\n"
+"    \\end{minipage}\n"
+"    \\hfill\n"
+"    \\begin{minipage}[t]{0.65\\linewidth}\n"
+"      \\vspace*{0mm}\n"
+"      \\subsection*{\\pagetarget{Empowered Statistic}{强化}属性牌}\\index{强化属性牌}\n"
+"      这些牌是普通属性牌的更强版本。\n"
+"      它们只有一个效果，与普通属性牌的专家效果相同，但不需要使用你的 \\svg{expert}。\\par\n"
+"\n"
 
 #. type: paracol
 #: sections/deckbuilding.tex:130
@@ -277,6 +382,10 @@ msgid ""
 "    \\end{minipage}\n"
 "  \\end{expansion}"
 msgstr ""
+"      \\medskip\n"
+"      这些牌可以通过某些游戏效果获得，例如访问 \\pagelink{Star Axis}{星轴}。\n"
+"    \\end{minipage}\n"
+"  \\end{expansion}"
 
 #. type: paracol
 #: sections/deckbuilding.tex:154
@@ -302,6 +411,25 @@ msgid ""
 "      \\begin{center}\n"
 "        \\begin{tikzpicture}\n"
 msgstr ""
+"        \\node (card) {\\includegraphics[width=3.5cm]{\\cards/necromancy_card.png}};\n"
+"        \\begin{relcoords}{card}\n"
+"          \\draw (0.65, 0.6) node {\\encircle{1}};\n"
+"          \\draw (0.28, 0.4) node {\\encircle{2}};\n"
+"          \\draw (0.28, 0.2) node {\\encircle{3}};\n"
+"          \\draw (0.9, 0.1) node {\\encircle{4}};\n"
+"          \\draw (0.9, 0.3) node {\\encircle{4}};\n"
+"        \\end{relcoords}\n"
+"      \\end{tikzpicture}\n"
+"      \\imagecaption{能力牌\\\\\\phantom{Blah}}\n"
+"    \\end{center}\n"
+"  \\end{expansion}\n"
+"  \\switchcolumn\n"
+"  \\begin{expansion}{navalbattles}\n"
+"    \\hspace*{-2.3mm}\n"
+"    \\begin{minipage}[t]{0.3\\linewidth}\n"
+"      \\vspace*{0mm}\n"
+"      \\begin{center}\n"
+"        \\begin{tikzpicture}\n"
 
 #. type: paracol
 #: sections/deckbuilding.tex:170
@@ -324,6 +452,22 @@ msgid ""
 "      Their only effect corresponds to the Expert effect of normal Ability cards, but without requiring you to use your \\svg{expert}.\n"
 "\n"
 msgstr ""
+"          \\node (card) {\\includegraphics[width=3.5cm]{\\cards/empowered-ability.png}};\n"
+"          \\begin{relcoords}{card}\n"
+"            \\draw (0.65, 0.8) node {\\encircle{1}};\n"
+"            \\draw (0.28, 0.25) node {\\encircle{2}};\n"
+"            \\draw (0.9, 0.1) node {\\encircle{4}};\n"
+"          \\end{relcoords}\n"
+"        \\end{tikzpicture}\n"
+"        \\imagecaption{强化\\\\能力牌}\n"
+"      \\end{center}\n"
+"    \\end{minipage}\n"
+"    \\hfill\n"
+"    \\begin{minipage}[t]{0.65\\linewidth}\n"
+"      \\subsection*{\\pagetarget{Empowered Ability}{强化}能力牌}\\index{强化能力牌}\n"
+"      强化能力牌的运作方式与强化属性牌非常相似。\n"
+"      它们的唯一效果对应于普通能力牌的专家效果，但不需要你使用你的 \\svg{expert}。\n"
+"\n"
 
 #. type: paracol
 #: sections/deckbuilding.tex:175
@@ -334,6 +478,10 @@ msgid ""
 "    \\end{minipage}\n"
 "  \\end{expansion}"
 msgstr ""
+"      \\medskip\n"
+"      这些牌可以通过花费\\pagelink{Empowered Ability Token}{强化能力标记}来获得，而强化能力标记仅在某些剧本中可用（例如，海战任务书中的``火焰之岛''）。\n"
+"    \\end{minipage}\n"
+"  \\end{expansion}"
 
 #. type: multicols
 #: sections/deckbuilding.tex:191
@@ -349,6 +497,15 @@ msgid ""
 "    \\item[\\textbf{4.}] Necropolis-specific card\n"
 "  \\end{itemize}"
 msgstr ""
+"{2}\n"
+"\\begin{multicols*}{2}\n"
+"  \\footnotesize\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{1.}] 名称\n"
+"    \\item[\\textbf{2.}] 基础效果\n"
+"    \\item[\\textbf{3.}] 专家效果\n"
+"    \\item[\\textbf{4.}] 墓园专属牌\n"
+"  \\end{itemize}"
 
 #. type: expansion
 #: sections/deckbuilding.tex:208
@@ -370,6 +527,21 @@ msgid ""
 "  If an Empowered Ability card isn't available, you can't spend the Empowered Ability Token and must keep it for later turns.\n"
 "\n"
 msgstr ""
+"*{navalbattles}\n"
+"\\begin{multicols*}{2}\n"
+"  \\pagetarget{Empowered Ability Token}{\\subsection*{强化能力标记}}\\index{强化能力}\n"
+"  \\setlength\\intextsep{0pt}\n"
+"  \\setlength\\columnsep{1em}\n"
+"  \\begin{wrapfigure}{r}{0.2\\linewidth}\n"
+"    \\includegraphics[width=\\linewidth]{\\images/crown-token.png}\n"
+"  \\end{wrapfigure}\n"
+"  强化能力牌会强化你的英雄能力牌。\n"
+"  你可以通过花费强化能力标记来获得它们。\n"
+"  无论你是如何获得新能力牌的，你都可以在获得新能力牌时使用这些标记中的一个。\n"
+"  如果你使用了这样的标记，将其弃置，把刚获得的普通能力牌移出游戏，并改为获得对应的强化能力牌。\n"
+"  每种强化能力牌都只有1张，所以如果一名玩家拿走了某张特定的强化能力牌，其他玩家就无法获得它。\n"
+"  如果某张强化能力牌不可用，你不能花费强化能力标记，并且必须将其保留到之后的回合。\n"
+"\n"
 
 #. type: expansion
 #: sections/deckbuilding.tex:210
@@ -378,6 +550,8 @@ msgid ""
 "  You can gain Empowered Ability Tokens only in certain Scenarios (e.~g.~``Island of Fire'' from the Naval Battles Mission Book).\\\\\n"
 "\n"
 msgstr ""
+"  你只能在某些剧本中获得强化能力标记（例 如：海战任务书中的``火焰之岛''）。\\\\\n"
+"\n"
 
 #. type: expansion
 #: sections/deckbuilding.tex:215
@@ -389,6 +563,11 @@ msgid ""
 "  \\end{center}\n"
 "\n"
 msgstr ""
+"  \\vspace*{5em}\n"
+"  \\begin{center}\n"
+"    \\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/scholar.png}\n"
+"  \\end{center}\n"
+"\n"
 
 #. type: expansion
 #: sections/deckbuilding.tex:221
@@ -401,6 +580,12 @@ msgid ""
 "    He chooses Offense and places the other card on the discard pile.}\n"
 "\n"
 msgstr ""
+"  \\subsection*{获得强化能力示例}\n"
+"  \\textit{鲍勃扮演克雷格·哈格并达到 II 级。\n"
+"    他执行搜寻（2）行动，并从能力牌堆抽两张牌。\n"
+"    这两张牌是进攻术和智慧术。\n"
+"    他选择进攻术，并将另一张牌放入弃牌堆。}\n"
+"\n"
 
 #. type: expansion
 #: sections/deckbuilding.tex:225
@@ -411,6 +596,10 @@ msgid ""
 "  \\end{center}\n"
 "\n"
 msgstr ""
+"  \\begin{center}\n"
+"    \\includegraphics[width=0.8\\linewidth]{\\examples/offense_over_wisdom.png}\n"
+"  \\end{center}\n"
+"\n"
 
 #. type: expansion
 #: sections/deckbuilding.tex:229
@@ -421,6 +610,10 @@ msgid ""
 "    He decides to use it, so he removes the ``Offense'' Ability card and discards the Empowered Ability Token to take the Empowered ``Offense'' Ability card instead.}\n"
 "\n"
 msgstr ""
+"  \\textit{鲍勃碰巧拥有一个强化能力标记。\n"
+"    他可以选择使用它，或者将该标记留到之后再用。\n"
+"    他决定使用它，于是他移除``进攻术''能力牌，并弃置该强化能力标记，改为拿取强化``进攻术''能力牌。}\n"
+"\n"
 
 #. type: expansion
 #: sections/deckbuilding.tex:231
@@ -429,6 +622,8 @@ msgid ""
 "  \\begin{center}\n"
 "    \\begin{tikzpicture}\n"
 msgstr ""
+"  \\begin{center}\n"
+"    \\begin{tikzpicture}\n"
 
 #. type: expansion
 #: sections/deckbuilding.tex:236
@@ -440,6 +635,11 @@ msgid ""
 "      \\draw (1.5, 0) node {\\includegraphics[width=0.45\\linewidth]{\\cards/ability-offense-empowered.png}};\n"
 "\n"
 msgstr ""
+"      \\draw (-3, 0) node {\\includegraphics[width=0.45\\linewidth]{\\cards/ability-offense.png}};\n"
+"      \\draw (-1.45, -1.95) node[opacity=0.9] {\\includegraphics[width=0.23\\linewidth]{\\images/token-drop-shadow.png}};\n"
+"      \\draw (-1.5, -1.9) node {\\includegraphics[width=0.2\\linewidth]{\\images/crown-token.png}};\n"
+"      \\draw (1.5, 0) node {\\includegraphics[width=0.45\\linewidth]{\\cards/ability-offense-empowered.png}};\n"
+"\n"
 
 #. type: expansion
 #: sections/deckbuilding.tex:243
@@ -452,6 +652,12 @@ msgid ""
 "  \\vspace*{\\fill}\n"
 "\\end{multicols*}"
 msgstr ""
+"      \\draw (-2.8, -3.5) node {\\svg[35]{red_cross}};\n"
+"      \\draw (1.6, -3.5) node {\\svg[35]{green_tick}};\n"
+"    \\end{tikzpicture}\n"
+"  \\end{center}\n"
+"  \\vspace*{\\fill}\n"
+"\\end{multicols*}"
 
 #. type: multicols
 #: sections/deckbuilding.tex:248
@@ -461,6 +667,9 @@ msgid ""
 "\\pagetarget{spells}{\\subheader{Spell Cards}}\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\pagetarget{spells}{\\subheader{法术牌}}\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:256
@@ -475,6 +684,14 @@ msgid ""
 "You may use a cheaper \\svg{empower} effect than what you've paid for, though.\\par\n"
 "\n"
 msgstr ""
+"法术牌\\index{法术牌}有三种可能的主要效果。\n"
+"使用最上方的基础版法术通常没有额外费用。\n"
+"要获得其他效果，你可以支付标示的费用（3）来\\textbf{强化}法术\\index{强化法术}，以获得更强大的结果（4）。\n"
+"你可以在施放法术前，打出其他牌来使用其强化 \\svg{empower} 效果（例如 \\wikilink{statistics/power}{魔法威力} 属性牌），以支付此费用。\n"
+"所有法术牌还都有一个位于底部的替代（5） \\svg{empower} 效果。\n"
+"你无法保留已打出的 \\svg{empower}：施放法术会消耗至今为止打出的所有 \\svg{empower}，而且如果你停止打牌，这股力量就会消散。\n"
+"不过，你也可以使用比你已支付费用更低的 \\svg{empower} 效果。\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:259
@@ -484,12 +701,15 @@ msgid ""
 "\\begin{center}\n"
 "  \\begin{scriptsize}\n"
 msgstr ""
+"\\bigskip\n"
+"\\begin{center}\n"
+"  \\begin{scriptsize}\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:260
 #, no-wrap
 msgid "    \\begin{tikzpicture}\n"
-msgstr ""
+msgstr "    \\begin{tikzpicture}\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:273
@@ -509,6 +729,19 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"      \\node (card) {\\includegraphics[width=0.6\\linewidth]{\\cards/spell.png}};\n"
+"      \\begin{relcoords}{card}\n"
+"        \\draw (0.25, 0.85) node {\\encircle{1}};\n"
+"        \\draw (0.2, 0.6) node {\\encircle{2}};\n"
+"        \\draw (0.32, 0.35) node {\\encircle{3}};\n"
+"        \\draw (0.66, 0.35) node {\\encircle{4}};\n"
+"        \\draw (0.62, 0.1) node {\\encircle{5}};\n"
+"      \\end{relcoords}\n"
+"    \\end{tikzpicture}\n"
+"  \\end{scriptsize}\\\\\n"
+"  \\imagecaption{法术牌}\\\\\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:285
@@ -525,6 +758,16 @@ msgid ""
 "    \\item[\\textbf{5.}] Alternative\\\\Effect\n"
 "  \\end{itemize}"
 msgstr ""
+"\\begin{multicols*}{2}\n"
+"  \\footnotesize\n"
+"  \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt]\n"
+"    \\item[\\textbf{1.}] 法术名称\n"
+"    \\item[\\textbf{2.}] 魔法学派\n"
+"    \\item[\\textbf{3.}] 用于强化\\\\的消耗\n"
+"    \\columnbreak\n"
+"    \\item[\\textbf{4.}] 法术效果\n"
+"    \\item[\\textbf{5.}] 替代效果\n"
+"  \\end{itemize}"
 
 #. type: multicols
 #: sections/deckbuilding.tex:289
@@ -535,6 +778,10 @@ msgid ""
 "The Token cannot be used during the \\textbf{same Round} when the Guild is constructed. Spells can also be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios.\n"
 "\n"
 msgstr ""
+"可以通过建造法师行会\\index{法师行会}来获得法术。\n"
+"建造它也使你能够使用法术书标记\\index{法术书标记}来购买额外的法术。\n"
+"该标记不能在建造行会的\\textbf{同一轮}中使用。法术也可以在同盟和合作剧本中被\\pagelink{Trading}{交易}。\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:291
@@ -543,6 +790,8 @@ msgid ""
 "During Combat, each player may play \\textbf{only one Spell card per Combat Round}.\n"
 "\n"
 msgstr ""
+"在战斗期间，每位玩家在每个战斗轮次中\\textbf{只能打出一张法术牌}。\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:294
@@ -552,6 +801,9 @@ msgid ""
 "When you use an effect which lets you cast a Spell from somewhere other than your hand (such as directly from the Spell Deck), place that Spell into your Discard Pile after casting it.\n"
 "\n"
 msgstr ""
+"\\columnbreak\n"
+"当你使用某个效果，使你可以从手牌以外的地方施放一个法术（例如直接从法术牌堆中），在施放后将该法术置入你的弃牌堆。\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:296
@@ -560,6 +812,8 @@ msgid ""
 "Some complex Spell cards use keywords or require special components, see \\pagelink{spell keywords}{Card Effect Keywords}.\n"
 "\n"
 msgstr ""
+"一些复杂的法术牌会使用关键词或需要特殊组件，参见 \\pagelink{spell keywords}{卡牌效果关键词}。\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:302
@@ -572,6 +826,12 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\vspace*{\\fill}\n"
+"  {\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/air_magic.png}}\n"
+"  \\vspace*{\\fill}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:308
@@ -584,6 +844,12 @@ msgid ""
 "By default there's no difference, but certain game effects can refer to specific Schools and to Basic/Expert Spells.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Schools of Magic}{魔法学派}}\n"
+"所有法术牌都属于一种魔法学派\\index{魔法学派}：气系、火系、土系或水系。\n"
+"带有一个学派符号的法术称为\\textbf{基础法术}\\index{基础法术}，而带有四个相同符号的法术称为\\textbf{专家法术}\\index{专家法术}。\n"
+"\\textbf{\\wikilink{spells/magic_arrow}{魔法箭}}是一种基础法术；施放\\textbf{魔法箭}时，你必须选择它属于哪个学派。\n"
+"默认情况下它们没有区别，但某些游戏效果会引用特定学派以及基础/专家法术。\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:336
@@ -618,6 +884,34 @@ msgid ""
 "\\clearpage\n"
 "\n"
 msgstr ""
+"\\begin{minipage}[t]{0.48\\textwidth}\n"
+"  \\centering\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire.png}\\\\\n"
+"    \\imagecaption{火系魔法学派}\n"
+"  \\endminipage\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_water.png}\\\\\n"
+"    \\imagecaption{水系魔法学派}\n"
+"  \\endminipage\n"
+"  \\hfill\\allowbreak%\n"
+"  \\bigbreak\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_air.png}\\\\\n"
+"    \\imagecaption{气系魔法学派}\n"
+"  \\endminipage\n"
+"  \\minipage[b]{0.5\\textwidth}\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_earth.png}\\\\\n"
+"    \\imagecaption{土系魔法学派}\n"
+"  \\endminipage\n"
+"  \\bigbreak\n"
+"\\end{minipage}\n"
+"\\clearpage\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:340
@@ -628,6 +922,10 @@ msgid ""
 "\\index{Hero Specialty card}\n"
 "\n"
 msgstr ""
+"\\pagebreak\n"
+"\\pagetarget{Specialty}{\\subheader{英雄特长牌}}\n"
+"\\index{英雄特长牌}\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:345
@@ -639,6 +937,11 @@ msgid ""
 "For example, the limit of 1 Spell per Combat Round doesn't apply to Specialty cards.\n"
 "\n"
 msgstr ""
+"英雄特长牌\\index{特长牌}可通过\\pagelink{Level}{升级}获得。\n"
+"每位主英雄都有一套独特的特长牌。\n"
+"虽然其中一些牌的效果与法术牌相似，甚至会使用\\svg{empower}，但特长牌是\\textbf{其自身独有的一类牌}。\n"
+"例如，每个战斗轮次限用1张法术的限制不适用于特长牌。\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:353
@@ -653,6 +956,14 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"{\n"
+"    \\medskip\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.7\\linewidth]{\\cards/specialty.png}\\\\\n"
+"    \\medskip\n"
+"    \\footnotesize\\textit{一张 IV 级特长牌，属于骑士凯瑟琳。}\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:361
@@ -667,6 +978,14 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"{\n"
+"    \\medskip\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.7\\linewidth]{\\cards/specialty2.png}\\\\\n"
+"    \\medskip\n"
+"    \\footnotesize\\textit{一张I级特长牌，属于术士迪默。它使用 \\svg{empower}，但尽管图像如此表示，它并不属于任何魔法学派。}\n"
+"}\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:364
@@ -676,6 +995,9 @@ msgid ""
 "\\pagetarget{Artifact}{\\subheader{Artifact Cards}}\n"
 "\n"
 msgstr ""
+"\\columnbreak\n"
+"\\pagetarget{Artifact}{\\subheader{神器牌}}\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:371
@@ -689,6 +1011,13 @@ msgid ""
 "Artifacts can be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios.\\par\n"
 "\\begin{tikzpicture}\n"
 msgstr ""
+"神器牌\\index{神器牌}具有顶部和底部效果。当你打出一张时，你必须\\textbf{选择你要使用哪个效果}。\n"
+"它们分为3个等级：次级、高级和圣物，其边框颜色各不相同。\n"
+"这些等级与该牌的整体强度相关，并且在结算某些效果或在剧本准备期间可能会被引用。\n"
+"除此之外，所有神器牌通常都会无视其等级混洗在一起，组成神器牌堆。\n"
+"它们通过地图探索获得。\\par\n"
+"神器可以在同盟和合作剧本中\\pagelink{Trading}{交易}。\\par\n"
+"\\begin{tikzpicture}\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:391
@@ -715,6 +1044,26 @@ msgid ""
 "\\end{tikzpicture}\n"
 "\n"
 msgstr ""
+"  \\node (major) {\\includegraphics[width=0.6\\linewidth]{\\cards/artifact.png}};\n"
+"  \\begin{relcoords}{major}\n"
+"    \\draw (0.2, 0.8) node {\\encircle{1}};\n"
+"    \\draw (0.7, 0.4) node {\\encircle{2}};\n"
+"    \\draw (0.9, 0.9) node {\\encircle{3}};\n"
+"    \\draw (0.25, 0.2) node {\\encircle{4}};\n"
+"  \\end{relcoords}\n"
+"  \\node [below=0pt of major.south] {\\imagecaption{高级神器}};\n"
+"  \\node (relic) [right=0.05\\linewidth of major.south east, anchor=south west] {\\includegraphics[width=0.3\\linewidth]{\\cards/relic_artifact.png}};\n"
+"  \\begin{relcoords}{relic}\n"
+"    \\draw (0.5, 0.7) node {\\encircle{3}};\n"
+"    \\node [below=0pt of relic.south] {\\imagecaption{圣物神器}};\n"
+"  \\end{relcoords}\n"
+"  \\node (minor) [above=4em of relic.north] {\\includegraphics[width=0.3\\linewidth]{\\cards/minor_artifact.png}};\n"
+"  \\begin{relcoords}{minor}\n"
+"    \\draw (0.5, 0.7) node {\\encircle{3}};\n"
+"    \\node [below=0pt of minor.south] {\\imagecaption{次级神器}};\n"
+"  \\end{relcoords}\n"
+"\\end{tikzpicture}\n"
+"\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:401
@@ -730,6 +1079,15 @@ msgid ""
 "    \\item[\\textbf{4.}] Flavor text\n"
 "  \\end{itemize}"
 msgstr ""
+"\\begin{multicols}{2}\n"
+"  \\footnotesize\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{1.}] 名称\n"
+"    \\item[\\textbf{2.}] 效果\n"
+"    \\columnbreak\n"
+"    \\item[\\textbf{3.}] 等级\n"
+"    \\item[\\textbf{4.}] 背景文字\n"
+"  \\end{itemize}"
 
 #. type: center
 #: sections/deckbuilding.tex:408
@@ -737,6 +1095,8 @@ msgid ""
 "{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/"
 "diplomats_ring.png}}"
 msgstr ""
+"{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/"
+"diplomats_ring.png}}"
 
 #. type: expansion
 #: sections/deckbuilding.tex:413
@@ -746,6 +1106,9 @@ msgid ""
 "\\pagetarget{Spell Scroll Cards}{\\subheader{Spell Scroll Cards}}\\index{Spell Scroll cards}\n"
 "\n"
 msgstr ""
+"{stronghold}\n"
+"\\pagetarget{Spell Scroll Cards}{\\subheader{法术卷轴牌}}\\index{法术卷轴牌}\n"
+"\n"
 
 #. type: expansion
 #: sections/deckbuilding.tex:418
@@ -757,6 +1120,11 @@ msgid ""
 "\\vspace*{1em}\n"
 "\n"
 msgstr ""
+"在准备时，将10张法术卷轴牌洗入神器牌堆。\n"
+"将剩余的10张牌放在一旁，组成法术卷轴牌堆。\n"
+"某些地点或剧本效果之后可能会要求使用它们。\n"
+"\\vspace*{1em}\n"
+"\n"
 
 #. type: expansion
 #: sections/deckbuilding.tex:428
@@ -773,6 +1141,16 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"{\n"
+"    \\medskip\n"
+"    \\centering\n"
+"    \\includegraphics[width=0.7\\linewidth]{\\cards/spell_scroll.png}\\\\\n"
+"    \\medskip\n"
+"    \\begin{center}\n"
+"         \\imagecaption{法术卷轴牌}\n"
+"    \\end{center}\n"
+"}\n"
+"\n"
 
 #. type: expansion
 #: sections/deckbuilding.tex:434
@@ -785,6 +1163,12 @@ msgid ""
 "If you gain a third one, draw the new Spells normally and then decide whether to discard the newly gained Spell Scroll or replace one you already have (including all Spells on it).\n"
 "\n"
 msgstr ""
+"\\vspace*{1em}\n"
+"当你获得一张法术卷轴时，将它放在你的英雄面板旁边，从法术牌堆顶部拿取2张牌并将其正面朝下放在法术卷轴上。\n"
+"你可以在任何时候查看这些法术，且它们不计入你的手牌 \\svg{hand} 上限。\n"
+"你同时只能拥有2张法术卷轴。\n"
+"如果你获得第3张，则照常抽取新的法术，然后决定是弃置新获得的法术卷轴，还是替换掉你已拥有的一张（包括其上的所有法术）。\n"
+"\n"
 
 #. type: expansion
 #: sections/deckbuilding.tex:444
@@ -798,6 +1182,13 @@ msgid ""
 "      You can't Empower the Spell with \\svg{empower} from any source.\n"
 "\\end{itemize}"
 msgstr ""
+"你可以像使用任何其他法术一样使用法术卷轴中的法术，但有以下例外：\n"
+"\\begin{itemize}\n"
+"    \\item 它们不计入你的法术上限。\n"
+"    你仍然可以在此战斗轮次中使用你手中的一张法术牌。\n"
+"    \\item 你可以使用该法术的\\textbf{最低魔法威力} \\svg{empower} \\textbf{效果}，无需支付其费用（例如\\wikilink{spells/implosion}{雷鸣爆弹}，费用为1）。\n"
+"      你不能通过任何来源的 \\svg{empower} 来强化该法术。\n"
+"\\end{itemize}"
 
 #. type: expansion
 #: sections/deckbuilding.tex:453
@@ -812,6 +1203,14 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"{stronghold}\n"
+"    \\begin{itemize}\n"
+"    \\item 它们不能用于提升另一张法术的\\svg{empower}。\n"
+"    \\item 你可以在贸易站以每张2\\svg{gold}的价格\\pagelink{selling Spell Scrolls}{出售魔法卷轴}。\n"
+"      此效果可与访问贸易站的其他效果叠加生效。\n"
+"    \\item 在使用或出售这些法术后，对应的法术牌会被\\textbf{移除}，而不是弃置。\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: expansion
 #: sections/deckbuilding.tex:455
@@ -820,6 +1219,8 @@ msgid ""
 "If the last Spell on a Spell Scroll is used or sold, place the Spell Scroll back in its Deck.\n"
 "\n"
 msgstr ""
+"如果法术卷轴上的最后一张法术被使用或出售，则将该法术卷轴放回其牌堆中。\n"
+"\n"
 
 #. type: expansion
 #: sections/deckbuilding.tex:458
@@ -828,6 +1229,8 @@ msgid ""
 "\\medskip\n"
 "Spell Scrolls are not part of your Deck, therefore they are not carried over between Scenarios in a Campaign."
 msgstr ""
+"\\medskip\n"
+"法术卷轴不属于你的牌堆，因此在战役中不会在剧本之间保留。"
 
 #. type: expansion
 #: sections/deckbuilding.tex:463
@@ -837,6 +1240,9 @@ msgid ""
 "  \\pagetarget{War Machines}{\\subheader{War Machine Cards}}\n"
 "\n"
 msgstr ""
+"{rampart,cove}\n"
+"  \\pagetarget{War Machines}{\\subheader{战争机器牌}}\n"
+"\n"
 
 #. type: expansion
 #: sections/deckbuilding.tex:467
@@ -847,6 +1253,10 @@ msgid ""
 "  War machines are also more expensive at the Trading Post.\n"
 "\n"
 msgstr ""
+"  战争机器\\index{战争机器牌}是永久牌，可以在\\pagelink{Trading Post}{贸易站}或\\pagelink{War Machine Factory}{战争机器工厂}购买。\n"
+"  如果你在贸易站购买一张，\\textbf{你不能使用}该格在此次访问期间的任何其他普通功能。\n"
+"  战争机器在贸易站的价格也更高。\n"
+"\n"
 
 #. type: expansion
 #: sections/deckbuilding.tex:491
@@ -876,3 +1286,26 @@ msgid ""
 "    \\end{itemize}\n"
 "  }"
 msgstr ""
+"  {\n"
+"    \\bigskip\n"
+"    \\centering\n"
+"    \\begin{tikzpicture}\n"
+"      \\node (card) [inner sep=0] {\\includegraphics[width=0.7\\linewidth]{\\cards/war_machine.png}};\n"
+"      \\begin{relcoords}{card}\n"
+"        \\draw (0.6, 0.92) node {\\encircle{1}};\n"
+"        \\draw (0.5, 0.15) node {\\encircle{2}};\n"
+"        \\draw (0.3, 0.3) node {\\encircle{3}};\n"
+"        \\draw (0.7, 0.3) node {\\encircle{4}};\n"
+"      \\end{relcoords}\n"
+"    \\end{tikzpicture}\n"
+"\n"
+"    \\medskip\n"
+"    \\footnotesize\n"
+"    \\imagecaption{战争机器牌}\n"
+"    \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt]\n"
+"      \\item[\\textbf{1.}] 名称\n"
+"      \\item[\\textbf{2.}] 效果\n"
+"      \\item[\\textbf{3.}] 在战争机器工厂中的费用\n"
+"      \\item[\\textbf{4.}] 在贸易站中的费用\n"
+"    \\end{itemize}\n"
+"  }"
