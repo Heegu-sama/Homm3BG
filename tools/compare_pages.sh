@@ -11,7 +11,7 @@ help() {
     Usage: ./tools/compare_pages.sh <language> -r <range> [OPTIONS]
 
     Mandatory Arguments:
-    <language>                      Specify the language for comparison (en, de, es, fr, pl, ru, ua, cs, he, de). Defaults to en.
+    <language>                      Specify the language for comparison (${valid_languages[*]}). Defaults to en.
       -r, --range <range>           Provide comma-separated list of pages or range of pages you want to compare,
                                     with optional target page where the range was moved to.
 

@@ -115,6 +115,16 @@ You can expect things to break, like having incorrect layout or not all the text
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/he/printable_he.pdf">הורדה</a></td>
             <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/he/economy_printable_he.pdf">הורדה</a></td>
         </tr>
+        <tr>
+            <td>🇨🇳 中文<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/cn/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cn/main_cn.pdf">下载</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cn/printable_cn.pdf">下载</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cn/economy_printable_cn.pdf">下载</a></td>
+        </tr>
     </tbody>
 </table>
 
@@ -224,6 +234,15 @@ They should be free of any major issues.<br>
             <td align="center">—</td>
             <td align="center">—</td>
         </tr>
+        <tr>
+            <td>🇨🇳 中文</td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+            <td align="center">—</td>
+        </tr>
     </tbody>
 </table>
 
@@ -269,8 +288,7 @@ This repository serves both as a means to preserve the work, but also for others
 Please discuss any and all factual errors, bad language or other errors you've found.
 You can do this by opening issues/PRs with suggestions, writing in the BGG thread, or joining us [on Discord](https://discord.gg/Y4uM9pPWF6).
 
-You can help translate this project using [Weblate](https://weblate.org/en/).
-Click the image to get started:
+Translation progress reported by [Weblate](https://weblate.org/en/).
 
 <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
 <picture>
@@ -316,7 +334,7 @@ To build the document in English, it's best to use the script (requires Perl, wo
 tools/build.sh
 ```
 
-To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, `de` `cs`, and `he` are supported, `en` is the default), make sure you have `po4a` (version 0.74 or higher) and use the script (works on Lin/Mac):
+To build the document in any language (currently, `pl`, `es`, `fr`, `ru`, `ua`, `de`, `cs`, `he`, and `cn` are supported, `en` is the default), make sure you have `po4a` (version 0.74 or higher) and use the script (works on Lin/Mac):
 
 ```bash
 tools/build.sh <LANGUAGE>
@@ -375,8 +393,6 @@ After setting it in options, press the `Build & View` ▶️ (F5) button on the 
 
 <details>
 <summary>Click to see details</summary>
-
-**We have a guide on [using AI for translations](tools/translation-ai-prompts/README.md).**
 
 Make sure you have [`po4a`](https://github.com/mquinson/po4a) installed.
 
