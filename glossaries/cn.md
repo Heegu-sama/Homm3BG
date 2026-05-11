@@ -57,6 +57,8 @@
 | level | 等级 |
 | main hero | 主英雄 |
 | movement points | 移动点 |
+| MP | 移动点 |
+| power | 魔法威力 |
 | secondary hero | 副英雄 |
 | specialty | 特长 |
 
@@ -66,16 +68,21 @@
 |---|---|
 | center field | 中央格 |
 | central map tile | 中央地图板块 |
+| creature bank | 怪物宝屋 |
 | dragon utopia | 龙之国 |
 | far map tile | 远端地图板块 |
 | field | 格 |
 | locations | 地点 |
 | map tile | 地图板块 |
+| mines | 矿场 |
+| monolith | 传送门 |
 | near map tile | 近端地图板块 |
+| obelisk | 方尖碑 |
 | random town | 随机城镇 |
 | revisitable | 可重复访问 |
 | settlement | 定居点 |
 | starting (i) map tile | 起始（I）地图板块 |
+| subterranean gate | 地下通道 |
 | tile | 板块 |
 | trading post | 贸易站 |
 | water wheel | 水车 |
@@ -85,6 +92,7 @@
 | English | Chinese |
 |---|---|
 | building materials | 建筑材料 |
+| gold | 金币 |
 | resource production tracker | 资源生产轨道 |
 | resources | 资源 |
 | treasure die | 宝物骰 |
@@ -111,6 +119,8 @@
 | English | Chinese |
 |---|---|
 | haste | 加速术 |
+| magic arrow | 魔法箭 |
+| school | 派系 |
 
 ## AI Deck
 
@@ -126,6 +136,7 @@
 | English | Chinese |
 |---|---|
 | buildings | 建筑 |
+| citadel | 大本营 |
 | dwelling | 兵营 |
 | population token | 人口标记 |
 
@@ -139,6 +150,9 @@
 | combat | 战斗 |
 | damage | 伤害 |
 | front line | 前排 |
+| initiative | 先攻 |
+| negative morale | 低落士气 |
+| positive morale | 高昂士气 |
 | winning combat | 赢得战斗 |
 
 ## Battlefield
@@ -146,9 +160,14 @@
 | English | Chinese |
 |---|---|
 | adventure mode | 冒险模式 |
-| skirmish mode | 遭遇战模式 |
-| final combat | 最终战斗 |
+| alliance | 同盟 |
+| campaign | 战役 |
+| clash | 冲突 |
 | combat power level | 战力等级 |
+| cooperative | 合作 |
+| final combat | 最终战斗 |
+| scenario | 剧本 |
+| skirmish mode | 遭遇战模式 |
 
 ## Keywords
 
@@ -163,11 +182,16 @@
 
 | English | Chinese |
 |---|---|
+| artifact | 神器 |
 | core rulebook | 核心规则书 |
 | effects | 效果 |
+| faction | 阵营 |
 | game setup | 游戏准备 |
 | map setup | 地图准备 |
 | player elimination | 玩家淘汰 |
 | player setup | 玩家准备 |
+| relic | 圣物 |
+| round | 轮 |
 | round tracker | 轮次轨道 |
+| turn | 回合 |
 | war machine | 战争机器 |

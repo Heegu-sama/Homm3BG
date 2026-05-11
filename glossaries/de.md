@@ -57,6 +57,8 @@
 | level | Stufe |
 | main hero | Hauptheld |
 | movement points | ... |
+| MP | ... |
+| power | ... |
 | secondary hero | Nebenheld |
 | specialty | ... |
 
@@ -66,16 +68,21 @@
 |---|---|
 | center field | ... |
 | central map tile | ... |
+| creature bank | ... |
 | dragon utopia | Drachen Utopia |
 | far map tile | fernes Gebiet |
 | field | Feld |
 | locations | Orte |
 | map tile | Gebiet |
+| mines | ... |
+| monolith | ... |
 | near map tile | nahes Gebiet |
+| obelisk | ... |
 | random town | Zufällige Stadt |
 | revisitable | besuchbare |
 | settlement | Siedlung |
 | starting (i) map tile | Startgebiet (I) |
+| subterranean gate | ... |
 | tile | Gebiet |
 | trading post | Handelsposten |
 | water wheel | ... |
@@ -85,6 +92,7 @@
 | English | German |
 |---|---|
 | building materials | Baumaterialien |
+| gold | ... |
 | resource production tracker | Einkommensleiste |
 | resources | Ressourcen |
 | treasure die | Schatzwürfel |
@@ -111,6 +119,8 @@
 | English | German |
 |---|---|
 | haste | Eile |
+| magic arrow | ... |
+| school | ... |
 
 ## AI Deck
 
@@ -126,6 +136,7 @@
 | English | German |
 |---|---|
 | buildings | ... |
+| citadel | ... |
 | dwelling | ... |
 | population token | Bevölkerungsmarker |
 
@@ -139,6 +150,9 @@
 | combat | Kampf |
 | damage | Schaden |
 | front line | vordere Kampfreihe |
+| initiative | ... |
+| negative morale | ... |
+| positive morale | ... |
 | winning combat | ... |
 
 ## Battlefield
@@ -146,9 +160,14 @@
 | English | German |
 |---|---|
 | adventure mode | Abenteuermodus |
-| skirmish mode | Gefechtsmodus |
-| final combat | finaler Kampf |
+| alliance | ... |
+| campaign | ... |
+| clash | ... |
 | combat power level | ... |
+| cooperative | ... |
+| final combat | finaler Kampf |
+| scenario | ... |
+| skirmish mode | Gefechtsmodus |
 
 ## Keywords
 
@@ -163,11 +182,16 @@
 
 | English | German |
 |---|---|
+| artifact | ... |
 | core rulebook | Regelbuch |
 | effects | ... |
+| faction | ... |
 | game setup | Spielaufbau |
 | map setup | Aufbau der Abenteuerkarte |
 | player elimination | Spielereliminierung |
 | player setup | ... |
+| relic | ... |
+| round | ... |
 | round tracker | Rundenleiste |
+| turn | ... |
 | war machine | Kriegsmaschine |
