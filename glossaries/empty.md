@@ -57,6 +57,8 @@
 | level | ... |
 | main hero | ... |
 | movement points | ... |
+| MP | ... |
+| power | ... |
 | secondary hero | ... |
 | specialty | ... |
 
@@ -66,16 +68,21 @@
 |---|---|
 | center field | ... |
 | central map tile | ... |
+| creature bank | ... |
 | dragon utopia | ... |
 | far map tile | ... |
 | field | ... |
 | locations | ... |
 | map tile | ... |
+| mines | ... |
+| monolith | ... |
 | near map tile | ... |
+| obelisk | ... |
 | random town | ... |
 | revisitable | ... |
 | settlement | ... |
 | starting (i) map tile | ... |
+| subterranean gate | ... |
 | tile | ... |
 | trading post | ... |
 | water wheel | ... |
@@ -85,6 +92,7 @@
 | English | ... |
 |---|---|
 | building materials | ... |
+| gold | ... |
 | resource production tracker | ... |
 | resources | ... |
 | treasure die | ... |
@@ -111,6 +119,8 @@
 | English | ... |
 |---|---|
 | haste | ... |
+| magic arrow | ... |
+| school | ... |
 
 ## AI Deck
 
@@ -126,6 +136,7 @@
 | English | ... |
 |---|---|
 | buildings | ... |
+| citadel | ... |
 | dwelling | ... |
 | population token | ... |
 
@@ -139,6 +150,9 @@
 | combat | ... |
 | damage | ... |
 | front line | ... |
+| initiative | ... |
+| negative morale | ... |
+| positive morale | ... |
 | winning combat | ... |
 
 ## Battlefield
@@ -146,9 +160,14 @@
 | English | ... |
 |---|---|
 | adventure mode | ... |
-| skirmish mode | ... |
-| final combat | ... |
+| alliance | ... |
+| campaign | ... |
+| clash | ... |
 | combat power level | ... |
+| cooperative | ... |
+| final combat | ... |
+| scenario | ... |
+| skirmish mode | ... |
 
 ## Keywords
 
@@ -163,11 +182,16 @@
 
 | English | ... |
 |---|---|
+| artifact | ... |
 | core rulebook | ... |
 | effects | ... |
+| faction | ... |
 | game setup | ... |
 | map setup | ... |
 | player elimination | ... |
 | player setup | ... |
+| relic | ... |
+| round | ... |
 | round tracker | ... |
+| turn | ... |
 | war machine | ... |
