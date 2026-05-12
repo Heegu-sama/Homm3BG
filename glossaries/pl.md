@@ -2,11 +2,12 @@
 
 ## Style notes
 
-- Em dash: `—`
-- Quotation marks: `,,word''`
-- Names of buildings, factions, heroes, abilities, spells, creatures, and artifacts are capitalized
-- Contrary to the original, the second argument of the `\wikilink{...}{...}` command, when it ends with punctuation, this punctuation should go outside.
-  For instance:
+- Myślnik: `--`
+- Cytaty: `,,word''`
+- Spójniki i przyimki takie jak "z" czy "i" łączymy z następnym słowem twardą spacją, np. "z~tego powodu", "tryb starcia i~sojuszu"
+- Nazwy budynków, frakcji, bohaterów, zdolności, zaklęć, stworzeń i artefaktów pisane są wielką literą
+- W przeciwieństwie do oryginału, gdy drugi argument komendy `\wikilink{...}{...}` kończy się znakiem interpunkcyjnym, znak ten powinien znaleźć się poza nawiasem klamrowym.
+  Na przykład:
   ```po
   msgid "When casting the \\wikilink{spells/quicksand}{\\textbf{Quicksand Spell},} depending on the \\svg{empower} used..."
   msgstr "Rzucając Zaklęcie \\wikilink{spells/quicksand}{\\textbf{Ruchomych Piasków}}, w zależności od użytego \\svg{empower}..."
@@ -66,8 +67,8 @@
 | level | poziom |
 | main hero | bohater główny |
 | movement points | PR (punkty ruchu) |
-| MP | ... |
-| power | ... |
+| MP | PR |
+| power | moc |
 | secondary hero | bohater pomocniczy |
 | specialty | specjalność |
 
@@ -83,15 +84,15 @@
 | field | pole |
 | locations | lokacje |
 | map tile | kafelek mapy |
-| mines | ... |
-| monolith | ... |
+| mines | kopalnie |
+| monolith | monolit |
 | near map tile | bliski kafelek mapy |
-| obelisk | ... |
+| obelisk | obelisk |
 | random town | losowe miasto |
 | revisitable | wielorazowe |
 | settlement | osada |
 | starting (i) map tile | początkowy kafelek mapy (i) |
-| subterranean gate | ... |
+| subterranean gate | brama podziemi |
 | tile | kafelek |
 | trading post | punkt handlowy |
 | water wheel | młyn wodny |
@@ -101,7 +102,7 @@
 | English | Polish |
 |---|---|
 | building materials | budulce |
-| gold | ... |
+| gold | złoto |
 | resource production tracker | tor przychodu |
 | resources | zasoby |
 | treasure die | kość skarbów |
@@ -128,8 +129,8 @@
 | English | Polish |
 |---|---|
 | haste | przyspieszenie |
-| magic arrow | ... |
-| school | ... |
+| magic arrow | magiczna strzała |
+| school | szkoła |
 
 ## AI Deck
 
@@ -145,7 +146,7 @@
 | English | Polish |
 |---|---|
 | buildings | budynki |
-| citadel | ... |
+| citadel | cytadela |
 | dwelling | siedlisko |
 | population token | żeton populacji |
 
@@ -159,9 +160,9 @@
 | combat | walka |
 | damage | obrażenia |
 | front line | pierwsza linia |
-| initiative | ... |
-| negative morale | ... |
-| positive morale | ... |
+| initiative | inicjatywa |
+| negative morale | niskie morale |
+| positive morale | wysokie morale |
 | winning combat | wygranie walki |
 
 ## Battlefield
@@ -169,13 +170,13 @@
 | English | Polish |
 |---|---|
 | adventure mode | tryb przygody |
-| alliance | ... |
-| campaign | ... |
-| clash | ... |
+| alliance | sojusz |
+| campaign | kampania |
+| clash | starcie |
 | combat power level | siła bojowa |
-| cooperative | ... |
+| cooperative | kooperacyjny |
 | final combat | finałowa walka |
-| scenario | ... |
+| scenario | scenariusz |
 | skirmish mode | tryb potyczki |
 
 ## Keywords
@@ -191,16 +192,16 @@
 
 | English | Polish |
 |---|---|
-| artifact | ... |
+| artifact | artefakt |
 | core rulebook | podstawowa księga zasad |
 | effects | efekty |
-| faction | ... |
+| faction | frakcja |
 | game setup | przygotowanie gry |
 | map setup | przygotowanie mapy |
 | player elimination | eliminacja gracza |
 | player setup | przygotowanie gracza |
-| relic | ... |
-| round | ... |
+| relic | relikt |
+| round | runda |
 | round tracker | tor rund |
-| turn | ... |
+| turn | tura |
 | war machine | machina wojenna |
