@@ -57,6 +57,8 @@
 | level | Úroveň |
 | main hero | Hlavní Hrdina |
 | movement points | ... |
+| MP | ... |
+| power | ... |
 | secondary hero | Sekundární Hrdina |
 | specialty | ... |
 
@@ -66,16 +68,21 @@
 |---|---|
 | center field | ... |
 | central map tile | ... |
+| creature bank | ... |
 | dragon utopia | Dračí Utopie |
 | far map tile | ... |
 | field | ... |
 | locations | ... |
 | map tile | Dílek |
+| mines | ... |
+| monolith | ... |
 | near map tile | ... |
+| obelisk | ... |
 | random town | ... |
 | revisitable | Opakovaně Navštívitelná Pole |
 | settlement | Osada |
 | starting (i) map tile | Startovní (I) Dílek |
+| subterranean gate | ... |
 | tile | Dílek |
 | trading post | Tržiště |
 | water wheel | ... |
@@ -85,6 +92,7 @@
 | English | Czech |
 |---|---|
 | building materials | Stavební Materiály |
+| gold | ... |
 | resource production tracker | Počítadlo Produkce Surovin |
 | resources | Suroviny |
 | treasure die | Kostka Surovin |
@@ -111,6 +119,8 @@
 | English | Czech |
 |---|---|
 | haste | Zrychlení |
+| magic arrow | ... |
+| school | ... |
 
 ## AI Deck
 
@@ -126,6 +136,7 @@
 | English | Czech |
 |---|---|
 | buildings | ... |
+| citadel | ... |
 | dwelling | Obydlí |
 | population token | Žeton Populace |
 
@@ -139,6 +150,9 @@
 | combat | Souboj |
 | damage | ... |
 | front line | Přední linie |
+| initiative | ... |
+| negative morale | ... |
+| positive morale | ... |
 | winning combat | ... |
 
 ## Battlefield
@@ -146,9 +160,14 @@
 | English | Czech |
 |---|---|
 | adventure mode | Výprava |
-| skirmish mode | ... |
-| final combat | ... |
+| alliance | ... |
+| campaign | ... |
+| clash | ... |
 | combat power level | ... |
+| cooperative | ... |
+| final combat | ... |
+| scenario | ... |
+| skirmish mode | ... |
 
 ## Keywords
 
@@ -163,11 +182,16 @@
 
 | English | Czech |
 |---|---|
+| artifact | ... |
 | core rulebook | ... |
 | effects | ... |
+| faction | ... |
 | game setup | Příprava hry |
 | map setup | ... |
 | player elimination | ... |
 | player setup | ... |
+| relic | ... |
+| round | ... |
 | round tracker | Počítadlo Kol |
+| turn | ... |
 | war machine | Válečné Stroje |

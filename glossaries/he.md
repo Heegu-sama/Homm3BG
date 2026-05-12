@@ -57,6 +57,8 @@
 | level | רמה |
 | main hero | גיבור ראשי |
 | movement points | ... |
+| MP | ... |
+| power | ... |
 | secondary hero | גיבור משני |
 | specialty | מומחיות |
 
@@ -66,16 +68,21 @@
 |---|---|
 | center field | ... |
 | central map tile | ... |
+| creature bank | ... |
 | dragon utopia | ... |
 | far map tile | ... |
 | field | ... |
 | locations | ... |
 | map tile | ... |
+| mines | ... |
+| monolith | ... |
 | near map tile | ... |
+| obelisk | ... |
 | random town | ... |
 | revisitable | ... |
 | settlement | ... |
 | starting (i) map tile | ... |
+| subterranean gate | ... |
 | tile | ... |
 | trading post | מסחר |
 | water wheel | ... |
@@ -85,6 +92,7 @@
 | English | Hebrew |
 |---|---|
 | building materials | אבנים |
+| gold | ... |
 | resource production tracker | לוח למעקב אחר ייצור המשאבים |
 | resources | משאבים |
 | treasure die | ... |
@@ -111,6 +119,8 @@
 | English | Hebrew |
 |---|---|
 | haste | מהירות |
+| magic arrow | ... |
+| school | ... |
 
 ## AI Deck
 
@@ -126,6 +136,7 @@
 | English | Hebrew |
 |---|---|
 | buildings | ... |
+| citadel | ... |
 | dwelling | ... |
 | population token | אסימון האוכלוסייה |
 
@@ -139,6 +150,9 @@
 | combat | קרב |
 | damage | נזק |
 | front line | קו חזית |
+| initiative | ... |
+| negative morale | ... |
+| positive morale | ... |
 | winning combat | ... |
 
 ## Battlefield
@@ -146,9 +160,14 @@
 | English | Hebrew |
 |---|---|
 | adventure mode | מצב הרפתקה |
-| skirmish mode | ... |
-| final combat | קרב סופי |
+| alliance | ... |
+| campaign | ... |
+| clash | ... |
 | combat power level | ... |
+| cooperative | ... |
+| final combat | קרב סופי |
+| scenario | ... |
+| skirmish mode | ... |
 
 ## Keywords
 
@@ -163,11 +182,16 @@
 
 | English | Hebrew |
 |---|---|
+| artifact | ... |
 | core rulebook | ספר חוקים |
 | effects | ... |
+| faction | ... |
 | game setup | הכנת המשחק |
 | map setup | ... |
 | player elimination | ... |
 | player setup | ... |
+| relic | ... |
+| round | ... |
 | round tracker | לוח מעקב הסבבים |
+| turn | ... |
 | war machine | מכונת מלחמה |
