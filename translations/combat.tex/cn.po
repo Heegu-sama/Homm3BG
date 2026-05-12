@@ -49,7 +49,7 @@ msgstr ""
 #. type: Plain text
 #: sections/combat.tex:3
 msgid "\\addsection{Combat}{\\skills/attack.png}"
-msgstr ""
+msgstr "\\addsection{战斗}{\\skills/attack.png}"
 
 #. type: multicols*
 #: sections/combat.tex:14
@@ -65,6 +65,15 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\pagetarget{Combat}{战斗}\\index{战斗}与 \\textbf{中立单位}的战斗开始于一位英雄移动到以下某个 \\textbf{未访问过的}格时：\n"
+"\\begin{itemize}\n"
+"  \\item 带有罗马数字的格，表示守卫该格的中立单位的 \\hyperlink{Difficulty Table}{类型和数量}，或\n"
+"\\begin{expansion}[left=4mm]{navalbattles}\n"
+"  \\item 一个 \\pagelink{Creature Bank List}{生物宝屋地点}。\n"
+"    在此情况下，遵循 \\pagelink{Creature Banks Rules}{对抗生物宝屋的战斗} 的规则。\n"
+"\\end{expansion}\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:21
@@ -78,6 +87,13 @@ msgid ""
 "Players are able to start multiple Combats during their Turn.\n"
 "\n"
 msgstr ""
+"与\\textbf{另一名玩家}的战斗可以通过两种方式开始：\n"
+"\\begin{itemize}\n"
+"  \\item 你移动到任何包含其一位英雄的格。\n"
+"  \\item 你移动到其拥有的城镇或定居点中，参见 \\pagelink{Siege Combat}{攻城战斗}。\n"
+"\\end{itemize}\n"
+"玩家能够在其回合中发起多次战斗。\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:23
@@ -86,6 +102,8 @@ msgid ""
 "When a \\pagelink{Secondary}{Secondary Hero} is attacked, they \\textbf{may choose} to be \\pagelink{Endcombat}{instantly defeated} instead of engaging in Combat, which helps to preserve the units.\n"
 "\n"
 msgstr ""
+"当一名\\pagelink{Secondary}{副英雄}受到攻击时，其\\textbf{可以选择}改为\\pagelink{Endcombat}{立即被击败}，而不进行战斗，这有助于保全单位。\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:27
@@ -96,6 +114,10 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\transparent{0.2}\\includegraphics[width=0.6\\linewidth]{\\art/wyvern.png}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:31
@@ -106,6 +128,10 @@ msgid ""
 "The player is considered to have beaten the Neutral Units by default and gains no rewards from the Combat itself before visiting the Field.\n"
 "\n"
 msgstr ""
+"\\pagetarget{Quick}{\\subheader{快速战斗}}\\index{快速战斗}\n"
+"如果你的英雄等级高于某个格在即将开始对抗中立单位战斗时的难度，则\\textbf{不进行战斗}。\n"
+"该玩家视为自动击败了中立单位，并且在访问该格之前，不会从此次战斗本身获得任何奖励。\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:33 sections/combat.tex:166 sections/credits.tex:38
@@ -126,11 +152,14 @@ msgid ""
 "  \\includegraphics[width=\\linewidth]{\\art/rogue.jpg}\n"
 "\\end{center}"
 msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=\\linewidth]{\\art/rogue.jpg}\n"
+"\\end{center}"
 
 #. type: Plain text
 #: sections/combat.tex:41
 msgid "\\pagetarget{Combatsetup}{\\subheader{Combat Setup}}"
-msgstr ""
+msgstr "\\pagetarget{Combatsetup}{\\subheader{战斗准备}}"
 
 #. type: multicols*
 #: sections/combat.tex:46
@@ -142,6 +171,11 @@ msgid ""
 "\\columnbreak\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=\\linewidth]{\\art/elf.jpg}\n"
+"\\end{center}\n"
+"\\columnbreak\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:51
@@ -153,6 +187,11 @@ msgid ""
 "Follow these steps when Combat begins against \\textbf{Neutral Units}:\n"
 "\n"
 msgstr ""
+"\\vspace*{-2em}\n"
+"战斗在 4×5 的战斗板上进行结算，其由位于相对两端的两条后排和两条前排，以及中间一行组成。\n"
+"战斗也可以在\\pagelink{Alternative Combat Boards}{替代战斗板}之一上进行结算。\n"
+"当与\\textbf{中立单位}开始战斗时，遵循以下步骤：\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:66
@@ -174,6 +213,21 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\begin{itemize}[leftmargin=2.2em]\n"
+"  \\item 选择战斗板的一侧作为你自己的区域。将至多 5 张你的单位牌自由放置在该侧的后排和前排。\n"
+"  \\item 查看\\hyperlink{Difficulty Table}{\\textbf{难度表}}\\iftoggle{printable}{（在封底）}{}，并从对应的牌堆中抽取相应数量的中立单位牌。\n"
+"  \\item \\mbox{中立单位的放置方式取决于游戏模式：}\n"
+"  \\item 在\\textbf{冲突}或\\textbf{同盟}剧本中，坐在你右侧的敌方玩家控制中立单位，并决定其放置位置。\\svg{unit_ranged}单位如果可能，必须放置在后排。\n"
+"  \\item \\pagetarget{CombatAISetup}在\\textbf{战役}或\\textbf{合作}剧本中，中立单位从玩家视角按从左到右的顺序放置。\n"
+"首先，将所有\\svg{unit_ranged}单位放置在后排\\index{单位放置}。\n"
+"然后，将所有\\svg{unit_ground}或\\svg{unit_flying}单位放置在前排。\n"
+"如果没有足够空间将某个单位放置在其正确的战线上，则将其放置在另一条战线上。\n"
+"单位必须按先攻\\index{先攻}顺序\\textbf{降序}放置。\n"
+"如果出现平局，先放置更高阶的单位。\n"
+"如果仍然平局，由玩家决定顺序。\n"
+"有关详细说明，请查看\\pagelink{AI Units}{\\textbf{对抗 AI 的战斗}}章节。\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:72
@@ -186,11 +240,17 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"与\\textbf{其他玩家}战斗时的单位准备：\n"
+"\\begin{itemize}[leftmargin=2.2em]\n"
+"  \\item 进攻方玩家先将至多5个单位放置在战斗板上其所选的一侧，然后由防守方放置。\n"
+"  \\item 如果战斗发生在带有大本营\\index{大本营}的城镇中，防守方在放置其单位后，加入\\pagelink{Walls}{城墙、城门和箭塔}牌。\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: Plain text
 #: sections/combat.tex:123
 msgid "\\pagetarget{Combatterminology}{\\subheader{Combat Terminology}}"
-msgstr ""
+msgstr "\\pagetarget{Combatterminology}{\\subheader{战斗术语}}"
 
 #. type: multicols*
 #: sections/combat.tex:123
@@ -245,6 +305,53 @@ msgid ""
 "\\end{expansion}\n"
 "\n"
 msgstr ""
+"{2}\n"
+"以下术语用于描述战斗中的效果和要素：\\par\n"
+"\\textbf{进攻玩家} – 发起战斗的玩家。\\par\n"
+"\\textbf{防守玩家} – 被发起战斗的玩家。\\par\n"
+"\\textbf{激活} – 当一个单位在先攻顺序中轮到下一个时，该单位会被激活。\\par\n"
+"\\textbf{相邻单位} – 如果一个单位与另一个单位在正交方向（非对角线）上相距一格，则其与该单位直接相邻。\\par\n"
+"\\textbf{战斗轮次} – 每位玩家的所有单位各激活一次的完整循环。\\par\n"
+"\\textbf{战斗障碍}\\index{战斗障碍}\\index{障碍，战斗} – 战斗板上的每一张牌都是战斗障碍。\n"
+"它们会阻挡所有非飞行单位的移动。\\par\n"
+"\\setlength\\columnsep{1.2em}\n"
+"\\setlength\\intextsep{0.8em}\n"
+"\\begin{wrapfigure}{r}{0.2\\linewidth}\n"
+"  \\includegraphics[width=\\linewidth]{\\images/attack_die.png}\n"
+"\\end{wrapfigure}\n"
+"\\textbf{攻击骰}\\index{攻击骰}\\index{骰子} – 一枚红色骰子，其结果范围为 $-1$ 到 $+1$。\n"
+"\\textbf{每当一个单位攻击时}掷此骰，\n"
+"并将结果加到该单位的攻击值上。\\par\n"
+"\\textbf{\\pagetarget{Retaliate}{反击}} – 如果一个单位在受到相邻单位的攻击后存活，它会对该单位进行一次反击。\n"
+"每个单位在每个战斗轮次中\\textbf{只能进行 1 次}反击\\index{反击}。\n"
+"反击的运作方式与普通攻击完全相同，但不会引发另一次反击。\n"
+"用一个黑色方块标记本轮反击过的单位。\\par\n"
+"\\setlength\\columnsep{1em}\n"
+"\\setlength\\intextsep{0pt}\n"
+"\\begin{wrapfigure}{r}{0.22\\linewidth}\n"
+"  \\centering\n"
+"  \\includegraphics[width=4em]{\\images/paralysis.png}\\\\\n"
+"  \\imagecaption{麻痹标记}\n"
+"\\end{wrapfigure}\n"
+"\\textbf{\\pagetarget{Paralysis}{麻痹}}\\index{麻痹} \\svg{paralysis} – 某些效果会在单位上放置一个麻痹标记。\n"
+"如果一个单位将在带有麻痹标记的情况下被激活，则\\textbf{跳过其激活}，并改为移除该标记。\n"
+"如果该单位在带有麻痹标记时\\textbf{受到攻击或受到任何伤害}，移除该标记。\n"
+"该标记不会阻止单位进行反击。\\par\n"
+"\\begin{wrapfigure}{r}{0.2\\linewidth}\n"
+"  \\centering\n"
+"  \\includegraphics[width=4em]{\\images/defense-token.png}\\\\\n"
+"  \\imagecaption{防御标记}\n"
+"\\end{wrapfigure}\n"
+"\\textbf{\\pagetarget{Defend}{防御}}\\index{防御行动} – 单位可以选择获得一个防御标记并结束激活，而不是进行攻击。\n"
+"当一个带有防御标记的单位受到攻击时，在初始攻击掷骰后，再掷一次攻击骰。\n"
+"如果你掷出 ``+1''，防守单位在此次攻击中额外获得 1 点防御。\n"
+"如果一个单位在其激活开始时带有防御标记，则弃置之。\n"
+"该单位在该次激活期间不能再次进行防御行动。\\par\n"
+"\\begin{expansion}{conflux}\n"
+"  \\textbf{\\pagetarget{Elemental Damage}{元素伤害}}\\index{元素伤害} – 如果单位造成元素伤害，则它们正常进行攻击，但所造成的伤害类似于法术造成的 \\svg{damage}，并且无视该单位的 \\svg{defense}。\n"
+"  元素伤害不算作来自法术的伤害。\n"
+"\\end{expansion}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:129
@@ -255,11 +362,15 @@ msgid ""
 "  \\hspace*{-2em}\\transparent{0.2}\\includegraphics[width=1.2\\linewidth]{\\art/storm_elemental.png}\n"
 "\\end{center}"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\\begin{center}\n"
+"  \\hspace*{-2em}\\transparent{0.2}\\includegraphics[width=1.2\\linewidth]{\\art/storm_elemental.png}\n"
+"\\end{center}"
 
 #. type: Plain text
 #: sections/combat.tex:132
 msgid "\\pagetarget{combatround}{\\subheader{Combat Round Structure}}"
-msgstr ""
+msgstr "\\pagetarget{combatround}{\\subheader{战斗轮次结构}}"
 
 #. type: multicols*
 #: sections/combat.tex:136
@@ -270,6 +381,10 @@ msgid ""
 "Combat lasts until all units on one side are eliminated, a player has to \\textbf{Retreat}\\index{Retreat} when fighting Neutral Units, or a player \\textbf{surrenders} to another player.\n"
 "\n"
 msgstr ""
+"战斗被分为若干轮次，在每个轮次中，所有参与该战斗的单位都按先攻顺序\\textbf{激活一次}\\index{激活！战斗}。\n"
+"每个单位都激活后，开始新的战斗轮次。\n"
+"战斗会持续进行，直到一方的所有单位都被消灭、玩家在与中立单位作战时必须\\textbf{撤退}\\index{撤退}，或玩家向另一位玩家\\textbf{投降}。\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:152
@@ -292,6 +407,21 @@ msgid ""
 "\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
+"战斗轮次的结构：\n"
+"\\begin{itemize}[leftmargin=2.3em]\n"
+"  \\item 玩家按照单位 \\pagelink{Initiative}{先攻} 的降序来激活其单位。\\textbf{如果出现平局}，则在进攻方与防守方之间交替，且从进攻方开始。\n"
+"  \\item 当一个单位被激活时，在其上放置一个阵营方块，以表示它在本战斗轮次中已被激活。\n"
+"  \\item 已激活的单位可以根据其 \\pagelink{Unittype}{类型} 移动并攻击。由对手玩家操控的中立单位若有可能则必须始终攻击。\n"
+"  \\item 单位可以选择 \\pagelink{Defend}{防御}，而不是攻击。\n"
+"  在中立战斗中，中立敌方单位不能防御，即使其由另一名玩家操控。\n"
+"  \\item 在单位攻击前，双方玩家都可以 \\pagelink{CombatCards}{打出牌}。牌按照玩家决定打出的顺序结算。\n"
+"  \\item 在单位的攻击已宣告且所有牌都已打出后，掷攻击骰。\n"
+"    先根据骰子结果修正攻击单位的攻击力，再减去防守单位的防御力，最后将剩余数值作为 \\pagelink{HP}{伤害}\\index{伤害} 施加给防守单位。\n"
+"  \\item 如果防守单位与攻击者相邻，且其本轮尚未如此做，则其会 \\pagelink{Retaliate}{反击}。\n"
+"  \\item 持续激活单位，直到所有单位都各自被激活过一次。\n"
+"在最后一个单位激活后，战斗轮次结束。\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:156
@@ -302,6 +432,9 @@ msgid ""
 "\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
+"\\subsection*{战役与合作战斗}\n"
+"在这些游戏模式中，所有敌方单位均按照\\pagelink{AI Units}{AI规则章节}中的描述进行激活。\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:164
@@ -316,6 +449,14 @@ msgid ""
 "Increased \\svg{defense} expires in a similar way.\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{CombatCards}{在战斗中使用卡牌}}\n"
+"每个战斗轮次中，你只能使用 \\textbf{一张法术}，而其他牌则可使用任意数量。\n"
+"持续 \\svg{ongoing} 和 \\svg{activation} 激活效果只能在\\textbf{激活你的一个单位时，且在其攻击之前}使用。\n"
+"持续效果\\index{持续效果}会一直持续到战斗结束，或直到牌上的效果被用尽。\\par\n"
+"即时 \\svg{instant} 牌可在\\textbf{任何时候}打出，除非另有说明，但不能在掷攻击骰与结算伤害之间打出。\n"
+"提升单位 \\svg{attack} 的效果（例如通过属性牌）会在该单位进行的第一次攻击结算后或其激活结束时失效，以先发生者为准。\n"
+"提高的 \\svg{defense} 也会以类似方式失效。\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:172
@@ -328,17 +469,23 @@ msgid ""
 "Retreating has no other penalties.\n"
 "\n"
 msgstr ""
+"\\vspace*{-\fill} \\subsection*{\\pagetarget{Timelimit}{战斗时间限制}}\\index{时间限制}\n"
+"对抗中立单位的战斗有 \\textbf{一轮战斗} 的时间限制。\n"
+"在每轮战斗结束时，你可以选择 \\textbf{撤退}\\index{撤退}，或消耗发起战斗的英雄的 1 个 \\svg{movement} 以进行下一轮。\n"
+"当你撤退时，结束战斗，并将发起战斗的英雄移回他们\\textbf{最后访问过的}格。\n"
+"撤退没有其他惩罚。\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:175
 #, no-wrap
 msgid "\\note{5}{Combats against Azure \\svg{azure} Units, other players, or \\pagelink{AI Heroes}{AI Heroes} have no time limit, and you cannot Retreat from them.}"
-msgstr ""
+msgstr "\\note{5}{与蔚蓝 \\svg{azure} 单位、其他玩家或 \\pagelink{AI Heroes}{AI英雄} 的战斗没有时间限制，且你不能从中撤退。} \\vfill \\begin{center} \\transparent{0.2} \\includegraphics[width=\\linewidth]{\\art/slayer.png} \\end{center}"
 
 #. type: Plain text
 #: sections/combat.tex:184
 msgid "\\pagetarget{Endcombat}{\\subheader{End of Combat}}"
-msgstr ""
+msgstr "\\pagetarget{Endcombat}{\\subheader{战斗结束}}"
 
 #. type: multicols*
 #: sections/combat.tex:184
@@ -353,6 +500,14 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+" {2}\n"
+"与中立单位的战斗有三种可能的结果：\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{胜利：}所有中立单位均被击败。\n"
+"  \\item \\textbf{撤退：}玩家耗尽时间或失去所有参战单位，但其单位牌堆中仍有单位。\n"
+"  \\item \\textbf{失败：}玩家失去所有参战单位，且其单位牌堆中没有任何单位。\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:190
@@ -365,6 +520,12 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"与另一位玩家的英雄进行战斗有两种可能的结果：\n"
+"\\begin{itemize}\n"
+" \\item \\textbf{胜利/战败：} 如果一方的所有单位都被击败，则仍有任意单位存活的一方为获胜者，另一方被击败。\n"
+" \\item \\textbf{投降：}\\index{投降} 英雄可以在本该激活其任意一个单位时，通过支付对方玩家 10 \\svg{gold} 来向其英雄投降，以防止自己的军队被击败。在这种情况下，战斗立即结束，双方都不算作战胜或战败。\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:192
@@ -373,6 +534,8 @@ msgid ""
 "When Combat ends, all damage is healed from all surviving units. Move any player-owned units back to their unit Deck and discard any leftover enemy Neutral Units. Depending on the type and result of the Combat, players must resolve the following consequences for themselves:\n"
 "\n"
 msgstr ""
+"当战斗结束时，所有存活单位上的所有伤害都会被治愈。将所有玩家拥有的单位移回其单位牌堆，并弃置所有剩余的敌方中立单位。根据战斗的类型和结果，玩家必须各自结算以下后果：\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:199
@@ -386,6 +549,13 @@ msgid ""
 "Remember to receive the starting units of the chosen Scenario for free each time your unit Deck is empty after a Combat.\n"
 "\n"
 msgstr ""
+"若 \\textbf{获胜英雄}是主英雄，则获得\\pagelink{Combatexperience}{经验}。如果其为攻击方，则其必须访问发生战斗的格。\\par\n"
+"与中立单位战斗后撤退的\\textbf{英雄}必须移回地图上其上一次访问的格（不访问该格）。\\par\n"
+"\\textbf{被击败的主英雄}必须移至一个友方城镇或定居点。如果其被另一名玩家的军队（无论有无英雄）击败，则其获得 1~\\svg{morale_negative}，并且必须向获胜者支付 5 \\svg{gold}。此外，其还要将一个\\pagelink{End}{阵营方块}交给获胜玩家。击败主英雄可能导致\\pagelink{End}{玩家淘汰}。\\par\n"
+"\\textbf{被击败的副英雄}（即使未经过战斗而被立即击败）会从地图上移除。如果被另一名玩家的军队击败，对方也会获得一个阵营方块。\\par\n"
+"\\textbf{投降的英雄}不视为被击败。将投降的主英雄移至一个城镇或定居点，将投降的副英雄从地图上移除、和他们被击败一样。另一名玩家既不会获得经验，也不会获得阵营方块。\\par\n"
+"请记得每次战斗后，当你的单位牌堆为空时，免费获得所选剧本的起始单位。\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:201
@@ -394,6 +564,8 @@ msgid ""
 "\\subsection*{\\pagetarget{Combatexperience}{Combat Experience}}\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Combatexperience}{战斗经验}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:210
@@ -409,6 +581,15 @@ msgid ""
 "You also do not gain Experience from \\textbf{defeating} a Secondary Hero, or if an enemy Hero \\textbf{surrenders} to you.\n"
 "\n"
 msgstr ""
+"赢得与你的主英雄进行的战斗通常会使其获得经验\\index{经验}。\n"
+"如果中立格的难度或被击败的敌方主英雄的等级与你的等级\\textbf{相同}，获得1个\\svg{experience}。\n"
+"如果其\\textbf{高于}你的等级，获得2个\\svg{experience}。\n"
+"在与中立蔚蓝 \\svg{azure} 单位进行的中立战斗中获胜，会使你的英雄\\textbf{立即}获得 VII 级。\n"
+"如果你曾同时获得多个等级，按顺序结算其效果。\n"
+"升级必须在访问发生战斗的格之前结算。\\par\n"
+"副英雄不能获得经验。\n"
+"击败副英雄，或敌方英雄向你\\textbf{投降}时，你也不会获得经验。\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:216
@@ -419,6 +600,10 @@ msgid ""
 "  \\transparent{0.2}\\includegraphics[width=0.7\\linewidth]{\\art/basilisk.png}\n"
 "\\end{center}"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\\begin{center}\n"
+"  \\transparent{0.2}\\includegraphics[width=0.7\\linewidth]{\\art/basilisk.png}\n"
+"\\end{center}"
 
 #. type: multicols*
 #: sections/combat.tex:221
@@ -427,7 +612,7 @@ msgid ""
 "{2}\n"
 "\\subsection*{Combat Example}\n"
 "\n"
-msgstr ""
+msgstr " {2}\n"
 
 #. type: multicols*
 #: sections/combat.tex:227
@@ -440,6 +625,12 @@ msgid ""
 "They would both be permitted to play any number of additional cards in any order, but they decide to stop after playing these cards.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{鲍勃的僵尸即将攻击爱丽丝的狮鹫。\n"
+"当鲍勃宣告攻击时，两位玩家现在都有机会通过打出任意数量的\\svg{instant}牌，来调整自己单位的攻击或防御，这些牌可以提高进攻单位的\\svg{attack}或防守单位的\\svg{defense}。}\\par\n"
+"\\textit{鲍勃决定打出一张+1攻击牌，将僵尸的攻击从2提高到3。\n"
+"爱丽丝则回应打出一张+1防御牌，将狮鹫的防御从0提高到1。\n"
+"他们本都可以按任意顺序再打出任意数量的额外牌，但他们决定在打出这些牌后停止。}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:229
@@ -448,6 +639,8 @@ msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/zombies_attack_griffins.png}\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{\\examples/zombies_attack_griffins.png}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:237
@@ -462,6 +655,14 @@ msgid ""
 "The previously played Attack and Defense cards no longer have any effect.}\n"
 "\n"
 msgstr ""
+"\\textit{在攻击的所有牌都打出后，掷出攻击骰，以进一步调整进攻单位造成的伤害数量。\n"
+"鲍勃 掷出了 +1。\n"
+"这使僵尸的攻击从 3 提高到 4，随后再被狮鹫的防御 1 降低。因此，3 点伤害 \\svg{damage} 放置到狮鹫上。由于它们的生命值 \\svg{health_points} 为 4，它们不会被翻到其``少量''侧。}\\par\n"
+"\\textit{狮鹫上没有黑色方块，因此它们现在开始一次反击攻击。\n"
+"该方块通常此时应放置到它们上面，但它们的特殊 \\svg{unit_retaliation} 能力说明它们可以反击任意次数，因此不放置该方块。}\\par\n"
+"\\textit{在反击攻击期间，双方玩家都可以再次调整其单位的属性。\n"
+"此前打出的攻击牌和防御牌不再产生任何效果。}\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:239 sections/introduction.tex:92
@@ -470,6 +671,8 @@ msgid ""
 "\\vfill\n"
 "\n"
 msgstr ""
+"\\vfill\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:241
@@ -478,16 +681,18 @@ msgid ""
 "{\\transparent{0.2}\\hspace{-1em}\\includegraphics[width=1.7\\linewidth]{\\art/minotaur.png}}\n"
 "\n"
 msgstr ""
+"{\\transparent{0.2}\\hspace{-1em}\\includegraphics[width=1.7\\linewidth]{\\art/minotaur.png}}\n"
+"\n"
 
 #. type: Plain text
 #: sections/combat.tex:251
 msgid "\\pagetarget{Siege Combat}{\\subheader{Siege Combat}}"
-msgstr ""
+msgstr "\\pagetarget{Siege Combat}{\\subheader{攻城战}}"
 
 #. type: index{#1}
 #: sections/combat.tex:251
 msgid "Siege Combat"
-msgstr ""
+msgstr "攻城战斗"
 
 #. type: multicols*
 #: sections/combat.tex:251
@@ -499,6 +704,11 @@ msgid ""
 "Paying this Gold represents the cost of transporting the army there.\n"
 "\n"
 msgstr ""
+" {2}\n"
+"当一名敌方英雄攻击你的城镇或定居点，且你的英雄不在该格时，你可以立即\\textbf{支付 8 \\svg{gold}，仅用你的单位进行防御}。\n"
+"你不能在此次战斗中使用你的牌堆，因为你的主英雄不在场。\n"
+"支付这些金币代表将军队运输到那里的成本。\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:254
@@ -508,6 +718,9 @@ msgid ""
 "Defending a Settlement follows the same rules as defending a Town without a Citadel.\n"
 "\n"
 msgstr ""
+"当你防守一座\\textbf{没有大本营}的城镇\\index{大本营}时，在标准战斗板上正常进行战斗。\n"
+"防守定居点时，遵循与防守没有大本营的城镇相同的规则。\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:257
@@ -517,6 +730,9 @@ msgid ""
 "\\note{3.5}{\\textbf{Note:} you cannot surrender when defending your Faction Town.}\\par\n"
 "\n"
 msgstr ""
+"\\vspace{0.5em}\n"
+"\\note{3.5}{\\textbf{注意：}当你防守你的阵营城镇时，你不能投降。}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:263
@@ -529,6 +745,12 @@ msgid ""
 "Defending units may move through the Gate and may stop on it.\n"
 "\n"
 msgstr ""
+"\\pagetarget{Walls}{\\subsection*{有大本营的城镇防守}}\\index{城墙和城门}\n"
+"当你防守你的城镇且该城镇有一座大本营时，在放置你的单位后，你将 3~个城墙和 1~个城门障碍物以任意顺序加入战斗板的中排。\n"
+"如果你防守的是你之前征服过的敌方城镇，\\textbf{不要使用城墙和城门}，\\textbf{即使}它是有大本营的城镇也不使用。\n"
+"城门牌对守方玩家来说\\textbf{不是障碍物}。\n"
+"防守单位可以穿过城门，也可以停在其上。\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:265
@@ -537,6 +759,8 @@ msgid ""
 "Walls \\pagelink{Walls protection}{protect defending units behind them}.\n"
 "\n"
 msgstr ""
+"城墙 \\pagelink{Walls protection}{保护其后方的防守单位}。\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:268
@@ -546,6 +770,9 @@ msgid ""
 "These attacks don't count as normal attacks: They are always successful and don't activate any of the attacking unit's \\svg{unit_attack} abilities, and you cannot play any cards or throw the Attack Die to affect the attack's result.\n"
 "\n"
 msgstr ""
+"城墙牌和城门牌可以被任何相邻的 \\svg{unit_ground} 或 \\svg{unit_flying} 单位的攻击摧毁，甚至包括你自己防守单位的攻击。\n"
+"这些攻击不算作普通攻击：它们总是成功，且不会触发攻击单位的任何 \\svg{unit_attack} 能力，并且你不能打出任何牌或投掷攻击骰来影响该攻击的结果。\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:280
@@ -561,6 +788,15 @@ msgid ""
 "The attacker doesn't need to destroy it to win the Combat.\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=0.6\\linewidth]{\\cards/arrow_tower.png}\n"
+"\\end{center}\n"
+"守方还会获得箭塔\\index{箭塔}单位牌，并将其放置在战斗板旁边。\n"
+"它的行为和远程 \\svg{unit_ranged} 单位一样，但不受到站位相关的任何效果的影响。\n"
+"例如，它对敌方单位进行攻击时永远不会受到远程惩罚，反之亦然。\n"
+"只有远程攻击和卡牌效果可以摧毁箭塔，但当所有城墙和城门都被摧毁时，它也被立即摧毁。\n"
+"攻方不需要摧毁它也能赢得战斗。\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:282
@@ -569,6 +805,8 @@ msgid ""
 "For Arrow Tower rules in Solo Scenarios, see \\pagelink{AI Siege}{AI Siege}.\n"
 "\n"
 msgstr ""
+"单人剧本中的箭塔规则，参见 \\pagelink{AI Siege}{AI攻城}。\n"
+"\n"
 
 #. type: multicols*
 #: sections/combat.tex:288
@@ -579,6 +817,10 @@ msgid ""
 "  \\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/coin.png}\n"
 "\\end{center}"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\\begin{center}\n"
+"  \\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/coin.png}\n"
+"\\end{center}"
 
 #. type: multicols
 #: sections/combat.tex:292
@@ -588,6 +830,9 @@ msgid ""
 "\\subsection*{\\pagetarget{Walls protection}{Protection} from \\svg[15]{unit_ranged} Attacks}\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\subsection*{对 \\svg[15]{unit_ranged} 攻击的\\pagetarget{Walls protection}{防护}}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:296
@@ -598,6 +843,10 @@ msgid ""
 "\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
+"防守方单位若站在己方一侧，且与一座未被摧毁的城墙或城门\\textbf{处于同一列}，则获得针对 \\svg{unit_ranged} 攻击的防护。\n"
+"如果它们成为从对手一侧的战斗板发起的 \\svg{unit_ranged} 攻击目标，\\textbf{则该次攻击的伤害减少 1}。\n"
+"\\vspace*{\\fill}\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:300
@@ -607,6 +856,9 @@ msgid ""
 "  \\transparent{0.15}\\includegraphics[width=0.7\\linewidth]{\\art/lions_shield_of_courage.png}\n"
 "\\end{center}"
 msgstr ""
+"\\begin{center}\n"
+"  \\transparent{0.15}\\includegraphics[width=0.7\\linewidth]{\\art/lions_shield_of_courage.png}\n"
+"\\end{center}"
 
 #. type: multicols
 #: sections/combat.tex:308
@@ -620,6 +872,13 @@ msgid ""
 "\\columnbreak\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\vspace*{\\fill}\n"
+"\\includegraphics[width=\\linewidth]{\\examples/ranged_protected.png}\n"
+"{\\textit{当戟兵位于一座未被摧毁的城门后方时，若从对手一侧的战斗板对其发起攻击，则其\\textbf{受到保护}。\n"
+"  邪眼的 \\svg{unit_ranged} 攻击伤害\\textbf{减少1点}。}}\n"
+"\\columnbreak\n"
+"\n"
 
 #. type: multicols
 #: sections/combat.tex:314
@@ -631,3 +890,8 @@ msgid ""
 "  Evil Eyes attack \\textbf{without penalty}.}}\n"
 "\\newline\\newline"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\\includegraphics[width=\\linewidth]{\\examples/ranged_unprotected.png}\n"
+"{\\textit{因为戟兵不在一段未被摧毁的城墙后方，所以\\textbf{保护不生效}。\n"
+"  邪眼\\textbf{攻击不受惩罚}。}}\n"
+"\\newline\\newline"

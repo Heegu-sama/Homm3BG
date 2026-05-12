@@ -57,6 +57,8 @@
 | level | Niveau |
 | main hero | Héros Principal |
 | movement points | ... |
+| MP | ... |
+| power | ... |
 | secondary hero | ... |
 | specialty | Spécialisation |
 
@@ -66,16 +68,21 @@
 |---|---|
 | center field | ... |
 | central map tile | ... |
+| creature bank | ... |
 | dragon utopia | ... |
 | far map tile | ... |
 | field | ... |
 | locations | Sites |
 | map tile | ... |
+| mines | ... |
+| monolith | ... |
 | near map tile | ... |
+| obelisk | ... |
 | random town | ... |
 | revisitable | ... |
 | settlement | ... |
 | starting (i) map tile | ... |
+| subterranean gate | ... |
 | tile | ... |
 | trading post | Échange |
 | water wheel | ... |
@@ -85,6 +92,7 @@
 | English | French |
 |---|---|
 | building materials | Matériaux |
+| gold | ... |
 | resource production tracker | Suivi des Revenus |
 | resources | Ressources |
 | treasure die | ... |
@@ -111,6 +119,8 @@
 | English | French |
 |---|---|
 | haste | ... |
+| magic arrow | ... |
+| school | ... |
 
 ## AI Deck
 
@@ -126,6 +136,7 @@
 | English | French |
 |---|---|
 | buildings | ... |
+| citadel | ... |
 | dwelling | ... |
 | population token | Jeton Population |
 
@@ -139,6 +150,9 @@
 | combat | Combat |
 | damage | dégâts |
 | front line | ... |
+| initiative | ... |
+| negative morale | ... |
+| positive morale | ... |
 | winning combat | ... |
 
 ## Battlefield
@@ -146,9 +160,14 @@
 | English | French |
 |---|---|
 | adventure mode | ... |
-| skirmish mode | ... |
-| final combat | ... |
+| alliance | ... |
+| campaign | ... |
+| clash | ... |
 | combat power level | ... |
+| cooperative | ... |
+| final combat | ... |
+| scenario | ... |
+| skirmish mode | ... |
 
 ## Keywords
 
@@ -163,11 +182,16 @@
 
 | English | French |
 |---|---|
+| artifact | ... |
 | core rulebook | ... |
 | effects | ... |
+| faction | ... |
 | game setup | Préparation |
 | map setup | ... |
 | player elimination | ... |
 | player setup | ... |
+| relic | ... |
+| round | ... |
 | round tracker | ... |
+| turn | ... |
 | war machine | ... |

@@ -63,6 +63,8 @@
 | level | уровень |
 | main hero | основной герой |
 | movement points | ОП (очки передвижения) |
+| MP | ... |
+| power | ... |
 | secondary hero | вторичный герой |
 | specialty | ... |
 
@@ -72,16 +74,21 @@
 |---|---|
 | center field | ... |
 | central map tile | ... |
+| creature bank | ... |
 | dragon utopia | Утопия драконов |
 | far map tile | дальний фрагмент карты |
 | field | поле |
 | locations | локации |
 | map tile | фрагмент карты |
+| mines | ... |
+| monolith | ... |
 | near map tile | ближний фрагмент карты |
+| obelisk | ... |
 | random town | случайный город |
 | revisitable | многоразовые |
 | settlement | посёлок |
 | starting (i) map tile | стартовый (I) фрагмент карты |
+| subterranean gate | ... |
 | tile | фрагмент |
 | trading post | рынок |
 | water wheel | ... |
@@ -91,6 +98,7 @@
 | English | Russian |
 |---|---|
 | building materials | строительные материалы |
+| gold | ... |
 | resource production tracker | трекер добычи ресурсов |
 | resources | ресурсы |
 | treasure die | кубик сокровищ |
@@ -117,6 +125,8 @@
 | English | Russian |
 |---|---|
 | haste | Ускорение |
+| magic arrow | ... |
+| school | ... |
 
 ## AI Deck
 
@@ -132,6 +142,7 @@
 | English | Russian |
 |---|---|
 | buildings | ... |
+| citadel | ... |
 | dwelling | Жилище |
 | population token | жетон популяции |
 
@@ -145,6 +156,9 @@
 | combat | сражение |
 | damage | урон |
 | front line | передовая линия |
+| initiative | ... |
+| negative morale | ... |
+| positive morale | ... |
 | winning combat | ... |
 
 ## Battlefield
@@ -152,9 +166,14 @@
 | English | Russian |
 |---|---|
 | adventure mode | ... |
-| skirmish mode | ... |
-| final combat | ... |
+| alliance | ... |
+| campaign | ... |
+| clash | ... |
 | combat power level | ... |
+| cooperative | ... |
+| final combat | ... |
+| scenario | ... |
+| skirmish mode | ... |
 
 ## Keywords
 
@@ -169,11 +188,16 @@
 
 | English | Russian |
 |---|---|
+| artifact | ... |
 | core rulebook | книга правил |
 | effects | эффекты |
+| faction | ... |
 | game setup | подготовка к игре |
 | map setup | ... |
 | player elimination | выбывание игрока |
 | player setup | ... |
+| relic | ... |
+| round | ... |
 | round tracker | трекер раундов |
+| turn | ... |
 | war machine | боевые машины |
