@@ -13,6 +13,9 @@
 \newcommand{\expansionlabelfont}[0]{}
 \newcommand{\cnignorefontfeature}[1]{}
 \newcommand{\subheaderfont}[0]{\let\addfontfeature\cnignorefontfeature}
+\newcommand\subsectionspacing{
+  \titlespacing*{\subsection}{0em}{0.9em}{0.2em}
+}
 
 \directlua{
   luaotfload.add_fallback(
