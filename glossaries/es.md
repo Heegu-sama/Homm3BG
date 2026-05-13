@@ -57,6 +57,8 @@
 | level | Nivel |
 | main hero | Héroe Principal |
 | movement points | ... |
+| MP | ... |
+| power | ... |
 | secondary hero | Héroe Secundario |
 | specialty | ... |
 
@@ -66,16 +68,21 @@
 |---|---|
 | center field | ... |
 | central map tile | ... |
+| creature bank | ... |
 | dragon utopia | Utopía del Dragón |
 | far map tile | ... |
 | field | Casilla |
 | locations | ... |
 | map tile | Loseta |
+| mines | ... |
+| monolith | ... |
 | near map tile | ... |
+| obelisk | ... |
 | random town | ... |
 | revisitable | Casillas Revisitables |
 | settlement | Asentamiento |
 | starting (i) map tile | Loseta Inicial (I) |
+| subterranean gate | ... |
 | tile | Loseta |
 | trading post | ... |
 | water wheel | ... |
@@ -85,6 +92,7 @@
 | English | Spanish |
 |---|---|
 | building materials | Materiales de Construcción |
+| gold | ... |
 | resource production tracker | Seguimiento de la Producción de Recursos |
 | resources | Recursos |
 | treasure die | Dado del Tesoro |
@@ -111,6 +119,8 @@
 | English | Spanish |
 |---|---|
 | haste | ... |
+| magic arrow | ... |
+| school | ... |
 
 ## AI Deck
 
@@ -126,6 +136,7 @@
 | English | Spanish |
 |---|---|
 | buildings | ... |
+| citadel | ... |
 | dwelling | Vivienda |
 | population token | Ficha de Población |
 
@@ -139,6 +150,9 @@
 | combat | Combate |
 | damage | daño |
 | front line | Frente |
+| initiative | ... |
+| negative morale | ... |
+| positive morale | ... |
 | winning combat | ... |
 
 ## Battlefield
@@ -146,9 +160,14 @@
 | English | Spanish |
 |---|---|
 | adventure mode | ... |
-| skirmish mode | ... |
-| final combat | ... |
+| alliance | ... |
+| campaign | ... |
+| clash | ... |
 | combat power level | ... |
+| cooperative | ... |
+| final combat | ... |
+| scenario | ... |
+| skirmish mode | ... |
 
 ## Keywords
 
@@ -163,11 +182,16 @@
 
 | English | Spanish |
 |---|---|
+| artifact | ... |
 | core rulebook | ... |
 | effects | ... |
+| faction | ... |
 | game setup | Preparación |
 | map setup | ... |
 | player elimination | eliminación de jugadores |
 | player setup | ... |
+| relic | ... |
+| round | ... |
 | round tracker | ... |
+| turn | ... |
 | war machine | Máquinas de Guerra |
