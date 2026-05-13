@@ -3,14 +3,14 @@
 ## Style notes
 
 - Myślnik: `--`
-- Cytaty: `,,word''`
+- Cudzysłów: `,,słowo''`
 - Spójniki i przyimki takie jak "z" czy "i" łączymy z następnym słowem twardą spacją, np. "z~tego powodu", "tryb starcia i~sojuszu"
 - Nazwy budynków, frakcji, bohaterów, zdolności, zaklęć, stworzeń i artefaktów pisane są wielką literą
 - W przeciwieństwie do oryginału, gdy drugi argument komendy `\wikilink{...}{...}` kończy się znakiem interpunkcyjnym, znak ten powinien znaleźć się poza nawiasem klamrowym.
   Na przykład:
   ```po
   msgid "When casting the \\wikilink{spells/quicksand}{\\textbf{Quicksand Spell},} depending on the \\svg{empower} used..."
-  msgstr "Rzucając Zaklęcie \\wikilink{spells/quicksand}{\\textbf{Ruchomych Piasków}}, w zależności od użytego \\svg{empower}..."
+  msgstr "Rzucając Zaklęcie \\wikilink{spells/quicksand}{\\textbf{Ruchomych Piasków}}, w~zależności od użytego \\svg{empower}..."
 
   ```
 
