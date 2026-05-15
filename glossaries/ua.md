@@ -41,6 +41,7 @@
 | reinforced | ... |
 | summoned elementals | ... |
 | unit cards | Карти Підрозділів |
+| unit miniatures | Мініатюри Підрозділів |
 | units | Підрозділи |
 | zealots | ... |
 
@@ -48,9 +49,11 @@
 
 | English | Ukrainian |
 |---|---|
+| MP | ... |
 | ability | Здібність |
 | experience | Досвід |
 | expert effects | ... |
+| hero board | Планшет Героя |
 | hero | Герой |
 | heroes | Герої |
 | level tracker | Трек Рівня |
@@ -80,12 +83,15 @@
 | obelisk | ... |
 | random town | Випадкове Місто |
 | revisitable | Багаторазові |
+| sea map tile | Морська Плитка Мапи |
 | settlement | Поселення |
 | starting (i) map tile | Стартова (I) Плитка |
 | subterranean gate | ... |
+| subterranean map tile | Підземна Плитка Мапи |
 | tile | Плитка |
 | trading post | Торговий Пост |
 | water wheel | Водяне Колесо |
+| whirlpool | Вир |
 
 ## Resources
 
@@ -93,6 +99,8 @@
 |---|---|
 | building materials | Будівельні Матеріали |
 | gold | ... |
+| grail token | Жетон Грааля |
+| resource dice | Кістка Ресурсів |
 | resource production tracker | Трек Виробництва Ресурсів |
 | resources | Ресурси |
 | treasure die | Кістка Скарбів |
@@ -107,12 +115,18 @@
 | decks | Колоди |
 | discard pile | Стопка Скиду |
 | discard | Скинути |
+| empowered ability card | ... |
+| empowered ability token | ... |
+| empowered statistic card | ... |
 | hand limit | Ліміт Руки |
+| pandora's box card | ... |
 | player decks | Колода Гравця |
 | search | ... |
 | specialty card | Карта Спеціалізації |
 | spell cards | Карти Заклинань |
+| spell scroll | Сувій Заклинання |
 | statistic card | ... |
+| summoned unit card | ... |
 
 ## Spells
 
@@ -135,10 +149,14 @@
 
 | English | Ukrainian |
 |---|---|
+| build token | Жетон Будівництва |
 | buildings | ... |
 | citadel | ... |
 | dwelling | Житло |
 | population token | Жетон Населення |
+| spell book token | Жетон Книги Заклинань |
+| town board | Планшет Міста |
+| town card | Карта Міста |
 
 ## Combat
 
@@ -159,8 +177,12 @@
 
 | English | Ukrainian |
 |---|---|
+| adventure card | ... |
 | adventure mode | ... |
 | alliance | ... |
+| battlefield board | ... |
+| battlefield obstacles | ... |
+| battlefield | Поле Битви |
 | campaign | ... |
 | clash | ... |
 | combat power level | ... |
@@ -173,18 +195,32 @@
 
 | English | Ukrainian |
 |---|---|
+| attack token | ... |
 | clone token | ... |
+| corrosion token | ... |
+| fire wall token | ... |
 | force field token | ... |
 | land mine token | ... |
+| miniatures | Мініатюри |
 | quicksand token | ... |
+| stack token | ... |
+| summon token | ... |
+| time token | ... |
+| weakness token | ... |
 
 ## Other
 
 | English | Ukrainian |
 |---|---|
 | artifact | ... |
+| astrologers proclaim card | ... |
+| attack dice | ... |
+| black cubes | ... |
 | core rulebook | книга правил |
 | effects | Ефекти |
+| event card | ... |
+| expert effect markers | ... |
+| faction cubes | ... |
 | faction | ... |
 | game setup | Підготовка до Гри |
 | map setup | ... |
