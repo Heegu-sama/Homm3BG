@@ -124,8 +124,8 @@
 | decks | talie |
 | discard pile | stos kart odrzuconych |
 | discard | odrzuć |
-| empowered ability card | karta wzmocnionej zdolności |
-| empowered ability token | żeton wzmocnionej zdolności |
+| empowered ability card | karta ulepszonej zdolności |
+| empowered ability token | żeton ulepszonej zdolności |
 | empowered statistic card | karta ulepszonych statystyk |
 | hand limit | limit kart w ręce |
 | pandora's box card | karta puszki pandory |
