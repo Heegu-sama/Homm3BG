@@ -699,6 +699,14 @@
   }
 }
 
+\newcommand{\level}[1]{%
+  \stringswitch{#1}{%
+    {I}{\svg[8.7]{level1}}%
+    {IV}{\svg[8.7]{level4}}%
+    {VI}{\svg[8.7]{level6}}%
+  }{{\liberation\textbf{#1}}}%
+}
+
 \newcommand{\drawbottom}{
   \iftoggle{textright2left}{
     \ifodd\value{page}
