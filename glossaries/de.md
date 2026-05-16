@@ -41,6 +41,7 @@
 | reinforced | ... |
 | summoned elementals | ... |
 | unit cards | Einheitenkarten |
+| unit miniatures | ... |
 | units | Einheiten |
 | zealots | ... |
 
@@ -48,9 +49,11 @@
 
 | English | German |
 |---|---|
+| MP | ... |
 | ability | Fähigkeit |
 | experience | Erfahrung |
 | expert effects | ... |
+| hero board | ... |
 | hero | Held |
 | heroes | Helden |
 | level tracker | Stufenleiste |
@@ -80,12 +83,15 @@
 | obelisk | ... |
 | random town | Zufällige Stadt |
 | revisitable | besuchbare |
+| sea map tile | ... |
 | settlement | Siedlung |
 | starting (i) map tile | Startgebiet (I) |
 | subterranean gate | ... |
+| subterranean map tile | ... |
 | tile | Gebiet |
 | trading post | Handelsposten |
 | water wheel | ... |
+| whirlpool | ... |
 
 ## Resources
 
@@ -93,6 +99,8 @@
 |---|---|
 | building materials | Baumaterialien |
 | gold | ... |
+| grail token | ... |
+| resource dice | Ressourcenwürfel |
 | resource production tracker | Einkommensleiste |
 | resources | Ressourcen |
 | treasure die | Schatzwürfel |
@@ -107,12 +115,18 @@
 | decks | Decks |
 | discard pile | Ablagestapel |
 | discard | abwerfen |
+| empowered ability card | ... |
+| empowered ability token | ... |
+| empowered statistic card | ... |
 | hand limit | Handkartenlimit |
+| pandora's box card | ... |
 | player decks | Spielerdecks |
 | search | Durchsuche |
 | specialty card | ... |
 | spell cards | Zauberkarten |
+| spell scroll | ... |
 | statistic card | ... |
+| summoned unit card | ... |
 
 ## Spells
 
@@ -135,10 +149,14 @@
 
 | English | German |
 |---|---|
+| build token | ... |
 | buildings | ... |
 | citadel | ... |
 | dwelling | ... |
 | population token | Bevölkerungsmarker |
+| spell book token | ... |
+| town board | ... |
+| town card | ... |
 
 ## Combat
 
@@ -159,8 +177,12 @@
 
 | English | German |
 |---|---|
+| adventure card | ... |
 | adventure mode | Abenteuermodus |
 | alliance | ... |
+| battlefield board | ... |
+| battlefield obstacles | ... |
+| battlefield | ... |
 | campaign | ... |
 | clash | ... |
 | combat power level | ... |
@@ -173,18 +195,32 @@
 
 | English | German |
 |---|---|
+| attack token | ... |
 | clone token | Klon-Marker |
+| corrosion token | ... |
+| fire wall token | ... |
 | force field token | Kraftfeld-Marker |
 | land mine token | Landminen-Marker |
+| miniatures | ... |
 | quicksand token | Treibsand-Marker |
+| stack token | ... |
+| summon token | ... |
+| time token | ... |
+| weakness token | ... |
 
 ## Other
 
 | English | German |
 |---|---|
 | artifact | ... |
+| astrologers proclaim card | ... |
+| attack dice | ... |
+| black cubes | ... |
 | core rulebook | Regelbuch |
 | effects | ... |
+| event card | ... |
+| expert effect markers | ... |
+| faction cubes | ... |
 | faction | ... |
 | game setup | Spielaufbau |
 | map setup | Aufbau der Abenteuerkarte |

@@ -47,6 +47,7 @@
 | reinforced | ... |
 | summoned elementals | ... |
 | unit cards | карты отрядов |
+| unit miniatures | миниатюры отрядов |
 | units | отряды |
 | zealots | ... |
 
@@ -54,9 +55,11 @@
 
 | English | Russian |
 |---|---|
+| MP | ОП |
 | ability | навык |
 | experience | опыт |
 | expert effects | экспертный эффект |
+| hero board | планшет героя |
 | hero | герой |
 | heroes | герои |
 | level tracker | трекер уровня |
@@ -86,12 +89,15 @@
 | obelisk | ... |
 | random town | случайный город |
 | revisitable | многоразовые |
+| sea map tile | морской фрагмент карты |
 | settlement | посёлок |
 | starting (i) map tile | стартовый (I) фрагмент карты |
 | subterranean gate | ... |
+| subterranean map tile | подземный фрагмент карты |
 | tile | фрагмент |
 | trading post | рынок |
 | water wheel | ... |
+| whirlpool | водоворот |
 
 ## Resources
 
@@ -99,6 +105,8 @@
 |---|---|
 | building materials | строительные материалы |
 | gold | ... |
+| grail token | жетон Грааля |
+| resource dice | кубик ресурсов |
 | resource production tracker | трекер добычи ресурсов |
 | resources | ресурсы |
 | treasure die | кубик сокровищ |
@@ -113,12 +121,18 @@
 | decks | колоды |
 | discard pile | сброс |
 | discard | сброс |
+| empowered ability card | усиленная карта навыка |
+| empowered ability token | жетон усиленного навыка |
+| empowered statistic card | усиленная карта характеристик |
 | hand limit | лимит руки |
+| pandora's box card | карта ящика Пандоры |
 | player decks | колода игрока |
 | search | поиск |
 | specialty card | ... |
 | spell cards | карты заклинаний |
+| spell scroll | свиток заклинания |
 | statistic card | карта характеристик |
+| summoned unit card | карта призванного отряда |
 
 ## Spells
 
@@ -141,10 +155,14 @@
 
 | English | Russian |
 |---|---|
+| build token | жетон строительства |
 | buildings | ... |
 | citadel | ... |
 | dwelling | Жилище |
 | population token | жетон популяции |
+| spell book token | жетон книги заклинаний |
+| town board | планшет города |
+| town card | карта города |
 
 ## Combat
 
@@ -165,8 +183,12 @@
 
 | English | Russian |
 |---|---|
+| adventure card | карта приключения |
 | adventure mode | ... |
 | alliance | ... |
+| battlefield board | доска поля битвы |
+| battlefield obstacles | препятствия поля битвы |
+| battlefield | поле битвы |
 | campaign | ... |
 | clash | ... |
 | combat power level | ... |
@@ -179,18 +201,32 @@
 
 | English | Russian |
 |---|---|
+| attack token | жетон атаки |
 | clone token | ... |
+| corrosion token | жетон коррозии |
+| fire wall token | жетон огненной стены |
 | force field token | ... |
 | land mine token | ... |
+| miniatures | миниатюры |
 | quicksand token | ... |
+| stack token | жетон улучшенного отряда |
+| summon token | жетон призыва |
+| time token | жетон времени |
+| weakness token | жетон слабости |
 
 ## Other
 
 | English | Russian |
 |---|---|
 | artifact | ... |
+| astrologers proclaim card | карта астрологов |
+| attack dice | кубик атаки |
+| black cubes | чёрные кубики |
 | core rulebook | книга правил |
 | effects | эффекты |
+| event card | карта события |
+| expert effect markers | маркеры экспертного эффекта |
+| faction cubes | кубики фракции |
 | faction | ... |
 | game setup | подготовка к игре |
 | map setup | ... |
