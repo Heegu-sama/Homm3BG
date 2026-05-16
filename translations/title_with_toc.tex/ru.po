@@ -54,12 +54,6 @@ msgstr "Алексей Соколов"
 
 #. type: center
 #: sections/title_with_toc.tex:22
-#, fuzzy
-#| msgid ""
-#| "\\iftoggle{githubbuild}{ \\getenv[\\githubsha]{GITHUB_SHA} This is an "
-#| "unreleased version built on GitHub from commit \\href{\\repourl}"
-#| "{\\textlang{english}{\\StrLeft{\\githubsha}{7}}}.  }"
-#| "{ \\textlang{\\mainlanguagename}{Version \\textlang{english}{\\version}} }"
 msgid ""
 "\\iftoggle{githubbuild}{ \\getenv[\\githubsha]{GITHUB_SHA} This is an "
 "unreleased version built on GitHub from commit \\href{\\repourl}"
@@ -71,16 +65,10 @@ msgstr ""
 "является неопубликованной сборкой из коммита в GitHub \\href{\\repourl}"
 "{\\textlang{english}{\\StrLeft{\\githubsha}{7}}}.  }"
 "{ \\textlang{\\mainlanguagename}{Версия \\textlang{english}{\\version}} }"
+"{\\large\\doclicenseIcon}"
 
 #. type: Plain text
 #: sections/title_with_toc.tex:27
-#, fuzzy
-#| msgid ""
-#| "This is a community-driven project, which has a \\href{\\repourl}{GitHub "
-#| "repository}.  Everyone is welcome to contribute, make changes, and fix "
-#| "errors.  If you simply want to leave feedback, please do so in the "
-#| "original \\href{\\bggthreadurl}{BoardGameGeek thread}.  You can also join "
-#| "the community \\href{\\discordurl}{Discord server} to get in touch."
 msgid ""
 "This project is licensed under \\doclicenseLongNameRef.  It is community-"
 "driven, and has a \\href{\\repourl}{GitHub repository}.  Everyone is welcome "
@@ -92,7 +80,8 @@ msgstr ""
 "GitHub}. Вы можете внести свой вклад в разработку, внести изменения или "
 "исправить ошибки. Если вы хотите просто оставить отзыв, сделайте это в "
 "\\href{\\bggthreadurl}{оригинальной ветке BoardGameGeek}. Вы также можете  "
-"присоединиться к \\href{\\discordurl}{серверу Discord}."
+"присоединиться к нашему \\href{\\discordurl}{серверу Discord}. Лицензия "
+"проекта: \\doclicenseLongNameRef."
 
 #. type: center
 #: sections/title_with_toc.tex:33
@@ -178,6 +167,16 @@ msgid ""
 "several different Factions, led by their Heroes, battle for supremacy.  "
 "Choose your Faction and Hero and banish your unruly enemies from these lands!"
 msgstr ""
+"\\AddToHookNext{shipout/background}{\\iftoggle{noartbackground}{}{ \\put "
+"(\\iftoggle{printable}{0.005\\paperwidth}"
+"{0.03\\paperwidth},-0.75\\paperheight){\\transparent{0.15}"
+"{\\includegraphics[width=0.9\\paperwidth]{\\art/"
+"minotaur_crusader_skeleton.png}}}}\\iftoggle{printable}{ \\drawbottom }"
+"{\\put (0in,-\\paperheight)"
+"{\\includegraphics[width=\\paperwidth,height=0.05\\paperheight]{\\layout/"
+"bottom.png}}} } \\vspace*{\\fill} Континент Антагарич охвачен войной: "
+"различные фракции, ведомые своими героями, сражаются за господство. Выберите "
+"свою фракцию и героя и изгоните непокорных врагов с этих земель!"
 
 #.  Source: https://heroes.thelazy.net/index.php/Restoration_of_Erathia_Manual_Page_84
 #. type: Plain text
@@ -186,6 +185,8 @@ msgid ""
 "\\textbf{Castle:} Human armies rallied under the banners of Clerics and "
 "Knights, bolstered by the might of Griffins and protected by Angels."
 msgstr ""
+"\\textbf{Замок:} Армии людей, сплотившиеся под знамёнами рыцарей и "
+"священников, усиленные мощью грифонов и защищённые ангелами."
 
 #.  Source: https://heroes.thelazy.net/index.php/Restoration_of_Erathia_Manual_Page_88
 #. type: Plain text
@@ -194,6 +195,8 @@ msgid ""
 "\\textbf{Dungeon:} Subterranean forces led by Warlocks and Overlords, "
 "wielding dark magic and bending fearsome creatures to their will."
 msgstr ""
+"\\textbf{Темница:} Подземные силы, ведомые лордами и чернокнижниками, "
+"использующими тёмную магию и подчиняющими ужасающих существ своей воле."
 
 #.  Source: https://heroes.thelazy.net/index.php/Restoration_of_Erathia_Manual_Page_100
 #. type: Plain text
@@ -202,8 +205,10 @@ msgid ""
 "\\textbf{Necropolis:} Legions of the undead, commanded by Necromancers and "
 "Death Knights, who sap the strength of the living to fuel their own."
 msgstr ""
+"\\textbf{Некрополис:} Легионы нежити под командованием некромантов и рыцарей "
+"смерти, отбирающих жизненные силы у живых, чтобы поддерживать свою мощь."
 
 #. type: Plain text
 #: sections/title_with_toc.tex:91
 msgid "More Factions, Heroes, and their armies await in the expansions."
-msgstr ""
+msgstr "В дополнениях вас ждут новые фракции, герои и их армии."
