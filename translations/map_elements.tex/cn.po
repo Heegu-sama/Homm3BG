@@ -47,7 +47,7 @@ msgstr ""
 #. type: Plain text
 #: sections/map_elements.tex:3
 msgid "\\pagetarget{Map}{\\addsection{Map Elements}{\\skills/logistics.png}}"
-msgstr ""
+msgstr "\\pagetarget{Map}{\\addsection{地图元素}{\\skills/logistics.png}}"
 
 #. type: multicols*
 #: sections/map_elements.tex:11
@@ -62,6 +62,14 @@ msgid ""
 "Starting (I) Tiles are the easiest while Center (VI–VII) Tiles are the most difficult.\\par\n"
 "\n"
 msgstr ""
+"{2}\n"
+"每个剧本使用四种类型的地图板块构建。\n"
+"玩家从其阵营专属的起始（I）地图板块开始。\n"
+"其他板块可以按照下一页所述放置并发现。\n"
+"在游戏准备期间，所有面朝下的板块都应按照剧本描述，从可能板块的池中随机选择并洗混，保持它们面朝下。\\par\n"
+"每个板块上的\\textbf{罗马数字}描述了该板块上\\textbf{中立单位的总体难度}，以及玩家可预期在该板块上找到的奖励数量。\n"
+"起始（I）板块最简单，而中央（VI–VII）板块最困难。\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:16
@@ -73,6 +81,11 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\\begin{center}\n"
+"  \\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/earth_magic.png}\n"
+"\\end{center} \\vfill \n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:28
@@ -91,6 +104,18 @@ msgid ""
 "\\columnbreak\n"
 "\n"
 msgstr ""
+"\\subsection*{地图板块结构}\\index{地图板块}\n"
+"每个地图板块被划分为7个独立的\\textbf{格子}，你的英雄可以\\textbf{访问}这些格子。\n"
+"当你的英雄移动到一个格子时，如果该格没有守卫，必须立即访问；或者\n"
+"在访问前，先与守卫该格的敌人进行一场\\pagelink{Combat}{战斗}。\n"
+"空格\\index{空格}在被访问时没有效果。\n"
+"格子边缘上的黄色实线不能穿过。\n"
+"格上标有的罗马数字表示该格由中立单位守卫，必须与其战斗才能访问，见封底的\\hyperlink{Difficulty Table}{表格}。\\par\n"
+"\\note{2}{\n"
+"  阻塞格不能进入，但可以离开。\n"
+"}\n"
+"\\columnbreak\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:31
@@ -117,6 +142,17 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"    \\node (tiles) [inner sep=0] {\\includegraphics[width=0.9\\linewidth]{\\images/maptiles.png}};\n"
+"    \\begin{relcoords}{tiles}\n"
+"      \\draw (0,    0.9) node {\\encircle{1}};\n"
+"      \\draw (0.55, 0.9) node {\\encircle{2}};\n"
+"      \\draw (0,    0.4) node {\\encircle{3}};\n"
+"      \\draw (0.55, 0.4) node {\\encircle{4}};\n"
+"    \\end{relcoords}\n"
+"  \\end{tikzpicture}\n"
+"  \\imagecaption{\\\\ \\footnotesize{}地图板块的类型}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:50
@@ -131,6 +167,14 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\item[\\textbf{1.}] 起始地图板块：I\n"
+"  \\item[\\textbf{2.}] 远端地图板块：II--III\n"
+"  \\item[\\textbf{3.}] 近端地图板块：IV--V\n"
+"  \\item[\\textbf{4.}] 中央地图板块：VI--VII\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:52 sections/map_elements.tex:221
@@ -184,6 +228,20 @@ msgid ""
 "    \\item[\\textbf{7.}] Tile name like \\\\{} \\texttt{F2} or \\texttt{\\#N3}\n"
 "  "
 msgstr ""
+"\\begin{center}\n"
+"  \\imagecaption{地图板块剖析}\n"
+"\\end{center}\n"
+"\\begin{itemize}\n"
+"  \\footnotesize\n"
+"  \\begin{multicols}{2}\n"
+"    \\item[\\textbf{1.}] 空置格\n"
+"    \\item[\\textbf{2.}] 地点\n"
+"    \\item[\\textbf{3.}] 神器符号\n"
+"    \\item[\\textbf{4.}] 地图格难度\n"
+"    \\item[\\textbf{5.}] 边界线\n"
+"    \\item[\\textbf{6.}] 阻塞格\n"
+"    \\item[\\textbf{7.}] 板块名称，例如 \\\\{} \\texttt{F2} 或 \\texttt{\\#N3}\n"
+"  "
 
 #. type: multicols*
 #: sections/map_elements.tex:89
@@ -213,6 +271,23 @@ msgid ""
 "\\columnbreak\n"
 "\n"
 msgstr ""
+"\\pagetarget{Categories}{\\subsection*{地点类别}}\n"
+"访问格会为英雄提供收益，例如获得资源或牌（见 \\pagelinkwithcomma{All Map Locations}{所有地图地点}）。\n"
+"格分为三类：\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{可访问} – 一旦你访问此格，在其上放置一个黑色方块。\n"
+"    只要其上有黑色方块，就将其视为空格。\n"
+"  \\item \\textbf{可插旗} – 这些格可以被玩家占领并提供被动收益。\n"
+"    当你访问其中一个时，在其上放置你的阵营方块。\n"
+"    访问你已插旗格的敌方英雄会用他们的方块替换你的方块，以\\textbf{偷取}该格的效果。\n"
+"    同盟英雄将已插旗格\\textbf{视为空格}。\n"
+"  \\item \\textbf{可重复访问} – 你可以多次访问此格。\n"
+"    当你访问它时，不放置任何方块。\n"
+"    你可以支付 1 移动力 再次访问此格。\n"
+"\\end{itemize}\n"
+"\\vspace*{\\fill}\n"
+"\\columnbreak\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:117
@@ -226,6 +301,13 @@ msgid ""
 "You may always rotate Map Tiles when placing or revealing them.\n"
 "\n"
 msgstr ""
+"\\pagetarget{Placing}{\\subheader{放置和发现新板块}}\\index{发现板块}\n"
+"英雄可以花费 1 移动力，以揭示一个相邻的面朝下板块，或从自己的板块供应中放置一个远端（II–III）地图板块（剧本规则决定你自己的供应中的板块）。\n"
+"所有面朝下的板块都应保持\\textbf{对所有玩家隐藏}，直到它们即将被放置或揭示。\n"
+"新板块必须放置在花费 移动力 的英雄相邻处，并且与至少两个其他已有板块相连。\n"
+"新板块还必须被摆放成存在一条有效路径，最终将它们与所有其他板块相连。\n"
+"在放置或揭示地图板块时，你始终可以旋转它们。\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:122
@@ -237,6 +319,11 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\medskip\n"
+"\\note{5}{\n"
+"  当你访问一个可访问格时， \\textbf{你必须} 在该格上放置一个黑色方块，即使你不能或选择不使用该格的效果。\n"
+"}\n"
+"\n"
 
 #. type: figure*
 #: sections/map_elements.tex:138
@@ -254,6 +341,17 @@ msgid ""
 "    \\node at (1, 1) [anchor=west] {\\textcolor{cadmiumgreen}{be adjacent to two other Tiles}};\n"
 "  \\end{tikzpicture}"
 msgstr ""
+"[!hb]\n"
+"  \\centering\n"
+"  \\includegraphics[width=\\textwidth]{\\images/placement.png}\n"
+"  \\footnotesize\n"
+"  \\bfseries\n"
+"  \\itshape\n"
+"  \\begin{tikzpicture}[overlay]\n"
+"    \\node at (5, 10) {\\textcolor{darkcandyapplered}{你不能在这里添加此板块}};\n"
+"    \\node at (1, 1.4) [anchor=west] {\\textcolor{cadmiumgreen}{你可以在这里添加此板块，因为它将}};\n"
+"    \\node at (1, 1) [anchor=west] {\\textcolor{cadmiumgreen}{与另外两个板块相邻}};\n"
+"  \\end{tikzpicture}"
 
 #. type: multicols*
 #: sections/map_elements.tex:144
@@ -262,6 +360,8 @@ msgid ""
 "\\subsection*{Example ``Flagging a guarded Mine''}\n"
 "\n"
 msgstr ""
+"\\subsection*{示例``占领有守卫的矿场''}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:147
@@ -271,6 +371,9 @@ msgid ""
 "    She spends 1 MP to move onto the Mine, which begins \\pagelink{Combat}{Combat} against Neutral Units, since the Field has a \\pagelink{Difficulty}{Difficulty Rating} and has not been previously flagged by any player.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{爱丽丝想要用她的主英雄，亡灵巫师山德鲁，给相邻的\\pagelink{Mines}{矿场}插旗以占领它。\n"
+"    她花费1移动力移动到该矿场上，这会开始与中立单位的\\pagelink{Combat}{战斗}，因为该格具有\\pagelink{Difficulty}{难度评级}，且此前未被任何玩家插旗。}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:149
@@ -279,6 +382,8 @@ msgid ""
 "\\includegraphics[width=1.1\\linewidth]{\\examples/sandro_takes_mine.png}\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=1.1\\linewidth]{\\examples/sandro_takes_mine.png}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:153
@@ -289,6 +394,10 @@ msgid ""
 "During the Combat, she casts the Lightning Bolt, and Empowers \\svg{empower} it with Haste's alternative (bottom) effect, which makes the Lightning Bolt deal 3 damage \\svg{damage}, killing the Troglodytes and winning the Combat.}\n"
 "\n"
 msgstr ""
+"\\textit{矿场原来由穴居人守卫，它们有 3 生命值 \\svg{health_points}。\n"
+"爱丽丝当前手牌包括一张魔法威力牌、一张闪电箭、加速术和城镇传送门。\n"
+"在战斗期间，她施放闪电箭，并用加速术的替代（下方）效果将其强化 \\svg{empower}，这使闪电箭造成 3 点伤害 \\svg{damage}，杀死穴居人并赢得战斗。}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:155
@@ -306,6 +415,9 @@ msgid ""
 "\\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell card per Combat Round.}\\par\n"
 "\n"
 msgstr ""
+"\\columnbreak\n"
+"\\textit{战斗只持续了一轮，所以爱丽丝无法同时施放闪电箭和加速术，因为玩家每个战斗轮次只能打出一张法术牌。}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:165
@@ -318,6 +430,12 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\textit{爱丽丝现在通过在该矿场上放置一个自己的阵营方块来插旗占领它。\n"
+"    插旗占领这个特定矿场会使她的建筑材料 \\svg{building_materials} 产量增加2，并且由于她是第一个插旗占领该矿场的玩家，她还立即获得该矿场2 \\svg{building_materials} 的产出值。}\\par\n"
+"\\textit{之后，爱丽丝想要施放手牌中仍保留的回城术，回去防守一个先前已插旗占领的定居点。\n"
+"    她的英雄是II级，因此她可以用魔法威力牌的专家效果 \\svg{expert} 来强化它，这会在施放后给予她额外1点移动力。\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:167
@@ -339,7 +457,7 @@ msgstr ""
 #. type: Plain text
 #: sections/map_elements.tex:187
 msgid "\\subheader{Expansion Tiles}"
-msgstr ""
+msgstr "\\subheader{扩展板块}"
 
 #. type: multicols
 #: sections/map_elements.tex:187
@@ -358,6 +476,18 @@ msgid ""
 "\\end{expansion}\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\begin{expansion}{cove}\n"
+"  \\subsection*{\\pagetarget{Sea Map Tiles}{海洋地图板块}}\n"
+"  \\index{海洋地图板块}\n"
+"  海洋地图板块拥有独特的背面，并在游戏准备期间按剧本地图布局所示放置。\n"
+"  探索它们的方式与普通板块相同。\n"
+"  海洋地图板块可能同时包含陆地格和海洋格。\n"
+"  从陆地到陆地、从海洋到海洋，或从海洋到陆地的移动均照常进行。\n"
+"  然而，当你的英雄\\textbf{从陆地格进入海洋格}时，其本回合的移动结束。\n"
+"  你可以将未使用的移动力用于其他行动（例如，对中立单位\\pagelink{Timelimit}{延长战斗}），但你在该回合不能再移动，即使借助卡牌效果也不行。\n"
+"\\end{expansion}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:189 sections/map_elements.tex:199
@@ -383,6 +513,14 @@ msgid ""
 "\\end{expansion}\n"
 "\n"
 msgstr ""
+"\\begin{expansion}{conflux}\n"
+"  \\subsection*{\\pagetarget{Elemental Map Tiles}{元素地图板块}}\n"
+"  \\index{元素地图板块}\n"
+"  每个元素地图板块都与一个\\pagelink{Schools of Magic}{魔法学派}相关联。\n"
+"  当你的主英雄站在这样的板块上时，来自该魔法学派的所有已施放法术的\\svg{empower}增加1。\n"
+"  % 需要关于主英雄的澄清。\n"
+"\\end{expansion}\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:213
@@ -403,6 +541,20 @@ msgid ""
 "\\columnbreak\n"
 "\n"
 msgstr ""
+"\\begin{expansion}{stronghold}\n"
+"  \\subsection*{\\pagetarget{Subterranean Map Tiles}{地下地图板块}}\n"
+"  \\index{地下地图板块}\n"
+"  地下地图板块具有独特的背面，并在准备期间按剧本地图布局所示放置。\n"
+"  它们的运作方式类似于普通地图板块，区别在于\\textbf{你不能在地表和地下板块之间移动，除非在两者之间使用\\pagelink{Subterranean Gate}{地下通道}}或回城术法术。\n"
+"  牌上的其他移动效果都不能允许你从一者移动到另一者。\n"
+"  你也不能在站在地表地图板块上时发现地下地图板块，反之亦然。\n"
+"  将地下通道标记的两个格都视为\\textbf{一个格}。\n"
+"  当英雄进入有地下通道的格时，免费发现另一侧的地图板块（如果它仍未被发现）。\n"
+"  否则，将地下通道标记视为空格。\n"
+"  % NOTE: Discovering from one to the other should also be impossible.\n"
+"\\end{expansion}\n"
+"\\columnbreak\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:219
@@ -415,6 +567,12 @@ msgid ""
 "\\end{tikzpicture}}\n"
 "\n"
 msgstr ""
+"\\makebox[\\linewidth][c]{\\begin{tikzpicture}\n"
+"  \\node (front) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-cove.png}};\n"
+"  \\node (back) [right=0pt of front.east] {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-sea.png}};\n"
+"  \\node [below=0pt of {$(front.south)!0.5!(back.south)$}] {\\imagecaption{海洋地图板块}};\n"
+"\\end{tikzpicture}}\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:232
@@ -432,6 +590,17 @@ msgid ""
 "\\end{tikzpicture}}\n"
 "\n"
 msgstr ""
+"\\makebox[\\linewidth][c]{\\begin{tikzpicture}\n"
+"  \\node (fire) {\\includegraphics[width=0.5\\linewidth]{\\images/elemental_tile_fire.png}};\n"
+"  \\node [below=0pt of fire.south] {\\imagecaption{火元素板块}};\n"
+"  \\node (water) [right=0pt of fire.east] {\\includegraphics[width=0.5\\linewidth]{\\images/elemental_tile_water.png}};\n"
+"  \\node [below=0pt of water.south] {\\imagecaption{水元素板块}};\n"
+"  \\node (air) [below=2em of fire.south] {\\includegraphics[width=0.5\\linewidth]{\\images/elemental_tile_air.png}};\n"
+"  \\node [below=0pt of air.south] {\\imagecaption{气元素板块}};\n"
+"  \\node (earth) [right=0pt of air.east] {\\includegraphics[width=0.5\\linewidth]{\\images/elemental_tile_earth.png}};\n"
+"  \\node [below=0pt of earth.south] {\\imagecaption{土元素板块}};\n"
+"\\end{tikzpicture}}\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:237
@@ -441,6 +610,9 @@ msgid ""
 "    \\centering\n"
 "    \\begin{tikzpicture}\n"
 msgstr ""
+"\\begin{center}\n"
+"    \\centering\n"
+"    \\begin{tikzpicture}\n"
 
 #. type: multicols
 #: sections/map_elements.tex:251
@@ -460,6 +632,19 @@ msgid ""
 "    \\end{tikzpicture}\n"
 "\\end{center}"
 msgstr ""
+"      \\newlength{\\tilesize}\n"
+"      \\setlength{\\tilesize}{0.5\\linewidth}\n"
+"      \\node (surface) {\\includegraphics[width=\\tilesize]{\\images/map-tile-stronghold.png}};\n"
+"      \\node [above=0pt of surface.north] {\\imagecaption{地表地图板块}};\n"
+"      \\node (subter) at ($(surface) + (0.8333\\tilesize, -0.2887\\tilesize)$)  %  ΔX=5/6, ΔY=-1/(2*sqrt(3))\n"
+"        {\\includegraphics[width=\\tilesize]{\\images/map-tile-sub.png}};\n"
+"      \\node [below=0pt of subter.south] {\\imagecaption{地下地图板块}};\n"
+"      \\node [opacity=0.85] at ($(surface)!0.5!(subter)$) {\\includegraphics[width=1.35\\tilesize]{\\images/subterranean_gate_drop_shadow.png}};\n"
+"      \\node [opacity=0.85] at ($(surface)!0.5!(subter)$) {\\includegraphics[width=1.2\\tilesize]{\\images/subterranean_gate_highlight.png}};\n"
+"      \\node at ($(surface)!0.5!(subter)$) (gate) {\\includegraphics[width=0.5\\tilesize]{\\map_locations/subterranean_gate_token.png}};\n"
+"      \\node at ($(gate.north)+(45pt, 5pt)$) {\\imagecaption{地下通道}};\n"
+"    \\end{tikzpicture}\n"
+"\\end{center}"
 
 #. type: Plain text
 #: sections/map_elements.tex:260
@@ -467,6 +652,7 @@ msgid ""
 "\\pagetarget{Discover Location Tokens}{\\subheader{Placing and Discovering "
 "Location Tokens}}"
 msgstr ""
+"\\pagetarget{Discover Location Tokens}{\\subheader{放置和发现地点标记}}"
 
 #. type: multicols
 #: sections/map_elements.tex:260
@@ -479,6 +665,12 @@ msgid ""
 "The effects of visiting the Location Tokens are described in \\pagelink{Location Token}{All Map Locations}.\n"
 "\n"
 msgstr ""
+"{2}\n"
+"地点标记由数个扩展加入游戏。\n"
+"当英雄发现带有关联标记的地图板块时，它们会单独放置，或放置在该地图板块的特定格上，并覆盖其所在位置原本的地点。\n"
+"标记不能放置在其他地点标记、被封锁的格，或包含为满足任一剧本胜利条件所需地点的格上。\n"
+"访问地点标记的效果在 \\pagelink{Location Token}{所有地图地点} 中说明。\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:274
@@ -496,6 +688,17 @@ msgid ""
 "\\end{expansion}\n"
 "\n"
 msgstr ""
+"\\begin{expansion}[before=\\vspace*{0pt}]{conflux}\n"
+"  \\subsection*{\\pagetarget{Monolith Tokens}{传送门标记}}\\index{传送门}\n"
+"  \\setlength\\intextsep{3pt}\n"
+"  \\setlength\\columnsep{0.5em}\n"
+"  \\begin{wrapfigure}{l}{0.38\\linewidth}\n"
+"    \\includegraphics[width=\\linewidth]{\\map_locations/monolith_token.png}\n"
+"  \\end{wrapfigure}\n"
+"   \\pagelink{Monolith}{传送门}的位置由剧本地图布局决定。\n"
+"   如果你发现了一个带有此类标记之一的板块，则正常发现该板块，然后将该标记放置在剧本地图布局所指示的格上；如果未指定，则放置在你选择的一个格上。\n"
+"\\end{expansion}\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:280
@@ -508,6 +711,12 @@ msgid ""
 "  \\begin{center}\n"
 "    \\begin{tikzpicture}\n"
 msgstr ""
+"\\begin{expansion}[before=\\vspace*{6pt}]{cove}\n"
+"  \\subsection*{\\pagetarget{Whirlpool Tokens}{漩涡标记}}\\index{漩涡}\n"
+"  发现 \\pagelink{Whirlpool}{漩涡} 遵循与发现传送门相同的规则。\n"
+"  \\bigskip\n"
+"  \\begin{center}\n"
+"    \\begin{tikzpicture}\n"
 
 #. type: multicols
 #: sections/map_elements.tex:287
@@ -540,6 +749,19 @@ msgid ""
 "\\end{expansion}\n"
 "\n"
 msgstr ""
+"\\begin{expansion}[before=\\vspace*{-11mm}]{stronghold}\n"
+"  \\pagetarget{Subterranean Gate}{\\subsection*{地下通道标记}}\\index{地下通道}\n"
+"  地下通道也由剧本地图布局决定，并连接一个地表地图板块与一个相邻的地下地图板块。\n"
+"  它们不能放置在地图板块之外。\n"
+"  在发现其中一个对应的地图板块后，你可以选择地下通道标记的位置，只要它连接两个指定的地图板块且不覆盖禁止的格。\n"
+"  \\setlength\\intextsep{5pt}\n"
+"  \\begin{wrapfigure}{l}{0.3\\linewidth}\n"
+"    \\includegraphics[width=1.8\\linewidth]{\\map_locations/subterranean_gate_token.png}\n"
+"  \\end{wrapfigure}\n"
+"  剧本地图布局只显示\\textbf{哪两个板块相连}，而不是标记放置的确切格。\n"
+"  \\vspace{11em}\n"
+"\\end{expansion}\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:313
@@ -556,6 +778,16 @@ msgid ""
 "  If you do, each time you discover a Far \\mbox{(II--III)} or Near \\mbox{(IV--V)} Map Tile, you may decide to draw a Creature Bank Token corresponding to the discovered Map Tile, and -- contrary to the normal rules -- you can place it \\textbf{only on its Blocked Field}.\n"
 "\\end{expansion}"
 msgstr ""
+"\\begin{expansion}[before=\\vspace*{5pt}]{navalbattles}\n"
+"  \\pagetarget{Creature Bank Tokens}{\\subsection*{生物宝屋标记}}\n"
+"  \\setlength\\intextsep{3pt}\n"
+"  \\setlength\\columnsep{0.5em}\n"
+"  \\begin{wrapfigure}{l}{0.38\\linewidth}\n"
+"    \\includegraphics[width=\\linewidth]{\\map_locations/creature_bank_token.png}\n"
+"  \\end{wrapfigure}\n"
+"  作为一条\\textbf{可选规则}，你可以决定使用\\pagelink{Creature Banks Rules}{生物宝屋}进行游戏。\n"
+"  如果你这样做，每当你发现一个远端 \\mbox{(II--III)} 或近端 \\mbox{(IV--V)} 地图板块时，你可以决定抽取一个与所发现地图板块对应的生物宝屋标记，并且 -- 与普通规则相反 -- 你只能将其放置在其被封锁的格上。\n"
+"\\end{expansion}"
 
 #. type: tikzpicture
 #: sections/map_elements.tex:319

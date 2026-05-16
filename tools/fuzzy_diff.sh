@@ -22,7 +22,7 @@ fi
 
 MYTMPDIR="$(mktemp -d)"
 trap 'rm -rf -- "$MYTMPDIR"' EXIT
-msgattrib --only-fuzzy "$1" > "$MYTMPDIR/fuzzy_only.po"
+msgattrib --only-fuzzy "$1" > "$MYTMPDIR/fuzzy_only.po" || exit 98
 if ! grep -q '^#, fuzzy' "$MYTMPDIR/fuzzy_only.po"; then
   echo "No fuzzy entries in $1."
   exit 99
