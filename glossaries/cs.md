@@ -41,6 +41,7 @@
 | reinforced | ... |
 | summoned elementals | ... |
 | unit cards | Karty Jednotek |
+| unit miniatures | ... |
 | units | Jednotky |
 | zealots | ... |
 
@@ -48,9 +49,11 @@
 
 | English | Czech |
 |---|---|
+| MP | ... |
 | ability | ... |
 | experience | Zkušenost |
 | expert effects | ... |
+| hero board | ... |
 | hero | Hrdina |
 | heroes | Hrdinové |
 | level tracker | ... |
@@ -80,12 +83,15 @@
 | obelisk | ... |
 | random town | ... |
 | revisitable | Opakovaně Navštívitelná Pole |
+| sea map tile | ... |
 | settlement | Osada |
 | starting (i) map tile | Startovní (I) Dílek |
 | subterranean gate | ... |
+| subterranean map tile | ... |
 | tile | Dílek |
 | trading post | Tržiště |
 | water wheel | ... |
+| whirlpool | ... |
 
 ## Resources
 
@@ -93,6 +99,8 @@
 |---|---|
 | building materials | Stavební Materiály |
 | gold | ... |
+| grail token | ... |
+| resource dice | ... |
 | resource production tracker | Počítadlo Produkce Surovin |
 | resources | Suroviny |
 | treasure die | Kostka Surovin |
@@ -107,12 +115,18 @@
 | decks | ... |
 | discard pile | Odhazovací Hromádka |
 | discard | ... |
+| empowered ability card | ... |
+| empowered ability token | ... |
+| empowered statistic card | ... |
 | hand limit | Limit Karet na ruce |
+| pandora's box card | ... |
 | player decks | Hráčské Balíčky |
 | search | Hledat |
 | specialty card | ... |
 | spell cards | Karty Kouzel |
+| spell scroll | ... |
 | statistic card | ... |
+| summoned unit card | ... |
 
 ## Spells
 
@@ -135,10 +149,14 @@
 
 | English | Czech |
 |---|---|
+| build token | ... |
 | buildings | ... |
 | citadel | ... |
 | dwelling | Obydlí |
 | population token | Žeton Populace |
+| spell book token | ... |
+| town board | ... |
+| town card | ... |
 
 ## Combat
 
@@ -159,8 +177,12 @@
 
 | English | Czech |
 |---|---|
+| adventure card | ... |
 | adventure mode | Výprava |
 | alliance | ... |
+| battlefield board | ... |
+| battlefield obstacles | ... |
+| battlefield | ... |
 | campaign | ... |
 | clash | ... |
 | combat power level | ... |
@@ -173,18 +195,32 @@
 
 | English | Czech |
 |---|---|
+| attack token | ... |
 | clone token | ... |
+| corrosion token | ... |
+| fire wall token | ... |
 | force field token | ... |
 | land mine token | ... |
+| miniatures | ... |
 | quicksand token | ... |
+| stack token | ... |
+| summon token | ... |
+| time token | ... |
+| weakness token | ... |
 
 ## Other
 
 | English | Czech |
 |---|---|
 | artifact | ... |
+| astrologers proclaim card | ... |
+| attack dice | ... |
+| black cubes | ... |
 | core rulebook | ... |
 | effects | ... |
+| event card | ... |
+| expert effect markers | ... |
+| faction cubes | ... |
 | faction | ... |
 | game setup | Příprava hry |
 | map setup | ... |

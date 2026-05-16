@@ -23,13 +23,16 @@ Extract the language code from the argument (the part before any flags).
 For each PO file (work through them in alphabetical order by directory name):
 
 1. Read the file.
-2. Find every entry where `msgstr` is empty — that is, entries matching:
-   ```
-   msgstr ""
-   ```
-   where the line immediately following is either another `msgid` block, a comment (`#`), or end of file (i.e. no translated content follows).
+2. Find every entry that needs work:
+   - **Fuzzy entries**: entries with a `#, fuzzy` flag line immediately before `msgid`. Review the existing `msgstr` against the current `msgid` and the translation rules — adjust if needed — then remove the `#, fuzzy` line.
+   - **Untranslated entries**: entries where `msgstr` is empty — matching `msgstr ""` where the line immediately following is another `msgid` block, a comment (`#`), or end of file (i.e. no translated content follows).
    Skip the file header entry (the first `msgid ""`/`msgstr ""` block with PO metadata).
-3. For each untranslated entry, produce the translated `msgstr` following the translation rules, then write it back into the file using the Edit tool.
+3. For each fuzzy entry, write the corrected `msgstr` and remove the `#, fuzzy` line using the Edit tool. For each untranslated entry, produce the translated `msgstr` following the translation rules, then write it back into the file using the Edit tool.
+   **Ambiguity — pause and ask the user** before writing when any of these apply:
+   - A fuzzy entry has structural changes beyond minor wording (e.g. sentence count changed, new LaTeX commands present, meaning shifted significantly).
+   - An untranslated entry has multiple valid glossary-compliant renderings and the best choice is unclear.
+   - The translated string is significantly longer than the English source (layout overflow risk) — present the translation and ask whether to proceed, shorten, or skip.
+   Use the `AskUserQuestion` tool to ask. Resume processing after the user responds.
 4. After finishing a file, tell the user which file was completed and how many strings were translated.
 
 If a file has no untranslated entries, skip it silently and move to the next.
