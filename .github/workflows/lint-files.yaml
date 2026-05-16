@@ -72,9 +72,3 @@ jobs:
             echo "Some words are not capitalized correctly. Please fix them."
             exit 1
           fi
-
-      - name: Check failure
-        if: failure()
-        run: |
-          echo "Linters failed, see the output above."
-          exit 1
