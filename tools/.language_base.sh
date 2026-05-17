@@ -12,7 +12,7 @@ declare -A icu_locale_map=(
   ["cs"]="cs_CZ"
   ["he"]="he_IL"
   ["de"]="de_DE"
-  ["cn"]="zh_CN"
+  ["cn"]="zh-u-co-pinyin"
 )
 
 # Function to check if language is valid
