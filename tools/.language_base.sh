@@ -2,19 +2,6 @@
 
 LANGUAGE="en"
 valid_languages=("en" "pl" "es" "fr" "ua" "ru" "cs" "he" "de" "cn")
-declare -A icu_locale_map=(
-  ["en"]="en_US"
-  ["pl"]="pl_PL"
-  ["es"]="es_ES"
-  ["fr"]="fr_FR"
-  ["ua"]="uk_UA"  # "ua" is the country code; ICU uses "uk" for Ukrainian
-  ["ru"]="ru_RU"
-  ["cs"]="cs_CZ"
-  ["he"]="he_IL"
-  ["de"]="de_DE"
-  ["cn"]="zh-u-co-pinyin"
-)
-
 # Function to check if language is valid
 is_valid_language() {
   local lang="$1"
@@ -37,4 +24,4 @@ if [[ $1 =~ ^[a-z]{2}$ ]]; then
   fi
 fi
 
-export ICU_LOCALE="${icu_locale_map[$LANGUAGE]}"
+export HOMM3_LANG="${LANGUAGE}"
