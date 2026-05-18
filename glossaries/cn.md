@@ -3,6 +3,7 @@
 ## Style notes
 
 - Round翻译为轮或者轮次，Turn翻译为回合，不可混淆
+- 如果latex命令（例如\textbf,\textit如果出现在汉字段落中，则去掉原有的空白。例如，`汉字\svg{icon}汉字`, 而不是`汉字 \svg{icon} 汉字`
 
 ## Factions
 
