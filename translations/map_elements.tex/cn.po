@@ -125,6 +125,9 @@ msgid ""
 "  \\hspace*{-1.5em}\n"
 "  \\begin{tikzpicture}\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\hspace*{-1.5em}\n"
+"  \\begin{tikzpicture}\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:42
@@ -184,6 +187,8 @@ msgid ""
 "\\separator\n"
 "\n"
 msgstr ""
+"\\separator\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:72
@@ -208,6 +213,24 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"    \\node (tile) [inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=0.75\\linewidth]{\\images/fields.png}}};\n"
+"    \\begin{relcoords}{tile}\n"
+"      \\draw (0.5, 0.5) node {\\encirclesmall{1}};\n"
+"      \\draw (0.25, 0.5) node {\\encirclesmall{2}};\n"
+"      \\draw (0.8, 0.5) node {\\encirclesmall{2}};\n"
+"      \\draw (0.3, 0.8) node {\\encirclesmall{2}};\n"
+"      \\draw (0.57, 0.2) node {\\encirclesmall{2}};\n"
+"      \\draw (0.57, 0.8) node {\\encirclesmall{2}};\n"
+"      \\draw (0.65, 0.12) node {\\encirclesmall{3}};\n"
+"      \\draw (0.65, 0.9) node {\\encirclesmall{4}};\n"
+"      \\draw (0.65, 0.35) node {\\encirclesmall{4}};\n"
+"      \\draw (0.4, 0.6) node {\\encirclesmall{5}};\n"
+"      \\draw (0.35, 0.3) node {\\encirclesmall{6}};\n"
+"      \\draw (0.31, 0.16) node {\\encirclesmall{7}};\n"
+"    \\end{relcoords}\n"
+"  \\end{tikzpicture}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:86
@@ -247,7 +270,7 @@ msgstr ""
 #: sections/map_elements.tex:89
 #, no-wrap
 msgid "\\end{itemize}"
-msgstr ""
+msgstr "\\end{itemize}"
 
 #. type: multicols
 #: sections/map_elements.tex:110
@@ -406,6 +429,8 @@ msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_lightning_bolt.png}\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_lightning_bolt.png}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:158
@@ -444,6 +469,8 @@ msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_town_portal.png}\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_town_portal.png}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:172
@@ -453,6 +480,9 @@ msgid ""
 "\\hspace{2em}\n"
 "{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/resurrection.png}}"
 msgstr ""
+"\\vfill\n"
+"\\hspace{2em}\n"
+"{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/resurrection.png}}"
 
 #. type: Plain text
 #: sections/map_elements.tex:187
@@ -499,6 +529,8 @@ msgid ""
 "\\bigskip\n"
 "\n"
 msgstr ""
+"\\bigskip\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:197
@@ -730,6 +762,13 @@ msgid ""
 "\\end{expansion}\n"
 "\n"
 msgstr ""
+"      \\draw (0, 2.75) node[inner sep=0] {\\includegraphics[width=0.38\\linewidth]{\\map_locations/whirlpool_0.png}};\n"
+"      \\draw (-1.6, 0) node[inner sep=0] {\\includegraphics[width=0.38\\linewidth]{\\map_locations/whirlpool_minus_1.png}};\n"
+"      \\draw (1.6, 0) node[inner sep=0] {\\includegraphics[width=0.38\\linewidth]{\\map_locations/whirlpool_plus_1.png}};\n"
+"    \\end{tikzpicture}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:300
@@ -798,3 +837,7 @@ msgid ""
 "    \\includegraphics[width=0.5\\paperwidth, keepaspectratio]{\\art/cove_part.png}\n"
 "  };"
 msgstr ""
+"[overlay]\n"
+"  \\node(bg)[anchor=center, opacity=0.15, xshift=8em, yshift=-22em] at (current page.center) {\n"
+"    \\includegraphics[width=0.5\\paperwidth, keepaspectratio]{\\art/cove_part.png}\n"
+"  };"
