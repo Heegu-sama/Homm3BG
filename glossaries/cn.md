@@ -3,7 +3,11 @@
 ## Style notes
 
 - Round翻译为轮或者轮次，Turn翻译为回合，不可混淆
-- 如果latex命令（例如\textbf,\textit如果出现在汉字段落中，则去掉原有的空白。例如，`汉字\svg{icon}汉字`, 而不是`汉字 \svg{icon} 汉字`
+- 空格规则：
+  - 空白包括空格，~, \n
+  - 中文段落中避免出现空白
+  - 如果翻译字符串内出现\n，且此行于下一行同属于一个段落，可以使用%\n避免生成空白
+  - 如果latex命令（例如\textbf,\textit,\svg,\pagelink, \wikilink）出现在汉字段落中，则去掉命令前后原有的空白。例如，`汉字\svg{icon}汉字`或是`1\svg{gold}`，而不是`汉字 \svg{icon} 汉字`或`1 \svg{gold}`
 
 ## Factions
 
