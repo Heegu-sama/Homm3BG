@@ -130,7 +130,7 @@ jobs:
           merge-multiple: true
 
       - name: Publish ${{ matrix.language }} in artifacts repository
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v4.1.0
         with:
           deploy_key: ${{ secrets.SSH_DEPLOY_KEY_BUILD_ARTIFACTS }}
           external_repository: qwrtln/Homm3BG-build-artifacts

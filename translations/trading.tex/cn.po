@@ -37,12 +37,12 @@ msgstr ""
 #. type: Plain text
 #: sections/trading.tex:3
 msgid "\\pagetarget{Trading}{\\addsection{Trading}{\\art/ammo_cart.png}}"
-msgstr ""
+msgstr "\\pagetarget{Trading}{\\addsection{交易}{\\art/ammo_cart.png}}"
 
 #. type: index{#1}
 #: sections/trading.tex:3
 msgid "Trading"
-msgstr ""
+msgstr "交易"
 
 #. type: multicols
 #: sections/trading.tex:16
@@ -60,6 +60,17 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{贸易站行动}\n"
+"访问\\pagelink{Trading Post}{贸易站格}时，你可以选择：\n"
+"\\begin{itemize}\n"
+"  \\item 按照\\hyperlink{Trade Table}{封底的表格}与游戏交易多种资源，或\n"
+"  \\begin{expansion}[before skip balanced=0.4em,left=4mm]{rampart,cove}\n"
+"    \\item 购买一台\\pagelink{War Machines}{战争机器}，或\n"
+"  \\end{expansion}\n"
+"  \\item 在贸易站从你的手牌中\\textbf{移除一张牌}，以获得1\\svg{gold}。\n"
+"    \\note{4}{特长、属性、初始能力和\\wikilink{spells/magic_arrow}{魔法箭}\\textbf{不能在贸易站被移除}。}\\par\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/trading.tex:26
@@ -76,6 +87,16 @@ msgid ""
 "\\columnbreak\n"
 "\n"
 msgstr ""
+"除上述内容外，玩家在同一次访问期间可以不限次数地执行以下免费行动：\n"
+"\\begin{itemize}\n"
+"  \\item 在\\textbf{合作剧本}中：可以将资源给予其他玩家。\n"
+"  \\begin{expansion}[before skip balanced=0.4em,left=4mm]{stronghold}\n"
+"    \\item 可以将 \\pagelink{Spell Scroll Cards}{法术卷轴牌} 中的法术\\pagetarget{selling Spell Scrolls}{以每个2~\\svg{gold}的价格出售}。\n"
+"      将出售的法术移出游戏。\n"
+"  \\end{expansion}\n"
+"\\end{itemize}\n"
+"\\columnbreak\n"
+"\n"
 
 #. type: multicols
 #: sections/trading.tex:36
@@ -92,6 +113,16 @@ msgid ""
 "\\medskip\n"
 "\n"
 msgstr ""
+"\\subsection*{其他交易行动}\n"
+"某些游戏模式和游戏效果也允许你进行交易：\n"
+"\\begin{itemize}\n"
+"  \\item 在\\textbf{同盟剧本}中，盟友可以在其回合的任何时候自由交易资源，战斗期间除外。\n"
+"  \\item 在\\textbf{同盟和合作剧本}中，如果盟友的英雄位于相邻格上，则可以任意组合交易\\textbf{法术}和\\textbf{神器}牌。\n"
+"    只能交易\\textbf{其手牌中的牌}，且你必须给出和接收相同数量的牌。\n"
+"  \\item 当其他游戏效果允许你\\textbf{交易资源}时（例如\\wikilink{events/marketplace}{市场事件}），也使用\\hyperlink{Trade Table}{交易表}。\n"
+"\\end{itemize}\n"
+"\\medskip\n"
+"\n"
 
 #. type: multicols
 #: sections/trading.tex:40
@@ -102,3 +133,7 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  {\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/black_market.png}}\n"
+"\\end{center}\n"
+"\n"
