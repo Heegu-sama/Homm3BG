@@ -8,6 +8,7 @@
   - 中文段落中避免出现空白
   - 如果翻译字符串内出现\n，且此行于下一行同属于一个段落，可以使用%\n避免生成空白
   - 如果latex命令（例如\textbf,\textit,\svg,\pagelink, \wikilink）出现在汉字段落中，则去掉命令前后原有的空白。例如，`汉字\svg{icon}汉字`或是`1\svg{gold}`，而不是`汉字 \svg{icon} 汉字`或`1 \svg{gold}`
+- 如果wikilink的文字中包括标点符号，视情况将标点符号移动到wikilink文字之外，或直接删除
 
 ## Factions
 
