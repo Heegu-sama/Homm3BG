@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-04-07 11:29+0000\n"
+"POT-Creation-Date: 2026-05-19 22:00+0100\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -25,7 +25,7 @@ msgstr ""
 #: sections/resources.tex:5 sections/round_structure.tex:5
 #: sections/scenarios.tex:5 sections/setup.tex:5 sections/solo_campaigns.tex:7
 #: sections/tournament_mode.tex:6 sections/town.tex:5 sections/trading.tex:5
-#: sections/units.tex:5 sections/units.tex:42 sections/units.tex:222
+#: sections/units.tex:5 sections/units.tex:42 sections/units.tex:221
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -649,9 +649,9 @@ msgstr ""
 
 #. type: multicols*
 #: sections/map_elements.tex:189 sections/map_elements.tex:199
-#: sections/map_elements.tex:263 sections/map_elements.tex:302
+#: sections/map_elements.tex:273 sections/map_elements.tex:312
 #: sections/player_turns.tex:48 sections/tournament_mode.tex:69
-#: sections/units.tex:241
+#: sections/units.tex:240
 #, no-wrap
 msgid ""
 "\\bigskip\n"
@@ -759,14 +759,32 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: sections/map_elements.tex:260
+#: sections/map_elements.tex:263
+#, fuzzy
+#| msgid ""
+#| "{\\centering\\phantom{Star Axis}\\par}\n"
+#| "\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
+#| "\n"
+msgid ""
+"\\AddToHookNext{shipout/background}{\\iftoggle{noartbackground}{}"
+"{ \\begin{tikzpicture}[remember picture,overlay] \\node(bg)[anchor=south "
+"east, opacity=0.15, xshift=2em, yshift=-5em] at (current page.south east) "
+"{ \\includegraphics[width=0.5\\paperwidth, keepaspectratio]{\\art/"
+"cove_part.png} }; \\end{tikzpicture} }}"
+msgstr ""
+"{\\centering\\phantom{Eje Estelar}\\par}\n"
+"\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
+"\n"
+
+#. type: Plain text
+#: sections/map_elements.tex:270
 msgid ""
 "\\pagetarget{Discover Location Tokens}{\\subheader{Placing and Discovering "
 "Location Tokens}}"
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:260
+#: sections/map_elements.tex:270
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -778,7 +796,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:274
+#: sections/map_elements.tex:284
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{0pt}]{conflux}\n"
@@ -795,7 +813,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:280
+#: sections/map_elements.tex:290
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{6pt}]{cove}\n"
@@ -807,7 +825,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:287
+#: sections/map_elements.tex:297
 #, fuzzy, no-wrap
 #| msgid ""
 #| "      \\node at (0, 0) {\\includegraphics[width=0.6\\linewidth]{\\cards/mmback.png}};\n"
@@ -831,7 +849,7 @@ msgstr ""
 "  \\end{subfigure}"
 
 #. type: multicols
-#: sections/map_elements.tex:300
+#: sections/map_elements.tex:310
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{-11mm}]{stronghold}\n"
@@ -850,7 +868,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/map_elements.tex:313
+#: sections/map_elements.tex:323
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{5pt}]{navalbattles}\n"
@@ -864,20 +882,3 @@ msgid ""
 "  If you do, each time you discover a Far \\mbox{(II--III)} or Near \\mbox{(IV--V)} Map Tile, you may decide to draw a Creature Bank Token corresponding to the discovered Map Tile, and -- contrary to the normal rules -- you can place it \\textbf{only on its Blocked Field}.\n"
 "\\end{expansion}"
 msgstr ""
-
-#. type: tikzpicture
-#: sections/map_elements.tex:319
-#, fuzzy, no-wrap
-#| msgid ""
-#| "{\\centering\\phantom{Star Axis}\\par}\n"
-#| "\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
-#| "\n"
-msgid ""
-"[overlay]\n"
-"  \\node(bg)[anchor=center, opacity=0.15, xshift=8em, yshift=-22em] at (current page.center) {\n"
-"    \\includegraphics[width=0.5\\paperwidth, keepaspectratio]{\\art/cove_part.png}\n"
-"  };"
-msgstr ""
-"{\\centering\\phantom{Eje Estelar}\\par}\n"
-"\\includegraphics[width=\\linewidth]{\\art/unicorn.jpg}\n"
-"\n"
