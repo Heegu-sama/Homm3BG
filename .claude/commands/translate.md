@@ -13,6 +13,8 @@ Extract the language code from the argument (the part before any flags).
 1. Read the glossary for the target language from `glossaries/<lang>.md`.
    If it does not exist, tell the user and list available files in `glossaries/`.
 2. Find all PO files for the target language: `find translations -name "<lang>.po"`.
+3. Read and follow the translation rules in
+   `.claude/commands/translation-rules.md`.
 
 ---
 
@@ -21,13 +23,16 @@ Extract the language code from the argument (the part before any flags).
 For each PO file (work through them in alphabetical order by directory name):
 
 1. Read the file.
-2. Find every entry where `msgstr` is empty — that is, entries matching:
-   ```
-   msgstr ""
-   ```
-   where the line immediately following is either another `msgid` block, a comment (`#`), or end of file (i.e. no translated content follows).
+2. Find every entry that needs work:
+   - **Fuzzy entries**: entries with a `#, fuzzy` flag line immediately before `msgid`. Review the existing `msgstr` against the current `msgid` and the translation rules — adjust if needed — then remove the `#, fuzzy` line.
+   - **Untranslated entries**: entries where `msgstr` is empty — matching `msgstr ""` where the line immediately following is another `msgid` block, a comment (`#`), or end of file (i.e. no translated content follows).
    Skip the file header entry (the first `msgid ""`/`msgstr ""` block with PO metadata).
-3. For each untranslated entry, produce the translated `msgstr` following the rules below, then write it back into the file using the Edit tool.
+3. For each fuzzy entry, write the corrected `msgstr` and remove the `#, fuzzy` line using the Edit tool. For each untranslated entry, produce the translated `msgstr` following the translation rules, then write it back into the file using the Edit tool.
+   **Ambiguity — pause and ask the user** before writing when any of these apply:
+   - A fuzzy entry has structural changes beyond minor wording (e.g. sentence count changed, new LaTeX commands present, meaning shifted significantly).
+   - An untranslated entry has multiple valid glossary-compliant renderings and the best choice is unclear.
+   - The translated string is significantly longer than the English source (layout overflow risk) — present the translation and ask whether to proceed, shorten, or skip.
+   Use the `AskUserQuestion` tool to ask. Resume processing after the user responds.
 4. After finishing a file, tell the user which file was completed and how many strings were translated.
 
 If a file has no untranslated entries, skip it silently and move to the next.
@@ -41,7 +46,7 @@ For each PO file (work through them in alphabetical order by directory name):
 1. Read the file.
 2. Find every entry where **both** `msgid` and `msgstr` are non-empty (i.e. already translated).
    Skip the file header entry (the first `msgid ""`/`msgstr ""` block with PO metadata).
-3. For each translated entry, check the `msgstr` against the rules below.
+3. For each translated entry, check the `msgstr` against the translation rules.
    If the entry looks correct, skip it silently.
    If you find one or more issues, fix the `msgstr` in place using the Edit tool and record what you changed.
 4. After finishing a file, report: file name, how many entries were reviewed, and a bullet list of every fix made (old → new, with the issue type). If no fixes were needed, skip the file silently.
@@ -56,7 +61,7 @@ Be rutally critical with this one.
 
 **Capitalization** — mirror the capitalization of the English `msgid` unless the glossary says otherwise.
 
-**LaTeX integrity** — all commands preserved exactly; see LaTeX Rules below.
+**LaTeX integrity** — all commands preserved exactly; see the translation rules file.
 
 **PO format** — `msgstr` must follow the same multi-line structure as `msgid`; no collapsing or splitting lines.
 
@@ -66,59 +71,6 @@ Be rutally critical with this one.
 
 ---
 
-## PO Format Rules
+## Translation Rules
 
-Both `msgid` and `msgstr` must:
-- Start with an empty quoted string: `""`
-- Have each line on its own line
-- Have each line surrounded by double quotes
-- End each quoted line with `\n`
-
-Example:
-```
-msgid ""
-"First line\n"
-"Second line\n"
-msgstr ""
-"Translated first line\n"
-"Translated second line\n"
-```
-
-Single-line `msgid` (no `""`):
-```
-msgid "\\addsection{Introduction}{\\spells/magic_arrow.png}"
-msgstr "\\addsection{Wprowadzenie}{\\spells/magic_arrow.png}"
-```
-
-## LaTeX Rules
-
-- Preserve all whitespace at the start of lines
-- Keep all LaTeX commands exactly as they appear — do not translate command names
-- Do not add or remove line breaks (`\n`)
-- Maintain all whitespace around LaTeX commands
-
-Specific commands:
-- `\pagetarget{A}{B}`: keep `A` unchanged, translate only `B`
-- `\pagelink{A}{B}`: keep `A` unchanged, translate only `B`
-- `\index{...}`: translate the content inside
-- SVG icons like `\svg{damage-yellow}`: keep unchanged
-- Spacing commands like `\bigskip`, `\hsize`: keep unchanged
-- Tables (`\hommtable`, `\tabularx`): keep all sizing parameters, column specs, and cell styling commands (`\darkcell`, `\lightcell`) unchanged
-
-Example:
-```
-msgid "\\darkcell[1.5]{\\color{white}Game Difficulty}"
-msgstr "\\darkcell[1.5]{\\color{white}<translated text>}"
-```
-
-## Layout
-
-This is a fixed-layout document.
-Translations that are significantly more verbose will overflow the layout.
-Localize naturally — use idiomatic phrasing in the target language, not word-for-word calques from English.
-When multiple natural translations exist for a phrase, prefer the more concise one to avoid layout overflow.
-
-## Capitalization
-
-Mirror the capitalization of the English source, unless stated otherwise in the glossary.
-If the English has "Hero" (capitalized), the translation must also be capitalized, unless stated otherwise in the language glossary.
+Read and follow `.claude/commands/translation-rules.md`.

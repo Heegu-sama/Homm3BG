@@ -1,19 +1,56 @@
-name: Check capitalization
+name: Lint files
 
 on:
   pull_request:
     branches: [main]
 
 jobs:
-  tablint:
+  linters:
     runs-on: ubuntu-latest
-    name: Check capitalization
+    name: Lint files
     steps:
       - name: Checkout
         uses: actions/checkout@v6
 
+      - name: Check tabs
+        run: |
+          ERRORS=0
+          for f in $(git grep -Il '')
+          do
+            if grep -q -P '\t' $f; then
+              grep -nHP '\t' $f
+              ERRORS=1
+            fi
+          done
+
+          if [[ $ERRORS == 1 ]]; then
+              echo "Tabs found, see the output above. Please replace them with spaces."
+            exit 1
+          fi
+
+      - name: Check final newline
+        uses: qwrtln/check-final-newline@v1.0.0
+        if: always()
+
+      - name: Check trailing whitespace
+        if: always()
+        run: |
+          ERRORS=0
+          for f in $(git grep -Il '')
+          do
+            if grep -q -P '\s+$' "$f"; then
+              grep -nHP '\s+$' "$f"
+              ERRORS=1
+            fi
+          done
+
+          if [[ $ERRORS == 1 ]]; then
+              echo "Trailing whitespace found, see the output above. Please remove trailing whitespace."
+            exit 1
+          fi
+
       - name: Find wrong caps
-        shell: bash
+        if: always()
         run: |
           ERRORS=0
           WORDS=("artifact" "board" "cube" "deck" "faction" "field" "grail" "hero" "level" "round" "scenario" "spell" "tile")

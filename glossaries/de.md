@@ -41,6 +41,7 @@
 | reinforced | ... |
 | summoned elementals | ... |
 | unit cards | Einheitenkarten |
+| unit miniatures | ... |
 | units | Einheiten |
 | zealots | ... |
 
@@ -48,15 +49,19 @@
 
 | English | German |
 |---|---|
+| MP | ... |
 | ability | Fähigkeit |
 | experience | Erfahrung |
 | expert effects | ... |
+| hero board | ... |
 | hero | Held |
 | heroes | Helden |
 | level tracker | Stufenleiste |
 | level | Stufe |
 | main hero | Hauptheld |
 | movement points | ... |
+| MP | ... |
+| power | ... |
 | secondary hero | Nebenheld |
 | specialty | ... |
 
@@ -66,25 +71,36 @@
 |---|---|
 | center field | ... |
 | central map tile | ... |
+| creature bank | ... |
 | dragon utopia | Drachen Utopia |
 | far map tile | fernes Gebiet |
 | field | Feld |
 | locations | Orte |
 | map tile | Gebiet |
+| mines | ... |
+| monolith | ... |
 | near map tile | nahes Gebiet |
+| obelisk | ... |
 | random town | Zufällige Stadt |
 | revisitable | besuchbare |
+| sea map tile | ... |
 | settlement | Siedlung |
 | starting (i) map tile | Startgebiet (I) |
+| subterranean gate | ... |
+| subterranean map tile | ... |
 | tile | Gebiet |
 | trading post | Handelsposten |
 | water wheel | ... |
+| whirlpool | ... |
 
 ## Resources
 
 | English | German |
 |---|---|
 | building materials | Baumaterialien |
+| gold | ... |
+| grail token | ... |
+| resource dice | Ressourcenwürfel |
 | resource production tracker | Einkommensleiste |
 | resources | Ressourcen |
 | treasure die | Schatzwürfel |
@@ -99,18 +115,26 @@
 | decks | Decks |
 | discard pile | Ablagestapel |
 | discard | abwerfen |
+| empowered ability card | ... |
+| empowered ability token | ... |
+| empowered statistic card | ... |
 | hand limit | Handkartenlimit |
+| pandora's box card | ... |
 | player decks | Spielerdecks |
 | search | Durchsuche |
 | specialty card | ... |
 | spell cards | Zauberkarten |
+| spell scroll | ... |
 | statistic card | ... |
+| summoned unit card | ... |
 
 ## Spells
 
 | English | German |
 |---|---|
 | haste | Eile |
+| magic arrow | ... |
+| school | ... |
 
 ## AI Deck
 
@@ -125,9 +149,14 @@
 
 | English | German |
 |---|---|
+| build token | ... |
 | buildings | ... |
+| citadel | ... |
 | dwelling | ... |
 | population token | Bevölkerungsmarker |
+| spell book token | ... |
+| town board | ... |
+| town card | ... |
 
 ## Combat
 
@@ -139,35 +168,66 @@
 | combat | Kampf |
 | damage | Schaden |
 | front line | vordere Kampfreihe |
+| initiative | ... |
+| negative morale | ... |
+| positive morale | ... |
 | winning combat | ... |
 
 ## Battlefield
 
 | English | German |
 |---|---|
+| adventure card | ... |
 | adventure mode | Abenteuermodus |
-| skirmish mode | Gefechtsmodus |
-| final combat | finaler Kampf |
+| alliance | ... |
+| battlefield board | ... |
+| battlefield obstacles | ... |
+| battlefield | ... |
+| campaign | ... |
+| clash | ... |
 | combat power level | ... |
+| cooperative | ... |
+| final combat | finaler Kampf |
+| scenario | ... |
+| skirmish mode | Gefechtsmodus |
 
 ## Keywords
 
 | English | German |
 |---|---|
+| attack token | ... |
 | clone token | Klon-Marker |
+| corrosion token | ... |
+| fire wall token | ... |
 | force field token | Kraftfeld-Marker |
 | land mine token | Landminen-Marker |
+| miniatures | ... |
 | quicksand token | Treibsand-Marker |
+| stack token | ... |
+| summon token | ... |
+| time token | ... |
+| weakness token | ... |
 
 ## Other
 
 | English | German |
 |---|---|
+| artifact | ... |
+| astrologers proclaim card | ... |
+| attack dice | ... |
+| black cubes | ... |
 | core rulebook | Regelbuch |
 | effects | ... |
+| event card | ... |
+| expert effect markers | ... |
+| faction cubes | ... |
+| faction | ... |
 | game setup | Spielaufbau |
 | map setup | Aufbau der Abenteuerkarte |
 | player elimination | Spielereliminierung |
 | player setup | ... |
+| relic | ... |
+| round | ... |
 | round tracker | Rundenleiste |
+| turn | ... |
 | war machine | Kriegsmaschine |

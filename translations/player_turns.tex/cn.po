@@ -40,6 +40,8 @@ msgid ""
 "\\clearpage\n"
 "\n"
 msgstr ""
+"\\clearpage\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:189 sections/map_elements.tex:199
@@ -51,12 +53,14 @@ msgid ""
 "\\bigskip\n"
 "\n"
 msgstr ""
+"\\bigskip\n"
+"\n"
 
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/player_turns.tex:3
 msgid "\\addsection{Player Turns}{\\spells/dimension_door.png}"
-msgstr ""
+msgstr "\\addsection{玩家回合}{\\spells/dimension_door.png}"
 
 #. type: multicols*
 #: sections/player_turns.tex:17
@@ -75,6 +79,18 @@ msgid ""
 "Once all players have spent all their Movement Points and do not wish to use any further Town or Morale Actions, the current Round is over.\n"
 "\n"
 msgstr ""
+"在你的回合开始时，按照以下步骤刷新你的手牌：\n"
+"\\begin{itemize}\n"
+"  \\item 从你的手牌中弃置任意数量的牌。\n"
+"如果你当前的手牌超过你的手牌上限 \\svg{hand}，你必须弃牌至符合该上限。\n"
+"  \\item 然后你可以抽牌，直到达到你的手牌上限。\n"
+"  \\item 抽牌后，结算任何``在你的回合开始时''的能力。\n"
+"\\end{itemize}\n"
+"你当前的手牌上限\\index{手牌上限}取决于你的主英雄的\\pagelink{Level}{等级}。\n"
+"你的手牌上限只会在你的回合开始时检查。\\par\n"
+"玩家可以执行三种类型的行动：\\textbf{移动}、\\textbf{城镇}和\\textbf{士气}。\n"
+"一旦所有玩家都花费完所有移动力，并且不想再使用任何城镇或士气行动，当前轮结束。\n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:22
@@ -86,6 +102,11 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\\begin{center}\n"
+"  \\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/town_portal.png}\n"
+"\\end{center} \\vfill \n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:27
@@ -97,6 +118,11 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{8}{\n"
+"  每当你被指示获得（额外）移动力时，有时会以符号 \\svg{movement-yellow} 表示，该移动力只会在\\textbf{获得它的那个回合}内保留。\n"
+"  在两个同盟英雄被迫进入同一个格的罕见情况下，你必须使用你的下一点移动力将其中一个移离该格。\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:40
@@ -116,6 +142,19 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\columnbreak\n"
+"\\subheader{移动行动}\n"
+"\\pagetarget{Movement}{移动行动}\\index{移动行动}通过花费移动力执行。\n"
+"玩家\\textbf{只能在自己的回合中}使用移动行动。\\par\n"
+"\\mbox{每花费1点移动力，你可以执行以下行动之一：}\n"
+"\\begin{itemize}\n"
+"  \\item 将一名英雄向任意方向移动1格。\n"
+"  \\item \\pagelink{Categories}{重复访问}你的英雄所在的格。\n"
+"  \\item \\pagelink{Timelimit}{继续战斗}，与中立单位额外进行1个战斗轮。\n"
+"  \\item 如果你的英雄位于某个板块相邻的格上，则\\pagelink{Placing}{发现一个面朝下的地图板块}。\n"
+"  \\item 从你的远端（II–III）地图板块池中放置一个新的地图板块。\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:46
@@ -128,6 +167,12 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\includesvg[width=0.6\\linewidth]{\\images/movement_tokens}\\\\\n"
+"  \\medskip\n"
+"  \\imagecaption{一个激活和一个未激活的移动标记。}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:54
@@ -140,6 +185,12 @@ msgid ""
 "When you move through a Field with an allied Hero, do not \\pagelink{Categories}{visit} the Field that the allied Hero is standing on.\\par\n"
 "\n"
 msgstr ""
+"通过将你的移动标记翻到棕色的非激活面，标记你已使用的移动力数量。\n"
+"如果一名玩家同时拥有主英雄和\\pagelink{Secondary}{副英雄}，则分别记录他们的移动力。\n"
+"英雄可以按任意顺序花费移动力。\\par\n"
+"友方英雄可以互相穿过，但不能在同一格停止移动。\n"
+"当你穿过有友方英雄的格时，不能\\pagelink{Categories}{访问}该友方英雄所在的格。\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:69
@@ -159,6 +210,19 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\pagetarget{Town Actions}{\\subheader{城镇行动}\\index{城镇行动}}\n"
+"你可以将下列每项城镇行动\\textbf{每轮执行一次}。\n"
+"这些行动可以在任意玩家回合中的任意时点执行，但不能在战斗中执行，也不能在你的城镇行动会打断另一项行动时执行。\n"
+"例如，玩家不能同时使用法术书标记抽取法术牌。\\par\n"
+"当一名玩家宣布即将开始战斗时，你可以在执行\\pagelink{Combatsetup}{战斗准备}的任何步骤之前，用任意数量的城镇行动作出反应。\\par\n"
+"执行城镇行动后，将你城镇板上对应的标记翻至非激活面。\n"
+"在下一轮开始、标记刷新之前，你不能再次使用该行动。\n"
+"\\begin{itemize}\n"
+"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/build.png}}] 建造标记\\index{建造标记}，用于扩展你的\\pagelink{Town}{城镇}。\n"
+"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/population.png}}] 人口标记\\index{人口标记}，用于招募和增援\\pagelink{Units}{单位}，或招募\\pagelink{Secondary}{一名副英雄}。\n"
+"  \\item [{\\includegraphics[height=1.5\\baselineskip, valign=c]{\\images/spells.png}}]法术书标记\\index{法术书标记}，用于购买\\pagelink{spells}{法术}。需要城镇建筑魔法行会才能使用。\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:73
@@ -169,6 +233,10 @@ msgid ""
 "\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\\makebox[\\linewidth]{\\transparent{0.2}\\includegraphics[width=0.8\\linewidth]{\\art/shield.png}}\n"
+"\\vspace*{\\fill}\n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:76
@@ -178,6 +246,9 @@ msgid ""
 "\\subsection*{Example Player Turn}\n"
 "\n"
 msgstr ""
+"\\columnbreak\n"
+"\\subsection*{玩家回合示例}\n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:84
@@ -192,6 +263,14 @@ msgid ""
 "As Alice announces her intent to start Combat, both players still have an opportunity to perform Town Actions.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{扮演骑士英雄凯瑟琳的爱丽丝开始了她的回合。\n"
+"她从上一轮保留了3张手牌，并决定在从她的牌堆抽牌至她的\\mbox{手牌上限 \\svg{hand}}之前弃置其中2张。\n"
+"当前上限为5，因为她的主英雄是III级，所以她弃置后抽4张牌（见\\pagelinkwithcomma{Level}{等级效果}）。}\\par\n"
+"\\textit{接着她花费她的建造标记来建造\\svg{golden}兵营，然后花费人口标记来\\pagelink{Units}{招募}\\svg{golden}单位骑兵。\n"
+"她可以这样做，因为她之前已经建造了作为前置条件的较低等级兵营（\\svg{bronze}和\\svg{silver}），并且有足够的\\pagelink{Resources}{资源}来建造该兵营并招募骑兵。}\\par\n"
+"\\textit{现在她已为即将到来的战斗做好准备，于是花费1点移动力，将她的主英雄移动到一个相邻的格，该格当前由山德鲁死灵法师占据，他是鲍勃控制的一名敌方主英雄。\n"
+"当爱丽丝宣布她打算开始战斗时，双方玩家仍有机会执行城镇行动。}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:88
@@ -202,6 +281,10 @@ msgid ""
 "\\columnbreak\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{\\examples/catherine_attacks_sandro.png}\n"
+"\\vspace*{\\fill}\n"
+"\\columnbreak\n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:104
@@ -224,6 +307,22 @@ msgid ""
 "If you would gain a second Negative Morale Token, you must instead \\textbf{discard your hand of cards} the next time you end your Turn.\\par\n"
 "\n"
 msgstr ""
+"\\pagetarget{Morale}{\\subheader{士气行动}}\n"
+"\\index{士气}\n"
+"玩家可以通过各种游戏效果获得或失去士气。\n"
+"当你获得士气时，拿取一个高昂士气标记\\index{高昂士气} \\svg{morale_positive}。\n"
+"你只能拥有一个此类标记。\n"
+"如果你即将获得第二个标记，你可以在获得第二个标记前立即花费第一个标记。\n"
+"高昂士气标记可以在任意时间花费，以执行以下任意行动：\n"
+"\\begin{itemize}\n"
+"  \\item 从你的牌堆中抽一张牌。\n"
+"  \\item 弃置任意数量的牌，然后抽取等量的牌。\n"
+"  \\item 重掷任意一个你已掷出的骰子。\n"
+"\\end{itemize}\n"
+"如果你失去士气，若你拥有高昂士气标记 \\svg{morale_positive}，则弃置它；否则获得一个低落士气\\index{低落士气}标记 \\svg{morale_negative}。\n"
+"反之，当你拥有低落士气标记时获得高昂士气，会弃置该标记。\n"
+"如果你将获得第二个低落士气标记，则改为在你下一次结束你的回合时\\textbf{弃置你的手牌}。\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:110
@@ -236,6 +335,12 @@ msgid ""
 "\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\\begin{center}\n"
+"{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/morale_low.png}}\n"
+"\\end{center}\n"
+"\\vspace*{\\fill}\n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:115
@@ -247,6 +352,11 @@ msgid ""
 "\\columnbreak\n"
 "\n"
 msgstr ""
+"\\note{3}{墓园\\svg{necro-yellow}阵营无视士气效果。\n"
+"  他们永远不会因任何原因获得或失去士气。\n"
+"}\n"
+"\\columnbreak\n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:118
@@ -256,6 +366,9 @@ msgid ""
 "\\subsection*{\\pagetarget{Morale Cards}{Morale cards}}\n"
 "\n"
 msgstr ""
+"\\begin{expansion}[before=\\vspace*{-11mm}]{battlefield}\n"
+"\\subsection*{\\pagetarget{Morale Cards}{士气牌}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:122
@@ -266,6 +379,10 @@ msgid ""
 "Then shuffle the Positive and Negative Morale cards separately and place them face down.\n"
 "\n"
 msgstr ""
+"你可以使用士气牌 \\textbf{代替} 标记。\n"
+"准备期间，移除所有带有战场符号的士气牌，除非你正在游玩 \\pagelink{Adventure and Skirmish Modes}{冒险或遭遇战}。\n"
+"然后分别洗混正面和低落士气牌，并将它们面朝下放置。\n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:126
@@ -276,6 +393,10 @@ msgid ""
 "  \\centering\n"
 "  \\begin{tikzpicture}\n"
 msgstr ""
+"\\vspace{1em}\n"
+"\\begin{multicols}{2}\n"
+"  \\centering\n"
+"  \\begin{tikzpicture}\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:134
@@ -290,6 +411,14 @@ msgid ""
 "  \\imagecaption{Positive Morale card}\n"
 "  \\begin{tikzpicture}\n"
 msgstr ""
+"    \\node (card) {\\includegraphics[width=\\linewidth]{\\cards/morale-positive.png}};\n"
+"    \\begin{relcoords}{card}\n"
+"      \\draw (0.6, 0.9) node {\\encircle{1}};\n"
+"      \\draw (0.25, 0.25) node {\\encircle{2}};\n"
+"    \\end{relcoords}\n"
+"  \\end{tikzpicture}\n"
+"  \\imagecaption{正向士气牌}\n"
+"  \\begin{tikzpicture}\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:143
@@ -304,6 +433,14 @@ msgid ""
 "  \\end{tikzpicture}\n"
 "  \\imagecaption{Negative Morale card}"
 msgstr ""
+"    \\node (card) {\\includegraphics[width=\\linewidth]{\\cards/morale-negative-battlefield.png}};\n"
+"    \\begin{relcoords}{card}\n"
+"      \\draw (0.6, 0.9) node {\\encircle{1}};\n"
+"      \\draw (0.25, 0.3) node {\\encircle{2}};\n"
+"      \\draw (0.4, 0.1) node {\\encircle{3}};\n"
+"    \\end{relcoords}\n"
+"  \\end{tikzpicture}\n"
+"  \\imagecaption{低落士气牌}"
 
 #. type: multicols*
 #: sections/player_turns.tex:159
@@ -326,6 +463,22 @@ msgid ""
 "\\end{figure}\n"
 "\n"
 msgstr ""
+"\\begin{figure}[H]\n"
+"  \\centering\n"
+"  \\footnotesize\n"
+"  \\begin{subfigure}[t]{0.27\\linewidth}\n"
+"    \\begin{itemize}\n"
+"      \\item[\\textbf{1.}] 名称\n"
+"      \\item[\\textbf{2.}] 效果\n"
+"    \\end{itemize}\n"
+"  \\end{subfigure}\n"
+"  \\begin{subfigure}[t]{0.7\\linewidth}\n"
+"    \\begin{itemize}\n"
+"      \\item[\\textbf{3.}] 战场符号\\\\{\\scriptsize\\textit{（仅在\\pagelink{Adventure and Skirmish Modes}{冒险模式与遭遇战模式}游戏中使用此类牌）}}\n"
+"    \\end{itemize}\n"
+"  \\end{subfigure}\n"
+"\\end{figure}\n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:169
@@ -342,6 +495,16 @@ msgid ""
 "Don't draw a third card.\n"
 "\n"
 msgstr ""
+"\\vspace*{-1em}\n"
+"每当你\\textbf{获得}士气时，弃置一张低落士气牌（如果有）；否则：\n"
+"\\begin{itemize}\n"
+"  \\setlength\\itemsep{0mm}\n"
+"  \\item 在\\pagelink{Adventure and Skirmish Modes}{冒险和遭遇战}中：搜寻(2)张高昂士气牌，并将不要的牌放到牌堆底部。\n"
+"  \\item 在常规游戏中：抽1张高昂士气牌。\n"
+"\\end{itemize}\n"
+"你同一时间可以拥有\\textbf{2张高昂士气牌}。\n"
+"不要抽第三张牌。\n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:173
@@ -352,6 +515,10 @@ msgid ""
 "You may have an \\textbf{unlimited number of Negative Morale cards}.\n"
 "\n"
 msgstr ""
+"\\smallskip\n"
+"每当你 \\textbf{失去} 士气时，弃置一张高昂士气牌（如果你有）；否则抽取1张低落士气牌（不能搜寻！）。\n"
+"你可以拥有 \\textbf{不限数量的低落士气牌}。\n"
+"\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:181
@@ -365,3 +532,10 @@ msgid ""
 "If you must draw a Morale card but the respective Morale Deck is empty, reshuffle its Discard Pile to form a new Deck.\n"
 "\\end{expansion}"
 msgstr ""
+"\\smallskip\n"
+"将新获得的士气牌正面朝上放在你的英雄面板旁。\n"
+"高昂士气牌可在你希望的任何时刻使用。\n"
+"低落士气牌必须在下次发生牌上所示情况时使用。\n"
+"\\textbf{将使用过的牌放到各自牌堆的底部}。\n"
+"如果你必须抽一张士气牌，但对应的士气牌堆为空，则将其弃牌堆重新洗混，形成新的牌堆。\n"
+"\\end{expansion}"

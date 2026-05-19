@@ -64,6 +64,8 @@ msgid ""
 "\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\n"
 
 #. type: multicols*
 #: sections/heroes.tex:40 sections/player_turns.tex:56 sections/units.tex:37
@@ -72,6 +74,8 @@ msgid ""
 "\\clearpage\n"
 "\n"
 msgstr ""
+"\\clearpage\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:189 sections/map_elements.tex:199
@@ -83,17 +87,19 @@ msgid ""
 "\\bigskip\n"
 "\n"
 msgstr ""
+"\\bigskip\n"
+"\n"
 
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/units.tex:3
 msgid "\\pagetarget{Units}{\\addsection{Units}{\\skills/leadership.png}}"
-msgstr ""
+msgstr "\\pagetarget{Units}{\\addsection{单位}{\\skills/leadership.png}}"
 
 #. type: index{#1}
 #: sections/units.tex:3
 msgid "Units"
-msgstr ""
+msgstr "单位"
 
 #. type: multicols*
 #: sections/units.tex:20
@@ -115,6 +121,21 @@ msgid ""
 "\\textbf{Reinforcing} requires that your Town has a Citadel\\index{Citadel} in addition to a Dwelling of that unit's Level.\\par\n"
 "\n"
 msgstr ""
+"除了英雄及其对应的牌堆外，玩家还拥有\\textbf{一个单位牌堆}，代表随英雄移动的军队。\n"
+"每个阵营都有\\textbf{7种不同单位}，每种都有独特的属性和能力。\n"
+"单位对于赢得战斗和达成剧本目标至关重要。\n"
+"每个剧本的准备说明会指出你的初始单位牌堆应包含哪些单位牌。\n"
+"这个牌堆应与阵营中其余单位清楚分开。\\par\n"
+"每个阵营单位都是双面的，一面是较弱的``少量''面，另一面是较强的``一群''面。\n"
+"``少量''单位可以通过\\textbf{增援}升级为``一群''，而受到伤害后，单位之后也可能降回``少量''面。\n"
+"移动或查看单位时，应始终保持它们处于正确的一面。\\par\n"
+"玩家的单位牌堆可以包含任意数量的单位，但在 \\pagelink{Combatsetup}{战斗准备} 中，\\textbf{最多只能选择5个单位}参战。\n"
+"如果一个单位在战斗中被击败，将其从你的单位牌堆中\\textbf{弃置}。\\par\n"
+"你可以翻转人口标记\\index{人口标记}并支付单位的招募 \\svg{recruit} 或增援 \\svg{reinforce} 费用，来招募\\index{招募}和增援\\index{增援}你阵营的单位。\n"
+"这样做时，只要你有足够的资源和所需的前置建筑，就可以立即进行\\textbf{任意次数}的招募和增援。\\par\n"
+"\\textbf{招募}一个单位要求你的城镇拥有该单位等级（\\svg{bronze}\\svg{silver}\\svg{golden}）对应的兵营。\n"
+"\\textbf{增援}要求你的城镇除了拥有该单位等级对应的兵营外，还拥有大本营\\index{大本营}。\\vspace{2em}\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:28
@@ -129,6 +150,14 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{11}{\n"
+"  任何指示你增援的效果（例如，\\wikilink{abilities/necromancy}{招魂术}）\\textbf{不}需要花费你的人口标记，也不需要拥有大本营或任何兵营。\\par\n"
+"\n"
+"  \\medskip\n"
+"\n"
+"  如果你单位牌堆中的所有单位都被击败，\\textbf{立即}用该剧本的起始单位\\index{起始单位}替换你的单位牌堆。被击败的阵营单位总是可以通过再次使用人口标记重新招募。\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:35
@@ -142,11 +171,14 @@ msgid ""
 "\\end{tikzpicture}\n"
 "\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\includegraphics[width=0.9\\linewidth]{\\art/rust_dragon.jpg}\n"
+"\\end{center}\n"
 
 #. type: Plain text
 #: sections/units.tex:42
 msgid "\\subheader{Unit Card Anatomy}"
-msgstr ""
+msgstr "\\subheader{单位牌结构}"
 
 #. type: multicols
 #: sections/units.tex:44
@@ -155,6 +187,8 @@ msgid ""
 "\\vspace{0pt}\n"
 "\n"
 msgstr ""
+"\\vspace{0pt}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:55
@@ -172,6 +206,17 @@ msgid ""
 "Units with a higher Initiative activate first.\n"
 "\n"
 msgstr ""
+"\\includegraphics[height=30px]{\\images/attack.png} \\textbf{攻击}\\index{攻击!单位} – 该单位攻击时造成的伤害量。\\par\n"
+"\\includegraphics[height=30px]{\\images/defense.png} \\textbf{防御}\\index{防御!单位} - 该单位减少即将受到的攻击伤害的数值。\n"
+"不适用于来自法术或其他非攻击效果的伤害。\\par\n"
+"\\includegraphics[height=30px]{\\images/hp.png} \\textbf{\\pagetarget{HP}{生命值}}\\index{生命值（HP）} - 击败该单位所需的伤害量。\n"
+"``少量''单位被击败时，会从战斗及其拥有者的单位牌堆中弃置。\n"
+"``一群''单位会翻回为``少量''单位，任何溢出伤害放置在其``少量''面上。\n"
+"单位会在战斗之间保留其``少量''或``一群''状态。\n"
+"所有单位的所有伤害会在战斗结束时治愈。\\par\n"
+"\\includegraphics[height=30px]{\\images/initiative.png}{\\pagetarget{Initiative}{\\textbf{先攻}}}\\index{先攻} - 决定该单位在战斗中何时激活。\n"
+"先攻更高的单位先激活。\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:70
@@ -191,6 +236,12 @@ msgid ""
 "\\end{tikzpicture}\n"
 "\n"
 msgstr ""
+"\\begin{tikzpicture}[remember picture, overlay]\n"
+"    \\node[opacity=0.2, xscale=-1, anchor=east, xshift=1em, yshift=-17em] at (current page.west) {\n"
+"      \\includegraphics[width=1.2\\linewidth]{\\art/gorgone.png}\n"
+"    };\n"
+"\\end{tikzpicture}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:77
@@ -202,6 +253,11 @@ msgid ""
 "    \\hspace*{-1.6em}\n"
 "    \\begin{tikzpicture}\n"
 msgstr ""
+"\\begin{multicols*}{2}\n"
+"  \\footnotesize\n"
+"  \\begin{center}\n"
+"    \\hspace*{-1.6em}\n"
+"    \\begin{tikzpicture}\n"
 
 #. type: multicols
 #: sections/units.tex:105
@@ -236,6 +292,34 @@ msgid ""
 "    \\hspace*{-1.8em}\n"
 "    \\begin{tikzpicture}\n"
 msgstr ""
+"      \\node (card) {\\includegraphics[width=\\linewidth]{\\cards/unit-few.png}};\n"
+"      \\begin{relcoords}{card}\n"
+"        \\draw (0.5, 0.8) node {\\encirclesmall{1}};\n"
+"        \\draw (0.85, 0.8) node {\\encirclesmall{2}};\n"
+"        \\draw (0.35, 0.75) node {\\encirclesmall{3}};\n"
+"        \\draw (0.05, 0.75) node {\\encirclesmall{4}};\n"
+"        \\draw (0.05, 0.62) node {\\encirclesmall{5}};\n"
+"        \\draw (0.05, 0.48) node {\\encirclesmall{6}};\n"
+"        \\draw (0.05, 0.34) node {\\encirclesmall{7}};\n"
+"        \\draw (0.35, 0.3) node {\\encirclesmall{8}};\n"
+"        \\draw (0.7, 0.3) node {\\encirclesmall{9}};\n"
+"        \\draw (0.6, 0.1) node {\\encircle{11}};\n"
+"      \\end{relcoords}\n"
+"    \\end{tikzpicture}\n"
+"    \\imagecaption{单位牌（少量）}\\index{少量}\n"
+"  \\end{center}\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{1.}] {名称}\n"
+"    \\item[\\textbf{2.}] {阶级}\n"
+"    \\item[\\textbf{3.}] {类型}\n"
+"    \\item[\\textbf{4.}] {攻击}\n"
+"    \\item[\\textbf{5.}] {防御}\n"
+"    \\item[\\textbf{6.}] {生命值}\n"
+"  \\end{itemize}\n"
+"  \\columnbreak\n"
+"  \\begin{center}\n"
+"    \\hspace*{-1.8em}\n"
+"    \\begin{tikzpicture}\n"
 
 #. type: multicols
 #: sections/units.tex:129
@@ -264,6 +348,28 @@ msgid ""
 "    \\item[\\textbf{11.}]{Special Ability}\n"
 "  \\end{itemize}"
 msgstr ""
+"      \\node (card) {\\includegraphics[width=\\linewidth]{\\cards/unit-pack.png}};\n"
+"      \\begin{relcoords}{card}\n"
+"        \\draw (0.5, 0.8) node {\\encirclesmall{1}};\n"
+"        \\draw (0.85, 0.8) node {\\encirclesmall{2}};\n"
+"        \\draw (0.35, 0.75) node {\\encirclesmall{3}};\n"
+"        \\draw (0.05, 0.75) node {\\encirclesmall{4}};\n"
+"        \\draw (0.05, 0.62) node {\\encirclesmall{5}};\n"
+"        \\draw (0.05, 0.48) node {\\encirclesmall{6}};\n"
+"        \\draw (0.05, 0.34) node {\\encirclesmall{7}};\n"
+"        \\draw (0.6, 0.3) node {\\encircle{10}};\n"
+"        \\draw (0.6, 0.1) node {\\encircle{11}};\n"
+"      \\end{relcoords}\n"
+"    \\end{tikzpicture}\n"
+"    \\imagecaption{单位牌（一群）}\\index{一群}\n"
+"  \\end{center}\n"
+"  \\begin{itemize}\n"
+"    \\item[\\textbf{7.}] {先攻}\n"
+"    \\item[\\textbf{8.}] {招募费用}\n"
+"    \\item[\\textbf{9.}] {增援费用}\n"
+"    \\item[\\textbf{10.}]{``一群''符号}\n"
+"    \\item[\\textbf{11.}]{特殊能力}\n"
+"  \\end{itemize}"
 
 #. type: multicols
 #: sections/units.tex:131
@@ -272,6 +378,8 @@ msgid ""
 "\\bigbreak\n"
 "\n"
 msgstr ""
+"\\bigbreak\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:144
@@ -291,17 +399,30 @@ msgid ""
 "  Some complex unit abilities use keywords or require \\pagelink{unit keywords}{special components}.\n"
 "\n"
 msgstr ""
+"大多数单位拥有一项\\textbf{特殊能力：}\\index{特殊单位能力}\\par\n"
+"\\begin{itemize}[wide]\n"
+"  \\item\\textbf{激活} \\svg{activation}\\index{激活!效果}\\index{激活!单位} 在该单位被激活时结算。\n"
+"  \\item\\textbf{攻击} \\svg{unit_attack} 在该单位于其激活期间攻击时结算。\n"
+"    如果有多次攻击，仅为\\textbf{第一次攻击}结算该效果。\n"
+"  \\item\\textbf{其他} \\svg{unit_alternative} 可以代替该单位的普通激活来结算。\n"
+"    它取代所有移动和/或攻击。\n"
+"  \\item\\textbf{被动} \\svg{unit_passive} 在其条件满足时结算。\n"
+"  \\item\\textbf{反击} \\svg{unit_retaliation} 在该单位反击时结算。\n"
+"  \\item\\textbf{地图} \\svg{map} 效果可以在战斗之外每回合结算一次，只要你的单位牌堆中有具备此效果的单位。\n"
+"  \\end{itemize}\n"
+"  一些复杂的单位能力使用关键词，或需要\\pagelink{unit keywords}{特殊组件}。\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:146 sections/units.tex:244
 #, no-wrap
 msgid "\\vspace*{\\fill}"
-msgstr ""
+msgstr "\\vspace*{\\fill}"
 
 #. type: Plain text
 #: sections/units.tex:161
 msgid "\\pagetarget{Unittype}{\\subheader{Unit Types}}"
-msgstr ""
+msgstr "\\pagetarget{Unittype}{\\subheader{单位类型}}"
 
 #. type: multicols
 #: sections/units.tex:161
@@ -320,6 +441,18 @@ msgid ""
 "Walls and Gates may also \\pagelink{Walls}{reduce} the damage from  \\svg{unit_ranged} attacks.\n"
 "\n"
 msgstr ""
+"{2}\n"
+"单位分为三种类型：\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{地面}\\index{地面单位} \\svg{unit_ground} 单位可以移动至多3格，然后攻击一个相邻敌人。\n"
+"  \\item \\textbf{飞行}\\index{飞行单位} \\svg{unit_flying} 单位可以移动至多3格，\\textbf{无视战斗障碍物}，然后攻击一个相邻敌人。\n"
+"  \\item \\textbf{远程}\\index{远程单位} \\svg{unit_ranged} 单位可以攻击\\textbf{任何位置的任何敌方单位}，然后移动至多1格，或者不攻击并移动至多1格。\n"
+"\\end{itemize}\n"
+"如果一个 \\svg{unit_ranged} 单位与敌方单位相邻，其攻击目标\\textbf{必须是}该相邻敌人。\n"
+"以这种方式攻击相邻敌人时，\\svg{unit_ranged} 单位会受到战斗惩罚\\index{战斗惩罚}：投掷两个攻击骰（而不是一个），并\\textbf{应用较小的结果}。\\par\n"
+"如果 \\svg{unit_ranged} 单位从己方后排攻击敌方后排，也会应用此惩罚。\n"
+"城墙和城门也可能\\pagelink{Walls}{降低}  \\svg{unit_ranged} 攻击造成的伤害。\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:173
@@ -338,6 +471,18 @@ msgid ""
 "Whenever a Neutral Unit is defeated from anywhere, place it into the appropriate Neutral Discard Pile.\\par\n"
 "\n"
 msgstr ""
+"\\subsection*{\\pagetarget{Neutral Units}{中立单位}}\n"
+"中立单位\\index{中立单位}守卫着游戏地图上的各种地点。\n"
+"要访问大多数地点，必须先与它们开始并赢得战斗。\n"
+"中立单位分为四个不同等阶，每个等阶都有各自的牌堆。\n"
+"除了 \\svg{bronze}、\\svg{silver} 和 \\svg{golden} 之外，还有蔚蓝 \\svg{azure} 中立单位，它们是游戏中最强的单位。\\par\n"
+"这些牌堆应始终彼此分开放置，并在准备期间洗牌。\n"
+"如果某个中立单位牌堆的牌用尽，将弃牌重新洗牌组成新的牌堆。\n"
+"当与中立单位的战斗开始时，从每个等阶抽取相应数量的单位（见封底的 \\hyperlink{Difficulty Table}{表格}）加入该战斗。\\par\n"
+"玩家可以通过各种效果将中立单位加入自己的单位牌堆，例如剧本特定规则或\\wikilink{abilities/diplomacy}{外交术}能力牌。\n"
+"\\textbf{中立单位不能被增援}，因为它们是单面牌。\n"
+"每当中立单位被击败时，将其放入对应的中立单位弃牌堆。\\par\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:178
@@ -349,6 +494,11 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\note{7}{\n"
+"  在你的城镇建造了 \\svg{golden} 兵营后，你可以使用 \\wikilink{abilities/diplomacy}{外交术} 能力牌的基础（顶部）效果来抽取一张 \\svg{azure} 单位牌。\n"
+"  此效果不适用于其他情况，例如地下城的召唤之门。\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:182
@@ -357,6 +507,8 @@ msgid ""
 "{3}\n"
 "\n"
 msgstr ""
+"{3}\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:185
@@ -366,6 +518,9 @@ msgid ""
 "  \\begin{center}\n"
 "    \\begin{tikzpicture}\n"
 msgstr ""
+"\\begin{expansion}[title=\\phantom{\\textbf{\\tiny{foo}}}, overlay={}]{}\n"
+"  \\begin{center}\n"
+"    \\begin{tikzpicture}\n"
 
 #. type: multicols*
 #: sections/units.tex:193
@@ -380,6 +535,14 @@ msgid ""
 "\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
+"      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/neutral-back.png}};\n"
+"      \\draw (1.5, -0.5) node {\\includegraphics[width=0.6\\linewidth]{\\cards/neutral-front.png}};\n"
+"    \\end{tikzpicture}\\\\\n"
+"    \\imagecaption{中立单位}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\\vspace*{\\fill}\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:197
@@ -390,6 +553,10 @@ msgid ""
 "  \\begin{center}\n"
 "    \\begin{tikzpicture}\n"
 msgstr ""
+"\\columnbreak\n"
+"\\begin{expansion}{navalbattles}\n"
+"  \\begin{center}\n"
+"    \\begin{tikzpicture}\n"
 
 #. type: multicols*
 #: sections/units.tex:206
@@ -405,6 +572,15 @@ msgid ""
 "\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
+"      \\draw (0, 0) node {\\includegraphics[width=0.6\\linewidth]{\\cards/creature-bank-back.png}};\n"
+"      \\draw (1.5, -0.5) node {\\includegraphics[width=0.6\\linewidth]{\\cards/creature-bank.png}};\n"
+"    \\end{tikzpicture}\\\\\n"
+"    \\imagecaption{怪物宝屋单位}\n"
+"  \\end{center}\n"
+"  参见 \\pagelink{Creature Banks Rules}{怪物宝屋}。\n"
+"\\end{expansion}\n"
+"\\vspace*{\\fill}\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:217
@@ -422,6 +598,17 @@ msgid ""
 "\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
+"\\columnbreak\n"
+"\\begin{expansion}{conflux}\n"
+"  \\begin{center}\n"
+"    \\includegraphics[width=0.6\\linewidth]{\\cards/unit-air-elemental-few.png}\\\\\n"
+"    \\imagecaption{召唤元素单位}\n"
+"  \\end{center}\n"
+"  召唤元素单位没有 \\svg{recruit} 也没有 \\svg{reinforce}。\n"
+"  参见 \\pagelink{Summoning}{召唤}。\n"
+"\\end{expansion}\n"
+"\\vspace*{\\fill}\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:223
@@ -430,6 +617,8 @@ msgid ""
 "\\includegraphics[width=\\linewidth]{\\art/titan.jpg}\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{\\art/titan.jpg}\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:225
@@ -438,6 +627,8 @@ msgid ""
 "\\subsection*{Example ``Pack and Few''}\n"
 "\n"
 msgstr ""
+"\\subsection*{示例``一群和少量''}\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:227
@@ -446,6 +637,8 @@ msgid ""
 "\\textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons, Empowering \\svg{empower} the Spell by 2 with the Expert  Effect \\svg{expert} of a Power card.}\n"
 "\n"
 msgstr ""
+"\\textit{鲍勃，扮演术士阿拉玛，对爱丽丝的一群骷髅施放魔法箭，并使用一张魔法威力牌的专家效果 \\svg{expert} 将该法术强化 \\svg{empower} 2 点。}\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:231
@@ -454,6 +647,8 @@ msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/alamar_empowering_magic_arrow.png}\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{\\examples/alamar_empowering_magic_arrow.png}\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:238
@@ -465,6 +660,11 @@ msgid ""
 "}\n"
 "\n"
 msgstr ""
+"\\textit{骷髅兵因该法术受到3点伤害 \\svg{damage}。\n"
+"  它们的1点防御 \\svg{defense} 不会减少该伤害，因为防御只适用于抵御攻击。\n"
+"  骷髅兵的生命值 \\svg{health_points} 只有2，因此现在将其翻到``少量''面，并在其上放置1点剩余伤害 \\svg{damage}。\n"
+"}\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:242
@@ -473,3 +673,5 @@ msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/skeletons_flipped.png}\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{\\examples/skeletons_flipped.png}\n"
+"\n"

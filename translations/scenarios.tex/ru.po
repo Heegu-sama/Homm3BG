@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-04-23 13:44+0000\n"
+"POT-Creation-Date: 2026-05-12 22:21+0000\n"
 "PO-Revision-Date: 2024-04-21 18:49+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -50,6 +50,11 @@ msgid ""
 "Furthermore, Scenarios can introduce entirely unique game rules.\n"
 "\n"
 msgstr ""
+"Герои III --- игра, основанная на сценариях.\n"
+"При подготовке к игре вначале вы выбираете сценарий из Книги миссий.\n"
+"Сценарии обладают собственной предысторией и определяют карту, стартовые условия для игроков, а также условия победы.\n"
+"Кроме того, они могут вводить совершенно новые игровые правила.\n"
+"\n"
 
 #. type: multicols*
 #: sections/scenarios.tex:14
@@ -60,6 +65,9 @@ msgid ""
 "\\subheader{Scenario Types}\n"
 "\n"
 msgstr ""
+"\\bigskip\n"
+"\\subheader{Виды сценариев}\n"
+"\n"
 
 #. type: multicols*
 #: sections/scenarios.tex:18
@@ -179,6 +187,9 @@ msgid ""
 "\\subheader{Scenario Difficulty}\n"
 "\n"
 msgstr ""
+"\\vspace*{1em}\n"
+"\\subheader{Сложность сценария}\n"
+"\n"
 
 #. type: multicols*
 #: sections/scenarios.tex:57
@@ -202,7 +213,6 @@ msgstr ""
 "  \\item \\textbf{Тяжёлый} — бросьте 1 \\svg{resource_die} и получите ресурсы ИЛИ сбрасывайте карты из колоды артефактов, пока не найдёте 1 малый артефакт, после чего возьмите его в руку.\n"
 "  \\item \\textbf{Невозможный} — не имеет бонусов.\n"
 "\\end{itemize}\n"
-"\\columnbreak\n"
 "\n"
 
 #. type: multicols*
@@ -225,6 +235,7 @@ msgid ""
 "The chosen Difficulty also determines the number and type of Neutral Units that are encountered during Neutral Combat according to the \\hyperlink{Difficulty Table}{table} on the back cover of the book.\n"
 "\n"
 msgstr ""
+"\\columnbreak\n"
 "Поиск \\textbf{артефактов} описан в \\pagelink{Playerdecks}{общих правилах карт}.\n"
 "Все артефакты, полученные из стартового бонуса, помещаются непосредственно \\textbf{в руку}, а не перемешиваются в стартовой колоде.\n"
 "Если в качестве стартового бонуса вы искали артефакты, то после завершения поиска объедините вместе колоду артефактов и её сброс\\index{Сброс}, перемешайте, после чего поместите одну верхнюю карту в сброс.\\par\n"
@@ -241,26 +252,31 @@ msgid ""
 "\n"
 msgstr ""
 "\\vfill\n"
-"\\includegraphics[width=\\linewidth]{\\art/crusader.jpg}\n"
+"\\includegraphics[width=\\linewidth]{\\art/diamond_golem.jpg}\n"
 "\\columnbreak\n"
 "\n"
 
 #. type: multicols*
 #: sections/scenarios.tex:73
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "\\pagetarget{End}{\\subheader{Victory conditions}}\n"
 "All Scenarios have their victory conditions\\index{Victory Conditions} described in the Mission Book.\n"
 "The most common victory conditions require defeating certain enemy Towns, Heroes, or Neutral Units; capturing the Grail; or controlling certain or most Locations over time.\n"
 "Whenever a player achieves a victory condition, the game ends at the end of the Round, unless stated otherwise.\n"
 "\n"
-msgstr "\\pagetarget{End}{Все} сценарии имеют собственные условия победы\\index{Условия победы}, описанные в книге сценариев.\n"
+msgstr ""
+"\\pagetarget{End}{\\subheader{Условия победы}}\n"
+"Все сценарии имеют собственные условия победы\\index{Условия победы}, описанные в книге сценариев.\n"
+"Чаще всего они заключаются в захвате определённых вражеских городов, победе над их героями или нейтральными отрядами; захвате Грааля; контролировании каких-то локаций в течение некоторого времени.\n"
+"Когда игрок выполняет условие победы, игра заканчивается в конце текущего раунда, если не указано иное.\n"
+"\n"
 
 #. type: multicols*
 #: sections/scenarios.tex:85
 #, no-wrap
 msgid ""
-"In addition, it is always possible to be \\textbf{Eliminated} from any Scenario in the following ways:\n"
+"In addition, it is always possible to be \\textbf{eliminated} from any Scenario in the following ways:\n"
 "\\begin{itemize}\n"
 "  \\item Play 3 full Rounds without controlling a Town or a Settlement.\n"
 "    Count the number of Rounds left using any suitable component.\n"
@@ -269,8 +285,8 @@ msgid ""
 "Eliminated players are immediately removed from the game.\n"
 "Discard their Faction Cubes and Hero models from the Map.\n"
 "Treat the cards in their Deck as being removed from the game for the rest of the Scenario.\n"
-"If you are Eliminated, you may still participate in the game by controlling Neutral Units.\\par\n"
-"\\note{4}{If you Eliminate all enemy Factions, you immediately win the Scenario.}\\par\n"
+"If you are eliminated, you may still participate in the game by controlling Neutral Units.\\par\n"
+"\\note{4}{If you eliminate all enemy Factions, you immediately win the Scenario.}\\par\n"
 "\n"
 msgstr ""
 "Также всегда есть возможность \\textbf{выбыть} из игры следующими способами:\n"
@@ -283,7 +299,7 @@ msgstr ""
 "Удалите их кубики фракции и миниатюры героев с игровой карты.\n"
 "До конца сценария расценивайте карты в их колоде как удалённые из игры.\n"
 "Если вы выбыли из игры, вы всё ещё можете принимать в ней участие, контролируя нейтральные отряды.\\par\n"
-"\\note{4}{Если все игроки кроме вас выбыли из игры, вы мгновенно выигрываете сценарий.}\\par\n"
+"\\note{5}{Если все игроки кроме вас выбыли из игры, вы мгновенно выигрываете сценарий.}\\par\n"
 "\n"
 
 #. type: multicols*
@@ -304,4 +320,4 @@ msgstr ""
 #: sections/scenarios.tex:91
 #, no-wrap
 msgid "After finishing a \\textbf{Solo Campaign} Scenario, see the \\pagelink{Campaign}{Campaign section} for how to prepare for the next Scenario of the Campaign."
-msgstr ""
+msgstr "По завершении сценария \\textbf{одиночной кампании}, см.~инструкцию в \\pagelink{Campaign}{разделе Кампания}, как подготовить следующий сценарий кампании."

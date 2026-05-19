@@ -41,6 +41,7 @@
 | reinforced | ... |
 | summoned elementals | ... |
 | unit cards | ... |
+| unit miniatures | ... |
 | units | יחידות |
 | zealots | ... |
 
@@ -48,15 +49,19 @@
 
 | English | Hebrew |
 |---|---|
+| MP | ... |
 | ability | יכולות |
 | experience | ... |
 | expert effects | ... |
+| hero board | ... |
 | hero | גיבור |
 | heroes | גיבורים |
 | level tracker | ... |
 | level | רמה |
 | main hero | גיבור ראשי |
 | movement points | ... |
+| MP | ... |
+| power | ... |
 | secondary hero | גיבור משני |
 | specialty | מומחיות |
 
@@ -66,25 +71,36 @@
 |---|---|
 | center field | ... |
 | central map tile | ... |
+| creature bank | ... |
 | dragon utopia | ... |
 | far map tile | ... |
 | field | ... |
 | locations | ... |
 | map tile | ... |
+| mines | ... |
+| monolith | ... |
 | near map tile | ... |
+| obelisk | ... |
 | random town | ... |
 | revisitable | ... |
+| sea map tile | ... |
 | settlement | ... |
 | starting (i) map tile | ... |
+| subterranean gate | ... |
+| subterranean map tile | ... |
 | tile | ... |
 | trading post | מסחר |
 | water wheel | ... |
+| whirlpool | ... |
 
 ## Resources
 
 | English | Hebrew |
 |---|---|
 | building materials | אבנים |
+| gold | ... |
+| grail token | ... |
+| resource dice | ... |
 | resource production tracker | לוח למעקב אחר ייצור המשאבים |
 | resources | משאבים |
 | treasure die | ... |
@@ -99,18 +115,26 @@
 | decks | ... |
 | discard pile | ... |
 | discard | ... |
+| empowered ability card | ... |
+| empowered ability token | ... |
+| empowered statistic card | ... |
 | hand limit | ... |
+| pandora's box card | ... |
 | player decks | ... |
 | search | ... |
 | specialty card | קלפי המומחיות |
 | spell cards | קלפי קסם |
+| spell scroll | ... |
 | statistic card | ... |
+| summoned unit card | ... |
 
 ## Spells
 
 | English | Hebrew |
 |---|---|
 | haste | מהירות |
+| magic arrow | ... |
+| school | ... |
 
 ## AI Deck
 
@@ -125,9 +149,14 @@
 
 | English | Hebrew |
 |---|---|
+| build token | ... |
 | buildings | ... |
+| citadel | ... |
 | dwelling | ... |
 | population token | אסימון האוכלוסייה |
+| spell book token | ... |
+| town board | ... |
+| town card | ... |
 
 ## Combat
 
@@ -139,35 +168,66 @@
 | combat | קרב |
 | damage | נזק |
 | front line | קו חזית |
+| initiative | ... |
+| negative morale | ... |
+| positive morale | ... |
 | winning combat | ... |
 
 ## Battlefield
 
 | English | Hebrew |
 |---|---|
+| adventure card | ... |
 | adventure mode | מצב הרפתקה |
-| skirmish mode | ... |
-| final combat | קרב סופי |
+| alliance | ... |
+| battlefield board | ... |
+| battlefield obstacles | ... |
+| battlefield | ... |
+| campaign | ... |
+| clash | ... |
 | combat power level | ... |
+| cooperative | ... |
+| final combat | קרב סופי |
+| scenario | ... |
+| skirmish mode | ... |
 
 ## Keywords
 
 | English | Hebrew |
 |---|---|
+| attack token | ... |
 | clone token | ... |
+| corrosion token | ... |
+| fire wall token | ... |
 | force field token | ... |
 | land mine token | ... |
+| miniatures | ... |
 | quicksand token | ... |
+| stack token | ... |
+| summon token | ... |
+| time token | ... |
+| weakness token | ... |
 
 ## Other
 
 | English | Hebrew |
 |---|---|
+| artifact | ... |
+| astrologers proclaim card | ... |
+| attack dice | ... |
+| black cubes | ... |
 | core rulebook | ספר חוקים |
 | effects | ... |
+| event card | ... |
+| expert effect markers | ... |
+| faction cubes | ... |
+| faction | ... |
 | game setup | הכנת המשחק |
 | map setup | ... |
 | player elimination | ... |
 | player setup | ... |
+| relic | ... |
+| round | ... |
 | round tracker | לוח מעקב הסבבים |
+| turn | ... |
 | war machine | מכונת מלחמה |
