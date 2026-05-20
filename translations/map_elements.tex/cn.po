@@ -680,6 +680,12 @@ msgstr ""
 
 #. type: Plain text
 #: sections/map_elements.tex:263
+#, fuzzy
+#| msgid ""
+#| "\\textlang{english}{\\begin{tikzpicture}[remember picture, overlay] "
+#| "\\node(cover)[anchor=center, yshift=12em] at (current page.south) "
+#| "{ \\includegraphics[width=1.01\\paperwidth, keepaspectratio]{\\art/"
+#| "castle_bottom.png} \\thispagestyle{empty} }; \\end{tikzpicture}}"
 msgid ""
 "\\AddToHookNext{shipout/background}{\\iftoggle{noartbackground}{}"
 "{ \\begin{tikzpicture}[remember picture,overlay] \\node(bg)[anchor=south "
@@ -687,11 +693,10 @@ msgid ""
 "{ \\includegraphics[width=0.5\\paperwidth, keepaspectratio]{\\art/"
 "cove_part.png} }; \\end{tikzpicture} }}"
 msgstr ""
-"\\AddToHookNext{shipout/background}{\\iftoggle{noartbackground}{}"
-"{ \\begin{tikzpicture}[remember picture,overlay] \\node(bg)[anchor=south "
-"east, opacity=0.15, xshift=2em, yshift=-5em] at (current page.south east) "
-"{ \\includegraphics[width=0.5\\paperwidth, keepaspectratio]{\\art/"
-"cove_part.png} }; \\end{tikzpicture} }}"
+"\\textlang{english}{\\begin{tikzpicture}[remember picture, overlay] "
+"\\node(cover)[anchor=center, yshift=12em] at (current page.south) "
+"{ \\includegraphics[width=1.01\\paperwidth, keepaspectratio]{\\art/"
+"castle_bottom.png} \\thispagestyle{empty} }; \\end{tikzpicture}}"
 
 #. type: Plain text
 #: sections/map_elements.tex:270
@@ -842,17 +847,3 @@ msgstr ""
 "  作为一条\\textbf{可选规则}，你可以决定使用\\pagelink{Creature Banks Rules}{怪物宝屋}进行游戏。%\n"
 "  如果你这样做，每当你发现一个远端\\mbox{（II--III）}或近端\\mbox{（IV--V）} 地图板块时，你可以决定抽取一个与所发现地图板块对应的怪物宝屋标记，并且 -- 与普通规则相反 -- 你只能将其放置在其被封锁的格上。\n"
 "\\end{expansion}"
-
-#. type: tikzpicture
-#: sections/map_elements.tex:319
-#, no-wrap
-msgid ""
-"[overlay]\n"
-"  \\node(bg)[anchor=center, opacity=0.15, xshift=8em, yshift=-22em] at (current page.center) {\n"
-"    \\includegraphics[width=0.5\\paperwidth, keepaspectratio]{\\art/cove_part.png}\n"
-"  };"
-msgstr ""
-"[overlay]\n"
-"  \\node(bg)[anchor=center, opacity=0.15, xshift=8em, yshift=-22em] at (current page.center) {\n"
-"    \\includegraphics[width=0.5\\paperwidth, keepaspectratio]{\\art/cove_part.png}\n"
-"  };"
