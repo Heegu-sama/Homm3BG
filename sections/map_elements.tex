@@ -251,6 +251,16 @@ During the Combat, she casts the Lightning Bolt, and Empowers \svg{empower} it w
 \end{multicols}
 \clearpage
 
+\AddToHookNext{shipout/background}{%
+  \iftoggle{noartbackground}{}{
+    \begin{tikzpicture}[remember picture,overlay]
+      \node(bg)[anchor=south east, opacity=0.15, xshift=2em, yshift=-5em] at (current page.south east) {
+        \includegraphics[width=0.5\paperwidth, keepaspectratio]{\art/cove_part.png}
+      };
+    \end{tikzpicture}
+  }%
+}
+
 \pagetarget{Discover Location Tokens}{\subheader{Placing and Discovering Location Tokens}}
 \begin{multicols}{2}
 Location Tokens are added by several expansions to the game.
@@ -311,9 +321,3 @@ The effects of visiting the Location Tokens are described in \pagelink{Location 
   If you do, each time you discover a Far \mbox{(II--III)} or Near \mbox{(IV--V)} Map Tile, you may decide to draw a Creature Bank Token corresponding to the discovered Map Tile, and -- contrary to the normal rules -- you can place it \textbf{only on its Blocked Field}.
 \end{expansion}
 \end{multicols}
-
-\begin{tikzpicture}[overlay]
-  \node(bg)[anchor=center, opacity=0.15, xshift=8em, yshift=-22em] at (current page.center) {
-    \includegraphics[width=0.5\paperwidth, keepaspectratio]{\art/cove_part.png}
-  };
-\end{tikzpicture}
