@@ -98,14 +98,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:32
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  \\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority:\n"
-#| "  \\svg{golden}\n"
-#| "  - \\svg{silver}\n"
-#| "  - \\svg{bronze}\n"
-#| "  - \\svg{azure}.}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority:\n"
 "    \\svg{golden}\n"
@@ -124,11 +117,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:35
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  \\item Ranged \\svg{unit_ranged} Units prioritize attacking other Ranged \\svg{unit_ranged} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
-#| "  If there are no Ranged \\svg{unit_ranged} Units for them to target, they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} Units in the same tier order.\\par\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\item Ranged \\svg{unit_ranged} units prioritize attacking other Ranged \\svg{unit_ranged} units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
 "    If there are no Ranged \\svg{unit_ranged} units for them to target, they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} units in the same tier order.\\par\n"
@@ -140,19 +129,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:48
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  \\textit{Example: \\svg{silver}\\svg{unit_ranged} has this priority:\n"
-#| "  \\svg{silver}\\svg{unit_ranged}\n"
-#| "  - \\svg{bronze}\\svg{unit_ranged}\n"
-#| "  - \\svg{golden}\\svg{unit_ranged}\n"
-#| "  - \\svg{azure}\\svg{unit_ranged}\n"
-#| "  - \\svg{silver}\\svg{unit_ground}\\svg{unit_flying}\n"
-#| "  - \\svg{bronze}\\svg{unit_ground}\\svg{unit_flying}\n"
-#| "  - \\svg{golden}\\svg{unit_ground}\\svg{unit_flying}\n"
-#| "  - \\svg{azure}\\svg{unit_ground}\\svg{unit_flying}.}\n"
-#| "\\end{itemize}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\textit{Example: \\svg{silver}\\svg{unit_ranged} has this priority:\n"
 "    \\svg{silver}\\svg{unit_ranged}\n"
@@ -183,11 +160,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:51
-#, fuzzy, no-wrap
-#| msgid ""
-#| "In both cases, if there's more than one valid target, they attack the closest one.\n"
-#| "If there's ever a tie between equally valid targets, the player chooses which Unit is attacked.\\par\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  In both cases, if there is more than one valid target, they attack the closest one.\n"
 "  If there is ever a tie between equally valid targets, the player chooses which unit is attacked.\\par\n"
@@ -212,10 +185,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:60
-#, fuzzy, no-wrap
-#| msgid ""
-#| "Enemy Units cannot \\pagelink{Defend}{Defend} unless instructed to.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  Enemy units cannot \\pagelink{Defend}{defend} unless instructed to.\n"
 "\n"
@@ -237,18 +207,13 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:70
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\vspace{1em}\n"
-#| "\\note{9}{In a siege against AI, the Arrow Tower follows the priority-rules like a Silver \\svg{silver} Unit. But if there are many valid targets, it cannot attack the nearest one, so it will attack the one that is closest to perishing (the smallest difference between \\svg{health_points-yellow} and current \\svg{damage-yellow}).}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  The \\pagelink{Walls}{Arrow Tower} is treated like a Silver \\svg{silver}\\svg{unit_ranged} unit.\n"
 "  However, if it has multiple equally valid targets to attack, it will attack the one with the least health remaining (the smallest difference between \\svg{health_points} and current~\\svg{damage})."
 msgstr ""
-"\\vspace{1em}\n"
-"\\note{9}{W oblężeniu przeciwko AI Wieża Łucznicza atakuje jak Srebrna \\svg{silver} Jednostka. Jeśli jest więcej niż jeden możliwy cel, nie może atakować najbliższego, więc zaatakuje ten, który jest najbliżej śmierci (najmniejsza różnica między \\svg{health_points-yellow} a obecnymi \\svg{damage-yellow}).}\n"
-"\n"
+"  \\pagelink{Walls}{Wieża Łucznicza} jest traktowana jak Srebrna \\svg{silver}\\svg{unit_ranged} jednostka.\n"
+"  Jeśli ma więcej niż jeden możliwy cel, zaatakuje ten, który ma najmniej życia (najmniejsza różnica między \\svg{health_points} a obecnymi \\svg{damage-yellow})."
 
 #. type: multicols
 #: sections/ai_rules.tex:78
@@ -284,19 +249,7 @@ msgstr ""
 
 #. type: multicols
 #: sections/ai_rules.tex:95
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\subsection*{AI Hero Turn}\n"
-#| "\\pagetarget{AIrules}{AI Heroes} are used in the Campaigns.\n"
-#| "They start in their Town, and have 3 MP, always spending them to perform the following Actions in descending priority:\n"
-#| "\\begin{itemize}\n"
-#| "  \\item If a player's Hero is on the same Tile as the AI, spend all MP to move towards them in an attempt to start Combat.\n"
-#| "  \\item If there are any Mines or Settlements the AI could Flag on the same Tile, move towards the closest one.\n"
-#| "  \\item Otherwise, move toward the player's Town.\n"
-#| "Repeat this sequence until all MPs are used up.\n"
-#| "AI Heroes take their turn after the player.\n"
-#| "\\end{itemize}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  \\columnbreak\n"
 "  \\subsection*{AI Hero Turns}\n"
@@ -309,31 +262,28 @@ msgid ""
 "  Repeat this sequence until all MPs are used up.\n"
 "\n"
 msgstr ""
-"\\subsection*{Tura Bohatera AI}\n"
-"\\pagetarget{AIrules}{Bohaterowie AI} występują w Kampaniach.\n"
-"Zaczynają grę w swoim Mieście i posiadają 3 PR, które przeznaczają na następujący schemat działań:\n"
-"\\begin{itemize}\n"
-"  \\item Jeśli Bohater gracza znajduje się na tym samym Kafelku co AI, wykorzystaj wszystkie PR, aby przemieścić się w jego kierunku w celu rozpoczęcia Walki.\n"
-"  \\item Jeśli na tym samym Kafelku Mapy znajdują się Kopalnie lub Osady, które można oflagować, przemieść się w kierunku najbliższej z nich i oflaguj ją.\n"
-"  \\item W pozostałych przypadkach idź w kierunku Miasta gracza.\n"
-"\\end{itemize}\n"
-"Powtarzaj tę sekwencję, aż wykorzystasz wszystkie PR. Bohaterowie AI wykonują swoją turę po graczu.\n"
+"  \\columnbreak\n"
+"  \\subsection*{Tura Bohatera AI}\n"
+"  \\pagetarget{AIrules}{Bohaterowie AI} występują w Kampaniach.\n"
+"  O ile nie wspomniano inaczej, Bohaterowie AI zaczynają grę w swoim Mieście, rozgrywają turę po turach graczy i posiadają 3 PR, które przeznaczają na następujący schemat działań:\n"
+"  \\begin{itemize}\n"
+"    \\item Jeśli Bohater gracza znajduje się na tym samym Kafelku co AI, wykorzystaj wszystkie PR, aby przemieścić się w jego kierunku w celu rozpoczęcia Walki.\n"
+"    \\item Jeśli na tym samym Kafelku Mapy znajdują się Kopalnie lub Osady, które można oflagować, przemieść się w kierunku najbliższej z nich i oflaguj ją.\n"
+"    \\item W pozostałych przypadkach idź w kierunku Miasta gracza.\n"
+"  \\end{itemize}\n"
+"  Powtarzaj tę sekwencję, aż wykorzystasz wszystkie PR. Bohaterowie AI wykonują swoją turę po graczu.\n"
 "\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:98
-#, fuzzy, no-wrap
-#| msgid ""
-#| "AI Heroes always \\textbf{automatically win Combat} against any Neutral Units, while simultaneously \\textbf{Flagging or Visiting all Fields} they happen to move through.\n"
-#| "They gain no benefits from any Fields.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  AI Heroes always \\textbf{automatically win Combat} against any Neutral Units, while simultaneously \\textbf{flagging or visiting all Fields} they happen to move through.\n"
 "  They gain no benefits from any Fields.\n"
 "\n"
 msgstr ""
-"Bohaterowie AI \\textbf{automatycznie wygrywają Walki} przeciwko wszystkim Jednostkom Neutralnym oraz \\textbf{zdobywają lub odwiedzają wszystkie Pola}, przez które przechodzą,\n"
-"nie uzyskując z nich korzyści.\n"
+"  Bohaterowie AI \\textbf{automatycznie wygrywają Walki} przeciwko wszystkim Jednostkom Neutralnym oraz \\textbf{zdobywają lub odwiedzają wszystkie Pola}, przez które przechodzą,\n"
+"  nie uzyskując z nich korzyści.\n"
 "\n"
 
 #. type: multicols
@@ -346,36 +296,24 @@ msgstr ""
 
 #. type: Plain text
 #: sections/ai_rules.tex:107
-#, fuzzy
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=1.05\\linewidth]{\\art/arrow_tower.jpg}\n"
-#| "\\end{center}\n"
-#| "\n"
 msgid ""
 "{\\begin{center} \\vfill \\includegraphics[width=\\linewidth]{\\art/"
 "gold_dragon.jpg} \\end{center}}"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=1.05\\linewidth]{\\art/arrow_tower.jpg}\n"
-"\\end{center}\n"
-"\n"
+"{\\begin{center} \\vfill \\includegraphics[width=\\linewidth]{\\art/"
+"gold_dragon.jpg} \\end{center}}"
 
 #. type: multicols*
 #: sections/ai_rules.tex:111
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\vfill\n"
-#| "\\begin{center}\n"
-#| "  \\begin{scriptsize}\n"
+#, no-wrap
 msgid ""
 "{2}\n"
 "  \\pagetarget{AI Deck}{\\subheader{AI Decks}}\n"
 "  \\begin{tikzpicture}\n"
 msgstr ""
-"\\vfill\n"
-"\\begin{center}\n"
-"  \\begin{scriptsize}\n"
+"{2}\n"
+"  \\pagetarget{AI Deck}{\\subheader{Talia AI}}\n"
+"  \\begin{tikzpicture}\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:143
