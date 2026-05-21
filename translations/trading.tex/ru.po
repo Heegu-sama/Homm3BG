@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-03-29 12:19+0000\n"
+"POT-Creation-Date: 2026-05-20 21:23+0000\n"
 "PO-Revision-Date: 2024-04-24 14:17+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -25,9 +25,9 @@ msgstr ""
 #: sections/heroes.tex:5 sections/map_elements.tex:93
 #: sections/map_elements.tex:142 sections/player_turns.tex:5
 #: sections/resources.tex:5 sections/round_structure.tex:5
-#: sections/scenarios.tex:5 sections/setup.tex:5 sections/solo_campaigns.tex:5
-#: sections/tournament_mode.tex:5 sections/town.tex:5 sections/trading.tex:5
-#: sections/units.tex:5 sections/units.tex:42 sections/units.tex:222
+#: sections/scenarios.tex:5 sections/setup.tex:5 sections/solo_campaigns.tex:7
+#: sections/tournament_mode.tex:6 sections/town.tex:5 sections/trading.tex:5
+#: sections/units.tex:5 sections/units.tex:42 sections/units.tex:221
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -37,32 +37,42 @@ msgstr ""
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/trading.tex:3
-#, fuzzy
-#| msgid "\\addsection{Trading}{\\skills/armorer.png}"
 msgid "\\pagetarget{Trading}{\\addsection{Trading}{\\art/ammo_cart.png}}"
-msgstr "\\addsection{Торговля}{\\skills/armorer.png}"
+msgstr "\\pagetarget{Trading}{\\addsection{Торговля}{\\art/ammo_cart.png}}"
 
 #. type: index{#1}
 #: sections/trading.tex:3
 msgid "Trading"
-msgstr ""
+msgstr "Торговля"
 
 #. type: multicols
 #: sections/trading.tex:16
 #, no-wrap
 msgid ""
 "\\subsection*{Trading Post actions}\n"
-"When visiting a \\pagelink{Trading Post}{Trading Post Field} allows you to either:\n"
+"When visiting a \\pagelink{Trading Post}{Trading Post Field}, choose one:\n"
 "\\begin{itemize}\n"
-"  \\item trade multiple Resources with the game in accordance to the \\hyperlink{Trade Table}{table at the back cover}, or\n"
+"  \\item Trade multiple Resources with the game in accordance with the \\hyperlink{Trade Table}{table at the back cover}.\n"
 "  \\begin{expansion}[before skip balanced=0.4em,left=4mm]{rampart,cove}\n"
-"    \\item buy a \\pagelink{War Machines}{War Machine}, or\n"
+"    \\item Buy a \\pagelink{War Machines}{War Machine} of your choice.\n"
 "  \\end{expansion}\n"
-"  \\item \\textbf{remove a single card} from your hand at the trading post to gain 1 \\svg{gold}.\n"
-"    \\note{5}{Specialty, Statistic, Starting Ability and \\wikilink{spells/magic_arrow}{Magic Arrows} \\textbf{cannot be removed} in the Trading Post.}\\par\n"
+"  \\item \\textbf{Remove a single card} from your hand to gain 1 \\svg{gold}.\\par\n"
+"    \\note{4}{Specialty, Statistic, Starting Ability and \\wikilink{spells/magic_arrow}{Magic Arrows} \\textbf{cannot be removed} in the Trading Post.}\\par\n"
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"\\subsection*{Действия Рынка}\n"
+"При посещении \\pagelink{Trading Post}{рынка} выберите одно из:\n"
+"\\begin{itemize}\n"
+"  \\item Обменивайте игровые ресурсы в соответствии с \\hyperlink{Trade Table}{таблицей на обратной стороне книги}. Можно более одного раза.\n"
+"  \\begin{expansion}[before skip balanced=0.4em,left=4mm]{rampart,cove}\n"
+"    \\item Купите \\pagelink{War Machines}{боевую машину} по вашему выбору.\n"
+"  \\end{expansion}\n"
+"  \\item \\textbf{Удалите одну карту} с руки и получите 1~\\svg{gold}.\\par\n"
+"\n"
+"    \\note{6}{Карты специальности, характеристик, стартового навыка и \\wikilink{spells/magic_arrow}{Волшебных стрел} \\textbf{нельзя удалить} на рынке.}\\par\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/trading.tex:26
@@ -79,6 +89,21 @@ msgid ""
 "\\columnbreak\n"
 "\n"
 msgstr ""
+"Кроме того, вы можете неограниченное число раз сделать следующие действия во время того же посещения:\n"
+"\\begin{itemize}\n"
+"  \\item В \\textbf{Кооперативных сценариях}: ресурсы можно послать другому игроку.\n"
+"  \\begin{expansion}[before skip balanced=0.4em,left=4mm]{stronghold}\n"
+"    \\item Заклинания со \\pagelink{Spell Scroll Cards}{свитка заклинаний} можно \\pagetarget{selling Spell Scrolls}{продать за 2~\\svg{gold} каждое}.\n"
+"      Удалите проданные заклинания из игры.\n"
+"  \\end{expansion}\n"
+"\\end{itemize}\n"
+"\\vfill\n"
+"\\begin{center}\n"
+"  {\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/black_market.png}}\n"
+"\\end{center}\n"
+"\\vfill\n"
+"\\columnbreak\n"
+"\n"
 
 #. type: multicols
 #: sections/trading.tex:36
@@ -89,30 +114,38 @@ msgid ""
 "\\begin{itemize}\n"
 "  \\item In \\textbf{Alliance Scenarios}, allies may trade Resources freely at any time on their Turns except during Combat.\n"
 "  \\item In \\textbf{Alliance and Cooperative Scenarios}, allies may trade \\textbf{Spell} and \\textbf{Artifact} cards in any mix if they have Heroes on adjacent Fields.\n"
-"    Only \\textbf{cards from their hands} may be traded and you must give and receive an equal amount of cards.\n"
+"    Only \\textbf{cards from their hands} may be traded and you must give and receive an equal number of cards.\n"
 "  \\item When other game effects allow you to \\textbf{trade Resources} (e.g., \\wikilink{events/marketplace}{Marketplace Event}), use the \\hyperlink{Trade Table}{trade table} as well.\n"
 "\\end{itemize}\n"
 "\\medskip\n"
 "\n"
 msgstr ""
+"\\subsection*{Другие торговые действия}\n"
+"Некоторые режимы игры и эффекты позволяют вам:\n"
+"\\begin{itemize}\n"
+"  \\item В \\textbf{сценариях Альянса} союзники могут свободно обмениваться ресурсами друг с другом в любой момент их ходов, за исключением сражений.\n"
+"  \\item В \\textbf{Альянсе и Кооперативе} союзники могут обмениваться \\textbf{заклинаниями} и \\textbf{артефактами} в любом количестве, если их герои находятся на смежных полях.\n"
+"    Обменивать можно только \\textbf{карты в руке}, количество отданных и полученных карт должно быть одинаковым.\n"
+"  \\item Когда другие игровые эффекты позволяют \\textbf{обменивать ресурсы}, используйте ту же \\hyperlink{Trade Table}{таблицу торговли}.\n"
+"\\end{itemize}\n"
+"\\medskip\n"
+"\n"
 
 #. type: multicols
 #: sections/trading.tex:40
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\vspace*{\\fill}\n"
-#| "\\begin{center}\n"
-#| "  \\transparent{0.2}\\includegraphics[width=1.3\\linewidth]{\\art/storm_elemental.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\begin{center}\n"
 "  {\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/black_market.png}}\n"
 "\\end{center}\n"
 "\n"
 msgstr ""
-"\\vspace*{\\fill}\n"
-"\\begin{center}\n"
-"  \\transparent{0.2}\\includegraphics[width=1.1\\linewidth]{\\art/storm_elemental.png}\n"
-"\\end{center}\n"
+"{\\begin{center} \\includegraphics[width=\\linewidth]{\\art/demon.jpg} \\end{center}}\n"
 "\n"
+
+#. type: Plain text
+#: sections/trading.tex:45
+msgid ""
+"{\\begin{center} \\includegraphics[width=\\linewidth]{\\art/harpy.jpg} "
+"\\end{center}}"
+msgstr "{}"
