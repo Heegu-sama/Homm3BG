@@ -680,12 +680,6 @@ msgstr ""
 
 #. type: Plain text
 #: sections/map_elements.tex:263
-#, fuzzy
-#| msgid ""
-#| "\\textlang{english}{\\begin{tikzpicture}[remember picture, overlay] "
-#| "\\node(cover)[anchor=center, yshift=12em] at (current page.south) "
-#| "{ \\includegraphics[width=1.01\\paperwidth, keepaspectratio]{\\art/"
-#| "castle_bottom.png} \\thispagestyle{empty} }; \\end{tikzpicture}}"
 msgid ""
 "\\AddToHookNext{shipout/background}{\\iftoggle{noartbackground}{}"
 "{ \\begin{tikzpicture}[remember picture,overlay] \\node(bg)[anchor=south "
@@ -693,10 +687,11 @@ msgid ""
 "{ \\includegraphics[width=0.5\\paperwidth, keepaspectratio]{\\art/"
 "cove_part.png} }; \\end{tikzpicture} }}"
 msgstr ""
-"\\textlang{english}{\\begin{tikzpicture}[remember picture, overlay] "
-"\\node(cover)[anchor=center, yshift=12em] at (current page.south) "
-"{ \\includegraphics[width=1.01\\paperwidth, keepaspectratio]{\\art/"
-"castle_bottom.png} \\thispagestyle{empty} }; \\end{tikzpicture}}"
+"\\AddToHookNext{shipout/background}{\\iftoggle{noartbackground}{}"
+"{ \\begin{tikzpicture}[remember picture,overlay] \\node(bg)[anchor=south "
+"east, opacity=0.15, xshift=2em, yshift=-5em] at (current page.south east) "
+"{ \\includegraphics[width=0.5\\paperwidth, keepaspectratio]{\\art/"
+"cove_part.png} }; \\end{tikzpicture} }}"
 
 #. type: Plain text
 #: sections/map_elements.tex:270
