@@ -36,22 +36,22 @@ msgstr ""
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/solo_campaigns.tex:5
-#, fuzzy
-#| msgid "\\addsection{Town}{\\skills/artillery.png}"
 msgid ""
 "\\pagetarget{Campaign}{\\addsection{Solo Campaigns}{\\spells/"
 "town_portal.png}}"
-msgstr "\\addsection{Город}{\\skills/artillery.png}"
+msgstr ""
+"\\pagetarget{Campaign}{\\addsection{Одиночные кампании}{\\spells/"
+"town_portal.png}}"
 
 #. type: index{#1}
 #: sections/solo_campaigns.tex:5
 msgid "Campaign"
-msgstr ""
+msgstr "Кампания"
 
 #. type: index{#1}
 #: sections/solo_campaigns.tex:5
 msgid "Solo Mode"
-msgstr ""
+msgstr "Одиночный режим"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:9
@@ -59,7 +59,7 @@ msgstr ""
 msgid ""
 "A Campaign is a series of Scenarios designed for solo play.\n"
 "\n"
-msgstr ""
+msgstr "Кампания --- последовательность сценариев для одного игрока.\n\n"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:13
@@ -70,6 +70,10 @@ msgid ""
 "Campaigns have unique bonuses that \\textbf{replace} the regular starting bonus from the chosen \\pagelink{Difficulty}{Difficulty}.\n"
 "\n"
 msgstr ""
+"\\subsection*{Начало сценария}\n"
+"В начале каждого сценария кампании установите свой доход в 10~\\svg{gold}, 0~\\svg{building_materials}, 0~\\svg{valuables} с помощью кубиков на соответствующих местах на доске города. Конкретные сценарии могут менять эти значения.\n"
+"Кампании дают специальные стартовые бонусы, которые \\textbf{заменяют} обычный стартовый бонус выбранной \\pagelink{Difficulty}{сложности}.\n"
+"\n"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:15
@@ -77,7 +81,8 @@ msgstr ""
 msgid ""
 "Prepare AI Enemies: their \\pagelink{AI Heroes}{units} and their \\pagelink{AI Deck}{AI Decks}.\n"
 "\n"
-msgstr ""
+msgstr "Подготовьте ИИ-врагов: их \\pagelink{AI Heroes}{отряды} и \\pagelink{AI Deck}{колоды карт ИИ}.\n"
+"\n"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:18
@@ -87,6 +92,9 @@ msgid ""
 "Although each campaign has its own recommended Hero for whom it is balanced and who is also the protagonist of the story, you are free to play with any other Hero of the same Faction.\n"
 "\n"
 msgstr ""
+"\\subsection*{Игра за других героев}\n"
+"Хотя у каждой кампании есть свой рекомендованный герой, для которого игра сбалансирована, и который является протагонистом истории, вы можете вместо него выбрать любого другого героя той же фракции.\n"
+"\n"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:25
@@ -100,6 +108,13 @@ msgid ""
 "You cannot have more than 4 \\wikilink{spells/magic_arrow}{Magic Arrow} cards, even if the previous Hero had 5 of them.\n"
 "\n"
 msgstr ""
+"Если вы решили поменять героя между сценариями кампании либо попробовать сыграть тот же сценарий, но с другим героем,\n"
+"замените все карты характеристик и специальности I уровня предыдущего героя характеристиками и специальностью I уровня нового героя.\n"
+"Если у предыдущего героя были \\pagelink{Empowered Statistic}{усиленные характеристики},\n"
+"вы можете удалить из колоды героя карты характеристик того же типа и заменить их усиленными характеристиками того же типа.\n"
+"Вы можете заменить любые карты из группы <<5 других карт, кроме специальности>> стартовым навыком нового героя (если в колоде пока ещё нет копии этого навыка), а также \\wikilink{spells/magic_arrow}{Волшебными стрелами.}\n"
+"Нельзя иметь более 4 карт \\wikilink{spells/magic_arrow}{Волшебной стрелы}, даже если у предыдущего героя их было 5.\n"
+"\n"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:28
@@ -109,6 +124,9 @@ msgid ""
 "See \\pagelink{AI Units}{Combat against AI} section.\n"
 "\n"
 msgstr ""
+"\\subsection*{Сражение}\n"
+"См. раздел \\pagelink{AI Units}{Сражение против ИИ}.\n"
+"\n"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:38
@@ -125,6 +143,16 @@ msgid ""
 "Skip \\pagelink{SetupStartingDeck}{steps \\ref*{SetupStartingDeck}--\\ref*{SetupStartingDeckEnd} of Setup} for the next Scenario of the Campaign.\n"
 "\n"
 msgstr ""
+"\\subsection*{Завершение сценария}\n"
+"После завершения сценария \\textbf{одиночной кампании} установите уровень героя назад в I и подготовьте стартовую колоду для следующего сценария кампании.\n"
+"В колоде будут:\n"
+"\\begin{itemize}\n"
+"  \\item все карты \\pagelink{Statistic}{характеристик} из старой колоды,\n"
+"  \\item \\pagelink{Specialty}{специальность} уровня I,\n"
+"  \\item 5 других карт, кроме специальности, из старой колоды по вашему выбору.\n"
+"\\end{itemize}\n"
+"При подготовке к следующему сценарию кампании пропустите \\pagelink{SetupStartingDeck}{шаги \\ref*{SetupStartingDeck}--\\ref*{SetupStartingDeckEnd}}.\n"
+"\n"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:41
@@ -134,6 +162,9 @@ msgid ""
 "If you lose the Scenario, reset the Deck to the same list.\n"
 "\n"
 msgstr ""
+"Запишите список карт в получившейся стартовой колоде.\n"
+"Если вы проиграли сценарий, восстановите колоду из этого списка.\n"
+"\n"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:44
@@ -143,16 +174,13 @@ msgid ""
 "\\note{6}{If your Hero is at some point given a Spell, Artifact, or Ability card that is unavailable, \\textbf{Search (3)} the respective card's Deck to get another card in its stead.}\n"
 "\n"
 msgstr ""
+"\\bigskip\n"
+"\\note{6}{Если вашему герою в какой-то момент дают заклинание, артефакт или навык, карта которых недоступна, вместо неё \\textbf{ищите~(3)} в колоде карт того же типа.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/solo_campaigns.tex:50
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\vspace*{\\fill}\n"
-#| "\\begin{center}\n"
-#| "  \\transparent{0.2}\\includegraphics[width=1.3\\linewidth]{\\art/storm_elemental.png}\n"
-#| "\\end{center}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "\\begin{center}\n"
 "  \\vfill\n"
@@ -160,8 +188,3 @@ msgid ""
 "  \\vfill\n"
 "\\end{center}"
 msgstr ""
-"\\vspace*{\\fill}\n"
-"\\begin{center}\n"
-"  \\transparent{0.2}\\includegraphics[width=1.1\\linewidth]{\\art/storm_elemental.png}\n"
-"\\end{center}\n"
-"\n"
