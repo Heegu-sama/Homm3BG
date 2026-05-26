@@ -184,6 +184,8 @@ msgid ""
 "\\separator\n"
 "\n"
 msgstr ""
+"{\\transparent{0.3}\\includegraphics[width=\\linewidth,height=1em,keepaspectratio]{\\layout/subsection_separator.png}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:72
@@ -564,6 +566,12 @@ msgid ""
 "\\end{tikzpicture}}\n"
 "\n"
 msgstr ""
+"\\makebox[\\linewidth][c]{\\begin{tikzpicture}\n"
+"  \\node (front) {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-cove.png}};\n"
+"  \\node (back) [right=0pt of front.east] {\\includegraphics[width=0.5\\linewidth]{\\images/map-tile-sea.png}};\n"
+"  \\node [below=0pt of {$(front.south)!0.5!(back.south)$}] {\\imagecaption{Морской фрагмент карты}};\n"
+"\\end{tikzpicture}}\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:232
@@ -581,6 +589,17 @@ msgid ""
 "\\end{tikzpicture}}\n"
 "\n"
 msgstr ""
+"\\makebox[\\linewidth][c]{\\begin{tikzpicture}\n"
+"  \\node (fire) {\\includegraphics[width=0.5\\linewidth]{\\images/elemental_tile_fire.png}};\n"
+"  \\node [below=0pt of fire.south, text centered, text width=0.5\\linewidth] {\\imagecaption{Фрагмент карты элементалей огня}};\n"
+"  \\node (water) [right=0pt of fire.east] {\\includegraphics[width=0.5\\linewidth]{\\images/elemental_tile_water.png}};\n"
+"  \\node [below=0pt of water.south, text centered, text width=0.5\\linewidth] {\\imagecaption{Фрагмент карты элементалей воды}};\n"
+"  \\node (air) [below=3em of fire.south] {\\includegraphics[width=0.5\\linewidth]{\\images/elemental_tile_air.png}};\n"
+"  \\node [below=0pt of air.south, text centered, text width=0.5\\linewidth] {\\imagecaption{Фрагмент карты элементалей воздуха}};\n"
+"  \\node (earth) [right=0pt of air.east] {\\includegraphics[width=0.5\\linewidth]{\\images/elemental_tile_earth.png}};\n"
+"  \\node [below=0pt of earth.south, text centered, text width=0.5\\linewidth] {\\imagecaption{Фрагмент карты элементалей земли}};\n"
+"\\end{tikzpicture}}\n"
+"\n"
 
 #. type: multicols
 #: sections/map_elements.tex:237
@@ -609,6 +628,19 @@ msgid ""
 "    \\end{tikzpicture}\n"
 "\\end{center}"
 msgstr ""
+"      \\newlength{\\tilesize}\n"
+"      \\setlength{\\tilesize}{0.5\\linewidth}\n"
+"      \\node (surface) {\\includegraphics[width=\\tilesize]{\\images/map-tile-stronghold.png}};\n"
+"      \\node [above=0pt of surface.north, xshift=2em] {\\imagecaption{Фрагмент карты поверхности}};\n"
+"      \\node (subter) at ($(surface) + (0.8333\\tilesize, -0.2887\\tilesize)$)  %  ΔX=5/6, ΔY=-1/(2*sqrt(3))\n"
+"        {\\includegraphics[width=\\tilesize]{\\images/map-tile-sub.png}};\n"
+"      \\node [below=0pt of subter.south, xshift=-2em] {\\imagecaption{Подземный фрагмент карты}};\n"
+"      \\node [opacity=0.85] at ($(surface)!0.5!(subter)$) {\\includegraphics[width=1.35\\tilesize]{\\images/subterranean_gate_drop_shadow.png}};\n"
+"      \\node [opacity=0.85] at ($(surface)!0.5!(subter)$) {\\includegraphics[width=1.2\\tilesize]{\\images/subterranean_gate_highlight.png}};\n"
+"      \\node at ($(surface)!0.5!(subter)$) (gate) {\\includegraphics[width=0.5\\tilesize]{\\map_locations/subterranean_gate_token.png}};\n"
+"      \\node at ($(gate.north)+(45pt, 5pt)$) {\\imagecaption{Подземные врата}};\n"
+"    \\end{tikzpicture}\n"
+"\\end{center}"
 
 #. type: Plain text
 #: sections/map_elements.tex:263
