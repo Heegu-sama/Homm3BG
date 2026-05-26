@@ -4,11 +4,15 @@
 % Language setting
 \usepackage[TU]{fontenc}
 \usepackage[russian]{babel}
+\usepackage{etoolbox}
 
 \def\sections{sections/translated/ru}
 
 \newcommand{\notefont}[0]{}
 \newcommand{\expansionlabelfont}[0]{\newcomputermodern\selectfont}
+
+\newtoggle{firstseparatorinmapelements}
+\toggletrue{firstseparatorinmapelements}
 
 \AtBeginDocument{
   \setmainfont{LiberationSerif}[
