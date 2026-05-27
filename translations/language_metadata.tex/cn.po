@@ -19,13 +19,13 @@ msgstr ""
 #. type: Plain text
 #: sections/language_metadata.tex:3
 msgid "\\def\\lang_header_adjustment{0px}"
-msgstr "\\def\\lang_header_adjustment{0px}"
+msgstr "\\def\\lang_header_adjustment{0px}\n\\AtBeginDocument{\\renewcommand{\\pagelink}[2]{\\hyperlink{#1}{#2}\\iftoggle{printable}{\\textmd{(\\pageref{#1}页)}}{}}}"
 
 #.  Page shorthand
 #. type: newcommand{#4}
 #: sections/language_metadata.tex:6
 msgid "p."
-msgstr "页"
+msgstr "\\def\\zhpageshorthand##1\\pageref##2{\\pageref{##2}页}\\zhpageshorthand"
 
 #.  Command for equal spacing between location titles and pictures
 #. type: newcommand{#4}
