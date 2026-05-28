@@ -4,6 +4,7 @@
 % Language setting
 \usepackage[TU]{fontenc}
 \usepackage[chinese, provide=*]{babel}
+\babelprovide[import, intraspace={0 .01 .01}]{chinese}
 \usepackage{fontspec}
 
 \def\sections{sections/translated/cn}
@@ -17,6 +18,7 @@
 \newcommand{\cnpagelinkbreakmarker}[0]{\global\cnprintablelinebreaktrue\ignorespaces}
 \newcommand{\printablelinebreak}[0]{\iftoggle{printable}{\unskip\\\ignorespaces}{\ignorespaces}}
 \newcommand{\cnpagelink}[2]{%
+  \leavevmode
   \cnprintablelinebreakfalse
   \begingroup
     \let\printablelinebreak\cnpagelinkbreakmarker
