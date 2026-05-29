@@ -483,7 +483,11 @@ msgstr ""
 #: sections/combat.tex:175
 #, no-wrap
 msgid "\\note{5}{Combats against Azure \\svg{azure} Units, other players, or \\pagelink{AI Heroes}{AI Heroes} have no time limit, and you cannot Retreat from them.}"
-msgstr "\\note{4}{与蔚蓝\\svg{azure}单位、其他玩家或\\pagelink{AI Heroes}{AI英雄}的战斗没有时间限制，且你不能撤退。} \\vfill \\begin{center} \\transparent{0.2} \\includegraphics[width=\\linewidth]{\\art/slayer.png} \\end{center}"
+msgstr ""
+"  \\iftoggle{printable}{\n"
+"    \\note{5}{与蔚蓝\\svg{azure}单位、其他玩家或\\pagelink{AI Heroes}{AI英雄}的战斗没有时间限制，且你不能撤退。} \\vspace{1em} \\begin{center} \\includegraphics[width=0.85\\linewidth]{\\art/crusader.jpg} \\end{center}\n"
+"  }{\n"
+"\\note{3}{\\vspace{1em} 与蔚蓝\\svg{azure}单位、其他玩家或\\pagelink{AI Heroes}{AI英雄}的战斗没有时间限制，且你不能撤退。} \\vspace{1em} \\begin{center} \\includegraphics[width=\\linewidth]{\\art/crusader.jpg} \\end{center}  }"
 
 #. type: Plain text
 #: sections/combat.tex:184
@@ -751,6 +755,7 @@ msgid ""
 "Defending units may move through the Gate and may stop on it.\n"
 "\n"
 msgstr ""
+"{\\vspace{-1em} \\transparent{0.2} \\begin{center}\\includegraphics[width=0.6\\linewidth]{\\art/cannon.png} \\end{center}} \\vspace{-1em}\n"
 "\\pagetarget{Walls}{\\subsection*{有大本营的城镇防守}}\\index{城墙和城门}%\n"
 "当你防守你的城镇且该城镇有一座大本营时，在放置你的单位后，你将3个城墙和1个城门障碍物以任意顺序加入战斗板的中排。%\n"
 "如果你防守的是你之前征服过的敌方城镇，\\textbf{不使用}城墙和城门，\\textbf{即使}它是有大本营的城镇也不使用。%\n"
@@ -900,4 +905,4 @@ msgstr ""
 "\\includegraphics[width=\\linewidth]{\\examples/ranged_unprotected.png}\n"
 "{\\textit{因为戟兵不在一段未被摧毁的城墙后方，所以\\textbf{保护不生效}。%\n"
 "邪眼\\textbf{攻击不受惩罚}。}}\n"
-"\\newline\\newline"
+"\\newline"
