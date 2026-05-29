@@ -512,7 +512,7 @@ msgid ""
 "  If the AI Hero is assigned a Spell card that is unavailable because it is in your Hero's Deck, and you do not have another copy, substitute it with a \\wikilink{spells/magic_arrow}{Magic Arrow} card.\n"
 "\n"
 msgstr ""
-"  Jeśli Bohater AI ma otrzymać kartę Zaklęcia, która jest niedostępna, ponieważ znajduje się już w Talii Twojego Bohatera i nie masz dodatkowej kopii, zastąp ją kartą \\wikilink{spells/magic_arrow}{Magiczna Strzała}.\n"
+"  Jeśli Bohater AI ma otrzymać kartę Zaklęcia, która jest niedostępna, ponieważ znajduje się już w Talii Twojego Bohatera, a Ty nie posiadasz dodatkowej kopii, zastąp ją kartą \\wikilink{spells/magic_arrow}{Magiczna Strzała}.\n"
 "\n"
 
 #. type: multicols*
@@ -524,7 +524,7 @@ msgid ""
 "\n"
 msgstr ""
 "  W przypadku niektórych Zaklęć może być niejasne, w jaki sposób AI ma z nich korzystać.\n"
-"  W celu wyjaśnienia sprawdź \\pagelink{AI Complex Spells}{Rzucanie Złożonych Zaklęć}.\n"
+"  Wyjaśnienia znajdziesz w sekcji \\pagelink{AI Complex Spells}{Rzucanie Złożonych Zaklęć}.\n"
 "\n"
 
 #. type: multicols*
@@ -539,9 +539,9 @@ msgid ""
 "\n"
 msgstr ""
 "  \\subsection*{Karty Umiejętności AI}\n"
-"  Jeśli Talia zawiera karty Umiejętności, przygotuj i odłóż na bok wskazane karty (zazwyczaj Umiejętności).\n"
-"  Gdy Bohater AI używa karty Umiejętności AI \\svg{skill}, użyj przypisanej jej w trakcie Przygotowania karty Umiejętności, ale jej nie odrzucaj.\n"
-"  W przeciwieństwie do standardowych reguł, Bohater AI może ponownie użyć tej umiejętności, jeśli wskaże tak Talia AI.\n"
+"  Jeśli Talia zawiera karty Umiejętności, odszukaj i odłóż na bok wskazane karty (zazwyczaj Umiejętności).\n"
+"  Gdy Bohater AI używa karty Umiejętności AI \\svg{skill}, użyj przypisanej mu podczas Przygotowania karty Umiejętności, ale jej nie odrzucaj.\n"
+"  W przeciwieństwie do standardowych reguł, Bohater AI może ponownie użyć tej umiejętności, jeśli Talia AI wyda takie polecenie.\n"
 "  Odrzuć \\svg{skill} kartę Umiejętności AI standardowo.\n"
 "\n"
 
@@ -552,7 +552,7 @@ msgid ""
 "  AI Skill cards cannot be replaced, so if Scenario rules assign the AI Hero a card that your Hero has and you do not have another copy, remove that card from your Deck and \\textbf{Search (3)} the respective card's Deck to compensate your Hero for the loss.\n"
 "\n"
 msgstr ""
-"  Nie można wymieniać kart Umiejętności AI, jeśli Scenariusz przypisuje Bohaterowi AI kartę, którą posiada Twój Bohater, a Ty nie posiadasz dodatkowej kopii, usuń ją ze swojej Talii i \\textbf{Przeszukaj (3)} Talię tej karty, aby zrekompensować jej utratę.\n"
+"  Kart Umiejętności AI nie można zastępować, jeśli Scenariusz przypisuje Bohaterowi AI kartę, którą posiada Twój Bohater, a Ty nie posiadasz dodatkowej kopii, usuń ją ze swojej Talii i \\textbf{Przeszukaj (3)} Talię tej karty, aby zrekompensować jej utratę.\n"
 "\n"
 
 #. type: multicols*
@@ -563,6 +563,9 @@ msgid ""
 "  After an AI card is resolved, discard it.\n"
 "\n"
 msgstr ""
+"  \\subsection*{Czas działania kart AI}\n"
+"  Po rozpatrzeniu karty AI odrzuć ją.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:186
@@ -573,6 +576,10 @@ msgid ""
 "  The same applies to any AI card which is not useful at the moment of drawing it.\n"
 "\n"
 msgstr ""
+"  Karta \\wikilink{ai\\#ai-cards}{Ataku} Mocy \\svg[12]{might} może odnosić się do ``jednostki, która ma zaatakować'', jeśli obecnie aktywowana jednostka nie ma właściwego celu, efekt karty Ataku będzie stosował się do kolejnej jednostki, która może zaatakować.\n"
+"  Zwróć uwagę, że wiele nierozpatrzonych kart może skumulować się w kolejnych aktywacjach.\n"
+"  Ta sama zasada stosuje się do każdej karty AI, która nie może zostać użyta w momencie dobrania jej.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:188
@@ -581,6 +588,8 @@ msgid ""
 "  If an AI card increased a unit's \\svg{defense}, or triggered another card which increased it, the AI card stays attached to the unit until the first defense happens.\n"
 "\n"
 msgstr ""
+"  Jeśli karta AI podnosi \\svg{defense} jednostki albo uruchamia efekt innej karty, która to powoduje, karta AI pozostaje przy tej jednostce do czasu pierwszej obrony.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:191
@@ -590,6 +599,9 @@ msgid ""
 "  If there are multiple AI Enemy Armies in the Scenario, but the rules do not specify to which Enemy an AI Deck, an AI Spell Deck, or a Skill belongs, you should assume it is shared between them.\n"
 "\n"
 msgstr ""
+"  \\subsection*{Dzielenie Talii AI}\n"
+"  Jeśli w Scenariuszu występuje wiele Armii AI, ale zasady nie określają, do którego Przeciwnika należą Talie AI, Zaklęć AI lub Umiejętności, przyjmij, że Talie te są dzielone między Przeciwnikami.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:198
@@ -603,6 +615,13 @@ msgid ""
 "  Scenarios can override these instructions.\n"
 "\n"
 msgstr ""
+"  \\bigskip\n"
+"  \\bigskip\n"
+"  \\pagetarget{AI Complex Spells}{\\subheader{Rzucanie złożonych Zaklęć}}\n"
+"  W niektórych Kampaniach, przeciwnicy używają Zaklęć, których efekty nie są w pełni zgodne z zasadami użycia kart \\svg{magic} Magii AI.\n"
+"  Aby w pełni skorzystać z ich efektów, znajdziesz poniżej rozszerzone zasady, jak Bohater AI powinien używać tych Zaklęć.\n"
+"  Scenariusze mogą nadpisywać te zasady.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:201
@@ -612,6 +631,9 @@ msgid ""
 "  \\textit{Examples: \\wikilink{spells/fireball}{Fireball,} \\wikilink{spells/chain_lightning}{Chain Lightning.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{Zaklęcia atakujące wiele celów}\n"
+"  \\textit{Przykłady: \\wikilink{spells/fireball}{Kula Ognia,} \\wikilink{spells/chain_lightning}{Łańcuch Piorunów.}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:207
@@ -624,6 +646,12 @@ msgid ""
 "  If that is also not possible, do not use this Spell -- instead, skip the AI \\svg{magic} card that activated this effect and put it on the bottom of the AI Deck, then shuffle this Spell back to the AI Spell Deck.\n"
 "\n"
 msgstr ""
+"  Po dobraniu, wybierz jednostkę, preferując grupy zawierające więcej jednostek wyższego poziomu, w pierwszej kolejności wybierz jednostki wyższego poziomu.\n"
+"  Jeśli jest więcej niż jedna grupa, zaatakuj tę, w której jednostki mają najmniej życia (najmniejsza różnica między \\svg{health_points} a aktualnymi obrażeniami \\svg{damage}).\n"
+"  Jeśli wciąż jest więcej niż jedna grupa, sam wybierz, która jednostka zostanie zaatakowana.\n"
+"  Jeśli nie ma jednostek gracza przylegających do siebie, atakuj te jednostki, które nie przylegają do jednostek AI.\n"
+"  Jeśli jest to niemożliwe, nie używaj tego Zaklęcia -- zamiast tego, pomiń kartę \\svg{magic} AI, która aktywowała ten efekt i odłóż ją na spód Talii AI, następnie wtasuj Zaklęcie z powrotem do Talii Zaklęć AI.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:210
@@ -633,6 +661,9 @@ msgid ""
 "  \\textit{Example: \\wikilink{spells/stone_skin}{Stone Skin.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{Zaklęcia natychmiastowej Obrony}\n"
+"  \\textit{Przykład: \\wikilink{spells/stone_skin}{Kamienna Skóra.}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:214
@@ -643,6 +674,10 @@ msgid ""
 "  In case of a tie in \\svg{defense} value, give preference to the unit of the highest tier, then to the greatest value of \\svg{damage}.\n"
 "\n"
 msgstr ""
+"  Po dobraniu odłóż tę kartę obok Planszy Walki, następnie połóż Żeton Obrony na jednostce z najwyższą \\svg{defense}, aby przedstawić efekt karty -- pozostanie on tam do czasu rozpatrzenia Obrony.\n"
+"  Jeśli ta jednostka ma już Żeton Obrony, połóż go na kolejnej jednostce z najwyższą \\svg{defense}.\n"
+"  W przypadku remisu w wartości \\svg{defense}, pierwszeństwo ma jednostka wyższego poziomu, a następnie z najwyższą wartością \\svg{damage}.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:217
@@ -652,6 +687,9 @@ msgid ""
 "  \\textit{Example: \\wikilink{spells/cure}{Cure.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{Zaklęcia uzdrawiające}\n"
+"  \\textit{Przykład: \\wikilink{spells/cure}{Wzmocnienie.}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:220
@@ -661,6 +699,9 @@ msgid ""
 "  If no AI unit has any \\svg{damage}, put the AI \\svg{magic} card that triggered the Spell at the bottom of the AI Deck, then shuffle this Spell card back to the AI Spell Deck.\n"
 "\n"
 msgstr ""
+"  Po dobraniu, usuń \\svg{damage} z jednostki AI, która otrzymała największą liczbę \\svg{damage}, zaczynając od najwyższego poziomu jednostki.\n"
+"  Jeśli żadna jednostka AI nie posiada \\svg{damage}, odłóż kartę\\svg{magic} AI, która wywołała ten efekt na spód Talii AI, następnie wtasuj Zaklęcie z powrotem do Talii Zaklęć AI.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:223
@@ -670,6 +711,9 @@ msgid ""
 "  \\textit{Example: \\wikilink{spells/fire_shield}{Fire Shield.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{Wzmocnienia na jedną rundę}\n"
+"  \\textit{Przykład: \\wikilink{spells/fire_shield}{Tarcza Ognia.}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:227
@@ -680,6 +724,10 @@ msgid ""
 "  Multiple delayed Spells may accumulate and be cast during the same activation.\n"
 "\n"
 msgstr ""
+"  Po dobraniu sprawdź poziom jednostki, na którą zamierzasz rzucić Zaklęcie i policz ile jednostek tego samego lub wyższego poziomu jest na Planszy.\n"
+"  Jeśli więcej niż połowa tych jednostek już aktywowała się w tej rundzie, nie rzucaj Zaklęcia; zamiast tego, odłóż je na bok i rzuć podczas aktywacji pierwszej jednostki AI w następnej Rundzie; pomiń dobieranie karty AI dla tej aktywacji.\n"
+"  Wiele odłożonych Zaklęć może nagromadzić się i zostać rzuconych w czasie tej samej aktywacji.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:230
@@ -689,6 +737,9 @@ msgid ""
 "  \\textit{Example: \\wikilink{spells/weakness}{Weakness.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{Zaklęcia osłabiające atak}\n"
+"  \\textit{Przykład: \\wikilink{spells/weakness}{Osłabienie.}}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:233
@@ -697,3 +748,5 @@ msgid ""
 "  When drawn, if the AI's activated unit is about to perform an attack that will provoke a Retaliation, cast this Spell on the Retaliating enemy to lower their \\svg{attack}.\n"
 "  If the AI's unit causes no Retaliation, do not cast this Spell; instead, ignore the AI \\svg{magic} card that activated the Spell and put it at the bottom of the AI Deck, then shuffle the Spell card back to the AI Spell Deck."
 msgstr ""
+"  Po dobraniu, jeśli aktywowana jednostka ma wykonać atak, który spowoduje Kontratak, rzuć to zaklęcie na Kontratakującą jednostkę, aby obniżyć jej \\svg{attack}.\n"
+"  Jeśli jednostka AI nie wywołuje Kontrataku, nie rzucaj tego Zaklęcia; zamiast tego, odłóż kartę\\svg{magic} AI, która wywołała ten efekt na spód Talii AI, następnie wtasuj Zaklęcie z powrotem do Talii Zaklęć AI."
