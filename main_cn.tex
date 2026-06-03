@@ -4,6 +4,7 @@
 % Language setting
 \usepackage[TU]{fontenc}
 \usepackage[chinese, provide=*]{babel}
+\babelprovide[import, intraspace={0 .01 .01}]{chinese}
 \usepackage{fontspec}
 
 \def\sections{sections/translated/cn}
@@ -13,6 +14,18 @@
 \newcommand{\expansionlabelfont}[0]{}
 \newcommand{\cnignorefontfeature}[1]{}
 \newcommand{\subheaderfont}[0]{\let\addfontfeature\cnignorefontfeature}
+\newif\ifcnprintablelinebreak
+\newcommand{\cnpagelinkbreakmarker}[0]{\global\cnprintablelinebreaktrue\ignorespaces}
+\newcommand{\printablelinebreak}[0]{\iftoggle{printable}{\unskip\\\ignorespaces}{\ignorespaces}}
+\newcommand{\cnpagelink}[2]{%
+  \leavevmode
+  \cnprintablelinebreakfalse
+  \begingroup
+    \let\printablelinebreak\cnpagelinkbreakmarker
+    \hyperlink{#1}{#2}%
+  \endgroup
+  \iftoggle{printable}{\ifcnprintablelinebreak\\\else\unskip\fi\textmd{(\pageref{#1}页)}}{}%
+}
 
 \directlua{
   luaotfload.add_fallback(

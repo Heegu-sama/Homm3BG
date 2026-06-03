@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-03-29 14:25+0000\n"
-"PO-Revision-Date: 2026-04-24 20:56+0200\n"
+"POT-Creation-Date: 2026-05-29 08:17+0000\n"
+"PO-Revision-Date: 2026-05-29 13:35+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -26,7 +26,7 @@ msgstr ""
 #: sections/resources.tex:5 sections/round_structure.tex:5
 #: sections/scenarios.tex:5 sections/setup.tex:5 sections/solo_campaigns.tex:7
 #: sections/tournament_mode.tex:6 sections/town.tex:5 sections/trading.tex:5
-#: sections/units.tex:5 sections/units.tex:42 sections/units.tex:222
+#: sections/units.tex:5 sections/units.tex:42 sections/units.tex:221
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -42,17 +42,21 @@ msgid ""
 "\\clearpage\n"
 "\n"
 msgstr ""
+"\\clearpage\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:189 sections/map_elements.tex:199
-#: sections/map_elements.tex:272 sections/map_elements.tex:305
+#: sections/map_elements.tex:273 sections/map_elements.tex:312
 #: sections/player_turns.tex:48 sections/tournament_mode.tex:69
-#: sections/units.tex:241
+#: sections/units.tex:240
 #, no-wrap
 msgid ""
 "\\bigskip\n"
 "\n"
 msgstr ""
+"\\bigskip\n"
+"\n"
 
 #.  !TeX spellcheck = en_US
 #. type: Plain text
@@ -315,7 +319,7 @@ msgstr ""
 "\\begin{itemize}\n"
 "  \\item Ziehe eine Karte von deinem Deck.\n"
 "  \\item Wirf eine beliebige Anzahl Handkarten ab und ziehe dieselbe Anzahl nach.\n"
-"  \\item Wiederhole einen Würfelwurf.\n"
+"  \\item Wiederhole einen deiner eigenen Würfelwürfe.\n"
 "\\end{itemize}\n"
 "Falls du Moral verlierst, entferne - falls vorhanden - einen Positive-Moral-Marker \\svg{morale_positive}. Anderenfalls erhalte einen Negative-Moral-\\index{Negative Moral}Marker \\svg{morale_negative}.\n"
 "Umgekehrt: Erhältst du Moral und hast einen Negative-Moral-Marker, wirf diesen ab.\n"
@@ -347,6 +351,9 @@ msgstr ""
 "\\note{5}{Die Nekropolis \\svg{necro-yellow} Fraktion ignoriert sämtliche Moral-Effekte.\n"
 "  Sie kann niemals Moral erhalten oder verlieren.\n"
 "}\n"
+"\\begin{center}\n"
+"{\\transparent{0.2}\\includegraphics[width=0.7\\linewidth]{\\art/quicksand.png}}\n"
+"\\end{center}\n"
 "\\vspace*{\fill}\n"
 "\n"
 
@@ -388,6 +395,10 @@ msgid ""
 "  \\centering\n"
 "  \\begin{tikzpicture}\n"
 msgstr ""
+"\\vspace{1em}\n"
+"\\begin{multicols}{2}\n"
+"  \\centering\n"
+"  \\begin{tikzpicture}\n"
 
 #. type: multicols*
 #: sections/player_turns.tex:134
@@ -402,7 +413,7 @@ msgid ""
 "  \\imagecaption{Positive Morale card}\n"
 "  \\begin{tikzpicture}\n"
 msgstr ""
-"    \\node (card) {\\includegraphics[width=\\linewidth]{\\cards/morale-positive.png}};\n"
+"    \\node (card) {\\includegraphics[width=\\linewidth]{translations/assets/de/morale-positive.png}};\n"
 "    \\begin{relcoords}{card}\n"
 "      \\draw (0.6, 0.9) node {\\encircle{1}};\n"
 "      \\draw (0.25, 0.25) node {\\encircle{2}};\n"
@@ -424,7 +435,7 @@ msgid ""
 "  \\end{tikzpicture}\n"
 "  \\imagecaption{Negative Morale card}"
 msgstr ""
-"    \\node (card) {\\includegraphics[width=\\linewidth]{\\cards/morale-negative-battlefield.png}};\n"
+"    \\node (card) {\\includegraphics[width=\\linewidth]{translations/assets/de/morale-negative-battlefield.png}};\n"
 "    \\begin{relcoords}{card}\n"
 "      \\draw (0.6, 0.9) node {\\encircle{1}};\n"
 "      \\draw (0.25, 0.3) node {\\encircle{2}};\n"
@@ -478,7 +489,7 @@ msgid ""
 "Every time you \\textbf{gain} Morale, discard a Negative Morale card (if you have any); otherwise:\n"
 "\\begin{itemize}\n"
 "  \\setlength\\itemsep{0mm}\n"
-"  \\item In \\pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish}: Search(2) Positive Morale card and put the unwanted card to the bottom of the Deck.\n"
+"  \\item In \\pagelink{Adventure and Skirmish Modes}{Adventure and Skirmish}: Search~(2) Positive Morale card and put the unwanted card to the bottom of the Deck.\n"
 "  \\item In regular games: draw 1 Positive Morale card.\n"
 "\\end{itemize}\n"
 "You may have \\textbf{2 Positive Morale cards at a time}.\n"
@@ -489,7 +500,7 @@ msgstr ""
 "Jedesmal, wenn du Moral \\textbf{erhältst}, wirf eine Negative Moralkarte (falls vorhanden) ab; ansonsten:\n"
 "\\begin{itemize}\n"
 "  \\setlength\\itemsep{0mm}\n"
-"  \\item Im \\pagelink{Adventure and Skirmish Modes}{Abenteuer- oder Gefechtsmodus}: Durchsuche(2) das Positive Moralkarten-Deck. Lege die nicht gewünschte Karte unter das Deck.\n"
+"  \\item Im \\pagelink{Adventure and Skirmish Modes}{Abenteuer- oder Gefechtsmodus}: Durchsuche~(2) das Positive Moralkarten-Deck. Lege die nicht gewünschte Karte unter das Deck.\n"
 "  \\item In regulären Spielen: Ziehe 1 Positive Moralkarte.\n"
 "\\end{itemize}\n"
 "Du darfst \\textbf{2 Positive Moralkarten zeitgleich} haben.\n"
