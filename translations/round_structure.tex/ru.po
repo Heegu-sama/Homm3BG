@@ -4,12 +4,12 @@
 # This file is distributed under the same license as the Homm package.
 # Automatically generated, 2024.
 #
-# SPDX-FileCopyrightText: 2024 Alexey Sokolov <alexey@asokolov.org>
+# SPDX-FileCopyrightText: 2024, 2026 Alexey Sokolov <alexey@asokolov.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
 "POT-Creation-Date: 2026-05-08 21:10+0100\n"
-"PO-Revision-Date: 2024-07-01 18:20+0300\n"
+"PO-Revision-Date: 2026-05-26 00:51+0100\n"
 "Last-Translator: Alexey Sokolov <alexey@asokolov.org>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #. type: multicols*
 #: sections/all_map_locations.tex:5 sections/combat.tex:5
@@ -236,6 +236,8 @@ msgid ""
 "\\subsection*{Turn Order}\n"
 "\n"
 msgstr ""
+"\\subsection*{Порядок ходов}\n"
+"\n"
 
 #. type: multicols*
 #: sections/round_structure.tex:91
@@ -285,6 +287,11 @@ msgid ""
 "}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Алиса играет за Башню против Боба, который играет за Темницу.\n"
+"Алиса --- первый игрок.\n"
+"Они собираются начать 5-й раунд.\n"
+"}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/round_structure.tex:107
@@ -295,6 +302,10 @@ msgid ""
 "Both players also regain the use of their Expert Effects \\svg{expert}.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Первым делом, они переворачивают свои жетоны строительства, популяции и книги магии на активную сторону.\n"
+"Все жетоны передвижения переворачиваются на активную зелёную~\\svg[12]{movement_token_green} сторону.\n"
+"Также оба игрока обновляют счётчики использования экспертных эффектов \\svg{expert}.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/round_structure.tex:110
@@ -304,6 +315,9 @@ msgid ""
 "Both players collect income from their Buildings, Mines, and Settlements.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Раунд 5 нечётный, при этом не первый, поэтому это \\textbf{ресурсный раунд}.\n"
+"Оба игрока получают доход со своих построек, шахт и посёлков.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/round_structure.tex:117
@@ -317,6 +331,13 @@ msgid ""
 "}\\par\n"
 "\n"
 msgstr ""
+"\\textit{У них обоих есть построенная Ратуша, так что они используют их эффекты <<в начале каждого ресурсного раунда>>.\n"
+"\\wikilink{/towns/tower/\\#fully-built}{Ратуша Башни} позволяет Алисе получить 4~\\svg{gold} или вытянуть карту из её колоды.\n"
+"Она берёт карту.\n"
+"\\wikilink{/towns/dungeon/\\#fully-built}{Ратуша Темницы} даёт Бобу возможность получить 5~\\svg{gold} или 1~\\svg{valuables}.\n"
+"Боб выбирает золото.\n"
+"}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/round_structure.tex:122
@@ -327,6 +348,10 @@ msgid ""
 "  The drawing responsibility rotates clockwise after each Event: Alice, as the starting player, drew the first Event back in Round 3.}\\par\n"
 "\n"
 msgstr ""
+"\\begin{expansion}{fortress}\n"
+"\\textit{Т.\\,к. это ресурсный раунд, теперь нужно вытянуть карту из колоды событий.\n"
+"  После каждого нового события взятие следующего события переходит к следующему игроку. Алиса в раунде 3 взяла событие первой.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/round_structure.tex:126
@@ -337,6 +362,10 @@ msgid ""
 "\\textit{It is therefore Bob's turn to draw. He takes the top card from the Event Deck, reads it aloud, and places it face-up so both players can see: it is \\textbf{Artifact Merchant} (see the Event card on the previous page).}\\par\n"
 "\n"
 msgstr ""
+"\\end{expansion}\n"
+"\\begin{expansion}{fortress}\n"
+"\\textit{Теперь очередь Боба. Он берёт верхнюю карту колоды событий, читает её вслух и кладёт туда, где всем будет видно. Это событие \\textbf{<<Торговец артефактами>>} (см.~на~предыдущей странице).}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/round_structure.tex:138
@@ -355,6 +384,18 @@ msgid ""
 "\\end{expansion}\n"
 "\n"
 msgstr ""
+"\\vspace*{0.5em}\n"
+"\\textit{Боб берёт 5 верхних карт из колоды артефактов и показывает их обоим игрокам.\n"
+"Среди них есть великий артефакт: \\wikilink{artifacts/head_of_legion}{Голова легиона.}\n"
+"Боб ходит первым, т.\\,к. он вытянул это событие.\n"
+"  Он покупает голову легиона: платит 5~\\svg{gold} (неплохое использование золота, полученного от Ратуши) и кладёт артефакт в руку.\n"
+"Он передаёт оставшиеся карты Алисе.\n"
+"Алиса тоже хотела голову легиона, но опоздала.\n"
+"Остальные артефакты ей не интересны, поэтому она пропускает ход.\n"
+"Т.\\,к. карты артефактов вернулись к вытянувшему их игроку, событие заканчивается.\n"
+"Некупленные артефакты замешиваются назад в колоду артефактов.}\\par\n"
+"\\end{expansion}\n"
+"\n"
 
 #. type: multicols*
 #: sections/round_structure.tex:143
@@ -366,6 +407,11 @@ msgid ""
 "Because Alice controls both a Main Hero and a Secondary Hero, \\textbf{both} of them benefit -- their movement goes to 4 and 3, respectively.}\\par\n"
 "\n"
 msgstr ""
+"\\vspace*{0.5em}\n"
+"\\textit{Также на трекере раундов на 5-м раунде отмечено временнóе событие: в сценарии написано, что в этом раунде все герои получают +1~\\svg{movement}.\n"
+"У Боба есть только основной герой, поэтому он получает 1 ОП, увеличивая \\svg{movement} с 3 до 4.\n"
+"Зато у Алисы два героя: основной и вторичный; \\textbf{оба} эти героя получают по ОП, таким образом, у основного героя в этом раунде 4~\\svg{movement}, а у вторичного — 3~\\svg{movement}.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/round_structure.tex:145
@@ -374,6 +420,8 @@ msgid ""
 "\\textit{As a starting player, Alice now starts her Turn.}\\par\n"
 "\n"
 msgstr ""
+"\\textit{Наконец, Алиса начинает свой ход, т.\\,к.~она первый игрок.}\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/round_structure.tex:151
