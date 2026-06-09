@@ -4,11 +4,16 @@
 % Language setting
 \usepackage[TU]{fontenc}
 \usepackage[russian]{babel}
+\usepackage{etoolbox}
 
 \def\sections{sections/translated/ru}
 
 \newcommand{\notefont}[0]{}
 \newcommand{\expansionlabelfont}[0]{\newcomputermodern\selectfont}
+
+% This is a hack used to translate separator lines in the Map Elements chapter differently.
+\newtoggle{firstseparatorinmapelements}
+\toggletrue{firstseparatorinmapelements}
 
 \AtBeginDocument{
   \setmainfont{LiberationSerif}[
