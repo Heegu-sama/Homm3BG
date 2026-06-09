@@ -23,45 +23,44 @@
 
 | English | Ukrainian |
 |---|---|
-| boars | ... |
+| boars | Кабани |
 | champions | Чемпіони |
 | deck of unit cards | Колода Підрозділів |
-| dendroids | ... |
-| dread knights | ... |
-| familiars | ... |
-| few | ... |
+| dendroids | Дендроїди |
+| dread knights | Лицарі Жаху |
+| familiars | Фамільяри |
+| few | Кілька |
 | griffins | Грифони |
 | hp | ОЗ |
-| liches | ... |
-| marksmen | ... |
+| liches | Лічі |
+| marksmen | Стрільці |
 | neutral units | Нейтральні Підрозділи |
-| pack | ... |
-| recruited or reinforced | ... |
-| reinforce | ... |
-| reinforced | ... |
-| summoned elementals | ... |
+| pack | Зграя |
+| recruited or reinforced | Найняті або підкріплені |
+| reinforce | Підкріпити |
+| reinforced | Підкріплені |
+| summoned elementals | Викликані елементалі |
 | unit cards | Карти Підрозділів |
-| unit miniatures | Мініатюри Підрозділів |
+| unit miniatures | Фігурки Підрозділів |
 | units | Підрозділи |
-| zealots | ... |
+| zealots | Фанатики |
 
 ## Heroes
 
 | English | Ukrainian |
 |---|---|
-| MP | ... |
+| MP | ОР |
 | ability | Здібність |
 | experience | Досвід |
-| expert effects | ... |
+| expert effects | Експертні ефекти |
 | hero board | Планшет Героя |
 | hero | Герой |
 | heroes | Герої |
-| level tracker | Трек Рівня |
+| level tracker | Лічильник Рівня |
 | level | Рівень |
 | main hero | Головний Герой |
-| movement points | ... |
-| MP | ... |
-| power | ... |
+| movement points | Очки Руху |
+| power | Сила |
 | secondary hero | Другорядний Герой |
 | specialty | Спеціалізація |
 
@@ -69,25 +68,25 @@
 
 | English | Ukrainian |
 |---|---|
-| center field | ... |
-| central map tile | ... |
-| creature bank | ... |
+| center field | Центральне поле |
+| central map tile | Центральна плитка мапи |
+| creature bank | Банк Створінь |
 | dragon utopia | Утопія Драконів |
 | far map tile | Далека Плитка Мапи |
 | field | Поле |
 | locations | Локації |
 | map tile | Плитка Мапи |
-| mines | ... |
-| monolith | ... |
+| mines | Копальні |
+| monolith | Моноліт |
 | near map tile | Близька Плитка Мапи |
-| obelisk | ... |
+| obelisk | Обеліск |
 | random town | Випадкове Місто |
 | revisitable | Багаторазові |
 | sea map tile | Морська Плитка Мапи |
 | settlement | Поселення |
 | starting (i) map tile | Стартова (I) Плитка |
-| subterranean gate | ... |
-| subterranean map tile | Підземна Плитка Мапи |
+| subterranean gate | Брама Підземелля |
+| subterranean map tile | Підземні Плитки Мапи |
 | tile | Плитка |
 | trading post | Торговий Пост |
 | water wheel | Водяне Колесо |
@@ -98,13 +97,13 @@
 | English | Ukrainian |
 |---|---|
 | building materials | Будівельні Матеріали |
-| gold | ... |
+| gold | Золото |
 | grail token | Жетон Грааля |
-| resource dice | Кістка Ресурсів |
-| resource production tracker | Трек Виробництва Ресурсів |
+| resource dice | Кубик Ресурсів |
+| resource production tracker | Лічильник Виробництва Ресурсів |
 | resources | Ресурси |
-| treasure die | Кістка Скарбів |
-| valuables | ... |
+| treasure die | Кубик Скарбів |
+| valuables | Коштовності |
 
 ## Deck-building
 
@@ -115,31 +114,32 @@
 | decks | Колоди |
 | discard pile | Стопка Скиду |
 | discard | Скинути |
-| empowered ability card | ... |
-| empowered ability token | ... |
-| empowered statistic card | ... |
+| empowered ability card | Карта Підсиленої Здібності |
+| empowered ability token | Жетон Підсиленої Здібності |
+| empowered statistic card | Карта Підсилених Характеристик |
 | hand limit | Ліміт Руки |
-| pandora's box card | ... |
+| pandora's box card | Карта Скриньки Пандори |
 | player decks | Колода Гравця |
-| search | ... |
+| search | Шукати |
 | specialty card | Карта Спеціалізації |
 | spell cards | Карти Заклинань |
 | spell scroll | Сувій Заклинання |
-| statistic card | ... |
-| summoned unit card | ... |
+| statistic card | Карта Характеристик |
+| summoned unit card | Карта Викликаного Підрозділу |
 
 ## Spells
 
 | English | Ukrainian |
 |---|---|
 | haste | Прискорення |
-| magic arrow | ... |
-| school | ... |
+| magic arrow | Магічна стріла |
+| school | школа |
 
 ## AI Deck
 
 | English | Ukrainian |
 |---|---|
+| ai card | Карта ШІ |
 | ai deck | Колода ШІ |
 | magic card | Карта Магії |
 | might card | Карта Меча |
@@ -150,8 +150,9 @@
 | English | Ukrainian |
 |---|---|
 | build token | Жетон Будівництва |
-| buildings | ... |
-| citadel | ... |
+| building tiles | Плитки Будівель |
+| buildings | Будівлі |
+| citadel | Цитадель |
 | dwelling | Житло |
 | population token | Жетон Населення |
 | spell book token | Жетон Книги Заклинань |
@@ -162,72 +163,73 @@
 
 | English | Ukrainian |
 |---|---|
-| arrow tower | ... |
+| arrow tower | Стрілецька Вежа |
 | back line | Тилова Лінія |
-| combat board | Бойове Поле |
+| combat board | Планшет Бою |
 | combat | Бій |
-| damage | Рани |
+| damage | Пошкодження |
 | front line | Передова Лінія |
-| initiative | ... |
-| negative morale | ... |
-| positive morale | ... |
+| initiative | Ініціатива |
+| negative morale | Негативна Мораль |
+| positive morale | Позитивна Мораль |
 | winning combat | ... |
 
 ## Battlefield
 
 | English | Ukrainian |
 |---|---|
-| adventure card | ... |
-| adventure mode | ... |
-| alliance | ... |
-| battlefield board | ... |
-| battlefield obstacles | ... |
-| battlefield | Поле Битви |
-| campaign | ... |
-| clash | ... |
+| adventure card | Карта Пригод |
+| adventure mode | Режим пригод |
+| alliance | Союз |
+| battlefield board | Планшет Поля Бою |
+| battlefield obstacles | Перешкоди для Поля Бою |
+| battlefield | Поле Бою |
+| campaign | Кампанія |
+| clash | Зіткнення |
 | combat power level | ... |
 | cooperative | ... |
-| final combat | ... |
-| scenario | ... |
-| skirmish mode | ... |
+| final combat | Фінальний бій |
+| scenario | Сценарій |
+| skirmish mode | Режим Сутички |
 
 ## Keywords
 
 | English | Ukrainian |
 |---|---|
-| attack token | ... |
-| clone token | ... |
-| corrosion token | ... |
-| fire wall token | ... |
-| force field token | ... |
-| land mine token | ... |
-| miniatures | Мініатюри |
-| quicksand token | ... |
-| stack token | ... |
-| summon token | ... |
-| time token | ... |
-| weakness token | ... |
+| attack token | Жетон Атаки |
+| clone token | Жетон Клону |
+| corrosion token | Жетон Корозії |
+| damage token | Жетони Пошкоджень |
+| fire wall token | Жетон Вогняної Стіни |
+| force field token | Жетон Силового Поля |
+| land mine token | Жетон Міни |
+| miniatures | Фігурки |
+| quicksand token | Жетон Сипучого Піску |
+| stack token | Жетон Стеку |
+| summon token | Жетон Виклику |
+| time token | Жетон Часу |
+| weakness token | Жетон Слабкості |
 
 ## Other
 
 | English | Ukrainian |
 |---|---|
-| artifact | ... |
-| astrologers proclaim card | ... |
-| attack dice | ... |
-| black cubes | ... |
+| artifact | Артефакт |
+| astrologers proclaim card | Карта Проголошення Астрологів |
+| attack dice | Кубик Атаки |
+| black cubes | Чорні Кубики |
 | core rulebook | книга правил |
 | effects | Ефекти |
-| event card | ... |
-| expert effect markers | ... |
-| faction cubes | ... |
-| faction | ... |
+| event card | Карта Подій |
+| expert effect markers | Маркери Експертного Ефекту |
+| faction cubes | Кубики Фракцій |
+| faction | Фракція |
 | game setup | Підготовка до Гри |
-| map setup | ... |
+| map setup | Підготовка мапи |
 | player elimination | Вибування Гравця |
-| player setup | ... |
-| relic | ... |
-| round | ... |
-| round tracker | ... |
-| turn | ... |
-| war machine | Бойові Машини |
+| player setup | Підготовка гравця |
+| relic | Реліквія |
+| round | Раунд |
+| round tracker | Лічильник Раундів |
+| turn | Хід |
+| war machine | Бойова Машина |
