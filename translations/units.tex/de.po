@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
 "POT-Creation-Date: 2026-04-22 08:58+0100\n"
-"PO-Revision-Date: 2026-05-02 18:37+0200\n"
+"PO-Revision-Date: 2026-05-29 13:21+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -66,6 +66,8 @@ msgid ""
 "\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\n"
 
 #. type: multicols*
 #: sections/heroes.tex:40 sections/player_turns.tex:56 sections/units.tex:37
@@ -171,6 +173,13 @@ msgid ""
 "\\end{tikzpicture}\n"
 "\n"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\\begin{tikzpicture}[remember picture, overlay]\n"
+"  \\node[opacity=0.2, xscale=-1, anchor=west, xshift=-11.55em, yshift=-13em] at (current page.east) {\n"
+"    \\includegraphics[width=0.66\\paperwidth]{\\art/cavalryman.png}\n"
+"  };\n"
+"\\end{tikzpicture}\n"
+"\n"
 
 #. type: Plain text
 #: sections/units.tex:42
@@ -184,6 +193,8 @@ msgid ""
 "\\vspace{0pt}\n"
 "\n"
 msgstr ""
+"\\vspace{0pt}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:55
@@ -231,6 +242,19 @@ msgid ""
 "\\end{tikzpicture}\n"
 "\n"
 msgstr ""
+"\\begin{tikzpicture}[remember picture, overlay]\n"
+"  \\iftoggle{printable}{\n"
+"    \\node[opacity=0.2, xscale=-1, anchor=east, xshift=22em, yshift=-13em] at (current page.west) {\n"
+"      \\includegraphics[width=0.66\\paperwidth]{\\art/cavalryman.png}\n"
+"    };\n"
+"  }{\n"
+"    \\node[opacity=0.2, xscale=-1, anchor=east, xshift=1em, yshift=-17em] at (current page.west) {\n"
+"      \\includegraphics[width=1.2\\linewidth]{\\art/gorgone.png}\n"
+"    };\n"
+"\n"
+"  }\n"
+"\\end{tikzpicture}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:77
@@ -406,7 +430,7 @@ msgstr ""
 #: sections/units.tex:146 sections/units.tex:244
 #, no-wrap
 msgid "\\vspace*{\\fill}"
-msgstr ""
+msgstr "\\vspace*{\\fill}"
 
 #. type: Plain text
 #: sections/units.tex:161
@@ -496,6 +520,8 @@ msgid ""
 "{3}\n"
 "\n"
 msgstr ""
+"{3}\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:185
@@ -505,6 +531,9 @@ msgid ""
 "  \\begin{center}\n"
 "    \\begin{tikzpicture}\n"
 msgstr ""
+"\\begin{expansion}[title=\\phantom{\\textbf{\\tiny{foo}}}, overlay={}]{}\n"
+"  \\begin{center}\n"
+"    \\begin{tikzpicture}\n"
 
 #. type: multicols*
 #: sections/units.tex:193
@@ -537,6 +566,10 @@ msgid ""
 "  \\begin{center}\n"
 "    \\begin{tikzpicture}\n"
 msgstr ""
+"\\columnbreak\n"
+"\\begin{expansion}{navalbattles}\n"
+"  \\begin{center}\n"
+"    \\begin{tikzpicture}\n"
 
 #. type: multicols*
 #: sections/units.tex:206
@@ -624,6 +657,8 @@ msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/alamar_empowering_magic_arrow.png}\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{\\examples/alamar_empowering_magic_arrow.png}\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:238
@@ -648,3 +683,5 @@ msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/skeletons_flipped.png}\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{\\examples/skeletons_flipped.png}\n"
+"\n"
