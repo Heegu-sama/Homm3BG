@@ -59,15 +59,14 @@
   Enemy units cannot \pagelink{Defend}{defend} unless instructed to.
 
   \pagetarget{AI Siege}{\subsection*{AI Siege}}\index{Siege Combat}
-  \textbf{If you are besieging an AI Town:} When the Walls and Gate\index{Walls and Gate} are mentioned in Combat preparation but no additional information on how to arrange them is given, arrange them as a human player would:
-  place the Gate in front of the \svg{unit_ground} unit with the highest \svg{initiative}.
+  \textbf{If you are besieging an AI Town:} When the Walls and Gate\index{Walls and Gate} are mentioned in Combat preparation but no additional information on how to arrange them is given, place the Gate in front of the \svg{unit_ground} unit with the highest \svg{initiative}.
   By default, the units do not attack the Walls -- they would rather fly over them to attack their target or move towards it through the Gate.
-  If it is not possible, they take a \pagelink{Defend}{Defend} Action.
+  If neither is possible, they take a \pagelink{Defend}{Defend} Action.
 
-  AI treats \pagelink{Walls}{the Arrow Tower}\index{Arrow Tower} like a Silver \svg{silver}\svg{unit_ranged} unit.
+  To the AI, \pagelink{Walls}{the Arrow Tower}\index{Arrow Tower} counts as a Silver \svg{silver}\svg{unit_ranged} unit.
   However, if it has multiple equally valid targets to attack, it will attack the one with the least health remaining (the smallest difference between \svg{health_points} and current~\svg{damage}).
 
-  \textbf{If AI Hero besieges you}, the Arrow Tower is treated like a Silver \svg{silver}\svg{unit_ranged} unit as well.
+  \textbf{If AI Hero besieges you}, the Arrow Tower counts as a Silver \svg{silver}\svg{unit_ranged} unit as well.
   Furthermore, \svg{unit_ground} and \svg{unit_flying} units attack the closest wall if no other enemy is in their reach.
 \end{multicols*}
 
