@@ -40,13 +40,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:11
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  \\bigskip\n"
-#| "  \\pagetarget{AI Units}{\\subheader{Combat against AI}}\n"
-#| "  Foreword: these rules are intended to make fun challenging encounters, but still be simple enough to follow.\n"
-#| "  You will likely find some loopholes which make the encounter too easy, but you may make AI behave more intellegently.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  \\bigskip\n"
 "  \\pagetarget{AI Units}{\\subheader{Combat against AI}}\\index{Combat}\n"
@@ -55,7 +49,7 @@ msgid ""
 "\n"
 msgstr ""
 "  \\bigskip\n"
-"  \\pagetarget{AI Units}{\\subheader{Сражение против ИИ}}\n"
+"  \\pagetarget{AI Units}{\\subheader{Сражение против ИИ}}\\index{Сражение}\n"
 "  Предисловие: эти правила предназначены для того, чтобы схватки были интересными, но чтобы при этом следовать правилам было просто.\n"
 "  Вы наверняка найдёте лазейки, из-за которых схватки будут слишком просты, однако вы можете заставить ИИ действовать умнее.\n"
 "\n"
@@ -94,17 +88,13 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:21
-#, fuzzy, no-wrap
-#| msgid ""
-#| "    \\item Enemy Ground \\svg{unit_ground} and Flying \\svg{unit_flying} units prioritize attacking units of the \\textbf{same} tier.\n"
-#| "    If this is impossible, they attack the unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\item Enemy Ground \\svg{unit_ground}\\index{Ground Units} and Flying \\svg{unit_flying} units\\index{Flying Units} prioritize attacking units of the \\textbf{same} tier.\n"
 "    If this is impossible, they attack the unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
 "\n"
 msgstr ""
-"\\item Приоритетом атаки вражеских наземных \\svg{unit_ground} и летающих \\svg{unit_flying} отрядов являются отряды \\textbf{того же} уровня. Если это невозможно, они атакуют отряд меньшего уровня (в порядке \\textbf{убывания} уровня вплоть до бронзового); если и это невозможно, то атакуют отряд высшего уровня (в порядке \\textbf{возрастания} уровня).\\par\n"
+"\\item Приоритетом атаки вражеских наземных \\svg{unit_ground}\\index{Отряд!Наземный} и летающих \\svg{unit_flying}\\index{Отряд!Летающий} отрядов являются отряды \\textbf{того же} уровня. Если это невозможно, они атакуют отряд меньшего уровня (в порядке \\textbf{убывания} уровня вплоть до бронзового); если и это невозможно, то атакуют отряд высшего уровня (в порядке \\textbf{возрастания} уровня).\\par\n"
 "\n"
 
 #. type: multicols*
@@ -143,17 +133,13 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:35
-#, fuzzy, no-wrap
-#| msgid ""
-#| "    \\item Ranged \\svg{unit_ranged} units prioritize attacking other Ranged \\svg{unit_ranged} units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
-#| "    If there are no Ranged \\svg{unit_ranged} units for them to target, they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} units in the same tier order.\\par\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\item Ranged \\svg{unit_ranged} units\\index{Ranged Units} prioritize attacking other Ranged \\svg{unit_ranged} units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
 "    If there are no Ranged \\svg{unit_ranged} units for them to target, they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} units in the same tier order.\\par\n"
 "\n"
 msgstr ""
-"\\item Стрелковые \\svg{unit_ranged} отряды предпочитают атаковать других стрелков \\svg{unit_ranged} того же уровня, потом уровнем ниже, далее высшим уровнем, используя очерёдность, описанную выше. Если нет возможности атаковать стрелков \\svg{unit_ranged}, они выбирают наземные \\svg{unit_ground} и летающие \\svg{unit_flying} отряды в том же порядке.\\par\n"
+"\\item Стрелковые \\svg{unit_ranged}\\index{Отряд!Стрелковый} отряды предпочитают атаковать других стрелков \\svg{unit_ranged} того же уровня, потом уровнем ниже, далее высшим уровнем, используя очерёдность, описанную выше. Если нет возможности атаковать стрелков \\svg{unit_ranged}, они выбирают наземные \\svg{unit_ground} и летающие \\svg{unit_flying} отряды в том же порядке.\\par\n"
 "\n"
 
 #. type: multicols*
@@ -231,14 +217,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:65
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  \\pagetarget{AI Siege}{\\subsection*{AI Siege}}\n"
-#| "  When the Walls and Gate are mentioned in Combat preparation but no additional information on how to arrange them is given, arrange them as a human player would:\n"
-#| "  place the Gate in front of the \\svg{unit_ground} unit with the highest \\svg{initiative}.\n"
-#| "  By default, the units do not attack the Walls -- they would rather fly over them to attack their target or move towards it through the Gate.\n"
-#| "  If it is not possible, they take a \\pagelink{Defend}{Defend} Action.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  \\pagetarget{AI Siege}{\\subsection*{AI Siege}}\\index{Siege Combat}\n"
 "  \\textbf{If you are besieging an AI Town:} When the Walls and Gate\\index{Walls and Gate} are mentioned in Combat preparation but no additional information on how to arrange them is given, place the Gate in front of the \\svg{unit_ground} unit with the highest \\svg{initiative}.\n"
@@ -246,8 +225,8 @@ msgid ""
 "  If neither is possible, they take a \\pagelink{Defend}{Defend} Action.\n"
 "\n"
 msgstr ""
-"  \\pagetarget{AI Siege}{\\subsection*{Осада ИИ}}\n"
-"  Если в сценарии сказано использовать в сражении стены и врата, но не указано, как их разместить, разместите их так, как бы это сделал человек:\n"
+"  \\pagetarget{AI Siege}{\\subsection*{Осада ИИ}}\\index{Осада}\n"
+"  \\textbf{Если вы напали на город ИИ:} Если в сценарии сказано использовать в сражении стены и врата\\index{Стены и врата}, но не указано, как их разместить, то\n"
 "  поместите врата перед отрядом \\svg{unit_ground} с самой высокой скоростью \\svg{initiative}.\n"
 "  По умолчанию отряды не будут атаковать стены: они перелетят через них, чтобы достичь целевой отряд, либо пойдут к нему через врата.\n"
 "  Если это невозможно, они \\pagelink{Defend}{защищаются}.\n"
@@ -255,17 +234,15 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:68
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  The \\pagelink{Walls}{Arrow Tower} is treated like a Silver \\svg{silver}\\svg{unit_ranged} unit.\n"
-#| "  However, if it has multiple equally valid targets to attack, it will attack the one with the least health remaining (the smallest difference between \\svg{health_points} and current~\\svg{damage})."
+#, no-wrap
 msgid ""
 "  To the AI, \\pagelink{Walls}{the Arrow Tower}\\index{Arrow Tower} counts as a Silver \\svg{silver}\\svg{unit_ranged} unit.\n"
 "  However, if it has multiple equally valid targets to attack, it will attack the one with the least health remaining (the smallest difference between \\svg{health_points} and current~\\svg{damage}).\n"
 "\n"
 msgstr ""
-"В осаде против ИИ стрелковая башня трактуется как отряд \\svg{silver}\\svg{unit_ranged}.\n"
-"Однако, если для неё имеется несколько равнозначных целей, атакуется отряд, наиболее близкий к поражению (имеющий наименьшую разницу между \\svg{health_points} и текущим \\svg{damage})."
+"  ИИ трактует \\pagelink{Walls}{стрелковую башню}\\index{Стрелковая башня} как серебряный отряд \\svg{silver}\\svg{unit_ranged}.\n"
+"  Однако, если для неё имеется несколько равнозначных целей, атакуется отряд, наиболее близкий к поражению (имеющий наименьшую разницу между \\svg{health_points} и текущим \\svg{damage}).\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:72
@@ -274,6 +251,8 @@ msgid ""
 "  \\textbf{If AI Hero besieges you}, the Arrow Tower counts as a Silver \\svg{silver}\\svg{unit_ranged} unit as well.\n"
 "  Furthermore, \\svg{unit_ground} and \\svg{unit_flying} units attack the closest wall if no other enemy is in their reach."
 msgstr ""
+"  \\textbf{Если ИИ осаждает ваш город}, стрелковая башня также считается серебряным отрядом \\svg{silver}\\svg{unit_ranged}.\n"
+"  Кроме того, отряды \\svg{unit_ground} и \\svg{unit_flying} атакуют ближайшую стену, если не могут достичь ни одного из вражеских отрядов."
 
 #. type: multicols
 #: sections/ai_rules.tex:80
@@ -633,15 +612,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/ai_rules.tex:200
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  \\bigskip\n"
-#| "  \\bigskip\n"
-#| "  \\pagetarget{AI Complex Spells}{\\subheader{Casting complex Spells}}\n"
-#| "  In some Campaigns, enemies use Spells whose effects are not fully compatible with the standard use of AI Magic \\svg{magic} cards.\n"
-#| "  To fully use their effects, here are extended descriptions of how AI Heroes should use each of these Spells.\n"
-#| "  Scenarios can override these instructions.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  \\bigskip\n"
 "  \\bigskip\n"
@@ -653,7 +624,7 @@ msgid ""
 msgstr ""
 "  \\bigskip\n"
 "  \\bigskip\n"
-"  \\pagetarget{AI Complex Spells}{\\subheader{Применение ИИ сложных заклинаний}}\n"
+"  \\pagetarget{AI Complex Spells}{\\subheader{Применение ИИ сложных заклинаний}}\\index{Заклинания}\n"
 "  В некоторых кампаниях враги используют заклинания, эффекты которых не очень совместимы с нормальным использованием карт магии ИИ \\svg{magic}.\n"
 "  Ниже описано, как герои ИИ должны использовать такие заклинания.\n"
 "  Сценарии могут менять эти правила.\n"
