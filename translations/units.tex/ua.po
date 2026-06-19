@@ -65,6 +65,8 @@ msgid ""
 "\\vspace*{\\fill}\n"
 "\n"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\n"
 
 #. type: multicols*
 #: sections/heroes.tex:40 sections/player_turns.tex:56 sections/units.tex:37
@@ -190,6 +192,8 @@ msgid ""
 "\\vspace{0pt}\n"
 "\n"
 msgstr ""
+"\\vspace{0pt}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:55
@@ -237,6 +241,19 @@ msgid ""
 "\\end{tikzpicture}\n"
 "\n"
 msgstr ""
+"\\begin{tikzpicture}[remember picture, overlay]\n"
+"  \\iftoggle{printable}{\n"
+"    \\node[opacity=0.2, xscale=-1, anchor=east, xshift=22em, yshift=-13em] at (current page.west) {\n"
+"      \\includegraphics[width=0.66\\paperwidth]{\\art/cavalryman.png}\n"
+"    };\n"
+"  }{\n"
+"    \\node[opacity=0.2, xscale=-1, anchor=east, xshift=1em, yshift=-17em] at (current page.west) {\n"
+"      \\includegraphics[width=1.2\\linewidth]{\\art/gorgone.png}\n"
+"    };\n"
+"\n"
+"  }\n"
+"\\end{tikzpicture}\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:77
@@ -373,6 +390,8 @@ msgid ""
 "\\bigbreak\n"
 "\n"
 msgstr ""
+"\\bigbreak\n"
+"\n"
 
 #. type: multicols
 #: sections/units.tex:144
@@ -410,7 +429,7 @@ msgstr ""
 #: sections/units.tex:146 sections/units.tex:244
 #, no-wrap
 msgid "\\vspace*{\\fill}"
-msgstr ""
+msgstr "\\vspace*{\\fill}"
 
 #. type: Plain text
 #: sections/units.tex:161
@@ -500,6 +519,8 @@ msgid ""
 "{3}\n"
 "\n"
 msgstr ""
+"{3}\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:185
@@ -638,6 +659,8 @@ msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/alamar_empowering_magic_arrow.png}\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{\\examples/alamar_empowering_magic_arrow.png}\n"
+"\n"
 
 #. type: multicols*
 #: sections/units.tex:238
@@ -662,3 +685,5 @@ msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/skeletons_flipped.png}\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{\\examples/skeletons_flipped.png}\n"
+"\n"
