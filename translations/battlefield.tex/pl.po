@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-04-17 23:15+0100\n"
+"POT-Creation-Date: 2026-06-20 18:11+0100\n"
 "PO-Revision-Date: 2025-12-07 21:39+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -118,8 +118,8 @@ msgstr ""
 
 #. type: multicols
 #: sections/battlefield.tex:33 sections/expansion_content.tex:178
-#: sections/expansion_content.tex:190 sections/title_with_toc.tex:37
-#: sections/title_with_toc.tex:42
+#: sections/expansion_content.tex:190 sections/title_with_toc.tex:40
+#: sections/title_with_toc.tex:45
 #, no-wrap
 msgid ""
 "  \\columnbreak\n"
@@ -787,10 +787,16 @@ msgstr ""
 
 #. type: expansion
 #: sections/battlefield.tex:326
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "*[before=\\vspace*{-11mm}]{battlefield}\n"
+#| "  \\pagetarget{Battlefield Combat}{\\subheader{Battlefield Combat}}\n"
+#| "  \\begin{multicols*}{2}\n"
+#| "  Playing on the Battlefield Board requires using Miniatures for Combat instead of unit cards.\n"
+#| "\n"
 msgid ""
 "*[before=\\vspace*{-11mm}]{battlefield}\n"
-"  \\pagetarget{Battlefield Combat}{\\subheader{Battlefield Combat}}\n"
+"  \\pagetarget{Battlefield Combat}{\\subheader{Battlefield Combat}}\\index{Combat}\n"
 "  \\begin{multicols*}{2}\n"
 "  Playing on the Battlefield Board requires using Miniatures for Combat instead of unit cards.\n"
 "\n"
@@ -803,9 +809,38 @@ msgstr ""
 
 #. type: expansion
 #: sections/battlefield.tex:354
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  \\subsection*{\\pagetarget{BF Obstacles}{Obstacle Tokens}}\n"
+#| "  You can place three token types on the Battlefield Board: Effect, Obstacle and Wall/\\allowbreak Gate.\n"
+#| "  Unless otherwise stated, these Tokens count and work as \\pagelink{Combatterminology}{Combat Obstacles}.\n"
+#| "  To place Effect Obstacles on the Battlefield Board you'll need the card that creates the effect, such as the \\wikilink{spells/fire_wall}{Fire Wall} Spell: use the Tokens and put the card beside the Battlefield as a reminder.\n"
+#| "  Effect Obstacles may be entered by units, if the card text allows it.\n"
+#| "  \\begin{figure}[H]\n"
+#| "    \\centering\n"
+#| "    \\begin{subfigure}[b]{0.3\\linewidth}\n"
+#| "      \\centering\n"
+#| "      \\includegraphics[width=\\linewidth]{\\images/bf-obstacle-1.png}\n"
+#| "      \\caption{\\imagecaption{Effect}}\n"
+#| "    \\end{subfigure}\n"
+#| "    \\begin{subfigure}[b]{0.3\\linewidth}\n"
+#| "      \\centering\n"
+#| "      \\includegraphics[width=0.9\\linewidth]{\\images/bf-obstacle-2.png}\n"
+#| "      \\caption{\\imagecaption{Obstacle}}\n"
+#| "    \\end{subfigure}\n"
+#| "    \\begin{subfigure}[b]{0.3\\linewidth}\n"
+#| "      \\centering\n"
+#| "      \\includegraphics[width=0.9\\linewidth]{\\images/bf-obstacle-3.png}\n"
+#| "      \\caption{\\imagecaption{Wall/Gate}}\n"
+#| "    \\end{subfigure}\n"
+#| "  \\end{figure}\n"
+#| "  \\vspace*{-0.5\\baselineskip}\n"
+#| "  \\note{3}{\n"
+#| "    All unit Miniatures also count as Obstacles.\n"
+#| "  }\n"
+#| "\n"
 msgid ""
-"  \\subsection*{\\pagetarget{BF Obstacles}{Obstacle Tokens}}\n"
+"  \\subsection*{\\pagetarget{BF Obstacles}{Obstacle Tokens}}\\index{Combat Obstacles}\\index{Obstacles, Combat}\n"
 "  You can place three token types on the Battlefield Board: Effect, Obstacle and Wall/\\allowbreak Gate.\n"
 "  Unless otherwise stated, these Tokens count and work as \\pagelink{Combatterminology}{Combat Obstacles}.\n"
 "  To place Effect Obstacles on the Battlefield Board you'll need the card that creates the effect, such as the \\wikilink{spells/fire_wall}{Fire Wall} Spell: use the Tokens and put the card beside the Battlefield as a reminder.\n"
@@ -897,7 +932,21 @@ msgstr ""
 
 #. type: expansion
 #: sections/battlefield.tex:381
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "  {\\centering\n"
+#| "    \\begin{tikzpicture}\n"
+#| "      \\draw (0, 0) node {\\framedimage[\\linewidth]{\\examples/bf-deploy.png}};\n"
+#| "      \\draw (3.2, 0) node[rotate=90, fill=black, fill opacity=0.19, text opacity=1]\n"
+#| "        {\\textbf{\\liberation\\LARGE\\textcolor{white}{\\MakeUppercase{Deployment Zone}}}};\n"
+#| "    \\end{tikzpicture}\n"
+#| "  }\\\\\n"
+#| "  \\imagecaption{Obstacles and Miniatures placed correctly are marked with the green border, and incorrectly -- with the red one.}\\par\n"
+#| "  \\vspace{1em}\n"
+#| "    The player with the Initiative Token chooses a deployment zone and places one of their units in it, then players take turns placing their units \\textbf{one by one} each in their zone.\n"
+#| "    The 5-unit limit does not apply in Adventure and Skirmish modes, and players may place all Faction units available to them.\n"
+#| "    When the last unit is placed, the Combat begins.\n"
+#| "  \\end{multicols*}"
 msgid ""
 "  {\\centering\n"
 "    \\begin{tikzpicture}\n"
@@ -908,7 +957,7 @@ msgid ""
 "  }\\\\\n"
 "  \\imagecaption{Obstacles and Miniatures placed correctly are marked with the green border, and incorrectly -- with the red one.}\\par\n"
 "  \\vspace{1em}\n"
-"    The player with the Initiative Token chooses a deployment zone and places one of their units in it, then players take turns placing their units \\textbf{one by one} each in their zone.\n"
+"    The player with the Initiative Token chooses a deployment zone and places one of their units in it, then players take turns placing their units \\textbf{one by one} each in their zone.\\index{Units Placement}\n"
 "    The 5-unit limit does not apply in Adventure and Skirmish modes, and players may place all Faction units available to them.\n"
 "    When the last unit is placed, the Combat begins.\n"
 "  \\end{multicols*}"
@@ -1051,10 +1100,16 @@ msgstr ""
 
 #. type: expansion
 #: sections/battlefield.tex:427
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "    \\subsection*{Siege with Walls and Gate}\n"
+#| "    During a Siege against a Town with a Citadel\\index{Citadel}, Walls and Gate Obstacles are placed as shown below.\n"
+#| "    Place no other Obstacles.\\par\n"
+#| "    \\bigskip\n"
+#| "    \\begin{tikzpicture}\n"
 msgid ""
-"    \\subsection*{Siege with Walls and Gate}\n"
-"    During a Siege against a Town with a Citadel\\index{Citadel}, Walls and Gate Obstacles are placed as shown below.\n"
+"    \\subsection*{Siege with Walls and Gate}\\index{Siege Combat}\n"
+"    During a Siege against a Town with a Citadel\\index{Citadel}, Walls and Gate Obstacles are placed as shown below.\\index{Walls and Gate}\n"
 "    Place no other Obstacles.\\par\n"
 "    \\bigskip\n"
 "    \\begin{tikzpicture}\n"
