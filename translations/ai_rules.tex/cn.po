@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-04-22 09:05+0100\n"
+"POT-Creation-Date: 2026-06-18 20:51+0000\n"
 "PO-Revision-Date: 2026-04-22 09:05+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -38,13 +38,13 @@ msgstr ""
 #, no-wrap
 msgid ""
 "  \\bigskip\n"
-"  \\pagetarget{AI Units}{\\subheader{Combat against AI}}\n"
+"  \\pagetarget{AI Units}{\\subheader{Combat against AI}}\\index{Combat}\n"
 "  Foreword: these rules are intended to make fun challenging encounters, but still be simple enough to follow.\n"
 "  You will likely find some loopholes which make the encounter too easy, but you may make AI behave more intellegently.\n"
 "\n"
 msgstr ""
 "  \\vspace{3em}\n"
-"  \\pagetarget{AI Units}{\\subheader{对抗AI的战斗}}\n"
+"  \\pagetarget{AI Units}{\\subheader{对抗AI的战斗}}\\index{战斗}\n"
 "  前言：这些规则旨在创造有趣且有挑战性的战斗，同时仍保持足够简单，便于执行。%\n"
 "  你可能会发现一些让战斗变得过于简单的漏洞；你可以让AI表现得更聪明。\n"
 "\n"
@@ -85,11 +85,11 @@ msgstr ""
 #: sections/ai_rules.tex:21
 #, no-wrap
 msgid ""
-"    \\item Enemy Ground \\svg{unit_ground} and Flying \\svg{unit_flying} units prioritize attacking units of the \\textbf{same} tier.\n"
+"    \\item Enemy Ground \\svg{unit_ground}\\index{Ground Units} and Flying \\svg{unit_flying} units\\index{Flying Units} prioritize attacking units of the \\textbf{same} tier.\n"
 "    If this is impossible, they attack the unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
 "\n"
 msgstr ""
-"    \\item 敌方地面\\svg{unit_ground}和飞行\\svg{unit_flying}单位优先攻击\\textbf{相同}阶级的单位。%\n"
+"    \\item 敌方地面\\svg{unit_ground}\\index{地面单位}和飞行\\svg{unit_flying}单位\\index{飞行单位}优先攻击\\textbf{相同}阶级的单位。%\n"
 "    若无法这样做，则攻击较低阶级的单位（按阶级\\textbf{降序}，直到青铜）；若仍然无法，则攻击较高阶级的单位（按阶级\\textbf{升序}）。\\par\n"
 "\n"
 
@@ -131,11 +131,11 @@ msgstr ""
 #: sections/ai_rules.tex:35
 #, no-wrap
 msgid ""
-"    \\item Ranged \\svg{unit_ranged} units prioritize attacking other Ranged \\svg{unit_ranged} units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
+"    \\item Ranged \\svg{unit_ranged} units\\index{Ranged Units} prioritize attacking other Ranged \\svg{unit_ranged} units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
 "    If there are no Ranged \\svg{unit_ranged} units for them to target, they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} units in the same tier order.\\par\n"
 "\n"
 msgstr ""
-"    \\item 远程\\svg{unit_ranged}单位优先攻击相同阶级的其他远程\\svg{unit_ranged}单位，然后攻击较低阶级，最后攻击较高阶级；阶级顺序同上。%\n"
+"    \\item 远程\\svg{unit_ranged}单位\\index{远程单位}优先攻击相同阶级的其他远程\\svg{unit_ranged}单位，然后攻击较低阶级，最后攻击较高阶级；阶级顺序同上。%\n"
 "    如果没有远程\\svg{unit_ranged}单位可作为目标，则按相同阶级顺序优先攻击地面\\svg{unit_ground}和飞行\\svg{unit_flying}单位。\\par\n"
 "\n"
 
@@ -214,35 +214,45 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:66
+#: sections/ai_rules.tex:65
 #, no-wrap
 msgid ""
-"  \\pagetarget{AI Siege}{\\subsection*{AI Siege}}\n"
-"  When the Walls and Gate are mentioned in Combat preparation but no additional information on how to arrange them is given, arrange them as a human player would:\n"
-"  place the Gate in front of the \\svg{unit_ground} unit with the highest \\svg{initiative}.\n"
+"  \\pagetarget{AI Siege}{\\subsection*{AI Siege}}\\index{Siege Combat}\n"
+"  \\textbf{If you are besieging an AI Town:} When the Walls and Gate\\index{Walls and Gate} are mentioned in Combat preparation but no additional information on how to arrange them is given, place the Gate in front of the \\svg{unit_ground} unit with the highest \\svg{initiative}.\n"
 "  By default, the units do not attack the Walls -- they would rather fly over them to attack their target or move towards it through the Gate.\n"
-"  If it is not possible, they take a \\pagelink{Defend}{Defend} Action.\n"
+"  If neither is possible, they take a \\pagelink{Defend}{Defend} Action.\n"
 "\n"
 msgstr ""
-"  \\pagetarget{AI Siege}{\\subsection*{AI攻城}}\n"
-"  如果战斗准备中提到城墙和城门，但没有给出额外的布置说明，则像人类玩家一样布置它们：%\n"
-"  将城门放在\\svg{initiative}最高的\\svg{unit_ground}单位前方。%\n"
+"  \\pagetarget{AI Siege}{\\subsection*{AI攻城}}\\index{攻城战斗}\n"
+"  \\textbf{如果你正在对AI城镇攻城：}如果战斗准备中提到城墙和城门\\index{城墙和城门}，但没有给出具体的布置说明，则将城门放在\\svg{initiative}最高的\\svg{unit_ground}单位前方。%\n"
 "  默认情况下，单位不会攻击城墙——它们更倾向于飞越城墙攻击目标，或穿过城门向目标移动。%\n"
-"  如果无法这样做，它们执行一次\\pagelink{Defend}{防御}行动。\n"
+"  如果两者都无法做到，它们执行一次\\pagelink{Defend}{防御}行动。\n"
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:70
+#: sections/ai_rules.tex:68
 #, no-wrap
 msgid ""
-"  The \\pagelink{Walls}{Arrow Tower} is treated like a Silver \\svg{silver}\\svg{unit_ranged} unit.\n"
-"  However, if it has multiple equally valid targets to attack, it will attack the one with the least health remaining (the smallest difference between \\svg{health_points} and current~\\svg{damage})."
+"  To the AI, \\pagelink{Walls}{the Arrow Tower}\\index{Arrow Tower} counts as a Silver \\svg{silver}\\svg{unit_ranged} unit.\n"
+"  However, if it has multiple equally valid targets to attack, it will attack the one with the least health remaining (the smallest difference between \\svg{health_points} and current~\\svg{damage}).\n"
+"\n"
 msgstr ""
-"  \\pagelink{Walls}{箭塔}视为一个白银\\svg{silver}\\svg{unit_ranged}单位。%\n"
-"  但是，如果它有多个同样有效的攻击目标，它会攻击剩余生命值最少的目标（\\svg{health_points}与当前\\svg{damage}之间差值最小者）。 \\begin{center} \\vfill \\includegraphics[width=0.8\\linewidth]{\\art/medusa.png} \\end{center}"
+"  对AI而言，\\pagelink{Walls}{箭塔}\\index{箭塔}视为一个白银\\svg{silver}\\svg{unit_ranged}单位。%\n"
+"  但是，如果它有多个同样有效的攻击目标，它会攻击剩余生命值最少的目标（\\svg{health_points}与当前\\svg{damage}之间差值最小者）。\n"
+"\n"
+
+#. type: multicols*
+#: sections/ai_rules.tex:72
+#, no-wrap
+msgid ""
+"  \\textbf{If AI Hero besieges you}, the Arrow Tower counts as a Silver \\svg{silver}\\svg{unit_ranged} unit as well.\n"
+"  Furthermore, \\svg{unit_ground} and \\svg{unit_flying} units attack the closest wall if no other enemy is in their reach."
+msgstr ""
+"  \\textbf{如果AI英雄对你攻城}，箭塔也视为一个白银\\svg{silver}\\svg{unit_ranged}单位。\n"
+"  此外，若攻击范围内没有其他敌人，\\svg{unit_ground}和\\svg{unit_flying}单位会攻击最近的城墙。\\begin{center} \\vfill \\includegraphics[width=0.8\\linewidth]{\\art/medusa.png} \\end{center}"
 
 #. type: multicols
-#: sections/ai_rules.tex:78
+#: sections/ai_rules.tex:80
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -262,7 +272,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:81
+#: sections/ai_rules.tex:83
 #, no-wrap
 msgid ""
 "  During setup, if multiple AI Heroes use the same unit and you do not have enough copies of its card, the AI Heroes must share it:\n"
@@ -274,7 +284,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:85
+#: sections/ai_rules.tex:87
 #, no-wrap
 msgid ""
 "  AI Heroes cannot surrender and you cannot surrender to them;\n"
@@ -288,7 +298,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:95
+#: sections/ai_rules.tex:97
 #, no-wrap
 msgid ""
 "  \\columnbreak\n"
@@ -314,7 +324,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:98
+#: sections/ai_rules.tex:100
 #, no-wrap
 msgid ""
 "  AI Heroes always \\textbf{automatically win Combat} against any Neutral Units, while simultaneously \\textbf{flagging or visiting all Fields} they happen to move through.\n"
@@ -326,7 +336,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:101
+#: sections/ai_rules.tex:103
 #, no-wrap
 msgid ""
 "  AI Heroes must discover face down Map Tiles as normal by spending 1 MP before moving onto them.\n"
@@ -336,7 +346,7 @@ msgstr ""
 "  由玩家选择该板块的朝向。"
 
 #. type: Plain text
-#: sections/ai_rules.tex:107
+#: sections/ai_rules.tex:109
 msgid ""
 "{\\begin{center} \\vfill \\includegraphics[width=\\linewidth]{\\art/"
 "gold_dragon.jpg} \\end{center}}"
@@ -345,7 +355,7 @@ msgstr ""
 "gold_dragon.jpg} \\end{center}}"
 
 #. type: multicols*
-#: sections/ai_rules.tex:111
+#: sections/ai_rules.tex:113
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -357,7 +367,7 @@ msgstr ""
 "  \\begin{tikzpicture}\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:143
+#: sections/ai_rules.tex:145
 #, no-wrap
 msgid ""
 "    \\node (card) {\\includegraphics[width=0.57\\linewidth]{\\cards/ai.png}};\n"
@@ -427,7 +437,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:149
+#: sections/ai_rules.tex:151
 #, no-wrap
 msgid ""
 "  AI Heroes use two Decks during Combat: the \\textbf{AI Deck} and the \\textbf{AI Spell Deck}.\n"
@@ -445,7 +455,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:154
+#: sections/ai_rules.tex:156
 #, no-wrap
 msgid ""
 "  When an AI Hero \\textbf{activates} a unit, draw an AI card\\index{AI card} and follow its instructions before the unit \\pagelink{AI Units}{moves and/or attacks}.\n"
@@ -461,7 +471,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:158
+#: sections/ai_rules.tex:160
 #, no-wrap
 msgid ""
 "  \\subsection*{AI Magic cards and AI Spell Deck}\n"
@@ -475,7 +485,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:162
+#: sections/ai_rules.tex:164
 #, no-wrap
 msgid ""
 "  Whenever an AI Magic \\svg{magic} card is drawn, draw the next Spell from the AI Spell Deck and cast it.\n"
@@ -489,7 +499,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:166
+#: sections/ai_rules.tex:168
 #, no-wrap
 msgid ""
 "  The AI Spell Deck may contain more Spell cards than there are Magic cards in the AI Hero's Deck.\n"
@@ -503,7 +513,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:168
+#: sections/ai_rules.tex:170
 #, no-wrap
 msgid ""
 "  If the AI Hero is assigned a Spell card that is unavailable because it is in your Hero's Deck, and you do not have another copy, substitute it with a \\wikilink{spells/magic_arrow}{Magic Arrow} card.\n"
@@ -513,7 +523,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:171
+#: sections/ai_rules.tex:173
 #, no-wrap
 msgid ""
 "  For certains Spells it can be unclear how the AI is supposed to cast them.\n"
@@ -525,7 +535,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:177
+#: sections/ai_rules.tex:179
 #, no-wrap
 msgid ""
 "  \\subsection*{AI Skill cards}\n"
@@ -543,7 +553,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:179
+#: sections/ai_rules.tex:181
 #, no-wrap
 msgid ""
 "  AI Skill cards cannot be replaced, so if Scenario rules assign the AI Hero a card that your Hero has and you do not have another copy, remove that card from your Deck and \\textbf{Search (3)} the respective card's Deck to compensate your Hero for the loss.\n"
@@ -553,7 +563,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:182
+#: sections/ai_rules.tex:184
 #, no-wrap
 msgid ""
 "  \\subsection*{AI cards timing}\n"
@@ -565,7 +575,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:186
+#: sections/ai_rules.tex:188
 #, no-wrap
 msgid ""
 "  The \\wikilink{ai\\#ai-cards}{Attack} Might \\svg[12]{might} card says about ``unit that is about to attack'', so if the currently activated unit doesn't have a valid target to attack, the Attack will apply to the next unit who is able to attack.\n"
@@ -579,7 +589,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:188
+#: sections/ai_rules.tex:190
 #, no-wrap
 msgid ""
 "  If an AI card increased a unit's \\svg{defense}, or triggered another card which increased it, the AI card stays attached to the unit until the first defense happens.\n"
@@ -589,7 +599,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:191
+#: sections/ai_rules.tex:193
 #, no-wrap
 msgid ""
 "  \\subsection*{AI Deck sharing}\n"
@@ -602,26 +612,26 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:198
+#: sections/ai_rules.tex:200
 #, no-wrap
 msgid ""
 "  \\bigskip\n"
 "  \\bigskip\n"
-"  \\pagetarget{AI Complex Spells}{\\subheader{Casting complex Spells}}\n"
+"  \\pagetarget{AI Complex Spells}{\\subheader{Casting complex Spells}}\\index{Spell cards}\n"
 "  In some Campaigns, enemies use Spells whose effects are not fully compatible with the standard use of AI Magic \\svg{magic} cards.\n"
 "  To fully use their effects, here are extended descriptions of how AI Heroes should use each of these Spells.\n"
 "  Scenarios can override these instructions.\n"
 "\n"
 msgstr ""
 "  \\columnbreak\n"
-"  \\pagetarget{AI Complex Spells}{\\subheader{施放复杂法术}}\n"
+"  \\pagetarget{AI Complex Spells}{\\subheader{施放复杂法术}}\\index{法术牌}\n"
 "  在某些战役中，敌人会使用一些效果无法完全套用AI魔法\\svg{magic}牌标准用法的法术。%\n"
 "  为了完整结算这些法术的效果，以下补充说明AI英雄应如何使用它们。%\n"
 "  剧本中的说明可以取代这些规则。\n"
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:201
+#: sections/ai_rules.tex:203
 #, no-wrap
 msgid ""
 "  \\subsection*{Spells attacking multiple targets}\n"
@@ -633,7 +643,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:207
+#: sections/ai_rules.tex:209
 #, no-wrap
 msgid ""
 "  When drawn, target any unit with one or two adjacent units from the player's army, prioritizing the groups where there are more higher-tier units.\n"
@@ -651,7 +661,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:210
+#: sections/ai_rules.tex:212
 #, no-wrap
 msgid ""
 "  \\subsection*{Instant Defense Spells}\n"
@@ -663,7 +673,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:214
+#: sections/ai_rules.tex:216
 #, no-wrap
 msgid ""
 "  When drawn, put this card on the side of the Combat Board, then put a Defense Token on the unit with the highest \\svg{defense} to represent the card's effect -- it stays there until the Defense is resolved.\n"
@@ -677,7 +687,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:217
+#: sections/ai_rules.tex:219
 #, no-wrap
 msgid ""
 "  \\subsection*{Healing Spells}\n"
@@ -689,7 +699,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:220
+#: sections/ai_rules.tex:222
 #, no-wrap
 msgid ""
 "  When drawn, remove the \\svg{damage} from the AI unit with the greatest value of \\svg{damage} taken, starting with the highest tier available.\n"
@@ -701,7 +711,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:223
+#: sections/ai_rules.tex:225
 #, no-wrap
 msgid ""
 "  \\subsection*{Single-round buffs}\n"
@@ -713,7 +723,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:227
+#: sections/ai_rules.tex:229
 #, no-wrap
 msgid ""
 "  When drawn, check the tier of the unit on which you are about to cast the Spell and count how many units of the same or higher tier there are on the Board.\n"
@@ -727,7 +737,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:230
+#: sections/ai_rules.tex:232
 #, no-wrap
 msgid ""
 "  \\subsection*{Attack-weakening Spells}\n"
@@ -739,7 +749,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:233
+#: sections/ai_rules.tex:235
 #, no-wrap
 msgid ""
 "  When drawn, if the AI's activated unit is about to perform an attack that will provoke a Retaliation, cast this Spell on the Retaliating enemy to lower their \\svg{attack}.\n"
