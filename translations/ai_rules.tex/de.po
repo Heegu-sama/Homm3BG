@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-04-22 09:05+0100\n"
+"POT-Creation-Date: 2026-06-18 20:51+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -39,13 +39,13 @@ msgstr ""
 #, no-wrap
 msgid ""
 "  \\bigskip\n"
-"  \\pagetarget{AI Units}{\\subheader{Combat against AI}}\n"
+"  \\pagetarget{AI Units}{\\subheader{Combat against AI}}\\index{Combat}\n"
 "  Foreword: these rules are intended to make fun challenging encounters, but still be simple enough to follow.\n"
 "  You will likely find some loopholes which make the encounter too easy, but you may make AI behave more intellegently.\n"
 "\n"
 msgstr ""
 "  \\bigskip\n"
-"  \\pagetarget{AI Units}{\\subheader{Kämpfe gegen Bots}}\n"
+"  \\pagetarget{AI Units}{\\subheader{Kämpfe gegen Bots}}\\index{Kampf}\n"
 "  Vorwort: Diese Regeln sollen für spannende und herausfordernde Kämpfe sorgen, dennoch leicht verständlich sein. \n"
 "  Wenn du eventuell Schlupflöcher findest, die den Kampf zu einfach machen, kannst du die Bot-Einheiten auch intelligenter agieren lassen.\n"
 "\n"
@@ -82,11 +82,11 @@ msgstr ""
 #: sections/ai_rules.tex:21
 #, no-wrap
 msgid ""
-"    \\item Enemy Ground \\svg{unit_ground} and Flying \\svg{unit_flying} units prioritize attacking units of the \\textbf{same} tier.\n"
+"    \\item Enemy Ground \\svg{unit_ground}\\index{Ground Units} and Flying \\svg{unit_flying} units\\index{Flying Units} prioritize attacking units of the \\textbf{same} tier.\n"
 "    If this is impossible, they attack the unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
 "\n"
 msgstr ""
-"    \\item Feindliche \\svg{unit_ground}- und \\svg{unit_flying}-Einheiten priorisieren Angriffe gegen Einheiten \\textbf{derselben} Stufe.\n"
+"    \\item Feindliche \\svg{unit_ground}-\\index{Nahkampfeinheiten} und \\svg{unit_flying}-Einheiten\\index{Fliegende Einheiten} priorisieren Angriffe gegen Einheiten \\textbf{derselben} Stufe.\n"
 "    Ist dies unmöglich, greifen sie Einheiten einer niedrigeren Stufe (\\textbf{in absteigender} Rangordnung runter bis Bronze) an, und wenn dies auch nicht möglich ist, greifen sie Einheiten einer höheren Stufe (in \\textbf{aufsteigender} Rangordnung) an.\\par\n"
 "\n"
 
@@ -129,11 +129,11 @@ msgstr ""
 #: sections/ai_rules.tex:35
 #, no-wrap
 msgid ""
-"    \\item Ranged \\svg{unit_ranged} units prioritize attacking other Ranged \\svg{unit_ranged} units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
+"    \\item Ranged \\svg{unit_ranged} units\\index{Ranged Units} prioritize attacking other Ranged \\svg{unit_ranged} units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
 "    If there are no Ranged \\svg{unit_ranged} units for them to target, they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} units in the same tier order.\\par\n"
 "\n"
 msgstr ""
-"    \\item \\svg{unit_ranged}-Einheiten priorisieren andere \\svg{unit_ranged}-Einheiten derselben Stufe, dann die mit niedrigerer Stufe und zuletzt die mit einer höheren Stufe. Nutze dieselbe Rangordnung wie oben.\n"
+"    \\item \\svg{unit_ranged}-Einheiten\\index{Fernkampfeinheiten} priorisieren andere \\svg{unit_ranged}-Einheiten derselben Stufe, dann die mit niedrigerer Stufe und zuletzt die mit einer höheren Stufe. Nutze dieselbe Rangordnung wie oben.\n"
 "    Wenn es keine \\svg{unit_ranged}-Einheiten als Ziel gibt, priorisieren sie \\svg{unit_ground}- oder \\svg{unit_flying}-Einheiten in derselben Rangordnung.\\par\n"
 "\n"
 
@@ -212,35 +212,78 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:66
+#: sections/ai_rules.tex:65
 #, no-wrap
 msgid ""
-"  \\pagetarget{AI Siege}{\\subsection*{AI Siege}}\n"
-"  When the Walls and Gate are mentioned in Combat preparation but no additional information on how to arrange them is given, arrange them as a human player would:\n"
-"  place the Gate in front of the \\svg{unit_ground} unit with the highest \\svg{initiative}.\n"
+"  \\pagetarget{AI Siege}{\\subsection*{AI Siege}}\\index{Siege Combat}\n"
+"  \\textbf{If you are besieging an AI Town:} When the Walls and Gate\\index{Walls and Gate} are mentioned in Combat preparation but no additional information on how to arrange them is given, place the Gate in front of the \\svg{unit_ground} unit with the highest \\svg{initiative}.\n"
 "  By default, the units do not attack the Walls -- they would rather fly over them to attack their target or move towards it through the Gate.\n"
-"  If it is not possible, they take a \\pagelink{Defend}{Defend} Action.\n"
+"  If neither is possible, they take a \\pagelink{Defend}{Defend} Action.\n"
 "\n"
 msgstr ""
-"  \\pagetarget{AI Siege}{\\subsection*{Bot-Belagerungen}}\n"
-"  In einem Belagerungskampf mit Mauern und Tor verfahre wie folgt (wenn im Szenario nicht anders angegeben):\n"
-"  Platziere das Tor vor der \\svg{unit_ground}-Einheit mit der höchsten \\svg{initiative}.\n"
+"  \\pagetarget{AI Siege}{\\subsection*{Bot-Belagerungen}}\\index{Belagerungskampf}\n"
+"  \\textbf{Wenn du als Angreifer einen Belagerungskampf gegen Bots führst}, platziere das Tor vor der \\svg{unit_ground}-Einheit mit der höchsten \\svg{initiative} (es sei denn, dass Szenario schreibt eine andere Platzierung vor).\n"
 "  Standardmäßig attackieren verteidigende Einheiten keine Mauern -- sie fliegen über sie hinweg oder bewegen sich durch das Tor, um ihr Ziel anzugreifen.\n"
 "  Ist das unmöglich, führen sie eine \\pagelink{Defend}{Verteidigungsaktion} aus.\n"
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:70
+#: sections/ai_rules.tex:68
 #, no-wrap
 msgid ""
-"  The \\pagelink{Walls}{Arrow Tower} is treated like a Silver \\svg{silver}\\svg{unit_ranged} unit.\n"
-"  However, if it has multiple equally valid targets to attack, it will attack the one with the least health remaining (the smallest difference between \\svg{health_points} and current~\\svg{damage})."
+"  To the AI, \\pagelink{Walls}{the Arrow Tower}\\index{Arrow Tower} counts as a Silver \\svg{silver}\\svg{unit_ranged} unit.\n"
+"  However, if it has multiple equally valid targets to attack, it will attack the one with the least health remaining (the smallest difference between \\svg{health_points} and current~\\svg{damage}).\n"
+"\n"
 msgstr ""
 "  In einem Belagerungskampf gegen Bots, folgt der \\pagelink{Walls}{Geschützturm} den Prioritätsregeln einer Silber-Einheit \\svg{silver}. \n"
-"  Bei mehreren gültigen Zielen wählt er die am stärksten beschädigte Einheit (mit der kleinsten Differenz zwischen \\svg{health_points} und aktuellem \\svg{damage})."
+"  Bei mehreren gültigen Zielen wählt er die am stärksten beschädigte Einheit (mit der kleinsten Differenz zwischen \\svg{health_points} und aktuellem \\svg{damage}).\n"
+"\\columnbreak\n"
+"\n"
+"\n"
+
+#. type: multicols*
+#: sections/ai_rules.tex:72
+#, no-wrap
+msgid ""
+"  \\textbf{If AI Hero besieges you}, the Arrow Tower counts as a Silver \\svg{silver}\\svg{unit_ranged} unit as well.\n"
+"  Furthermore, \\svg{unit_ground} and \\svg{unit_flying} units attack the closest wall if no other enemy is in their reach."
+msgstr ""
+"  \\textbf{Verteidigst du deine Stadt gegen Bots}, dann gilt der Geschützturm ebenfalls als \\svg{silver}\\svg{unit_ranged}-Einheit.\n"
+"  Außerdem greifen \\svg{unit_ground}- und \\svg{unit_flying}-Bot-Einheiten die nächstgelegene Mauer an, nur wenn sie keine gegnerische Einheit erreichen können.\n"
+"\n"
+"{\\begin{center} \\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/basilisk.png} \\end{center}}\n"
+"  \\pagetarget{AI Heroes}{\\subheader{Bot-Helden}}\n"
+"  Bot-Helden werden üblicherweise in Kampagnen genutzt.\n"
+"  Sie haben weder Stadt- noch Heldentableau und verwenden keine Ressourcen.\n"
+"  Ihr Einheitendeck ist statisch und durch das Szenario festgelegt: Suchen Sie während des Spielaufbaus die entsprechenden Einheitenkarten heraus.\n"
+"  Ist eine Einheitenstufe (\\svg{bronze}, \\svg{silver}, \\svg{golden}, oder \\svg{azure}) angegeben, nimm neutrale Einheiten statt Fraktionseinheiten (``Wenige'' oder ``Rudel'').\n"
+"\n"
+"Während des Spielaufbaus gilt: Wenn mehrere Bot-Helden dieselbe Einheit verwenden sollen, du aber nicht genügend Exemplare der Einheitenkarten besitzt, müssen sich die Bot-Helden diese Karte teilen: Stelle die Einheitendecks ohne die gemeinsame Karte zusammen und füge sie dann der Armee des Bot-Helden hinzu, sobald du den Kampf mit ihm beginnst.\n"
+"\n"
+"Bot-Helden können nicht kapitulieren und ihr könnt euch ihnen nicht ergeben.\n"
+"Sie kämpfen so lange, bis ihnen die Einheiten ausgehen.\n"
+"Ein Sieg gegen einen Bot-Helden bringt keine Belohnungen ein, sofern im Szenario nichts anderes angegeben ist.\n"
+"\n"
+"  \\columnbreak\n"
+"  \\subsection*{Spielzug eines Bot-Helden}\n"
+"  Bot-Helden beginnen in ihrer Stadt und haben 3 BP, die sie immer ausgeben, um die folgenden Aktionen in absteigender Priorität auszuführen:\n"
+"  \\begin{itemize}\n"
+"    \\item Befindet sich der Held eines Spielers auf demselben Gebiet wie der Bot-Held, gibt dieser alle BP aus, um sich auf den Helden zuzubewegen und zu versuchen, einen Kampf zu beginnen.\n"
+"    \\item Wenn sich auf demselben Gebiet Minen oder Siedlungen befinden, die der Bot einnehmen könnte, bewegt er sich zur Nächstgelegenen.\n"
+"    \\item Andernfalls bewegt er sich auf die Stadt des Spielers zu.\n"
+"  \\end{itemize}\n"
+"Wiederhole diese Abfolge, bis alle BP aufgebraucht sind.\n"
+"\n"
+"  Bot-Helden \\textbf{gewinnen automatisch jeden Kampf} gegen neutrale Einheiten und \\textbf{besuchen bzw. nehmen alle Orte ein}, durch die sie sich bewegen.\n"
+"  Sie erhalten niemals Belohnungen von Orten.\n"
+"\n"
+"  Bot-Helden müssen verdeckte Gebiete wie gewohnt für 1 BP aufdecken, bevor sie sich darauf bewegen können.\n"
+"  Der Spieler bestimmt die Ausrichtung des Gebiets.\n"
+"\n"
+"{\\begin{center} \\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/aging.png} \\end{center}}"
 
 #. type: multicols
-#: sections/ai_rules.tex:78
+#: sections/ai_rules.tex:80
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -250,41 +293,29 @@ msgid ""
 "  Their units are static and defined by the Scenario: locate the indicated unit cards during setup.\n"
 "  If the unit indicates a unit tier (\\svg{bronze}, \\svg{silver}, \\svg{golden}, or \\svg{azure}) instead of ``Few'' or ``Pack'', it is a Neutral Unit.\n"
 "\n"
-msgstr ""
-"{2}\n"
-"  \\pagetarget{AI Heroes}{\\subheader{Bot-Helden}}\n"
-"  Bot-Helden werden üblicherweise in Kampagnen genutzt.\n"
-"  Sie haben weder Stadt- noch Heldentableau und verwenden keine Ressourcen.\n"
-"  Ihr Einheitendeck ist statisch und durch das Szenario festgelegt: Suchen Sie während des Spielaufbaus die entsprechenden Einheitenkarten heraus.\n"
-"  Ist eine Einheitenstufe (\\svg{bronze}, \\svg{silver}, \\svg{golden}, oder \\svg{azure}) angegeben, nimm neutrale Einheiten statt Fraktionseinheiten (``Wenige'' oder ``Rudel'').\n"
-"\n"
+msgstr "{2}\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:81
+#: sections/ai_rules.tex:83
 #, no-wrap
 msgid ""
 "  During setup, if multiple AI Heroes use the same unit and you do not have enough copies of its card, the AI Heroes must share it:\n"
 "  set up everything without that card, then add it to the AI Hero's Army when you initiate Combat with them.\n"
 "\n"
-msgstr ""
-"Während des Spielaufbaus gilt: Wenn mehrere Bot-Helden dieselbe Einheit verwenden sollen, du aber nicht genügend Exemplare der Einheitenkarten besitzt, müssen sich die Bot-Helden diese Karte teilen: Stelle die Einheitendecks ohne die gemeinsame Karte zusammen und füge sie dann der Armee des Bot-Helden hinzu, sobald du den Kampf mit ihm beginnst.\n"
-"\n"
+msgstr "\\empty\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:85
+#: sections/ai_rules.tex:87
 #, no-wrap
 msgid ""
 "  AI Heroes cannot surrender and you cannot surrender to them;\n"
 "  they will always fight until they run out of units.\n"
 "  Winning Combat against an AI Hero does not grant any rewards unless stated by the Scenario.\n"
 "\n"
-msgstr ""
-"Bot-Helden können nicht kapitulieren und ihr könnt euch ihnen nicht ergeben.\n"
-"Sie kämpfen so lange, bis ihnen die Einheiten ausgehen.\n"
-"Ein Sieg gegen einen Bot-Helden bringt keine Belohnungen ein, sofern im Szenario nichts anderes angegeben ist.\n"
+msgstr "\\empty\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:95
+#: sections/ai_rules.tex:97
 #, no-wrap
 msgid ""
 "  \\columnbreak\n"
@@ -297,49 +328,34 @@ msgid ""
 "  \\end{itemize}\n"
 "  Repeat this sequence until all MPs are used up.\n"
 "\n"
-msgstr ""
-"  \\columnbreak\n"
-"  \\subsection*{Spielzug eines Bot-Helden}\n"
-"  Bot-Helden beginnen in ihrer Stadt und haben 3 BP, die sie immer ausgeben, um die folgenden Aktionen in absteigender Priorität auszuführen:\n"
-"  \\begin{itemize}\n"
-"    \\item Befindet sich der Held eines Spielers auf demselben Gebiet wie der Bot-Held, gibt dieser alle BP aus, um sich auf den Helden zuzubewegen und zu versuchen, einen Kampf zu beginnen.\n"
-"    \\item Wenn sich auf demselben Gebiet Minen oder Siedlungen befinden, die der Bot einnehmen könnte, bewegt er sich zur Nächstgelegenen.\n"
-"    \\item Andernfalls bewegt er sich auf die Stadt des Spielers zu.\n"
-"  \\end{itemize}\n"
-"Wiederhole diese Abfolge, bis alle BP aufgebraucht sind.\n"
-"\n"
+msgstr "\\empty\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:98
+#: sections/ai_rules.tex:100
 #, no-wrap
 msgid ""
 "  AI Heroes always \\textbf{automatically win Combat} against any Neutral Units, while simultaneously \\textbf{flagging or visiting all Fields} they happen to move through.\n"
 "  They gain no benefits from any Fields.\n"
 "\n"
-msgstr ""
-"  Bot-Helden \\textbf{gewinnen automatisch jeden Kampf} gegen neutrale Einheiten und \\textbf{besuchen bzw. nehmen alle Orte ein}, durch die sie sich bewegen.\n"
-"  Sie erhalten niemals Belohnungen von Orten.\n"
-"\n"
+msgstr "\\empty\n"
 
 #. type: multicols
-#: sections/ai_rules.tex:101
+#: sections/ai_rules.tex:103
 #, no-wrap
 msgid ""
 "  AI Heroes must discover face down Map Tiles as normal by spending 1 MP before moving onto them.\n"
 "  The player chooses that Tile's orientation."
-msgstr ""
-"  Bot-Helden müssen verdeckte Gebiete wie gewohnt für 1 BP aufdecken, bevor sie sich darauf bewegen können.\n"
-"  Der Spieler bestimmt die Ausrichtung des Gebiets."
+msgstr "\\empty"
 
 #. type: Plain text
-#: sections/ai_rules.tex:107
+#: sections/ai_rules.tex:109
 msgid ""
 "{\\begin{center} \\vfill \\includegraphics[width=\\linewidth]{\\art/"
 "gold_dragon.jpg} \\end{center}}"
-msgstr ""
+msgstr "\\empty"
 
 #. type: multicols*
-#: sections/ai_rules.tex:111
+#: sections/ai_rules.tex:113
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -351,7 +367,7 @@ msgstr ""
 "  \\begin{tikzpicture}\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:143
+#: sections/ai_rules.tex:145
 #, no-wrap
 msgid ""
 "    \\node (card) {\\includegraphics[width=0.57\\linewidth]{\\cards/ai.png}};\n"
@@ -421,7 +437,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:149
+#: sections/ai_rules.tex:151
 #, no-wrap
 msgid ""
 "  AI Heroes use two Decks during Combat: the \\textbf{AI Deck} and the \\textbf{AI Spell Deck}.\n"
@@ -439,7 +455,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:154
+#: sections/ai_rules.tex:156
 #, no-wrap
 msgid ""
 "  When an AI Hero \\textbf{activates} a unit, draw an AI card\\index{AI card} and follow its instructions before the unit \\pagelink{AI Units}{moves and/or attacks}.\n"
@@ -455,7 +471,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:158
+#: sections/ai_rules.tex:160
 #, no-wrap
 msgid ""
 "  \\subsection*{AI Magic cards and AI Spell Deck}\n"
@@ -468,7 +484,7 @@ msgstr ""
 "  Mische vor jedem Kampf das Bot-Zauberdeck und seinen Ablagestapel zusammen. \n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:162
+#: sections/ai_rules.tex:164
 #, no-wrap
 msgid ""
 "  Whenever an AI Magic \\svg{magic} card is drawn, draw the next Spell from the AI Spell Deck and cast it.\n"
@@ -482,7 +498,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:166
+#: sections/ai_rules.tex:168
 #, no-wrap
 msgid ""
 "  The AI Spell Deck may contain more Spell cards than there are Magic cards in the AI Hero's Deck.\n"
@@ -494,7 +510,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:168
+#: sections/ai_rules.tex:170
 #, no-wrap
 msgid ""
 "  If the AI Hero is assigned a Spell card that is unavailable because it is in your Hero's Deck, and you do not have another copy, substitute it with a \\wikilink{spells/magic_arrow}{Magic Arrow} card.\n"
@@ -502,7 +518,7 @@ msgid ""
 msgstr "  Ist für das Bot-Zauberdeck ein Zauber vorgesehen, von dem du kein Exemplar mehr hast, nutze einen überschüssigen \\wikilink{spells/magic_arrow}{Magischen Pfeil} als Ersatz.\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:171
+#: sections/ai_rules.tex:173
 #, no-wrap
 msgid ""
 "  For certains Spells it can be unclear how the AI is supposed to cast them.\n"
@@ -513,7 +529,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:177
+#: sections/ai_rules.tex:179
 #, no-wrap
 msgid ""
 "  \\subsection*{AI Skill cards}\n"
@@ -531,7 +547,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:179
+#: sections/ai_rules.tex:181
 #, no-wrap
 msgid ""
 "  AI Skill cards cannot be replaced, so if Scenario rules assign the AI Hero a card that your Hero has and you do not have another copy, remove that card from your Deck and \\textbf{Search (3)} the respective card's Deck to compensate your Hero for the loss.\n"
@@ -541,7 +557,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:182
+#: sections/ai_rules.tex:184
 #, no-wrap
 msgid ""
 "  \\subsection*{AI cards timing}\n"
@@ -553,7 +569,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:186
+#: sections/ai_rules.tex:188
 #, no-wrap
 msgid ""
 "  The \\wikilink{ai\\#ai-cards}{Attack} Might \\svg[12]{might} card says about ``unit that is about to attack'', so if the currently activated unit doesn't have a valid target to attack, the Attack will apply to the next unit who is able to attack.\n"
@@ -568,7 +584,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:188
+#: sections/ai_rules.tex:190
 #, no-wrap
 msgid ""
 "  If an AI card increased a unit's \\svg{defense}, or triggered another card which increased it, the AI card stays attached to the unit until the first defense happens.\n"
@@ -578,7 +594,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:191
+#: sections/ai_rules.tex:193
 #, no-wrap
 msgid ""
 "  \\subsection*{AI Deck sharing}\n"
@@ -590,12 +606,12 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:198
+#: sections/ai_rules.tex:200
 #, no-wrap
 msgid ""
 "  \\bigskip\n"
 "  \\bigskip\n"
-"  \\pagetarget{AI Complex Spells}{\\subheader{Casting complex Spells}}\n"
+"  \\pagetarget{AI Complex Spells}{\\subheader{Casting complex Spells}}\\index{Spell cards}\n"
 "  In some Campaigns, enemies use Spells whose effects are not fully compatible with the standard use of AI Magic \\svg{magic} cards.\n"
 "  To fully use their effects, here are extended descriptions of how AI Heroes should use each of these Spells.\n"
 "  Scenarios can override these instructions.\n"
@@ -603,14 +619,14 @@ msgid ""
 msgstr ""
 "  \\bigskip\n"
 "  \\bigskip\n"
-"  \\pagetarget{AI Complex Spells}{\\subheader{Komplexe Zauber}}\n"
+"  \\pagetarget{AI Complex Spells}{\\subheader{Komplexe Zauber}}\\index{Zauberkarte}\n"
 "  In einigen Kampagnen nutzen Gegner Zauber, deren Effekte nicht mit den Standardregeln von Bot-Magiekarten \\svg{magic} ausführbar sind.\n"
 "  Hier sind zusätzliche Erklärungen nötig, nach welchen Prioritäten Bot-Helden diese Zauber ausspielen.\n"
 "  Szenarioregeln können diese Instruktionen überschreiben.\n"
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:201
+#: sections/ai_rules.tex:203
 #, no-wrap
 msgid ""
 "  \\subsection*{Spells attacking multiple targets}\n"
@@ -622,7 +638,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:207
+#: sections/ai_rules.tex:209
 #, no-wrap
 msgid ""
 "  When drawn, target any unit with one or two adjacent units from the player's army, prioritizing the groups where there are more higher-tier units.\n"
@@ -640,7 +656,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:210
+#: sections/ai_rules.tex:212
 #, no-wrap
 msgid ""
 "  \\subsection*{Instant Defense Spells}\n"
@@ -652,7 +668,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:214
+#: sections/ai_rules.tex:216
 #, no-wrap
 msgid ""
 "  When drawn, put this card on the side of the Combat Board, then put a Defense Token on the unit with the highest \\svg{defense} to represent the card's effect -- it stays there until the Defense is resolved.\n"
@@ -666,7 +682,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:217
+#: sections/ai_rules.tex:219
 #, no-wrap
 msgid ""
 "  \\subsection*{Healing Spells}\n"
@@ -678,7 +694,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:220
+#: sections/ai_rules.tex:222
 #, no-wrap
 msgid ""
 "  When drawn, remove the \\svg{damage} from the AI unit with the greatest value of \\svg{damage} taken, starting with the highest tier available.\n"
@@ -689,7 +705,7 @@ msgstr ""
 "  Hat keine Bot-Einheit \\svg{damage} erlitten, nutze den Zauber nicht. Lege die Bot-Karte \\svg{magic} unter das Bot-Deck und mische den Zauber zurück in das Bot-Zauberdeck.\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:223
+#: sections/ai_rules.tex:225
 #, no-wrap
 msgid ""
 "  \\subsection*{Single-round buffs}\n"
@@ -701,7 +717,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:227
+#: sections/ai_rules.tex:229
 #, no-wrap
 msgid ""
 "  When drawn, check the tier of the unit on which you are about to cast the Spell and count how many units of the same or higher tier there are on the Board.\n"
@@ -715,7 +731,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:230
+#: sections/ai_rules.tex:232
 #, no-wrap
 msgid ""
 "  \\subsection*{Attack-weakening Spells}\n"
@@ -727,7 +743,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/ai_rules.tex:233
+#: sections/ai_rules.tex:235
 #, no-wrap
 msgid ""
 "  When drawn, if the AI's activated unit is about to perform an attack that will provoke a Retaliation, cast this Spell on the Retaliating enemy to lower their \\svg{attack}.\n"
