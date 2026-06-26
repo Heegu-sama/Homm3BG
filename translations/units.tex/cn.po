@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-04-22 08:58+0100\n"
+"POT-Creation-Date: 2026-06-20 18:11+0100\n"
 "PO-Revision-Date: 2026-04-22 08:58+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -79,7 +79,7 @@ msgstr ""
 
 #. type: multicols*
 #: sections/map_elements.tex:189 sections/map_elements.tex:199
-#: sections/map_elements.tex:263 sections/map_elements.tex:302
+#: sections/map_elements.tex:273 sections/map_elements.tex:312
 #: sections/player_turns.tex:48 sections/tournament_mode.tex:69
 #: sections/units.tex:240
 #, no-wrap
@@ -118,7 +118,7 @@ msgid ""
 "Units of your Faction may be recruited\\index{Recruiting} and reinforced\\index{Reinforcing} by flipping the Population Token\\index{Population Token} and paying the unit's recruitment \\svg{recruit} or reinforcement \\svg{reinforce} cost.\n"
 "When you do so, you can instantly recruit and reinforce \\textbf{any number} of times, provided you have enough Resources and the prerequisite Buildings to do so.\\par\n"
 "\\textbf{Recruiting} a unit requires that your Town has a Dwelling of that unit's Level (\\svg{bronze}\\svg{silver}\\svg{golden}).\n"
-"\\textbf{Reinforcing} requires that your Town has a Citadel\\index{Citadel} in addition to a Dwelling of that unit's Level.\\par\n"
+"\\textbf{Reinforcing} requires that your Town has a Citadel\\index{Citadel} in addition to a Dwelling\\index{Unit Dwellings} of that unit's Level.\\par\n"
 "\n"
 msgstr ""
 "除了英雄及其对应的牌堆外，玩家还拥有\\textbf{一个单位牌堆}，代表随英雄移动的军队。%\n"
@@ -134,7 +134,7 @@ msgstr ""
 "你通过可以翻转人口标记\\index{人口标记}并支付单位的招募\\svg{recruit}或增援\\svg{reinforce}费用，来招募\\index{招募}和增援\\index{增援}你阵营的单位。%\n"
 "这样做时，只要满足资源和所需的前置建筑要求，你就可以立即进行\\textbf{任意次数}的招募和增援。\\par\n"
 "\\textbf{招募}一个单位要求你的城镇拥有该单位等级（\\svg{bronze}\\svg{silver}\\svg{golden}）对应的兵营。%\n"
-"\\textbf{增援}要求你的城镇除了拥有该单位等级对应的兵营外，还拥有大本营\\index{大本营}。\\vspace{2em}\n"
+"\\textbf{增援}要求你的城镇除了拥有该单位等级对应的兵营\\index{单位兵营}外，还拥有大本营\\index{大本营}。\\vspace{2em}\n"
 "\n"
 
 #. type: multicols*
@@ -394,7 +394,7 @@ msgid ""
 "    It replaces all movement and/or attacking.\n"
 "  \\item\\textbf{Passive} \\svg{unit_passive} resolves whenever its condition is met.\n"
 "  \\item\\textbf{Retaliate} \\svg{unit_retaliation} resolves when the unit retaliates.\n"
-"  \\item\\textbf{Map} \\svg{map} effects may be resolved once per Turn outside of Combat as long as a unit with this effect is in your Unit Deck.\n"
+"  \\item\\textbf{Map} \\svg{map} effects\\index{Map Effects} may be resolved once per Turn outside of Combat as long as a unit with this effect is in your Unit Deck.\n"
 "  \\end{itemize}\n"
 "  Some complex unit abilities use keywords or require \\pagelink{unit keywords}{special components}.\n"
 "\n"
@@ -408,7 +408,7 @@ msgstr ""
 "    它取代所有移动和/或攻击。\n"
 "  \\item\\textbf{被动}\\svg{unit_passive}在其条件满足时结算。\n"
 "  \\item\\textbf{反击}\\svg{unit_retaliation}在该单位反击时结算。\n"
-"  \\item\\textbf{地图}\\svg{map}效果可以在战斗之外每回合结算一次，只要具备此效果的单位仍在你的单位牌堆中。\n"
+"  \\item\\textbf{地图}\\svg{map}效果\\index{地图效果}可以在战斗之外每回合结算一次，只要具备此效果的单位仍在你的单位牌堆中。\n"
 "  \\end{itemize}\n"
 "  一些复杂的单位能力使用关键词，或需要\\pagelink{unit keywords}{特殊组件}。\n"
 "\n"
@@ -634,10 +634,10 @@ msgstr ""
 #: sections/units.tex:227
 #, no-wrap
 msgid ""
-"\\textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons, Empowering \\svg{empower} the Spell by 2 with the Expert  Effect \\svg{expert} of a Power card.}\n"
+"\\textit{Bob, playing as Alamar the Warlock, casts a Magic Arrow against Alice's pack of Skeletons\\index{Pack}, Empowering \\svg{empower} the Spell by 2 with the Expert  Effect \\svg{expert} of a Power card.}\n"
 "\n"
 msgstr ""
-"\\textit{鲍勃，使用术士阿拉玛，对爱丽丝的一群骷髅施放魔法箭，并使用一张魔法威力牌的专家效果\\svg{expert}将该法术强化\\svg{empower}2点。}\n"
+"\\textit{鲍勃，使用术士阿拉玛，对爱丽丝的一群骷髅\\index{一群}施放魔法箭，并使用一张魔法威力牌的专家效果\\svg{expert}将该法术强化\\svg{empower}2点。}\n"
 "\n"
 
 #. type: multicols*
@@ -656,13 +656,13 @@ msgstr ""
 msgid ""
 "\\textit{The Skeletons take 3 damage \\svg{damage} from the Spell.\n"
 "  Their Defense \\svg{defense} of 1 does not reduce the damage, because it only applies against attacks.\n"
-"  The Skeletons have a HP \\svg{health_points} of only 2, so they are now turned to their ``Few'' side and 1 leftover damage \\svg{damage} is placed on them.\n"
+"  The Skeletons have a HP \\svg{health_points} of only 2, so they are now turned to their ``Few'' side\\index{Few} and 1 leftover damage \\svg{damage} is placed on them.\n"
 "}\n"
 "\n"
 msgstr ""
 "\\textit{骷髅兵因该法术受到3点伤害\\svg{damage}。%\n"
 "  它们的1点防御\\svg{defense}不会减少该伤害，因为防御只适用于抵御攻击。%\n"
-"  骷髅兵的生命值\\svg{health_points}只有2，因此现在将其翻到“少量”面，并在其上放置1点剩余伤害\\svg{damage}。\n"
+"  骷髅兵的生命值\\svg{health_points}只有2，因此现在将其翻到“少量”面\\index{少量}，并在其上放置1点剩余伤害\\svg{damage}。\n"
 "}\n"
 "\n"
 
