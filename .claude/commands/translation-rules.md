@@ -54,3 +54,8 @@ When multiple natural translations exist for a phrase, prefer the more concise o
 
 Mirror the capitalization of the English source, unless stated otherwise in the glossary.
 If the English has "Hero" (capitalized), the translation must also be capitalized, unless stated otherwise in the language glossary.
+
+## Editing
+
+While editing a fuzzy entry, delete the fuzzy block and edit `msgstr` atomically.
+Never split it into two actions.
