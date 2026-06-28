@@ -176,6 +176,7 @@
 | combat board | plansza walki |
 | combat | walka |
 | damage | obrażenia |
+| elemental damage | obrażenia od żywiołów |
 | front line | pierwsza linia |
 | initiative | inicjatywa |
 | negative morale | niskie morale |

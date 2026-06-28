@@ -167,6 +167,7 @@
 | combat board | לוח הקרבות |
 | combat | קרב |
 | damage | נזק |
+| elemental damage | ... |
 | front line | קו חזית |
 | initiative | ... |
 | negative morale | ... |
