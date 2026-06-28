@@ -167,6 +167,7 @@
 | combat board | Deska Bojiště |
 | combat | Souboj |
 | damage | ... |
+| elemental damage | ... |
 | front line | Přední linie |
 | initiative | ... |
 | negative morale | ... |

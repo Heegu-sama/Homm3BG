@@ -168,6 +168,7 @@
 | combat board | Планшет Бою |
 | combat | Бій |
 | damage | Пошкодження |
+| elemental damage | Елементальне Пошкодження |
 | front line | Передова Лінія |
 | initiative | Ініціатива |
 | negative morale | Негативна Мораль |

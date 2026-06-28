@@ -167,6 +167,7 @@
 | combat board | Tablero de Combate |
 | combat | Combate |
 | damage | daño |
+| elemental damage | ... |
 | front line | Frente |
 | initiative | ... |
 | negative morale | ... |
