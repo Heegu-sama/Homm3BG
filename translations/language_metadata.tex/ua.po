@@ -67,7 +67,7 @@ msgstr "Розширення Злиття"
 #. type: newcommand{#4}
 #: sections/language_metadata.tex:21
 msgid "Cove Expansion"
-msgstr "Розширення Бухта"
+msgstr "Розширення Пристань"
 
 #. type: newcommand{#4}
 #: sections/language_metadata.tex:21
@@ -88,7 +88,7 @@ msgstr "Розширення Додаткові Цілі 2"
 #. type: newcommand{#4}
 #: sections/language_metadata.tex:24
 msgid "en"
-msgstr ""
+msgstr "uk"
 
 #.  Wikilink character ° command with custom kerning for characters appearing before it
 #. type: newcommand{#4}
@@ -98,14 +98,17 @@ msgid ""
 "s:sub(-1)  if last == \".\" or last == \",\" then tex.print(\"\\"
 "\\kern-0.1em\")  end }"
 msgstr ""
+"\\directlua{ local s = \"\\luaescapestring{\\detokenize{#1}}\" local last = "
+"s:sub(-1)  if last == \".\" or last == \",\" then tex.print(\"\\"
+"\\kern-0.1em\")  end }"
 
 #. type: textcolor{#2}
 #: sections/language_metadata.tex:36
 msgid "\\textbf{°}"
-msgstr ""
+msgstr "\\textbf{°}"
 
 #.  Kerning for characters after the wikilink character °
 #. type: newcommand{#4}
 #: sections/language_metadata.tex:41
 msgid "\\ifx\\wikinexttoken)\\kern-0.08em\\fi"
-msgstr ""
+msgstr "\\ifx\\wikinexttoken)\\kern-0.08em\\fi"
