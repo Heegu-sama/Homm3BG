@@ -173,6 +173,7 @@
 | combat board | 战斗板 |
 | combat | 战斗 |
 | damage | 伤害 |
+| elemental damage | 元素伤害 |
 | front line | 前排 |
 | initiative | 先攻 |
 | negative morale | 低落士气 |
