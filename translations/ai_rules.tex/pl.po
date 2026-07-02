@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-06-18 20:51+0000\n"
+"POT-Creation-Date: 2026-06-29 22:02+0000\n"
 "PO-Revision-Date: 2024-04-06 18:37+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -21,10 +21,8 @@ msgstr ""
 #.  !TeX spellcheck = en_US
 #. type: Plain text
 #: sections/ai_rules.tex:3
-#, fuzzy
-#| msgid "\\addsection{Heroes}{\\skills/sorcery.png}"
 msgid "\\addsection{AI rules}{\\skills/armorer.png}"
-msgstr "\\addsection{Bohaterowie}{\\skills/sorcery.png}"
+msgstr "\\addsection{Zasady AI}{\\skills/armorer.png}"
 
 #. type: multicols*
 #: sections/ai_rules.tex:6
@@ -34,6 +32,9 @@ msgid ""
 "  AI rules apply to Enemy Heroes and all Combat encounters, including those against Neutral Units, in \\textbf{Solo Campaigns} and \\textbf{Cooperative} Scenarios.\n"
 "\n"
 msgstr ""
+"{2}\n"
+"  Zasady AI dotyczą wrogich Bohaterów i~wszystkich Walk, w~tym tych z~Jednostkami Neutralnymi, w~\\textbf{Kampaniach} i~Scenariuszach \\textbf{Kooperacyjnych}.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:11
@@ -45,33 +46,29 @@ msgid ""
 "  You will likely find some loopholes which make the encounter too easy, but you may make AI behave more intellegently.\n"
 "\n"
 msgstr ""
+"  \\bigskip\n"
+"  \\pagetarget{AI Units}{\\subheader{Walka z~AI}}\\index{Walka}\n"
+"  Uwaga: poniższe zasady mają sprawić, by walki były satysfakcjonującym, ale nie uciążliwym wyzwaniem.\n"
+"  Możesz natknąć się na luki w zasadach, przez które walki będą zbyt łatwe. Wówczas kieruj AI w inteligentniejszy sposób.\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:13
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\pagetarget{AI Units}{These rules} apply during Combat in \\textbf{Solo}\\index{Solo Mode} and \\textbf{Cooperative} Scenarios.\n"
-#| "The rules for AI Unit placement during setup are described in \\pagelink{CombatAISetup}{Combat chapter}.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  The rules for AI unit placement during setup are described in \\pagelink{CombatAISetup}{Combat section}.\n"
 "\n"
 msgstr ""
-"\\pagetarget{AI Units}{Niniejsze zasady} obowiązują podczas Walki w trybach \\textbf{Solo}\\index{Tryb Solo} oraz \\textbf{Kooperacyjnym}.\n"
-"Zasady rozmieszczania Jednostek AI podczas przygotowania są opisane w rozdziale \\pagelink{CombatAISetup}{Walka}.\n"
+"  Rozmieszczanie jednostek AI podczas przygotowania opisano w~rozdziale \\pagelink{CombatAISetup}{Walka}.\n"
 "\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:15
-#, fuzzy, no-wrap
-#| msgid ""
-#| "When Neutral enemies or AI Heroes activate a Unit, they follow a set of automatic instructions:\\par\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  When Neutral enemies or \\pagelink{AI Heroes}{AI Heroes} activate a unit, they follow a set of instructions:\\par\n"
 "\n"
 msgstr ""
-"Gdy Neutralni wrogowie lub Bohaterowie AI aktywują Jednostkę, wykonują polecenia:\\par\n"
+"  Gdy Neutralni wrogowie lub \\pagelink{AI Heroes}{Bohaterowie AI} aktywują jednostkę, postępują następująco:\\par\n"
 "\n"
 
 #. type: multicols*
@@ -82,23 +79,20 @@ msgid ""
 "    \\item If it is an AI Hero, draw and resolve the next \\pagelink{AI Deck}{AI card}.\n"
 "\n"
 msgstr ""
+"  \\begin{itemize}[leftmargin=22pt]\n"
+"    \\item W przypadku Bohatera AI dobierz i~rozpatrz \\pagelink{AI Deck}{kartę AI}.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:21
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{itemize}\n"
-#| "  \\item Enemy Ground \\svg{unit_ground} and Flying \\svg{unit_flying} Units prioritize attacking Units of the \\textbf{same} tier.\n"
-#| "  If this is impossible, they attack the Unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the Unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\item Enemy Ground \\svg{unit_ground}\\index{Ground Units} and Flying \\svg{unit_flying} units\\index{Flying Units} prioritize attacking units of the \\textbf{same} tier.\n"
 "    If this is impossible, they attack the unit of a lower tier (in tier \\textbf{descending} order, down to bronze), and if that is also impossible, they attack the unit of a higher tier (in tier \\textbf{ascending} order).\\par\n"
 "\n"
 msgstr ""
-"\\begin{itemize}\n"
-"  \\item Wrogie Jednostki Naziemne \\svg{unit_ground} oraz Latające \\svg{unit_flying} atakują w pierwszej kolejności Jednostki \\textbf{tego samego} poziomu.\n"
-"  Jeśli jest to niemożliwe, atakują Jednostkę niższego poziomu (w \\textbf{malejącej} kolejności aż do brązowego), a jeśli i to jest niemożliwe, Jednostkę wyższego poziomu (w \\textbf{rosnącej} kolejności poziomów).\\par\n"
+"    \\item Wrogie jednostki Naziemne \\svg{unit_ground}\\index{Jednostki!Naziemne} i~Latające \\svg{unit_flying}\\index{Jednostki!Latające} atakują w~pierwszej kolejności jednostki \\textbf{tego samego} poziomu.\n"
+"    Jeśli to niemożliwe, atakują jednostkę niższego poziomu (w~\\textbf{malejącej} kolejności aż do brązowego), a jeśli i~to jest niemożliwe, jednostkę wyższego poziomu (w~\\textbf{rosnącej} kolejności poziomów).\\par\n"
 "\n"
 
 #. type: multicols*
@@ -110,17 +104,14 @@ msgid ""
 "    \\end{expansion}\n"
 "\n"
 msgstr ""
+"    \\begin{expansion}{navalbattles}\n"
+"      Jeśli w twojej armii znajdują się \\pagelink{Creature Banks Rules}{Jednostki Banku Stworzeń}, wrogie jednostki zaatakują inne jednostki z najwyższym priorytetem, a Jednostki Banku Stworzeń z najniższym.\n"
+"    \\end{expansion}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:32
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  \\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority:\n"
-#| "  \\svg{golden}\n"
-#| "  - \\svg{silver}\n"
-#| "  - \\svg{bronze}\n"
-#| "  - \\svg{azure}.}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\textit{Example: \\svg{golden}\\svg{unit_ground} has this priority:\n"
 "    \\svg{golden}\n"
@@ -130,44 +121,29 @@ msgid ""
 "    - Creature Bank Units.}\n"
 "\n"
 msgstr ""
-"  \\textit{Przykład: \\svg{golden}\\svg{unit_ground} atakuje kolejno:\n"
-"  \\svg{golden}\n"
-"  - \\svg{silver}\n"
-"  - \\svg{bronze}\n"
-"  - \\svg{azure}.}\n"
+"    \\textit{Przykład: \\svg{golden}\\svg{unit_ground} atakuje kolejno:\n"
+"    \\svg{golden}\n"
+"    - \\svg{silver}\n"
+"    - \\svg{bronze}\n"
+"    - \\svg{azure}\n"
+"    - Jednostki Banku Stworzeń.}\n"
 "\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:35
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  \\item Ranged \\svg{unit_ranged} Units prioritize attacking other Ranged \\svg{unit_ranged} Units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
-#| "  If there are no Ranged \\svg{unit_ranged} Units for them to target, they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} Units in the same tier order.\\par\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\item Ranged \\svg{unit_ranged} units\\index{Ranged Units} prioritize attacking other Ranged \\svg{unit_ranged} units of the same tier, then lower tier, and finally higher tier, using the same tier order as above.\n"
 "    If there are no Ranged \\svg{unit_ranged} units for them to target, they prioritize Ground \\svg{unit_ground} and Flying \\svg{unit_flying} units in the same tier order.\\par\n"
 "\n"
 msgstr ""
-"  \\item Jednostki Strzelające \\svg{unit_ranged} atakują najpierw inne Jednostki Strzelające \\svg{unit_ranged} tego samego poziomu, potem niższego poziomu, a na końcu wyższego w takiej samej kolejności, jak opisano wyżej.\n"
-"  Jeśli nie ma Jednostek Strzelających, które mogłyby być celem Ataku, najpierw atakują Jednostki Naziemne \\svg{unit_ground} oraz Latające \\svg{unit_flying} w tej samej kolejności poziomów.\\par\n"
-"  \n"
+"    \\item Jednostki Strzelające \\svg{unit_ranged}\\index{Jednostki!Strzelające} atakują najpierw inne jednostki Strzelające \\svg{unit_ranged} tego samego poziomu, potem niższego poziomu, a na końcu wyższego w takiej samej kolejności, jak opisano wyżej.\n"
+"    Jeśli nie ma jednostek Strzelających, które mogłyby być celem Ataku, najpierw atakują jednostki Naziemne \\svg{unit_ground} oraz Latające \\svg{unit_flying} w tej samej kolejności poziomów.\\par\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:48
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  \\textit{Example: \\svg{silver}\\svg{unit_ranged} has this priority:\n"
-#| "  \\svg{silver}\\svg{unit_ranged}\n"
-#| "  - \\svg{bronze}\\svg{unit_ranged}\n"
-#| "  - \\svg{golden}\\svg{unit_ranged}\n"
-#| "  - \\svg{azure}\\svg{unit_ranged}\n"
-#| "  - \\svg{silver}\\svg{unit_ground}\\svg{unit_flying}\n"
-#| "  - \\svg{bronze}\\svg{unit_ground}\\svg{unit_flying}\n"
-#| "  - \\svg{golden}\\svg{unit_ground}\\svg{unit_flying}\n"
-#| "  - \\svg{azure}\\svg{unit_ground}\\svg{unit_flying}.}\n"
-#| "\\end{itemize}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\textit{Example: \\svg{silver}\\svg{unit_ranged} has this priority:\n"
 "    \\svg{silver}\\svg{unit_ranged}\n"
@@ -183,32 +159,30 @@ msgid ""
 "  \\end{itemize}\n"
 "\n"
 msgstr ""
-"  \\textit{Przykład: \\svg{silver}\\svg{unit_ranged} atakuje kolejno:\n"
-"  \\svg{silver}\\svg{unit_ranged}\n"
-"  - \\svg{bronze}\\svg{unit_ranged}\n"
-"  - \\svg{golden}\\svg{unit_ranged}\n"
-"  - \\svg{azure}\\svg{unit_ranged}\n"
-"  - \\svg{silver}\\svg{unit_ground}\\svg{unit_flying}\n"
-"  - \\svg{bronze}\\svg{unit_ground}\\svg{unit_flying}\n"
-"  - \\svg{golden}\\svg{unit_ground}\\svg{unit_flying}\n"
-"  - \\svg{azure}\\svg{unit_ground}\\svg{unit_flying}.}\n"
-"\\end{itemize}\n"
+"  \\end{itemize}\n"
+"    \\textit{Przykład: \\svg{silver}\\svg{unit_ranged} atakuje kolejno:\n"
+"    \\svg{silver}\\svg{unit_ranged}\n"
+"    - \\svg{bronze}\\svg{unit_ranged}\n"
+"    - \\svg{golden}\\svg{unit_ranged}\n"
+"    - \\svg{azure}\\svg{unit_ranged}\n"
+"    - Jednostki Banku Stworzeń\\,\\svg{unit_ranged}\n"
+"    - \\svg{silver}\\svg{unit_ground}\\svg{unit_flying}\n"
+"    - \\svg{bronze}\\svg{unit_ground}\\svg{unit_flying}\n"
+"    - \\svg{golden}\\svg{unit_ground}\\svg{unit_flying}\n"
+"    - \\svg{azure}\\svg{unit_ground}\\svg{unit_flying}\n"
+"    - Jednostki Banku Stworzeń\\,\\svg{unit_ground}\\svg{unit_flying}.}\n"
 "\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:51
-#, fuzzy, no-wrap
-#| msgid ""
-#| "In both cases, if there's more than one valid target, they attack the closest one.\n"
-#| "If there's ever a tie between equally valid targets, the player chooses which Unit is attacked.\\par\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  In both cases, if there is more than one valid target, they attack the closest one.\n"
 "  If there is ever a tie between equally valid targets, the player chooses which unit is attacked.\\par\n"
 "\n"
 msgstr ""
-"W obu przypadkach, jeśli jest więcej niż jeden możliwy cel, atakują najbliższy.\n"
-"Jeśli wystąpi remis pomiędzy równorzędnymi celami, Gracz wybiera, która Jednostka jest atakowana.\\par\n"
+"  W obu przypadkach, jeśli jest więcej niż jeden możliwy cel, atakują najbliższy.\n"
+"  W~przypadku remisu gracz wybiera, która jednostka jest atakowana.\\par\n"
 "\n"
 
 #. type: multicols*
@@ -223,19 +197,21 @@ msgid ""
 "  \\end{expansion}\n"
 "\n"
 msgstr ""
+"  \\begin{expansion}{navalbattles}\n"
+"    \\pagelink{Creature Banks Rules}{Jednostki Banku Stworzeń} nie mają poziomu.\n"
+"    Z~tego powodu ignorują kolejność poziomów wymienioną powyżej i~zamiast tego atakują najbliższy możliwy cel.\n"
+"  \\end{expansion}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:60
-#, fuzzy, no-wrap
-#| msgid ""
-#| "Enemy Units cannot \\pagelink{Defend}{Defend} unless instructed to.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  Enemy units cannot \\pagelink{Defend}{defend} unless instructed to.\n"
 "\n"
 msgstr ""
-"Wrogie Jednostki nie mogą \\pagelink{Defend}{się bronić}, chyba że otrzymają takie polecenie.\n"
-"\\vfill\n"
+"  Wrogie jednostki nie mogą \\pagelink{Defend}{się bronić}, chyba że otrzymają takie polecenie.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:65
@@ -247,21 +223,22 @@ msgid ""
 "  If neither is possible, they take a \\pagelink{Defend}{Defend} Action.\n"
 "\n"
 msgstr ""
+"  \\pagetarget{AI Siege}{\\subsection*{Oblężenie AI}}\\index{Oblężenie}\n"
+"  \\textbf{Jeśli oblegasz Miasto AI:} gdy Mury i~Brama\\index{Mury i Brama} są wspomniane w~przygotowaniu do Walki bez dodatkowych instrukcji dotyczących ich rozstawienia, umieść Bramę przed jednostką \\svg{unit_ground} z~najwyższą \\svg{initiative}.\n"
+"  Domyślnie jednostki nie atakują Murów -- zamiast tego wolą przelecieć nad nimi, aby zaatakować cel lub poruszają się w jego kierunku przez Bramę.\n"
+"  Jeśli jest to niemożliwe, podejmują Akcję \\pagelink{Defend}{Obrony}.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:68
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\vspace{1em}\n"
-#| "\\note{9}{In a siege against AI, the Arrow Tower follows the priority-rules like a Silver \\svg{silver} Unit. But if there are many valid targets, it cannot attack the nearest one, so it will attack the one that is closest to perishing (the smallest difference between \\svg{health_points-yellow} and current \\svg{damage-yellow}).}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  To the AI, \\pagelink{Walls}{the Arrow Tower}\\index{Arrow Tower} counts as a Silver \\svg{silver}\\svg{unit_ranged} unit.\n"
 "  However, if it has multiple equally valid targets to attack, it will attack the one with the least health remaining (the smallest difference between \\svg{health_points} and current~\\svg{damage}).\n"
 "\n"
 msgstr ""
-"\\vspace{1em}\n"
-"\\note{9}{W oblężeniu przeciwko AI Wieża Łucznicza atakuje jak Srebrna \\svg{silver} Jednostka. Jeśli jest więcej niż jeden możliwy cel, nie może atakować najbliższego, więc zaatakuje ten, który jest najbliżej śmierci (najmniejsza różnica między \\svg{health_points-yellow} a obecnymi \\svg{damage-yellow}).}\n"
+"  Dla AI \\pagelink{Walls}{Wieża Łucznicza}\\index{Wieża Łucznicza} jest srebrną \\svg{silver}\\svg{unit_ranged} jednostką.\n"
+"  Jeśli ma więcej niż jeden możliwy cel, zaatakuje ten, który ma najmniej życia (najmniejsza różnica między \\svg{health_points} a~\\svg{damage}).\n"
 "\n"
 
 #. type: multicols*
@@ -271,6 +248,8 @@ msgid ""
 "  \\textbf{If AI Hero besieges you}, the Arrow Tower counts as a Silver \\svg{silver}\\svg{unit_ranged} unit as well.\n"
 "  Furthermore, \\svg{unit_ground} and \\svg{unit_flying} units attack the closest wall if no other enemy is in their reach."
 msgstr ""
+"  \\textbf{Jeśli to Bohater AI oblega ciebie}, Wieża Łucznicza również jest uznawana za srebrną \\svg{silver}\\svg{unit_ranged} jednostkę.\n"
+"  Ponadto jednostki \\svg{unit_ground} i~\\svg{unit_flying} atakują najbliższy mur, jeśli żaden inny wróg nie jest w~ich zasięgu."
 
 #. type: multicols
 #: sections/ai_rules.tex:80
@@ -284,6 +263,13 @@ msgid ""
 "  If the unit indicates a unit tier (\\svg{bronze}, \\svg{silver}, \\svg{golden}, or \\svg{azure}) instead of ``Few'' or ``Pack'', it is a Neutral Unit.\n"
 "\n"
 msgstr ""
+"{2}\n"
+"  \\pagetarget{AI Heroes}{\\subheader{Bohaterowie AI}}\n"
+"  Bohaterowie AI występują w Kampaniach.\n"
+"  Nie posiadają Planszy Miasta, Zasobów ani Planszetki Bohatera.\n"
+"  Ich jednostki są niezmienne i zdefiniowane przez Scenariusz: odszukaj wskazane karty jednostek podczas przygotowania gry.\n"
+"  Jeśli jednostka ma wskazany poziom (\\svg{bronze}, \\svg{silver}, \\svg{golden}, lub \\svg{azure}) zamiast ,,Garstki'' lub ,,Grupy'', jest to Jednostka Neutralna.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:83
@@ -293,6 +279,9 @@ msgid ""
 "  set up everything without that card, then add it to the AI Hero's Army when you initiate Combat with them.\n"
 "\n"
 msgstr ""
+"  Jeśli wielu Bohaterów AI posiada tę samą jednostkę, a nie masz wystarczającej liczby kopii jej kart, Bohaterowie AI muszą współdzielić tę kartę:\n"
+"  przygotuj Bohaterów bez tej karty i dodaj ją do ich armii, gdy rozpoczynasz z nimi walkę.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:87
@@ -303,22 +292,14 @@ msgid ""
 "  Winning Combat against an AI Hero does not grant any rewards unless stated by the Scenario.\n"
 "\n"
 msgstr ""
+"  Bohaterowie AI nie mogą się poddać, a Ty nie możesz poddać się im;\n"
+"  walka trwa, aż nie skończą się ich jednostki.\n"
+"  Nie zdobywasz żadnych nagród, pokonując Bohatera AI, chyba że Scenariusz nie mówi inaczej.\n"
+"\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:97
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\subsection*{AI Hero Turn}\n"
-#| "\\pagetarget{AIrules}{AI Heroes} are used in the Campaigns.\n"
-#| "They start in their Town, and have 3 MP, always spending them to perform the following Actions in descending priority:\n"
-#| "\\begin{itemize}\n"
-#| "  \\item If a player's Hero is on the same Tile as the AI, spend all MP to move towards them in an attempt to start Combat.\n"
-#| "  \\item If there are any Mines or Settlements the AI could Flag on the same Tile, move towards the closest one.\n"
-#| "  \\item Otherwise, move toward the player's Town.\n"
-#| "Repeat this sequence until all MPs are used up.\n"
-#| "AI Heroes take their turn after the player.\n"
-#| "\\end{itemize}\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  \\columnbreak\n"
 "  \\subsection*{AI Hero Turns}\n"
@@ -331,31 +312,27 @@ msgid ""
 "  Repeat this sequence until all MPs are used up.\n"
 "\n"
 msgstr ""
-"\\subsection*{Tura Bohatera AI}\n"
-"\\pagetarget{AIrules}{Bohaterowie AI} występują w Kampaniach.\n"
-"Zaczynają grę w swoim Mieście i posiadają 3 PR, które przeznaczają na następujący schemat działań:\n"
-"\\begin{itemize}\n"
-"  \\item Jeśli Bohater gracza znajduje się na tym samym Kafelku co AI, wykorzystaj wszystkie PR, aby przemieścić się w jego kierunku w celu rozpoczęcia Walki.\n"
-"  \\item Jeśli na tym samym Kafelku Mapy znajdują się Kopalnie lub Osady, które można oflagować, przemieść się w kierunku najbliższej z nich i oflaguj ją.\n"
-"  \\item W pozostałych przypadkach idź w kierunku Miasta gracza.\n"
-"\\end{itemize}\n"
-"Powtarzaj tę sekwencję, aż wykorzystasz wszystkie PR. Bohaterowie AI wykonują swoją turę po graczu.\n"
+"  \\columnbreak\n"
+"  \\subsection*{Tura Bohatera AI}\n"
+"  O ile nie napisano inaczej, Bohaterowie AI zaczynają grę w swoim Mieście, wykonują swoje tury po graczach i mają 3~PR, które zawsze wydają na poniższe działania według malejącego priorytetu:\n"
+"  \\begin{itemize}\n"
+"    \\item Jeśli Bohater gracza znajduje się na tym samym Kafelku co AI, wykorzystaj wszystkie PR, aby przemieścić się w jego kierunku i rozpocząć Walkę.\n"
+"    \\item Jeśli na tym samym Kafelku znajdują się Kopalnie lub Osady, które można oflagować, przemieść się w kierunku najbliższej z nich i oflaguj ją.\n"
+"    \\item W pozostałych przypadkach idź w kierunku Miasta gracza.\n"
+"  \\end{itemize}\n"
+"  Powtarzaj te działania, aż wydasz wszystkie PR.\n"
 "\n"
 
 #. type: multicols
 #: sections/ai_rules.tex:100
-#, fuzzy, no-wrap
-#| msgid ""
-#| "AI Heroes always \\textbf{automatically win Combat} against any Neutral Units, while simultaneously \\textbf{Flagging or Visiting all Fields} they happen to move through.\n"
-#| "They gain no benefits from any Fields.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  AI Heroes always \\textbf{automatically win Combat} against any Neutral Units, while simultaneously \\textbf{flagging or visiting all Fields} they happen to move through.\n"
 "  They gain no benefits from any Fields.\n"
 "\n"
 msgstr ""
-"Bohaterowie AI \\textbf{automatycznie wygrywają Walki} przeciwko wszystkim Jednostkom Neutralnym oraz \\textbf{zdobywają lub odwiedzają wszystkie Pola}, przez które przechodzą,\n"
-"nie uzyskując z nich korzyści.\n"
+"  Bohaterowie AI \\textbf{automatycznie wygrywają Walki} przeciwko wszystkim Jednostkom Neutralnym oraz \\textbf{flagują lub odwiedzają wszystkie Pola}, przez które przechodzą,\n"
+"  nie uzyskując z nich korzyści.\n"
 "\n"
 
 #. type: multicols
@@ -365,68 +342,33 @@ msgid ""
 "  AI Heroes must discover face down Map Tiles as normal by spending 1 MP before moving onto them.\n"
 "  The player chooses that Tile's orientation."
 msgstr ""
+"  Bohaterowie AI odkrywają Kafelki Mapy w~standardowy sposób, wydając 1 PR, zanim na nie wejdą.\n"
+"  Gracz wybiera ułożenie Kafelka."
 
 #. type: Plain text
 #: sections/ai_rules.tex:109
-#, fuzzy
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=1.05\\linewidth]{\\art/arrow_tower.jpg}\n"
-#| "\\end{center}\n"
-#| "\n"
 msgid ""
 "{\\begin{center} \\vfill \\includegraphics[width=\\linewidth]{\\art/"
 "gold_dragon.jpg} \\end{center}}"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=1.05\\linewidth]{\\art/arrow_tower.jpg}\n"
-"\\end{center}\n"
-"\n"
+"{\\begin{center} \\vfill \\includegraphics[width=\\linewidth]{\\art/"
+"gold_dragon.jpg} \\end{center}}"
 
 #. type: multicols*
 #: sections/ai_rules.tex:113
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\vfill\n"
-#| "\\begin{center}\n"
-#| "  \\begin{scriptsize}\n"
+#, no-wrap
 msgid ""
 "{2}\n"
 "  \\pagetarget{AI Deck}{\\subheader{AI Decks}}\n"
 "  \\begin{tikzpicture}\n"
 msgstr ""
-"\\vfill\n"
-"\\begin{center}\n"
-"  \\begin{scriptsize}\n"
+"{2}\n"
+"  \\pagetarget{AI Deck}{\\subheader{Talia AI}}\n"
+"  \\begin{tikzpicture}\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:145
-#, fuzzy, no-wrap
-#| msgid ""
-#| "      \\draw (0, 0) node {\\includegraphics[width=1.3\\linewidth]{\\cards/ai.png}};\n"
-#| "      \\draw (-0.7, 2.5) node {\\encircle{1}};\n"
-#| "      \\draw (1.5, 1.2) node {\\encircle{2}};\n"
-#| "      \\draw (-1.5, 0) node {\\encircle{3}};\n"
-#| "      \\draw (0.5, 0) node {\\encircle{4}};\n"
-#| "      \\draw (-1.5, -1.2) node {\\encircle{5}};\n"
-#| "      \\draw (0.5, -1.2) node {\\encircle{6}};\n"
-#| "      \\draw (-0.5, -2.5) node {\\encircle{7}};\n"
-#| "    \\end{tikzpicture}\\\\\n"
-#| "    \\phantom{\\ldots\\ldots}\\footnotesize{\\imagecaption{AI Card}}\n"
-#| "    \\vspace*{-1em}\n"
-#| "  \\end{center}\n"
-#| "  \\vspace*{\\fill}\n"
-#| "  \\columnbreak\n"
-#| "  \\scriptsize\n"
-#| "  \\begin{itemize}[itemsep=0pt]\n"
-#| "    \\item[\\textbf{1.}] Name\n"
-#| "    \\item[\\textbf{2.}] Description\n"
-#| "    \\item[\\textbf{3.}] Easy Modifier\n"
-#| "    \\item[\\textbf{4.}] Normal Modifier\n"
-#| "    \\item[\\textbf{5.}] Expert Modifier\n"
-#| "    \\item[\\textbf{6.}] Impossible\\\\Modifier\n"
-#| "    \\item[\\textbf{7.}] Card Type\n"
-#| "  \\end{itemize}\\vspace*{\\fill}"
+#, no-wrap
 msgid ""
 "    \\node (card) {\\includegraphics[width=0.57\\linewidth]{\\cards/ai.png}};\n"
 "    \\begin{relcoords}{card}\n"
@@ -461,43 +403,43 @@ msgid ""
 "  \\end{tikzpicture}\n"
 "\n"
 msgstr ""
-"      \\draw (0, 0) node {\\includegraphics[width=1.3\\linewidth]{translations/assets/pl/ai.png}};\n"
-"      \\draw (-0.7, 2.3) node {\\encircle{1}};\n"
-"      \\draw (1.5, 1.2) node {\\encircle{2}};\n"
-"      \\draw (-1.5, 0) node {\\encircle{3}};\n"
-"      \\draw (0.5, 0) node {\\encircle{4}};\n"
-"      \\draw (-1.5, -1.2) node {\\encircle{5}};\n"
-"      \\draw (0.5, -1.2) node {\\encircle{6}};\n"
-"      \\draw (-0.5, -2.5) node {\\encircle{7}};\n"
-"    \\end{tikzpicture}\\\\\n"
-"    \\phantom{\\ldots\\ldots}\\footnotesize{\\imagecaption{Karta AI}}\n"
-"    \\vspace*{-1em}\n"
-"  \\end{center}\n"
-"  \\vspace*{\\fill}\n"
-"  \\columnbreak\n"
-"  \\scriptsize\n"
-"  \\begin{itemize}[itemsep=0pt]\n"
-"    \\item[\\textbf{1.}] Nazwa\n"
-"    \\item[\\textbf{2.}] Instrukcja\n"
-"    \\item[\\textbf{3.}] Poziom Trudności: Łatwy\n"
-"    \\item[\\textbf{4.}] Poziom Trudności: Normalny\n"
-"    \\item[\\textbf{5.}] Poziom Trudności: Trudny\n"
-"    \\item[\\textbf{6.}] Poziom Trudności: Niemożliwy\n"
-"    \\item[\\textbf{7.}] Typ Karty\n"
-"  \\end{itemize}\\vspace*{\\fill}"
+"    \\node (card) {\\includegraphics[width=0.57\\linewidth]{translations/assets/pl/cards/ai.png}};\n"
+"    \\begin{relcoords}{card}\n"
+"      \\draw (0.4, 0.85) node {\\encircle{1}};\n"
+"      \\draw (0.8, 0.7) node {\\encircle{2}};\n"
+"      \\draw (0.15, 0.5) node {\\encircle{3}};\n"
+"      \\draw (0.55, 0.5) node {\\encircle{4}};\n"
+"      \\draw (0.15, 0.3) node {\\encircle{5}};\n"
+"      \\draw (0.55, 0.3) node {\\encircle{6}};\n"
+"      \\draw (0.38, 0.1) node {\\encircle{7}};\n"
+"    \\end{relcoords}\n"
+"    \\node [below=0pt of card.south] {\\imagecaption{Karta AI}};\n"
+"    \\node [right=-1em of card.east] {\n"
+"      \\begin{minipage}[t]{0.49\\linewidth}\n"
+"        \\scriptsize\n"
+"        \\begin{itemize}[itemsep=0.8em]\n"
+"          \\item[\\textbf{1.}] Nazwa\n"
+"          \\item[\\textbf{2.}] Instrukcja\n"
+"          \\item[\\textbf{3.}] Poziom Trudności:\\\\Łatwy\n"
+"          \\item[\\textbf{4.}] Poziom Trudności:\\\\Normalny\n"
+"          \\item[\\textbf{5.}] Poziom Trudności:\\\\Trudny\n"
+"          \\item[\\textbf{6.}] Poziom Trudności:\\\\Niemożliwy\n"
+"          \\item[\\textbf{7.}] Typ Karty\n"
+"           \\smallskip\n"
+"            \\begin{itemize}[itemsep=0.5em]\n"
+"              \\item[{\\svg[12]{might}}] Mocy\n"
+"              \\item[\\svg{magic}] Magii\n"
+"              \\item[\\svg{skill}] Umiejętności\n"
+"            \\end{itemize}\n"
+"        \\end{itemize}\n"
+"      \\end{minipage}\n"
+"    };\n"
+"  \\end{tikzpicture}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:151
-#, fuzzy, no-wrap
-#| msgid ""
-#| "AI Heroes use two Decks during Combat: the \\textbf{AI Deck}, and the \\textbf{AI Spell Deck}.\n"
-#| "The AI Deck consists of three types of AI Cards: Might \\svg[12]{might}, Magic \\svg{magic} and Skill \\svg{skill}.\n"
-#| "Each Campaign Scenario lists the number and types of Cards to include during setup.\n"
-#| "Choose these Cards \\textbf{randomly} when building the Deck.\n"
-#| "If Skill Cards are included, search for and set aside the Ability Card related to it.\n"
-#| "Build the \\textbf{AI Spell Deck} by separating the indicated Spells from the regular Spell Deck.\n"
-#| "Shuffle these Decks during setup after building them.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  AI Heroes use two Decks during Combat: the \\textbf{AI Deck} and the \\textbf{AI Spell Deck}.\n"
 "  The AI Deck consists of three types of AI cards: Might \\svg[12]{might}, Magic \\svg{magic}, and Skill \\svg{skill}.\n"
@@ -506,25 +448,16 @@ msgid ""
 "  Before each Combat, shuffle the AI Deck and its discard pile together.\n"
 "\n"
 msgstr ""
-"Bohaterowie AI używają dwóch Talii Kart w Walce: \\textbf{AI} oraz \\textbf{Zaklęć}. Talia AI jest tworzona z trzech rodzajów Kart AI: Mocy \\svg[12]{might}, Magii \\svg{magic} i Umiejętności \\svg{skill}.\n"
-"Każdy Scenariusz Kampanii podaje liczbę każdego rodzaju Kart wchodzących w skład Talii.\n"
-"Wybierz te karty \\textbf{losowo} podczas budowania Talii.\n"
-"Jeśli do Talii dołączone są Karty Umiejętności, wyszukaj odpowiadające im Karty Zdolności i odłóż je na bok.\n"
-"Stwórz \\textbf{Talię Zaklęć AI}, oddzielając wskazane Zaklęcia od zwykłej Talii Zaklęć.\n"
-"Potasuj te Talie podczas przygotowania gry.\n"
+"  Bohaterowie AI używają dwóch Talii Kart w Walce: \\textbf{AI} i \\textbf{Zaklęć AI}.\n"
+"  Talia AI składa się z trzech rodzajów kart AI: Mocy \\svg[12]{might}, Magii \\svg{magic} i Umiejętności \\svg{skill}.\n"
+"  Każdy Scenariusz Kampanii podaje liczbę i rodzaj kart, które należy przygotować.\n"
+"  Wybierz je \\textbf{losowo} podczas budowania Talii AI.\n"
+"  Przed każdą Walką potasuj Talię AI i jej stos kart odrzuconych.\n"
 "\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:156
-#, fuzzy, no-wrap
-#| msgid ""
-#| "When an AI Hero \\textbf{Activates} a Unit, draw an AI Card\\index{AI Card} and follow its instructions before the Unit moves and/or attacks.\n"
-#| "If AI Deck is depleted during Combat, stop drawing from it.\n"
-#| "The effect of each AI Card depends on the game's \\pagelink{Difficulty}{Difficulty}.\n"
-#| "The Might Card \\svg[12]{might} is attached to the Unit until the first respective attack/defense happens.\n"
-#| "The AI Spell Deck is used whenever a Magic Card \\svg{magic} is drawn.\n"
-#| "If an AI Hero is instructed to draw a Card, they will draw and resolve \\textbf{another Card} from the AI Deck.\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  When an AI Hero \\textbf{activates} a unit, draw an AI card\\index{AI card} and follow its instructions before the unit \\pagelink{AI Units}{moves and/or attacks}.\n"
 "  If the AI Deck is depleted during Combat, stop drawing from it.\n"
@@ -532,12 +465,11 @@ msgid ""
 "  If an AI Hero is instructed to draw a card, they will draw and resolve \\textbf{another card} from the AI Deck.\n"
 "\n"
 msgstr ""
-"Kiedy Bohater AI \\textbf{Aktywuje} Jednostkę, dobierz Kartę AI \\index{Karta!AI} i rozpatrz ją przed atakiem i/lub ruchem Jednostki.\n"
-"Jeżeli Talia AI wyczerpie się podczas Walki, nie dobieraj z niej Kart.\n"
-"Efekt Kart AI wynika z \\pagelink{Difficulty}{Poziomu Trudności} gry.\n"
-"Karta Mocy \\svg[12]{might} zostaje przy Jednostce do momentu pierwszego ataku/obrony.\n"
-"Talii Zaklęć AI używa się zawsze, gdy dobierana jest Karta Magii \\svg{magic} z Talii AI.\n"
-"Jeśli Bohater AI powinien dobrać Kartę, dobierz i rozpatrz \\textbf{kolejną Kartę} z Talii AI. \\vspace*{\\fill} \\columnbreak \\pagetarget{AI Units}{\\subheader{Walka z AI}}"
+"  Kiedy Bohater AI \\textbf{aktywuje} jednostkę, dobierz kartę AI\\index{Karta!AI} i rozpatrz ją zanim jednostka \\pagelink{AI Units}{poruszy się lub zaatakuje}.\n"
+"  Jeżeli Talia AI wyczerpie się podczas Walki, nie dobieraj więcej kart.\n"
+"  Efekt każdej karty AI zależy od \\pagelink{Difficulty}{Poziomu Trudności} gry.\n"
+"  Jeśli Bohater AI powinien dobrać kartę, dobierz i rozpatrz \\textbf{kolejną kartę} z Talii AI.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:160
@@ -548,6 +480,10 @@ msgid ""
 "  Before each Combat, shuffle the AI Spell Deck and its discard pile together.\n"
 "\n"
 msgstr ""
+"  \\subsection*{Karty Magii i Talia Zaklęć AI}\n"
+"  Podczas przygotowania znajdź Zaklęcia wskazane w~Scenariuszu i~stwórz z~nich \\textbf{Talię Zaklęć AI}.\n"
+"  Przed każdą Walką potasuj Talię Zaklęć AI z~jej stosem kart odrzuconych.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:164
@@ -558,6 +494,10 @@ msgid ""
 "  If the AI Spell Deck empties before Combat ends, shuffle the AI Spell Discard Pile to form a new Spell Deck.\n"
 "\n"
 msgstr ""
+"  Gdy dobierzesz kartę Magii AI \\svg{magic}, dobierz Zaklęcie z Talii Zaklęć AI i rzuć je.\n"
+"  Odrzucone Zaklęcia trafiają na osobny Stos Odrzuconych Kart Zaklęć AI.\n"
+"  Jeśli Talia Zaklęć AI skończy się przed zakończeniem Walki, potasuj jej Stos Kart Odrzuconych, aby utworzyć nową Talię Zaklęć.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:168
@@ -568,6 +508,10 @@ msgid ""
 "  Some are included for the sake of variety.\n"
 "\n"
 msgstr ""
+"  \\columnbreak\n"
+"  Talia Zaklęć AI może zawierać więcej kart Zaklęć od liczby Kart Magii w Talii Bohatera AI.\n"
+"  Jest to celowe: nie wszystkie Zaklęcia będą użyte podczas Walki.\n"
+"  Ich liczba ma służyć większej różnorodności.\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:170
@@ -576,6 +520,8 @@ msgid ""
 "  If the AI Hero is assigned a Spell card that is unavailable because it is in your Hero's Deck, and you do not have another copy, substitute it with a \\wikilink{spells/magic_arrow}{Magic Arrow} card.\n"
 "\n"
 msgstr ""
+"  Jeśli Bohater AI ma otrzymać kartę Zaklęcia, która jest niedostępna, ponieważ znajduje się już w Talii Gracza, a nie posiadasz dodatkowej kopii, zastąp ją kartą \\wikilink{spells/magic_arrow}{Magiczna Strzała}.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:173
@@ -585,26 +531,38 @@ msgid ""
 "  See \\pagelink{AI Complex Spells}{Casting Complex Spells} for explanations.\n"
 "\n"
 msgstr ""
+"  W przypadku niektórych Zaklęć może być niejasne, w jaki sposób AI ma je rzucać.\n"
+"  Wyjaśnienia znajdziesz w sekcji \\pagelink{AI Complex Spells}{Rzucanie Złożonych Zaklęć}.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:179
 #, no-wrap
 msgid ""
 "  \\subsection*{AI Skill cards}\n"
-"  If Skill cards are included, search for and set aside the indicated card related to it (usually, an Ability).\n"
-"  Whenever an AI Hero uses the AI Skill \\svg{skill} card, use the Skill card assigned to them in the Setup, but do not discard it afterwards.\n"
+"  If Skill cards are included, search for and set aside the indicated card related to it (usually, an Ability), hereby referred to as ``skill''.\n"
+"  Whenever an AI Hero uses the AI Skill \\svg{skill} card, use the skill, but do not discard it afterwards.\n"
 "  Contrary to the regular rules, the AI Hero can use the skill again, when instructed to do so by the AI Deck.\n"
 "  Discard the AI Skill \\svg{skill} card as usual.\n"
 "\n"
 msgstr ""
+"  \\subsection*{Karty Umiejętności AI}\n"
+"  Jeśli Talia zawiera karty Umiejętności, odszukaj i odłóż na bok wskazane karty (zazwyczaj Zdolności), zwane dalej ,,umiejętnością''.\n"
+"  Gdy Bohater AI używa karty Umiejętności AI \\svg{skill}, użyj umiejętności, ale jej nie odrzucaj.\n"
+"  W~przeciwieństwie do zwykłych reguł Bohater AI może ponownie użyć tej karty, jeśli Talia AI wyda takie polecenie.\n"
+"  Kartę Umiejętności AI \\svg{skill} odrzuć standardowo.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:181
 #, no-wrap
 msgid ""
-"  AI Skill cards cannot be replaced, so if Scenario rules assign the AI Hero a card that your Hero has and you do not have another copy, remove that card from your Deck and \\textbf{Search (3)} the respective card's Deck to compensate your Hero for the loss.\n"
+"  Skills cannot be replaced, so if Scenario rules assign the AI Hero a card that your Hero has and you do not have another copy, remove that card from your Deck and \\textbf{Search (3)} the respective card's Deck to compensate your Hero for the loss.\n"
 "\n"
 msgstr ""
+"  Umiejętności nie można zastąpić.\n"
+"  Jeśli Scenariusz przypisuje Bohaterowi AI kartę, którą posiada twój Bohater, a nie masz dodatkowej kopii, usuń ją ze swojej Talii i~\\textbf{Przeszukaj~(3)} Talię tej karty, aby zrekompensować jej utratę.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:184
@@ -614,6 +572,9 @@ msgid ""
 "  After an AI card is resolved, discard it.\n"
 "\n"
 msgstr ""
+"  \\subsection*{Kiedy działają karty AI}\n"
+"  Odrzuć kartę AI po rozpatrzeniu jej.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:188
@@ -624,6 +585,11 @@ msgid ""
 "  The same applies to any AI card which is not useful at the moment of drawing it.\n"
 "\n"
 msgstr ""
+"  Karta \\wikilink{ai\\#ai-cards}{Ataku} Mocy \\svg[12]{might} może odnosić się do ,,jednostki, która ma zaatakować''.\n"
+"  Jeśli aktywowana jednostka nie ma w~zasięgu celu, efekt karty Ataku stosuje się do kolejnej atakującej jednostki.\n"
+"  Zwróć uwagę, że wiele nierozpatrzonych kart może skumulować się w kolejnych aktywacjach.\n"
+"  Zasada ta stosuje się do każdej karty AI, której nie możesz użyć w momencie dobrania.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:190
@@ -632,6 +598,8 @@ msgid ""
 "  If an AI card increased a unit's \\svg{defense}, or triggered another card which increased it, the AI card stays attached to the unit until the first defense happens.\n"
 "\n"
 msgstr ""
+"  Jeśli karta AI podnosi \\svg{defense} jednostki albo uruchamia efekt innej karty, która to powoduje, karta AI pozostaje przy tej jednostce do czasu pierwszej obrony.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:193
@@ -641,6 +609,9 @@ msgid ""
 "  If there are multiple AI Enemy Armies in the Scenario, but the rules do not specify to which Enemy an AI Deck, an AI Spell Deck, or a Skill belongs, you should assume it is shared between them.\n"
 "\n"
 msgstr ""
+"  \\subsection*{Dzielenie Talii AI}\n"
+"  Jeśli w Scenariuszu występuje wiele Armii AI, ale zasady nie określają, do którego przeciwnika należą Talie AI, Zaklęć AI lub Umiejętności, przyjmij, że Talie te są dzielone między przeciwnikami.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:200
@@ -654,6 +625,12 @@ msgid ""
 "  Scenarios can override these instructions.\n"
 "\n"
 msgstr ""
+"  \\bigskip\n"
+"  \\pagetarget{AI Complex Spells}{\\subheader{Rzucanie złożonych Zaklęć}}\\index{Karta!Zaklęć}\n"
+"  W~niektórych Kampaniach, przeciwnicy używają Zaklęć, których efekty nie są w~pełni zgodne z~zasadami użycia kart Magii AI \\svg{magic}.\n"
+"  Aby w~pełni skorzystać z~ich efektów, zastosuj poniższe zasady rzucania tych Zaklęć przez Bohaterów AI.\n"
+"  Scenariusze mogą nadpisywać te zasady.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:203
@@ -663,6 +640,9 @@ msgid ""
 "  \\textit{Examples: \\wikilink{spells/fireball}{Fireball,} \\wikilink{spells/chain_lightning}{Chain Lightning.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{Zaklęcia atakujące wiele celów}\n"
+"  \\textit{Przykłady: \\wikilink{spells/fireball}{Kula Ognia}, \\wikilink{spells/chain_lightning}{Łańcuch Piorunów}.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:209
@@ -675,6 +655,12 @@ msgid ""
 "  If that is also not possible, do not use this Spell -- instead, skip the AI \\svg{magic} card that activated this effect and put it on the bottom of the AI Deck, then shuffle this Spell back to the AI Spell Deck.\n"
 "\n"
 msgstr ""
+"  Po dobraniu wybierz jednostkę sąsiadującą z~inną jednostką gracza, preferując grupy zawierające więcej jednostek wyższego poziomu.\n"
+"  Jeśli jest więcej niż jedna grupa, zaatakuj tę, w~której jednostki mają najmniej życia (najmniejsza różnica między \\svg{health_points} a obecnymi~\\svg{damage}).\n"
+"  Jeśli wciąż jest więcej niż jedna grupa, sam wybierz, na którą jednostkę AI rzuci zaklęcie.\n"
+"  Jeśli nie ma sąsiadujących jednostek gracza, wybierz te, które nie sąsiadują z~jednostkami AI.\n"
+"  Jeśli jest to niemożliwe, nie rzucaj tego Zaklęcia -- zamiast tego pomiń kartę \\svg{magic} AI, która aktywowała ten efekt i odłóż ją na spód Talii AI, a~następnie wtasuj Zaklęcie z~powrotem do Talii Zaklęć AI.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:212
@@ -684,6 +670,9 @@ msgid ""
 "  \\textit{Example: \\wikilink{spells/stone_skin}{Stone Skin.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{Zaklęcia natychmiastowej obrony}\n"
+"  \\textit{Przykład: \\wikilink{spells/stone_skin}{Kamienna Skóra}.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:216
@@ -694,6 +683,10 @@ msgid ""
 "  In case of a tie in \\svg{defense} value, give preference to the unit of the highest tier, then to the greatest value of \\svg{damage}.\n"
 "\n"
 msgstr ""
+"  Po dobraniu połóż tę kartę obok Planszy Walki, a~następnie połóż Żeton Obrony na jednostce z~najwyższą \\svg{defense}, aby przedstawić efekt karty -- pozostanie on tam do czasu rozpatrzenia Obrony.\n"
+"  Jeśli ta jednostka ma już Żeton Obrony, połóż go na kolejnej jednostce z najwyższą \\svg{defense}.\n"
+"  W przypadku remisu \\svg{defense} pierwszeństwo ma jednostka wyższego poziomu, a~następnie z~najwyższymi~\\svg{damage}.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:219
@@ -703,6 +696,9 @@ msgid ""
 "  \\textit{Example: \\wikilink{spells/cure}{Cure.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{Zaklęcia uzdrawiające}\n"
+"  \\textit{Przykład: \\wikilink{spells/cure}{Wzmocnienie}.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:222
@@ -712,6 +708,9 @@ msgid ""
 "  If no AI unit has any \\svg{damage}, put the AI \\svg{magic} card that triggered the Spell at the bottom of the AI Deck, then shuffle this Spell card back to the AI Spell Deck.\n"
 "\n"
 msgstr ""
+"  Po dobraniu usuń \\svg{damage} z~jednostki AI, która otrzymała największą liczbę~\\svg{damage}, zaczynając od jednostki najwyższego poziomu.\n"
+"  Jeśli żadna jednostka AI nie ma \\svg{damage}, odłóż kartę \\svg{magic} AI, która wywołała ten efekt, na spód Talii AI, a~następnie wtasuj Zaklęcie z~powrotem do Talii Zaklęć AI.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:225
@@ -721,6 +720,9 @@ msgid ""
 "  \\textit{Example: \\wikilink{spells/fire_shield}{Fire Shield.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{Wzmocnienia na jedną rundę}\n"
+"  \\textit{Przykład: \\wikilink{spells/fire_shield}{Tarcza Ognia}.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:229
@@ -731,6 +733,10 @@ msgid ""
 "  Multiple delayed Spells may accumulate and be cast during the same activation.\n"
 "\n"
 msgstr ""
+"  Po dobraniu sprawdź poziom jednostki, na którą zamierzasz rzucić Zaklęcie i policz ile jednostek tego samego lub wyższego poziomu jest na Planszy.\n"
+"  Jeśli więcej niż połowa tych jednostek już aktywowała się w tej rundzie, nie rzucaj Zaklęcia; zamiast tego, odłóż je na bok i rzuć podczas aktywacji pierwszej jednostki AI w~następnej Rundzie; pomiń dobieranie karty AI dla tej aktywacji.\n"
+"  Wiele odłożonych Zaklęć może skumulować się i~zostać rzuconych w~tej samej aktywacji.\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:232
@@ -740,6 +746,9 @@ msgid ""
 "  \\textit{Example: \\wikilink{spells/weakness}{Weakness.}}\n"
 "\n"
 msgstr ""
+"  \\subsection*{Zaklęcia osłabiające atak}\n"
+"  \\textit{Przykład: \\wikilink{spells/weakness}{Osłabienie}.}\n"
+"\n"
 
 #. type: multicols*
 #: sections/ai_rules.tex:235
@@ -748,3 +757,5 @@ msgid ""
 "  When drawn, if the AI's activated unit is about to perform an attack that will provoke a Retaliation, cast this Spell on the Retaliating enemy to lower their \\svg{attack}.\n"
 "  If the AI's unit causes no Retaliation, do not cast this Spell; instead, ignore the AI \\svg{magic} card that activated the Spell and put it at the bottom of the AI Deck, then shuffle the Spell card back to the AI Spell Deck."
 msgstr ""
+"  Po dobraniu, jeśli aktywowana jednostka ma wykonać atak, który spowoduje kontratak, rzuć to zaklęcie na kontratakującą jednostkę, aby obniżyć jej \\svg{attack}.\n"
+"  Jeśli jednostka AI nie sprowokuje kontrataku, nie rzucaj tego Zaklęcia; zamiast tego odłóż kartę \\svg{magic} AI, która wywołała ten efekt na spód Talii AI, a~następnie wtasuj Zaklęcie z~powrotem do Talii Zaklęć AI."
