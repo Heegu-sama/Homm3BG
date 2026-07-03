@@ -173,6 +173,7 @@
 | combat board | доска сражений |
 | combat | сражение |
 | damage | урон |
+| elemental damage | элементальный урон |
 | front line | передовая линия |
 | initiative | ... |
 | negative morale | ... |
