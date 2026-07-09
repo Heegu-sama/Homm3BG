@@ -167,6 +167,7 @@
 | combat board | Kampfspielplan |
 | combat | Kampf |
 | damage | Schaden |
+| elemental damage | Elementarschaden |
 | front line | vordere Kampfreihe |
 | initiative | ... |
 | negative morale | ... |

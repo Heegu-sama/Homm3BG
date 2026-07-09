@@ -149,6 +149,7 @@
 | combat board | ... |
 | combat | ... |
 | damage | ... |
+| elemental damage | ... |
 | front line | ... |
 | initiative | ... |
 | negative morale | ... |
