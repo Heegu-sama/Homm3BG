@@ -246,15 +246,10 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
 \begin{multicols}{2}
 \pagetarget{spells}{\subheader{Spell Cards}}
 
-Spell cards\index{Spell cards} have three possible primary effects.
-Using the topmost, basic version of the Spell usually has no additional costs.
-To access the other effects, you may \textbf{Empower} a Spell\index{Empowering Spells} by paying the indicated cost (3) to get a more powerful outcome (4).
-You may pay this cost by playing other cards for their Empower \svg{empower} effect (e.g. the \wikilink{statistics/power}{Power} Statistic card) before casting the Spell.
-All Spell cards also have an alternative bottom (5) \svg{empower} effect.
-You cannot preserve the played \svg{empower}: casting a Spell consumes all the \svg{empower} played so far, and if you stop playing cards, the power dissipates.
-You may use a cheaper \svg{empower} effect than what you've paid for, though.\par
+When playing a Spell card for its primary effect (``casting the Spell''), choose how much Power \svg{empower} (3) you'll spend from the \textbf{Power Pool} for it, and apply the chosen effect (4).
+The topmost effect usually requires spending 0~\svg{empower}.
 
-\bigskip
+\medskip
 \begin{center}
   \begin{scriptsize}
     \begin{tikzpicture}
@@ -287,18 +282,24 @@ Spells can be gained by Building the Mage Guild\index{Mage Guild}.
 Building it also enables you to use the Spell Book Token\index{Spell Book Token} for buying additional Spells.
 The Token cannot be used during the \textbf{same Round} when the Guild is constructed. Spells can also be \pagelink{Trading}{traded} in Alliance and Cooperative Scenarios.
 
-During Combat, each player may play \textbf{only one Spell card per Combat Round} for its primary effect.
+During Combat, each player may play \textbf{only one Spell card per Combat Round} for its primary effect, though some effects like \svg{expert} \wikilink{statistics/knowledge}{Knowledge} can increase this number.
 
-\columnbreak
 When you use an effect which lets you cast a Spell from somewhere other than your hand (such as directly from the Spell Deck), place that Spell into your Discard Pile after casting~it.
 
 Some Spell cards with complex effects use keywords or require special components, see \pagelink{spell keywords}{Card Effect Keywords}.
+\columnbreak
 
-\begin{center}
-  \vspace*{\fill}
-  {\transparent{0.2}\includegraphics[width=0.9\linewidth]{\art/air_magic.png}}
-  \vspace*{\fill}
-\end{center}
+\subsection*{Empowering Spells}
+Some effects can increase your \textbf{Power Pool} \svg{empower}: for example, the \wikilink{statistics/power}{Power} Statistic card, or the alternative bottom (5) +1~\svg{empower} effect of Spell cards.
+Keep played \svg{instant} cards which increased your \svg{empower} on the table, don't discard them yet.
+When you do anything which doesn't add any more \svg{empower} to the Pool, all \svg{empower} in the Pool disappears; that includes the case of casting a Spell, even if you used not all available \svg{empower} from the Pool.
+At that moment, discard all the \svg{instant} cards you played which added \svg{empower}.
+Count how much \svg{empower} you spent on the Spell, and choose which of these cards participated in it; one of the cards may be used partially if the sum is too high.
+These cards are considered played ``together'' with the Spell, this is important for certain effects such as \svg{expert} \wikilink{abilities/mysticism}{Mysticism}.
+
+See examples of Empowering on \hyperlink{example flagging mine}{page \pageref{example flagging mine}}.
+
+\textbf{Note:} \pagelink{Elemental Map Tiles}{Elemental Map Tiles} increase Spells' \svg{empower} without the Pool.
 
 \subsection*{\pagetarget{Schools of Magic}{Schools of Magic}}
 All Spell cards belong to one School of Magic\index{Schools of Magic}: either Air, Fire, Earth or Water.
