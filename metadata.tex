@@ -680,6 +680,11 @@
 \newcommand\encirclesmall[1]{
   \encirclebase{goblin}{0.9em}{#1}
 }
+\newcommand\encircleinline[1]{%
+  \phantom{(#1)}\makebox[0pt][r]{%
+    \raisebox{0.1\height}[0pt][0pt]{\encirclebase[legend]{goblin}{0.9em}{#1}\hspace*{-1ex}}%
+  }%
+}
 
 \ExplSyntaxOn
 \NewDocumentEnvironment{relcoords}{ m +b }{
