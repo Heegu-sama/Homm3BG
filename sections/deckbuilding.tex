@@ -246,15 +246,14 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
 \begin{multicols}{2}
 \pagetarget{spells}{\subheader{Spell Cards}}
 
-Spell cards\index{Spell cards} have three possible primary effects.
-Using the topmost, basic version of the Spell usually has no additional costs.
-To access the other effects, you may \textbf{Empower} a Spell\index{Empowering Spells} by paying the indicated cost (3) to get a more powerful outcome (4).
-You may pay this cost by playing other cards for their Empower \svg{empower} effect (e.g. the \wikilink{statistics/power}{Power} Statistic card) before casting the Spell.
-All Spell cards also have an alternative bottom (5) \svg{empower} effect.
-You cannot preserve the played \svg{empower}: casting a Spell consumes all the \svg{empower} played so far, and if you stop playing cards, the power dissipates.
-You may use a cheaper \svg{empower} effect than what you've paid for, though.\par
+The effects of a Spell card\index{Spell cards} depend on the amount of \svg{empower} you play.
+Using the topmost, basic version usually has no additional cost, but by paying the indicated cost \encircleinline{3} you can use a stronger effect \encircleinline{4}.
+You pay by playing other cards for their \textbf{Empower}\index{Empowering Spells} \svg{empower} effect (e.g. the \wikilink{statistics/power}{Power} Statistic card) together with the Spell. Playing the cards together means you can resolve their effects in any order, even resolve Empower effects before casting the Spell.
+All the \svg{empower} played this way is consumed, though you may use a cheaper effect than the \svg{empower} you paid for.
+Each Spell card also has an alternative +1 \svg{empower} effect \encircleinline{5}.
+See examples of Empowering on \hyperlink{example flagging mine}{page \pageref{example flagging mine}}.
 
-\bigskip
+\medskip
 \begin{center}
   \begin{scriptsize}
     \begin{tikzpicture}
@@ -283,20 +282,19 @@ You may use a cheaper \svg{empower} effect than what you've paid for, though.\pa
   \end{itemize}
 \end{multicols*}
 
-Spells can be gained by Building the Mage Guild\index{Mage Guild}.
-Building it also enables you to use the Spell Book Token\index{Spell Book Token} for buying additional Spells.
-The Token cannot be used during the \textbf{same Round} when the Guild is constructed. Spells can also be \pagelink{Trading}{traded} in Alliance and Cooperative Scenarios.
-
-During Combat, each player may play \textbf{only one Spell card per Combat Round} for its primary effect.
+During Combat, each player may play \textbf{only one Spell card per Combat Round} for its primary effect, though some effects such as \svg{expert} \wikilink{statistics/knowledge}{Knowledge} can increase this number.
 
 \columnbreak
 When you use an effect which lets you cast a Spell from somewhere other than your hand (such as directly from the Spell Deck), place that Spell into your Discard Pile after casting~it.
+These Spells also count against your Combat Round Spell limit.
 
 Some Spell cards with complex effects use keywords or require special components, see \pagelink{spell keywords}{Card Effect Keywords}.
 
+Spells can be \pagelink{Trading}{traded} in Alliance and Cooperative Scenarios.
+
 \begin{center}
   \vspace*{\fill}
-  {\transparent{0.2}\includegraphics[width=0.9\linewidth]{\art/air_magic.png}}
+  {\transparent{0.2}\includegraphics[width=0.75\linewidth]{\art/air_magic.png}}
   \vspace*{\fill}
 \end{center}
 
@@ -332,7 +330,6 @@ By default there's no difference, but certain game effects can refer to specific
   \endminipage
   \bigbreak
 \end{minipage}
-\clearpage
 
 \pagebreak
 \pagetarget{Specialty}{\subheader{Hero Specialty Cards}}
