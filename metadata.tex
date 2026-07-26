@@ -686,6 +686,12 @@
   }%
 }
 
+\newcommand\itemdotimage[1]{%
+  \makebox[0pt][r]{%
+    \raisebox{0\height}[0pt][0pt]{#1}%
+  }%
+}
+
 \ExplSyntaxOn
 \NewDocumentEnvironment{relcoords}{ m +b }{
   \begin{scope}[
