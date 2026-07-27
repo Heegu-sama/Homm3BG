@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 cache_dir="$(pwd)/cache"
+screenshots_dir="$(pwd)/screenshots"
 
 source tools/.language_base.sh
 #
@@ -18,6 +19,7 @@ help() {
     Optional Arguments:
       -p, --printable               Compares your build against 'printable' build.
       -s, --single-page             Combines all compared pages into a single image.
+      -o, --open                    Open directory with screenshots.
 
     Examples:
       ./tools/compare_pages.sh en -r 1
@@ -174,6 +176,18 @@ get_actual_filename() {
   fi
 }
 
+case "$(uname -s)" in
+  Darwin*)
+    open=open
+    ;;
+  Linux*)
+    open=xdg-open
+    ;;
+  MINGW*|MSYS*|CYGWIN*)
+    open=start
+    ;;
+esac
+
 #
 # MAIN FLOW
 #
@@ -181,6 +195,7 @@ get_actual_filename() {
 range=""
 printable=0
 single_page=0
+open_directory=0
 
 while [[ "$1" != "" ]]; do
   case $1 in
@@ -193,6 +208,9 @@ while [[ "$1" != "" ]]; do
       ;;
     -s | --single-page )
       single_page=1
+      ;;
+    -o | --open )
+      open_directory=1
       ;;
     * )
       help
@@ -245,7 +263,11 @@ fi
 
 wait
 
-mkdir -p screenshots
-mv ${tmp_dir}/${LANGUAGE}* screenshots
+mkdir -p "${screenshots_dir}"
+mv ${tmp_dir}/${LANGUAGE}* "${screenshots_dir}"
 
-echo "Done. Images saved to screenshots directory."
+echo "Done. Images saved to ${screenshots_dir} directory."
+
+if [[ "$open_directory" -eq 1 ]]; then
+  ${open} "${screenshots_dir}"
+fi
