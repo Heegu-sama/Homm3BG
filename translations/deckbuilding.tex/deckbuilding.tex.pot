@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-07-12 21:25+0100\n"
+"POT-Creation-Date: 2026-07-27 21:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,7 +43,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols*
-#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:436
+#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:437
 #: sections/units.tex:229 sections/units.tex:233
 #, no-wrap
 msgid ""
@@ -61,7 +61,7 @@ msgstr ""
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:121 sections/card_effect_keywords.tex:207
-#: sections/deckbuilding.tex:191 sections/deckbuilding.tex:452
+#: sections/deckbuilding.tex:191 sections/deckbuilding.tex:453
 #: sections/resources.tex:31
 #, no-wrap
 msgid "\\columnbreak"
@@ -183,7 +183,7 @@ msgstr ""
 #: sections/deckbuilding.tex:78
 #, no-wrap
 msgid ""
-"All Statistic\\index{Statistic cards} and Ability cards\\index{Ability cards} have a \\textbf{Basic Effect}\\index{Basic Effect} and a stronger \\textbf{Expert} \\svg{expert} \\textbf{Effect}\\index{Expert Effect}, which is shown below the Basic Effect.\n"
+"All Statistic\\index{Statistic cards} and Ability cards\\index{Ability cards} have a \\textbf{Basic Effect}\\index{Basic Effect} and a stronger \\textbf{Expert Effect} \\svg{expert}\\index{Expert Effect}, which is shown below the Basic Effect.\n"
 "Whenever you play a Statistic or Ability card, you must choose which effect you are using.\n"
 "The number of \\svg{expert} Effects you can use each Round is limited by your Main Hero's \\pagelink{Level}{Level}.\n"
 "Track the number of uses you have in any suitable manner, such as by moving Black Cubes on and off your Hero Board.\\par\n"
@@ -459,13 +459,13 @@ msgstr ""
 #: sections/deckbuilding.tex:256
 #, no-wrap
 msgid ""
-"Spell cards\\index{Spell cards} have three possible primary effects.\n"
-"Using the topmost, basic version of the Spell usually has no additional costs.\n"
-"To access the other effects, you may \\textbf{Empower} a Spell\\index{Empowering Spells} by paying the indicated cost (3) to get a more powerful outcome (4).\n"
-"You may pay this cost by playing other cards for their Empower \\svg{empower} effect (e.g. the \\wikilink{statistics/power}{Power} Statistic card) before casting the Spell.\n"
-"All Spell cards also have an alternative bottom (5) \\svg{empower} effect.\n"
-"You cannot preserve the played \\svg{empower}: casting a Spell consumes all the \\svg{empower} played so far, and if you stop playing cards, the power dissipates.\n"
-"You may use a cheaper \\svg{empower} effect than what you've paid for, though.\\par\n"
+"The effects of a Spell card\\index{Spell cards} depend on the amount of \\svg{empower} you play.\n"
+"The topmost, basic effect usually has no additional cost.\n"
+"To use a stronger effect \\encircleinline{4}, pay the indicated cost \\encircleinline{3}.\n"
+"You pay by playing other cards for their \\textbf{Empower}\\index{Empowering Spells} \\svg{empower} effect (e.g. the \\wikilink{statistics/power}{Power} Statistic card) \\textbf{together} with the Spell.\n"
+"All the \\svg{empower} played this way is consumed and cannot be saved for later.\n"
+"Each Spell card also has an alternative +1 \\svg{empower} effect \\encircleinline{5}.\n"
+"See examples of empowering on \\hyperlink{example flagging mine}{page \\pageref{example flagging mine}}.\n"
 "\n"
 msgstr ""
 
@@ -473,7 +473,7 @@ msgstr ""
 #: sections/deckbuilding.tex:259
 #, no-wrap
 msgid ""
-"\\bigskip\n"
+"\\medskip\n"
 "\\begin{center}\n"
 "  \\begin{scriptsize}\n"
 msgstr ""
@@ -512,7 +512,7 @@ msgid ""
 "  \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt]\n"
 "    \\item[\\textbf{1.}] Spell Name\n"
 "    \\item[\\textbf{2.}] School of Magic\n"
-"    \\item[\\textbf{3.}] Cost to\\\\Empower\n"
+"    \\item[\\textbf{3.}] Cost to\\\\empower\n"
 "    \\columnbreak\n"
 "    \\item[\\textbf{4.}] Spell Effect\n"
 "    \\item[\\textbf{5.}] Alternative\\\\Effect\n"
@@ -520,54 +520,38 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:289
+#: sections/deckbuilding.tex:298
 #, no-wrap
 msgid ""
-"Spells can be gained by Building the Mage Guild\\index{Mage Guild}.\n"
-"Building it also enables you to use the Spell Book Token\\index{Spell Book Token} for buying additional Spells.\n"
-"The Token cannot be used during the \\textbf{same Round} when the Guild is constructed. Spells can also be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios.\n"
+"Additional Spell rules:\\par\n"
+"\\begin{itemize}\n"
+"    \\item You may use a cheaper effect than the \\svg{empower} you paid for.\n"
+"    \\item You may resolve cards with +\\svg{empower} effects (e.g. \\wikilink{abilities/sorcery}{Sorcery}) before deciding which Spell to cast.\n"
+"    \\item During Combat, each player may play \\textbf{only one Spell card per Combat Round} for its primary effect.\n"
+"    Some effects, such as \\svg{expert} \\wikilink{statistics/knowledge}{Knowledge,} increase this limit.\n"
+"    \\columnbreak\n"
+"    \\item When you use an effect that lets you cast a Spell from outside your hand (such as directly from the Spell Deck), place that Spell into your Discard Pile after casting~it.\n"
+"    These Spells also count against your Combat Round Spell limit.\n"
+"    \\item Some Spell cards with complex effects use keywords or require special components; see \\pagelink{spell keywords}{Card Effect Keywords}.\n"
+"    \\item Spells can be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios.\n"
+"\\end{itemize}\n"
 "\n"
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:291
-#, no-wrap
-msgid ""
-"During Combat, each player may play \\textbf{only one Spell card per Combat Round} for its primary effect.\n"
-"\n"
-msgstr ""
-
-#. type: multicols
-#: sections/deckbuilding.tex:294
-#, no-wrap
-msgid ""
-"\\columnbreak\n"
-"When you use an effect which lets you cast a Spell from somewhere other than your hand (such as directly from the Spell Deck), place that Spell into your Discard Pile after casting~it.\n"
-"\n"
-msgstr ""
-
-#. type: multicols
-#: sections/deckbuilding.tex:296
-#, no-wrap
-msgid ""
-"Some Spell cards with complex effects use keywords or require special components, see \\pagelink{spell keywords}{Card Effect Keywords}.\n"
-"\n"
-msgstr ""
-
-#. type: multicols
-#: sections/deckbuilding.tex:302
+#: sections/deckbuilding.tex:304
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
 "  \\vspace*{\\fill}\n"
-"  {\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/air_magic.png}}\n"
+"  {\\transparent{0.2}\\includegraphics[width=0.6\\linewidth]{\\art/air_magic.png}}\n"
 "  \\vspace*{\\fill}\n"
 "\\end{center}\n"
 "\n"
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:308
+#: sections/deckbuilding.tex:310
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Schools of Magic}{Schools of Magic}}\n"
@@ -579,7 +563,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:336
+#: sections/deckbuilding.tex:337
 #, no-wrap
 msgid ""
 "\\begin{minipage}[t]{0.48\\textwidth}\n"
@@ -608,12 +592,11 @@ msgid ""
 "  \\endminipage\n"
 "  \\bigbreak\n"
 "\\end{minipage}\n"
-"\\clearpage\n"
 "\n"
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:340
+#: sections/deckbuilding.tex:341
 #, no-wrap
 msgid ""
 "\\pagebreak\n"
@@ -623,7 +606,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:345
+#: sections/deckbuilding.tex:346
 #, no-wrap
 msgid ""
 "Hero Specialty cards\\index{Specialty cards} are gained from \\pagelink{Level}{Level ups}.\n"
@@ -634,7 +617,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:353
+#: sections/deckbuilding.tex:354
 #, no-wrap
 msgid ""
 "{\n"
@@ -648,7 +631,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:361
+#: sections/deckbuilding.tex:362
 #, no-wrap
 msgid ""
 "{\n"
@@ -662,7 +645,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:364
+#: sections/deckbuilding.tex:365
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -671,7 +654,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:371
+#: sections/deckbuilding.tex:372
 #, no-wrap
 msgid ""
 "Artifact cards\\index{Artifact cards} have a top and bottom effect. When you play one, you must \\textbf{choose which effect} you are using.\n"
@@ -684,7 +667,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:391
+#: sections/deckbuilding.tex:392
 #, no-wrap
 msgid ""
 "  \\node (major) {\\includegraphics[width=0.6\\linewidth]{\\cards/artifact.png}};\n"
@@ -710,7 +693,7 @@ msgid ""
 msgstr ""
 
 #. type: multicols
-#: sections/deckbuilding.tex:401
+#: sections/deckbuilding.tex:402
 #, no-wrap
 msgid ""
 "\\begin{multicols}{2}\n"
@@ -725,14 +708,14 @@ msgid ""
 msgstr ""
 
 #. type: center
-#: sections/deckbuilding.tex:408
+#: sections/deckbuilding.tex:409
 msgid ""
 "{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/"
 "diplomats_ring.png}}"
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:413
+#: sections/deckbuilding.tex:414
 #, no-wrap
 msgid ""
 "{stronghold}\n"
@@ -741,7 +724,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:418
+#: sections/deckbuilding.tex:419
 #, no-wrap
 msgid ""
 "During setup shuffle 10 of the Spell Scroll cards into the Artifact Deck.\n"
@@ -752,7 +735,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:428
+#: sections/deckbuilding.tex:429
 #, no-wrap
 msgid ""
 "{\n"
@@ -768,7 +751,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:434
+#: sections/deckbuilding.tex:435
 #, no-wrap
 msgid ""
 "\\vspace*{1em}\n"
@@ -780,7 +763,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:444
+#: sections/deckbuilding.tex:445
 #, no-wrap
 msgid ""
 "You can play Spells from a Spell Scroll like any other Spell with the following exceptions:\n"
@@ -788,12 +771,12 @@ msgid ""
 "    \\item They don't count towards your Spell Limit.\n"
 "    You can also play a Spell from your hand during this Combat Round.\n"
 "    \\item You may use the Spell's \\textbf{lowest Power} \\svg{empower} \\textbf{effect}, without needing to pay its cost (e.g. in case of \\wikilink{spells/implosion}{Implosion} the cost is 1).\n"
-"      You can't Empower the Spell with \\svg{empower} from any source.\n"
+"      You can't empower the Spell with \\svg{empower} from any source.\n"
 "\\end{itemize}"
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:452
+#: sections/deckbuilding.tex:453
 #, no-wrap
 msgid ""
 "{stronghold}\n"
@@ -806,7 +789,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:454
+#: sections/deckbuilding.tex:455
 #, no-wrap
 msgid ""
 "If the last Spell on a Spell Scroll is used or sold, place the Spell Scroll back in its Deck.\n"
@@ -814,7 +797,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:457
+#: sections/deckbuilding.tex:458
 #, no-wrap
 msgid ""
 "\\medskip\n"
@@ -822,7 +805,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:462
+#: sections/deckbuilding.tex:463
 #, no-wrap
 msgid ""
 "{rampart,cove}\n"
@@ -831,7 +814,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:466
+#: sections/deckbuilding.tex:467
 #, no-wrap
 msgid ""
 "  War Machines\\index{War Machine cards} are permanent cards that can be bought at either a \\pagelink{Trading Post}{Trading Post} or a \\pagelink{War Machine Factory}{War Machine Factory}.\n"
@@ -841,7 +824,7 @@ msgid ""
 msgstr ""
 
 #. type: expansion
-#: sections/deckbuilding.tex:490
+#: sections/deckbuilding.tex:491
 #, no-wrap
 msgid ""
 "  {\n"
