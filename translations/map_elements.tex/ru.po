@@ -4,19 +4,21 @@
 # This file is distributed under the same license as the Homm package.
 # Automatically generated, 2024.
 #
+# SPDX-FileCopyrightText: 2026 Alexey Sokolov <alexey@asokolov.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-06-28 15:13+0000\n"
-"PO-Revision-Date: 2024-04-06 18:37+0300\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2026-07-27 21:30+0000\n"
+"PO-Revision-Date: 2026-07-28 02:07+0100\n"
+"Last-Translator: Alexey Sokolov <alexey@asokolov.org>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #. type: multicols*
 #: sections/all_map_locations.tex:5 sections/combat.tex:5
@@ -33,6 +35,8 @@ msgid ""
 "{2}\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\n"
 
 #. type: multicols*
 #: sections/battlefield.tex:94 sections/map_elements.tex:54
@@ -125,6 +129,9 @@ msgid ""
 "  \\hspace*{-1.5em}\n"
 "  \\begin{tikzpicture}\n"
 msgstr ""
+"\\begin{center}\n"
+"  \\hspace*{-1.5em}\n"
+"  \\begin{tikzpicture}\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:42
@@ -177,8 +184,8 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:52 sections/map_elements.tex:221
-#: sections/map_elements.tex:234
+#: sections/map_elements.tex:52 sections/map_elements.tex:224
+#: sections/map_elements.tex:237
 #, no-wrap
 msgid ""
 "\\separator\n"
@@ -214,6 +221,24 @@ msgid ""
 "\\end{center}\n"
 "\n"
 msgstr ""
+"    \\node (tile) [inner sep=0] {\\makebox[\\linewidth][c]{\\includegraphics[width=0.75\\linewidth]{\\images/fields.png}}};\n"
+"    \\begin{relcoords}{tile}\n"
+"      \\draw (0.5, 0.5) node {\\encirclesmall{1}};\n"
+"      \\draw (0.25, 0.5) node {\\encirclesmall{2}};\n"
+"      \\draw (0.8, 0.5) node {\\encirclesmall{2}};\n"
+"      \\draw (0.3, 0.8) node {\\encirclesmall{2}};\n"
+"      \\draw (0.57, 0.2) node {\\encirclesmall{2}};\n"
+"      \\draw (0.57, 0.8) node {\\encirclesmall{2}};\n"
+"      \\draw (0.65, 0.12) node {\\encirclesmall{3}};\n"
+"      \\draw (0.65, 0.9) node {\\encirclesmall{4}};\n"
+"      \\draw (0.65, 0.35) node {\\encirclesmall{4}};\n"
+"      \\draw (0.4, 0.6) node {\\encirclesmall{5}};\n"
+"      \\draw (0.35, 0.3) node {\\encirclesmall{6}};\n"
+"      \\draw (0.31, 0.16) node {\\encirclesmall{7}};\n"
+"    \\end{relcoords}\n"
+"  \\end{tikzpicture}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols*
 #: sections/map_elements.tex:86
@@ -253,7 +278,7 @@ msgstr ""
 #: sections/map_elements.tex:89
 #, no-wrap
 msgid "\\end{itemize}"
-msgstr ""
+msgstr "\\end{itemize}"
 
 #. type: multicols
 #: sections/map_elements.tex:110
@@ -361,18 +386,20 @@ msgstr ""
 "    \\node at (1, 0.6) [anchor=west] {\\textcolor{cadmiumgreen}{с двумя другими фрагментами.}};\n"
 "  \\end{tikzpicture}"
 
-#. type: multicols*
-#: sections/map_elements.tex:144
+#. type: multicols
+#: sections/map_elements.tex:145
 #, no-wrap
 msgid ""
-"\\subsection*{Example ``Flagging a guarded Mine''}\n"
+"\\subsection*{Example ``Empowering Spells and flagging a guarded Mine''}\n"
+"\\pagetarget{example flagging mine}{}\n"
 "\n"
 msgstr ""
-"\\subsection*{Пример захвата охраняемой шахты}\n"
+"\\subsection*{Пример усиления заклинаний и захвата охраняемой шахты}\n"
+"\\pagetarget{example flagging mine}{}\n"
 "\n"
 
-#. type: multicols*
-#: sections/map_elements.tex:147
+#. type: multicols
+#: sections/map_elements.tex:148
 #, no-wrap
 msgid ""
 "\\textit{Alice wants to capture an adjacent \\pagelink{Mines}{Mine} by flagging it with her Main Hero, Sandro the Necromancer.\n"
@@ -383,90 +410,89 @@ msgstr ""
 "    Она использует 1 ОП для передвижения в шахту, начиная \\pagelink{Combat}{сражение} против нейтральных отрядов, так как поле имеет \\pagelink{Difficulty}{уровень сложности} и не было ранее захвачено другим игроком.}\\par\n"
 "\n"
 
-#. type: multicols*
-#: sections/map_elements.tex:149
+#. type: multicols
+#: sections/map_elements.tex:150
 #, no-wrap
 msgid ""
-"\\includegraphics[width=1.1\\linewidth]{\\examples/sandro_takes_mine.png}\n"
+"\\includegraphics[width=\\linewidth]{\\examples/sandro_takes_mine.png}\n"
 "\n"
 msgstr ""
+"\\includegraphics[width=\\linewidth]{\\examples/sandro_takes_mine.png}\n"
+"\n"
 
-#. type: multicols*
-#: sections/map_elements.tex:153
+#. type: multicols
+#: sections/map_elements.tex:160
 #, no-wrap
 msgid ""
-"\\textit{The Mine turns out to be guarded by Troglodytes, which have 3 HP \\svg{health_points}.\n"
-"Alice's current hand consists of a Power card, a Lightning Bolt, Haste, and a Town Portal.\n"
-"During the Combat, she casts the Lightning Bolt, and Empowers \\svg{empower} it with Haste's alternative (bottom) effect, which makes the Lightning Bolt deal 3 damage \\svg{damage}, killing the Troglodytes and winning the Combat.}\n"
+"\\textit{The Mine turns out to be guarded by Griffins with 4~\\svg{health_points}.\n"
+"  Alice's current hand consists of a Power card, a Magic Arrow, Sorcery, and a Town Portal.\n"
+"  During the Combat, Alice decides to cast an offensive Spell, as she already holds a Magic Arrow.\n"
+"  She first plays Sorcery for its \\svg{empower} effect, which also draws her a card: a Lightning Bolt.\n"
+"  She casts the Lightning Bolt instead, empowering it with the already played Sorcery and with Magic Arrow's alternative (bottom) effect.\n"
+"  The Lightning Bolt deals 4~\\svg{damage}, killing the Griffins and winning the Combat.\n"
+"  The Combat lasted only one Round.\n"
+"  Alice could not have cast both Magic Arrow and the drawn Lightning Bolt, because players may play only one Spell card per Combat Round.\n"
+"  For winning the Combat, Sandro gains his second \\svg{experience}, reaching Level II, so Alice Searches~(2) the Ability Deck before visiting the Field.}\\par\n"
 "\n"
 msgstr ""
-"\\textit{Оказалось, что шахта охраняется Троглодитами, имеющими 3 HP \\svg{health_points}.\n"
-"Рука Алисы содержит карты Силы магии, Молнию, Ускорение и Городской портал.\n"
-"В ходе сражения она колдует Молнию и усиляет её \\svg{empower} с помощью альтернативного (нижнего) эффекта карты Ускорения, что позволяет Молнии нанести 3 очка урона \\svg{damage}, уничтожая Троглодитов и побеждая в сражении.}\n"
+"\\textit{Оказалось, что шахта охраняется Грифонами, имеющими 4 HP \\svg{health_points}.\n"
+"  Рука Алисы содержит карты: Силу магии, Волшебную стрелу, Волшебство и Городской портал.\n"
+"  Во время сражения Алиса решает колдовать ударное заклинание, т. к. у неё уже есть Волшебная стрела.\n"
+"  Сначала она играет Волшебство, дающее \\svg{empower} и карту Молнии.\n"
+"  Она решает колдовать Молнию, усилив её уже сыгранным Волшебством и нижним эффектом Волшебной стрелы.\n"
+"  Молния наносит 4 очка урона \\svg{damage}, уничтожая Грифонов, принеся победу Алисе.\n"
+"  Битва завершилась за один раунд, поэтому Алиса не могла наколдовать ещё и Волшебную стрелу, так как игроки могут колдовать только одно заклинание за раунд сражения.\n"
+"  За победу в сражении Сандро получает \\svg{experience}, достигает уровня II, так что Алиса ищет~(2) в колоде навыков перед посещением поля.}\\par\n"
 "\n"
 
-#. type: multicols*
-#: sections/map_elements.tex:155
-#, no-wrap
-msgid ""
-"\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_lightning_bolt.png}\n"
-"\n"
-msgstr ""
-
-#. type: multicols*
-#: sections/map_elements.tex:158
-#, no-wrap
-msgid ""
-"\\columnbreak\n"
-"\\textit{The Combat lasted for only one Round, so Alice would not have been able to cast both Lightning Bolt and Haste, since players are limited to playing only one Spell card per Combat Round.}\\par\n"
-"\n"
-msgstr ""
-"\\columnbreak\n"
-"\\textit{Битва завершилась за один раунд, поэтому Алиса не могла использовать ещё и основной эффект Ускорения, так как игроки могут колдовать только одно заклинание за раунд сражения.}\\par\n"
-"\n"
-
-#. type: multicols*
-#: sections/map_elements.tex:165
+#. type: multicols
+#: sections/map_elements.tex:166
 #, no-wrap
 msgid ""
 "\\textit{Alice now flags the Mine by placing one of her Faction Cubes on it.\n"
-"    Flagging this particular Mine increases her Building Materials \\svg{building_materials} production by 2, and she also immediately gains the Mine's production value of 2 \\svg{building_materials} as she was the first player to flag it.}\\par\n"
-"\\textit{Afterwards, Alice wants to go back to defend a previously flagged Settlement by casting the Town Portal still left in her hand.\n"
-"    Her Hero is Level II, so she can empower it with the Power card's Expert Effect \\svg{expert}, which grants her an additional Movement Point after casting it.\n"
+"  Flagging this Mine increases her Building Materials \\svg{building_materials} production by 2, and she immediately gains the Mine's production value of 2~\\svg{building_materials} because she was the first player to flag it.\n"
+"  Afterwards, Alice wants to go back to defend a previously flagged Settlement by casting the Town Portal still in her hand.\n"
+"  Her Hero is Level II, so she can empower the Spell with the Power card's Expert Effect \\svg{expert}, which grants her an additional Movement Point after casting it.\n"
 "}\n"
 "\n"
 msgstr ""
 "\\textit{Теперь Алиса захватывает шахту, помещая на неё кубик своей фракции.\n"
-"    Захват этой конкретной шахты увеличивает её доход строительных материалов \\svg{building_materials} на 2; также Алиса незамедлительно получает 2 \\svg{building_materials}, так как она была первым игроком, захватившим эту шахту.}\\par\n"
-"\\textit{Далее Алиса хочет вернуться на защиту ранее захваченного посёлка, колдуя Городской портал, все ещё находящийся в её руке.\n"
-"    Уровень её героя равен II, поэтому она может усилить заклинание с помощью экспертного эффекта карты Силы магии \\svg{expert}, поэтому это заклинание даёт ей дополнительное ОП.\n"
+"  Захват этой шахты увеличивает её доход строительных материалов \\svg{building_materials} на 2; также Алиса незамедлительно получает 2 \\svg{building_materials}, так как она была первым игроком, захватившим эту шахту.\n"
+"  Далее Алиса хочет вернуться на защиту ранее захваченного посёлка, колдуя Городской портал, все ещё находящийся в её руке.\n"
+"  Уровень её героя равен II, поэтому она может усилить заклинание с помощью экспертного эффекта карты Силы магии \\svg{expert}, поэтому это заклинание даёт ей дополнительное ОП.\n"
 "}\n"
 "\n"
 
-#. type: multicols*
-#: sections/map_elements.tex:167
+#. type: multicols
+#: sections/map_elements.tex:168
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_town_portal.png}\n"
 "\n"
 msgstr ""
-
-#. type: multicols*
-#: sections/map_elements.tex:172
-#, no-wrap
-msgid ""
-"\\vfill\n"
-"\\hspace{2em}\n"
-"{\\transparent{0.2}\\includegraphics[width=\\linewidth]{\\art/resurrection.png}}"
-msgstr ""
+"\\includegraphics[width=\\linewidth]{\\examples/sandro_empowering_town_portal.png}\n"
+"\n"
 
 #. type: Plain text
-#: sections/map_elements.tex:187
+#: sections/map_elements.tex:175
+msgid ""
+"{ \\includegraphics[width=0.6\\linewidth]{\\examples/"
+"sandro_empowering_lightning_bolt.png}\\hfill "
+"{\\transparent{0.2}\\includegraphics[width=0.3\\linewidth]{\\art/"
+"resurrection.png}} }"
+msgstr ""
+"{ \\includegraphics[width=0.6\\linewidth]{\\examples/"
+"sandro_empowering_lightning_bolt.png}\\vspace*{-2em}\\hfill "
+"{\\transparent{0.2}\\includegraphics[width=0.3\\linewidth]{\\art/"
+"resurrection.png}} }"
+
+#. type: Plain text
+#: sections/map_elements.tex:190
 msgid "\\subheader{Expansion Tiles}"
 msgstr "\\subheader{Фрагменты карты из дополнений}"
 
 #. type: multicols
-#: sections/map_elements.tex:187
+#: sections/map_elements.tex:190
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -496,8 +522,8 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/map_elements.tex:189 sections/map_elements.tex:199
-#: sections/map_elements.tex:273 sections/map_elements.tex:312
+#: sections/map_elements.tex:192 sections/map_elements.tex:202
+#: sections/map_elements.tex:276 sections/map_elements.tex:315
 #: sections/player_turns.tex:48 sections/tournament_mode.tex:69
 #: sections/units.tex:240
 #, no-wrap
@@ -505,9 +531,11 @@ msgid ""
 "\\bigskip\n"
 "\n"
 msgstr ""
+"\\bigskip\n"
+"\n"
 
 #. type: multicols
-#: sections/map_elements.tex:197
+#: sections/map_elements.tex:200
 #, no-wrap
 msgid ""
 "\\begin{expansion}{conflux}\n"
@@ -528,7 +556,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:213
+#: sections/map_elements.tex:216
 #, no-wrap
 msgid ""
 "\\begin{expansion}{stronghold}\n"
@@ -560,7 +588,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:219
+#: sections/map_elements.tex:222
 #, no-wrap
 msgid ""
 "\\makebox[\\linewidth][c]{\\begin{tikzpicture}\n"
@@ -578,7 +606,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:232
+#: sections/map_elements.tex:235
 #, no-wrap
 msgid ""
 "\\makebox[\\linewidth][c]{\\begin{tikzpicture}\n"
@@ -606,16 +634,19 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:237
+#: sections/map_elements.tex:240
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
 "    \\centering\n"
 "    \\begin{tikzpicture}\n"
 msgstr ""
+"\\begin{center}\n"
+"    \\centering\n"
+"    \\begin{tikzpicture}\n"
 
 #. type: multicols
-#: sections/map_elements.tex:251
+#: sections/map_elements.tex:254
 #, no-wrap
 msgid ""
 "      \\newlength{\\tilesize}\n"
@@ -647,7 +678,7 @@ msgstr ""
 "\\end{center}"
 
 #. type: Plain text
-#: sections/map_elements.tex:263
+#: sections/map_elements.tex:266
 msgid ""
 "\\AddToHookNext{shipout/background}{\\iftoggle{noartbackground}{}"
 "{ \\begin{tikzpicture}[remember picture,overlay] \\node(bg)[anchor=south "
@@ -655,9 +686,14 @@ msgid ""
 "{ \\includegraphics[width=0.5\\paperwidth, keepaspectratio]{\\art/"
 "cove_part.png} }; \\end{tikzpicture} }}"
 msgstr ""
+"\\AddToHookNext{shipout/background}{\\iftoggle{noartbackground}{}"
+"{ \\begin{tikzpicture}[remember picture,overlay] \\node(bg)[anchor=south "
+"east, opacity=0.15, xshift=2em, yshift=-5em] at (current page.south east) "
+"{ \\includegraphics[width=0.5\\paperwidth, keepaspectratio]{\\art/"
+"cove_part.png} }; \\end{tikzpicture} }}"
 
 #. type: Plain text
-#: sections/map_elements.tex:270
+#: sections/map_elements.tex:273
 msgid ""
 "\\pagetarget{Discover Location Tokens}{\\subheader[Placing and Discovering\\"
 "\\Location Tokens]{Placing and Discovering Location Tokens}}"
@@ -666,7 +702,7 @@ msgstr ""
 "жетонов локации}}"
 
 #. type: multicols
-#: sections/map_elements.tex:270
+#: sections/map_elements.tex:273
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -684,7 +720,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:284
+#: sections/map_elements.tex:287
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{0pt}]{conflux}\n"
@@ -712,7 +748,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:290
+#: sections/map_elements.tex:293
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{6pt}]{cove}\n"
@@ -731,7 +767,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:297
+#: sections/map_elements.tex:300
 #, no-wrap
 msgid ""
 "      \\draw (0, 2.75) node[inner sep=0] {\\includegraphics[width=0.38\\linewidth]{\\map_locations/whirlpool_0.png}};\n"
@@ -742,9 +778,16 @@ msgid ""
 "\\end{expansion}\n"
 "\n"
 msgstr ""
+"      \\draw (0, 2.75) node[inner sep=0] {\\includegraphics[width=0.38\\linewidth]{\\map_locations/whirlpool_0.png}};\n"
+"      \\draw (-1.6, 0) node[inner sep=0] {\\includegraphics[width=0.38\\linewidth]{\\map_locations/whirlpool_minus_1.png}};\n"
+"      \\draw (1.6, 0) node[inner sep=0] {\\includegraphics[width=0.38\\linewidth]{\\map_locations/whirlpool_plus_1.png}};\n"
+"    \\end{tikzpicture}\n"
+"  \\end{center}\n"
+"\\end{expansion}\n"
+"\n"
 
 #. type: multicols
-#: sections/map_elements.tex:310
+#: sections/map_elements.tex:313
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{-11mm}]{stronghold}\n"
@@ -776,7 +819,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/map_elements.tex:323
+#: sections/map_elements.tex:326
 #, no-wrap
 msgid ""
 "\\begin{expansion}[before=\\vspace*{5pt}]{navalbattles}\n"

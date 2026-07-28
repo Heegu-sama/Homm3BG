@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-06-27 22:50+0000\n"
+"POT-Creation-Date: 2026-07-07 19:24+0000\n"
 "PO-Revision-Date: 2026-04-19 11:51+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -34,7 +34,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:309 sections/combat.tex:271
+#: sections/all_map_locations.tex:309 sections/combat.tex:272
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -134,7 +134,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/combat.tex:33 sections/combat.tex:166 sections/credits.tex:38
+#: sections/combat.tex:33 sections/combat.tex:167 sections/credits.tex:38
 #: sections/credits.tex:42 sections/units.tex:57
 #, no-wrap
 msgid ""
@@ -440,7 +440,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:164
+#: sections/combat.tex:165
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{CombatCards}{Using Cards During Combat}}\n"
@@ -448,6 +448,7 @@ msgid ""
 "Ongoing \\svg{ongoing} and \\svg{activation} activation effects can be used only \\textbf{when activating one of your units and before it attacks}.\n"
 "Ongoing effects\\index{Ongoing Effects} last until end of Combat or if the effect on the card is used~up.\\par\n"
 "Instant \\svg{instant} cards may be played \\textbf{at any time} except between rolling the Attack Die and resolving damage unless otherwise stated.\n"
+"\\textbf{Reroll effects} affecting the Attack Die are an exception to this and may be played after the die is rolled.\n"
 "Effects of increasing a unit's \\svg{attack} (e.g. by the Statistics cards) expire whenever the first attack performed by that unit resolves or the activation ends, whichever comes first.\n"
 "Increased \\svg{defense} expires in a similar way.\n"
 "\n"
@@ -457,12 +458,13 @@ msgstr ""
 "持续\\svg{ongoing}和\\svg{activation}激活效果只能在你\\textbf{激活一个单位且在其攻击之前}使用。%\n"
 "持续效果\\index{持续效果}会一直持续到战斗结束，或直到卡牌效果被用尽。\\par\n"
 "即时\\svg{instant}牌可在\\textbf{任何时候}打出，但不能在掷攻击骰与结算伤害之间打出，除非另有说明。%\n"
+"影响攻击骰的\\textbf{重掷效果}属于例外，可在掷骰后打出。%\n"
 "提升单位\\svg{attack}的效果（例如通过属性牌）会在该单位进行的第一次攻击结算后或其激活结束时失效，以先发生者为准。%\n"
 "提高的\\svg{defense}也会以类似方式失效。\n"
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:172
+#: sections/combat.tex:173
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Timelimit}{Combat Time Limits}}\\index{Time Limit}\n"
@@ -480,22 +482,22 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:175
+#: sections/combat.tex:176
 #, no-wrap
 msgid "\\note{5}{Combats against Azure \\svg{azure} Units, other players, or \\pagelink{AI Heroes}{AI Heroes} have no time limit, and you cannot Retreat from them.}"
 msgstr ""
 "  \\iftoggle{printable}{\n"
-"    \\note{5}{与蔚蓝\\svg{azure}单位、其他玩家或\\pagelink{AI Heroes}{AI英雄}的战斗没有时间限制，且你不能撤退。} \\vspace{1em} \\begin{center} \\includegraphics[width=0.85\\linewidth]{\\art/crusader.jpg} \\end{center}\n"
+"    \\note{5}{与蔚蓝\\svg{azure}单位、其他玩家或\\pagelink{AI Heroes}{AI英雄}的战斗没有时间限制，且你不能撤退。} \\vspace{1em} \\begin{center} \\includegraphics[width=0.8\\linewidth]{\\art/crusader.jpg} \\end{center}\n"
 "  }{\n"
-"\\note{3}{\\vspace{1em} 与蔚蓝\\svg{azure}单位、其他玩家或\\pagelink{AI Heroes}{AI英雄}的战斗没有时间限制，且你不能撤退。} \\vspace{1em} \\begin{center} \\includegraphics[width=\\linewidth]{\\art/crusader.jpg} \\end{center}  }"
+"\\note{3}{\\vspace{1em} 与蔚蓝\\svg{azure}单位、其他玩家或\\pagelink{AI Heroes}{AI英雄}的战斗没有时间限制，且你不能撤退。} \\vspace{1em} \\begin{center} \\includegraphics[width=0.9\\linewidth]{\\art/crusader.jpg} \\end{center}  }"
 
 #. type: Plain text
-#: sections/combat.tex:184
+#: sections/combat.tex:185
 msgid "\\pagetarget{Endcombat}{\\subheader{End of Combat}}"
 msgstr "\\pagetarget{Endcombat}{\\subheader{战斗结束}}"
 
 #. type: multicols*
-#: sections/combat.tex:184
+#: sections/combat.tex:185
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -517,7 +519,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:190
+#: sections/combat.tex:191
 #, no-wrap
 msgid ""
 "Combat against another player's Hero has two possible outcomes:\n"
@@ -535,7 +537,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:192
+#: sections/combat.tex:193
 #, no-wrap
 msgid ""
 "When Combat ends, all damage is healed from all surviving units. Move any player-owned units back to their unit Deck and discard any leftover enemy Neutral Units. Depending on the type and result of the Combat, players must resolve the following consequences for themselves:\n"
@@ -545,7 +547,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:199
+#: sections/combat.tex:200
 #, no-wrap
 msgid ""
 "A \\textbf{Winning Hero} gets \\pagelink{Combatexperience}{Experience}, if it was the Main Hero. If it was the attacker, they must visit the Field where the Combat took place.\\par\n"
@@ -565,7 +567,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:201
+#: sections/combat.tex:202
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Combatexperience}{Combat Experience}}\n"
@@ -575,7 +577,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:210
+#: sections/combat.tex:211
 #, no-wrap
 msgid ""
 "Winning Combat with your Main Hero usually grants them Experience\\index{Experience}.\n"
@@ -599,7 +601,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:216
+#: sections/combat.tex:217
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -613,7 +615,7 @@ msgstr ""
 "\\end{center}"
 
 #. type: multicols*
-#: sections/combat.tex:221
+#: sections/combat.tex:222
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -625,7 +627,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:227
+#: sections/combat.tex:228
 #, no-wrap
 msgid ""
 "\\textit{Bob's Zombies are about to attack Alice's Griffins.\n"
@@ -643,7 +645,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:229
+#: sections/combat.tex:230
 #, no-wrap
 msgid ""
 "\\includegraphics[width=\\linewidth]{\\examples/zombies_attack_griffins.png}\n"
@@ -653,7 +655,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:237
+#: sections/combat.tex:238
 #, no-wrap
 msgid ""
 "\\textit{After all cards for the attack have been played, the Attack Die\\index{Attack Die} is thrown to further modify the amount of damage the attacking unit deals.\n"
@@ -675,7 +677,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:239 sections/introduction.tex:92
+#: sections/combat.tex:240 sections/introduction.tex:92
 #, no-wrap
 msgid ""
 "\\vfill\n"
@@ -685,7 +687,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:241
+#: sections/combat.tex:242
 #, no-wrap
 msgid ""
 "{\\transparent{0.2}\\hspace{-1em}\\includegraphics[width=1.7\\linewidth]{\\art/minotaur.png}}\n"
@@ -695,17 +697,17 @@ msgstr ""
 "\n"
 
 #. type: Plain text
-#: sections/combat.tex:251
+#: sections/combat.tex:252
 msgid "\\pagetarget{Siege Combat}{\\subheader{Siege Combat}}"
 msgstr "\\pagetarget{Siege Combat}{\\subheader{攻城战}}"
 
 #. type: index{#1}
-#: sections/combat.tex:251
+#: sections/combat.tex:252
 msgid "Siege Combat"
 msgstr "攻城战斗"
 
 #. type: multicols*
-#: sections/combat.tex:251
+#: sections/combat.tex:252
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -721,7 +723,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:254
+#: sections/combat.tex:255
 #, no-wrap
 msgid ""
 "When you defend a Town \\textbf{without a Citadel}\\index{Citadel}, resolve Combat normally on the standard Combat Board.\n"
@@ -733,7 +735,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:257
+#: sections/combat.tex:258
 #, no-wrap
 msgid ""
 "\\vspace{0.5em}\n"
@@ -745,7 +747,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:263
+#: sections/combat.tex:264
 #, no-wrap
 msgid ""
 "\\pagetarget{Walls}{\\subsection*{Defending a Town with a~Citadel}}\\index{Walls and Gate}\n"
@@ -764,7 +766,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:265
+#: sections/combat.tex:266
 #, no-wrap
 msgid ""
 "Walls \\pagelink{Walls protection}{protect defending units behind them}.\n"
@@ -774,7 +776,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:268
+#: sections/combat.tex:269
 #, no-wrap
 msgid ""
 "The Wall and Gate Cards can be destroyed by any adjacent \\svg{unit_ground} or \\svg{unit_flying} unit's attack, even by your own defending units.\n"
@@ -786,7 +788,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:280
+#: sections/combat.tex:281
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -810,7 +812,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:282
+#: sections/combat.tex:283
 #, no-wrap
 msgid ""
 "For Arrow Tower rules in Solo Scenarios, see \\pagelink{AI Siege}{AI Siege}.\n"
@@ -820,7 +822,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/combat.tex:288
+#: sections/combat.tex:289
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"
@@ -834,7 +836,7 @@ msgstr ""
 "\\end{center}"
 
 #. type: multicols
-#: sections/combat.tex:292
+#: sections/combat.tex:293
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -846,7 +848,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/combat.tex:296
+#: sections/combat.tex:297
 #, no-wrap
 msgid ""
 "Defending units standing on their own side and \\textbf{in the same column} as a non-destroyed Wall or Gate gain protection from \\svg{unit_ranged} attacks.\n"
@@ -860,7 +862,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/combat.tex:300
+#: sections/combat.tex:301
 #, no-wrap
 msgid ""
 "\\begin{center}\n"
@@ -872,7 +874,7 @@ msgstr ""
 "\\end{center}"
 
 #. type: multicols
-#: sections/combat.tex:308
+#: sections/combat.tex:309
 #, no-wrap
 msgid ""
 "{2}\n"
@@ -892,7 +894,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/combat.tex:314
+#: sections/combat.tex:315
 #, no-wrap
 msgid ""
 "\\vspace*{\\fill}\n"

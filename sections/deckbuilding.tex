@@ -4,7 +4,7 @@
 \begin{multicols}{2}
 
 \subsection*{\pagetarget{Playerdecks}{Player Decks}}
-All players have a unique Deck which represents their Main Hero's Abilities and Equipment.
+All players have a unique Deck which represents their Main Hero's Abilities and equipment.
 Decks may contain Statistic, Ability, Spell, Artifact and the Main Hero's Specialty cards.
 Each player's Deck starts with 9 cards, built during the game's setup.\par
 \bigskip
@@ -71,17 +71,17 @@ Each player's Deck starts with 9 cards, built during the game's setup.\par
 \subheader{Statistic and Ability Cards}
 \begin{multicols}{2}
 
-All Statistic\index{Statistic cards} and Ability cards\index{Ability cards} have a \textbf{Basic Effect}\index{Basic Effect} and a stronger \textbf{Expert} \svg{expert} \textbf{Effect}\index{Expert Effect}, which is shown below the Basic Effect.
+All Statistic\index{Statistic cards} and Ability cards\index{Ability cards} have a \textbf{Basic Effect}\index{Basic Effect} and a stronger \textbf{Expert Effect} \svg{expert}\index{Expert Effect}, which is shown below the Basic Effect.
 Whenever you play a Statistic or Ability card, you must choose which effect you are using.
 The number of \svg{expert} Effects you can use each Round is limited by your Main Hero's \pagelink{Level}{Level}.
 Track the number of uses you have in any suitable manner, such as by moving Black Cubes on and off your Hero Board.\par
 
 \columnbreak
 
-\note{11}{
+\note{11.5}{
   \wikilink{abilities/necromancy}{Necromancy cards} are limited to the Necropolis Faction \svg{necro-yellow}.
-  When a non-Necropolis player draws a Necropolis card\index{Necropolis card} from the Ability Deck, they may either discard it and draw a new card as a replacement or gain it.
-  Non-Necropolis players \textbf{cannot use} Faction Specific cards from their hand in any way besides for effects that discard them.
+  When a non-Necropolis player draws a Necropolis-specific card\index{Necropolis card} from the Ability Deck, they may either discard it and draw a new card as a replacement or gain it.
+  Non-Necropolis players \textbf{cannot use} Necropolis-specific cards from their hand in any way besides for effects that discard them.
 }
 \end{multicols}
 
@@ -203,7 +203,7 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
   You can gain them by spending Empowered Ability Tokens.
   You can use one of these Tokens at the moment you gain a new Ability card, regardless of how you obtain it.
   If you use such a Token, discard it, remove the just-gained normal Ability card from the game, and gain the corresponding Empowered Ability card in its stead.
-  There's only 1 copy of each Empowered Ability card, so if one player takes a particular Empowered Ability card, they prevent other players from obtaining it.
+  There's only one copy of each Empowered Ability card, so if one player takes a particular Empowered Ability card, they prevent other players from obtaining it.
   If an Empowered Ability card isn't available, you can't spend the Empowered Ability Token and must keep it for later turns.
 
   You can gain Empowered Ability Tokens only in certain Scenarios (e.~g.~``Island of Fire'' from the Naval Battles Mission Book).\\
@@ -213,7 +213,7 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
     \transparent{0.2}\includegraphics[width=\linewidth]{\art/scholar.png}
   \end{center}
 
-  \subsection*{Gaining Empowered Ability\\Example}
+  \subsection*{Gaining Empowered Ability Example}
   \textit{Bob playing as Crag Hack reaches Level II.
     He performs the Search (2) action and draws two cards from the Ability Deck.
     The cards are Offense and Wisdom.
@@ -246,15 +246,15 @@ Track the number of uses you have in any suitable manner, such as by moving Blac
 \begin{multicols}{2}
 \pagetarget{spells}{\subheader{Spell Cards}}
 
-Spell cards\index{Spell cards} have three possible primary effects.
-Using the topmost, basic version of the Spell usually has no additional costs.
-To access the other effects, you may \textbf{Empower} a Spell\index{Empowering Spells} by paying the indicated cost (3) to get a more powerful outcome (4).
-You may pay this cost by playing other cards for their Empower \svg{empower} effect (e.g. the \wikilink{statistics/power}{Power} Statistic card) before casting the Spell.
-All Spell cards also have an alternative bottom (5) \svg{empower} effect.
-You cannot preserve the played \svg{empower}: casting a Spell consumes all the \svg{empower} played so far, and if you stop playing cards, the power dissipates.
-You may use a cheaper \svg{empower} effect than what you've paid for, though.\par
+The effects of a Spell card\index{Spell cards} depend on the amount of \svg{empower} you play.
+The topmost, basic effect usually has no additional cost.
+To use a stronger effect \encircleinline{4}, pay the indicated cost \encircleinline{3}.
+You pay by playing other cards for their \textbf{Empower}\index{Empowering Spells} \svg{empower} effect (e.g. the \wikilink{statistics/power}{Power} Statistic card) \textbf{together} with the Spell.
+All the \svg{empower} played this way is consumed and cannot be saved for later.
+Each Spell card also has an alternative +1 \svg{empower} effect \encircleinline{5}.
+See examples of empowering on \hyperlink{example flagging mine}{page \pageref{example flagging mine}}.
 
-\bigskip
+\medskip
 \begin{center}
   \begin{scriptsize}
     \begin{tikzpicture}
@@ -276,27 +276,29 @@ You may use a cheaper \svg{empower} effect than what you've paid for, though.\pa
   \begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt]
     \item[\textbf{1.}] Spell Name
     \item[\textbf{2.}] School of Magic
-    \item[\textbf{3.}] Cost to\\Empower
+    \item[\textbf{3.}] Cost to\\empower
     \columnbreak
     \item[\textbf{4.}] Spell Effect
     \item[\textbf{5.}] Alternative\\Effect
   \end{itemize}
 \end{multicols*}
 
-Spells can be gained by Building the Mage Guild\index{Mage Guild}.
-Building it also enables you to use the Spell Book Token\index{Spell Book Token} for buying additional Spells.
-The Token cannot be used during the \textbf{same Round} when the Guild is constructed. Spells can also be \pagelink{Trading}{traded} in Alliance and Cooperative Scenarios.
-
-During Combat, each player may play \textbf{only one Spell card per Combat Round} for its primary effect.
-
-\columnbreak
-When you use an effect which lets you cast a Spell from somewhere other than your hand (such as directly from the Spell Deck), place that Spell into your Discard Pile after casting~it.
-
-Some complex Spell cards use keywords or require special components, see \pagelink{spell keywords}{Card Effect Keywords}.
+Additional Spell rules:\par
+\begin{itemize}
+    \item You may use a cheaper effect than the \svg{empower} you paid for.
+    \item You may resolve cards with +\svg{empower} effects (e.g. \wikilink{abilities/sorcery}{Sorcery}) before deciding which Spell to cast.
+    \item During Combat, each player may play \textbf{only one Spell card per Combat Round} for its primary effect.
+    Some effects, such as \svg{expert} \wikilink{statistics/knowledge}{Knowledge,} increase this limit.
+    \columnbreak
+    \item When you use an effect that lets you cast a Spell from outside your hand (such as directly from the Spell Deck), place that Spell into your Discard Pile after casting~it.
+    These Spells also count against your Combat Round Spell limit.
+    \item Some Spell cards with complex effects use keywords or require special components; see \pagelink{spell keywords}{Card Effect Keywords}.
+    \item Spells can be \pagelink{Trading}{traded} in Alliance and Cooperative Scenarios.
+\end{itemize}
 
 \begin{center}
   \vspace*{\fill}
-  {\transparent{0.2}\includegraphics[width=0.9\linewidth]{\art/air_magic.png}}
+  {\transparent{0.2}\includegraphics[width=0.6\linewidth]{\art/air_magic.png}}
   \vspace*{\fill}
 \end{center}
 
@@ -332,7 +334,6 @@ By default there's no difference, but certain game effects can refer to specific
   \endminipage
   \bigbreak
 \end{minipage}
-\clearpage
 
 \pagebreak
 \pagetarget{Specialty}{\subheader{Hero Specialty Cards}}
@@ -427,9 +428,9 @@ Some locations or Scenario effects may call for them later.
 }
 
 \vspace*{1em}
-When you gain a Spell Scroll, place it next to your Hero Board, take the 2 top cards from the Spell Deck and place them face-down on the Spell Scroll.
+When you gain a Spell Scroll, place it next to your Hero Board, take the two top cards from the Spell Deck and place them face-down on the Spell Scroll.
 You can look at these Spells at any time and they don't count toward your Hand \svg{hand} Limit.
-You can only have 2 Spell Scrolls at a time.
+You can only have two Spell Scrolls at a time.
 If you gain a third one, draw the new Spells normally and then decide whether to discard the newly gained Spell Scroll or replace one you already have (including all Spells on it).
 
 \medskip
@@ -439,7 +440,7 @@ You can play Spells from a Spell Scroll like any other Spell with the following 
     \item They don't count towards your Spell Limit.
     You can also play a Spell from your hand during this Combat Round.
     \item You may use the Spell's \textbf{lowest Power} \svg{empower} \textbf{effect}, without needing to pay its cost (e.g. in case of \wikilink{spells/implosion}{Implosion} the cost is 1).
-      You can't Empower the Spell with \svg{empower} from any source.
+      You can't empower the Spell with \svg{empower} from any source.
 \end{itemize}
 \end{expansion}
 \columnbreak
@@ -447,7 +448,6 @@ You can play Spells from a Spell Scroll like any other Spell with the following 
     \begin{itemize}
     \item They can't be used to increase the \svg{empower} of another Spell.
     \item You can \pagelink{selling Spell Scrolls}{sell Spell Scrolls} at a Trading Post for 2 \svg{gold} per each Spell on it.
-      This works in addition to other effect of visiting the Trading Post.
     \item After using or selling those Spells, the Spell card is \textbf{removed}, not discarded.
 \end{itemize}
 
