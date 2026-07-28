@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Homm 3BG\n"
-"POT-Creation-Date: 2026-07-04 20:14+0000\n"
+"POT-Creation-Date: 2026-07-27 21:15+0000\n"
 "PO-Revision-Date: 2026-07-07 20:23+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -47,7 +47,7 @@ msgstr ""
 "\n"
 
 #. type: multicols*
-#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:436
+#: sections/all_map_locations.tex:60 sections/deckbuilding.tex:437
 #: sections/units.tex:229 sections/units.tex:233
 #, no-wrap
 msgid ""
@@ -87,7 +87,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Playerdecks}{Player Decks}}\n"
-"All players have a unique Deck which represents their Main Hero's Abilities and Equipment.\n"
+"All players have a unique Deck which represents their Main Hero's Abilities and equipment.\n"
 "Decks may contain Statistic, Ability, Spell, Artifact and the Main Hero's Specialty cards.\n"
 "Each player's Deck starts with 9 cards, built during the game's setup.\\par\n"
 "\\bigskip\n"
@@ -246,9 +246,15 @@ msgstr ""
 
 #. type: multicols
 #: sections/deckbuilding.tex:78
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "All Statistic\\index{Statistic cards} and Ability cards\\index{Ability cards} have a \\textbf{Basic Effect}\\index{Basic Effect} and a stronger \\textbf{Expert} \\svg{expert} \\textbf{Effect}\\index{Expert Effect}, which is shown below the Basic Effect.\n"
+#| "Whenever you play a Statistic or Ability card, you must choose which effect you are using.\n"
+#| "The number of \\svg{expert} Effects you can use each Round is limited by your Main Hero's \\pagelink{Level}{Level}.\n"
+#| "Track the number of uses you have in any suitable manner, such as by moving Black Cubes on and off your Hero Board.\\par\n"
+#| "\n"
 msgid ""
-"All Statistic\\index{Statistic cards} and Ability cards\\index{Ability cards} have a \\textbf{Basic Effect}\\index{Basic Effect} and a stronger \\textbf{Expert} \\svg{expert} \\textbf{Effect}\\index{Expert Effect}, which is shown below the Basic Effect.\n"
+"All Statistic\\index{Statistic cards} and Ability cards\\index{Ability cards} have a \\textbf{Basic Effect}\\index{Basic Effect} and a stronger \\textbf{Expert Effect} \\svg{expert}\\index{Expert Effect}, which is shown below the Basic Effect.\n"
 "Whenever you play a Statistic or Ability card, you must choose which effect you are using.\n"
 "The number of \\svg{expert} Effects you can use each Round is limited by your Main Hero's \\pagelink{Level}{Level}.\n"
 "Track the number of uses you have in any suitable manner, such as by moving Black Cubes on and off your Hero Board.\\par\n"
@@ -264,10 +270,10 @@ msgstr ""
 #: sections/deckbuilding.tex:86
 #, no-wrap
 msgid ""
-"\\note{11}{\n"
+"\\note{11.5}{\n"
 "  \\wikilink{abilities/necromancy}{Necromancy cards} are limited to the Necropolis Faction \\svg{necro-yellow}.\n"
-"  When a non-Necropolis player draws a Necropolis card\\index{Necropolis card} from the Ability Deck, they may either discard it and draw a new card as a replacement or gain it.\n"
-"  Non-Necropolis players \\textbf{cannot use} Faction Specific cards from their hand in any way besides for effects that discard them.\n"
+"  When a non-Necropolis player draws a Necropolis-specific card\\index{Necropolis card} from the Ability Deck, they may either discard it and draw a new card as a replacement or gain it.\n"
+"  Non-Necropolis players \\textbf{cannot use} Necropolis-specific cards from their hand in any way besides for effects that discard them.\n"
 "}"
 msgstr ""
 "\\note{11}{\n"
@@ -523,7 +529,7 @@ msgid ""
 "  You can gain them by spending Empowered Ability Tokens.\n"
 "  You can use one of these Tokens at the moment you gain a new Ability card, regardless of how you obtain it.\n"
 "  If you use such a Token, discard it, remove the just-gained normal Ability card from the game, and gain the corresponding Empowered Ability card in its stead.\n"
-"  There's only 1 copy of each Empowered Ability card, so if one player takes a particular Empowered Ability card, they prevent other players from obtaining it.\n"
+"  There's only one copy of each Empowered Ability card, so if one player takes a particular Empowered Ability card, they prevent other players from obtaining it.\n"
 "  If an Empowered Ability card isn't available, you can't spend the Empowered Ability Token and must keep it for later turns.\n"
 "\n"
 msgstr ""
@@ -573,14 +579,14 @@ msgstr ""
 #: sections/deckbuilding.tex:221
 #, no-wrap
 msgid ""
-"  \\subsection*{Gaining Empowered Ability\\\\Example}\n"
+"  \\subsection*{Gaining Empowered Ability Example}\n"
 "  \\textit{Bob playing as Crag Hack reaches Level II.\n"
 "    He performs the Search (2) action and draws two cards from the Ability Deck.\n"
 "    The cards are Offense and Wisdom.\n"
 "    He chooses Offense and places the other card on the discard pile.}\n"
 "\n"
 msgstr ""
-"  \\subsection*{Beispiel zum Erhalten von\\\\Verbesserten Fähigkeiten}\n"
+"  \\subsection*{Beispiel zum Erhalten verstärkter Fähigkeiten}\n"
 "  \\textit{Bob spielt Crag Hack, welcher Stufe II erreicht.\n"
 "    Er führt eine Durchsuche-(2)-Aktion aus und zieht zwei Fähigkeitskarten vom Fähigkeiten-Deck:\n"
 "    Offensive und Weisheit.\n"
@@ -675,26 +681,25 @@ msgstr ""
 #: sections/deckbuilding.tex:256
 #, no-wrap
 msgid ""
-"Spell cards\\index{Spell cards} have three possible primary effects.\n"
-"Using the topmost, basic version of the Spell usually has no additional costs.\n"
-"To access the other effects, you may \\textbf{Empower} a Spell\\index{Empowering Spells} by paying the indicated cost (3) to get a more powerful outcome (4).\n"
-"You may pay this cost by playing other cards for their Empower \\svg{empower} effect (e.g. the \\wikilink{statistics/power}{Power} Statistic card) before casting the Spell.\n"
-"All Spell cards also have an alternative bottom (5) \\svg{empower} effect.\n"
-"You cannot preserve the played \\svg{empower}: casting a Spell consumes all the \\svg{empower} played so far, and if you stop playing cards, the power dissipates.\n"
-"You may use a cheaper \\svg{empower} effect than what you've paid for, though.\\par\n"
+"The effects of a Spell card\\index{Spell cards} depend on the amount of \\svg{empower} you play.\n"
+"The topmost, basic effect usually has no additional cost.\n"
+"To use a stronger effect \\encircleinline{4}, pay the indicated cost \\encircleinline{3}.\n"
+"You pay by playing other cards for their \\textbf{Empower}\\index{Empowering Spells} \\svg{empower} effect (e.g. the \\wikilink{statistics/power}{Power} Statistic card) \\textbf{together} with the Spell.\n"
+"All the \\svg{empower} played this way is consumed and cannot be saved for later.\n"
+"Each Spell card also has an alternative +1 \\svg{empower} effect \\encircleinline{5}.\n"
+"See examples of empowering on \\hyperlink{example flagging mine}{page \\pageref{example flagging mine}}.\n"
 "\n"
 msgstr ""
-"Zauberkarten\\index{Zauberkarte} haben drei mögliche primäre Effekte.\n"
-"Die Nutzung des obersten Basiseffektes hat meist keine weiteren Kosten.\n"
-"Um einen der beiden stärkeren primären Effekte (4) zu nutzen, muss der Zauber \\textbf{verstärkt}\\index{Zauber verstärken} werden, indem die Kosten des Effektes (3) durch Ausspielen anderer Karten mit Verstärkungseffekt \\svg{empower} (z. B. der Statistikkarte \\wikilink{statistics/power}{Zauberkraft}) bezahlt werden.\n"
-"Alle Zauber können auch mit ihrem alternativen unteren \\svg{empower}-Effekt (5) gespielt werden, um andere Zauber zu verstärken.\n"
-"Du darfst eine niedrigere Effektstärke wählen, kannst gespielte \\svg{empower}-Effekte aber nicht aufsparen: Das Abhandeln eines Zaubers verbraucht alle ausgespielten \\svg{empower}-Effekte.\\par\n"
 
 #. type: multicols
 #: sections/deckbuilding.tex:259
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\bigskip\n"
+#| "\\begin{center}\n"
+#| "  \\begin{scriptsize}\n"
 msgid ""
-"\\bigskip\n"
+"\\medskip\n"
 "\\begin{center}\n"
 "  \\begin{scriptsize}\n"
 msgstr ""
@@ -742,14 +747,25 @@ msgstr ""
 
 #. type: multicols
 #: sections/deckbuilding.tex:285
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{multicols*}{2}\n"
+#| "  \\footnotesize\n"
+#| "  \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt]\n"
+#| "    \\item[\\textbf{1.}] Spell Name\n"
+#| "    \\item[\\textbf{2.}] School of Magic\n"
+#| "    \\item[\\textbf{3.}] Cost to\\\\Empower\n"
+#| "    \\columnbreak\n"
+#| "    \\item[\\textbf{4.}] Spell Effect\n"
+#| "    \\item[\\textbf{5.}] Alternative\\\\Effect\n"
+#| "  \\end{itemize}"
 msgid ""
 "\\begin{multicols*}{2}\n"
 "  \\footnotesize\n"
 "  \\begin{itemize}[itemsep=0pt, parsep=5pt, topsep=0pt, partopsep=0pt]\n"
 "    \\item[\\textbf{1.}] Spell Name\n"
 "    \\item[\\textbf{2.}] School of Magic\n"
-"    \\item[\\textbf{3.}] Cost to\\\\Empower\n"
+"    \\item[\\textbf{3.}] Cost to\\\\empower\n"
 "    \\columnbreak\n"
 "    \\item[\\textbf{4.}] Spell Effect\n"
 "    \\item[\\textbf{5.}] Alternative\\\\Effect\n"
@@ -767,68 +783,44 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: multicols
-#: sections/deckbuilding.tex:289
+#: sections/deckbuilding.tex:298
 #, no-wrap
 msgid ""
-"Spells can be gained by Building the Mage Guild\\index{Mage Guild}.\n"
-"Building it also enables you to use the Spell Book Token\\index{Spell Book Token} for buying additional Spells.\n"
-"The Token cannot be used during the \\textbf{same Round} when the Guild is constructed. Spells can also be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios.\n"
+"Additional Spell rules:\\par\n"
+"\\begin{itemize}\n"
+"    \\item You may use a cheaper effect than the \\svg{empower} you paid for.\n"
+"    \\item You may resolve cards with +\\svg{empower} effects (e.g. \\wikilink{abilities/sorcery}{Sorcery}) before deciding which Spell to cast.\n"
+"    \\item During Combat, each player may play \\textbf{only one Spell card per Combat Round} for its primary effect.\n"
+"    Some effects, such as \\svg{expert} \\wikilink{statistics/knowledge}{Knowledge,} increase this limit.\n"
+"    \\columnbreak\n"
+"    \\item When you use an effect that lets you cast a Spell from outside your hand (such as directly from the Spell Deck), place that Spell into your Discard Pile after casting~it.\n"
+"    These Spells also count against your Combat Round Spell limit.\n"
+"    \\item Some Spell cards with complex effects use keywords or require special components; see \\pagelink{spell keywords}{Card Effect Keywords}.\n"
+"    \\item Spells can be \\pagelink{Trading}{traded} in Alliance and Cooperative Scenarios.\n"
+"\\end{itemize}\n"
 "\n"
 msgstr ""
-"Zauber können beim Bau der Magiergilde\\index{Magiergilde} erhalten werden.  Außerdem ermöglicht die Magiergilde den Kauf neuer Zauber durch Nutzung des Zauberbuchmarkers\\index{Zauberbuchmarker}.  Der Marker kann nicht in \\textbf{derselben Runde} genutzt werden, in der die Magiergilde gebaut wurde. Zauber können in Allianz- oder kooperativen Szenarien auch \\pagelink{Trading}{gehandelt} werden.\n"
-"\\columnbreak\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:291
+#: sections/deckbuilding.tex:304
 #, no-wrap
 msgid ""
-"During Combat, each player may play \\textbf{only one Spell card per Combat Round} for its primary effect.\n"
-"\n"
-msgstr ""
-"Im Kampf darf jeder Spieler \\textbf{nur einen Zauber pro Kampfrunde} für seinen primären Effekt ausspielen.\n"
-"\n"
-
-#. type: multicols
-#: sections/deckbuilding.tex:294
-#, no-wrap
-msgid ""
-"\\columnbreak\n"
-"When you use an effect which lets you cast a Spell from somewhere other than your hand (such as directly from the Spell Deck), place that Spell into your Discard Pile after casting~it.\n"
-"\n"
-msgstr ""
-"Wenn ein Effekt dir erlaubt, einen Zauber auszuspielen, den du nicht auf der Hand hältst (sondern z. B. direkt vom Zauberdeck), wirf diesen Zauber anschließend auf deinen Ablagestapel.\n"
-"\n"
-
-#. type: multicols
-#: sections/deckbuilding.tex:296
-#, no-wrap
-msgid ""
-"Some complex Spell cards use keywords or require special components, see \\pagelink{spell keywords}{Card Effect Keywords}.\n"
-"\n"
-msgstr ""
-"Einige komplexe Zauberkarten nutzen Schlüsselwörter oder benötigen eigenes Spielmaterial, siehe unter \\pagelink{spell keywords}{Schlüsselwörter in Karteneffekten}.\n"
-"\n"
-
-#. type: multicols
-#: sections/deckbuilding.tex:302
-#, no-wrap
-msgid ""
-"\\begin{center}\n"
-"  \\vspace*{\\fill}\n"
-"  {\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/air_magic.png}}\n"
-"  \\vspace*{\\fill}\n"
-"\\end{center}\n"
-"\n"
-msgstr ""
 "\\begin{center}\n"
 "  \\vspace*{\\fill}\n"
 "  {\\transparent{0.2}\\includegraphics[width=0.6\\linewidth]{\\art/air_magic.png}}\n"
 "  \\vspace*{\\fill}\n"
 "\\end{center}\n"
 "\n"
+msgstr ""
+"\\begin{center}\n"
+"  \\vspace*{\\fill}\n"
+"  {\\transparent{0.2}\\includegraphics[width=0.4\\linewidth]{\\art/air_magic.png}}\n"
+"  \\vspace*{\\fill}\n"
+"\\end{center}\n"
+"\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:308
+#: sections/deckbuilding.tex:310
 #, no-wrap
 msgid ""
 "\\subsection*{\\pagetarget{Schools of Magic}{Schools of Magic}}\n"
@@ -845,8 +837,37 @@ msgstr ""
 "Magieschulen haben standardmäßig keine Auswirkungen, aber andere Effekte können sich auf Magieschulen oder auf Basis/Expertenzauber beziehen.\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:336
-#, no-wrap
+#: sections/deckbuilding.tex:337
+#, fuzzy, no-wrap
+#| msgid ""
+#| "\\begin{minipage}[t]{0.48\\textwidth}\n"
+#| "  \\centering\n"
+#| "  \\minipage[b]{0.5\\textwidth}\n"
+#| "    \\centering\n"
+#| "    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_fire.png}\n"
+#| "    \\imagecaption{School of Fire}\n"
+#| "  \\endminipage\n"
+#| "  \\minipage[b]{0.5\\textwidth}\n"
+#| "    \\centering\n"
+#| "    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_water.png}\n"
+#| "    \\imagecaption{School of Water}\n"
+#| "  \\endminipage\n"
+#| "  \\hfill\\allowbreak%\n"
+#| "  \\bigbreak\n"
+#| "  \\minipage[b]{0.5\\textwidth}\n"
+#| "    \\centering\n"
+#| "    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_air.png}\n"
+#| "    \\imagecaption{School of Air}\n"
+#| "  \\endminipage\n"
+#| "  \\minipage[b]{0.5\\textwidth}\n"
+#| "    \\centering\n"
+#| "    \\includegraphics[width=0.75\\linewidth]{\\images/school_of_earth.png}\n"
+#| "    \\imagecaption{School of Earth}\n"
+#| "  \\endminipage\n"
+#| "  \\bigbreak\n"
+#| "\\end{minipage}\n"
+#| "\\clearpage\n"
+#| "\n"
 msgid ""
 "\\begin{minipage}[t]{0.48\\textwidth}\n"
 "  \\centering\n"
@@ -874,7 +895,6 @@ msgid ""
 "  \\endminipage\n"
 "  \\bigbreak\n"
 "\\end{minipage}\n"
-"\\clearpage\n"
 "\n"
 msgstr ""
 "\\begin{minipage}[t]{0.48\\textwidth}\n"
@@ -907,7 +927,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:340
+#: sections/deckbuilding.tex:341
 #, no-wrap
 msgid ""
 "\\pagebreak\n"
@@ -921,7 +941,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:345
+#: sections/deckbuilding.tex:346
 #, no-wrap
 msgid ""
 "Hero Specialty cards\\index{Specialty cards} are gained from \\pagelink{Level}{Level ups}.\n"
@@ -937,7 +957,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:353
+#: sections/deckbuilding.tex:354
 #, no-wrap
 msgid ""
 "{\n"
@@ -959,7 +979,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:361
+#: sections/deckbuilding.tex:362
 #, no-wrap
 msgid ""
 "{\n"
@@ -982,7 +1002,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:364
+#: sections/deckbuilding.tex:365
 #, no-wrap
 msgid ""
 "\\columnbreak\n"
@@ -993,7 +1013,7 @@ msgstr ""
 "\\pagetarget{Artifact}{\\subheader{Artefakte}}\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:371
+#: sections/deckbuilding.tex:372
 #, no-wrap
 msgid ""
 "Artifact cards\\index{Artifact cards} have a top and bottom effect. When you play one, you must \\textbf{choose which effect} you are using.\n"
@@ -1008,7 +1028,7 @@ msgstr ""
 "\\begin{tikzpicture}\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:391
+#: sections/deckbuilding.tex:392
 #, no-wrap
 msgid ""
 "  \\node (major) {\\includegraphics[width=0.6\\linewidth]{\\cards/artifact.png}};\n"
@@ -1054,7 +1074,7 @@ msgstr ""
 "\n"
 
 #. type: multicols
-#: sections/deckbuilding.tex:401
+#: sections/deckbuilding.tex:402
 #, no-wrap
 msgid ""
 "\\begin{multicols}{2}\n"
@@ -1078,7 +1098,7 @@ msgstr ""
 "  \\end{itemize}"
 
 #. type: center
-#: sections/deckbuilding.tex:408
+#: sections/deckbuilding.tex:409
 msgid ""
 "{\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/"
 "diplomats_ring.png}}"
@@ -1087,7 +1107,7 @@ msgstr ""
 "diplomats_ring.png}}"
 
 #. type: expansion
-#: sections/deckbuilding.tex:413
+#: sections/deckbuilding.tex:414
 #, no-wrap
 msgid ""
 "{stronghold}\n"
@@ -1099,7 +1119,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:418
+#: sections/deckbuilding.tex:419
 #, no-wrap
 msgid ""
 "During setup shuffle 10 of the Spell Scroll cards into the Artifact Deck.\n"
@@ -1115,7 +1135,7 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:428
+#: sections/deckbuilding.tex:429
 #, no-wrap
 msgid ""
 "{\n"
@@ -1141,33 +1161,41 @@ msgstr ""
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:434
+#: sections/deckbuilding.tex:435
 #, no-wrap
 msgid ""
 "\\vspace*{1em}\n"
-"When you gain a Spell Scroll, place it next to your Hero Board, take the 2 top cards from the Spell Deck and place them face-down on the Spell Scroll.\n"
+"When you gain a Spell Scroll, place it next to your Hero Board, take the two top cards from the Spell Deck and place them face-down on the Spell Scroll.\n"
 "You can look at these Spells at any time and they don't count toward your Hand \\svg{hand} Limit.\n"
-"You can only have 2 Spell Scrolls at a time.\n"
+"You can only have two Spell Scrolls at a time.\n"
 "If you gain a third one, draw the new Spells normally and then decide whether to discard the newly gained Spell Scroll or replace one you already have (including all Spells on it).\n"
 "\n"
 msgstr ""
 "\\vspace*{1em}\n"
-"Erhältst du eine Zauberspruchrolle, platziere sie neben deinem Heldentableau. Ziehe 2 Karten vom Zauber-Deck und platziere sie verdeckt auf der Zauberspruchrolle.\n"
+"Erhältst du eine Zauberspruchrolle, platziere sie neben deinem Heldentableau. Ziehe zwei Karten vom Zauber-Deck und platziere sie verdeckt auf der Zauberspruchrolle.\n"
 "Du darfst diese Zauber jederzeit ansehen. Sie zählen nicht zum Handkartenlimit \\svg{hand}.\n"
-"Du darfst höchstens 2 Zauberspruchrollen zeitgleich besitzen.\n"
-"Ziehst du eine dritte, ziehe die 2 Zauber wie üblich und entscheide dann, welche der drei Zauberspruchrollen (inklusive ihrer Zauber) du abwirfst.\n"
+"Du darfst höchstens zwei Zauberspruchrollen zeitgleich besitzen.\n"
+"Ziehst du eine dritte, ziehe die zwei Zauber wie üblich und entscheide dann, welche der drei Zauberspruchrollen (inklusive ihrer Zauber) du abwirfst.\n"
 "\n"
 
 #. type: expansion
-#: sections/deckbuilding.tex:444
-#, no-wrap
+#: sections/deckbuilding.tex:445
+#, fuzzy, no-wrap
+#| msgid ""
+#| "You can play Spells from a Spell Scroll like any other Spell with the following exceptions:\n"
+#| "\\begin{itemize}\n"
+#| "    \\item They don't count towards your Spell Limit.\n"
+#| "    You can also play a Spell from your hand during this Combat Round.\n"
+#| "    \\item You may use the Spell's \\textbf{lowest Power} \\svg{empower} \\textbf{effect}, without needing to pay its cost (e.g. in case of \\wikilink{spells/implosion}{Implosion} the cost is 1).\n"
+#| "      You can't Empower the Spell with \\svg{empower} from any source.\n"
+#| "\\end{itemize}"
 msgid ""
 "You can play Spells from a Spell Scroll like any other Spell with the following exceptions:\n"
 "\\begin{itemize}\n"
 "    \\item They don't count towards your Spell Limit.\n"
 "    You can also play a Spell from your hand during this Combat Round.\n"
 "    \\item You may use the Spell's \\textbf{lowest Power} \\svg{empower} \\textbf{effect}, without needing to pay its cost (e.g. in case of \\wikilink{spells/implosion}{Implosion} the cost is 1).\n"
-"      You can't Empower the Spell with \\svg{empower} from any source.\n"
+"      You can't empower the Spell with \\svg{empower} from any source.\n"
 "\\end{itemize}"
 msgstr ""
 "Du kannst Zauber auf einer Zauberspruchrolle wie andere Zauber ausspielen, aber mit folgenden Ausnahmen:\n"
@@ -1180,13 +1208,21 @@ msgstr ""
 
 #. type: expansion
 #: sections/deckbuilding.tex:453
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "{stronghold}\n"
+#| "    \\begin{itemize}\n"
+#| "    \\item They can't be used to increase the \\svg{empower} of another Spell.\n"
+#| "    \\item You can \\pagelink{selling Spell Scrolls}{sell Spell Scrolls} at a Trading Post for 2 \\svg{gold} per each Spell on it.\n"
+#| "      This works in addition to other effect of visiting the Trading Post.\n"
+#| "    \\item After using or selling those Spells, the Spell card is \\textbf{removed}, not discarded.\n"
+#| "\\end{itemize}\n"
+#| "\n"
 msgid ""
 "{stronghold}\n"
 "    \\begin{itemize}\n"
 "    \\item They can't be used to increase the \\svg{empower} of another Spell.\n"
 "    \\item You can \\pagelink{selling Spell Scrolls}{sell Spell Scrolls} at a Trading Post for 2 \\svg{gold} per each Spell on it.\n"
-"      This works in addition to other effect of visiting the Trading Post.\n"
 "    \\item After using or selling those Spells, the Spell card is \\textbf{removed}, not discarded.\n"
 "\\end{itemize}\n"
 "\n"
