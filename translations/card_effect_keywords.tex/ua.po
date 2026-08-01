@@ -17,12 +17,12 @@ msgstr ""
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:4
-#, fuzzy
-#| msgid "\\addsection{Difficulty}{\\spells/berserk.png}"
 msgid ""
 "\\pagetarget{Card Effect Keywords}{\\addsection{Card Effect Keywords}"
 "{\\skills/interference.png}}"
-msgstr "\\addsection{Рівень Складності}{\\spells/berserk.png}"
+msgstr ""
+"\\pagetarget{Card Effect Keywords}{\\addsection{Додаткові Ефекти}{\\skills/"
+"interference.png}}"
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:7
@@ -31,18 +31,19 @@ msgid ""
 "with more elaborate rules and require specific game components.  This "
 "section provides the rules for these keywords."
 msgstr ""
+"Більшість розширень додають до гри нові карти. Деякі з цих карт "
+"використовують ефекти зі складнішими правилами та потребують особливих "
+"ігрових компонентів. У цьому розділі наведено правила для таких ефектів."
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:9
-#, fuzzy
-#| msgid "\\pagetarget{spells}{Spell Cards}"
 msgid "\\pagetarget{spell keywords}{\\subheader{Spell Card Keywords}}"
-msgstr "\\pagetarget{spells}{Карти Заклинань}"
+msgstr "\\pagetarget{spell keywords}{\\subheader{Ефекти Карт Заклинань}}"
 
 #. type: index{#1}
 #: sections/card_effect_keywords.tex:9
 msgid "Spell cards"
-msgstr ""
+msgstr "Карти Заклинань"
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:13
@@ -51,6 +52,9 @@ msgid ""
 "Units} on the Combat Board.  Use the corresponding Tokens to mark these "
 "spaces."
 msgstr ""
+"Деякі Карти Заклинань дозволяють розміщувати \\textbf{Ефекти} або "
+"\\textbf{Викликані Підрозділи} на Планшеті Бою.  Використовуйте відповідні "
+"Жетони, щоб позначити ці поля."
 
 #. type: expansion
 #: sections/card_effect_keywords.tex:33
@@ -77,6 +81,26 @@ msgid ""
 "    \\columnbreak\n"
 "\n"
 msgstr ""
+"{cove}\n"
+"  \\begin{multicols}{2}\n"
+"    \\pagetarget{Clone Token}{\\subsection*{Жетон Клону}}\n"
+"    \\index{Клон}\n"
+"    \\setlength\\intextsep{0pt}\n"
+"    \\setlength\\columnsep{1em}\n"
+"    \\begin{wrapfigure}{r}{0.3\\linewidth}\n"
+"      \\includegraphics[width=3em]{\\images/clone-token.png}\\vspace*{1em}\n"
+"      \\includegraphics[width=4.6em]{\\images/clone-token.png}\n"
+"      \\centering\\imagecaption{Жетони \\mbox{Клону}}\n"
+"    \\end{wrapfigure}\n"
+"    Коли ви розігруєте \\wikilink{spells/clone}{\\textbf{Заклинання Клону},} виберіть союзний Підрозділ (залежно від використаного \\svg{empower}) та суміжне порожнє поле на Планшеті Бою.\n"
+"    Покладіть малий Жетон Клону на вибраний Підрозділ, а більший Жетон того самого кольору (синій або червоний) — на порожнє поле.\n"
+"    Більший Жетон на порожньому полі представляє Клон.\n"
+"    Клон діє так само, як оригінальний Підрозділ, копіюючи все, що надруковано на його карті, але без інших ефектів, розіграних на оригінальному Підрозділі.\n"
+"    Якщо Клон отримує щонайменше 1 \\svg{damage} з будь-якого джерела або його атакують (навіть якщо ця атака завдає 0 \\svg{damage}), завдайте йому достатньо Пошкоджень, щоб його \\svg{health_points} стали 0.\n"
+"    Клон прибирають з Планшета Бою, якщо з Планшета Бою прибрано його оригінальний Підрозділ.\n"
+"    \\vfill\n"
+"    \\columnbreak\n"
+"\n"
 
 #. type: expansion
 #: sections/card_effect_keywords.tex:43
@@ -93,6 +117,16 @@ msgid ""
 "    \\par\\noindent\n"
 "    \\begin{tikzpicture}\n"
 msgstr ""
+"    \\subsection*{Приклад Клону}\n"
+"    \\textit{%\n"
+"      Один із Підрозділів Боба в Бою — ``Кілька'' Грифонів зі значенням Ініціативи 6.\n"
+"      Він розігрує на них Заклинання Клону, кладучи малий Жетон Клону на Грифонів, а більший Жетон того самого кольору — на суміжне порожнє поле.\n"
+"      Пізніше він розігрує ``Прискорення'' з 0~\\svg{empower} на оригінальних Грифонів, збільшуючи їхню Ініціативу на 1.\n"
+"      Тепер значення Ініціативи оригінальних Грифонів — 7, але Ініціатива Клону залишається 6.\n"
+"    }\n"
+"    \\vspace*{1em}\n"
+"    \\par\\noindent\n"
+"    \\begin{tikzpicture}\n"
 
 #. type: expansion
 #: sections/card_effect_keywords.tex:57
@@ -112,6 +146,19 @@ msgid ""
 "  \\vspace*{-8em}\n"
 "  {\\transparent{0.2}\\includegraphics[width=0.5\\linewidth]{\\art/magic_arrow.png}\\hfill}"
 msgstr ""
+"      \\draw (0, 0) node[rotate=180] {\\includegraphics[width=\\linewidth]{\\images/combat_board_half.png}};\n"
+"      \\draw (-1, 1.3) node {\\includegraphics[width=0.22\\linewidth]{\\cards/unit-few.png}};\n"
+"      \\draw (-0.8, 1.2) node[circular drop shadow={shadow scale=0.8, shadow xshift=0.15ex, shadow yshift=-0.15ex, opacity=0.7,\n"
+"        fill=black, path fading={circle with fuzzy edge 10 percent},\n"
+"        every shadow}] {\\includegraphics[width=0.1\\linewidth]{\\images/clone-token-2.png}};\n"
+"      \\draw (1, 1.3) node[circular drop shadow={shadow scale=0.85, shadow xshift=0.2ex, shadow yshift=-0.2ex, opacity=0.7,\n"
+"        fill=black, path fading={circle with fuzzy edge 10 percent},\n"
+"        every shadow}] {\\includegraphics[width=0.18\\linewidth]{\\images/clone-token-2.png}};\n"
+"      \\draw (-0.4, -1.7) node {\\includegraphics[width=0.22\\linewidth]{\\cards/haste.png}};\n"
+"    \\end{tikzpicture}\n"
+"  \\end{multicols}\n"
+"  \\vspace*{-8em}\n"
+"  {\\transparent{0.2}\\includegraphics[width=0.5\\linewidth]{\\art/magic_arrow.png}\\hfill}"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:72
@@ -131,16 +178,23 @@ msgid ""
 "  If the Token shows the Quicksand icon, the unit's movement and activation end immediately.\n"
 "\n"
 msgstr ""
+"{2}\n"
+"\\begin{expansion}{stronghold}\n"
+"  \\pagetarget{Quicksand Token}{\\subsection*{Жетон Сипучого Піску}}\n"
+"  \\index{Сипучий Пісок}\n"
+"  Розігруючи \\wikilink{spells/quicksand}{\\textbf{Заклинання Сипучого Піску},} візьміть, залежно від \\svg{empower}, 2, 4 або 6 \\textbf{Жетонів Сипучого Піску} з одного набору (синього або червоного).\n"
+"  Половина з них має бути ``порожніми'', а половина — із символом Сипучого Піску.\n"
+"  Перетасуйте їх долілиць і покладіть по одному на вибрані порожні поля Планшета Бою.\n"
+"  Якщо порожніх полів недостатньо -- скиньте зайві Жетони.\n"
+"  Ви можете будь-коли дивитися на свої розміщені Жетони.\n"
+"  Коли Підрозділ заходить на поле з Жетоном -- розкрийте його.\n"
+"  Якщо він порожній -- Підрозділ продовжує рух.\n"
+"  Якщо на Жетоні є символ Сипучого Піску -- рух і Активація Підрозділу негайно завершуються.\n"
+"\n"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:79
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-#| "\\end{center}\n"
-#| "\\columnbreak\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  \\textbf{Note:} Two Quicksand Tokens may occupy a single space only if they are placed by different players.\n"
 "  \\bigskip\n"
@@ -150,32 +204,27 @@ msgid ""
 "    \\imagecaption{Quicksand Token}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-"\\end{center}\n"
-"\\columnbreak\n"
+"  \\textbf{Примітка:} Два Жетони Сипучого Піску можуть займати одне поле, лише якщо їх поклали різні гравці.\n"
+"  \\bigskip\n"
+"  \\begin{multicols*}{2}\n"
+"    \\centering\n"
+"    \\includegraphics[width=4.6em]{\\images/quicksand-token.png}\\\\\n"
+"    \\imagecaption{Жетон Сипучого Піску}\n"
 "\n"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:85
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-#| "\\end{center}\n"
-#| "\\columnbreak\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\columnbreak\n"
 "    \\includegraphics[width=4.6em]{\\images/quicksand-token-2.png}\\\\\n"
 "    \\imagecaption{Empty Quicksand Token}\n"
 "  "
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-"\\end{center}\n"
-"\\columnbreak\n"
-"\n"
+"    \\columnbreak\n"
+"    \\includegraphics[width=4.6em]{\\images/quicksand-token-2.png}\\\\\n"
+"    \\imagecaption{Порожній Жетон Сипучого Піску}\n"
+"  "
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:85
@@ -184,6 +233,8 @@ msgid ""
 "\\end{expansion}\n"
 "\n"
 msgstr ""
+"\\end{expansion}\n"
+"\n"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:95
@@ -200,15 +251,20 @@ msgid ""
 "  When using the large \\pagelink{Battlefield Combat}{Battlefield Board}, you must use the Token instead of the card.\n"
 "\n"
 msgstr ""
+"\\vspace*{1em}\n"
+"\\begin{expansion}{battlefield,conflux}\n"
+"  \\pagetarget{Fire Wall Token}{\\subsection*{Жетон Вогняної Стіни}}\n"
+"  \\index{Вогняна Стіна}\n"
+"  \\wikilink{spells/fire_wall}{\\textbf{Заклинання Вогняної Стіни}} та \\wikilink{heroes/luna\\#specialty}{\\textbf{Карти Спеціалізації Луни I та VI}} дозволяють покласти карту Вогняної Стіни на поле Планшета Бою.\n"
+"  Замість карт можна використати Жетони.\n"
+"  Покладіть Карту Заклинання або Спеціалізації біля Планшета як нагадування.\n"
+"  Коли карту прибирають або скидають, скиньте й Жетон.\n"
+"  На великому \\pagelink{Battlefield Combat}{Планшеті Поля Бою} Жетон обов'язковий.\n"
+"\n"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:101
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "    \\includegraphics[width=0.75\\linewidth]{\\images/tower-lineup.png}\n"
-#| "\\end{center}\n"
-#| "\\vspace*{\\fill}"
+#, no-wrap
 msgid ""
 "  \\medskip\n"
 "  \\begin{multicols}{2}\n"
@@ -217,31 +273,26 @@ msgid ""
 "    \\imagecaption{Fire~Wall~Token\\\\(Spell)}\n"
 "\n"
 msgstr ""
-"\\vspace*{-1em} % REMOVE WHILE TRANSLATING\n"
-"\\begin{center}\n"
-"    \\includegraphics[width=0.75\\linewidth]{\\images/tower-lineup.png}\n"
-"\\end{center}\n"
-"\\vspace*{\\fill}"
+"  \\medskip\n"
+"  \\begin{multicols}{2}\n"
+"    \\centering\n"
+"    \\includegraphics[width=4.6em]{\\images/firewall-bf-token.png}\\\\\n"
+"    \\imagecaption{Жетон Заклинання}\n"
+"\n"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:105
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "    \\includegraphics[width=0.75\\linewidth]{\\images/tower-lineup.png}\n"
-#| "\\end{center}\n"
-#| "\\vspace*{\\fill}"
+#, no-wrap
 msgid ""
 "    \\columnbreak\n"
 "    \\includegraphics[width=4.6em]{\\images/firewall-vi-token.png}\n"
 "    \\imagecaption{Fire~Wall~Token\\\\(Luna's Specialty)}\n"
 "  "
 msgstr ""
-"\\vspace*{-1em} % REMOVE WHILE TRANSLATING\n"
-"\\begin{center}\n"
-"    \\includegraphics[width=0.75\\linewidth]{\\images/tower-lineup.png}\n"
-"\\end{center}\n"
-"\\vspace*{\\fill}"
+"    \\columnbreak\n"
+"    \\includegraphics[width=4.6em]{\\images/firewall-vi-token.png}\\\\\n"
+"    \\imagecaption{Жетон Спеціалізації Луни}\n"
+"  "
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:121 sections/card_effect_keywords.tex:207
@@ -269,16 +320,23 @@ msgid ""
 "  If the unit is still on the Board, it continues its activation.\n"
 "\n"
 msgstr ""
+"{stretchgoals2}\n"
+"  \\pagetarget{Land Mine Token}{\\subsection*{Жетон Міни}}\n"
+"  \\index{Міна}\n"
+"  Розігруючи \\wikilink{spells/land_mine}{\\textbf{Заклинання Міни},} візьміть, залежно від \\svg{empower}, 2, 4 або 6 \\textbf{Жетонів Мін}.\n"
+"  Половина з них має бути ``порожніми'', а половина — із символом 2~\\svg{damage}.\n"
+"  Перетасуйте їх долілиць і покладіть по одному на вибрані порожні поля Планшета Бою.\n"
+"  Якщо порожніх полів недостатньо -- скиньте зайві Жетони.\n"
+"  Ви можете будь-коли дивитися на свої розміщені Жетони.\n"
+"  Коли Підрозділ заходить на поле з Жетоном, розкрийте його.\n"
+"  Якщо він порожній -- Підрозділ продовжує рух.\n"
+"  Якщо на Жетоні є символ 2~\\svg{damage} -- Підрозділ отримує 2 Пошкодження.\n"
+"  Якщо Підрозділ залишився на Планшеті, після нанесення пошкоджень -- він продовжує Активацію.\n"
+"\n"
 
 #. type: expansion
 #: sections/card_effect_keywords.tex:128
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-#| "\\end{center}\n"
-#| "\\columnbreak\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "  \\textbf{Note:} Two Land Mine Tokens may occupy a single space only if they are placed by different players.\n"
 "  \\bigskip\n"
@@ -288,42 +346,31 @@ msgid ""
 "    \\imagecaption{Land Mine Token\\\\(Backside)}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-"\\end{center}\n"
-"\\columnbreak\n"
+"  \\textbf{Примітка:} Два Жетони Мін можуть займати одне поле, лише якщо їх поклали різні гравці.\n"
+"  \\bigskip\n"
+"  \\begin{multicols}{3}\n"
+"    \\centering\n"
+"    \\includegraphics[width=4.6em]{\\images/land-mine-token.png}\n"
+"    \\imagecaption{Жетон Міни\\\\(Зворотний бік)}\n"
 "\n"
 
 #. type: expansion
 #: sections/card_effect_keywords.tex:132
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-#| "\\end{center}\n"
-#| "\\columnbreak\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\columnbreak\n"
 "    \\includegraphics[width=4.6em]{\\images/land-mine-token-0.png}\n"
 "    \\imagecaption{Empty Land Mine Token}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-"\\end{center}\n"
-"\\columnbreak\n"
+"    \\columnbreak\n"
+"    \\includegraphics[width=4.6em]{\\images/land-mine-token-0.png}\n"
+"    \\imagecaption{Порожній Жетон Міни}\n"
 "\n"
 
 #. type: expansion
 #: sections/card_effect_keywords.tex:137
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-#| "\\end{center}\n"
-#| "\\columnbreak\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\columnbreak\n"
 "    \\includegraphics[width=4.6em]{\\images/land-mine-token-2.png}\n"
@@ -331,10 +378,10 @@ msgid ""
 "  \\end{multicols}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-"\\end{center}\n"
-"\\columnbreak\n"
+"    \\columnbreak\n"
+"    \\includegraphics[width=4.6em]{\\images/land-mine-token-2.png}\n"
+"    \\imagecaption{Жетон Міни}\n"
+"  \\end{multicols}\n"
 "\n"
 
 #. type: expansion
@@ -361,11 +408,30 @@ msgid ""
 "  {\\hspace{2em}\\transparent{0.2}\\includegraphics[width=0.5\\linewidth]{\\art/land_mine.png}}\n"
 "\\end{center}"
 msgstr ""
+"  \\vspace*{1em}\n"
+"  \\pagetarget{Force Field Token}{\\subsection*{Жетон Силового Поля}}\n"
+"  \\index{Силове Поле}\n"
+"  \\setlength\\intextsep{0pt}\n"
+"  \\setlength\\columnsep{1em}\n"
+"  \\begin{wrapfigure}{r}{0.25\\linewidth}\n"
+"    \\includegraphics[width=4.6em]{\\images/force-field-token.png}\n"
+"    \\begin{center}\n"
+"      \\imagecaption{Жетон Силового Поля}\\\\\n"
+"      \\vspace*{1em}\n"
+"    \\end{center}\n"
+"  \\end{wrapfigure}\n"
+"  Використовуйте \\textbf{Жетон Силового Поля}, щоб позначити ефект \\wikilink{spells/force_field}{\\textbf{Заклинання Силове Поле}.}\n"
+"  Жетон вважається Перешкодою, тому лише \\svg{unit_flying} Підрозділи можуть проходити через поле з цим Жетоном.\n"
+"  На звичайному Планшеті Бою покладіть 1 Жетон Силового Поля.\n"
+"  На \\pagelink{Battlefield Combat}{Планшеті Поля Бою} покладіть 2 Жетони на суміжні гекси.\n"
+"\\begin{center}\n"
+"  {\\hspace{2em}\\transparent{0.2}\\includegraphics[width=0.5\\linewidth]{\\art/land_mine.png}}\n"
+"\\end{center}"
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:179
 msgid "\\pagetarget{Summoning}{\\subheader{Summoning}\\index{Summoning}}"
-msgstr ""
+msgstr "\\pagetarget{Summoning}{\\subheader{Виклик}\\index{Виклик}}"
 
 #. type: expansion
 #: sections/card_effect_keywords.tex:179
@@ -375,6 +441,9 @@ msgid ""
 "  Summoned units activate in the Round they were summoned if their Initiative is lower than or equal to the Initiative of the currently activated unit.\n"
 "  Otherwise, treat them as if they already activated this Combat Round."
 msgstr ""
+"{inferno,conflux}\n"
+"  Викликані Підрозділи Активуються в тому ж Раунді, коли їх викликали, якщо їхня Ініціатива менша або дорівнює Ініціативі Підрозділу, що активований зараз.\n"
+"  Інакше вважайте, що вони вже Активувалися цього Раунду Бою."
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:179
@@ -394,16 +463,23 @@ msgid ""
 "    \\bigskip\n"
 "\n"
 msgstr ""
+"{2}\n"
+"  \\begin{expansion}{conflux}\n"
+"    \\subsection*{Виклик Підрозділів Елементалей}\n"
+"    \\textbf{Заклинання Виклику Елементалей} дозволяють під час Бою додати на Планшет Підрозділ Елементалей.\n"
+"    Тримайте Колоду Викликаних Підрозділів горілиць біля Нейтральних Колод.\n"
+"    Залежно від використаного \\svg{empower} Викликайте непідкріплений (Кілька) або підкріплений (Зграя) Підрозділ.\n"
+"    Візьміть відповідну карту з Колоди Викликаних Підрозділів і покладіть її на вибране порожнє поле.\n"
+"    Замість карт можна класти \\textbf{Жетони Виклику Підрозділів}.\n"
+"    На \\pagelink{Battlefield Combat}{Планшеті Поля Бою} Жетон обов'язковий.\n"
+"    Викликані Підрозділи залишаються під вашим контролем, доки не загинуть або не завершиться Бій.\n"
+"    Викликаний Підрозділ Елементалей \\textbf{не} додається до вашої Колоди.\n"
+"    \\bigskip\n"
+"\n"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:184
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-#| "\\end{center}\n"
-#| "\\columnbreak\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\begin{multicols}{2}\n"
 "      \\centering\n"
@@ -411,116 +487,81 @@ msgid ""
 "      \\imagecaption{A Few Air Elementals}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-"\\end{center}\n"
-"\\columnbreak\n"
+"    \\begin{multicols}{2}\n"
+"      \\centering\n"
+"      \\includegraphics[width=0.9\\linewidth]{\\cards/unit-air-elemental-few.png}\\\\\n"
+"      \\imagecaption{Кілька Елементалів Повітря}\n"
 "\n"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:188
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-#| "\\end{center}\n"
-#| "\\columnbreak\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "      \\vspace{2em}\n"
 "      \\includegraphics[width=3em]{\\images/summon-token-fire.png}\\\\\n"
 "      \\imagecaption{Fire Elemental Token}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-"\\end{center}\n"
-"\\columnbreak\n"
+"      \\vspace{2em}\n"
+"      \\includegraphics[width=3em]{\\images/summon-token-fire.png}\\\\\n"
+"      \\imagecaption{Жетон Елементаля Вогню}\n"
 "\n"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:192
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-#| "\\end{center}\n"
-#| "\\columnbreak\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "      \\vspace{2em}\n"
 "      \\includegraphics[width=3em]{\\images/summon-token-earth.png}\\\\\n"
 "      \\imagecaption{Earth Elemental Token}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-"\\end{center}\n"
-"\\columnbreak\n"
+"      \\vspace{2em}\n"
+"      \\includegraphics[width=3em]{\\images/summon-token-earth.png}\\\\\n"
+"      \\imagecaption{Жетон Елементаля Землі}\n"
 "\n"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:196
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-#| "\\end{center}\n"
-#| "\\columnbreak\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "      \\columnbreak\n"
 "      \\includegraphics[width=0.9\\linewidth]{\\cards/unit-air-elemental-pack.png}\\\\\n"
 "      \\imagecaption{A Pack of Air Elementals}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-"\\end{center}\n"
-"\\columnbreak\n"
+"      \\columnbreak\n"
+"      \\includegraphics[width=0.9\\linewidth]{\\cards/unit-air-elemental-pack.png}\\\\\n"
+"      \\imagecaption{Зграя Елементалів Повітря}\n"
 "\n"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:200
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-#| "\\end{center}\n"
-#| "\\columnbreak\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "      \\vspace{2em}\n"
 "      \\includegraphics[width=3em]{\\images/summon-token-water.png}\\\\\n"
 "      \\imagecaption{Water Elemental Token}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-"\\end{center}\n"
-"\\columnbreak\n"
+"      \\vspace{2em}\n"
+"      \\includegraphics[width=3em]{\\images/summon-token-water.png}\\\\\n"
+"      \\imagecaption{Жетон Елементаля Води}\n"
 "\n"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:204
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-#| "\\end{center}\n"
-#| "\\columnbreak\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "      \\vspace{2em}\n"
 "      \\includegraphics[width=3em]{\\images/summon-token-air.png}\\\\\n"
 "      \\imagecaption{Air Elemental Token}\n"
 "    "
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-"\\end{center}\n"
-"\\columnbreak\n"
-"\n"
+"      \\vspace{2em}\n"
+"      \\includegraphics[width=3em]{\\images/summon-token-air.png}\\\\\n"
+"      \\imagecaption{Жетон Елементаля Повітря}\n"
+"    "
 
 #. type: expansion
 #: sections/card_effect_keywords.tex:216
@@ -536,16 +577,19 @@ msgid ""
 "    \\bigskip\n"
 "\n"
 msgstr ""
+"{inferno}\n"
+"    \\subsection*{Виклик Демонів}\\index{Здібність Підрозділу}\n"
+"    Підрозділ \\textbf{\\wikilink{units/pit_lords/\\#pack}{``Зграя'' Володарів Урвища}} з Фракції Інферно може використати свою здібність \\svg{unit_alternative}, щоб викликати або підкріпити Підрозділ \\wikilink{units/demons}{Демонів} під час Бою.\n"
+"    Цей ефект не може викликати Демонів з Колоди Нейтральних Підрозділів.\n"
+"    Покладіть викликаних ``Кілька'' Демонів суміжно з Володарями Урвища.\n"
+"    Якщо ``Кілька'' Демонів уже в Бою, натомість підкріпіть їх.\n"
+"    Після Бою, якщо не вказано інше, викликані Демони \\textbf{додаються} до вашої Колоди Підрозділів.\n"
+"    \\bigskip\n"
+"\n"
 
 #. type: expansion
 #: sections/card_effect_keywords.tex:221
-#, fuzzy, no-wrap
-#| msgid ""
-#| "\\begin{center}\n"
-#| "  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-#| "\\end{center}\n"
-#| "\\columnbreak\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "    \\begin{multicols}{2}\n"
 "      \\centering\n"
@@ -553,10 +597,10 @@ msgid ""
 "      \\imagecaption{Pit Lords}\n"
 "\n"
 msgstr ""
-"\\begin{center}\n"
-"  \\includegraphics[width=\\linewidth,height=\\textheight,keepaspectratio]{\\art/efreet.jpg}\n"
-"\\end{center}\n"
-"\\columnbreak\n"
+"    \\begin{multicols}{2}\n"
+"      \\centering\n"
+"      \\includegraphics[width=0.9\\linewidth]{\\cards/unit-pitlord.png}\\\\\n"
+"      \\imagecaption{Володарі Урвища}\n"
 "\n"
 
 #. type: expansion
@@ -572,18 +616,24 @@ msgid ""
 "  \\vspace*{3.4em}\n"
 "  "
 msgstr ""
+"      \\columnbreak\n"
+"      \\includegraphics[width=0.9\\linewidth]{\\cards/unit-demon.png}\\\\\n"
+"      \\imagecaption{Демони}\n"
+"    \\end{multicols}\n"
+"  \\vspace*{2.4em}\n"
+"  {\\hfill\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/cerberi.png}}\n"
+"  \\vspace*{3.4em}\n"
+"  "
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:236
-#, fuzzy
-#| msgid "\\pagetarget{Other Fields}{Other Fields}"
 msgid "\\pagetarget{unit keywords}{\\subheader{Tokens on Units}}"
-msgstr "\\pagetarget{Other Fields}{Інші Поля}"
+msgstr "\\pagetarget{unit keywords}{\\subheader{Жетони на Підрозділах}}"
 
 #. type: index{#1}
 #: sections/card_effect_keywords.tex:236
 msgid "Special Unit Ability"
-msgstr ""
+msgstr "Особлива Здібність Підрозділу"
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:263
@@ -591,6 +641,9 @@ msgid ""
 "The following components and keywords are used by certain unit abilities.  "
 "These Tokens are typically placed on other units to modify their statistics."
 msgstr ""
+"Наведені нижче компоненти та ефекти використовуються здібностями певних "
+"Підрозділів.  Такі Жетони зазвичай кладуть на інші Підрозділи, щоб змінити "
+"їхні характеристики."
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:263
@@ -622,6 +675,31 @@ msgid ""
 "  \\columnbreak\n"
 "\n"
 msgstr ""
+"{2}\n"
+"  \\begin{expansion}{cove,stretchgoals2}\n"
+"    \\pagetarget{Weakness Token}{\\subsection*{Жетон Слабкості}}\n"
+"    \\index{Жетон Слабкості}\n"
+"    \\setlength\\intextsep{0pt}\n"
+"    \\setlength\\columnsep{1em}\n"
+"    \\begin{wrapfigure}{r}{0.25\\linewidth}\n"
+"      \\centering\n"
+"      \\includegraphics[width=3em]{\\images/weakness-token.png}\\\\\n"
+"      \\imagecaption{Жетон Слабкості}\\\\\n"
+"      \\vspace{1em}\n"
+"    \\end{wrapfigure}\n"
+"    Коли ефект кладе Жетон Слабкості на Підрозділ, він вказує, який бік використати: $-1$ чи $-2$.\n"
+"    Підрозділ із цим Жетоном отримує $-1$~\\svg{attack} або $-2$~\\svg{attack} відповідно.\n"
+"    Кожен Підрозділ може мати лише один Жетон Слабкості одночасно.\n"
+"    Якщо Підрозділ повинен отримати другий -- гравець, який ним керує, обирає, який залишити.\n"
+"    \\textit{Такий Жетон можна покласти на Підрозділи завдяки здібності Підрозділу \\wikilink{units/sorceresses}{Чародійок}.}\n"
+"    \\begin{center}\n"
+"      \\vspace*{2.5em}\n"
+"      {\\transparent{0.2}\\includegraphics[width=0.9\\linewidth]{\\art/weakness.png}}\n"
+"      \\vspace*{2em}\n"
+"    \\end{center}\n"
+"  \\end{expansion}\n"
+"  \\columnbreak\n"
+"\n"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:281
@@ -646,6 +724,24 @@ msgid ""
 "  \\end{expansion}\n"
 "\n"
 msgstr ""
+"  \\begin{expansion}{stronghold,stretchgoals2}\n"
+"    \\pagetarget{Attack Token}{\\subsection*{Жетон Атаки}}\n"
+"    \\index{Жетон Атаки}\n"
+"    \\setlength\\intextsep{0pt}\n"
+"    \\setlength\\columnsep{1em}\n"
+"    \\begin{wrapfigure}{r}{0.2\\linewidth}\n"
+"      \\centering\n"
+"      \\includegraphics[width=3em]{\\images/attack-token.png}\\\\\n"
+"      \\imagecaption{Жетон Атаки}\\\\\n"
+"      \\vspace{1em}\n"
+"    \\end{wrapfigure}\n"
+"    Коли ефект кладе Жетон Атаки на Підрозділ, він вказує, який бік використати: $1$ чи $2$.\n"
+"    Підрозділи з таким Жетоном отримують додатково 1~\\svg{attack} або 2~\\svg{attack} відповідно.\n"
+"    Кожен Підрозділ може мати лише один Жетон Атаки одночасно.\n"
+"    Якщо Підрозділ повинен отримати другий -- гравець, який ним керує, обирає, який залишити.\n"
+"    \\textit{Такий Жетон можна покласти на Підрозділи завдяки здібності Підрозділу \\wikilink{units/ogres}{Огрів}.}\n"
+"  \\end{expansion}\n"
+"\n"
 
 #. type: multicols
 #: sections/card_effect_keywords.tex:300
@@ -670,24 +766,34 @@ msgid ""
 "    \\textit{For example, this Token is given to enemy units by the \\wikilink{units/behemoths}{Behemoths} unit's ability.}\n"
 "  \\end{expansion}"
 msgstr ""
+"  \\vspace*{1em}\n"
+"  \\begin{expansion}{stronghold}\n"
+"    \\pagetarget{Corrosion Token}{\\subsection*{Жетон Корозії}}\n"
+"    \\index{Жетон Корозії}\n"
+"    \\setlength\\intextsep{0pt}\n"
+"    \\setlength\\columnsep{1em}\n"
+"    \\begin{wrapfigure}{r}{0.25\\linewidth}\n"
+"      \\centering\n"
+"      \\includegraphics[width=3em]{\\images/corrosion-token.png}\\\\\n"
+"      \\imagecaption{Жетон Корозії}\\\\\n"
+"      \\vspace{1em}\n"
+"    \\end{wrapfigure}\n"
+"    Жетон Корозії зменшує \\svg{defense} Підрозділу на 1, але не нижче 0.\n"
+"    Підрозділ може мати лише один Жетон Корозії одночасно.\n"
+"    Якщо Підрозділ повинен отримати другий Жетон Корозії -- скиньте один з них.\n"
+"    Якщо Жетон Корозії не знято Заклинаннями чи іншими ефектами, він залишається на Підрозділі до кінця Бою.\n"
+"    \\textit{Такий Жетон можна покласти на Підрозділи завдяки здібності Підрозділу \\wikilink{units/behemoths}{Бегемотів}.}\n"
+"  \\end{expansion}"
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:308
-#, fuzzy
-#| msgid ""
-#| "{2}\n"
-#| "\\subsection*{Unit Card Anatomy}\n"
-#| "\n"
 msgid "\\pagetarget{wiki}{\\subheader{Fan-Made Wiki}}"
-msgstr ""
-"{2}\n"
-"\\subsection*{Опис Карти Підрозділу}\n"
-"\n"
+msgstr "\\pagetarget{wiki}{\\subheader{Фанатська Вікі}}"
 
 #. type: wrapfigure
 #: sections/card_effect_keywords.tex:308
 msgid "{r}{0.2\\textwidth}"
-msgstr ""
+msgstr "{r}{0.2\\textwidth}"
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:311
@@ -696,6 +802,9 @@ msgid ""
 "ambiguous or misleading wording.  Fortunately, the developers have clarified "
 "many card effects."
 msgstr ""
+"Багато карт у \\textbf{Heroes of Might and Magic 3: The Board Game} мають "
+"неоднозначне або хибне формулювання. На щастя, розробники роз'яснили дію "
+"багатьох карт."
 
 #. type: Plain text
 #: sections/card_effect_keywords.tex:315
@@ -705,3 +814,7 @@ msgid ""
 "have questions about specific cards, visit this website: "
 "\\mbox{\\href{https://en.homm3bg.wiki/}{https://en.homm3bg.wiki/}}"
 msgstr ""
+"Спільнота підтримує \\textbf{Фанатську Вікі}: збірку майже всіх ігрових "
+"компонентів із докладними примітками, що роз'яснюють окремі правила.  Якщо у "
+"вас є питання щодо конкретних карт, відвідайте цей сайт: "
+"\\mbox{\\href{https://en.homm3bg.wiki/}{https://en.homm3bg.wiki/}}"
