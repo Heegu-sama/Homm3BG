@@ -7,6 +7,8 @@
   </p>
 </div>
 
+If you're looking for a single, comprehensive rule book for Heroes of Might & Magic III: The Board Game, you've come to the right place.
+
 **Join us [on Discord](https://discord.gg/Y4uM9pPWF6) to help with translating or just to get in touch!**
 
 Download your desired version of the rule book from one of the available versions below 👇
@@ -134,7 +136,7 @@ You can expect things to break, like having incorrect layout or not all the text
 Those builds are the ones officially released, with a specific cutoff point in time, to give translators time to create localized versions.
 They should be free of any major issues.<br>
 
-#### 🆕 Version 2.0 <sub>(08.08.2026)</sub>
+#### ⭐ Version 2.0 <sub>(08.08.2026)</sub>
 
 <table>
     <thead>
@@ -184,6 +186,10 @@ They should be free of any major issues.<br>
         </tr>
     </tbody>
 </table>
+
+All 2.0 documents have clickable card names which link to the [game wiki](https://homm3bg.wiki).
+The economy printable prints unit stars with a letter instead of a color, so they stay readable in grayscale and for colorblind players:
+<img src="assets/glyphs/bronze-mono.svg" height="18"> <img src="assets/glyphs/silver-mono.svg" height="18"> <img src="assets/glyphs/golden-mono.svg" height="18"> <img src="assets/glyphs/azure-mono.svg" height="18">
 
 <details>
 <summary>🗄️ Click to see older releases</summary>
@@ -401,15 +407,17 @@ This is for people who want to save their toners.
 
 ### 💡 What Is This?
 
-This project aims to rewrite the original rule book, in which the amount of vague language was just too vast to ignore.
+Official rules are scattered across a dozen-plus booklets, plus countless clarifications on BoardGameGeek and Discord, although the company behind the game announced crowdfunding for a unified rule book.
+
+This project aims to rewrite the original rule books, in which the amount of vague language was just too vast to ignore.
 Its aim is to explain the rules clearly and concisely, and should eventually have an answer for any basic rules query you might have.
 
 ### 🤔 Why?
 
-Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1).
+Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1), continued for version 2.0 in [The Compendium](https://boardgamegeek.com/thread/3628439/the-rule-book-rewrite-project-20-the-compendium).
 
 The content in the official English rule book is, simply put, insufficient as a teaching tool for the game or as a general rules reference.
-If you read the thread linked above you should understand how frustrating this has been for the original author.
+If you read the first thread linked above you should understand how frustrating this has been for the original author.
 
 ### 🛠️ How?
 
