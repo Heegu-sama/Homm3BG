@@ -188,7 +188,7 @@ They should be free of any major issues.<br>
 </table>
 
 All 2.0 documents have clickable card names which link to the [game wiki](https://homm3bg.wiki).
-The economy printable prints unit stars with a letter instead of a color, so they stay readable in grayscale and for colorblind players:
+The economy printable prints unit stars with a letter in addition to the color, so they stay readable in grayscale and for colorblind players:
 <img src="assets/glyphs/bronze-mono.svg" height="18"> <img src="assets/glyphs/silver-mono.svg" height="18"> <img src="assets/glyphs/golden-mono.svg" height="18"> <img src="assets/glyphs/azure-mono.svg" height="18">
 
 <details>
@@ -407,7 +407,7 @@ This is for people who want to save their toners.
 
 ### 💡 What Is This?
 
-Official rules are scattered across a dozen-plus booklets, plus countless clarifications on BoardGameGeek and Discord, although the company behind the game announced crowdfunding for a unified rule book.
+Official rules are scattered across a dozen-plus booklets, plus countless clarifications on BoardGameGeek and Discord, though the company behind the game has announced crowdfunding for a unified rule book.
 
 This project aims to rewrite the original rule books, in which the amount of vague language was just too vast to ignore.
 Its aim is to explain the rules clearly and concisely, and should eventually have an answer for any basic rules query you might have.
@@ -441,7 +441,7 @@ Translation progress reported by [Weblate](https://weblate.org/en/).
 
 ### 🔮 The Future
 
-All new version of the rule book and their change logs will be published here and in the BGG thread.
+All new versions of the rule book and their change logs will be published here and in the BGG thread.
 
 ## 💻 Local Development
 
