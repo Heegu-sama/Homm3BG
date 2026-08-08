@@ -7,6 +7,8 @@
   </p>
 </div>
 
+If you're looking for a single, comprehensive rule book for Heroes of Might & Magic III: The Board Game, you've come to the right place.
+
 **Join us [on Discord](https://discord.gg/Y4uM9pPWF6) to help with translating or just to get in touch!**
 
 Download your desired version of the rule book from one of the available versions below 👇
@@ -134,117 +136,254 @@ You can expect things to break, like having incorrect layout or not all the text
 Those builds are the ones officially released, with a specific cutoff point in time, to give translators time to create localized versions.
 They should be free of any major issues.<br>
 
+#### ⭐ Version 2.0 <sub>(08.08.2026)</sub>
+
 <table>
     <thead>
         <tr>
-            <th>Language</th>
-            <th colspan=2 align="center">Version 1.2<br>(22.05.2024)</th>
-            <th colspan=2 align="center">Version 1.3<br>(23.11.2024)</th>
-            <th colspan=2 align="center">Version 2.0<br>(26.04.2026)</th>
+            <th>🌍 Language</th>
+            <th align="center">🖥️<br>Digital</th>
+            <th align="center">🖨️<br>Printable</th>
+            <th align="center">🤑<br>Economy Printable</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td align="center">🌍</td>
-            <td align="center">🖥️<br>Digital</td>
-            <td align="center">🖨️<br>Printable</td>
-            <td align="center">🖥️<br>Digital</td>
-            <td align="center">🖨️<br>Printable</td>
-            <td align="center">🖥️<br>Digital</td>
-            <td align="center">🖨️<br>Printable</td>
+            <td>🇬🇧 English</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0/Heroes3_English_Rules_Rewrite_2_0.pdf">download</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0/Heroes3_English_Rules_Rewrite_2_0_Printable.pdf">download</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0/Heroes3_English_Rules_Rewrite_2_0_Economy_Printable.pdf">download</a></td>
         </tr>
+        <tr>
+            <td>🇵🇱 Polski</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0/Heroes3_Polish_Rules_Rewrite_2_0.pdf">pobierz</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0/Heroes3_Polish_Rules_Rewrite_2_0_Printable.pdf">pobierz</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0/Heroes3_Polish_Rules_Rewrite_2_0_Economy_Printable.pdf">pobierz</a></td>
+        </tr>
+        <tr>
+            <td>🇷🇺 Русский</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0/Heroes3_Russian_Rules_Rewrite_2_0.pdf">скачать</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0/Heroes3_Russian_Rules_Rewrite_2_0_Printable.pdf">скачать</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0/Heroes3_Russian_Rules_Rewrite_2_0_Economy_Printable.pdf">скачать</a></td>
+        </tr>
+        <tr>
+            <td>🇺🇦 Українська</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0/Heroes3_Ukrainian_Rules_Rewrite_2_0.pdf">завантажити</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0/Heroes3_Ukrainian_Rules_Rewrite_2_0_Printable.pdf">завантажити</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0/Heroes3_Ukrainian_Rules_Rewrite_2_0_Economy_Printable.pdf">завантажити</a></td>
+        </tr>
+        <tr>
+            <td>🇩🇪 Deutsch</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0/Heroes3_German_Rules_Rewrite_2_0.pdf">speichern</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0/Heroes3_German_Rules_Rewrite_2_0_Printable.pdf">speichern</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0/Heroes3_German_Rules_Rewrite_2_0_Economy_Printable.pdf">speichern</a></td>
+        </tr>
+        <tr>
+            <td>🇨🇳 中文</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0/Heroes3_Chinese_Rules_Rewrite_2_0.pdf">下载</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0/Heroes3_Chinese_Rules_Rewrite_2_0_Printable.pdf">下载</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0/Heroes3_Chinese_Rules_Rewrite_2_0_Economy_Printable.pdf">下载</a></td>
+        </tr>
+    </tbody>
+</table>
+
+All 2.0 documents have clickable card names which link to the [game wiki](https://homm3bg.wiki).
+The economy printable prints unit stars with a letter in addition to the color, so they stay readable in grayscale and for colorblind players:
+<img src="assets/glyphs/bronze-mono.svg" height="18"> <img src="assets/glyphs/silver-mono.svg" height="18"> <img src="assets/glyphs/golden-mono.svg" height="18"> <img src="assets/glyphs/azure-mono.svg" height="18">
+
+<details>
+<summary>🗄️ Click to see older releases</summary>
+
+#### Version 1.3 <sub>(23.11.2024)</sub>
+
+<table>
+    <thead>
+        <tr>
+            <th>🌍 Language</th>
+            <th align="center">🖥️<br>Digital</th>
+            <th align="center">🖨️<br>Printable</th>
+            <th align="center">🤑<br>Economy Printable</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>🇬🇧 English</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_English_Rules_Rewrite_1_3.pdf">download</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_English_Rules_Rewrite_1_3_Printable.pdf">download</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_English_Rules_Rewrite_1_3_Economy_Printable.pdf">download</a></td>
+        </tr>
+        <tr>
+            <td>🇵🇱 Polski</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Polski_Rules_Rewrite_1_3.pdf">pobierz</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Polski_Rules_Rewrite_1_3_Printable.pdf">pobierz</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Polski_Rules_Rewrite_1_3_Economy_Printable.pdf">pobierz</a></td>
+        </tr>
+        <tr>
+            <td>🇪🇸 Español</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Espanol_Rules_Rewrite_1_3.pdf">descargar</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Espanol_Rules_Rewrite_1_3_Printable.pdf">descargar</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Espanol_Rules_Rewrite_1_3_Economy_Printable.pdf">descargar</a></td>
+        </tr>
+        <tr>
+            <td>🇫🇷 Français</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Francais_Rules_Rewrite_1_3.pdf">télécharger</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Francais_Rules_Rewrite_1_3_Printable.pdf">télécharger</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Francais_Rules_Rewrite_1_3_Economy_Printable.pdf">télécharger</a></td>
+        </tr>
+        <tr>
+            <td>🇷🇺 Русский</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Russkiy_Rules_Rewrite_1_3.pdf">скачать</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Russkiy_Rules_Rewrite_1_3_Printable.pdf">скачать</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Russkiy_Rules_Rewrite_1_3_Economy_Printable.pdf">скачать</a></td>
+        </tr>
+        <tr>
+            <td>🇨🇿 Čeština</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Cestina_Rules_Rewrite_1_3.pdf">stáhnout</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Cestina_Rules_Rewrite_1_3_Printable.pdf">stáhnout</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Cestina_Rules_Rewrite_1_3_Economy_Printable.pdf">stáhnout</a></td>
+        </tr>
+        <tr>
+            <td>🇮🇱 עברית</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Ivrit_Rules_Rewrite_1_3.pdf">הורדה</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Ivrit_Rules_Rewrite_1_3_Printable.pdf">הורדה</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Ivrit_Rules_Rewrite_1_3_Economy_Printable.pdf">הורדה</a></td>
+        </tr>
+    </tbody>
+</table>
+
+#### Version 1.2 <sub>(22.05.2024)</sub>
+
+<table>
+    <thead>
+        <tr>
+            <th>🌍 Language</th>
+            <th align="center">🖥️<br>Digital</th>
+            <th align="center">🖨️<br>Printable</th>
+        </tr>
+    </thead>
+    <tbody>
         <tr>
             <td>🇬🇧 English</td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_English_Rules_Rewrite_12.pdf">download</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_English_Rules_Rewrite_12_Printable.pdf">download</a></td>
-            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_English_Rules_Rewrite_1_3.pdf">download</a></td>
-            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_English_Rules_Rewrite_1_3_Printable.pdf">download</a></td>
-            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0-rc5/Heroes3_English_Rules_Rewrite_2_0-rc5.pdf">download</a></td>
-            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0-rc5/Heroes3_English_Rules_Rewrite_2_0-rc5_Printable.pdf">download</a></td>
         </tr>
         <tr>
             <td>🇵🇱 Polski</td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Polski_Rules_Rewrite_12.pdf">pobierz</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Polski_Rules_Rewrite_12_Printable.pdf">pobierz</a></td>
-            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Polski_Rules_Rewrite_1_3.pdf">pobierz</a></td>
-            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Polski_Rules_Rewrite_1_3_Printable.pdf">pobierz</a></td>
-            <td align="center">—</td>
-            <td align="center">—</td>
         </tr>
         <tr>
             <td>🇪🇸 Español</td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Espanol_Rules_Rewrite_12.pdf">descargar</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Espanol_Rules_Rewrite_12_Printable.pdf">descargar</a></td>
-            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Espanol_Rules_Rewrite_1_3.pdf">descargar</a></td>
-            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Espanol_Rules_Rewrite_1_3_Printable.pdf">descargar</a></td>
-            <td align="center">—</td>
-            <td align="center">—</td>
         </tr>
         <tr>
             <td>🇫🇷 Français</td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Francais_Rules_Rewrite_12.pdf">télécharger</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Francais_Rules_Rewrite_12_Printable.pdf">télécharger</a></td>
-            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Francais_Rules_Rewrite_1_3.pdf">télécharger</a></td>
-            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Francais_Rules_Rewrite_1_3_Printable.pdf">télécharger</a></td>
-            <td align="center">—</td>
-            <td align="center">—</td>
-        </tr>
-        <tr>
-            <td>🇷🇺 Русский</td>
-            <td align="center">—</td>
-            <td align="center">—</td>
-            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Russkiy_Rules_Rewrite_1_3.pdf">скачать</a></td>
-            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Russkiy_Rules_Rewrite_1_3_Printable.pdf">скачать</a></td>
-            <td align="center">—</td>
-            <td align="center">—</td>
         </tr>
         <tr>
             <td>🇺🇦 Українська</td>
-            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Ukrainska_Rules_Rewrite_12.pdf">️завантажити</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Ukrainska_Rules_Rewrite_12.pdf">завантажити</a></td>
             <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.2/Heroes3_Ukrainska_Rules_Rewrite_12_Printable.pdf">завантажити</a></td>
-            <td align="center">—</td>
-            <td align="center">—</td>
-            <td align="center">—</td>
-            <td align="center">—</td>
-        </tr>
-        <tr>
-            <td>🇩🇪 Deutsch</td>
-            <td align="center">—</td>
-            <td align="center">—</td>
-            <td align="center">—</td>
-            <td align="center">—</td>
-            <td align="center">—</td>
-            <td align="center">—</td>
-        </tr>
-        <tr>
-            <td>🇨🇿 Čeština</td>
-            <td align="center">—</td>
-            <td align="center">—</td>
-            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Cestina_Rules_Rewrite_1_3.pdf">stáhnout</a></td>
-            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Cestina_Rules_Rewrite_1_3_Printable.pdf">stáhnout</a></td>
-            <td align="center">—</td>
-            <td align="center">—</td>
-        </tr>
-        <tr>
-            <td>🇮🇱 עברית</td>
-            <td align="center">—</td>
-            <td align="center">—</td>
-            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Ivrit_Rules_Rewrite_1_3.pdf">הורדה</a></td>
-            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.3/Heroes3_Ivrit_Rules_Rewrite_1_3_Printable.pdf">הורדה</a></td>
-            <td align="center">—</td>
-            <td align="center">—</td>
-        </tr>
-        <tr>
-            <td>🇨🇳 中文</td>
-            <td align="center">—</td>
-            <td align="center">—</td>
-            <td align="center">—</td>
-            <td align="center">—</td>
-            <td align="center">—</td>
-            <td align="center">—</td>
         </tr>
     </tbody>
 </table>
+
+#### Version 1.1 <sub>(22.04.2024)</sub>
+
+<table>
+    <thead>
+        <tr>
+            <th>🌍 Language</th>
+            <th align="center">🖥️<br>Digital</th>
+            <th align="center">🖨️<br>Printable</th>
+            <th align="center">📦<br>Components List</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>🇬🇧 English</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.1/Heroes3_rules_rewrite_11.pdf">download</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.1/Heroes3_rewrite_11_printable.pdf">download</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.1/Heroes3_components_list_11.pdf">download</a></td>
+        </tr>
+    </tbody>
+</table>
+
+#### Version 1.0 <sub>(02.04.2024)</sub>
+
+<table>
+    <thead>
+        <tr>
+            <th>🌍 Language</th>
+            <th align="center">🖥️<br>Digital</th>
+            <th align="center">🖨️<br>Printable</th>
+            <th align="center">📦<br>Components List</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>🇬🇧 English</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.0/Heroes3_rules_rewrite_10.pdf">download</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.0/Heroes3_rewrite_10_printable.pdf">download</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v1.0/Heroes3_components.pdf">download</a></td>
+        </tr>
+    </tbody>
+</table>
+
+#### Version 0.4 <sub>(04.03.2024)</sub>
+
+<table>
+    <thead>
+        <tr>
+            <th>🌍 Language</th>
+            <th align="center">🖥️<br>Digital</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>🇬🇧 English</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v.04/Heroes3_rules_rewrite_04.pdf">download</a></td>
+        </tr>
+    </tbody>
+</table>
+
+#### Version 0.3 <sub>(17.02.2024)</sub>
+
+<table>
+    <thead>
+        <tr>
+            <th>🌍 Language</th>
+            <th align="center">🖥️<br>Digital</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>🇬🇧 English</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v.03/Heroes3_rules_rewrite_03.pdf">download</a></td>
+        </tr>
+    </tbody>
+</table>
+
+#### Version 0.2 <sub>(10.02.2024)</sub>
+
+<table>
+    <thead>
+        <tr>
+            <th>🌍 Language</th>
+            <th align="center">🖥️<br>Digital</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>🇬🇧 English</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v0.2/Heroes3_rules_rewrite_02.pdf">download</a></td>
+        </tr>
+    </tbody>
+</table>
+
+</details>
 
 <details>
 <summary>Click to see the details regarding every version</summary>
@@ -268,15 +407,17 @@ This is for people who want to save their toners.
 
 ### 💡 What Is This?
 
-This project aims to rewrite the original rule book, in which the amount of vague language was just too vast to ignore.
+Official rules are scattered across a dozen-plus booklets, plus countless clarifications on BoardGameGeek and Discord, though the company behind the game has announced crowdfunding for a unified rule book.
+
+This project aims to rewrite the original rule books, in which the amount of vague language was just too vast to ignore.
 Its aim is to explain the rules clearly and concisely, and should eventually have an answer for any basic rules query you might have.
 
 ### 🤔 Why?
 
-Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1).
+Please see the original thread on [BoardGameGeek](https://boardgamegeek.com/thread/3235221/rule-book-rewrite-project/page/1), continued for version 2.0 in [The Compendium](https://boardgamegeek.com/thread/3628439/the-rule-book-rewrite-project-20-the-compendium).
 
 The content in the official English rule book is, simply put, insufficient as a teaching tool for the game or as a general rules reference.
-If you read the thread linked above you should understand how frustrating this has been for the original author.
+If you read the first thread linked above you should understand how frustrating this has been for the original author.
 
 ### 🛠️ How?
 
@@ -300,7 +441,7 @@ Translation progress reported by [Weblate](https://weblate.org/en/).
 
 ### 🔮 The Future
 
-All new version of the rule book and their change logs will be published here and in the BGG thread.
+All new versions of the rule book and their change logs will be published here and in the BGG thread.
 
 ## 💻 Local Development
 
@@ -515,14 +656,12 @@ All assets come from publicly available sources.
 Some of the images in the rule book (all in the [`assets/examples`](https://github.com/Heegu-sama/Homm3BG/tree/main/assets/examples) directory as of writing) were generated by [GIMP](https://www.gimp.org/).
 Their respective XCF files reside in [`assets/gimp-files`](https://github.com/Heegu-sama/Homm3BG/tree/main/assets/gimp-files) directory.
 
-## Star History
+## 🙌 Acknowledgements
 
-<a href="https://star-history.com/#Heegu-sama/Homm3BG&Date">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Heegu-sama/Homm3BG&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Heegu-sama/Homm3BG&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Heegu-sama/Homm3BG&type=Date" />
-  </picture>
+This project was brought to you with the help of these amazing people:
+
+<a href="https://github.com/Heegu-sama/Homm3BG/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Heegu-sama/Homm3BG" alt="Contributors" />
 </a>
 
 ## 🛡️ Other Community Projects
