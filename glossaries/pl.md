@@ -199,7 +199,7 @@
 | cooperative | kooperacyjny |
 | final combat | finałowa walka |
 | scenario | scenariusz |
-| skirmish mode | tryb potyczki |
+| skirmish mode | tryb pojedynku |
 
 ## Keywords
 
