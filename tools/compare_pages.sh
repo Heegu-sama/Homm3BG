@@ -246,6 +246,12 @@ wait_for_page() {
 # of an edited word, since wherever old and new letters both put ink the
 # difference is zero. Then: binarise -> close -> blur -> binarise -> blobs.
 diff_regions() {
+  uv venv --allow-existing
+  uv pip install pymupdf opencv-python numpy scikit-image
+  uv run tools/pdf_screenshot_diff.py "$@"
+}
+
+diff_regions_old() {
   local left="$1"
   local right="$2"
   local min_area="$3"
@@ -444,6 +450,9 @@ page_total=${#pages[@]}
 for page in "${pages[@]}"; do
   page_index=$((page_index + 1))
 
+  qpdf "${base_file}" --pages . "$page" -- "$tmp_dir/aa-$page.pdf"
+  qpdf "main_${LANGUAGE}.pdf" --pages . "$page" -- "$tmp_dir/bb-$page.pdf"
+
   if [[ "$all_pages" -eq 1 ]]; then
     aa_file=$(wait_for_page "aa" "$page" "$aa_pid")
     bb_file=$(wait_for_page "bb" "$page" "$bb_pid")
@@ -457,7 +466,13 @@ for page in "${pages[@]}"; do
     continue
   fi
 
-  mapfile -t regions < <(diff_regions "${tmp_dir}/${aa_file}" "${tmp_dir}/${bb_file}" "$diff_min_area")
+  cp "${tmp_dir}/${aa_file}" /tmp/aa-30.png
+  cp "${tmp_dir}/${bb_file}" /tmp/bb-30.png
+  diff_regions "${tmp_dir}/aa-$page.pdf" "${tmp_dir}/bb-$page.pdf" \
+    --output-dir /tmp/outpdf
+  cp /tmp/outpdf/page-aa-001.png "${tmp_dir}/${aa_file}"
+  cp /tmp/outpdf/page-bb-001.png "${tmp_dir}/${bb_file}"
+  #mapfile -t regions < <(diff_regions "${tmp_dir}/${aa_file}" "${tmp_dir}/${bb_file}" "$diff_min_area")
 
   if [[ "${#regions[@]}" -eq 0 ]]; then
     if [[ "$all_pages" -eq 1 ]]; then
