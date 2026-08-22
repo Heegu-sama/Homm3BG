@@ -224,12 +224,13 @@ def _merge_bboxes(spans):
 
 
 
-def extract_pdf_objects(path: str):
+def extract_pdf_objects(path: str, pagenum:int):
     """Extract paragraph/block-level text plus vector/image objects from a PDF."""
     doc = fitz.open(path)
     pages = []
 
     for page_index, page in enumerate(doc):
+      if page_index + 1 == pagenum:
         objects = []
         data = page.get_text("dict")
 
@@ -377,7 +378,7 @@ def _same_page_text_candidates(before_items, after_item, used_before):
     return [(bi, bo) for _, _, bi, bo in fuzzy[:3]]
 
 
-def compare_pdf_structure(before_pdf, after_pdf):
+def compare_pdf_structure(before_pdf, after_pdf, before_page, after_page):
     """
     Match PDF objects semantically.
 
@@ -385,8 +386,8 @@ def compare_pdf_structure(before_pdf, after_pdf):
     fuzzy spatial similarity. Drawings/images are matched by kind
     and geometry. Returns page-level structural changes.
     """
-    before_pages = extract_pdf_objects(before_pdf)
-    after_pages = extract_pdf_objects(after_pdf)
+    before_pages = extract_pdf_objects(before_pdf, before_page)
+    after_pages = extract_pdf_objects(after_pdf, after_page)
 
     results = []
 
@@ -515,6 +516,7 @@ def compare_pdf_structure(before_pdf, after_pdf):
                     "text": bo.text,
                 })
 
+        continue
         # ---- coarse drawings/images ----
         for kind in ("drawing", "image"):
             old = [(i, o) for i, o in enumerate(before) if o.kind == kind]
@@ -573,15 +575,13 @@ def spread(spans):
   return result
 
 
-def render_pdf_structural_diff(after_pdf, structural_changes, output_dir, kind, fname):
+def render_pdf_structural_diff(after_pdf, structural_changes, kind, fname, pagenum):
     """Render the AFTER PDF with structural changes highlighted."""
-    output_dir = Path(output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
-
     doc = fitz.open(after_pdf)
     rendered = []
 
     for page_no, page in enumerate(doc):
+      if page_no + 1 == pagenum:
         pix = page.get_pixmap(matrix=fitz.Matrix(2, 2), alpha=False)
         image = np.frombuffer(pix.samples, dtype=np.uint8).reshape(
             pix.height, pix.width, pix.n
@@ -595,7 +595,8 @@ def render_pdf_structural_diff(after_pdf, structural_changes, output_dir, kind, 
 
         for change in structural_changes:
             if change["page"] != page_no:
-                continue
+              pass
+              #continue
             if change["kind"] != kind:
               continue
 
@@ -622,9 +623,8 @@ def render_pdf_structural_diff(after_pdf, structural_changes, output_dir, kind, 
           image[:,:,color] = (1-alpha_foreground)*image[:,:,color]+alpha_foreground*highlights_c[:,:,color]
         cv2.drawContours(image, ctrs, -1, COLORSLINE[kind], 2)
 
-        path = output_dir / f"page-{fname}-{page_no + 1:03d}.png"
-        cv2.imwrite(str(path), image)
-        rendered.append(str(path))
+        cv2.imwrite(str(fname), image)
+        rendered.append(str(fname))
 
     doc.close()
     return rendered
@@ -651,6 +651,9 @@ def main():
         default=None,
         help="Optional text report containing structural changes",
     )
+    parser.add_argument("--before-page", type=int)
+    parser.add_argument("--after-page", type=int)
+    parser.add_argument("--force-output", action=argparse.BooleanOptionalAction, default=False)
 
     args = parser.parse_args()
 
@@ -659,7 +662,7 @@ def main():
     if Path(args.after).suffix.lower() != ".pdf":
         parser.error("AFTER must be a PDF")
 
-    changes = compare_pdf_structure(args.before, args.after)
+    changes = compare_pdf_structure(args.before, args.after, args.before_page, args.after_page)
 
     print()
     print("=" * 72)
@@ -697,26 +700,32 @@ def main():
             encoding="utf-8",
         )
 
-    rendered = render_pdf_structural_diff(
+    output_dir = Path(args.output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    changes = [change for change in changes if change["kind"] != "moved"]
+
+    if changes or args.force_output:
+      rendered = render_pdf_structural_diff(
         args.after,
         changes,
-        args.output_dir,
         "added",
-        "bb",
-    )
+        output_dir / f"bb-{args.after_page}.png",
+        args.after_page,
+      )
 
-    render_pdf_structural_diff(
+      render_pdf_structural_diff(
         args.before,
         changes,
-        args.output_dir,
         "removed",
-        "aa",
-    )
+        output_dir / f"aa-{args.after_page}.png",
+        args.before_page,
+      )
 
-    print()
-    print("Annotated page images:")
-    for path in rendered:
-        print(path)
+      print()
+      print("Annotated page images:")
+      for path in rendered:
+          print(path)
 
 
 if __name__ == "__main__":

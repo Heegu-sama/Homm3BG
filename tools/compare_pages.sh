@@ -246,12 +246,6 @@ wait_for_page() {
 # of an edited word, since wherever old and new letters both put ink the
 # difference is zero. Then: binarise -> close -> blur -> binarise -> blobs.
 diff_regions() {
-  uv venv --allow-existing
-  uv pip install pymupdf opencv-python numpy scikit-image
-  uv run tools/pdf_screenshot_diff.py "$@"
-}
-
-diff_regions_old() {
   local left="$1"
   local right="$2"
   local min_area="$3"
@@ -402,6 +396,11 @@ if [[ ! -f "main_${LANGUAGE}.pdf" ]]; then
   exit 1
 fi
 
+if [[ $highlight == 1 ]]; then
+  uv venv --allow-existing
+  uv pip install pymupdf opencv-python numpy scikit-image
+fi
+
 echo "Checking if there is the base file for comparison..."
 base_file=$(ensure_base_file "$LANGUAGE" "$printable")
 
@@ -423,24 +422,23 @@ if [[ "$all_pages" -eq 1 ]]; then
   for ((page=1; page<=last_page; page++)); do
     pages+=($page)
   done
+fi
 
-  echo "Making images of ${base_file} and main_${LANGUAGE}.pdf for pages 1-${last_page}..."
-  echo "Pages are compared as soon as they are rendered."
-  pdftoppm "${base_file}" "${tmp_dir}/aa" -f 1 -l "${last_page}" -png &
-  aa_pid=$!
-  pdftoppm "main_${LANGUAGE}.pdf" "${tmp_dir}/bb" -f 1 -l "${last_page}" -png &
-  bb_pid=$!
-else
-  parse_pages "$range"
+parse_pages "$range"
 
-  for page in "${pages[@]}"; do
-    echo "Making images of ${base_file} and main_${LANGUAGE}.pdf for page ${page}..."
+for page in "${pages[@]}"; do
+  echo "Making images of ${base_file} and main_${LANGUAGE}.pdf for page ${page}..."
+  if [[ $highlight == 1 ]]; then
+    uv run tools/pdf_screenshot_diff.py "${base_file}" "main_${LANGUAGE}.pdf" \
+      --output-dir ${tmp_dir} --before-page $page --after-page "${moved[${page}]:-${page}}" \
+      --force-output &
+  else
     pdftoppm "${base_file}" "${tmp_dir}/aa" -f "${page}" -l "${page}" -png &
     pdftoppm "main_${LANGUAGE}.pdf" "${tmp_dir}/bb" -f "${moved[${page}]:-${page}}" -l "${moved[${page}]:-${page}}" -png &
-  done
+  fi
+done
 
-  wait
-fi
+wait
 
 declare -a skipped_pages
 declare -a changed_pages
@@ -449,9 +447,6 @@ page_total=${#pages[@]}
 
 for page in "${pages[@]}"; do
   page_index=$((page_index + 1))
-
-  qpdf "${base_file}" --pages . "$page" -- "$tmp_dir/aa-$page.pdf"
-  qpdf "main_${LANGUAGE}.pdf" --pages . "$page" -- "$tmp_dir/bb-$page.pdf"
 
   if [[ "$all_pages" -eq 1 ]]; then
     aa_file=$(wait_for_page "aa" "$page" "$aa_pid")
@@ -464,31 +459,6 @@ for page in "${pages[@]}"; do
   if [[ -z "$aa_file" || -z "$bb_file" ]]; then
     echo "⚠️ Could not find generated files for page $page"
     continue
-  fi
-
-  cp "${tmp_dir}/${aa_file}" /tmp/aa-30.png
-  cp "${tmp_dir}/${bb_file}" /tmp/bb-30.png
-  diff_regions "${tmp_dir}/aa-$page.pdf" "${tmp_dir}/bb-$page.pdf" \
-    --output-dir /tmp/outpdf
-  cp /tmp/outpdf/page-aa-001.png "${tmp_dir}/${aa_file}"
-  cp /tmp/outpdf/page-bb-001.png "${tmp_dir}/${bb_file}"
-  #mapfile -t regions < <(diff_regions "${tmp_dir}/${aa_file}" "${tmp_dir}/${bb_file}" "$diff_min_area")
-
-  if [[ "${#regions[@]}" -eq 0 ]]; then
-    if [[ "$all_pages" -eq 1 ]]; then
-      printf '[%d/%d] Page %02d: no differences ⏭️\n' "$page_index" "$page_total" "$page"
-      skipped_pages+=($page)
-      rm "${tmp_dir}/${aa_file}" "${tmp_dir}/${bb_file}"
-      continue
-    fi
-    printf '[%d/%d] Page %02d: no differences, saved anyway ✅\n' "$page_index" "$page_total" "$page"
-  else
-    changed_pages+=($page)
-    printf '[%d/%d] Page %02d: %d changed area(s) ✅\n' \
-      "$page_index" "$page_total" "$page" "${#regions[@]}"
-
-    [[ "$highlight" -eq 1 ]] && \
-      highlight_regions "${tmp_dir}/${bb_file}" "${tmp_dir}/${bb_file}" "${regions[@]}"
   fi
 
   # Written straight to its final place, so that a page reported as saved is on
