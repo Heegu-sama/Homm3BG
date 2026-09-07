@@ -3,6 +3,15 @@ cache_dir="$(pwd)/cache"
 screenshots_dir="$(pwd)/screenshots"
 
 source tools/.language_base.sh
+mkdir -p "${screenshots_dir}"
+
+# Two builds of the same page are never pixel-identical, so differences are
+# judged by density: a real change is a solid blob, noise is scattered dust.
+diff_sensitivity=10       # how strong a pixel difference has to be, in percent
+diff_density=35           # how dense a neighbourhood has to be, in percent
+diff_min_area_default=120 # smallest blob that is not noise, in pixels
+diff_min_thickness=8      # thinnest blob that is not noise, in pixels
+
 #
 # HELPER FUNCTIONS
 #
@@ -15,11 +24,25 @@ help() {
     <language>                      Specify the language for comparison (${valid_languages[*]}). Defaults to en.
       -r, --range <range>           Provide comma-separated list of pages or range of pages you want to compare,
                                     with optional target page where the range was moved to.
+                                    Mutually exclusive with '--all'.
+      -a, --all                     Compare every page of the document. Pages without a real difference
+                                    are skipped, so only pages that actually changed end up in the output.
+                                    Mutually exclusive with '--range'.
 
     Optional Arguments:
       -p, --printable               Compares your build against 'printable' build.
       -s, --single-page             Combines all compared pages into a single image.
       -o, --open                    Open directory with screenshots.
+      -d, --debug                   Open every comparison in a viewer the moment it is ready, instead of
+                                    waiting for the whole run to finish. One window per changed page.
+      -g, --highlight               Mark the changed areas on your build with a translucent green wash.
+                                    Off by default, the pages are left as they are.
+      -t, --threshold <pixels>      Smallest area, in pixels, that counts as a real difference rather than
+                                    rendering noise. Lower it if changes are missed, raise it if noise
+                                    gets highlighted. Defaults to ${diff_min_area_default}.
+
+    With '--highlight', changed areas are marked with a translucent green box on the right-hand
+    (your build) page.
 
     Examples:
       ./tools/compare_pages.sh en -r 1
@@ -30,6 +53,10 @@ help() {
           - Then because there is the '--single-page' parameter, it combines them to a single file 'en-all.png'.
           - It will use 'printable_en.pdf' from the repository as baseline because '--printable' was specified.
             It would use 'main_en.pdf' if this parameter was omitted.
+
+      ./tools/compare_pages.sh pl --all
+          - This will render every page of both documents and save only the pages that
+            actually differ, one image per page.
 
       ./tools/compare_pages.sh fr -r 2,5:7,8-9:6
           This will produce the following 4 images:
@@ -176,6 +203,124 @@ get_actual_filename() {
   fi
 }
 
+page_count() {
+  pdfinfo "$1" 2>/dev/null | awk '/^Pages:/ {print $2}'
+}
+
+# Blocks until a page is fully rendered, then prints its filename. pdftoppm
+# writes pages in order, so a page is done once the next one appears - and for
+# the last page, once the renderer itself is gone.
+wait_for_page() {
+  local prefix="$1"
+  local page="$2"
+  local pid="$3"
+  local still_rendering current next
+
+  while :; do
+    still_rendering=0
+    kill -0 "$pid" 2>/dev/null && still_rendering=1
+
+    current=$(get_actual_filename "$tmp_dir" "$prefix" "$page")
+    next=$(get_actual_filename "$tmp_dir" "$prefix" $((page + 1)))
+
+    if [[ -n "$current" && -n "$next" ]]; then
+      echo "$current"
+      return 0
+    fi
+
+    if [[ "$still_rendering" -eq 0 ]]; then
+      echo "$current"
+      [[ -n "$current" ]]
+      return
+    fi
+
+    sleep 0.2
+  done
+}
+
+# Prints the bounding box of every meaningful difference between two images, one
+# 'WxH+X+Y' per line, or nothing when the pages are effectively the same.
+#
+# Both pages are blurred into ink-density maps *before* they are subtracted,
+# which is the whole trick: subtracting sharp images only lights up the fringes
+# of an edited word, since wherever old and new letters both put ink the
+# difference is zero. Then: binarise -> close -> blur -> binarise -> blobs.
+diff_regions() {
+  local left="$1"
+  local right="$2"
+  local min_area="$3"
+
+  magick \( "$left" -colorspace Gray -blur 0x2 \) \
+         \( "$right" -colorspace Gray -blur 0x2 \) \
+    -compose difference -composite \
+    -threshold "${diff_sensitivity}%" \
+    -morphology Close Disk:3 \
+    -blur 0x3 -threshold "${diff_density}%" \
+    -define connected-components:verbose=true \
+    -define connected-components:mean-color=true \
+    -define connected-components:area-threshold="${min_area}" \
+    -connected-components 8 null: 2>/dev/null \
+    | awk -v thickness="$diff_min_thickness" '
+        $5 ~ /\(255,255,255\)|gray\(255\)|white/ {
+          split($2, box, /[x+]/)
+          if (box[1] >= thickness && box[2] >= thickness) {
+            print $2
+          }
+        }'
+}
+
+# Paints a translucent green wash over the given regions. They are collected
+# into a single mask first: drawing them one by one would make every overlap
+# darker, which reads as "this bit changed more" while meaning nothing.
+highlight_regions() {
+  local source_image="$1"
+  local output_image="$2"
+  shift 2
+  local -a draw_args
+  local box width height rest x y padding=6
+  local dimensions mask holes
+
+  for box in "$@"; do
+    width=${box%%x*}
+    rest=${box#*x}
+    height=${rest%%+*}
+    rest=${rest#*+}
+    x=${rest%%+*}
+    y=${rest#*+}
+
+    draw_args+=(-draw "rectangle $((x - padding)),$((y - padding)) $((x + width + padding)),$((y + height + padding))")
+  done
+
+  dimensions=$(magick identify -format '%wx%h' "$source_image")
+  mask=$(mktemp "${tmp_dir}/mask-XXXXXX.png")
+  holes=$(mktemp "${tmp_dir}/holes-XXXXXX.png")
+
+  # White where something changed. The closing pulls in boxes that are merely
+  # near each other, so slivers between them stop showing through.
+  magick -size "$dimensions" xc:black -fill white "${draw_args[@]}" -alpha off \
+    -morphology Close Disk:10 "$mask"
+
+  # Flooding from the border paints everything the outside can reach; whatever
+  # stays black is enclosed, which is exactly the set of holes to fill.
+  magick "$mask" -bordercolor black -border 1 \
+    -fill white -draw 'color 0,0 floodfill' \
+    -negate -shave 1x1 "$holes"
+  magick "$mask" "$holes" -compose lighten -composite "$mask"
+
+  magick "$source_image" \
+    \( -size "$dimensions" xc:'rgb(126,217,87)' "$mask" \
+       -alpha off -compose copy_opacity -composite \
+       -channel A -evaluate multiply 0.30 +channel \) \
+    -compose over -composite \
+    \( "$mask" -morphology EdgeOut Octagon:2 \
+       -size "$dimensions" xc:'rgb(58,150,30)' +swap \
+       -alpha off -compose copy_opacity -composite \) \
+    -compose over -composite \
+    "$output_image"
+
+  rm -f "$mask" "$holes"
+}
+
 case "$(uname -s)" in
   Darwin*)
     open=open
@@ -196,6 +341,10 @@ range=""
 printable=0
 single_page=0
 open_directory=0
+all_pages=0
+debug=0
+highlight=0
+diff_min_area=$diff_min_area_default
 
 while [[ "$1" != "" ]]; do
   case $1 in
@@ -206,11 +355,24 @@ while [[ "$1" != "" ]]; do
       shift
       range=$1
       ;;
+    -a | --all )
+      all_pages=1
+      ;;
+    -t | --threshold )
+      shift
+      diff_min_area=$1
+      ;;
     -s | --single-page )
       single_page=1
       ;;
     -o | --open )
       open_directory=1
+      ;;
+    -d | --debug )
+      debug=1
+      ;;
+    -g | --highlight )
+      highlight=1
       ;;
     * )
       help
@@ -219,8 +381,24 @@ while [[ "$1" != "" ]]; do
   shift
 done
 
-if [[ -z "$LANGUAGE" || -z "$range" ]]; then
+if [[ -z "$LANGUAGE" ]] || [[ -z "$range" && "$all_pages" -eq 0 ]]; then
   help
+fi
+
+if [[ -n "$range" && "$all_pages" -eq 1 ]]; then
+  echo "Error: '--range' and '--all' cannot be used together."
+  exit 2
+fi
+
+if [[ ! -f "main_${LANGUAGE}.pdf" ]]; then
+  echo "❌ There is no 'main_${LANGUAGE}.pdf' to compare against. Build it first,"
+  echo "   or pass the language you actually mean - without it '${LANGUAGE}' is assumed."
+  exit 1
+fi
+
+if [[ $highlight == 1 ]]; then
+  uv venv --allow-existing
+  uv pip install pymupdf opencv-python numpy scikit-image
 fi
 
 echo "Checking if there is the base file for comparison..."
@@ -231,40 +409,84 @@ trap 'rm -rf -- "$tmp_dir"' EXIT
 
 declare -A moved
 declare -a pages
+
+if [[ "$all_pages" -eq 1 ]]; then
+  base_pages=$(page_count "$base_file")
+  own_pages=$(page_count "main_${LANGUAGE}.pdf")
+  last_page=$(( base_pages < own_pages ? base_pages : own_pages ))
+
+  if [[ "$base_pages" -ne "$own_pages" ]]; then
+    echo "Note: base file has ${base_pages} pages, main_${LANGUAGE}.pdf has ${own_pages}. Comparing the first ${last_page}."
+  fi
+
+  for ((page=1; page<=last_page; page++)); do
+    pages+=($page)
+  done
+fi
+
 parse_pages "$range"
 
 for page in "${pages[@]}"; do
   echo "Making images of ${base_file} and main_${LANGUAGE}.pdf for page ${page}..."
-  pdftoppm "${base_file}" "${tmp_dir}/aa" -f "${page}" -l "${page}" -png &
-  pdftoppm "main_${LANGUAGE}.pdf" "${tmp_dir}/bb" -f "${moved[${page}]:-${page}}" -l "${moved[${page}]:-${page}}" -png &
-done
-
-wait
-
-for page in "${pages[@]}"; do
-  echo "Combining pages $(printf %02d $page)..."
-
-  # Get actual filenames generated by pdftoppm
-  aa_file=$(get_actual_filename "$tmp_dir" "aa" "$page")
-  bb_file=$(get_actual_filename "$tmp_dir" "bb" "${moved[${page}]:-${page}}")
-
-  if [[ -n "$aa_file" && -n "$bb_file" ]]; then
-    montage "${tmp_dir}/${aa_file}" "${tmp_dir}/${bb_file}" -tile 2x1 -geometry +0+0 "${tmp_dir}/${LANGUAGE}-$(printf %02d $page).png" && \
-    rm "${tmp_dir}/${aa_file}" "${tmp_dir}/${bb_file}" &
+  if [[ $highlight == 1 ]]; then
+    uv run tools/pdf_screenshot_diff.py "${base_file}" "main_${LANGUAGE}.pdf" \
+      --output-dir ${tmp_dir} --before-page $page --after-page "${moved[${page}]:-${page}}" \
+      --force-output &
   else
-    echo "Warning: Could not find generated files for page $page"
+    pdftoppm "${base_file}" "${tmp_dir}/aa" -f "${page}" -l "${page}" -png &
+    pdftoppm "main_${LANGUAGE}.pdf" "${tmp_dir}/bb" -f "${moved[${page}]:-${page}}" -l "${moved[${page}]:-${page}}" -png &
   fi
 done
 
-if [[ "$single_page" -eq 1 ]]; then
-  wait
-  montage ${tmp_dir}/${LANGUAGE}* -tile "1x" -geometry +0+0 ${tmp_dir}/${LANGUAGE}-all.png
-fi
+wait
+
+declare -a skipped_pages
+declare -a changed_pages
+page_index=0
+page_total=${#pages[@]}
+
+for page in "${pages[@]}"; do
+  page_index=$((page_index + 1))
+
+  if [[ "$all_pages" -eq 1 ]]; then
+    aa_file=$(wait_for_page "aa" "$page" "$aa_pid")
+    bb_file=$(wait_for_page "bb" "$page" "$bb_pid")
+  else
+    aa_file=$(get_actual_filename "$tmp_dir" "aa" "$page")
+    bb_file=$(get_actual_filename "$tmp_dir" "bb" "${moved[${page}]:-${page}}")
+  fi
+
+  if [[ -z "$aa_file" || -z "$bb_file" ]]; then
+    echo "⚠️ Could not find generated files for page $page"
+    continue
+  fi
+
+  # Written straight to its final place, so that a page reported as saved is on
+  # disk instead of waiting for the rest of the run to finish.
+  comparison="${screenshots_dir}/${LANGUAGE}-$(printf %02d $page).png"
+
+  {
+    montage "${tmp_dir}/${aa_file}" "${tmp_dir}/${bb_file}" -tile 2x1 -geometry +0+0 "$comparison" && \
+    rm "${tmp_dir}/${aa_file}" "${tmp_dir}/${bb_file}" && \
+    [[ "$debug" -eq 1 ]] && ${open} "$comparison" >/dev/null 2>&1
+  } &
+done
 
 wait
 
-mkdir -p "${screenshots_dir}"
-mv ${tmp_dir}/${LANGUAGE}* "${screenshots_dir}"
+if [[ "$all_pages" -eq 1 ]]; then
+  echo "Unchanged pages skipped (${#skipped_pages[@]}): ${skipped_pages[*]:-none}"
+  echo "Pages with differences (${#changed_pages[@]}): ${changed_pages[*]:-none}"
+
+  if [[ "${#changed_pages[@]}" -eq 0 ]]; then
+    echo "Nothing to show, both documents look the same."
+    exit 0
+  fi
+fi
+
+if [[ "$single_page" -eq 1 ]]; then
+  montage ${screenshots_dir}/${LANGUAGE}-[0-9]*.png -tile "1x" -geometry +0+0 ${screenshots_dir}/${LANGUAGE}-all.png
+fi
 
 echo "Done. Images saved to ${screenshots_dir} directory."
 
