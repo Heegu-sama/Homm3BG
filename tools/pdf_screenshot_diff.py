@@ -718,7 +718,7 @@ def main():
         args.before,
         changes,
         "removed",
-        output_dir / f"aa-{args.after_page}.png",
+        output_dir / f"aa-{args.before_page}.png",
         args.before_page,
       )
 
