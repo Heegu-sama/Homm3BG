@@ -41,7 +41,7 @@
 | familiars | chowańce |
 | few | garstka |
 | griffins | gryfy |
-| hp | pz |
+| hp | hp |
 | liches | lisze |
 | marksmen | kusznicy |
 | neutral units | jednostki neutralne |
