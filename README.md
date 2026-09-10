@@ -456,6 +456,7 @@ To work on the document on your machine, you need the following:
 - [**delta**](https://dandavison.github.io/delta/) (optional) to find changes in already translated passages
 - [**pdftoppm**](https://linux.die.net/man/1/pdftoppm) (optional) to make screenshots of rendered PDF pages
 - [**ImageMagick**](https://imagemagick.org/index.php) (optional) to combine screenshots into convenient diffs
+- [**Python**](https://www.python.org/) and [**uv**](https://docs.astral.sh/uv/) (optional) to highlight changed areas when comparing screenshots
 - [**ghostscript**](https://www.ghostscript.com/) (optional) to optimize PDF file sizes
 - [**entr**](https://eradman.com/entrproject/) (optional) to automatically rebuild the document on file changes
 - [**Podman**](https://podman.io/getting-started/installation) (preferable) or [**Docker**](https://www.docker.com/get-started) container engine if you want to use a container without installing all of the above
@@ -628,6 +629,17 @@ tools/compare_pages.sh -h
 ```
 
 **This script requires `pdftoppm` and `imagemagick` utilities.**
+
+##### 🖍️ Highlighting changes
+
+Add the `-g`/`--highlight` option to mark the changed areas with a translucent green wash:
+
+```bash
+tools/compare_pages.sh -r 1,5-7,30 -g
+```
+
+This makes subtle edits easier to spot on a page.
+**This mode also needs [`uv`](https://docs.astral.sh/uv/). `uv` installs the Python packages required for the comparison.**
 
 </details>
 
