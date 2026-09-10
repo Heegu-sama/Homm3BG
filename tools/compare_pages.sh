@@ -5,12 +5,7 @@ screenshots_dir="$(pwd)/screenshots"
 source tools/.language_base.sh
 mkdir -p "${screenshots_dir}"
 
-# Two builds of the same page are never pixel-identical, so differences are
-# judged by density: a real change is a solid blob, noise is scattered dust.
-diff_sensitivity=10       # how strong a pixel difference has to be, in percent
-diff_density=35           # how dense a neighbourhood has to be, in percent
 diff_min_area_default=120 # smallest blob that is not noise, in pixels
-diff_min_thickness=8      # thinnest blob that is not noise, in pixels
 
 #
 # HELPER FUNCTIONS
@@ -236,89 +231,6 @@ wait_for_page() {
 
     sleep 0.2
   done
-}
-
-# Prints the bounding box of every meaningful difference between two images, one
-# 'WxH+X+Y' per line, or nothing when the pages are effectively the same.
-#
-# Both pages are blurred into ink-density maps *before* they are subtracted,
-# which is the whole trick: subtracting sharp images only lights up the fringes
-# of an edited word, since wherever old and new letters both put ink the
-# difference is zero. Then: binarise -> close -> blur -> binarise -> blobs.
-diff_regions() {
-  local left="$1"
-  local right="$2"
-  local min_area="$3"
-
-  magick \( "$left" -colorspace Gray -blur 0x2 \) \
-         \( "$right" -colorspace Gray -blur 0x2 \) \
-    -compose difference -composite \
-    -threshold "${diff_sensitivity}%" \
-    -morphology Close Disk:3 \
-    -blur 0x3 -threshold "${diff_density}%" \
-    -define connected-components:verbose=true \
-    -define connected-components:mean-color=true \
-    -define connected-components:area-threshold="${min_area}" \
-    -connected-components 8 null: 2>/dev/null \
-    | awk -v thickness="$diff_min_thickness" '
-        $5 ~ /\(255,255,255\)|gray\(255\)|white/ {
-          split($2, box, /[x+]/)
-          if (box[1] >= thickness && box[2] >= thickness) {
-            print $2
-          }
-        }'
-}
-
-# Paints a translucent green wash over the given regions. They are collected
-# into a single mask first: drawing them one by one would make every overlap
-# darker, which reads as "this bit changed more" while meaning nothing.
-highlight_regions() {
-  local source_image="$1"
-  local output_image="$2"
-  shift 2
-  local -a draw_args
-  local box width height rest x y padding=6
-  local dimensions mask holes
-
-  for box in "$@"; do
-    width=${box%%x*}
-    rest=${box#*x}
-    height=${rest%%+*}
-    rest=${rest#*+}
-    x=${rest%%+*}
-    y=${rest#*+}
-
-    draw_args+=(-draw "rectangle $((x - padding)),$((y - padding)) $((x + width + padding)),$((y + height + padding))")
-  done
-
-  dimensions=$(magick identify -format '%wx%h' "$source_image")
-  mask=$(mktemp "${tmp_dir}/mask-XXXXXX.png")
-  holes=$(mktemp "${tmp_dir}/holes-XXXXXX.png")
-
-  # White where something changed. The closing pulls in boxes that are merely
-  # near each other, so slivers between them stop showing through.
-  magick -size "$dimensions" xc:black -fill white "${draw_args[@]}" -alpha off \
-    -morphology Close Disk:10 "$mask"
-
-  # Flooding from the border paints everything the outside can reach; whatever
-  # stays black is enclosed, which is exactly the set of holes to fill.
-  magick "$mask" -bordercolor black -border 1 \
-    -fill white -draw 'color 0,0 floodfill' \
-    -negate -shave 1x1 "$holes"
-  magick "$mask" "$holes" -compose lighten -composite "$mask"
-
-  magick "$source_image" \
-    \( -size "$dimensions" xc:'rgb(126,217,87)' "$mask" \
-       -alpha off -compose copy_opacity -composite \
-       -channel A -evaluate multiply 0.30 +channel \) \
-    -compose over -composite \
-    \( "$mask" -morphology EdgeOut Octagon:2 \
-       -size "$dimensions" xc:'rgb(58,150,30)' +swap \
-       -alpha off -compose copy_opacity -composite \) \
-    -compose over -composite \
-    "$output_image"
-
-  rm -f "$mask" "$holes"
 }
 
 case "$(uname -s)" in
