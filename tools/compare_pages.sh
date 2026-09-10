@@ -396,9 +396,9 @@ if [[ ! -f "main_${LANGUAGE}.pdf" ]]; then
   exit 1
 fi
 
-if [[ $highlight == 1 ]]; then
+if [[ $highlight == 1 && -z "$HOMM3BG_CONTAINER" ]]; then
   uv venv --allow-existing
-  uv pip install pymupdf opencv-python numpy scikit-image
+  uv pip install pymupdf opencv-python numpy
 fi
 
 echo "Checking if there is the base file for comparison..."
@@ -429,9 +429,15 @@ parse_pages "$range"
 for page in "${pages[@]}"; do
   echo "Making images of ${base_file} and main_${LANGUAGE}.pdf for page ${page}..."
   if [[ $highlight == 1 ]]; then
-    uv run tools/pdf_screenshot_diff.py "${base_file}" "main_${LANGUAGE}.pdf" \
-      --output-dir ${tmp_dir} --before-page $page --after-page "${moved[${page}]:-${page}}" \
-      --force-output &
+    if [[ -n "$HOMM3BG_CONTAINER" ]]; then
+      python3 tools/pdf_screenshot_diff.py "${base_file}" "main_${LANGUAGE}.pdf" \
+        --output-dir ${tmp_dir} --before-page $page --after-page "${moved[${page}]:-${page}}" \
+        --force-output &
+    else
+      uv run tools/pdf_screenshot_diff.py "${base_file}" "main_${LANGUAGE}.pdf" \
+        --output-dir ${tmp_dir} --before-page $page --after-page "${moved[${page}]:-${page}}" \
+        --force-output &
+    fi
   else
     pdftoppm "${base_file}" "${tmp_dir}/aa" -f "${page}" -l "${page}" -png &
     pdftoppm "main_${LANGUAGE}.pdf" "${tmp_dir}/bb" -f "${moved[${page}]:-${page}}" -l "${moved[${page}]:-${page}}" -png &

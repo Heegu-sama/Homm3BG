@@ -27,7 +27,7 @@ Usage:
 
 Dependencies:
 
-    pip install pymupdf opencv-python numpy scikit-image
+    pip install pymupdf opencv-python numpy
 """
 
 from __future__ import annotations
@@ -730,4 +730,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
