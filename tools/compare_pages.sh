@@ -5,8 +5,6 @@ screenshots_dir="$(pwd)/screenshots"
 source tools/.language_base.sh
 mkdir -p "${screenshots_dir}"
 
-diff_min_area_default=120 # smallest blob that is not noise, in pixels
-
 #
 # HELPER FUNCTIONS
 #
@@ -32,9 +30,6 @@ help() {
                                     waiting for the whole run to finish. One window per changed page.
       -g, --highlight               Mark the changed areas on your build with a translucent green wash.
                                     Off by default, the pages are left as they are.
-      -t, --threshold <pixels>      Smallest area, in pixels, that counts as a real difference rather than
-                                    rendering noise. Lower it if changes are missed, raise it if noise
-                                    gets highlighted. Defaults to ${diff_min_area_default}.
 
     With '--highlight', changed areas are marked with a translucent green box on the right-hand
     (your build) page.
@@ -256,7 +251,6 @@ open_directory=0
 all_pages=0
 debug=0
 highlight=0
-diff_min_area=$diff_min_area_default
 
 while [[ "$1" != "" ]]; do
   case $1 in
@@ -269,10 +263,6 @@ while [[ "$1" != "" ]]; do
       ;;
     -a | --all )
       all_pages=1
-      ;;
-    -t | --threshold )
-      shift
-      diff_min_area=$1
       ;;
     -s | --single-page )
       single_page=1
