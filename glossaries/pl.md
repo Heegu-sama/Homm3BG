@@ -127,7 +127,7 @@
 | empowered ability card | karta ulepszonej zdolności |
 | empowered ability token | żeton ulepszonej zdolności |
 | empowered statistic card | karta ulepszonych statystyk |
-| hand limit | limit kart w ręce |
+| hand limit | limit kart na ręce |
 | pandora's box card | karta puszki pandory |
 | player decks | talie graczy |
 | search | przeszukaj |
