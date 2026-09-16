@@ -1,0 +1,81 @@
+% !TeX spellcheck = en_US
+\addscenariosection{1}{Meme Scenario}{Unbelievable}{\images/shackles_of_war.png}
+
+\begin{multicols*}{2}
+
+\textbf{Author:} NeuroN not
+
+\textit{Power struggle at the border escalates. This trade route is incredibly important as a supply line, and you cannot allow it to fall into enemy hands.}
+
+\subsection*{\MakeUppercase{Scenario Length}}
+12 Rounds
+
+\subsection*{\MakeUppercase{Player Setup}}
+\textbf{Player Count:} 2
+
+\textbf{Starting Resources:} 20 \svg{gold}, 6 \svg{building_materials}, 1 \svg{valuables}
+
+\textbf{Starting Income:} 10 \svg{gold}, 0 \svg{building_materials}, 0 \svg{valuables}
+
+\textbf{Starting Units:}
+
+\begin{itemize}
+  \item A ``Pack'' of the cheapest \svg{bronze} Units
+  \item A ``Few'' of the most expensive \svg{bronze} Units
+\end{itemize}
+
+\textbf{Town Buildings:} \svg{bronze} Dwelling
+
+\subsection*{\MakeUppercase{Map Setup}}
+
+Take the following Map Tiles and arrange them as shown in the Scenario map layout:
+
+\begin{itemize}
+  \item 2 × Starting (I) Map Tiles
+  \item 4 × Far (II--III) Map Tiles, 2 of which must contain a Settlement
+  \item 4 × Near (IV--V) Map Tiles: 2 with an Obelisk, 2 with a Settlement
+  \item 1 × Center (VI--VII) Map Tile with a Grail
+\end{itemize}
+
+Place Far and Near Tiles symmetrically, so that Obelisks and Settlements aren't adjacent.
+
+\subsection*{\MakeUppercase{Victory Conditions}}
+Take control of the enemy Town.
+
+\subsection*{\MakeUppercase{Defeat Conditions}}
+At end of Round 12 the game ends in a draw.
+
+\subsection*{\MakeUppercase{Timed Events}}
+\textbf{\nth{2}, \nth{6}, and \nth{10} Round:}
+\begin{itemize}
+  \item The \nth{2} player gains 1~\svg{movement}
+\end{itemize}
+
+\subsection*{\MakeUppercase{Additional Rules}}
+\begin{itemize}
+  \item At the start of each Resource Round, choose either extra 1~\svg{valuables} or 2~\svg{building_materials}.
+  \item You don't need to pay \svg{gold} to defend your Town and can use Cards during siege.
+  \item Once your Main Hero reaches Level V, all your Heroes gain +1~\svg{movement} at the start of every Turn.
+  \item When visiting an Obelisk, choose one:
+    \begin{itemize}
+      \item Remove a Card from your hand
+      \item Gain \svg{morale_positive}
+      \item Gain 1~\svg{movement}
+    \end{itemize}
+  \item After winning a combat on the Grail Field, you may recruit one of the Units you just defeated for free.
+\end{itemize}
+
+\begin{tikzpicture}[overlay]
+  \node (map) at (4, -3.5) [inner sep=0] {\includegraphics[width=1.1\linewidth]{\maps/chain_link.png}};
+    \begin{relcoords}{map}
+      {
+        \iftoggle{noartbackground}{\def\mapcolor{white}\def\opacity{0.5}}{\def\mapcolor{deepskyblue}\def\opacity{0.3}}
+        \color{\mapcolor}
+        \draw (0.345, 0.62) node [fill=black, fill opacity=\opacity, text opacity=1, inner sep=2pt] {\footnotesize\textbf{Obelisk}};
+        \draw (0.73, 0.80)   node [fill=black, fill opacity=\opacity, text opacity=1, inner sep=2pt] {\footnotesize\textbf{Settlement}};
+        \draw (0.27, 0.20)  node [fill=black, fill opacity=\opacity, text opacity=1, inner sep=2pt] {\footnotesize\textbf{Settlement}};
+        \draw (0.65, 0.38)  node [fill=black, fill opacity=\opacity, text opacity=1, inner sep=2pt] {\footnotesize\textbf{Obelisk}};
+      }
+    \end{relcoords}
+\end{tikzpicture}
+\end{multicols*}
