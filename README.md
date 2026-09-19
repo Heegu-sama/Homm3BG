@@ -13,130 +13,69 @@ If you're looking for a single, comprehensive rule book for Heroes of Might & Ma
 
 Download your desired version of the rule book from one of the available versions below 👇
 
-### ⚗️ Experimental builds
-These are made from the main branch every time a new change is introduced.
-You can expect things to break, like having incorrect layout or not all the text translated.
-
-<table>
-    <thead>
-        <tr>
-            <th>Language</th>
-            <th colspan=3 align="center">Latest Build ⚗️<br>(Experimental)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td align="center">🌍</td>
-            <td align="center">🖥️<br>Digital</td>
-            <td align="center">🖨️<br>Printable</td>
-            <td align="center">🤑<br>Economy Printable</td>
-        </tr>
-        <tr>
-            <td>🇬🇧 English</td>
-            <td align="center">️<a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf">download</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf">download</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/economy_printable_en.pdf">download</a></td>
-        </tr>
-        <tr>
-            <td>🇵🇱 Polski<br>
-              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
-                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/pl/svg-badge.svg" alt="Translation status" />
-              </a>
-            </td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf">️pobierz</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf">pobierz</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/economy_printable_pl.pdf">pobierz</a></td>
-        </tr>
-        <tr>
-            <td>🇪🇸 Español<br>
-              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
-                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/es/svg-badge.svg" alt="Translation status" />
-              </a>
-            </td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf">️descargar</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf">descargar</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/economy_printable_es.pdf">descargar</a></td>
-        </tr>
-        <tr>
-            <td>🇫🇷 Français<br>
-              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
-                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/fr/svg-badge.svg" alt="Translation status" />
-              </a>
-            </td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf">️télécharger</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf">télécharger</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/economy_printable_fr.pdf">télécharger</a></td>
-        </tr>
-        <tr>
-            <td>🇷🇺 Русский<br>
-              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
-                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/ru/svg-badge.svg" alt="Translation status" />
-              </a>
-            </td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf">️скачать</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf">скачать</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/economy_printable_ru.pdf">скачать</a></td>
-        </tr>
-        <tr>
-            <td>🇺🇦 Українська<br>
-              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
-                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/uk/svg-badge.svg" alt="Translation status" />
-              </a>
-            </td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf">️завантажити</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf">завантажити</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/economy_printable_ua.pdf">завантажити</a></td>
-        </tr>
-        <tr>
-            <td>🇩🇪 Deutsch<br>
-              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
-                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/de/svg-badge.svg" alt="Translation status" />
-              </a>
-            </td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/main_de.pdf">️speichern</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/printable_de.pdf">speichern</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/economy_printable_de.pdf">speichern</a></td>
-        </tr>
-        <tr>
-            <td>🇨🇿 Čeština<br>
-              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
-                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/cs/svg-badge.svg" alt="Translation status" />
-              </a>
-            </td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cs/main_cs.pdf">stáhnout</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cs/printable_cs.pdf">stáhnout</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cs/economy_printable_cs.pdf">stáhnout</a></td>
-        </tr>
-        <tr>
-            <td>🇮🇱 עברית<br>
-              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
-                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/he/svg-badge.svg" alt="Translation status" />
-              </a>
-            </td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/he/main_he.pdf">הורדה</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/he/printable_he.pdf">הורדה</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/he/economy_printable_he.pdf">הורדה</a></td>
-        </tr>
-        <tr>
-            <td>🇨🇳 中文<br>
-              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
-                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/cn/svg-badge.svg" alt="Translation status" />
-              </a>
-            </td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cn/main_cn.pdf">下载</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cn/printable_cn.pdf">下载</a></td>
-            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cn/economy_printable_cn.pdf">下载</a></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
 ### 🪨 Stable releases
 Those builds are the ones officially released, with a specific cutoff point in time, to give translators time to create localized versions.
 They should be free of any major issues.<br>
 
-#### ⭐ Version 2.0 <sub>(08.08.2026)</sub>
+#### ⭐ Version 2.0.1 <sub>(19.09.2026)</sub>
+
+<table>
+    <thead>
+        <tr>
+            <th>🌍 Language</th>
+            <th align="center">🖥️<br>Digital</th>
+            <th align="center">🖨️<br>Printable</th>
+            <th align="center">🤑<br>Economy Printable</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>🇬🇧 English</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_English_Rules_Rewrite_2_0_1.pdf">download</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_English_Rules_Rewrite_2_0_1_Printable.pdf">download</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_English_Rules_Rewrite_2_0_1_Economy_Printable.pdf">download</a></td>
+        </tr>
+        <tr>
+            <td>🇵🇱 Polski</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Polish_Rules_Rewrite_2_0_1.pdf">pobierz</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Polish_Rules_Rewrite_2_0_1_Printable.pdf">pobierz</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Polish_Rules_Rewrite_2_0_1_Economy_Printable.pdf">pobierz</a></td>
+        </tr>
+        <tr>
+            <td>🇷🇺 Русский</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Russian_Rules_Rewrite_2_0_1.pdf">скачать</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Russian_Rules_Rewrite_2_0_1_Printable.pdf">скачать</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Russian_Rules_Rewrite_2_0_1_Economy_Printable.pdf">скачать</a></td>
+        </tr>
+        <tr>
+            <td>🇺🇦 Українська</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Ukrainian_Rules_Rewrite_2_0_1.pdf">завантажити</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Ukrainian_Rules_Rewrite_2_0_1_Printable.pdf">завантажити</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Ukrainian_Rules_Rewrite_2_0_1_Economy_Printable.pdf">завантажити</a></td>
+        </tr>
+        <tr>
+            <td>🇩🇪 Deutsch</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_German_Rules_Rewrite_2_0_1.pdf">speichern</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_German_Rules_Rewrite_2_0_1_Printable.pdf">speichern</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_German_Rules_Rewrite_2_0_1_Economy_Printable.pdf">speichern</a></td>
+        </tr>
+        <tr>
+            <td>🇨🇳 中文</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Chinese_Rules_Rewrite_2_0_1.pdf">下载</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Chinese_Rules_Rewrite_2_0_1_Printable.pdf">下载</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Chinese_Rules_Rewrite_2_0_1_Economy_Printable.pdf">下载</a></td>
+        </tr>
+    </tbody>
+</table>
+
+All 2.0 documents have clickable card names which link to the [game wiki](https://homm3bg.wiki).
+The economy printable prints unit stars with a letter in addition to the color, so they stay readable in grayscale and for colorblind players:
+<img src="assets/glyphs/bronze-mono.svg" height="18"> <img src="assets/glyphs/silver-mono.svg" height="18"> <img src="assets/glyphs/golden-mono.svg" height="18"> <img src="assets/glyphs/azure-mono.svg" height="18">
+
+<details>
+<summary>🗄️ Click to see older releases</summary>
+
+#### Version 2.0 <sub>(08.08.2026)</sub>
 
 <table>
     <thead>
@@ -186,13 +125,6 @@ They should be free of any major issues.<br>
         </tr>
     </tbody>
 </table>
-
-All 2.0 documents have clickable card names which link to the [game wiki](https://homm3bg.wiki).
-The economy printable prints unit stars with a letter in addition to the color, so they stay readable in grayscale and for colorblind players:
-<img src="assets/glyphs/bronze-mono.svg" height="18"> <img src="assets/glyphs/silver-mono.svg" height="18"> <img src="assets/glyphs/golden-mono.svg" height="18"> <img src="assets/glyphs/azure-mono.svg" height="18">
-
-<details>
-<summary>🗄️ Click to see older releases</summary>
 
 #### Version 1.3 <sub>(23.11.2024)</sub>
 
@@ -402,6 +334,125 @@ Best served for those who would like to have it on paper 🤞<br>
 🤑 The economy printable build has **no art backgrounds**. Other than that, it's the same as the regular printable build.
 This is for people who want to save their toners.
 </details>
+
+---
+
+### ⚗️ Experimental builds
+These are made from the main branch every time a new change is introduced.
+You can expect things to break, like having incorrect layout or not all the text translated.
+
+<table>
+    <thead>
+        <tr>
+            <th>Language</th>
+            <th colspan=3 align="center">Latest Build ⚗️<br>(Experimental)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center">🌍</td>
+            <td align="center">🖥️<br>Digital</td>
+            <td align="center">🖨️<br>Printable</td>
+            <td align="center">🤑<br>Economy Printable</td>
+        </tr>
+        <tr>
+            <td>🇬🇧 English</td>
+            <td align="center">️<a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/main_en.pdf">download</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/printable_en.pdf">download</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/en/economy_printable_en.pdf">download</a></td>
+        </tr>
+        <tr>
+            <td>🇵🇱 Polski<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/pl/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/main_pl.pdf">️pobierz</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/printable_pl.pdf">pobierz</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/pl/economy_printable_pl.pdf">pobierz</a></td>
+        </tr>
+        <tr>
+            <td>🇪🇸 Español<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/es/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/main_es.pdf">️descargar</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/printable_es.pdf">descargar</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/es/economy_printable_es.pdf">descargar</a></td>
+        </tr>
+        <tr>
+            <td>🇫🇷 Français<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/fr/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/main_fr.pdf">️télécharger</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/printable_fr.pdf">télécharger</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/fr/economy_printable_fr.pdf">télécharger</a></td>
+        </tr>
+        <tr>
+            <td>🇷🇺 Русский<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/ru/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/main_ru.pdf">️скачать</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/printable_ru.pdf">скачать</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ru/economy_printable_ru.pdf">скачать</a></td>
+        </tr>
+        <tr>
+            <td>🇺🇦 Українська<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/uk/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/main_ua.pdf">️завантажити</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/printable_ua.pdf">завантажити</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/ua/economy_printable_ua.pdf">завантажити</a></td>
+        </tr>
+        <tr>
+            <td>🇩🇪 Deutsch<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/de/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/main_de.pdf">️speichern</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/printable_de.pdf">speichern</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/de/economy_printable_de.pdf">speichern</a></td>
+        </tr>
+        <tr>
+            <td>🇨🇿 Čeština<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/cs/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cs/main_cs.pdf">stáhnout</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cs/printable_cs.pdf">stáhnout</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cs/economy_printable_cs.pdf">stáhnout</a></td>
+        </tr>
+        <tr>
+            <td>🇮🇱 עברית<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/he/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/he/main_he.pdf">הורדה</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/he/printable_he.pdf">הורדה</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/he/economy_printable_he.pdf">הורדה</a></td>
+        </tr>
+        <tr>
+            <td>🇨🇳 中文<br>
+              <a href="https://hosted.weblate.org/engage/homm3bg-rules-rewrite/">
+                <img src="https://hosted.weblate.org/widget/homm3bg-rules-rewrite/-/cn/svg-badge.svg" alt="Translation status" />
+              </a>
+            </td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cn/main_cn.pdf">下载</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cn/printable_cn.pdf">下载</a></td>
+            <td align="center"><a href="https://raw.githubusercontent.com/qwrtln/Homm3BG-build-artifacts/cn/economy_printable_cn.pdf">下载</a></td>
+        </tr>
+    </tbody>
+</table>
 
 ---
 
