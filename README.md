@@ -17,7 +17,65 @@ Download your desired version of the rule book from one of the available version
 Those builds are the ones officially released, with a specific cutoff point in time, to give translators time to create localized versions.
 They should be free of any major issues.<br>
 
-#### ⭐ Version 2.0 <sub>(08.08.2026)</sub>
+#### ⭐ Version 2.0.1 <sub>(19.09.2026)</sub>
+
+<table>
+    <thead>
+        <tr>
+            <th>🌍 Language</th>
+            <th align="center">🖥️<br>Digital</th>
+            <th align="center">🖨️<br>Printable</th>
+            <th align="center">🤑<br>Economy Printable</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>🇬🇧 English</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_English_Rules_Rewrite_2_0_1.pdf">download</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_English_Rules_Rewrite_2_0_1_Printable.pdf">download</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_English_Rules_Rewrite_2_0_1_Economy_Printable.pdf">download</a></td>
+        </tr>
+        <tr>
+            <td>🇵🇱 Polski</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Polish_Rules_Rewrite_2_0_1.pdf">pobierz</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Polish_Rules_Rewrite_2_0_1_Printable.pdf">pobierz</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Polish_Rules_Rewrite_2_0_1_Economy_Printable.pdf">pobierz</a></td>
+        </tr>
+        <tr>
+            <td>🇷🇺 Русский</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Russian_Rules_Rewrite_2_0_1.pdf">скачать</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Russian_Rules_Rewrite_2_0_1_Printable.pdf">скачать</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Russian_Rules_Rewrite_2_0_1_Economy_Printable.pdf">скачать</a></td>
+        </tr>
+        <tr>
+            <td>🇺🇦 Українська</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Ukrainian_Rules_Rewrite_2_0_1.pdf">завантажити</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Ukrainian_Rules_Rewrite_2_0_1_Printable.pdf">завантажити</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Ukrainian_Rules_Rewrite_2_0_1_Economy_Printable.pdf">завантажити</a></td>
+        </tr>
+        <tr>
+            <td>🇩🇪 Deutsch</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_German_Rules_Rewrite_2_0_1.pdf">speichern</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_German_Rules_Rewrite_2_0_1_Printable.pdf">speichern</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_German_Rules_Rewrite_2_0_1_Economy_Printable.pdf">speichern</a></td>
+        </tr>
+        <tr>
+            <td>🇨🇳 中文</td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Chinese_Rules_Rewrite_2_0_1.pdf">下载</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Chinese_Rules_Rewrite_2_0_1_Printable.pdf">下载</a></td>
+            <td align="center"><a href="https://github.com/Heegu-sama/Homm3BG/releases/download/v2.0.1/Heroes3_Chinese_Rules_Rewrite_2_0_1_Economy_Printable.pdf">下载</a></td>
+        </tr>
+    </tbody>
+</table>
+
+All 2.0 documents have clickable card names which link to the [game wiki](https://homm3bg.wiki).
+The economy printable prints unit stars with a letter in addition to the color, so they stay readable in grayscale and for colorblind players:
+<img src="assets/glyphs/bronze-mono.svg" height="18"> <img src="assets/glyphs/silver-mono.svg" height="18"> <img src="assets/glyphs/golden-mono.svg" height="18"> <img src="assets/glyphs/azure-mono.svg" height="18">
+
+<details>
+<summary>🗄️ Click to see older releases</summary>
+
+#### Version 2.0 <sub>(08.08.2026)</sub>
 
 <table>
     <thead>
@@ -67,13 +125,6 @@ They should be free of any major issues.<br>
         </tr>
     </tbody>
 </table>
-
-All 2.0 documents have clickable card names which link to the [game wiki](https://homm3bg.wiki).
-The economy printable prints unit stars with a letter in addition to the color, so they stay readable in grayscale and for colorblind players:
-<img src="assets/glyphs/bronze-mono.svg" height="18"> <img src="assets/glyphs/silver-mono.svg" height="18"> <img src="assets/glyphs/golden-mono.svg" height="18"> <img src="assets/glyphs/azure-mono.svg" height="18">
-
-<details>
-<summary>🗄️ Click to see older releases</summary>
 
 #### Version 1.3 <sub>(23.11.2024)</sub>
 
