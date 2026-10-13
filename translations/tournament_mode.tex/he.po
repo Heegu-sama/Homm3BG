@@ -44,6 +44,8 @@ msgid ""
 "\\bigskip\n"
 "\n"
 msgstr ""
+"\\bigskip\n"
+"\n"
 
 #.  !TeX spellcheck = en_US
 #. type: Plain text
@@ -52,11 +54,13 @@ msgid ""
 "\\pagetarget{Tournament Mode}{\\addsection{Tournament Mode}{\\images/homm-"
 "shield.png}}"
 msgstr ""
+"\\pagetarget{Tournament Mode}{\\addsection{\\texthebrew{מצב טורניר}}"
+"{\\images/homm-shield.png}}"
 
 #. type: index{#1}
 #: sections/tournament_mode.tex:4
 msgid "Tournament mode"
-msgstr ""
+msgstr "מצב טורניר"
 
 #. type: multicols
 #: sections/tournament_mode.tex:8
@@ -65,6 +69,8 @@ msgid ""
 "The 1~vs.~1 Tournament Mode features rule changes to reduce randomness, allow more tactical decisions, and give players greater control.\n"
 "\n"
 msgstr ""
+"מצב הטורניר מיועד למשחק של \\textenglish{1~vs.~1}. הוא משנה כמה חוקים כדי להפחית את האקראיות, לאפשר יותר החלטות טקטיות ולתת לשחקנים שליטה רבה יותר.\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:10
@@ -73,6 +79,8 @@ msgid ""
 "\\textbf{Note:} Tournament Mode is designed for the Core Game only. Rules for incorporating expansion content (e.g. \\pagelinkwithcomma{Sea Map Tiles}{Sea Map Tiles}) are not provided.\n"
 "\n"
 msgstr ""
+"\\textbf{שימו לב:} מצב הטורניר מיועד למשחק הבסיס בלבד. החוקים אינם מתייחסים לשילוב תוכן מההרחבות (לדוגמה, \\pagelinkwithcomma{Sea Map Tiles}{אריחי ים}).\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:12
@@ -81,6 +89,8 @@ msgid ""
 "\\subsection*{Changes during Setup}\n"
 "\n"
 msgstr ""
+"\\subsection*{שינויים במהלך ההכנה}\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:19
@@ -94,6 +104,13 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"לפני תחילת המשחק, בצעו את הפעולות הבאות:\n"
+"\\begin{itemize}\n"
+"  \\item הוציאו מהמשחק את קלף היכולת \\wikilink{abilities/diplomacy}{\\texthebrew{\\mbox{\\textenglish{Diplomacy}} (דיפלומטיה)}} ואת קלף החפץ \\wikilink{artifacts/hourglass_of_the_evil_hour}{\\texthebrew{\\mbox{\\textenglish{Hourglass of the Evil Hour}} (שעון החול של השעה הרעה)}} לפני שאתם בונים את החפיסות שלהם.\n"
+"  \\item שני השחקנים מטילים 2 \\svg{resource_die}. השחקן שקיבל את הסכום הגבוה ביותר בוחר מי מתחיל.\n"
+"  \\item השחקן השני מקבל \\svg{morale_positive} בתחילת המשחק.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:21
@@ -102,6 +119,8 @@ msgid ""
 "\\subsection*{Building the Map}\n"
 "\n"
 msgstr ""
+"\\subsection*{בניית המפה}\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:25
@@ -112,6 +131,10 @@ msgid ""
 "The placement decisions of all other Map Tiles assigned to the Scenario are decided by both players.\n"
 "\n"
 msgstr ""
+"בתרחיש טורניר השחקנים בונים את המפה בעצמם, והיא \\textbf{חשופה לחלוטין} מתחילת המשחק.\n"
+"מתווה המפה של התרחיש מראה רק איך צריך להיראות מרכז המפה ואילו אריחים דרושים לבניית שאר המפה.\n"
+"שני השחקנים מחליטים יחד היכן להניח את כל שאר אריחי המפה של התרחיש.\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:45
@@ -138,6 +161,26 @@ msgid ""
 "\\end{enumerate}\n"
 "\n"
 msgstr ""
+"פעלו לפי החוקים הבאים כדי לבנות את המפה, \\textbf{והניחו תמיד את כל אריחי המפה כשפניהם כלפי מעלה}:\n"
+"\\begin{enumerate}\n"
+"  \\item השחקן המתחיל מניח את אריחי המפה במרכז המפה לפי מתווה המפה של התרחיש, ומגלה ומסובב אותם כרצונו.\n"
+"\\columnbreak\n"
+"  \\item החל מהשחקן השני, השחקנים מוסיפים לסירוגין את אריחי המפה הקרובים של התרחיש, אחד בכל פעם.\n"
+"  \\begin{itemize}\n"
+"    \\item אם אפשר, הניחו את אריחי המפה הקרובים ליד אריח מפה מרכזי.\n"
+"    \\item בכל תרחיש חייבים להיות לפחות 2 אריחי מפה קרובים שיש עליהם מיקום אובליסק.\n"
+"    \\item מאגר אריחי המפה הקרובים הזמינים מונח כשפניו כלפי מטה. השחקנים שולפים אריח אקראי, חושפים אותו ובוחרים איך להניח אותו.\n"
+"  \\end{itemize}\n"
+"  \\item אחרי שכל אריחי המפה הקרובים הונחו, השחקן הראשון חייב להניח את אריח המפה ההתחלתי שלו ליד אריח מפה קרוב אחד לפחות.\n"
+"    השחקן השני חייב להניח את אריח המפה ההתחלתי שלו בצד הנגדי של המפה – במיקום הרחוק ביותר מאריח המפה ההתחלתי של השחקן הראשון (בספירת אריחים).\n"
+"  \\item החל מהשחקן הראשון, השחקנים מוסיפים לסירוגין את אריחי המפה הרחוקים של התרחיש, אחד בכל פעם.\n"
+"  \\begin{itemize}\n"
+"    \\item כל שחקן חייב להניח את אריח המפה הרחוק הראשון שלו ליד אריח המפה ההתחלתי שלו.\n"
+"    \\item שאר אריחי המפה כפופים ל\\pagelink{Placing}{חוקי ההנחה הרגילים של אריחים}.\n"
+"    \\item מאגר אריחי המפה הרחוקים הזמינים מונח כשפניו כלפי מטה. השחקנים שולפים אריח אקראי, חושפים אותו ובוחרים איך להניח אותו.\n"
+"  \\end{itemize}\n"
+"\\end{enumerate}\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:47
@@ -146,6 +189,8 @@ msgid ""
 "\\subsection*{Additional rules during the game}\n"
 "\n"
 msgstr ""
+"\\subsection*{חוקים נוספים במהלך המשחק}\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:59
@@ -164,6 +209,18 @@ msgid ""
 "\\end{itemize}\n"
 "\n"
 msgstr ""
+"החוקים הבאים חלים על כל תרחיש טורניר:\n"
+"\\begin{itemize}\n"
+"  \\item \\textbf{מוליגן בסבב הראשון:} בתור שלכם בסבב הראשון, השליכו כמה קלפים שתרצו מהיד, ואז שלפו עד מגבלת הקלפים ביד שלכם כרגיל.\n"
+"    אחרי ששלפתם, אתם רשאים לבצע מוליגן: ערבבו את היד ואת ערימת ההשלכה בחזרה לחפיסה שלכם.\n"
+"    לאחר מכן שלפו שוב עד מגבלת הקלפים ביד שלכם.\n"
+"    אתם יכולים לבצע מוליגן פעם אחת בלבד.\n"
+"  \\item כל השחקנים יכולים להשתמש באסימוני מורל ל\\textbf{פעולת מורל חדשה}: במהלך \\textbf{כל פעולת חיפוש}, השליכו את כל הקלפים ששלפתם ובצעו את פעולת החיפוש מחדש.\n"
+"  \\item אם אתם מוציאים קלפי חפץ מהמשחק במהלכו, \\textbf{שמרו אותם ליד החפיסה שלכם} עד סוף המשחק; בסוף המשחק הם נספרים בניקוד נקודות הניצחון הסופי שלכם.\n"
+"  \\item כשאתם מבקרים ב\\textbf{מצפה רדווד}, השתמשו ב\\pagelink{Observatory}{אפקט החלופי} שלו.\n"
+"  \\item \\textbf{חוק רשות}: אתם יכולים לשחק עם הווריאנט \\pagelink{Split Artifact and Spell Decks}{פיצול חפיסות החפצים והקסמים} כדי לשלוט טוב יותר בקלפים שאתם שולפים.\n"
+"\\end{itemize}\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:70
@@ -181,6 +238,17 @@ msgid ""
 "The player with the most VPs wins the Scenario.\n"
 "\n"
 msgstr ""
+"\\vspace*{\\fill}\n"
+"\\begin{center}\n"
+"  \\transparent{0.2}\\includegraphics[width=1.05\\linewidth]{\\art/berserk.png}\n"
+"\\end{center}\n"
+"\\vspace*{\\fill}\n"
+"\\columnbreak\n"
+"\\subsection*{ספירת נקודות ניצחון}\n"
+"\\index{נקודות ניצחון}\n"
+"כשהתרחיש מגיע למגבלת הסבבים שלו, או כששחקן כלשהו משלים את תנאי הניצחון של התרחיש, המשחק מסתיים ושני השחקנים סופרים את נקודות הניצחון (נ״נ) שלהם לפי הטבלה שלהלן.\n"
+"השחקן שצבר הכי הרבה נ״נ מנצח בתרחיש.\n"
+"\n"
 
 #. type: multicols
 #: sections/tournament_mode.tex:100
@@ -214,3 +282,30 @@ msgid ""
 "  }\n"
 "\\end{table}"
 msgstr ""
+"\\begin{table}[H]\n"
+"  \\hommtable{26}{\n"
+"    \\centering\n"
+"    \\medskip\n"
+"    \\textbf{\\texthebrew{ניקוד נקודות הניצחון}}\\\\\n"
+"    \\bigskip\n"
+"    \\begin{tabularx}{0.95\\linewidth}{>{\\hsize=0.8\\hsize\\linewidth=\\hsize}X\n"
+"        >{\\hsize=0.12\\hsize\\linewidth=\\hsize}X\n"
+"      }\n"
+"      \\darkcell[0.8]{\\begin{hebrew}קטגוריה\\end{hebrew}} & \\darkcell[0.8]{\\begin{hebrew}נ״נ\\end{hebrew}} \\\\\n"
+"      \\lightcell[1.2]{\\begin{hebrew}עבור כל מכרה או יישוב שבשליטתכם\\end{hebrew}} &\n"
+"      \\darkcell[1.2]{1} \\\\\n"
+"      \\lightcell[1.2]{\\begin{hebrew}עבור כל מבנה בעיר שלכם\\end{hebrew}} &\n"
+"      \\darkcell[1.2]{1} \\\\\n"
+"      \\lightcell[1.8]{\\begin{hebrew}עבור כל שני קלפי חפץ בחפיסה שלכם (כולל אלה שהוצאו)\\end{hebrew}} &\n"
+"      \\darkcell[1.8]{1} \\\\\n"
+"      \\lightcell[1.2]{\\begin{hebrew}עבור כל רמה של הגיבור הראשי שלכם\\end{hebrew}} &\n"
+"      \\darkcell[1.2]{1} \\\\\n"
+"      \\lightcell[1.2]{\\begin{hebrew}עבור כל גיבור משני של היריב שהבסתם\\end{hebrew}} &\n"
+"      \\darkcell[1.2]{2} \\\\\n"
+"      \\lightcell[1.2]{\\begin{hebrew}עבור הבסת הגיבור הראשי של היריב (פעם אחת בלבד)\\end{hebrew}} &\n"
+"      \\darkcell[1.2]{4} \\\\\n"
+"      \\lightcell[1.6]{\\begin{hebrew}עבור כל יעד נוסף שמופיע בתיאור התרחיש\\end{hebrew}} &\n"
+"      \\darkcell[1.6]{\\textenglish{X}} \\\\\n"
+"      \\end{tabularx}\n"
+"  }\n"
+"\\end{table}"
