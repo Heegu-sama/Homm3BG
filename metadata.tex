@@ -305,10 +305,12 @@
 \ExplSyntaxOff
 
 % used in components
+% In right-to-left documents the bar is on the right, so put the label on the far side
+\iftoggle{textright2left}{\tcbset{expminipad/.style={before title={\raggedleft\tiny}}}}{\tcbset{expminipad/.style={left=-1mm}}}
 \newenvironment{expansionmini}[1]{\begin{expansion}[%
   size=minimal,
   beforeafter skip balanced=0pt,
-  left=-1mm,
+  expminipad,
 ]{#1}}{\end{expansion}}
 
 % https://tex.stackexchange.com/questions/675895/how-to-use-full-string-conditionals-in-latex
@@ -578,13 +580,16 @@
 }
 % End of Heroes-styled canvas definition.
 
+% Table cell text direction: right-to-left documents need RTL paragraphs inside cell nodes
+\newcommand{\celltextdir}{\iftoggle{textright2left}{\pardir TRT\textdir TRT}{}}
+
 \definecolor{darkcellborder}{HTML}{634831}
 \definecolor{darkcellbg}{HTML}{20160C}
 
 \newcommand{\darkcell}[2][0.9]{
   \begin{tikzpicture}
     \filldraw[line width=1.0pt, fill=darkcellbg, fill opacity=0.5, draw=darkcellborder] (0, 0) rectangle (\linewidth, #1);
-    \node[text width=\linewidth, align=center] at (current bounding box.center) {\textbf{#2}};
+    \node[text width=\linewidth, align=center] at (current bounding box.center) {\celltextdir\textbf{#2}};
   \end{tikzpicture}
 }
 
@@ -592,7 +597,7 @@
   \begin{tikzpicture}
     \filldraw[line width=1.0pt, fill=darkcellbg, fill opacity=0.5, draw=darkcellborder] (0, 0) rectangle (\linewidth, #1);
 
-    \node[text width=\linewidth, align=left] at (current bounding box.center) {
+    \node[text width=\linewidth, align=left] at (current bounding box.center) {\celltextdir
       \leftskip=0.4em
       \rightskip=0pt plus 1fil
       \textbf{#2}\\
@@ -606,14 +611,14 @@
 \newcommand{\lightcell}[2][0.9]{
   \begin{tikzpicture}
     \filldraw[line width=1.0pt, fill=\iftoggle{noartbackground}{white}{lightcellbg}, fill opacity=0.25, draw=lightcellbg, fill opacity=0.25, draw=lightcellborder] (0, 0) rectangle (\linewidth, #1);
-    \node[text width=\linewidth, align=center] at (current bounding box.center) {\iftoggle{noartbackground}{}{\color{white}}#2};
+    \node[text width=\linewidth, align=center] at (current bounding box.center) {\celltextdir\iftoggle{noartbackground}{}{\color{white}}#2};
   \end{tikzpicture}
 }
 
 \newcommand{\lightcellleft}[2][0.9]{
   \begin{tikzpicture}
     \filldraw[line width=1.0pt, fill=\iftoggle{noartbackground}{white}{lightcellbg}, fill opacity=0.25, draw=lightcellbg, fill opacity=0.25, draw=lightcellborder] (0, 0) rectangle (\linewidth, #1);
-    \node[text width=\linewidth, align=left] at (current bounding box.center) {
+    \node[text width=\linewidth, align=left] at (current bounding box.center) {\celltextdir
       \iftoggle{noartbackground}{}{\color{white}}
       \leftskip=0.4em
       \rightskip=0pt plus 1fil
@@ -694,13 +699,26 @@
 
 \ExplSyntaxOn
 \NewDocumentEnvironment{relcoords}{ m +b }{
-  \begin{scope}[
-    shift={(#1.south~west)},
-    x={($(#1.east)~-~(#1.west)$)},
-    y={($(#1.north)~-~(#1.south)$)}
-  ]
-    #2
-  \end{scope}
+  % Pictures are laid out mirrored in right-to-left documents,
+  % so measure x from the east edge to keep callouts on their targets.
+  \iftoggle{textright2left}{
+    \begin{scope}[
+      shift={(#1.south~east)},
+      x={($(#1.west)~-~(#1.east)$)},
+      y={($(#1.north)~-~(#1.south)$)},
+      every~node/.append~style={execute~at~begin~node={\textdir~TLT}}
+    ]
+      #2
+    \end{scope}
+  }{
+    \begin{scope}[
+      shift={(#1.south~west)},
+      x={($(#1.east)~-~(#1.west)$)},
+      y={($(#1.north)~-~(#1.south)$)}
+    ]
+      #2
+    \end{scope}
+  }
 }{}
 \ExplSyntaxOff
 % Enable this temporarily inside relcoords when placing encircles

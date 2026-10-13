@@ -16,6 +16,10 @@
 \newcommand{\setlanguages}[0]{
   \setmainlanguage[calendar=hebrew]{hebrew} % Set the main language to Hebrew
   \setotherlanguage{english} % Optional: if you have English text as well
+  % Single space after sentences, as is customary in Hebrew typesetting
+  \SetLanguageKeys{hebrew}{frenchspacing=true}
+  % Numbered list labels are numbers; keep multi-digit ones from being reversed
+  \setlist[enumerate,1]{label=\textenglish{\arabic*}., ref=\arabic*}
 }
 
 % Command to enforce LTR for English text and numbers
@@ -47,6 +51,9 @@
   Script=Hebrew,
   Scale=MatchLowercase
 ]
+
+% Note and table text uses the Hebrew font so parentheses are mirrored correctly
+\newcommand{\notefont}{\hebrewfont}
 
 \def\sections{sections/translated/he}
 \newtoggle{textright2left}
