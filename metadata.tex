@@ -116,6 +116,8 @@
 \providetoggle{textright2left}
 
 \setlist[itemize,2]{leftmargin=15pt, label=$\triangleright$}
+% Second-level bullets point toward the text, which is on the left in right-to-left documents
+\iftoggle{textright2left}{\setlist[itemize,2]{label=$\triangleleft$}}{}
 
 % Control addition of certain pages in the printable version.
 % Useful to make the printable version have correct number of pages.
