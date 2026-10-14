@@ -582,6 +582,9 @@
 
 % Table cell text direction: right-to-left documents need RTL paragraphs inside cell nodes
 \newcommand{\celltextdir}{\iftoggle{textright2left}{\pardir TRT\textdir TRT}{}}
+% Start-aligned cells: flush right with the padding on the right in right-to-left documents
+\iftoggle{textright2left}{\tikzset{cellstart/.style={align=right}}}{\tikzset{cellstart/.style={align=left}}}
+\newcommand{\cellstartskips}{\iftoggle{textright2left}{\leftskip=0pt plus 1fil\rightskip=0.4em}{\leftskip=0.4em\rightskip=0pt plus 1fil}}
 
 \definecolor{darkcellborder}{HTML}{634831}
 \definecolor{darkcellbg}{HTML}{20160C}
@@ -597,9 +600,8 @@
   \begin{tikzpicture}
     \filldraw[line width=1.0pt, fill=darkcellbg, fill opacity=0.5, draw=darkcellborder] (0, 0) rectangle (\linewidth, #1);
 
-    \node[text width=\linewidth, align=left] at (current bounding box.center) {\celltextdir
-      \leftskip=0.4em
-      \rightskip=0pt plus 1fil
+    \node[text width=\linewidth, cellstart] at (current bounding box.center) {\celltextdir
+      \cellstartskips
       \textbf{#2}\\
     };
   \end{tikzpicture}
@@ -618,10 +620,9 @@
 \newcommand{\lightcellleft}[2][0.9]{
   \begin{tikzpicture}
     \filldraw[line width=1.0pt, fill=\iftoggle{noartbackground}{white}{lightcellbg}, fill opacity=0.25, draw=lightcellbg, fill opacity=0.25, draw=lightcellborder] (0, 0) rectangle (\linewidth, #1);
-    \node[text width=\linewidth, align=left] at (current bounding box.center) {\celltextdir
+    \node[text width=\linewidth, cellstart] at (current bounding box.center) {\celltextdir
       \iftoggle{noartbackground}{}{\color{white}}
-      \leftskip=0.4em
-      \rightskip=0pt plus 1fil
+      \cellstartskips
       #2\\
     };
   \end{tikzpicture}
@@ -697,6 +698,9 @@
   }%
 }
 
+% Right-to-left run for Hebrew text inside relcoords nodes, which are typeset left-to-right
+\newcommand{\rtlrun}[1]{\iftoggle{textright2left}{{\textdir TRT #1}}{#1}}
+
 \ExplSyntaxOn
 \NewDocumentEnvironment{relcoords}{ m +b }{
   % Pictures are laid out mirrored in right-to-left documents,
@@ -735,7 +739,7 @@
     {I}{\svg[8.7]{level1}}%
     {IV}{\svg[8.7]{level4}}%
     {VI}{\svg[8.7]{level6}}%
-  }{{\liberation\textbf{#1}}}%
+  }{\iftoggle{textright2left}{\textenglish{\liberation\textbf{#1}}}{{\liberation\textbf{#1}}}}%
 }
 
 \newcommand{\drawbottom}{
