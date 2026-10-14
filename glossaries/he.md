@@ -166,6 +166,7 @@ Faction names are not translated (use `\textenglish{...}`).
 | English | Hebrew |
 |---|---|
 | expert spells / basic spells | קסמים מתקדמים / קסמים בסיסיים |
+| Combat Penalty (roll two Attack Dice, use the lower) | חיסרון קרב (״סובלת מחיסרון קרב״, ״ללא חיסרון״); not קנס/עונש |
 | Implosion (spell) | קריסה |
 | haste | מהירות |
 | magic arrow | חץ קסם |
