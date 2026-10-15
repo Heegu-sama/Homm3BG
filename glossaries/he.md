@@ -15,7 +15,7 @@
 - Any Latin text inside Hebrew (names, `AI`, `MP`, `HP`, Roman numerals such as `II--III`) must be wrapped in `\textenglish{...}`, otherwise it renders mirrored. Never type it backwards as a workaround.
 - Multi-digit numbers render reversed in RTL text: wrap them in `\textenglish{}` (e.g. `\textenglish{10}`). Never type numbers backwards. Ranges: `\textenglish{1--3}`.
 - `--` does not become a dash in Hebrew text; use a real en dash `–` in Hebrew prose.
-- Letter labels (a, b, c, …) become Hebrew numeral letters: א ב ג ד ה ו ז ח ט י יא יב יג … (never כ/ל for the 11th/12th). Callouts that refer to them: `\encircle{\texthebrew{4א}}`; two-letter labels inside pictures need `\rtlrun`: `\encircle{4\rtlrun{יא}}`.
+- Letter labels (a, b, c, …) become Hebrew numeral letters: א ב ג ד ה ו ז ח ט י יא יב יג … (never כ/ל for the 11th/12th). Callouts inside pictures read number then letter, right-to-left: `\encircle{\rtlrun{4א}}`, `\encircle{\rtlrun{4יא}}`.
 - `\pagelink{anchor}{label}`, `\pagetarget{anchor}{label}`, `\ref*{anchor}`, `\wikilink{path}{label}`: anchors and paths stay in English, only labels are translated. `\index{...}` entries are translated.
 - Quotes: use Hebrew gershayim-style quotes ״...״ for quoted terms; use the geresh/gershayim characters (׳ ״) in abbreviations.
 - Hyphen after a prefix letter before a number or Latin word: ה-\textenglish{AI}, ב-3, ל-\textenglish{Castle}.
@@ -250,7 +250,9 @@ Faction names are not translated (use `\textenglish{...}`).
 |---|---|
 | attack token | אסימון התקפה |
 | clone token | אסימון שיבוט |
-| corrosion token | אסימון קורוזיה |
+| corrosion token | אסימון חלודה |
+| Necromancy (ability) / necromancers | נקרומנסיה / נקרומנסרים |
+| Demoniacs (Inferno hero class) | אחוזי שדים (not דיבוק — a dibbuk is a dead soul, not a demon) |
 | fire wall token | אסימון חומת אש |
 | force field token | אסימון שדה כוח |
 | land mine token | אסימון מוקש |
