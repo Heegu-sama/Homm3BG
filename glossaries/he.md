@@ -252,7 +252,7 @@ Faction names are not translated (use `\textenglish{...}`).
 | clone token | אסימון שיבוט |
 | corrosion token | אסימון חלודה |
 | Necromancy (ability) / necromancers | נקרומנסיה / נקרומנסרים |
-| Demoniacs (Inferno hero class) | אחוזי שדים (not דיבוק — a dibbuk is a dead soul, not a demon) |
+| Demoniacs (Inferno hero class) | אחוזי דיבוק |
 | fire wall token | אסימון חומת אש |
 | force field token | אסימון שדה כוח |
 | land mine token | אסימון מוקש |
