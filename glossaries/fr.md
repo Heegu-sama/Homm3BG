@@ -27,10 +27,10 @@
 
 | English | French |
 |---|---|
-| boars | ... |
+| boars | Sangliers |
 | champions | Champions |
-| deck of unit cards | ... |
-| dendroids | ... |
+| deck of unit cards | deck d’unités |
+| dendroids | Dendroïdes |
 | dread knights | Chevaliers de l'Effroi |
 | familiars | Familiers |
 | few | Quelques |
@@ -43,9 +43,9 @@
 | recruited or reinforced | Recrutée ou Améliorée |
 | reinforce | Améliorer |
 | reinforced | Améliorée |
-| summoned elementals | ... |
+| summoned elementals | Élémentaires invoqués |
 | unit cards | cartes Unité |
-| unit miniatures | ... |
+| unit miniatures | figurines d’unités |
 | units | Unités |
 | zealots | Zélotes |
 
@@ -73,10 +73,10 @@
 
 | English | French |
 |---|---|
-| center field | ... |
+| center field | case Centrale |
 | central map tile | tuile Centrale |
-| creature bank | ... |
-| dragon utopia | ... |
+| creature bank | Colonie de créatures |
+| dragon utopia | Terres Désolées |
 | far map tile | tuile Lointaine |
 | field | case |
 | locations | Sites |
@@ -85,17 +85,17 @@
 | monolith | Monolithe |
 | near map tile | tuile Proche |
 | obelisk | Obélisque |
-| random town | ... |
+| random town | Ville aléatoire |
 | revisitable | Ouvert |
-| sea map tile | ... |
+| sea map tile | tuile Mer |
 | settlement | Enclave |
 | starting (i) map tile | tuile de Départ |
-| subterranean gate | ... |
-| subterranean map tile | ... |
-| tile | ... |
+| subterranean gate | Portail souterrain |
+| subterranean map tile | tuile Souterrain |
+| tile | tuile |
 | trading post | Comptoir |
 | water wheel | Moulin à eau |
-| whirlpool | ... |
+| whirlpool | Tourbillon |
 
 ## Resources
 
@@ -119,16 +119,16 @@
 | decks | decks / pioches |
 | discard pile | Défausse |
 | discard | défausser |
-| empowered ability card | ... |
-| empowered ability token | ... |
+| empowered ability card | carte Compétence renforcée |
+| empowered ability token | jeton Compétence renforcée |
 | empowered statistic card | carte Caractéristique renforcée |
 | hand limit | limite de cartes |
 | pandora's box card | Boîte de Pandore |
-| player decks | ... |
+| player decks | deck du joueur |
 | search | Fouiller |
 | specialty card | carte Spécialisation |
 | spell cards | cartes Sort |
-| spell scroll | ... |
+| spell scroll | Parchemin de sort |
 | statistic card | carte Caractéristique |
 | summoned unit card | carte Unité invoquée |
 
@@ -145,9 +145,9 @@
 | English | French |
 |---|---|
 | ai deck | pioche I.A. |
-| magic card | ... |
-| might card | ... |
-| skill card | ... |
+| magic card | carte Magie |
+| might card | carte Guerrier |
+| skill card | carte Capacité |
 
 ## Town
 
@@ -160,7 +160,7 @@
 | population token | Jeton Population |
 | spell book token | jeton Grimoire |
 | town board | plateau de Ville |
-| town card | ... |
+| town card | carte Ville |
 
 ## Combat
 
@@ -171,28 +171,28 @@
 | combat board | plateau de Combat |
 | combat | Combat |
 | damage | dégâts |
-| elemental damage | ... |
+| elemental damage | dégâts élémentaires |
 | front line | ligne de front |
 | initiative | Initiative |
 | negative morale | Moral Négatif |
 | positive morale | Moral Positif |
-| winning combat | ... |
+| winning combat | remporter un Combat |
 
 ## Battlefield
 
 | English | French |
 |---|---|
-| adventure card | ... |
+| adventure card | carte Aventure |
 | adventure mode | mode Aventure |
 | alliance | Alliance |
-| battlefield board | ... |
-| battlefield obstacles | ... |
+| battlefield board | plateau Champ de bataille |
+| battlefield obstacles | obstacles du Champ de bataille |
 | battlefield | Champ de bataille |
 | campaign | Campagne |
 | clash | Affrontement |
-| combat power level | ... |
+| combat power level | niveau de puissance de combat |
 | cooperative | Coopératif |
-| final combat | ... |
+| final combat | Combat final |
 | scenario | scénario |
 | skirmish mode | mode Escarmouche |
 
@@ -200,18 +200,18 @@
 
 | English | French |
 |---|---|
-| attack token | ... |
+| attack token | jeton Attaque |
 | clone token | jeton Clone |
 | corrosion token | jeton Corrosion |
-| fire wall token | ... |
-| force field token | ... |
-| land mine token | ... |
-| miniatures | ... |
+| fire wall token | jeton Mur de Flammes |
+| force field token | jeton Champ de Force |
+| land mine token | jeton Mine terrestre |
+| miniatures | figurines |
 | quicksand token | jeton Sables mouvants |
-| stack token | ... |
+| stack token | jeton Unités nombreuses |
 | summon token | jeton Invocation |
-| time token | ... |
-| weakness token | ... |
+| time token | jeton Temps |
+| weakness token | jeton Faiblesse |
 
 ## Other
 
@@ -221,18 +221,18 @@
 | astrologers proclaim card | carte Proclamation des Astrologues |
 | attack dice | dés d'Attaque |
 | black cubes | cubes noirs |
-| core rulebook | ... |
-| effects | ... |
-| event card | ... |
-| expert effect markers | ... |
+| core rulebook | livre de règles |
+| effects | effets |
+| event card | carte Événement |
+| expert effect markers | marqueurs d’effet Expert |
 | faction cubes | cubes de faction |
 | faction | faction |
 | game setup | Mise en place |
-| map setup | ... |
-| player elimination | ... |
-| player setup | ... |
+| map setup | mise en place du plateau |
+| player elimination | élimination du joueur |
+| player setup | mise en place du joueur |
 | relic | Relique |
 | round | manche |
 | round tracker | Piste de manches |
 | turn | tour |
-| war machine | ... |
+| war machine | machine de guerre |
