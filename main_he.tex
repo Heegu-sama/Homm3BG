@@ -16,6 +16,10 @@
 \newcommand{\setlanguages}[0]{
   \setmainlanguage[calendar=hebrew]{hebrew} % Set the main language to Hebrew
   \setotherlanguage{english} % Optional: if you have English text as well
+  % Single space after sentences, as is customary in Hebrew typesetting
+  \SetLanguageKeys{hebrew}{frenchspacing=true}
+  % Numbered list labels are numbers; keep multi-digit ones from being reversed
+  \setlist[enumerate,1]{label=\textenglish{\arabic*}., ref=\arabic*}
 }
 
 % Command to enforce LTR for English text and numbers
@@ -48,9 +52,29 @@
   Scale=MatchLowercase
 ]
 
+% Note and table text uses the Hebrew font so parentheses are mirrored correctly
+\newcommand{\notefont}{\hebrewfont}
+
 \def\sections{sections/translated/he}
 \newtoggle{textright2left}
 \toggletrue{textright2left}
+
+% Right-to-left run for Hebrew text inside relcoords nodes, which are typeset left-to-right
+\newcommand{\rtlrun}[1]{{\textdir TRT #1}}
+
+% Pictures are laid out mirrored in right-to-left documents,
+% so relcoords measures x from the east edge to keep callouts on their targets.
+% metadata.tex only provides the left-to-right default.
+\NewDocumentEnvironment{relcoords}{ m +b }{
+  \begin{scope}[
+    shift={(#1.south east)},
+    x={($(#1.west) - (#1.east)$)},
+    y={($(#1.north) - (#1.south)$)},
+    every node/.append style={execute at begin node={\textdir TLT}}
+  ]
+    #2
+  \end{scope}
+}{}
 
 \input{metadata.tex}
 
