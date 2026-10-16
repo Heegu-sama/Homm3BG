@@ -59,6 +59,23 @@
 \newtoggle{textright2left}
 \toggletrue{textright2left}
 
+% Right-to-left run for Hebrew text inside relcoords nodes, which are typeset left-to-right
+\newcommand{\rtlrun}[1]{{\textdir TRT #1}}
+
+% Pictures are laid out mirrored in right-to-left documents,
+% so relcoords measures x from the east edge to keep callouts on their targets.
+% metadata.tex only provides the left-to-right default.
+\NewDocumentEnvironment{relcoords}{ m +b }{
+  \begin{scope}[
+    shift={(#1.south east)},
+    x={($(#1.west) - (#1.east)$)},
+    y={($(#1.north) - (#1.south)$)},
+    every node/.append style={execute at begin node={\textdir TLT}}
+  ]
+    #2
+  \end{scope}
+}{}
+
 \input{metadata.tex}
 
 % TEST_SUBSTRING=אני עושה זאת

@@ -700,31 +700,15 @@
   }%
 }
 
-% Right-to-left run for Hebrew text inside relcoords nodes, which are typeset left-to-right
-\newcommand{\rtlrun}[1]{\iftoggle{textright2left}{{\textdir TRT #1}}{#1}}
-
 \ExplSyntaxOn
-\NewDocumentEnvironment{relcoords}{ m +b }{
-  % Pictures are laid out mirrored in right-to-left documents,
-  % so measure x from the east edge to keep callouts on their targets.
-  \iftoggle{textright2left}{
-    \begin{scope}[
-      shift={(#1.south~east)},
-      x={($(#1.west)~-~(#1.east)$)},
-      y={($(#1.north)~-~(#1.south)$)},
-      every~node/.append~style={execute~at~begin~node={\textdir~TLT}}
-    ]
-      #2
-    \end{scope}
-  }{
-    \begin{scope}[
-      shift={(#1.south~west)},
-      x={($(#1.east)~-~(#1.west)$)},
-      y={($(#1.north)~-~(#1.south)$)}
-    ]
-      #2
-    \end{scope}
-  }
+\ProvideDocumentEnvironment{relcoords}{ m +b }{
+  \begin{scope}[
+    shift={(#1.south~west)},
+    x={($(#1.east)~-~(#1.west)$)},
+    y={($(#1.north)~-~(#1.south)$)}
+  ]
+    #2
+  \end{scope}
 }{}
 \ExplSyntaxOff
 % Enable this temporarily inside relcoords when placing encircles
