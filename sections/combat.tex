@@ -136,17 +136,18 @@ Combat lasts until all units on one side are eliminated, a player has to \textbf
 
 Structure of a Combat Round:
 \begin{itemize}[leftmargin=2.3em]
-  \item Players activate their units in descending order of unit \pagelink{Initiative}{Initiative}. \textbf{If there's a tie}, alternate between attackers and defenders starting with an attacker.
+  \item Players activate their units in descending order of unit \pagelink{Initiative}{Initiative}. \textbf{If there's a tie}, alternate between attackers and defenders starting with the~attacker's unit.
   \item When a unit activates, place a Faction Cube on it to indicate it has been activated this Combat Round.
-  \item Activated units may move and attack according to their \pagelink{Unittype}{type}. Neutral Units controlled by an opposing player must always attack if possible.
+  \item Activated units may move and attack according to their \pagelink{Unittype}{type}.
+    Neutral Units controlled by the opposing player must always attack. If that is not possible, they spend all their movement to move towards the Hero's units.
   \item Instead of attacking, a unit may \pagelink{Defend}{defend}.
   In Neutral Combat, the Neutral enemy units cannot defend, even when controlled by another player.
-  \item Before a unit attacks, both players may \pagelink{CombatCards}{play cards}. Cards are resolved in the order in which players decide to play them.
+  \item Before a unit attacks, both players may \pagelink{CombatCards}{play cards}. Cards are resolved in the order in which players play them.
   \item After a unit's attack has been declared and all cards have been played, roll the Attack Die.
     Modify the attacking unit's attack by the Die's result, then reduce it by the defending unit's Defense, and finally deal the rest as \pagelink{HP}{damage}\index{Damage} to the defending unit.
   \item If the defending unit was adjacent to the attacker, it \pagelink{Retaliate}{retaliates} if it hasn't done so this Round.
   \item Keep activating units until they've all been activated once.
-After the last unit's activation, the Combat Round ends.
+After the last unit's activation, the Round ends.
 \end{itemize}
 \vspace*{\fill}
 
@@ -159,7 +160,7 @@ You may only use \textbf{one Spell per Combat Round}, unlike being able to play 
 Ongoing \svg{ongoing} and \svg{activation} activation effects can be used only \textbf{when activating one of your units and before it attacks}.
 Ongoing effects\index{Ongoing Effects} last until end of Combat or if the effect on the card is used~up.\par
 Instant \svg{instant} cards may be played \textbf{at any time} except between rolling the Attack Die and resolving damage unless otherwise stated.
-\textbf{Reroll effects} affecting the Attack Die are an exception to this and may be played after the die is rolled.
+\textbf{Reroll effects} affecting the Attack Die are an exception to this and may be played after the roll.
 Effects of increasing a unit's \svg{attack} (e.g. by the Statistics cards) expire whenever the first attack performed by that unit resolves or the activation ends, whichever comes first.
 Increased \svg{defense} expires in a similar way.
 
