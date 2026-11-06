@@ -22,19 +22,19 @@ jobs:
             "include": [
               { "language": "en", "display": "🇺🇸 English"},
               { "language": "pl", "display": "🇵🇱 Polski"},
-              { "language": "es", "display": "🇪🇸 Español"},
+              { "language": "es", "display": "🇪🇸 Español", "disabled": true},
               { "language": "fr", "display": "🇫🇷 Français"},
               { "language": "ru", "display": "🇷🇺 Русский"},
               { "language": "ua", "display": "🇺🇦 Українська"},
               { "language": "de", "display": "🇩🇪 Deutsch"},
-              { "language": "cs", "display": "🇨🇿 Čeština"},
+              { "language": "cs", "display": "🇨🇿 Čeština", "disabled": true},
               { "language": "he", "display": "🇮🇱 עברית"},
               { "language": "cn", "display": "🇨🇳 中文"}
             ]
           }
           EOF
-          echo "matrix=$(jq -c . matrix.json)" >> $GITHUB_OUTPUT
-          echo "check-pages-matrix=$(jq -c 'del(.include[] | select(.language == "en"))' matrix.json)" >> $GITHUB_OUTPUT
+          echo "matrix=$(jq -c 'del(.include[] | select(.disabled))' matrix.json)" >> $GITHUB_OUTPUT
+          echo "check-pages-matrix=$(jq -c 'del(.include[] | select(.disabled or .language == "en"))' matrix.json)" >> $GITHUB_OUTPUT
 
   digital_build:
     needs: matrix-setup
