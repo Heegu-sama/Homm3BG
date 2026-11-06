@@ -76,6 +76,72 @@
   \end{scope}
 }{}
 
+% Expansion boxes: the faded background in metadata.tex uses path fading, whose PDF soft mask
+% is not shifted along with the right-to-left picture, so it lands next to the box.
+% metadata.tex holds the whole document, so the Hebrew version replaces it when the document begins.
+\ExplSyntaxOn
+\NewDocumentEnvironment{heexpansion}{ s O{} m +b }{
+  \__expansion_color_titles:NNn \l_expcolor_tl \l_exptitles_tl {#3}
+
+  \tl_clear_new:N \l_expoverlay_tl
+  % The bar and the fade are the English ones mirrored: the bar on the right of the box, the fade strongest next to it.
+  % PDF soft masks are not shifted with it, so the fade is drawn as stacked rectangles instead of path fading.
+  % Boxes that run to the bottom of the page show no fade in English, so they get only the bar.
+  \tl_set:No \l_expoverlay_tl {
+    \begin{scope}
+      \coordinate (henw) at (frame.north~west);
+      \coordinate (hene) at (frame.north~east);
+      \coordinate (hese) at (frame.south~east);
+      \IfBooleanF{#1}{
+        % Same profile as the east fading: full strength on the quarter next to the bar, gone by the far quarter.
+        \foreach \i in {0,...,23} {
+          \fill[\l_expcolor_tl, opacity=0.0039]
+            ($([xshift=-5pt]henw)!0.25+\i/48!([xshift=5pt]hene)+(0,3pt)$) rectangle
+            ([xshift=5pt, yshift=-3pt]hese);
+        }
+      }
+      \fill[
+        top~color=\l_expcolor_tl,
+        bottom~color=\l_expcolor_tl,
+        rounded~corners=1.5pt,
+        opacity=0.5
+      ]
+      ([xshift=5pt, yshift=3pt]hene) rectangle
+      \IfBooleanTF{#1}{([xshift=8pt, yshift=-\paperheight]hese)}{([xshift=8pt, yshift=-3pt]hese)};
+    \end{scope}
+  }
+
+  \IfBooleanT{#1}{\global\toggletrue{bottomforeground}}
+  \begin{tcolorbox}[
+    enhanced,
+    before~title=\raggedright\tiny,
+    title=\textbf{\l_exptitles_tl},
+    opacityfill=0,
+    size=small,
+    boxrule=0pt,
+    arc=0pt,
+    oversize,
+    beforeafter~skip~balanced=0.3\baselineskip~plus~1pt,
+    overlay={
+      \l_expoverlay_tl
+    },
+    #2]
+    #4
+  \end{tcolorbox}
+  \IfBooleanT{#1}{\afterpage{\global\togglefalse{bottomforeground}}}
+}{}
+\ExplSyntaxOff
+\NewDocumentCommand\hepicdimsltr{O{}mmm}{\hbox dir TLT{\textdir TLT\hepicdims[#1]{#2}{#3}{#4}}}
+% The small component boxes get the English left=-1mm on the bar side, which is the right in Hebrew.
+\AddToHook{begindocument/before}{%
+  \RenewEnvironmentCopy{expansion}{heexpansion}%
+  \tcbset{expminipad/.style={before title={\raggedleft\tiny}, right=-1mm}}%
+  % The note and table backgrounds are clipped with a PDF literal placed from where its box starts;
+  % in a right-to-left box that is the right edge, so the clip misses the picture. Keep them left-to-right.
+  \NewCommandCopy\hepicdims\picdims
+  \RenewCommandCopy\picdims\hepicdimsltr
+}
+
 \input{metadata.tex}
 
 % TEST_SUBSTRING=אני עושה זאת
