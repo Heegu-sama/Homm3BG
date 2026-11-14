@@ -168,7 +168,7 @@ jobs:
 
       - name: Optimize PDF
         id: optimize
-        uses: qwrtln/optimize-pdf@v10.07
+        uses: qwrtln/optimize-pdf@v10.08
         if: steps.cache-pdf.outputs.cache-hit != 'true'
         with:
           file-name: main_${{ inputs.language }}.pdf
